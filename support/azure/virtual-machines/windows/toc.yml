@@ -110,10 +110,12 @@ items:
       href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-0x80070002.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Error 0x80070003 when Windows Update fails
       href: ../../../windows-server/installing-updates-features-roles/error-0x80070003-windows-update-fails.md?context=/troubleshoot/azure/context/context
+    - name: Error code 0x80070005
+      href: ../../../windows-client/installing-updates-features-roles/troubleshoot-windows-update-error-0x80070005.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
+    - name: Error code0x80070008
+      href: ../../../windows-client/installing-updates-features-roles/troubleshoot-windows-update-error-0x80070008.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Error code 0x8007000d
       href: ../../../windows-server/installing-updates-features-roles/error-invalid-data-startup-installing-updates.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
-    - name: Troubleshoot Windows Update error 0x80070008
-      href: ../../../windows-client/installing-updates-features-roles/troubleshoot-windows-update-error-0x80070008.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Error code 0x8007000e or 0x800705aa
       href: ../../../windows-client/installing-updates-features-roles/error-0x8007000e-0x800705aa-insufficient-virtual-memory.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Error code 0x80070070
@@ -122,11 +124,15 @@ items:
       href: ../../../windows-server/installing-updates-features-roles/troubleshoot-error-shutdown-in-process.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Error code 0x80070490
       href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-0x80070490.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
+    - name: Error code 0x80070570
+      href: ../../../windows-client/installing-updates-features-roles/troubleshoot-windows-update-error-0x80070570.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
+    - name: Error code 0x800706D9
+      href: ../../../windows-client/installing-updates-features-roles/troubleshoot-windows-update-error-0x800706D9.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Error code 0x80070bc9
       href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-0x80070bc9.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Error code 0x800719e4 (ERROR_LOG_FULL)
       href: ../../../windows-server/installing-updates-features-roles/error-0x800719e4-windows-update-fails.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
-    - name: Troubleshoot Windows Update error 0x80071A91
+    - name: Error code 0x80071A91
       href: ../../../windows-client/installing-updates-features-roles/troubleshoot-windows-update-error-0x80071a91.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Error code 0x80072f8f
       href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-0x80072f8f.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
@@ -140,7 +146,7 @@ items:
       href: ../../../windows-client/installing-updates-features-roles/troubleshoot-windows-update-error-0x8024001e.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Error code 0x8024002E
       href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-code-0x8024002e.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
-    - name: Troubleshoot Windows Update error 0x80240439
+    - name: Error code 0x80240439
       href: ../../../windows-client/installing-updates-features-roles/troubleshoot-windows-update-error-0x80240439.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Error code 0x80244007
       href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-0x80244007.md?context=/troubleshoot/azure/virtual-machines/windows/context/context   
@@ -422,6 +428,8 @@ items:
       href: boot-error-0xc0000221.md
     - name: Boot failure with error INACCESSIBLE_BOOT_DEVICE
       href: windows-boot-failure.md
+    - name: Can't boot with INACCESSIBLE_BOOT_DEVICE (WS 2012 R2 platform update)
+      href: windows-server-2012r2-boot-failure-platform-update.md
     - name: Azure VM startup hangs at "Applying Group Policy Environment"
       href: applying-group-policy-environment-policy.md
     - name: Azure VM startup hangs at "Applying Group Policy Scheduled Tasks policy"
@@ -496,10 +504,18 @@ items:
     items:
     - name: Downsize a data disk without losing data
       href: downsize-data-disk-without-losing-data.md
+    - name: Troubleshoot Azure disk resize failures
+      href: troubleshoot-disk-resize.md
+    - name: Troubleshoot disk resize blocked by an active SAS token
+      href: troubleshoot-disk-resize-sas-block.md
     - name: Cannot extend an encrypted OS volume in Windows
       href: cannot-extend-encrypted-os-volume.md
+    - name: Cannot extend OS volume because a recovery partition blocks the extend
+      href: cannot-extend-volume-recovery-partition.md
     - name: Cannot extend volume on a SQL standalone server virtual machine
       href: cannot-extend-volume-sql-server.md
+    - name: Convert an Azure VM disk from MBR to GPT partition style
+      href: convert-mbr-to-gpt-azure-virtual-machine.md
     - name: Disk <number> has been surprise removed
       href: disk-has-been-surprise-removed-event-id-157.md
     - name: Errors when deleting storage resources
@@ -550,7 +566,7 @@ items:
 
 - name: Cannot activate Windows
   items:
-  - name: Overview
+  - name: Start troubleshooting here
     href: troubleshoot-activation-problems.md
   - name: Troubleshooting tools
     href: windows-activation-troubleshoot-tools.md
@@ -566,20 +582,40 @@ items:
       href: custom-routes-enable-kms-activation.md
     - name: Duplicate Client Machine ID
       href: windows-activation-duplicate-client-machine-id.md
-    - name: Error 0x80070005
-      href: ../../../windows-server/deployment/error-0x80070005-access-denied.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
-    - name: Error 0x800705B4
-      href: windows-vm-activation-error-0x800705b4.md
-    - name: Error 0xC004E015
-      href: ../../../windows-server/deployment/error-0xc004e015-sl-e-eul-consumption-failed-activate-windows.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
-    - name: Error 0xC004FD01 or 0xC004FD02
-      href: windows-vm-activation-error-0xc004fd01-0xc004fd02.md
-    - name: Error 0xC004F06C
-      href: ../../../windows-server/deployment/error-0xc004f06c-activate-windows.md?context=/troubleshoot/azure/virtual-machines/windows/context/context 
-    - name: Error 0xC004F074
-      href: windows-vm-activation-error-0xc004f074.md
     - name: Activation watermark continues to be displayed
       href: activation-watermark-appears.md
+  - name: KMS and DNS errors
+    items:
+    - name: Error 0x800705B4 — Timeout
+      href: windows-vm-activation-error-0x800705b4.md
+    - name: Error 0x8007232B — DNS name does not exist
+      href: windows-vm-activation-error-0x8007232b.md
+    - name: Error 0x8007232A — DNS server failure
+      href: ../../../windows-server/licensing-and-activation/activation-error-0x8007232a-dns-server-failure.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
+    - name: Error 0xC004F074 — No KMS could be contacted
+      href: windows-vm-activation-error-0xc004f074.md
+    - name: Error 0xC004F038 — KMS count insufficient
+      href: windows-vm-activation-error-0xc004f038.md
+    - name: Error 0xC004F042 — KMS can't be used
+      href: windows-vm-activation-error-0xc004f042.md
+    - name: Error 0xC0020017 / 0x8007139F — KMS contact failure (SPP)
+      href: windows-vm-activation-error-0xc0020017-0x8007139f.md
+  - name: Product key and MAK errors
+    items:
+    - name: Error 0xC004C003 — Product key blocked
+      href: windows-vm-activation-error-0xc004c003.md
+    - name: Error 0xC004C008 — Product key exceeded limit
+      href: windows-vm-activation-error-0xc004c008.md
+    - name: Error 0xC004F06C — MAK activation failed
+      href: ../../../windows-server/deployment/error-0xc004f06c-activate-windows.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
+    - name: Error 0x80070005 — Access denied
+      href: ../../../windows-server/deployment/error-0x80070005-access-denied.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
+  - name: Configuration errors
+    items:
+    - name: Error 0xC004FD01 or 0xC004FD02 — AVMA
+      href: windows-vm-activation-error-0xc004fd01-0xc004fd02.md
+    - name: Error 0xC004E015 — EULA consumption failed
+      href: ../../../windows-server/deployment/error-0xc004e015-sl-e-eul-consumption-failed-activate-windows.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
 
 - name: Received an allocation failure
   items:

@@ -1,11 +1,13 @@
 ---
 title:  Troubleshoot Resource Scheduling Optimization add-in deployment issues
 description: Resolves issues with deployments of the Resource Scheduling Optimization add-in for Dynamics 365 Field Service.
-ms.reviewer: mhart
-ms.date: 01/08/2025
+ms.reviewer: anclear, v-wendysmith, v-shaywood
+ms.date: 05/04/2026
 ms.custom: sap:Resource Scheduling Optimization
 ---
 # Troubleshoot issues with Resource Scheduling Optimization add-in deployments
+
+## Summary
 
 This article helps administrators resolve issues with deployments of the [Resource Scheduling Optimization add-in](/dynamics365/field-service/rso-overview) for Microsoft Dynamics 365 Field Service.
 
@@ -13,7 +15,7 @@ This article helps administrators resolve issues with deployments of the [Resour
 
 The deployment or upgrade fails or takes a long time and doesn't complete.
 
-## Resolution
+## Solution
 
 For failed deployments or upgrades, go to the [Resource Scheduling Optimization deployment app](/dynamics365/field-service/rso-deployment) and select the **Delete Current Deployment** option to delete the existing deployment. Then, redeploy the latest version. If it fails again, verify the Dynamics 365 organization isn't in administration mode.
 

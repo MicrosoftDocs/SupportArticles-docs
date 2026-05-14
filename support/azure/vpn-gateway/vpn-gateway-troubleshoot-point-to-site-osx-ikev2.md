@@ -7,9 +7,8 @@ ms.author: jarrettr
 ms.service: azure-vpn-gateway
 ms.topic: troubleshooting
 ms.date: 09/04/2024
-ms.custom: 
-  - sfi-image-nochange
-  - sap:Connectivity
+ms.custom: sap:Connectivity
+
 # Customer intent: As a macOS X user troubleshooting my VPN connection, I want to verify and configure my VPN client settings, so that I can establish a successful point-to-site connection using IKEv2.
 ---
 

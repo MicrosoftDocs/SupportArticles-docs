@@ -1,12 +1,13 @@
 ---
 title: Azure ExpressRoute ARP tables - Troubleshooting
-description: This page provides instructions on getting the Address Resolution Protocol (ARP) tables for an ExpressRoute circuit
+description: Learn how to get and use ExpressRoute ARP tables to troubleshoot layer 2 connectivity issues on your circuit. Follow the steps to diagnose problems faster.
 services: expressroute
 author: JarrettRenshaw
 ms.author: jarrettr
 ms.service: azure-expressroute
 ms.topic: troubleshooting
 ms.date: 01/31/2025
+ms.custom: sap:Connectivity & Performance Issues
 ---
 # Getting ARP tables in the Resource Manager deployment model
 
@@ -16,7 +17,7 @@ ms.date: 01/31/2025
 > 
 ## Summary
 
-This article walks you through the steps to learn the ARP tables for your ExpressRoute circuit.
+This article explains how to get ExpressRoute ARP tables so you can validate layer 2 configuration and troubleshoot connectivity issues.
 
 > [!IMPORTANT]
 > This document is intended to help you diagnose and fix simple issues. It isn't intended to be a replacement for Microsoft support. You must open a support ticket with [Microsoft support](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade) if you're unable to solve the problem using the guidance described in this article.
@@ -25,7 +26,7 @@ The steps and examples in this article use Azure PowerShell Az modules. To insta
 
 ## Address Resolution Protocol (ARP) and ARP tables
 
-Address Resolution Protocol (ARP) is a layer 2 protocol defined in [RFC 826](https://tools.ietf.org/html/rfc826). ARP is used to map the Ethernet address (MAC address) with an IP address.
+Address Resolution Protocol (ARP) is a layer 2 protocol defined in [RFC 826](https://tools.ietf.org/html/rfc826). ARP maps the Ethernet address (MAC address) to an IP address.
 
 The ARP table provides the following information for both the primary and secondary interfaces for each peering type:
 
@@ -51,14 +52,14 @@ The following section provides information on how you can view the ARP tables se
 Ensure that the following information is true before you progress further:
 
 * A valid ExpressRoute circuit configured with at least one peering. The circuit must be fully configured with the connectivity provider. You or your connectivity provider must configure at least Azure private or Microsoft peering on this circuit.
-* IP address ranges used to configure the peerings. To understand how IP addresses get mapped to interfaces, review the IP address assignment examples in the [ExpressRoute routing requirements page](/azure/expressroute/expressroute-routing) . You can get information on the peering configuration by reviewing the [ExpressRoute peering configuration page](/azure/expressroute/expressroute-howto-routing-arm).
-* Information from your networking team/connectivity provider on the MAC addresses of interfaces used with these IP addresses.
-* You must have the latest PowerShell module for Azure (version 1.50 or newer).
+* IP address ranges used to configure the peerings. To understand how IP addresses get mapped to interfaces, review the IP address assignment examples in the [ExpressRoute routing requirements page](/azure/expressroute/expressroute-routing). You can get information on the peering configuration by reviewing the [ExpressRoute peering configuration page](/azure/expressroute/expressroute-howto-routing-arm).
+* Information from your networking team or connectivity provider on the MAC addresses of interfaces used with these IP addresses.
+* The latest PowerShell module for Azure (version 1.50 or newer).
 
 > [!NOTE]
-> If layer 3 is provided by the service provider and the ARP tables are blank in the portal, refresh the circuit configuration using the refresh button in the portal. This operation applies the right routing configuration on your circuit.
+> If the service provider provides layer 3 and the ARP tables are blank in the portal, refresh the circuit configuration by using the refresh button in the portal. This operation applies the right routing configuration on your circuit.
 
-## Getting the ARP tables for your ExpressRoute circuit
+## Get the ARP tables for your ExpressRoute circuit
 
 This section provides instructions on how you can view the ARP tables per peering using PowerShell. You or your connectivity provider must configure the peering before progressing further. Each circuit has two paths (primary and secondary). You can check the ARP table for each path independently.
 
@@ -122,10 +123,10 @@ The ARP table of a peering can be used to determine and validate layer 2 configu
 
 ### ARP table when a circuit is in operational state (expected state)
 
-* The ARP table has an entry for the on-premises side with a valid IP address and MAC address. The same can be seen for the Microsoft side.
+* The ARP table has an entry for the on-premises side with a valid IP address and MAC address. You can see the same information for the Microsoft side.
 * The last octet of the on-premises IP address is an odd number.
 * The last octet of the Microsoft IP address is an even number.
-* The same MAC address appears on the Microsoft side for all three peerings (primary/secondary).
+* The same MAC address appears on the Microsoft side for all three peerings (primary and secondary).
 
 ```output
 Age InterfaceProperty IpAddress  MacAddress    
@@ -141,7 +142,7 @@ Age InterfaceProperty IpAddress  MacAddress
  10 On-Prem           20.33.0.1   ffff.eeee.dddd
 ```
 
-### ARP table when on-premises/connectivity provider side has problems
+### ARP table when on-premises or connectivity provider side has problems
 
 If there's a problem with the on-premises or connectivity provider, the ARP table shows one of two things: the on-premises MAC address shows as incomplete, or only the Microsoft entry is present in the ARP table.
 
@@ -168,13 +169,13 @@ Age InterfaceProperty IpAddress  MacAddress
 
 ### ARP table when Microsoft side has problems
 
-* If there are issues on the Microsoft side, the ARP table for a peering doesn't appear.
+* If there are problems on the Microsoft side, the ARP table for a peering doesn't appear.
 * Open a support ticket with [Microsoft support](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade). Specify that you have an issue with layer 2 connectivity.
 
-## Next Steps
+## Next steps
 
 * Validate Layer 3 configurations for your ExpressRoute circuit.
-  * Get route summary to determine the state of BGP sessions.
-  * Get route table to determine which prefixes are advertised across ExpressRoute.
-* Validate data transfer by reviewing bytes in/out.
+  * Get the route summary to check the state of BGP sessions.
+  * Get the route table to see which prefixes are advertised across ExpressRoute.
+* Validate data transfer by reviewing bytes in and out.
 * Open a support ticket with [Microsoft support](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade) if you're still experiencing issues.
