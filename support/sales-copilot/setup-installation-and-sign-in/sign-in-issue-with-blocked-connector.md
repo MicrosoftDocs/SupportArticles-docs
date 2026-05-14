@@ -1,10 +1,9 @@
 ---
 title: Can't sign in to Salesforce due to blocked Salesforce connector
 description: Resolves an error message that occurs in Sales agent when you can't sign in to Salesforce due to a blocked Salesforce connector.
-ms.date: 05/12/2026
-author: sbmjais
-ms.author: shjais
+ms.date: 05/14/2026
 ms.custom: sap:Setup, Installation and Sign-in\CRM Sign-In & Sign Out
+ms.reviewer: shjais, v-shaywood
 ---
 # Can't sign in to Salesforce due to blocked Salesforce connector
 

@@ -1,11 +1,9 @@
 ---
 title: Salesforce CRM users can't see data in Sales agent
 description: Resolves an issue where users are unable to see data in Sales agent.
-ms.date: 05/12/2026
-author: sbmjais
-ms.author: shjais
-manager: shujoshi
+ms.date: 05/14/2026
 ms.custom: sap:CRM Permissions and Configurations\CRM Settings
+ms.reviewer: shjais, v-shaywood
 ---
 # Salesforce CRM users unable to see data in Sales agent
 

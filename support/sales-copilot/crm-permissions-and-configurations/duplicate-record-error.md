@@ -1,10 +1,9 @@
 ---
 title: Contact already exists error when creating a CRM record
 description: Resolves an error that occurs due to a duplicate detection rule in CRM when a user tries to create a record from Sales agent.
-ms.date: 05/12/2026
-author: sbmjais
-ms.author: shjais
+ms.date: 05/14/2026
 ms.custom: sap:CRM Permissions and Configurations\CRM Settings
+ms.reviewer: shjais, v-shaywood
 ---
 # Record creation error due to duplicate detection rules in CRM
 

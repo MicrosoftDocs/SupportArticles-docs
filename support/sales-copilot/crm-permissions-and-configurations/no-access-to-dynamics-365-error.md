@@ -1,11 +1,9 @@
 ---
 title: No access to Dynamics 365 error in Sales agent
 description: Resolves an issue where users can't access Dynamics 365 through the Sales agent in Outlook.
-ms.date: 05/12/2026
-author: sbmjais
-ms.author: shjais
-manager: shujoshi
+ms.date: 05/14/2026
 ms.custom: sap:CRM Permissions and Configurations\CRM Permissions
+ms.reviewer: shjais, v-shaywood
 ---
 # "No access to Dynamics 365" error in Sales agent
 

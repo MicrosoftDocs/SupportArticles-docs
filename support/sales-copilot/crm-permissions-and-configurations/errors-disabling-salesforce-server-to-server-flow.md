@@ -1,10 +1,8 @@
 ---
 title: Errors When Disabling Salesforce with Server-to-Server Flow
 description: Troubleshoot errors that might occur when disabling Salesforce with a server-to-server flow in Sales agent.
-ms.date: 05/12/2026
-author: sbmjais
-ms.author: shjais
-ms.reviewer: marrabi
+ms.date: 05/14/2026
+ms.reviewer: marrabi, shjais, v-shaywood
 ms.custom: sap:CRM Permissions and Configurations\CRM Settings
 ---
 # Errors that occur when disabling Salesforce with server-to-server flow

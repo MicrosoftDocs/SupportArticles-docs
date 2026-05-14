@@ -1,7 +1,7 @@
 ---
 title: Errors When Enabling Salesforce in Server-to-Server Flow
 description: Troubleshoot errors that occur when you try to enable Salesforce with a server-to-server flow in the Sales agent.
-ms.date: 05/12/2026
+ms.date: 05/14/2026
 ms.reviewer: marrabi, shjais, v-shaywood
 ms.custom: sap:CRM Permissions and Configurations\CRM Settings
 ---

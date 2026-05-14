@@ -1,10 +1,8 @@
 ---
 title: Errors When Accessing Salesforce with Server-to-Server Flow
 description: Troubleshoot and resolve errors that occur when accessing Salesforce with server-to-server flow or during setup in Sales agent.
-ms.date: 05/12/2026
-author: sbmjais
-ms.author: shjais
-ms.reviewer: marrabi
+ms.date: 05/14/2026
+ms.reviewer: marrabi, shjais, v-shaywood
 ms.custom: sap:CRM Permissions and Configurations\CRM Settings
 ---
 # Errors that occur when accessing Salesforce with server-to-server flow

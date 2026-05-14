@@ -1,11 +1,9 @@
 ---
 title: Can't update records because of missing record access in Salesforce CRM
 description: Resolves an error that occurs when users can't update CRM records in Sales agent because of missing record access in Salesforce CRM.
-ms.date: 05/12/2026
-author: sbmjais
-ms.author: shjais
-manager: shujoshi
+ms.date: 05/14/2026
 ms.custom: sap:CRM Permissions and Configurations\CRM Permissions
+ms.reviewer: shjais, v-shaywood
 ---
 # Can't update records because of missing record access in Salesforce CRM
 

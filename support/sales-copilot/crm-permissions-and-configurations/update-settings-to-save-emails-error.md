@@ -1,11 +1,9 @@
 ---
 title: Can't save email to CRM due to invalid mailbox settings
 description: Resolves an error that occurs in Sales agent due to invalid mailbox settings in Microsoft Dynamics 365.
-ms.date: 05/12/2026
-author: sbmjais
-ms.author: shjais
-manager: shujoshi
+ms.date: 05/14/2026
 ms.custom: sap:CRM Permissions and Configurations\CRM Settings
+ms.reviewer: shjais, v-shaywood
 ---
 # Can't save an email to CRM due to invalid mailbox settings
 

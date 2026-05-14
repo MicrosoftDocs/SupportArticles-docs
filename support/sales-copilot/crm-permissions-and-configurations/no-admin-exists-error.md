@@ -1,10 +1,9 @@
 ---
 title: You don't have permission for this when opening Sales agent
 description: Resolves the You don't have permission for this error that occurs in Sales agent when a user tries to open the app.
-ms.date: 05/12/2026
-author: sbmjais
-ms.author: shjais
+ms.date: 05/14/2026
 ms.custom: sap:CRM Permissions and Configurations\CRM Settings
+ms.reviewer: shjais, v-shaywood
 ---
 
 # "You don't have permission for this" error when opening Sales agent

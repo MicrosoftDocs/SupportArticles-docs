@@ -1,15 +1,14 @@
 ---
 title: Sales agent team creation error ContainsBlockedWord
 description: Resolves an error that occurs when creating a team for an account or opportunity in Sales agent due to naming policy restrictions.
-ms.date: 05/12/2026
-author: sbmjais
-ms.author: shjais
+ms.date: 05/14/2026
 ms.custom:
   - sap:Teams Collaboration Spaces\Collaboration Space Creation and access from Outlook Side-Panel
   - ai-gen-docs-bap
   - ai-gen-title
   - ai-seo-date:06/03/2024
   - ai-gen-desc
+ms.reviewer: shjais, v-shaywood
 ---
 # Can't create a team for an account or opportunity in Sales agent
 

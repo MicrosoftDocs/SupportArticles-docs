@@ -1,10 +1,9 @@
 ---
 title: Opportunity summary not displayed in deal rooms
 description: Resolves an issue where the opportunity summary isn't displayed in deal rooms.
-ms.date: 05/12/2026
-author: sbmjais
-ms.author: shjais
+ms.date: 05/14/2026
 ms.custom: sap:Teams Collaboration Spaces\Deal room template for CRM opportunities
+ms.reviewer: shjais, v-shaywood
 ---
 # Opportunity summary isn't displayed in deal rooms
 

@@ -1,10 +1,9 @@
 ---
 title: Align missing fields error in Sales agent
 description: Resolves an error that occurs due to field mismatching between Microsoft Dynamics 365 and Sales agent.
-ms.date: 05/12/2026
-author: sbmjais
-ms.author: shjais
+ms.date: 05/14/2026
 ms.custom: sap:CRM Permissions and Configurations\CRM Settings
+ms.reviewer: shjais, v-shaywood
 ---
 # "Align missing fields" error in Sales agent
 

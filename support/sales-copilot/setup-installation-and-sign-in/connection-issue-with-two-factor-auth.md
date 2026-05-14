@@ -1,11 +1,9 @@
 ---
 title: Sales agent doesn't connect to Dynamics 365 with multifactor authentication enabled
 description: Resolves an issue where the Sales agent for Microsoft Teams doesn't connect to Dynamics 365 when multifactor authentication is enabled.
-ms.date: 05/12/2026
-author: sbmjais
-ms.author: shjais
-manager: shujoshi
+ms.date: 05/14/2026
 ms.custom: sap:Setup, Installation and Sign-in\Sales Copilot Teams App Installation
+ms.reviewer: shjais, v-shaywood
 ---
 # Sales agent doesn't connect to Dynamics 365 with multifactor authentication enabled
 

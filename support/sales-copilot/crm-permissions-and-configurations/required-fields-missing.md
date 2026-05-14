@@ -1,10 +1,9 @@
 ---
 title: Required fields are missing error in Sales agent
 description: Resolves the Required fields are missing error that occurs when creating a contact or record in the Sales agent in Outlook.
-ms.date: 05/12/2026
-author: sbmjais
-ms.author: shjais
+ms.date: 05/14/2026
 ms.custom: sap:CRM Permissions and Configurations\CRM Settings
+ms.reviewer: shjais, v-shaywood
 ---
 # "Required fields are missing" error when creating a contact or record from Sales agent in Outlook
 

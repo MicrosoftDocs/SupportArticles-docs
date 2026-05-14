@@ -1,11 +1,9 @@
 ---
 title: Add-in update error in Sales agent for Outlook
 description: Resolves an error message that repeatedly prompts users to update Sales agent for Outlook.
-ms.date: 05/12/2026
-author: sbmjais
-ms.author: shjais
-manager: shujoshi
+ms.date: 05/14/2026
 ms.custom: sap:Setup, Installation and Sign-in\Sales Copilot Outlook Add-In Installation
+ms.reviewer: shjais, v-shaywood
 ---
 # Add-in update error in Sales agent for Microsoft Outlook
 

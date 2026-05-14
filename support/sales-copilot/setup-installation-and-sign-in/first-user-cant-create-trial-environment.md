@@ -1,11 +1,9 @@
 ---
 title: First Salesforce CRM user can't access Sales agent
 description: Resolves an error message that occurs in Sales agent related to signing in to Salesforce.
-ms.date: 05/12/2026
-author: sbmjais
-ms.author: shjais
-manager: shujoshi
+ms.date: 05/14/2026
 ms.custom: sap:Setup, Installation and Sign-in\CRM Sign-In & Sign Out
+ms.reviewer: shjais, v-shaywood
 ---
 # First Salesforce CRM user can't access Sales agent
 

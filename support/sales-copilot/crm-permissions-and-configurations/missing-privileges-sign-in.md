@@ -1,11 +1,9 @@
 ---
 title: Missing privileges in Dynamics 365
 description: Resolves the missing privileges error that occurs when signing in to Sales agent.
-ms.date: 05/12/2026
-author: sbmjais
-ms.author: shjais
-manager: shujoshi
+ms.date: 05/14/2026
 ms.custom: sap:CRM Permissions and Configurations\CRM Permissions
+ms.reviewer: shjais, v-shaywood
 ---
 # Missing privileges in Dynamics 365 when signing in to Sales agent
 

@@ -1,11 +1,9 @@
 ---
 title: Sign-in issue when opening the Sales pane in Outlook
 description: Resolves an error message that occurs in Sales agent when users have issues opening the Sales pane in Outlook.
-ms.date: 05/12/2026
-author: sbmjais
-ms.author: shjais
-manager: shujoshi
+ms.date: 05/14/2026
 ms.custom: sap:Outlook side panel
+ms.reviewer: shjais, v-shaywood
 ---
 # Sign-in issue when opening the Sales pane in Outlook
 

@@ -1,11 +1,9 @@
 ---
 title: Fix mailbox errors in Dynamics 365
 description: Resolves an error that might occur when you try to save an email or a meeting to Dynamics 365 using the Sales agent in Outlook.
-ms.date: 05/12/2026
-author: sbmjais
-ms.author: shjais
-manager: shujoshi
+ms.date: 05/14/2026
 ms.custom: sap:CRM Permissions and Configurations\CRM Settings
+ms.reviewer: shjais, v-shaywood
 ---
 # "Fix mailbox errors in Dynamics 365" error occurs when saving an email or a meeting
 

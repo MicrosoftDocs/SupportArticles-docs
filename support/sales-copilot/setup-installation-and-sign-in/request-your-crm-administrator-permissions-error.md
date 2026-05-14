@@ -1,11 +1,9 @@
 ---
 title: Error after connecting and signing in to Salesforce CRM
 description: Resolves an error message that occurs after connecting and signing in to Salesforce CRM in Sales agent.
-ms.date: 05/12/2026
-author: sbmjais
-ms.author: shjais
-manager: shujoshi
+ms.date: 05/14/2026
 ms.custom: sap:Setup, Installation and Sign-in\CRM Sign-In & Sign Out
+ms.reviewer: shjais, v-shaywood
 ---
 # "Request your CRM administrator permissions to access Salesforce using APIs" error
 
