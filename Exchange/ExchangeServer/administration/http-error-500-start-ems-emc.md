@@ -21,6 +21,7 @@ appliesto:
   - Exchange Server 2016
 ms.date: 04/26/2026
 ---
+
 # HTTP server error status (500) when you try to start Exchange Management Shell (EMS) or Exchange Management Console (EMC)
 
 _Original KB number:_ &nbsp; 2027063

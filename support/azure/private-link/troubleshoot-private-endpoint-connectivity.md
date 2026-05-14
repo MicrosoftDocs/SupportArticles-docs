@@ -7,7 +7,8 @@ ms.author: jarrettr
 manager: dcscontentpm
 ms.topic: troubleshooting
 ms.date: 04/06/2026
-ms.custom: sfi-image-nochange
+ms.custom: sap:Private Endpoints
+
 # Customer intent: As a network administrator, I want to troubleshoot Azure Private Endpoint connectivity issues, so that I can ensure secure and reliable access to Azure services from my virtual network.
 ---
 

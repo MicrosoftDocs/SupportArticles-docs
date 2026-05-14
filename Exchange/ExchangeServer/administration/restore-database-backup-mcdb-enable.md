@@ -14,9 +14,8 @@ ms.custom:
 ms.reviewer: jeffrem, robwhal, v-six
 appliesto: 
   - Exchange Server 2019
-search.appverid: 
-  - MET150
-ms.date: 01/24/2024
+search.appverid: MET150
+ms.date: 05/12/2026
 ---
 
 # Can't restore a database from a backup if MCDB is enabled in Exchange Server 2019

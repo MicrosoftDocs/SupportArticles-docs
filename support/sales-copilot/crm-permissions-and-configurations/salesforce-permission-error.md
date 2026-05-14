@@ -1,29 +1,28 @@
 ---
-title: Salesforce CRM users can't view, edit, or save data in Sales app
-description: Resolves an issue where users are unable to view, edit, or save data in Sales app.
-ms.date: 11/20/2025
-author: sbmjais
-ms.author: shjais
+title: Salesforce CRM users can't view, edit, or save data in Sales agent
+description: Resolves an issue where users are unable to view, edit, or save data in Sales agent.
+ms.date: 05/14/2026
 ms.custom: sap:CRM Permissions and Configurations\CRM Settings
+ms.reviewer: shjais, v-shaywood
 ---
-# Salesforce CRM users can't view, edit, or save data in Sales app
+# Salesforce CRM users can't view, edit, or save data in Sales agent
 
-This article helps you resolve an issue where users can't view, edit, or save data in Sales app.
+This article helps you resolve an issue where users can't view, edit, or save data in Sales agent.
 
 ## Who is affected?
 
 | Requirement type |Description  |
 |---------|---------|
-|**Client app**     |  Sales app in Outlook        |
+|**Client app**     |  Sales agent in Outlook        |
 |**Platform**     | Web and desktop clients         |
 |**OS**     | Windows and Mac         |
 |**Deployment**     | User managed and admin managed       |
 |**CRM**     | Salesforce      |
-|**Users**     | Users who don't have permission to view fields added in a Sales app form can't save, edit, or view the form  |
+|**Users**     | Users who don't have permission to view fields added in a Sales agent form can't save, edit, or view the form  |
 
 ## Symptoms
 
-When a user opens Sales app in Outlook, the following error message is displayed:
+When a user opens Sales agent in Outlook, the following error message is displayed:
 
 > Something went wrong.
 
@@ -33,9 +32,9 @@ When you select **Show details**, you see "SFTypeNotSupported" or "SFInvalidFiel
 
 ## Cause
 
-The user has no permission to view, create, or edit objects in Salesforce CRM. As a result, Sales app can't reference that object as expected in the configuration.
+The user has no permission to view, create, or edit objects in Salesforce CRM. As a result, Sales agent can't reference that object as expected in the configuration.
 
-Objects must have at least read permissions to be displayed in Sales app. For example, if a user doesn't have read permissions for the Contact entity, the contacts won't be displayed in Sales app.
+Objects must have at least read permissions to be displayed in Sales agent. For example, if a user doesn't have read permissions for the Contact entity, the contacts won't be displayed in Sales agent.
 
 ## Resolution
 
@@ -53,10 +52,10 @@ To resolve this issue, update the user profile permissions in Salesforce.
     > [!NOTE]
     >
     > - Updating permissions in a profile can affect other users who are assigned to the same profile. 
-    > - Users must have permission to access all the objects that are added to Sales app from the admin settings in Microsoft Teams.
+    > - Users must have permission to access all the objects that are added to Sales agent from the admin settings in Microsoft Teams.
 
 ## More information
 
-If your issue is still unresolved, go to the [Sales in Microsoft 365 Copilot - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
+If your issue is still unresolved, go to the [Sales agent - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]

@@ -17,7 +17,7 @@ appliesto:
   - Exchange Server 2016
   - Exchange Server 2013
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 05/12/2026
 ---
 
 # Export-ModernPublicFolderStatistics.ps1 script fails and returns a "ToBytes" error
