@@ -4,7 +4,7 @@ ms.custom: sap:Linked Server and distributed queries, evergreen
 ms.reviewer: randolphwest, hugoqueiroz, jamesferebee, aartigoyle, v-shaywood
 ---
 
-Linked server queries that use the `MSDASQL` (OLE DB Provider for ODBC Drivers) provider and specify a provider string (`@provstr`) might fail and return the following error message:
+Linked server queries that use the `MSDASQL` (OLE DB Provider for ODBC Drivers) provider and specify a provider string (`@provstr`) fail and return the following error message:
 
 > Msg 7416, Level 16  
 > Access to the remote server is denied because no login-mapping exists.
