@@ -1,20 +1,19 @@
 ---
 title: Access needed error when signing in to Dynamics 365 
-description: Resolves the Access needed error in Sales app when a user is either disabled or not a member of any business unit in Microsoft Dynamics 365.
-ms.date: 11/20/2025
-author: sbmjais
-ms.author: shjais
+description: Resolves the Access needed error in Sales agent when a user is either disabled or not a member of any business unit in Microsoft Dynamics 365.
+ms.date: 05/14/2026
 ms.custom: sap:Setup, Installation and Sign-in\CRM Sign-In & Sign Out
+ms.reviewer: shjais, v-shaywood
 ---
 # "Access needed" error when signing in to Dynamics 365 
 
-This article helps you troubleshoot and resolve the "Access needed" error in Sales app when a user is either disabled or not a member of any business unit in Microsoft Dynamics 365.
+This article helps you troubleshoot and resolve the "Access needed" error in Sales agent when a user is either disabled or not a member of any business unit in Microsoft Dynamics 365.
 
 ## Who is affected?
 
 | Requirement type |Description  |
 |---------|---------|
-|**Client app**     |  Sales app in Outlook        |
+|**Client app**     |  Sales agent in Outlook        |
 |**Platform**     | Web and desktop clients         |
 |**OS**     | Windows and Mac         |
 |**Deployment**     | User managed and admin managed       |
@@ -23,7 +22,7 @@ This article helps you troubleshoot and resolve the "Access needed" error in Sal
 
 ## Symptoms
 
-When a Dynamics 365 user tries to sign in to Sales app, the following error message is displayed:
+When a Dynamics 365 user tries to sign in to Sales agent, the following error message is displayed:
 
 > Access needed
 
@@ -57,4 +56,4 @@ The **Access needed** error message is displayed because of one of the following
 
 ## More information
 
-If your issue is still unresolved, go to the [Sales in Microsoft 365 Copilot - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
+If your issue is still unresolved, go to the [Sales agent - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.

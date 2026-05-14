@@ -1,20 +1,19 @@
 ---
 title: Can't sign in to Salesforce due to blocked Salesforce connector
-description: Resolves an error message that occurs in Sales app when you can't sign in to Salesforce due to a blocked Salesforce connector.
-ms.date: 11/20/2025
-author: sbmjais
-ms.author: shjais
+description: Resolves an error message that occurs in Sales agent when you can't sign in to Salesforce due to a blocked Salesforce connector.
+ms.date: 05/14/2026
 ms.custom: sap:Setup, Installation and Sign-in\CRM Sign-In & Sign Out
+ms.reviewer: shjais, v-shaywood
 ---
 # Can't sign in to Salesforce due to blocked Salesforce connector
 
-This article helps you troubleshoot and resolve an error that occurs in Sales app when you can't sign in to Salesforce due to a blocked Salesforce connector.
+This article helps you troubleshoot and resolve an error that occurs in Sales agent when you can't sign in to Salesforce due to a blocked Salesforce connector.
 
 ## Who is affected?
 
 | Requirement type |Description  |
 |---------|---------|
-|**Client app**     |  Sales app in Outlook        |
+|**Client app**     |  Sales agent in Outlook        |
 |**Platform**     | Web and desktop clients         |
 |**OS**     | Windows and Mac         |
 |**Deployment**     | User managed and admin managed       |
@@ -23,7 +22,7 @@ This article helps you troubleshoot and resolve an error that occurs in Sales ap
 
 ## Symptoms
 
-When you try to sign in to Salesforce from Sales app, the following error message is displayed with the error code `ConnectionApiPolicyViolation`:
+When you try to sign in to Salesforce from Sales agent, the following error message is displayed with the error code `ConnectionApiPolicyViolation`:
 
 > Something went wrong
 
@@ -49,6 +48,6 @@ For more information, see [Manage data loss prevention (DLP) policies](/power-pl
 
 ## More information
 
-If your issue is still unresolved, go to the [Sales in Microsoft 365 Copilot - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
+If your issue is still unresolved, go to the [Sales agent - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
