@@ -9,8 +9,6 @@ ms.custom: sap:Data Ingestion\Connect to a Power Query data source
 ---
 # "Data source credentials are missing or invalid" error
 
-[!INCLUDE [consolidated-sku](../../includes/consolidated-sku.md)]
-
 This article helps you resolve the "Data source credentials are missing or invalid" error that might occur when you use a [Power Query connector](/power-query/connectors/) in Microsoft Dynamics 365 Customer Insights - Data.
 
 ## Symptoms

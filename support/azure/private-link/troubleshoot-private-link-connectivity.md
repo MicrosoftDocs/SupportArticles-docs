@@ -7,6 +7,8 @@ ms.author: jarrettr
 manager: dcscontentpm
 ms.topic: troubleshooting
 ms.date: 04/06/2026
+ms.custom: sap:Private Link Service
+
 # Customer intent: "As a network administrator, I want to diagnose Azure Private Link connectivity issues, so that I can ensure secure, private access to services and troubleshoot any problems effectively."
 ---
 

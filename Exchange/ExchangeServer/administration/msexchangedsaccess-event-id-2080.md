@@ -18,8 +18,9 @@ appliesto:
   - Exchange Server 2019
   - Exchange Server 2016
 search.appverid: MET150
-ms.date: 04/24/2026
+ms.date: 05/12/2026
 ---
+
 # Event ID 2080 from MSExchangeDSAccess
 
 _Original KB number:_ &nbsp; 316300

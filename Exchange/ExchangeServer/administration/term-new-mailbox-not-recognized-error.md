@@ -15,8 +15,9 @@ appliesto:
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 05/12/2026
 ---
+
 # Error when you create a mailbox in Exchange Server 2010: The term New-Mailbox is not recognized
 
 _Original KB number:_ &nbsp;2795751

@@ -9,8 +9,6 @@ ms.custom: sap:Export destinations or Outbound connectors\Microsoft connectors
 ---
 # "the following name already exists" error occurs during exports
 
-[!INCLUDE [consolidated-sku](../../includes/consolidated-sku.md)]
-
 If an export tries to create a new segment in the export destination, but there is already a segment with that name, then review all exports to that destination for segments that are exported several times.
 
 ## Prerequisites

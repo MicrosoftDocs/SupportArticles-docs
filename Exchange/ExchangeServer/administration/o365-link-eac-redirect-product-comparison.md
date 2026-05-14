@@ -14,8 +14,8 @@ search.appverid:
   - MET150
 appliesto: 
   - Exchange Online
-ms.date: 01/24/2024
 ms.reviewer: v-six
+ms.date: 05/12/2026
 ---
 
 # Microsoft 365 link in on-premises EAC goes to product comparison, not Exchange admin center
