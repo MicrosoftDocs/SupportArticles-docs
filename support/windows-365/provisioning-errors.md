@@ -148,6 +148,12 @@ While provisioning is in progress, someone deleted the associated user.
 
 **Suggested solution:** Make sure that the assigned user account is valid.
 
+## Windows Autopatch enrollment error
+
+Windows 365 provisioned the Cloud PC but didn't enroll the Cloud PC in Windows Autopatch because the Windows Autopatch group was deleted before the Cloud PC provisioned.
+
+**Suggested solution:** Add the Windows Autopatch group to the provisioning policy, then reprovision the Cloud PC.
+
 ## Windows reset error
 
 Windows 365 provisioned the Cloud PC but didn't disable the built-in Windows reset option. As a result, the user can manually trigger the built-in Windows reset option under **Settings**. The Cloud PC will never successfully complete the reset, which makes the Cloud PC unusable.

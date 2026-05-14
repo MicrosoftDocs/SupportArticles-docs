@@ -57,7 +57,7 @@ items:
       tocHref: /troubleshoot/sql/
       topicHref: /troubleshoot/sql/welcome-sql-server
 
-    - name: Sales in Microsoft 365 Copilot
+    - name: Sales agent
       tocHref: /troubleshoot/sales-copilot/
       topicHref: /troubleshoot/sales-copilot/welcome-sales-copilot
 
@@ -226,6 +226,9 @@ items:
       - name: Azure Load Balancer
         tocHref: /troubleshoot/azure/load-balancer
         topicHref: /troubleshoot/azure/load-balancer/welcome-azure-load-balancer
+      - name: Azure Firewall
+        tocHref: /troubleshoot/azure/firewall
+        topicHref: /troubleshoot/azure/firewall/welcome-azure-firewall  
 
     - name: Entra
       tocHref: /troubleshoot/entra/
