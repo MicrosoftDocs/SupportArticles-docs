@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot MSDASQL Linked Server Fails With Error 7416
-description: MSDASQL linked server queries failing with error 7416 after a SQL Server CU or GDR update? Apply these workarounds to restore access immediately.
+title: Troubleshoot MSDASQL linked server fails with error 7416
+description: MSDASQL linked server queries fail and generate error 7416 after a SQL Server CU or GDR update. Apply these workarounds to restore access.
 ms.date: 05/14/2026
 ms.reviewer: jopilov, randolphwest, hugoqueiroz, jamesferebee, aartigoyle, v-shaywood
 ms.custom: sap:Linked Server and distributed queries
@@ -10,9 +10,9 @@ ms.custom: sap:Linked Server and distributed queries
 
 ## Summary
 
-This article describes a known issue in which linked server queries that use the `MSDASQL` (OLE DB Provider for ODBC Drivers) provider and specify a provider string fail with error 7416. It also provides workarounds that restore linked server connectivity without rolling back the update.
+This article describes a known issue in which linked server queries that use the `MSDASQL` (OLE DB Provider for ODBC Drivers) provider and specify a provider string fail and generate error 7416. The article also provides workarounds that restore linked server connectivity without rolling back the update.
 
-This issue applies to the following SQL Server cumulative updates and security updates:
+This issue applies to the following SQL Server cumulative updates and security updates.
 
 | Version | Update | KB | Released |
 | --- | --- | --- | --- |
@@ -44,25 +44,25 @@ This issue applies to the following SQL Server cumulative updates and security u
 
 ## Symptoms
 
-Linked server queries that use the `MSDASQL` provider and specify a provider string (`@provstr`) might fail and return the following error when a user that isn't a member of the **sysadmin** fixed server role runs the query:
+Linked server queries that use the `MSDASQL` provider and specify a provider string (`@provstr`) fail and return the following error message when a user that isn't a member of the **sysadmin** fixed server role runs the query:
 
 > Msg 7416, Level 16  
 > Access to the remote server is denied because no login-mapping exists.
 
-The failure can occur even when the linked server and login mappings are configured correctly.
+The failure can occur even if the linked server and login mappings are configured correctly.
 
 ## Cause
 
-A stricter connection validation check in the Database Engine can reject connections for certain linked server configurations that use the `MSDASQL` provider, even when earlier builds allowed those connections.
+A stricter connection validation check in the Database Engine can reject connections for certain linked server configurations that use the `MSDASQL` provider, even if earlier builds allowed those connections.
 
-## Workarounds
+## Workaround
 
 To work around this issue without rolling back the update, use one of the following methods:
 
 - If your configuration doesn't require the provider string (`@provstr`), remove it from the linked server definition.
 - Add a `User ID` entry to the provider string (`@provstr`). For example, set `User ID=<value>`. The provider string must still include `UID`.
 
-Granting the affected user **sysadmin** permissions also prevents the failure, but isn't recommended.
+You can also prevent the failure by granting **sysadmin** permissions to the affected user. However, we don't recommend that you use this method.
 
 ## Related content
 
