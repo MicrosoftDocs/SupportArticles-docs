@@ -20,6 +20,7 @@ appliesto:
 search.appverid: MET150
 ms.date: 04/03/2026
 ---
+
 # Can't sign in to Outlook on the web or the EAC if the Exchange Server OAuth certificate is expired
 
 _Original KB number:_ &nbsp; 2617816

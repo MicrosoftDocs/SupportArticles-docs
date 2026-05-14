@@ -14,8 +14,9 @@ ms.reviewer: v-six
 appliesto: 
   - Exchange Server
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 05/12/2026
 ---
+
 # Error when you try to perform Exchange Server management tasks: Insufficient access rights to perform the operation  
 
 _Original KB number:_ &nbsp;3096158

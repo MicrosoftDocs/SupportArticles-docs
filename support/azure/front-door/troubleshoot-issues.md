@@ -7,9 +7,7 @@ ms.author: jarrettr
 ms.service: azure-frontdoor
 ms.topic: troubleshooting
 ms.date: 09/24/2025
-ms.custom: 
-  - sfi-image-nochange
-  - sap:Connectivity
+ms.custom: sap:Connectivity
 #customer intent: As an Azure Front Door operator, I want to quickly diagnose and resolve common routing and timeout issues so that my applications remain available.
 ---
 

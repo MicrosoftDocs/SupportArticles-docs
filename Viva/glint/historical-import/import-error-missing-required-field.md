@@ -2,14 +2,14 @@
 title: Missing required field error during historical imports
 description: Fix the missing required field error when you import historical data in Viva Glint.
 manager: dcscontentpm
-ms.reviewer: aweixelman
-ms.date: 11/19/2023
+ms.reviewer: aweixelman, amywheater
+ms.date: 05/08/2026
 audience: ITPro
 ms.topic: troubleshooting
 search.appverid: MET150
 ms.custom: 
   - CSSTroubleshoot
-  - CI184015
+  - CI 184015
 ---
 
 # "Missing required field" error during historical imports

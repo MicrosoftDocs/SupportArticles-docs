@@ -3,7 +3,6 @@ title: Error (A subscription wasn't found for this user) when migrating a public
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
-ms.date: 01/24/2024
 audience: Admin
 ms.topic: troubleshooting
 search.appverid: 
@@ -20,6 +19,7 @@ ms.custom:
   - CSSTroubleshoot
 ms.reviewer: batre, v-six
 description: Describes the resolution to the Exchange error A subscription wasn't found for this user when trying to migrate a public batch folder.
+ms.date: 05/12/2026
 ---
 
 # Error (A subscription wasn't found for this user) when migrating a public folder batch
