@@ -9,7 +9,7 @@ ms.custom: sap:Desktop flows\Working with Power Automate for desktop
 
 ## Summary
 
-This article describes a security update for the [sensitive variables](/power-automate/desktop-flows/manage-variables#sensitive-variables) feature in Microsoft Power Automate for desktop. A potential vulnerability that can expose sensitive values in flow execution logs affects Power Automate for desktop versions *2.62* through *2.66*.
+This article describes a security update for the [sensitive variables](/power-automate/desktop-flows/manage-variables#sensitive-variables) feature in Microsoft Power Automate for desktop. A potential vulnerability ([CVE-2026-40374](https://msrc.microsoft.com/update-guide/advisory/CVE-2026-40374)) that can expose sensitive values in flow execution logs affects Power Automate for desktop versions *2.62* through *2.66*.
 
 > [!IMPORTANT]
 > The issue affects only flows that use *global sensitive variables* in *local subflows*.
@@ -37,3 +37,4 @@ If you need an update for an earlier release, get one of the following downloads
 
 - [Variable data types in Power Automate for desktop](/power-automate/desktop-flows/variable-data-types)
 - [Set up subflows in the Power Automate for desktop flow designer](/power-automate/desktop-flows/designer-workspace)
+- [CVE-2026-40374](https://msrc.microsoft.com/update-guide/advisory/CVE-2026-40374)
