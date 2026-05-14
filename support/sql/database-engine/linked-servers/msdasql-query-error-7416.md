@@ -60,7 +60,7 @@ A stricter connection validation check in the Database Engine can reject connect
 To work around this issue without rolling back the update, use one of the following methods:
 
 - If your configuration doesn't require the provider string (`@provstr`), remove it from the linked server definition.
-- Add a `User ID` entry to the provider string (`@provstr`). For example, set `User ID=<value>`. The provider string must still include `UID`.
+- Add a `User ID` entry to the provider string (`@provstr`). For example, set `User ID=<value>`. The provider string must still include `UID` as well.
 
 You can also prevent the failure by granting **sysadmin** permissions to the affected user. However, we don't recommend that you use this method.
 
