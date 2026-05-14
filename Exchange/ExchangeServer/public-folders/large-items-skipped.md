@@ -20,8 +20,9 @@ appliesto:
   - Exchange Server 2016
   - Exchange Online
 search.appverid: MET150
-ms.date: 04/26/2026
+ms.date: 05/12/2026
 ---
+
 # Large items are skipped during public folder migration
 
 ## Summary

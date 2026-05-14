@@ -9,8 +9,6 @@ ms.custom: sap:Data Ingestion\Connect to data in Azure Data Lake Storage
 ---
 # Troubleshoot ingestion errors or corrupt data
 
-[!INCLUDE [consolidated-sku](../../includes/consolidated-sku.md)]
-
 This article introduces common reasons for data ingestion errors or corrupt data when using Azure Data Lake Storage or Power Query in Microsoft Dynamics 365 Customer Insights - Data.
 
 ## Ingestion errors or corrupt data with Azure Data Lake Storage

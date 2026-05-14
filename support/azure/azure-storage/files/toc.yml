@@ -26,6 +26,8 @@
   items:
   - name: Troubleshoot Azure Files identity-based authentication (SMB)
     href: security/files-troubleshoot-smb-authentication.md
+  - name: Troubleshoot AES-256 encryption upgrade
+    href: security/files-troubleshoot-encryption.md
   - name: Troubleshoot general SMB issues on Linux
     href: security/files-troubleshoot-linux-smb.md
   - name: Troubleshoot general NFS issues on Linux

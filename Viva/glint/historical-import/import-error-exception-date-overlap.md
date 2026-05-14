@@ -2,8 +2,8 @@
 title: Exception date overlap error during historical imports
 description: Fix the exception date overlap error that occurs when Viva Glint processes a historical import.
 manager: dcscontentpm
-ms.reviewer: aweixelman
-ms.date: 11/21/2023
+ms.reviewer: aweixelman, amywheater
+ms.date: 05/08/2026
 audience: ITPro
 ms.topic: troubleshooting
 search.appverid: MET150

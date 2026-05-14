@@ -18,8 +18,9 @@ appliesto:
   - Exchange Server 2013 Standard Edition
   - Exchange Server 2016 Enterprise Edition
   - Exchange Server 2016 Standard Edition
-ms.date: 01/24/2024
+ms.date: 05/12/2026
 ---
+
 # Newly created move request remains in queued status forever in Exchange Server 2013 or Exchange Server 2016
 
 _Original KB number:_ &nbsp; 3016284

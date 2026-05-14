@@ -15,7 +15,7 @@ ms.reviewer: shadans, sathyana, meerak, v-shorestris
 appliesto:
   - Microsoft Purview
 search.appverid: MET150
-ms.date: 04/05/2026
+ms.date: 05/08/2026
 ---
 
 # Self-help diagnostics for Microsoft Purview
@@ -54,10 +54,25 @@ You can find these diagnostics on the following portal pages:
 The following table lists the available diagnostics on **Solutions** pages. You can access the diagnostics by selecting the associated link in the fourth column. When you're prompted, sign in to the Microsoft Purview portal.
 
 > [!NOTE]
-> To run these diagnostics, the minimum roles you need are:
 > 
+> To run the Information Protection diagnostics, you need to have either of the following roles:
 > - Compliance Administrator
 > - Security Administrator
+>
+>  To run the DLP diagnostics, you need to have any of the following roles:
+>
+> - Compliance Administrator
+> - Security Administrator
+> - Organization Configuration
+> - View-Only Configuration
+> - Security Reader
+> - DLP Compliance Management
+> - View-Only DLP Compliance Management
+> - Insider Risk Management Administrator
+> - Information Protection Administrator
+> - Information Protection Analyst
+> - Information Protection Investigator
+> - Data Security AI Administrator
 
 When you select a diagnostic on a Solutions page, the diagnostic runs the [Check-PurviewConfig](/powershell/module/exchangepowershell/check-purviewconfig) cmdlet to check your organization's configuration settings in Microsoft Purview. Then, the diagnostic calls the appropriate cmdlet that's listed in the following table to perform checks that are specific to your issue. 
 
