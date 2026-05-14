@@ -6,7 +6,7 @@ ms.author: jarrettr
 ms.service: azure-vpn-gateway
 ms.topic: how-to
 ms.date: 07/16/2024
-ms.custom: sap:Connectivity
+ms.custom: sap:Configuration and Setup
 
 # Customer intent: "As a user of the Azure VPN Client, I want to effectively report issues via the Feedback Hub, so that I can receive timely support and improve my experience with the software."
 ---

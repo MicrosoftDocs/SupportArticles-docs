@@ -15,8 +15,9 @@ search.appverid:
   - MET150
 appliesto: 
   - Exchange Server 2010
-ms.date: 01/24/2024
+ms.date: 05/12/2026
 ---
+
 # HTTP server error status (500) when you try to start Exchange Management Shell or Exchange Management Console
 
 _Original KB number:_ &nbsp; 2027063

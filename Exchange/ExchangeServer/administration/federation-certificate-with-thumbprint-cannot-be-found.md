@@ -21,6 +21,7 @@ appliesto:
   - Exchange Server 2016
 ms.date: 04/26/2026
 ---
+
 # Error when you make changes to federation trust: Federation certificate with the thumbprint cannot be found
 
 _Original KB number:_ &nbsp; 3215261

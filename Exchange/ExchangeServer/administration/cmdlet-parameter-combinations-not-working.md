@@ -17,8 +17,9 @@ appliesto:
   - Exchange Server 2013 Enterprise
   - Exchange Server 2013 Standard Edition
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 05/12/2026
 ---
+
 # Some PowerShell cmdlet or parameter combinations are unsuccessful in Exchange Server
 
 _Original KB number:_ &nbsp; 4295103
