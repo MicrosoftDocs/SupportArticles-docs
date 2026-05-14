@@ -8,7 +8,7 @@ ms.author: jarrettr
 manager: dcscontentpm
 ms.topic: troubleshooting
 ms.date: 04/06/2026
-ms.custom: sfi-image-nochange
+ms.custom: sap:Web Application Firewall (WAF)
 # Customer intent: "As a web application firewall administrator, I want to troubleshoot WAF rule violations and false positives, so that I can ensure legitimate traffic is allowed while maintaining robust security for my applications."
 ---
 

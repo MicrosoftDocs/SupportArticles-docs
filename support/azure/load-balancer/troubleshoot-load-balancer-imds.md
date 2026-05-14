@@ -9,6 +9,7 @@ ms.author: jarrettr
 manager: dcscontentpm
 ms.topic: troubleshooting
 ms.date: 04/06/2026
+ms.custom: sap:I don't think this belongs to LB
 # Customer intent: "As a cloud administrator, I want to understand common error codes from the Azure Instance Metadata Service when retrieving load balancer information, so that I can troubleshoot and resolve issues efficiently."
 ---
 

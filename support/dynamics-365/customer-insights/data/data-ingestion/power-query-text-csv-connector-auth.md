@@ -9,8 +9,6 @@ ms.custom: sap:Data Ingestion\Connect to a Power Query data source
 ---
 # Power Query Text/CSV connector authentication fails
 
-[!INCLUDE [consolidated-sku](../../includes/consolidated-sku.md)]
-
 This article resolves the error "The credentials provided for the source are invalid" that occurs during the authentication of the [Text/CSV](/power-query/connectors/text-csv) editor in Microsoft Dynamics 365 Customer Insights - Data.
 
 ## Symptoms

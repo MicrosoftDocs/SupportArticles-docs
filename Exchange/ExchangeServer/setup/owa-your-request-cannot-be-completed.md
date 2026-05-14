@@ -15,8 +15,9 @@ appliesto:
   - Exchange Server 2013 Standard Edition
   - Exchange Server 2013 Enterprise
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 05/12/2026
 ---
+
 # Error in Outlook Web App after an upgrade to Exchange Server 2013 CU 11 or later: Your request cannot be completed right now
 
 _Original KB number:_ &nbsp;3191636
