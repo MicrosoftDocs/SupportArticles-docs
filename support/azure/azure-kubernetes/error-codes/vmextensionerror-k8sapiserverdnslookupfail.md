@@ -25,9 +25,13 @@ This article explains how to identify and resolve the `VMExtensionError_K8SAPISe
 
 When you try to create, start, upgrade, or scale an AKS cluster, you receive an error message like the following:
 
-> Code="VMExtensionProvisioningError"
+> Agents are unable to resolve Kubernetes API server name. It's likely custom DNS server is not correctly configured, please see <https://aka.ms/aks/private-cluster#hub-and-spoke-with-custom-dns> for more information.
+>
+> Code: "VMExtensionProvisioningError"
+>
+> Message: CSE failed with 'VMExtensionError_K8SAPIServerDNSLookupFail'. Agents are unable to resolve Kubernetes API server name. It's likely custom DNS server is not correctly configured, please see https://aka.ms/aks/vmextensionerror_k8sapiserverdnslookupfail and https://aka.ms/aks/private-cluster#hub-and-spoke-with-custom-dns for more information.
 > 
-> Message="CSE failed with 'VMExtensionError_K8SAPIServerDNSLookupFail'. Agents are unable to resolve Kubernetes API server name. \<Diagnostic Details\>. For troubleshooting and more information about custom FNS for private AKS clusters, see https://aka.ms/aks/vmextensionerror_k8sapiserverdnslookupfail and https://aka.ms/aks/private-cluster#hub-and-spoke-with-custom-dns."
+> "In some logs, this may also appear as exit status=52 / ExitCode: 52"
 
 The diagnostic details can include:
 
