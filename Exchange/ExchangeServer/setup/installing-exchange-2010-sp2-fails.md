@@ -16,8 +16,9 @@ search.appverid:
 appliesto: 
   - Exchange Server 2010 Standard
   - Exchange Server 2010 Enterprise
-ms.date: 01/24/2024
+ms.date: 05/12/2026
 ---
+
 # Error message when you try to install Exchange Server 2010 SP2: AuthorizationManager check failed
 
 _Original KB number:_ &nbsp; 2668686

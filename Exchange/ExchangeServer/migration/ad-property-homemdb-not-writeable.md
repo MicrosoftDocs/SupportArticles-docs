@@ -16,8 +16,9 @@ search.appverid: MET150
 ms.reviewer: ninob, jarrettr, v-six
 author: cloud-writer
 ms.author: meerak
-ms.date: 01/24/2024
+ms.date: 05/12/2026
 ---
+
 # "Active Directory property ‎'homeMDB‎' isn't writeable on recipient" error when moving a mailbox to Microsoft 365
 
 ## Symptoms

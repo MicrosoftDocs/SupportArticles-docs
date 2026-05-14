@@ -9,7 +9,8 @@ manager: dcscontentpm
 ms.service: azure-nat-gateway
 ms.topic: troubleshooting
 ms.date: 04/06/2026
-#Customer intent: For customers to troubleshoot and resolve common outbound connectivity problems with your NAT gateway. This article also provides best practices on how to design applications to use outbound connections efficiently.
+ms.custom: sap:Connectivity
+
 # Customer intent: As a network engineer, I want to troubleshoot connectivity problems with the NAT gateway, so that I can ensure reliable outbound connections for my applications and improve overall network performance.
 ---
 

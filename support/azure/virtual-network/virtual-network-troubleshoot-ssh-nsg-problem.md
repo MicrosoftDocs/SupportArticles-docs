@@ -6,9 +6,7 @@ ms.author: allensu
 ms.service: azure-virtual-network
 ms.date: 03/17/2026
 ms.topic: troubleshooting
-ms.custom: 
-  - sap:Connectivity
-  - sap:Creating and troubleshooting Network Security Groups
+ms.custom: sap:Creating and troubleshooting Network Security Groups
 ---
 
 # Troubleshoot SSH connectivity blocked by network security group misconfiguration in Azure

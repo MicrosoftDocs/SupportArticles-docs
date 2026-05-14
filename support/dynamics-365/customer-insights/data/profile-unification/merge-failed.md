@@ -9,8 +9,6 @@ ms.custom: sap:Data Unification\Match
 ---
 # "Merge failed" error occurs on the "Unified data view" page in Dynamics 365 Customer Insights - Data
 
-[!INCLUDE [consolidated-sku](../../includes/consolidated-sku.md)]
-
 This article resolves an issue where data unification fails due to a merge error.
 
 ## Symptoms
