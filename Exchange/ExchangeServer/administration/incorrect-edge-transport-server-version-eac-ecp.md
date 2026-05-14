@@ -21,8 +21,9 @@ appliesto:
   - Exchange Server 2013 Enterprise
   - Exchange Server 2010 Standard
   - Exchange Server 2010 Enterprise
-ms.date: 01/24/2024
+ms.date: 05/12/2026
 ---
+
 # The Exchange Edge Transport server version is incorrect in EAC or ECP after an upgrade
 
 _Original KB number:_ &nbsp; 4019802

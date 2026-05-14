@@ -20,8 +20,9 @@ appliesto:
   - Exchange Server 2010 Enterprise
   - Outlook 2013
   - Outlook 2010
-ms.date: 01/24/2024
+ms.date: 05/12/2026
 ---
+
 # Error (too many recipients) when you update a meeting in a large Outlook distribution group
 
 _Original KB number:_ &nbsp; 3024804

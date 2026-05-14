@@ -1,7 +1,6 @@
 ---
 title: Event ID 17018 when Microsoft Exchange Transport service stops
 description: Fixes an issue in which the Microsoft Exchange Transport service stops on an Exchange-based server that has a high CPU core count and a high transport load.
-ms.date: 05/08/2026
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -19,6 +18,7 @@ appliesto:
 - Exchange Server SE
 - Exchange Server 2019
 search.appverid: MET150
+ms.date: 05/12/2026
 ---
 
 # Microsoft Exchange Transport service stops and returns Event ID 17018

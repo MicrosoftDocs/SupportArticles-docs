@@ -1,21 +1,19 @@
 ---
 title: Fix mailbox errors in Dynamics 365
-description: Resolves an error that might occur when you try to save an email or a meeting to Dynamics 365 using the Sales app in Outlook.
-ms.date: 11/20/2025
-author: sbmjais
-ms.author: shjais
-manager: shujoshi
+description: Resolves an error that might occur when you try to save an email or a meeting to Dynamics 365 using the Sales agent in Outlook.
+ms.date: 05/14/2026
 ms.custom: sap:CRM Permissions and Configurations\CRM Settings
+ms.reviewer: shjais, v-shaywood
 ---
 # "Fix mailbox errors in Dynamics 365" error occurs when saving an email or a meeting
 
-This article helps you troubleshoot and resolve the "Fix mailbox errors in Dynamics 365" error when you use Sales app in Outlook.
+This article helps you troubleshoot and resolve the "Fix mailbox errors in Dynamics 365" error when you use Sales agent in Outlook.
 
 ## Who is affected?
 
 | Requirement type |Description  |
 |---------|---------|
-|**Client app**     |  Sales app in Outlook        |
+|**Client app**     |  Sales agent in Outlook        |
 |**Platform**     | Web and desktop clients         |
 |**OS**     | Windows and Mac         |
 |**Deployment**     | User managed and admin managed       |
@@ -24,7 +22,7 @@ This article helps you troubleshoot and resolve the "Fix mailbox errors in Dynam
 
 ## Symptoms
 
-When you open Sales app in Outlook and try to save an email or a meeting to Microsoft Dynamics 365, you see the following error message:
+When you open Sales agent in Outlook and try to save an email or a meeting to Microsoft Dynamics 365, you see the following error message:
 
 > Fix mailbox errors in Dynamics 365
 
@@ -34,13 +32,13 @@ When you open Sales app in Outlook and try to save an email or a meeting to Micr
 
 This issue occurs because one or more sync errors occur in server-side synchronization.
 
-Sales app requires server-side synchronization to synchronize emails and meetings to Dynamics 365. When server-side synchronization encounters an error while attempting the synchronization, Sales app detects and displays this error message for you to take action and resolve the error.
+Sales agent requires server-side synchronization to synchronize emails and meetings to Dynamics 365. When server-side synchronization encounters an error while attempting the synchronization, Sales agent detects and displays this error message for you to take action and resolve the error.
 
 ## Resolution
 
 To resolve the error, you must locate the specific error as part of the mailbox alert wall, read the description, and take action. You can also delete the error to suppress it.
 
-1. Open the CRM instance you connected to Sales app.
+1. Open the CRM instance you connected to Sales agent.
 
     > [!NOTE]
     > - To get the CRM instance URL, go to the [Home tab](/microsoft-sales-copilot/personal-app#home-tab) in the Sales personal app in [Outlook](/microsoft-sales-copilot/personal-app#open-the-personal-app-in-outlook) or [Teams](/microsoft-sales-copilot/personal-app#open-the-personal-app-in-teams), and select the environment name in the upper-right corner.
@@ -65,8 +63,8 @@ To resolve the error, you must locate the specific error as part of the mailbox 
     > [!NOTE]
     > Deleting an error resets the mailbox state. The error might reappear during the next synchronization if the underlying issue isn't resolved.
 
-5. Resolve and clear errors to restore the save to CRM functionality in Sales app.
+5. Resolve and clear errors to restore the save to CRM functionality in Sales agent.
 
 ## More information
 
-If your issue is still unresolved, go to the [Sales in Microsoft 365 Copilot - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
+If your issue is still unresolved, go to the [Sales agent - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
