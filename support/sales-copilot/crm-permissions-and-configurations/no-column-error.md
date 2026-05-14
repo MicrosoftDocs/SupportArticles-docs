@@ -1,30 +1,28 @@
 ---
-title: Salesforce CRM users can't see data in Sales app
-description: Resolves an issue where users are unable to see data in Sales app.
-ms.date: 11/20/2025
-author: sbmjais
-ms.author: shjais
-manager: shujoshi
+title: Salesforce CRM users can't see data in Sales agent
+description: Resolves an issue where users are unable to see data in Sales agent.
+ms.date: 05/14/2026
 ms.custom: sap:CRM Permissions and Configurations\CRM Settings
+ms.reviewer: shjais, v-shaywood
 ---
-# Salesforce CRM users unable to see data in Sales app
+# Salesforce CRM users unable to see data in Sales agent
 
-This article helps you troubleshoot and resolve an issue where users can't see data in Sales app.
+This article helps you troubleshoot and resolve an issue where users can't see data in Sales agent.
 
 ## Who is affected?
 
 | Requirement type |Description  |
 |---------|---------|
-|**Client app**     |  Sales app in Outlook        |
+|**Client app**     |  Sales agent in Outlook        |
 |**Platform**     | Web and desktop clients         |
 |**OS**     | Windows and Mac         |
 |**Deployment**     | User managed and admin managed       |
 |**CRM**     | Salesforce        |
-|**Users**     | Users who don't have permission to view fields added in Sales app forms   |
+|**Users**     | Users who don't have permission to view fields added in Sales agent forms   |
 
 ## Symptoms
 
-When a user opens Sales app in Outlook, the following error message is displayed:
+When a user opens Sales agent in Outlook, the following error message is displayed:
 
 > Something went wrong
 
@@ -32,7 +30,7 @@ When a user opens Sales app in Outlook, the following error message is displayed
 
 ## Cause
 
-The field-level security for the field is set to invisible in Salesforce CRM. As a result, Sales app can't reference that field as expected in the configuration.
+The field-level security for the field is set to invisible in Salesforce CRM. As a result, Sales agent can't reference that field as expected in the configuration.
 
 ## Resolution 1: Fix field-level security in Salesforce CRM
 
@@ -56,9 +54,9 @@ The field-level security for the field is set to invisible in Salesforce CRM. As
 
 For more information regarding field-level security in Salesforce CRM, see [Field-Level Security](https://help.salesforce.com/s/articleView?id=sf.admin_fls.htm&type=5).
 
-## Resolution 2: Change settings in Sales app to hide fields or remove edit capabilities
+## Resolution 2: Change settings in Sales agent to hide fields or remove edit capabilities
 
-Change the admin settings from the Sales app admin settings in Microsoft Teams to hide the fields or remove editing capabilities.
+Change the admin settings from the Sales agent admin settings in Microsoft Teams to hide the fields or remove editing capabilities.
 
 1. Sign in to Microsoft Teams with your administrator credentials.
 
@@ -79,10 +77,10 @@ Change the admin settings from the Sales app admin settings in Microsoft Teams t
 
 ## Resolution 3: Refresh the data from CRM
 
-If you don't know which field is causing the issue, you can [refresh the data](/microsoft-sales-copilot/customize-forms-and-fields#refresh-data-from-crm) from CRM. This action will sync the latest changes from CRM to Sales app and remove any fields that were removed from CRM but are still available in Sales app. After you refresh the data, you must close and reopen the Sales app in Outlook.
+If you don't know which field is causing the issue, you can [refresh the data](/microsoft-sales-copilot/customize-forms-and-fields#refresh-data-from-crm) from CRM. This action will sync the latest changes from CRM to Sales agent and remove any fields that were removed from CRM but are still available in Sales agent. After you refresh the data, you must close and reopen the Sales agent in Outlook.
 
 ## More information
 
-If your issue is still unresolved, go to the [Sales in Microsoft 365 Copilot - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
+If your issue is still unresolved, go to the [Sales agent - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
