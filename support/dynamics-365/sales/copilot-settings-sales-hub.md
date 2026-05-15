@@ -1,12 +1,12 @@
 ---
 title: Troubleshoot Copilot feature settings in Dynamics 365 Sales Hub
 description: Resolves issues where Copilot settings aren't visible or Copilot isn't functioning in the Microsoft Dynamics 365 Sales Hub app.
-ms.reviewer: AEAF-DC5E
+ms.reviewer: ramakris
 ms.date: 05/15/2026
 ms.custom: sap:Copilot\Copilot settings
 ms.collection: CEnSKM-ai-copilot
-author: AEAF-DC5E
-ms.author: AEAF-DC5E
+author: ramakris
+ms.author: ramakris
 ai-usage:
   - ai-assisted
 ---
