@@ -42,6 +42,8 @@ The Copilot settings page might not appear in the Sales Hub app if the navigatio
 
 1. Open the Sales Hub app in the [Power Apps app designer](https://make.powerapps.com/).
 2. In the app designer, select **Change area** and choose **App Settings**.
+
+   :::image type="content" source="media/copilot-settings-sales-hub/copilot-app-settings-navigation.png" alt-text="Screenshot showing how to navigate to App Settings in the Sales Hub app designer.":::
 3. Add the following navigation link to the app:
 
    `/main.aspx?pagetype=control&controlName=msdyn_Sales.Controls.CopilotSettingsControl`
