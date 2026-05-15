@@ -70,6 +70,10 @@
       href: troubleshoot-sales-premium-issues.md
     - name: Troubleshoot relationship intelligence
       href: troubleshoot-relationship-intelligence.md
+- name: Copilot
+  items:
+    - name: Troubleshoot Copilot feature settings in Sales Hub
+      href: copilot-settings-sales-hub.md
 - name: Sales Qualification Agent
   items: 
     - name: Dynamics 365 Sales AI agent is stuck during activation
