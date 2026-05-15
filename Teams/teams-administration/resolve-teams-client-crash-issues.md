@@ -34,7 +34,7 @@ We also recommend that you keep your audio and video drivers updated to ensure o
 
 ## WebView2 failure
 
-To fix issues that are caused by WebView2 process failures, check the WebView2 process exit or error codes for more information. These codes indicate various problems, such as:
+To fix the issue, make sure that [antivirus and DLP tools](include-exclude-teams-from-antivirus-dlp.md) don't block Teams and WebView2 processes from accessing Teams services.  For other issues caused by WebView2 process failures, check the WebView2 process exit or error codes for more information. These codes indicate various problems, such as:
 
 - External termination
 - Invalid parameters
