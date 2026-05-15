@@ -401,8 +401,6 @@ items:
       href: ./networking/cannot-establish-dial-up-connection.md
     - name: Error "WSAENOBUFS (10055)"
       href: ./networking/connect-tcp-greater-than-5000-error-wsaenobufs-10055.md
-    - name: How to disable network adapter power management
-      href: ./networking/power-management-on-network-adapter.md
     - name: ICS doesn't work after computer or service restart
       href: ./networking/ics-not-work-after-computer-or-service-restart.md
     - name: Internet Explorer or Edge window opens when connecting to a corporate network
