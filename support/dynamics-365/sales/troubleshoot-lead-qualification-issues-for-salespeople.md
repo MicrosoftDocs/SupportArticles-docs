@@ -2,10 +2,12 @@
 title: Troubleshoot issues with lead qualification for salespeople
 description: Provides resolutions for the lead qualification issues for salespeople in Dynamics 365 Sales.
 author: sbmjais
-ms.author: shjais
+ms.author: ramakris
+ms.reviewer: ramakris
 ms.topic: troubleshooting
-ms.date: 04/17/2025
+ms.date: 05/15/2026
 ms.custom: sap:Lead
+ai-usage: ai-assisted
 ---
 
 # Troubleshoot issues with lead qualification issues for salespeople
@@ -33,6 +35,7 @@ There are multiple errors or issues that occur when you qualify a lead:
 5. [Error 5 - The lead is closed and you cannot convert or qualify a lead that is already closed](#error-5---the-lead-is-closed-and-you-cannot-convert-or-qualify-a-lead-that-is-already-closed)
 6. [Error 6 - Invalid status code error for a contact or an opportunity](#error-6---invalid-status-code-error-for-a-contact-or-an-opportunity)
 7. [Issue: Can't proceed to the next stage when you select Next stage on the business process flow](#issue-cannot-proceed-to-the-next-stage-when-you-select-next-stage-on-the-business-process-flow)
+8. [Error 8 - Insufficient permissions or Access denied error when a user is trying to qualify a lead](#error-8---insufficient-permissions-or-access-denied-error-when-a-user-is-trying-to-qualify-a-lead)
 
 The following sections describe each of these errors and how you can resolve them.
 
@@ -152,3 +155,25 @@ This is by design. When you haven't qualified the record, there will be no oppor
 #### Resolution
 
 To resolve this issue, you must qualify the lead. Qualifying the lead automatically moves the lead to next stage (creating an opportunity).
+
+### Error 8 - Insufficient permissions or Access denied error when a user is trying to qualify a lead
+
+How you resolve this error depends on the following ownership scenarios for the lead records.
+
+| Ownership scenario   |  Resolution steps       |
+|--------------------- | -----------------       |
+| The lead is owned by the user trying to qualify it. | <ol> <li> Make sure you have a system administrator role or equivalent permissions. </li><li> Go to **Settings** > **Security Role**.</li><li> Open the security role of the user.</li><li> On the **Core Records** tab, assign **Create**, **Read**, **Append**, and **Append To** permissions to the Security Role at User level on the following entities:<ul><li>  Account</li><li>Lead</li><li>Contact</li><li>Opportunity</li></ul> :::image type="content" source="media/troubleshoot-lead-qualification-issues-for-salespeople/security-role-sales-person.png" alt-text="Security role with access at User level."::: <br><br> <li> On the **Custom Entities** tab, assign Read access to any custom entity.</li><li> On the **Customizations** tab, assign **Read** access to **Attribute Map**, **Customizations**, **Entity**, and **Entity Map**.</li></ol> |
+| The lead that the user is trying to qualify is in their business unit.| <ol><li>Go to **Settings** > **Security Role**.</li> <li> Open the security role of the user.</li><li> Assign **Create**, **Read**, **Append**, and **Append To** permissions to the user's Security Role at Business Unit level on the following entities:<ul><li> Account</li><li>Lead</li><li>Contact</li><li>Opportunity</li></ul>:::image type="content" source="media/troubleshoot-lead-qualification-issues-for-salespeople/security-role-sales-person-business-unit-access.png" alt-text="Security role with access at Business Unit level."::: <li> Assign **Read** access to any custom entity.</li><li>Assign **Read** access to **Attribute Map**, **Customizations**, **Entity**, and **Entity Map**.</li></ol>|
+| The lead that the user is trying to qualify is in their organization.| <ol><li>Go to **Settings** > **Security Role**.</li> <li> Open the security role of the user.</li><li> Assign **Create**, **Read**, **Append**, and **Append To** permissions to the user's Security Role at Organization level on the following entities:<ul><li> Account</li><li>Lead</li><li>Contact</li><li>Opportunity</li></ul>:::image type="content" source="media/troubleshoot-lead-qualification-issues-for-salespeople/security-role-sales-person-org-access.png" alt-text="Security role with access at Organization level."::: <li> Assign **Read** access to any custom entity.</li><li>Assign **Read** access to **Attribute Map**, **Customizations**, **Entity**, and **Entity Map**.</li></ol>|
+
+During qualification of a lead, the records that (optionally) get created are: Opportunity, Contact, and Account. For more information, see [Qualify or convert leads](/dynamics365/sales/qualify-lead-convert-opportunity-sales).
+
+If the user is getting privilege-related errors even after assigning appropriate privileges as mentioned earlier in this section, it might be possible that they're missing privileges on some entities that are being accessed during creation of the account, contact, or opportunity records. For example, the user might be missing privileges on some custom entities that are accessed when some plug-ins or workflows run on some operation of the account, contact, or opportunity entities.
+
+To troubleshoot this further, follow these steps:
+
+1. **Isolate the issue to creation of Opportunity, Account or Contact record:** Ask the user to try creating individual records of Account, Contact, and Opportunity and see if they get the same privilege-related issue on creation of these records. They might have privilege issues on one or more type of records, so it's important to perform this step for each record type. For example, they might not have appropriate privileges on Account and Contact entities.
+
+2. **Identify whether any plug-in/workflow registered on creation of entity is causing issues:** After isolating the issue to creation of a particular entity record, check whether any plug-in or workflow running on creation of these entity records is accessing some other entities on which the current user is missing privileges. For this, find out all the plug-ins or workflows registered on creation of entity records and deactivate them one by one to identify the plug-in or workflow causing the issue. Once you identify the plug-in or workflow causing the issue, deactivate it to unblock the record creation process. For more information about identifying all workflows registered for an entity, see [Deactivate custom workflow process](troubleshoot-multiple-tables-issues.md#deactivate-a-custom-workflow-process).
+
+For more information about identifying plug-ins registered on creation of an entity record, see [Deactivate custom plug-in](troubleshoot-multiple-tables-issues.md#deactivate-a-custom-plug-in).
