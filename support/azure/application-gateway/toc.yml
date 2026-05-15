@@ -12,6 +12,8 @@ items:
   href: troubleshoot-appgw-failed-state-issues.md
 - name: ApplicationGatewaySkuNotSpecified error
   href: error-codes/applicationgatewayskunotspecified.md
+- name: Troubleshoot HTTP 504 Gateway Timeout
+  href: AEGT-AppGW-504-Timeout.md
 - name: ApplicationGatewayFrontendIpCannotHavePublicIpAndSubnet error
   href: error-codes/application-gateway-frontend-ip-cannot-have-public-ip-subnet-error.md
 - name: Troubleshoot WAF anomaly scoring behavior and rule 949110 blocks
