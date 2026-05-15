@@ -41,7 +41,9 @@ If no results are returned, your storage accounts already support AES-256, and y
 
 ### Step 2: Ensure AES-256 is allowed by clients and by the storage account
 
-Ensure that client machines don't have a value in the `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System\Kerberos\Parameters\SupportedEncryptionTypes` registry key that would explicitly disallow AES-256 encryption. See [Mount to Azure Files fails when using Entra Kerberos due to unsupported Kerberos encryption types](files-troubleshoot-smb-authentication.md#mount-to-azure-files-fails-when-using-entra-kerberos-due-to-unsupported-kerberos-encryption-types) for more details.
+Ensure your clients are running an OS version that supports AES-256 Kerberos ticket encryption. All actively supported OS versions today have support for AES-256 Kerberos ticket encryption. Windows versions older than Vista, MacOS versions older than OS X Lion 10.7, and Linux distributions running krb5 1.3.2 or older are known to not support AES-256 ticket encryption.
+
+For Windows clients, ensure that client machines don't have a value in the `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System\Kerberos\Parameters\SupportedEncryptionTypes` registry key that would explicitly disallow AES-256 encryption. See [Mount to Azure Files fails when using Entra Kerberos due to unsupported Kerberos encryption types](files-troubleshoot-smb-authentication.md#mount-to-azure-files-fails-when-using-entra-kerberos-due-to-unsupported-kerberos-encryption-types) for more details.
 
 Additionally, ensure that the [storage account's SMB security settings](/azure/storage/files/files-smb-protocol#smb-security-settings) don't disallow AES-256 Kerberos ticket encryption.
 
