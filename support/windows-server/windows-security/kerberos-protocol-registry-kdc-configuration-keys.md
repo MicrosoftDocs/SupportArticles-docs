@@ -111,7 +111,7 @@ The registry entries that are listed in this section must be added to the follow
     This value indicates the default encryption type for pre-authentication.
 
     > [!NOTE]
-    > Starting in Windows Server 2025 and Windows 11 24H2, this setting is no longer applicable.
+    > Starting in Windows Server 2025 and Windows 11, version 24H2, this setting is no longer applicable.
 
 - Entry: FarKdcTimeout
 
