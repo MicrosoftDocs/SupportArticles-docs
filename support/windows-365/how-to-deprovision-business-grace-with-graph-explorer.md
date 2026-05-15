@@ -3,7 +3,7 @@ title: Remove Windows 365 Business Cloud PCs from Grace with Graph Explorer and 
 description: Learn how to remove Windows 365 Business Cloud PCs from grace period using Microsoft Graph Explorer and API. Follow this step-by-step guide to resolve issues and reassign licenses.
 manager: dcscontentpm
 ms.reviewer: kaushika, anwill
-ms.date: 04/30/2026
+ms.date: 05/15/2026
 ms.topic: troubleshooting
 ms.custom:
 - pcy:Provisioning\Grace Period Issues
@@ -16,6 +16,9 @@ ms.custom:
 When a license is removed from a user, Windows 365 Business Cloud PCs enter a seven-day grace period before permanent removal. This article explains how to manually remove Cloud PCs from grace to reassign licenses and avoid provisioning issues.
 
 This article provides step-by-step instructions for using Microsoft Graph Explorer and the Microsoft Graph API to perform this deprovision.
+
+> [!NOTE]
+> For most scenarios, administrators can now end the grace period and deprovision Windows 365 Business Cloud PCs directly from the Microsoft 365 admin center or Intune by using the __Deprovision now__ option. This article describes how to perform the same action by using Microsoft Graph and is intended for automation or advanced troubleshooting scenarios.
 
 ## Prerequisites
 
