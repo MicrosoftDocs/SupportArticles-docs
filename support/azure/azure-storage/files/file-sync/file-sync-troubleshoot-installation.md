@@ -327,6 +327,64 @@ A reboot might be required to complete installation.
 After setting the environment variable and confirming prerequisites, reboot then re-run `ServerRegistration.exe` to complete registration.
 
 
+
+
+## Upgrade an expired agent manually if auto-upgrade did not succeed
+
+Auto-upgrade keeps Azure File Sync agents on a supported version, but it can fail when the server has been offline for an extended period, lacks outbound connectivity to the update endpoints, has a pending reboot, or is blocked by local policy. When that happens, sync stops and the agent must be upgraded manually.
+### Symptoms
+
+- Sync has stopped on all server endpoints registered to the affected server.
+- The portal shows the agent as expired or unsupported under **Registered servers**.
+- Auto-upgrade has not moved the server to a supported version.
+
+
+### Direct upgrade is supported — do not unregister
+
+A direct in-place upgrade to the latest agent is supported from any older expired version. No intermediate version step is required, and uninstalling the old agent first is not recommended.
+
+**Do not unregister the server.** The registration and sync topology are still valid — only the agent binary needs to be updated. Unregistering removes server endpoints, breaks tiered-file references on disk, and forces a full re-registration and re-sync.
+
+### Before you upgrade
+
+- Apply the latest Windows updates and reboot.
+- Confirm TLS 1.2 or 1.3 is enabled.
+- Re-validate proxy and firewall rules — see [Azure File Sync on-premises firewall and proxy settings](file-sync/file-sync-firewall-and-proxy.md). This is the most common cause of failure when the server has moved or the network changed.
+- If cloud tiering is disabled, confirm the local volume has free space for the full dataset.
+- Plan for a one-time **catch-up sync**: local changes since expiry will upload, cloud changes will download, and in multi-server sync groups those changes will propagate to other servers.
+
+### Upgrade
+
+**Option 1 — AfsUpdater (recommended).** From an elevated prompt on the server:
+
+```
+"C:\Program Files\Azure\StorageSyncAgent\AfsUpdater.exe"
+```
+
+**Option 2 — Microsoft Update Catalog.** If `AfsUpdater.exe` cannot reach the update service, download the latest agent MSI from the [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/) and install it. Server registration is preserved across the in-place install.
+
+The server should report **Online** in the portal within ~15 minutes. A reboot may be required depending on the version delta.
+
+### Validate
+
+```powershell
+Import-Module "C:\Program Files\Azure\StorageSyncAgent\StorageSync.Management.ServerCmdlets.dll"
+Get-StorageSyncAgentVersion
+Debug-StorageSyncServer -TestNetworkConnectivity
+Debug-StorageSyncServer -Diagnose
+```
+
+Then confirm sync activity has resumed under **Sync groups** in the portal. 
+
+### What not to do
+
+| Don't | Why |
+|---|---|
+| Unregister the server | Breaks endpoints and tiered-file references; forces a full re-sync. |
+| Uninstall and reinstall the agent | Risks losing local sync state. The in-place upgrade is the supported path. |
+| Run `Reset-StorageSyncServer` | This cmdlet is for orphaned-registration cleanup, not expired-agent remediation. |
+
+
 ## See also
 
 - [Troubleshoot Azure File Sync sync group management](file-sync-troubleshoot-sync-group-management.md)
