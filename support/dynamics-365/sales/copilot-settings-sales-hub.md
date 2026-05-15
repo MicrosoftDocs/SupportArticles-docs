@@ -7,8 +7,7 @@ ms.custom: sap:Copilot\Copilot settings
 ms.collection: CEnSKM-ai-copilot
 author: ramakris
 ms.author: ramakris
-ai-usage:
-  - ai-assisted
+ai-usage: ai-assisted
 ---
 
 # Troubleshoot Copilot feature settings in Dynamics 365 Sales Hub
