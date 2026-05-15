@@ -369,7 +369,6 @@ The server should report **Online** in the portal within ~15 minutes. A reboot m
 
 ```powershell
 Import-Module "C:\Program Files\Azure\StorageSyncAgent\StorageSync.Management.ServerCmdlets.dll"
-Get-StorageSyncAgentVersion
 Debug-StorageSyncServer -TestNetworkConnectivity
 Debug-StorageSyncServer -Diagnose
 ```
