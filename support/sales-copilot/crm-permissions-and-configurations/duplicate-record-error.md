@@ -1,17 +1,17 @@
 ---
-title: Fix Contact Already Exists Error in CRM Records
-description: Learn how to resolve the "This contact already exists" error caused by a duplicate detection rule when creating a CRM record from the Sales app.
+title: Fix Contact Already Exists error in CRM Records
+description: Learn how to resolve the "This contact already exists" error that's caused by a duplicate detection rule when you create a CRM record from the Sales app.
 ms.date: 05/18/2026
 ms.reviewer: shjais, v-shaywood
 ms.custom: sap:CRM Permissions and Configurations\CRM Settings
 ---
-# Record creation error due to duplicate detection rules in CRM
+# Record creation error because of duplicate detection rules in CRM
 
 ## Summary
 
-This article helps you fix the "This contact already exists" error that occurs when you try to [create a new record in your CRM](/microsoft-sales-copilot/create-new-record) from the Sales app and a [duplicate detection rule](/power-platform/admin/set-up-duplicate-detection-rules-keep-data-clean) blocks the record from being created.
+This article helps you fix the "This contact already exists" error that occurs when you try to [create a new record in your CRM](/microsoft-sales-copilot/create-new-record) from the Sales app, and a [duplicate detection rule](/power-platform/admin/set-up-duplicate-detection-rules-keep-data-clean) blocks the record from being created.
 
-The following areas are affected by this issue:
+The following areas are affected by this issue.
 
 | Requirement type | Description                                             |
 | ---------------- | ------------------------------------------------------- |
@@ -24,7 +24,7 @@ The following areas are affected by this issue:
 
 ## Symptoms
 
-When a user tries to [create a new record in your CRM from the Sales app](/microsoft-sales-copilot/create-new-record), the following error appears. It indicates that the record creation failed because of a [duplicate detection rule in the CRM](/power-platform/admin/set-up-duplicate-detection-rules-keep-data-clean).
+When a user tries to [create a new record in your CRM from the Sales app](/microsoft-sales-copilot/create-new-record), the following error message appears. The message indicates that the record creation failed because of a [duplicate detection rule in the CRM](/power-platform/admin/set-up-duplicate-detection-rules-keep-data-clean).
 
 > This contact already exists. To create a duplicate contact, try adding it in Salesforce.
 
@@ -34,14 +34,14 @@ When a user tries to [create a new record in your CRM from the Sales app](/micro
 
 A duplicate detection rule in the CRM prevents specific fields from having duplicate values across multiple records. When a user tries to create a record from the Sales app that contains a duplicate field, the rule blocks the record from being created.
 
-For example, if a duplicate detection rule prevents the creation of a record with the same email address as an existing record, the record creation fails when the new record's email address matches an existing one.
+For example, if a duplicate detection rule prevents the creation of a record that has the same email address as an existing record, record creation fails if the new record's email address matches an existing address.
 
 ## Solution
 
 To fix the error, use either of the following methods:
 
-- Create the record again with a different value for the field that caused the error. For example, if the error occurs because the new record's email address matches an existing record's email address, re-create the record with a different email address.
-- Ask your administrator to change the duplicate detection rule in the CRM to let the field that caused the error have duplicate values.
+- Create the record again by using a different value for the field that caused the error. For example, if the error occurs because the new record's email address matches an existing record's email address, re-create the record by using a different email address.
+- Ask your administrator to change the duplicate detection rule in the CRM for the field that caused the error to allow the field to have duplicate values.
 
 For information about duplicate detection rules in the CRM, see:
 
