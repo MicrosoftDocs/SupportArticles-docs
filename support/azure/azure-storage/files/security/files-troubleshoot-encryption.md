@@ -140,7 +140,7 @@ There are two options to upgrade your storage account to AES-256. We strongly re
 
 - **Azure RBAC:** The executing user (or service principal) has the **Storage Account Contributor** role (or higher) on the target storage account.
 - **Active Directory permissions:** The executing user has either **Domain Admins** membership, or an explicit delegation on the OU containing the storage account's AD object granting **Reset Password** and **Write `msDS-SupportedEncryptionTypes`** rights.
-- **Machine context:** The cmdlet runs from a machine that is **domain-joined to the same AD DS forest** as the storage account, with line-of-sight to a domain controller (LDAP/Kerberos ports open).
+- **Machine context:** The cmdlet runs from a machine that is **domain-joined to the same AD DS forest** as the storage account, with unimpeded network connectivity to a domain controller (LDAP/Kerberos ports open).
 - **PowerShell modules:** Current version of [AzFilesHybrid](https://www.powershellgallery.com/packages/AzFilesHybrid/) is installed and imported.
 - **Authenticated session:** You're signed in to the correct subscription (`Connect-AzAccount` followed by `Set-AzContext -Subscription <subscriptionId>`).
 
