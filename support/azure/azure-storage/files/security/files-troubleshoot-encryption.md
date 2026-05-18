@@ -298,9 +298,6 @@ The output should show `AES-256-CTS-HMAC-SHA1-96` for both the **KerbTicket Encr
         Cache Flags: 0
         Kdc Called: <domain-controller-name>
 ```
-
-#### Confirm at the directory level (AD DS)
-
 To confirm the upgrade across an entire domain (rather than one client at a time), re-run the [Step 1b](#step-1b-identify-storage-accounts-that-havent-been-upgraded-to-aes-256-ad-ds) LDAP query. Any storage accounts you upgraded should no longer appear in the results — once `msDS-SupportedEncryptionTypes` is set on the AD object, the filter excludes it.
 
 ## Reverting the AES-256 upgrade
