@@ -86,7 +86,13 @@ On a domain controller, filter the Security event log for Kerberos service ticke
 
 ### Step 2: Ensure AES-256 is allowed by clients and by the storage account
 
+Before upgrading the storage account in Step 3, confirm AES-256 is permitted at three layers: the **client operating system**, the **client Kerberos policy**, and the **storage account's SMB security settings**. If AES-256 is blocked at any layer, mounts will fail after the upgrade.
+
+#### Step 2a: Verify client OS supports AES-256
+
 Ensure your clients are running an OS version that supports AES-256 Kerberos ticket encryption. All actively supported OS versions today have support for AES-256 Kerberos ticket encryption. Windows versions older than Vista, MacOS versions older than OS X Lion 10.7, and Linux distributions running krb5 1.3.2 or older are known to not support AES-256 ticket encryption. If you have questions about client versions, please reach out to our team at <filesadauth@microsoft.com>.
+
+#### Step 2b: Verify Windows client Kerberos policy allows AES-256
 
 For Windows clients, ensure that client machines don't have a value in the `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System\Kerberos\Parameters\SupportedEncryptionTypes` registry key that would explicitly disallow AES-256 encryption. See [Mount to Azure Files fails when using Entra Kerberos due to unsupported Kerberos encryption types](files-troubleshoot-smb-authentication.md#mount-to-azure-files-fails-when-using-entra-kerberos-due-to-unsupported-kerberos-encryption-types) for more details.
 
@@ -118,7 +124,9 @@ if ($null -eq $v) {
 
 For example, `0x18` (24) allows AES-128 and AES-256 and is a safe value. `0x4` (4) allows only RC4 and is **not** safe. `0x1C` (28) allows RC4, AES-128, and AES-256 and is a valid transitional value. If the value is set by Group Policy, update the policy at **Computer Configuration > Policies > Windows Settings > Security Settings > Local Policies > Security Options > Network security: Configure encryption types allowed for Kerberos**.
 
-Additionally, ensure that the [storage account's SMB security settings](/azure/storage/files/files-smb-protocol#smb-security-settings) don't disallow AES-256 Kerberos ticket encryption.
+#### Step 2c: Verify the storage account's SMB security settings allow AES-256
+
+Ensure that the [storage account's SMB security settings](/azure/storage/files/files-smb-protocol#smb-security-settings) don't disallow AES-256 Kerberos ticket encryption.
 
 > [!IMPORTANT]
 > The storage account's **SMB security settings** control which Kerberos ticket encryption types the storage account will *accept* on the wire. They do **not** indicate whether the storage account has actually been upgraded to AES-256. In particular, the SMB security settings do **not** reflect:
