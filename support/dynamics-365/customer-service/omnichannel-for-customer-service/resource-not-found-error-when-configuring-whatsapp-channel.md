@@ -1,16 +1,16 @@
 ---
-title: Resource Not Found Error When Configuring WhatsApp Channel
-description: Solves the Resource not found for the segment error when configuring the WhatsApp channel in Microsoft Dynamics 365 Customer Service or Dynamics 365 Contact Center.
-author: Yerragovula
-ms.author: srreddy
+title: Resolve WhatsApp Channel Resource Not Found Error
+description: Troubleshoot the msdyn_UpdatePrivacyTerms Resource not found error in Dynamics 365 Customer Service or Dynamics 365 Contact Center. Get step-by-step help now.
 ai-usage: ai-assisted
-ms.date: 03/31/2025
-ms.reviewer: parkmermel
+ms.date: 04/22/2026
+ms.reviewer: srreddy, parkmermel, nenellim, v-shaywood
 ms.custom: sap:WhatsApp via Twilio, DFM
 ---
 # Resource not found error when configuring WhatsApp channel
 
-This article provides guidance on resolving the "A Resource not found for the segment 'msdyn\_UpdatePrivacyTerms'" error that may occur when you configure the WhatsApp channel in Dynamics 365 Customer Service or Dynamics 365 Contact Center.
+## Summary
+
+When you configure the WhatsApp channel in [Dynamics 365 Customer Service](/dynamics365/customer-service/implement/overview) or [Dynamics 365 Contact Center](/dynamics365/customer-service/implement/introduction-omnichannel), you might receive a "Resource not found for the segment 'msdyn\_UpdatePrivacyTerms'" error. This error occurs because a required omnichannel process is deactivated. Reactivating the process resolves the issue.
 
 ## Symptoms
 
@@ -20,39 +20,17 @@ When you try to [configure the WhatsApp channel](/dynamics365/customer-service/a
 
 ## Cause
 
-This issue occurs when certain required Omnichannel-related plugins are disabled.
+This issue occurs when the required **UpdatePrivacyTerms** omnichannel process is deactivated in your environment.
 
-## Resolution
+## Solution
 
-To resolve this issue, follow these steps:
+1. Go to [Power Apps](https://make.powerapps.com/) and select your environment.
+1. Select **Solutions** > **Default Solution**.
+1. Select **Objects** and then search for *processes*.
+1. In the search box in the upper-right corner, enter *UpdatePrivacyTerms*.
+1. Select the **UpdatePrivacyTerms** process, and then select **Activate**.
 
-### Step 1: Access the Customization Settings
+## Related content
 
-1. Open the **Dynamics 365 model-driven app**.
-
-2. Navigate to the following path: **Settings** > **Advanced Settings** > **Customizations** > **Customize the System**.
-
-### Step 2: Locate SDK Message Processing Steps
-
-1. Within the **Customize the System** window, expand the left-hand navigation panel.
-
-2. Select **SDK Message Processing Steps** under the **Components** section.
-
-### Step 3: Activate the Required Plugins
-
-1. In the **SDK Message Processing Steps** list, look in the **Name** column to locate the following plugins:
-
-    - **Microsoft.Dynamics.OmnichannelSharedBase.Plugins.PostOperationUpdatePrivacyTermsPlugin**: `msdyn_UpdatePrivacyTerms` of any Entity.
-    - **Microsoft.Dynamics.OmnichannelBase.Plugins.PostOperationUpdatePrivacyTermsPlugin**: `msdyn_UpdatePrivacyTerms` of any Entity.
-
-2. Verify the **Status** column for each plugin:
-
-    - If the plugin is disabled, select it by selecting the checkbox next to its name.
-
-    - Select the **Activate** button in the toolbar.
-
-### Step 4: Save and Publish Customizations
-
-1. Once the necessary plugins are activated, select **Save** in the toolbar.
-
-2. Then, select **Publish All Customizations** to apply the changes.
+- [Provision channels in Dynamics 365 Contact Center](/dynamics365/contact-center/implement/provision-channels)
+- [Configure a WhatsApp channel through Azure Communication Services](/dynamics365/contact-center/administer/configure-whatsapp-acs)
