@@ -9,7 +9,7 @@ ms.custom: sap:CRM Permissions and Configurations\CRM Settings
 
 ## Summary
 
-This article helps you fix the "This contact already exists" error that occurs when you try to [create a new record in your CRM](/microsoft-sales-copilot/create-new-record) from the Sales app, and a [duplicate detection rule](/power-platform/admin/set-up-duplicate-detection-rules-keep-data-clean) blocks the record from being created.
+This article helps you fix the "This contact already exists" error. This error occurs when you try to [create a new record in your CRM](/microsoft-sales-copilot/create-new-record) from the Sales app, and a [duplicate detection rule](/power-platform/admin/set-up-duplicate-detection-rules-keep-data-clean) blocks the record from being created.
 
 The following areas are affected by this issue.
 
@@ -34,7 +34,7 @@ When a user tries to [create a new record in your CRM from the Sales app](/micro
 
 A duplicate detection rule in the CRM prevents specific fields from having duplicate values across multiple records. When a user tries to create a record from the Sales app that contains a duplicate field, the rule blocks the record from being created.
 
-For example, if a duplicate detection rule prevents the creation of a record that has the same email address as an existing record, record creation fails if the new record's email address matches an existing address.
+For example, a duplicate detection rule might prevent the creation of a record that has the same email address as an existing record,. In this case, record creation fails if the new record's email address matches an existing address.
 
 ## Solution
 
