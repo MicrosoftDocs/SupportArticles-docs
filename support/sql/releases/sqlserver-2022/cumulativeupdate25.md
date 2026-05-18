@@ -22,6 +22,8 @@ This article describes Cumulative Update package 25 (CU25) for Microsoft SQL Ser
 - SQL Server - Product version: **16.0.4255.1**, file version: **2022.160.4255.1**
 - Analysis Services - Product version: **16.0.43.252**, file version: **2022.160.43.252**
 
+[!INCLUDE [enable-encryption-extended-protection](../includes/enable-encryption-extended-protection.md)]
+
 ## Known issues in this update
 
 ### Incorrect behavior of SESSION_CONTEXT in parallel plans
