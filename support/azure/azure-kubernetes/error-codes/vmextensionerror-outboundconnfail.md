@@ -26,11 +26,11 @@ When you try to start or create an AKS cluster, you receive the following error 
 
 > Unable to establish outbound connection from agents, please see <https://aka.ms/aks-required-ports-and-addresses> for more information.
 >
-> Details: Code="VMExtensionProvisioningError"
+> Code: "VMExtensionProvisioningError"
 >
-> Message="VM has reported a failure when processing extension 'vmssCSE'.
+> Message: CSE failed with 'VMExtensionError_OutboundConnFail'. AKS Node provisioning failed due to inability to establish outbound connectivity to obtain packages with exit status 50. Please refer to https://aka.ms/aks/outbound-rules-control-egress  and https://aka.ms/aks/vmextensionerror_outboundconnfail for troubleshooting.
 >
-> Error message: "**CSE failed with 'VMExtensionError_OutboundConnFail'. AKS Node provisioning failed due to inability to establish outbound connectivity to obtain packages with exit status 50.** Please refer to https://aka.ms/aks/outbound-rules-control-egress  and https://aka.ms/aks/vmextensionerror_outboundconnfail for troubleshooting.
+> "In some logs, this may also appear as exit status=50 / ExitCode: 50"
 
 ## Cause
 

@@ -1,30 +1,28 @@
 ---
 title: Error after connecting and signing in to Salesforce CRM
-description: Resolves an error message that occurs after connecting and signing in to Salesforce CRM in Sales app.
-ms.date: 11/20/2025
-author: sbmjais
-ms.author: shjais
-manager: shujoshi
+description: Resolves an error message that occurs after connecting and signing in to Salesforce CRM in Sales agent.
+ms.date: 05/14/2026
 ms.custom: sap:Setup, Installation and Sign-in\CRM Sign-In & Sign Out
+ms.reviewer: shjais, v-shaywood
 ---
 # "Request your CRM administrator permissions to access Salesforce using APIs" error
 
-This article helps you troubleshoot and resolve issues when an error message is displayed after connecting and signing in to Salesforce CRM in Sales app.
+This article helps you troubleshoot and resolve issues when an error message is displayed after connecting and signing in to Salesforce CRM in Sales agent.
 
 ## Who is affected?
 
 | Requirement type |Description  |
 |---------|---------|
-|**Client app**     |  Sales app in Outlook        |
+|**Client app**     |  Sales agent in Outlook        |
 |**Platform**     | Web and desktop clients         |
 |**OS**     | Windows and Mac         |
 |**Deployment**     | User managed and admin managed       |
 |**CRM**     | Salesforce      |
-|**Users**     | Users trying to use Sales app with Salesforce CRM |
+|**Users**     | Users trying to use Sales agent with Salesforce CRM |
 
 ## Symptoms
 
-After you sign in to Salesforce CRM through the [Sales app in Outlook](/microsoft-sales-copilot/open-app#access-copilot-for-sales-in-outlook), the following error message is displayed:
+After you sign in to Salesforce CRM through the [Sales agent in Outlook](/microsoft-sales-copilot/open-app#access-copilot-for-sales-in-outlook), the following error message is displayed:
 
 > Request your CRM administrator permissions to access Salesforce using APIs
 
@@ -65,6 +63,6 @@ An admininstrator can grant the **API Enabled** permission to the user or the af
 
 ## More information
 
-If your issue is still unresolved, go to the [Sales in Microsoft 365 Copilot - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
+If your issue is still unresolved, go to the [Sales agent - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]

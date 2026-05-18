@@ -8,6 +8,8 @@ manager: dcscontentpm
 ms.service: azure-bastion
 ms.topic: troubleshooting
 ms.date: 04/06/2026
+ms.custom: sap:Configuration and setup
+
 # Customer intent: As a network administrator, I want to troubleshoot connectivity issues in Azure Bastion so that I can ensure seamless access to my virtual machines and efficiently manage network security settings.
 ---
 

@@ -21,8 +21,9 @@ appliesto:
   - Exchange Server 2010 Service Pack 3
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard
-ms.date: 01/24/2024
+ms.date: 05/12/2026
 ---
+
 # Error (1007 AccessDenied) when you try to delete the federation trust in an Exchange organization
 
 _Original KB number:_ &nbsp; 3215278

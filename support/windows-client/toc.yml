@@ -277,6 +277,8 @@ items:
       href: ./licensing-and-activation/cannot-activate-windows-from-oem.md
     - name: Error "certificate in the connection information has expired"
       href: ./licensing-and-activation/error-certificate-connection-information-expired.md
+    - name: Error 0x8007232A "DNS server failure" when you activate Windows
+      href: ../windows-server/licensing-and-activation/activation-error-0x8007232a-dns-server-failure.md?context=/troubleshoot/windows-client/context/context
     - name: How to validate the OEM activation key
       href: ./licensing-and-activation/validate-oem-activation-key.md
     - name: KMS current count doesn't increase
@@ -399,8 +401,6 @@ items:
       href: ./networking/cannot-establish-dial-up-connection.md
     - name: Error "WSAENOBUFS (10055)"
       href: ./networking/connect-tcp-greater-than-5000-error-wsaenobufs-10055.md
-    - name: How to disable network adapter power management
-      href: ./networking/power-management-on-network-adapter.md
     - name: ICS doesn't work after computer or service restart
       href: ./networking/ics-not-work-after-computer-or-service-restart.md
     - name: Internet Explorer or Edge window opens when connecting to a corporate network
@@ -1347,6 +1347,8 @@ items:
       href: ../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-0x80070070.md?context=/troubleshoot/windows-client/context/context
     - name: Troubleshoot Windows Update error 0x80070570
       href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x80070570.md
+    - name: Troubleshoot Windows Update error 0x800706D9
+      href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x800706D9.md
     - name: Troubleshoot Windows Update error 0x80071A91
       href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x80071a91.md
     - name: Troubleshoot Windows Update error 0x80072EFE

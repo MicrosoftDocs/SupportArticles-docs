@@ -15,8 +15,9 @@ appliesto:
   - Exchange Server 2013 Enterprise
   - Exchange Server 2010 Enterprise
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 05/12/2026
 ---
+
 # 403: Forbidden error when you try to view organization-wide free/busy information in Exchange
 
 _Original KB number:_ &nbsp;3082946
