@@ -349,7 +349,7 @@ A direct in-place upgrade to the latest agent is supported from any older expire
 
 - Apply the latest Windows updates and reboot.
 - Confirm TLS 1.2 or 1.3 is enabled.
-- Re-validate proxy and firewall rules — see [Azure File Sync on-premises firewall and proxy settings](azure/storage/file-sync/file-sync-firewall-and-proxy). This is the most common cause of failure when the server has moved or the network changed.
+- Re-validate proxy and firewall rules — see [Azure File Sync on-premises firewall and proxy settings](/azure/storage/file-sync/file-sync-firewall-and-proxy). This is the most common cause of failure when the server has moved or the network changed.
 - If cloud tiering is disabled, confirm the local volume has free space for the full dataset.
 - Plan for a one-time **catch-up sync**: local changes since expiry will upload, cloud changes will download, and in multi-server sync groups those changes will propagate to other servers.
 
