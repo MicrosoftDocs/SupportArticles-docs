@@ -110,7 +110,7 @@ To resolve, transfer the PDC role to another domain controller running Windows S
 
 After creating a server endpoint on Windows Server 2012 R2, the following error occurs when accessing the volume:
 
-> drive letter:\ is not accessible.  
+> drive letter:\ isn't accessible.  
 > The parameter is incorrect.
 
 To resolve this issue, install [KB2919355](https://support.microsoft.com/help/2919355/windows-rt-8-1-windows-8-1-windows-server-2012-r2-update-april-2014) and restart the server. If this update can't install because a later update is already installed, go to **Windows Update**, install the latest updates for Windows Server 2012 R2, and restart the server.
@@ -133,7 +133,7 @@ To learn about installing the Azure File Sync Agent for Windows, see [Install an
  
 | **Error Message** | **Error Code** | **Remediation steps** |
 |-------------------|----------------|------------------------|
-| Cannot install Azure File Sync agent because .NET Framework 4.7.2 or later is required. Install the latest .NET Framework and try again | 206 | Install .NET Framework 4.7.2 or later, then restart your computer. |
+| Can't install Azure File Sync agent because .NET Framework 4.7.2 or later is required. Install the latest .NET Framework and try again | 206 | Install .NET Framework 4.7.2 or later, then restart your computer. |
 | Azure File Sync agent is already installed. No further action needed. | 0 | No action required. The extension is installed, but no customization is applied. |
 | The Azure File Sync agent is only supported on RTM (Release to Manufacturing) versions of supported operating systems. | 51 | Azure File Sync agent and extension are supported only on RTM versions of Windows Server 2016, 2019, 2022, and 2025. |
 | Proxy settings error. `UseCustomProxy` is enabled but ProxyAddress is missing or invalid. ProxyAddress must be specified without port and length must be less than 255 characters. | 201 | Ensure that the `ProxyAddress` is specified and doesn't exceed 255 characters in length. |
@@ -141,7 +141,7 @@ To learn about installing the Azure File Sync Agent for Windows, see [Install an
 | Proxy settings error. `ProxyAuthRequired` is enabled but ProxyUsername is missing or invalid. `ProxyUsername` length must be between 3 and 255 characters | 203 | Ensure `ProxyUsername` is specified and its length is between 3 and 255 characters. |
 | Proxy settings error. `ProxyAuthRequired` is enabled but ProxyPassword is missing or empty | 204 | Provide a non-empty `ProxyPassword` when `ProxyAuthRequired` is enabled. |
 | A system reboot is pending due to Storage Sync file rename operations. Restart your server before installing the Azure File Sync agent. | 83 | A reboot is required. Restart the server before installing the agent again. |
-| The file signature is not valid. Or Signature validation failed for the downloaded MSI file | 86 | The installer file might be corrupted or tampered with. Download the MSI file again from a trusted source. |
+| The file signature isn't valid. Or Signature validation failed for the downloaded MSI file | 86 | The installer file might be corrupted or tampered with. Download the MSI file again from a trusted source. |
 | Certificate chain validation failed. | 86 | Ensure the required root certificates are installed. Refer to [Prerequisites for AKS Edge Essentials offline installation](/azure/aks/aksarc/aks-edge-howto-offline-install).<br><br>If using a proxy, ensure the following domains are bypassed:<br>`login.microsoftonline.com`, `management.azure.com`, `go.microsoft.com`, `download.microsoft.com`, `download.windowsupdate.com`, `crl.microsoft.com`, `oneocsp.microsoft.com`, `ocsp.msocsp.com`, `www.microsoft.com`.<br><br>Restart the computer to apply any updates. |
 | Azure File Sync agent download or configuration failed. Details: Failed to configure auto update settings: Agent install directory not found in registry. Check the installation. | 214 | Open an elevated PowerShell session and check if .NET 4.7.2 or higher is installed:<br>```$releaseKey = (Get-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full" -ErrorAction SilentlyContinue).Release```<br><br>If `$releaseKey` is less than `461808`, .NET 4.7.2 isn't installed. In this case, download and install .NET Framework 4.7.2 or later from the [official .NET download site](https://dotnet.microsoft.com/download/dotnet-framework). |
 
@@ -254,7 +254,7 @@ Reset-StorageSyncServer
 
 This issue occurs when the **Enhanced Internet Explorer Security** policy is enabled during server registration. For more information about how to correctly disable the **Enhanced Internet Explorer Security** policy, see [Prepare Windows Server to use with Azure File Sync](/azure/storage/file-sync/file-sync-deployment-guide#prepare-windows-server-to-use-with-azure-file-sync) and [How to deploy Azure File Sync](/azure/storage/file-sync/file-sync-deployment-guide).
 
-<a id="server-registration-missing"></a>**Server is not listed under registered servers in the Azure portal**
+<a id="server-registration-missing"></a>**Server isn't listed under registered servers in the Azure portal**
 
 If a server isn't listed under **Registered servers** for a Storage Sync Service:
 
@@ -329,27 +329,27 @@ After setting the environment variable and confirming prerequisites, reboot then
 
 
 
-## Upgrade an expired agent manually if auto-upgrade did not succeed
+## Upgrade an expired agent manually if auto-upgrade didn't succeed
 
 Auto-upgrade keeps Azure File Sync agents on a supported version, but it can fail when the server has been offline for an extended period, lacks outbound connectivity to the update endpoints, has a pending reboot, or is blocked by local policy. When that happens, sync stops and the agent must be upgraded manually.
 ### Symptoms
 
 - Sync has stopped on all server endpoints registered to the affected server.
 - The portal shows the agent as expired or unsupported under **Registered servers**.
-- Auto-upgrade has not moved the server to a supported version.
+- Auto-upgrade hasn't moved the server to a supported version.
 
 
-### Direct upgrade is supported (do not unregister)
+### Direct upgrade is supported (don't unregister)
 
-A direct in-place upgrade to the latest agent is supported from any older expired version. No intermediate version step is required, and uninstalling the old agent first is not recommended.
+A direct in-place upgrade to the latest agent is supported from any older expired version. No intermediate version step is required, and uninstalling the old agent first isn't recommended.
 
-**Do not unregister the server.** The registration and sync topology are still valid — only the agent binary needs to be updated. Unregistering removes server endpoints, breaks tiered-file references on disk, and forces a full re-registration and re-sync.
+**Don't unregister the server.** The registration and sync topology are still valid — only the agent binary needs to be updated. Unregistering removes server endpoints, breaks tiered-file references on disk, and forces a full re-registration and re-sync.
 
 ### Before you upgrade
 
 - Apply the latest Windows updates and reboot.
 - Confirm TLS 1.2 or 1.3 is enabled.
-- Re-validate proxy and firewall rules — see [Azure File Sync on-premises firewall and proxy settings](file-sync/file-sync-firewall-and-proxy.md). This is the most common cause of failure when the server has moved or the network changed.
+- Re-validate proxy and firewall rules — see [Azure File Sync on-premises firewall and proxy settings](azure/storage/file-sync/file-sync-firewall-and-proxy). This is the most common cause of failure when the server has moved or the network changed.
 - If cloud tiering is disabled, confirm the local volume has free space for the full dataset.
 - Plan for a one-time **catch-up sync**: local changes since expiry will upload, cloud changes will download, and in multi-server sync groups those changes will propagate to other servers.
 
@@ -361,7 +361,7 @@ A direct in-place upgrade to the latest agent is supported from any older expire
 "C:\Program Files\Azure\StorageSyncAgent\AfsUpdater.exe"
 ```
 
-**Option 2 — Microsoft Update Catalog.** If `AfsUpdater.exe` cannot reach the update service, download the latest agent MSI from the [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/) and install it. Server registration is preserved across the in-place install.
+**Option 2 — Microsoft Update Catalog.** If `AfsUpdater.exe` can't reach the update service, download the latest agent MSI from the [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/) and install it. Server registration is preserved across the in-place install.
 
 The server should report **Online** in the portal within ~15 minutes. A reboot may be required depending on the version delta.
 
