@@ -6,7 +6,9 @@ documentationcenter: ''
 manager: dcscontentpm
 editor: 'v-jesits'
 tags: ''
-ms.custom: sap:Cannot connect to my VM, linux-related-content
+ms.custom: 
+ - Kernel Upgrades
+ - Package Management issue (Yum, Zypper, RPM, DPKG, APT)
 ms.service: azure-virtual-machines
 ms.collection: linux
 ms.workload: infrastructure-services

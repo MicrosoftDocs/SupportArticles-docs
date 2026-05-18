@@ -11,6 +11,7 @@ ms.custom: linux-related-content
 ms.workload: infrastructure
 ms.date: 08/25/2025
 ms.author: Gabsta
+ms.custom: Cannot connect to my VM
 ---
 
 # Removing extensions from VMs created from NetApp CVO images

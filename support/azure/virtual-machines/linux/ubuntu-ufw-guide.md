@@ -4,9 +4,9 @@ description: Discusses how to use Uncomplicated Firewall (UFW) to diagnose and r
 author: msaenzbosupport
 ms.author: msaenzbo
 ms.reviewer: divargas-msft
-editor: 
 ms.date: 08/23/2024
 ms.service: azure-virtual-machines
+ms.custom: Cannot connect to my VM
 ---
 
 # Use UFW to troubleshoot connectivity issues in Azure Ubuntu VMs

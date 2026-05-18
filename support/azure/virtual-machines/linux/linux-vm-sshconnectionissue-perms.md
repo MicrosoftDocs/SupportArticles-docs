@@ -5,7 +5,7 @@ ms.date: 03/13/2025
 author: pagienge
 ms.reviewer: divargas, adelgadohell, saimsh
 ms.service: azure-virtual-machines
-ms.custom: sap:Cannot connect to my VM, linux-related-content
+ms.custom: Azure Disk Encryption (ADE) not operating correctly
 ms.collection: linux
 ---
 
