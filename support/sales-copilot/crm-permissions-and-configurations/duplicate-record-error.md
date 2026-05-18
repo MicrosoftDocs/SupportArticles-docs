@@ -34,7 +34,7 @@ When a user tries to [create a new record in your CRM from the Sales app](/micro
 
 A duplicate detection rule in the CRM prevents specific fields from having duplicate values across multiple records. When a user tries to create a record from the Sales app that contains a duplicate field, the rule blocks the record from being created.
 
-For example, a duplicate detection rule might prevent the creation of a record that has the same email address as an existing record,. In this case, record creation fails if the new record's email address matches an existing address.
+For example, a duplicate detection rule might prevent the creation of a record that has the same email address as an existing record. In this case, record creation fails if the new record's email address matches an existing address.
 
 ## Solution
 
