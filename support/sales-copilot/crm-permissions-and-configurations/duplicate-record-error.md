@@ -4,7 +4,6 @@ description: Learn how to resolve the "This contact already exists" error that's
 ms.date: 05/18/2026
 ms.reviewer: shjais, v-shaywood
 ms.custom: sap:CRM Permissions and Configurations\CRM Settings
-ms.reviewer: shjais, v-shaywood
 ---
 # Record creation error because of duplicate detection rules in CRM
 
