@@ -22,7 +22,7 @@ description: Provides instructions to prevent antivirus and DLP applications fro
 
 # Prevent antivirus and DLP tools from blocking or crashing Microsoft Teams
 
-Third-party applications for antivirus, reliability monitoring, and data loss prevention (DLP) can interfere with the Microsoft Teams app and [Edge WebView2](https://developer.microsoft.com/microsoft-edge/webview2/?form=MA13LH). These tools can degrade Teams client performance and also cause the app to exit unexpectedly. To improve application stability and efficency when you use non-Microsoft antivirus or DLP applications on desktops, you can include or approve the use of the Teams app, the executable that automatically updates the Teams app, and Edge Webview2.
+Third-party applications for antivirus, reliability monitoring, and data loss prevention (DLP) can interfere with the Microsoft Teams app and [Edge WebView2](https://developer.microsoft.com/microsoft-edge/webview2/?form=MA13LH). These tools can degrade Teams client performance and also cause the app to exit unexpectedly. To improve application stability and efficiency when you use non-Microsoft antivirus or DLP applications on desktops, you can include or approve the use of the Teams app, the executable that automatically updates the Teams app, and Edge Webview2.
 
 ## New Teams
 
