@@ -15,9 +15,9 @@ ms.reviewer: kendownie, v-surmaini, v-weizhu
 This article explains how an upcoming Windows update will change the default Kerberos encryption type in Active Directory Domain Services (AD DS) from RC4 to AES-256, and how to upgrade your storage account so you won't be impacted. Azure Files customers who have already upgraded their storage accounts to use AES-256 encryption won't be impacted.
 
 > [!NOTE]
-> This article applies only to Azure Files storage accounts that use **on-premises Active Directory Domain Services (AD DS)** for SMB identity-based authentication. **No action is required** if your storage account uses Microsoft Entra Kerberos, Microsoft Entra Domain Services (Microsoft Entra Domain Services), or storage account key access only. To verify, run the Azure Resource Graph query in [Step 1a](#step-1a-find-ad-joined-storage-accounts-and-their-domains-azure-resource-graph) — if the query returns no results in your subscriptions, you are not affected by this change.
+> This article applies only to Azure Files storage accounts that use **on-premises Active Directory Domain Services (AD DS)** for SMB identity-based authentication. **No action is required** if your storage account uses Microsoft Entra Kerberos, Microsoft Entra Domain Services, or storage account key access only. To verify, run the Azure Resource Graph query in [Step 1a](#step-1a-find-ad-joined-storage-accounts-and-their-domains-azure-resource-graph). If the query returns no results in your subscriptions, you aren't affected by this change.
 >
-> **FSLogix and Azure Virtual Desktop (AVD):** If you use FSLogix with Azure Files storage with **AD DS** authentication, those storage accounts **are in scope** for this article. AVD deployments that use Microsoft Entra Kerberos for FSLogix are not affected.
+> **FSLogix and Azure Virtual Desktop:** If you use FSLogix with Azure Files storage with **AD DS** authentication, those storage accounts **are in scope** for this article. Azure Virtual Desktop deployments that use Microsoft Entra Kerberos for FSLogix aren't affected.
 
 ## Supported encryption methods for Azure Files identity-based access
 
@@ -55,14 +55,14 @@ resources
 If this query returns no results, no storage accounts in the queried subscriptions use AD DS authentication and you don't need to take any action. Otherwise, take note of the unique `domainName` values returned. You'll use them in the next step.
 
 > [!IMPORTANT]
-> The accounts returned by this query are **not necessarily impacted** — this query lists every AD DS-joined storage account, regardless of whether it has already been upgraded to AES-256. Azure has no visibility into the AD object's `msDS-SupportedEncryptionTypes` attribute, so this list is the *candidate set*. [Step 1b](#step-1b-identify-storage-accounts-that-havent-been-upgraded-to-aes-256-ad-ds) confirms which of these accounts are still on RC4 and need to be upgraded.
+> The accounts returned by this query aren't necessarily impacted. This query lists every AD DS-joined storage account, regardless of whether it has already been upgraded to AES-256. Azure has no visibility into the AD object's `msDS-SupportedEncryptionTypes` attribute, so this list is the *candidate set*. [Step 1b](#step-1b-identify-storage-accounts-that-havent-been-upgraded-to-aes-256-ad-ds) confirms which of these accounts are still on RC4 and need to be upgraded.
 
 > [!NOTE]
 > Resource Graph only returns subscriptions you currently have access to. If your tenant spans multiple management groups or partner-managed subscriptions, run this query in each scope to get full coverage.
 
 #### Step 1b: Identify storage accounts that haven't been upgraded to AES-256 (AD DS)
 
-For each unique domain returned by Step 1a, run the following PowerShell command on a machine joined to that domain to identify storage account objects that are still using RC4 (that is, the `msDS-SupportedEncryptionTypes` attribute is not set):
+For each unique domain returned by Step 1a, run the following PowerShell command on a machine joined to that domain to identify storage account objects that are still using RC4 (that is, the `msDS-SupportedEncryptionTypes` attribute isn't set):
 
 ```PowerShell
 Get-ADObject `
@@ -77,12 +77,12 @@ If no results are returned, the storage accounts in that domain already support 
 
 #### Step 1c (optional): Identify which clients are still requesting RC4 tickets
 
-Steps 1a and 1b tell you *which storage accounts* still need to be upgraded. They do **not** tell you *which client machines* are currently mounting those shares with RC4 tickets. This step is **optional** and is intended for customers who want extra confidence before upgrading — for example, to identify legacy clients that may need patching, or to estimate blast radius for a change-management ticket.
+Steps 1a and 1b tell you *which storage accounts* still need to be upgraded. They do **not** tell you *which client machines* are currently mounting those shares with RC4 tickets. This step is **optional** and is intended for customers who want extra confidence before upgrading, for example, to identify legacy clients that might need patching, or to estimate blast radius for a change-management ticket.
 
 On a domain controller, filter the Security event log for Kerberos service ticket events ([Event ID 4769](/windows/security/threat-protection/auditing/event-4769)) where the **Service Name** is the storage account's SPN (`cifs/<storage-account-name>.file.core.windows.net`) and the **Ticket Encryption Type** is `0x17` (RC4-HMAC). The **Client Address** field identifies the requesting client.
 
 > [!NOTE]
-> Skipping this step is safe. The upgrade itself is non-disruptive (see [Step 3](#step-3-upgrade-your-storage-account-to-aes-256)) — clients with cached RC4 tickets transparently get an AES-256 ticket on the next renewal. This step is purely diagnostic.
+> Skipping this step is safe. The upgrade itself is non-disruptive (see [Step 3](#step-3-upgrade-your-storage-account-to-aes-256)). Clients with cached RC4 tickets transparently get an AES-256 ticket on the next renewal. This step is purely diagnostic.
 
 ### Step 2: Ensure AES-256 is allowed by clients and by the storage account
 
@@ -90,7 +90,7 @@ Before upgrading the storage account in Step 3, confirm AES-256 is permitted at 
 
 #### Step 2a: Verify client OS supports AES-256
 
-Ensure your clients are running an OS version that supports AES-256 Kerberos ticket encryption. All actively supported OS versions today have support for AES-256 Kerberos ticket encryption. Windows versions older than Vista, MacOS versions older than OS X Lion 10.7, and Linux distributions running krb5 1.3.2 or older are known to not support AES-256 ticket encryption. If you have questions about client versions, please reach out to our team at <filesadauth@microsoft.com>.
+Ensure your clients are running an OS version that supports AES-256 Kerberos ticket encryption. All actively supported OS versions today have support for AES-256 Kerberos ticket encryption. Windows versions older than Vista, MacOS versions older than OS X Lion 10.7, and Linux distributions running krb5 1.3.2 or older don't support AES-256 ticket encryption. If you have questions about client versions, reach out to the [Azure Files authentication team](mailto:filesadauth@microsoft.com).
 
 #### Step 2b: Verify Windows client Kerberos policy allows AES-256
 
@@ -110,7 +110,7 @@ if ($null -eq $v) {
 }
 ```
 
-`SupportedEncryptionTypes` is a bitmask. AES-256 is bit `0x10` (decimal 16). If the registry value exists and bit `0x10` is not set, AES-256 is explicitly disallowed and the client won't be able to mount the file share once the storage account is upgraded.
+`SupportedEncryptionTypes` is a bitmask. AES-256 is bit `0x10` (decimal 16). If the registry value exists and bit `0x10` isn't set, AES-256 is explicitly disallowed and the client won't be able to mount the file share once the storage account is upgraded.
 
 | Bit | Encryption type |
 |---|---|
@@ -161,7 +161,7 @@ $StorageAccountName = "<storage-account-name-here>"
 Update-AzStorageAccountAuthForAES256 -ResourceGroupName $ResourceGroupName -StorageAccountName $StorageAccountName
 ```
 
-**What the cmdlet does.** `Update-AzStorageAccountAuthForAES256` performs three coordinated steps in a single operation. Knowing what's happening helps you reason about RBAC requirements (Storage Account Contributor on the SA + AD modify rights on the OU) and explain the change to AD/security teams who may need to review it:
+**What the cmdlet does:** `Update-AzStorageAccountAuthForAES256` performs three coordinated steps in a single operation. Knowing what's happening helps you reason about RBAC requirements (Storage Account Contributor on the SA + AD modify rights on the OU) and explain the change to AD/security teams who might need to review it:
 
 1. **Rotates one of the storage account's Kerberos keys** (`kerb1` by default). Calling `New-AzStorageAccountKey -KeyName kerb1` generates a new password for the AD object that backs the storage account. This is an Azure-side operation against the storage account's resource provider.
 2. **Sets `msDS-SupportedEncryptionTypes` on the AD object** to enable AES-256. This is an AD-side write against the computer or user object representing the storage account, which is why the executing identity needs **Write `msDS-SupportedEncryptionTypes`** on the OU.
@@ -306,7 +306,8 @@ The output should show `AES-256-CTS-HMAC-SHA1-96` for both the **KerbTicket Encr
         Cache Flags: 0
         Kdc Called: <domain-controller-name>
 ```
-To confirm the upgrade across an entire domain (rather than one client at a time), re-run the [Step 1b](#step-1b-identify-storage-accounts-that-havent-been-upgraded-to-aes-256-ad-ds) LDAP query. Any storage accounts you upgraded should no longer appear in the results — once `msDS-SupportedEncryptionTypes` is set on the AD object, the filter excludes it.
+
+To confirm the upgrade across an entire domain (rather than one client at a time), re-run the [Step 1b](#step-1b-identify-storage-accounts-that-havent-been-upgraded-to-aes-256-ad-ds) LDAP query. Any storage accounts you upgraded should no longer appear in the results. Once `msDS-SupportedEncryptionTypes` is set on the AD object, the filter excludes it.
 
 ## Reverting the AES-256 upgrade
 
