@@ -112,10 +112,6 @@ If you use Azure Key Vault together with [Private Link](/azure/private-link/priv
 
 To create a private endpoint in the correct region:
 
-1. Identify the deployment region of your Power Platform environment:
-   1. Open [Power Apps](https://make.powerapps.com), and select the **Settings** (gear symbol) in the top-right corner.
-   1. Select **Session details**.
-   1. Note the **Deployment location** value (for example, **WUS** is West US and **EUS** is East US).
 1. In the [Azure portal](https://portal.azure.com), go to your key vault.
 1. Select **Settings** > **Networking** > **Private endpoint connections**.
 1. Create a new private endpoint in the same region as your Power Platform environment.
