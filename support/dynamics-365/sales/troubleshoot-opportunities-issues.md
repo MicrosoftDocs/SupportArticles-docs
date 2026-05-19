@@ -3,8 +3,9 @@ title: Troubleshoot issues with an opportunity
 description: Provides resolutions for the issues that may occur when working with opportunities in Dynamics 365 Sales.
 author: sbmjais
 ms.author: shjais
-ms.date: 06/25/2024
+ms.date: 05/19/2026
 ms.custom: sap:Opportunity
+ai-usage: ai-assisted
 ---
 # Troubleshoot issues with opportunities
 
@@ -67,6 +68,65 @@ The opportunity that you're trying to close is already marked as Won or Lost.
 ##### Resolution
 
 If you want to make changes to the already closed opportunity, reopen the opportunity, make changes, and close it again.
+
+#### Error 4 - The opportunity close dialog doesn't open or shows unexpected behavior
+
+##### Cause
+
+One of the following issues might cause the opportunity close dialog to not open correctly:
+
+- A required metadata flag is turned off.
+- There are active customization layers on the opportunity close entity.
+- The opportunity close entity isn't added to the required model-driven app.
+- The **Custom fields on closing form** setting isn't enabled in Sales Hub settings.
+
+##### Resolution
+
+Try the following steps to resolve this issue:
+
+1. Check if there are any active layers on the opportunity close entity. Remove these layers to validate the scenario.
+
+    > [!NOTE]
+    > Removing active layers causes the system to lose all changes made as part of that solution.
+
+1. Add the opportunity close entity to the required model-driven apps.
+1. Ensure the opportunity close customization is enabled in Sales Hub settings. Go to **App Settings** > **Lead + opportunity management** > **Opportunity closing** and verify the **Custom fields on closing form** toggle is set correctly.
+
+    :::image type="content" source="media/troubleshoot-opportunities-issues/opportunity-closing-custom-fields-setting.png" alt-text="Screenshot of the Opportunity closing settings page in Sales Hub showing the Custom fields on closing form toggle.":::
+
+1. If you customized the opportunity close form with additional fields, ensure that scripts or fields don't cause errors. Try removing customizations and reattempt the opportunity close to isolate the issue.
+
+#### Error 5 - "More than one parent exists" or "MultipleParentEntitiesFoundByEntity"
+
+##### Cause
+
+Multiple fields in the opportunity close form have cascading relationships with the same entity. This configuration isn't supported.
+
+##### Resolution
+
+Remove one of the fields that has a cascading relationship with the same entity from the opportunity close form. For example, remove a custom field or the **Regarding** field if both reference the same entity. For more information, see [Create and edit 1:N (one-to-many) relationships](/dynamics365/customerengagement/on-premises/customize/create-and-edit-1n-relationships?view=op-9-1&preserve-view=true).
+
+#### Error 6 - Close as Won or Close as Lost button isn't visible
+
+##### Cause
+
+An active layer or managed component might be updating the ribbon definition, which hides the close buttons.
+
+##### Resolution
+
+Check if there's an active layer or managed component that modifies the ribbon definition. Use the [Command Checker](/power-apps/maker/model-driven-apps/use-command-designer) to inspect the visibility rules for the **Close as Won** and **Close as Lost** buttons.
+
+#### Error 7 - Currency mismatch error when closing an opportunity
+
+##### Cause
+
+The actual revenue currency in the **Opportunity Close** entity doesn't match the transaction currency of the opportunity.
+
+##### Resolution
+
+1. Open the opportunity record and check its transaction currency (for example, Japanese Yen).
+1. Open the opportunity close form and find the **Actual Revenue** field.
+1. Ensure the actual revenue currency matches the transaction currency of the opportunity.
 
 ### Issue 2 - Can't edit an opportunity
 
