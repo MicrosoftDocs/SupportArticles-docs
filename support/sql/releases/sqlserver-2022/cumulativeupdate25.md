@@ -1,7 +1,7 @@
 ---
 title: Cumulative Update 25 for SQL Server 2022 (KB5081477)
 description: This article contains the summary, known issues, improvements, fixes, and other information for SQL Server 2022 Cumulative Update 25 (KB5081477).
-ms.date: 05/14/2026
+ms.date: 05/20/2026
 ms.update-cycle: 1095-days
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5081477
 ms.reviewer: v-shaywood
@@ -12,7 +12,7 @@ appliesto:
 
 # KB5081477 - Cumulative Update 25 for SQL Server 2022
 
-_Release Date:_ &nbsp; May 14, 2026  
+_Release Date:_ &nbsp; May 20, 2026  
 _Version:_ &nbsp; 16.0.4255.1  
 
 ## Summary
