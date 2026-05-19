@@ -22,13 +22,11 @@ This article explains how to identify and resolve the `VMExtensionError_CniDownl
 
 When you try to create a Linux-based AKS cluster, you receive the following error message:
 
-> Message: We are unable to serve this request due to an internal error
+> Code: "VMExtensionProvisioningError"
 >
-> SubCode: VMExtensionError_CniDownloadTimeout;
+> Message: CSE failed with 'VMExtensionError_CniDownloadTimeout', which means agents are unable to connect to the endpoint that's used to download the container network interface libraries. It's likely that a network virtual appliance is blocking SSL communication or an SSL certificate, please see https://aka.ms/aks/vmextensionerror_cnidownloadtimeout for more information.
 >
-> Message="VM has reported a failure when processing extension 'vmssCSE'.
->
-> Error message: "CSE failed with 'VMExtensionError_CniDownloadTimeout', which means agents are unable to connect to the endpoint that's used to download the container network interface libraries. It's likely that a network virtual appliance is blocking SSL communication or an SSL certificate, please see https://aka.ms/aks/vmextensionerror_cnidownloadtimeout for more information.
+> "In some logs, this may also appear as exit status=41 / ExitCode: 41"
 
 ## Cause
 

@@ -1,21 +1,20 @@
 ---
-title: You don't have permission for this when opening Sales app
-description: Resolves the You don't have permission for this error that occurs in Sales app when a user tries to open the app.
-ms.date: 11/20/2025
-author: sbmjais
-ms.author: shjais
+title: You don't have permission for this when opening Sales agent
+description: Resolves the You don't have permission for this error that occurs in Sales agent when a user tries to open the app.
+ms.date: 05/14/2026
 ms.custom: sap:CRM Permissions and Configurations\CRM Settings
+ms.reviewer: shjais, v-shaywood
 ---
 
-# "You don't have permission for this" error when opening Sales app
+# "You don't have permission for this" error when opening Sales agent
 
-This article helps you resolve the "You don't have permission for this" error in Sales app when a user tries to open the app.
+This article helps you resolve the "You don't have permission for this" error in Sales agent when a user tries to open the app.
 
 ## Who is affected?
 
 | Requirement type |Description  |
 |---------|---------|
-|**Client app**     |  Sales app in Outlook        |
+|**Client app**     |  Sales agent in Outlook        |
 |**Platform**     | Web and desktop clients         |
 |**OS**     | Windows and Mac         |
 |**Deployment**     | User managed and admin managed       |
@@ -24,7 +23,7 @@ This article helps you resolve the "You don't have permission for this" error in
 
 ## Symptoms
 
-When a user tries to open Sales app, the following error is displayed:
+When a user tries to open Sales agent, the following error is displayed:
 
 > You don't have permission for this
 
@@ -32,7 +31,7 @@ When a user tries to open Sales app, the following error is displayed:
 
 ## Cause
 
-This error occurs when the first user in a tenant tries to [open Sales app](/microsoft-sales-copilot/open-app), and the tenant doesn't have any administrators assigned to create the environment.
+This error occurs when the first user in a tenant tries to [open Sales agent](/microsoft-sales-copilot/open-app), and the tenant doesn't have any administrators assigned to create the environment.
 
 ## Resolution
 
@@ -49,4 +48,4 @@ To resolve this issue, assign at least one administrator to the tenant with your
 
 ## More information
 
-If your issue is still unresolved, go to the [Sales in Microsoft 365 Copilot - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
+If your issue is still unresolved, go to the [Sales agent - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.

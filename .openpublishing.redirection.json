@@ -15857,6 +15857,16 @@
     {
       "source_path": "support/sql/database-engine/database-file-operations/database-engine-input-output-requirements.md",
       "redirect_url": "/sql/relational-databases/sql-server-storage-guide"
+    },
+    {
+      "source_path": "support/azure/virtual-machines/windows/windows-vm-activation-error-0x8007232a.md",
+      "redirect_url": "/troubleshoot/windows-server/licensing-and-activation/activation-error-0x8007232a-dns-server-failure.md?context=/troubleshoot/azure/virtual-machines/windows/context/context",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/networking/power-management-on-network-adapter.md",
+      "redirect_url": "/windows-hardware/drivers/kernel/introduction-to-power-management",
+      "redirect_document_id": false
     }
   ]
 }
