@@ -52,8 +52,8 @@ If you entered an opportunity ID:
 
 If you entered an opportunity name that resembles an ID:
 
-1. Retry the operation by using a clearly identifiable opportunity name. For example, instead of `Save to ABC12345`, use `Save this note to the opportunity named Contoso Renewal Deal`.
-1. Rephrase your input to explicitly indicate that it's a name.
+- Retry the operation by using a clearly identifiable opportunity name. For example, instead of `Save to ABC12345`, use `Save this note to the opportunity named Contoso Renewal Deal`.
+- Rephrase your input to explicitly indicate that it's a name.
 
 > [!NOTE]
 >
