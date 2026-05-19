@@ -78,7 +78,7 @@ The following table lists applications and their associated DLLs that are known 
 | Avast Antivirus| `aswhook.dll`|
 | Avecto (now BeyondTrust)| `PGHook.dll`|
 | BeyondTrust||
-| Citrix Workspace app - App Protection module| `ctxapclient64.dll` </br> Citrix Workspace app for Windows 2503.10 CR and 2507 LTSR contains critical fixes that prevent the Teams app that is running locally from becoming unresponsive.|
+| Citrix Workspace app - App Protection module| `ctxapclient64.dll` </br> Citrix Workspace app for Windows 2503.10 CR and 2507 LTSR contains critical fixes that prevent the Teams app that's running locally from becoming unresponsive.|
 | Citrix Workspace app - App Protection module| `epclient64.dll`<br/> Deprecated in Citrix Workspace app 2311, and replaced by ctxapclient64.dll.|
 | Citrix ICA Service in the VDA| `ctxdodhook64.dll`|
 | ControlUp||
