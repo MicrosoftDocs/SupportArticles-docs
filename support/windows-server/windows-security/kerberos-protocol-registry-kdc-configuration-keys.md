@@ -280,12 +280,12 @@ The registry entries that are listed in this section must be added to the follow
 - Entry: DefaultDomainSupportedEncTypes
 
   - Type: REG_DWORD
-  - Default value: 0x27
+  - Default value: 0x18
   - Possible values:
 
-    The default value is 0x27 (DES, RC4, AES session keys). We recommend setting the value to 0x3C for increased security, as this value allows for both AES-encrypted tickets and AES session keys. If you move to an AES-only environment where RC4 isn't used for the Kerberos protocol, we recommend setting the value to 0x18.
+    The default value is 0x18 (AES-SHA1). If you still have legacy applications that need RC4 ticket encryption we recommend setting the value to 0x24 (RC4, AES-SHA1 session keys).
 
-    This value sets AES as the default encryption type for session keys on accounts that aren't marked with a default encryption type.
+    This value sets AES-SHA1 as the default encryption type for accounts that aren't marked with a default encryption type.
 
     For more information, see [KB5021131: How to manage the Kerberos protocol changes related to CVE-2022-37966](https://support.microsoft.com/topic/kb5021131-how-to-manage-the-kerberos-protocol-changes-related-to-cve-2022-37966-fd837ac3-cdec-4e76-a6ec-86e67501407d).
  
