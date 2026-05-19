@@ -1,30 +1,31 @@
 ---
 title: Fix Contact Already Exists error in CRM Records
-description: Learn how to resolve the "This contact already exists" error that's caused by a duplicate detection rule when you create a CRM record from the Sales app.
+description: Learn how to resolve the "This contact already exists" error that's caused by a duplicate detection rule when you create a CRM record from Sales agent.
 ms.date: 05/18/2026
 ms.reviewer: shjais, v-shaywood
 ms.custom: sap:CRM Permissions and Configurations\CRM Settings
+ms.reviewer: shjais, v-shaywood
 ---
 # Record creation error because of duplicate detection rules in CRM
 
 ## Summary
 
-This article helps you fix the "This contact already exists" error. This error occurs when you try to [create a new record in your CRM](/microsoft-sales-copilot/create-new-record) from the Sales app, and a [duplicate detection rule](/power-platform/admin/set-up-duplicate-detection-rules-keep-data-clean) blocks the record from being created.
+This article helps you fix the "This contact already exists" error. This error occurs when you try to [create a new record in your CRM](/microsoft-sales-copilot/create-new-record) from Sales agent, and a [duplicate detection rule](/power-platform/admin/set-up-duplicate-detection-rules-keep-data-clean) blocks the record from being created.
 
 The following areas are affected by this issue.
 
 | Requirement type | Description                                             |
 | ---------------- | ------------------------------------------------------- |
-| **Client app**   | Sales app in Outlook                                    |
+| **Client app**   | Sales agent in Outlook                                    |
 | **Platform**     | Web and desktop clients                                 |
 | **OS**           | Windows and Mac                                         |
 | **Deployment**   | User managed and admin managed                          |
 | **CRM**          | Dynamics 365 and Salesforce                             |
-| **Users**        | Users who try to create a CRM record from the Sales app |
+| **Users**        | Users who try to create a CRM record from the Sales agent |
 
 ## Symptoms
 
-When a user tries to [create a new record in your CRM from the Sales app](/microsoft-sales-copilot/create-new-record), the following error message appears. The message indicates that the record creation failed because of a [duplicate detection rule in the CRM](/power-platform/admin/set-up-duplicate-detection-rules-keep-data-clean).
+When a user tries to [create a new record in your CRM from the Sales agent](/microsoft-sales-copilot/create-new-record), the following error message appears. The message indicates that the record creation failed because of a [duplicate detection rule in the CRM](/power-platform/admin/set-up-duplicate-detection-rules-keep-data-clean).
 
 > This contact already exists. To create a duplicate contact, try adding it in Salesforce.
 
@@ -32,7 +33,7 @@ When a user tries to [create a new record in your CRM from the Sales app](/micro
 
 ## Cause
 
-A duplicate detection rule in the CRM prevents specific fields from having duplicate values across multiple records. When a user tries to create a record from the Sales app that contains a duplicate field, the rule blocks the record from being created.
+A duplicate detection rule in the CRM prevents specific fields from having duplicate values across multiple records. When a user tries to create a record from Sales agent that contains a duplicate field, the rule blocks the record from being created.
 
 For example, a duplicate detection rule might prevent the creation of a record that has the same email address as an existing record. In this case, record creation fails if the new record's email address matches an existing address.
 
@@ -54,7 +55,7 @@ If your issue is still unresolved, go to the [Sales in Microsoft 365 Copilot - M
 
 ## Related content
 
-- ["Required fields are missing" error when creating a contact or record from Sales app in Outlook](required-fields-missing.md)
+- ["Required fields are missing" error when creating a contact or record from Sales agent in Outlook](required-fields-missing.md)
 - [Invalid CRM Record ID error when saving notes from Sales agent](invalid-crm-record-id-error.md)
 - [Can't update records because of missing record access in Salesforce CRM](missing-record-update-edit-access.md)
 
