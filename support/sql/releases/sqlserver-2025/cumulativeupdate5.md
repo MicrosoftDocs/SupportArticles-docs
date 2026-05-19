@@ -1,7 +1,7 @@
 ---
 title: Cumulative Update 5 for SQL Server 2025 (KB5084896)
 description: This article contains the summary, known issues, improvements, fixes, and other information for SQL Server 2025 Cumulative Update 5 (KB5084896).
-ms.date: 05/14/2026
+ms.date: 05/20/2026
 ms.update-cycle: 1095-days
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5084896
 ms.reviewer: v-shaywood
@@ -12,7 +12,7 @@ appliesto:
 
 # KB5084896 - Cumulative Update 5 for SQL Server 2025
 
-_Release Date:_ &nbsp; May 14, 2026  
+_Release Date:_ &nbsp; May 20, 2026  
 _Version:_ &nbsp; 17.0.4045.5  
 
 ## Summary
