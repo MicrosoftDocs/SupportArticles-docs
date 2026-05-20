@@ -1,6 +1,6 @@
 ---
 title: Error 0x8007232B "DNS name does not exist" when activating Windows
-description: 
+description: Discusses how to troubleshoot and resolve error 0x8007232B ("DNS name does not exist"). The steps apply to physical computers, on-premises virtual machines (VMs), and Azure VMs.
 ms.date: 05/21/2026
 ms.collection: windows
 ai.usage: ai-assisted
@@ -13,6 +13,12 @@ appliesto:
   - ✅ <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Error 0x8007232B "DNS name does not exist" when activating Windows
+
+## Summary
+
+This article helps you troubleshoot and resolve error 0x8007232B ("DNS name does not exist"). This error occurs when you try to activate Windows by using Key Management Services (KMS). This error typically means the KMS client can't locate a valid KMS host by using the automatic discovery process.
+
+The troubleshooting steps in this article walk you through the most common causes, including DNS configuration issues, incorrect KMS host settings, and network connectivity problems. The steps apply to physical computers, on-premises virtual machines (VMs), and Azure VMs.
 
 ## Symptoms
 
@@ -36,7 +42,7 @@ The most common causes of this issue include the following scenarios:
 
 ## Resolution
 
-To get the best results from these procedures, install the [PsPing](/sysinternals/downloads/psping) tool on the affected computer. If you have a self-hosted KMS server, install the PSPing tool on that computer as well.
+Use the following steps to troubleshoot and fix the issue. To get the best results from these procedures, install the [PsPing](/sysinternals/downloads/psping) tool on the affected computer. If you have a self-hosted KMS server, install the PSPing tool on that computer as well.
 
 You should also be familiar with the [`slmgr` script](/windows-server/get-started/activation-slmgr-vbs-options).
 
@@ -44,7 +50,7 @@ You should also be familiar with the [`slmgr` script](/windows-server/get-starte
 
 ### Step 1: Make sure that a KMS host is available, or use the Azure KMS service
 
-To use KMS activation, you have to have a KMS host in your environment for the clients to activate against. If your clients are Azure virtual machines, you can use the Azure KMS service. If you don't have a self-hosted KMS host and you can't use Azure KMS, use one of the following methods:
+To use KMS activation, you have to have a KMS host in your environment for the clients to activate against. If your clients are Azure VMs, you can use the Azure KMS service. If you don't have a self-hosted KMS host and you can't use Azure KMS, use one of the following methods:
 
 - Method 1: [Configure a self-hosted KMS server](#method-1-configure-a-self-hosted-kms-server)
 - Method 2: [Use an MAK product key instead of KMS](#method-2-use-an-mak-product-key-instead-of-kms)
@@ -123,7 +129,7 @@ To bypass the automatic discovery process, you can use the slmgr script to speci
    > [!NOTE]  
    >
    > - In this command, \<KMSHost_fqdn> represents the fully qualified domain name (FQDN) of the KMS host, and \<KMSHost_Port> represents the port that the KMS host uses.
-   > - To activate a virtual machine by using the Azure KMS service, use `azkms.core.windows.net` for \<KMSHost_fqdn> and use `1688` for \<KMSHost_Port.
+   > - To activate an Azure VM by using the Azure KMS service, use `azkms.core.windows.net` for \<KMSHost_fqdn> and use `1688` for \<KMSHost_Port.
 
 1. To try again to activate, run the following command:
 
@@ -144,7 +150,7 @@ If activation fails and generates the same error as before, continue to Step 4.
    > [!NOTE]  
 
    > - In this command, \<KMSHost_ip> represents the IP address of the KMS host.
-   > - If the client is a virtual machine and you're using the Azure KMS service for activation, use `20.118.99.224` or `40.83.235.53` for \<KMSHost-ip>.
+   > - If the client is an Azure VM and you're using the Azure KMS service for activation, use `20.118.99.224` or `40.83.235.53` for \<KMSHost-ip>.
 
 1. If you're using a self-hosted KMS host, open an administrative Command Prompt window on the KMS host, and then run the following command:
 
@@ -157,7 +163,7 @@ If activation fails and generates the same error as before, continue to Step 4.
 
 1. If `psping` fails in either case, follow these steps:
 
-   1. For a VM, check any network security groups (NSGs) that might affect the VM (such as NSGs that are set at the network interface, subnet, or virtual network level). Make sure that any NSG allows traffic between the VM and the DNS server on UDP/TCP port 53.
+   1. For an Azure VM, check any network security groups (NSGs) that might affect the VM (such as NSGs that are set at the network interface, subnet, or virtual network level). Make sure that any NSG allows traffic between the VM and the DNS server on UDP/TCP port 53.
 
    1. Make sure that any firewall (including Windows Firewall on the client) allows traffic between the client and the KMS server on UDP/TCP port 1688.
 
@@ -182,9 +188,9 @@ If activation fails and generates the same error as before, continue to Step 5.
    > [!NOTE]  
    >
    > - In this command, \<KMSHost_fqdn> represents the FQDN of the KMS host, and \<intendedDNS_name> represents the FQDN or IP address of the DNS server that the client should use to contact the host.
-   > - If the client is a VM that uses the Azure DNS service, use `168-63-129-16` for \<intendedDNS_name>.
+   > - If the client is an Azure VM that uses the Azure DNS service, use `168-63-129-16` for \<intendedDNS_name>.
 
-1. If the client is a VM and you're using the Azure KMS service, and the `nslookup` command failed, see the following articles to troubleshoot your DNS configuration:
+1. If the client is an Azure VM and you're using the Azure KMS service, and the `nslookup` command failed, see the following articles to troubleshoot your DNS configuration:
    - [DNS troubleshooting guidance](../networking/troubleshoot-dns-guidance.md)
    - [Configure DNS name resolution for Azure virtual networks](/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances)
 
@@ -213,16 +219,16 @@ If activation fails and generates the same error as before, continue to Step 5.
    ```
 
    > [!NOTE]  
-   > In this example, `168.63.129.16` is the IP address that VMs use when they connect to the Azure DNS infrastructure. The other IP addresses represent custom DNS servers.
+   > In this example, `168.63.129.16` is the IP address that Azure VMs use when they connect to the Azure DNS infrastructure. The other IP addresses represent custom DNS servers.
 
 1. Verify that each of the DNS server addresses is correct.
 
    > [!IMPORTANT]  
-   > When you use custom DNS servers for VMs, don't configure the DNS server settings on the VM itself. Specify DNS servers at the level of the network interface or the virtual network.
+   > When you use custom DNS servers for Azure VMs, don't configure the DNS server settings on the VM itself. Specify DNS servers at the level of the network interface or the virtual network.
 
 1. If the list is empty or doesn't include the correct DNS server addresses, see the following articles for more information:
 
-   - VMs: [Configure DNS name resolution for Azure virtual networks](/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances)
+   - Azure VMs: [Configure DNS name resolution for Azure virtual networks](/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances)
    - [Guidelines for troubleshooting DNS-related activation issues](/windows-server/get-started/common-troubleshooting-procedures-kms-dns)
    - [DNS troubleshooting guidance](../networking/troubleshoot-dns-guidance.md)
 
