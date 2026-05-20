@@ -37,7 +37,7 @@ By default, KMS clients locate KMS hosts automatically by querying DNS for a lis
 The most common causes of this issue include the following scenarios:
 
 - Firewall rules or Network Security Group (NSG) rules block DNS resolution.
-- The `slmgr.vbs /skms` was used to configure the client to use an incorrect name for the KMS host, or a KMS host that's not valid.
+- The client was configured to use a specific KMS host, but the KMS host name was incorrect or invalid.
 - The KMS host didn't publish KMS SRV records to the DNS server that the client uses. Additionally, the DNS server doesn't have a forwarding or recursion path to a DNS server that has the records.
 
 ## Resolution
