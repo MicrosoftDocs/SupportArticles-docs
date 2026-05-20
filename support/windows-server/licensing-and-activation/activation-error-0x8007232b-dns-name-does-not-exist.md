@@ -30,19 +30,19 @@ When you try to activate a Windows system, you see the following error message i
 
 ## Cause
 
-This error message appears when the Key Management Services (KMS) client can't find the server resource records (SRV RRs) for the KMS host in DNS.
+This error message appears if the Key Management Services (KMS) client can't find the server resource records (SRV RRs) for the KMS host in DNS.
 
-By default, the KMS clients locate KMS hosts automatically by querying DNS for a list of servers that have published `_vlmcs` SRV records within the membership zone of the client. DNS returns the list of KMS hosts in a random order. The client picks a KMS host and tries to establish a session on it. If this attempt works, the client caches the name of the KMS host and tries to use it for the next renewal attempt. If the attempt fails, the client randomly picks another KMS host. We highly recommend that you use the automatic discovery process.
+By default, KMS clients locate KMS hosts automatically by querying DNS for a list of servers that have published `_vlmcs` SRV records within the membership zone of the client. DNS returns the list of KMS hosts in a random order. The client picks a KMS host, and tries to establish a session on it. If this attempt succeeds, the client caches the name of the KMS host, and tries to use it for the next renewal attempt. If the attempt fails, the client randomly picks another KMS host. We highly recommend that you use the automatic discovery process.
 
 The most common causes of this issue include the following scenarios:
 
 - Firewall rules or Network Security Group (NSG) rules block DNS resolution.
 - The `slmgr.vbs /skms` was used to configure the client to use an incorrect name for the KMS host, or a KMS host that's not valid.
-- The KMS host didn't publish KMS SRV records to the DNS server that the client uses, and the DNS server doesn't have a forwarding or recursion path to a DNS server that has the records.
+- The KMS host didn't publish KMS SRV records to the DNS server that the client uses. Additionally, the DNS server doesn't have a forwarding or recursion path to a DNS server that has the records.
 
 ## Resolution
 
-Use the following steps to troubleshoot and fix the issue. To get the best results from these procedures, install the [PsPing](/sysinternals/downloads/psping) tool on the affected computer. If you have a self-hosted KMS server, install the PSPing tool on that computer as well.
+Use the following steps to troubleshoot and fix the issue. To get the best results from these procedures, install the [PsPing](/sysinternals/downloads/psping) tool on the affected computer. If you have a self-hosted KMS server, install the PSPing tool on that computer also.
 
 You should also be familiar with the [`slmgr` script](/windows-server/get-started/activation-slmgr-vbs-options).
 
@@ -50,22 +50,22 @@ You should also be familiar with the [`slmgr` script](/windows-server/get-starte
 
 ### Step 1: Make sure that a KMS host is available, or use the Azure KMS service
 
-To use KMS activation, you have to have a KMS host in your environment for the clients to activate against. If your clients are Azure VMs, you can use the Azure KMS service. If you don't have a self-hosted KMS host and you can't use Azure KMS, use one of the following methods:
+To use KMS activation, you have to have a KMS host in your environment for the clients to activate against. If your clients are Azure VMs, you can use the Azure KMS service. If you don't have a self-hosted KMS host, and you can't use Azure KMS, use one of the following methods:
 
 - Method 1: [Configure a self-hosted KMS server](#method-1-configure-a-self-hosted-kms-server)
 - Method 2: [Use an MAK product key instead of KMS](#method-2-use-an-mak-product-key-instead-of-kms)
 
 #### Method 1: Configure a self-hosted KMS server
 
-If there are no KMS hosts configured in your environment, and you can't use the Azure KMS service, install one. Then use an appropriate KMS host key to activate it. After you configure a computer on the network to host the KMS software, publish the Domain Name System (DNS) settings.
+If there are no KMS hosts configured in your environment, and you can't use the Azure KMS service, install one. Then, use an appropriate KMS host key to activate it. After you configure a computer on the network to host the KMS software, publish the Domain Name System (DNS) settings.
 
 For information about the KMS host configuration process, see [Activate using Key Management Service](/windows/deployment/volume-activation/activate-using-key-management-service-vamt) and [Install and Configure VAMT](/windows/deployment/volume-activation/install-configure-vamt).
 
-After you configure a KMS host, try to activate again. If activation fails and generates the same error as before, continue to [Step 2](#step-2-check-the-client-kms-key).
+After you configure a KMS host, try again to activate. If activation fails and generates the same error as before, go to [Step 2](#step-2-check-the-client-kms-key).
 
 #### Method 2: Use an MAK product key instead of KMS
 
-If you can't install a KMS host or, for some other reason, you can't use KMS activation, use an MAK product key. If you downloaded Windows images from Microsoft, the stock-keeping units (SKUs) that are associated with the images are generally volume licensed-media, and the product key that's provided for these images is an MAK key.
+If you can't install a KMS host or, for some other reason, you can't use KMS activation, use an MAK product key. If you downloaded Windows images from Microsoft, the stock keeping units (SKUs) that are associated with the images are generally volume licensed-media, and the product key that's provided for these images is an MAK key.
 
 To use an MAK product key, open an administrative Command Prompt window, and then run the following command:
 
@@ -82,7 +82,7 @@ To try again to activate, run the following command:
 cscript c:\windows\system32\slmgr.vbs /ato
 ```
 
-If activation fails and generates the same error as before, continue to [Step 2](#step-2-check-the-client-kms-key).
+If activation fails and generates the same error as before, go to [Step 2](#step-2-check-the-client-kms-key).
 
 ### Step 2: Check the client KMS key
 
@@ -106,11 +106,11 @@ If activation fails and generates the same error as before, continue to [Step 2]
    cscript c:\windows\system32\slmgr.vbs /ato
    ```
 
-If activation fails and generates the same error as before, continue to Step 3.
+If activation fails and generates the same error as before, go to Step 3.
 
 ### Step 3: Activate by using a particular KMS host
 
-To bypass the automatic discovery process, you can use the slmgr script to specify a KMS host.
+To bypass the automatic discovery process, you can use the slmgr script to specify a KMS host:
 
 1. Open an administrative Command Prompt window on the client.
 
@@ -129,7 +129,7 @@ To bypass the automatic discovery process, you can use the slmgr script to speci
    > [!NOTE]  
    >
    > - In this command, \<KMSHost_fqdn> represents the fully qualified domain name (FQDN) of the KMS host, and \<KMSHost_Port> represents the port that the KMS host uses.
-   > - To activate an Azure VM by using the Azure KMS service, use `azkms.core.windows.net` for \<KMSHost_fqdn> and use `1688` for \<KMSHost_Port.
+   > - To activate an Azure VM by using the Azure KMS service, use `azkms.core.windows.net` for \<KMSHost_fqdn>, and use `1688` for \<KMSHost_Port.
 
 1. To try again to activate, run the following command:
 
@@ -137,7 +137,7 @@ To bypass the automatic discovery process, you can use the slmgr script to speci
    cscript c:\windows\system32\slmgr.vbs /ato
    ```
 
-If activation fails and generates the same error as before, continue to Step 4.
+If activation fails and generates the same error as before, go to Step 4.
 
 ### Step 4: Make sure that activation traffic can pass between the client and the KMS host
 
@@ -150,7 +150,7 @@ If activation fails and generates the same error as before, continue to Step 4.
    > [!NOTE]  
 
    > - In this command, \<KMSHost_ip> represents the IP address of the KMS host.
-   > - If the client is an Azure VM and you're using the Azure KMS service for activation, use `20.118.99.224` or `40.83.235.53` for \<KMSHost-ip>.
+   > - If the client is an Azure VM, and you're using the Azure KMS service for activation, use `20.118.99.224` or `40.83.235.53` for \<KMSHost-ip>.
 
 1. If you're using a self-hosted KMS host, open an administrative Command Prompt window on the KMS host, and then run the following command:
 
@@ -175,7 +175,7 @@ If activation fails and generates the same error as before, continue to Step 4.
    cscript c:\windows\system32\slmgr.vbs /ato
    ```
 
-If activation fails and generates the same error as before, continue to Step 5.
+If activation fails and generates the same error as before, go to Step 5.
 
 ### Step 5: Check the DNS configuration
 
@@ -190,7 +190,7 @@ If activation fails and generates the same error as before, continue to Step 5.
    > - In this command, \<KMSHost_fqdn> represents the FQDN of the KMS host, and \<intendedDNS_name> represents the FQDN or IP address of the DNS server that the client should use to contact the host.
    > - If the client is an Azure VM that uses the Azure DNS service, use `168-63-129-16` for \<intendedDNS_name>.
 
-1. If the client is an Azure VM and you're using the Azure KMS service, and the `nslookup` command failed, see the following articles to troubleshoot your DNS configuration:
+1. If the client is an Azure VM, and you're using the Azure KMS service, and the `nslookup` command failed, see the following articles to troubleshoot your DNS configuration:
    - [DNS troubleshooting guidance](../networking/troubleshoot-dns-guidance.md)
    - [Configure DNS name resolution for Azure virtual networks](/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances)
 
@@ -226,13 +226,13 @@ If activation fails and generates the same error as before, continue to Step 5.
    > [!IMPORTANT]  
    > When you use custom DNS servers for Azure VMs, don't configure the DNS server settings on the VM itself. Specify DNS servers at the level of the network interface or the virtual network.
 
-1. If the list is empty or doesn't include the correct DNS server addresses, see the following articles for more information:
+1. If the list of DNS server addresses is empty or doesn't include the correct addresses, see the following articles for more information:
 
    - Azure VMs: [Configure DNS name resolution for Azure virtual networks](/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances)
    - [Guidelines for troubleshooting DNS-related activation issues](/windows-server/get-started/common-troubleshooting-procedures-kms-dns)
    - [DNS troubleshooting guidance](../networking/troubleshoot-dns-guidance.md)
 
-1. If you change any of the DNS settings, restart the KMS host.
+1. If you change any DNS settings, restart the KMS host.
 
 1. After the KMS host restarts, open an administrative Command Prompt window, and then run the following command:
 
@@ -248,9 +248,9 @@ If activation fails and generates the same error as before, continue to Step 5.
    cscript c:\windows\system32\slmgr.vbs /ato
    ```
 
-If the activation fails and generates the same error as previously, continue to Step 7.
+If the activation fails and generates the same error as before, go to Step 7.
 
-### Step 7 (Self-hosted KMS host only): Verify that the KMS host is configured to register DNS records
+### Step 7 (self-hosted KMS host only): Verify that the KMS host is configured to register DNS records
 
 To determine whether the KMS host is registering with DNS, check the registry of the KMS host computer. By default, a KMS host computer dynamically registers a DNS SRV record one time every 24 hours.
 
@@ -261,7 +261,7 @@ To check this setting, follow these steps:
 1. Start Registry Editor. To do this, right-click **Start** > **Run**, type **regedit**, and then press Enter.
 1. Locate the `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SoftwareProtectionPlatform` subkey, and check the value of the `DisableDnsPublishing` entry. This entry has the following possible values:
 
-   - `0` or undefined (default): The KMS host registers an SRV record once every 24 hours.
+   - `0` or undefined (default): The KMS host registers an SRV record one time every 24 hours.
    - `1`: The KMS host doesn't automatically register SRV records. If your implementation doesn't support dynamic updates, see [Manually create a KMS SRV record](/windows-server/get-started/common-troubleshooting-procedures-kms-dns#manually-create-a-kms-srv-record).
 
    > [!NOTE]  
