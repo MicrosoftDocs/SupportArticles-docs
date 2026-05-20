@@ -185,7 +185,6 @@ Backups might fail when you enable change tracking on the database. You might se
 If you encounter this problem on a supported version of SQL Server, install the latest cumulative update for your version. For background and historical fixes, see the following articles:
 
 - [2682488 FIX: Backup operation fails in a SQL Server 2008, in a SQL Server 2008 R2 or in a SQL Server 2012 database after you enable change tracking](https://support.microsoft.com/help/2682488)
-- [2603910 FIX: Backup fails in SQL Server 2008, in SQL Server 2008 R2 or in SQL Server 2012 if you enable change tracking on the database](https://support.microsoft.com/help/2603910)
 
 ## Restore backups of encrypted databases
 
