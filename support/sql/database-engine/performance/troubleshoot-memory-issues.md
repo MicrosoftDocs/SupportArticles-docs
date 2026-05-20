@@ -3,9 +3,7 @@ title: Troubleshoot out of memory or low memory issues in SQL Server
 description: Learn how to troubleshoot SQL Server memory issues, including out-of-memory errors, low memory conditions, and performance problems caused by external, internal, and engine-level memory pressure.
 ms.date: 05/20/2026
 ms.custom: sap:SQL resource usage and configuration (CPU, Memory, Storage)
-ms.reviewer: shaunbe, jopilov, v-shaywood
-author: pijocoder
-ms.author: jopilov
+ms.reviewer: jopilov, shaunbe, v-shaywood
 ---
 
 # Troubleshoot out of memory or low memory issues in SQL Server

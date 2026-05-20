@@ -4,8 +4,6 @@ description: Provides workarounds for common issues that can occur when you upgr
 ms.date: 05/20/2026
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall
 ms.reviewer: joriel, jopilov, prmadhes, v-sidong, v-shaywood
-ms.author: prmadhes
-author: prmadhes-msft
 ---
 # Issues when upgrading to SQL Server 2022
 

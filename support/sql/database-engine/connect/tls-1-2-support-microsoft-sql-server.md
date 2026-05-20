@@ -3,9 +3,7 @@ title: TLS 1.2 support for Microsoft SQL Server
 description: Learn which updates enable TLS 1.2 support for Microsoft SQL Server, the supported client drivers and providers, and how to fix common connectivity issues.
 ms.date: 05/20/2026
 ms.custom: sap:Database Connectivity and Authentication
-author: PiJoCoder 
-ms.author: jopilov
-ms.reviewer: v-sidong, v-shaywood
+ms.reviewer: jopilov, v-sidong, v-shaywood
 ---
 # TLS 1.2 support for Microsoft SQL Server
 

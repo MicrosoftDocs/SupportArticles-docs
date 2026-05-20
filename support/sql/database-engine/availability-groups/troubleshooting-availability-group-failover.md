@@ -4,7 +4,6 @@ description: This article provides troubleshooting steps to help you determine w
 ms.date: 05/20/2026
 ms.custom: sap:Always On Availability Groups (AG)
 ms.reviewer: cmathews, v-jayaramanp, jopilov, v-shaywood
-ms.author: cmathews
 ---
 
 # Troubleshoot failover of Always On Availability Groups

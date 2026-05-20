@@ -3,8 +3,6 @@ title: An existing connection was forcibly closed (OS error 10054)
 description: Troubleshoot the SQL Server connectivity error "An existing connection was forcibly closed by the remote host" caused by TLS handshake failures, mismatched protocols, or cipher suite issues.
 ms.date: 05/20/2026
 ms.custom: sap:Database Connectivity and Authentication
-author: aartig13
-ms.author: aartigoyle
 ms.reviewer: jopilov, v-jayaramanp, v-shaywood
 ---
 

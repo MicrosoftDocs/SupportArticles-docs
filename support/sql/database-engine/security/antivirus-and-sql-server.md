@@ -1,8 +1,6 @@
 ---
 title: Configure antivirus software to work with SQL Server
 description: This article describes how to configure antivirus software on computers running SQL Server.
-author: pijocoder
-ms.author: jopilov
 ms.reviewer: jopilov, v-shaywood
 ms.date: 05/20/2026
 ms.custom: sap:Security, Encryption, Auditing, Authorization
