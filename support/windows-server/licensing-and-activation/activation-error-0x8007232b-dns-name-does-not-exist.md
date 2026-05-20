@@ -16,7 +16,7 @@ appliesto:
 
 ## Summary
 
-This article helps you troubleshoot and resolve error 0x8007232B ("DNS name does not exist"). This error occurs when you try to activate Windows by using Key Management Services (KMS). This error typically means the KMS client can't locate a valid KMS host by using the automatic discovery process.
+This article helps you troubleshoot and resolve error `0x8007232B (DNS name does not exist)`. This error occurs when you try to activate Windows by using Key Management Services (KMS). This error typically means the KMS client can't locate a valid KMS host by using the automatic discovery process.
 
 The troubleshooting steps in this article walk you through the most common causes, including DNS configuration issues, incorrect KMS host settings, and network connectivity problems. The steps apply to physical computers, on-premises virtual machines (VMs), and Azure VMs.
 
