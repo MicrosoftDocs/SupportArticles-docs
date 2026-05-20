@@ -4,8 +4,9 @@ description: Provides resolutions for the known issues that are related to table
 author: sbmjais
 ms.author: shjais
 ms.topic: troubleshooting
-ms.date: 04/17/2025
+ms.date: 05/20/2026
 ms.custom: sap:Opportunity
+ai-usage: ai-assisted
 ---
 
 # Troubleshoot issues with table views
