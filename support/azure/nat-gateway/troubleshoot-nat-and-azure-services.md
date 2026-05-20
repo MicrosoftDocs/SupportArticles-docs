@@ -8,7 +8,7 @@ ms.author: jarrettr
 manager: dcscontentpm
 ms.service: azure-nat-gateway
 ms.topic: troubleshooting
-ms.date: 04/06/2026
+ms.date: 05/15/2026
 ms.custom: sap:Connectivity
 # Customer intent: As a cloud administrator, I want to troubleshoot outbound connectivity issues with NAT gateway and Azure services, so that I can ensure seamless application integration and efficient network performance in my cloud environment.
 ---
@@ -27,20 +27,6 @@ This article provides guidance on how to troubleshoot connectivity issues when u
 
 * [Azure Databricks](#azure-databricks)
 
-## Known limitations with StandardV2 NAT Gateway and VNet injection scenarios
-
-* StandardV2 NAT Gateway doesn't support and can't be attached to delegated subnets for the following services: 
-    * Azure SQL Managed Instance 
-    * Azure Container Instances 
-    * Azure Database for PostgreSQL - Flexible Server 
-    * Azure Database for MySQL - Flexible Server 
-    * Azure Database for MySQL  
-    * Azure Data Factory - Data Movement 
-    * Microsoft Power Platform services 
-    * Azure Stream Analytics
-    * Azure Container Apps
-    * Azure Web Apps 
-    * Azure DNS Private Resolver 
 
 ## Azure App Services 
 
