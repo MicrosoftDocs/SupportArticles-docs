@@ -57,8 +57,6 @@ items:
       href: troubleshoot-windows-365-enterprise-cloud-pcs-grace-period-issue.md
   - name: Session connectivity
     items:
-    - name: Windows 365 for Agents provisioning errors
-      href: windows-365-agents-pool-errors.md
     - name: Connection errors
       href: connection-errors.md
     - name: Connection fails with "an interactive window could not be shown"
@@ -83,3 +81,9 @@ items:
     items:
     - name: Windows 365 BCDR known issues
       href: windows-365-bcdr-known-issues.md
+- name: Windows 365 for Agents
+  items:
+  - name: Cloud PC agent pools
+    items:
+    - name: Provisioning errors
+      href: windows-365-agents-pool-errors.md
