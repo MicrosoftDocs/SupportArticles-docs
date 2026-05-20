@@ -8,12 +8,12 @@ editor: v-jesits
 ---
 # Troubleshoot SQL Server backup and restore operations
 
+_Original product version:_ &nbsp; SQL Server  
+_Original KB number:_ &nbsp; 224071
+
 ## Summary
 
 This article helps you troubleshoot common SQL Server backup and restore operations issues. These problems include slow backup or restore performance, version compatibility errors, Always On availability group backup jobs, media errors, permissions failures, third-party VDI and VSS backups, change tracking failures, and encrypted database restores. The article also includes a frequently asked questions section and links to reference topics for SQL Server backup and restore.
-
-_Original product version:_ &nbsp; SQL Server  
-_Original KB number:_ &nbsp; 224071
 
 ## Backup and restore operations take a long time
 

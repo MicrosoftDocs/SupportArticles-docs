@@ -7,12 +7,12 @@ ms.reviewer: SureshKa, jopilov, v-shaywood
 ---
 # Recommendations to reduce allocation contention in SQL Server tempdb database
 
+_Original product version:_ &nbsp; SQL Server 2014, SQL Server 2016, SQL Server 2017, SQL Server 2019, SQL Server 2022  
+_Original KB number:_ &nbsp; 2154845
+
 ## Summary
 
 This article explains how to diagnose and reduce allocation contention in the SQL Server `tempdb` database. It covers `PAGELATCH_UP` waits on Page Free Space (PFS), Global Allocation Map (GAM), and Shared Global Allocation Map (SGAM) pages. It describes how to use multiple equally sized `tempdb` data files and, on older versions, trace flags 1118 and 1117 to improve SQL Server performance under heavy concurrent workloads.
-
-_Original product version:_ &nbsp; SQL Server 2014, SQL Server 2016, SQL Server 2017, SQL Server 2019, SQL Server 2022  
-_Original KB number:_ &nbsp; 2154845
 
 ## Symptoms
 
