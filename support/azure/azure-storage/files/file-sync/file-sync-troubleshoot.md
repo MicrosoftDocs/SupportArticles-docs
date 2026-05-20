@@ -26,11 +26,11 @@ If you're experiencing problems with Azure File Sync, start by completing the fo
     - Open the Services MMC snap-in and verify the Storage Sync Agent service (FileSyncSvc) is running. If the service isn't running and fails to start, see [Storage Sync Agent service (FileSyncSvc) fails to start](file-sync-troubleshoot-service-fails-start.md).
 1. Verify the Azure File Sync filter drivers (*StorageSync.sys* and *StorageSyncGuard.sys*) are running on the server:
     - At an elevated command prompt, run `fltmc`. Verify the *StorageSync.sys* and *StorageSyncGuard.sys* file system filter drivers are listed.
-1. Use the [Debug-StorageSyncServer cmdlet](file-sync-debug-server-cmdlet.md) on the server to check for common problems.
+1. Use the [Debug-StorageSyncServer cmdlet](file-sync-use-debug-cmdlet.md) on the server to check for common problems.
 
 ## Troubleshooting resources
 
-- [Use Debug-StorageSyncServer cmdlet](file-sync-debug-server-cmdlet.md)
+- [Use Debug-StorageSyncServer cmdlet](file-sync-use-debug-cmdlet.md)
 - [Collect logs and traces on the Azure File Sync server](file-sync-collect-logs-traces.md)
 - [Storage Sync Agent service (FileSyncSvc) fails to start](file-sync-troubleshoot-service-fails-start.md)
 - [Troubleshoot Auto Update for expired Azure File Sync agents](file-sync-troubleshoot-auto-update-expired-agent.md)

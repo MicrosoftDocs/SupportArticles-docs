@@ -4,7 +4,7 @@ items:
     - name: Troubleshoot Azure File Sync
       href: file-sync-troubleshoot.md   
     - name: Use Debug-StorageSyncServer cmdlet
-      href: file-sync-debug-server-cmdlet.md
+      href: file-sync-use-debug-cmdlet.md
     - name: Collect logs and traces on the Azure File Sync server
       href: file-sync-collect-logs-traces.md
     - name: Storage Sync Agent service (FileSyncSvc) fails to start
