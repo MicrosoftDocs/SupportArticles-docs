@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot Auto Update for Expired Azure File Sync Agents    
+title: Troubleshoot Auto Update for expired Azure File Sync agents    
 description: Troubleshoot Auto Update when an Azure File Sync agent is near expiration or expired, verify metadata and connectivity, and restore updates now.
 author: khdownie
 ms.service: azure-file-storage

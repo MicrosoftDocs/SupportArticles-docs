@@ -1,6 +1,18 @@
 items:
-  - name: Troubleshoot Azure File Sync
-    href: file-sync-troubleshoot.md   
+  - name: Troubleshoot general problems
+    items:
+    - name: Troubleshoot Azure File Sync
+      href: file-sync-troubleshoot.md   
+    - name: Use Debug-StorageSyncServer cmdlet
+      href: file-sync-debug-server-cmdlet.md
+    - name: Collect logs and traces on the Azure File Sync server
+      href: file-sync-collect-logs-traces.md
+    - name: Storage Sync Agent service (FileSyncSvc) fails to start
+      href: file-sync-troubleshoot-service-fails-start.md
+    - name: Troubleshoot Auto Update for expired Azure File Sync agents
+      href: file-sync-troubleshoot-auto-update-expired-agent.md
+    - name: Troubleshoot high memory usage
+      href: file-sync-troubleshoot-high-memory-usage.md
   - name: Troubleshoot agent installation and server registration
     href: file-sync-troubleshoot-installation.md
   - name: Troubleshoot cloud tiering issues
@@ -11,9 +23,4 @@ items:
     href: file-sync-troubleshoot-sync-errors.md
   - name: Troubleshoot managed identities
     href: file-sync-troubleshoot-managed-identities.md
-  - name: Troubleshoot Storage Sync Agent service (FileSyncSvc) fails to start
-    href: file-sync-troubleshoot-service-fails-start.md
-  - name: Troubleshoot Auto Update can't upgrade expired Azure File Sync agent
-    href: file-sync-troubleshoot-auto-update-expired-agent.md
-  - name: Troubleshoot high memory usage
-    href: file-sync-troubleshoot-high-memory-usage.md
+
