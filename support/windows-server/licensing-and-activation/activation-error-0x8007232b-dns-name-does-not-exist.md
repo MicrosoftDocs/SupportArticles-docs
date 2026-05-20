@@ -32,7 +32,7 @@ When you try to activate a Windows system, you see the following error message i
 
 This error message appears if the Key Management Services (KMS) client can't find the server resource records (SRV RRs) for the KMS host in DNS.
 
-By default, KMS clients locate KMS hosts automatically by querying DNS for a list of servers that have published `_vlmcs` SRV records within the membership zone of the client. DNS returns the list of KMS hosts in a random order. The client picks a KMS host, and tries to establish a session on it. If this attempt succeeds, the client caches the name of the KMS host, and tries to use it for the next renewal attempt. If the attempt fails, the client randomly picks another KMS host. We highly recommend that you use the automatic discovery process.
+By default, KMS clients locate KMS hosts automatically by querying DNS for a list of servers that published `_vlmcs` SRV records within the membership zone of the client. DNS returns the list of KMS hosts in a random order. The client picks a KMS host, and tries to establish a session on it. If this attempt succeeds, the client caches the name of the KMS host, and tries to use it for the next renewal attempt. If the attempt fails, the client randomly picks another KMS host. We highly recommend that you use the automatic discovery process.
 
 The most common causes of this issue include the following scenarios:
 
@@ -50,7 +50,7 @@ You should also be familiar with the [`slmgr` script](/windows-server/get-starte
 
 ### Step 1: Make sure that a KMS host is available, or use the Azure KMS service
 
-To use KMS activation, you have to have a KMS host in your environment for the clients to activate against. If your clients are Azure VMs, you can use the Azure KMS service. If you don't have a self-hosted KMS host, and you can't use Azure KMS, use one of the following methods:
+To use KMS activation, you must have a KMS host in your environment for the clients to activate against. If your clients are Azure VMs, you can use the Azure KMS service. If you don't have a self-hosted KMS host, and you can't use Azure KMS, use one of the following methods:
 
 - Method 1: [Configure a self-hosted KMS server](#method-1-configure-a-self-hosted-kms-server)
 - Method 2: [Use an MAK product key instead of KMS](#method-2-use-an-mak-product-key-instead-of-kms)
