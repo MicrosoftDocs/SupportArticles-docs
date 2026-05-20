@@ -6,7 +6,7 @@ ms.collection: windows
 ai.usage: ai-assisted
 ms.reviewer: cwhitley, scotro, v-leedennis, kaushika, v-appelgatet
 ms.custom: 
-  - sap:Cannot activate my Windows VM\My VM is reporting a specific activation error
+  - sap:Windows Activation\Windows activation issues
 appliesto:
   - ✅ <a href=https://learn.microsoft.com/lifecycle/products/azure-virtual-machine target=_blank>Supported versions of Azure Virtual Machine</a>
   - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
