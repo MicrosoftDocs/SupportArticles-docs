@@ -18,7 +18,7 @@ The following errors can appear when a Windows 365 for Agents Cloud PC pool stat
 
 ## Invalid billing plan
 
-The selected billing plan for the provisioning policy (agents) is invalid. Cloud PCs will not be provisioned, and all updates will fail until there is a valid billing policy.
+The selected billing plan for the provisioning policy (agents) is invalid. Cloud PCs cannot be provisioned, and all pool updates fail until there's a valid billing policy.
 
 **Suggested solution:** Update the billing plan and reprovision.
 
@@ -27,4 +27,4 @@ The selected billing plan for the provisioning policy (agents) is invalid. Cloud
 **Suggested solution:** Edit the pool configuration, if needed, and retry reprovisioning.
 
 ## Other failures or warnings
-If you encounter a failed update, then please try again.
+If you encounter a failed update, then try again.
