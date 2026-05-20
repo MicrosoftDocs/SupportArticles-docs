@@ -57,6 +57,12 @@ A subnet that's in use for a cluster no longer has available IP addresses within
 
 Read more about the [design of Azure CNI to assign IP addresses to pods](/azure/aks/configure-azure-cni#plan-ip-addressing-for-your-cluster).
 
+Please note that AKS will consider all node pools in the cluster, and their respective subnet. So even if you are upgrading node pool "pool-A" in subnet "subnet-A", and there's another subnet "subnet-B" linked to another node pool "pool-B" facing IP exhaustion, then the error might happen.
+
+`Code: InsufficientSubnetSize; Message: Pre-allocated IPs <number> exceeds IPs available <number> in Subnet Cidr <CIDR>, Subnet Name <subnet-name>. If Autoscaler is enabled, the max-count from each nodepool is counted towards this total, which means that pre-allocated IPs count represents a theoretical max value, not the actual number of IPs requested. See http://aka.ms/aks/insufficientsubnetsize for troubleshooting steps. Surge nodes would also consume the subnet IP space, consider use smaller maxSurge or use maxUnavailable (aka.ms/aks/maxUnavailable).`
+
+
+
 ## Solution
 
 Trying to update a subnet's CIDR address space in an existing node pool isn't currently supported. To migrate your workloads to a new node pool in a larger subnet, follow these steps:
@@ -68,6 +74,11 @@ Trying to update a subnet's CIDR address space in an existing node pool isn't cu
 3. Migrate your workloads to the new node pool by draining the nodes in the old node pool. For information about how to drain AKS worker nodes safely, see [Safely Drain a Node](https://kubernetes.io/docs/tasks/administer-cluster/safely-drain-node).
 
 4. Delete the original node pool by running the [az aks nodepool delete](/cli/azure/aks/nodepool#az-aks-nodepool-delete) command.
+
+
+Alternatively, if you have some node pools with Cluster Autoscaler enabled, a quick solution can be to temporarily decrease the MaxCount of nodes in these pools (whenever possible), so that AKS counts less IP against the total available.
+Once the Scale/Upgrade/Add operation is finished, you can increase the MaxCount back to its original value.
+
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-contact-disclaimer.md)]
 
