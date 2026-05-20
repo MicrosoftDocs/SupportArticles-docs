@@ -248,7 +248,7 @@ If the activation fails and generates the same error as previously, continue to 
 
 Check the registry of the KMS host server to determine whether it is registering with DNS. By default, a KMS host server dynamically registers a DNS SRV record one time every 24 hours.
 
-Registry edit
+[!INCLUDE [Important registry alert](../../../includes/registry-important-alert.md)]
 
 To check this setting, follow these steps:
 
