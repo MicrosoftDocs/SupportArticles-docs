@@ -24,7 +24,7 @@ When you try to activate a Windows system, you see the following error message i
 
 ## Cause
 
-This error message appears when the KMS client can't find the server resource records (SRV RRs) for the KMS host in DNS.
+This error message appears when the Key Management Services (KMS) client can't find the server resource records (SRV RRs) for the KMS host in DNS.
 
 By default, the KMS clients locate KMS hosts automatically by querying DNS for a list of servers that have published `_vlmcs` SRV records within the membership zone of the client. DNS returns the list of KMS hosts in a random order. The client picks a KMS host and tries to establish a session on it. If this attempt works, the client caches the name of the KMS host and tries to use it for the next renewal attempt. If the attempt fails, the client randomly picks another KMS host. We highly recommend that you use the automatic discovery process.
 
@@ -51,7 +51,7 @@ To use KMS activation, you have to have a KMS host in your environment for the c
 
 #### Method 1: Configure a self-hosted KMS server
 
-If there are no KMS hosts configured in your environment, and you can't use the Azure KMS service, install and activate one by using an appropriate KMS host key. After you configure a computer on the network to host the KMS software, publish the Domain Name System (DNS) settings.
+If there are no KMS hosts configured in your environment, and you can't use the Azure KMS service, install one. Then use an appropriate KMS host key to activate it. After you configure a computer on the network to host the KMS software, publish the Domain Name System (DNS) settings.
 
 For information about the KMS host configuration process, see [Activate using Key Management Service](/windows/deployment/volume-activation/activate-using-key-management-service-vamt) and [Install and Configure VAMT](/windows/deployment/volume-activation/install-configure-vamt).
 
@@ -59,7 +59,7 @@ After you configure a KMS host, try to activate again. If activation fails and g
 
 #### Method 2: Use an MAK product key instead of KMS
 
-If you can't install a KMS host or, for some other reason, you can't use KMS activation, use an MAK product key. If you downloaded Windows images from Microsoft, the stock-keeping units (SKUs) that are associated with the images are generally volume licensed-media, and the product key that's provided is an MAK key.
+If you can't install a KMS host or, for some other reason, you can't use KMS activation, use an MAK product key. If you downloaded Windows images from Microsoft, the stock-keeping units (SKUs) that are associated with the images are generally volume licensed-media, and the product key that's provided for these images is an MAK key.
 
 To use an MAK product key, open an administrative Command Prompt window, and then run the following command:
 
@@ -92,7 +92,7 @@ If activation fails and generates the same error as before, continue to [Step 2]
    cscript c:\windows\system32\slmgr.vbs /ipk <kms-client-setup-key>
    ```
 
-1. After yhe script finishes, restart the client.
+1. After the script finishes, restart the client.
 
 1. To try again to activate, run the following command:
 
@@ -246,7 +246,7 @@ If the activation fails and generates the same error as previously, continue to 
 
 ### Step 7 (Self-hosted KMS host only): Verify that the KMS host is configured to register DNS records
 
-Check the registry of the KMS host server to determine whether it is registering with DNS. By default, a KMS host server dynamically registers a DNS SRV record one time every 24 hours.
+To determine whether the KMS host is registering with DNS, check the registry of the KMS host computer. By default, a KMS host computer dynamically registers a DNS SRV record one time every 24 hours.
 
 [!INCLUDE [Important registry alert](../../../includes/registry-important-alert.md)]
 
@@ -255,8 +255,8 @@ To check this setting, follow these steps:
 1. Start Registry Editor. To do this, right-click **Start** > **Run**, type **regedit**, and then press Enter.
 1. Locate the `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SoftwareProtectionPlatform` subkey, and check the value of the `DisableDnsPublishing` entry. This entry has the following possible values:
 
-   - `0` or undefined (default): The KMS host registers a SRV record once every 24 hours.
-   - `1`: The KMS host does not automatically register SRV records. If your implementation does not support dynamic updates, see [Manually create a KMS SRV record](/windows-server/get-started/common-troubleshooting-procedures-kms-dns#manually-create-a-kms-srv-record).
+   - `0` or undefined (default): The KMS host registers an SRV record once every 24 hours.
+   - `1`: The KMS host doesn't automatically register SRV records. If your implementation doesn't support dynamic updates, see [Manually create a KMS SRV record](/windows-server/get-started/common-troubleshooting-procedures-kms-dns#manually-create-a-kms-srv-record).
 
    > [!NOTE]  
    > Windows Server 2008 and Windows Vista used `SL` in the subkey instead of `SoftwareProtectionPlatform`.
