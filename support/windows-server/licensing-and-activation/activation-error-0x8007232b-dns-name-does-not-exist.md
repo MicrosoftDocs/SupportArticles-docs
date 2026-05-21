@@ -148,7 +148,7 @@ If activation fails and generates the same error as before, go to Step 4.
    ```
 
    > [!NOTE]  
-
+   >
    > - In this command, \<KMSHost_ip> represents the IP address of the KMS host.
    > - If the client is an Azure VM, and you're using the Azure KMS service for activation, use `20.118.99.224` or `40.83.235.53` for \<KMSHost-ip>.
 
