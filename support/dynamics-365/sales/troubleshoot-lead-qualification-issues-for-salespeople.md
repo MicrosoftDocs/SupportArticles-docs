@@ -1,7 +1,7 @@
 ---
 title: Fix lead qualification errors in Dynamics 365 Sales
 description: Resolve common lead qualification errors for salespeople in Dynamics 365 Sales, such as duplicate warnings, missing permissions, status code mismatches, and business process flow issues.
-ms.reviewer: ramakris, shjais, v-shaywood
+ms.reviewer: ramakris, shjais, tapanm, v-shaywood
 ms.date: 05/21/2026
 ms.custom: sap:Lead
 ai-usage: ai-assisted
