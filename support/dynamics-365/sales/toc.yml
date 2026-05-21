@@ -75,10 +75,6 @@ items:
   items: 
     - name: Dynamics 365 Sales AI agent is stuck during activation
       href: troubleshoot-ai-agents-issues.md
-- name: Visual hierarchy
-  items:
-    - name: View hierarchy button is missing
-      href: view-hierarchy-button-missing.md
 - name: Teams Dialer
   items:
     - name: Can't enable Teams dialer
@@ -99,3 +95,7 @@ items:
       href: dialer-not-available-in-custom-app.md
     - name: Teams dialer isn't visible in the Sales Hub
       href: dialer-not-visible-in-sales.md
+- name: Visual hierarchy
+  items:
+    - name: View hierarchy button is missing
+      href: view-hierarchy-button-missing.md
