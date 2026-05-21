@@ -31,7 +31,7 @@ Description: License Activation failed. The Software Protection service reported
 ```
 
 > [!NOTE]  
-> In the event output, /<ErrorCode> represents one of several error codes. For the issue discussed in this article, the error code is either `0xC0020017` or `0x8007139F`.
+> In the event output, \<ErrorCode> represents one of several error codes. For the issue discussed in this article, the error code is either `0xC0020017` or `0x8007139F`.
 
 To view this event, open a Windows PowerShell Command Prompt on the client, and then run the following cmdlet:
 
@@ -41,7 +41,7 @@ Get-WinEvent -FilterHashtable @{LogName='Application'; ProviderName='Security-SP
 
 ## Cause
 
-Error `0xC0020017` indicates that the Software Protection Platform (SPP) service can't contact the KMS server. This error is functionally similar to error [0xC004F074](../../../azure/virtual-machines/windows/windows-vm-activation-error-0xc004f074.md), but comes from a different code path. The SPP event pipeline reports this error instead of the System-Level Cache (SLC) API.
+Error `0xC0020017` indicates that the Software Protection Platform (SPP) service on the KMS client can't contact the KMS host. This error is functionally similar to error [0xC004F074](../../azure/virtual-machines/windows/windows-vm-activation-error-0xc004f074.md), but comes from a different code path. The SPP event pipeline reports this error instead of the System-Level Cache (SLC) API.
 
 This issue can occur under the conditions that include the following scenarios:
 
@@ -102,7 +102,7 @@ If your virtual network routes all client traffic through a gateway (forced tunn
 
 1. Review your tunneling configuration, and make sure that activation traffic can pass directly over port 1688 between clients and the KMS host.
 
-   For example, for Azure VMs that use Azure KMS, add a user-defined route (UDR) that sends traffic for the Azure KMS IP addresses directly to the internet. For information about how to configure this exemption for Azure, see [Windows activation fails in forced tunneling scenario](../../../azure/virtual-machines/windows/custom-routes-enable-kms-activation.md).
+   For example, for Azure VMs that use Azure KMS, add a user-defined route (UDR) that sends traffic for the Azure KMS IP addresses directly to the internet. For information about how to configure this exemption for Azure, see [Windows activation fails in forced tunneling scenario](../../azure/virtual-machines/windows/custom-routes-enable-kms-activation.md).
 
 1. To try again to activate Windows, run the following command at the command prompt on the client:
 
@@ -188,7 +188,6 @@ If the activation process still generates Event ID 8198 (error code `0xC0020017`
 
 If the activation process still generates Event ID 8198 (error code `0xC0020017` or `0x8007139F`), continue to Step 5.
 
-
 ### Step 5: Check the DNS configuration
 
 1. To check the DNS configuration, run the following command at the command prompt on the client:
@@ -263,8 +262,8 @@ If the activation process still generates Event ID 8198 (error code `0xC0020017`
 
 ## References
 
-- [Windows activation fails in forced tunneling scenario](../../../azure/virtual-machines/windows/custom-routes-enable-kms-activation.md)
-- [Error 0xC004F074 - No KMS could be contacted](../../../azure/virtual-machines/windows/windows-vm-activation-error-0xc004f074.md)
+- [Windows activation fails in forced tunneling scenario](../../azure/virtual-machines/windows/custom-routes-enable-kms-activation.md)
+- [Error 0xC004F074 - No KMS could be contacted](../../azure/virtual-machines/windows/windows-vm-activation-error-0xc004f074.md)
 - [DNS troubleshooting guidance](../networking/troubleshoot-dns-guidance.md)
 - [Guidelines for troubleshooting DNS-related activation issues](/windows-server/get-started/common-troubleshooting-procedures-kms-dns)
 - [Troubleshooting tools for Windows activation issues on Azure VMs](../../azure/virtual-machines/windows/windows-activation-troubleshoot-tools.md)
