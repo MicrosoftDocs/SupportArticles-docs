@@ -11,7 +11,7 @@ ai-usage: ai-assisted
 
 ## Summary
 
-This article helps you troubleshoot and resolve lead qualification issues for salespeople in Dynamics 365 Sales. When you qualify a lead, you might get errors related to duplicate records, missing permissions, business process flow stages, or entity mappings. Use the guidance in this article to identify the cause of common lead qualification errors and apply the right fix.
+This article helps you troubleshoot and resolve lead qualification issues for salespeople in Dynamics 365 Sales. When you [qualify a lead](/dynamics365/sales/qualify-lead-convert-opportunity-sales), you might get errors related to duplicate records, missing permissions, business process flow stages, or entity mappings. Use the guidance in this article to identify the cause of common lead qualification errors and apply the right fix.
 
 The following errors or issues can occur when you qualify a lead:
 
@@ -142,8 +142,6 @@ You get the following error message when you try to qualify a lead:
 > Insufficient permissions or Access denied error when a user is trying to qualify a lead.
 
 This issue occurs when the user's [security role](/dynamics365/sales/security-roles-for-sales) is missing one or more privileges required on the Account, Lead, Contact, or Opportunity entities (and related customization entities) that are accessed during lead qualification.
-
-When you qualify a lead, the records that can optionally get created are Opportunity, Contact, and Account. For more information, see [Qualify or convert leads](/dynamics365/sales/qualify-lead-convert-opportunity-sales).
 
 ### Assign the required privileges to the security role
 
