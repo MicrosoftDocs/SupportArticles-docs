@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot HTTP 504 Gateway Timeout errors in Azure Application Gateway
-description: Diagnose and fix HTTP 504 Gateway Timeout errors in Azure Application Gateway. Check backend response times, health probes, and network latency to resolve timeouts now.
+title: Troubleshoot HTTP 504 Gateway timeout errors in Azure Application Gateway
+description: Diagnose and fix HTTP 504 Gateway timeout errors in Azure Application Gateway. Check backend response times, health probes, and network latency to resolve timeouts.
 ms.service: azure-application-gateway
 ms.topic: troubleshooting
 ms.author: chadmat
@@ -25,31 +25,32 @@ ai.hint.context-required:
   - RESOURCE_NAME
 ---
 
-# Troubleshoot HTTP 504 Gateway Timeout errors in Azure Application Gateway
+# Troubleshoot HTTP 504 Gateway timeout errors in Azure Application Gateway
 
 ## Summary
 
-HTTP 504 Gateway Timeout errors from Application Gateway occur when the backend server doesn't respond within the configured request timeout threshold. The most common causes include:
+"HTTP 504" timeout errors from Microsoft Azure Application Gateway occur if the back-end server doesn't respond within the configured request timeout threshold. The most common causes include:
 
-- Backend application processing time exceeds the timeout setting. 
-- Backend resource exhaustion (high CPU, memory, or disk input/output operations per second (IOPS)). 
-- Network-level delays between Application Gateway and the backend.
+- back-end application processing time that exceeds the timeout setting
+- back-end resource exhaustion (high CPU, memory, or disk input/output operations per second (IOPS))
+- Network-level delays between Application Gateway and the backend
 
 ## Symptoms
 
 Common symptoms include:
 
-- Application Gateway returns HTTP 504 responses to clients.
-- Intermittent timeouts that correlate with traffic spikes or specific API endpoints.
+- Application Gateway returns "HTTP 504" responses to clients.
+- Intermittent timeouts that correlate to traffic spikes or specific API endpoints.
 - Application Gateway access logs show high `serverResponseLatency` values.
-- Backend application response times increase with no Application Gateway configuration change.
+- back-end application response times increase without any Application Gateway configuration change.
 - The following portal message appears: `The request to the backend timed out`.
 
 ## Prerequisites
 
-- **Permissions required**: `Network Contributor` role on the Application Gateway resource group or equivalent (`Microsoft.Network/applicationGateways/read`).
-- **Tools**: Azure CLI 2.x, Azure PowerShell 9.x, or an AI agent with Azure MCP Server.
-- **The following table lists variables used in the commands**:
+- **Permissions required**: `Network Contributor` role on the Application Gateway resource group or equivalent (`Microsoft.Network/applicationGateways/read`)
+- **Tools**: Azure CLI 2._x_, Azure PowerShell 9._x_, or an AI agent with Azure MCP Server
+
+### Command variables
 
 | Variable | Description | Example |
 |---|---|---|
@@ -58,18 +59,18 @@ Common symptoms include:
 | `{RESOURCE_NAME}` | Application Gateway resource name | `myAppGateway` |
 
 > [!TIP]
-> Before running any commands, verify all the variables listed in the previous table. Additional variables (like Log Analytics workspace ID, backend resource IDs, subnet IDs) are discovered during the diagnostic steps. You don't need them to start.
+> Before you run any commands, verify all the variables that are listed in the table. Additional variables (such as Log Analytics workspace ID, back-end resource IDs, subnet IDs) are discovered during the diagnostic steps. You don't need them to start.
 
 ## Diagnostic steps
 
 > [!NOTE]
 > These steps are read-only. No changes are made to your environment.
 
-### Step 1a: Determine if the request timeout setting is appropriate for your backend application
+### Step 1a: Determine the appropriate request timeout setting
 
-This step checks the request timeout value in the HTTP settings. Application Gateway waits this many seconds for a response from the backend before returning 504 to the client.
+This step determine whether the request timeout setting is appropriate for your back-end application. Application Gateway waits this many seconds for a response from the backend before it returns "504" to the client.
 
-Run the following command to check the `requestTimeout` value for each HTTP setting:
+To check the `requestTimeout` value for each HTTP setting, run the following command, as appropriate.
 
 **Azure CLI**
 
@@ -98,15 +99,15 @@ $gw.BackendHttpSettingsCollection |
 
 | If you see... | Meaning | Next steps |
 |---|---|---|
-| `requestTimeout` is 20 seconds (default). | The default is appropriate for most web applications. 20 seconds is a long time for typical page loads and API calls. Only increase the time if the backend legitimately performs long-running operations (like report generation, file processing, and batch APIs). | Note the value as you'll use it in [Step 2a: Check backend response times for 504 errors in access logs](#step-2a-check-backend-response-times-for-504-errors-in-access-logs). |
-| `requestTimeout` is set to 30–120 seconds and 504 errors still occur. | The backend is responding slower than an extended timeout usually allows. | Note the value as you'll use it in [Step 2a: Check backend response times for 504 errors in access logs](#step-2a-check-backend-response-times-for-504-errors-in-access-logs). |
-| `requestTimeout` is very high (for example, greater than 300 seconds) and 504 errors still occur. | There are backend delays or network issues. Timeout isn't the problem. | Note the value as you'll use it in [Step 2a: Check backend response times for 504 errors in access logs](#step-2a-check-backend-response-times-for-504-errors-in-access-logs).  |
+| `requestTimeout` is 20 seconds (default). | The default is appropriate for most web applications. 20 seconds is a long time for typical page loads and API calls. Increase the time only if the backend legitimately performs long-running operations (such as report generation, file processing, and batch APIs). | Note the value because you'll use it in [Step 2a: Check backend response times for 504 errors in access logs](#step-2a-check-backend-response-times-for-504-errors-in-access-logs). |
+| `requestTimeout` is set to 30–120 seconds, and "504" errors still occur. | The backend is responding slower than an extended timeout usually allows. | Note the value because you'll use it in [Step 2a: Check backend response times for 504 errors in access logs](#step-2a-check-backend-response-times-for-504-errors-in-access-logs). |
+| `requestTimeout` is very high (for example, greater than 300 seconds), and "504" errors still occur. | Backend delays or network issues are occurring. Timeout isn't the problem. | Note the value because you'll use it in [Step 2a: Check backend response times for 504 errors in access logs](#step-2a-check-backend-response-times-for-504-errors-in-access-logs).  |
 
-### Step 1b: Check if Application Gateway access logs are enabled and where they're sent
+### Step 1b: Check Application Gateway access logs status and target
 
 This step checks which Log Analytics workspace receives Application Gateway access logs. You need this workspace ID to query logs in [Step 2a: Check backend response times for 504 errors in access logs](#step-2a-check-backend-response-times-for-504-errors-in-access-logs).
 
-Run the following command to check diagnostic settings for the Application Gateway resource:
+To check diagnostic settings for the Application Gateway resource, run the following command, as appropriate.
 
 **Azure CLI**
 
@@ -127,13 +128,13 @@ Get-AzDiagnosticSetting `
 
 | If you see... | Meaning | Next steps |
 |---|---|---|
-| `workspaceId` is populated and `ApplicationGatewayAccessLog` is `true`. | Access logs are enabled. Record the `workspaceId` value (this is an Azure Resource Manager (ARM) resource ID) | Note the value as you'll use it in [Step 2a - Check backend response times for 504 errors in access logs](#step-2a-check-backend-response-times-for-504-errors-in-access-logs). |
-| `ApplicationGatewayAccessLog` is `false` or missing. | Access logging isn't enabled. You can't query access logs until this is configured. | Enable access logs. See [Resolution 4: Enable diagnostic logging](#resolution-4-enable-diagnostic-logging) for more details. |
-| No diagnostic settings found. | No diagnostics are configured. | Enable access logs. See [Resolution 4: Enable diagnostic logging](#resolution-4-enable-diagnostic-logging) for more details. |
+| `workspaceId` is populated, and `ApplicationGatewayAccessLog` is `true`. | Access logs are enabled. Record the `workspaceId` value (this value is an Azure Resource Manager (ARM) resource ID) | Note the value because you'll use it in [Step 2a - Check backend response times for 504 errors in access logs](#step-2a-check-backend-response-times-for-504-errors-in-access-logs). |
+| `ApplicationGatewayAccessLog` is `false` or missing. | Access logging isn't enabled. You can't query access logs until this setting is configured. | Enable access logs. For more information, see [Resolution 4: Enable diagnostic logging](#resolution-4-enable-diagnostic-logging). |
+| No diagnostic settings found. | No diagnostics are configured. | Enable access logs. For more information, see [Resolution 4: Enable diagnostic logging](#resolution-4-enable-diagnostic-logging). |
 
-The `workspaceId` returned is an ARM resource ID, but the `az monitor log-analytics query` command in [Step 2a - Check backend response times for 504 errors in access logs](#step-2a-check-backend-response-times-for-504-errors-in-access-logs) requires the **workspace GUID** (`customerId`). 
+The `workspaceId` that's returned is an ARM resource ID, but the `az monitor log-analytics query` command in [Step 2a - Check backend response times for 504 errors in access logs](#step-2a-check-backend-response-times-for-504-errors-in-access-logs) requires the **workspace GUID** (`customerId`). 
 
-Run this command to get the GUID:
+To get the GUID, run the following command, as appropriate.
 
 **Azure CLI**
 
@@ -154,13 +155,13 @@ Record the returned GUID as `{LOG_ANALYTICS_WORKSPACE_ID}` in [Step 2a - Check b
 
 ### Step 2a: Check backend response times for 504 errors in access logs
 
-This step checks the actual time the backend takes to respond as recorded in Application Gateway access logs.
+This step checks the actual amount of time that the backend takes to respond, as recorded in Application Gateway access logs.
 
-**Prerequisite** 
+**Prerequisites** 
 
-You must enable diagnostic settings and send the `ApplicationGatewayAccessLog` category to Log Analytics. If you don't have this configuration, see [Step 1b: Check if Application Gateway access logs are enabled and where they're sent](#step-1b-check-if-application-gateway-access-logs-are-enabled-and-where-theyre-sent). If you recently enabled diagnostic settings, it can take 15–20 minutes for log data to appear.
+You must enable diagnostic settings and send the `ApplicationGatewayAccessLog` category to Log Analytics. If you don't have this configuration, see [Step 1b: Check Application Gateway access logs status and target](#step-1b-check-application-gateway-access-logs-status-and-target). If you recently enabled diagnostic settings, log data can take 15–20 minutes to appear.
 
-Run the following command to query the last 50 access log entries with HTTP 504 status codes, sorted by most recent:
+To query the last 50 access log entries that have "HTTP 504" status codes (sorted by most recent), run the following command, as appropriate.
 
 **Azure CLI**
 
@@ -206,17 +207,17 @@ AzureDiagnostics
 
 | If you see... | Meaning | Next steps |
 |---|---|---|
-| `serverResponseLatency_s` exceeds `requestTimeout` value from [Step 1a: Determine if the request timeout setting is appropriate for your backend application](#step-1a-determine-if-the-request-timeout-setting-is-appropriate-for-your-backend-application). | Backend is responding slower than the timeout allows. | See [Resolution 1: Increase request timeout](#resolution-1-increase-request-timeout) to increase  the timeout or [Step 3a: Check backend resource utilization (CPU, memory, disk )](#step-3a-check-backend-resource-utilization-cpu-memory-disk) to investigate the backend. |
-| `serverResponseLatency_s` is consistently at a specific value (for example, exactly 20 seconds or 30 seconds) that is less than the `requestTimeout` setting. | The backend application itself has an internal timeout (for example, the web server `proxy_read_timeout`, PHP `max_execution_time`, or application-level request timeout) that's shorter than the Application Gateway timeout. The backend closes the connection at its own limit, causing Application Gateway to return 504 errors. | See [Step 2b: Check backend health probe status](#step-2b-check-backend-health-probe-status) to check backend health, then [Resolution 2: Scale or optimize backend](#resolution-2-scale-or-optimize-backend) to investigate and fix the backend application's internal timeout configuration. |
-| `serverResponseLatency_s` is near zero but `timeTaken_d` is high. | There's network delay between Application Gateway and the backend, or the backend dropped the connection. | See [Resolution 3: Fix network path](#resolution-3-fix-network-path) to check the network path. |
-| 504 errors correlate with specific `requestUri_s` patterns. | Certain API endpoints or pages are slow. | See [Step 3a: Check backend resource utilization (CPU, memory, disk )](#step-3a-check-backend-resource-utilization-cpu-memory-disk) to investigate those specific backend endpoints. |
-| No access log data found. | Access logging isn't enabled. | See [Resolution 4: Enable diagnostic logging](#resolution-4-enable-diagnostic-logging) for more details. |
+| `serverResponseLatency_s` exceeds `requestTimeout` value from [Step 1a: Determine whethr the request timeout setting is appropriate for your backend application](#step-1a-determine-whether-the-request-timeout-setting-is-appropriate-for-your-backend-application). | Backend is responding slower than the timeout allows. | To increase the timeout, see [Resolution 1: Increase request timeout](#resolution-1-increase-request-timeout). Or, to investigate the backend, see [Step 3a: Check backend resource utilization (CPU, memory, disk )](#step-3a-check-backend-resource-utilization-cpu-memory-disk). |
+| `serverResponseLatency_s` is consistently at a specific value (for example, exactly 20 seconds or 30 seconds) that is less than the `requestTimeout` setting. | The back-end application itself has an internal timeout (for example, the web server `proxy_read_timeout`, PHP `max_execution_time`, or application-level request timeout) that's shorter than the Application Gateway timeout. The backend closes the connection at its own limit. This causes Application Gateway to return "504" errors. | To check backend health, see [Step 2b: Check backend health probe status](#step-2b-check-backend-health-probe-status). Then, to investigate and fix the back-end application's internal timeout configuration, see [Resolution 2: Scale or optimize backend](#resolution-2-scale-or-optimize-backend). |
+| `serverResponseLatency_s` is near zero but `timeTaken_d` is high. | Network delays occur between Application Gateway and the backend, or the backend dropped the connection. | To check the network path, see [Resolution 3: Fix network path](#resolution-3-fix-network-path). |
+| 504 errors correlate with specific `requestUri_s` patterns. | Certain API endpoints or pages are slow. | To investigate those specific backend endpoints, see [Step 3a: Check backend resource utilization (CPU, memory, disk )](#step-3a-check-backend-resource-utilization-cpu-memory-disk). |
+| No access log data found. | Access logging isn't enabled. | For more information, see [Resolution 4: Enable diagnostic logging](#resolution-4-enable-diagnostic-logging). |
 
 ### Step 2b: Check backend health probe status
 
-This check verifies whether Application Gateway can successfully reach the backend servers and whether the health probes are passing. This check is one of the most fundamental diagnostics because a backend marked as **Unhealthy** causes all requests to fail.
+This check verifies whether Application Gateway can successfully reach the back-end servers and whether the health probes are passing. This check is one of the most fundamental diagnostics because a backend that's marked as **Unhealthy** causes all requests to fail.
 
-Run this command to check the health status of backend servers as seen by Application Gateway:
+To check the health status of back-end servers as seen by Application Gateway, run the following command, as appropriate.
 
 **Azure CLI**
 
@@ -252,17 +253,16 @@ $health.BackendAddressPools.BackendHttpSettingsCollection.Servers |
 
 | If you see... | Meaning | Next steps |
 |---|---|---|
-| `health` is `Healthy` and probe returns a **200** status code. | The backend is reachable and responding to health probes. The issue is specific to request processing time, not availability. | See [Step 3a: Check backend resource utilization (CPU, memory, disk )](#step-3a-check-backend-resource-utilization-cpu-memory-disk) to check backend resource utilization. |
-| `health` is `Unhealthy` with a probe timeout or connection refused. | Backend isn't responding to health probes. Requests fail with 502 or 504 errors. | Check that the backend application is running and listening on the correct port. Verify network security group (NSG) rules allow traffic from the Application Gateway subnet. |
-| `health` is `Unhealthy` with a **non-200** status code. | Backend responds but with an error like 403 or 500. The health probe path might be misconfigured. | Verify the health probe path returns **200** on the backend. Check probe settings with `az network application-gateway probe list`. |
-| Mixed results (some healthy, some unhealthy). | There's a partial backend failure and some instances are down. | Investigate the unhealthy instances specifically. |
-
+| `health` is `Healthy` and probe returns a **200** status code. | The backend is reachable and responding to health probes. The issue is specific to request processing time, not availability. | To check backend resource usage, see [Step 3a: Check backend resource utilization (CPU, memory, disk )](#step-3a-check-backend-resource-utilization-cpu-memory-disk). |
+| `health` is `Unhealthy` with a probe timeout or connection refused. | Backend isn't responding to health probes. Requests fail with 502 or 504 errors. | Check that the back-end application is running and listening on the correct port. Verify network security group (NSG) rules allow traffic from the Application Gateway subnet. |
+| `health` is `Unhealthy` with a **non-200** status code. | Backend responds but returns an error code such as "403" or "500." The health probe path might be misconfigured. | Verify that the health probe path returns **200** on the backend. Check probe settings by using `az network application-gateway probe list`. |
+| Mixed results (some healthy, some unhealthy). | A partial backend failure exists, and some instances are down. | Investigate the unhealthy instances specifically. |
 
 ### Step 3a: Check backend resource utilization (CPU, memory, disk)
 
-This check verifies whether the backend VM or app service is under resource pressure (CPU, memory, disk IOPS) that indicates slow responses.
+This check verifies whether the back-end VM or app service is under resource pressure (CPU, memory, disk IOPS) that indicates slow responses.
 
-Run the following command to identify which backend servers are in the Application Gateway backend pool:
+To identify which back-end servers are in the Application Gateway back-end pool, run the following command, as appropriate.
 
 **Azure CLI**
 
@@ -287,11 +287,11 @@ $gw.BackendAddressPools |
   Format-Table -AutoSize
 ```
 
-Record the backend IP addresses or fully qualified domain names (FQDNs) returned. If the backends are Azure virtual machines (VMs) in the same resource group as the Application Gateway, use `{RESOURCE_GROUP}` in [Step 3b: Check backend VM resource utilization metrics](#step-3b-check-backend-vm-resource-utilization-metrics). Otherwise, identify the resource group containing the backend resources.
+Record the back-end IP addresses or fully qualified domain names (FQDNs) that are returned. If the backends are Azure virtual machines (VMs) in the same resource group as the Application Gateway, use `{RESOURCE_GROUP}` in [Step 3b: Check backend VM resource utilization metrics](#step-3b-check-backend-vm-resource-utilization-metrics). Otherwise, identify the resource group that contains the back-end resources.
 
-#### Step 3b: Check backend VM resource utilization metrics
+#### Step 3b: Check back-end VM resource usage metrics
 
-Run the following commands to check the resource utilization metrics for Azure VM backends:
+To check the resource usage metrics for Azure VM backends, run the following commands, as appropriate.
 
 **Azure CLI**
 
@@ -329,24 +329,24 @@ Get-AzMetric `
 
 | If you see... | Meaning | Next steps |
 |---|---|---|
-| CPU consistently above 90 percent (%). | The backend CPU is saturated and requests queue up. | See [Resolution 2: Scale or optimize backend](#resolution-2-scale-or-optimize-backend) to scale or optimize the backend. |
-| Available memory is near zero. | Memory exhaustion. The backend might be swapping or encountering Out of Memory Killer (OOM Killer) processes in Linux.  | See [Resolution 2: Scale or optimize backend](#resolution-2-scale-or-optimize-backend) to scale or optimize the backend. |
-| Disk IOPS at or near the VM SKU limit. | Disk throughput is bottlenecked. This condition is common with Standard HDD or undersized disks. | See [Resolution 2: Scale or optimize backend](#resolution-2-scale-or-optimize-backend) to upgrade the disk tier or VM SKU. |
-| All metrics are within normal range. | The backend infrastructure is healthy. Investigate application-level performance. | See [Resolution 2: Scale or optimize backend](#resolution-2-scale-or-optimize-backend) to profile the application. |
+| CPU consistently above 90 percent (%). | The back-end CPU is saturated, and requests queue up. | To scale or optimize the backend, see [Resolution 2: Scale or optimize backend](#resolution-2-scale-or-optimize-backend). |
+| Available memory is near zero. | Memory exhaustion. The backend might be swapping or encountering Out of Memory Killer (OOM Killer) processes in Linux.  | To scale or optimize the backend, see [Resolution 2: Scale or optimize backend](#resolution-2-scale-or-optimize-backend). |
+| Disk IOPS at or near the VM SKU limit. | Disk throughput is bottlenecked. This condition is common for Standard HDD or undersized disks. | To upgrade the disk tier or VM SKU, see [Resolution 2: Scale or optimize backend](#resolution-2-scale-or-optimize-backend). |
+| All metrics are within normal range. | The back-end infrastructure is healthy. Investigate application-level performance. | To profile the application, see [Resolution 2: Scale or optimize backend](#resolution-2-scale-or-optimize-backend). |
 
 ## Decision map
 
-Use the following decision map table to determine which resolution path to take based on the diagnostic results from the previous steps:
+Use the following decision map table to determine which resolution path to take, based on the diagnostic results from the previous steps.
 
 | Diagnostic result | Next action |
 |---|---|
 | The request timeout is too low for backend processing time. | See [Resolution 1: Increase request timeout](#resolution-1-increase-request-timeout). |
-| The backend application has its own internal timeout shorter than Application Gateway timeout. | See [Resolution 2: Scale or optimize backend](#resolution-2-scale-or-optimize-backend) to fix backend app timeout configuration. |
-| The backend health probe is unhealthy. | See [Resolution 2: Scale or optimize backend](#resolution-2-scale-or-optimize-backend) to verify the backend application is running, check NSG rules, and verify the probe path. |
+| The back-end application has its own internal timeout that's shorter than the Application Gateway timeout. | To fix back-end application timeout configuration, see [Resolution 2: Scale or optimize backend](#resolution-2-scale-or-optimize-backend). |
+| The backend health probe is unhealthy. | To verify that the backend application is running, see [Resolution 2: Scale or optimize backend](#resolution-2-scale-or-optimize-backend). Then, check NSG rules, and verify the probe path. |
 | The backend CPU, memory, or disk is exhausted. | See [Resolution 2: Scale or optimize backend](#resolution-2-scale-or-optimize-backend). |
 | There is a network delay between Application Gateway and backend. | See [Resolution 3: Fix network path](#resolution-3-fix-network-path). |
 | Access logging isn't enabled (can't diagnose). | See [Resolution 4: Enable diagnostic logging](#resolution-4-enable-diagnostic-logging). |
-| All diagnostics pass and 504 errors still occur. | File an Azure support request. |
+| All diagnostics pass but "504" errors still occur. | File an Azure support request. |
 
 ## Resolution 1: Increase request timeout
 
@@ -355,12 +355,12 @@ The Application Gateway request timeout (default 20 seconds) is shorter than the
 ### Step 1: Increase the request timeout in HTTP settings
 
 > [!IMPORTANT]
-> The following commands are write operations and require customer approval before running.
+> The following commands are write operations and require customer approval before they can be run.
 
 > [!TIP]
-> Review the following command and understand what it does before running. Set the request timeout to accommodate your backend's expected response time with a reasonable margin.
+> Review the following command, and understand what it does before you run it. Set the request timeout to accommodate your backend's expected response time by using a reasonable margin.
 
-Run the following commands to update the `requestTimeout` value for the relevant HTTP settings:
+To update the `requestTimeout` value for the relevant HTTP settings, run the following command, as appropriate.
 
 **Azure CLI**
 
@@ -395,28 +395,28 @@ Set-AzApplicationGateway -ApplicationGateway $gw
 ```
 
 > [!NOTE]
-> The maximum request timeout is 86,400 seconds (24 hours). Typical values for web applications are 30–120 seconds. Setting this value to a greater timeout value doesn't fix the root cause. It only masks slow backend responses.
+> The maximum request timeout is 86,400 seconds (24 hours). Typical values for web applications are 30–120 seconds. You won't fix the root cause of this problem by increasing this timeout value. A greater value only masks slow backend responses.
 
 ### Step 2: Monitor access logs
 
-Monitor access logs after the change. `serverResponseLatency_s` should now be within the new timeout and 504 errors should stop for requests where the backend responds within the new threshold.
+Monitor access logs after the change. `serverResponseLatency_s` should now be within the new timeout, and "504" errors should stop for requests in which the backend responds within the new threshold.
 
-If 504s persist with the increased timeout, see [Resolution 2: Scale or optimize backend](#resolution-2-scale-or-optimize-backend) to address backend performance.
+If "504" responses persist after the timeout value is increased, investigate backend performance. See [Resolution 2: Scale or optimize backend](#resolution-2-scale-or-optimize-backend).
 
 ---
 
 ## Resolution 2: Scale or optimize backend
 
-The backend server can't process requests within the timeout due to resource constraints or application-level performance issues.
+The back-end server can't process requests within the timeout due to resource constraints or application-level performance issues.
 
 > [!IMPORTANT]
-> The following commands are write operations and require customer approval before running.
+> The following commands are write operations and require customer approval before they can be run.
 
-Run the following commands to check backend health and resource utilization:
+To check backend health and resource usage, run the following command, as appropriate.
 
 ### Step 1: Resize VM SKU
 
-Use Azure CLI to run the following command to resize to a larger SKU:
+To resize to a larger SKU, use Azure CLI to run the following command, as appropriate.
 
 ```azurecli-interactive
 az vm resize \
@@ -439,9 +439,9 @@ az appservice plan update \
 ### Step 2: Add more backend instances
 
 > [!IMPORTANT]
-> The following commands are write operations and require customer approval before running.
+> The following commands are write operations and require customer approval before they can be run.
 
-Use Azure CLI to add additional backend servers to the Application Gateway backend pool to distribute the load:
+Use Azure CLI to add additional back-end servers to the Application Gateway back-end pool to distribute the load:
 
 ```azurecli-interactive
 az network application-gateway address-pool update \
@@ -454,20 +454,20 @@ az network application-gateway address-pool update \
 
 ### Step 3: Optimize application performance
 
-If backend infrastructure metrics are healthy but responses are slow, the problem is at the application level. Perform the following optimizations:
+If back-end infrastructure metrics are healthy but responses are slow, the problem is at the application level. Perform the following optimizations:
 
-- Profile the slow API endpoints to identify bottlenecks (like database queries, external service calls, and CPU-intensive processing).
+- Profile the slow API endpoints to identify bottlenecks (such as database queries, external service calls, and CPU-intensive processing).
 - Enable Application Insights on the backend to trace slow requests.
 - Implement caching for larger operations.
 - Review connection pooling settings for database connections.
 
 ## Resolution 3: Fix network path
 
-Network delay or packet loss exists between Application Gateway and the backend, causing responses to arrive after the timeout.
+Network delay or packet loss exists between Application Gateway and the backend. This condition causes responses to arrive after the timeout.
 
 ### Discover Application Gateway subnet ID
 
-Run the following command to get the subnet ID of the Application Gateway:
+To get the subnet ID of the Application Gateway, run the following command, as appropriate.
 
 **Azure CLI**
 
@@ -490,7 +490,7 @@ $gw = Get-AzApplicationGateway `
 $gw.GatewayIPConfigurations[0].Subnet.Id
 ```
 
-Record the returned value as `{APPGW_SUBNET_ID}`. Then use Azure CLI to check for route tables and NSGs:
+Record the returned value as `{APPGW_SUBNET_ID}`. Then, use Azure CLI to check for route tables and NSGs.
 
 **Azure CLI (read-only)**
 
@@ -501,7 +501,7 @@ az network vnet subnet show \
   --output json
 ```
 
-If a route table exists, check for routes that redirect backend traffic through a Network Virtual Appliance (NVA):
+If a route table exists, check for routes that redirect back-end traffic through a Network Virtual Appliance (NVA):
 
 ```azurecli-interactive
 az network route-table route list \
@@ -515,17 +515,17 @@ az network route-table route list \
 
 | If you see... | Meaning | Next steps |
 |---|---|---|
-| There's no route table or only default routes. | The network path is direct. There's no latency caused by routing. | Check backend application performance. |
-| NVA routing to the backend subnet. | The traffic is traversing a firewall or NVA and adds latency. | Verify NVA capacity and whether it's a bottleneck. |
+| No route table exists or only default routes exist. | The network path is direct. No latency is caused by routing. | Check back-end application performance. |
+| NVA routing to the back-end subnet. | The traffic is traversing a firewall or NVA, and it adds latency. | Verify NVA capacity and whether it's a bottleneck. |
 
 ## Resolution 4: Enable diagnostic logging
 
-You can't diagnose 504 errors without access log data.
+You can't diagnose "504" errors without having access to log data.
 
 ### Enable Application Gateway access logs to Log Analytics
 
 > [!IMPORTANT]
-> The following command is a write operation and requires customer approval before running.
+> The following command is a write operation. It requires customer approval before it can be run.
 
 Use Azure CLI to enable Application Gateway access logs and send them to a Log Analytics workspace:
 
@@ -540,7 +540,7 @@ az monitor diagnostic-settings create \
   --logs "[{\"category\":\"ApplicationGatewayAccessLog\",\"enabled\":true},{\"category\":\"ApplicationGatewayPerformanceLog\",\"enabled\":true}]"
 ```
 
-After enabling, wait for traffic to flow through the gateway (15–30 minutes) then run [Step 2a: Check backend response times for 504 errors in access logs](#step-2a-check-backend-response-times-for-504-errors-in-access-logs) again.
+After you enable access, wait for traffic to flow through the gateway (15–30 minutes). Then, run [Step 2a: Check backend response times for 504 errors in access logs](#step-2a-check-backend-response-times-for-504-errors-in-access-logs) again.
 
 ## References
 
