@@ -1,3 +1,4 @@
+items:
 - name: Windows Server
   href: welcome-windows-server.yml
 - name: Active Directory
@@ -1164,6 +1165,8 @@
       href: ./licensing-and-activation/error-when-you-validate-copy-windows.md
     - name: Event 12293 when registering a KMS host record
       href: ./licensing-and-activation/event-12293-error-0x800723-set-kms-host.md
+    - name: Event 8198, error 0xC0020017 or 0x8007139F "KMS contact failure" when activating Windows
+      href: ./licensing-and-activation/activation-event-8198-error-0xc0020017-0x8007139f-kms-contact-failure.md
     - name: Event ID 8208, 8200, or 900 is logged
       href: ./licensing-and-activation/event-id-8208-8200-900.md
     - name: Fail to activate Windows Server over the Internet
