@@ -1,6 +1,6 @@
 ---
 title: Event 8198, error 0xC0020017 or 0x8007139F when activating Windows
-description: Discusses how to troubleshoot and resolve error . The steps apply to physical computers, on-premises virtual machines (VMs), and Azure VMs.
+description: Discusses how to troubleshoot and resolve Event ID 8198 when it includes error code 0xC0020017 or 0x8007139F. The steps apply to physical computers, on-premises virtual machines (VMs), and Azure VMs.
 ms.date: 05/23/2026
 ms.collection: windows
 ai.usage: ai-assisted
@@ -15,9 +15,9 @@ appliesto:
 
 # Event 8198, error 0xC0020017 or 0x8007139F "KMS contact failure" when activating Windows
 
-This article explains how to resolve the 0xC0020017 or 0x8007139F error that occurs if a Windows virtual machine (VM) in Microsoft Azure can't contact the Key Management Service (KMS) for activation. You typically see this error in the Application Event Log as Event ID 8198 from the **Security-SPP** (Software Protection Platform) source instead of through the standard `slmgr.vbs` output.
+This article explains how to resolve Event ID 8198 when it includes error code `0xC0020017` or `0x8007139F`. These codes, when they occur in this event, indicate that a Windows KMS client can't contact the Key Management Service (KMS) for activation.
 
-The troubleshooting steps in this article walk you through the most common causes, including DNS configuration issues, incorrect KMS host settings, and network connectivity problems. The steps apply to physical computers, on-premises virtual machines (VMs), and Azure VMs.
+The troubleshooting steps in this article walk you through the most common causes, including VPN or tunneling configuration issues, incorrect client settings, and network connectivity problems. The steps apply to physical computers, on-premises virtual machines (VMs), and Azure VMs.
 
 ## Symptoms
 
