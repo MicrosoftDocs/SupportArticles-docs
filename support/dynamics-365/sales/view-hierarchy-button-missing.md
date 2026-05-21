@@ -4,7 +4,7 @@ description: Fix the missing View hierarchy button on the command bar in Dynamic
 ms.reviewer: udag, ramakris, v-shaywood
 ms.date: 05/21/2026
 ms.custom: sap:Visual hierarchy\View hierarchy button is missing
-ms.collection: ai-assisted
+ai-usage: ai-assisted
 ---
 # View hierarchy button is missing
 
