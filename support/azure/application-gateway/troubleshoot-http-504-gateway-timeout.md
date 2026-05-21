@@ -207,7 +207,7 @@ AzureDiagnostics
 
 | If you see... | Meaning | Next steps |
 |---|---|---|
-| `serverResponseLatency_s` exceeds `requestTimeout` value from [Step 1a: Determine whether the request timeout setting is appropriate for your backend application](#step-1a-determine-whether-the-request-timeout-setting-is-appropriate-for-your-backend-application). | Backend is responding slower than the timeout allows. | To increase the timeout, see [Resolution 1: Increase request timeout](#resolution-1-increase-request-timeout). Or, to investigate the backend, see [Step 3a: Check backend resource utilization (CPU, memory, disk )](#step-3a-check-backend-resource-utilization-cpu-memory-disk). |
+| `serverResponseLatency_s` exceeds `requestTimeout` value from [Step 1a: Determine the appropriate request timeout setting](#step-1a-determine-the-appropriate-request-timeout-setting). | Backend is responding slower than the timeout allows. | To increase the timeout, see [Resolution 1: Increase request timeout](#resolution-1-increase-request-timeout). Or, to investigate the backend, see [Step 3a: Check backend resource utilization (CPU, memory, disk )](#step-3a-check-backend-resource-utilization-cpu-memory-disk). |
 | `serverResponseLatency_s` is consistently at a specific value (for example, exactly 20 seconds or 30 seconds) that is less than the `requestTimeout` setting. | The back-end application itself has an internal timeout (for example, the web server `proxy_read_timeout`, PHP `max_execution_time`, or application-level request timeout) that's shorter than the Application Gateway timeout. The backend closes the connection at its own limit. This causes Application Gateway to return "504" errors. | To check backend health, see [Step 2b: Check backend health probe status](#step-2b-check-backend-health-probe-status). Then, to investigate and fix the back-end application's internal timeout configuration, see [Resolution 2: Scale or optimize backend](#resolution-2-scale-or-optimize-backend). |
 | `serverResponseLatency_s` is near zero but `timeTaken_d` is high. | Network delays occur between Application Gateway and the backend, or the backend dropped the connection. | To check the network path, see [Resolution 3: Fix network path](#resolution-3-fix-network-path). |
 | 504 errors correlate with specific `requestUri_s` patterns. | Certain API endpoints or pages are slow. | To investigate those specific backend endpoints, see [Step 3a: Check backend resource utilization (CPU, memory, disk )](#step-3a-check-backend-resource-utilization-cpu-memory-disk). |
@@ -287,7 +287,7 @@ $gw.BackendAddressPools |
   Format-Table -AutoSize
 ```
 
-Record the back-end IP addresses or fully qualified domain names (FQDNs) that are returned. If the backends are Azure virtual machines (VMs) in the same resource group as the Application Gateway, use `{RESOURCE_GROUP}` in [Step 3b: Check backend VM resource utilization metrics](#step-3b-check-backend-vm-resource-utilization-metrics). Otherwise, identify the resource group that contains the back-end resources.
+Record the back-end IP addresses or fully qualified domain names (FQDNs) that are returned. If the backends are Azure virtual machines (VMs) in the same resource group as the Application Gateway, use `{RESOURCE_GROUP}` in [Step 3b: Check back-end VM resource usage metrics](#step-3b-check-back-end-vm-resource-usage-metrics). Otherwise, identify the resource group that contains the back-end resources.
 
 #### Step 3b: Check back-end VM resource usage metrics
 
