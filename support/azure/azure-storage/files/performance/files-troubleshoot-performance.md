@@ -347,7 +347,7 @@ If the number of **DirectoryOpen/DirectoryClose** calls is among the top API cal
 
 ### Workaround
 
-A fix for this issue is available in the [April Platform Update for Windows](https://support.microsoft.com/help/4052623/update-for-windows-defender-antimalware-platform).
+Update Windows Defender Antivirus antimalware platform. Download updates from the [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4052623).
 
 ## SMB Multichannel isn't being triggered
 
