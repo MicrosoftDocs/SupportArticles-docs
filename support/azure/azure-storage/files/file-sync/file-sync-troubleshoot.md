@@ -14,6 +14,21 @@ ms.custom: sap:File Sync, copilot-scenario-highlight
 
 Use Azure File Sync to centralize your organization's file shares in Azure Files, while keeping the flexibility, performance, and compatibility of an on-premises file server. This article helps you troubleshoot and resolve problems that you might encounter with your Azure File Sync deployment. It also describes how to collect important logs from the system if a deeper investigation of the problem is required. 
 
+## Common troubleshooting documentation
+
+Based on the problem you're experiencing, review the appropriate troubleshooting documentation:
+
+|Problems|Troubleshooting documentation|
+|---|---|
+|Agent installation or server registration problems|[Troubleshoot Azure File Sync agent installation and server registration](file-sync-troubleshoot-installation.md)|
+|Cloud endpoint or server endpoint creation problems, or the registered server is offline|[Troubleshoot Azure File Sync sync group management](file-sync-troubleshoot-sync-group-management.md)|
+|Server endpoint has an error status, or files fail to sync|[Troubleshoot Azure File Sync sync health and errors](file-sync-troubleshoot-sync-errors.md)|
+|Files fail to tier or recall|[Troubleshoot Azure File Sync cloud tiering](file-sync-troubleshoot-cloud-tiering.md)|
+|Storage Sync Agent service (FileSyncSvc) fails to start|[Storage Sync Agent service (FileSyncSvc) fails to start](file-sync-troubleshoot-service-fails-start.md)|
+|High memory usage on the server|[Troubleshoot high memory usage](file-sync-troubleshoot-high-memory-usage.md)|
+
+If you're unsure where to start, see [General troubleshooting steps](#general-troubleshooting-steps).
+
 > [!TIP]
 > Use Azure Copilot to help diagnose and fix your Azure File Sync environment. For more information, see [Manage and troubleshoot storage accounts using Azure Copilot](/azure/copilot/improve-storage-accounts#troubleshoot-and-resolve-azure-file-sync-issues).
 
@@ -32,8 +47,6 @@ If you're experiencing problems with Azure File Sync, start by completing the fo
 
 - [Use Debug-StorageSyncServer cmdlet](file-sync-use-debug-cmdlet.md)
 - [Collect logs and traces on the Azure File Sync server](file-sync-collect-logs-traces.md)
-- [Storage Sync Agent service (FileSyncSvc) fails to start](file-sync-troubleshoot-service-fails-start.md)
 - [Troubleshoot Auto Update for expired Azure File Sync agents](file-sync-troubleshoot-auto-update-expired-agent.md)
-- [Troubleshoot high memory usage](file-sync-troubleshoot-high-memory-usage.md)
 
  
