@@ -1,3 +1,4 @@
+items:
 - name: Dynamics 365 Sales
   href: welcome-sales.yml
 - name: Customization
@@ -74,6 +75,10 @@
   items: 
     - name: Dynamics 365 Sales AI agent is stuck during activation
       href: troubleshoot-ai-agents-issues.md
+- name: Visual hierarchy
+  items:
+    - name: View hierarchy button is missing
+      href: view-hierarchy-button-missing.md
 - name: Teams Dialer
   items:
     - name: Can't enable Teams dialer
