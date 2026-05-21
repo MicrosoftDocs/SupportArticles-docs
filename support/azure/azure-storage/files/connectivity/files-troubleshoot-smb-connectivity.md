@@ -294,11 +294,37 @@ To learn more, see [Prerequisites for mounting an Azure file share with Linux an
 
 ##### Cause 2: Virtual network or firewall rules are enabled on the storage account, or port 445 is blocked
 
-If virtual network (VNET) and firewall rules are configured on the storage account, network traffic will be denied access unless the client IP address or virtual network is allowed access. In addition, if your company or ISP blocks port 445 outbound, you won't be able to mount the share.
+If virtual network (VNET) and firewall rules are configured on the storage account, network traffic will be denied access unless the client IP address or virtual network is allowed access. This includes scenarios where the storage account firewall is blocking the VM's subnet, even when the VM and storage account are in the same region. In addition, if your company or ISP blocks port 445 outbound, you won't be able to mount the share.
 
 ##### Solution for cause 2
 
-Verify that the VNET and firewall rules are configured properly on the storage account, and that port 445 is allowlisted. To test if virtual networks or firewall rules cause the issue, you can temporarily change the setting on the storage account to **Allow access from all networks**. To learn more, see [Configure Azure Storage firewalls and virtual networks](/azure/storage/common/storage-network-security).
+Verify that the VM's subnet is allowlisted in the storage account firewall, and that port 445 isn't blocked. To test if virtual networks or firewall rules cause the issue, you can temporarily change the setting on the storage account to **Allow access from all networks**. 
+
+To check and update the virtual network rules, use the Azure portal or Azure CLI.
+
+To use the Azure portal, follow these steps:
+
+1. In the [Azure portal](https://portal.azure.com), navigate to your storage account.
+1. Under **Security + networking**, select **Networking**.
+1. On the **Firewalls and virtual networks** tab, confirm that **Enabled from selected virtual networks and IP addresses** is selected and that your VM's virtual network and subnet appear under **Virtual networks**.
+1. If the subnet isn't listed, select **+ Add existing virtual network**, select the virtual network and subnet, and then select **Add**. Select **Save** to apply the changes.
+
+To list the current virtual network rules by using Azure CLI, run the following command:
+
+```azurecli
+az storage account network-rule list --resource-group "<resource-group>" --account-name "<storage-account>" --query virtualNetworkRules
+```
+
+To add your VM's subnet, run:
+
+```azurecli
+subnetid=$(az network vnet subnet show --resource-group "<resource-group>" --vnet-name "<vnet-name>" --name "<subnet-name>" --query id --output tsv)
+az storage account network-rule add --resource-group "<resource-group>" --account-name "<storage-account>" --subnet $subnetid
+```
+
+To test SMB connectivity after verifying the network rules, use the [AzFileDiagnostics](https://github.com/Azure-Samples/azure-files-samples/tree/master/AzFileDiagnostics/Windows) tool.
+
+For more information, see [Configure Azure Storage firewalls and virtual networks](/azure/storage/common/storage-network-security).
 
 ##### Cause 3: SMB client is configured to use NTLMv1
 
