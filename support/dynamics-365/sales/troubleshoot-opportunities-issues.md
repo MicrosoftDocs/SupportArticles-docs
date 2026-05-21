@@ -2,7 +2,7 @@
 title: Fix opportunity errors in Dynamics 365 Sales
 description: Resolve common opportunity errors in Dynamics 365 Sales, such as close opportunity failures, missing permissions, currency mismatches, product errors, and pipeline view issues.
 ms.date: 05/21/2026
-ms.reviewer: shjais, josaw, v-shaywood
+ms.reviewer: shjais, ramakris, josaw, v-shaywood
 ms.custom: sap:Opportunity
 ai-usage: ai-assisted
 ---
