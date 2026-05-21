@@ -16,11 +16,13 @@ This issue applies to the following SQL Server cumulative updates and security u
 
 | Version | Update | KB | Released |
 | --- | --- | --- | --- |
+| SQL Server 2025 | CU5 | [KB5084896](../../releases/sqlserver-2025/cumulativeupdate5.md) | May 20, 2026 |
 | SQL Server 2025 | CU4 + GDR | [KB5089899](https://support.microsoft.com/help/5089899) | May 12, 2026 |
 | SQL Server 2025 | GDR | [KB5091223](https://support.microsoft.com/help/5091223) | May 12, 2026 |
 | SQL Server 2025 | CU4 | [KB5081495](../../releases/sqlserver-2025/cumulativeupdate4.md) | April 16, 2026 |
 | SQL Server 2025 | CU3 + GDR | [KB5083245](https://support.microsoft.com/help/5083245) | April 14, 2026 |
 | SQL Server 2025 | GDR | [KB5084814](https://support.microsoft.com/help/5084814) | April 14, 2026 |
+| SQL Server 2022 | CU25 | [KB5081477](../../releases/sqlserver-2022/cumulativeupdate25.md) | May 20, 2026 |
 | SQL Server 2022 | CU24 + GDR | [KB5089900](https://support.microsoft.com/help/5089900) | May 12, 2026 |
 | SQL Server 2022 | GDR | [KB5091158](https://support.microsoft.com/help/5091158) | May 12, 2026 |
 | SQL Server 2022 | CU24 + GDR | [KB5083252](https://support.microsoft.com/help/5083252) | April 14, 2026 |
