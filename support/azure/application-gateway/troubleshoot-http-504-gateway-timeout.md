@@ -68,7 +68,7 @@ Common symptoms include:
 
 ### Step 1a: Determine the appropriate request timeout setting
 
-This step determine whether the request timeout setting is appropriate for your back-end application. Application Gateway waits this many seconds for a response from the backend before it returns "504" to the client.
+This step determines whether the request timeout setting is appropriate for your back-end application. Application Gateway waits this many seconds for a response from the backend before it returns "504" to the client.
 
 To check the `requestTimeout` value for each HTTP setting, run the following command, as appropriate.
 
@@ -99,9 +99,9 @@ $gw.BackendHttpSettingsCollection |
 
 | If you see... | Meaning | Next steps |
 |---|---|---|
-| `requestTimeout` is 20 seconds (default). | The default is appropriate for most web applications. 20 seconds is a long time for typical page loads and API calls. Increase the time only if the backend legitimately performs long-running operations (such as report generation, file processing, and batch APIs). | Note the value because you'll use it in [Step 2a: Check backend response times for 504 errors in access logs](#step-2a-check-backend-response-times-for-504-errors-in-access-logs). |
-| `requestTimeout` is set to 30–120 seconds, and "504" errors still occur. | The backend is responding slower than an extended timeout usually allows. | Note the value because you'll use it in [Step 2a: Check backend response times for 504 errors in access logs](#step-2a-check-backend-response-times-for-504-errors-in-access-logs). |
-| `requestTimeout` is very high (for example, greater than 300 seconds), and "504" errors still occur. | Backend delays or network issues are occurring. Timeout isn't the problem. | Note the value because you'll use it in [Step 2a: Check backend response times for 504 errors in access logs](#step-2a-check-backend-response-times-for-504-errors-in-access-logs).  |
+| `requestTimeout` is 20 seconds (default). | The default is appropriate for most web applications. 20 seconds is a long time for typical page loads and API calls. Increase the time only if the backend legitimately performs long-running operations (such as report generation, file processing, and batch APIs). | Note the value because you use it in [Step 2a: Check backend response times for 504 errors in access logs](#step-2a-check-backend-response-times-for-504-errors-in-access-logs). |
+| `requestTimeout` is set to 30–120 seconds, and "504" errors still occur. | The backend is responding slower than an extended timeout usually allows. | Note the value because you use it in [Step 2a: Check backend response times for 504 errors in access logs](#step-2a-check-backend-response-times-for-504-errors-in-access-logs). |
+| `requestTimeout` is very high (for example, greater than 300 seconds), and "504" errors still occur. | Backend delays or network issues are occurring. Timeout isn't the problem. | Note the value because you use it in [Step 2a: Check backend response times for 504 errors in access logs](#step-2a-check-backend-response-times-for-504-errors-in-access-logs).  |
 
 ### Step 1b: Check Application Gateway access logs status and target
 
@@ -128,7 +128,7 @@ Get-AzDiagnosticSetting `
 
 | If you see... | Meaning | Next steps |
 |---|---|---|
-| `workspaceId` is populated, and `ApplicationGatewayAccessLog` is `true`. | Access logs are enabled. Record the `workspaceId` value (this value is an Azure Resource Manager (ARM) resource ID) | Note the value because you'll use it in [Step 2a - Check backend response times for 504 errors in access logs](#step-2a-check-backend-response-times-for-504-errors-in-access-logs). |
+| `workspaceId` is populated, and `ApplicationGatewayAccessLog` is `true`. | Access logs are enabled. Record the `workspaceId` value (this value is an Azure Resource Manager (ARM) resource ID) | Note the value because you use it in [Step 2a - Check backend response times for 504 errors in access logs](#step-2a-check-backend-response-times-for-504-errors-in-access-logs). |
 | `ApplicationGatewayAccessLog` is `false` or missing. | Access logging isn't enabled. You can't query access logs until this setting is configured. | Enable access logs. For more information, see [Resolution 4: Enable diagnostic logging](#resolution-4-enable-diagnostic-logging). |
 | No diagnostic settings found. | No diagnostics are configured. | Enable access logs. For more information, see [Resolution 4: Enable diagnostic logging](#resolution-4-enable-diagnostic-logging). |
 
@@ -207,7 +207,7 @@ AzureDiagnostics
 
 | If you see... | Meaning | Next steps |
 |---|---|---|
-| `serverResponseLatency_s` exceeds `requestTimeout` value from [Step 1a: Determine whethr the request timeout setting is appropriate for your backend application](#step-1a-determine-whether-the-request-timeout-setting-is-appropriate-for-your-backend-application). | Backend is responding slower than the timeout allows. | To increase the timeout, see [Resolution 1: Increase request timeout](#resolution-1-increase-request-timeout). Or, to investigate the backend, see [Step 3a: Check backend resource utilization (CPU, memory, disk )](#step-3a-check-backend-resource-utilization-cpu-memory-disk). |
+| `serverResponseLatency_s` exceeds `requestTimeout` value from [Step 1a: Determine whether the request timeout setting is appropriate for your backend application](#step-1a-determine-whether-the-request-timeout-setting-is-appropriate-for-your-backend-application). | Backend is responding slower than the timeout allows. | To increase the timeout, see [Resolution 1: Increase request timeout](#resolution-1-increase-request-timeout). Or, to investigate the backend, see [Step 3a: Check backend resource utilization (CPU, memory, disk )](#step-3a-check-backend-resource-utilization-cpu-memory-disk). |
 | `serverResponseLatency_s` is consistently at a specific value (for example, exactly 20 seconds or 30 seconds) that is less than the `requestTimeout` setting. | The back-end application itself has an internal timeout (for example, the web server `proxy_read_timeout`, PHP `max_execution_time`, or application-level request timeout) that's shorter than the Application Gateway timeout. The backend closes the connection at its own limit. This causes Application Gateway to return "504" errors. | To check backend health, see [Step 2b: Check backend health probe status](#step-2b-check-backend-health-probe-status). Then, to investigate and fix the back-end application's internal timeout configuration, see [Resolution 2: Scale or optimize backend](#resolution-2-scale-or-optimize-backend). |
 | `serverResponseLatency_s` is near zero but `timeTaken_d` is high. | Network delays occur between Application Gateway and the backend, or the backend dropped the connection. | To check the network path, see [Resolution 3: Fix network path](#resolution-3-fix-network-path). |
 | 504 errors correlate with specific `requestUri_s` patterns. | Certain API endpoints or pages are slow. | To investigate those specific backend endpoints, see [Step 3a: Check backend resource utilization (CPU, memory, disk )](#step-3a-check-backend-resource-utilization-cpu-memory-disk). |
@@ -344,7 +344,7 @@ Use the following decision map table to determine which resolution path to take,
 | The back-end application has its own internal timeout that's shorter than the Application Gateway timeout. | To fix back-end application timeout configuration, see [Resolution 2: Scale or optimize backend](#resolution-2-scale-or-optimize-backend). |
 | The backend health probe is unhealthy. | To verify that the backend application is running, see [Resolution 2: Scale or optimize backend](#resolution-2-scale-or-optimize-backend). Then, check NSG rules, and verify the probe path. |
 | The backend CPU, memory, or disk is exhausted. | See [Resolution 2: Scale or optimize backend](#resolution-2-scale-or-optimize-backend). |
-| There is a network delay between Application Gateway and backend. | See [Resolution 3: Fix network path](#resolution-3-fix-network-path). |
+| A network delay exists between Application Gateway and backend. | See [Resolution 3: Fix network path](#resolution-3-fix-network-path). |
 | Access logging isn't enabled (can't diagnose). | See [Resolution 4: Enable diagnostic logging](#resolution-4-enable-diagnostic-logging). |
 | All diagnostics pass but "504" errors still occur. | File an Azure support request. |
 
@@ -395,7 +395,7 @@ Set-AzApplicationGateway -ApplicationGateway $gw
 ```
 
 > [!NOTE]
-> The maximum request timeout is 86,400 seconds (24 hours). Typical values for web applications are 30–120 seconds. You won't fix the root cause of this problem by increasing this timeout value. A greater value only masks slow backend responses.
+> The maximum request timeout is 86,400 seconds (24 hours). Typical values for web applications are 30–120 seconds. You can't fix the root cause of this problem by increasing this timeout value. A greater value only masks slow backend responses.
 
 ### Step 2: Monitor access logs
 
