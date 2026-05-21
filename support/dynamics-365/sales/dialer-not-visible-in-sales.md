@@ -1,11 +1,13 @@
 ---
 title: Teams dialer isn't visible in Dynamics 365 Sales
 description: Provides a resolution for an issue where a seller can't see the Microsoft Teams dialer in Dynamics 365 Sales due to cached browsing data or the Read privilege.
-ms.date: 08/22/2023
-ms.reviewer: asaftzuk, ilanak
+ms.date: 05/21/2026
+ms.reviewer: ramakris
 author: t-ronioded
-ms.author: ronihemed
+ms.author: ramakris
 ms.custom: sap:Teams Dialer
+ai-usage:
+  - ai-assisted
 ---
 # Teams dialer isn't visible in Dynamics 365 Sales
 
@@ -14,6 +16,9 @@ This article provides resolutions for an issue where the [Microsoft Teams dialer
 ## Symptoms
 
 A seller can't see the Microsoft Teams dialer in Dynamics 365 Sales.
+
+> [!NOTE]
+> The Microsoft Teams dialer requires that the user has a Microsoft Teams license and a phone number assigned to their account. If either is missing, the dialer won't appear. Verify these prerequisites before proceeding with the troubleshooting steps below.
 
 ## Cause 1: Cached browsing data
 
@@ -46,3 +51,8 @@ To solve the issue with the Read privilege, follow the mitigation steps:
    :::image type="content" source="media/dialer-not-visible-in-crm/sales-hub-security-roles.png" alt-text="Screenshot that shows the Sales Manager and Salesperson security roles." lightbox="media/dialer-not-visible-in-crm/sales-hub-security-roles.png":::
 
    :::image type="content" source="media/dialer-not-visible-in-crm/teams-dialer-admin-settings-priviliges.png" alt-text="Screenshot that shows how to enable the read permission for the Teams Dialer Admin settings entity." lightbox="media/dialer-not-visible-in-crm/teams-dialer-admin-settings-priviliges.png":::
+
+## See also
+
+- [Teams dialer isn't visible in a custom app](dialer-not-available-in-custom-app.md)
+- [Microsoft Teams dialer basic troubleshooting](dialer-basic-troubleshooting.md)
