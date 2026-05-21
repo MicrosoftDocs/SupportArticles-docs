@@ -242,7 +242,7 @@ This command forces the executable to extract the files to the previous missing 
 
 The KB Article URL line helps you download the patch media if needed.
 
-## Manually restore the files
+## Manually restore the missing cache files
 
 To manually restore files that are missing from the Windows Installer cache, complete the following steps:
 
@@ -321,7 +321,7 @@ To find more details about the missing `.msp` file in the Windows Installer cach
 
 For more information about how to get the service pack, see [KB2546951 - List of issues fixed by SQL Server 2008 Service Pack 3](https://support.microsoft.com/help/2546951).
 
-## Restore from system state backups
+## Restore missing cache from system state backups
 
 If the previous solutions don't work, restore the Windows Installer cache from a system state backup. For step-by-step guidance, see [Missing Windows Installer cache requires a computer rebuild](../../../../windows-client/deployment/missing-windows-installer-cache.md).
 

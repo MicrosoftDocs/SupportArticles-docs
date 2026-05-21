@@ -1,7 +1,7 @@
 ---
 title: Transfer SQL Server Logins and Passwords Between Instances
 description: Learn how to transfer logins and passwords between SQL Server instances to maintain user access and security during migrations or restores.
-ms.date: 05/20/2026
+ms.date: 05/21/2026
 ms.custom: sap:Security, Encryption, Auditing, Authorization
 ms.reviewer: jopilov, bartd, v-shaywood
 ms.topic: how-to
@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 918992, 246133
 
 ## Summary
 
-This article shows how to transfer SQL Server logins and passwords between instances of [Microsoft SQL Server](/sql/sql-server/sql-server-technical-documentation) running on Windows. Use these procedures during SQL Server migration, restore, or high-availability scenarios to keep user authentication intact and to avoid orphaned database users on the destination instance. The procedures apply to currently supported releases, including SQL Server 2016, 2017, 2019, and 2022. The source and destination instances can be on the same server or on different servers, and their versions can differ.
+This article shows how to transfer SQL Server logins and passwords between instances of [Microsoft SQL Server](/sql/sql-server/sql-server-technical-documentation) running on Windows. Use these procedures during SQL Server migration, restore, or high-availability scenarios to keep user authentication intact and to avoid orphaned database users on the destination instance. The source and destination instances can be on the same server or on different servers, and their versions can differ.
 
 ## Why transfer logins between SQL Server instances
 

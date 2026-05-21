@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot out of memory or low memory issues in SQL Server
 description: Learn how to troubleshoot SQL Server memory issues, including out-of-memory errors, low memory conditions, and performance problems caused by external, internal, and engine-level memory pressure.
-ms.date: 05/20/2026
+ms.date: 05/21/2026
 ms.custom: sap:SQL resource usage and configuration (CPU, Memory, Storage)
 ms.reviewer: jopilov, shaunbe, v-shaywood
 ---
@@ -10,9 +10,9 @@ ms.reviewer: jopilov, shaunbe, v-shaywood
 
 ## Summary
 
-This article describes how to troubleshoot SQL Server memory problems, including out-of-memory errors, low memory conditions, and related performance problems. It explains the symptoms, the three main categories of memory pressure (external, internal from non-engine modules, and internal from SQL Server engine components), the diagnostic tools you can use to collect data, and the steps you can take to fix or relieve memory pressure on a SQL Server instance.
+This article describes how to troubleshoot SQL Server memory problems, including out-of-memory and failure to allocate memory errors, low memory conditions, and related performance problems. It explains the symptoms, the three main categories of memory pressure (external, internal from non-engine modules, and internal from SQL Server engine components), the diagnostic tools you can use to collect data, and the steps you can take to fix or relieve memory pressure on a SQL Server instance.
 
-## Symptoms
+## Symptoms of low memory errors
 
 SQL Server uses a complex [memory architecture](/sql/relational-databases/memory-management-architecture-guide) that corresponds to the complex and rich feature set. Because of the variety of memory needs, many sources can cause memory consumption and memory pressure, which can lead to out of memory conditions.
 
@@ -38,7 +38,7 @@ Common errors indicate low memory in SQL Server. Examples of these errors includ
 - 26053: SQL network interfaces fail to initialize due to insufficient memory.
 - 30085, 30086, 30094: SQL full-text operations fail due to insufficient memory.
 
-## Cause
+## Cause of low memory issues
 
 Many factors can cause insufficient memory. Such factors include operating system settings, physical memory availability, components that use memory inside SQL Server, and memory limits on the current workload. In most cases, the query that fails with an out-of-memory error isn't the cause of the error. You can group the causes into three categories.
 
@@ -71,7 +71,7 @@ The following graph illustrates the types of pressure that can lead to out of me
 
 :::image type="content" source="media/troubleshoot-out-of-memory/out-of-memory-issues.svg" alt-text="Diagram that shows the three types of SQL Server memory pressure: external/OS, internal from non-engine modules, and internal from engine components.":::
 
-## Diagnostic tools
+## Diagnostic tools to troubleshoot memory issues
 
 Use the following diagnostic tools to collect troubleshooting data.
 

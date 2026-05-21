@@ -12,7 +12,9 @@ _Applies to:_ &nbsp; SQL Server
 
 ## Summary
 
-This article describes scenarios in which the SQL Server connectivity error "An existing connection was forcibly closed by the remote host" occurs, and it provides resolutions. The error is tied to a failed TLS handshake between the client and SQL Server, often because the client and server can't agree on a TLS protocol version (for example, TLS 1.2 or TLS 1.3) or a cipher suite. The article covers the following error messages:
+This article describes scenarios in which the SQL Server connectivity error "An existing connection was forcibly closed by the remote host" occurs, and it provides resolutions. The error is tied to a failed TLS handshake between the client and SQL Server, often because the client and server can't agree on a TLS protocol version (for example, TLS 1.2 or TLS 1.3) or a cipher suite.
+
+The article covers the following error messages:
 
 > A connection was successfully established with the server, but then an error occurred during the login process. (provider: SSL Provider, error: 0 - An existing connection was forcibly closed by the remote host.)
 
@@ -103,7 +105,7 @@ For more information, see [TLS 1.2 Upgrade Workflow](https://github.com/microsof
 
 This issue can occur when the client and server run on different Windows versions (for example, Windows Server 2012 and Windows Server 2016 or later) and both advertise `TLS_DHE_*` cipher suites. Those Windows versions handle Diffie-Hellman key exchange inside TLS differently, which can cause the handshake to fail.
 
-### Solution
+### Remove TLS_DHE cipher suites
 
 To fix this issue, remove all cipher suites that start with `TLS_DHE_` from the local policy. For more information about errors that occur when applications try to connect to SQL Server in Windows, see [Applications experience forcibly closed TLS connection errors when connecting SQL Servers in Windows](../../../windows-server/certificates-and-public-key-infrastructure-pki/apps-forcibly-closed-tls-connection-errors.md).
 
