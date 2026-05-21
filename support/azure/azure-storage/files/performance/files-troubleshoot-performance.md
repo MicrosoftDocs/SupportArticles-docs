@@ -201,7 +201,7 @@ One potential cause is a lack of SMB multi-channel support for standard file sha
 
 ### Workaround
 
-- For premium file shares, [enable SMB Multichannel](/azure/storage/files/files-smb-protocol#smb-multichannel).
+- For premium file shares, [enable SMB Multichannel](/azure/storage/files/smb-performance#smb-multichannel).
 - Obtaining a VM with a bigger core might help improve throughput.
 - Running the client application from multiple VMs will increase throughput.
 - Use REST APIs where possible.
