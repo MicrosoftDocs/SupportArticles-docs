@@ -31,7 +31,7 @@ You can use the Always-On Diagnostics (AOD) tool to collect logs on NFSv4 and SM
 The Always-On Diagnostics tool is currently compatible with systems running SUSE Linux Enterprise Server 15 (SLES 15) and Red Hat Enterprise Linux 8 (RHEL 8). Follow the installation steps that correspond to your operating system:
 
 > [!IMPORTANT]
-> Always-On Diagnostics does not supports NFS volumes with Encryption in transit enabled. To enable log collection on the impacted NFS share, you must mount the share without EiT.
+> Always-On Diagnostics doesn't support NFS volumes with encryption in transit enabled. To enable log collection on the impacted NFS share, you must mount the share without EiT.
 
 ### [RHEL](#tab/RHEL)
 
