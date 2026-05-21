@@ -4,7 +4,7 @@ description: Provides a solution to an issue where you can't resize a Master Boo
 ms.service: azure-virtual-machines
 ms.date: 10/22/2025
 ms.reviewer: brfett
-ms.custom: sap:Assistance with disk operations, linux-related-content
+ms.custom: Assistance with resizing a disk
 ---
 # Unable to resize MBR partition for a data disk larger than 2 TB in Linux virtual machine
 
