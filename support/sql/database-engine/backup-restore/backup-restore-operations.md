@@ -1,7 +1,7 @@
 ---
 title: SQL Server backup and restore operation issues
 description: This article troubleshoots SQL Server backup and restore operation issues, like the operation taking a long time, issues between different SQL Server versions.
-ms.date: 05/20/2026
+ms.date: 05/21/2026
 ms.custom: sap:Database Backup and Restore
 ms.reviewer: ramakoni, v-shaywood
 editor: v-jesits
@@ -43,7 +43,6 @@ Backup and restore operations are I/O intensive. Backup and restore throughput d
     |---|---|
     | [Back up and restore of SQL Server databases](/sql/relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases)|Covers best practices that can improve backup and restore performance. For example, grant the `SE_MANAGE_VOLUME_NAME` privilege to the Windows account that runs SQL Server to let instant file initialization speed up data file operations.|
     | [Configure antivirus software to work with SQL Server](../security/antivirus-and-sql-server.md)|Antivirus software might hold locks on `.bak` files, which can affect the performance of backup and restore operations. Follow the guidance in this article to exclude backup files from virus scans.|
-    | [967351 A heavily fragmented file in an NTFS volume may not grow beyond a certain size](https://support.microsoft.com/help/967351)|Discusses an issue that occurs when an NTFS file system is heavily fragmented.|
     |A backup or restore operation to a network location is slow|Isolate the issue to the network by copying a similarly sized file to the network location from the server that runs SQL Server, and check the performance.|
 
 2. Check the SQL Server error log and Windows event log for error messages that point to the cause of the problem.

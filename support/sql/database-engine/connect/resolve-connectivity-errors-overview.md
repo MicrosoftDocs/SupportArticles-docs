@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot connectivity issues in SQL Server
 description: Get an overview of SQL Server connectivity errors, common causes of connection failure, and a troubleshooting overview with tools and methods to diagnose and fix them.
-ms.date: 05/20/2026
+ms.date: 05/21/2026
 ms.custom: sap:Database Connectivity and Authentication
 ms.reviewer: jopilov, v-shaywood
 ---
@@ -38,7 +38,7 @@ Most connectivity errors fall into one of the following categories. Use this tab
 Use the following list to go to the article that matches your scenario:
 
 - [A network-related or instance-specific error occurred while establishing a connection to SQL Server](../connect/network-related-or-instance-specific-error-occurred-while-establishing-connection.md)
-- [Can't generate SSPI context](cannot-generate-sspi-context-error.md)
+- [Cannot generate SSPI context](cannot-generate-sspi-context-error.md)
 - [Login failed for user](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error?context=/troubleshoot/sql/context/context), which covers the following sign-in errors:
 
   - > "Login failed for user 'NT AUTHORITY\ANONYMOUS LOGON'"

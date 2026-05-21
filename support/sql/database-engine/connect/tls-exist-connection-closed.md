@@ -1,7 +1,7 @@
 ---
 title: An existing connection was forcibly closed (OS error 10054)
 description: Troubleshoot the SQL Server connectivity error "An existing connection was forcibly closed by the remote host" caused by TLS handshake failures, mismatched protocols, or cipher suite issues.
-ms.date: 05/20/2026
+ms.date: 05/21/2026
 ms.custom: sap:Database Connectivity and Authentication
 ms.reviewer: jopilov, v-jayaramanp, v-shaywood
 ---
@@ -40,7 +40,7 @@ The following table compares the TLS versions you might encounter when troublesh
 
 For the current support state of TLS protocols on Windows, see [Protocols in TLS/SSL (Schannel SSP)](/windows/win32/secauthn/protocols-in-tls-ssl--schannel-ssp-).
 
-## Identify which scenario applies
+## Identify which scenario applies in your environment
 
 The following sections describe different scenarios that can cause the handshake to fail. If you're not sure which one matches your environment, use these starting points to narrow it down:
 
@@ -55,7 +55,7 @@ Secure Sockets Layer (SSL) and versions of TLS earlier than TLS 1.2 have several
 
 Connectivity errors occur when your application uses an older Open Database Connectivity (ODBC) driver, OLE DB provider, .NET Framework component, or SQL Server version that doesn't support TLS 1.2 or later. The issue occurs because the server and the client can't find a matching protocol. A matching protocol is needed to complete the TLS handshake.
 
-### Solution
+### Fix protocol mismatch between client and server
 
 To fix this issue, use one of the following methods:
 
@@ -81,7 +81,7 @@ This scenario occurs when you or an administrator restricts certain algorithms o
 
 You can examine the client and server TLS versions and [cipher suites](/windows/win32/secauthn/cipher-suites-in-schannel) in the **Client Hello** and **Server Hello** packets in a network trace. The **Client Hello** packet advertises all the client cipher suites, and the **Server Hello** packet returns the one the server picked. If there are no matching suites, the server closes the connection instead of sending a **Server Hello** packet.
 
-### Solution
+### Fix cipher suite mismatch
 
 To check the issue, follow these steps:
 
@@ -114,7 +114,7 @@ SQL Server always encrypts network packets that are related to sign in. For this
 > [!NOTE]
 > Self-signed certificates aren't affected by this issue.
 
-### Solution
+### Replace or reconfigure certificates with weak hash algorithms
 
 To fix the issue, follow these steps:
 
@@ -145,7 +145,7 @@ This scenario occurs when the client and the server negotiate a `TLS_DHE_*` ciph
 
 On systems with high workloads that run SQL Server 2017 or earlier, you might see intermittent 10054 errors caused by TCP three-way handshake failures, which lead to TCP rejections. The root cause is often a delay in processing `TCPAcceptEx` requests. The delay can be caused by a shortage of [Input/Output Completion Port (IOCP) listener](https://techcommunity.microsoft.com/blog/sqlserversupport/is-the-iocp-listener-actually-listening/333989) workers, which manage the acceptance of incoming connections. When IOCP workers are too few or are busy servicing other requests, connection requests are processed late, which results in handshake failures and TCP rejections. You might also see sign-in timeouts during the SSL handshake or during the processing of sign-in requests, which involve authentication checks.
 
-### Solution
+### Mitigate IOCP worker shortages and handshake timeouts
 
 A shortage of IOCP workers and of SOS Worker resources allocated to authentication and encryption operations is the main cause of these TCP three-way handshake timeouts and sign-in timeouts. SQL Server 2019 and later include several performance improvements in this area. One notable enhancement is a dedicated login dispatcher pool, which optimizes resource allocation for sign-in tasks. This change reduces timeouts and improves overall system performance. If you're affected by this issue, plan an upgrade to a currently supported SQL Server version.
 
