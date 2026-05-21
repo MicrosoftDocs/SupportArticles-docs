@@ -153,7 +153,7 @@ If the activation process still generates Event ID 8198 (error code `0xC0020017`
    ```
 
    > [!NOTE]  
-
+   >
    > - In this command, \<KMSHost_ip> represents the IP address of the KMS host.
    > - If the client is an Azure VM, and you're using the Azure KMS service for activation, use `20.118.99.224` or `40.83.235.53` for \<KMSHost-ip>.
 
