@@ -207,10 +207,10 @@ AzureDiagnostics
 
 | If you see... | Meaning | Next steps |
 |---|---|---|
-| `serverResponseLatency_s` exceeds `requestTimeout` value from [Step 1a: Determine the appropriate request timeout setting](#step-1a-determine-the-appropriate-request-timeout-setting). | Backend is responding slower than the timeout allows. | To increase the timeout, see [Resolution 1: Increase request timeout](#resolution-1-increase-request-timeout). Or, to investigate the backend, see [Step 3a: Check backend resource utilization (CPU, memory, disk )](#step-3a-check-backend-resource-utilization-cpu-memory-disk). |
+| `serverResponseLatency_s` exceeds `requestTimeout` value from [Step 1a: Determine the appropriate request timeout setting](#step-1a-determine-the-appropriate-request-timeout-setting). | Backend is responding slower than the timeout allows. | To increase the timeout, see [Resolution 1: Increase request timeout](#resolution-1-increase-request-timeout). Or, to investigate the backend, see [Step 3a: Check back-end resource usage (CPU, memory, disk )](#step-3a-check-back-end-resource-usage-cpu-memory-disk). |
 | `serverResponseLatency_s` is consistently at a specific value (for example, exactly 20 seconds or 30 seconds) that is less than the `requestTimeout` setting. | The back-end application itself has an internal timeout (for example, the web server `proxy_read_timeout`, PHP `max_execution_time`, or application-level request timeout) that's shorter than the Application Gateway timeout. The backend closes the connection at its own limit. This causes Application Gateway to return "504" errors. | To check backend health, see [Step 2b: Check backend health probe status](#step-2b-check-backend-health-probe-status). Then, to investigate and fix the back-end application's internal timeout configuration, see [Resolution 2: Scale or optimize backend](#resolution-2-scale-or-optimize-backend). |
 | `serverResponseLatency_s` is near zero but `timeTaken_d` is high. | Network delays occur between Application Gateway and the backend, or the backend dropped the connection. | To check the network path, see [Resolution 3: Fix network path](#resolution-3-fix-network-path). |
-| 504 errors correlate with specific `requestUri_s` patterns. | Certain API endpoints or pages are slow. | To investigate those specific backend endpoints, see [Step 3a: Check backend resource utilization (CPU, memory, disk )](#step-3a-check-backend-resource-utilization-cpu-memory-disk). |
+| 504 errors correlate with specific `requestUri_s` patterns. | Certain API endpoints or pages are slow. | To investigate those specific backend endpoints, see [Step 3a: Check back-end resource usage (CPU, memory, disk )](#step-3a-check-back-end-resource-usage-cpu-memory-disk). |
 | No access log data found. | Access logging isn't enabled. | For more information, see [Resolution 4: Enable diagnostic logging](#resolution-4-enable-diagnostic-logging). |
 
 ### Step 2b: Check backend health probe status
@@ -253,12 +253,12 @@ $health.BackendAddressPools.BackendHttpSettingsCollection.Servers |
 
 | If you see... | Meaning | Next steps |
 |---|---|---|
-| `health` is `Healthy` and probe returns a **200** status code. | The backend is reachable and responding to health probes. The issue is specific to request processing time, not availability. | To check backend resource usage, see [Step 3a: Check backend resource utilization (CPU, memory, disk )](#step-3a-check-backend-resource-utilization-cpu-memory-disk). |
+| `health` is `Healthy` and probe returns a **200** status code. | The backend is reachable and responding to health probes. The issue is specific to request processing time, not availability. | To check backend resource usage, see [Step 3a: Check back-end resource usage (CPU, memory, disk )](#step-3a-check-back-end-resource-usage-cpu-memory-disk). |
 | `health` is `Unhealthy` with a probe timeout or connection refused. | Backend isn't responding to health probes. Requests fail with 502 or 504 errors. | Check that the back-end application is running and listening on the correct port. Verify network security group (NSG) rules allow traffic from the Application Gateway subnet. |
 | `health` is `Unhealthy` with a **non-200** status code. | Backend responds but returns an error code such as "403" or "500." The health probe path might be misconfigured. | Verify that the health probe path returns **200** on the backend. Check probe settings by using `az network application-gateway probe list`. |
 | Mixed results (some healthy, some unhealthy). | A partial backend failure exists, and some instances are down. | Investigate the unhealthy instances specifically. |
 
-### Step 3a: Check backend resource utilization (CPU, memory, disk)
+### Step 3a: Check back-end resource usage (CPU, memory, disk)
 
 This check verifies whether the back-end VM or app service is under resource pressure (CPU, memory, disk IOPS) that indicates slow responses.
 
