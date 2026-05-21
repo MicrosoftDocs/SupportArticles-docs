@@ -6,8 +6,7 @@ ms.reviewer: ramakris
 author: t-ronioded
 ms.author: ramakris
 ms.custom: sap:Teams Dialer
-ai-usage:
-  - ai-assisted
+ai-usage: ai-assisted
 ---
 # Microsoft Teams dialer isn't visible in a custom app
 
