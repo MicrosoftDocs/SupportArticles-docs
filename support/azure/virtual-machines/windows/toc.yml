@@ -602,8 +602,6 @@ items:
       href: windows-vm-activation-error-0xc0020017-0x8007139f.md
   - name: Product key and MAK errors
     items:
-    - name: Error 0xC004C003 — Product key blocked
-      href: windows-vm-activation-error-0xc004c003.md
     - name: Error 0xC004C008 — Product key exceeded limit
       href: windows-vm-activation-error-0xc004c008.md
     - name: Error 0xC004F06C — MAK activation failed
