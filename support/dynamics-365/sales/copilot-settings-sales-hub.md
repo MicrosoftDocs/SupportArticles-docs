@@ -31,7 +31,7 @@ Republish the agent to refresh its state:
 
 1. Sign in to [Copilot Studio](https://copilotstudio.microsoft.com/).
 1. Select your Dynamics 365 environment and then select **Agents**.
-1. Select **Copilot in Dynamics 365 Sales** to customize Copilot in Dynamics 365 Sales.
+1. Select **Copilot in Dynamics 365 Sales**.
 1. Select **Publish**.
 1. Wait a few minutes for the changes to propagate.
 1. Return to the Sales Hub app and verify if Copilot works.
