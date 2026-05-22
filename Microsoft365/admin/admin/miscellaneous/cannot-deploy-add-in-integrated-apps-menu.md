@@ -13,7 +13,7 @@ ms.reviewer: haembab
 appliesto: 
   - Microsoft 365
 search.appverid: MET150
-ms.date: 05/06/2026
+ms.date: 05/22/2026
 ---
 # Can’t deploy add-ins by using the Integrated apps menu in the Microsoft 365 admin center
 
@@ -105,6 +105,13 @@ The output of these commands resembles the following examples.
 If your user name isn't displayed in the command output for the role that’s required to deploy the add-in, or your role assignment is delegating, an admin who has the appropriate, regular role assignment can use one of the following methods to assign the necessary role to you.  
   
 **Method 1:** Assign the Org Marketplace Apps role or Org Custom Apps role, as appropriate, explicitly by using the Exchange admin center.
+
+Use the following steps:
+
+1. Open the Exchange admin center.
+1. Select **Roles** > **Admin roles** > **Organization Management**.
+1. In the Organization Management flyout pane, on the **Permissions** tab, select the role that you want to assign.
+1. Select **Save**.
 
 :::image type="content" source="media/cannot-deploy-addin-integrated-apps-menu/assign-role-explicitly.png" alt-text="screenshot of the menu options in the Exchange admin center that're required to assign a role explicitly":::
 
