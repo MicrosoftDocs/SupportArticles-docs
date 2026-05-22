@@ -1,6 +1,6 @@
 ---
 title: Event 8198, error 0xC0020017 or 0x8007139F when activating Windows
-description: Discusses how to troubleshoot and resolve Event ID 8198 when it includes error code 0xC0020017 or 0x8007139F. The steps apply to physical computers, on-premises virtual machines (VMs), and Azure VMs.
+description: Discusses how to troubleshoot and resolve Event ID 8198 if it includes error code 0xC0020017 or 0x8007139F. The steps apply to physical computers, on-premises virtual machines (VMs), and Azure VMs.
 ms.date: 05/23/2026
 ms.collection: windows
 ai.usage: ai-assisted
@@ -15,13 +15,13 @@ appliesto:
 
 # Event 8198, error 0xC0020017 or 0x8007139F "KMS contact failure" when activating Windows
 
-This article explains how to resolve Event ID 8198 when it includes error code `0xC0020017` or `0x8007139F`. These codes, when they occur in this event, indicate that a Windows KMS client can't contact the Key Management Service (KMS) for activation.
+This article explains how to resolve Event ID 8198 if it includes error code `0xC0020017` or `0x8007139F`. These codes, when they occur in this event, indicate that a Windows KMS client can't contact the Key Management Service (KMS) for activation.
 
 The troubleshooting steps in this article walk you through the most common causes, including VPN or tunneling configuration issues, incorrect client settings, and network connectivity problems. The steps apply to physical computers, on-premises virtual machines (VMs), and Azure VMs.
 
 ## Symptoms
 
-When you try to activate a Windows system, the standard `slmgr.vbs /ato` command returns a generic failure code. However, the actual error is recorded in the application log, as Event ID 8198. The event content resembles following example:
+When you try to activate a Windows system, the standard `slmgr.vbs /ato` command returns a generic failure code. However, the actual error is recorded in the application log as Event ID 8198. The event content resembles the following example:
 
 ```output
 Source: Security-SPP
@@ -31,9 +31,9 @@ Description: License Activation failed. The Software Protection service reported
 ```
 
 > [!NOTE]  
-> In the event output, \<ErrorCode> represents one of several error codes. For the issue discussed in this article, the error code is either `0xC0020017` or `0x8007139F`.
+> In the event output, \<ErrorCode> represents one of several error codes. For the issue that's discussed in this article, the error code is either `0xC0020017` or `0x8007139F`.
 
-To view this event, open a Windows PowerShell Command Prompt on the client, and then run the following cmdlet:
+To view this event, open Windows PowerShell on the client, and then run the following cmdlet:
 
 ```powershell
 Get-WinEvent -FilterHashtable @{LogName='Application'; ProviderName='Security-SPP'; Id=8198} -MaxEvents 5 | Format-List TimeCreated, Message
@@ -41,19 +41,19 @@ Get-WinEvent -FilterHashtable @{LogName='Application'; ProviderName='Security-SP
 
 ## Cause
 
-Error `0xC0020017` indicates that the Software Protection Platform (SPP) service on the KMS client can't contact the KMS host. This error is functionally similar to error [0xC004F074](../../azure/virtual-machines/windows/windows-vm-activation-error-0xc004f074.md), but comes from a different code path. The SPP event pipeline reports this error instead of the System-Level Cache (SLC) API.
+Error `0xC0020017` indicates that the Software Protection Platform (SPP) service on the KMS client can't contact the KMS host. This error is functionally similar to error [0xC004F074](../../azure/virtual-machines/windows/windows-vm-activation-error-0xc004f074.md), but it comes from a different code path. The SPP event pipeline reports this error instead of the System-Level Cache (SLC) API.
 
-This issue can occur under the conditions that include the following scenarios:
+This issue might occur in any of the following scenarios:
 
 - **Firewall blocks KMS traffic**: Firewall rules or Network Security Group (NSG) rules block traffic to the KMS host or service.
 - **Forced tunneling**: All outbound traffic is routed through a VPN or similar technology, bypassing the KMS endpoint. For example, if you implement DirectAccess, Always On VPN, or Azure ExpressRoute gateway, you might encounter this issue.
 - **DNS resolution failure**: The KMS client can't connect to a DNS server, or the DNS server can't resolve the address of the KMS host (or Azure KMS service, for Azure VMs).
-- **Wrong KMS target**: The client was configured to use a specific KMS host, but the KMS host name was incorrect or invalid.
+- **Wrong KMS target**: The client is configured to use a specific KMS host, but the KMS host name is incorrect or invalid.
 - **SPP service issue**: the SPP service itself might be in a stuck state.
 
 ## Resolution
 
-Use the following steps to troubleshoot and fix the issue. To get the best results from these procedures, install the [PsPing](/sysinternals/downloads/psping) tool on the affected computer. If you have a self-hosted KMS server, install the PSPing tool on that computer also.
+To troubleshoot and fix this issue, use the following steps. To get the best results from this procedure, install the [PsPing](/sysinternals/downloads/psping) tool on the affected computer. If you have a self-hosted KMS server, install the PsPing tool on that computer, also.
 
 You should also be familiar with the [`slmgr` script](/windows-server/get-started/activation-slmgr-vbs-options).
 
@@ -88,13 +88,13 @@ To bypass the automatic discovery process, you can use the `slmgr` script to spe
    cscript c:\windows\system32\slmgr.vbs /ato
    ```
 
-1. To check whether the issue recurs, run the following command at the PowerShell command prompt:
+1. To check whether the issue reoccurs, run the following command at the PowerShell command prompt:
 
    ```powershell
    Get-WinEvent -FilterHashtable @{LogName='Application'; ProviderName='Security-SPP'; Id=8198} -MaxEvents 1 | Format-List TimeCreated, Message
    ```
 
-If the activation process still generates Event ID 8198 (error code `0xC0020017` or `0x8007139F`), continue to Step 2.
+If the activation process still generates Event ID 8198 (error code `0xC0020017` or `0x8007139F`), go to Step 2.
 
 ### Step 2: Check the VPN, Direct Access, forced tunneling, or similar configuration
 
@@ -110,13 +110,13 @@ If your virtual network routes all client traffic through a gateway (forced tunn
    cscript c:\windows\system32\slmgr.vbs /ato
    ```
 
-1. To check whether the issue recurs, run the following command at the PowerShell command prompt:
+1. To check whether the issue reoccurs, run the following command at the PowerShell command prompt:
 
    ```powershell
    Get-WinEvent -FilterHashtable @{LogName='Application'; ProviderName='Security-SPP'; Id=8198} -MaxEvents 1 | Format-List TimeCreated, Message
    ```
 
-If the activation process still generates Event ID 8198 (error code `0xC0020017` or `0x8007139F`), continue to Step 3.
+If the activation process still generates Event ID 8198 (error code `0xC0020017` or `0x8007139F`), go to Step 3.
 
 ### Step 3: Restart the SPP service
 
@@ -136,13 +136,13 @@ In some cases, the SPP service itself might be in a stuck state.
    cscript c:\windows\system32\slmgr.vbs /ato
    ```
 
-1. To check whether the issue recurs, run the following command at the PowerShell command prompt:
+1. To check whether the issue reoccurs, run the following command at the PowerShell command prompt:
 
    ```powershell
    Get-WinEvent -FilterHashtable @{LogName='Application'; ProviderName='Security-SPP'; Id=8198} -MaxEvents 1 | Format-List TimeCreated, Message
    ```
 
-If the activation process still generates Event ID 8198 (error code `0xC0020017` or `0x8007139F`), continue to Step 4.
+If the activation process still generates Event ID 8198 (error code `0xC0020017` or `0x8007139F`), go to Step 4.
 
 ### Step 4: Make sure that activation traffic can pass between the client and the KMS host
 
@@ -180,13 +180,13 @@ If the activation process still generates Event ID 8198 (error code `0xC0020017`
    cscript c:\windows\system32\slmgr.vbs /ato
    ```
 
-1. To check whether the issue recurs, run the following command at the PowerShell command prompt:
+1. To check whether the issue reoccurs, run the following command at the PowerShell command prompt:
 
    ```powershell
    Get-WinEvent -FilterHashtable @{LogName='Application'; ProviderName='Security-SPP'; Id=8198} -MaxEvents 1 | Format-List TimeCreated, Message
    ```
 
-If the activation process still generates Event ID 8198 (error code `0xC0020017` or `0x8007139F`), continue to Step 5.
+If the activation process still generates Event ID 8198 (error code `0xC0020017` or `0x8007139F`), go to Step 5.
 
 ### Step 5: Check the DNS configuration
 
@@ -252,7 +252,7 @@ If the activation process still generates Event ID 8198 (error code `0xC0020017`
    cscript c:\windows\system32\slmgr.vbs /ato
    ```
 
-1. To check whether the issue recurs, run the following command at the PowerShell command prompt:
+1. To check whether the issue reoccurs, run the following command at the PowerShell command prompt:
 
    ```powershell
    Get-WinEvent -FilterHashtable @{LogName='Application'; ProviderName='Security-SPP'; Id=8198} -MaxEvents 1 | Format-List TimeCreated, Message
