@@ -10,8 +10,11 @@ ms.custom: sap:Linked Server and distributed queries
 
 _Applies to:_
 
-- SQL Server 2022 CU and GDR updates since March 2026
 - SQL Server 2025 CU and GDR updates since April 2026
+- SQL Server 2022 CU and GDR updates since March 2026
+- SQL Server 2019 CU and GDR updates since April 2026
+- SQL Server 2017 CU and GDR updates since April 2026
+- SQL Server 2016 SP3 and Azure Connect Pack GDR updates since April 2026
 - Azure SQL Managed Instance
 
 ## Summary
