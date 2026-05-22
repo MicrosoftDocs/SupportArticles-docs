@@ -181,7 +181,7 @@ istioctl proxy-config all <pod-name> \
 
 ### Step 5: Check the injection status
 
-To check the injection status of the resource, run the following [istioctl experimental check-inject]() command:
+To check the injection status of the resource, run the following `istioctl experimental check-inject` command:
 
 ```bash
 istioctl experimental check-inject --istioNamespace aks-istio-system \
