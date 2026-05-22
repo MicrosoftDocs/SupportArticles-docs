@@ -600,8 +600,6 @@ items:
       href: windows-vm-activation-error-0xc004f038.md
     - name: Error 0xC004F042 — KMS can't be used
       href: windows-vm-activation-error-0xc004f042.md
-    - name: Error 0xC0020017 / 0x8007139F — KMS contact failure (SPP)
-      href: windows-vm-activation-error-0xc0020017-0x8007139f.md
   - name: Product key and MAK errors
     items:
     - name: Error 0xC004C003 — Product key blocked
