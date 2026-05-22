@@ -1,7 +1,7 @@
 ---
-title: Application Routing Gateway API ingress Troubleshooting
-description: Learn how to do Application Routing Gateway API ingress troubleshooting for Azure Kubernetes Service (AKS).
-ms.date: 11/26/2025
+title: Troubleshoot application routing Gateway API ingress problems
+description: Troubleshoot application routing Gateway API ingress issues in AKS. Diagnose networking, upgrade, and Istio control plane problems and fix them fast.
+ms.date: 05/22/2026
 author: nshankar13
 ms.author: nshankar
 ms.reviewer: jkatariya
@@ -11,29 +11,41 @@ ms.custom: sap:Extensions, Policies and Add-Ons
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot Gateway-API based ingress gateways of Application Routing add-on so that I can use the Istio service mesh successfully.
 ---
 
-# Application routing Gateway API ingress troubleshooting
+# Troubleshoot application routing Gateway API ingress problems in AKS
 
-## Overview
+## Summary
 
-The [application routing add-on](/azure/aks/app-routing-gateway-api) supports using the [Kubernetes Gateway API](https://gateway-api.sigs.k8s.io/) to manage ingress traffic to AKS cluster workloads. If you are using [managed NGINX](/azure/aks/app-routing-nginx-configuration) with the legacy Ingress API, we strongly recommend migrating to using the Kubernetes Gateway API Implementation. 
+This article provides guidance on troubleshooting common issues with the application routing Gateway API ingress in Azure Kubernetes Service (AKS).
 
-The application routing Gateway API Implementation deploys an Istio control plane to manages Kubernetes Gateway API resources. However, the application routing Gateway API Implementation is distinct from the [Istio add-on](./istio-add-on-general-troubleshooting.md), which is a full, end-to-end service mesh solution for AKS users to manage east-west and egress traffic in addition to ingress traffic - the application routing add-on's Istio control plane _only_ manages infrastructure for `Gateways` with `gatewayClassName` of `approuting-istio`, whereas the Istio add-on manages infrastructure for `Gateways` with `gatewayClassName` of `istio` and also supports other service mesh features. Moreover, the application routing Gateway API Istio control plane is not revisioned and is upgraded in-place, whereas the Istio add-on uses [canary upgrades](/azure/aks/istio-gateway-api) for minor revision upgrades.
+The [application routing add-on](/azure/aks/app-routing-gateway-api) supports using the [Kubernetes Gateway API](https://gateway-api.sigs.k8s.io/) to manage ingress traffic to AKS cluster workloads. If you're using [managed NGINX](/azure/aks/app-routing-nginx-configuration) with the legacy ingress API, migrate to the Kubernetes Gateway API implementation. 
 
-## Troubleshooting Steps
+The application routing Gateway API implementation deploys an Istio control plane to manage Kubernetes Gateway API resources. However, the application routing Gateway API implementation is distinct from the [Istio add-on](istio-add-on-general-troubleshooting.md). 
 
-### Istio Add-On Compatibility and Migration
+The add-on is a full, end-to-end service mesh solution for AKS users to manage east-west and egress traffic in addition to ingress traffic. The application routing add-on's Istio control plane *only* manages infrastructure for `Gateways` with `gatewayClassName` of `approuting-istio`, whereas the Istio add-on manages infrastructure for `Gateways` with `gatewayClassName` of `istio` and also supports other service mesh features. 
 
-Use of the [application routing Gateway API Implementation](/azure/aks/app-routing-gateway-api) and the [Istio service mesh add-on](/azure/aks/istio-about) simultaneously is unsupported. You must disable one first and enable the other in a separate operation.
+The application routing Gateway API Istio control plane isn't revisioned and is upgraded in-place, whereas the Istio add-on uses [canary upgrades](/azure/aks/istio-gateway-api) for minor revision upgrades.
 
-If you were previously using the Istio add-on and migrated to the application routing Gateway API Implementation, make sure that all Istio Custom Resource Definitions (CRDs) and other resources have been cleaned up from the prior installation. You must also update the `gatewayClassName` for your `Gateways` from `istio` to `approuting-istio`. If you previously labeled your Istio `Gateway` resources with the revision label `istio.io/rev=<asm-revision`, remember to remove this label after enabling the application routing add-on, which does not have a revisioned Istio control plane. You may also need to manually restart pods that were previously part of the mesh for Envoy sidecars to be un-injected from applications.
+## Troubleshooting scenarios
 
-If there are issues with the new application routing Istio control plane taking ownership of existing `Gateway` resources, try restarting the `istiod` deployment. Also inspect the `istiod` logs for any errors related to watching and/or taking ownership of the `Gateway` resources.
+The following are common troubleshooting scenarios for the application routing Gateway API.
 
-### Networking, firewall, and load balancer errors troubleshooting
+### Istio add-on compatibility and migration
 
-#### Step 1: Make sure that Azure Load Balancer health probes are configured appropriately
+You can't use the [application routing Gateway API Implementation](/azure/aks/app-routing-gateway-api) and the [Istio service mesh add-on](/azure/aks/istio-about) at the same time. You must disable one first and then enable the other in a separate operation.
 
-The application routing add-on adds [Azure Load Balancer annotations](https://cloud-provider-azure.sigs.k8s.io/topics/loadbalancer/) to the `Gateway` service to configure health probes, namely:
+If you previously used the Istio add-on and migrated to the application routing Gateway API Implementation, make sure that you clean up all Istio Custom Resource Definitions (CRDs) and other resources from the prior installation. You must also update the `gatewayClassName` for your `Gateways` from `istio` to `approuting-istio`. If you previously labeled your Istio `Gateway` resources with the revision label `istio.io/rev=<asm-revision`, remove this label after enabling the application routing add-on as it doesn't have a revisioned Istio control plane. You might also need to manually restart pods that were previously part of the mesh for Envoy sidecars to be un-injected from applications.
+
+If there are issues with the new application routing Istio control plane taking ownership of existing `Gateway` resources, try restarting the `istiod` deployment. Also inspect the `istiod` logs for any errors related to watching and taking ownership of the `Gateway` resources.
+
+### Networking, firewall, and load balancer errors 
+
+To troubleshoot common networking, firewall, and load balancer errors that you might encounter when using the application routing Gateway API, follow these steps.
+
+#### Step 1: Make sure Azure Load Balancer health probes are configured appropriately
+
+The application routing add-on adds [Azure Load Balancer annotations](https://cloud-provider-azure.sigs.k8s.io/topics/loadbalancer/) to the `Gateway` service to configure health probes. 
+
+See the following examples:
 
 ```
 service.beta.kubernetes.io/port_<gateway_port>_health-probe_port: "10256"
@@ -43,11 +55,16 @@ service.beta.kubernetes.io/port_<gateway_port>_health-probe_protocol: http
 service.beta.kubernetes.io/port_<gateway_port>_health-probe_request-path: /healthz
 ```
 
-These annotations tell Azure Load Balancer the path, protocol, and port for health probing the node or backend pods before forwarding traffic to the pod. By default, this is set to the port that `kube-proxy` is listening on to ensure that the `kube-proxy` instance on the node is healthy and can forward traffic to the destination pods. Note that these health probes only take effect when the `externalTrafficPolicy` is set to `cluster` - when the `externalTrafficPolicy` is set to `local`, Azure Load Balancer will use the `healthCheckNodePort` for health probing the node.
+These annotations tell Azure Load Balancer the path, protocol, and port for health probing the node or backend pods before forwarding traffic to the pod. By default, this configuration sets the port to the one that `kube-proxy` listens on to ensure that the `kube-proxy` instance on the node is healthy and can forward traffic to the destination pods. 
 
-You can verify that these annotations have been added to the service by running `kubectl get service <gateway-svc-name> -n <gateway-svc-namespace> -o yaml`. If these annotations are not added to the service for some reason or you are overwriting these annotations with your own resource customizations, traffic from Azure Load Balancer to the Gateway API deployment could be blocked because of failing health probes. You can address this issue by adding [Azure LoadBalancer annotations](https://cloud-provider-azure.sigs.k8s.io/topics/loadbalancer/) for the health probe path/port/protocol directly to the `Gateway` object, or by [customizing](#gateway-traffic-management-and-resource-customization-issues) the `GatewayClass`-level ConfigMap or the per-`Gateway` ConfigMap.
+> [!NOTE]
+> These health probes only take effect when `externalTrafficPolicy` is set to `cluster`. When `externalTrafficPolicy` is set to `local`, Azure Load Balancer uses the `healthCheckNodePort` for health probing the node.
 
-`Gateway` customization (ex - for `Gateway` listening on port `80`):
+Verify that the service has these annotations by running `kubectl get service <gateway-svc-name> -n <gateway-svc-namespace> -o yaml` in the cluster. If the service doesn't have these annotations, or if you overwrite these annotations with your own resource customizations, failing health probes can block traffic from Azure Load Balancer to the Gateway API deployment. 
+
+Add [Azure Load Balancer annotations](https://cloud-provider-azure.sigs.k8s.io/topics/loadbalancer/) for the health probe path, port, or protocol directly to the `Gateway` object, or [customize](#gateway-traffic-management-and-resource-customization-problems) the `GatewayClass`-level ConfigMap or the per-`Gateway` ConfigMap to address this problem.
+
+Run the following `Gateway` customization (for example, `Gateway` listening on port `80`):
 
 ```yaml
 apiVersion: gateway.networking.k8s.io/v1
@@ -74,42 +91,49 @@ data:
         service.beta.kubernetes.io/port_80_health-probe_request-path: /healthz
 ```
 
-You can also see whether health probes are failing by inspecting the `LoadBalancer` in the infrastructure resource group for the cluster on Azure Portal under `Settings/Properties`.
+You can also see whether health probes are failing by inspecting the `LoadBalancer` in the infrastructure resource group for the cluster in the [Azure portal](https://portal.azure.com) in the **Settings** > **Properties** section.
 
 #### Step 2: Make sure no firewall or NSG rules block ingress traffic
 
-Verify that no [firewall](/azure/firewall/protect-azure-kubernetes-service) or [Network Security Group (NSG) rules](/azure/virtual-network/network-security-groups-overview) rules block traffic to the ingress gateway.
+Verify that no [firewall](/azure/firewall/protect-azure-kubernetes-service) or [network security group (NSG) rules](/azure/virtual-network/network-security-groups-overview) block traffic to the ingress gateway.
 
-Double check whether you set restrictions to allow traffic to only the subnets of your user node pools. If the Gateway API pods are scheduled onto [system node pools](/azure/aks/use-system-pools?tabs=azure-cli), incoming traffic to these pods could be blocked. You can address this issue by allowing traffic to the subnets of your system node pools.
+Determine whether you set restrictions to allow traffic to only the subnets of your user node pools. If the Gateway API pods are scheduled onto [system node pools](/azure/aks/use-system-pools?tabs=azure-cli), incoming traffic to these pods can be blocked. Address this problem by allowing traffic to the subnets of your system node pools.
 
-### Versioning and Upgrade Troubleshooting
+### Versioning and upgrade problems
 
-Upgrades of Istio control plane for the application routing Gateway API Implementation occur in-place and are triggered in the following two scenarios:
-- The AKS cluster is upgraded to a new version which has a higher maximum supported Istio version corresponding to it. The Istio control plane will be upgraded to the higher minor version as part of the AKS cluster upgrade.
-- A new Istio version is released for AKS and is now the maximum supported Istio version for the AKS cluster version. The Istio control plane on your cluster will **automatically** be upgraded to the new minor version after the release is rolled out to your region. Follow the AKS release notes to track new Istio version releases.
+Upgrades of the Istio control plane for the application routing Gateway API implementation happen in-place and are triggered in the following two scenarios:
 
-In the rare event that there isn't a supported Istio version for the AKS cluster version, the application routing Gateway API implementation installs the maximum _compatible_ Istio version for the given AKS Kubernetes version. In this situation, your [AKS cluster Kubernetes version](/azure/aks/supported-kubernetes-versions). 
+- You upgrade the AKS cluster to a new version that supports a higher maximum Istio version. The upgrade process updates the Istio control plane to the higher minor version.
+- A new Istio version is released for AKS and becomes the maximum supported Istio version for the AKS cluster version. The Istio control plane on your cluster automatically upgrades to the new minor version after the release is rolled out to your region. Follow the AKS release notes to track new Istio version releases.
 
-It's possible that traffic disruptions could occur during the upgrade process. To minimize disruptions during upgrades, the application routing add-on deploys a Horizontal Pod Autoscaler (HPA) with 2 minimum replicas and a PodDisruptionBudget (PDB) with a minimum availability of 1 for each `Gateway`. 
+If there's no supported Istio version for the AKS cluster version, the application routing Gateway API implementation installs the maximum *compatible* Istio version for the given AKS Kubernetes version. In this situation, it should align with your [AKS cluster Kubernetes version](/azure/aks/supported-kubernetes-versions). 
 
-See the [Istio release calendar](/azure/aks/app-routing-gateway-api#versioning-and-upgrades) to find the expected Istio minor version for the cluster's Kubernetes version, and check the AKS release notes and [AKS release tracker](https://releases.aks.azure.com/webpage/index.html) to see whether the new Istio minor version has been released to your region. You should also verify that the `istiod` deployment pilot image tag has the expected minor version for the given cluster version by running:
+Traffic disruptions can occur during the upgrade process. To minimize disruptions during upgrades, the application routing add-on deploys a Horizontal Pod Autoscaler (HPA) with two minimum replicas and a PodDisruptionBudget (PDB) with a minimum availability of one for each `Gateway`. 
+
+To find the expected Istio minor version for the cluster's Kubernetes version, see the [Istio release calendar](/azure/aks/app-routing-gateway-api#versioning-and-upgrades). Check the AKS release notes and [AKS release tracker](https://releases.aks.azure.com/webpage/index.html) to see whether the new Istio minor version is released to your region. 
+
+Verify that the `istiod` deployment pilot image tag has the expected minor version for the given cluster version by running the following command:
 
 ```bash
 kubectl get deployment istiod -n aks-istio-system -o yaml
 ```
 
-If the `istiod` deployment is still not up-to-date, you may need to manually trigger a reconciliation of the AKS cluster. You can do this by running `az aks update`.
+If the `istiod` deployment isn't up-to-date, you likely need to manually trigger a reconciliation of the AKS cluster. Run `az aks update` to trigger reconciliation.
 
-If the `istiod` version is up-to-date, you should also verify that the `Gateway` deployment proxy images also have the new patch versions. `istiod` should update the `Gateway` deployments automatically after `istiod` gets updated. If the `Gateway` deployment images aren't updated to the new minor or patch version, try restarting the `istiod` deployment manually.
+If the `istiod` version is up-to-date, also verify that the `Gateway` deployment proxy images have the new patch versions. `istiod` updates the `Gateway` deployments automatically after `istiod` gets updated. If the `Gateway` deployment images aren't updated to the new minor or patch version, try restarting the `istiod` deployment manually.
 
-## Istio control plane and `Gateway` proxy troubleshooting
+### Istio control plane and `Gateway` proxy problems
 
-Because the application routing Gateway API Implementation uses an Istio control plane, you can follow the steps in the [Istio add-on troubleshooting guide](./istio-add-on-general-troubleshooting.md) to debug `istiod` and `Gateway` proxies. Note that some of the Istio add-on troubleshooting steps could pertain to Istio CRDs, revisioned deployments, canary upgrades, and other features that are not applicable to the App Routing Istio Gateway API Implementation.
+Because the application routing Gateway API implementation uses an Istio control plane, you can follow the steps in the [Istio add-on troubleshooting guide](./istio-add-on-general-troubleshooting.md) to debug `istiod` and `Gateway` proxies. 
 
-## Gateway Traffic Management and Resource Customization Issues
+> [!NOTE]
+> Some of the Istio add-on troubleshooting steps can also pertain to Istio CRDs, revisioned deployments, canary upgrades, and other features that aren't applicable to the application routing Istio Gateway API implementation.
 
-While the application routing Gateway API Implementation is separate from the Istio add-on and uses a different `gatewayClassName` of `approuting-istio`, the process of deploying and troubleshooting `Gateways` between the Istio add-on and the App Routing Gateway API Implementation is roughly the same. Moreover, both application routing Gateway API Implementation and the Istio add-on use the same resource customization allowlist to validate `Gateway` ConfigMaps. Follow the steps in the Istio add-on Gateway API troubleshooting guide for [Gateway configuration](./istio-add-on-gateway-api.md#gateway-configuration-troubleshooting) and [resource customization](./istio-add-on-gateway-api.md#gateway-resource-customization-troubleshooting) errors.
+### Gateway traffic management and resource customization problems
 
-To avoid conflicts, ensure that you don't have the `GatewayClass` `approuting-istio` installed on your cluster - or any controller that reconciles `Gateways` of `GatewayClass` `approuting-istio` - prior to enabling App Routing Istio with the Managed Gateway API.
+While the application routing Gateway API implementation is separate from the Istio add-on and uses a different `gatewayClassName` of `approuting-istio`, the process of deploying and troubleshooting `Gateways` between the Istio add-on and the application routing Gateway API implementation is roughly the same. Both application routing Gateway API implementation and the Istio add-on use the same resource customization allowlist to validate `Gateway` ConfigMaps. Follow the steps in the Istio add-on Gateway API troubleshooting guide for [Gateway configuration](./istio-add-on-gateway-api.md#gateway-configuration-troubleshooting) and [resource customization](./istio-add-on-gateway-api.md#gateway-resource-customization-troubleshooting) problems.
 
-Also note that the `istio-gateway-class-defaults` ConfigMap is provisioned and reconciled by AKS when the Managed Gateway API CRDs and the application routing Gateway API implementation are enabled together. If you previously created the `istio-gateway-class-defaults` ConfigMap in the `aks-istio-system` namespace yourself, you must delete the self-managed ConfigMap instance prior to enabling the Managed Gateway API CRDs to avoid conflicts with reconciliation of the AKS-managed ConfigMap.
+To avoid conflicts, ensure that you don't have the `GatewayClass` `approuting-istio` installed on your cluster (or any controller that reconciles `Gateways` of `GatewayClass` `approuting-istio`) prior to enabling application routing Istio with the Managed Gateway API.
+
+> [!NOTE]
+> AKS provisions and reconciles the `istio-gateway-class-defaults` ConfigMap when you enable the Managed Gateway API CRDs and the application routing Gateway API implementation together. If you previously created the `istio-gateway-class-defaults` ConfigMap in the `aks-istio-system` namespace, delete the self-managed ConfigMap instance before enabling the Managed Gateway API CRDs to avoid conflicts with reconciliation of the AKS-managed ConfigMap.

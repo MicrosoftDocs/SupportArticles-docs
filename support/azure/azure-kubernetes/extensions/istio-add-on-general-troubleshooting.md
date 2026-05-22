@@ -233,7 +233,7 @@ For links to discussion about other issues, such as sidecar injection, observabi
 
 #### Verify AuthorizationPolicy evaluation rules
 
-When applying multiple authorization policies to a particular workload, be mindful of the order in which Istio processess the different access control types. More information can be found in the [Istio Authorization Policy doc](https://istio.io/latest/docs/reference/config/security/authorization-policy/)
+When applying multiple authorization policies to a particular workload, be mindful of the order Istio processess the different access control types. For more information, see the [Istio Authorization Policy documentation](https://istio.io/latest/docs/reference/config/security/authorization-policy/)
 
 ### Step 3: Verify protocol selection
 
