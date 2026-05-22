@@ -1,6 +1,6 @@
 ---
 title: Fix Copilot settings issues in Dynamics 365 Sales
-description: Resolves issues where Copilot settings aren't visible in Sales Hub navigation or the Sales Copilot bot isn't functioning. Covers publishing the bot in Copilot Studio and adding the Copilot settings navigation link.
+description: Troubleshoot missing Copilot settings in the Sales Hub navigation and Copilot features that don't work in Microsoft Dynamics 365 Sales.
 ms.reviewer: ramakris, josaw, v-shaywood
 ms.date: 05/21/2026
 ms.custom: sap:Copilot in Dynamics 365 Sales\Turn Copilot features on or off in Sales Hub
@@ -12,7 +12,7 @@ ai-usage: ai-assisted
 
 ## Summary
 
-This article helps administrators resolve issues where they can't turn Copilot features on or off, or where Copilot settings aren't visible in the Microsoft Dynamics 365 Sales. It covers publishing the Copilot in Dynamics 365 Sales agent from Microsoft Copilot Studio and adding the Copilot settings navigation link to the Sales Hub app so that Copilot in Dynamics 365 Sales works as expected.
+This article helps administrators resolve issues where they can't turn Copilot features on or off, or where Copilot settings aren't visible in Microsoft Dynamics 365 Sales. It covers publishing the Copilot in Dynamics 365 Sales agent from Microsoft Copilot Studio and adding the Copilot settings navigation link to the Sales Hub app so that Copilot in Dynamics 365 Sales works as expected.
 
 ## Symptoms
 
@@ -34,7 +34,7 @@ Republish the agent to refresh its state:
 1. Select **Copilot in Dynamics 365 Sales**.
 1. Select **Publish**.
 1. Wait a few minutes for the changes to propagate.
-1. Return to the Sales Hub app and verify if Copilot works.
+1. Return to the Sales Hub app and check that Copilot works.
 
 ## Add the Copilot settings navigation link to the Sales Hub app
 
