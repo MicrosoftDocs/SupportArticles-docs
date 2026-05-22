@@ -14,8 +14,8 @@ This article provides solutions for scenarios in which the **View hierarchy** bu
 
 - [The View hierarchy button isn't configured for the table](#the-view-hierarchy-button-isnt-configured-for-the-table)
 - [No hierarchy is published for the table](#no-hierarchy-is-published-for-the-table)
-- [The user lacks the required permission.]
-- [Multiple records are selected in a grid view.] 
+- [The user doesn't have permission to view hierarchies](#the-user-doesnt-have-permission-to-view-hierarchies)
+- [Multiple records are selected in a grid view](#multiple-records-are-selected-in a-grid-view) 
 
 Use the following sections to identify the cause and apply the matching solution.
 
@@ -27,11 +27,11 @@ When you open a record in a form or select a record in a grid view in Dynamics 3
 
 ### The View hierarchy button isn't configured for the table
 
-The **View hierarchy** button is preconfigured only for the Contact, Opportunity, Lead, and Account tables. For any other table, a Dynamics 365 Sales administrator must configure the forms or grids associated with the table to show the button.
+The **View hierarchy** button is preconfigured for only the Contact, Opportunity, Lead, and Account tables. For any other table, a Dynamics 365 Sales administrator must configure the forms or grids that are associated with the table to show the button.
 
 #### Solution
 
-To resolve this issue, ask your administrator to add the **View hierarchy** button to the form or grid command bar for the table you want. For more information, see [Add a view hierarchy button](/dynamics365/sales/add-hierarchy-visualization-custom-tables).
+To resolve this issue, ask your administrator to add the **View hierarchy** button to the form or grid command bar for the table that you want. For more information, see [Add a view hierarchy button](/dynamics365/sales/add-hierarchy-visualization-custom-tables).
 
 ### No hierarchy is published for the table
 
@@ -47,11 +47,11 @@ To view hierarchies, a user must have **Read** permission on the **Hierarchy con
 
 #### Solution
 
-To resolve this issue, grant **Read** permission on the **Hierarchy configuration** table to the user's [security role](/power-platform/admin/security-roles-privileges).
+To resolve this issue, grant the **Read** permission on the **Hierarchy configuration** table to the user's [security role](/power-platform/admin/security-roles-privileges).
 
-### More than one record is selected in a grid view
+### Multiple records are selected in a grid view
 
-In a grid (list) view, the **View hierarchy** button is available only when a single record is selected. If you select no record or more than one record, the button doesn't appear.
+In a grid (list) view, the **View hierarchy** button is available only if a single record is selected. If you select no record or more than one record, the button doesn't appear.
 
 #### Solution
 
