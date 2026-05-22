@@ -10,41 +10,50 @@ ai-usage: ai-assisted
 
 ## Summary
 
-This article provides solutions for scenarios where the **View hierarchy** button doesn't appear on the command bar in Microsoft Dynamics 365 Sales. The visual hierarchy feature lets users explore parent-child relationships between records, but the button can be missing because the table isn't configured for hierarchies, no hierarchy is published, the user lacks the required permission, or multiple records are selected in a grid view. Use the following sections to identify the cause and apply the matching solution.
+This article provides solutions for scenarios in which the **View hierarchy** button doesn't appear on the command bar in Microsoft Dynamics 365 Sales. The visual hierarchy feature lets users explore parent-child relationships between records, but the button could be missing for several reasons: 
+
+- [The View hierarchy button isn't configured for the table](#the-view-hierarchy-button-isnt-configured-for-the-table)
+- [No hierarchy is published for the table](#no-hierarchy-is-published-for-the-table)
+- [The user lacks the required permission.]
+- [Multiple records are selected in a grid view.] 
+
+Use the following sections to identify the cause and apply the matching solution.
 
 ## Symptoms
 
 When you open a record in a form or select a record in a grid view in Dynamics 365 Sales, the **View hierarchy** button doesn't appear on the command bar.
 
-## The View hierarchy button isn't configured for the table
+## Cause
+
+### The View hierarchy button isn't configured for the table
 
 The **View hierarchy** button is preconfigured only for the Contact, Opportunity, Lead, and Account tables. For any other table, a Dynamics 365 Sales administrator must configure the forms or grids associated with the table to show the button.
 
-### Solution
+#### Solution
 
 To resolve this issue, ask your administrator to add the **View hierarchy** button to the form or grid command bar for the table you want. For more information, see [Add a view hierarchy button](/dynamics365/sales/add-hierarchy-visualization-custom-tables).
 
-## No hierarchy is published for the table
+### No hierarchy is published for the table
 
 If no hierarchy is published for the table, the **View hierarchy** button doesn't appear. An administrator must publish a hierarchy for the organization before users can view it.
 
-### Solution
+#### Solution
 
 To resolve this issue, ask your administrator to design and publish a hierarchy for the table. For more information, see [Design and publish hierarchy](/dynamics365/sales/create-activate-hierarchy-visualizations).
 
-## The user doesn't have permission to view hierarchies
+### The user doesn't have permission to view hierarchies
 
 To view hierarchies, a user must have **Read** permission on the **Hierarchy configuration** table. Without this permission, the **View hierarchy** button doesn't appear.
 
-### Solution
+#### Solution
 
 To resolve this issue, grant **Read** permission on the **Hierarchy configuration** table to the user's [security role](/power-platform/admin/security-roles-privileges).
 
-## More than one record is selected in a grid view
+### More than one record is selected in a grid view
 
 In a grid (list) view, the **View hierarchy** button is available only when a single record is selected. If you select no record or more than one record, the button doesn't appear.
 
-### Solution
+#### Solution
 
 To resolve this issue, select a single record in the grid view, and then check the command bar for the **View hierarchy** button.
 
