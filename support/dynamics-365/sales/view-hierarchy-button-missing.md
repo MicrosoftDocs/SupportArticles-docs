@@ -15,7 +15,7 @@ This article provides solutions for scenarios in which the **View hierarchy** bu
 - [The View hierarchy button isn't configured for the table](#the-view-hierarchy-button-isnt-configured-for-the-table)
 - [No hierarchy is published for the table](#no-hierarchy-is-published-for-the-table)
 - [The user doesn't have permission to view hierarchies](#the-user-doesnt-have-permission-to-view-hierarchies)
-- [Multiple records are selected in a grid view](#multiple-records-are-selected-in a-grid-view) 
+- [Multiple records are selected in a grid view](#multiple-records-are-selected-in-a-grid-view) 
 
 Use the following sections to identify the cause and apply the matching solution.
 
