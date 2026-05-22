@@ -1,6 +1,6 @@
 ---
 title: Fix lead qualification errors in Dynamics 365 Sales
-description: Resolve common lead qualification errors for salespeople in Dynamics 365 Sales. Such erros include duplicate warnings, missing permissions, status code mismatches, and business process flow issues.
+description: Resolve common lead qualification errors for salespeople in Dynamics 365 Sales. These errors include duplicate warnings, missing permissions, status code mismatches, and business process flow issues.
 ms.reviewer: ramakris, shjais, tapanm, v-shaywood
 ms.date: 05/21/2026
 ms.custom: sap:Lead
@@ -44,7 +44,7 @@ To resolve this issue, take either of the following actions in the **Duplicate w
 - To create a new record instead, select **Continue**.
 
 > [!NOTE]
-> When you qualify a lead through the Leads grid, the system creates an account or contact even if a duplicate record exists. This action occurs because the [duplicate detection rule](/power-platform/admin/set-up-duplicate-detection-rules-keep-data-clean) is disabled by design in that flow. But when you qualify a lead through the lead record form, the duplicate detection rule runs and prompts you with a warning to resolve the conflict if it finds any duplicate account or contact records.
+> When you qualify a lead through the Leads grid, the system creates an account or contact, even if a duplicate record exists. This action occurs because the [duplicate detection rule](/power-platform/admin/set-up-duplicate-detection-rules-keep-data-clean) is disabled by design in that flow. But when you qualify a lead through the lead record form, the duplicate detection rule runs and prompts you with a warning to resolve the conflict if it finds any duplicate account or contact records.
 
 ### Required fields not filled in the current stage
 
@@ -186,7 +186,7 @@ The following screenshots show the **Core Records** settings at each access leve
 
 #### Troubleshoot privilege errors that persist after assigning permissions
 
-If the user still gets privilege-related errors after you assign privileges (as listed in this section), they might be missing privileges on other entities that are accessed when the Account, Contact, or Opportunity records are created. For example, the user might be missing privileges on custom entities that are accessed when [plug-ins](/power-apps/developer/data-platform/plug-ins) or [workflows](/power-automate/workflow-processes) run on the Account, Contact, or Opportunity entities.
+If the user still encounters privilege-related errors after you assign privileges (as listed in this section), they might be missing privileges on other entities that are accessed when the Account, Contact, or Opportunity records are created. For example, the user might be missing privileges on custom entities that are accessed when [plug-ins](/power-apps/developer/data-platform/plug-ins) or [workflows](/power-automate/workflow-processes) run on the Account, Contact, or Opportunity entities.
 
 To troubleshoot further, follow these steps:
 
