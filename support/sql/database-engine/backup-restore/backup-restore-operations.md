@@ -51,7 +51,7 @@ Backup and restore operations are I/O intensive. Backup and restore throughput d
 
 4. Work with your Windows administrator to check for firmware updates for your hardware.  
 
-## Restore a database between different SQL Server versions
+## Errors when restoring backups to earlier SQL Server versions
 
 ### Symptoms
 
@@ -185,7 +185,7 @@ If you encounter this problem on a supported version of SQL Server, install the 
 
 - [2682488 FIX: Backup operation fails in a SQL Server 2008, in a SQL Server 2008 R2 or in a SQL Server 2012 database after you enable change tracking](https://support.microsoft.com/help/2682488)
 
-## Restore backups of encrypted databases
+## Errors when restoring backups of encrypted databases
 
 ### Symptoms
 
@@ -195,16 +195,6 @@ You encounter problems when you restore backups of databases protected by transp
 
 To fix the problem, see [Move a TDE protected database to another SQL Server](/sql/relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server).
 
-## Restore a Dynamics CRM backup from Enterprise edition to Standard edition
-
-### Symptoms
-
-Restoring a Microsoft Dynamics CRM database backup taken on SQL Server Enterprise edition fails on SQL Server Standard edition.
-
-### Resolution
-
-To fix the issue, see ["Database cannot be started in this edition of SQL Server" error when restoring a Microsoft Dynamics CRM database](/previous-versions/troubleshoot/dynamics/crm/database-cannot-be-started-in-this-edition-of-sql-error-when-restoring).
-  
 ## Frequently asked questions about SQL Server backup and restore
 
 #### How can I check the status of a backup operation?

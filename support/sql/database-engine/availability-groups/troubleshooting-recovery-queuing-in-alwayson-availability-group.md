@@ -18,7 +18,7 @@ Changes made to the primary replica in an availability group database are sent t
 
 If changes arrive and harden in the transaction log faster than they can be redone, a *recovery queue* forms. This queue is the set of hardened log records that aren't yet applied to the database.
 
-## Symptoms and effects of redo queuing
+## Symptoms and effects of recovery queuing
 
 ### Stale data on secondary replicas
 
@@ -36,7 +36,7 @@ Recovery Time Objective (RTO) is the maximum database downtime that an organizat
 
 When redo queuing is significant, the Always On dashboard in SQL Server Management Studio (SSMS) might show the availability group as unhealthy.
 
-## Check for redo queuing
+## Check for recovery queuing
 
 The recovery queue is a per-database measurement. You can check it from the Always On dashboard on the primary replica or by querying the [sys.dm_hadr_database_replica_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql) dynamic management view (DMV) on the primary or secondary replica. Performance Monitor counters also report recovery queue size and redo rate. Check those counters on the secondary replica.
 
@@ -112,7 +112,7 @@ If the recovery queue grows over time, investigate further. Growth indicates tha
 - **Log Redo Rate (KB/sec)** (Always On dashboard)
 - `redo_rate` in `sys.dm_hadr_database_replica_states`
 
-### Establish baseline redo rates
+### Establish baseline recovery rates
 
 During healthy Always On performance, monitor the redo rate on your busy availability group databases. Capture rates during typical business hours and during maintenance windows when large transactions (like index rebuilds or ETL processes) drive higher throughput. Compare those baselines when you see recovery queue growth to identify what changed. The workload might be larger than usual, or the redo rate might be lower than expected, which needs further investigation.
 
@@ -120,7 +120,7 @@ During healthy Always On performance, monitor the redo rate on your busy availab
 
 Large workloads (like an `UPDATE` statement against one million rows, an index rebuild on a 1-TB table, or an ETL batch that inserts millions of rows) typically cause some recovery queue growth, either immediately or over time. This growth is expected when many changes are made suddenly in the availability group database.
 
-## Diagnose redo queuing
+## Diagnose recovery queuing
 
 After you identify recovery queuing for a specific secondary replica availability group database, connect to the secondary replica, and then query `sys.dm_exec_requests` to check the `wait_type` and `wait_time` for recovery threads. You're looking for a high frequency of one or more wait types and large wait times for those wait types. The following sample query runs every five seconds and reports wait types and wait times for the availability group database `agdb`:
 
@@ -143,11 +143,11 @@ In the following example, some I/O-related wait types are reported (`PAGEIOLATCH
 
    :::image type="content" source="media/troubleshooting-recovery-queuing-in-alwayson-availability-group/input-output-related-waittimes-recovery.png" alt-text="Screenshot showing the largest wait times reported in the next column." lightbox="media/troubleshooting-recovery-queuing-in-alwayson-availability-group/input-output-related-waittimes-recovery.png":::
 
-### Identify redo wait types
+### Identify recovery wait types
 
 After you identify a wait type, use [Availability group secondary replica redo model and performance](https://techcommunity.microsoft.com/blog/sqlserver/sql-server-20162017-availability-group-secondary-replica-redo-model-and-performance/385905) as a cross-reference for common wait types that cause recovery queuing and for guidance on how to fix the problem.
 
-### Blocked redo threads on read-only secondary replicas
+### Blocked recovery threads on read-only secondary replicas
 
 If your solution directs reporting (querying) against availability group databases on a secondary replica, those read-only queries acquire schema stability (Sch-S) locks. Sch-S locks can block redo threads from acquiring schema modification (Sch-M) locks (also known as schema modify locks, or `LCK_M_SCH_M`) needed to apply data definition language (DDL) changes like `ALTER TABLE` or `ALTER INDEX`. A blocked redo thread can't apply log records until it's unblocked, which causes recovery queuing.
 
@@ -163,7 +163,7 @@ Monitor for the schema modification lock wait type that the redo thread tries to
  
   :::image type="content" source="media/troubleshooting-recovery-queuing-in-alwayson-availability-group/increase-wait-time-lck-m-sch-m-recovery.png" alt-text="Screenshot that shows the increasing wait time for the LCK_M_SCH_M." lightbox="media/troubleshooting-recovery-queuing-in-alwayson-availability-group/increase-wait-time-lck-m-sch-m-recovery.png":::  
 
-### Single-threaded redo
+### Single-threaded recovery
 
 SQL Server 2016 introduced parallel recovery for secondary replica databases. If you're running an earlier version, like SQL Server 2014 or SQL Server 2012, upgrade to a supported version to get parallel redo and improved redo performance.
 

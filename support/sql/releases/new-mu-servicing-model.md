@@ -24,7 +24,9 @@ A SQL Server servicing baseline (RTM or, for older versions, a Service Pack) bra
 
 After you install a CU, the instance moves to the CU branch and continues to get CUs (and the CU branch version of GDR security releases) for that baseline.
 
-## How the original Microsoft Update detection logic worked
+## Microsoft Update detection logic
+
+### How the original logic worked
 
 The original Microsoft Update (MU) detection logic offered updates from the GDR branch to instances that were at the servicing baseline or already on the GDR branch.
 
@@ -35,11 +37,11 @@ To get CU-branch updates through MU, you had to install at least one CU manually
 
 This design minimized the changes applied to an instance when only a security or other critical fix was needed. Instances on the CU branch get every update released for the baseline when a required security release ships, including all nonsecurity changes up to that security update.
 
-### Why the original logic was a problem for WSUS
+### Problem with the original logic
 
 The original logic made routine servicing of large SQL Server fleets through WSUS difficult, because each instance had to be manually moved to the CU branch before WSUS could offer CU-branch updates to it. That manual step doesn't scale for environments that manage many instances centrally.
 
-### Changes to the MU detection logic
+### Changes to the logic
 
 To make WSUS-based servicing practical without silently moving instances to the CU branch, the MU detection logic was updated for both routine CU servicing and GDR security releases on supported baselines.
 

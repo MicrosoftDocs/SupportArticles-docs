@@ -33,25 +33,6 @@ Most connectivity errors fall into one of the following categories. Use this tab
 | Encryption and certificates | The certificate isn't trusted or the TLS handshake fails. | [The certificate chain was issued by an authority that is not trusted](../connect/error-message-when-you-connect.md) |
 | Access validation | Token-based server access validation fails. | [Token-based server access validation failed](../connect/cannot-connect-remotely.md) |
 
-## Common connectivity issues
-
-Use the following list to go to the article that matches your scenario:
-
-- [A network-related or instance-specific error occurred while establishing a connection to SQL Server](../connect/network-related-or-instance-specific-error-occurred-while-establishing-connection.md)
-- [Cannot generate SSPI context](cannot-generate-sspi-context-error.md)
-- [Login failed for user](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error?context=/troubleshoot/sql/context/context), which covers the following sign-in errors:
-
-  - > "Login failed for user 'NT AUTHORITY\ANONYMOUS LOGON'"
-  - > "Login failed for user '(null)'"
-  - > "Login failed for user (empty)"
-  - > "Login failed for user '\<username\>'"
-  - > "Login failed for user '\<domain>\\\<username>'"
-
-- [Timeout expired. The timeout period elapsed prior to completion of the operation or the server is not responding](../connect/timeout-expired-error.md)
-- [An existing connection was forcibly closed by the remote host](../connect/tls-exist-connection-closed.md)
-- [Token-based server access validation failed with an infrastructure error. Check for previous errors](../connect/cannot-connect-remotely.md)
-- [The certificate chain was issued by an authority that is not trusted](../connect/error-message-when-you-connect.md)
-
 ## Tools and methods to troubleshoot connectivity issues
 
 The following sections describe tools and procedures that help you diagnose different SQL Server connectivity errors.
