@@ -588,10 +588,10 @@ items:
     items:
     - name: Error 0x800705B4 — Timeout
       href: windows-vm-activation-error-0x800705b4.md
-    - name: Error 0x8007232B — DNS name does not exist
-      href: windows-vm-activation-error-0x8007232b.md
     - name: Error 0x8007232A — DNS server failure
       href: ../../../windows-server/licensing-and-activation/activation-error-0x8007232a-dns-server-failure.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
+    - name: Error 0x8007232B — DNS name does not exist
+      href: ../../../windows-server/licensing-and-activation/activation-error-0x8007232b-dns-name-does-not-exist.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Error 0xC004F074 — No KMS could be contacted
       href: windows-vm-activation-error-0xc004f074.md
     - name: Error 0xC004F038 — KMS count insufficient
