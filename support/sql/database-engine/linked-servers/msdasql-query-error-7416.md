@@ -4,13 +4,15 @@ description: MSDASQL linked server queries fail and generate error 7416 after a 
 ms.date: 05/14/2026
 ms.reviewer: jopilov, randolphwest, hugoqueiroz, jamesferebee, aartigoyle, v-shaywood
 ms.custom: sap:Linked Server and distributed queries
-appliesto:
-- SQL Server 2022 CU and GDR updates since March 2026
-- SQL Server 2025 CU and GDR updates since April 2026
-- Azure SQL Managed Instance
 ---
 
 # Linked server queries that use MSDASQL fail with error 7416
+
+_Applies to:_
+
+- SQL Server 2022 CU and GDR updates since March 2026
+- SQL Server 2025 CU and GDR updates since April 2026
+- Azure SQL Managed Instance
 
 ## Summary
 
