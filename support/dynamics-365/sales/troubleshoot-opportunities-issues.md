@@ -203,7 +203,7 @@ To resolve this issue:
 
 The bubbles might not be visible for the following reasons:
 
-- The [bubble chart](/dynamics365/sales/use-opportunity-pipeline-view#understand-the-opportunity-pipeline-charts) shows only the first 50 valid opportunity entries (those that have defined x-axis, y-axis, radius data, and **Segment by** fields). As a result, some or all bubbles might not appear on the graph even though they exist in the grid view.
+- The [bubble chart](/dynamics365/sales/use-opportunity-pipeline-view#understand-the-opportunity-pipeline-charts) shows only the first 50 valid opportunity entries (those entries that have defined x-axis, y-axis, radius data, and **Segment by** fields). As a result, some or all bubbles might not appear on the graph even though they exist in the grid view.
 - If the [msdyn_Score](/dynamics365/sales/developer/entities/msdyn_predictivescore#BKMK_msdyn_Score) (opportunity score) and [msdyn_Grade](/dynamics365/sales/developer/entities/msdyn_predictivescore#BKMK_msdyn_Grade) (opportunity grade) fields are selected as the **Tooltips** fields for the Deal tracker, the "not null" filters of these fields are applied to the opportunities for the bubble chart. This action might filter out all opportunities from the chart even though they're visible in the grid view.
 
 #### Solution
