@@ -89,7 +89,7 @@ In all of the example commands, replace the following parameters with your value
 
 ### `fstab`
 
-This action validates the `etc/fstab` file identifying syntax violations and correcting common misconfigurations - including adding the `nofail` option to non-essential mount points. It first makes a copy of the original file for reference. When the OS starts, the administrator can edit the fstab to correct any errors that prevented a reboot of the system.
+This action validates the `etc/fstab` file by identifying syntax violations and correcting common misconfigurations. It corrects errors like adding the `nofail` option to nonessential mount points. It first makes a copy of the original file for reference. When the OS starts, the administrator can edit the fstab to correct any errors that prevented a reboot of the system.
 
 For more information about problems with a malformed `/etc/fstab` file, see [Troubleshoot Linux VM starting issues because `fstab` errors](linux-virtual-machine-cannot-start-fstab-errors.md).
 
@@ -103,7 +103,7 @@ Use this action to reinstall GRUB and regenerate the `grub.cfg` file.
 
 ### `initrd`
 
-Use this action to fix an initrd or initramfs that's corrupted or incorrectly created.
+Use this action to fix a corrupted or incorrectly created initrd or initramfs.
 
 To create the initrd or initramfs correctly, add the `hv_vmbus`, `hv_netvsc`, and `hv_storvsc` modules to the image.
 
