@@ -15875,7 +15875,7 @@
     },
     {
       "source_path": "support/azure/virtual-machines/windows/windows-vm-activation-error-0xc004c003.md",
-      "redirect_url": "/previous-versions/troubleshoot/azure/virtual-machines/windows/windows-vm-activation-error-0xc004c003",
+      "redirect_url": "/troubleshoot/windows-server/licensing-and-activation/activation-error-0xc004c003-product-key-blocked.md?context=/troubleshoot/azure/virtual-machines/windows/context/context",
       "redirect_document_id": false
     }
   ]
