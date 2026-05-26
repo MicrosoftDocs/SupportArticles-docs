@@ -48,12 +48,12 @@ If your licensing model requires MAK activation, follow these steps:
 
 1. To install the new MAK, open an administrative Command Prompt window on the client, and then run the following command:
 
-```cmd
+   ```cmd
    slmgr -/ipk <xxxxx-xxxxx-xxxxx-xxxxx-xxxxx>
-```
+   ```
 
-> [!NOTE]  
-> In this command, \<xxxxx-xxxxx-xxxxx-xxxxx-xxxxx> represents your MAK product key.
+   > [!NOTE]  
+   > In this command, \<xxxxx-xxxxx-xxxxx-xxxxx-xxxxx> represents your MAK product key.
 
 1. To try again to activate, run the following command:
 
