@@ -18,17 +18,12 @@ The following errors or issues can occur when you qualify a lead:
 - [Duplicate account or contact match warning](#duplicate-account-or-contact-match-warning)
 - [Required fields not filled in the current stage](#required-fields-not-filled-in-the-current-stage)
 - [Active stage isn't on the lead entity](#active-stage-isnt-on-the-lead-entity)
-- [Access denied or insufficient permissions on the lead](#access-denied-or-insufficient-permissions-on-the-lead)
 - [Lead is already closed](#lead-is-already-closed)
 - [Invalid status code for a contact or opportunity](#invalid-status-code-for-a-contact-or-opportunity)
 - [Can't proceed to the next stage from the business process flow](#cant-proceed-to-the-next-stage-from-the-business-process-flow)
 - [Insufficient permissions when qualifying a lead](#insufficient-permissions-when-qualifying-a-lead)
 
-## Errors
-
-The following sections describe each of these errors and how to resolve them.
-
-### Duplicate account or contact match warning
+## Duplicate account or contact match warning
 
 When you try to qualify a lead, you receive the following warning message:
 
@@ -46,7 +41,7 @@ To resolve this issue, take either of the following actions in the **Duplicate w
 > [!NOTE]
 > When you qualify a lead through the Leads grid, the system creates an account or contact, even if a duplicate record exists. This action occurs because the [duplicate detection rule](/power-platform/admin/set-up-duplicate-detection-rules-keep-data-clean) is disabled by design in that flow. But when you qualify a lead through the lead record form, the duplicate detection rule runs and prompts you with a warning to resolve the conflict if it finds any duplicate account or contact records.
 
-### Required fields not filled in the current stage
+## Required fields not filled in the current stage
 
 You receive the following message when you try to qualify a lead:
 
@@ -56,7 +51,7 @@ This issue occurs if one or more business-required fields in the current stage o
 
 To resolve this issue, fill in all the required fields in the current stage, save the record, and then try again to qualify the lead.
 
-### Active stage isn't on the lead entity
+## Active stage isn't on the lead entity
 
 When you try to qualify a lead, you receive the following error message:
 
@@ -71,17 +66,7 @@ To resolve this issue:
 
     :::image type="content" source="media/troubleshoot-lead-qualification-issues-for-salespeople/set-active-button-qualify-stage.png" alt-text="The Set Active button in the Qualify stage of lead form." border="false":::
 
-### Access denied or insufficient permissions on the lead
-
-When you try to qualify a lead, you receive the following error message:
-
-> Access denied or Insufficient permissions.
-
-This issue occurs if you don't have sufficient permissions on the lead record.
-
-To resolve this issue, ask your system administrator to grant you the required permissions.
-
-### Lead is already closed
+## Lead is already closed
 
 When you try to qualify a lead, you receive the following error message:
 
@@ -89,7 +74,7 @@ When you try to qualify a lead, you receive the following error message:
 
 To resolve this issue, make sure that the lead that you're trying to qualify or disqualify is open and isn't already qualified or disqualified. To check, select the **My Open Leads** or **Open Leads** view.
 
-### Invalid status code for a contact or opportunity
+## Invalid status code for a contact or opportunity
 
 When you try to qualify a lead, you receive the following error message:
 
@@ -103,7 +88,7 @@ In order for [entity mapping](/power-apps/maker/data-platform/map-entity-fields)
 
 To resolve this issue, make sure that the status codes on the Lead entity and the target entity are the same.
 
-#### View status codes for the Lead entity and target entity
+### View status codes for the Lead entity and target entity
 
 1. In the Sales Hub app, go to **Settings** > **Customizations** > **Customize the System**.
 1. Expand the Lead entity node, and select **Fields**.
@@ -116,7 +101,7 @@ To resolve this issue, make sure that the status codes on the Lead entity and th
 
     :::image type="content" source="media/troubleshoot-lead-qualification-issues-for-salespeople/contact-status-code.png" alt-text="See the status code of the Contact entity." border="false":::
 
-#### View entity mappings
+### View entity mappings
 
 1. In the Sales Hub app, go to **Settings** > **Customizations** > **Customize the System**.
 1. Expand the Lead entity node, and select **1:N Relationships**.
@@ -132,7 +117,7 @@ To resolve this issue, make sure that the status codes on the Lead entity and th
 > - If you still receive the error message, remove the status code mapping between the Lead entity and the target entity (Account, Contact, or Opportunity).
 > - To add new status codes that have the same values, import the new option set values through a [managed solution](/power-platform/alm/solution-concepts-alm#managed-and-unmanaged-solutions) for the Contact or Opportunity entity.
 
-### Can't proceed to the next stage from the business process flow
+## Can't proceed to the next stage from the business process flow
 
 When you select **Next Stage** on the business process flow for a lead, the stage doesn't advance.
 
@@ -140,15 +125,16 @@ This behavior is by design. Until you qualify the record, no Opportunity is asso
 
 To resolve this issue, qualify the lead. Qualifying the lead creates the Opportunity and automatically moves the record to the next stage.
 
-### Insufficient permissions when qualifying a lead
+## Insufficient permissions when qualifying a lead
 
-When you try to qualify a lead, you receive the following error message:
-
-> Insufficient permissions or Access denied error when a user is trying to qualify a lead.
+When you try to qualify a lead, you receive an Insufficient permissions or Access denied error.
 
 This issue occurs if the user's [security role](/dynamics365/sales/security-roles-for-sales) is missing one or more privileges that are required on the Account, Lead, Contact, or Opportunity entities (and related customization entities) that are accessed during lead qualification.
 
-#### Assign the required privileges to the security role
+### Assign the required privileges to the security role
+
+> [!NOTE]
+> If you're a salesperson, ask your system administrator to grant the required permissions described in this section.
 
 How you resolve this error depends on who owns the lead. The steps are the same in each ownership scenario, but you assign permissions at a different access level:
 
@@ -184,7 +170,7 @@ The following screenshots show the **Core Records** settings at each access leve
 
     :::image type="content" source="media/troubleshoot-lead-qualification-issues-for-salespeople/security-role-sales-person-org-access.png" alt-text="Security role with access at Organization level.":::
 
-#### Troubleshoot privilege errors that persist after assigning permissions
+### Troubleshoot privilege errors that persist after assigning permissions
 
 If the user still encounters privilege-related errors after you assign privileges (as listed in this section), they might be missing privileges on other entities that are accessed when the Account, Contact, or Opportunity records are created. For example, the user might be missing privileges on custom entities that are accessed when [plug-ins](/power-apps/developer/data-platform/plug-ins) or [workflows](/power-automate/workflow-processes) run on the Account, Contact, or Opportunity entities.
 
