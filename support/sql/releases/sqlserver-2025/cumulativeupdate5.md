@@ -17,7 +17,7 @@ _Version:_ &nbsp; 17.0.4045.5
 
 ## Summary
 
-This article describes Cumulative Update (CU5) for Microsoft SQL Server 2025. This update package contains six [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2025 Cumulative Update 4. It updates components in the following builds:
+This article describes Cumulative Update (CU5) for Microsoft SQL Server 2025. This update package contains seven [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2025 Cumulative Update 4. It updates components in the following builds:
 
 - SQL Server - Product version: **17.0.4045.5**, file version: **2025.170.4045.5**
 - Analysis Services - Product version: **17.0.25.223**, file version: **2025.170.25.223**
