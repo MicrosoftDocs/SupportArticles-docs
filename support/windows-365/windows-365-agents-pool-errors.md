@@ -1,30 +1,30 @@
 ---
-# Required metadata
-# For more information, see https://learn.microsoft.com/en-us/help/platform/learn-editor-add-metadata
-# For valid values of ms.service, ms.prod, and ms.topic, see https://learn.microsoft.com/en-us/help/platform/metadata-taxonomies
-
 title: Troubleshoot Windows 365 for Agents provisioning errors
 description: Troubleshoot provisioning errors in Windows 365 for Agents
-author:      serenaz # GitHub alias
-ms.author: sezhen
-ms.service: windows-365
 ms.topic: troubleshooting
-ms.date:     05/20/2026
-ms.subservice: windows-365-enterprise
+ms.date: 06/02/2026
+manager: dcscontentpm
+audience: itpro
+ms.topic: troubleshooting
+ms.reviewer: sezhen
+ms.custom:
+- pcy:
+- sap:
 ---
 # Troubleshoot Windows 365 for Agents provisioning errors
 
-The following errors can appear when a Windows 365 for Agents Cloud PC pool status is **Failed** or **Available with warning**.  
+The following errors can appear when the status of a Windows 365 for Agents Cloud PC pool is **Failed** or **Available with warning**.  
 
 ## Invalid billing plan
 
-The selected billing plan for the provisioning policy (agents) is invalid. Cloud PCs cannot be provisioned, and all pool updates fail until there's a valid billing policy.
+The selected billing plan for the provisioning policy (agents) is invalid. Until the provisioning policy has a valid billing plan, you can't provision Cloud PCs, and all pool updates fail.
 
-**Suggested solution:** Update the billing plan and reprovision.
+To resolve this issue, update the billing plan, and then try to provision the Cloud PCs again.
 
-## Reprovision failed
+## Can't reprovision Cloud PC
 
-**Suggested solution:** Edit the pool configuration, if needed, and retry reprovisioning.
+Review the pool configuration, and edit it if needed. Then try to reprovision the Cloud PC.
 
 ## Other failures or warnings
-If you encounter a failed update, then try again.
+
+If an update fails to install, try again to install the update.
