@@ -28,6 +28,10 @@ This article describes Cumulative Update (CU4) for Microsoft SQL Server 2025. Th
 
 [!INCLUDE [av-session-context](../includes/av-sesssion-context.md)]
 
+### Linked server queries that use MSDASQL fail with error 7416
+
+[!INCLUDE [msdasql-error-7416](../includes/msdasql-error-7416.md)]
+
 ## Improvements and fixes included in this update
 
 A downloadable Microsoft Excel workbook that contains a summary list of builds, together with their current support lifecycle, is available. The Excel file also contains detailed fix lists for SQL Server 2025, SQL Server 2022, SQL Server 2019, and SQL Server 2017. [Download this Excel file now](https://aka.ms/sqlserverbuilds).
