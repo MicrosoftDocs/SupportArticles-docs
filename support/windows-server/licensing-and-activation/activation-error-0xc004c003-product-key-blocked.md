@@ -11,11 +11,11 @@ appliesto:
   - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
   - ✅ <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
-# Error 0xC004C003 - "The activation server determined the specified product key is blocked"
+# Error 0xC004C003 "product key is blocked" when you use MAK to activate Windows
 
 ## Summary
 
-This article explains how to resolve error `0xC004C003 (The activation server determined the specified product key is blocked)`. This error might appear when you use a Multiple Activation Key (MAK) to activate Windows. The article reviews the common causes of this issue, and provides steps to address them. The troubleshooting steps in this article apply to physical computers, on-premises virtual machines (VMs), and Azure VMs.
+This article explains how to resolve error `0xC004C003 (The activation server determined the specified product key is blocked)`. This error might appear when you use a Multiple Activation Key (MAK) to activate Windows. The article reviews the common causes of this issue, and provides steps to resolve them. The troubleshooting steps in this article apply to physical computers, on-premises virtual machines (VMs), and Azure VMs.
 
 ## Symptoms
 
@@ -32,7 +32,7 @@ The MAK that you configured on the client is blocked on the activation server. S
 - The product key is reported as stolen or misused.
 - The product key is a trial or evaluation key that expires.
 - The product key doesn't match the installed Windows edition.
-- The client was originally an on-premises physical computer or virtual machine (VM), and migrated to the Azure environment. The original product key isn't valid for Azure.
+- The client was originally an on-premises physical computer or virtual machine (VM), and was migrated to the Azure environment. The original product key isn't valid for Azure.
 
 ## Resolution
 
@@ -90,7 +90,7 @@ By default, Azure VMs should use Azure Key Management Service (KMS) activation. 
    cscript c:\windows\system32\slmgr.vbs /ato
    ```
 
-If activation fails and generates the same error as before, Contact Microsoft Support for assistance.
+If activation fails and generates the same error, Contact Microsoft Support for assistance.
 
 ## References
 
