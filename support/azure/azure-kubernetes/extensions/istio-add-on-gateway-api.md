@@ -59,7 +59,7 @@ These annotations tell Azure Load Balancer the path, protocol, and port for heal
 > [!NOTE]
 > These health probes take effect only if `externalTrafficPolicy` is set to `cluster`. If `externalTrafficPolicy` is set to `local`, Azure Load Balancer uses the `healthCheckNodePort` for health probing the node.
 
-Verify this by running `kubectl get service <gateway-svc-name> -n <gateway-svc-namespace> -o yaml` in the cluster. If the service doesn't have these annotations, or if you overwrite these annotations with your own resource customizations, failing health probes can block traffic from Azure Load Balancer to the Istio Gateway API deployment. 
+Verify this setting by running `kubectl get service <gateway-svc-name> -n <gateway-svc-namespace> -o yaml` in the cluster. If the service doesn't have these annotations, or if you overwrite these annotations with your own resource customizations, failing health probes can block traffic from Azure Load Balancer to the Istio Gateway API deployment. 
 
 Add [Azure Load Balancer annotations](https://cloud-provider-azure.sigs.k8s.io/topics/loadbalancer/) for the health probe path, port, or protocol directly to the `Gateway` object, or by [customizing](#gateway-resource-customization-problems) the `GatewayClass`-level ConfigMap or the per-`Gateway` ConfigMap.
 
