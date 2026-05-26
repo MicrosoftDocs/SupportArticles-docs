@@ -30,7 +30,7 @@ This article describes Cumulative Update package 24 (CU24) for Microsoft SQL Ser
 
 ### Availability group listener error 10013 in error log
 
-If you configure a SQL Server availability group with a listener, when the SQL Server service starts or an availability group failover occurs, you might see errors in the SQL Server error log that indicate a problem with the listener object. The following example shows what these errors look like:
+If you configure an Always On availability group with a listener, when the SQL Server service starts or an availability group failover occurs, you might see errors in the SQL Server error log that indicate a problem with the listener object. The following example shows what these errors look like:
 
 ```output
 The Service Broker endpoint is in disabled or stopped state.
