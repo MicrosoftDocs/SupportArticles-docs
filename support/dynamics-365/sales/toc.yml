@@ -90,7 +90,7 @@
       href: cannot-make-phone-calls-to-pstn.md
     - name: Teams dialer basic troubleshooting
       href: dialer-basic-troubleshooting.md
-    - name: Teams dialer isn't visible in custom app
+    - name: Teams dialer isn't visible in a custom app
       href: dialer-not-available-in-custom-app.md
-    - name: Teams dialer isn't visible in the Sales Hub
+    - name: Teams dialer isn't visible in Dynamics 365 Sales
       href: dialer-not-visible-in-sales.md

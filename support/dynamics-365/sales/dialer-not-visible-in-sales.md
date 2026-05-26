@@ -6,7 +6,7 @@ ms.reviewer: ramakris, v-shaywood
 ms.custom: sap:Teams Dialer
 ai-usage: ai-assisted
 ---
-# Teams dialer isn't visible in Dynamics 365 Sales
+# Microsoft Teams dialer isn't visible in Dynamics 365 Sales
 
 ## Summary
 
