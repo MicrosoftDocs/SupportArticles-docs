@@ -18,11 +18,11 @@ The following errors or issues might occur when you try to close an opportunity:
 
 - [The opportunity can't be closed](#the-opportunity-cant-be-closed)
 - [Access denied or insufficient permissions](#access-denied-or-insufficient-permissions)
-- [The opportunity is already closed](#the-opportunity-is-already-closed)
+- [The opportunity has already been closed](#the-opportunity-has-already-been-closed)
 - [The opportunity close dialog doesn't open or shows unexpected behavior](#the-opportunity-close-dialog-doesnt-open-or-shows-unexpected-behavior)
 - [Multiple cascading relationships on the close form](#multiple-cascading-relationships-on-the-close-form)
 - [Close as Won or Close as Lost button isn't visible](#close-as-won-or-close-as-lost-button-isnt-visible)
-- [Currency mismatch error ](#currency-mismatch-error)
+- [Currency mismatch error](#currency-mismatch-error)
 
 The following sections describe each error and how to resolve it.
 
@@ -51,7 +51,7 @@ Ask your system administrator to grant you the required permissions. The adminis
 1. Open the [security role](/power-platform/admin/security-roles-privileges) of the user.
 1. Assign **Read**, **Create**, **Append**, and **Append To** permissions to the user's security role at User level on the Opportunity entity and the custom entity.
 
-### The opportunity is already closed
+### The opportunity has already been closed
 
 The opportunity that you're trying to close is already marked as Won or Lost.
 
