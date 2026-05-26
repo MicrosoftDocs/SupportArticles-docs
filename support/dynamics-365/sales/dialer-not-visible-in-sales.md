@@ -20,21 +20,17 @@ The Microsoft Teams dialer requires that the user has a Microsoft Teams license 
 
 A seller can't see the Microsoft Teams dialer in Dynamics 365 Sales.
 
-## Cause
-
-### Cached browsing data
+## Cached browsing data
 
 Stale or corrupted data in the browser cache can prevent the dialer control from loading correctly, even after the dialer is configured and the user has the required licenses and security roles.
 
-#### Solution
+To resolve this issue, follow the [Microsoft Teams dialer basic troubleshooting steps](dialer-basic-troubleshooting.md).
 
-Follow the [Microsoft Teams dialer basic troubleshooting steps](dialer-basic-troubleshooting.md).
-
-### Missing Read privilege on the security roles
+## Missing Read privilege on the security roles
 
 To see the Teams dialer, the security roles that you assign to the user must have the Read privilege for the **Teams Dialer Admin settings** entity. The **Sales Manager** and **Salesperson** security roles automatically grant this privilege.
 
-#### Solution
+To resolve this issue, grant the Read privilege to the security roles:
 
 1. Sign in to the [Sales Hub app](/dynamics365/sales/intro-saleshub) with an administrator account.
 1. Go to **Settings** > **Advanced Settings**.
