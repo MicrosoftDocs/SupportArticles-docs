@@ -602,7 +602,7 @@ items:
       href: windows-vm-activation-error-0xc0020017-0x8007139f.md
   - name: Product key and MAK errors
     items:
-    - name: Error 0xC004C003 - The activation server determined the specified product key is blocked
+    - name: Error 0xC004C003 — The product key is blocked
       href: ../../../windows-server/licensing-and-activation/activation-error-0xc004c003-product-key-blocked.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Error 0xC004C008 — Product key exceeded limit
       href: windows-vm-activation-error-0xc004c008.md

@@ -1151,7 +1151,7 @@ items:
       href: ./licensing-and-activation/activation-error-0x8007232a-dns-server-failure.md
     - name: Error 0x8007232B "DNS name does not exist" when activating Windows
       href: ./licensing-and-activation/activation-error-0x8007232b-dns-name-does-not-exist.md
-    - name: Error 0xC004C003 "The activation server determined the specified product key is blocked" when activating Windows
+    - name: Error 0xC004C003 "product key is blocked" when you use MAK to activate Windows
       href: ./licensing-and-activation/activation-error-0xc004c003-product-key-blocked.md
     - name: Error 0xC004E002 during activation
       href: ./licensing-and-activation/error-0xc004e002-during-activation.md
