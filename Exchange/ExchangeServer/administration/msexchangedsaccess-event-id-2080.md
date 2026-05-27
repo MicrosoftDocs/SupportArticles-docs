@@ -31,20 +31,22 @@ _Original KB number:_ &nbsp; 316300
 
 ## Example Event 2080 log entry
 
-> Log Name:      Application  
+```txt
+Log Name:      Application  
 Source:        MSExchange ADAccess  
 Event ID:      2080  
 Task Category: Topology  
 Level:         Information  
 Keywords:      Classic  
 Description:  
-     Process Microsoft.Exchange.Directory.TopologyService.exe (PID=4016). Exchange Active Directory Provider has discovered the following servers with the following characteristics:  
-(Server name | Roles | Enabled | Reachability | Synchronized | GC capable | PDC | SACL right | Critical Data | Netlogon | OS Version)  
+     Process Microsoft.Exchange.Directory.TopologyService.exe (PID=5800). Exchange Active Directory Provider has discovered the following servers with the following characteristics:  
+ (Server name | Roles | Enabled | Reachability | Synchronized | GC capable | PDC | SACL right | Critical Data | Netlogon | OS Version)
 In-site:  
 `domaincontroller1.company.com` CDG 1 7 7 1 0 0 1 7 1  
 `domaincontroller2.company.com` CDG 1 7 7 1 0 1 1 7 1  
 `domaincontroller3.company.com` CDG 1 7 7 1 0 1 1 7 1  
 Out-of-site:
+```
 
 ## Event ID 2080 contents
 
@@ -52,7 +54,7 @@ The following information describes the columns in Event 2080 and their contents
 
 ### Example table
 
-|Server name|Roles|Enabled|Reachability|Synchronized|GC capable|PDC|SACL right|Critical data|Netlogon check|System version|
+|Server name|Roles|Enabled|Reachability|Synchronized|GC capable|PDC|SACL right|Critical data|Netlogon|OS version|
 |---|---|---|---|---|---|---|---|---|---|---|
 |`domaincontroller1.company.com`|CDG|1|7|7|1|0|0|1|7|1|
 |`domaincontroller2.company.com`|CDG|1|7|7|1|0|1|1|7|1|
@@ -74,8 +76,8 @@ The following information describes the columns in Event 2080 and their contents
 - **PDC:** The seventh column is a Boolean expression that states whether the domain controller is a primary domain controller for its domain.
 - **SACL right:** The eighth column is a Boolean expression that states whether `ADAccess` has the correct permissions to read the SACL (part of `nTSecurityDescriptor`) against that directory service.
 - **Critical data:** The ninth column is a Boolean expression that states whether `ADAccess` found this Exchange server in the configuration container of the domain controller listed in **Server name** column.
-- **Netlogon check:** The tenth column indicates whether AD Access successfully connected to a domain controller's Net Logon service. Connecting requires the use of Remote Procedure Call (RPC). That call might fail for reasons other than that a server is down. For example, firewalls might block this call. So, if there's a value of **7** in the ninth column, the Net Logon service check was successful for each role (domain controller, configuration domain controller, and global catalog).
-- **System version:** The 11th column indicates whether the operating system of the listed domain controller satisfies the operating system requirements of Exchange Server for use by `ADAccess`.
+- **Netlogon:** The tenth column indicates whether AD Access successfully connected to a domain controller's Net Logon service. Connecting requires the use of Remote Procedure Call (RPC). That call might fail for reasons other than that a server is down. For example, firewalls might block this call. So, if there's a value of **7** in the ninth column, the Net Logon service check was successful for each role (domain controller, configuration domain controller, and global catalog).
+- **OS version:** The 11th column indicates whether the operating system of the listed domain controller satisfies the operating system requirements of Exchange Server for use by `ADAccess`.
 
 ## How to use the information in Event ID 2080 to diagnose `ADAccess` problems
 
