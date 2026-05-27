@@ -10,7 +10,8 @@ ms.custom:
   - sap:OWA And Exchange Admin Center\Issues connecting to Exchange Management Shell
   - Exchange Server
   - CSSTroubleshoot
-  - 
+  - CI 9823
+  - CI 11505
 ms.reviewer: wduff, v-six, v-kccross
 search.appverid: 
   - MET150
