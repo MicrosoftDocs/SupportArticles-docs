@@ -44,7 +44,7 @@ The issues can occur when:
 - The user’s OneDrive content exceeds the quota currently applied to the user.  
 - The user’s OneDrive quota was previously set higher than the user’s licensed entitlement.  
 - The user’s license was changed to a plan with a lower OneDrive storage entitlement.  
-- The tenant default OneDrive storage setting was reduced, and the user’s OneDrive usage is now above the new limit.  
+- The tenant's default OneDrive storage setting was reduced, and the user’s OneDrive usage is now above the new limit.  
 
 When the effective OneDrive storage limit is lower than the user’s current storage usage, the OneDrive site becomes read-only until the quota or usage issue is resolved.  
 
@@ -58,6 +58,8 @@ To restore write access, a Microsoft 365 administrator must bring the user’s 
 
   **Users** > **Active users** > select the affected user > **OneDrive** tab.
 
+  To review the storage usage for multiple users simultaneously and check whether it is greater than the storage quota for their license, you can run a script. See [Identify OneDrive Users Over License-Based Storage Quota](https://adoption.microsoft.com/sample-solution-gallery/sample/onedrive-overquota-report/) for more information.
+
 Review the user’s current storage usage and configured storage limit. Admins can also review a specific user’s OneDrive storage by using the SharePoint admin center or SharePoint Online PowerShell.
 
 1. Increase the OneDrive quota, if the license supports it.
@@ -67,6 +69,8 @@ If the [user’s license supports additional OneDrive storage](/office365/servi
 In the **Microsoft 365 admin center**, go to:
 
 **Users** > **Active users** > select the user > **OneDrive** tab > **Storage used** > **Edit**.
+
+To increase the quota by using SharePoint Online PowerShell, use the following cmdlet:
 
 ```powershell
 Set-SPOSite -Identity <OneDriveSiteUrl> ` 
