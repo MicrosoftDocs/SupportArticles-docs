@@ -38,7 +38,7 @@ There is another Microsoft KB that discusses some other possible reasons why you
 
 In both instances, the symptoms and the workaround are the same:
 
-# Workarounds
+## Workarounds
 
 Manual registration of the missing packages 
 
