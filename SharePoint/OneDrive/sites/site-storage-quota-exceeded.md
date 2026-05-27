@@ -44,7 +44,7 @@ The issues can occur when:
 - The user’s OneDrive content exceeds the quota currently applied to the user.  
 - The user’s OneDrive quota was previously set higher than the user’s licensed entitlement.  
 - The user’s license was changed to a plan with a lower OneDrive storage entitlement.  
-- The tenant default OneDrive storage setting was reduced, and the user’s OneDrive usage is now above the new limit.  
+- The tenant's default OneDrive storage setting was reduced, and the user’s OneDrive usage is now above the new limit.  
 
 When the effective OneDrive storage limit is lower than the user’s current storage usage, the OneDrive site becomes read-only until the quota or usage issue is resolved.  
 
