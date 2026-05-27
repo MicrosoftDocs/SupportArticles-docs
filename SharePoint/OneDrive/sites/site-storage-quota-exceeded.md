@@ -19,7 +19,7 @@ ms.date: 05/27/2026
 # OneDrive site is read-only because storage quota was exceeded
 
 > [!NOTE]
-> This article applies to an individual user's OneDrive for work or school storage quota. It's separate from an organization-wide SharePoint storage pool issue. If the tenant storage pool is exhausted, admins should troubleshoot tenant storage separately in the SharePoint admin center. For more information, see [SharePoint Online out of storage space](/sharepoint/administration/out-of-storage).
+> This article applies to an individual user's OneDrive for work or school storage quota. It's separate from an organization-wide SharePoint storage pool issue. If the tenant storage pool is exhausted, admins should troubleshoot tenant storage separately in the SharePoint admin center. For more information, see [SharePoint Online out of storage space](../sharepoint/administration/out-of-storage).
 
 ## Summary
 
@@ -54,9 +54,9 @@ To restore write access, a Microsoft 365 administrator must bring the user’s 
 
 1. Review the user’s OneDrive storage usage and quota.
 
-In the **Microsoft 365 admin center**, go to:
+   In the **Microsoft 365 admin center**, go to:
 
-**Users** > **Active users** > select the affected user > **OneDrive** tab.
+  **Users** > **Active users** > select the affected user > **OneDrive** tab.
 
 Review the user’s current storage usage and configured storage limit. Admins can also review a specific user’s OneDrive storage by using the SharePoint admin center or SharePoint Online PowerShell.
 
@@ -68,11 +68,11 @@ In the **Microsoft 365 admin center**, go to:
 
 **Users** > **Active users** > select the user > **OneDrive** tab > **Storage used** > **Edit**.
 
-```PowerShell```
-
+```powershell
 Set-SPOSite -Identity <OneDriveSiteUrl> ` 
   -StorageQuota <QuotaInMB> ` 
   -StorageQuotaWarningLevel <WarningLevelInMB> 
+```
 
 For detailed steps and quota values, see [Change a specific user’s OneDrive storage space](/sharepoint/change-user-storage).  
 
