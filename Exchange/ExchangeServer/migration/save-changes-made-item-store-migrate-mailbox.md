@@ -44,7 +44,7 @@ For more information about Exchange Online mailbox folder limits, see [Exchange 
 
 ## Resolution
 
-1. Using an account that has [sufficient permissions](/exchange/permissions/permissions) on your Exchange Server, open the [Exchange Management Shell (EMS)](/powershell/exchange/open-the-exchange-management-shell) or [connect to your Exchange server by using remote PowerShell](/powershell/exchange/connect-to-exchange-servers-using-remote-powershell?view=exchange-ps).
+1. Using an account that has [sufficient permissions](/exchange/permissions/permissions) on your Exchange Server, open the [Exchange Management Shell (EMS)](/powershell/exchange/open-the-exchange-management-shell) or [connect to your Exchange server by using remote PowerShell](/powershell/exchange/connect-to-exchange-servers-using-remote-powershell).
 1. Run the [Get-MailboxFolderStatistics](/powershell/module/exchangepowershell/get-mailboxfolderstatistics) PowerShell cmdlet to check which folder contains more than 1 million items.
 
     ```powershell
