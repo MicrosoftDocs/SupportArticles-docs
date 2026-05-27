@@ -41,7 +41,7 @@ items:
   href: permission-error-use-volume-mount-point.md
 - name: Remove a partial installation of SQL Server
   href: remove-partial-installation.md
-- name: Restore the missing Windows Installer cache files
+- name: Restore missing Windows Installer cache files
   href: restore-missing-windows-installer-cache-files.md
 - name: Service may not start after patch installed
   href: service-not-start-after-patch-installed.md
