@@ -218,6 +218,7 @@ If instances aren't regularly updated, they can become incompatible with our upd
     ```bash
     sudo mkdir -p /root/packages/rpms
     ```
+
 1. Download the following packages based on SLES versions of the affected VM:
 
    SLES 12
@@ -228,6 +229,7 @@ If instances aren't regularly updated, they can become incompatible with our upd
    ```bash
    sudo zypper --pkg-cache-dir /root/packages/ download cloud-regionsrv-client cloud-regionsrv-client-plugin-azure regionServiceClientConfigAzure python3-azuremetadata suseconnect-ng python3-cssselect python3-toml python3-lxml python3-M2Crypto python3-zypp-plugin python3-dnspython libsuseconnect suseconnect-ruby-bindings docker docker-bash-completion runc containerd libcontainers-common bash-completion
    ```
+
 1. Run the following commands.
 
     ```bash
