@@ -58,7 +58,7 @@ This article lists the Microsoft SQL Server 2017 builds that were released after
 | CU1           | 14.0.3006.16 | 2017.140.3006.16 | 14.0.1.439  | 2017.140.1.439  | [KB4038634](cumulativeupdate1.md)  | October 24, 2017   |
 | RTM | 14.0.1000.169 | 2017.140.1000.169 | 14.0.1.439 | 2017.140.1.439 | [SQL Server 2017 release notes](/sql/sql-server/sql-server-2017-release-notes) | September 29, 2017 |
 
-## SQL Server 2017 GDR builds
+## SQL Server 2017 General Distribution Release (GDR) builds
 
 | Cumulative update name | SQL Server product version | SQL Server (sqlservr.exe) file version | Analysis Services product version | Analysis Services (msmdsrv.exe) file version | Knowledge Base number | Release date |
 |------------|---------------|-------------------|--------------|------------------|---------------------------------------------------------|--------------------|
