@@ -19,7 +19,7 @@ ms.date: 05/27/2026
 # OneDrive site is read-only because storage quota was exceeded
 
 > [!NOTE]
-> This article applies to an individual user's OneDrive for work or school storage quota. It's separate from an organization-wide SharePoint storage pool issue. If the tenant storage pool is exhausted, admins should troubleshoot tenant storage separately in the SharePoint admin center. For more information, see [SharePoint Online out of storage space](../../administration/out-of-storage.md).
+> This article applies to an individual user's OneDrive for work or school storage quota. It's separate from an organization-wide SharePoint storage pool issue. If the tenant storage pool is exhausted, admins should troubleshoot tenant storage separately in the SharePoint admin center. For more information, see [SharePoint Online out of storage space](/troubleshoot/sharepoint/administration/out-of-storage).
 
 ## Summary
 
@@ -39,7 +39,7 @@ In this state, the user can't add new content or modify existing files on their 
 
 OneDrive enforces per-user storage quotas based on each user’s license entitlements. If a user’s OneDrive usage goes beyond the amount of storage included with their Microsoft 365 license, the system automatically restricts the OneDrive site to read-only mode. This behavior ensures that user storage remains aligned with the licensed quota.
 
-This can occur when:
+The issues can occur when:
 
 - The user’s OneDrive content exceeds the quota currently applied to the user.  
 - The user’s OneDrive quota was previously set higher than the user’s licensed entitlement.  
