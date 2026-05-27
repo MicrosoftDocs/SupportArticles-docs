@@ -58,6 +58,8 @@ To restore write access, a Microsoft 365 administrator must bring the user’s 
 
   **Users** > **Active users** > select the affected user > **OneDrive** tab.
 
+  To review the storage usage for multiple users simultaneously and check whether it is greater than the storage quota for their license, you can run a script. See [Identify OneDrive Users Over License-Based Storage Quota](https://adoption.microsoft.com/sample-solution-gallery/sample/onedrive-overquota-report/) for more information.
+
 Review the user’s current storage usage and configured storage limit. Admins can also review a specific user’s OneDrive storage by using the SharePoint admin center or SharePoint Online PowerShell.
 
 1. Increase the OneDrive quota, if the license supports it.
@@ -67,6 +69,8 @@ If the [user’s license supports additional OneDrive storage](/office365/servi
 In the **Microsoft 365 admin center**, go to:
 
 **Users** > **Active users** > select the user > **OneDrive** tab > **Storage used** > **Edit**.
+
+To increase the quota by using SharePoint Online PowerShell, use the following cmdlet:
 
 ```powershell
 Set-SPOSite -Identity <OneDriveSiteUrl> ` 
