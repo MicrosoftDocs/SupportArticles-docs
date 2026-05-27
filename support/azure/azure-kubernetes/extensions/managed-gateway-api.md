@@ -15,7 +15,7 @@ ms.custom: sap:Extensions, Policies and Add-Ons
 
 ## Summary
 
-The [Managed Gateway API installation](/azure/aks/managed-gateway-api) for Azure Kubernetes Service (AKS) allows users to opt into a managed installation of the [Kubernetes Gateway API](https://gateway-api.sigs.k8s.io/) Custom Resource Definitions (CRDs). You must have at least one AKS add-on installed, such as the [Istio add-on](/azure/aks/istio-about), to use the Managed Gateway API CRDs in a fully supported mode.
+The [Managed Gateway API installation](/azure/aks/managed-gateway-api) for Azure Kubernetes Service (AKS) enables users to opt in to a managed installation of the [Kubernetes Gateway API](https://gateway-api.sigs.k8s.io/) Custom Resource Definitions (CRDs).
 
 ## Step 1: Verify existing Gateway API CRD channel and bundle version
 
