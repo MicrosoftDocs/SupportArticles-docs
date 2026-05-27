@@ -4,14 +4,13 @@ description: Manage your Windows 365 Cloud PC with direct actions like viewing d
 ms.date: 05/27/2026
 manager: dcscontentpm
 ms.reviewer: kaushika
-ms.date: 05/15/2026
 ms.topic: troubleshooting
 ms.custom:
 - pcy:WinComm User Experience
 - sap:Configuration and Management\Application Issues
 ---
 
-# Rename, restart, restore, and reset Cloud PCs with Windows 365
+# Rename, Restart, Restore and Reset Cloud PCs with Windows 365
 
 You can perform a variety of actions on your Windows 365 Cloud PC, just like you would on a physical PC. This article describes the direct actions available to help you manage your Cloud PCs, including inspecting connections, viewing details, renaming, restarting, restoring, and resetting.
 
