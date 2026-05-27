@@ -1,6 +1,6 @@
 ---
-title: Cannot save changes made to an item to store while migrating a mailbox to Exchange Online
-description: This article explains how to fix an issue in which you can't migrate mailboxes from on-premises to Exchange Online with the error "Cannot save changes made to an item to store."
+title: Can't save changes made to an item to store while migrating a mailbox to Exchange Online
+description: This article explains how to fix an issue in which you can't migrate mailboxes to Exchange Online with the error "Cannot save changes made to an item to store."
 author: cloud-writer
 ms.author: meerak
 ms.reviewer: pramods, v-six, v-kccross
@@ -24,13 +24,11 @@ appliesto:
 ms.date: 04/26/2026
 ---
 
-# Cannot save changes made to an item to store when you migrate a mailbox to Exchange Online
+# Can't save changes made to an item to store when you migrate a mailbox to Exchange Online
 
 ## Summary
 
-Mailbox migrations to Exchange Online can fail with a “Cannot save changes made to an item to store” error when a folder exceeds the per-folder item limit. This article shows how to identify and reduce oversized folders so migration can continue.
-
-# Error while migrating mailbox to Exchange Online: Cannot save changes made to an item to store
+Mailbox migrations to Exchange Online can fail with the error "Cannot save changes made to an item to store." This issue happens when a folder exceeds the per-folder item limit. This article shows how to identify and reduce oversized folders so migration can continue.
 
 ## Symptoms
 
@@ -46,7 +44,7 @@ For more information about Exchange Online mailbox folder limits, see [Exchange 
 
 ## Resolution
 
-1. Open the Exchange Management Shell or connect to your Exchange server by using remote PowerShell.
+1. Using an account that has [sufficient permissions](/exchange/permissions/permissions) on your Exchange Server, open the [Exchange Management Shell (EMS)](/powershell/exchange/open-the-exchange-management-shell) or [connect to your Exchange server by using remote PowerShell](/powershell/exchange/connect-to-exchange-servers-using-remote-powershell?view=exchange-ps).
 1. Run the [Get-MailboxFolderStatistics](/powershell/module/exchangepowershell/get-mailboxfolderstatistics) PowerShell cmdlet to check which folder contains more than 1 million items.
 
     ```powershell
