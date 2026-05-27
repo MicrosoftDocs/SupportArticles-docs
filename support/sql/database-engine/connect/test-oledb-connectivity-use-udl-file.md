@@ -173,4 +173,4 @@ For each of the above methods, if one combination works and another fails, it co
 [Universal Data Link (UDL) configuration](/sql/connect/oledb/help-topics/data-link-pages)
 
 > [!NOTE]
-> If this article doesn't resolve your issue, you can check [Troubleshoot connectivity issues in SQL Server](../connect/resolve-connectivity-errors-overview.md#common-connectivity-issues) for more help.
+> If this article doesn't resolve your issue, you can check [Troubleshoot connectivity issues in SQL Server](../connect/resolve-connectivity-errors-overview.md#categories-of-sql-server-connectivity-errors) for more help.
