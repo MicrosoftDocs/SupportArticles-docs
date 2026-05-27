@@ -16,7 +16,7 @@ search.appverid: MET150
 ms.date: 05/27/2026
 ---
 
-# OneDrive site is read-only because storage quota was exceeded 
+# OneDrive site is read-only because storage quota was exceeded
 
 > [!NOTE]
 > This article applies to an individual user's OneDrive for work or school storage quota. It's separate from an organization-wide SharePoint storage pool issue. If the tenant storage pool is exhausted, admins should troubleshoot tenant storage separately in the SharePoint admin center. For more information, see [SharePoint Online out of storage space](/sharepoint/administration/out-of-storage).
