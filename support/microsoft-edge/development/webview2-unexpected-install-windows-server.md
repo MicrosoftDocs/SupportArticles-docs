@@ -25,7 +25,7 @@ This article helps you troubleshoot the issue where WebView2 runtimes are unexpe
 
 ## Cause
 
-On Windows Server operating systems, Microsoft Edge Update checks whether the device is configured for multi-session support. This condition is triggered when one of the following roles is enabled:
+On Windows Server operating systems, Microsoft Edge Update checks whether the device is configured for multi-session support. This configuration is triggered if one of the following roles is enabled:
 
 - **Terminal Services** (Windows Server 2008 and earlier)
 - **Remote Desktop Services** (Windows Server 2008 R2 and later)
