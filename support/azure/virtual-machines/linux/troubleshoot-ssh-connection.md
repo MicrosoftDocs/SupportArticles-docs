@@ -6,7 +6,9 @@ services: virtual-machines
 author: JarrettRenshaw
 manager: dcscontentpm
 tags: top-support-issue,azure-service-management,azure-resource-manager
-ms.custom: sap:Cannot connect to my VM, devx-track-azurecli, linux-related-content
+ms.custom: 
+  - Kernel Upgrades
+  - Package Management issue (Yum, Zypper, RPM, DPKG, APT)
 ms.service: azure-virtual-machines
 ms.collection: linux
 ms.workload: infrastructure-services

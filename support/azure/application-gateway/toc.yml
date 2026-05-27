@@ -10,8 +10,12 @@ items:
   href: troubleshoot-dns-resolution-issues.md
 - name: Troubleshoot Failed State issues in Application Gateway
   href: troubleshoot-appgw-failed-state-issues.md
+- name: Troubleshoot rewrite rules in Application Gateway
+  href: troubleshoot-url-rewrite-rules.md
 - name: ApplicationGatewaySkuNotSpecified error
   href: error-codes/applicationgatewayskunotspecified.md
+- name: Troubleshoot HTTP 504 Gateway Timeout
+  href: troubleshoot-http-504-gateway-timeout.md
 - name: ApplicationGatewayFrontendIpCannotHavePublicIpAndSubnet error
   href: error-codes/application-gateway-frontend-ip-cannot-have-public-ip-subnet-error.md
 - name: Troubleshoot WAF anomaly scoring behavior and rule 949110 blocks

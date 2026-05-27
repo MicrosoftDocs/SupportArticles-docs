@@ -28,6 +28,10 @@ This article describes Cumulative Update package 24 (CU24) for Microsoft SQL Ser
 
 [!INCLUDE [av-session-context](../includes/av-sesssion-context.md)]
 
+### Linked server queries that use MSDASQL fail with error 7416
+
+[!INCLUDE [msdasql-error-7416](../includes/msdasql-error-7416.md)]
+
 ### Availability group listener error 10013 in error log
 
 If you configure a SQL Server availability group with a listener, when the SQL Server service starts or an availability group failover occurs, you might see errors in the SQL Server error log that indicate a problem with the listener object. The following example shows what these errors look like:
