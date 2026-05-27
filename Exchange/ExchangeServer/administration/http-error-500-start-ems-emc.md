@@ -19,7 +19,7 @@ appliesto:
   - Exchange Server SE
   - Exchange Server 2019
   - Exchange Server 2016
-ms.date: 04/26/2026
+ms.date: 05/27/2026
 ---
 
 # HTTP server error status (500) when you try to start Exchange Management Shell (EMS) or Exchange Management Console (EMC)
@@ -28,11 +28,11 @@ _Original KB number:_ &nbsp; 2027063
 
 ## Summary
 
-An HTTP 500 error might occur when starting the EMS or EMC because of a missing `ExchangeInstallPath` system variable or an incorrect PowerShell virtual directory path. This article explains how to correct these settings.
+An HTTP 500 error might occur when you start the EMS or EMC because of a missing `ExchangeInstallPath` system variable or an incorrect PowerShell virtual directory path. This article explains how to correct these settings.
 
 ## Symptoms
 
-When you try to start EMS or EMC on a computer that is running Exchange Server, you receive the following error message:
+When you start EMS or EMC on a computer that runs Exchange Server, you receive the following error message:
 
 > Connecting to remote server failed with the following error message: The WinRM client received an HTTP server error status (500), but the remote service did not include any other information about the cause of the failure. For more information, see the about_Remote_Troubleshooting Help topic. It was running the command 'Discover-ExchangeServer -UseWIA $true -SuppressError $true'.
 
