@@ -295,11 +295,11 @@ sudo registercloudguest --force-new
 > If the VM is SLES SAP, you can also run the command by using the name of the SLES SAP product:
 > 1. Run the `SUSEConnect` command to get the current registration status, including the name of the SLES SAP product:
 >    ```bash
->    sudo SUSEConnect --url https://www.suse.com/download/sle-sap --status-text
+>    sudo SUSEConnect --url https://smt-azure.susecloud.net --status-text
 >    ```
 > 1. Run the `SUSEConnect` command by using the product name to activate the product:
 >    ```bash
->    sudo SUSEConnect --url https://www.suse.com/download/sle-sap --product <SLES-SAP-product-name>
+>    sudo SUSEConnect --url https://smt-azure.susecloud.net --product <SLES-SAP-product-name>
 >    ```
 
 If these commands aren't successful, clean up all repository information, and then try to register the VM. Any error messages that are related to the certificates and other components should disappear. Run the following commands:
