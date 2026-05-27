@@ -6,9 +6,9 @@ ms.author: elcorral
 ms.date: 01/20/2025
 ms.reviewer: divargas
 ms.service: azure-virtual-machines
-ms.custom: linux-related-content
 ms.topic: how-to
 ms.collection: linux
+ms.custom: Azure Disk Encryption (ADE) not operating correctly
 ---
 
 # How to display encryption settings on Azure Linux Virtual Machines

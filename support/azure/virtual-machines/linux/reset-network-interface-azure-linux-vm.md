@@ -10,7 +10,7 @@ ms.service: azure-virtual-machines
 ms.collection: windows
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
-ms.custom: sap:Cannot connect to my VM, devx-track-azurecli, linux-related-content
+ms.custom: VM Admin - Linux (Guest OS)
 ms.workload: infrastructure-services
 ms.date: 09/19/2024
 ---
