@@ -226,6 +226,14 @@ When screen capture protection is enabled, Microsoft Teams on Windows 365 Cloud 
      - **Enable screen capture protection** = **Enable**
      - **Screen Capture Protection Options** = **Block screen capture on client and server**
 
+## Windows 365 role assignments do not support device groups as scope groups
+
+Windows 365 role assignments do not support adding device group as a part of scope groups. It only supports user groups. 
+
+### Solution
+
+Make sure to add the right user groups within the administrator's role assignment. For devices that do not have associated users (Frontline in shared mode devices or CloudApps), the scope group check is skipped.  
+
 ## Windows 365 scope tags and nested groups
 
 Windows 365 doesn't support nested security groups. If you apply a scope tag to the top of a nested security group, Cloud PCs in inner nested groups aren't assigned scope tags.
@@ -337,6 +345,14 @@ Immediately after provisioning, the status information for the Autopilot Device 
 #### Solution
 
 Wait for the process to continue. Cloud PC serial numbers can take up to 30 minutes to appear in the status information.
+
+### Windows Autopilot Device Preparation is not currently supported for Citrix Cloud PCs
+
+Device preparation policies (DPP) aren't supported for Cloud PCs that are configured to use Citrix integration. If you assign a device preparation policy to a provisioning policy that’s used for Citrix Cloud PCs, the policy won't be applied during Cloud PC provisioning.
+
+#### Solution
+
+There is currently no workaround. To use Citrix integration, configure your Cloud PCs by using a provisioning policy that doesn’t include a device preparation policy.
 
 ## Next steps
 

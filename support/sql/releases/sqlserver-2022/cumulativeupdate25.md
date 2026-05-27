@@ -17,7 +17,7 @@ _Version:_ &nbsp; 16.0.4255.1
 
 ## Summary
 
-This article describes Cumulative Update package 25 (CU25) for Microsoft SQL Server 2022. This update contains 11 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2022 Cumulative Update 24. It updates components in the following builds:
+This article describes Cumulative Update package 25 (CU25) for Microsoft SQL Server 2022. This update contains 12 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2022 Cumulative Update 24. It updates components in the following builds:
 
 - SQL Server - Product version: **16.0.4255.1**, file version: **2022.160.4255.1**
 - Analysis Services - Product version: **16.0.43.252**, file version: **2022.160.43.252**
@@ -29,6 +29,10 @@ This article describes Cumulative Update package 25 (CU25) for Microsoft SQL Ser
 ### Incorrect behavior of SESSION_CONTEXT in parallel plans
 
 [!INCLUDE [av-session-context](../includes/av-sesssion-context.md)]
+
+### Linked server queries that use MSDASQL fail with error 7416
+
+[!INCLUDE [msdasql-error-7416](../includes/msdasql-error-7416.md)]
 
 ## Improvements and fixes included in this update
 
@@ -51,6 +55,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id=5130873>[5130873](#5130873)</a> | Fixes a heap corruption issue in the generic ODBC connector when using the Oracle ODBC driver.                                                                                                                                | Integration Services    | Integration Services                    | All      |
 | <a id=5131000>[5131000](#5131000)</a> | Fixes an XML External Entity (XXE) vulnerability in the Web Service Task by blocking the `file://` protocol in WSDL service endpoints to prevent unauthorized file access and denial-of-service attacks.                      | Integration Services    | Integration Services                    | Windows  |
 | <a id=5157137>[5157137](#5157137)</a> | Fixes CPU starvation issues by adding yields at regular intervals during in-memory OLTP garbage collection scan of hash indexes.                                                                                              | SQL Server Engine       | In-Memory OLTP                          | All      |
+| <a id=5208913>[5208913](#5208913)</a> | Fixes an error that occurs when an online index operation runs concurrently with data manipulation language (DML) operations in a database that has Change Data Capture (CDC) enabled.                                                                           | SQL Server Engine       | Storage Engine                          | All      |
 | <a id=5213660>[5213660](#5213660)</a> | Fixes a back-up cleanup issue on Linux that could cause SQL Server to stop responding when a network share becomes full or unreachable.                                                                                       | SQL Server Engine       | Linux                                   | Linux    |
 
 ## How to obtain or download this or the latest cumulative update package

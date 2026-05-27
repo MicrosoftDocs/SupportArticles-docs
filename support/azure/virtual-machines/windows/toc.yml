@@ -578,12 +578,14 @@ items:
     href: /windows-server/get-started/kms-client-activation-keys?context=/troubleshoot/azure/virtual-machines/windows/context/context
   - name: Common issues
     items:
-    - name: Forced tunneling scenario
-      href: custom-routes-enable-kms-activation.md
-    - name: Duplicate Client Machine ID
-      href: windows-activation-duplicate-client-machine-id.md
     - name: Activation watermark continues to be displayed
       href: activation-watermark-appears.md
+    - name: Duplicate Client Machine ID
+      href: windows-activation-duplicate-client-machine-id.md
+    - name: Event 8198, error 0xC0020017 or 0x8007139F - KMS contact failure
+      href: ../../../windows-server/licensing-and-activation/activation-event-8198-error-0xc0020017-0x8007139f-kms-contact-failure.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
+    - name: Forced tunneling scenario
+      href: custom-routes-enable-kms-activation.md
   - name: KMS and DNS errors
     items:
     - name: Error 0x800705B4 — Timeout
@@ -598,8 +600,6 @@ items:
       href: windows-vm-activation-error-0xc004f038.md
     - name: Error 0xC004F042 — KMS can't be used
       href: windows-vm-activation-error-0xc004f042.md
-    - name: Error 0xC0020017 / 0x8007139F — KMS contact failure (SPP)
-      href: windows-vm-activation-error-0xc0020017-0x8007139f.md
   - name: Product key and MAK errors
     items:
     - name: Error 0xC004C003 — The product key is blocked

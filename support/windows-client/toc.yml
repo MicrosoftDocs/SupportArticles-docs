@@ -283,6 +283,8 @@ items:
       href: ../windows-server/licensing-and-activation/activation-error-0x8007232b-dns-name-does-not-exist.md?context=/troubleshoot/windows-client/context/context
     - name: Error 0xC004C003 "product key is blocked" when you use MAK to activate Windows
       href: ../windows-server/licensing-and-activation/activation-error-0xc004c003-product-key-blocked.md?context=/troubleshoot/windows-client/context/context
+    - name: Event 8198, error 0xC0020017 or 0x8007139F "KMS contact failure" when activating Windows
+      href: ../windows-server/licensing-and-activation/activation-event-8198-error-0xc0020017-0x8007139f-kms-contact-failure.md?context=/troubleshoot/windows-client/context/context
     - name: How to validate the OEM activation key
       href: ./licensing-and-activation/validate-oem-activation-key.md
     - name: KMS current count doesn't increase
