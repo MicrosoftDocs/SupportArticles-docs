@@ -352,7 +352,7 @@ The following error messages appear as text messages in the event log or in the 
   > 1636 Unable to install Windows Installer MSP file
 
 > [!NOTE]
-> Review the setup log files to find out whether any cache files are missing. For more information, see the [Repair the SQL Server installation](#repair-the-sql-server-installation) section.
+> Review the setup log files to find out whether any cache files are missing. For more information, see the [Repair the SQL Server installation](#solution-1-repair-the-sql-server-installation) section.
 
 ### SQL Server 2008 SP1
 

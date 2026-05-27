@@ -141,7 +141,7 @@ To fix the issue, follow these steps:
 This scenario occurs when the client and the server negotiate a `TLS_DHE_*` cipher suite for the TLS handshake, but one side doesn't have the Windows update that adds the leading-zero fix for the Diffie-Hellman key exchange. For more information about this scenario, see [Applications experience forcibly closed TLS connection errors when connecting SQL Servers in Windows](../../../windows-server/identity/apps-forcibly-closed-tls-connection-errors.md).
 
 > [!NOTE]
-> If this article doesn't fix your issue, check whether the [common connectivity issues articles](../connect/resolve-connectivity-errors-overview.md#common-connectivity-issues) can help.
+> If this article doesn't fix your issue, check whether the [common connectivity issues articles](../connect/resolve-connectivity-errors-overview.md#categories-of-sql-server-connectivity-errors) can help.
 
 ## TCP three-way handshake timeout from IOCP worker shortage
 
