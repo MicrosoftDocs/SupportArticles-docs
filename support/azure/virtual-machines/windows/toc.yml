@@ -604,8 +604,8 @@ items:
     items:
     - name: Error 0xC004C003 — Product key blocked
       href: windows-vm-activation-error-0xc004c003.md
-    - name: Error 0xC004C008 — Product key exceeded limit
-      href: windows-vm-activation-error-0xc004c008.md
+    - name: Error 0xC004C008 - The specified product key could not be used
+      href: ../../../windows-server/licensing-and-activation/activation-error-0xc004c008-product-key-not-used.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Error 0xC004F06C — MAK activation failed
       href: ../../../windows-server/deployment/error-0xc004f06c-activate-windows.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Error 0x80070005 — Access denied
