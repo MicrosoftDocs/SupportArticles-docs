@@ -1,6 +1,6 @@
 ---
 title: General Istio Service Mesh Add-on Troubleshooting
-description: Troubleshoot the Istio service mesh add-on in Azure Kubernetes Service (AKS) by using proven steps, common errors, and fixes to restore mesh health quickly.
+description: Troubleshoot the Istio service mesh add-on in Azure Kubernetes Service (AKS) by using proven steps and fixes to address common mesh errors quickly.
 ms.date: 03/18/2025
 author: nshankar13
 ms.author: nshankar

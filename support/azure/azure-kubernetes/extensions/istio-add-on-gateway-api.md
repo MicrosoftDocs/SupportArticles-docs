@@ -34,11 +34,11 @@ The following situations are common troubleshooting scenarios for Istio service 
 
 You can't use the [application routing Gateway API Implementation](/azure/aks/app-routing-gateway-api) and the [Istio service mesh add-on](/azure/aks/istio-about) at the same time. You must disable one first and then enable the other in a separate operation. You must also update the `gatewayClassName` for your `Gateways` from `approuting-istio` to `approuting`.
 
-If you previously used application routing Istio Gateway API Implementation, then migrated to the Istio add-on, and now experience issues that cause the Istio add-on control plane to take ownership of existing `Gateway` resources, try restarting the `istiod` deployment. Also, inspect the `istiod` logs for any errors that are related to watching and taking ownership of the `Gateway` resources.
+If you previously used application routing Istio Gateway API Implementation, then migrated to the Istio add-on, and now experience issues that prevent the Istio add-on control plane from taking ownership of and reconciling existing `Gateway` resources, try restarting the `istiod` deployment. Also, inspect the `istiod` logs for any errors that are related to watching and taking ownership of the `Gateway` resources.
 
 ### Networking, firewall, and load balancer errors 
 
-To troubleshoot common networking, firewall, and load balancer errors that you might encounter when you use the application routing Gateway API, follow these steps.
+To troubleshoot common networking, firewall, and load balancer errors that you might encounter when you use the Istio add-on, follow these steps.
 
 #### Step 1: Make sure that Azure Load Balancer health probes are configured appropriately
 
@@ -144,12 +144,12 @@ You can annotate your `Gateway` resource with `gateway.istio.io/name-override` t
 
 #### Step 9: Verify `GatewayClass` is created
 
-Verify that the `GatewayClass` `istio` is created. To verify, run `istiod`: `kubectl get gatewayclass`. If the `GatewayClass` isn't yet created, make sure that you enabled the Managed Gateway API CRD installation on the cluster. If the Managed Gateway API CRDs are installed but the `GatewayClass` still isn't created, inspect the `istiod` logs for any errors. 
+Verify that the `GatewayClass` `istio` is created. To verify, run `kubectl get gatewayclass`. If the `GatewayClass` isn't yet created, make sure that you enabled the Managed Gateway API CRD installation on the cluster. If the Managed Gateway API CRDs are installed but the `GatewayClass` still isn't created, inspect the `istiod` logs for any errors. 
 
 > [!NOTE]
 > If you're using the [application routing Gateway API Implementation](/azure/aks/app-routing-gateway-api), the created `GatewayClass` should be `approuting-istio`.
 
-To avoid conflicts, also make sure that you don't have the `GatewayClass` `istio` installed on your cluster before you enable the Istio add-on with the Managed Gateway API. Also make sure that you don't have another Istio-based controller that reconciles the `GatewayClass` `istio` (like Open-Source Istio) installed simultaneously with the Istio add-on. 
+To avoid conflicts, also make sure that you don't have the `GatewayClass` `istio` deployed on your cluster before you enable the Istio add-on with the Managed Gateway API. Also make sure that you don't have another Istio-based controller that reconciles the `GatewayClass` `istio` (like Open-Source Istio) installed simultaneously with the Istio add-on. 
 
 ### Minor revision upgrades and revision label problems
 
