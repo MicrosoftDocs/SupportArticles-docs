@@ -35,18 +35,18 @@ Received response `https://InternalMP.contoso.com/SMS_MP/.sms_aut?MPLIST2&CM1` f
 
 ### Cause
 
-The CMG connection point requires a [server authentication certificate](/mem/configmgr/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_clientauth) to securely forward client requests to an HTTPS management point. If the server authentication certificate is missing, misconfigured, or invalid, status code 403 is returned. In scenarios where the Management Point (MP) operates in enhanced HTTP mode with token-based authentication, the certificate isn't required but is always recommended.
+When any CMG enabled Management Point is configured for HTTPS, the CMG connection point requires a valid [client authentication certificate](/mem/configmgr/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_clientauth) to be present in the Personal Store of the server to communicate with the HTTPS Management Point. If the client authentication certificate is missing, misconfigured, or invalid, status code 403 is returned. In scenarios where the Management Point (MP) operates in Enhanced HTTP mode with token-based authentication, the certificate isn't required.
 
 ### Resolution
 
-To resolve this issue, generate a [server authentication certificate](/mem/configmgr/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_clientauth) for the CMG connection point.
+To resolve this issue, generate a [client authentication certificate](/mem/configmgr/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_clientauth) for the CMG connection point.
 
 > [!NOTE]
 > In the certificate, computers must have a unique value in the **Subject Name** or **Subject Alternative Name** field.
 
-### How to verify the CMG has a server certificate
+### How to verify the Connection Point has a client certificate
 
-After you enable verbose logging, the **SMS_Cloud_ProxyConnector.log** file will show the list of available certificates on the server. To verify if a valid server authentication certificate to establish communication between the CMG connection point and the management point exists, check the number of certificates in the **Filtered cert count with client auth:** line. See the following log for an example:
+After you enable verbose logging, the **SMS_Cloud_ProxyConnector.log** file will show the list of client certificates available in the Personal Store of the server. To verify if a valid client authentication certificate to establish communication between the CMG connection point and the management point exists, check the number of certificates in the **Filtered cert count with client auth:** line. See the following log for an example:
 
 **SMS_Cloud_ProxyConnector.log**
 
@@ -78,7 +78,7 @@ In the following log file, error messages that resemble the following entries ar
 
 ### Cause
 
-There's a mismatch between the Internet Information Services (IIS) bindings and the management point in HTTP mode. If the management point is moved from HTTPS mode to enhanced HTTP mode without cleaning the bindings, the Configuration Management client might be unable to configure an **SMS Role SSL certificate** used in enhanced HTTP mode. In other situations, an incorrect certificate (expired or revoked) exists in the IIS bindings and needs to be cleaned.
+There's a mismatch between the Internet Information Services (IIS) bindings and the Management Point type. If the management point is set to Enhanced HTTP mode, but another certificate is already present in the bindings, the site might be unable to configure and bind the required **SMS Role SSL certificate** in IIS. In other situations, an incorrect certificate (expired or revoked) exists in the IIS bindings and needs to be cleaned.
 
 ### Resolution
 
