@@ -1,6 +1,6 @@
 ---
 title: Error 0xC004C008 "The specified product key could not be used" when you activate Windows
-description: Discusses how to resolve error 0xC004C008 ("The activation server determined that the specified product key could not be used"). This error occurs if .
+description: Discusses how to resolve error 0xC004C008 ("The activation server determined that the specified product key could not be used"). This error occurs if your Key Management Services (KMS) host key has exceeded its activation limit.
 ms.date: 05/28/2026
 ms.collection: windows
 ai.usage: ai-assisted
@@ -35,7 +35,7 @@ This error occurs if the Key Management Services (KMS) host key exceeds its acti
 
 This error typically occurs in the following scenarios:
 
-- You deploy Windows by using a custom image that contains a KMS host key that's already activated on too many computers.
+- You deploy Windows by using a custom image that contains a KMS host key that was used to activate too many computers.
 - You reuse a shared KMS key across multiple Windows systems in a test or development environment.
 - You migrate a virtual machine (VM) from an on-premises environment to the Azure environment. The on-premises environment heavily reused the same KMS key.
 
@@ -47,9 +47,9 @@ Use the following steps to troubleshoot and fix the issue. To get the best resul
 
 ### Step 1: Get a new key or reset the existing key
 
-If you need an MAK or KMS host key (for example, for VMs that are in an isolated network), contact the [Microsoft Licensing Activation Centers](https://www.microsoft.com/licensing/existing-customer/activation-centers) to request a new key or to reset the activation count on your existing key.
+If you need an MAK or KMS host key (for example, for VMs that are in an isolated network), contact the [Microsoft Licensing Activation Centers](https://www.microsoft.com/licensing/existing-customer/activation-centers). There, you can request a new key or to reset the activation count on your existing key.
 
-If you are trying to activate an Azure VM, and your infrastructure doesn't require a KMS key for a self-hosted KMS host, you can try Step 2.
+If you're trying to activate an Azure VM, and your infrastructure doesn't require a KMS key for a self-hosted KMS host, you can try Step 2.
 
 ### Step 2 (Azure VMs): Activate by using Azure KMS
 
