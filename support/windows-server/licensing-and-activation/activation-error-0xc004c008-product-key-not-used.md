@@ -1,6 +1,6 @@
 ---
 title: Error 0xC004C008 "The specified product key could not be used" when you try to activate Windows
-description: Discusses how to resolve error 0xC004C008 ("The activation server determined that the specified product key could not be used"). This error occurs if your Key Management Services (KMS) host key has exceeded its activation limit.
+description: Discusses how to resolve error 0xC004C008 ("The activation server determined that the specified product key could not be used"). This error occurs if your Key Management Services (KMS) host key exceeds its activation limit.
 ms.date: 05/28/2026
 ms.collection: windows
 ai.usage: ai-assisted
@@ -19,7 +19,7 @@ appliesto:
 
 ## Summary
 
-When you try to activate Windows, you might receive error 0xC004C008 if your Key Management Services (KMS) host key has exceeded its activation limit. The troubleshooting steps in this article help you to reset the key, obtain a new key, or, for Azure virtual machines (VMs), use the Azure KMS service to activate. The steps apply to physical computers, on-premises VMs, and Azure VMs.
+When you try to activate Windows, you might receive error 0xC004C008 if your Key Management Services (KMS) host key exceeds its activation limit. The troubleshooting steps in this article help you to reset the key, obtain a new key, or, for Azure virtual machines (VMs), use the Azure KMS service to activate. The steps apply to physical computers, on-premises VMs, and Azure VMs.
 
 ## Symptoms
 
