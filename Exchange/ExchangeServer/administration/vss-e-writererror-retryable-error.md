@@ -25,14 +25,16 @@ ms.date: 05/12/2026
 
 _Original KB number:_ &nbsp; 4037535
 
+In this article:
+
+- The *passive database server* is the Exchange server that initiates the backup of a passive database copy.
+- The *active database server* is the Exchange server that hosts the active database.
+
 ## Summary
 
-Use this article when backups of passive mailbox database copies in an Exchange Database Availability Group (DAG) fail with the VSS_E_WRITERERROR_RETRYABLE error. It explains how to identify the issue by using backup output, BETEST, and Event ID 2153, and provides configuration and network guidance to restore reliable communication between passive and active database servers during backup.
+Use this article when backups of passive mailbox database copies in an Exchange Database Availability Group (DAG) fail with the VSS_E_WRITERERROR_RETRYABLE error. The article explains how to identify the issue by using backup output, BETEST, and Event ID 2153. It also provides configuration and network guidance to restore reliable communication between passive and active database servers during backup.
 
 ## Symptoms
-
-> [!NOTE]
-> This article uses passive database server to refer to the Exchange server that initiates the backup of a passive database copy and active database server to refer to the Exchange server that hosts the active database.
 
 You have a DAG in Exchange Server. The DAG has a mailbox database copy that is hosted on a remote site. When you try to back up a passive database copy, the backup fails, and you observe the following issues.
 
@@ -92,6 +94,6 @@ To initiate a backup of a passive database copy, the Exchange replication servic
 Consider the following points about DAG backups:
 
 - Use passive database copies for backups. Don't back up active database copies. Active database copies should be dedicated to ongoing business operations.
-- If you must back up active database copies for some reason, make sure that the passive database copies are not configured for backup at the same time. Otherwise, you will experience backup failure and the **RETRYABLE** error.
+- If you must back up active database copies for some reason, make sure that the passive database copies aren't configured for backup at the same time. Otherwise, backup fails and you receive the **RETRYABLE** error.
 - During backup, don't move databases to another Exchange server in the DAG.
 - Network connections should be active and stable.
