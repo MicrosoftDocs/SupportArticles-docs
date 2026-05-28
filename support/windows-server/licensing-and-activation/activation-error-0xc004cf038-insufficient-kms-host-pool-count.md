@@ -23,9 +23,9 @@ When you try to activate a Windows system, you see the following error message i
 The Software Protection Service reported that the computer couldn't be activated. The count reported by your Key Management Service (KMS) is insufficient. Please contact your system administrator.
 ```
 
-Typically, this message indicates that the KMS host doesn't have enough computers in its KMS pool.
-
 ## Cause
+
+Typically, this message indicates that the KMS host doesn't have enough computers in its KMS pool.
 
 When you use a self-hosted KMS host (either on-premises or in Azure), you have to have a sufficient number of computers in the KMS pool before you can use the KMS host for activation. The following conditions apply:
 
@@ -86,6 +86,6 @@ If activation fails and generates the same error, Contact Microsoft Support for 
 
 ## References
 
-- [Troubleshoot Windows activation error codes](/troubleshoot/windows-server/licensing-and-activation/troubleshoot-activation-error-codes)
+- [Troubleshoot Windows activation error codes](troubleshoot-activation-error-codes.md)
 - [Troubleshoot Azure Windows virtual machine activation problems](../../azure/virtual-machines/windows/troubleshoot-activation-problems.md)
 - [Troubleshooting tools for Windows activation issues on Azure VMs](../../azure/virtual-machines/windows/windows-activation-troubleshoot-tools.md)
