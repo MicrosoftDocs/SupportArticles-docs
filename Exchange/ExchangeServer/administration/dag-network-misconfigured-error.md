@@ -40,7 +40,7 @@ In this scenario, you see a **Misconfigured** error status when you view the **S
 
 ## Cause
 
-The Multi-NIC Cluster Network feature of Windows Server is not supported by Exchange Server.
+The Multi-NIC Cluster Network feature of Windows Server isn't supported by Exchange Server.
 
 ## Resolution
 
