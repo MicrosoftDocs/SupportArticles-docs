@@ -29,7 +29,17 @@ As an agent maker, if a problem occurs when you use the test pane to [test your 
 | [AIPluginOperationNotFound](#aipluginoperationnotfound)                             | There's an error when attempting to access a connected agent.                                                                                                                             |
 | [AsyncResponsePayloadTooLarge](#asyncresponsepayloadtoolarge)                       | There's an error that's related to the output of a connector.                                                                                                                            |
 | [AuthenticationNotConfigured](#authenticationnotconfigured)                         | Authentication is required but wasn't configured.                                                                                                                                        |
+| [HTTP401Unauthorized (Authentication: 401)](#http401unauthorized)                   | A tool call failed because authentication credentials were missing or expired.                                                                                                           |
+| [InvalidAuthenticationToken (Authentication: 401)](#invalidauthenticationtoken)     | A tool call failed because the access token format was invalid or corrupted.                                                                                                             |
+| [MsalUiException (Authentication: 401)](#msaluiexception)                           | A tool call failed because interactive sign-in is required to acquire a token.                                                                                                           |
+| [HTTP403Forbidden (Authorization: 403)](#http403forbidden)                          | A tool call failed because the caller is authenticated but lacks permission to access the resource.                                                                                     |
+| [HTTP500InternalServerError (Service availibility: 5xx)](#http500internalservererror) | A tool call failed because the service encountered an unexpected internal error.                                                                                                       |
+| [HTTP502BadGateway (Service availibility: 5xx)](#http502badgateway)                   | A tool call failed because an upstream service returned an invalid response.                                                                                                           |
+| [HTTP503ServiceUnavailable (Service availibility: 5xx)](#http503serviceunavailable)   | A tool call failed because the service is temporarily unavailable.                                                                                                                     |
+| [HTTP504GatewayTimeout (Service availibility: 5xx)](#http504gatewaytimeout)           | A tool call failed because the upstream service didn't respond in time.                                                                                                                |
+| [HTTP408RequestTimeout (Timeout · execution)](#http408requesttimeout)               | A tool call failed because the request exceeded allowed time limits.                                                                                                                     |
 | [BindingKeyNotFoundError](#bindingkeynotfounderror)                                 | One or more inputs have changed on the agent flow (added, removed, or renamed). The agent flow needs to be removed and re-added to ensure Copilot Studio has the correct list of inputs. |
+| [BingSearchFailed](#bingsearchfailed)                                               | A system issue occurred while searching Bing knowledge.                                                                                                                                   |
 | [ConnectedAgentAuthMismatch](#connectedagentauthmismatch)                           | There's an authentication mismatch between the orchestrator and sub-agent.                                                                                                               |
 | [ConnectedAgentBotNotFound](#connectedagentbotnotfound)                             | A sub-agent in a multi-agent orchestration configuration wasn't found.                                                                                                                   |
 | [ConnectedAgentBotNotPublished](#connectedagentbotnotpublished)                     | A sub-agent in a multi-agent orchestration configuration wasn't published.                                                                                                               |
@@ -40,11 +50,24 @@ As an agent maker, if a problem occurs when you use the test pane to [test your 
 | [ConsentNotProvidedByUser](#consentnotprovidedbyuser)                               | A user interacting with an agent rejected the agent's SSO request.                                                                                                                       |
 | [ConversationStateTooLarge](#conversationstatetoolarge)                             | The conversation state exceeds the size limits.                                                                                                                                          |
 | [DataLossPreventionViolation](#datalosspreventionviolation)                         | There's a data policy violation.                                                                                                                                                         |
+| [DataverseFileAttachment429](#dataversefileattachment429)                           | Dataverse file attachment search was throttled by SharePoint.                                                                                                                            |
+| [DataverseSearchFailed](#dataversesearchfailed)                                     | A system issue occurred while searching Dataverse knowledge.                                                                                                                              |
+| [DataverseStructured401](#dataversestructured401)                                   | Dataverse structured search returned an authentication error.                                                                                                                             |
+| [DataverseStructured429](#dataversestructured429)                                   | Dataverse structured search was throttled.                                                                                                                                                |
+| [DataverseStructured500](#dataversestructured500)                                   | Dataverse structured search returned an internal server error.                                                                                                                            |
+| [DataverseStructured503](#dataversestructured503)                                   | Dataverse structured search was unavailable.                                                                                                                                              |
 | [EnforcementMessageC2](#enforcementmessagec2)                                       | Not enough prepaid capacity is available.                                                                                                                                                |
+| [ExecutionTimeout (Timeout · execution)](#executiontimeout)                         | A tool or flow action exceeded its configured execution timeout.                                                                                                                         |
 | [FlowActionBadRequest](#flowactionbadrequest)                                       | A request that was made to an [agent flow][1] is malformed.                                                                                                                              |
 | [FlowActionException](#flowactionexception)                                         | An error occurred while executing an [agent flow][1].                                                                                                                                    |
 | [FlowActionTimedOut](#flowactiontimedout)                                           | An [agent flow][1] took more than 100 seconds to run and timed out.                                                                                                                      |
 | [FlowMakerConnectionBlocked](#flowmakerconnectionblocked)                           | An [agent flow][1] invoked with unauthorized maker credentials in connection.                                                                                                            |
+| [HTTP400BadRequest (Request validation: 400)](#http400badrequest)                   | A tool call failed because request syntax or parameters were invalid.                                                                                                                    |
+| [HTTP422UnprocessableEntity (Request validation: 400)](#http422unprocessableentity) | A tool call failed because the request was well-formed but contains semantic validation errors.                                                                                          |
+| [HTTP404NotFound (Resource lookup: 404)](#http404notfound)                          | A tool call failed because the requested resource doesn't exist.                                                                                                                         |
+| [HTTP429TooManyRequests (Rate limiting: 429)](#http429toomanyrequests)              | A tool call failed because request rate exceeded service limits.                                                                                                                         |
+| [QuotaExceeded (Rate limiting: 429)](#quotaexceeded)                                | A tool call failed because monthly, daily, or concurrency quota limits were exceeded.                                                                                                   |
+| [FoundryIQSearchFailed](#foundryiqsearchfailed)                                     | A system issue occurred while searching Foundry IQ knowledge.                                                                                                                             |
 | [GenAISearchandSummarizeRateLimitReached](#genaisearchandsummarizeratelimitreached) | The usage limit for generative AI was reached.                                                                                                                                           |
 | [GenAIToolPlannerRateLimitReached](#genaitoolplannerratelimitreached)               | The usage limit for generative orchestration was reached.                                                                                                                                |
 | [InfiniteLoopInBotContent](#infiniteloopinbotcontent)                               | A node was executed too many times.                                                                                                                                                      |
@@ -55,11 +78,16 @@ As an agent maker, if a problem occurs when you use the test pane to [test your 
 | [OpenAIndirectAttack](#openaindirectattack)                                         | Indirect attack content was detected.                                                                                                                                                    |
 | [OpenAISelfHarm](#openaiselfharm)                                                   | Self-harm content was detected.                                                                                                                                                          |
 | [OpenAISexual](#openaisexual)                                                       | Sexual content was detected.                                                                                                                                                             |
+| [OperationTimeout (Timeout · execution)](#operationtimeout)                         | A specific tool operation timed out before completion.                                                                                                                                    |
 | [OpenAIRateLimitReached](#openairatelimitreached)                                   | The capacity limit of the agent was reached.                                                                                                                                             |
 | [OpenAIViolence](#openaiviolence)                                                   | Violence content was detected.                                                                                                                                                           |
 | [OutgoingMessageSizeTooBig](#outgoingmessagesizetoobig)                             | A message sent by an agent was too large to process.                                                                                                                                     |
 | [RedirectToDisabledDialog](#redirecttodisableddialog)                               | A topic was [redirecting][2] to a disabled topic.                                                                                                                                        |
 | [RedirectToNonExistentDialog](#redirecttononexistentdialog)                         | A topic was [redirecting][2] to another topic that no longer exists.                                                                                                                     |
+| [SharePoint429](#sharepoint429)                                                     | SharePoint knowledge search was throttled.                                                                                                                                                |
+| [SharePoint500](#sharepoint500)                                                     | SharePoint knowledge search returned an internal server error.                                                                                                                            |
+| [SharePoint503](#sharepoint503)                                                     | SharePoint knowledge search was unavailable.                                                                                                                                              |
+| [SharePointSearchFailed](#sharepointsearchfailed)                                   | A system issue occurred while searching SharePoint knowledge.                                                                                                                             |
 | [SystemError](#systemerror)                                                         | A system error occurred in Copilot Studio.                                                                                                                                               |
 | [TooMuchDataToHandle](#toomuchdatatohandle)                                         | The request that was made by the user is too large to process.                                                                                                                           |
 
@@ -122,6 +150,58 @@ For more information, see [Create a prompt action](/ai-builder/use-a-custom-prom
 
 For more information, see [Configure user authentication](/microsoft-copilot-studio/configuration-end-user-authentication).
 
+#### HTTP401Unauthorized
+
+**Category**: Authentication: 401
+
+**Error message**: Unauthorized.
+
+**Resolution**: This error can be caused by missing or expired authentication credentials. To resolve the problem:
+
+1. Verify the connector is configured correctly in Copilot Studio.
+1. Check whether the OAuth token has expired and reauthenticate the connection.
+1. Validate API key or connection settings.
+1. Test the connection before deploying.
+1. If using service principal authentication, verify credentials haven't rotated.
+
+#### InvalidAuthenticationToken
+
+**Category**: Authentication: 401
+
+**Error message**: InvalidAuthenticationToken.
+
+**Resolution**: This error can be caused by malformed or stale token data. To resolve the problem:
+
+1. Remove and recreate the connection.
+1. Reauthenticate the connector.
+1. Clear browser or app cache if applicable.
+1. Retry the flow.
+
+#### MsalUiException
+
+**Category**: Authentication: 401
+
+**Error message**: MsalUiException.
+
+**Resolution**: This error can be caused when silent token acquisition fails and interactive sign-in is required. To resolve the problem:
+
+1. Sign out and sign in again to refresh your token.
+1. Complete any interactive authentication prompts.
+1. Retry the tool call after authentication completes.
+
+#### HTTP403Forbidden
+
+**Category**: Authorization: 403
+
+**Error message**: Forbidden.
+
+**Resolution**: This error can be caused by missing permissions in the target system. To resolve the problem:
+
+1. Verify the user or app has required roles and permissions.
+1. Check app registration permissions and admin consent requirements.
+1. Verify resource-level sharing and delegation settings.
+1. Confirm tenant and environment scoping are correct.
+
 #### BindingKeyNotFoundError
 
 **Error messages**:
@@ -133,6 +213,12 @@ For more information, see [Configure user authentication](/microsoft-copilot-stu
 **Resolution**: Check that the agent flow inputs and outputs are set up correctly. Try refreshing the inputs or outputs to resolve this issue. If that doesn't work, try setting up the agent flow again.
 
 To get the latest inputs and outputs, remove and readd the agent flow.
+
+#### BingSearchFailed
+
+**Error message**: This is a system issue on our side. Nothing you need to fix. Error details: Platform runtime - BingSearchFailed.
+
+**Resolution**: This issue can be caused by a platform-side Bing search failure. Retry later. If the issue continues, contact support.
 
 #### ConnectedAgentAuthMismatch
 
@@ -251,6 +337,58 @@ Common problems include:
 - One or more connectors that you use in the agent aren't in the same data group. See [Copilot Studio connectors](/microsoft-copilot-studio/admin-data-loss-prevention#copilot-studio-connectors-and-data-groups).
 - One or more connectors that you use in the agent were blocked by the tenant administrator.
 
+#### DataverseFileAttachment429
+
+**Error message**: SharePoint is limiting requests right now. Try again later. Error details: DataverseFiles429.
+
+**Resolution**: This error can be caused by service throttling. Wait and retry.
+
+#### DataverseSearchFailed
+
+**Error message**: This is a system issue on our side. Nothing you need to fix. Error details: Platform runtime - DataverseSearchFailed.
+
+**Resolution**: This issue can be caused by Dataverse knowledge search failures such as user connection errors. To resolve the problem:
+
+1. Open the agent knowledge source settings and reauthenticate the Dataverse connection.
+1. Verify that the user has valid licensing and permissions for the Dataverse knowledge source.
+1. If the issue persists after reauthentication, contact support.
+
+#### DataverseStructured401
+
+**Error message**: Search ran into an authentication issue. This usually resolves on its own. Nothing to fix on your side. Error details: Dataverse401.
+
+**Resolution**: This error can indicate missing permissions for the agent's identity or user account. To resolve the problem:
+
+1. Grant the required Dataverse knowledge search permissions to the agent's service principal.
+1. Verify that the knowledge source environment matches the agent's environment.
+1. Retry after permission updates.
+
+For more information, see [Troubleshoot enterprise knowledge sources](../knowledge/enterprise-data.md).
+
+#### DataverseStructured429
+
+**Error message**: Dataverse is limiting requests right now. Try again later. Error details: Dataverse429.
+
+**Resolution**: The service was throttled or timed out. To reduce recurrence:
+
+1. Retry with exponential backoff.
+1. Reduce knowledge source size where possible.
+1. Spread large query loads over time.
+
+For more information, see [Microsoft Graph throttling guidance](/graph/throttling).
+
+#### DataverseStructured500
+
+**Error message**: This isn't a configuration problem. The owning service needs to investigate. Error details: Dataverse500.
+
+**Resolution**: This error can be caused by a service-side issue. Retry later. If the issue continues, contact support.
+
+#### DataverseStructured503
+
+**Error message**: This isn't a configuration problem. The owning service needs to investigate. Error details: Dataverse503.
+
+**Resolution**: This error can be caused by temporary service unavailability. Retry later.
+
 #### ConversationStateTooLarge
 
 **Error message:** Conversation state size exceeds the maximum allowed limit.
@@ -307,6 +445,169 @@ For more information, see [Copilot Studio quotas and limits](/microsoft-copilot-
 **Error message**: The flow with name `{FlowName}` is using a maker connection, which isn't allowed. Error Code: `{FlowMakerConnectionBlocked}`
 
 **Resolution**: The administrator prevents using maker credentials in a connection that's invoked from the agent flow. [Open the flow in Power Automate](/power-automate/overview-manage-cloud-flows#open-the-details-screen-for-a-flow) and [share the cloud flow by using run-only permissions](/power-automate/create-team-flows#share-a-cloud-flow-with-run-only-permissions).
+
+#### HTTP500InternalServerError
+
+**Category**: Service availibility: 5xx
+
+**Error message**: This tool is temporarily unavailable. The service didn't respond or is currently unavailable. Error details: Service availability · 5xx.
+
+**Resolution**: This error can be caused by unexpected service-side failures. To resolve the problem:
+
+1. Retry the request because transient failures are common.
+1. Check connector and service health dashboards for active incidents.
+1. Add retry policy with exponential backoff.
+1. If persistent, collect request timestamp and correlation details and contact support.
+
+#### HTTP502BadGateway
+
+**Category**: Service availibility: 5xx
+
+**Error message**: This tool is temporarily unavailable. The service didn't respond or is currently unavailable. Error details: Service availability · 5xx.
+
+**Resolution**: This error can be caused by invalid responses from upstream dependencies. To resolve the problem:
+
+1. Wait and retry after a short delay.
+1. Validate endpoint URL and connector configuration.
+1. Add retries with exponential backoff.
+1. If persistent, check vendor status pages and connector documentation.
+
+#### HTTP503ServiceUnavailable
+
+**Category**: Service availibility: 5xx
+
+**Error message**: This tool is temporarily unavailable. The service didn't respond or is currently unavailable. Error details: Service availability · 5xx.
+
+**Resolution**: This error can be caused by temporary service outages or overload. To resolve the problem:
+
+1. Retry later with longer backoff.
+1. Check service health for planned maintenance or incidents.
+1. Defer noncritical operations until the service stabilizes.
+1. Implement circuit-breaker style controls for repeated failures.
+
+#### HTTP504GatewayTimeout
+
+**Category**: Service availibility: 5xx
+
+**Error message**: This tool is temporarily unavailable. The service didn't respond or is currently unavailable. Error details: Service availability · 5xx.
+
+**Resolution**: This error can be caused by slow upstream processing or network latency. To resolve the problem:
+
+1. Retry the operation and verify whether the backend completed despite timeout.
+1. Reduce payload size and optimize expensive queries.
+1. Break large operations into smaller batches.
+1. Increase configured timeout where supported.
+
+#### HTTP408RequestTimeout
+
+**Category**: Timeout · execution
+
+**Error message**: This tool call timed out. The operation took too long to complete. Error details: Timeout · execution.
+
+**Resolution**: This error can be caused by client or network time limits being exceeded. To resolve the problem:
+
+1. Check network stability and latency.
+1. Reduce payload size where possible.
+1. Add retries with incremental backoff.
+1. Use asynchronous patterns for long-running operations.
+
+#### ExecutionTimeout
+
+**Category**: Timeout · execution
+
+**Error message**: This tool call timed out. The operation took too long to complete. Error details: Timeout · execution.
+
+**Resolution**: This error can be caused by long-running execution paths. To resolve the problem:
+
+1. Break large workflows into smaller steps.
+1. Optimize query and transformation logic.
+1. Remove unnecessary actions from the critical path.
+1. Validate loops and branching conditions for inefficiencies.
+
+#### OperationTimeout
+
+**Category**: Timeout · execution
+
+**Error message**: This tool call timed out. The operation took too long to complete. Error details: Timeout · execution.
+
+**Resolution**: This error can be caused by operation-level timeouts in dependent services. To resolve the problem:
+
+1. Narrow query scope and add filtering.
+1. Add retry with backoff for transient timeouts.
+1. Use pagination for large result sets.
+1. Review target service performance and request limits.
+
+#### HTTP400BadRequest
+
+**Category**: Request validation: 400
+
+**Error message**: Bad Request.
+
+**Resolution**: This error can be caused by malformed payloads or invalid parameters. To resolve the problem:
+
+1. Verify all required parameters are present.
+1. Confirm data types match the action schema.
+1. Test with known-good sample data.
+1. Validate JSON formatting for complex payloads.
+
+#### HTTP422UnprocessableEntity
+
+**Category**: Request validation: 400
+
+**Error message**: Unprocessable Entity.
+
+**Resolution**: This error can be caused by semantic validation failures. To resolve the problem:
+
+1. Validate field-level formats and allowed values.
+1. Add data validation before the tool call.
+1. Check business rule constraints.
+1. Retry with known-good sample data.
+
+#### HTTP404NotFound
+
+**Category**: Resource lookup: 404
+
+**Error message**: Not Found.
+
+**Resolution**: This error can be caused by missing or incorrect resource identifiers. To resolve the problem:
+
+1. Verify resource ID or URL is correct.
+1. Confirm the resource still exists.
+1. Verify correct environment and tenant selection.
+1. Prefer dynamic resource selection over manually typed IDs.
+
+#### HTTP429TooManyRequests
+
+**Category**: Rate limiting: 429
+
+**Error message**: Too Many Requests.
+
+**Resolution**: This error can be caused by throttling limits. To resolve the problem:
+
+1. Add delays between calls.
+1. Implement exponential backoff retries.
+1. Limit concurrency for batch operations.
+1. Respect `Retry-After` headers when present.
+1. Monitor usage and throttling in analytics.
+
+#### QuotaExceeded
+
+**Category**: Rate limiting: 429
+
+**Error message**: QuotaExceeded.
+
+**Resolution**: This error can be caused by exhausted monthly, daily, or concurrency entitlements. To resolve the problem:
+
+1. Check usage in admin analytics.
+1. Reduce unnecessary tool calls.
+1. Consolidate operations where possible.
+1. Review and upgrade licensing or quota plans if needed.
+
+#### FoundryIQSearchFailed
+
+**Error message**: This is a system issue on our side. Nothing you need to fix. Error details: Platform runtime - FoundryIQSearchFailed.
+
+**Resolution**: This issue can be caused by a platform-side Foundry IQ search failure. Retry later. If the issue continues, contact support.
 
 #### GenAISearchandSummarizeRateLimitReached
 
@@ -452,6 +753,30 @@ For more information, see [Maximum channel data message size limits when using C
 **Error message**: The Dialog with Id {DialogId} wasn't found in the definition. Please check that the Dialog is present and that the Id is correct.
 
 **Resolution**: [Create a new topic](/microsoft-copilot-studio/authoring-create-edit-topics#create-a-topic) to redirect to, or [remove the redirect node](/microsoft-copilot-studio/authoring-create-edit-topics#delete-a-node).
+
+#### SharePoint429
+
+**Error message**: SharePoint is limiting requests right now. Try again later. Error details: SharePoint429.
+
+**Resolution**: This error can be caused by service throttling. Wait and retry.
+
+#### SharePoint500
+
+**Error message**: This isn't a configuration problem. The owning service needs to investigate. Error details: SharePoint500.
+
+**Resolution**: This error can be caused by a service-side issue. Retry later. If the issue continues, contact support.
+
+#### SharePoint503
+
+**Error message**: This isn't a configuration problem. The owning service needs to investigate. Error details: SharePoint503.
+
+**Resolution**: This error can be caused by temporary service unavailability. Retry later.
+
+#### SharePointSearchFailed
+
+**Error message**: This is a system issue on our side. Nothing you need to fix. Error details: Platform runtime - SharePointSearchFailed.
+
+**Resolution**: This issue can be caused by a platform-side SharePoint search failure. Retry later. If the issue continues, contact support.
 
 #### SystemError
 
