@@ -28,18 +28,18 @@ _Original KB number:_ &nbsp; 3215261
 
 ## Summary
 
-This issue can occur after an Exchange server is recovered by using the Setup /m:RecoverServer option. In this state, Exchange still references a federation trust certificate that is no longer available, which causes federation management tasks to fail. This article describes how to remove the stale federation trust configuration and recreate the trust.
+This issue can occur after an Exchange server is recovered by using the `Setup /m:RecoverServer` option. In this state, Exchange still references a federation trust certificate that is no longer available, which causes federation management tasks to fail. This article describes how to remove the stale federation trust configuration and recreate the trust.
 
 ## Symptoms
 
-Assume that you try to perform the following operations in an Exchange organization:
+Assume that you try to perform the following operations in your organization:
 
 - Make changes to your federation trust.
 - Create a new certificate for your federation trust.
 - Use federation services.
 - Remove your federated domains or federation trust.
 
-In this situation, you receive an error message that resembles the following:
+In this situation, you receive an error message that resembles the following message:
 
 > Federation certificate with the thumbprint [**certificate thumbprint**] cannot be found.  
 > \+ CategoryInfo: InvalidArgument: (:) [Set-FederationTrust], FederationCertificateInvalidException  
@@ -58,7 +58,7 @@ To work around this issue, use the [ADSI Edit (adsiedit.msc)](/previous-versions
 
 Follow these steps:
 
-1. Open ADSI Edit. Select **Start**, select **Run**, enter *ADSIEdit.msc*, and then select **OK**.
+1. Open ADSI Edit. Select **Start**, select **Run**, enter _ADSIEdit.msc_, and then select **OK**.
 
 1. Locate `CN=Federation,CN=First Organization,CN=Microsoft Exchange,CN=Services,CN=Configuration,DC=Domain,DC=com`, and do the following:
     1. Clear the value of the `msExchFedAccountNamespace` attribute.
