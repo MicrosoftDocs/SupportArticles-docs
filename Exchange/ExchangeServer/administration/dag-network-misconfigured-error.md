@@ -25,6 +25,10 @@ ms.date: 05/27/2026
 
 _Original KB number:_ &nbsp; 4075323
 
+## Summary
+
+This article describes an issue where a database availability group (DAG) network shows a Misconfigured status when a DAG node uses multiple network interface cards (NICs) on the same subnet. The issue occurs because Exchange Server does not support the Windows Multi-NIC Cluster Network feature. To resolve the issue, avoid configuring DAG nodes to use this feature.
+
 ## Symptoms
 
 Consider this scenario:
