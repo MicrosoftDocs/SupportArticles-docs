@@ -1,6 +1,6 @@
 ---
 title: Error 0xC004F042 "The specified Key Management Service (KMS) can't be used" when  activating Windows
-description: Discusses how to troubleshoot and resolve error 0xC004C003 ("the specified product key is blocked"). The steps apply to physical computers, on-premises virtual machines (VMs), and Azure VMs.
+description: Discusses how to troubleshoot and resolve error 0xC004F042 ("The specified Key Management Service (KMS) can't be used"). The steps apply to physical computers, on-premises virtual machines (VMs), and Azure VMs.
 ms.date: 05/29/2026
 ms.collection: windows
 ms.reviewer: cwhitley, scotro, v-leedennis, kaushika, v-appelgatet
@@ -15,7 +15,7 @@ appliesto:
 
 ## Summary
 
-This article explains how to resolve error `0xC004F042 (The Software Licensing Service determined that the specified Key Management Service (KMS) cannot be used.)`. This error might appear when you use a Multiple Activation Key (MAK) to activate Windows. The article reviews the common causes of this issue, and provides steps to resolve them. The troubleshooting steps in this article apply to physical computers, on-premises virtual machines (VMs), and Azure VMs.
+This article explains how to resolve error `0xC004F042 (The Software Licensing Service determined that the specified Key Management Service (KMS) cannot be used.)`. This error might appear when you have multiple KMS hosts that activate different sets of KMS clients. The troubleshooting steps in this article apply to physical computers, on-premises virtual machines (VMs), and Azure VMs.
 
 ## Symptoms
 
