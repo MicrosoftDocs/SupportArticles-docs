@@ -219,6 +219,10 @@
     {
       "source_path": "Exchange/ExchangeServer/setup/active-directory-wasnt-prepared-using-hosting-mode-error.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/Administration/incorrect-edge-transport-server-version-eac-ecp.md",
+      "redirect_url": "incorrect-edge-transport-server-version-eac"
     }
   ]
 }

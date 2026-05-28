@@ -71,7 +71,7 @@ items:
         - name: Doesn't display all OUs
           href: ../administration/exchange-server-not-display-all-ou.md
         - name: Edge Transport server version isn't updated after an upgrade
-          href: ../administration/incorrect-edge-transport-server-version-eac-ecp.md
+          href: ../administration/incorrect-edge-transport-server-version-eac.md
         - name: Email received via Microsoft 365 not journaled
           href: ../administration/email-received-via-eop-not-journaled.md
         - name: Empty StorageLimitStatus when running Get-MailboxStatistics
