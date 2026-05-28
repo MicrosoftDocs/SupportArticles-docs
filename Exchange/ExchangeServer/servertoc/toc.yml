@@ -396,8 +396,8 @@ items:
           href: ../setup/cannot-uninstall-server-role-via-setup-exe.md
         - name: Cumulative Update 20 shown instead of CU22
           href: ../setup/cumulative-update-20-is-shown-not-22.md
-        - name: Exchange Server 2019 setup does not run correctly using PowerShell
-          href: ../setup/ex2019-setup-does-not-run-correctly-started-powershell.md
+        - name: Exchange Server setup doesn't run correctly using PowerShell
+          href: ../setup/exchange-setup-does-not-run-correctly-started-powershell.md
         - name: Exchange Server Setup fails and returns “Database is mandatory on UserMailbox” error 
           href: ../setup/database-mandatory-on-usermailbox.md
         - name: Install Exchange Server 2010 SP2 fails
