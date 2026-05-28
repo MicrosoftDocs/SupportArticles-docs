@@ -82,7 +82,7 @@ By default, Azure VMs should use Azure Key Management Service (KMS) activation. 
    cscript c:\windows\system32\slmgr.vbs /ato
    ```
 
-If activation fails and generates the same error, Contact Microsoft Support for assistance.
+If activation fails and generates the same error, contact Microsoft Support for assistance.
 
 ## References
 
