@@ -1,5 +1,5 @@
 ---
-title: Error 0xC004C008 "The specified product key could not be used" when you try to activate Windows
+title: Error 0xC004C008 "The specified product key could not be used" when you activate Windows
 description: Discusses how to resolve error 0xC004C008 ("The activation server determined that the specified product key could not be used"). This error occurs if your Key Management Services (KMS) host key exceeds its activation limit.
 ms.date: 05/28/2026
 ms.collection: windows
@@ -15,7 +15,7 @@ appliesto:
   - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
   - ✅ <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
-# Error 0xC004C008 "The specified product key could not be used" when you try to activate Windows
+# Error 0xC004C008 "The specified product key could not be used" when you activate Windows
 
 ## Summary
 
