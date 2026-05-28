@@ -22,6 +22,10 @@ ms.date: 05/12/2026
 
 # Remote move migration doesn't finalize
 
+## Summary
+
+This article describes an issue where a remote move migration fails to finalize because replication lag prevents the target mailbox database from meeting data consistency requirements. The issue occurs when the `DataMoveReplicationConstraint` setting is configured to `SecondCopy` and no passive database copy satisfies the Data Guarantee criteria. To resolve the issue, verify database copy health, move the mailbox to a suitable database, or change the replication constraint setting.
+
 ## Symptoms
 
 When you initiate a remote move migration by using the [Exchange admin center](/exchange/mailbox-migration/manage-migration-batches) (EAC) or the [New-MoveRequest](/powershell/module/exchange/new-moverequest) PowerShell cmdlet, the migration to the target mailbox database doesn't finish, and it returns the following error message:
