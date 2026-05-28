@@ -11,9 +11,11 @@ ms.custom:
   - Exchange Server
   - CSSTroubleshoot
   - CI 166083
-ms.reviewer: haembab, ninob, meerak, v-trisshores
+  - CI 9823
+  - CI 11874
+ms.reviewer: haembab, ninob, meerak, v-trisshores, v-kccross
 appliesto: 
-  - Exchange Server
+  - Exchange Server SE
 search.appverid: MET150
 ms.date: 05/12/2026
 ---
@@ -28,7 +30,7 @@ When you initiate a remote move migration by using the [Exchange admin center](/
 
 ## Cause
 
-The [DataMoveReplicationConstraint](/exchange/managing-mailbox-database-copies-exchange-2013-help#effect-of-mailbox-moves-on-continuous-replication) setting for the target mailbox database is set to **SecondCopy**. This is the default value if the system or administrator added a second mailbox database copy. The **SecondCopy** setting requires that at least one passive database copy meets the [Data Guarantee API](/exchange/managing-mailbox-database-copies-exchange-2013-help#check-replication-health) criteria for health, replay lag time, and copy queue length. The error message indicates that the migration didn't finalize because no passive database copy met the maximum replay lag time criteria.
+The [DataMoveReplicationConstraint](/exchange/managing-mailbox-database-copies-exchange-2013-help#effect-of-mailbox-moves-on-continuous-replication) setting for the target mailbox database is set to **SecondCopy**. This value is the default value if the system or administrator added a second mailbox database copy. The **SecondCopy** setting requires that at least one passive database copy meets the [Data Guarantee API](/exchange/managing-mailbox-database-copies-exchange-2013-help#check-replication-health) criteria for health, replay lag time, and copy queue length. The error message indicates that the migration didn't finalize because no passive database copy met the maximum replay lag time criteria.
 
 ## Resolution
 
@@ -46,7 +48,7 @@ Use the appropriate method, depending on the direction of the move request and w
      Set-MailboxDatabase <target mailbox database GUID> -DataMoveReplicationConstraint None
      ```
 
-- For offboarding, if the target mailbox is _not_ in a DAG, use the following method:
+- For offboarding, if the target mailbox *isn't* in a DAG, use the following method:
 
   - Set the **DataMoveReplicationConstraint** to **None** by running the following command in the on-premises EMS:
 
