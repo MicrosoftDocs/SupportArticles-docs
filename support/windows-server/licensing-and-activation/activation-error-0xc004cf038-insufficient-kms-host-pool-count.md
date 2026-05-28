@@ -13,9 +13,7 @@ appliesto:
 ---
 # Error 0xC004F038 "The count reported by your Key Management Service (KMS) is insufficient" when you activate Windows
 
-This article explains how to resolve error `0xC00F038 (The count reported by your Key Management Service (KMS) is insufficient)`. 
-
-This error might appear when you use a Multiple Activation Key (MAK) to activate Windows. The article reviews the common causes of this issue, and provides steps to resolve them. The troubleshooting steps in this article apply to physical computers, on-premises virtual machines (VMs), and Azure VMs.
+This article explains how to resolve error `0xC00F038 (The count reported by your Key Management Service (KMS) is insufficient)`. This error might appear when you use a self-hosted KMS host to activate Windows. The article reviews the common causes of this issue, and provides steps to resolve them. The troubleshooting steps in this article apply to physical computers, on-premises virtual machines (VMs), and Azure VMs.
 
 ## Symptoms
 
