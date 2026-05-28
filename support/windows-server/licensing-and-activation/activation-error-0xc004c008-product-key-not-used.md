@@ -79,7 +79,7 @@ If activation fails and generates the same error, contact Microsoft Support for 
 
 ## References
 
-- [Troubleshoot Windows activation error codes](/troubleshoot/windows-server/licensing-and-activation/troubleshoot-activation-error-codes)
+- [Troubleshoot Windows activation error codes](troubleshoot-activation-error-codes.md)
 - [Slmgr.vbs options for obtaining volume activation information](/windows-server/get-started/activation-slmgr-vbs-options)
 - [Troubleshoot Azure Windows virtual machine activation problems](../../azure/virtual-machines/windows/troubleshoot-activation-problems.md)
 - [Troubleshooting tools for Windows activation issues on Azure VMs](../../azure/virtual-machines/windows/windows-activation-troubleshoot-tools.md)
