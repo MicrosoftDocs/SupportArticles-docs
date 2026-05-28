@@ -1,6 +1,6 @@
 ---
-title: Error 0xC004F042 "The specified Key Management Service (KMS) can't be used" when  activating Windows
-description: Discusses how to troubleshoot and resolve error 0xC004F042 ("The specified Key Management Service (KMS) can't be used"). The steps apply to physical computers, on-premises virtual machines (VMs), and Azure VMs.
+title: Error 0xC004F042 "The specified Key Management Service (KMS) can't be used" when activating Windows
+description: Describes how to troubleshoot and resolve error 0xC004F042 ("The specified Key Management Service (KMS) can't be used"). The steps apply to physical computers, on-premises virtual machines (VMs), and Azure VMs.
 ms.date: 05/29/2026
 ms.collection: windows
 ms.reviewer: cwhitley, scotro, v-leedennis, kaushika, v-appelgatet
@@ -15,7 +15,7 @@ appliesto:
 
 ## Summary
 
-This article explains how to resolve error `0xC004F042 (The Software Licensing Service determined that the specified Key Management Service (KMS) cannot be used.)`. This error might appear when you have multiple KMS hosts that activate different sets of KMS clients. The troubleshooting steps in this article apply to physical computers, on-premises virtual machines (VMs), and Azure VMs.
+This article explains how to resolve error `0xC004F042 (The Software Licensing Service determined that the specified Key Management Service (KMS) cannot be used.)`. This error might occur if you have multiple KMS hosts that activate different sets of KMS clients. The troubleshooting steps in this article apply to physical computers, on-premises virtual machines (VMs), and Azure VMs.
 
 ## Symptoms
 
@@ -31,9 +31,9 @@ This error occurs if the KMS client contacts a KMS host that can't activate the 
 
 This error typically occurs in the following scenarios:
 
-- You configure the KMS client to contact a self-hosted KMS server that doesn't support the Windows edition installed on the client.
+- You configure the KMS client to contact a self-hosted KMS server that doesn't support the Windows edition that's installed on the client.
 - The KMS host key doesn't match the product that you're activating (for example, trying to use a Windows Server 2016 KMS key to activate a Windows Server 2022 client).
-- You migrated the client from an on-premises environment that uses a different KMS infrastructure.
+- You migrate the client from an on-premises environment that uses a different KMS infrastructure.
 
 ## Resolution
 
