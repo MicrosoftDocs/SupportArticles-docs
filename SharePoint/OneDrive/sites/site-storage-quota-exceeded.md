@@ -54,44 +54,37 @@ To restore write access, a Microsoft 365 administrator must bring the user’s 
 
 1. Review the user’s OneDrive storage usage and quota.
 
-   In the **Microsoft 365 admin center**, go to:
+   In the **Microsoft 365 admin center**, navigate to **Users** > **Active users** > select the affected user > **OneDrive** tab.
 
-  **Users** > **Active users** > select the affected user > **OneDrive** tab.
+   To review the storage usage for multiple users simultaneously and check whether it's greater than the storage quota for their license, you can run a script. For more information, see [Identify OneDrive Users Over License-Based Storage Quota](https://adoption.microsoft.com/sample-solution-gallery/sample/onedrive-overquota-report/).
 
-  To review the storage usage for multiple users simultaneously and check whether it is greater than the storage quota for their license, you can run a script. See [Identify OneDrive Users Over License-Based Storage Quota](https://adoption.microsoft.com/sample-solution-gallery/sample/onedrive-overquota-report/) for more information.
-
-Review the user’s current storage usage and configured storage limit. Admins can also review a specific user’s OneDrive storage by using the SharePoint admin center or SharePoint Online PowerShell.
+   Review the user’s current storage usage and configured storage limit. Admins can also review a specific user’s OneDrive storage by using the SharePoint admin center or SharePoint Online PowerShell.
 
 1. Increase the OneDrive quota, if the license supports it.
+   If the [user’s license supports additional OneDrive storage](/office365/servicedescriptions/onedrive-for-business-service-description#storage-limits), increase the user’s OneDrive storage limit.
 
-If the [user’s license supports additional OneDrive storage](/office365/servicedescriptions/onedrive-for-business-service-description#storage-limits), increase the user’s OneDrive storage limit.
+   To increase the storage quota by using the Microsoft 365 admin center, navigate to **Users** > **Active users** > select the user > **OneDrive** tab > **Storage used** > **Edit**.
 
-In the **Microsoft 365 admin center**, go to:
+   To increase the quota by using SharePoint Online PowerShell, use the following cmdlet:
 
-**Users** > **Active users** > select the user > **OneDrive** tab > **Storage used** > **Edit**.
+   ```powershell
+   Set-SPOSite -Identity <OneDriveSiteUrl> ` 
+     -StorageQuota <QuotaInMB> ` 
+     -StorageQuotaWarningLevel <WarningLevelInMB> 
+   ```
 
-To increase the quota by using SharePoint Online PowerShell, use the following cmdlet:
-
-```powershell
-Set-SPOSite -Identity <OneDriveSiteUrl> ` 
-  -StorageQuota <QuotaInMB> ` 
-  -StorageQuotaWarningLevel <WarningLevelInMB> 
-```
-
-For detailed steps and quota values, see [Change a specific user’s OneDrive storage space](/sharepoint/change-user-storage).  
-
+   For detailed steps and quota values, see [Change a specific user’s OneDrive storage space](/sharepoint/change-user-storage).
+   
 1. Assign a license with more OneDrive storage, if needed.
 
-If the user’s current license doesn't support the required OneDrive storage amount, assign a license that includes the needed storage entitlement. Then update the user’s OneDrive quota as needed.
-
-For detailed licensing steps, see [Assign or unassign licenses for users in the Microsoft 365 admin center](/microsoft-365/admin/manage/assign-licenses-to-users).  
+   If the user’s current license doesn't support the required OneDrive storage amount, assign a license that includes the needed storage entitlement. Then update the user’s OneDrive quota as needed. For detailed licensing steps, see [Assign or unassign licenses for users in the Microsoft 365 admin center](/microsoft-365/admin/manage/assign-licenses-to-users).
 
 1. Reduce the user’s OneDrive storage usage.
 
-If the user’s quota can't be increased, the user must reduce their OneDrive storage usage below the current quota.
+   If the user’s quota can't be increased, the user must reduce their OneDrive storage usage below the current quota.
 
-Have the user delete or move unnecessary files, and then empty the OneDrive recycle bin to reclaim storage. Deleted files might continue to count against storage until they're permanently removed from the recycle bin.
+   Ask the user to delete or move unnecessary files, and then empty the OneDrive recycle bin to reclaim storage. Deleted files might continue to count against storage until they're permanently removed from the recycle bin.
 
-1. Verify access
+1. Verify access.
 
-After the quota is increased or storage usage is reduced, allow time for SharePoint Online to reevaluate the OneDrive site. Then confirm that the user can upload and edit files again.
+   After the quota is increased or storage usage is reduced, allow time for SharePoint Online to reevaluate the OneDrive site. Then confirm that the user can upload and edit files again.
