@@ -6,7 +6,6 @@ ms.author: shjais
 ms.topic: troubleshooting
 ms.date: 05/20/2026
 ms.custom: sap:Opportunity
-ai-usage: ai-assisted
 ---
 
 # Troubleshoot issues with table views
