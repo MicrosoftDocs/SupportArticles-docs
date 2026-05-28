@@ -7,7 +7,9 @@ ms.reviewer: divargas
 ms.topic: troubleshooting
 ms.date: 04/15/2024
 ms.service: azure-virtual-machines
-ms.custom: sap:Cannot connect to my VM, linux-related-content
+ms.custom: 
+ - Kernel Upgrades
+ - Package Management issue (Yum, Zypper, RPM, DPKG, APT)
 ms.collection: linux
 ---
 # SSH connection to Azure Linux virtual machines fails due to SELinux misconfiguration

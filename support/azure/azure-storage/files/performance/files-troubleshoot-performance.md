@@ -201,7 +201,7 @@ One potential cause is a lack of SMB multi-channel support for standard file sha
 
 ### Workaround
 
-- For premium file shares, [enable SMB Multichannel](/azure/storage/files/files-smb-protocol#smb-multichannel).
+- For premium file shares, [enable SMB Multichannel](/azure/storage/files/smb-performance#smb-multichannel).
 - Obtaining a VM with a bigger core might help improve throughput.
 - Running the client application from multiple VMs will increase throughput.
 - Use REST APIs where possible.
@@ -347,7 +347,7 @@ If the number of **DirectoryOpen/DirectoryClose** calls is among the top API cal
 
 ### Workaround
 
-A fix for this issue is available in the [April Platform Update for Windows](https://support.microsoft.com/help/4052623/update-for-windows-defender-antimalware-platform).
+Update Windows Defender Antivirus antimalware platform. Download updates from the [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4052623).
 
 ## SMB Multichannel isn't being triggered
 

@@ -1,3 +1,4 @@
+items:
 - name: Windows Server
   href: welcome-windows-server.yml
 - name: Active Directory
@@ -1148,6 +1149,10 @@
       href: ./licensing-and-activation/0x8007000d-activate-machine.md
     - name: Error 0x8007232A "DNS server failure" when you activate Windows
       href: ./licensing-and-activation/activation-error-0x8007232a-dns-server-failure.md
+    - name: Error 0x8007232B "DNS name does not exist" when activating Windows
+      href: ./licensing-and-activation/activation-error-0x8007232b-dns-name-does-not-exist.md
+    - name: Error 0xC004C003 "product key is blocked" when you use MAK to activate Windows
+      href: ./licensing-and-activation/activation-error-0xc004c003-product-key-blocked.md
     - name: Error 0xC004E002 during activation
       href: ./licensing-and-activation/error-0xc004e002-during-activation.md
     - name: Error 0xC004E015 (SL_E_EUL_CONSUMPTION_FAILED)
@@ -1164,6 +1169,8 @@
       href: ./licensing-and-activation/error-when-you-validate-copy-windows.md
     - name: Event 12293 when registering a KMS host record
       href: ./licensing-and-activation/event-12293-error-0x800723-set-kms-host.md
+    - name: Event 8198, error 0xC0020017 or 0x8007139F "KMS contact failure" when activating Windows
+      href: ./licensing-and-activation/activation-event-8198-error-0xc0020017-0x8007139f-kms-contact-failure.md
     - name: Event ID 8208, 8200, or 900 is logged
       href: ./licensing-and-activation/event-id-8208-8200-900.md
     - name: Fail to activate Windows Server over the Internet

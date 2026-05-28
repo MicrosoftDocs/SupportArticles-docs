@@ -138,4 +138,4 @@ If you aren't able to run SQLCHECK on your SQL Server computer, you can check th
 
 ## Common connectivity issues
 
-When you've gone through the prerequisites and checklist, see [common connectivity issues](resolve-connectivity-errors-overview.md#common-connectivity-issues) and select the corresponding error message for detailed troubleshooting steps.
+When you've gone through the prerequisites and checklist, see [common connectivity issues](resolve-connectivity-errors-overview.md#categories-of-sql-server-connectivity-errors) and select the corresponding error message for detailed troubleshooting steps.
