@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot Connectivity and Registration for SUSE SLES VMs
-description: Troubleshoot scenarios in which an Azure VM that has a SUSE Linux Enterprise Server image can't connect to the SUSE Subscription Management Tool (SMT) repository.
+description: "Learn how to troubleshoot SUSE SLES VM connectivity and registration issues with the SUSE SMT repository on Azure. Find fixes for common scenarios."
 ms.date: 05/12/2025
 author: rnirek
 ms.author: hokamath
@@ -17,9 +17,9 @@ keywords:
 
 ## Summary
 
-This article discusses an issue in which a Microsoft Azure Virtual Machine (VM) is set up by using a SUSE Linux Enterprise Server (SLES) image, but the VM can't connect to the SUSE Subscription Management Tool (SMT) repository. This article provides some basic troubleshooting steps and actions to take for specific scenarios (such as failures in the Zypper command-line tool for managing packages in SUSE). Linux specialists at Microsoft assembled this information based on support experience and documentation from SUSE.
+This article discusses an issue in which a Microsoft Azure Virtual Machine (VM) is set up by using a SUSE Linux Enterprise Server (SLES) image, but the VM can't connect to the SUSE Subscription Management Tool (SMT) repository. This article provides some basic troubleshooting steps and actions to take for specific scenarios, like failures in the Zypper command-line tool for managing packages in SUSE. Linux specialists at Microsoft assembled this information based on support experience and documentation from SUSE.
 
-It's important to read the output of each command for more clues. We recommend that you save the results and messages for further troubleshooting.
+It's important to read the output of each command for more clues. Save the results and messages for further troubleshooting.
 
 ## Prerequisites
 
@@ -29,12 +29,12 @@ It's important to read the output of each command for more clues. We recommend t
 - [Zypper](https://documentation.suse.com/smart/systems-management/html/concept-zypper/index.html) package manager
 - [OpenSSL](https://www.openssl.org/source/) toolkit
 - [SUSEConnect](https://github.com/SUSE/connect) tool
-- [registercloudguest](https://github.com/SUSE-Enceladus/cloud-regionsrv-client/blob/master/man/man1/registercloudguest.1) tool
+- [registercloudguest](https://github.com/SUSE-Enceladus/cloud-regionsrv-client/tree/master/cloudregister) tool
 
 > [!Note]
-> If your SLES VM is behind a proxy server, we recommend that you review the technical considerations that are discussed in [Accessing the Public Cloud Update Infrastructure via a Proxy](https://www.suse.com/c/accessing-the-public-cloud-update-infrastructure-via-a-proxy/).
+> If your SLES VM is behind a proxy server, review the technical considerations discussed in [Accessing the Public Cloud Update Infrastructure via a Proxy](https://www.suse.com/c/accessing-the-public-cloud-update-infrastructure-via-a-proxy/).
 > For SLES VMs on Azure, the following conditions apply:
-> - Connecting to update servers from a SLES VM relies on hostname resolution that can't be resolved by public DNS servers. Therefore, some Linux/Unix proxy server implementations might require that you manually put a record in */etc/hosts* on the proxy server side so that the "smt-azure" name can be resolved.
+> - Connecting to update servers from a SLES VM relies on hostname resolution that public DNS servers can't resolve. Therefore, some Linux/Unix proxy server implementations might require that you manually put a record in */etc/hosts* on the proxy server side so that the "smt-azure" name can be resolved.
 >
 >    Here's an example record:
 >    
@@ -42,7 +42,7 @@ It's important to read the output of each command for more clues. We recommend t
 >
 >    The available IP addresses vary by Azure region. For more information, see the IP address list in [this smt XML file](https://susepubliccloudinfo.suse.com/v1/microsoft/servers/smt.xml).
 > 
-> - The IP addresses [168.63.129.16](/azure/virtual-network/what-is-ip-address-168-63-129-16) and 169.254.169.254 that are used by the [Instance Metadata Service (IMDS)](/azure/virtual-machines/instance-metadata-service) should bypass proxy access. These special IP addresses can't be accessed through a proxy server, and SLES VMs need information from IMDS to recognize the cloud environment that they're running on and to find an appropriate SUSE update server.
+> - The IP addresses [168.63.129.16](/azure/virtual-network/what-is-ip-address-168-63-129-16) and 169.254.169.254 that the [Instance Metadata Service (IMDS)](/azure/virtual-machines/instance-metadata-service) uses should bypass proxy access. These special IP addresses can't be accessed through a proxy server, and SLES VMs need information from IMDS to recognize the cloud environment that they're running on and to find an appropriate SUSE update server.
 >
 >    For example, the `NO_PROXY` variable in */etc/sysconfig/proxy* should be configured on SLES VMs such as the following:
 >
@@ -52,13 +52,13 @@ It's important to read the output of each command for more clues. We recommend t
 
 ### <a id="step1"></a>Step 1: Run a repository diagnostic script
 
-Run the [SUSEcloud repocheck script](https://raw.githubusercontent.com/SUSE/susecloud-repocheck/main/sc-repocheck.py) that's provided by Rich Paredes, a SUSE engineer. This Python script does the following tasks:
+Run the [SUSEcloud repocheck script](https://raw.githubusercontent.com/SUSE/susecloud-repocheck/main/sc-repocheck.py) provided by Rich Paredes, a SUSE engineer. This Python script performs the following tasks:
 
-1. Check for connectivity to the SUSE public cloud repositories.
+1. Checks for connectivity to the SUSE public cloud repositories.
 
-2. Try to fix any existing issues.
+1. Tries to fix any existing problems.
 
-3. Create a log archive in the `/var/log/` directory, and name it *sc-repocheck_\<YYMMDD_hhmmss>.tar.xzq*. This log might be useful if the connection or registration issues persist.
+1. Creates a log archive in the `/var/log/` directory, and names it *sc-repocheck_\<YYMMDD_hhmmss>.tar.xzq*. This log might be useful if the connection or registration problems persist.
 
 To start the script, run the following command to transfer the script from its GitHub location to the Python interpreter:
 
@@ -66,11 +66,11 @@ To start the script, run the following command to transfer the script from its G
 sudo python3 <(curl --location --silent https://raw.githubusercontent.com/rfparedes/susecloud-repocheck/main/sc-repocheck.py)
 ```
 
-To run successfully, the command requires internet access from the VM. Otherwise, you have to download the script first, and then modify the command so that it runs.
+To run successfully, the command requires internet access from the VM. Otherwise, you need to download the script first, and then modify the command so that it runs.
 
 ### Step 2: Check connectivity to server IP addresses on port 443
 
-The VM must be able to open a TCP connection on port 443 to the SUSE repository server `smt-azure.susecloud.net` (based on the region where the VM is located) together with the region servers. The list of IP addresses for the repository server and the region servers can be found at the following locations.
+The VM must be able to open a TCP connection on port 443 to the SUSE repository server `smt-azure.susecloud.net` (based on the region where the VM is located) together with the region servers. You can find the list of IP addresses for the repository server and the region servers at the following locations.
 
 | IP address type | URL containing the IP address list |
 | --------------- | ---------------------------------- |
@@ -136,7 +136,7 @@ DONE
 ```
 
 > [!NOTE]
-> To review the support scope of different SUSE versions, see [SUSE Lifeycle](https://www.suse.com/lifecycle).
+> To review the support scope of different SUSE versions, see [SUSE Lifecycle](https://www.suse.com/lifecycle).
 
 ## Scenario 1: No server certificate or SSL session is shown
 
@@ -150,11 +150,11 @@ Because SUSE uses certificate pinning, another injected SSL certificate can brea
 
 ### Resolution
 
-Make sure that the NVA doesn't do the following:
+Make sure that the NVA doesn't do the following actions:
 
-- Block access to the SUSE repository IP addresses
-- Do SSL packet inspection on the secure connection to the SUSE repositories
-- Insert the NVA SSL certificate on the server
+- Block access to the SUSE repository IP addresses.
+- Perform SSL packet inspection on the secure connection to the SUSE repositories.
+- Insert the NVA SSL certificate on the server.
 
 ## Scenario 2: Cloud-regionsrv-client issues and registration failures
 
@@ -212,13 +212,14 @@ If instances aren't regularly updated, they can become incompatible with our upd
 
 ### Resolution
 
-1. Create a PAYG instance by using the same OS as the one that has the broken repos.
-2. Create a temporary directory:
+1. Create a pay-as-you-go instance that uses the same OS as the one with the broken repos.
+1. Create a temporary directory.
 
     ```bash
     sudo mkdir -p /root/packages/rpms
     ```
-3. Download the following packages based on SLES versions of the affected VM:
+
+1. Download the following packages based on SLES versions of the affected VM:
 
    SLES 12
    ```bash
@@ -228,7 +229,8 @@ If instances aren't regularly updated, they can become incompatible with our upd
    ```bash
    sudo zypper --pkg-cache-dir /root/packages/ download cloud-regionsrv-client cloud-regionsrv-client-plugin-azure regionServiceClientConfigAzure python3-azuremetadata suseconnect-ng python3-cssselect python3-toml python3-lxml python3-M2Crypto python3-zypp-plugin python3-dnspython libsuseconnect suseconnect-ruby-bindings docker docker-bash-completion runc containerd libcontainers-common bash-completion
    ```
-4. Run the following commands:
+
+1. Run the following commands.
 
     ```bash
     sudo find /root/packages/ -type f -name "*.rpm" -exec cp {} /root/packages/rpms/ \;
@@ -236,7 +238,7 @@ If instances aren't regularly updated, they can become incompatible with our upd
     sudo tar -czvf suse-public-registration.tgz rpms
     ```
 
-5. Transfer `suse-public-registration.tgz` to the broken instance:
+1. Transfer `suse-public-registration.tgz` to the broken instance.
 
     ```bash
     sudo scp /root/packages/suse-public-registration.tgz user@targetip:/tmp
@@ -245,7 +247,7 @@ If instances aren't regularly updated, they can become incompatible with our upd
     > [!NOTE]
     > Replace `user` and `targetip` as appropriate.
 
-6. Sign in to the broken instance to extract and install the packages:
+1. Sign in to the broken instance to extract and install the packages.
 
     ```bash
     sudo cd tmp
@@ -254,22 +256,37 @@ If instances aren't regularly updated, they can become incompatible with our upd
     sudo zypper --no-refresh --no-remote --non-interactive install --force *.rpm
     ```
 
-7. Register the VM again:
+1. Register the VM again.
 
     ```bash
     sudo registercloudguest --force-new
     ```
+
+1. Zypper can fail running in non-interactive mode. This failure happens due to additional dependencies requesting to select a solution. If this failure occurs, run the following command and select a solution:
+
+    ```bash
+    sudo zypper --no-refresh --no-remote install --force *.rpm
+    sudo registercloudguest --force-new
+    ```
+
+    - To run as a last resort, run:
+
+    ```bash
+    sudo rpm -Uvh *.rpm --force
+    sudo registercloudguest --force-new
+    ```
+
 For more information, see [Cloud instance repos fail due to outdated packages](https://www.suse.com/support/kb/doc/?id=000021552).
 
-## Scenario 3: General registration issues
+## Scenario 3: General registration problems
 
 ### Cause
 
-Your VM has stale credentials for repository access, or you receive messages that indicate that your system isn't being registered after you try to make updates or installations.
+Your VM has stale credentials for repository access, or you receive messages that indicate that your system isn't registered after you try to make updates or installations.
 
 ### Resolution
 
-To fix most registration issues, specify the combination of the [SUSEConnect](https://github.com/SUSE/connect/blob/master/SUSEConnect.8.ronn) cleanup command and the [registercloudguest](https://github.com/SUSE-Enceladus/cloud-regionsrv-client/blob/master/man/man1/registercloudguest.1) command by using the `force-new` parameter:
+To fix most registration problems, specify the combination of the [SUSEConnect](https://github.com/SUSE/connect/blob/master/SUSEConnect.8.ronn) cleanup command and the [registercloudguest](https://github.com/SUSE-Enceladus/cloud-regionsrv-client/tree/master/cloudregister) command by using the `force-new` parameter:
 
 ```bash
 sudo SUSEConnect --cleanup
@@ -282,12 +299,12 @@ sudo registercloudguest --force-new
 >    ```bash
 >    sudo SUSEConnect --url https://smt-azure.susecloud.net --status-text
 >    ```
-> 2. Run the `SUSEConnect` command by using the product name to activate the product:
+> 1. Run the `SUSEConnect` command by using the product name to activate the product:
 >    ```bash
 >    sudo SUSEConnect --url https://smt-azure.susecloud.net --product <SLES-SAP-product-name>
 >    ```
 
-If these commands are unsuccessful, clean up all repository information, and then try to register the VM. Any error messages that are related to the certificates and other components should disappear. Run the following commands:
+If these commands aren't successful, clean up all repository information, and then try to register the VM. Any error messages that are related to the certificates and other components should disappear. Run the following commands:
 
 ```bash
 sudo SUSEConnect --cleanup
@@ -307,7 +324,7 @@ In the JSON command output, look for a `"status":"Registered"` entry.
 
 ## Scenario 4: No attested data supplied (422)
 
-After you run the [repository diagnostic script](#step1), you might see the following error entry when the script tries to fix issues that affect the `zypper update`:
+After you run the [repository diagnostic script](#step1), you might see the following error entry when the script tries to fix problems that affect the `zypper update` command:
 
 ```output
 Error: Activating SLES_SAP 12.5 x86_64 ... Error: Registration server returned 'Instance verification failed: No attested data supplied' (422)
@@ -356,23 +373,23 @@ When you try to register the VM to the SUSE repositories, you see the following 
 
 ### Cause
 
-The issue is caused by a bug in version 1.4.0 of the `suseconnect-ng` package.
+A bug in version 1.4.0 of the `suseconnect-ng` package causes the problem.
 
-These errors occur in the following modules only:
+These errors occur only in the following modules:
 
-* sle-module-legacy
-* sle-module-web-scripting
-* sle-module-hpc
-* sle-sdk
+* `sle-module-legacy`
+* `sle-module-web-scripting`
+* `sle-module-hpc`
+* `sle-sdk`
 
 ### Resolution
 
 1. Move the following files from the `/etc/products.d` folder to the `/tmp` folder:
 
-    - sle-module-hpc.prod
-    - sle-module-legacy.prod
-    - sle-module-web-scripting.prod
-    - sle-sdk.prod
+    - `sle-module-hpc.prod`
+    - `sle-module-legacy.prod`
+    - `sle-module-web-scripting.prod`
+    - `sle-sdk.prod`
 
     ```bash
     sudo cd /etc/products.d 
@@ -430,7 +447,7 @@ These errors occur in the following modules only:
 
 ## Scenario 6: Registration fails with "WARNING:Found unknown entry in credentials file "system_token="" error
 
-A "Found unknown entry in credentials file 'system_token='" warning message is logged in the `/var/log/cloudregister` log, and the VM can't register to the SUSE public cloud repositories:
+The `/var/log/cloudregister` log shows a "Found unknown entry in credentials file 'system_token='" warning message, and the VM can't register to the SUSE public cloud repositories.
 
 ```output
 2023-10-24 17:50:58,140 DEBUG:Starting new HTTPS connection (1): smt-azure.susecloud.net:443
@@ -445,7 +462,7 @@ A "Found unknown entry in credentials file 'system_token='" warning message is l
 
 ### Cause
 
-The issue occurs because of a wrong temporary certificate bundle, `ca-bundle.pem.tmp`.  
+This problem happens because of an incorrect temporary certificate bundle, `ca-bundle.pem.tmp`.  
 
 ### Resolution
 
@@ -468,7 +485,7 @@ The issue occurs because of a wrong temporary certificate bundle, `ca-bundle.pem
 
 ## Scenario 7: VM doesn't connect to SMT because of an azuremetadata error
 
-When `/var/log/cloudregister` is checked, the following azuremetadata error message is displayed:
+When you check `/var/log/cloudregister`, you see the following azuremetadata error message:
 
 ```bash
 sudo tail -10 /var/log/cloudregister
@@ -508,7 +525,7 @@ Warning: There are no enabled repositories defined. Use 'zypper addrepo' or 'zyp
 
 ### Cause 1
 
-The `--subscriptionId` entry is present in the configuration file `/etc/regionserverclnt.cfg`. This causes an error in the `azuremetadata` command:
+The configuration file `/etc/regionserverclnt.cfg` includes the `--subscriptionId` entry. This entry causes an error in the `azuremetadata` command:
 
 ```bash
 sudo cat /etc/regionserverclnt.cfg
@@ -546,7 +563,7 @@ instanceArgs = msftazure
 
 ### Cause 2
 
-When you register the SUSE server to the repo by using the `/usr/sbin/registercloudguest --force-new` command, an error occurs. The command output doesn't indicate that the registration succeeded because the `/etc/zypp/credentials.d/SCCcredentials` file was corrupted.
+An error occurs when you register the SUSE server to the repo by using the `/usr/sbin/registercloudguest --force-new` command. The command output doesn't indicate that the registration succeeded because the `/etc/zypp/credentials.d/SCCcredentials` file is corrupted.
 
 ### Resolution 2
 
@@ -666,7 +683,7 @@ SLES 12 SP5 VM with LTSS enabled failed to connect to SMT repository. The follow
 
 **Resolution:**
 
-1. Verify the list of modules enabled under directory `/etc/products.d`
+1. Verify the list of modules enabled under directory `/etc/products.d`.
    
 ```bash
 sudo ls -l /etc/products.d/
@@ -683,6 +700,7 @@ sudo ls -l /etc/products.d/
 ```
 
 2. Disable the LTSS related modules by renaming them.  
+
    ```bash
    sudo mv SLES-LTSS.prod SLES-LTSS.prod-bkp 
    ```
@@ -702,7 +720,8 @@ sudo ls -l /etc/products.d/
    -rw-r--r-- 1 root root 2254 2017-11-23 04:48 sle-module-web-scripting.prod
    -rw-r--r-- 1 root root 2363 2019-10-18 06:58 sle-sdk.prod
 ```
-4. Re-register the VM using following commands.
+
+4. Re-register the VM by using the following commands.
 
    ```bash        
    sudo SUSEConnect --cleanup
@@ -718,15 +737,17 @@ sudo ls -l /etc/products.d/
    ```output
     Registration succeeded
     ```
-5. Validate the SMT repository connectivity.
+
+5. Validate the SMT repository connectivity:
+
    ```bash
    sudo zypper refresh
    ```
    ```bash
    sudo SUSEConnect --status
    ```
-6. Once the registration to SMT repository is successful, the LTSS can be re-enabled as specified in [SUSE article - How to assign Long Term Service Pack Support repositories to installed systems](https://support.scc.suse.com/s/kb/How-to-assign-Long-Term-Service-Pack-Support-repositories-to-installed-systems-1583239391022?language=en_US)  
 
+6. Once the registration to SMT repository is successful, re-enable the LTSS as specified in [SUSE article - How to assign Long Term Service Pack Support repositories to installed systems](https://support.scc.suse.com/s/kb/How-to-assign-Long-Term-Service-Pack-Support-repositories-to-installed-systems-1583239391022?language=en_US).    
 
 ## Next steps
 
@@ -742,6 +763,6 @@ The third-party products that this article discusses are manufactured by compani
 
 ## Third-party contact information disclaimer
 
-Microsoft provides third-party contact information to help you find additional information about this topic. This contact information may change without notice. Microsoft does not guarantee the accuracy of third-party contact information.
+Microsoft provides third-party contact information to help you find additional information about this topic. This contact information might change without notice. Microsoft doesn't guarantee the accuracy of third-party contact information.
 
  

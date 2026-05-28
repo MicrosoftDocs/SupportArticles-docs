@@ -5,6 +5,8 @@ items:
   href: crashes-run-oracle-linked-server-query.md
 - name: Decreased performance when querying view across linked servers
   href: decreased-performance-linkedserver-views.md
+- name: Linked server queries that use MSDASQL fail with error 7416
+  href: msdasql-query-error-7416.md
 - name: Pass a variable to a linked server query
   href: pass-variable-linked-server-query.md
 - name: SQL Server becomes unresponsive during SQL Server dump generation

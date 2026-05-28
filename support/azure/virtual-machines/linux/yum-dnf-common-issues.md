@@ -10,7 +10,9 @@ ms.collection: linux
 ms.topic: troubleshooting
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
-ms.custom: linux-related-content
+ms.custom: 
+  - Kernel Upgrades
+  - Package Management issue (Yum, Zypper, RPM, DPKG, APT)
 ms.date: 07/10/2025
 #customer intent: As an Azure Linux VM administrator, I want troubleshoot issues in the yum and dnf tools so that I can successfully install or update applications on my VMs.
 ---

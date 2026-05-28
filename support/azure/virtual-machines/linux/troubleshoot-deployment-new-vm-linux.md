@@ -1,7 +1,9 @@
 ---
 title: Troubleshoot Linux virtual machine deployment issues
 description: Troubleshoot Linux VM deployment issues in Azure. Identify failure stages, analyze serial logs, and apply fixes to restore provisioning. Get started now.
-ms.custom: sap:Cannot create a VM, linux-related-content
+ms.custom: 
+ - Kernel Upgrades
+ - Package Management issue (Yum, Zypper, RPM, DPKG, APT)
 ms.service: azure-virtual-machines
 ms.date: 03/25/2026
 ms.collection: linux
