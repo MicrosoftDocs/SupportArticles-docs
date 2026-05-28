@@ -15882,6 +15882,11 @@
       "source_path": "support/azure/virtual-machines/windows/windows-vm-activation-error-0xc0020017-0x8007139f.md",
       "redirect_url": "/troubleshoot/windows-server/licensing-and-activation/activation-event-8198-error-0xc0020017-0x8007139f-kms-contact-failure?context=/troubleshoot/azure/virtual-machines/windows/context/context",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/virtual-machines/windows/windows-vm-activation-error-0xc004f038.md",
+      "redirect_url": "/troubleshoot/windows-server/licensing-and-activation/activation-error-0xc004cf036-insufficient-kms-host-pool-count.md?context=/troubleshoot/azure/virtual-machines/windows/context/context",
+      "redirect_document_id": false
     }
   ]
 }
