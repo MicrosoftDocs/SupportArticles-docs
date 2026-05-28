@@ -1,6 +1,6 @@
 ---
 title: Federation certificate with the thumbprint cannot be found error
-description: Provides a workaround to resolve an error in which the federation certificate with the thumbprint cannot be found. This error  occurs when you make changes to a federation trust.
+description: Provides a workaround to resolve an error in which the federation certificate that has the thumbprint cannot be found. This error occurs when you make changes to a federation trust.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -28,7 +28,7 @@ _Original KB number:_ &nbsp; 3215261
 
 ## Summary
 
-This issue can occur after you use the `Setup /m:RecoverServer` option to recover an Exchange server. In this error state, Exchange still references a federation trust certificate that is no longer available. Referencing the invalid certificate causes federation management tasks to fail. This article describes how to remove the stale federation trust configuration and recreate the trust.
+This issue can occur after you use the `Setup /m:RecoverServer` option to recover a server that's running Microsoft Exchange Server. In this error state, Exchange Server still references a federation trust certificate that's no longer available. This reference to an invalid certificate causes federation management tasks to fail. This article describes how to remove the stale federation trust configuration, and re-create the trust.
 
 ## Symptoms
 
@@ -48,7 +48,7 @@ In this situation, you receive an error message that resembles the following mes
 
 ## Cause
 
-This issue occurs because the Exchange federation trust references a missing certificate (OrgPrivCertificate). However, the federation configuration mistakenly recognizes the certificate as still there. Therefore, any PowerShell cmdlets that edit, manipulate, or use the federation trust to look for this certificate fail.
+This issue occurs because the Exchange Server federation trust references a missing certificate (OrgPrivCertificate). However, the federation configuration mistakenly recognizes the certificate as still existing. Therefore, PowerShell cmdlets fail if they edit, manipulate, or use the federation trust to look for this certificate.
 
 ## Workaround
 
@@ -58,7 +58,7 @@ Follow these steps:
 
 1. Open ADSI Edit. Select **Start**, select **Run**, enter `ADSIEdit.msc`, and then select **OK**.
 
-1. Locate `CN=Federation,CN=First Organization,CN=Microsoft Exchange,CN=Services,CN=Configuration,DC=Domain,DC=com`, and complete these steps:
+1. Locate `CN=Federation,CN=First Organization,CN=Microsoft Exchange,CN=Services,CN=Configuration,DC=Domain,DC=com`, and follow these steps:
     1. Clear the value of the `msExchFedAccountNamespace` attribute.
     1. Clear the value of the `msExchFedDelegationTrust` attribute.
     1. Set the value of the `msExchFedIsEnabled` attribute to **False**.
@@ -67,7 +67,7 @@ Follow these steps:
 
 1. Locate `CN=Accepted Domains,CN=Transport Settings,CN=First Organization,CN=Microsoft Exchange,CN=Services,CN=Configuration,DC=Domain,DC=com`, and clear the value of the `msExchFedAcceptedDomainLink` attribute for each accepted domain name.
 
-1. Recreate the federation trust. For more information, see [Configure a federation trust](/exchange/configure-a-federation-trust-exchange-2013-help).
+1. Re-create the federation trust. For more information, see [Configure a federation trust](/exchange/configure-a-federation-trust-exchange-2013-help).
 
 ## More information
 
