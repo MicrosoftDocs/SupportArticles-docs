@@ -223,6 +223,10 @@
     {
       "source_path": "Exchange/ExchangeServer/Administration/incorrect-edge-transport-server-version-eac-ecp.md",
       "redirect_url": "incorrect-edge-transport-server-version-eac"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/setup/ex2019-setup-does-not-run-correctly-started-powershell.md",
+      "redirect_url": "exchange-setup-does-not-run-correctly-started-powershell"
     }
   ]
 }
