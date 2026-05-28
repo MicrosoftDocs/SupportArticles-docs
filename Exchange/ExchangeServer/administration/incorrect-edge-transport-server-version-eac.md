@@ -1,6 +1,6 @@
 ---
 title: Edge Transport server version isn't updated after upgrade
-description: Describes an issue in which the Exchange Server version for an Edge Server isn't updated in the Exchange Admin Center (EAC) after upgrade.
+description: Discusses an issue in which the Exchange Server version for an Edge Server isn't updated in the Exchange Admin Center (EAC) after upgrade.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -28,13 +28,13 @@ _Original KB number:_ &nbsp; 4019802
 
 ## Symptoms
 
-After you upgrade an Exchange Server that is assigned the Edge Transport server role to a new version, you notice the following situations:
+After you upgrade a server that's assigned the Edge Transport server role to a newer version of Microsoft Exchange Server, you notice the following situations:
 
 - In Exchange Admin Center (EAC), the version information for the Edge Transport server isn't updated as expected, as shown in the following screenshot.
 
     :::image type="content" source="media/incorrect-edge-transport-server-version-eac-ecp/incorrect-version-eac.png" alt-text="Screenshot of wrong Edge Transport server version in Exchange Admin Center.":::
 
-- On another Exchange Server that isn't assigned the Edge Transport server role, you run the [Get-ExchangeServer](/powershell/module/exchange/get-exchangeserver) cmdlet in Exchange Management Shell (EMS) by using the following command:
+- On another Exchange server that isn't assigned the Edge Transport server role, you run the [Get-ExchangeServer](/powershell/module/exchange/get-exchangeserver) cmdlet in Exchange Management Shell (EMS) by using the following command:
 
     ```powershell
     Get-ExchangeServer edge | FL Name, AdminDisplayVersion
@@ -48,11 +48,11 @@ This issue occurs because the Edge Subscription XML file that contains the versi
 
 ## Resolution
 
-To resolve this issue, resubscribe the Edge Transport server by completing these steps:
+To resolve this issue, resubscribe the Edge Transport server by following these steps:
 
-1. Using an account that has [sufficient permissions](/exchange/permissions/permissions) on the Edge Transport server, open the [Exchange Management Shell (EMS)](/powershell/exchange/open-the-exchange-management-shell) or [connect to your Exchange server by using remote PowerShell](/powershell/exchange/connect-to-exchange-servers-using-remote-powershell).
+1. Use an account that has [sufficient permissions](/exchange/permissions/permissions) on the Edge Transport server to open the [Exchange Management Shell (EMS)](/powershell/exchange/open-the-exchange-management-shell) or [connect to your Exchange server by using remote PowerShell](/powershell/exchange/connect-to-exchange-servers-using-remote-powershell).
 
-1. On the Edge Transport server, run the [New-EdgeSubscription](/powershell/module/exchange/new-edgesubscription) cmdlet to create and export the Edge Subscription file as shown in the following example:
+1. On the Edge Transport server, run the [New-EdgeSubscription](/powershell/module/exchange/new-edgesubscription) cmdlet to create and export the Edge Subscription file, as shown in the following example:
 
     ```powershell
     New-EdgeSubscription -FileName "c:\EdgeServerSubscription.xml"
@@ -65,7 +65,7 @@ To resolve this issue, resubscribe the Edge Transport server by completing these
     New-EdgeSubscription -FileData $Temp -Site "Default-First-Site-Name"
     ```
 
-You have to resubscribe the Edge Transport server to the same Active Directory site that it was originally subscribed to. Also, you don't have to remove the original Edge Subscription. The resubscription process overwrites the existing Edge Subscription.
+You have to resubscribe the Edge Transport server to the same Active Directory site that it was originally subscribed to. Also, you don't have to remove the original Edge Subscription. The resubscription process overwrites the existing Edge subscription.
 
 ## References
 
