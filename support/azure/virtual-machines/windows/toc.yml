@@ -582,8 +582,6 @@ items:
       href: activation-watermark-appears.md
     - name: Duplicate Client Machine ID
       href: windows-activation-duplicate-client-machine-id.md
-    - name: Event 8198, error 0xC0020017 or 0x8007139F - KMS contact failure
-      href: ../../../windows-server/licensing-and-activation/activation-event-8198-error-0xc0020017-0x8007139f-kms-contact-failure.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Forced tunneling scenario
       href: custom-routes-enable-kms-activation.md
   - name: KMS and DNS errors
@@ -600,10 +598,12 @@ items:
       href: windows-vm-activation-error-0xc004f038.md
     - name: Error 0xC004F042 — KMS can't be used
       href: windows-vm-activation-error-0xc004f042.md
+    - name: Event 8198, error 0xC0020017 or 0x8007139F - KMS contact failure
+      href: ../../../windows-server/licensing-and-activation/activation-event-8198-error-0xc0020017-0x8007139f-kms-contact-failure.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
   - name: Product key and MAK errors
     items:
-    - name: Error 0xC004C003 — Product key blocked
-      href: windows-vm-activation-error-0xc004c003.md
+    - name: Error 0xC004C003 — The product key is blocked
+      href: ../../../windows-server/licensing-and-activation/activation-error-0xc004c003-product-key-blocked.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Error 0xC004C008 — Product key exceeded limit
       href: windows-vm-activation-error-0xc004c008.md
     - name: Error 0xC004F06C — MAK activation failed
