@@ -1,6 +1,6 @@
 ---
 title: Large items are skipped during public folder migration
-description: Fixes an issue in which large items are skipped during a public folder migration and you receive the Failed to recopy large item error in the migration report.
+description: Fixes an issue in which large items are skipped during a public folder migration, and you receive the Failed to recopy large item error in the migration report.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -27,15 +27,15 @@ ms.date: 05/27/2026
 
 ## Summary
 
-This article explains why large items are skipped during public folder migration from Exchange Server to Exchange Online. The article also describes how to fix the issue by reviewing and modifying item size limits if necessary, and resuming migration.
+This article explains why large items are skipped during public folder migration from Microsoft Exchange Server to Exchange Online. The article also discusses how to fix the issue by reviewing and modifying item size limits, if it's necessary, and resuming migration.
 
 ## Symptoms
 
-When you run a public folder migration from Microsoft Exchange Server to Exchange Online, the migration skips one or more items because they're marked as large items. The [migration report](/exchange/mailbox-migration/migration-users-status-report#migration-users-report-in-classic-exchange-admin-center-classic-eac) displays a "Failed to recopy large item" informational message that resembles the following message:
+When you run a public folder migration from Exchange Server to Exchange Online, the migration skips one or more items because they're marked as large items. The [migration report](/exchange/mailbox-migration/migration-users-status-report#migration-users-report-in-classic-exchange-admin-center-classic-eac) displays a "Failed to recopy large item" informational message that resembles the following message:
 
 > [\<ServerName>] **Failed to recopy large item**: Item ([len=70, data=000000001A447390AA6611 CD9BC800AA002FC45A0900C1F54ED028C6E54FBFB688ACA28186DB00012A8622020000C1F54ED028C6E54FBFB688ACA28186DB00012A8638D70000]) MessageClass:"IPM.Post", Size: (**16.63 MB** (17,436,461 bytes)), Folder: ([len=46, data=000000001A447390AA6611CD9BC800AA002FC45A0300C1F54ED028C6E54FBFB688ACA28186DB00012A8622020000])
 
-In this example, the size of the item that was marked as large and that was skipped during migration is 16.63 MB.
+In this example, the size of the item that was marked as large and was skipped during migration is 16.63 MB.
 
 ## Cause
 
@@ -73,11 +73,11 @@ Then, check the current limits that are set in Exchange Online and in Exchange S
    ```
 
    > [!NOTE]
->  If the size of the largest item that was skipped is more than the current limit, but less than 150 MB, increase the current limit to a greater value to accommodate the size of the item. Also, migration skips items  that are larger than 150 MB by design. In this case, you can safely ignore the issue. If this skipping isn't acceptable, you can stop the migration.
+>  If the size of the largest item that was skipped is more than the current limit, but less than 150 MB, increase the current limit to a greater value to accommodate the size of the item. By design, migration skips items that are larger than 150 MB. In this case, you can safely ignore the issue. If this skipping isn't acceptable, you can stop the migration.
 
 ### Check the current item limit size for individual public folders in Exchange Server
 
-1. In [Exchange Management Shell](/powershell/exchange/exchange-management-shell), run the [Get-PublicFolder](/powershell/module/exchangepowershell/Get-PublicFolder) cmdlet as shown, to determine the value of the `MaxItemSize` parameter on the affected public folder:
+1. In [Exchange Management Shell](/powershell/exchange/exchange-management-shell), run the [Get-PublicFolder](/powershell/module/exchangepowershell/Get-PublicFolder) cmdlet as shown to determine the value of the `MaxItemSize` parameter on the affected public folder:
 
    ```powershell
    Get-PublicFolder <\PF1> |FT Identity, MaxItemSize
@@ -85,7 +85,7 @@ Then, check the current limits that are set in Exchange Online and in Exchange S
 
    In this cmdlet, replace \<\PF1> with either the path or the identity of the affected public folder.
 
-   To determine the identity of a public folder that has a value set for the `MaxItemSize` parameter, run the  [Get-PublicFolder](/powershell/module/exchangepowershell/get-publicfolder) cmdlet as shown, in Exchange Management Shell:  
+   To determine the identity of a public folder that has a value set for the `MaxItemSize` parameter, run the  [Get-PublicFolder](/powershell/module/exchangepowershell/get-publicfolder) cmdlet as shown in Exchange Management Shell:  
 
    ```powershell
    Get-PublicFolder \ -Recurse | where {$_.MaxItemSize -ne $null}| FT Identity, MaxItemSize
@@ -120,7 +120,7 @@ Start-MigrationBatch PublicFolderMigration
 
 ## More information
 
-If items are marked as large and skipped during public folder migration, the "MapiExceptionPermanentImportFailure" with "MapiExceptionMaxSubmissionExceeded" failure type is registered. This failure type might not display in the **Migration** pane in the [Exchange admin center](/exchange/exchange-admin-center) during the migration or be listed in the migration report. However, you can use the following steps to find it:
+If items are marked as large and skipped during public folder migration, the "MapiExceptionPermanentImportFailure" with "MapiExceptionMaxSubmissionExceeded" failure type is registered. This failure type might not appear in the **Migration** pane in the [Exchange admin center](/exchange/exchange-admin-center) during the migration or be listed in the migration report. However, you can use the following steps to find it:
 
 1. To retrieve all failures that are listed in the statistics of the public folder mailbox migration request, run the [Get-PublicFolderMailboxMigrationRequest](/powershell/module/exchangepowershell/get-publicfoldermailboxmigrationrequest) cmdlet and [Get-PublicFolderMailboxMigrationRequestStatistics](/powershell/module/exchangepowershell/get-publicfoldermailboxmigrationrequeststatistics) cmdlets in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell):  
 
@@ -131,7 +131,7 @@ If items are marked as large and skipped during public folder migration, the "Ma
 
    Replace \<Mailbox1> with the identity of the affected public folder mailbox.
 
-1. Run the following command to locate the `MapiExceptionPermanentImportFailure` failure type and check the error message:
+1. To locate the `MapiExceptionPermanentImportFailure` failure type and check the error message, run the following command:
 
    ```powershell
    $pf_stats.Report.Failures | where {$_.FailureType -eq "MapiExceptionPermanentImportFailure"} | select -last 1
@@ -153,7 +153,7 @@ If items are marked as large and skipped during public folder migration, the "Ma
 
    This example is the value specified in the `MapiExceptionPermanentImportFailure` failure type for the item that's 16.63 MB in size and was skipped during migration.  
 
-   The current value set for the `MaxItemSize` parameter on the individual public folder in Exchange Server is 0x800000 (or 8 MB). However, this value is smaller than 16.63 MB. Because of this setting for the individual Exchange Server public folders, the Exchange Online Mailbox Replication Service (MRS) enforces the same migration item size limit, and it skips the 16.63-MB item.
+   The current value set for the `MaxItemSize` parameter on the individual public folder in Exchange Server is 0x800000 (or 8 MB). However, this value is smaller than 16.63 MB. Because of this setting for the individual Exchange Server public folders, the Exchange Online Mailbox Replication Service (MRS) enforces the same migration item size limit, and it skips the 16.63 MB item.
 
    > [!TIP]
    > To determine the equivalent of the displayed size (such as 0x800000) in MB, divide it by 1 MB, as shown in the following screenshot:
