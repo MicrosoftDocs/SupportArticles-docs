@@ -37,7 +37,7 @@ This error typically occurs in the following scenarios:
 
 ## Resolution
 
-To resolve this issue, make sure your KMS clients connect to the correct hosts. This factor is particularly important if you're using specific KMS hosts to activate specific applications or operating systems.
+To resolve this issue, make sure your KMS clients connect to the correct hosts. This factor is important if you're using specific KMS hosts to activate specific applications or operating systems.
 
 To get the best results from these procedures, you should be familiar with the [`slmgr` script](/windows-server/get-started/activation-slmgr-vbs-options).
 
