@@ -5,7 +5,7 @@ editor: v-jsitser
 ms.service: azure-virtual-machines
 ms.date: 09/15/2025
 ms.reviewer: srijangupta, v-leedennis
-ms.custom: sap:Cannot create a VM
+ms.custom: VM Performance
 ---
 # Cloud–init-enabled VM takes a long time to start up
 

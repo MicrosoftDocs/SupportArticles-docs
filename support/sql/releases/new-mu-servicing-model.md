@@ -1,60 +1,77 @@
 ---
-title: Updates to the Microsoft Update detection logic 
-description: This article describes the updates to the Microsoft Update detection logic for SQL Service servicing.
-ms.date: 03/21/2025
+title: Updates to the Microsoft Update detection logic
+description: Learn how the modern SQL Server servicing model in Microsoft Update offers cumulative updates (CUs) and GDR security releases through MU, WSUS, and the Microsoft Update Catalog.
+ms.date: 05/20/2026
 ms.topic: concept-article
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall
-ms.reviewer: jeffwil 
+ms.reviewer: jeffwil, v-shaywood
 ---
 
 # Updates to the Microsoft Update detection logic for SQL Server servicing
 
-_Applies to:_ &nbsp; SQL Server 2019, SQL Server 2017, SQL Server 2016
+_Applies to:_ &nbsp; SQL Server 2019, SQL Server 2022, SQL Server 2025
 
-## Historical servicing baselines
+## Summary
 
-Historically, servicing baselines (RTM or Service Pack) have included the following servicing branches:
+This article describes the modern SQL Server servicing model used by Microsoft Update (MU), Windows Server Update Services (WSUS), and the Microsoft Update Catalog. It explains how the detection logic offers cumulative updates (CUs) and General Distribution Release (GDR) security updates to SQL Server instances, why the logic changed, and which releases the updated behavior applies to. Use this information to plan routine patching, manage large fleets through WSUS, and choose between the CU and GDR servicing branches.
 
-- A General Distribution Release (GDR) branch that contains only security and other critical fixes.
-- A cumulative update (CU) branch that contains security and other critical fixes plus all other fixes for the baseline.
+## How SQL Server servicing baselines work
 
-## Microsoft update detection logic
+A SQL Server servicing baseline (RTM or, for older versions, a Service Pack) branches into two servicing tracks:
 
-The Microsoft Update (MU) detection logic was constructed so that instances at the servicing baseline or along the GDR branch would be offered updates from the GDR branch.
+- A *General Distribution Release* (GDR) branch that contains only security and other critical fixes.
+- A *cumulative update* (CU) branch that contains the same security and critical fixes, plus all other fixes released for the baseline.
 
-Previously, users had to proactively install at least one CU to align the instance to the CU branch for servicing through MU. However, after that was done, you could not return to the GDR branch for that instance until either of the following changes were made:
+After you install a CU, the instance moves to the CU branch and continues to get CUs (and the CU branch version of GDR security releases) for that baseline.
 
-- The baseline was reset by moving up to the next service pack.
-- The instance was reverted to the GDR branch or servicing baseline by uninstalling all CUs.
+## Microsoft Update detection logic
 
-This logic was established to minimize the changes to the instance if a security update or other critical update was required. Instances on the CU branch have to take all updates that are released for the baseline when a required security or other critical release appears. This includes all nonsecurity changes up to the required security update.
+### How the original logic worked
 
-### Problems with MU logic
+The original Microsoft Update (MU) detection logic offered updates from the GDR branch to instances that were at the servicing baseline or already on the GDR branch.
 
-However, this logic created problems for users who tried to manage routine servicing of large sets of instances by using WSUS. This is because the MU logic couldn't be used without first manually updating every client so that it could participate. 
+To get CU-branch updates through MU, you had to install at least one CU manually first. After the instance was on the CU branch, you couldn't return it to the GDR branch unless one of these things happened:
 
-### Changes to MU detection logic
+- The baseline was reset by moving to the next Service Pack (for SQL Server versions that still shipped Service Packs).
+- All CUs were uninstalled to revert the instance to the GDR branch or servicing baseline.
 
-To work around this issue and still avoid flipping instances to the CU train without explicit user consent, the following changes were made to the MU detection logic for both routine CU servicing and security releases for the more recent servicing releases of baselines in support:
+This design minimized the changes applied to an instance when only a security or other critical fix was needed. Instances on the CU branch get every update released for the baseline when a required security release ships, including all nonsecurity changes up to that security update.
 
-- Cumulative Updates: The MU detection logic now allows clean instances that are at the baseline (RTM or SP,  with no servicing updates) or that are already updated along the CU branch to receive the update. A CU update does not have to be installed for an instance to be offered the update. However, if the instance has a GDR update, the instance must still be manually updated outside MU to become manageable through MU (WSUS) automation.
-- Security Releases (GDRs): The logic for security releases is now split into the following channels:
+### Problem with the original logic
 
-  - An *Automatic Updates* channel (Microsoft Update) keeps the older historic behavior that requires a CU to be installed on the instance in order for the CU branch version of the security release to be offered. It does this to protect instances from receiving all updates instead of only critical and security-related updates without evidence of the user explicitly opting in to the more extensive mode of servicing.
+The original logic made routine servicing of large SQL Server fleets through WSUS difficult, because each instance had to be manually moved to the CU branch before WSUS could offer CU-branch updates to it. That manual step doesn't scale for environments that manage many instances centrally.
 
-  - A *WSUS / Catalog* channel that uses the new detection logic that allows the CU branch version of the security release to be applied against a clean baseline instance. This is the channel of the release that will be presented to users who go to the Microsoft Update Catalog website.
+### Changes to the logic
+
+To make WSUS-based servicing practical without silently moving instances to the CU branch, the MU detection logic was updated for both routine CU servicing and GDR security releases on supported baselines.
+
+#### Cumulative updates
+
+The detection logic now offers a CU to a clean instance that's at the baseline (RTM, with no servicing updates applied) or that's already on the CU branch. You don't have to install a CU first to be offered the next CU.
+
+If the instance has a GDR update applied, you still need to update it manually (outside MU) before WSUS automation can manage it on the CU branch.
+
+#### Security releases (GDRs)
+
+The logic for GDR security releases is split into two channels:
+
+- **Automatic Updates channel (Microsoft Update)**. This channel keeps the original behavior. A CU must already be installed on the instance for the CU branch version of a security release to be offered. This requirement protects instances from getting all CU content when the user hasn't explicitly opted in to CU branch servicing.
+- **WSUS and Microsoft Update Catalog channel**. This channel uses the new detection logic, which lets the CU branch version of a security release be applied to a clean baseline instance. This version of the release is offered to users who go to the [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/) website.
 
 ## Applicable releases
 
-This new updated detection logic applies to the following CU and GDR releases:
+The updated detection logic applies to the following releases:
 
 - SQL Server 2016 Service Pack 2: CU14 and later CUs
 - SQL Server 2017 RTM: CU19 and later CUs
-- SQL Server 2019 RTM: All CUs
-- GDR and Security Releases: All starting in 2021
+- SQL Server 2019 RTM: all CUs
+- SQL Server 2022 RTM: all CUs
+- SQL Server 2025 RTM: all CUs
+- GDR and security releases: all releases starting in 2021
 
 > [!NOTE]
-> For SQL Server 2019, the RTM baseline can be either the RTM (**15.0.2000.5**) version baseline or the RTM + RTM GDR (**15.0.2070.41**) version baseline. Either version will work for this release.
-> For the SQL Server 2014 SP3 (**12.3.6024.0**) version baseline, the new model will be implemented for GDR Security Releases on the CU branch starting in 2021.
-> For information about the old Microsoft Update detection model, see [Non-applicable SQL Server CUs are listed in WSUS, MU, or ConfMgr](../database-engine/install/windows/cu-apply-installation.md).
+>
+> - For SQL Server 2019, the RTM baseline can be either the RTM (**15.0.2000.5**) baseline or the RTM + RTM GDR (**15.0.2070.41**) baseline. Either baseline works with this model.
+> - For the SQL Server 2014 SP3 (**12.3.6024.0**) baseline, the model applies to GDR security releases on the CU branch starting in 2021. SQL Server 2014 reached the end of extended support on July 9, 2024, and no longer gets security updates outside of [Extended Security Updates](/sql/sql-server/end-of-support/sql-server-end-of-life-overview).
+> - For information about the original Microsoft Update detection model, see [Non-applicable SQL Server CUs are listed in WSUS, MU, or ConfMgr](../database-engine/install/windows/cu-apply-installation.md).
 
