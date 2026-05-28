@@ -22,6 +22,7 @@ ms.date: 05/12/2026
 
 _Original KB number:_ &nbsp;2764844
 
+
 ## Symptoms
 
 When you try to move a mailbox in a Microsoft Exchange Server 2013 environment, you receive the following error message:
