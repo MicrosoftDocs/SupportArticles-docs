@@ -97,8 +97,8 @@ For more information about this issue, see [Azure VM Ghosted Nic Validation and 
 
 1. Download the following scripts:
 
-- [Windows_GhostedNIC_Detection.ps1](https://github.com/Azure/azure-support-scripts/blob/master/RunCommand/Windows/Windows_GhostedNIC_Detection.ps1)
-- [Windows_GhostedNIC_Removal.ps1](https://github.com/Azure/azure-support-scripts/blob/master/RunCommand/Windows/Windows_GhostedNIC_Removal.ps1)
+- [Windows_GhostedNIC_Detection.ps1](https://github.com/Azure/azure-support-scripts/blob/master/RunCommand/Windows/Windows_GhostedNIC_Detection/Windows_GhostedNIC_Detection.ps1)
+- [Windows_GhostedNIC_Removal.ps1](https://github.com/Azure/azure-support-scripts/blob/master/RunCommand/Windows/Windows_GhostedNIC_Removal/Windows_GhostedNIC_Removal.ps1)
 
 1. To detect any ghosted network adapters or drivers, open an administrative Windows PowerShell Command Prompt window, and then run the following commands:
 
