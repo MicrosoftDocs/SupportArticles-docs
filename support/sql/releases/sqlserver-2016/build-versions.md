@@ -19,7 +19,9 @@ This article lists the Microsoft SQL Server 2016 builds that were released after
 
 | Cumulative update name   | Product version | Knowledge Base number                                   | Release date       |
 |--------------------------|-----------------|---------------------------------------------------------|-------------------|
-| Azure Connect Pack + GDR | 13.0.7075.5     | [KB5077473](https://support.microsoft.com/help/5077473) | March 10, 2026  |
+|Azure Connect Pack + GDR | 13.0.7085.1     | [KB5089270](https://support.microsoft.com/help/5089270) | May 12, 2026  |
+|Azure Connect Pack + GDR | 13.0.7080.1     | [KB5084820](https://support.microsoft.com/help/5084820) | April 14, 2026  |
+ Azure Connect Pack + GDR | 13.0.7075.5     | [KB5077473](https://support.microsoft.com/help/5077473) | March 10, 2026  |
 | Azure Connect Pack + GDR | 13.0.7070.1     | [KB5068400](https://support.microsoft.com/help/5068400) | November 11, 2025  |
 | Azure Connect Pack + GDR | 13.0.7065.1     | [KB5065227](https://support.microsoft.com/help/5065227) | September 09, 2025  |
 | Azure Connect Pack + GDR | 13.0.7060.1     | [KB5063761](https://support.microsoft.com/help/5063761) | August 12, 2025  |
@@ -37,6 +39,8 @@ This article lists the Microsoft SQL Server 2016 builds that were released after
 
 | Cumulative update name | Product version | Knowledge Base number                                   | Release date        |
 |------------------------|-----------------|---------------------------------------------------------|--------------------|
+| SP3 + GDR              | 13.0.6490.1     | [KB5089271](https://support.microsoft.com/help/5089271) | May 12, 2026   |
+| SP3 + GDR              | 13.0.6485.1     | [KB5084821](https://support.microsoft.com/help/5084821) | April 14, 2026   |
 | SP3 + GDR              | 13.0.6480.4     | [KB5077474](https://support.microsoft.com/help/5077474) | March 10, 2026   |
 | SP3 + GDR              | 13.0.6475.1     | [KB5068401](https://support.microsoft.com/help/5068401) | November 11, 2025   |
 | SP3 + GDR              | 13.0.6470.1     | [KB5065226](https://support.microsoft.com/help/5065226) | September 09, 2025   |

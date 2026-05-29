@@ -18,6 +18,8 @@ ms.custom: sap:Cannot connect to my VM
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
+## Summary
+
 This article helps resolve the issue when you can't connect to an Azure virtual machine (VM) because no Remote Desktop license server is available to provide a license.
 
 ## Symptoms

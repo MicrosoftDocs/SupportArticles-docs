@@ -1,8 +1,6 @@
 ---
 title: Exchange data can't be collected to generate insights
 description: Provides a resolution for the issue where no insights are generated based on Exchange data even if relationship intelligence is enabled.
-author: roraisin
-ms.author: roraisin
 ms.topic: troubleshooting
 ms.date: 03/28/2023
 ms.custom: sap:Sales Insights

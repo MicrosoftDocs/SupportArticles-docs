@@ -1,6 +1,6 @@
 ---
 title: Can't deploy Virtual Machines or Virtual Machine Scale Sets (Uniform) with Capacity Reservation
-description: The following article discusses why you may not be able to deploy virtual machines (VMs) or Virtual Machine Scale Sets (VMSS) with Capacity Reservation.
+description: The following article discusses why you might not be able to deploy virtual machines (VMs) or Virtual Machine Scale Sets with Capacity Reservation.
 ms.date: 12/06/2024
 ms.reviewer: 
 ms.service: azure-virtual-machines
@@ -12,11 +12,13 @@ ms.custom: sap:Cannot create a VM
 
 **Applies to:** :heavy_check_mark: Linux VMs :heavy_check_mark: Windows VMs
 
-The following article discusses why you may not be able to deploy virtual machines (VMs) or Virtual Machine Scale Sets (VMSS) with Capacity Reservation.
+## Summary
 
-## Reasons why VMs or VMSS won't deploy with Capacity Reservation
+The following article discusses why you might not be able to deploy virtual machines (VMs) or Virtual Machine Scale Sets with Capacity Reservation.
 
-If you have an existing Capacity Reservations that you can't use with VMs or VMSS, it could be because of one or more of the following reasons:
+## Reasons why VMs or Virtual Machine Scale Sets won't deploy with Capacity Reservation
+
+If you have an existing Capacity Reservations that you can't use with VMs or Virtual Machine Scale Sets, it could be because of one or more of the following reasons:
 
 - Limitations and restrictions of capacity reservation.
 
@@ -28,25 +30,25 @@ If you have an existing Capacity Reservations that you can't use with VMs or VMS
 
     - UltraSSD storage
 
-  - Spot VMs and Azure Dedicated Host Nodes are not supported with capacity reservation.
+  - Spot VMs and Azure Dedicated Host Nodes aren't supported with capacity reservation.
 
-  - For the supported VM series, up to three Fault Domains (FDs) will be supported. A deployment with more than 3 FDs will fail to deploy against capacity reservation.
+  - For the supported VM series, up to three Fault Domains (FDs) are supported. A deployment with more than three FDs fail to deploy against capacity reservation.
 
-  - Availability Sets are not supported with capacity reservation.
+  - Availability Sets aren't supported with capacity reservation.
 
-  - The scope for capacity reservation is subscription. Only the subscription that created the reservation can use it. If your VM/VMSS is in a different subscription, create a new reservation in that subscription, or create your VM/VMSS in the subscription that has access to the capacity reservation.
+  - The scope for capacity reservation is subscription. Only the subscription that created the reservation can use it. If your VM/Virtual Machine Scale Sets is in a different subscription, create a new reservation in that subscription, or create your VM/Virtual Machine Scale Sets in the subscription that has access to the capacity reservation.
 
 - Not deploying explicitly against the reservation.
 
-  To consume Capacity Reservation, the reservation should be explicitly added as a property of the VM or VMSS.
+  To consume Capacity Reservation, the reservation should be explicitly added as a property of the VM or Virtual Machine Scale Sets.
   
   For more information, see the following documentation:
 
   - [Associate a new Virtual Machine to Capacity Reservation](/azure/virtual-machines/capacity-reservation-associate-vm)
   - [Associate a new Virtual Machine Scale Sets to Capacity Reservation](/azure/virtual-machines/capacity-reservation-associate-virtual-machine-scale-set)
 
-- Trying to attach a running VM/VMSS without first de-allocating the VM/VMSS.
+- Trying to attach a running VM/Virtual Machine Scale Sets without first de-allocating the VM/Virtual Machine Scale Sets.
 
-  To attach running VM/VMSS to Capacity Reservation, the VM/VMSS must first be de-allocated. At the time of reallocation, reference Capacity Reservation as a property of the VM/VMSS.
+  To attach running VM/Virtual Machine Scale Sets to Capacity Reservation, the VM/Virtual Machine Scale Sets must first be de-allocated. At the time of reallocation, reference Capacity Reservation as a property of the VM/Virtual Machine Scale Sets.
 
  

@@ -18,6 +18,8 @@ ms.custom: sap:My VM is not booting
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
+## Summary
+
 This article describes the "Getting ready" and "Getting Windows ready" screens that you may encounter when you start a Windows virtual machine (VM) in Microsoft Azure. It provides steps to help you collect data for a support ticket.
 
 [!INCLUDE [Feedback](../../../includes/feedback.md)]

@@ -6,7 +6,7 @@ ms.author: msaenzbo
 editor: v-jsitser
 ms.reviewer: azurevmlnxcic, divargas, v-leedennis
 ms.service: azure-virtual-machines
-ms.custom: sap:Cannot connect to my VM, linux-related-content
+ms.custom: Cannot connect to my VM
 ms.collection: linux
 ms.topic: troubleshooting
 ms.workload: infrastructure-services
@@ -18,9 +18,9 @@ ms.date: 07/10/2025
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
-Misconfigurations at the networking layer can cause common issues to occur in the Red Hat Update Infrastructure (RHUI). This article helps you identify and resolve some of these issues.
+## Summary
 
-## Overview
+Misconfigurations at the networking layer can cause common issues to occur in the Red Hat Update Infrastructure (RHUI). This article helps you identify and resolve some of these issues.
 
 Access to the Microsoft Azure-hosted RHUI is limited to virtual machines (VMs) that are within the Azure Datacenter IP address ranges. For more information, see [Red Hat Update Infrastructure for on-demand Red Hat Enterprise Linux VMs in Azure](/azure/virtual-machines/linux/update-infrastructure-redhat).
 

@@ -19,6 +19,8 @@ ms.custom: sap:My VM is not booting
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
+## Summary
+
 This article helps resolve the issue when your Virtual Machine (VM) is stuck at the Windows Update stage during startup.
 
 ## Symptom

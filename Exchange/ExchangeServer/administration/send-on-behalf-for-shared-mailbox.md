@@ -31,7 +31,7 @@ This issue occurs because the **Send on Behalf** permission can't be managed in 
 
 ## Workaround
 
-To work around this issue, add the **Send on Behalf** permission by using the following [Set-Mailbox](/powershell/module/exchangepowershell/set-mailbox?view=exchange-ps) PowerShell command:
+To work around this issue, add the **Send on Behalf** permission by using the following [Set-Mailbox](/powershell/module/exchangepowershell/set-mailbox?view=exchange-ps&preserve-view=true) PowerShell command:
 
 ```powershell
 Set-Mailbox -Identity <MailboxOrGroupIdentity> -GrantSendOnBehalfTo <Delegates>
@@ -43,5 +43,5 @@ For example, to assign the **Send on Behalf** permission for Sean Chai's mailbox
 Set-Mailbox -Identity seanc@contoso.com -GrantSendOnBehalfTo hollyh
 ```
 
-[!NOTE]
-If you use Microsoft 365, you can use the Microsoft 365 admin center to assign the Send on Behalf permission to shared mailboxes.
+> [!NOTE]  
+> If you use Microsoft 365, you can use the Microsoft 365 admin center to assign the Send on Behalf permission to shared mailboxes.

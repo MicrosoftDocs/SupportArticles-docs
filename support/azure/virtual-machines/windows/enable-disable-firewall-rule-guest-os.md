@@ -22,6 +22,8 @@ ms.custom: sap:Cannot connect to my VM
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
+## Summary
+
 This article provides a reference for troubleshooting a situation in which you suspect that the guest operating system firewall is filtering partial traffic on a virtual machine (VM). This could be useful for the following reasons:
 
 * If a change was deliberately made to the firewall that caused RDP connections to fail, using the Custom Script Extension feature can resolve the issue.
@@ -30,7 +32,7 @@ This article provides a reference for troubleshooting a situation in which you s
 
 ## Solution
 
-How you configure the firewall rules depends on the level of access to the VM that’s required. The following examples use RDP rules. However, the same methods can be applied to any other kind of traffic by pointing to the correct registry key.
+How you configure the firewall rules depends on the level of access to the VM that's required. The following examples use RDP rules. However, the same methods can be applied to any other kind of traffic by pointing to the correct registry key.
 
 ### Online troubleshooting
 
@@ -147,7 +149,7 @@ Before you follow these steps, take a snapshot of the system disk of the affecte
 7. Locate and then open the \windows\system32\config\SYSTEM file.
 
     > [!Note]
-    > You are prompted for a name. Enter **BROKENSYSTEM**, and then expand **HKEY_LOCAL_MACHINE**. You will now see an additional key that’s named **BROKENSYSTEM**. For this troubleshooting, we are mounting these problem hives as **BROKENSYSTEM**.
+    > You are prompted for a name. Enter **BROKENSYSTEM**, and then expand **HKEY_LOCAL_MACHINE**. You will now see an additional key that's named **BROKENSYSTEM**. For this troubleshooting, we are mounting these problem hives as **BROKENSYSTEM**.
 
 8. Make the following changes on the BROKENSYSTEM branch:
 

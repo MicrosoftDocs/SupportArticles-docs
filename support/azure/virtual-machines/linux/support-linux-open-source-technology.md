@@ -11,6 +11,10 @@ ms.reviewer: patcatun, clausw, divargas, rondom, azurevmlnxcic, v-weizhu
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
+## Summary
+
+This article describes the support available for Linux distributions and open-source technology in Microsoft Azure. It covers the endorsed Linux distributions, support options, and resources available for customers running Linux on Azure.
+
 Microsoft Azure supports the [Linux operating system](https://azure.microsoft.com/solutions/linux-on-azure). All Linux distributions are welcome in Azure. To upload your Linux distribution to Azure, see the [requirements](/azure/virtual-machines/linux/imaging). Marketplace images of the most popular Linux distributions are also available. Support for these images is available but requires a support contract. See the following sections for more details.
 
 ## Linux support matrix

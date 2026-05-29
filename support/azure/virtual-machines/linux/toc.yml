@@ -240,6 +240,45 @@ items:
     - name: Cloud-init-enabled VM takes a long time to start up
       href: cloud-init-deployment-delay.md
 
+- name: Move and migrate VM resources
+  items:
+  - name: Top error scenarios
+    items:
+    - name: Resource is not in a Succeeded state
+      href: ../windows/move-resources-not-succeeded-state.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Resource type not supported for move
+      href: ../windows/move-resources-resource-type-not-supported.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Move not supported - resource has plan for different subscription
+      href: ../windows/move-resources-plan-different-subscription.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Tenant not authorized to access linked subscription
+      href: ../windows/move-resources-tenant-not-authorized.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: 800 resource limit per move operation
+      href: ../windows/move-resources-800-limit.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Cannot move more than 100 resources via portal
+      href: ../windows/move-resources-100-limit-portal.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Backup error during resource move
+      href: ../windows/move-resources-backup-error.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Operation not allowed - system upgrade in progress
+      href: ../windows/move-resources-operation-not-allowed-system-upgrade.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Move fails with MissingMoveDependentResources
+      href: ../windows/move-resources-missing-dependencies.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Move operation times out after four hours
+      href: ../windows/move-resources-4-hour-timeout.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Move fails due to invalid or deleted storage account
+      href: ../windows/move-resources-invalid-storage-account.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Move fails with IncompleteRequest - hidden resources not included
+      href: ../windows/move-resources-incomplete-request-hidden-resources.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Move fails because a private endpoint is not in Succeeded state
+      href: ../windows/move-resources-private-endpoint-failed-state.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+  - name: FAQ
+    href: ../windows/move-vm-resources-faq.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+  - name: How-to guides
+    items:
+    - name: Move resources to a different tenant
+      href: ../windows/move-vm-to-different-tenant.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Convert unmanaged disks to managed disks
+      href: ../windows/migrate-vm-unmanaged-to-managed-disks.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+
 - name: Disk management
   items:
   - name: Overview
@@ -250,10 +289,16 @@ items:
     href: ../windows/azure-iaas-vm-disks-managed-unmanaged.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
   - name: Downsize a data disk without losing data
     href: ../windows/downsize-data-disk-without-losing-data.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+  - name: Troubleshoot Azure disk resize failures
+    href: ../windows/troubleshoot-disk-resize.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+  - name: Troubleshoot disk resize blocked by an active SAS token
+    href: ../windows/troubleshoot-disk-resize-sas-block.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
   - name: Errors when deleting storage resources
     href: ../windows/storage-resource-deletion-errors.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
   - name: Can't resize MBR partition for a data disk larger than 2 TB
     href: convert-mbr-partition-to-gpt.md
+  - name: Convert an Azure VM disk from MBR to GPT partition style
+    href: ../windows/convert-mbr-to-gpt-azure-virtual-machine.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
   - name: VHD is not supported when you create a VM in Azure
     href: ../windows/vhd-not-supported-vm-azure.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
   - name: Create a SWAP file
@@ -367,7 +412,7 @@ items:
   - name: Azure Virtual Machine repair
     href: repair-linux-vm-using-azure-virtual-machine-repair-commands.md
   - name: Azure Linux Auto Repair
-    href: repair-linux-vm-using-ALAR.md
+    href: repair-linux-vm-using-alar.md
   - name: Troubleshoot chroot environment for Linux rescue VM
     href: chroot-environment-linux.md
   - name: Redeploy Linux virtual machine to new Azure node

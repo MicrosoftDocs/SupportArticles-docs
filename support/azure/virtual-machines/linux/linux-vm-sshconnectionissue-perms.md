@@ -5,13 +5,15 @@ ms.date: 03/13/2025
 author: pagienge
 ms.reviewer: divargas, adelgadohell, saimsh
 ms.service: azure-virtual-machines
-ms.custom: sap:Cannot connect to my VM, linux-related-content
+ms.custom: Azure Disk Encryption (ADE) not operating correctly
 ms.collection: linux
 ---
 
 # Troubleshoot SSH connection issues in Azure Linux VM due to permission and ownership issues
 
 **Applies to:** :heavy_check_mark: Linux VMs
+
+## Summary
 
 This article provides solutions to an issue in which connecting to a Linux virtual machine (VM) via Secure Shell (SSH) fails because the _/var/empty/sshd_ directory in RHEL, the _/var/lib/empty_ directory in SUSE, or the _/var/run/sshd_ directory in Ubuntu, doesn't exist, or it isn't owned by the root user, or it's group-writable or world-writable.
 

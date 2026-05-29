@@ -1,7 +1,7 @@
 ---
 title: Track software update synchronization
 description: Describes the synchronization process on the top-level site and on a child primary site or secondary site.
-ms.date: 02/11/2025
+ms.date: 03/30/2026
 ms.reviewer: kaushika
 ms.custom: sap:Software Update Management (SUM)\Software Update Synchronization
 ---

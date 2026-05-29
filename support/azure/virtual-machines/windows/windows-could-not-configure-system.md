@@ -20,6 +20,8 @@ ms.custom: sap:My VM is not booting
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
+## Summary
+
 This article provides steps to resolve issues where the Sysprep process prevents the booting of an Azure virtual machine (VM).
 
 ## Symptom

@@ -8,7 +8,9 @@ ms.custom: sap:Microsoft Entra Connect Sync
 ---
 # Permission-issue error 8344, "Insufficient access rights to perform the operation."
 
-This article discusses how to understand and troubleshoot the "permission-issue [8344]" error, "Insufficient access rights to perform the operation." This Microsoft Entra error occurs on an on-premises Active Directory connector during an export operation in Synchronization Service Manager.
+## Summary
+
+This article explains how to understand and troubleshoot the "permission-issue [8344]" error, "Insufficient access rights to perform the operation." This Microsoft Entra error occurs on an on-premises Active Directory connector during an export operation in Synchronization Service Manager.
 
 [!INCLUDE [Feedback](../../../includes/feedback.md)]
 
@@ -37,9 +39,9 @@ The on-premises Active Directory connector account (`MSOL_<hex-digits>`) doesn't
 ## Solution 1: Grant permissions by using the Microsoft Entra Connect Troubleshooting console
 
 > [!NOTE]  
-> This solution is the recommended and preferred method.
+> Use this solution as the recommended and preferred method.
 
-In the on-premises Active Directory connector account (`MSOL_<hex-digits>`), locate the attributes that this account doesn't have permissions for. Then, use the Microsoft Entra Connect wizard to grant the permissions in the Microsoft Entra Connect Troubleshooting console, as described in the following sections.
+In the on-premises Active Directory connector account (`MSOL_<hex-digits>`), find the attributes that this account doesn't have permissions for. Then, use the Microsoft Entra Connect wizard to grant the permissions in the Microsoft Entra Connect Troubleshooting console, as described in the following sections.
 
 ### Part 1: Determine which on-premises Active Directory connector account is in use
 
@@ -118,7 +120,7 @@ The output is a table that displays the `Name`, `Forest`, `Domain`, and `Usernam
 
 1. Identify the Microsoft Entra Connect feature that you're using by following one of these methods:
 
-   - When using 'mS-DS-ConsistencyGuid' attribute as the source anchor, the added attribute will be the [mS-DS-ConsistencyGuid](/entra/identity/hybrid/connect/plan-connect-design-concepts#using-ms-ds-consistencyguid-as-sourceanchor) attribute.
+   - When using `mS-DS-ConsistencyGuid` attribute as the source anchor, the added attribute is the [mS-DS-ConsistencyGuid](/entra/identity/hybrid/connect/plan-connect-design-concepts#using-ms-ds-consistencyguid-as-sourceanchor) attribute.
       
    - Review the list of [Exchange hybrid writeback](/azure/active-directory/hybrid/connect/reference-connect-sync-attributes-synchronized#exchange-hybrid-writeback) attributes to synchronize, and then return to the **Attribute information** table UI to find the Exchange hybrid writeback attribute that ADSync was trying to add or modify. For example, the added or modified attribute might be the [msDS-ExternalDirectoryObjectID](/openspecs/windows_protocols/ms-ada2/0abc1d06-ac09-476f-a60b-5deb05b394f7) attribute.
       
@@ -131,7 +133,7 @@ The output is a table that displays the `Name`, `Forest`, `Domain`, and `Usernam
 ### Part 3: Grant the missing permissions
 
 > [!IMPORTANT]  
-> The account that's used to run the Microsoft Entra Connect tool must be allowed to grant permissions on all domains to Active Directory. Usually, only the Enterprise Administrator has Domain Administrator rights on all domains in the Active Directory forest.
+> The account that you use to run the Microsoft Entra Connect tool must have permission to grant permissions on all domains to Active Directory. Usually, only the Enterprise Administrator has Domain Administrator rights on all domains in the Active Directory forest.
 
 1. On the Windows Desktop, double-click the **Microsoft Entra Connect** icon.
 1. In the **Microsoft Entra Connect** dialog box, select the **Configure** button.
@@ -218,7 +220,7 @@ The output is a table that displays the `Name`, `Forest`, `Domain`, and `Usernam
    ```
 
    > [!NOTE]  
-   > We recommend that you don't synchronize your on-premises AD administrator accounts to Microsoft Entra ID. For more information, see the [Administrator password setting](/azure/active-directory/authentication/howto-sspr-deployment#administrator-password-setting) section of [Plan a Microsoft Entra self-service password reset deployment](/azure/active-directory/authentication/howto-sspr-deployment).
+   > Don't synchronize your on-premises AD administrator accounts to Microsoft Entra ID. For more information, see the [Administrator password setting](/azure/active-directory/authentication/howto-sspr-deployment#administrator-password-setting) section of [Plan a Microsoft Entra self-service password reset deployment](/azure/active-directory/authentication/howto-sspr-deployment).
 
 1. In the `Confirm` screen, enter *Y* for `Yes` to confirm your choice (the default response):
 
@@ -239,7 +241,7 @@ For information about this solution, see the ["Using the ADSyncConfig PowerShell
 ## Solution 3: Grant permissions by using the Active Directory Users and Computers snap-in
 
 > [!WARNING]  
-> If you grant permissions manually in Active Directory by using this method, this action might cause insufficient permissions that can have unexpected results.
+> If you grant permissions manually in Active Directory by using this method, you might cause insufficient permissions that can lead to unexpected results.
 
 1. On an account that has the appropriate Domain Administrator permissions, select **Start**, and then search for and select the **Active Directory Users and Computers** snap-in (*dsa.msc*).
 
@@ -267,7 +269,7 @@ For information about this solution, see the ["Using the ADSyncConfig PowerShell
 ## Solution 4: Grant permissions by using the dsacls tool
 
 > [!WARNING]  
-> If you grant permissions manually in Active Directory by using this method, this action might cause insufficient permissions that can have unexpected results.
+> If you grant permissions manually in Active Directory by using this method, you might cause insufficient permissions that can lead to unexpected results.
 
 To grant permissions to read and write all properties for all objects at the root of the domain to all of its descendant objects, run the following [dsacls](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc771151(v=ws.11)) command:
 

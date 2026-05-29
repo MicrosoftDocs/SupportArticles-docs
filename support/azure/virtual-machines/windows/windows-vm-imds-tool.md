@@ -10,13 +10,15 @@ ms.reviewer: macla, scotro, glimoli, jarrettr, azurevmcptcic
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
+## Summary
+
+This article provides information about the Azure VM Instance Metadata Service Verification Tool, a PowerShell script designed to help diagnose and resolve issues related to the Azure Instance Metadata Service (IMDS) on Windows virtual machines (VMs). The tool checks the reachability of the IMDS endpoint, validates the presence and correctness of IMDS certificates, and identifies certificate-related failures.
+
 The Azure Instance Metadata Service (IMDS) is a REST API that's available at a well-known, non-routable IP address (`169.254.169.254`). You can access the API only from within the virtual machine (VM). Communication between the VM and IMDS never leaves the host. HTTP clients must bypass web proxies within the VM when they query IMDS. The IMDS IP address (`169.254.169.254`) must be handled in the same manner as the `168.63.129.16` IP address. For more information, see [Azure Instance Metadata Service (IMDS)](/azure/virtual-machines/instance-metadata-service)
 
 IMDS problems on Azure VMs can occur because of configuration, certificate, or connectivity issues. Microsoft provides a script-based tool to help diagnose and resolve most activation-related problems.
 
-## Overview
-
-This PowerShell script confirms the attestation signature that's provided by the Azure Instance Metadata Service (IMDS). The script makes sure that the certificate that's used in attestation is valid and trusted. It performs this action by trying to build a complete certificate chain. This process helps confirm the integrity and authenticity of an Azure VM’s identity. The script is also available through the Run command.
+This PowerShell script confirms the attestation signature that's provided by the Azure Instance Metadata Service (IMDS). The script makes sure that the certificate that's used in attestation is valid and trusted. It performs this action by trying to build a complete certificate chain. This process helps confirm the integrity and authenticity of an Azure VM's identity. The script is also available through the Run command.
 
 ## Key features  
 

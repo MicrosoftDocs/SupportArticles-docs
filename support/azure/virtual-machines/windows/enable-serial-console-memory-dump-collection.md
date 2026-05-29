@@ -11,6 +11,8 @@ ms.topic: how-to
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
+## Summary
+
 This article shows how to enable the serial console and memory dump collection.
 
 ## How to enable the serial console and memory dump collection

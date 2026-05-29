@@ -21,6 +21,8 @@ ms.reviewer: ekpathak, v-leedennis, v-weizhu
 
 [!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
 
+## Summary
+
 This article discusses multiple conditions that cause GRUB rescue issues and provides troubleshooting guidance.
 
 During the boot process, the boot loader tries to locate the Linux kernel and hand off the boot control. If this handoff can't be performed, the virtual machine (VM) enters a GRUB rescue console. The GRUB rescue console prompt isn't shown in the Azure serial console log, but it can be shown in the [Azure boot diagnostics screenshot](/azure/virtual-machines/boot-diagnostics#boot-diagnostics-view).
@@ -82,7 +84,7 @@ The ALAR scripts use the repair extension `repair-button` to fix GRUB issues by 
     ```azurecli-interactive
     az extension add -n vm-repair
     az extension update -n vm-repair
-    az vm repair repair-button --button-command 'grubfix' --verbose $RGNAME --name $VMNAME
+    az vm repair repair-button --button-command 'grubfix' --verbose --resource-group $RGNAME --name $VMNAME
     ```
 
 * **Linux VMs with UEFI (Gen2):**
@@ -90,7 +92,7 @@ The ALAR scripts use the repair extension `repair-button` to fix GRUB issues by 
     ```azurecli-interactive
     az extension add -n vm-repair
     az extension update -n vm-repair
-    az vm repair repair-button --button-command 'efifix' --verbose $RGNAME --name $VMNAME
+    az vm repair repair-button --button-command 'efifix' --verbose --resource-group  $RGNAME --name $VMNAME
     ```
 
 > [!IMPORTANT]

@@ -1,16 +1,18 @@
 ---
 title: Troubleshoot Azure Files identity-based authentication and authorization issues (SMB)
-description: Troubleshoot problems with using identity-based authentication to connect to SMB Azure file shares and see possible resolutions.
+description: Troubleshoot identity-based authentication and authorization issues with SMB Azure file shares. Find solutions for common errors, causes, and resolutions.
 ms.service: azure-file-storage
 ms.custom: sap:Security, has-azure-ad-ps-ref, azure-ad-ref-level-one-done
-ms.date: 03/06/2026
+ms.date: 05/08/2026
 ms.reviewer: kendownie, v-surmaini, v-weizhu
 ---
 # Troubleshoot Azure Files identity-based authentication and authorization issues (SMB)
 
 **Applies to:** :heavy_check_mark: SMB Azure file shares
 
-This article lists common problems when using SMB Azure file shares with identity-based authentication. It also provides possible causes and resolutions for these problems. Identity-based authentication isn't currently supported for NFS Azure file shares.
+## Summary
+
+This article lists common problems when using identity-based authentication with SMB Azure file shares and provides possible causes and resolutions. Use this guide to diagnose and fix authentication errors, permission issues, and Kerberos configuration problems.
 
 ## Error when running the AzFilesHybrid module
 
@@ -34,10 +36,10 @@ When you try to mount a file share, you might receive the following error:
 
 ### Cause: Share-level permissions are incorrect
 
-If end users are accessing the Azure file share using identity-based authentication, access to the file share fails with "Access is denied" error if share-level permissions are incorrect. 
+If end users access the Azure file share by using identity-based authentication, access to the file share fails with "Access is denied" error if share-level permissions are incorrect. 
 
 > [!NOTE]
-> This error might be caused by issues other than incorrect share-level permissions. For information on other possible causes and solutions, see [Troubleshoot Azure Files connectivity and access issues](../connectivity/files-troubleshoot-smb-connectivity.md#error5).
+> This error might be caused by problems other than incorrect share-level permissions. For information on other possible causes and solutions, see [Troubleshoot Azure Files connectivity and access issues](../connectivity/files-troubleshoot-smb-connectivity.md#error5).
 
 ### Solution
 
@@ -53,23 +55,23 @@ Error AadDsTenantNotFound happens when you try to [enable Microsoft Entra Domain
 
 ### Solution
 
-Enable Microsoft Entra Domain Services on the Microsoft Entra tenant of the subscription that your storage account is deployed to. You need administrator privileges of the Microsoft Entra tenant to create a managed domain. If you aren't the administrator of the Microsoft Entra tenant, contact the administrator and follow the step-by-step guidance to [create and configure a Microsoft Entra Domain Services managed domain](/entra/identity/domain-services/tutorial-create-instance).
+Enable Microsoft Entra Domain Services on the Microsoft Entra tenant of the subscription that your storage account is deployed to. You need administrator privileges of the Microsoft Entra tenant to create a managed domain. If you're not the administrator of the Microsoft Entra tenant, contact the administrator and follow the step-by-step guidance to [create and configure a Microsoft Entra Domain Services managed domain](/entra/identity/domain-services/tutorial-create-instance).
 
 
 ## Error: All newly added URIs must contain a tenant verified domain, tenant ID, or app ID
 
 ### Cause
 
-This error occurs during configuration of identity-based authentication for Azure Files when adding a redirect URI or identifier URI that doesn't meet Microsoft Entra ID application security requirements.
+This error occurs during configuration of identity-based authentication for Azure Files when you add a redirect URI or identifier URI that doesn't meet Microsoft Entra ID application security requirements.
 
-Microsoft Entra ID enforces restrictions on application identifier URIs and redirect URIs. Newly added URIs must reference one of the following:
+Microsoft Entra ID enforces restrictions on application identifier URIs and redirect URIs. Newly added URIs must reference one of the following values:
 - A tenant-verified custom domain
 - The Microsoft Entra tenant ID
 - The application (client) ID
 
-If a URI uses an unverified domain, a `.local` hostname, or an arbitrary URL that is not associated with the tenant, the request is blocked by default tenant policy.
+If a URI uses an unverified domain, a `.local` hostname, or an arbitrary URL that isn't associated with the tenant, the default tenant policy blocks the request.
 
-This behavior is enforced by Microsoft Entra ID and isn't specific to the Azure Files service.
+Microsoft Entra ID enforces this behavior and it isn't specific to the Azure Files service.
 
 For more information, see:
 - [Restrictions on identifier URIs of Microsoft Entra applications](/entra/identity-platform/identifier-uri-restrictions)
@@ -77,13 +79,13 @@ For more information, see:
 - [Managing custom domain names in your Microsoft Entra ID](/entra/identity/users/domains-manage)
 
 ### Solution
-When configuring application registration or identity-based authentication for Azure Files, ensure that any redirect URI or identifier URI uses one of the supported formats:
+When you configure application registration or identity-based authentication for Azure Files, ensure that any redirect URI or identifier URI uses one of the supported formats:
 - Use a tenant-verified custom domain
 - Use the Microsoft Entra tenant ID
 - Use the application (client) ID
 
-Do not use unverified domains, `.local` hostnames, or arbitrary URLs, as these will be rejected by Microsoft Entra ID tenant policy.
-If you are unsure which domains are verified in your tenant, review the Custom domain names section in the Microsoft Entra admin center or contact your tenant administrator.
+Don't use unverified domains, `.local` hostnames, or arbitrary URLs, as Microsoft Entra ID tenant policy rejects these values.
+If you're unsure which domains are verified in your tenant, review the Custom domain names section in the Microsoft Entra admin center or contact your tenant administrator.
 
   
 ## Unable to mount Azure file shares with AD credentials
@@ -259,7 +261,7 @@ After rebooting, retry mounting the file share.
 You might experience one of the symptoms described below when trying to configure Windows ACLs with Windows File Explorer on a mounted file share:
 
 - After you click on **Edit permission** under the **Security** tab, the Permission wizard doesn't load. 
-- When you try to select a new user or group, the domain location doesn't display the right AD DS domain. 
+- When you try to select a new user or group, the domain location doesn't display the right Active Directory Domain Services (AD DS) domain. 
 - You're using multiple AD forests and get the following error message: "The Active Directory domain controllers required to find the selected objects in the following domains are not available. Ensure the Active Directory domain controllers are available, and try to select the objects again."
 
 ### Solution
@@ -293,167 +295,6 @@ This error might occur if a domain controller that holds the RID Master FSMO rol
 ### Error: "Cannot bind positional parameters because no names were given"
 
 This error is most likely triggered by a syntax error in the `Join-AzStorageAccountforAuth` command.Check the command for misspellings or syntax errors and verify that the latest version of the [AzFilesHybrid](https://www.powershellgallery.com/packages/AzFilesHybrid/) module is installed.
-
-## Azure Files on-premises AD DS authentication support for AES-256 Kerberos encryption
-
-Azure Files uses Kerberos authentication for identity-based access when using Active Directory Domain Services (AD DS) on-premises. AES-256 Kerberos encryption has been supported since AzFilesHybrid module v0.2.2, and it's been the default encryption method since module v0.2.5. Historically, RC4 was the only supported encryption option until AES-256 support was added.
-
-> [!IMPORTANT]
-> An upcoming Windows change (**July 2026 Windows Server Update**) will change the default Kerberos encryption type from RC4 to AES-256. Storage accounts that haven't yet been upgraded to AES-256 might experience mount errors when this change rolls out. You should take action before applying this update to ensure uninterrupted access to your Azure file shares. Customers who have already upgraded to AES-256 won't be impacted.
->
-> Storage accounts configured with custom DNS suffixes or custom Kerberos service principal names (for example, `storageaccount.domain.com` instead of `<storageaccount>.file.core.windows.net`) might be impacted earlier, beginning with the **April 2026 Windows Update**. If you use custom SPNs, upgrade to AES-256 before applying the April update.
->
-> For more information about this Windows change, see [How to manage Kerberos KDC usage of RC4 for service account ticket issuance changes related to CVE-2026-20833](https://support.microsoft.com/topic/how-to-manage-kerberos-kdc-usage-of-rc4-for-service-account-ticket-issuance-changes-related-to-cve-2026-20833-1ebcda33-720a-4da8-93c1-b0496e1910dc).
-
-### Step 1: Check if you're impacted
-
-Run the following PowerShell command on a domain-joined machine to identify storage accounts that use Azure Files with AD DS authentication but haven't been upgraded to AES-256:
-
-```PowerShell
-Get-ADObject `
-    -LDAPFilter "(&(servicePrincipalName=*.file.core.windows.net)(!(msDS-SupportedEncryptionTypes=*)))" -Properties servicePrincipalName, msDS-SupportedEncryptionTypes |
-    Select-Object Name, ObjectClass, servicePrincipalName, msDS-SupportedEncryptionTypes
-```
-
-If no results are returned, your accounts already support AES-256, and you don't need to take any action. If any accounts are returned, you need to upgrade those accounts to support AES-256 using one of the two options described in Step 2.
-
-> [!NOTE]
-> If you're using storage accounts outside of the Azure public cloud, adjust `*.file.core.windows.net` in the LDAP filter to match the endpoint for your environment.
-
-### Step 2: Upgrade to AES-256
-
-There are two options to upgrade your storage account to AES-256. We strongly recommend **Option 1** using the AzFilesHybrid PowerShell module, as it handles all the necessary steps automatically with a single command. Option 2 provides manual steps if you're unable to use the module.
-
-#### Option 1: Use the AzFilesHybrid cmdlet (recommended)
-
-[Download the latest AzFilesHybrid module](https://www.powershellgallery.com/packages/AzFilesHybrid/) and run the following PowerShell script.
-
-```PowerShell
-$ResourceGroupName = "<resource-group-name-here>"
-$StorageAccountName = "<storage-account-name-here>"
-
-Update-AzStorageAccountAuthForAES256 -ResourceGroupName $ResourceGroupName -StorageAccountName $StorageAccountName
-```
-
-As part of the update, the cmdlet rotates the Kerberos keys, which is necessary to switch to AES-256. You don't need to rotate back unless you want to regenerate both passwords.
-
-#### Option 2: Manual steps
-
-If you can't use the AzFilesHybrid module, you can manually upgrade to AES-256 by following these steps.
-
-First, check the domain properties:
-
-```PowerShell
-$ResourceGroupName = "<resource-group-name-here>"
-$StorageAccountName = "<storage-account-name-here>"
-
-$sa = Get-AzStorageAccount -ResourceGroupName $ResourceGroupName -Name $StorageAccountName
-$sa.AzureFilesIdentityBasedAuth.ActiveDirectoryProperties | Select-Object DomainName, SamAccountName, AccountType
-```
-
-If `DomainName`, `SamAccountName`, and `AccountType` all return values, your domain properties are correctly set and you can skip ahead to [Enable AES-256 on the domain object](#enable-aes-256-on-the-domain-object).
-
-> [!NOTE]
-> Only run the following script if the previous command returned empty, incorrect, or missing values. This script populates the required domain properties on the storage account.
-
-```PowerShell
-$ResourceGroupName = "<resource-group-name-here>"
-$StorageAccountName = "<storage-account-name-here>"
-
-$domainInformation = Get-ADDomain
-$domainGuid = $domainInformation.ObjectGUID.ToString()
-$domainName = $domainInformation.DnsRoot
-$domainSid = $domainInformation.DomainSID.Value
-$forestName = $domainInformation.Forest
-$netBiosDomainName = $domainInformation.DnsRoot
-
-$saAdObject = Get-ADObject ` 
-    -LDAPFilter "(servicePrincipalName=cifs/$StorageAccountName.file.core.windows.net)" `
-    -Properties *
-
-$saADObjectSid = $saAdObject.objectSid.Value
-$samAccountName = $saAdObject.sAMAccountName.TrimEnd('$')
-$type = if ($saAdObject.objectClass -contains "computer") { "Computer" } ` 
-    elseif ($saAdObject.objectClass -contains "user") { "User" }
-
-Set-AzStorageAccount `
-    -ResourceGroupName $ResourceGroupName `
-    -Name $StorageAccountName `
-    -EnableActiveDirectoryDomainServicesForFile $true `
-    -ActiveDirectoryDomainName $domainName `
-    -ActiveDirectoryNetBiosDomainName $netBiosDomainName `
-    -ActiveDirectoryForestName $forestName  `
-    -ActiveDirectoryDomainGuid $domainGuid `
-    -ActiveDirectoryDomainSid $domainSid `
-    -ActiveDirectoryAzureStorageSid $saADObjectSid `
-    -ActiveDirectorySamAccountName $samAccountName `
-    -ActiveDirectoryAccountType $type
-```
-
-For more information, see [Enable AD DS authentication for Azure Files](/azure/storage/files/storage-files-identity-ad-ds-enable).
-
-##### Enable AES-256 on the domain object
-
-> [!NOTE]
-> If you already ran the preceding domain properties script and have the `$saAdObject` variable in your session, you can skip the following query and set `$identity = $saAdObject.DistinguishedName` directly.
-
-```PowerShell
-$saAdObject = Get-ADObject ` 
-    -LDAPFilter "(servicePrincipalName=cifs/$StorageAccountName.file.core.windows.net)" `
-    -Properties *
-
-$identity = $saAdObject.DistinguishedName
-```
-
-To determine your account type, check the `AccountType` value from the domain properties check, or run `$saAdObject.objectClass`. If the object class is `computer`, use `Set-ADComputer`. If it's `user`, use `Set-ADUser`.
-
-To enable AES-256 encryption on a **computer account**, run the following command.
-
-```PowerShell
-Set-ADComputer -Identity $identity -KerberosEncryptionType "AES256"
-```
-
-To enable AES-256 encryption on a **service logon account**, run the following command instead.
-
-```PowerShell
-Set-ADUser -Identity $identity -KerberosEncryptionType "AES256"
-```
-
-##### Refresh the domain object password
-
-After you run the preceding cmdlet, run the following script to refresh your domain object password. This step is critical to generating the appropriate authentication metadata on the service side.
-
-```PowerShell
-$KeyName = "kerb1" # Could be either the first or second kerberos key, this script assumes we're refreshing the first
-$KerbKeys = New-AzStorageAccountKey -ResourceGroupName $ResourceGroupName -Name $StorageAccountName -KeyName $KeyName
-$KerbKey = $KerbKeys.keys | Where-Object {$_.KeyName -eq $KeyName} | Select-Object -ExpandProperty Value
-$NewPassword = ConvertTo-SecureString -String $KerbKey -AsPlainText -Force
-
-Set-ADAccountPassword -Identity $identity -Reset -NewPassword $NewPassword
-```
-
-### Step 3: Confirm the AES-256 upgrade
-
-After completing either Option 1 or Option 2, purge cached Kerberos tickets on the client and verify the upgrade by remounting the file share.
-
-1. Run `klist purge` from an elevated command prompt to clear any cached Kerberos tickets that still use RC4.
-1. Remount the Azure file share.
-1. Run `klist get cifs/<storage-account-name>.file.core.windows.net` to verify that the new Kerberos ticket uses AES-256 encryption.
-
-The output should show `AES-256-CTS-HMAC-SHA1-96` for both the **KerbTicket Encryption Type** and **Session Key Type**, similar to the following:
-
-```
-#1>     Client: user @ DOMAIN.CONTOSO.COM
-        Server: cifs/<storage-account-name>.file.core.windows.net @ DOMAIN.CONTOSO.COM
-        KerbTicket Encryption Type: AES-256-CTS-HMAC-SHA1-96
-        Ticket Flags 0x40a10000 -> forwardable renewable pre_authent name_canonicalize
-        Start Time: 3/20/2026 23:16:32 (local)
-        End Time:   3/21/2026 9:16:32 (local)
-        Renew Time: 3/27/2026 23:16:32 (local)
-        Session Key Type: AES-256-CTS-HMAC-SHA1-96
-        Cache Flags: 0
-        Kdc Called: <domain-controller-name>
-```
 
 ## User identity formerly having the Owner or Contributor role assignment still has storage account key access
 The storage account Owner and Contributor roles grant the ability to list the storage account keys. The storage account key enables full access to the storage account's data including file shares, blobs, tables, and queues. It also provides limited access to the Azure Files management operations via the legacy management APIs exposed through the FileREST API. If you're changing role assignments, you should consider that the users being removed from the Owner or Contributor roles might continue to have access to the storage account through saved storage account keys.
@@ -653,7 +494,7 @@ Windows clients that use Microsoft Entra Kerberos authentication to access Azure
 
 This issue is caused by a known Windows behavior where certain network changes clear the cached KDC proxy configuration on the client. When the KDC proxy configuration is removed, the client is unable to refresh Kerberos service tickets from Microsoft Entra ID.
 
-Although the user’s Primary Refresh Token (PRT) remains valid, the missing KDC proxy configuration prevents the client from acquiring a new service ticket, resulting in authentication failures.
+Although the user's Primary Refresh Token (PRT) remains valid, the missing KDC proxy configuration prevents the client from acquiring a new service ticket, resulting in authentication failures.
 
 This is a Windows client limitation and is not caused by Azure Files or Microsoft Entra ID configuration.
 
@@ -687,7 +528,7 @@ Windows clients using Microsoft Entra Kerberos authentication to access Azure Fi
 
 This issue is caused by a known limitation in Microsoft Entra Kerberos authentication. Microsoft Entra ID does not currently support renewal of Ticket Granting Tickets (TGTs).
 
-In Microsoft Entra Kerberos scenarios, the TGT is obtained as part of the user’s Primary Refresh Token (PRT). Because TGT renewal is not supported, the client cannot refresh the TGT once it expires. When the TGT expires, the client is unable to acquire new service tickets, resulting in authentication failures.
+In Microsoft Entra Kerberos scenarios, the TGT is obtained as part of the user's Primary Refresh Token (PRT). Because TGT renewal is not supported, the client cannot refresh the TGT once it expires. When the TGT expires, the client is unable to acquire new service tickets, resulting in authentication failures.
 
 Signing out and signing back in to Windows resolves the issue by obtaining a new PRT, which includes a new TGT.
 This is a known limitation of Microsoft Entra Kerberos and is not caused by Azure Files configuration.

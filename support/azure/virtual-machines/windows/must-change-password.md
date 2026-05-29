@@ -23,6 +23,10 @@ ms.custom: sap:Cannot connect to my VM
 
 [!INCLUDE [VM assist troubleshooting tools](~/includes/azure/vmassist-include.md)]
 
+## Summary
+
+When using Remote Desktop Protocol to connect to a virtual machine, you might have to change the password of the account first. This article provides troubleshooting steps to resolve this issue.
+
 ## Symptom
 
 When you use a Remote Desktop Protocol (RDP) connection to connect to an Azure virtual machine (VM), you encounter the error:
@@ -44,7 +48,7 @@ Before following the troubleshooting steps below, backup the VM OS disk by creat
 
 Before using this option, make sure the VM agent is running. You can check the status of Azure guest agent in the Azure portal by going to the Virtual Machine, then **VM** > **Settings** > **Properties** > **Agent status**. If the VM agent is running healthy, you can use the Run Command described in [Remote troubleshooting tool for Azure VMs](./remote-tools-troubleshoot-azure-vm-issues.md).
 
-If your VM doesn’t have an agent running, you can follow the steps in [Reset local Windows password for Azure VM offline](./reset-local-password-without-agent.md). When you can connect to the VM, you can use the following instructions to solve the issue on the account that needs a password reset.
+If your VM doesn't have an agent running, you can follow the steps in [Reset local Windows password for Azure VM offline](./reset-local-password-without-agent.md). When you can connect to the VM, you can use the following instructions to solve the issue on the account that needs a password reset.
 
 1. Open the Run Command and input the following commands:
     - For local accounts:

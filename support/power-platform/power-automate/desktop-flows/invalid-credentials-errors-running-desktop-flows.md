@@ -1,16 +1,18 @@
 ---
 title: Invalid credentials error running desktop flows
 description: Provides a resolution for the invalid credentials error that might occur when you run a desktop flow in Power Automate.
-ms.reviewer: guco, johndund
+ms.reviewer: kdeepika, sbemag, v-shaywood
 ms.custom: sap:Desktop flows\Cannot create desktop flow connection
-ms.date: 04/08/2025
+ms.date: 04/03/2026
 ---
 # Invalid credentials error when running desktop flows in Power Automate for desktop
 
-This article provides a solution to the invalid credentials error that occurs when you [run a desktop flow from a cloud flow](/power-automate/desktop-flows/trigger-desktop-flows#trigger-a-desktop-flow-from-a-cloud-flow) in Microsoft Power Automate for desktop.
-
 _Applies to:_ &nbsp; Power Automate  
 _Original KB number:_ &nbsp; 5021155
+
+## Summary
+
+When you [run a desktop flow from a cloud flow](/power-automate/desktop-flows/trigger-desktop-flows#trigger-a-desktop-flow-from-a-cloud-flow) or create a [desktop flow connection](/power-automate/desktop-flows/desktop-flow-connections) in Power Automate for desktop, you might receive an invalid credentials error like `WindowsIdentityIncorrect` or "Connection failed." These errors occur because the credentials can't authenticate on the target machine, which can be caused by an incorrect username or password, an expired password, user account restrictions, or an incorrect username format. This article provides troubleshooting steps and specific error code resolutions to help identify and fix the issue.
 
 ## Symptoms
 
@@ -39,9 +41,22 @@ The error messages occur because the credentials in the connection can't authent
 
 When you create a connection, Power Automate checks to ensure the credentials are valid. If the credentials don't authenticate on the target machine, the connection can't be made, and you receive an error describing the problem.
 
-If you successfully created your connection earlier but now encounter an error when running your flow, it indicates that something has changed in your user account or machine. For example, your password might have expired.
+If you successfully created your connection earlier but now encounter an error when running your flow, it indicates that something has changed or is configured incorrectly in your user account or machine.
 
-## Resolution
+Common reasons why a user account is configured incorrectly:
+
+- The administrator changed the account credentials.
+- The domain user account wasn't propagated to the machine.
+- The user account lost privileges or was disabled.
+- The user account password expired.
+
+Other reasons that might prevent you from signing in to the target machine (besides using an incorrect username or password):
+
+- PINs aren't supported. Make sure you use a password instead of a [Windows Hello](/windows/security/identity-protection/hello-for-business/) PIN.
+- The machine can't connect to its domain or Microsoft Entra ID (formerly Azure Active Directory) because it isn't properly joined. To solve this issue, see [Desktop flow invalid credentials error when you use a Microsoft Entra account](troubleshoot-ui-flow-invalid-credentials-error-using-aad-account.md).
+- The machine can't call the authentication endpoint due to a network issue. Make sure to check your network connection.
+
+## Troubleshooting steps
 
 To see an error message with specific details on what went wrong, ensure you have Power Automate version 2.24 or higher installed. Often, this method gives you enough information to solve the problem. The following table shows some specific error codes and the resolutions.
 
@@ -57,20 +72,8 @@ To see an error message with specific details on what went wrong, ensure you hav
 
 If you don't have a more specific error associated with the problem, the easiest way to troubleshoot is to sign in to the machine with the exact credentials you entered in your connection. You can try this method by signing in to the machine locally or through a Remote Desktop connection. You should receive the same error message that Power Automate receives when trying to authenticate your credentials, which should help you troubleshoot the issue.
 
-Other reasons that might prevent you from signing in to the target machine (besides using an incorrect username or password):
+## Related content
 
-- PINs aren't supported. Make sure you use a password instead of a Windows Hello PIN.
-- The machine can't connect to its domain or Microsoft Entra ID (formerly Azure Active Directory) because it isn't properly joined. To solve this issue, see [Desktop flow invalid credentials error when you use a Microsoft Entra account](~/power-platform/power-automate/authentication-or-sign-in/troubleshoot-ui-flow-invalid-credentials-error-using-aad-account.md).
-- The machine can't call the authentication endpoint due to a network issue. Make sure to check your network connection.
-
-Here are some common reasons why the user account is configured incorrectly:
-
-- The administrator changed the account credentials.
-- The domain user account wasn't propagated to the machine.
-- The user account lost privileges or was disabled.
-- The user account password expired.
-
-## More information
-
-- [Desktop flow invalid credentials error when you use a Microsoft Entra account](troubleshoot-ui-flow-invalid-credentials-error-using-aad-account.md)
-- ["Logon type has not been granted" error when running a desktop flow or creating a connection](logon-type-has-not-been-granted.md)
+- [Desktop flow connections](/power-automate/desktop-flows/desktop-flow-connections)
+- [Error code occurs when running an attended or unattended desktop flow](troubleshoot-errors-running-attended-or-unattended-desktop-flows.md)
+- [ExpiredDesktopFlowConnection error when using or testing a desktop flow connection](troubleshoot-expired-desktop-flow-connection.md)

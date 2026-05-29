@@ -4,7 +4,7 @@ description: Troubleshoot problems connecting to and accessing SMB Azure file sh
 services: storage
 ms.service: azure-file-storage
 ms.custom: sap:Connectivity, devx-track-azurepowershell, linux-related-content
-ms.date: 01/26/2026
+ms.date: 04/08/2026
 ms.reviewer: kendownie, jarrettr, v-weizhu, v-six, hanagpal, justingross
 ---
 # Troubleshoot Azure Files connectivity and access issues (SMB)
@@ -38,15 +38,15 @@ When you try to connect to an Azure file share in Windows, you might receive the
 
 #### Cause 1: Unencrypted communication channel
 
-For security, connections to Azure file shares are blocked if the communication channel isn't encrypted and the connection attempt isn't made from the same datacenter where the Azure file shares reside. If the [Secure transfer required](/azure/storage/common/storage-require-secure-transfer) setting is enabled on the storage account, unencrypted connections within the same datacenter are also blocked. An encrypted communication channel is only provided if the end-user's client OS supports SMB encryption.
+For security, connections to Azure file shares are blocked if the communication channel isn't encrypted and the connection attempt isn't made from the same datacenter where the Azure file shares reside. If the **Secure transfer required** setting or the **Require encryption in transit for SMB** setting is enabled on the storage account, unencrypted connections within the same datacenter are also blocked. An encrypted communication channel is only provided if the user's client OS supports SMB encryption.
 
 Windows 8, Windows Server 2012, and later versions of each system negotiate requests that include SMB 3.*x*, which supports encryption.
 
 #### Solution for cause 1
 
 1. Connect from a client that supports SMB encryption (Windows 8/Windows Server 2012 or later).
-2. Connect from a virtual machine (VM) in the same datacenter as the Azure storage account that's used for the Azure file share.
-3. Verify the [Secure transfer required](/azure/storage/common/storage-require-secure-transfer) setting is disabled on the storage account if the client doesn't support SMB encryption.
+1. Connect from a virtual machine (VM) in the same datacenter as the Azure storage account that's used for the Azure file share.
+1. If the client doesn't support SMB encryption, verify that both the [Secure transfer required](/azure/storage/common/storage-require-secure-transfer) setting and the [Require encryption in transit for SMB](/azure/storage/files/files-smb-protocol#smb-security-settings) setting are disabled on the storage account.
 
 #### Cause 2: Virtual network or firewall rules are enabled on the storage account
 
@@ -266,11 +266,13 @@ Common causes for this problem are:
 - The minimum SMB version, 2.1, isn't available on the client.
 - SMB 3.x encryption isn't supported on the client. The preceding table provides a list of Linux distributions that support mounting from on-premises and cross-region using encryption. Other distributions require kernel 4.11 and later versions.
 - You're trying to connect to an Azure file share from an Azure VM, and the VM isn't in the same region as the storage account.
-- If the [Secure transfer required](/azure/storage/common/storage-require-secure-transfer) setting is enabled on the storage account, Azure Files will allow only connections that use SMB 3.x with encryption.
+- If the [Secure transfer required](/azure/storage/common/storage-require-secure-transfer) setting or the [Require encryption in transit for SMB](/azure/storage/files/files-smb-protocol#smb-security-settings) setting is enabled on the storage account, Azure Files will allow only connections that use SMB 3.x with encryption.
 
 ### Solution
 
-To resolve the problem, use the [troubleshooting tool for Azure Files mounting errors on Linux](https://github.com/Azure-Samples/azure-files-samples/tree/master/AzFileDiagnostics/Linux). This tool:
+If the client doesn't support SMB encryption, verify that both the [Secure transfer required](/azure/storage/common/storage-require-secure-transfer) setting and the [Require encryption in transit for SMB](/azure/storage/files/files-smb-protocol#smb-security-settings) setting are disabled on the storage account.
+
+You can use the [troubleshooting tool for Azure Files mounting errors on Linux](https://github.com/Azure-Samples/azure-files-samples/tree/master/AzFileDiagnostics/Linux) to resolve the problem. This tool:
 
 - Helps you to validate the client running environment.
 - Detects the incompatible client configuration that would cause access failure for Azure Files.
@@ -292,11 +294,37 @@ To learn more, see [Prerequisites for mounting an Azure file share with Linux an
 
 ##### Cause 2: Virtual network or firewall rules are enabled on the storage account, or port 445 is blocked
 
-If virtual network (VNET) and firewall rules are configured on the storage account, network traffic will be denied access unless the client IP address or virtual network is allowed access. In addition, if your company or ISP blocks port 445 outbound, you won't be able to mount the share.
+If virtual network (VNET) and firewall rules are configured on the storage account, network traffic will be denied access unless the client IP address or virtual network is allowed access. This includes scenarios where the storage account firewall is blocking the VM's subnet, even when the VM and storage account are in the same region. In addition, if your company or ISP blocks port 445 outbound, you won't be able to mount the share.
 
 ##### Solution for cause 2
 
-Verify that the VNET and firewall rules are configured properly on the storage account, and that port 445 is allowlisted. To test if virtual networks or firewall rules cause the issue, you can temporarily change the setting on the storage account to **Allow access from all networks**. To learn more, see [Configure Azure Storage firewalls and virtual networks](/azure/storage/common/storage-network-security).
+Verify that the VM's subnet is allowlisted in the storage account firewall, and that port 445 isn't blocked. To test if virtual networks or firewall rules cause the issue, you can temporarily change the setting on the storage account to **Allow access from all networks**. 
+
+To check and update the virtual network rules, use the Azure portal or Azure CLI.
+
+To use the Azure portal, follow these steps:
+
+1. In the [Azure portal](https://portal.azure.com), navigate to your storage account.
+1. Under **Security + networking**, select **Networking**.
+1. On the **Firewalls and virtual networks** tab, confirm that **Enabled from selected virtual networks and IP addresses** is selected and that your VM's virtual network and subnet appear under **Virtual networks**.
+1. If the subnet isn't listed, select **+ Add existing virtual network**, select the virtual network and subnet, and then select **Add**. Select **Save** to apply the changes.
+
+To list the current virtual network rules by using Azure CLI, run the following command:
+
+```azurecli
+az storage account network-rule list --resource-group "<resource-group>" --account-name "<storage-account>" --query virtualNetworkRules
+```
+
+To add your VM's subnet, run:
+
+```azurecli
+subnetid=$(az network vnet subnet show --resource-group "<resource-group>" --vnet-name "<vnet-name>" --name "<subnet-name>" --query id --output tsv)
+az storage account network-rule add --resource-group "<resource-group>" --account-name "<storage-account>" --subnet $subnetid
+```
+
+To test SMB connectivity after verifying the network rules, use the [AzFileDiagnostics](https://github.com/Azure-Samples/azure-files-samples/tree/master/AzFileDiagnostics/Windows) tool.
+
+For more information, see [Configure Azure Storage firewalls and virtual networks](/azure/storage/common/storage-network-security).
 
 ##### Cause 3: SMB client is configured to use NTLMv1
 

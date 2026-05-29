@@ -8,8 +8,7 @@ manager: dcscontentpm
 ms.service: azure-virtual-network
 ms.topic: troubleshooting
 ms.date: 03/17/2026
-ms.custom:
-  - sap:Cannot delete Azure Virtual Network (VNet),fasttrack-edit,sfi-image-nochange
+ms.custom: sap:Cannot delete Azure Virtual Network (VNet)
 
 # Customer intent: As a cloud administrator, I want to troubleshoot problems that prevent the deletion or modification of a virtual network or subnet, so I can resolve blocking resource dependencies and maintain my cloud resources.
 ---

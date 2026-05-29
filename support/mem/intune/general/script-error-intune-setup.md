@@ -1,7 +1,7 @@
 ---
 title: Script error during Intune setup process in Configuration Manager
 description: Fixes an issue in which you receive script error when you set up Microsoft Intune in Configuration Manager.
-ms.date: 02/11/2025
+ms.date: 03/30/2026
 search.appverid: MET150
 ms.reviewer: kaushika
 ms.custom: sap:Set Up Intune\Set up administrators and manage roles

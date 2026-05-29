@@ -4,7 +4,7 @@ description: Describes an issue in which you cannot upgrade an Azure VM to a siz
 ms.date: 04/15/2024
 ms.reviewer: 
 ms.service: azure-virtual-machines
-ms.custom: sap:Windows Update, Guest Patching and OS Upgrades
+ms.custom: sap:Windows Update and OS Upgrades
 ---
 # Can't upgrade an Azure VM to a size that contains more than 64 vCPUs
 
@@ -13,6 +13,10 @@ ms.custom: sap:Windows Update, Guest Patching and OS Upgrades
 _Original KB number:_ &nbsp; 4131519
 
 [!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
+
+## Summary
+
+This article describes an issue in which you cannot upgrade an Azure virtual machine (VM) to a size that contains more than 64 virtual CPUs (vCPUs).
 
 ## Symptoms
 

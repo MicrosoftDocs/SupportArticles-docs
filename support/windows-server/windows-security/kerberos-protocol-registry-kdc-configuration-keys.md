@@ -1,11 +1,11 @@
 ---
 title: Registry entries about Kerberos protocol and Key Distribution Center (KDC)
 description: Lists the registry entries in Windows Server that can be used for Kerberos protocol testing and troubleshooting Kerberos authentication issues.
-ms.date: 02/12/2026
+ms.date: 04/14/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, herbertm, jobesanc
+ms.reviewer: kaushika, herbertm, jobesanc, wiaftrin
 ms.custom:
 - sap:windows security technologies\kerberos authentication
 - pcy:WinComm Directory Services
@@ -109,6 +109,9 @@ The registry entries that are listed in this section must be added to the follow
     - 23 decimal for RC4 HMAC
 
     This value indicates the default encryption type for pre-authentication.
+
+    > [!NOTE]
+    > Starting in Windows Server 2025 and Windows 11, version 24H2, this setting is no longer applicable.
 
 - Entry: FarKdcTimeout
 
@@ -277,12 +280,12 @@ The registry entries that are listed in this section must be added to the follow
 - Entry: DefaultDomainSupportedEncTypes
 
   - Type: REG_DWORD
-  - Default value: 0x27
+  - Default value: 0x18
   - Possible values:
 
-    The default value is 0x27 (DES, RC4, AES session keys). We recommend setting the value to 0x3C for increased security, as this value allows for both AES-encrypted tickets and AES session keys. If you move to an AES-only environment where RC4 isn't used for the Kerberos protocol, we recommend setting the value to 0x38.
+    The default value is 0x18 (AES-SHA1). If you still have legacy applications that need RC4 ticket encryption we recommend setting the value to 0x24 (RC4, AES-SHA1 session keys).
 
-    This value sets AES as the default encryption type for session keys on accounts that aren't marked with a default encryption type.
+    This value sets AES-SHA1 as the default encryption type for accounts that aren't marked with a default encryption type.
 
     For more information, see [KB5021131: How to manage the Kerberos protocol changes related to CVE-2022-37966](https://support.microsoft.com/topic/kb5021131-how-to-manage-the-kerberos-protocol-changes-related-to-cve-2022-37966-fd837ac3-cdec-4e76-a6ec-86e67501407d).
  

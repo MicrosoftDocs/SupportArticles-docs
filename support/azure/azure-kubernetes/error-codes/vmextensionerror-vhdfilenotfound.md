@@ -20,7 +20,9 @@ When you try to create an AKS cluster, you receive the following error message:
 
 > VMExtensionProvisioningError: VM has reported a failure when processing extension 'vmssCSE'.
 >
-> Error message: "CSE failed with 'VMExtensionError_VHDFileNotFound'. There was a connectivity issue between your cluster and required azure endpoints,  please see https://learn.microsoft.com/troubleshoot/azure/azure-kubernetes/error-codes/vhdfilenotfound for more information."
+> Message: CSE failed with 'VMExtensionError_VHDFileNotFound'. There was a connectivity issue between your cluster and required azure endpoints, please see `https://learn.microsoft.com/troubleshoot/azure/azure-kubernetes/error-codes/vhdfilenotfound` for more information.
+>
+> "In some logs, this may also appear as exit status=65 / ExitCode: 65"
 
 ## Cause
 

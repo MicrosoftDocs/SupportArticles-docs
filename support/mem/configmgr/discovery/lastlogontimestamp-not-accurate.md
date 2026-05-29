@@ -1,7 +1,7 @@
 ---
 title: lastLogonTimestamp is not accurate
 description: Describes a problem in which the lastLogonTimestamp attribute may not be accurate in Configuration Manager.
-ms.date: 02/11/2025
+ms.date: 03/30/2026
 ms.reviewer: kaushika, erinwi, brshaw
 ms.custom: sap:Client Operations\Other
 ---

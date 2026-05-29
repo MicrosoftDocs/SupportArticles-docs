@@ -75,6 +75,8 @@ items:
     href: availability-performance/troubleshoot-oomkilled-aks-clusters.md
   - name: Troubleshoot pod scheduler errors
     href: availability-performance/troubleshoot-pod-scheduler-errors.md
+  - name: Troubleshoot pod workload restarts in AKS
+    href: availability-performance/troubleshoot-pod-workload-restart.md
   - name: Troubleshoot node not ready
     items:
     - name: Basic troubleshooting
@@ -173,6 +175,8 @@ items:
     href: storage/troubleshoot-common-bring-your-own-key-issues.md
   - name: Troubleshoot pods and namespaces stuck in the Terminating state
     href: storage/pods-namespaces-terminating-state.md
+  - name: Troubleshoot timeout and latency issues in AKS with Azure Storage
+    href: storage/troubleshoot-timeout-latency-aks-azure-storage.md
   - name: Mount failures
     items:
     - name: Can't set the uid and gid mounting options on an Azure Disk
@@ -227,6 +231,8 @@ items:
       href: extensions/runtime-host-incidents-third-party-scanner.md
   - name: Troubleshoot the AKS Managed Gateway API installation
     href: extensions/managed-gateway-api.md
+  - name: Troubleshoot the Application Routing Gateway API Implementation
+    href: extensions/application-routing-gateway-api.md
   - name: Troubleshoot the Istio-based service mesh add-on
     items:
     - name: General Istio add-on troubleshooting
@@ -413,6 +419,8 @@ items:
       href: error-codes/virtualnetworknotinsucceededstate-error.md
     - name: VMExtensionError_CniDownloadTimeout error
       href: error-codes/vmextensionerror-cnidownloadtimeout.md
+    - name: VMExtensionError_K8SDownloadTimeout error
+      href: error-codes/vmextensionerror-k8sdownloadtimeout.md
     - name: VMExtensionError_OutboundConnFail error
       href: error-codes/vmextensionerror-outboundconnfail.md
     - name: VMExtensionError_K8SAPIServerConnFail error

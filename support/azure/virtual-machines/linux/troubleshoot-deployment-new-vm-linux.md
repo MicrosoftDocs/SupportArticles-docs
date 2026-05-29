@@ -1,13 +1,16 @@
 ---
 title: Troubleshoot Linux virtual machine deployment issues
-description: Troubleshoot Linux virtual machine deployment issues in Azure by identifying failure stages, analyzing logs, and applying fixes to restore provisioning. Start now.
-ms.custom: sap:Cannot create a VM, linux-related-content
+description: Troubleshoot Linux VM deployment issues in Azure. Identify failure stages, analyze serial logs, and apply fixes to restore provisioning. Get started now.
+ms.custom: 
+ - Kernel Upgrades
+ - Package Management issue (Yum, Zypper, RPM, DPKG, APT)
 ms.service: azure-virtual-machines
 ms.date: 03/25/2026
+ms.collection: linux
 ms.reviewer: divargas, jarrettr
 ---
 
-# Troubleshoot issues when deploying Linux virtual machines
+# Troubleshoot Linux virtual machine deployment issues in Azure
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
@@ -21,7 +24,7 @@ ms.reviewer: divargas, jarrettr
 
 This article helps you troubleshoot issues that occur when deploying a new Linux virtual machine (VM) in Azure. It helps you identify the stage at which the deployment failed (deployment, provisioning, or OS boot) and guides you to the appropriate diagnostic tools and remediation steps.
 
-## Identify the failure stage
+## Identify the Linux VM deployment failure stage
 
 Before troubleshooting, determine where the deployment failed:
 
@@ -32,11 +35,13 @@ Before troubleshooting, determine where the deployment failed:
 
 | Symptom | Likely area |
 |-------|------------|
-| ARM deployment fails | Template, quota, region, image |
+| Azure Resource Manager deployment fails | Template, quota, region, image, terms & conditions |
 | VM stuck in provisioning | Cloud-init, extension, OS config |
 | VM running but no SSH | Network, Network security group (NSG), SSH config |
 
 ## Symptoms
+
+### Provisioning failure
 
 A common provisioning failure occurs when you deploy a virtual machine from a custom Linux image. In this scenario:
 
@@ -47,7 +52,7 @@ A common provisioning failure occurs when you deploy a virtual machine from a cu
 The following example shows this kind of error message:
 
 > [!NOTE]
-> Make sure your [Linux](https://azure.microsoft.com/documentation/articles/virtual-machines-linux-capture-image/) image is properly prepared (generalized).
+> Make sure your [Linux](/azure/virtual-machines/linux/create-upload-generic) image is properly prepared (generalized).
 
 ```output
 Deployment failed. Correlation ID: aaaa0000-bb11-2222-33cc-444444dddddd. {
@@ -67,21 +72,48 @@ Deployment failed. Correlation ID: aaaa0000-bb11-2222-33cc-444444dddddd. {
 
 When this problem occurs, the VM state shows as `failed`.
 
-### Why provisioning failures occur
+### Extra terms and conditions required
+
+Some Marketplace images (other than ones required by Azure) require the user to accept terms and conditions in order to deploy them.
+
+The following is a typical error message during deployment when using the Azure CLI to deploy these kind of Marketplace images:
+
+```output
+Message: Offer with PublisherId: 'xxxx', OfferId: 'XXXXlinux-aarch64' cannot be purchased due to validation errors. 
+For more information see details. Correlation Id: 'aaaa0000-bb11-2222-33cc-444444dddddd' You have not accepted the legal terms on this subscription: 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx' 
+for this plan. Before the subscription can be used, you need to accept the legal terms of the image. To read and accept legal terms, use the Azure CLI commands described at 
+https://go.microsoft.com/fwlink/?linkid=2110637 or the PowerShell commands available at https://go.microsoft.com/fwlink/?linkid=862451. Alternatively, deploying via the Azure portal
+provides a UI experience for reading and accepting the legal terms. Offer details: publisher='llll' offer = 'xxxxxxx', sku = 'xxxxx-xxx, 
+Correlation Id: 'aaaa0000-bb11-2222-33cc-444444dddddd'...
+```
+
+### Resolution
+
+For resolution, use one of the following options:
+
+- Use [Azure CLI](/cli/azure/vm/image/terms).
+- Use [Azure PowerShell](/powershell/module/az.marketplaceordering/set-azmarketplaceterms).
+- Deploy a machine from the Azure portal and accept the terms and conditions during the deployment process.
+
+## Why Linux VM provisioning failures occur
 
 Provisioning failures commonly occur for multiple reasons, including:
 
-- Missing provisioning or incorrectly configured agent.
+- **Missing provisioning or incorrectly configured agent**
 
-  Verify that an agent exists and is working correctly by using [cloud-init](/azure/virtual-machines/linux/using-cloud-init). If your image doesn't support this configuration, review [these steps](/azure/virtual-machines/linux/no-agent).
+Verify that an agent exists and is working correctly by using [cloud-init](/azure/virtual-machines/linux/using-cloud-init). If your image doesn't support this configuration, review [these steps](/azure/virtual-machines/linux/no-agent).
 
-- Incorrect image configuration.
+- **Incorrect image configuration**
 
-   For guidance to set up images by using cloud-init, see [Azure image requirements](/azure/virtual-machines/linux/create-upload-generic).
+For guidance to set up images by using cloud-init, see [Azure image requirements](/azure/virtual-machines/linux/create-upload-generic).
+
+- **Failed to accept terms and conditions for the particular image**
+
+Accept terms and conditions by using PowerShell, Azure CLI, or the Azure portal.
 
 ### Troubleshoot provisioning failures
 
-To identify the reason for failed provisioning, start by examining the serial log. This log is made available by deploying the VM to use Azure boot diagnostics.
+To identify the reason for failed provisioning, start by examining the serial log. You can access this log by deploying the VM with Azure boot diagnostics enabled.
 
 You must deploy a new VM with [boot diagnostics enabled](/cli/azure/vm/boot-diagnostics) so the VM that uses the failing image can access provisioning events in the serial log.
 
@@ -186,15 +218,17 @@ Use the following table for reference, not as a checklist. You don't need to ide
 
  #### Cause
  
-The kernel doesn't load the UDF driver. The VM needs this driver to provision. For more information, see [image requirements](/azure/virtual-machines/linux/create-upload-generic).
+The kernel doesn't load the UDF driver. Virtual machines (VMs) with cloud-init 21.1 or older need this driver to provision. For more information, see [image requirements](/azure/virtual-machines/linux/create-upload-generic). 
 
-When a VM is first provisioned on Azure, the Azure host presents a 'provisioning cdrom iso disk' to the VM. This provisioning disk is usually presented to the VM through /dev/sr0. Within the provisioning disk, there is a provisioning manifest that contains a VM's provisioning information. The in-VM provisioning agent is expected to mount the provisioning disk, read the provisioning manifest, and provision the VM accordingly.
+VMs with cloud-init 21.2 or newer deploy successfully. However, custom data isn't accessible to these VMs, preventing passwords and other sensitive information from also being deployed.
 
-Because the provisioning disk is a `cdrom iso disk`, the Linux UDF driver is required by the kernel to mount this disk. Microsoft [documentation for Linux images](/azure/virtual-machines/linux/create-upload-generic) references this requirement. For this VM, logs indicate that the provisioning disk didn't mount and VM provisioning failed. The most likely reason is missing or blocked UDF drivers.
+When a VM is first provisioned on Azure, the Azure host presents a `provisioning cdrom iso disk` to the VM. This provisioning disk is presented to the VM through `/dev/sr0`. In the provisioning disk, there's a provisioning manifest that contains a VM's provisioning information. The in-VM provisioning agent is expected to mount the provisioning disk, read the provisioning manifest, and provision the VM accordingly.
+
+Because the provisioning disk is a `cdrom iso disk`, the Linux kernel requires the UDF driver to mount this disk. Microsoft [documentation for Linux images](/azure/virtual-machines/linux/create-upload-generic) references this requirement. For this VM, logs indicate that the provisioning disk didn't mount and VM provisioning failed. The most likely reason is missing or blocked UDF drivers.
 
 #### Solution
 
-Make sure that the UDF driver is configured to be loaded in the kernel.
+Configure the UDF driver to be loaded by the kernel.
 
 A common way to block UDF drivers is through configurations within `/etc/modprobe.d/`. Work with the image owner to make sure that Linux UDF drivers are present and not blocked. For more information, see [this article about blocking and unblocking kernel drivers](https://linux.die.net/man/5/modprobe.d).
 
@@ -236,9 +270,9 @@ This problem occurs because the provided password includes unsupported (non-ASCI
 
 Provide a password that includes only ASCII characters.
 
-### Dhclient permission
+### DHCLIENT permission
 
-**Error** in cloud-init.log:
+**Error** in *cloud-init.log*:
 
 ```output
 Command: ['/var/tmp/cloud-init/cloud-init-dhcp-yd8mvxud/dhclient', '-1', '-v', '-lf', '/var/tmp/cloud-init/cloud-init-dhcp-yd8mvxud/dhcp.leases', '-pf', '/var/tmp/cloud-init/cloud-init-dhcp-yd8mvxud/dhclient.pid', 'eth0', '-sf', '/bin/true']
@@ -259,9 +293,9 @@ For VMs that run cloud-init earlier than version 20.3, configure the VM so that 
 > [!NOTE]
 > The `dhclient` permission problem was resolved in cloud-init 22.4 and later versions. For more information, see [cloud-init issues 3956](https://github.com/canonical/cloud-init/issues/3956).
 
-## Get more logs
+## Get more logs for Linux VM provisioning failures
 
-If you need more logs from the VM to understand the problems, SSH into the VM by using the [serial console](/azure/virtual-machines/troubleshooting/serial-console-linux) by using a user that's baked into the image. If you don't have a user baked in, you can either re-create the image to include a user, or use the [AZ VM Repair tool](/cli/azure/vm/repair#az-vm-repair-create) to mount the OS disk of the VM that didn't provision to another VM.
+If you need more logs from the VM to understand the problems, use a pre-provisioned user to log in into the serial console [serial console](/azure/virtual-machines/troubleshooting/serial-console-linux). If you don't have a pre-provisioned user, you can either re-create the image to include one, or use the [AZ VM Repair tool](/cli/azure/vm/repair#az-vm-repair-create) to mount the OS disk of the VM that didn't provision to another VM.
 
 ```azurecli-interactive 
 az vm repair create  \

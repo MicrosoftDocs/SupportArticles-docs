@@ -58,9 +58,9 @@ productDirectory:
     summary: Troubleshooting articles for Microsoft 365
     url: /office/troubleshoot
 
-  - title: Sales in Microsoft 365 Copilot
+  - title: Sales agent
     imageSrc: "media/hub-landing/sales-copilot.svg"
-    summary: Troubleshooting articles for Sales in Microsoft 365 Copilot
+    summary: Troubleshooting articles for Sales agent
     url: sales-copilot/welcome-sales-copilot.yml
 
   - title: Microsoft Dynamics GP

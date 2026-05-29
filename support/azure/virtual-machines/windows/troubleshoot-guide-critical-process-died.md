@@ -19,6 +19,8 @@ ms.custom: sap:My VM is not booting
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
+## Summary
+
 This article provides steps to resolve issues where a critical process dies during boot in an Azure VM.
 
 ## Symptom

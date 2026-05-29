@@ -18,6 +18,8 @@ ms.custom: sap:My VM is not booting
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
+## Summary
+
 This article provides steps to resolve issues where the disk isn't bootable in an Azure Virtual Machine (VM).
 
 ## Symptoms

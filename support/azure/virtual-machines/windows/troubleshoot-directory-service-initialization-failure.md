@@ -19,6 +19,8 @@ ms.custom: sap:My VM is not booting
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
+## Summary
+
 This article provides steps to resolve issues where an Active Directory domain controller virtual machine (VM) in Azure, is stuck in a loop and states that it needs to restart.
 
 ## Symptom

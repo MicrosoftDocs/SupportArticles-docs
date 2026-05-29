@@ -15,6 +15,8 @@ ms.custom: sap:Issue with Pacemaker clustering, and fencing
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
+## Summary
+
 This article discusses the most common causes of startup issues in RedHat Enterprise Linux (RHEL) Pacemaker Cluster resources or services, and also provides guidance to identify and resolve the issues.
 
 ## Scenario 1: Can't start cluster service because of quorum
