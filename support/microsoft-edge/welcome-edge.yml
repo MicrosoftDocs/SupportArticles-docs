@@ -36,6 +36,8 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
+          - text: Fix Microsoft Edge not saving cookies or sign-in sessions across launches
+            url: security/cookies-sessions-not-persisting.md
           - text: Saved site icons change unexpectedly on the new tab page
             url: security/site-icons-change-new-tab-page.md
           - text: Troubleshoot common sign-in problems
