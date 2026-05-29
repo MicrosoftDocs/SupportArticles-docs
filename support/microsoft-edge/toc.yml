@@ -21,7 +21,7 @@ items:
   - name: Stability and Performance
     items:
       - name: Fix high CPU or memory usage in Microsoft Edge
-        href: performance/edge-high-cpu-or-memory.md
+        href: performance/edge-high-cpu-memory.md
   - name: Web Platform and Development
     items:
       - name: Failure to deploy self-hosted extension via group policy

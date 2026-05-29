@@ -46,7 +46,7 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Fix high CPU or memory usage in Microsoft Edge
-            url: performance/edge-high-cpu-or-memory.md
+            url: performance/edge-high-cpu-memory.md
 
   - title: Web Platform and Development
     linkLists:
