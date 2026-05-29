@@ -1,21 +1,24 @@
 ---
 title: Automapping experiences unwanted results
-description: This article describes how unwanted Automapping results may occur when you add or remove mailbox permissions in EAC. Provides a workaround.
+description: This article describes how to work around an issue in which unwanted Automapping results occur if you add or remove mailbox permissions in Exchange Admin Center.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.reviewer: ninob, dpaul, v-six
+ms.reviewer: ninob, dpaul, v-six, v-kccross
 ms.custom: 
   - sap:Permissions\Need help with Mailbox permissions (Send As, Send on Behalf, Full Access)
   - Exchange Server
   - CSSTroubleshoot
+  - CI 9823
+  - CI 11875
 search.appverid: 
   - MET150
 appliesto: 
+  - Exchange Server SE
+  - Exchange Server 2019
   - Exchange Server 2016
-  - Exchange Server 2013
 ms.date: 05/12/2026
 ---
 
@@ -23,21 +26,22 @@ ms.date: 05/12/2026
 
 _Original KB number:_ &nbsp; 4487381
 
+## Summary
+
 ## Symptoms
 
 Consider the following scenario:
 
-- You're working in a Microsoft Exchange Server 2016 or Exchange Server 2013 organization.
 - You have a cross-Active Directory forest environment that contains [linked mailboxes](/exchange/recipients/linked-mailboxes).
-- In the Exchange Admin Center (EAC), you remove the Full Access permission from a linked account to a mailbox.
+- In the Exchange Admin Center (EAC), you remove the Full Access permission that allows a linked account to access and manage a particular mailbox.
 
-In this scenario, Automapping may experience unwanted results. For example, the linked mailbox may still be displayed in Outlook.
+In this scenario, Automapping might experience unwanted results. For example, the linked mailbox might still appear in Outlook.
 
-Additionally, if the user had previously selected **Download Shared Folders** in Outlook, the user who no longer has permission to the linked mailbox still sees mail items for the mailbox that were previously synced while the user still had permission. However, the user can no longer do any work out of the linked mailbox.
+If the user previously enabled **Download Shared Folders** in Outlook, they might still see mailbox items that were synced earlier. However, because the user no longer has permission, they can’t access or work with the linked mailbox.
 
 ## Cause
 
-The issue may occur because the server that is running Exchange Server doesn't correctly update the `msExchDelegateListLink` attribute. This attribute is used for Automapping from the Active Directory account when you add or remove the mailbox permission in EAC. The server that is running Exchange Server references the AD object of the account forest instead of the resource forest in which the server is deployed.
+The issue might occur because the server that is running Microsoft Exchange Server doesn't correctly update the `msExchDelegateListLink` attribute. This attribute is used for Automapping from the Active Directory account when you add or remove the mailbox permission in EAC. The server that is running Exchange Server references the AD object of the account forest instead of the resource forest in which the server is deployed.
 
 ## Workaround
 
