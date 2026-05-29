@@ -28,6 +28,8 @@ _Original KB number:_ &nbsp; 4487381
 
 ## Summary
 
+This article describes an issue where unwanted Automapping behavior occurs after you add or remove mailbox permissions in the Exchange Admin Center (EAC) in a cross-forest environment. The issue occurs because Exchange doesn’t correctly update the attribute used for Automappinga. This issue can cause a mailbox to continue to appear in Outlook even after permissions are removed. To work around this issue, manage mailbox permissions by using the Exchange Management Shell with the correct Active Directory object.
+
 ## Symptoms
 
 Consider the following scenario:
