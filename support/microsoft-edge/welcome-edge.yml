@@ -57,3 +57,5 @@ landingContent:
           url: development/video-playback-issues.md
         - text: Unexpected SmartScreen block or warning on website
           url: development/unexpected-block-warning.md
+        - text: WebView2 is unexpectedly installed on Windows Server operating systems
+          url: development/webview2-unexpected-install-windows-server.md
