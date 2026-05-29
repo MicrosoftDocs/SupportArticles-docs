@@ -592,10 +592,10 @@ items:
       href: ../../../windows-server/licensing-and-activation/activation-error-0x8007232a-dns-server-failure.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Error 0x8007232B — DNS name does not exist
       href: ../../../windows-server/licensing-and-activation/activation-error-0x8007232b-dns-name-does-not-exist.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
+    - name: Error 0xC004F038 - The count reported by your Key Management Service (KMS) is insufficient
+      href: ../../../windows-server/licensing-and-activation/activation-error-0xc004cf038-insufficient-kms-host-pool-count.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Error 0xC004F074 — No KMS could be contacted
       href: windows-vm-activation-error-0xc004f074.md
-    - name: Error 0xC004F038 — KMS count insufficient
-      href: windows-vm-activation-error-0xc004f038.md
     - name: Error 0xC004F042 — KMS can't be used
       href: windows-vm-activation-error-0xc004f042.md
     - name: Event 8198, error 0xC0020017 or 0x8007139F - KMS contact failure
