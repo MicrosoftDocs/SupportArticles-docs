@@ -7,17 +7,18 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
-  - sap:OWA  And Exchange Admin Center\Issues connecting to Exchange Management Shell
+  - sap:OWA And Exchange Admin Center\Issues connecting to Exchange Management Shell
   - Exchange Server
   - CSSTroubleshoot
+  - CI 9823
+  - CI 11876
 ms.reviewer: jarrettr, ralfle, v-six
 appliesto: 
-  - Exchange Server 2016 Enterprise Edition
-  - Exchange Server 2016 Enterprise Edition
-  - Exchange Server 2013 Enterprise
-  - Exchange Server 2013 Standard Edition
+  - Exchange Server SE
+  - Exchange Server 2019
+  - Exchange Server 2016
 search.appverid: MET150
-ms.date: 05/12/2026
+ms.date: 05/28/2026
 ---
 
 # Some PowerShell cmdlet or parameter combinations are unsuccessful in Exchange Server
@@ -28,12 +29,12 @@ _Original KB number:_ &nbsp; 4295103
 
 Consider this scenario:
 
-- You have a Microsoft Exchange Server 2013 or 2016 environment that contains two or more mailbox servers.
+- You have a Microsoft Exchange Server environment that contains two or more mailbox servers.
 - Your Active Directory Forest contains two or more domains.
 - Your Exchange Servers and user objects are located in different Active Directory domains.
 - You manage your recipients through Exchange Management Shell (EMS) by setting `Set-ADServerSettings -ViewEntireForest $true`.
 
-In this scenario, when you run a PowerShell cmdlet or parameter combination, the cmdlet is unsuccessful, you receive this error message:
+In this scenario, when you run a PowerShell cmdlet or parameter combination, the cmdlet is unsuccessful, and you receive this error message:
 
 ```console
 Error on proxy command 'Set-Mailbox -Identity:'user@contoso.com' -LitigationHoldEnabled:$False' to server
@@ -60,11 +61,11 @@ Here are some cmdlet or parameter combinations that may be affected:
 
 ## Cause
 
-This behavior is by design when the specified mailbox is located on a different server than the server that EMS is connected to.
+This behavior is by design when the specified mailbox is located on a different server from the server to which EMS is connected.
 
 ## Workaround
 
-To work around this behavior, specify the `-DomainController` parameter with the cmdlet. For example, specify a Domain Controller from the Active Directory domain where the associated user object is located, such as the following:
+To work around this behavior, specify the `-DomainController` parameter with the cmdlet. You can pecify a Domain Controller from the Active Directory domain where the associated user object is located, as shown in the following example:
 
 ```powershell
 Set-Mailbox -Identity:'user@contoso.com' -LitigationHoldEnabled:$False -DomainController dc1.sub.corp.contoso.com
