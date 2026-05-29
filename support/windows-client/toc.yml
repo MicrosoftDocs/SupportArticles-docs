@@ -1,3 +1,4 @@
+items:
 - name: Windows Client
   href: welcome-windows-client.yml
 - name: Active Directory
@@ -12,7 +13,7 @@
       items:
         - name: "Troubleshooting guidance: Active Directory domain join"
           href: ../windows-server/active-directory/active-directory-domain-join-troubleshooting-guidance.md?context=/troubleshoot/windows-client/context/context
-        - name: Cannot contect to the Internet or the domain
+        - name: Cannot connect to the Internet or the domain
           href: ../windows-server/active-directory/cannot-connect-internet-domain.md?context=/troubleshoot/windows-client/context/context
         - name: Default limit to workstation numbers
           href: ../windows-server/active-directory/default-workstation-numbers-join-domain.md?context=/troubleshoot/windows-client/context/context
@@ -266,30 +267,32 @@
           href: ./high-availability/retrieve-data-from-windows-xp-mode-vm.md
 - name: Licensing and activation
   items:
-  - name: Licensing and activation
-    href: ./licensing-and-activation/licensing-and-activation-overview.md
-  - name: Windows volume activation
-    items:
-    - name: Activation failures on volume-licensed KMS clients
-      href: ./licensing-and-activation/activation-failures-not-genuine-notifications-volume-licensed-kms-client.md
-    - name: Can't activate Windows 7 with KMS
-      href: ./licensing-and-activation/cannot-activate-windows-from-oem.md
-    - name: Error "certificate in the connection information has expired"
-      href: ./licensing-and-activation/error-certificate-connection-information-expired.md
-    - name: Error 0x8007232A "DNS server failure" when you activate Windows
-      href: ../windows-server/licensing-and-activation/activation-error-0x8007232a-dns-server-failure.md?context=/troubleshoot/windows-client/context/context
-    - name: Error 0x8007232B "DNS name does not exist" when activating Windows
-      href: ../windows-server/licensing-and-activation/activation-error-0x8007232b-dns-name-does-not-exist.md?context=/troubleshoot/windows-client/context/context
-    - name: Error 0xC004C003 "product key is blocked" when you use MAK to activate Windows
-      href: ../windows-server/licensing-and-activation/activation-error-0xc004c003-product-key-blocked.md?context=/troubleshoot/windows-client/context/context
-    - name: Error 0xC004F038 "The count reported by your Key Management Service (KMS) is insufficient" when you activate Windows
-      href: ../windows-server/licensing-and-activation/activation-error-0xc004cf038-insufficient-kms-host-pool-count.md?context=/troubleshoot/windows-client/context/context
-    - name: Event 8198, error 0xC0020017 or 0x8007139F "KMS contact failure" when activating Windows
-      href: ../windows-server/licensing-and-activation/activation-event-8198-error-0xc0020017-0x8007139f-kms-contact-failure.md?context=/troubleshoot/windows-client/context/context
-    - name: How to validate the OEM activation key
-      href: ./licensing-and-activation/validate-oem-activation-key.md
-    - name: KMS current count doesn't increase
-      href: ./licensing-and-activation/kms-current-count-not-increase.md
+    - name: Licensing and activation
+      href: ./licensing-and-activation/licensing-and-activation-overview.md
+    - name: Windows volume activation
+      items:
+        - name: Activation failures on volume-licensed KMS clients
+          href: ./licensing-and-activation/activation-failures-not-genuine-notifications-volume-licensed-kms-client.md
+        - name: Can't activate Windows 7 with KMS
+          href: ./licensing-and-activation/cannot-activate-windows-from-oem.md
+        - name: Error "certificate in the connection information has expired"
+          href: ./licensing-and-activation/error-certificate-connection-information-expired.md
+        - name: Error 0x8007232A "DNS server failure" when you activate Windows
+          href: ../windows-server/licensing-and-activation/activation-error-0x8007232a-dns-server-failure.md?context=/troubleshoot/windows-client/context/context
+        - name: Error 0x8007232B "DNS name does not exist" when activating Windows
+          href: ../windows-server/licensing-and-activation/activation-error-0x8007232b-dns-name-does-not-exist.md?context=/troubleshoot/windows-client/context/context
+        - name: Error 0xC004C003 "product key is blocked" when you use MAK to activate Windows
+          href: ../windows-server/licensing-and-activation/activation-error-0xc004c003-product-key-blocked.md?context=/troubleshoot/windows-client/context/context
+        - name: Error 0xC004F038 "The count reported by your Key Management Service (KMS) is insufficient" when you activate Windows
+          href: ../windows-server/licensing-and-activation/activation-error-0xc004cf038-insufficient-kms-host-pool-count.md?context=/troubleshoot/windows-client/context/context
+        - name: Error 0xC004F042 "The specified Key Management Service (KMS) can't be used" when you activate Windows
+          href: ../windows-server/licensing-and-activation/activation-error-0xc004cf042-cant-use-specified-kms.md?context=/troubleshoot/windows-client/context/context
+        - name: Event 8198, error 0xC0020017 or 0x8007139F "KMS contact failure" when activating Windows
+          href: ../windows-server/licensing-and-activation/activation-event-8198-error-0xc0020017-0x8007139f-kms-contact-failure.md?context=/troubleshoot/windows-client/context/context
+        - name: How to validate the OEM activation key
+          href: ./licensing-and-activation/validate-oem-activation-key.md
+        - name: KMS current count doesn't increase
+          href: ./licensing-and-activation/kms-current-count-not-increase.md
 - name: Networking
   items:
     - name: Networking
