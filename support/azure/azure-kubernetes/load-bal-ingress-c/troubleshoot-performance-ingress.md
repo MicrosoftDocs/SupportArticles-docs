@@ -4,6 +4,7 @@ description: Learn how to troubleshoot Managed NGINX ingress controller performa
 ms.reviewer: claudiogodoy
 ms.service: azure-kubernetes-service
 ms.date: 05/24/2025
+ms.custom: sap:Load balancer and Ingress controller
 ---
 # Troubleshoot issues in Managed NGINX ingress controller 
 

@@ -1,29 +1,34 @@
 ---
-title: Error (Cannot save changes made to an item to store) while migrating mailbox to Exchange Online
-description: This article fixes an issue in which you can't migrate mailboxes from on-premises to Exchange Online with Cannot save changes made to an item to store error.
+title: Can't save changes made to an item to store while migrating a mailbox to Exchange Online
+description: This article explains how to fix an issue in which you can't migrate mailboxes to Exchange Online with the error "Cannot save changes made to an item to store."
 author: cloud-writer
 ms.author: meerak
-ms.reviewer: pramods, v-six
+ms.reviewer: pramods, v-six, v-kccross
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
-  - sap:Migration\Issues with Move Mailbox within same organization
+  - sap:Intra-Organization Migration
   - Exchange Server
   - CSSTroubleshoot
   - CI 123834
+  - CI 9823
+  - CI 11506
 search.appverid: 
   - MET150
 appliesto: 
   - Exchange Online
+  - Exchange Server SE
   - Exchange Server 2019
   - Exchange Server 2016
-  - Exchange Server 2013
-  - Exchange Server 2010
-ms.date: 05/12/2026
+ms.date: 04/26/2026
 ---
 
-# Error while migrating mailbox to Exchange Online: Cannot save changes made to an item to store
+# Can't save changes made to an item to store when you migrate a mailbox to Exchange Online
+
+## Summary
+
+Mailbox migrations to Exchange Online can fail with the error "Cannot save changes made to an item to store." This issue happens when a folder exceeds the per-folder item limit. This article shows how to identify and reduce oversized folders so migration can continue.
 
 ## Symptoms
 
@@ -39,9 +44,8 @@ For more information about Exchange Online mailbox folder limits, see [Exchange 
 
 ## Resolution
 
-### For Microsoft Exchange Server 2013 and above
-
-1. Run these commands in the on-premises PowerShell to check which folder contains more than 1 million items.
+1. Using an account that has [sufficient permissions](/exchange/permissions/permissions) on your Exchange Server, open the [Exchange Management Shell (EMS)](/powershell/exchange/open-the-exchange-management-shell) or [connect to your Exchange server by using remote PowerShell](/powershell/exchange/connect-to-exchange-servers-using-remote-powershell).
+1. Run the [Get-MailboxFolderStatistics](/powershell/module/exchangepowershell/get-mailboxfolderstatistics) PowerShell cmdlet to check which folder contains more than 1 million items.
 
     ```powershell
     $root=Get-MailboxFolderStatistics -Identity user@contoso.com
@@ -49,7 +53,7 @@ For more information about Exchange Online mailbox folder limits, see [Exchange 
     $root | sort itemsinfolder -descending |ft folderpath,itemsinfolder
     ```
 
-2. Check if any folder under **NonIpmRoot** contains more than 1 million items.
+1. Check if any folder under **NonIpmRoot** contains more than 1 million items.
 
     ```powershell
     $non_root=Get-MailboxFolderStatistics user@contoso.com -FolderScope NonIpmRoot
@@ -57,22 +61,6 @@ For more information about Exchange Online mailbox folder limits, see [Exchange 
     $non_root | sort itemsinfolder -descending |ft folderpath,itemsinfolder
     ```
 
-3. If the problematic folder is accessible from Outlook or through the [MFCMAPI](https://github.com/stephenegriffin/mfcmapi/releases/tag/20.0.20280.01) tool, move some items to other folders and resume the migration.
+1. If the folder that has too many items is accessible from Outlook or through the [MFCMAPI](https://github.com/stephenegriffin/mfcmapi/releases/tag/20.0.20280.01) tool, move some items to other folders and resume the migration.
 
-    There's a high chance that a folder named **Deferred action** contains more than 1 million items. You can delete some of them (HardDelete) using MFCMAPI. The folder is right below the root of the mailbox. To learn more about this folder, see [this article](/openspecs/exchange_server_protocols/ms-oxorule/0ae81043-05e6-47e4-aa3f-f546512e96b6).
-
-### For Microsoft Exchange server 2010
-
-1. Run this command in the on-premises PowerShell to check which folder contains more than 1 million items.
-
-    ```powershell
-    $root=Get-MailboxFolderStatistics -Identity user@contoso.com
-
-    $root | sort itemsinfolder -descending |ft folderpath,itemsinfolder
-    ```
-
-2. Move the items to other folders and resume the migration.
-3. If you didn't find the folder in the command above, use [MFCMAPI](https://github.com/stephenegriffin/mfcmapi/releases/tag/20.0.20280.01) to connect to the mailbox. Clean-up folders in **NonIpmRoot**.
-
-    > [!NOTE]
-    > In Exchange Server 2010, `Get-MailboxFolderStatistics` doesn't have a `-FolderScope NonIpmRoot` switch.
+   It's possible that the **Deferred action** folder contains more than 1 million items. You can delete some of the items (HardDelete) using the MFCMAPI tool. This folder is under the root of the mailbox. To learn more about this folder, see the [Glossary](/openspecs/exchange_server_protocols/ms-oxorule/0ae81043-05e6-47e4-aa3f-f546512e96b6) for the MS-OXORULE Email Rules Protocol.
