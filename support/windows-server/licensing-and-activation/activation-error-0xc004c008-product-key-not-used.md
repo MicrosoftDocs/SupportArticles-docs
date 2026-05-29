@@ -35,9 +35,9 @@ This error occurs if the Key Management Services (KMS) host key exceeds its acti
 
 This error typically occurs in the following scenarios:
 
-- You deploy Windows by using a custom image that contains a KMS host key that was used to activate too many computers.
-- You reuse a shared KMS key across multiple Windows systems in a test or development environment.
-- You migrate a virtual machine (VM) from an on-premises environment to the Azure environment. The on-premises environment reused the same KMS key many times.
+- The KMS host key has already been used to set up other KMS hosts. For example, you reuse a shared KMS key across multiple KMS hosts in a test or development environment.
+- The KMS host key was used incorrectly to activate non-KMS host.
+- The KMS host role was moved to new server.
 
 ## Resolution
 
@@ -47,7 +47,17 @@ Use the following steps to troubleshoot and fix the issue. To get the best resul
 
 ### Step 1: Get a new key or reset the existing key
 
+> [!IMPORTANT]  
+> To request more KMS activations to activate more than six KMS hosts, you must have the VL Administrator or Product keys reader role.
+
 If you need a KMS host key (for example, for VMs that are in an isolated network), contact [Microsoft Volume License Key assisted support](https://www.microsoft.com/licensing/existing-customer/activation-centers). There, you can find the appropriate contact information to request a new key or to have the activation count on your existing key be reset.
+
+You can also request additional activations through the [Microsoft Engage Center request form](https://support.serviceshub.microsoft.com/supportforbusiness/create?sapId=2afa6f15-b710-db46-909a-8346017c802f). Provide the following information on the web form:
+
+- Agreement number, enrollment number, or license ID
+- Product name (including version and edition)
+- The number of host activations that you need
+- Business justification or reason for deployment
 
 If you're trying to activate an Azure VM, and your infrastructure doesn't require a KMS key for a self-hosted KMS host, you can try Step 2.
 
@@ -79,6 +89,7 @@ If activation fails and generates the same error, contact Microsoft Support for 
 
 ## References
 
+- [KMS client activation and product keys](/windows-server/get-started/kms-client-activation-keys)
 - [Troubleshoot Windows activation error codes](troubleshoot-activation-error-codes.md)
 - [Slmgr.vbs options for obtaining volume activation information](/windows-server/get-started/activation-slmgr-vbs-options)
 - [Troubleshoot Azure Windows virtual machine activation problems](../../azure/virtual-machines/windows/troubleshoot-activation-problems.md)
