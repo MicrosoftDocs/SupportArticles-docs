@@ -28,7 +28,7 @@ _Original KB number:_ &nbsp; 4487381
 
 ## Summary
 
-This article describes an issue where unwanted Automapping behavior occurs after you add or remove mailbox permissions in the Exchange Admin Center (EAC) in a cross-forest environment. The issue occurs because Exchange doesn’t correctly update the attribute used for Automappinga. This issue can cause a mailbox to continue to appear in Outlook even after permissions are removed. To work around this issue, manage mailbox permissions by using the Exchange Management Shell with the correct Active Directory object.
+This article describes an issue in which unwanted Automapping behavior occurs after you add or remove mailbox permissions in the Exchange Admin Center (EAC) in a cross-forest environment. The issue occurs because Exchange doesn’t correctly update the attribute that's used for Automapping. This issue can cause a mailbox to continue to appear in Outlook even after permissions are removed. To work around this issue, manage mailbox permissions by using the Exchange Management Shell together with the correct Active Directory object.
 
 ## Symptoms
 
@@ -43,13 +43,13 @@ If the user previously enabled **Download Shared Folders** in Outlook, they migh
 
 ## Cause
 
-The issue might occur because the server that is running Microsoft Exchange Server doesn't correctly update the `msExchDelegateListLink` attribute. This attribute is used for Automapping from the Active Directory account when you add or remove the mailbox permission in EAC. The server that is running Exchange Server references the AD object of the account forest instead of the resource forest in which the server is deployed.
+The issue might occur because the server that's running Microsoft Exchange Server doesn't correctly update the `msExchDelegateListLink` attribute. This attribute is used for Automapping from the Active Directory account when you add or remove the mailbox permission in EAC. The server that's running Exchange Server references the AD object of the account forest instead of the resource forest in which the server is deployed.
 
 ## Workaround
 
 To work around this issue, add or remove the mailbox permissions within the Exchange Management Shell, and use the correct AD object.
 
-In the following example, you grant the Full Access permission to mailbox *MailboxTest1* for the *LinkTest2* account forests. The resource forest (Exchange forest) domain is `contoso.com`, and the account forest domain is `example.com`.  
+In the following example, you grant the Full Access permission to the *MailboxTest1* mailbox for the *LinkTest2* account forests. The resource forest (Exchange forest) domain is `contoso.com`, and the account forest domain is `example.com`.  
 
 ```powershell
 Add-MailboxPermission -Identity 'Contoso\MailboxTest1' -User 'Contoso\LinkTest2' -AccessRights 'FullAccess'
