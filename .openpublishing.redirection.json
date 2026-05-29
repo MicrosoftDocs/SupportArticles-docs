@@ -15884,6 +15884,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/azure/virtual-machines/windows/windows-vm-activation-error-0xc004c008.md",
+      "redirect_url": "/troubleshoot/windows-server/licensing-and-activation/activation-error-0xc004c008-product-key-not-used.md?context=/troubleshoot/azure/virtual-machines/windows/context/context",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/azure/virtual-machines/windows/windows-vm-activation-error-0xc004f042.md",
       "redirect_url": "/troubleshoot/windows-server/licensing-and-activation/activation-error-0xc004cf042-cant-use-specified-kms.md?context=/troubleshoot/azure/virtual-machines/windows/context/context",
       "redirect_document_id": false
