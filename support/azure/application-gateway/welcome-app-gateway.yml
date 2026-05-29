@@ -24,8 +24,14 @@ landingContent:
         links:
           - text: Troubleshoot TCP connection timeout issues in Application Gateway
             url: troubleshoot-tcp-connection-timeout-issues.md
-          - text: ApplicationGatewaySkuNotSpecified error
-            url: error-codes/applicationgatewayskunotspecified.md
+          - text: Troubleshoot private frontend IP allocation issues in Application Gateway
+            url: troubleshoot-private-frontend-ip-allocation-issues.md
+          - text: Troubleshoot DNS Resolution issues in Application Gateway
+            url: troubleshoot-dns-resolution-issues.md
+          - text: Troubleshoot Failed State issues in Application Gateway
+            url: troubleshoot-appgw-failed-state-issues.md
+          - text: Troubleshoot rewrite rules in Application Gateway
+            url: troubleshoot-url-rewrite-rules.md
           - text: ApplicationGatewayFrontendIpCannotHavePublicIpAndSubnet error
             url: error-codes/application-gateway-frontend-ip-cannot-have-public-ip-subnet-error.md
           - text: Troubleshoot WAF anomaly scoring behavior and rule 949110 blocks

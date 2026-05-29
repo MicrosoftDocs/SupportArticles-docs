@@ -123,4 +123,4 @@ This issue occurs with VMs that deploy an uninitialized temporary drive, such as
 ||[Famdsv7 series](/azure/virtual-machines/sizes/compute-optimized/famdsv7-series#sizes-in-series)|
 
 > [!NOTE]
-> Make sure the VM isn't configured using a [sector size greater than 4 KB](sql-installation-fails-sector-size-error-azure-vm.md#resolution) before installing SQL Server. 
+> Make sure the VM isn't configured using a [sector size greater than 4 KB](sql-installation-fails-sector-size-error-azure-vm.md#solution) before installing SQL Server. 

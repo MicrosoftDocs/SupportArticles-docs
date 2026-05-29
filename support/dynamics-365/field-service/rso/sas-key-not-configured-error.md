@@ -1,11 +1,13 @@
 ---
 title: SAS Key hasn't been configured error when publishing a schedule
 description: Resolves an issue with misconfigured Azure resources in the Resource Scheduling Optimization add-in for Dynamics 365 Field Service.
-ms.reviewer: mhart
-ms.date: 01/08/2025
+ms.reviewer: anclear, v-wendysmith, v-shaywood
+ms.date: 05/04/2026
 ms.custom: sap:Resource Scheduling Optimization
 ---
 # "SAS Key hasn't been configured" error in Resource Scheduling Optimization
+
+## Summary
 
 This article helps administrators resolve an issue in the [Resource Scheduling Optimization add-in](/dynamics365/field-service/rso-overview) for Microsoft Dynamics 365 Field Service.
 
@@ -13,7 +15,7 @@ This article helps administrators resolve an issue in the [Resource Scheduling O
 
 The "SAS Key hasn't been configured" error message appears when users try to [publish a schedule](/dynamics365/field-service/rso-schedule-optimization#buttons-and-functions-for-optimization-schedules).
 
-## Resolution
+## Solution
 
 The message means the Resource Scheduling Optimization Azure resources aren't set up correctly.
 

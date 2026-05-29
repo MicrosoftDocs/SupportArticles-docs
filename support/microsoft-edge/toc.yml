@@ -34,6 +34,8 @@ items:
         href: development/video-playback-issues.md
       - name: Unexpected SmartScreen block or warning on website
         href: development/unexpected-block-warning.md
+      - name: WebView2 is unexpectedly installed on Windows Server operating systems
+        href: development/webview2-unexpected-install-windows-server.md
   - name: Security and Privacy
     items:
       - name: Saved site icons change unexpectedly on the new tab page

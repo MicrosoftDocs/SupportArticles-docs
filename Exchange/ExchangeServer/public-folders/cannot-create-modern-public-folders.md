@@ -16,7 +16,7 @@ search.appverid: MET150
 ms.reviewer: batre, aartigoyle, jarrettr, v-six
 author: cloud-writer
 ms.author: meerak
-ms.date: 01/24/2024
+ms.date: 05/12/2026
 ---
 
 # Owner cannot create modern public folders by using Outlook in Exchange Server 2013 or Exchange Server 2016

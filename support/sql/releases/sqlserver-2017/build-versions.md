@@ -58,10 +58,12 @@ This article lists the Microsoft SQL Server 2017 builds that were released after
 | CU1           | 14.0.3006.16 | 2017.140.3006.16 | 14.0.1.439  | 2017.140.1.439  | [KB4038634](cumulativeupdate1.md)  | October 24, 2017   |
 | RTM | 14.0.1000.169 | 2017.140.1000.169 | 14.0.1.439 | 2017.140.1.439 | [SQL Server 2017 release notes](/sql/sql-server/sql-server-2017-release-notes) | September 29, 2017 |
 
-## SQL Server 2017 GDR builds
+## SQL Server 2017 General Distribution Release (GDR) builds
 
 | Cumulative update name | SQL Server product version | SQL Server (sqlservr.exe) file version | Analysis Services product version | Analysis Services (msmdsrv.exe) file version | Knowledge Base number | Release date |
 |------------|---------------|-------------------|--------------|------------------|---------------------------------------------------------|--------------------|
+| CU31 + GDR | 14.0.3530.2   | 2017.140.3530.2   | 14.0.249.120 | 2017.140.249.120 | [KB5090354](https://support.microsoft.com/help/5090354) | May 12, 2026   |
+| GDR        | 14.0.2110.2  |  2017.140.2110.2   | 14.0.6.482   | 2017.140.6.482   | [KB5090347](https://support.microsoft.com/help/5090347) | May 12, 2026   |
 | CU31 + GDR | 14.0.3525.1   | 2017.140.3525.1   | 14.0.249.120 | 2017.140.249.120 | [KB5084818](https://support.microsoft.com/help/5084818) | April 14, 2026   |
 | GDR        | 14.0.2105.1  |  2017.140.2105.1   | 14.0.6.482   | 2017.140.6.482   | [KB5084819](https://support.microsoft.com/help/5084819) | April 14, 2026   |
 | CU31 + GDR | 14.0.3520.4   | 2017.140.3520.4   | 14.0.249.120 | 2017.140.249.120 | [KB5077471](https://support.microsoft.com/help/5077471) | March 10, 2026   |

@@ -1,7 +1,7 @@
 ---
-title: Troubleshoot Lookup issues in model-driven apps
-description: Helps troubleshoot Simple Lookup control issues in Power Apps model-driven apps.
-ms.date: 05/27/2025
+title: Troubleshoot Lookup control issues in model-driven apps
+description: Helps troubleshoot Simple and Advanced Lookup control issues in Power Apps model-driven apps.
+ms.date: 05/28/2026
 ms.reviewer: hwhong, v-shaywood
 ms.custom: sap:Running model-driven app controls\Lookup, advanced lookup
 search.audienceType: 
@@ -11,9 +11,12 @@ search.app:
 contributors:
   - hwhong
 ---
-# Troubleshoot Lookup issues in model-driven apps
+# Troubleshoot Lookup control issues in model-driven apps
 
-The Lookup control combines the Lookup field and its relationships, the assigned view, the entity's Quick Find view, the search string, and any applied custom script to build a fetchXML for retrieving search results.
+## Summary
+
+This article explains how to troubleshoot lookup control issues in Power Apps model-driven apps.
+The Simple and Advanced Lookup controls use the Lookup field, its relationships, the assigned view, the entity's Quick Find view, the search string, and any applied custom script to build a FetchXML for retrieving search results.
 
 Issues with this operation usually fall into one of these categories:
 
@@ -23,43 +26,50 @@ Issues with this operation usually fall into one of these categories:
 
 ## Search results are incorrect
 
-If the Lookup's search results are missing items or include unexpected items, inspect the fetchXML of the outgoing network request that the control makes.
+If the Lookup control's search results are missing items or include unexpected items, inspect the [FetchXML](/power-apps/developer/data-platform/fetchxml/overview) of the [outgoing network request](/azure/azure-web-pubsub/howto-troubleshoot-network-trace) that the control makes.
 
-- If the fetchXML is incorrect, then the problem is that:
+- If the FetchXML is incorrect, the problem is that:
 
   - The Quick Find view or the view being searched is misconfigured:
     - Missing search fields.
     - Missing the primary field.
-    - Using a filter that's blocking results.
+    - Using a filter that blocks results.
 
-  - A client script modifies the control's behavior with API such as [addPreSearch](/power-apps/developer/model-driven-apps/clientapi/reference/controls/addpresearch) or [addCustomFilter](/power-apps/developer/model-driven-apps/clientapi/reference/controls/addcustomfilter).
+  - A client script modifies the control's behavior by using APIs such as [addPreSearch](/power-apps/developer/model-driven-apps/clientapi/reference/controls/addpresearch) or [addCustomFilter](/power-apps/developer/model-driven-apps/clientapi/reference/controls/addcustomfilter).
 
-- If the fetchXML is correct, but the data returned is incorrect, the issue is on the server, such as a misconfigured relationship. Another possibility is that the user doesn't have correct permissions for some entities, which might not be apparent in the network response other than with an omission of results.
+- If the FetchXML is correct, but the data returned is incorrect, the issue is on the server, such as a misconfigured relationship. Another possibility is that the user doesn't have correct permissions for some entities, which might not be apparent in the network response other than by an omission of results.
+
+> [!TIP]
+>
+> Search results are listed in the order they're returned from the server. If results aren't in the expected order, then either
+>
+> - the FetchXML [order element](/power-apps/developer/data-platform/fetchxml/reference/order) has the wrong attribute values, or
+> - the server is unable to sort the results, such as with [virtual entities](/dynamics365/customerengagement/on-premises/developer/virtual-entities/get-started-ve).
 
 > [!NOTE]
 >
-> - Selecting the text area (the input box of the Lookup) will show a list of the most recently used items, not a fresh search.
-> - Selecting the magnifying glass will trigger a search based on your input, showing results that match your search terms. You can configure the control to always perform a search when you select the text area, instead of showing recent items.
+> - Selecting the text area (the input box of the Lookup control) shows a list of the most recently used items, not a fresh search.
+> - Selecting the magnifying glass triggers a search based on your input, showing results that match your search terms. You can configure the control to always perform a search when you select the text area, instead of showing recent items.
 
 ## Views are incorrect
 
-- If an entity or view is missing from the Lookup views or results, or the default view is incorrect:
+- If an entity or view is missing from the Lookup control's views or results, or the default view is incorrect:
 
   - Verify that the entity is enabled for the app.
-  - Verify that the user has permissions and roles required to interact with the entity and related entities.
+  - Verify that you have the permissions and roles required to interact with the entity and related entities.
 
 - If the [addCustomView](/power-apps/developer/model-driven-apps/clientapi/reference/controls/addcustomview) API is being applied, verify that the `viewId` isn't already used.
 - If the [lookupObjects](/power-apps/developer/model-driven-apps/clientapi/reference/xrm-utility/lookupobjects) or [setDefaultView](/power-apps/developer/model-driven-apps/clientapi/reference/controls/setdefaultview) API is being applied, verify that the `viewId` belongs to a view that's included in the current app.
 
 ## Result fields are incorrect
 
-The Lookup control's search results are presented in the order that they're listed in the entity's Lookup view, with the following exceptions:
+The Simple Lookup control presents the search result fields in the order that they're listed in the entity's Lookup view, with the following exceptions:
 
 - Blank fields are replaced with the next nonblank field.
 - Fields beginning with the search string are swapped with the second field.
 
 > [!NOTE]
-> A multi-entity Lookup can have results with different orders of fields if the entities' Lookup views have different field combinations.
+> A multi-entity Lookup control can have results with different orders of fields if the entities' Lookup views have different field combinations.
 
 ## See also
 

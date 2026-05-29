@@ -1,13 +1,15 @@
 ---
 title: Fail to connect to Azure Linux VM through SSH due to SELinux misconfiguration
-description: Provides a solution to an issue where you fail to connect to an Azure virtual machine (VM) through Secure Shell (SSH) due to SELinux misconfiguration.
+description: Fix SSH connection failures to an Azure Linux VM caused by SELinux misconfiguration. Follow this guide to restore VM access quickly.
 author: adelgadohell
 ms.author: adelgadohell
 ms.reviewer: divargas
 ms.topic: troubleshooting
 ms.date: 04/15/2024
 ms.service: azure-virtual-machines
-ms.custom: sap:Cannot connect to my VM, linux-related-content
+ms.custom: 
+ - Kernel Upgrades
+ - Package Management issue (Yum, Zypper, RPM, DPKG, APT)
 ms.collection: linux
 ---
 # SSH connection to Azure Linux virtual machines fails due to SELinux misconfiguration
@@ -33,7 +35,7 @@ Different distributions include SELinux out of the box or provide a straightforw
 * [Debian](https://wiki.debian.org/SELinux)
 * [CentOS](https://wiki.centos.org/HowTos/SELinux)
 
-Red Hat-based images on Azure come with SELinux enabled; other distributions don't. When you use [SELinux in Ubuntu](https://wiki.ubuntu.com/SELinux), there's a warning about its unmaintained state on this distribution. Ubuntu implements a different solution for MAC, called [AppArmor](https://help.ubuntu.com/community/AppArmor).
+Red Hat-based images on Azure and Azure Linux images (previously Mariner) come with SELinux enabled. Other distributions don't. When you use [SELinux in Ubuntu](https://wiki.ubuntu.com/SELinux), there's a warning about its unmaintained state on this distribution. Ubuntu implements a different solution for MAC, called [AppArmor](https://help.ubuntu.com/community/AppArmor).
 
 ## Prerequisites
 
@@ -56,17 +58,17 @@ The SELinux configuration is managed by the system administrator. The system adm
 3. Select <kbd>E</kbd> to modify the first kernel entry in the GRUB menu.
 4. Go to the `linux16` line and add `selinux=0` to disable SELinux temporarily.
 
-    :::image type="content" source="media/linux-selinux-troubleshooting/disable-selinux-grub.gif" alt-text="Animated GIF that shows the process of interrupting boot at the GRUB menu level to disable SELinux temporarily.":::
+    :::image type="content" source="media/linux-selinux-troubleshooting/disable-selinux-grub.gif" alt-text="Screenshot of the GRUB menu edit step used to add selinux=0 and temporarily disable SELinux during startup.":::
 
 5. Validate and correct the SELinux configuration in `/etc/selinux/config`.
 
     For example, one common mistake is setting the `SELINUXTYPE` key to one of the values used for the `SELINUX` key. See the following screenshot as an example:
 
-    :::image type="content" source="./media/linux-selinux-troubleshooting/wrong-selinux-configuration.png" alt-text="Screenshot that shows the SELINUXTYPE key is incorrectly set to disabled.":::
+    :::image type="content" source="./media/linux-selinux-troubleshooting/wrong-selinux-configuration.png" alt-text="Screenshot of /etc/selinux/config with SELINUXTYPE incorrectly set to disabled.":::
 
     Notice the last line, `SELINUXTYPE=disabled`. The `SELINUXTYPE` key should be set to `targeted`, `minimum`, or `mls` rather than `disabled`. The following screenshot shows the correct configuration:
 
-    :::image type="content" source="./media/linux-selinux-troubleshooting/correct-selinux-configuration.png" alt-text="Screenshot that shows the correct configuration of /etc/selinux/config.":::
+    :::image type="content" source="./media/linux-selinux-troubleshooting/correct-selinux-configuration.png" alt-text="Screenshot of the correct /etc/selinux/config values for SELINUX and SELINUXTYPE.":::
 
 ## Solution 2: Repair SELinux misconfiguration by using a rescue VM
 

@@ -15846,17 +15846,52 @@
     },
     {
       "source_path": "support/windows-server/user-profiles-and-logon/relocation-of-users-and-programdata-directories.md",
-      "redirect_url": "/troublshoot/windows-server/setup-upgrade-and-drivers/servicing-fails-moved-user-profile-programdata-folders",
+      "redirect_url": "/troubleshoot/windows-server/setup-upgrade-and-drivers/servicing-fails-moved-user-profile-programdata-folders",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/installing-updates-features-roles/troubleshoot-windows-installation-error.md",
-      "redirect_url": "/troubleshoot/windows-server/setup-upgrade-and-drivers/servicing-fails-moved-user-profile-programdata-folders",
+      "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/troubleshoot-windows-update-installation-error-corruption",
       "redirect_document_id": false
     },
     {
       "source_path": "support/sql/database-engine/database-file-operations/database-engine-input-output-requirements.md",
       "redirect_url": "/sql/relational-databases/sql-server-storage-guide"
+    },
+    {
+      "source_path": "support/azure/virtual-machines/windows/windows-vm-activation-error-0x8007232a.md",
+      "redirect_url": "/troubleshoot/windows-server/licensing-and-activation/activation-error-0x8007232a-dns-server-failure.md?context=/troubleshoot/azure/virtual-machines/windows/context/context",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/networking/power-management-on-network-adapter.md",
+      "redirect_url": "/windows-hardware/drivers/kernel/introduction-to-power-management",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/virtual-machines/windows/windows-vm-activation-error-0x8007232b.md",
+      "redirect_url": "/troubleshoot/windows-server/licensing-and-activation/activation-error-0x8007232b-dns-name-does-not-exist.md?context=/troubleshoot/azure/virtual-machines/windows/context/context",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/virtual-machines/windows/windows-vm-activation-error-0xc004c003.md",
+      "redirect_url": "/troubleshoot/windows-server/licensing-and-activation/activation-error-0xc004c003-product-key-blocked.md?context=/troubleshoot/azure/virtual-machines/windows/context/context",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/virtual-machines/windows/windows-vm-activation-error-0xc0020017-0x8007139f.md",
+      "redirect_url": "/troubleshoot/windows-server/licensing-and-activation/activation-event-8198-error-0xc0020017-0x8007139f-kms-contact-failure?context=/troubleshoot/azure/virtual-machines/windows/context/context",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/virtual-machines/windows/windows-vm-activation-error-0xc004f042.md",
+      "redirect_url": "/troubleshoot/windows-server/licensing-and-activation/activation-error-0xc004cf042-cant-use-specified-kms.md?context=/troubleshoot/azure/virtual-machines/windows/context/context",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/virtual-machines/windows/windows-vm-activation-error-0xc004f038.md",
+      "redirect_url": "/troubleshoot/windows-server/licensing-and-activation/activation-error-0xc004cf038-insufficient-kms-host-pool-count.md?context=/troubleshoot/azure/virtual-machines/windows/context/context",
+      "redirect_document_id": false
     }
   ]
 }

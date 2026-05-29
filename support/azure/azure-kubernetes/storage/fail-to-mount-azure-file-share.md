@@ -327,7 +327,7 @@ After the Kubernetes secret `azure-storage-account-<storage-account-name>-secret
 
 ### <a id="akssubnetnotallowed"></a>Cause 2: AKS's VNET and subnet aren't allowed for storage account
 
-If the storage account's network is limited to selected networks, but the VNET and subnet of the AKS cluster aren't added to selected networks, the mounting operation will fail with the "Permission denied" error.
+If the storage account's network is limited to **selected networks** by firewall rules, but the VNET and subnet of the AKS cluster aren't added to **selected networks**, the mounting operation will fail with the "Permission denied" error. For more information, see [Configure Azure Storage firewalls and virtual networks](/azure/storage/common/storage-network-security) and [Virtual network or firewall rules are enabled on the storage account](/troubleshoot/azure/azure-storage/files/connectivity/files-troubleshoot-smb-connectivity?tabs=linux#cause-2-virtual-network-or-firewall-rules-are-enabled-on-the-storage-account-or-port-445-is-blocked).
 
 #### Solution: Allow AKS's VNET and subnet for storage account
 
@@ -356,6 +356,9 @@ If the storage account's network is limited to selected networks, but the VNET a
     It may take a few moments for the changes to take effect. After the VNET and subnet are added, check if the pod status changes from **ContainerCreating** to **Running**.
 
     :::image type="content" source="media/fail-to-mount-azure-file-share/verify-pod-status.png" alt-text="Screenshot of command output that shows current pod status.":::
+
+
+
 
 ### <a id="aksnotawareprivateipaddress"></a>Cause 3: Connectivity is via private link but nodes and private endpoint are in different VNETs
 

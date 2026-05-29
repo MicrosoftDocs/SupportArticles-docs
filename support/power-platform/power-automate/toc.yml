@@ -41,6 +41,8 @@ items:
         href: connections/troubleshooting-flow-custom-connectors.md
       - name: User doesn't have service plan adequate for non-Standard connection
         href: connections/user-does-not-have-a-service-plan-error.md
+      - name: Verify OAuth configuration for custom connectors
+        href: connections/verify-oauth-configuration.md
   - name: Desktop flows
     items:
       - name: Browser automation
@@ -217,6 +219,8 @@ items:
         href: desktop-flows/session-has-logged-off-troubleshooting.md
       - name: 'Security update for "connect with sign-in" connections on AD domain-joined machines'
         href: desktop-flows/connect-with-sign-in-security-update.md
+      - name: Security update for sensitive variables
+        href: desktop-flows/sensitive-variables-security-update.md
       - name: Some actions appear to be missing or aren't visible
         href: desktop-flows/actions-not-available.md
       - name: Session creation errors for unattended desktop flow runs
