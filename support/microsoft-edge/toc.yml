@@ -18,6 +18,10 @@ items:
     items:
       - name: Troubleshoot common sign-in problems
         href: security/troubleshoot-sign-in-issues.md
+  - name: Stability and Performance
+    items:
+      - name: Microsoft Edge crashes or fails to launch
+        href: performance/edge-crashes-or-fails-to-launch.md
   - name: Web Platform and Development
     items:
       - name: Failure to deploy self-hosted extension via group policy
