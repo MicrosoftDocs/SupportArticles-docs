@@ -47,13 +47,13 @@ Use the following steps to troubleshoot and fix the issue. To get the best resul
 
 ### Step 1: Get a new key or reset the existing key
 
-If you need an MAK or KMS host key (for example, for VMs that are in an isolated network), contact the [Microsoft Licensing Activation Centers](https://www.microsoft.com/licensing/existing-customer/activation-centers). There, you can request a new key or to have the activation count on your existing key be reset.
+If you need a KMS host key (for example, for VMs that are in an isolated network), contact [Microsoft Volume License Key assisted support](https://www.microsoft.com/licensing/existing-customer/activation-centers). There, you can find the appropriate contact information to request a new key or to have the activation count on your existing key be reset.
 
 If you're trying to activate an Azure VM, and your infrastructure doesn't require a KMS key for a self-hosted KMS host, you can try Step 2.
 
 ### Step 2 (Azure VMs): Activate by using Azure KMS
 
-By default, Azure VMs should use Azure Key Management Service (KMS) activation. If the VM uses a Multiple Activation Key (MAK) or a KMS key for a self-hosted KMS server instead, reconfigure the VM to use Azure KMS:
+By default, Azure VMs should use Azure Key Management Service (KMS) activation. If the VM uses a KMS key for a self-hosted KMS server instead, reconfigure the VM to use Azure KMS:
 
 1. Open an administrative Command Prompt window on the Azure VM.
 
