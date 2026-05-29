@@ -1,5 +1,5 @@
 ---
-title: Fix High CPU or Memory Usage in Microsoft Edge Browser
+title: Fix High CPU or memory usage in Microsoft Edge browser
 description: Troubleshoot high CPU or memory usage in Microsoft Edge. Identify the responsible process, manage extensions, turn on sleeping tabs, and reduce resource use.
 ms.date: 05/29/2026
 ms.reviewer: Johnny.Xu, dili, v-shaywood
@@ -10,27 +10,27 @@ ms.custom: 'sap:Stability and Performance\Browser Slow Performance: including Sl
 
 ## Summary
 
-This article helps you identify why Microsoft Edge is using high CPU or memory and reduce its resource consumption. The guidance covers diagnosing busy processes with the Browser task manager, isolating extensions, turning on sleeping tabs, stopping background activity, and confirming that hardware acceleration is in use.
+This article helps you identify why Microsoft Edge is using high CPU activity or memory, and how to reduce its resource consumption. The guidance includes diagnosing busy processes by using the Browser Task Manager, isolating extensions, turning on sleeping tabs, stopping background activity, and verifying that hardware acceleration is in use.
 
 ## Symptoms
 
 You experience one or more of the following symptoms:
 
-- One or more `msedge.exe` processes consistently use a large share of CPU when the browser is idle.
-- Edge memory usage is much higher than expected with only a few tabs open.
+- One or more `msedge.exe` processes consistently use a large share of CPU power while the browser is idle.
+- Edge memory usage is much higher than expected when only a few tabs are open.
 - The system feels sluggish when Edge is running.
 - Switching between tabs is slow.
 
 ## Solution
 
-Work through the following sections in order. After each section, observe Edge for several minutes and check whether resource usage drops before you continue.
+Work through the following sections in the given order. After each section, observe Edge for several minutes, and check whether resource usage drops before you continue.
 
-### Identify the responsible process with the Browser task manager
+### Identify the responsible process by using the Browser Task Manager
 
-1. In Edge, press <kbd>Shift</kbd>+<kbd>Esc</kbd> to open the Browser task manager.
-1. Sort by **CPU** or **Memory** to find the responsible tab, extension, subframe, or utility process.
+1. Open the Browser Task Manager: In Edge, press <kbd>Shift</kbd>+<kbd>Esc</kbd>.
+1. To find the responsible tab, extension, subframe, or utility process, sort by **CPU** or **Memory**.
 1. Select the process, and then select **End process**.
-1. Check whether system load drops.
+1. Check whether the system load drops.
 
 ### Turn off extensions
 
@@ -51,22 +51,22 @@ For enterprise management, see the [SleepingTabsEnabled](/deployedge/microsoft-e
 
 ### Turn off background apps
 
-If Edge keeps using CPU after you close all windows, background processes are still running.
+If Edge continues to use excessive CPU after you close all windows, background processes are still running.
 
 1. Go to `edge://settings/system`.
 1. Turn off **Continue running background extensions and apps when Microsoft Edge is closed**.
 
 For enterprise management, see the [BackgroundModeEnabled](/deployedge/microsoft-edge-policies/backgroundmodeenabled) policy.
 
-### Confirm that hardware acceleration is on
+### Verify that hardware acceleration is on
 
 Software rendering of video, WebGL, and canvas content increases CPU usage.
 
 1. Go to `edge://gpu`.
-1. Review **Graphics Feature Status** and confirm that hardware acceleration is in use.
+1. Review **Graphics Feature Status**, and verify that hardware acceleration is in use.
 1. If items show software-only rendering:
    1. Update your GPU driver.
-   1. Make sure **Use graphics acceleration when available** is turned on at `edge://settings/system`.
+   1. Make sure that **Use graphics acceleration when available** is turned on in `edge://settings/system`.
 
 For enterprise management, see the [HardwareAccelerationModeEnabled](/deployedge/microsoft-edge-policies/hardwareaccelerationmodeenabled) policy.
 
@@ -76,14 +76,14 @@ For enterprise management, see the [HardwareAccelerationModeEnabled](/deployedge
 1. Select **Restore settings to their default values**.
 
 > [!NOTE]
-> Bookmarks, history, and saved passwords are preserved. Pinned tabs, startup page, search engine, and extensions are reset.
+> When you restore the settings, bookmarks, history, and saved passwords are preserved. Pinned tabs, startup page, search engine, and extensions are reset.
 
 ## Data collection
 
-If you need to contact Microsoft Support for more help, collect the following diagnostic information and include it with your support request.
+If you have to contact Microsoft Support for more help, collect the following diagnostic information to include in your support request:
 
 - **Microsoft Edge version**: Go to `edge://settings/help`, and note the full version number.
-- **Browser task manager screenshots**: Press <kbd>Shift</kbd>+<kbd>Esc</kbd>, and take one screenshot sorted by **CPU** and another sorted by **Memory**.
+- **Browser Task Manager screenshots**: Press <kbd>Shift</kbd>+<kbd>Esc</kbd>, take one screenshot that's sorted by **CPU**, then take another that's sorted by **Memory**.
 - **Discarded tabs report**: Go to `edge://discards`, and save the output.
 
 ## Related content
