@@ -1163,6 +1163,8 @@ items:
       href: ./licensing-and-activation/error-0xc004f015-activate-windows-10.md
     - name: Error 0xC004F038 "The count reported by your Key Management Service (KMS) is insufficient" when you activate Windows
       href: ./licensing-and-activation/activation-error-0xc004cf038-insufficient-kms-host-pool-count.md
+    - name: Error 0xC004F042 "The specified Key Management Service (KMS) can't be used" when you activate Windows
+      href: ./licensing-and-activation/activation-error-0xc004cf042-cant-use-specified-kms.md
     - name: Error 0xC004F063 when activating an OEM version
       href: ./licensing-and-activation/0xc004f063-when-activating-oem-version.md
     - name: Error 0xC004F06C when you activate Windows
