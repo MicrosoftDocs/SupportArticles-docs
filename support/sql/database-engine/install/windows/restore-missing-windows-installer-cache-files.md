@@ -1,7 +1,7 @@
 ---
 title: Restore the missing Windows Installer cache files
 description: Learn how to restore missing MSI and MSP files in the Windows Installer cache to fix SQL Server cumulative update and service pack installation errors.
-ms.date: 05/292026
+ms.date: 05/29/2026
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall
 ms.reviewer: jopilov, v-sidong, v-shaywood
 ---
