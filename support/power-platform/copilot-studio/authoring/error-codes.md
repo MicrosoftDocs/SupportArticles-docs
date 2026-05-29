@@ -25,32 +25,32 @@ As an agent maker, if a problem occurs when you use the test pane to [test your 
 | Error code                                                                          | Description                                                                                                                                                                              |
 | ----------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [AIModelActionBadRequest](#aimodelactionbadrequest)                                 | There's a mismatch between the prompt action types.                                                                                                                                      |
-| [AIModelActionRequestTimeout](#aimodelactionrequesttimeout)                         | There's a timeout error that's related to a call to an AI Builder model.                                                                                                                 |
+| [AIModelActionRequestTimeout](#aimodelactionrequesttimeout)                         | There's a timeout error related to a call to an AI Builder model.                                                                                                                 |
 | [AIPluginOperationNotFound](#aipluginoperationnotfound)                             | There's an error when attempting to access a connected agent.                                                                                                                             |
-| [AsyncResponsePayloadTooLarge](#asyncresponsepayloadtoolarge)                       | There's an error that's related to the output of a connector.                                                                                                                            |
+| [AsyncResponsePayloadTooLarge](#asyncresponsepayloadtoolarge)                       | There's an error related to the output of a connector.                                                                                                                            |
 | [AuthenticationNotConfigured](#authenticationnotconfigured)                         | Authentication is required but wasn't configured.                                                                                                                                        |
 | [HTTP401Unauthorized (Authentication: 401)](#http401unauthorized)                   | A tool call failed because authentication credentials were missing or expired.                                                                                                           |
 | [InvalidAuthenticationToken (Authentication: 401)](#invalidauthenticationtoken)     | A tool call failed because the access token format was invalid or corrupted.                                                                                                             |
 | [MsalUiException (Authentication: 401)](#msaluiexception)                           | A tool call failed because interactive sign-in is required to acquire a token.                                                                                                           |
 | [HTTP403Forbidden (Authorization: 403)](#http403forbidden)                          | A tool call failed because the caller is authenticated but lacks permission to access the resource.                                                                                     |
-| [HTTP500InternalServerError (Service availibility: 5xx)](#http500internalservererror) | A tool call failed because the service encountered an unexpected internal error.                                                                                                       |
-| [HTTP502BadGateway (Service availibility: 5xx)](#http502badgateway)                   | A tool call failed because an upstream service returned an invalid response.                                                                                                           |
-| [HTTP503ServiceUnavailable (Service availibility: 5xx)](#http503serviceunavailable)   | A tool call failed because the service is temporarily unavailable.                                                                                                                     |
-| [HTTP504GatewayTimeout (Service availibility: 5xx)](#http504gatewaytimeout)           | A tool call failed because the upstream service didn't respond in time.                                                                                                                |
+| [HTTP500InternalServerError (Service availability: 5xx)](#http500internalservererror) | A tool call failed because the service encountered an unexpected internal error.                                                                                                       |
+| [HTTP502BadGateway (Service availability: 5xx)](#http502badgateway)                   | A tool call failed because an upstream service returned an invalid response.                                                                                                           |
+| [HTTP503ServiceUnavailable (Service availability: 5xx)](#http503serviceunavailable)   | A tool call failed because the service is temporarily unavailable.                                                                                                                     |
+| [HTTP504GatewayTimeout (Service availability: 5xx)](#http504gatewaytimeout)           | A tool call failed because the upstream service didn't respond in time.                                                                                                                |
 | [HTTP408RequestTimeout (Timeout · execution)](#http408requesttimeout)               | A tool call failed because the request exceeded allowed time limits.                                                                                                                     |
-| [BindingKeyNotFoundError](#bindingkeynotfounderror)                                 | One or more inputs have changed on the agent flow (added, removed, or renamed). The agent flow needs to be removed and re-added to ensure Copilot Studio has the correct list of inputs. |
+| [BindingKeyNotFoundError](#bindingkeynotfounderror)                                 | One or more inputs changed on the agent flow (added, removed, or renamed). The agent flow needs to be removed and readded to ensure Copilot Studio has the correct list of inputs. |
 | [BingSearchFailed](#bingsearchfailed)                                               | A system issue occurred while searching Bing knowledge.                                                                                                                                   |
-| [ConnectedAgentAuthMismatch](#connectedagentauthmismatch)                           | There's an authentication mismatch between the orchestrator and sub-agent.                                                                                                               |
-| [ConnectedAgentBotNotFound](#connectedagentbotnotfound)                             | A sub-agent in a multi-agent orchestration configuration wasn't found.                                                                                                                   |
-| [ConnectedAgentBotNotPublished](#connectedagentbotnotpublished)                     | A sub-agent in a multi-agent orchestration configuration wasn't published.                                                                                                               |
+| [ConnectedAgentAuthMismatch](#connectedagentauthmismatch)                           | There's an authentication mismatch between the orchestrator and subagent.                                                                                                               |
+| [ConnectedAgentBotNotFound](#connectedagentbotnotfound)                             | A subagent in a multi-agent orchestration configuration wasn't found.                                                                                                                   |
+| [ConnectedAgentBotNotPublished](#connectedagentbotnotpublished)                     | A subagent in a multi-agent orchestration configuration wasn't published.                                                                                                               |
 | [ConnectedAgentChainingNotSupported](#connectedagentchainingnotsupported)           | Multi-level agent chaining isn't supported.                                                                                                                                              |
 | [ConnectedAgentGptComponentNotFound](#connectedagentgptcomponentnotfound)           | A connected agent is missing descriptions or instructions.                                                                                                                               |
 | [ConnectorPowerFxError](#connectorpowerfxerror)                                     | There's an error in the Power Fx expression evaluation in connector actions.                                                                                                             |
 | [ContentError](#contenterror)                                                       | There's an error in the topic content.                                                                                                                                                   |
-| [ConsentNotProvidedByUser](#consentnotprovidedbyuser)                               | A user interacting with an agent rejected the agent's SSO request.                                                                                                                       |
+| [ConsentNotProvidedByUser](#consentnotprovidedbyuser)                               | A user interacting with an agent rejected the agent's Single Sign-on (SSO) request.                                                                                                                       |
 | [ConversationStateTooLarge](#conversationstatetoolarge)                             | The conversation state exceeds the size limits.                                                                                                                                          |
 | [DataLossPreventionViolation](#datalosspreventionviolation)                         | There's a data policy violation.                                                                                                                                                         |
-| [DataverseFileAttachment429](#dataversefileattachment429)                           | Dataverse file attachment search was throttled by SharePoint.                                                                                                                            |
+| [DataverseFileAttachment429](#dataversefileattachment429)                           | SharePoint throttled Dataverse file attachment search.                                                                                                                            |
 | [DataverseSearchFailed](#dataversesearchfailed)                                     | A system issue occurred while searching Dataverse knowledge.                                                                                                                              |
 | [DataverseStructured401](#dataversestructured401)                                   | Dataverse structured search returned an authentication error.                                                                                                                             |
 | [DataverseStructured429](#dataversestructured429)                                   | Dataverse structured search was throttled.                                                                                                                                                |
@@ -136,11 +136,11 @@ For more information, see [Create a prompt action](/ai-builder/use-a-custom-prom
 
 **Error messages:**
 
-- Authentication is not configured for this bot.
+- Authentication isn't configured for this bot.
 
-- The bot requires sign in, but is not configured for authentication. Please update the authentication method for the bot.
+- The bot requires sign in, but isn't configured for authentication. Update the authentication method for the bot.
 
-- Integrated authentication is not supported in channel `{channel}`.
+- Integrated authentication isn't supported in channel `{channel}`.
 
 **Resolution:** This error occurs if your agent uses actions or features that require user authentication, but authentication isn't configured. To resolve the problem:
 
@@ -159,10 +159,10 @@ For more information, see [Configure user authentication](/microsoft-copilot-stu
 **Resolution**: This error can be caused by missing or expired authentication credentials. To resolve the problem:
 
 1. Verify the connector is configured correctly in Copilot Studio.
-1. Check whether the OAuth token has expired and reauthenticate the connection.
+1. Check whether the OAuth token expired and reauthenticate the connection.
 1. Validate API key or connection settings.
 1. Test the connection before deploying.
-1. If using service principal authentication, verify credentials haven't rotated.
+1. If using service principal authentication, verify credentials didn't rotate.
 
 #### InvalidAuthenticationToken
 
@@ -170,7 +170,7 @@ For more information, see [Configure user authentication](/microsoft-copilot-stu
 
 **Error message**: InvalidAuthenticationToken.
 
-**Resolution**: This error can be caused by malformed or stale token data. To resolve the problem:
+**Resolution**: Malformed or stale token data can cause this error. To resolve the problem:
 
 1. Remove and recreate the connection.
 1. Reauthenticate the connector.
@@ -218,13 +218,13 @@ To get the latest inputs and outputs, remove and readd the agent flow.
 
 **Error message**: This is a system issue on our side. Nothing you need to fix. Error details: Platform runtime - BingSearchFailed.
 
-**Resolution**: This issue can be caused by a platform-side Bing search failure. Retry later. If the issue continues, contact support.
+**Resolution**: A platform-side Bing search failure can cause this issue. Retry later. If the issue continues, contact support.
 
 #### ConnectedAgentAuthMismatch
 
 **Error message:** Your connected agent with schema name `{AgentSchemaName}` has an authentication mismatch with the main agent.
 
-**Resolution:** The orchestrator agent and connected sub-agent have different authentication configurations. In order for multi-agent orchestration to work, both agents must use compatible authentication settings. To resolve the problem:
+**Resolution:** The orchestrator agent and connected subagent have different authentication configurations. In order for multi-agent orchestration to work, both agents must use compatible authentication settings. To resolve the problem:
 
 1. Open both agents, and go to **Settings > Security > Authentication**.
 1. Make sure that both agents use the same authentication method (for example, both use **Authenticate with Microsoft**).
@@ -234,7 +234,7 @@ The following authentication compatibility rules apply:
 
 - If the connected agent has _no authentication_ configured, any orchestrator authentication is acceptable.
 - If the connected agent _requires authentication_, the orchestrator must use the _same_ authentication method.
-- **Manual authentication (Generic OAuth2)** on the orchestrator is _not compatible_ with connected agents that require authentication. Both agents must use the same manual authentication configuration, or the connected agent must have no authentication requirement.
+- **Manual authentication (Generic OAuth2)** on the orchestrator isn't compatible_ with connected agents that require authentication. Both agents must use the same manual authentication configuration, or the connected agent must have no authentication requirement.
 
 For more information, see [Configure user authentication](/microsoft-copilot-studio/configuration-end-user-authentication) and [Use agents as actions in other agents (preview)](/microsoft-copilot-studio/advanced-use-dispatcher).
 
@@ -242,7 +242,7 @@ For more information, see [Configure user authentication](/microsoft-copilot-stu
 
 **Error message:** Connected agent with schema name {AgentSchemaName} not found.
 
-**Resolution:** This error occurs in multi-agent orchestration if the orchestrator agent can't find a connected sub-agent. To resolve the problem:
+**Resolution:** This error occurs in multi-agent orchestration if the orchestrator agent can't find a connected subagent. To resolve the problem:
 
 1. Verify that the connected agent exists in the same environment as the orchestrator agent.
 1. Make sure that the connected agent's schema name is spelled correctly in the orchestrator configuration.
@@ -255,7 +255,7 @@ For more information, see [Use agents as actions in other agents (preview)](/mic
 
 **Error message:** Connected agent with schema name `{AgentSchemaName}` needs to be published to be invoked.
 
-**Resolution:** The connected sub-agent must be published before the orchestrator agent can invoke it. To resolve the problem:
+**Resolution:** The connected subagent must be published before the orchestrator agent can invoke it. To resolve the problem:
 
 1. Open the connected agent in Copilot Studio.
 1. Publish the agent.
@@ -267,11 +267,11 @@ For more information, see [Use agents as actions in other agents (preview)](/mic
 
 **Error message:** Agent chaining detected. Your agent cannot be connected to agent with schema name `{AgentSchemaName}` as it already has a connected agent.
 
-**Resolution:** Multi-level agent chaining isn't supported. An orchestrator agent can connect to sub-agents, but those sub-agents can't have their own connected agents. To resolve the problem:
+**Resolution:** Multi-level agent chaining isn't supported. An orchestrator agent can connect to subagents, but those subagents can't have their own connected agents. To resolve the problem:
 
 1. Review your agent architecture, and flatten the hierarchy.
 1. Move the functionality from deeply nested agents into either the orchestrator or first-level connected agents.
-1. Consider using topics or actions instead of additional connected agents.
+1. Consider using topics or actions instead of more connected agents.
 
 For more information, see [Use agents as actions in other agents (preview)](/microsoft-copilot-studio/advanced-use-dispatcher).
 
@@ -279,7 +279,7 @@ For more information, see [Use agents as actions in other agents (preview)](/mic
 
 **Error message:** No GPT component found for connected agent with schema name `{AgentSchemaName}`.
 
-**Resolution:** The connected agent is missing a required description or instructions that enable it to be invoked by an orchestrator agent. To resolve the problem:
+**Resolution:** The connected agent is missing a required description or instructions. The orchestrator needs that information to know when to call the connected agent. To resolve the problem:
 
 1. Open the connected agent in Copilot Studio.
 1. Go to the agent's **Overview** page.
@@ -335,19 +335,19 @@ Common problems include:
 
 - Your environment's data policies require that users sign in. See [Add user authentication with the Sign in system topic](/microsoft-copilot-studio/advanced-end-user-authentication#add-user-authentication-with-the-sign-in-system-topic).
 - One or more connectors that you use in the agent aren't in the same data group. See [Copilot Studio connectors](/microsoft-copilot-studio/admin-data-loss-prevention#copilot-studio-connectors-and-data-groups).
-- One or more connectors that you use in the agent were blocked by the tenant administrator.
+- The tenant administrator blocked one or more connectors that you use in the agent.
 
 #### DataverseFileAttachment429
 
 **Error message**: SharePoint is limiting requests right now. Try again later. Error details: DataverseFiles429.
 
-**Resolution**: This error can be caused by service throttling. Wait and retry.
+**Resolution**: Service throttling can cause this error.
 
 #### DataverseSearchFailed
 
 **Error message**: This is a system issue on our side. Nothing you need to fix. Error details: Platform runtime - DataverseSearchFailed.
 
-**Resolution**: This issue can be caused by Dataverse knowledge search failures such as user connection errors. To resolve the problem:
+**Resolution**: Dataverse knowledge search failures such as user connection errors this issue. To resolve the problem:
 
 1. Open the agent knowledge source settings and reauthenticate the Dataverse connection.
 1. Verify that the user has valid licensing and permissions for the Dataverse knowledge source.
@@ -381,13 +381,13 @@ For more information, see [Microsoft Graph throttling guidance](/graph/throttlin
 
 **Error message**: This isn't a configuration problem. The owning service needs to investigate. Error details: Dataverse500.
 
-**Resolution**: This error can be caused by a service-side issue. Retry later. If the issue continues, contact support.
+**Resolution**: A service-side issue can cause this error. Retry later. If the issue continues, contact support.
 
 #### DataverseStructured503
 
 **Error message**: This isn't a configuration problem. The owning service needs to investigate. Error details: Dataverse503.
 
-**Resolution**: This error can be caused by temporary service unavailability. Retry later.
+**Resolution**: Temporary service unavailability can cause this error. Retry later.
 
 #### ConversationStateTooLarge
 
@@ -444,15 +444,15 @@ For more information, see [Copilot Studio quotas and limits](/microsoft-copilot-
 
 **Error message**: The flow with name `{FlowName}` is using a maker connection, which isn't allowed. Error Code: `{FlowMakerConnectionBlocked}`
 
-**Resolution**: The administrator prevents using maker credentials in a connection that's invoked from the agent flow. [Open the flow in Power Automate](/power-automate/overview-manage-cloud-flows#open-the-details-screen-for-a-flow) and [share the cloud flow by using run-only permissions](/power-automate/create-team-flows#share-a-cloud-flow-with-run-only-permissions).
+**Resolution**: The administrator prevents using maker credentials in a connection invoked from the agent flow. [Open the flow in Power Automate](/power-automate/overview-manage-cloud-flows#open-the-details-screen-for-a-flow) and [share the cloud flow by using run-only permissions](/power-automate/create-team-flows#share-a-cloud-flow-with-run-only-permissions).
 
 #### HTTP500InternalServerError
 
-**Category**: Service availibility: 5xx
+**Category**: Service availability: 5xx
 
 **Error message**: This tool is temporarily unavailable. The service didn't respond or is currently unavailable. Error details: Service availability · 5xx.
 
-**Resolution**: This error can be caused by unexpected service-side failures. To resolve the problem:
+**Resolution**: A service-side issue can cause this error. To resolve the problem:
 
 1. Retry the request because transient failures are common.
 1. Check connector and service health dashboards for active incidents.
@@ -461,11 +461,11 @@ For more information, see [Copilot Studio quotas and limits](/microsoft-copilot-
 
 #### HTTP502BadGateway
 
-**Category**: Service availibility: 5xx
+**Category**: Service availability: 5xx
 
 **Error message**: This tool is temporarily unavailable. The service didn't respond or is currently unavailable. Error details: Service availability · 5xx.
 
-**Resolution**: This error can be caused by invalid responses from upstream dependencies. To resolve the problem:
+**Resolution**: Invalid responses from upstream dependencies can cause this error. To resolve the problem:
 
 1. Wait and retry after a short delay.
 1. Validate endpoint URL and connector configuration.
@@ -474,7 +474,7 @@ For more information, see [Copilot Studio quotas and limits](/microsoft-copilot-
 
 #### HTTP503ServiceUnavailable
 
-**Category**: Service availibility: 5xx
+**Category**: Service availability: 5xx
 
 **Error message**: This tool is temporarily unavailable. The service didn't respond or is currently unavailable. Error details: Service availability · 5xx.
 
@@ -487,11 +487,11 @@ For more information, see [Copilot Studio quotas and limits](/microsoft-copilot-
 
 #### HTTP504GatewayTimeout
 
-**Category**: Service availibility: 5xx
+**Category**: Service availability: 5xx
 
 **Error message**: This tool is temporarily unavailable. The service didn't respond or is currently unavailable. Error details: Service availability · 5xx.
 
-**Resolution**: This error can be caused by slow upstream processing or network latency. To resolve the problem:
+**Resolution**: Slow upstream processing or network latency can cause this error. To resolve the problem:
 
 1. Retry the operation and verify whether the backend completed despite timeout.
 1. Reduce payload size and optimize expensive queries.
@@ -504,7 +504,7 @@ For more information, see [Copilot Studio quotas and limits](/microsoft-copilot-
 
 **Error message**: This tool call timed out. The operation took too long to complete. Error details: Timeout · execution.
 
-**Resolution**: This error can be caused by client or network time limits being exceeded. To resolve the problem:
+**Resolution**: Exceeding client or network time limits can cause this error. To resolve the problem:
 
 1. Check network stability and latency.
 1. Reduce payload size where possible.
@@ -517,7 +517,7 @@ For more information, see [Copilot Studio quotas and limits](/microsoft-copilot-
 
 **Error message**: This tool call timed out. The operation took too long to complete. Error details: Timeout · execution.
 
-**Resolution**: This error can be caused by long-running execution paths. To resolve the problem:
+**Resolution**: Long-running execution paths can cause this error. To resolve the problem:
 
 1. Break large workflows into smaller steps.
 1. Optimize query and transformation logic.
@@ -530,7 +530,7 @@ For more information, see [Copilot Studio quotas and limits](/microsoft-copilot-
 
 **Error message**: This tool call timed out. The operation took too long to complete. Error details: Timeout · execution.
 
-**Resolution**: This error can be caused by operation-level timeouts in dependent services. To resolve the problem:
+**Resolution**: Operation-level timeouts in dependent services can cause this error. To resolve the problem:
 
 1. Narrow query scope and add filtering.
 1. Add retry with backoff for transient timeouts.
@@ -543,7 +543,7 @@ For more information, see [Copilot Studio quotas and limits](/microsoft-copilot-
 
 **Error message**: Bad Request.
 
-**Resolution**: This error can be caused by malformed payloads or invalid parameters. To resolve the problem:
+**Resolution**: Malformed payloads or invalid parameters can cause this error. To resolve the problem:
 
 1. Verify all required parameters are present.
 1. Confirm data types match the action schema.
@@ -556,7 +556,7 @@ For more information, see [Copilot Studio quotas and limits](/microsoft-copilot-
 
 **Error message**: Unprocessable Entity.
 
-**Resolution**: This error can be caused by semantic validation failures. To resolve the problem:
+**Resolution**: Semantic validation failures can cause this error. To resolve the problem:
 
 1. Validate field-level formats and allowed values.
 1. Add data validation before the tool call.
@@ -569,7 +569,7 @@ For more information, see [Copilot Studio quotas and limits](/microsoft-copilot-
 
 **Error message**: Not Found.
 
-**Resolution**: This error can be caused by missing or incorrect resource identifiers. To resolve the problem:
+**Resolution**: Missing or incorrect resource identifiers can cause this error. To resolve the problem:
 
 1. Verify resource ID or URL is correct.
 1. Confirm the resource still exists.
@@ -582,7 +582,7 @@ For more information, see [Copilot Studio quotas and limits](/microsoft-copilot-
 
 **Error message**: Too Many Requests.
 
-**Resolution**: This error can be caused by throttling limits. To resolve the problem:
+**Resolution**: Throttling limits can cause this error. To resolve the problem:
 
 1. Add delays between calls.
 1. Implement exponential backoff retries.
@@ -596,7 +596,7 @@ For more information, see [Copilot Studio quotas and limits](/microsoft-copilot-
 
 **Error message**: QuotaExceeded.
 
-**Resolution**: This error can be caused by exhausted monthly, daily, or concurrency entitlements. To resolve the problem:
+**Resolution**: Exhausted monthly, daily, or concurrency entitlements can cause this error. To resolve the problem:
 
 1. Check usage in admin analytics.
 1. Reduce unnecessary tool calls.
@@ -607,7 +607,7 @@ For more information, see [Copilot Studio quotas and limits](/microsoft-copilot-
 
 **Error message**: This is a system issue on our side. Nothing you need to fix. Error details: Platform runtime - FoundryIQSearchFailed.
 
-**Resolution**: This issue can be caused by a platform-side Foundry IQ search failure. Retry later. If the issue continues, contact support.
+**Resolution**: A platform-side Foundry IQ search failure can cause this issue. Retry later. If the issue continues, contact support.
 
 #### GenAISearchandSummarizeRateLimitReached
 
@@ -734,9 +734,9 @@ This restriction includes, but isn't limited to, content about:
 
 #### OutgoingMessageSizeTooBig
 
-**Error message**: Outgoing message size too big.
+**Error message**: Outgoing message size too large.
 
-**Resolution**: Depending on the channel that you use to transfer files, such as Direct Line or Facebook, you might receive the following error message: "The request content length exceeded limit of 262,144 bytes." These limits are imposed by the [channel](/azure/bot-service/bot-service-resources-faq-general?azure-bot-service-4.0#what-is-the-size-limit-of-a-file-transferred-using-channels&preserve-view=true), not by Copilot Studio.
+**Resolution**: Depending on the channel that you use to transfer files, such as Direct Line or Facebook, you might receive the following error message: "The request content length exceeded limit of 262,144 bytes." The [channel](/azure/bot-service/bot-service-resources-faq-general?azure-bot-service-4.0#what-is-the-size-limit-of-a-file-transferred-using-channels&preserve-view=true) imposes these limits, not Copilot Studio.
 
 In this scenario, consider a few options. One option is to provide a link to the resource as an internet attachment. Another option is to review your nodes to make sure that none of them use a variable that contains a large volume of text, such as a `JSON.stringify()` static method. If you use this method or a variable that contains a large volume of text, modify the node to pass only the portion of text that's necessary. For example, if you use an Adaptive Card to pass data to another topic, update the variable to pass only the necessary property.
 
@@ -758,25 +758,25 @@ For more information, see [Maximum channel data message size limits when using C
 
 **Error message**: SharePoint is limiting requests right now. Try again later. Error details: SharePoint429.
 
-**Resolution**: This error can be caused by service throttling. Wait and retry.
+**Resolution**: Service throttling can cause this error. Wait and retry.
 
 #### SharePoint500
 
 **Error message**: This isn't a configuration problem. The owning service needs to investigate. Error details: SharePoint500.
 
-**Resolution**: This error can be caused by a service-side issue. Retry later. If the issue continues, contact support.
+**Resolution**: A service-side issue can cause this error. Retry later. If the issue continues, contact support.
 
 #### SharePoint503
 
 **Error message**: This isn't a configuration problem. The owning service needs to investigate. Error details: SharePoint503.
 
-**Resolution**: This error can be caused by temporary service unavailability. Retry later.
+**Resolution**: Temporary service unavailability can cause this error. Retry later.
 
 #### SharePointSearchFailed
 
 **Error message**: This is a system issue on our side. Nothing you need to fix. Error details: Platform runtime - SharePointSearchFailed.
 
-**Resolution**: This issue can be caused by a platform-side SharePoint search failure. Retry later. If the issue continues, contact support.
+**Resolution**: A platform-side SharePoint search failure can cause this issue. Retry later. If the issue continues, contact support.
 
 #### SystemError
 
@@ -808,7 +808,7 @@ For more information, see [Maximum channel data message size limits when using C
 | **2011**                | "We couldn't find `{Skill Name}` in `{Topic Name}`. Please check your content."                                                                                          | Your skill couldn't be found because it was deleted. To create a skill, see [Configure a Bot Framework skill][15].                                                                                                        |
 | **2012**                | "We couldn't find `{Flow Name}` in `{Topic Name}`. Please check your content."                                                                                           | Your Power Automate Flow couldn't be found because it was deleted. To create a flow, see [Create a flow][16].                                                                                                             |
 | **2014**                | "The translation service didn't respond."                                                                                                                                | Try again later. If the issue persists, [contact customer support][17].                                                                                                                                                   |
-| **2015**                | "You're not authorized to call `{Skill Name}`. Please check the skill and its usage for any issues."                                                                     | Check your [skill's configuration][15], and also check whether your bot is [added to the skill's allowlist][18].                                                                                                          |
+| **2015**                | "You're not authorized to call `{Skill Name}`. Please check the skill and its usage for any issues."                                                                     | Check your [skill's configuration][15], and also check whether your bot is [added to the skill's allow list][18].                                                                                                          |
 | **2016**                | "Sorry, we couldn't find your bot."                                                                                                                                      | A problem affects an [Azure Bot Service channel][19]. The channel might be deleted or configured incorrectly.                                                                                                             |
 | **2017**                | "Sorry, we couldn't access your bot."                                                                                                                                    | The [Azure Bot Service channel][19] couldn't be accessed. Check the channel configuration for authentication issues.                                                                                                      |
 | **2018**                | "The user is typing too fast."                                                                                                                                           | You sent messages too quickly. Read more about [quotas and limits within Copilot Studio][11].                                                                                                                             |
