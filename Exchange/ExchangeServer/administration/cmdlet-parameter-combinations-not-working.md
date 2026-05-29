@@ -1,6 +1,6 @@
 ---
 title: Cmdlet or parameter combinations not working
-description: Some PowerShell cmdlet or parameter combinations do not work as expected. Provides a workaround.
+description: This article describes how to work around an issue in which some PowerShell cmdlet or parameter combinations do not work as expected.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -25,6 +25,10 @@ ms.date: 05/28/2026
 
 _Original KB number:_ &nbsp; 4295103
 
+## Summary
+
+This article describes an issue where certain PowerShell cmdlets or parameter combinations fail in multi-domain Exchange Server environments. The issue occurs by design when the mailbox object resides in a different domain or on a different server than the one used by Exchange Management Shell (EMS). To work around the issue, specify a domain controller from the correct Active Directory domain by using the `-DomainController` parameter.
+
 ## Symptoms
 
 Consider this scenario:
@@ -32,7 +36,7 @@ Consider this scenario:
 - You have a Microsoft Exchange Server environment that contains two or more mailbox servers.
 - Your Active Directory Forest contains two or more domains.
 - Your Exchange Servers and user objects are located in different Active Directory domains.
-- You manage your recipients through Exchange Management Shell (EMS) by setting `Set-ADServerSettings -ViewEntireForest $true`.
+- You manage your recipients through EMS by setting `Set-ADServerSettings -ViewEntireForest $true`.
 
 In this scenario, when you run a PowerShell cmdlet or parameter combination, the cmdlet is unsuccessful, and you receive this error message:
 
