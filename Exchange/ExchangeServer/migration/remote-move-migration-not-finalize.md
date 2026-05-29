@@ -52,7 +52,7 @@ Use the appropriate method, depending on the direction of the move request and w
      Set-MailboxDatabase <target mailbox database GUID> -DataMoveReplicationConstraint None
      ```
 
-- For offboarding, if the target mailbox is *not* in a DAG, use the following method:
+- For offboarding, if the target mailbox *isn't* in a DAG, use the following method:
 
   - Set the **DataMoveReplicationConstraint** to **None** by running the following command in the on-premises EMS:
 
