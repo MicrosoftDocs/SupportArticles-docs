@@ -1,16 +1,16 @@
 ---
-title: Fix Microsoft Edge profile that won't load or is locked
-description: Fix a Microsoft Edge profile that won't load, is locked, or shows a profile error message at startup. Follow these steps to recover your profile.
+title: Fix Microsoft Edge profile that doesn't load or is locked
+description: Fix a Microsoft Edge profile that doesn't load, is locked, or shows a profile error message at startup. Follow these steps to recover your profile.
 ms.date: 05/29/2026
 ms.reviewer: Johnyy.Xu, dili, v-shaywood
 ms.custom: 'sap:Security and Privacy\Profiles and Sync: Caches, Favorites, Autofill, Wallet'
 ---
 
-# Fix a Microsoft Edge profile that won't load or shows an error
+# Fix a Microsoft Edge profile that doesn't load or shows an error
 
 ## Summary
 
-This article helps you recover a Microsoft Edge user profile that won't load, appears locked, or shows a profile error message at startup. Use these steps if Edge experiences an error when it starts, doesn't switch profiles, opens by having empty bookmarks or history or extensions, or blocks you from creating a new profile. Common causes include a profile folder that's in use by another process, a read-only user data folder, sync problems, and restrictive enterprise policies.
+This article helps you recover a Microsoft Edge user profile that doesn't load, appears locked, or shows a profile error message at startup. Use these steps if Edge experiences an error when it starts, doesn't switch profiles, opens by having empty bookmarks or history or extensions, or blocks you from creating a new profile. Common causes include a profile folder that's in use by another process, a read-only user data folder, sync problems, and restrictive enterprise policies.
 
 ## Symptoms
 
