@@ -24,7 +24,7 @@ ms.date: 05/12/2026
 
 ## Summary
 
-This article describes an issue where a remote move migration fails to finalize because replication lag prevents the target mailbox database from meeting data consistency requirements. The issue occurs when the `DataMoveReplicationConstraint` setting is configured to `SecondCopy` and no passive database copy satisfies the Data Guarantee criteria. To resolve the issue, verify database copy health, move the mailbox to a suitable database, or change the replication constraint setting.
+This article describes an issue in which a remote move migration doesn't finalize because replication lag prevents the target mailbox database from meeting data consistency requirements. The issue occurs if the `DataMoveReplicationConstraint` setting is configured to `SecondCopy`, and no passive database copy satisfies the Data Guarantee criteria. To resolve the issue, verify database copy health, move the mailbox to a suitable database, or change the replication constraint setting.
 
 ## Symptoms
 
@@ -52,7 +52,7 @@ Use the appropriate method, depending on the direction of the move request and w
      Set-MailboxDatabase <target mailbox database GUID> -DataMoveReplicationConstraint None
      ```
 
-- For offboarding, if the target mailbox *isn't* in a DAG, use the following method:
+- For offboarding, if the target mailbox is *not* in a DAG, use the following method:
 
   - Set the **DataMoveReplicationConstraint** to **None** by running the following command in the on-premises EMS:
 
