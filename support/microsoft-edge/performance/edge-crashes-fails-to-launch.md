@@ -61,10 +61,10 @@ If Edge starts cleanly by using the test profile, the original profile is the ca
 Follow these steps:
 
 1. Close all Edge windows.
-1. Go to `%LOCALAPPDATA%\Microsoft\Edge\User Data`.
-1. Rename the `Default` folder to `Default.old`.
-1. Start Edge to create a fresh `Default` profile.
-1. If Edge is stable, close it, and then copy any data that you want to keep (such as `Bookmarks`) from `Default.old` to the new `Default` profile.
+1. Go to *%LOCALAPPDATA%\Microsoft\Edge\User Data*.
+1. Rename the *Default* folder to *Default.old*.
+1. Start Edge to create a fresh *Default* profile.
+1. If Edge is stable, close it, and then copy any data that you want to keep (such as *Bookmarks*) from *Default.old* to the new *Default* profile.
 
 ### Repair Microsoft Edge
 
