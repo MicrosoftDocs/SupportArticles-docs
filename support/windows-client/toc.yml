@@ -1,4 +1,4 @@
-items:
+items:    # Please do not delete this line, it is required for the yaml format
 - name: Windows Client
   href: welcome-windows-client.yml
 - name: Active Directory
