@@ -687,7 +687,7 @@ items:    # Please do not delete this line, it is required for the yaml format
           href: ./backup-and-storage/you-dont-have-permission-error-mount-iso-image.md
     - name: ReFS
       items:
-        - name: Troubleshoot ReFS volumes
+        - name: "Troubleshooting guidance: ReFS volumes"
           href: ./backup-and-storage/refs-troubleshooting.md
         - name: Fix heavy memory usage in ReFS
           href: ./backup-and-storage/fix-heavy-memory-usage-refs.md

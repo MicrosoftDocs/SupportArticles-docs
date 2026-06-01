@@ -1,11 +1,11 @@
 ---
-title: Troubleshoot ReFS volumes
+title: Guidance for troubleshooting ReFS volumes
 description: Provides guidance to help IT administrators investigate and resolve issues with Resilient File System (ReFS) volumes on Windows Server.
-ms.date: 04/30/2026
+ms.date: 06/04/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting-general
-ms.reviewer: kaushika
+ms.reviewer: kaushika, v-appelgatet
 ms.custom:
 - sap:backup, recovery, disk, and storage\refs
 - pcy:WinComm Storage High Avail
@@ -13,7 +13,7 @@ appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 
-# Troubleshoot ReFS volumes
+# ReFS volumes troubleshooting guidance
 
 This article provides guidance to help IT administrators and support personnel investigate and resolve issues with Resilient File System (ReFS) volumes on Windows Server.
 
