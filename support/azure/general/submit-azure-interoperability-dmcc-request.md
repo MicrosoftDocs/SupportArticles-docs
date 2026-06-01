@@ -1,6 +1,6 @@
 ---
 title: How to Request Azure Interoperability Under UK DMCC
-description: Request Azure interoperability under the UK DMCC through Microsoft's dedicated mechanism, ensuring transparent assessment and timely responses for cloud providers.
+description: Request Azure interoperability under the UK DMCC (Digital Markets, Competition and Consumers) through Microsoft's dedicated mechanism, ensuring transparent assessment and timely responses for cloud providers.
 ms.date: 06/01/2026
 author: kaushika-msft
 ms.author: kaushika
@@ -16,7 +16,7 @@ Microsoft is committed to ensuring that UK Azure customers and developers can de
 
 ## Scope and eligibility  
 
-Although this request form is accessible worldwide, DMCC Azure interoperability requests must originate from UK Azure customers and be related to an Azure product or service.  
+Although this request form is accessible worldwide, DMCC (Digital Markets, Competition and Consumers) Azure interoperability requests must originate from UK Azure customers and be related to an Azure product or service.  
 
 ## Submit a DMCC Azure interoperability request  
 
