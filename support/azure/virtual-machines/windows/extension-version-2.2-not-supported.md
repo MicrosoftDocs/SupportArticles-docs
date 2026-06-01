@@ -12,6 +12,8 @@ ms.custom: sap:Azure Disk Encryption (ADE) not operating correctly
 
 _Original KB number:_ &nbsp; 4339481
 
+## Summary
+
 This article provides two workarounds to an issue in which you can't enable Azure Disk Encryption with error "Azure Disk Encryption extension version '2.2' is not supported".
 
 ## Symptoms

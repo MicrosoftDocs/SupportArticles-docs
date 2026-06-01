@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Rolling Upgrade Issues
 description: Discusses how to troubleshoot rolling upgrade issues.
-ms.date: 12/05/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

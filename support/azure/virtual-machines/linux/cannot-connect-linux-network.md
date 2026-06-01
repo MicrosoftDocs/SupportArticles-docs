@@ -5,9 +5,10 @@ ms.date: 04/15/2024
 author: JarrettRenshaw
 ms.author: jarrettr
 ms.service: azure-virtual-machines
-ms.custom: sap:Cannot connect to my VM, linux-related-content
+ms.custom: 
+ - Kernel Upgrades
+ - Package Management issue (Yum, Zypper, RPM, DPKG, APT)
 ms.collection: linux
-ms.reviewer: 
 ---
 # Can't connect to Azure Linux VM through network
 
@@ -16,6 +17,8 @@ ms.reviewer:
 _Original KB number:_ &nbsp; 4010059
 
 [!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
+
+## Summary
 
 This article fixes an issue in which network errors prevent you from connecting to Azure Linux virtual machines.
 

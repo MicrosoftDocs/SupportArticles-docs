@@ -1,7 +1,7 @@
 ---
 title: Event ID 10016 is logged in Windows
 description: Describes an issue in which DCOM event ID 10016 is logged in Windows. Provides a resolution.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -12,12 +12,12 @@ ms.custom:
 adobe-target: true
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # DCOM event ID 10016 is logged in Windows
 
 This article provides a workaround to solve the event 10016 that's logged in Windows when accessing DCOM components.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2019, Windows Server 2016  
 _Original KB number:_ &nbsp; 4022522
 
 ## Symptoms

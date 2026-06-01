@@ -1,3 +1,4 @@
+items:
 - name: Dynamics 365 Field Service
   href: welcome-field-service.yml
 - name: Administration and settings
@@ -8,11 +9,13 @@
       href: administration/cannot-find-user-set-up-frontline-workers.md
     - name: Can't identify the user in an error message
       href: administration/cant-identify-user.md
+    - name: Can't install Dynamics 365 Field Service
+      href: administration/cant-install-field-service.md
     - name: Date Window Start/End fields don't exist
       href: administration/date-window-fields-missing.md
     - name: Entity record names have duplicated numbers
       href: administration/entity-names-duplicated-numbers.md
-    - name: Inspection flows aren't triggered 
+    - name: Inspection flows don't trigger 
       href: administration/inspection-flows-not-triggered.md
     - name: '"The user has not been assigned any roles" error'
       href: administration/user-has-no-roles.md
@@ -30,7 +33,9 @@
       href: iot/troubleshoot-iot-issues-logic-app.md
 
 - name: Mobile app
-  items: 
+  items:
+    - name: Troubleshoot Common issues with the Field Service mobile app
+      href: mobile-app/mobile-app-common-issues.md 
     - name: Booking timestamp is created with an incorrect time
       href: mobile-app/booking-timestamp-incorrect-time.md
     - name: Camera pictures are blurry or not focused
@@ -50,19 +55,19 @@
 
 - name: Mobile app - New experience
   items: 
-    - name: Error on startup due to permission or privilege issues
-      href: mobile-app/newux-error-on-start-permission.md
     - name: Error on startup due to missing files in the solution
       href: mobile-app/newux-error-on-start-missing-files.md
+    - name: Error on startup due to permission or privilege issues
+      href: mobile-app/newux-error-on-start-permission.md
 
 - name: Resource Scheduling Optimization add-in
   items: 
     - name: Locked booking is infeasible
       href: rso/locked-booking-infeasible.md
-    - name: Optimization request fails to modify some bookings
-      href: rso/system-failed-modify-bookings-error.md
     - name: '"Object reference not set to an instance of an object" error'
       href: rso/object-reference-not-set-instance-object.md
+    - name: Optimization request fails to modify some bookings
+      href: rso/system-failed-modify-bookings-error.md
     - name: Requirements not scheduled
       href: rso/requirement-not-scheduled-in-rso.md
     - name: '"SAS Key has not been configured" error'
@@ -76,8 +81,27 @@
 
 - name: Scheduling
   items: 
-    - name: Issue with cascading crew changes when assigning a booking
-      href: scheduling/cascade-crew-changes-booking.md
+    - name: Booking card shows NaN or incorrect date and time on the schedule board
+      href: scheduling/schedule-board-nan-datetime.md
     - name: Form context is missing on bookable resource forms
       href: scheduling/missing-form-context-bookable-resource.md
+    - name: Issue with cascading crew changes when assigning a booking
+      href: scheduling/cascade-crew-changes-booking.md
+    - name: Resources don't display on the schedule board
+      href: scheduling/schedule-board-missing-resources.md
+    - name: Schedule board is slow to load or experiences extreme latency
+      href: scheduling/schedule-board-performance.md
+    - name: Schedule board shows a blank page or fails to load
+      href: scheduling/schedule-board-not-loading.md
+    - name: Schedule board errors due to version mismatches
+      href: scheduling/schedule-board-version-mismatch.md  
+
+- name: Work order
+  items:
+    - name: Agreement booking setup doesn't create work orders
+      href: work-order/agreement-work-orders-not-generated.md
+    - name: Work order doesn't save or create successfully
+      href: work-order/work-order-creation-errors.md
+    - name: Work order status doesn't change as expected
+      href: work-order/work-order-status-stuck.md
 

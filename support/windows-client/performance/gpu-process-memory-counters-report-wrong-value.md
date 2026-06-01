@@ -1,7 +1,7 @@
 ---
 title: GPU Process Memory counters report incorrect value
 description: Discusses an issue where Graphics Processing Unit (GPU) process memory counters show memory leaks for running applications and report incorrect values.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

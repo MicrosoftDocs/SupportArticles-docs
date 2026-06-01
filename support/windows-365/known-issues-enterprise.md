@@ -1,10 +1,10 @@
 ---
-title: Windows 365 Enterprise and Frontline Known issues
-description: Learn about known issues for Windows 365 Enterprise.
+title: Windows 365 Enterprise and Windows 365 Flex Known issues
+description: Learn about known issues for Windows 365 Enterprise and Windows 365 Flex.
 manager: dcscontentpm
-ms.date: 11/17/2025
+ms.date: 05/05/2026
 ms.topic: troubleshooting
-ms.reviewer: msft-jasonparker, stulimat, scottduf
+ms.reviewer: kaushika, msft-jasonparker, stulimat, scottduf
 ms.custom:
 - pcy:WinComm User Experience
 - sap:Onboarding issues
@@ -13,9 +13,9 @@ ms.collection:
 - tier2
 ---
 
-# Windows 365 Enterprise and Frontline known issues
+# Windows 365 Enterprise and Windows 365 Flex known issues
 
-The following items are known issues for Windows 365 Enterprise.
+The following items are known issues for Windows 365 Enterprise and Windows 365 Flex.
 
 ## First-time Cloud PC sign-in triggers an impossible travel location alert
 
@@ -226,6 +226,14 @@ When screen capture protection is enabled, Microsoft Teams on Windows 365 Cloud 
      - **Enable screen capture protection** = **Enable**
      - **Screen Capture Protection Options** = **Block screen capture on client and server**
 
+## Windows 365 role assignments do not support device groups as scope groups
+
+Windows 365 role assignments do not support adding device group as a part of scope groups. It only supports user groups. 
+
+### Solution
+
+Make sure to add the right user groups within the administrator's role assignment. For devices that do not have associated users (Frontline in shared mode devices or CloudApps), the scope group check is skipped.  
+
 ## Windows 365 scope tags and nested groups
 
 Windows 365 doesn't support nested security groups. If you apply a scope tag to the top of a nested security group, Cloud PCs in inner nested groups aren't assigned scope tags.
@@ -269,13 +277,13 @@ For newly provisioned Cloud PCs, verify that WebRTC is available. If it's not, y
 
 - To add the WebRTC Redirector Service app to an individual Cloud PC, follow the steps in [Install the Remote Desktop WebRTC Redirector Service](/azure/virtual-desktop/teams-on-avd#install-the-remote-desktop-webrtc-redirector-service). To get the most up-to-date installer, see [https://aka.ms/msrdcwebrtcsvc/msi](https://aka.ms/msrdcwebrtcsvc/msi).
 
-## Windows 365 Frontline issues
+## Windows 365 Flex issues
 
-The following items are known issues for Windows 365 Frontline.
+The following items are known issues for Windows 365 Flex.
 
-### Users can't access Frontline Cloud PCs that are in shared mode
+### Users can't access Windows 365 Flex Cloud PCs that are in shared mode
 
-When Frontline Cloud PCs in shared mode are assigned to a Microsoft Entra ID group that has more than 10,000 members, some users might not receive access and don't see the Cloud PC cards in the Windows app client.
+When Windows 365 Flex Cloud PCs in shared mode are assigned to a Microsoft Entra ID group that has more than 10,000 members, some users might not receive access and don't see the Cloud PC cards in the Windows app client.
 
 #### Solution
 
@@ -297,7 +305,7 @@ Perform a reprovisioning action in the provisioning policy:
 
 ### Scheduled reprovisioning doesn't recover after license changes
 
-When Frontline Cloud PCs are provisioned in shared mode, and licenses expire or are removed from the tenant, the Cloud PCs are deprovisioned. After you add back valid licenses, Cloud PCs provision according to the policy configurations. However, both scheduled reprovisioning and manual reprovisioning functionality remain disabled.
+When Windows 365 Flex Cloud PCs are provisioned in shared mode, and licenses expire or are removed from the tenant, the Cloud PCs are deprovisioned. After you add back valid licenses, Cloud PCs provision according to the policy configurations. However, both scheduled reprovisioning and manual reprovisioning functionality remain disabled.
 
 #### Solution
 
@@ -315,7 +323,7 @@ To restore full reprovisioning functionality after you restore expired licenses:
 
 ### Can't decrease Cloud PC count due to pooled user storage limits
 
-You can't reduce the number of Cloud PCs for Frontline Cloud PCs in shared mode if the operation would cause the amount of pooled user storage to exceed its limit.
+You can't reduce the number of Cloud PCs for Windows 365 Flex Cloud PCs in shared mode if the operation would cause the amount of pooled user storage to exceed its limit.
 
 #### Solution
 
@@ -337,6 +345,14 @@ Immediately after provisioning, the status information for the Autopilot Device 
 #### Solution
 
 Wait for the process to continue. Cloud PC serial numbers can take up to 30 minutes to appear in the status information.
+
+### Windows Autopilot Device Preparation is not currently supported for Citrix Cloud PCs
+
+Device preparation policies (DPP) aren't supported for Cloud PCs that are configured to use Citrix integration. If you assign a device preparation policy to a provisioning policy that’s used for Citrix Cloud PCs, the policy won't be applied during Cloud PC provisioning.
+
+#### Solution
+
+There is currently no workaround. To use Citrix integration, configure your Cloud PCs by using a provisioning policy that doesn’t include a device preparation policy.
 
 ## Next steps
 

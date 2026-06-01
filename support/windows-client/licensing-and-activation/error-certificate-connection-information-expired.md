@@ -2,7 +2,7 @@
 title: Certificate in the connection information has expired when accessing an AVD VM
 description: Helps resolve the error certificate in the connection information has expired when accessing an AVD VM by using the Remote Desktop client for Windows.
 manager: dcscontentpm
-ms.date: 07/03/2025
+ms.date: 02/12/2026
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-nehaborkar, jasone, v-lianna

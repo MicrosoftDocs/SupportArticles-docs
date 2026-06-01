@@ -9,14 +9,16 @@ ms.author: meerak
 ms.custom: 
   - Extensibility\Macros
   - CSSTroubleshoot
-ms.reviewer: grege
+  - CI 11012
+ms.reviewer: grege, akeeler, v-lisalozano 
 search.appverid: 
   - MET150
 appliesto: 
-  - Excel 2010
-  - Office Excel 2007
-  - Office Excel 2003
-ms.date: 05/26/2025
+  - Excel for Microsoft 365
+  - Microsoft Excel 2024 
+  - Microsoft Excel 2021 
+  - Microsoft Excel 2016 
+ms.date: 04/01/2026
 ---
 
 # Methods for transferring data to Excel from Visual Basic

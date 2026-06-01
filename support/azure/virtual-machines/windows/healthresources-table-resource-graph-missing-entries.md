@@ -11,6 +11,8 @@ ms.custom: sap:VM Performance
 
 **Applies to:** :heavy_check_mark: Linux VMs :heavy_check_mark: Windows VMs
 
+## Summary
+
 This article discusses the possibility of missing virtual machine (VM) availability status or health annotations in the HealthResources and HealthResourceChanges tables in Microsoft Azure Resource Graph. The article also discusses how to react if this scenario occurs.
 
 ## Symptoms

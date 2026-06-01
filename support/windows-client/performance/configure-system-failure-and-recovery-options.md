@@ -1,7 +1,7 @@
 ---
 title: Configure system failure and recovery options
 description: Learn how to configure the actions that Windows takes when a system error occurs and what the recovery options are.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 ms.topic: troubleshooting
 manager: dcscontentpm
 ms.custom:

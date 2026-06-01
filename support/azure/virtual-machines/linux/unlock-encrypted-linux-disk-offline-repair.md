@@ -18,6 +18,8 @@ ms.author: diambroi
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
+## Summary
+
 This article describes how to unlock an Azure Disk Encryption (ADE)-enabled OS disk for offline repair.
 
 Azure Disk Encryption can be applied to Microsoft endorsed Linux virtual machines (VMs). Here are some basic requirements to enable Azure Disk Encryption in Linux VMs:

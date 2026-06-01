@@ -1,7 +1,7 @@
 ---
 title: Track the software update deployment process
 description: Describes how to track the deployment of software updates in System Center 2012 Configuration Manager by using log files.
-ms.date: 02/11/2025
+ms.date: 03/30/2026
 ms.reviewer: kaushika, andad
 ms.custom: sap:Software Update Management (SUM)\Software Update Groups or Deployments
 ---
@@ -783,4 +783,4 @@ After the deployment and the deployment policy have been created on the server, 
 
 ## State message reporting
 
-Throughout the deployment phase, multiple state messages are raised to indicate the current state of the updates and the deployment itself. After these state messages are raised, they're processed in the way that's described in [State messaging data flow](state-messaging-description.md#state-messaging-data-flow).
+Throughout the deployment phase, multiple state messages are raised to indicate the current state of the updates and the deployment itself. After these state messages are raised, they're processed in the way that's described in [State messaging data flow](../setup-migrate-backup-recovery/state-messaging-description.md#state-messaging-data-flow).

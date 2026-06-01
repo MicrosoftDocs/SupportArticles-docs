@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot the ZonalAllocationFailed, AllocationFailed, or OverconstrainedAllocationRequest error code
-description: Troubleshoot the ZonalAllocationFailed, AllocationFailed, or OverconstrainedAllocationRequest error when you create, deploy, or update a Kubernetes cluster.
+description: Troubleshoot ZonalAllocationFailed and AllocationFailed errors in AKS create or update operations. Follow steps to fix capacity constraints quickly.
 ms.date: 09/05/2024
 author: axelgMS
 ms.author: axelg
@@ -10,6 +10,8 @@ ms.service: azure-kubernetes-service
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
 # Troubleshoot the ZonalAllocationFailed, AllocationFailed, or OverconstrainedAllocationRequest error code
+
+## Summary
 
 This article describes how to identify and resolve the `ZonalAllocationFailed`, `AllocationFailed`, or `OverconstrainedAllocationRequest` error that might occur when you try to create, deploy, or update a Microsoft Azure Kubernetes Service (AKS) cluster.
 
@@ -25,15 +27,15 @@ When you try to create, upgrade or scale up a cluster, you receive one of the fo
 
 Code: `ZonalAllocationFailed`
 
-Message: "Allocation failed. We do not have sufficient capacity for the requested VM size in this zone. Read more about improving likelihood of allocation success at https://aka.ms/allocation-guidance. Please note that allocation failures can also arise if a proximity placement group is associated with this VMSS. See https://learn.microsoft.com/troubleshoot/azure/azure-kubernetes/error-code-zonalallocationfailed-allocationfailed for more details. This is not AKS controlled behavior, please ask help to VMSS team for allocation failure. If the error is due to capacity constrain, consider upgrade with maxUnavailable instead of maxSurge, details: aka.ms/aks/maxUnavailable."
+Message: `Allocation failed. We do not have sufficient capacity for the requested VM size in this zone. Read more about improving likelihood of allocation success at https://aka.ms/allocation-guidance. Please note that allocation failures can also arise if a proximity placement group is associated with this VMSS. See https://learn.microsoft.com/troubleshoot/azure/azure-kubernetes/error-code-zonalallocationfailed-allocationfailed for more details. This is not AKS controlled behavior, please ask help to VMSS team for allocation failure. If the error is due to capacity constrain, consider upgrade with maxUnavailable instead of maxSurge, details: aka.ms/aks/maxUnavailable.`
 
 Code: `AllocationFailed`
 
-Message: "The VM allocation failed due to an internal error. Please retry later or try deploying to a different location. Please note that allocation failures can also arise if a proximity placement group is associated with this VMSS. See https://learn.microsoft.com/troubleshoot/azure/azure-kubernetes/error-code-zonalallocationfailed-allocationfailed for more details. This is not AKS controlled behavior, please ask help to VMSS team for allocation failure."
+Message: `The VM allocation failed due to an internal error. Please retry later or try deploying to a different location. Please note that allocation failures can also arise if a proximity placement group is associated with this VMSS. See https://learn.microsoft.com/troubleshoot/azure/azure-kubernetes/error-code-zonalallocationfailed-allocationfailed for more details. This is not AKS controlled behavior, please ask help to VMSS team for allocation failure.`
 
 Code: `OverconstrainedAllocationRequest`
 
-Message: "Create or update VMSS failed. Allocation failed. VM(s) with the following constraints cannot be allocated, because the condition is too restrictive. Please remove some constraints and try again. Constraints applied are: - Differencing (Ephemeral) Disks  - Networking Constraints (such as Accelerated Networking or IPv6)  - VM Size"
+Message: `Create or update VMSS failed. Allocation failed. VM(s) with the following constraints cannot be allocated, because the condition is too restrictive. Please remove some constraints and try again. Constraints applied are: - Differencing (Ephemeral) Disks  - Networking Constraints (such as Accelerated Networking or IPv6)  - VM Size`
 
 ### Cause 1: Limited zone availability in a SKU
 
@@ -56,7 +58,7 @@ For more information about how to fix this error, see [Resolve errors for SKU no
 
 ### Solution 3: Upgrade in place using `MaxUnavailable`
 
-If you don’t need surge nodes during upgrades, see [Customize unavailable nodes](/azure/aks/upgrade-aks-node-pools-rolling#customize-unavailable-nodes) for information on how to upgrade with the existing capacity. Set `MaxUnavailable` to a value greater than zero (0) and set `MaxSurge` equal to zero (0). Existing nodes are then cordoned and drained one at a time and pods are evicted to remaining nodes. No buffer node is created.
+If you don't need surge nodes during upgrades, see [Customize unavailable nodes](/azure/aks/upgrade-aks-node-pools-rolling#customize-unavailable-nodes) for information on how to upgrade with the existing capacity. Set `MaxUnavailable` to a value greater than zero (0) and set `MaxSurge` equal to zero (0). Existing nodes are then cordoned and drained one at a time and pods are evicted to remaining nodes. No buffer node is created.
 
 ### Solution 4: Use deployment recommender in portal for new cluster creates
 

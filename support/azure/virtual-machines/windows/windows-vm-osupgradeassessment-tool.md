@@ -13,9 +13,9 @@ ms.reviewer: macla, scotro, glimoli, jarrettr, azurevmcptcic, v-ryanberg
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
-## Overview
+## Summary
 
-This PowerShell script is designed to assess the readiness of a Windows machine (desktop or server) for an **in-place OS upgrade**, with special considerations for **Azure VMs**. It evaluates OS version, supported upgrade paths, system disk space, and Azure security features like **Trusted Launch**, **Secure Boot**, and **virtual trusted platform modules (vTPMs)**.
+This article provides information about the Azure Virtual Machine (VM) Windows OS Upgrade Assessment tool, a PowerShell script designed to assess the readiness of a Windows machine (desktop or server) for an **in-place OS upgrade**, with special considerations for **Azure VMs**. The tool evaluates OS version, supported upgrade paths, system disk space, and Azure security features like **Trusted Launch**, **Secure Boot**, and **virtual trusted platform modules (vTPMs)**.
 
 ## Features
 

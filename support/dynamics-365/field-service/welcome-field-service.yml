@@ -7,9 +7,9 @@ metadata:
   description: Landing page for Dynamics 365 Field Service troubleshooting articles.
   ms.topic: landing-page
   ms.service: dynamics-365-field-service
-  author: m-hartmann
-  ms.author: mhart
-  ms.date: 04/30/2025
+  author: aartig13 
+  ms.author: aartigoyle
+  ms.date: 04/20/2026
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -23,6 +23,8 @@ landingContent:
             url: administration/cannot-find-user-set-up-frontline-workers.md
           - text: Can't identify the user in an error message
             url: administration/cant-identify-user.md
+          - text: Can't install Dynamics 365 Field Service
+            url: administration/cant-install-field-service.md
           - text: Date Window Start/End fields don't exist
             url: administration/date-window-fields-missing.md
           - text: Entity record texts have duplicated numbers
@@ -31,24 +33,36 @@ landingContent:
             url: administration/user-has-no-roles.md
   
   # Card
-  - title: Customization
+  - title: Scheduling
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Can't delete record because of a restrict-delete relationships
-            url: customization/restrict-delete-relationships.md
-          - text: Forms show an error about being read-only
-            url: customization/forms-record-read-only-error.md
+          - text: Booking card shows NaN or incorrect date and time on the schedule board
+            url: scheduling/schedule-board-nan-datetime.md
+          - text: Issue with cascading crew changes when assigning a booking
+            url: scheduling/cascade-crew-changes-booking.md
+          - text: Missing form context on bookable resource forms
+            url: scheduling/missing-form-context-bookable-resource.md
+          - text: Resources don't display on the schedule board
+            url: scheduling/schedule-board-missing-resources.md
+          - text: Schedule board errors due to version mismatches
+            url: scheduling/schedule-board-version-mismatch.md
+          - text: Schedule board is slow to load or experiences extreme latency
+            url: scheduling/schedule-board-performance.md
+          - text: Schedule board shows a blank page or fails to load
+            url: scheduling/schedule-board-not-loading.md
 
   # Card
-  - title: Connected Field Service
+  - title: Work order
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: No records after pulling IoT device data
-            url: iot/no-device-history-properties.md
-          - text: Troubleshoot issues with IoT capabilities
-            url: iot/troubleshoot-iot-issues-logic-app.md
+          - text: Agreement booking setup doesn't create work orders
+            url: work-order/agreement-work-orders-not-generated.md
+          - text: Work order doesn't save or create successfully
+            url: work-order/work-order-creation-errors.md
+          - text: Work order status doesn't change as expected
+            url: work-order/work-order-status-stuck.md
 
   # Card
   - title: Mobile app
@@ -59,6 +73,8 @@ landingContent:
             url: mobile-app/booking-timestamp-incorrect-time.md
           - text: Camera pictures are blurry or not focused
             url: mobile-app/camera-picture-not-focused.md
+          - text: Common issues with the Field Service mobile app
+            url: mobile-app/mobile-app-common-issues.md
           - text: Duplicated inspection responses
             url: mobile-app/duplicate-inspection-responses.md
           - text: Incorrect or missing data in offline mode
@@ -77,11 +93,21 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Error on start due to permission or privilege issues
-            url: mobile-app/newux-error-on-start-permission.md
           - text: Error on start due to missing files in the solution
             url: mobile-app/newux-error-on-start-missing-files.md
+          - text: Error on start due to permission or privilege issues
+            url: mobile-app/newux-error-on-start-permission.md
   
+  # Card
+  - title: Customization
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Can't delete record because of a restrict-delete relationships
+            url: customization/restrict-delete-relationships.md
+          - text: Forms show an error about being read-only
+            url: customization/forms-record-read-only-error.md
+
   # Card
   - title: Resource Scheduling Optimization Add-in for Field Service
     linkLists:
@@ -97,14 +123,14 @@ landingContent:
             url: rso/user-lacks-privileges-error.md
 
   # Card
-  - title: Scheduling
+  - title: Connected Field Service
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Issue with cascading crew changes when assigning a booking
-            url: scheduling/cascade-crew-changes-booking.md
-          - text: Missing form context on bookable resource forms
-            url: scheduling/missing-form-context-bookable-resource.md
+          - text: No records after pulling IoT device data
+            url: iot/no-device-history-properties.md
+          - text: Troubleshoot issues with IoT capabilities
+            url: iot/troubleshoot-iot-issues-logic-app.md
 
   # Card
   - title: Documentation and training

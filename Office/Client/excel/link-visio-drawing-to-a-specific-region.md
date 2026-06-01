@@ -8,12 +8,14 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: meerak
+ms.reviewer: akeeler, v-lisalozano
 ms.custom: 
   - Editing\Embedding
   - CSSTroubleshoot
+  - CI 11127
 appliesto: 
-  - Microsoft Excel
-ms.date: 05/26/2025
+  - Microsoft Visio
+ms.date: 04/13/2026
 ---
 
 # How to link a Visio drawing to a specific region in an Excel worksheet

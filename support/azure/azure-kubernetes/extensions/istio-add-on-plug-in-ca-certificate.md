@@ -12,6 +12,8 @@ ms.custom: sap:Extensions, Policies and Add-Ons
 ---
 # Istio service mesh add-on plug-in CA certificate troubleshooting
 
+## Summary
+
 This article discusses common troubleshooting issues with the Istio add-on plug-in certificate authority (CA) certificates feature, and it offers solutions to fix these issues. The article also reviews the general process of setting up plug-in CA certificates for the service mesh add-on.
 
 > [!NOTE]

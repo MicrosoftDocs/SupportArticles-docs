@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot common AD replication errors
 description: Contains troubleshooting information to help you fix Active Directory replication errors.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -1,7 +1,7 @@
 ---
 title: Linux accounts cannot get AES tickets
 description: Provides methods to resolve an issue where Linux-integrated accounts in AD DS can't get AES-encrypted Kerberos tickets but get RC4-encrypted tickets instead.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -67,7 +67,7 @@ In an Active Directory Domain Services (AD DS) environment, Linux-integrated acc
 
 ## Cause
 
-This issue occurs because the **operatingSystemVersion** attribute value of Linux is set to *3.10.0x*. AD DS reads the attribute value from left to right, stopping at the first decimal point (.) If the first character of the value is a digit and the value is less than six, the KDC determines that the requesting operating system might not support newer encryption types. In this case, the value is 3. Therefore, the KDC ignores **msDS-SupportedEncryptionTypes** and uses RC4 to encrypt the ticket.
+This issue occurs because the **operatingSystemVersion** attribute value of Linux is set to *3.10.0x*. AD DS reads the attribute value from left to right, stopping at the first decimal point (.) If the first character of the value is a digit and the value is less than six, the KDC determines that the requesting operating system might not support newer encryption types. In this case, the value is 3. Therefore, the KDC ignores **msDS-SupportedEncryptionTypes** and will used the assumed supported encryption types for the domain. For additional information please see [the KDC DefaultDomainSupportedEncTypes registry configuration.](/troubleshoot/windows-server/windows-security/kerberos-protocol-registry-kdc-configuration-keys#registry-entries-and-values-under-the-kdc-key)
 
 This behavior is by design. It accommodates older versions of Windows (including Windows 2000 Server, Windows Server 2003, and Windows XP) that do not support the **msDS-SupportedEncryptionTypes** attribute or the AES encryption type. The following specifications describe this design:<a id="1"></a>
 

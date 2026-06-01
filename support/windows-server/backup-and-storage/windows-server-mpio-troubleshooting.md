@@ -1,7 +1,7 @@
 ---
 title: Multipath I/O (MPIO) Troubleshooting Guidance
 description: Discusses how to troubleshoot and fix issues in Hyper-V, clustering, and virtualization environments that use the Windows Multipath I/O (MPIO) feature.
-ms.date: 12/12/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

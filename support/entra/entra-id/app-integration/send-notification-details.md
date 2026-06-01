@@ -59,9 +59,9 @@ See the following descriptions for more details about the notifications.
 - **UPN** – the user who performed the operation
   - Example – **tperkins\@f128.info**
 - **Tenant ID** – the unique ID of the tenant that the user who performed the operation was a member of
-  - Example – **7918d4b5-0442-4a97-be2d-36f9f9962ece**
+  - Example – **aaaabbbb-0000-cccc-1111-dddd2222eeee**
 - **User object ID** – the unique ID of the user who performed the operation
-  - Example – **17f84be4-51f8-483a-b533-383791227a99**
+  - Example – **cccccccc-2222-3333-4444-dddddddddddd**
 
 ### Detailed Notification Items
 
@@ -75,6 +75,6 @@ See the following descriptions for more details about the notifications.
   - Example – **Internal url `https://bing.com/` is invalid since it is already in use**
 - **Copy error** – Select the **copy icon** to the right of the **Copy error** textbox to copy all the notification details to share with a support or product group engineer
   - Example
-    ```{"errorCode":"InternalUrl\_Duplicate","localizedErrorDetails":{"errorDetail":"Internal url 'https://google.com/' is invalid since it is already in use"},"operationResults":\[{"objectId":null,"displayName":null,"status":0,"details":"Internal url 'https://bing.com/' is invalid since it is already in use"}\],"timeStampUtc":"2017-03-23T19:50:26.465743Z","clientRequestId":"302fd775-3329-4670-a9f3-bea37004f0bb","internalTransactionId":"ea5b5475-03b9-4f08-8e95-bbb11289ab65","upn":"tperkins@f128.info","tenantId":"7918d4b5-0442-4a97-be2d-36f9f9962ece","userObjectId":"17f84be4-51f8-483a-b533-383791227a99"}```
+    ```{"errorCode":"InternalUrl\_Duplicate","localizedErrorDetails":{"errorDetail":"Internal url 'https://google.com/' is invalid since it is already in use"},"operationResults":\[{"objectId":null,"displayName":null,"status":0,"details":"Internal url 'https://bing.com/' is invalid since it is already in use"}\],"timeStampUtc":"2017-03-23T19:50:26.465743Z","clientRequestId":"aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb","internalTransactionId":"bbbbbbbb-1111-2222-3333-cccccccccccc","upn":"tperkins@f128.info","tenantId":"aaaabbbb-0000-cccc-1111-dddd2222eeee","userObjectId":"cccccccc-2222-3333-4444-dddddddddddd"}```
 
  

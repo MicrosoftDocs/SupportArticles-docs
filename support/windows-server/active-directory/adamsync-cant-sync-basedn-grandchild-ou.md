@@ -1,7 +1,7 @@
 ---
 title: Synchronizing Between AD DS and AD LDS Enters Endless Loop if the base DN is a Grandchild OU
 description: Discusses how to work around a behavior in the Adamsync tool in which the synchronization process enters an endless loop.
-ms.date: 01/09/2026
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

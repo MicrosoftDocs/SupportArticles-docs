@@ -6,14 +6,16 @@ ms.author: elcorral
 ms.date: 01/20/2025
 ms.reviewer: divargas
 ms.service: azure-virtual-machines
-ms.custom: linux-related-content
 ms.topic: how-to
 ms.collection: linux
+ms.custom: Azure Disk Encryption (ADE) not operating correctly
 ---
 
 # How to display encryption settings on Azure Linux Virtual Machines
 
 **Applies to:** :heavy_check_mark: Linux VMs
+
+## Summary
 
 When Azure Disk Encryption (ADE) is enabled on an Azure Linux Virtual Machine (VM), encryption settings are configured at a platform level to either the disk object or the VM object. This guide shows how to visualize these encryption settings after ADE is deployed.
 

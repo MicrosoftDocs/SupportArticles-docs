@@ -1,7 +1,7 @@
 ---
 title: Cluster validation account causes events or messages
 description: Describes the temporary user account that the cluster validation process creates, uses, and deletes.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

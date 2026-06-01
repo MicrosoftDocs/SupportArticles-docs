@@ -83,10 +83,10 @@ Policy tip evaluation for the OWA client completed successfully
 
 **Summary:**<br/> None of the rules defined in the policy matched.
 
-| Policy Name/Rule Name  | Is Rule Matched  |
+| Policy Name / Rule Name  | Is Rule Matched  |
 |----|----|
-| External sharing-Sensitive Information DLP policy|False |
-| Default Endpoint DLP Policy Rule-Low Volume-Default policy for devices | False  |
+| External sharing / Sensitive Information DLP policy|False |
+| Default Endpoint DLP Policy Rule / Low Volume-Default policy for devices | False  |
 
 **Sender:** `XXX@contoso.onmicrosoft.com`
 
@@ -98,10 +98,10 @@ Policy tip evaluation for the OWA client completed successfully
 
 **Summary:** Expected Policy Tip to be shown: 'Your email message conflicts with a policy in your organization.' from the rule 'External sharing-Sensitive Information DLP policy'.
 
-|Policy Name/Rule Name| Is Rule Matched |
+|Policy Name / Rule Name| Is Rule Matched |
 |----|----|
-| External sharing-Sensitive Information DLP policy  | True  |
-| Adaptive Protection audit rule for Teams and Exchange DLP-Adaptive Protection policy for Teams and Exchange DLP | True  |
+| External sharing / Sensitive Information DLP policy  | True  |
+| Adaptive Protection audit rule for Teams and Exchange DLP / Adaptive Protection policy for Teams and Exchange DLP | True  |
 
 ## Interpret the HAR diagnostic results
 

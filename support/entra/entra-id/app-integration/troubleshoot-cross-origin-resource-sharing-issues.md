@@ -196,7 +196,7 @@ function MSALInstanceFactory(): IPublicClientApplication {
   return new PublicClientApplication({
     auth: {
       authority: 'https://contoso.b2clogin.com/tfp/655e51e9-be5e-xxxx-xxxx-38aa6558xxxx/b2c_1_susi/v2.0/',
-      clientId: 'fb2ad7b7-2032-4a66-8723-e993eb4b9004',
+      clientId: '00001111-aaaa-2222-bbbb-3333cccc4444',
       redirectUri: 'http://localhost:4200',
       knownAuthorities: ['contoso.b2clogin.com'],
       protocolMode: ProtocolMode.OIDC

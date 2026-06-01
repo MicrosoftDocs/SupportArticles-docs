@@ -1,7 +1,7 @@
 ---
 title: Rebuild performance counter library values
 description: This article describes how to manually rebuild performance counter library values.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

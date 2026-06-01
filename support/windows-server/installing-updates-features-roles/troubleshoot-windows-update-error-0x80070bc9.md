@@ -3,7 +3,7 @@ title: Troubleshoot Windows Update Error 0x80070bc9
 description: Learn how to resolve the Windows Update error 0x80070bc9 on Windows.
 manager: dcscontentpm
 audience: itpro
-ms.date: 11/6/2025
+ms.date: 02/12/2026
 ms.topic: troubleshooting
 ms.reviewer: scotro, mwesley, jarretr, v-ryanberg, v-gsitser
 ms.custom:

@@ -6,7 +6,7 @@ ms.author: jarrettr
 ms.reviewer: v-ryanberg
 ms.custom: sap:Confluent on Azure
 ms.service: partner-services 
-ms.topic: troubleshooting-general
+ms.topic: troubleshooting
 ms.date: 09/24/2025
 ai-usage: ai-assisted
 
@@ -14,6 +14,8 @@ ai-usage: ai-assisted
 ---
 
 # Can't create a service connection by using Service Connector
+
+## Summary
 
 This article helps you troubleshoot issues with creating a service connection for Confluent Cloud by using Service Connector in Azure.
 

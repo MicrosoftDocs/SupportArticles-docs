@@ -1,7 +1,7 @@
 ---
 title: Event ID 8 is logged in Application log
 description: Provides help to solve the Event ID 8 logged in the Application log.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

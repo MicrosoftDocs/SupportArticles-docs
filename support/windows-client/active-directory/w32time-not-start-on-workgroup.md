@@ -1,7 +1,7 @@
 ---
 title: W32Time doesn't start on a workgroup computer
 description: Describes an issue in which the Windows Time service doesn't automatically start in a stand-alone environment for Windows 7, Windows Server 2008 R2, and later versions of Windows. Workarounds are provided.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

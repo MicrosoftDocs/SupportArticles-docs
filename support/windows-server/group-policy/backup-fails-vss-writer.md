@@ -1,7 +1,7 @@
 ---
 title: Managing Removable Devices Through Group Policy Troubleshooting Guidance
 description: Resolves issues in which GPOs and registry settings that control access to removable drives don't work as expected in Windows.
-ms.date: 10/08/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

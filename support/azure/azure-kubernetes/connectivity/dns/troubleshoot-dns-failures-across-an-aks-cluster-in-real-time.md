@@ -1,12 +1,14 @@
 ---
-title: Troubleshoot DNS failures across an AKS cluster in real time
-description: Learn how to troubleshoot DNS failures across an AKS cluster in real time using Inspektor Gadget.
+title: Troubleshoot AKS DNS failures in real time
+description: Troubleshoot DNS failures across an AKS cluster in real time with Inspektor Gadget and identify slow or failed queries—start diagnosing now.
 ms.reviewer: qasimsarfraz, v-weizhu
 ms.service: azure-kubernetes-service
 ms.custom: sap:Connectivity
 ms.date: 08/09/2024
 ---
 # Real-time DNS traffic analysis to troubleshoot DNS resolution failures in AKS
+
+## Summary
 
 This article discusses how to troubleshoot Domain Name System (DNS) failures across an Azure Kubernetes Service (AKS) cluster in real time.
 

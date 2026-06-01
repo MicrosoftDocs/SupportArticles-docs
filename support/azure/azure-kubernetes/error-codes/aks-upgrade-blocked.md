@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot AKS upgrade errors because of version skew, incompatibility, or lack of support
-description: Learn how to troubleshoot AKS upgrade not allowed or blocked because of unsupported Kubernetes version or node pool version skew.
+description: Learn how to troubleshoot AKS upgrade errors caused by unsupported Kubernetes versions or node pool skew, and follow steps to upgrade successfully.
 ms.date: 08/22/2025
 editor: v-jsitser
 ms.reviewer: v-liuamson
@@ -9,6 +9,10 @@ ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot an AKS upgrade not allowed or blocked because of an unsupported Kubernetes version or node pool version skew so that I can successfully upgrade an AKS cluster by using the Azure CLI.
 ---
 # Troubleshoot AKS upgrade errors because of version skew, incompatibility, or lack of support
+
+## Summary
+
+This article explains how to troubleshoot AKS upgrade errors that occur due to version skew, incompatibility, or lack of support. It provides guidance on identifying the cause of the error and steps to resolve it.
 
 ## Prerequisites
 

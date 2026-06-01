@@ -42,11 +42,11 @@ Make sure that the correct SKU is specified when you create or configure the app
 
 2. **Update the application gateway configuration**
 
-If you're modifying an existing application gateway, update the SKU settings by using [the Azure portal](https://portal.azure.com), Azure CLI, or an Azure Rights Management (Azure RMS) template.
+If you're modifying an existing application gateway, update the SKU settings by using [the Azure portal](https://portal.azure.com), Azure CLI, or an Azure Resource Manager template (ARM template).
 
-3. **Check Azure RMS or Azure CLI command**
+3. **Check ARM template or Azure CLI command**
 
-If you're using an Azure RMS template or Azure CLI, make sure that the `sku` segment is included correctly. For Azure CLI:
+If you're using an ARM template or Azure CLI, make sure that the `sku` segment is included correctly. For Azure CLI:
        
 ```azurecli
 

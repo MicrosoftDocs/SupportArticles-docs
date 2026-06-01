@@ -1,7 +1,7 @@
 ---
 title: Hyper-V Environments Experience Frequent Power-offs and Rapid Disk Space Consumption
 description: Provides solutions to address issues in a Hyper-V environment where frequent power-offs and rapid disk space consumption are observed.
-ms.date: 09/10/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

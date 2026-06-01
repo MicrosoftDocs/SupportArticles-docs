@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Event ID 2866 (Maximum Number of Cached Audit Events)
 description: Discusses several methods to troubleshoot Event ID 2866, and discusses how to identify which methods are appropriate for your situation.
-ms.date: 01/14/2026
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

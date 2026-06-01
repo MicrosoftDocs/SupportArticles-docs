@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot the Microsoft Intune certificate connector and event IDs
 description:  Troubleshoot the Microsoft Intune certificate connector by reviewing Event IDs and descriptions, and review diagnostic codes for the Intune connector service.
-ms.date: 02/11/2025
+ms.date: 03/30/2026
 ms.reviewer: kaushika, lacranda
 search.appverid: MET150
 ms.custom: sap:Configure Devices - iOS\SCEP Certificates

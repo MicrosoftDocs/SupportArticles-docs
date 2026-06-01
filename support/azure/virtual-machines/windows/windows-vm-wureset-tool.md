@@ -13,9 +13,9 @@ ms.reviewer: macla, scotro, glimoli, jarrettr, azurevmcptcic
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
-## Overview
+## Summary
 
-This article covers steps to run a PowerShell script that resets the Windows Update servicing stack for a VM running in Azure. Running the tool can fix most problems that prevent Windows Updates from installing successfully. 
+This article provides information about the Azure Virtual Machine (VM) Windows Update Reset Tool, a PowerShell script that resets the Windows Update servicing stack for a VM running in Azure. Running the tool can fix most problems that prevent Windows Updates from installing successfully.
 
 > [!NOTE]
 > This article is intended for use with support agents and IT professionals. If you're a home user and looking for more information about fixing Windows update errors, see [Fix Windows Update errors](https://support.microsoft.com/help/10164).

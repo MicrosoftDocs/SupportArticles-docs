@@ -17,6 +17,8 @@ ms.custom: sap:My VM is not booting
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
+## Summary
+
 This article provides steps to resolve issues where Windows Server 2008 virtual machines crash with an error message that states that there was a hardware malfunction.
 
 ## Symptoms

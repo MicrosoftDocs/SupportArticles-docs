@@ -3,7 +3,7 @@ title: Troubleshoot Windows Update Error 0x800f0920
 description: Learn how to resolve Windows Update error 0x800f0920 that occurs when the Trusted Installer service fails.
 manager: dcscontentpm
 audience: itpro
-ms.date: 11/11/2025
+ms.date: 02/12/2026
 ms.topic: troubleshooting
 ms.reviewer: scotro, mwesley, jarretr, v-ryanberg, v-gsitser
 ms.custom:

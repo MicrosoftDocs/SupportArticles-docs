@@ -1,7 +1,7 @@
 ---
 title: 'Scenario guide: Troubleshoot WMI connectivity and access issues'
 description: Covers how to review the Windows Management Instrumentation (WMI) configuration, diagnose and troubleshoot WMI connectivity or access issues.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

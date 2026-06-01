@@ -1,7 +1,7 @@
 ---
 title: Error 0x800719e4 (ERROR_LOG_FULL) When Windows Update Fails
 description: Discusses how to fix Windows Update failures related to error code `0x800719e4 (ERROR_LOG_FULL)`--typically on Azure-hosted Windows virtual machines.
-ms.date: 01/08/2026
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ai.usage: ai-generated
@@ -97,8 +97,8 @@ For more information about this issue, see [Azure VM Ghosted Nic Validation and 
 
 1. Download the following scripts:
 
-- [Windows_GhostedNIC_Detection.ps1](https://github.com/Azure/azure-support-scripts/blob/master/RunCommand/Windows/Windows_GhostedNIC_Detection.ps1)
-- [Windows_GhostedNIC_Removal.ps1](https://github.com/Azure/azure-support-scripts/blob/master/RunCommand/Windows/Windows_GhostedNIC_Removal.ps1)
+- [Windows_GhostedNIC_Detection.ps1](https://github.com/Azure/azure-support-scripts/blob/master/RunCommand/Windows/Windows_GhostedNIC_Detection/Windows_GhostedNIC_Detection.ps1)
+- [Windows_GhostedNIC_Removal.ps1](https://github.com/Azure/azure-support-scripts/blob/master/RunCommand/Windows/Windows_GhostedNIC_Removal/Windows_GhostedNIC_Removal.ps1)
 
 1. To detect any ghosted network adapters or drivers, open an administrative Windows PowerShell Command Prompt window, and then run the following commands:
 

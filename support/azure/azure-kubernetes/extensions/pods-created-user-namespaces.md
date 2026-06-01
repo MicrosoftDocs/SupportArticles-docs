@@ -1,6 +1,6 @@
 ---
 title: Pods are created in the user namespaces
-description: Troubleshoot a security risk scenario in which pods can be created in the user namespaces in Azure Kubernetes Service (AKS).
+description: Learn why AKS allows pods in user namespaces with system-critical priority classes, and use this guide to confirm your cluster isn't at risk.
 ms.date: 05/13/2024
 author: mosbahmajed
 ms.author: momajed
@@ -11,9 +11,11 @@ ms.topic: troubleshooting-problem-resolution
 ms.custom: sap:Extensions, Policies and Add-Ons
 #Customer intent: As an Azure Kubernetes user, I want to learn why pods can be created in user namespaces so that I can be assured that there isn't a security risk to my Azure Kubernetes Service (AKS) cluster.
 ---
-# Pods are created in the user namespaces
+# Pods are created in user namespaces in AKS
 
-This article discusses a scenario in which pods in Microsoft Azure Kubernetes Service (AKS) are created in the user namespaces. This scenario is generally considered to be a security risk.
+## Summary
+
+This article explains why AKS can create pods in user namespaces when system-critical priority classes are used, and clarifies why this behavior isn't a security risk.
 
 ## Symptoms
 

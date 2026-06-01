@@ -1,7 +1,7 @@
 ---
 title: Network Connection Status Indicator (NCSI) troubleshooting guidance
 description: Provides guidance to help troubleshoot NCSI issues.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

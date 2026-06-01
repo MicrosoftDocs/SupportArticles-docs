@@ -1,7 +1,7 @@
 ---
 title: Printer redirection and drive redirection don't work
 description: Fixes the printer redirection failure issues and hard drive redirection failure issues because of incorrect registry settings.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

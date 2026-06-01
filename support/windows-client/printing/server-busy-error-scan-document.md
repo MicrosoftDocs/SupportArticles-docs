@@ -1,7 +1,7 @@
 ---
 title: (Server Busy) error message when you try to scan a document
 description: Provides a resolution for fixing (Server Busy) error when you try to scan a document
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

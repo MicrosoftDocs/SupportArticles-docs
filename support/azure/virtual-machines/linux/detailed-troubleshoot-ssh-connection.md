@@ -7,13 +7,13 @@ documentationcenter: ''
 author: JarrettRenshaw
 manager: dcscontentpm
 tags: top-support-issue,azure-service-management,azure-resource-manager
-ms.custom: sap:Cannot connect to my VM, linux-related-content
+ms.custom: 
+ - Kernel Upgrades
+ - Package Management issue (Yum, Zypper, RPM, DPKG, APT)
 ms.service: azure-virtual-machines
-
 ms.collection: linux
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
-
 ms.topic: troubleshooting
 ms.date: 07/22/2024
 ms.author: jarrettr
@@ -21,6 +21,10 @@ ms.author: jarrettr
 # Detailed SSH troubleshooting steps for issues connecting to a Linux VM in Azure
 
 **Applies to:** :heavy_check_mark: Linux VMs
+
+## Summary
+
+This article provides detailed troubleshooting steps for issues connecting to a Linux virtual machine (VM) in Azure using SSH. It helps identify the source of the problem and offers guidance on how to resolve it.
 
 There are many possible reasons that the SSH client might not be able to reach the SSH service on the VM. If you have followed through the more [general SSH troubleshooting steps](troubleshoot-ssh-connection.md), you need to further troubleshoot the connection issue. This article guides you through detailed troubleshooting steps to determine where the SSH connection is failing and how to resolve it.
 
@@ -74,7 +78,7 @@ If you are using certificate authentication, verify that you have these permissi
 * Chmod 700 ~/.ssh
 * Chmod 644 ~/.ssh/\*.pub
 * Chmod 600 ~/.ssh/id_rsa (or any other files that have your private keys stored in them)
-* Chmod 644 ~/.ssh/known_hosts (contains hosts that you’ve connected to via SSH)
+* Chmod 644 ~/.ssh/known_hosts (contains hosts that you've connected to via SSH)
 
 ## Source 2: Organization edge device
 

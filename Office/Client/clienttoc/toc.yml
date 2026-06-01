@@ -16,8 +16,6 @@
           href: ../access/build-dynamic-query-from-search-form.md
         - name: Can't add or delete records with ADO methods
           href: ../access/cannot-add-delete-records-ado.md
-        - name: Can't open a previous created database
-          href: ../access/database-previous-version.md
         - name: Can't open or make a reference to a linked table
           href: ../access/error-reference-linked-table.md
         - name: Can't perform an operation on a table
@@ -122,6 +120,8 @@
           href: ../access/error-opening-sql-linked-table.md
         - name: OLE DB Provider for Jet and ODBC driver
           href: ../access/jet-odbc-driver-available-32-bit-version.md
+        - name: Operation is not supported error 
+          href: ../access/operation-is-not-supported-error.md          
         - name: Optimize Access when using ODBC data sources
           href: ../access/optimize-odbc-data-sources.md
         - name: Query must have at least one destination field
@@ -252,8 +252,6 @@
           href: ../excel/blank-pages-unexpectedly-printed.md
         - name: Can't export to Excel from SharePoint Online
           href: ../excel/cannot-export-to-excel.md
-        - name: Can't modify oData connection in PowerPivot
-          href: ../excel/cannot-modify-odata-connection.md
         - name: Can't paste any attributes into a workbook in another instance
           href: ../excel/cannot-paste-attributes.md
         - name: Can't use object linking and embedding
@@ -288,14 +286,10 @@
           href: ../excel/dsum-and-dcount-not-work-with-pivottables.md
         - name: Error when saving a file
           href: /troubleshoot/office/excel/issue-when-save-excel-workbooks?tabs=file-name-lengtherror-saving-file.md
-        - name: Error when sending commands in Excel
-          href: ../excel/error-when-send-commands-in-excel.md
         - name: Error when you copy formulas over large area
           href: ../excel/copy-formulas-over-large-area.md
         - name: Error when you import data to a workbook
           href: ../excel/index-outside-bounds-of-array-error.md
-        - name: Excel cannot complete this task
-          href: ../excel/excel-cannot-complete-task-with-available.md
         - name: Excel incorrectly assumes 1900 is a leap year
           href: ../excel/wrongly-assumes-1900-is-leap-year.md
         - name: Excel opening blank
@@ -340,8 +334,6 @@
           href: ../excel/link-visio-drawing-to-a-specific-region.md
         - name: Loop through a list of data by using macros
           href: ../excel/loop-through-data-using-macro.md
-        - name: Memory usage in the 32-bit edition of Excel
-          href: ../excel/memory-usage-32-bit-edition-of-excel.md
         - name: Network Mapped Drive hyperlinks resolve as UNC
           href: ../excel/network-mapped-drive-hyperlinks-unc.md
         - name: Object Model calls fails from WorkbookOpen event
@@ -484,6 +476,8 @@
           href: ../office-suite-issues/document-information-panel-deprecate.md
         - name: Enable or disable hyperlink warning messages
           href: ../office-suite-issues/enable-disable-hyperlink-warning.md
+        - name: Error 0xc0000715 when starting Microsoft 365 apps 
+          href: ../office-suite-issues/error-when-starting-apps.md
         - name: Error when editing an equation in Office
           href: ../office-suite-issues/issue-when-edit-equation-in-office.md
         - name: Errors when Office add-ins start
@@ -498,8 +492,6 @@
           href: ../office-suite-issues/enable-collaboration.md
         - name: Increase the size of diagnostic logs
           href: ../office-suite-issues/collect-office-diagnostic-logs.md
-        - name: Install Microsoft Support and Recovery Assistant from network share
-          href: ../office-suite-issues/install-sara-from-network-share.md
         - name: Invalid product key or license mismatch
           href: ../office-suite-issues/invalid-product-key-or-license-mismatch-error.md
         - name: Issue when launching Office in Microsoft Store app
@@ -524,6 +516,8 @@
           href: ../office-suite-issues/missing-fonts-opening-documents.md
         - name: Mobile viewing PDF files with Office Web Apps
           href: ../office-suite-issues/mobile-viewing-pdf-files.md
+        - name: Network document connection is lost
+          href: ../office-suite-issues/network-document-connection-lost.md                  
         - name: No Add-ins loaded due to Group Policy settings
           href: ../office-suite-issues/office-add-in-not-loaded.md
         - name: No default mail client

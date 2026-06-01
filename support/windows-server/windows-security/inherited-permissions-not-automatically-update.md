@@ -1,7 +1,7 @@
 ---
 title: Inherited permissions aren't automatically updated
 description: Provides a solution to an issue where inherited permissions aren't automatically updated when you move folders.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

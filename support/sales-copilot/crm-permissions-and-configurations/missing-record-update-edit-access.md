@@ -1,30 +1,28 @@
 ---
 title: Can't update records because of missing record access in Salesforce CRM
-description: Resolves an error that occurs when users can't update CRM records in Sales app because of missing record access in Salesforce CRM.
-ms.date: 11/20/2025
-author: sbmjais
-ms.author: shjais
-manager: shujoshi
+description: Resolves an error that occurs when users can't update CRM records in Sales agent because of missing record access in Salesforce CRM.
+ms.date: 05/14/2026
 ms.custom: sap:CRM Permissions and Configurations\CRM Permissions
+ms.reviewer: shjais, v-shaywood
 ---
 # Can't update records because of missing record access in Salesforce CRM
 
-This article helps you troubleshoot and resolve issues when users can't update CRM records in Sales app because of missing record access in Salesforce CRM.
+This article helps you troubleshoot and resolve issues when users can't update CRM records in Sales agent because of missing record access in Salesforce CRM.
 
 ## Who is affected?
 
 | Requirement type |Description  |
 |---------|---------|
-|**Client app**     |  Sales app in Outlook        |
+|**Client app**     |  Sales agent in Outlook        |
 |**Platform**     | Web and desktop clients         |
 |**OS**     | Windows and Mac         |
 |**Deployment**     | User managed and admin managed       |
 |**CRM**     | Salesforce      |
-|**Users**     | Users trying to update a CRM record from Sales app |
+|**Users**     | Users trying to update a CRM record from Sales agent |
 
 ## Symptoms
 
-When a user tries to update a CRM record from the [Sales app in Outlook](/microsoft-sales-copilot/open-app#access-copilot-for-sales-in-outlook), the following error message is displayed:
+When a user tries to update a CRM record from the [Sales agent in Outlook](/microsoft-sales-copilot/open-app#access-copilot-for-sales-in-outlook), the following error message is displayed:
 
 > To update Salesforce, ask for edit access for this record.
 
@@ -34,7 +32,7 @@ When a user tries to update a CRM record from the [Sales app in Outlook](/micros
 
 The user doesn't have edit access to the record in Salesforce.
 
-When a user tries to edit a record, Sales app checks if the user has edit access to the object and record in Salesforce. If the user has edit access to the object but not to the record, the error message is displayed.
+When a user tries to edit a record, Sales agent checks if the user has edit access to the object and record in Salesforce. If the user has edit access to the object but not to the record, the error message is displayed.
 
 ## Resolution
 
@@ -42,7 +40,7 @@ A Salesforce administrator must provide edit access to the record in Salesforce 
 
 ## More information
 
-If your issue is still unresolved, go to the [Sales in Microsoft 365 Copilot - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
+If your issue is still unresolved, go to the [Sales agent - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
 

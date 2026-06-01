@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot the Kubernetes Event-driven Autoscaling (KEDA) add-on
-description: Learn how to troubleshoot the Kubernetes Event-driven Autoscaling (KEDA) add-on to the Azure Kubernetes Service (AKS).
+description: Learn how to troubleshoot the Kubernetes Event-driven Autoscaling (KEDA) add-on in AKS, fix common scaling errors, and restore autoscaling now.
 ms.service: azure-kubernetes-service
 ms.date: 08/13/2024
 editor: v-jsitser
@@ -10,6 +10,8 @@ ms.custom: sap:Extensions, Policies and Add-Ons
 ---
 
 # Troubleshoot the Kubernetes Event-driven Autoscaling add-on
+
+## Summary
 
 This article discusses how to troubleshoot the Kubernetes Event-driven Autoscaling (KEDA) add-on to the Microsoft Azure Kubernetes Service (AKS). When you deploy the KEDA AKS add-on, you might experience problems that are associated with the configuration of the application autoscaler. This article will help you troubleshoot errors and resolve common problems that affect the add-on but aren't covered in the official KEDA [FAQ][keda-faq] and [troubleshooting guide][keda-troubleshooting].
 

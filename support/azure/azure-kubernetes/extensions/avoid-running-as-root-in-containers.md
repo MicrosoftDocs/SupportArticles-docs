@@ -1,12 +1,14 @@
 ---
 title: Avoid running as root in containers on Azure Kubernetes Service
-description: This article discusses how to run as a nonroot user in containers by using the securityContext field.
+description: Learn how to avoid running as root in containers on Azure Kubernetes Service by configuring securityContext settings to improve pod security. Start now.
 ms.date: 04/15/2024
 ms.reviewer: chiragpa, andbar, haitch, v-leedennis
 ms.service: azure-kubernetes-service
 ms.custom: sap:Extensions, Policies and Add-Ons
 ---
 # Security best practice: Don't run as root in containers
+
+## Summary
 
 To improve security, we recommend that you don't run as a root user inside containers that are hosted on Azure Kubernetes Service. To run the container as a nonroot user, specify the following `securityContext`settings in the YAML file when you deploy a pod or other Azure Kubernetes resources.
 

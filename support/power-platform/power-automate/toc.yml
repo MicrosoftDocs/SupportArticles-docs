@@ -7,13 +7,13 @@ items:
         href: administration/conditional-access-and-multi-factor-authentication-in-flow.md
   - name: Approvals
     items:
-      - name: Common errors creating and assigning flow approvals
+      - name: Common errors creating and assigning Power Automate Approvals
         href: approvals/common-errors-creating-and-assigning-flow-approvals.md
       - name: Differences between flow approval actions
         href: approvals/differences-between-flow-approval-actions.md
       - name: Issues with flow approval emails in Outlook Desktop and Web
         href: approvals/issues-with-flow-approval-emails-in-outlook.md
-      - name: Power Automate Approval Dataverse Provisioning errors and recommendations
+      - name: Power Automate Approvals Dataverse provisioning errors and recommendations
         href: approvals/flow-approval-cds-provisioning-errors.md
       - name: Power Automate Approval Email delivery information
         href: approvals/power-automate-approval-email-information.md
@@ -23,8 +23,6 @@ items:
     items:
       - name: Add images to email messages
         href: /power-automate/desktop-flows/how-to/add-images-email-messages?context=/troubleshoot/power-platform/power-automate/context/context
-      - name: Authentication failed when signing in to Microsoft Flow
-        href: authentication-or-sign-in/cannot-sign-in-to-microsoft-flow-due-to-authentication-failed.md
       - name: Can't sign into OneDrive connector
         href: authentication-or-sign-in/cannot-sign-in-to-onedrive-connector-when-using-office-365-account-during-flow-creation.md
   - name: Connections
@@ -43,6 +41,8 @@ items:
         href: connections/troubleshooting-flow-custom-connectors.md
       - name: User doesn't have service plan adequate for non-Standard connection
         href: connections/user-does-not-have-a-service-plan-error.md
+      - name: Verify OAuth configuration for custom connectors
+        href: connections/verify-oauth-configuration.md
   - name: Desktop flows
     items:
       - name: Browser automation
@@ -127,6 +127,8 @@ items:
         href: desktop-flows/application-certificate-error.md
       - name: Agent-related errors when running attended or unattended desktop flows
         href: desktop-flows/agent-connectivity-issues-pad.md
+      - name: Can't automate websites and apps that require Windows credentials
+        href: desktop-flows/windows-credentials-dialog-issues.md
       - name: Can't connect to an IBM Personal Communications session
         href: desktop-flows/cannot-connect-to-ibm-personal-communications.md 
       - name: Can't silently join a machine group
@@ -217,6 +219,8 @@ items:
         href: desktop-flows/session-has-logged-off-troubleshooting.md
       - name: 'Security update for "connect with sign-in" connections on AD domain-joined machines'
         href: desktop-flows/connect-with-sign-in-security-update.md
+      - name: Security update for sensitive variables
+        href: desktop-flows/sensitive-variables-security-update.md
       - name: Some actions appear to be missing or aren't visible
         href: desktop-flows/actions-not-available.md
       - name: Session creation errors for unattended desktop flow runs
@@ -261,10 +265,6 @@ items:
         href: flow-creation/fail-to-list-excel-online-tables-retrieving-values.md
       - name: Failed to fetch when creating a flow
         href: flow-creation/failed-fetch-error-when-creating-flow.md
-      - name: Flow Editor issues and recommendations
-        href: flow-creation/flow-editor-issues-recommendations.md
-      - name: Flow Management errors and recommendations
-        href: flow-creation/flow-management-errors-recommendations.md
       - name: How to use Power Automate's JavaScript Software Developer Kit
         href: flow-creation/flow-embed-sdk.md
       - name: How to use Flow to copy items between two data sources
@@ -275,14 +275,12 @@ items:
         href: flow-creation/widget-cookies-pop-up-error.md
   - name: Flow management
     items:
-      - name: Manage orphan flows when the owner leaves the organization
+      - name: Manage orphaned flows when the owner leaves the organization
         href: flow-management/manage-orphan-flow-when-owner-leaves-org.md
   - name: Flow run issues
     items:
       - name: Errors with null fields
         href: flow-run-issues/getting-errors-null-fields.md
-      - name: Flow Runtime errors and recommendations
-        href: flow-run-issues/flow-runtime-errors-recommendations.md
       - name: Issues triggering emails with attachments from shared mailbox
         href: flow-run-issues/issues-triggering-emails-with-attachments-from-shared-mailbox.md
       - name: Missing runs or triggers history for a flow

@@ -1,10 +1,8 @@
 ---
 title: Settings Area Is Missing from the Field Service Mobile App Module
 description: Provides a resolution for the missing Settings area in the Dynamics 365 Field Service mobile app.
-author: JonBaker007
-ms.author: jobaker
-ms.reviewer: mhart
-ms.date: 12/12/2024
+ms.reviewer: jobaker, v-wendysmith, v-shaywood
+ms.date: 01/29/2026
 ms.custom: sap:Mobile application\Issues with performance
 ---
 # Settings area is missing in the Field Service Mobile app module navigation
@@ -32,7 +30,7 @@ If you find that a customization layer on the sitemap is on top and overrides th
 **Option 1**: Remove the sitemap customization layer and manually customize it again
 
 1. [Remove the unmanaged customization layer](/power-apps/maker/data-platform/solution-layers#remove-an-unmanaged-layer).
-2. Apply the [sitemap customizations](/power-apps/maker/model-driven-apps/create-site-map-app) again.
+1. Apply the [sitemap customizations](/power-apps/maker/model-driven-apps/create-site-map-app) again.
 
 **Option 2**: Manually add the **Settings** area and switch to the sitemap
 

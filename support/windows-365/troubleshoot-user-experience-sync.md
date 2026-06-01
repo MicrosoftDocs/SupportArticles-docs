@@ -1,10 +1,10 @@
 ---
-title: Troubleshoot User Experience Sync for Windows 365 Frontline in shared mode
-description: Troubleshoot User Experience Sync for Windows 365 Frontline in shared mode
+title: Troubleshoot User Experience Sync for Windows 365 Flex in shared mode
+description: Troubleshoot User Experience Sync for Windows 365 Flex in shared mode
 manager: dcscontentpm
-ms.date: 10/29/2025
+ms.date: 05/05/2026
 ms.topic: troubleshooting
-ms.reviewer: msft-jasonparker, stulimat, scottduf
+ms.reviewer: kaushika, msft-jasonparker, stulimat, scottduf
 ms.custom:
 - pcy:WinComm User Experience
 - sap:Configuration and Management\Managing Devices with Intune
@@ -13,18 +13,29 @@ ms.collection:
 - tier2
 ---
 
-# Troubleshoot User Experience Sync for Windows 365 Frontline in shared mode
+# Troubleshoot User Experience Sync for Windows 365 Flex in shared mode
 
-This article provides troubleshooting steps for the most common issues related to User Experience Sync in Windows 365 Frontline shared mode environments.
+This article provides troubleshooting steps for the most common issues that are related to User Experience Sync in Windows 365 Flex shared mode environments.
 
 ## Users receive a warning about a temporary user experience
 
-When a user signs in, Windows might notify them that they've signed in by using a temporary profile instead of the user's regular profile. Windows also displays another notification that states "We can't sign into your account." As a result, the user has a temporary user experience.
+When a user signs in, Windows might notify them that they signed in by using a temporary profile instead of the user's regular profile. Windows also displays another notification that states, "We can't sign into your account." As a result, the user has a temporary user experience.
 
 > [!NOTE]  
-> A temporary profile is a non-persistent Windows user profile that Windows creates when the system can't load or create the user's regular profile. The temporary profile provides basic functionality, but any changes made during the session (such as changes to settings, changes to files, or customizations) are discarded when the user signs out. Users see a notification that they've signed in by using a temporary profile, and their desktop and Start menu use default Windows settings instead of their personalized configuration.
+> A temporary profile is a non-persistent Windows user profile that Windows creates when the system can't load or create the user's regular profile. The temporary profile provides basic functionality, but any changes that are made during the session (such as changes to settings, changes to files, or customizations) are discarded when the user signs out. Users see a notification that they signed in by using a temporary profile, and their desktop and Start menu use default Windows settings instead of their personalized configuration.
 
 To start troubleshooting this issue, check the status of the user's individual user storage as described in the following sections.
+
+### Policies prevent access to individual user storage
+
+User Experience Sync doesn't support policies that affect write access to fixed or removable drives. When policies prevent or change access permissions to individual user storage, the drive attaches. However, when the user signs in, Windows creates a temporary profile (temporary user experience).
+
+Windows 365 uses Microsoft managed keys (MMK) to encrypt individual user storage instead of using BitLocker or other products. Review your organization policies that target the Windows 365 Flex Cloud PCs in shared mode to verify that the following settings aren't enabled.
+
+| Policy | Setting |
+| --- | --- |
+| **Windows Component\BitLocker Drive Encryption\Fixed Data Drives** | Deny write access to fixed data drives not protected by BitLocker |
+| **Windows Component\BitLocker Drive Encryption\Removable Data Drives** | Deny write access to removable drives not protected by BitLocker |
 
 ### Individual user storage failed to attach to their session
 
@@ -43,11 +54,11 @@ User Experience Sync provides a limited amount pooled user storage based on a st
 
 Each provisioning policy defines a pooled user storage limit calculated using the following formula:
 
-**Total pooled storage** = OS disk size × Number of provisioned Cloud PCs
+> **Total pooled storage** = OS disk size × Number of provisioned Cloud PCs
 
 :::image type="content" source="media/troubleshoot-user-experience-sync/user-experience-sync-user-storage-example.png" alt-text="Figure 1: Storage calculation of pooled user storage based on Cloud PC size and count":::
 
-<sup>**Figure 1:** Storage calculation of pooled user storage based on Cloud PC size and count</sup>
+**Figure 1:** Storage calculation of pooled user storage based on Cloud PC size and count
 
 ##### Normal storage consumption
 
@@ -59,7 +70,7 @@ Under normal conditions, the pooled user storage is consumed as users create ind
 
 :::image type="content" source="media/troubleshoot-user-experience-sync/user-experience-sync-full-storage-limit.png" alt-text="Figure 2: Pooled user storage that is at the policy limit":::
 
-<sup>**Figure 2:** Pooled user storage that is at the policy limit</sup>
+**Figure 2:** Pooled user storage that is at the policy limit
 
 ##### Exceeded storage conditions
 
@@ -71,7 +82,7 @@ When pooled user storage is *near* capacity and multiple users sign in simultane
 
 :::image type="content" source="media/troubleshoot-user-experience-sync/user-experience-sync-exceeded-storage-limit.png" alt-text="Figure 3: Pooled user storage that has exceeded the policy limit":::
 
-<sup>**Figure 3:** Pooled user storage that has exceeded the policy limit</sup>
+**Figure 3:** Pooled user storage that has exceeded the policy limit
 
 ##### Exceeded tolerance period
 
@@ -88,7 +99,7 @@ After the seven-day tolerance period expires:
 - **Service protection**: The service begins deleting individual user storage starting at the oldest (based on the last attach timestamp). The quantity of individual user storage that's deleted is determined by the amount of space that's required for the policy to be under the policy limit.
 
 > [!NOTE]  
-> Monitor your storage usage regularly and configure the [Frontline Cloud PC User Experience Sync Storage Limits](/windows-365/enterprise/alerts) alert to avoid reaching the exceeded condition. Consider increasing your storage limit before reaching capacity to ensure uninterrupted user experience.
+> Monitor your storage usage regularly and configure the [Windows 365 Flex Cloud PC User Experience Sync Storage Limits](/windows-365/enterprise/alerts) alert to avoid reaching the exceeded condition. Consider increasing your storage limit before reaching capacity to ensure uninterrupted user experience.
 
 ## Users experience low or full user storage issues
 

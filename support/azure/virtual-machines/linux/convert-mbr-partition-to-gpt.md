@@ -2,13 +2,15 @@
 title: Failed to resize MBR partitions for a data disk larger than 2 TB
 description: Provides a solution to an issue where you can't resize a Master Boot Record (MBR) partition for a data disk larger than 2 TB in an Azure Linux virtual machine.
 ms.service: azure-virtual-machines
-ms.date: 10/22/1025
+ms.date: 10/22/2025
 ms.reviewer: brfett
-ms.custom: sap:Assistance with disk operations, linux-related-content
+ms.custom: Assistance with resizing a disk
 ---
 # Unable to resize MBR partition for a data disk larger than 2 TB in Linux virtual machine
 
 **Applies to:** :heavy_check_mark: Linux VMs
+
+## Summary
 
 This article provides a solution to an issue where you fail to resize a Master Boot Record (MBR) partition for a data disk larger than 2 TB in an Azure Linux virtual machine.
 

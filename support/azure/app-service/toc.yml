@@ -34,9 +34,9 @@ items:
       - name: Configuration and management
         items:
         - name: Create or delete web apps FAQs
-          href: ./create-delete-resources-faq.yml
+          href: ./create-delete-resources-faq-new.md
         - name: FAQs about scaling web apps
-          href: ./scaling-web-app-faq.yml
+          href: ./scaling-web-app-faq-new.md
         - name: Backing up, restoring, and cloning
           href: backing-up-restoring-and-cloning-microsoft-azure-app-services.md
       - name: Networking

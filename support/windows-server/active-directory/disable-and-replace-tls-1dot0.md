@@ -1,7 +1,7 @@
 ---
 title: Disable and replace TLS 1.0 in ADFS
 description: Provides guidance and considerations for disabling and replacing TLS 1.0 in ADFS.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

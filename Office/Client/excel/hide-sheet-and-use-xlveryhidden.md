@@ -10,12 +10,16 @@ ms.topic: troubleshooting
 ms.custom: 
   - Extensibility\Macros
   - CSSTroubleshoot
+  - CI 10891
 ms.author: meerak
+ms.reviewer: akeeler, v-lisalozano
 appliesto: 
-  - Excel 2007
-  - Excel 2003
-  - Excel 2000
-ms.date: 05/26/2025
+  - Excel for Microsoft 365  
+  - Excel for Microsoft 365 for Mac
+  - Microsoft Excel 2024 
+  - Microsoft Excel 2021 
+  - Microsoft Excel 2016 
+ms.date: 03/31/2026
 ---
 
 # Hide sheets and use the xlVeryHidden constant in a macro

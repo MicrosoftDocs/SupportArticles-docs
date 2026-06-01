@@ -57,7 +57,7 @@ items:
       tocHref: /troubleshoot/sql/
       topicHref: /troubleshoot/sql/welcome-sql-server
 
-    - name: Sales in Microsoft 365 Copilot
+    - name: Sales agent
       tocHref: /troubleshoot/sales-copilot/
       topicHref: /troubleshoot/sales-copilot/welcome-sales-copilot
 
@@ -163,18 +163,24 @@ items:
       - name: Virtual Desktop
         tocHref: /troubleshoot/azure/virtual-desktop/
         topicHref: /troubleshoot/azure/virtual-desktop/welcome-virtual-desktop
+      - name: Application Gateway
+        tocHref: /troubleshoot/azure/application-gateway/
+        topicHref: /troubleshoot/azure/application-gateway/welcome-app-gateway
       - name: Virtual Network
         tocHref: /troubleshoot/azure/virtual-network/
-        topicHref: /troubleshoot/azure/virtual-network/welcome-virtual-network      
+        topicHref: /troubleshoot/azure/virtual-network/welcome-virtual-network  
+      - name: VPN Gateway
+        tocHref: /troubleshoot/azure/vpn-gateway/
+        topicHref: /troubleshoot/azure/vpn-gateway/welcome-vpn-gateway  
+      - name: ExpressRoute
+        tocHref: /troubleshoot/azure/expressroute/
+        topicHref: /troubleshoot/azure/expressroute/welcome-expressroute    
       - name: Cloud Services (classic)
         tocHref: /troubleshoot/azure/cloud-services/classic/
         topicHref: /troubleshoot/azure/cloud-services/classic/welcome-cloud-services-classic
       - name: Cloud Services (extended support)
         tocHref: /troubleshoot/azure/cloud-services/extended/
         topicHref: /troubleshoot/azure/cloud-services/extended/welcome-cloud-services-extended
-      - name: DevOps Services
-        tocHref: /troubleshoot/azure/devops/
-        topicHref: /troubleshoot/azure/devops/welcome-azure-devops
       - name: General
         tocHref: /troubleshoot/azure/general/
         topicHref: /troubleshoot/azure/general/welcome-general
@@ -199,6 +205,30 @@ items:
       - name: Azure Native Integrations
         tocHref: /troubleshoot/azure/partner-solutions/
         topicHref: /troubleshoot/azure/partner-solutions
+      - name: Azure Front Door
+        tocHref: /troubleshoot/azure/front-door/
+        topicHref: /troubleshoot/azure/front-door/welcome-front-door
+      - name: Azure Bastion
+        tocHref: /troubleshoot/azure/bastion
+        topicHref: /troubleshoot/azure/bastion/welcome-azure-bastion
+      - name: Azure DNS
+        tocHref: /troubleshoot/azure/dns
+        topicHref: /troubleshoot/azure/dns/welcome-azure-dns
+      - name: Azure NAT Gateway
+        tocHref: /troubleshoot/azure/nat-gateway
+        topicHref: /troubleshoot/azure/nat-gateway/welcome-azure-nat-gateway
+      - name: Azure Private Link
+        tocHref: /troubleshoot/azure/private-link
+        topicHref: /troubleshoot/azure/private-link/welcome-azure-private-link
+      - name: Azure Traffic Manager
+        tocHref: /troubleshoot/azure/traffic-manager
+        topicHref: /troubleshoot/azure/traffic-manager/welcome-azure-traffic-manager
+      - name: Azure Load Balancer
+        tocHref: /troubleshoot/azure/load-balancer
+        topicHref: /troubleshoot/azure/load-balancer/welcome-azure-load-balancer
+      - name: Azure Firewall
+        tocHref: /troubleshoot/azure/firewall
+        topicHref: /troubleshoot/azure/firewall/welcome-azure-firewall  
 
     - name: Entra
       tocHref: /troubleshoot/entra/
@@ -279,4 +309,8 @@ items:
     - name: Surface
       tocHref: /troubleshoot/devices/
       topicHref: /troubleshoot/devices/
+
+    - name: Microsoft Edge
+      tocHref: /troubleshoot/microsoft-edge
+      topicHref: /troubleshoot/microsoft-edge/welcome-edge
 

@@ -74,7 +74,7 @@ The following table provides an example of the parameters used in a sign-in requ
 |---|---|---|
 |Aad-Instance|    `<Aad-Instance>`|    login.microsoftonline.com|
 |Tenant-ID|    `<Tenant-ID>` portion of the sign-in request|    common|
-|App-ID|    `<App-ID>` portion of the sign-in request|    1f92960d-1442-4cd2-8c76-d13c5dcb30bf|
+|App-ID|    `<App-ID>` portion of the sign-in request|    00001111-aaaa-2222-bbbb-3333cccc4444|
 |Scope|    `<Scope>` portion of the sign-in request|    Openid+User.Read+Directory.Read.All|
 |App-URI-ID|    V1 endpoint: `<App-URI-ID>` portion of the sign-in request</br>   </br>V2 endpoint: For resources other than Microsoft Graph, this will be the portion before the scope name. For example, for `https://analysis.windows.net/powerbi/api/App.Read.All`, `App.Read.All` is the scope name, so the `App-URI-ID` is `https://analysis.windows.net/powerbi/api`.|    https://graph.microsoft.com|
 |Prompt|    `<Prompt>` portion of the sign-in request     ||
@@ -166,11 +166,11 @@ Sometimes, signing in to the application requires passing the `prompt` parameter
 
 Your sign-in request might look like this:
 
-`https://login.microsoftonline.com/contoso.onmicrosoft.com/oauth2/authorize?client_id=1f92960d-1442-4cd2-8c76-d13c5dcb30bf&response_type=code&redirect_uri=https://www.contoso.com&scope=openid+profile+User.Read+Directory.Read.All&prompt=consent`
+`https://login.microsoftonline.com/contoso.onmicrosoft.com/oauth2/authorize?client_id=00001111-aaaa-2222-bbbb-3333cccc4444&response_type=code&redirect_uri=https://www.contoso.com&scope=openid+profile+User.Read+Directory.Read.All&prompt=consent`
 
 So, to resolve consent issues, remove the `prompt` parameter as follows:
 
-`https://login.microsoftonline.com/contoso.onmicrosoft.com/oauth2/authorize?client_id=1f92960d-1442-4cd2-8c76-d13c5dcb30bf&response_type=code&redirect_uri=https://www.contoso.com&scope=openid+profile+User.Read+Directory.Read.All`
+`https://login.microsoftonline.com/contoso.onmicrosoft.com/oauth2/authorize?client_id=00001111-aaaa-2222-bbbb-3333cccc4444&response_type=code&redirect_uri=https://www.contoso.com&scope=openid+profile+User.Read+Directory.Read.All`
 
 ## Perform admin consent
 
@@ -186,11 +186,11 @@ To resolve consent issues, perform admin consent by following these steps:
 
 3. If the administrator doesn't get the consent screen, grab the sign-in address, add `&prompt=consent` to the end, and then use this request to perform admin consent.
 
-    Here's an example: `https://login.microsoftonline.com/contoso.onmicrosoft.com/oauth2/authorize?client_id=1f92960d-1442-4cd2-8c76-d13c5dcb30bf&response_type=code&redirect_uri=https://www.contoso.com&scope=openid+profile&tresource=https://graph.microsoft.com&prompt=consent`
+    Here's an example: `https://login.microsoftonline.com/contoso.onmicrosoft.com/oauth2/authorize?client_id=00001111-aaaa-2222-bbbb-3333cccc4444&response_type=code&redirect_uri=https://www.contoso.com&scope=openid+profile&tresource=https://graph.microsoft.com&prompt=consent`
 
     If the requested permissions aren't listed in the application registration, use the Microsoft identity platform (V2) endpoint to force admin consent. V2 endpoint requires each permission scope to be passed in the `scope` parameter as follows:
 
-    `https://login.microsoftonline.com/contoso.onmicrosoft.com/oauth2/v2.0/authorize?client_id=1f92960d-1442-4cd2-8c76-d13c5dcb30bf&response_type=code&redirect_uri=https://www.contoso.com&scope=openid+profile+User.Read+Directory.Read.All&prompt=consent`
+    `https://login.microsoftonline.com/contoso.onmicrosoft.com/oauth2/v2.0/authorize?client_id=00001111-aaaa-2222-bbbb-3333cccc4444&response_type=code&redirect_uri=https://www.contoso.com&scope=openid+profile+User.Read+Directory.Read.All&prompt=consent`
 
 > [!NOTE]
 > - Permission scopes used by the application must be provided by the application owner.

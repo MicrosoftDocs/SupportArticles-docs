@@ -12,6 +12,8 @@ ms.custom: sap:My VM is not booting
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
+## Summary
+
 This article helps you resolve an issue where a Microsoft Azure virtual machine (VM) experiences the **MEMORY_MANAGEMENT** bug check with the stop code 0x0000001A.
 
 ## Symptoms

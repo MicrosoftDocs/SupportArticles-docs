@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Microsoft Store app download failures
 description: Provides guidance for troubleshooting Microsoft Store app download and update failures.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -75,6 +75,8 @@ items:
     href: availability-performance/troubleshoot-oomkilled-aks-clusters.md
   - name: Troubleshoot pod scheduler errors
     href: availability-performance/troubleshoot-pod-scheduler-errors.md
+  - name: Troubleshoot pod workload restarts in AKS
+    href: availability-performance/troubleshoot-pod-workload-restart.md
   - name: Troubleshoot node not ready
     items:
     - name: Basic troubleshooting
@@ -103,6 +105,8 @@ items:
       href: connectivity/get-and-analyze-http-response-codes.md
     - name: Intermittent timeouts or server issues
       href: connectivity/intermittent-timeouts-or-server-issue.md
+    - name: Can't pull images from container registry to cluster
+      href: connectivity/cannot-pull-image-from-acr-to-aks-cluster.md
   - name: Can't connect to AKS cluster through API server
     items:
     - name: Basic troubleshooting
@@ -171,6 +175,8 @@ items:
     href: storage/troubleshoot-common-bring-your-own-key-issues.md
   - name: Troubleshoot pods and namespaces stuck in the Terminating state
     href: storage/pods-namespaces-terminating-state.md
+  - name: Troubleshoot timeout and latency issues in AKS with Azure Storage
+    href: storage/troubleshoot-timeout-latency-aks-azure-storage.md
   - name: Mount failures
     items:
     - name: Can't set the uid and gid mounting options on an Azure Disk
@@ -225,6 +231,8 @@ items:
       href: extensions/runtime-host-incidents-third-party-scanner.md
   - name: Troubleshoot the AKS Managed Gateway API installation
     href: extensions/managed-gateway-api.md
+  - name: Troubleshoot the Application Routing Gateway API Implementation
+    href: extensions/application-routing-gateway-api.md
   - name: Troubleshoot the Istio-based service mesh add-on
     items:
     - name: General Istio add-on troubleshooting
@@ -247,8 +255,6 @@ items:
     items:
     - name: AKS Cost Analysis add-on issues
       href: extensions/aks-cost-analysis-add-on-issues.md
-    - name: Can't pull images from container registry to cluster
-      href: extensions/cannot-pull-image-from-acr-to-aks-cluster.md
     - name: Troubleshoot AI toolchain operator add-on errors
       href: extensions/troubleshoot-ai-toolchain-operator-addon-issues.md
     - name: Troubleshoot Azure Key Vault Provider for Secrets Store CSI Driver
@@ -267,6 +273,8 @@ items:
       href: extensions/troubleshoot-network-isolated-cluster.md
     - name: Troubleshoot node auto provisioning
       href: extensions/troubleshoot-node-auto-provision.md
+    - name: Troubleshoot upgrade failure due to conflicting PodDisruptionBudgets
+      href: extensions/troubleshoot-eviction-autoscaler.md
   - name: KEDA add-on
     items:
     - name: Breaking changes in KEDA add-on 2.15 and 2.14
@@ -411,6 +419,8 @@ items:
       href: error-codes/virtualnetworknotinsucceededstate-error.md
     - name: VMExtensionError_CniDownloadTimeout error
       href: error-codes/vmextensionerror-cnidownloadtimeout.md
+    - name: VMExtensionError_K8SDownloadTimeout error
+      href: error-codes/vmextensionerror-k8sdownloadtimeout.md
     - name: VMExtensionError_OutboundConnFail error
       href: error-codes/vmextensionerror-outboundconnfail.md
     - name: VMExtensionError_K8SAPIServerConnFail error
@@ -419,8 +429,6 @@ items:
       href: error-codes/vmextensionerror-k8sapiserverdnslookupfail.md
     - name: VMExtensionError_VHDFileNotFound error
       href: error-codes/vmextensionerror-vhdfilenotfound.md
-    - name: VMExtensionProvisioningTimeout error
-      href: create-upgrade-delete/error-code-vmextensionprovisioningtimeout.md
     - name: VMExtensionError_ProvisioningTimeout error
       href: error-codes/vmextensionerror-provisioningtimeout.md
     - name: WINDOWS_CSE_ERROR_CHECK_API_SERVER_CONNECTIVITY error

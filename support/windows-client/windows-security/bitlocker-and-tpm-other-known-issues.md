@@ -1,7 +1,7 @@
 ---
 title: 'BitLocker and TPM: other known issues'
 description: Describes common issues that relate directly to the TPM, and provides guidance for resolving those issues.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 ms.reviewer: kaushika, v-tappelgate
 manager: dcscontentpm
 ms.collection: Windows Security Technologies\BitLocker

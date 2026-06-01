@@ -6,7 +6,9 @@ services: virtual-machines
 author: JarrettRenshaw
 manager: dcscontentpm
 tags: top-support-issue,azure-service-management,azure-resource-manager
-ms.custom: sap:Cannot connect to my VM, devx-track-azurecli, linux-related-content
+ms.custom: 
+  - Kernel Upgrades
+  - Package Management issue (Yum, Zypper, RPM, DPKG, APT)
 ms.service: azure-virtual-machines
 ms.collection: linux
 ms.workload: infrastructure-services
@@ -18,6 +20,8 @@ ms.author: jarrettr
 # Troubleshoot SSH connections to an Azure Linux VM that fails, errors out, or is refused
 
 **Applies to:** :heavy_check_mark: Linux VMs
+
+## Summary
 
 This article helps you find and correct the problems that occur due to Secure Shell (SSH) errors, SSH connection failures, or SSH is refused when you try to connect to a Linux virtual machine (VM). You can use the Azure portal, Azure CLI, or VM Access Extension for Linux to troubleshoot and resolve connection problems.
 

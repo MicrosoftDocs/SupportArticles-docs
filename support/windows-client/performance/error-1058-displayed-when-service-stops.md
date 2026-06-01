@@ -1,7 +1,7 @@
 ---
 title: Error 1058 is displayed when a service suddenly stops
 description: Provides a solution to an error that occurs when a service suddenly stops.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

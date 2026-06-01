@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot DNS name resolution on the Internet
 description: Describes how to troubleshoot DNS name resolution on the Internet in Microsoft Windows Server.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

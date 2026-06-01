@@ -1,7 +1,7 @@
 ---
 title: Obtain error code descriptions
 description: Describes how to convert error codes to a hexadecimal value to obtain an error description in Configuration Manager.
-ms.date: 02/11/2025
+ms.date: 03/30/2026
 ms.reviewer: kaushika
 ms.custom: sap:Admin Console, Role-Based Access and Reporting\Reports and subscriptions
 ---

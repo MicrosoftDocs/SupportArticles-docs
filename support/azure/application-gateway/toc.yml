@@ -1,4 +1,46 @@
+items:
+
 - name: Welcome
   href: welcome-app-gateway.yml
+- name: Troubleshoot TCP connection timeout issues in Application Gateway
+  href: troubleshoot-tcp-connection-timeout-issues.md
+- name: Troubleshoot private frontend IP allocation issues in Application Gateway
+  href: troubleshoot-private-frontend-ip-allocation-issues.md
+- name: Troubleshoot DNS Resolution issues in Application Gateway
+  href: troubleshoot-dns-resolution-issues.md
+- name: Troubleshoot Failed State issues in Application Gateway
+  href: troubleshoot-appgw-failed-state-issues.md
+- name: Troubleshoot rewrite rules in Application Gateway
+  href: troubleshoot-url-rewrite-rules.md
 - name: ApplicationGatewaySkuNotSpecified error
   href: error-codes/applicationgatewayskunotspecified.md
+- name: Troubleshoot HTTP 504 Gateway Timeout
+  href: troubleshoot-http-504-gateway-timeout.md
+- name: ApplicationGatewayFrontendIpCannotHavePublicIpAndSubnet error
+  href: error-codes/application-gateway-frontend-ip-cannot-have-public-ip-subnet-error.md
+- name: Troubleshoot WAF anomaly scoring behavior and rule 949110 blocks
+  href: troubleshoot-waf-anomaly-scoring-rule-949110-blocks.md
+- name: Troubleshoot an Application Gateway in Azure (ILB ASE)
+  href: create-gateway-internal-load-balancer-app-service-environment.md 
+- name: Troubleshoot redirection to App Service URL
+  href: troubleshoot-app-service-redirection-app-service-url.md
+- name: Troubleshoot session affinity issues
+  href: how-to-troubleshoot-application-gateway-session-affinity-issues.md
+- name: Troubleshoot Bad Gateway errors - Azure Application Gateway
+  href: application-gateway-troubleshooting-502.md
+- name: HTTP response codes - Azure Application Gateway
+  href: http-response-codes.md
+- name: Troubleshoot mutual authentication on Azure Application Gateway 
+  href: mutual-authentication-troubleshooting.md
+- name: Application Gateway Ingress Controller troubleshooting
+  href: ingress-controller-troubleshoot.md
+- name: Azure Application Gateway Resource Health overview 
+  href: resource-health-overview.md
+- name: Examining logs using Azure Log Analytics
+  href: log-analytics.md
+- name: Troubleshoot backend health issues in Azure Application Gateway
+  href: application-gateway-backend-health-troubleshooting.md
+- name: Common key vault errors in Application Gateway
+  href: application-gateway-key-vault-common-errors.md
+- name: Understanding disabled listeners
+  href: disabled-listeners.md

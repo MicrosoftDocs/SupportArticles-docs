@@ -42,7 +42,7 @@ To resolve this issue, use one of the following methods:
 1. Run the [Update-MgUser](/powershell/module/microsoft.graph.users/update-mguser) cmdlet:
 
     ```powershell
-   Update-MgUser -UserId '0ba17ca9-0000-0000-0000-a5e34bc4803b' -UserType Member
+   Update-MgUser -UserId '00aa00aa-bb11-cc22-dd33-44ee44ee44ee' -UserType Member
     ```
     You can get the users Object ID by looking at the Users Profile page within the Azure portal.
 

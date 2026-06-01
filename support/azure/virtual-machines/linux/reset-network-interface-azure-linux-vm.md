@@ -10,13 +10,15 @@ ms.service: azure-virtual-machines
 ms.collection: windows
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
-ms.custom: sap:Cannot connect to my VM, devx-track-azurecli, linux-related-content
+ms.custom: VM Admin - Linux (Guest OS)
 ms.workload: infrastructure-services
 ms.date: 09/19/2024
 ---
 # Reset the network interface for Azure Linux VM
 
 **Applies to:** :heavy_check_mark: Linux VMs
+
+## Summary
 
 This article shows how to reset the network interface for Azure Linux Virtual Machine (VM) to resolve issues when you can't connect to an Azure Linux VM after:
 

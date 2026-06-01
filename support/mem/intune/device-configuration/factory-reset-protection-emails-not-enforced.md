@@ -1,7 +1,7 @@
 ---
 title: Factory Reset Protection Emails Not Enforced in Intune for Android
 description: Describes an issue in which an Android Enterprise device can be activated by using a Google account that isn't included in the "Factory reset protection emails" setting.
-ms.date: 02/11/2025
+ms.date: 03/30/2026
 search.appverid: MET150
 ms.custom: sap:Configure Devices - Android\Device restrictions
 ms.reviewer: kaushika
@@ -52,7 +52,7 @@ Then, use one of the following methods when you reset the device to the factory 
 - Reset the device through Recovery mode (FRP will be enforced).
 - Wipe the device from Intune when the device is in your possession and is expected to be reset for further use (FRP will not be enforced).
 
-For background and guidance, see [Factory reset protection (FRP) enforcement behavior for Android Enterprise](/troubleshoot/mem/intune/device-configuration/factory-reset-protection-emails-not-enforced).
+For background and guidance, see [Factory reset protection (FRP) enforcement behavior for Android Enterprise](factory-reset-protection-emails-not-enforced.md).
 
 ## References
 

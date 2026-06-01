@@ -1,7 +1,7 @@
 ---
 title: Understand and Troubleshoot the Updates and Servicing process
 description: This article helps administrators understand Updates and Servicing, and troubleshoot some common issues in Configuration Manager.
-ms.date: 11/17/2025
+ms.date: 03/30/2026
 ms.reviewer: kaushika, payur
 ms.custom: sap:Configuration Manager Setup, High Availability, Migration and Recovery\Updates and Servicing
 ---
@@ -358,7 +358,7 @@ Get new Easy Setup Package IDs~~
 Found a new available update~~
 ```
 
-DMPDownloader uses high-priority [state messages](../update-management/state-messaging-description.md) to report progress to the site server. DMPDownloader logs entries that resemble the following example:
+DMPDownloader uses high-priority [state messages](state-messaging-description.md) to report progress to the site server. DMPDownloader logs entries that resemble the following example:
 
 ```output
 Generating state message: 6 for package 3b7d84fa-eccc-4ea0-b8ab-abbda1e88e0e~~
@@ -1386,7 +1386,7 @@ This issue occurs because the files aren't downloaded correctly. To fix this iss
 
 A specific global replication group, **CMUpdates**, replicates the installation completion information one time per minute. If the replication process isn't working correctly, the console continues to display **Installing** even if the update installed successfully on all sites.
 
-In the console, go to **Monitoring** > **Overview** > **Database Replication**. For each link for the **CMUpdates** replication group states, review the **Initialization** and **Replication** tabs. If you find an issue, see [Troubleshoot database replication service issues in Configuration Manager](../data-transfer-sites/troubleshoot-database-replication-service-issues.md) for help.
+In the console, go to **Monitoring** > **Overview** > **Database Replication**. For each link for the **CMUpdates** replication group states, review the **Initialization** and **Replication** tabs. If you find an issue, see [Troubleshoot database replication service issues in Configuration Manager](../data-transfer-sites/troubleshoot/troubleshoot-database-replication-service-issues.md) for help.
 
 ##### Issue 3: CONFIGURATION_MANAGER_UPDATE service keeps restarting
 

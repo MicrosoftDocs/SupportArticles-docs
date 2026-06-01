@@ -1,7 +1,7 @@
 ---
 title: Stop error when Windows tries to repair a drive while restarting
 description: This article describes an issue in which a Windows device displays a drive repair prompt when it restarts, and the system experiences a stop error.
-ms.date: 01/22/2026
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

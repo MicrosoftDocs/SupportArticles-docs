@@ -22,6 +22,8 @@ ms.custom: sap:Cannot connect to my VM
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
+## Summary
+
 This article provides a reference for situations in which you suspect that the guest operating system firewall is filtering partial or complete traffic to a virtual machine (VM). This could occur if changes were deliberately made to the firewall that caused RDP connections to fail.
 
 ## Solution
@@ -56,11 +58,11 @@ If you have a working Azure agent, you can use [Custom Script Extension](/azure/
 >   Restart-Service -Name mpssvc
 >   ```
 >
->   However, as soon as the policy is applied again, you’ll be kicked out of the remote session. The permanent fix for this issue is to modify the policy that's applied on this computer.
+>   However, as soon as the policy is applied again, you'll be kicked out of the remote session. The permanent fix for this issue is to modify the policy that's applied on this computer.
 
 #### Mitigation 2: Remote PowerShell
 
-1. Connect to a VM that’s located on the same virtual network as the VM that you cannot reach by using RDP connection.
+1. Connect to a VM that's located on the same virtual network as the VM that you cannot reach by using RDP connection.
 
 2. Open a PowerShell console window.
 
@@ -126,7 +128,7 @@ If you have a situation in which you cannot reach the VM by any method, Custom S
 
 2. Start a Remote Desktop connection to the recovery VM.
 
-3. Make sure that the disk is flagged as Online in the Disk Management console. Note the drive letter that’s assigned to the attached system disk.
+3. Make sure that the disk is flagged as Online in the Disk Management console. Note the drive letter that's assigned to the attached system disk.
 
 4. Before you make any changes, create a copy of the \windows\system32\config folder in case a rollback of the changes is necessary.
 

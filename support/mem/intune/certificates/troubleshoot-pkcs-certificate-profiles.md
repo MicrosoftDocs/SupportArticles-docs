@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot use of PKCS certificate profiles to provision certificates with Microsoft Intune
 description: Troubleshoot the use of Public Key Cryptography Standards (PKCS) profiles by devices to request certificates for use with Intune.  
-ms.date: 02/11/2025
+ms.date: 03/30/2026
 ms.reviewer: kaushika, lacranda
 search.appverid: MET150
 ms.custom: sap:Configure Devices - iOS\PKCS Certificates

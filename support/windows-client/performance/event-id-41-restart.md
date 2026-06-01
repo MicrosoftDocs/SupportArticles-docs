@@ -1,7 +1,7 @@
 ---
 title: Event ID 41 The system has rebooted without cleanly shutting down first
 description: Describes the circumstances that cause a computer to generate Event ID 41, and provides guidance for troubleshooting the issue.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 ms.topic: troubleshooting
 manager: dcscontentpm
 ms.custom:
