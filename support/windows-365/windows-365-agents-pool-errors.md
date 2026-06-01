@@ -1,7 +1,6 @@
 ---
 title: Troubleshoot Windows 365 for Agents provisioning errors
-description: Troubleshoot provisioning errors in Windows 365 for Agents
-ms.topic: troubleshooting
+description: Discusses the most common provisioning issues for Cloud PCs in Windows 365 for Agents, and provides instructions for resolving those issues.
 ms.date: 06/02/2026
 manager: dcscontentpm
 audience: itpro
@@ -13,7 +12,9 @@ ms.custom:
 ---
 # Troubleshoot Windows 365 for Agents provisioning errors
 
-The following errors can appear when the status of a Windows 365 for Agents Cloud PC pool is **Failed** or **Available with warning**.  
+## Summary
+
+When you provision Cloud PCs in Windows 365 for Agents, provisioning errors can cause a Cloud PC pool status to show as **Failed** or **Available with warning**. This article describes the most common provisioning issues and how to resolve them.
 
 ## Invalid billing plan
 
