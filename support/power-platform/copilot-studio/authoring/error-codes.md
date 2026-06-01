@@ -1,7 +1,7 @@
 ---
 title: Understand Error Codes
 description: Understand error codes so that you can troubleshoot issues in your agent design by using Microsoft Copilot Studio.
-ms.date: 03/10/2026
+ms.date: 06/01/2026
 ms.reviewer:
   - jameslew
   - erickinser
@@ -232,9 +232,9 @@ To get the latest inputs and outputs, remove and readd the agent flow.
 
 The following authentication compatibility rules apply:
 
-- If the connected agent has _no authentication_ configured, any orchestrator authentication is acceptable.
-- If the connected agent _requires authentication_, the orchestrator must use the _same_ authentication method.
-- **Manual authentication (Generic OAuth2)** on the orchestrator isn't compatible_ with connected agents that require authentication. Both agents must use the same manual authentication configuration, or the connected agent must have no authentication requirement.
+- If the connected agent has **No authentication** configured, any orchestrator authentication is acceptable.
+- If the connected agent requires authentication, the orchestrator must use the _same_ authentication method.
+- **Manual authentication (Generic OAuth2)** on the orchestrator isn't compatible with connected agents that require authentication. Both agents must use the same manual authentication configuration, or the connected agent must have no authentication requirement.
 
 For more information, see [Configure user authentication](/microsoft-copilot-studio/configuration-end-user-authentication) and [Use agents as actions in other agents (preview)](/microsoft-copilot-studio/advanced-use-dispatcher).
 
@@ -341,13 +341,13 @@ Common problems include:
 
 **Error message**: SharePoint is limiting requests right now. Try again later. Error details: DataverseFiles429.
 
-**Resolution**: Service throttling can cause this error.
+**Resolution**: Service throttling can cause this error. Wait and retry.
 
 #### DataverseSearchFailed
 
 **Error message**: This is a system issue on our side. Nothing you need to fix. Error details: Platform runtime - DataverseSearchFailed.
 
-**Resolution**: Dataverse knowledge search failures such as user connection errors this issue. To resolve the problem:
+**Resolution**: Dataverse knowledge search failures such as user connection errors can this issue. To resolve the problem:
 
 1. Open the agent knowledge source settings and reauthenticate the Dataverse connection.
 1. Verify that the user has valid licensing and permissions for the Dataverse knowledge source.
@@ -734,7 +734,7 @@ This restriction includes, but isn't limited to, content about:
 
 #### OutgoingMessageSizeTooBig
 
-**Error message**: Outgoing message size too large.
+**Error message**: Outgoing message size too big.
 
 **Resolution**: Depending on the channel that you use to transfer files, such as Direct Line or Facebook, you might receive the following error message: "The request content length exceeded limit of 262,144 bytes." The [channel](/azure/bot-service/bot-service-resources-faq-general?azure-bot-service-4.0#what-is-the-size-limit-of-a-file-transferred-using-channels&preserve-view=true) imposes these limits, not Copilot Studio.
 
