@@ -602,14 +602,14 @@ items:
       href: ../../../windows-server/licensing-and-activation/activation-event-8198-error-0xc0020017-0x8007139f-kms-contact-failure.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
   - name: Product key and MAK errors
     items:
-    - name: Error 0xC004C003 — The product key is blocked
-      href: ../../../windows-server/licensing-and-activation/activation-error-0xc004c003-product-key-blocked.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
-    - name: Error 0xC004C008 — Product key exceeded limit
-      href: windows-vm-activation-error-0xc004c008.md
-    - name: Error 0xC004F06C — MAK activation failed
-      href: ../../../windows-server/deployment/error-0xc004f06c-activate-windows.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Error 0x80070005 — Access denied
       href: ../../../windows-server/deployment/error-0x80070005-access-denied.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
+    - name: Error 0xC004C003 — The product key is blocked
+      href: ../../../windows-server/licensing-and-activation/activation-error-0xc004c003-product-key-blocked.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
+    - name: Error 0xC004C008 — The specified product key could not be used
+      href: ../../../windows-server/licensing-and-activation/activation-error-0xc004c008-product-key-not-used.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
+    - name: Error 0xC004F06C — MAK activation failed
+      href: ../../../windows-server/deployment/error-0xc004f06c-activate-windows.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
   - name: Configuration errors
     items:
     - name: Error 0xC004FD01 or 0xC004FD02 — AVMA

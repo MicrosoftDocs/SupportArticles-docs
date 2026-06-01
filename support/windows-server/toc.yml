@@ -1157,6 +1157,8 @@ items:
       href: ./licensing-and-activation/activation-error-0x8007232b-dns-name-does-not-exist.md
     - name: Error 0xC004C003 "product key is blocked" when you use MAK to activate Windows
       href: ./licensing-and-activation/activation-error-0xc004c003-product-key-blocked.md
+    - name: Error 0xC004C008 "The specified product key could not be used" when you activate Windows
+      href: ./licensing-and-activation/activation-error-0xc004c008-product-key-not-used.md
     - name: Error 0xC004E002 during activation
       href: ./licensing-and-activation/error-0xc004e002-during-activation.md
     - name: Error 0xC004E015 (SL_E_EUL_CONSUMPTION_FAILED)
