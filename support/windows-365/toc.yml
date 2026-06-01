@@ -1,3 +1,4 @@
+items:   # Please do not delete this line, it is required for the yaml format
 - name: Windows 365
   href: ./welcome-windows-365.yml
 - name: Windows 365 Business
