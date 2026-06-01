@@ -39,7 +39,7 @@ This problem occurs if large size or a large number of memory allocations or dea
 
 ## Resolution
 
-To fix this issue, [enable the Lock Pages in Memory option](/sql/database-engine/configure-windows/enable-the-lock-pages-in-memory-option-windows) for the SQL Server service account to keep data in physical memory. After this operation, the system uses the [Address Windowing Extensions](/windows/win32/memory/address-windowing-extensions) (AWE) API instead of the VMM.
+To fix this issue, [enable the Lock Pages in Memory option](/sql/database-engine/configure-windows/enable-the-lock-pages-in-memory-option-windows) for the SQL Server service account to keep data in physical memory. After this operation, the system uses the [Address Windowing Extensions](/windows/win32/memory/address-windowing-extensions) (AWE) API instead of the Virtual Memory Manager (VMM).
 
 To enable the lock pages in memory option, follow these steps:
 
