@@ -22,7 +22,7 @@ description: Provides instructions to prevent antivirus and DLP applications fro
 
 # Prevent antivirus and DLP tools from blocking or crashing Microsoft Teams
 
-Third-party applications for antivirus, reliability monitoring, and data loss prevention (DLP) can interfere with the Microsoft Teams app and [Edge WebView2](https://developer.microsoft.com/microsoft-edge/webview2/?form=MA13LH). These tools can degrade Teams client performance and also cause the app to exit unexpectedly. To improve application stability and efficency when you use non-Microsoft antivirus or DLP applications on desktops, you can include or approve the use of the Teams app, the executable that automatically updates the Teams app, and Edge Webview2.
+Third-party applications for antivirus, reliability monitoring, and data loss prevention (DLP) can interfere with the Microsoft Teams app and [Edge WebView2](https://developer.microsoft.com/microsoft-edge/webview2/?form=MA13LH). These tools can degrade Teams client performance and also cause the app to exit unexpectedly. To improve application stability and efficiency when you use non-Microsoft antivirus or DLP applications on desktops, you can include or approve the use of the Teams app, the executable that automatically updates the Teams app, and Edge Webview2.
 
 ## New Teams
 
@@ -78,9 +78,9 @@ The following table lists applications and their associated DLLs that are known 
 | Avast Antivirus| `aswhook.dll`|
 | Avecto (now BeyondTrust)| `PGHook.dll`|
 | BeyondTrust||
-| Citrix App Protection| `ctxapclient64.dll`|
-| Citrix ICA Client| `epclient64.dll`|
-| Citrix ICA Service| `ctxdodhook64.dll`|
+| Citrix Workspace app - App Protection module| `ctxapclient64.dll` </br> Citrix Workspace app for Windows 2503.10 CR and 2507 LTSR contains critical fixes that prevent the Teams app that's running locally from becoming unresponsive.|
+| Citrix Workspace app - App Protection module| `epclient64.dll`<br/> Deprecated in Citrix Workspace app 2311, and replaced by ctxapclient64.dll.|
+| Citrix ICA Service in the VDA| `ctxdodhook64.dll`|
 | ControlUp||
 | CrowdStrike Falcon Sensor| `Umppc*.dll`|
 | Cylance Desktop Security| `cymemdef64.dll`|
