@@ -26,7 +26,7 @@ The Resilient File System (ReFS) is designed to maximize data availability, scal
 Follow these steps to document the current state of your environment and start to isolate the cause of your issue.
 
 > [!NOTE]  
-> If Windows Server is not responding, restart the system into Safe mode.
+> If Windows Server is not responding, restart the system in [Safe mode](../performance/troubleshoot-startup-problems#how-to-start-the-computer-in-safe-mode).
 
 1. Make sure that recent backups are available before you attempt repairs or changes.
 
@@ -51,69 +51,107 @@ Follow these steps to document the current state of your environment and start t
    - Changes to the storage configuration
    - Power outages or other unclean shutdowns
 
+1. Review the current system health, including the following information:
 
-### Gather initial information
+   - Hardware and device health
+   - Storage pool health
+   - Storage Spaces Direct (S2D) pool status (if appropriate)
+   - ReFS volume status (RAW, online, read-only, and so on)
 
-- Current ReFS volume status (RAW, online, read-only, and so on)
-- Error messages and event log entries (Event IDs 131, 133, 135, 140, 55, and similar)
-- Storage pool health, device and Storage Spaces Direct (S2D) pool status, and cluster logs
+1. Collect the following error and event information:
 
-### Initial action steps
+   - Error messages
 
-- Verify hardware health
+   - Cluster logs from all nodes. To collect logs, run the following command on one of the cluster nodes:
 
-- Boot into Safe Mode if the system is unresponsive.
-
-## Common issues and Solutions
-
-### 1. Volume becomes RAW or inaccessible
-
-Volume status is RAW; data is inaccessible; repeated mount or repair failures occur; Event IDs 133 or 135 are logged.
-
-**Root causes**
-
-File system corruption due to power loss, failed hardware, an unsupported ReFS version, or unfinished background processes.
-
-**Resolution steps**
-
-1. Open Event Viewer and note any errors on the volume.
-2. Use `refsutil salvage` to attempt to mount or recover the volume:
-   - Prepare a second disk of equal or larger size.
-   - Run:
-
-     ```console
-     refsutil salvage -s <source volume> -d <destination folder>
+     ```powershell
+      Get-ClusterLog -UseLocalTime -Destination <folder path></folder>
      ```
 
-3. Collect salvage logs for escalation if recovery is incomplete.
-4. If salvage fails, check hardware, attempt data recovery with third-party tools, or reformat and restore from backup if backups are available.
+   - Microsoft-Windows-DeviceSetupManager/Admin event log. In particular, look for event IDs 131, 133, 135, or 140
+   - System log. In particular, look for event ID 55.
 
-> [!TIP]
+## Common issues and solutions
+
+### Volume is RAW or inaccessible (Event IDs 133 or 135)
+
+#### Symptoms
+
+- Volume status is RAW
+- Data on the volume is inaccessible
+- You encounter repeated mount or repair failures
+- The event log lists event IDs 133 or 135
+
+#### Cause
+
+This issue typically indicates that the file system is corrupted. Any of the following conditions or occurrences can cause this corruption:
+
+- Power loss
+- Hardware failure
+- Unsupported ReFS version
+- Background processes didn't finish
+
+#### Resolution
+
+> [!TIP]  
 > If the volume became inaccessible after stop errors that involved `ReFS.sys`, see [Local disk volume is inaccessible after ReFS.sys errors in Windows Server 2022 Standard](windows-server-2022-standard-local-refs-disk-inaccessible-bsod.md).
 
-### 2. Metadata corruption or mount failures
+1. Prepare a second disk that's the same size as the corrupted volume, or larger.
 
-**Symptoms**
+1. Open a Command Prompt window on the system where the volume is mounted.
+1. To attempt to mount or recover the volume, run the following command:
 
-The volume fails to mount; Event IDs 134, 137, or 140 are logged; error messages reference invalid metadata pages, checksum failures, or "device is busy."
-
-**Root causes**
-
-Corruption of ReFS metadata, incompatibility from OS upgrades, faults during write operations, or registry options (such as metadata validation) interfering after upgrades.
-
-**Resolution steps**
-
-1. Review event logs and errors.
-2. For volumes that previously mounted on older OS versions, ensure the OS is fully patched and that the ReFS utilities match the volume version.
-3. Set the following registry value to disable metadata validation if checksum errors occur:
-
-   ```
-   HKLM\SYSTEM\CurrentControlSet\Control\FileSystem\
-   RefsDisableVolumeIntegrityValidation = 1
+   ```cmd
+   refsutil salvage -s <SourceVolume> -d <DestinationFolder>
    ```
 
-4. Reboot all nodes, and then retry the mount or salvage.
-5. If the issue persists, escalate for internal review and possible registry or kernel hotfixes.
+   > [!NOTE]  
+   >
+   > - In this command, \<SourceVolume> represents the drive letter of the corrupted volume, and \<DestinationFolder> represents the path to a folder on the second disk.
+   > - For more information about this command and its available options, see [`refsutil salvage`](/windows-server/administration/windows-commands/refsutil-salvage).
+
+1. If the salvage process fails or doesn't finish, try the following actions:
+
+   - Review the logs from the salvage process.
+   - Check the storage hardware for faults
+   - Use third-party tools to try to recover the data
+   - If recent backups are available, reformat the volume and restore the data
+   - Contact Microsoft Support for assistance. Attach the salvage process logs and event log information to the support request.
+
+### Metadata corruption or mount failures (Event IDs 134, 135, or 140)
+
+#### Symptoms
+
+- The volume fails to mount
+- The event log lists event IDs 134, 137, or 140
+- Error messages indicate that there are invalid metadata pages or checksum failures, or that the "device is busy."
+
+#### Cause
+
+This issue typically indicates that one of the following conditions occurred:
+
+- ReFS metadata is corrupted
+- Faults occurred during write operations
+- An operating system upgrade is installed that's not compatible with the ReFS version
+- An operating system upgrade is installed that changed registry entries that affect ReFS operations (such as metadata validation).
+
+#### Resolution
+
+1. If the volume was previously mounted on an older version of Windows Server and is now mounted on a newer version, make sure that the operating system is up to date and that the versions of the ReFS utilities match the version of the volume.
+
+1. If checksum errors occurred, follow these steps (in a clustered system, follow these steps on all nodes):
+
+   1. On the system where the volume is mounted, open Registry Editor and locate the `HKLM\SYSTEM\CurrentControlSet\Control\FileSystem\` subkey.
+
+1. To disable metadata validation, set the `RefsDisableVolumeIntegrityValidation` value to **1**
+
+1. Restart the system (in a clustered system, restart all nodes).
+
+1. Try again to mount the volume.
+
+1. If you still can't mount the volume, try to salvage the volume as described in [Volume is RAW or inaccessible (Event IDs 133 or 135)].(#volume-is-raw-or-inaccessible-event-ids-133-or-135).
+
+1. If the issue persists, you might need registry or kernel hotfixes. Escalate as needed to review this option, and contact Microsoft Support for assistance.
 
 ### 3. System hangs, high resource or memory usage, or freeze on volume attach
 
