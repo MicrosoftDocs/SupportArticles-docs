@@ -83,3 +83,9 @@ items:   # Please do not delete this line, it is required for the yaml format
       items:
         - name: Windows 365 BCDR known issues
           href: windows-365-bcdr-known-issues.md
+- name: Windows 365 for Agents
+  items:
+    - name: Cloud PC agent pools
+      items:
+        - name: Provisioning errors
+          href: windows-365-agents-pool-errors.md
