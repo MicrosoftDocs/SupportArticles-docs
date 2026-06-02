@@ -1,28 +1,26 @@
-items:
 - name: Welcome
   href: welcome-general.yml
-
 - name: General
   items:
-  - name: Azure dependency availability by country/region
-    href: dependency-availability-by-country.md
-  - name: Azure region access request process
-    href: region-access-request-process.md
-  - name: Tips for finding Microsoft troubleshooting content
-    href: search-tips-find-troubleshooting-content.md
-  - name: Use Secure File Exchange to exchange files
-    href: secure-file-exchange-transfer-files.md
-  - name: How to tell if an email from Support is genuine
-    href: email-domains-support-agent.md
-  - name: Zonal enablement request for restricted VM series
-    href: zonal-enablement-request-for-restricted-vm-series.md
-
+    - name: Azure dependency availability by country/region
+      href: dependency-availability-by-country.md
+    - name: Azure region access request process
+      href: region-access-request-process.md
+    - name: Tips for finding Microsoft troubleshooting content
+      href: search-tips-find-troubleshooting-content.md
+    - name: Use Secure File Exchange to exchange files
+      href: secure-file-exchange-transfer-files.md
+    - name: How to tell if an email from Support is genuine
+      href: email-domains-support-agent.md
+    - name: Zonal enablement request for restricted VM series
+      href: zonal-enablement-request-for-restricted-vm-series.md
+    - name: Request Azure Interoperability Under UK DMCC
+      href: submit-azure-interoperability-dmcc-request.md
 - name: Other common issues
   items:
-  - name: Users and groups lists disappear
-    href: cannot-see-users-groups-list-iam.md
-
-- name:  Support Diagnostic Packages
+    - name: Users and groups lists disappear
+      href: cannot-see-users-groups-list-iam.md
+- name: Support Diagnostic Packages
   items:
-  - name: Azure Stack Edge support package and device logs
-    href: ../azure-stack-edge/azure-stack-edge-support-package-device-logs.md
+    - name: Azure Stack Edge support package and device logs
+      href: ../azure-stack-edge/azure-stack-edge-support-package-device-logs.md

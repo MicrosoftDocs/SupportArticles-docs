@@ -1,176 +1,186 @@
 ---
-title: Troubleshoot issues with an opportunity
-description: Provides resolutions for the issues that may occur when working with opportunities in Dynamics 365 Sales.
-author: sbmjais
-ms.author: shjais
-ms.date: 06/25/2024
+title: Fix opportunity errors in Dynamics 365 Sales
+description: Resolve common opportunity errors in Dynamics 365 Sales, such as close opportunity failures, missing permissions, currency mismatches, product errors, and pipeline view issues.
+ms.date: 05/21/2026
+ms.reviewer: shjais, ramakris, josaw, v-shaywood
 ms.custom: sap:Opportunity
+ai-usage: ai-assisted
 ---
 # Troubleshoot issues with opportunities
 
-Follow the instructions in this article to troubleshoot the issues you might face when you work with opportunities.
+## Summary
 
-## Opportunity issues and resolution for salespeople
+Use this article to troubleshoot issues that you might encounter when you work with opportunities in Microsoft Dynamics 365 Sales. It covers errors and unexpected behavior when you close opportunities, edit closed opportunities, add products, view the opportunity pipeline, and manage permissions and stakeholders. For more information about how to work with opportunities, see [Manage opportunities](/dynamics365/sales/opportunity-management-overview).
 
-### How do I close an opportunity?
+## Can't close an opportunity
 
-Whether your customer has accepted or rejected your proposal, it's a good practice to close the opportunity as won or lost.
+The following errors or issues might occur when you try to close an opportunity:
 
-When you close an opportunity, the opportunity is marked as complete, and can't be changed. To make further changes to an opportunity, you can reopen it.
+- [The opportunity can't be closed](#the-opportunity-cant-be-closed)
+- [Access denied or insufficient permissions](#access-denied-or-insufficient-permissions)
+- [The opportunity has already been closed](#the-opportunity-has-already-been-closed)
+- [The opportunity close dialog doesn't open or shows unexpected behavior](#the-opportunity-close-dialog-doesnt-open-or-shows-unexpected-behavior)
+- [Multiple cascading relationships on the close form](#multiple-cascading-relationships-on-the-close-form)
+- [Close as Won or Close as Lost button isn't visible](#close-as-won-or-close-as-lost-button-isnt-visible)
+- [Currency mismatch error](#currency-mismatch-error)
 
-> [!NOTE]
-> At the time of closing the opportunity, enter the Actual Revenue and Actual Close Date. The Actual Revenue is used for reporting purposes in charts and reports in Dynamics 365 Sales.
+The following sections describe each error and how to resolve it.
 
-To close an opportunity, open the opportunity record, and on the command bar, select **Close as Won** or **Close as Lost**.
+### The opportunity can't be closed
 
-:::image type="content" source="media//troubleshoot-opportunities-issues/close-opportunity.png" alt-text="Close opportunity as Won or Lost.":::
+This error occurs when active or draft [quotes](/dynamics365/sales/create-edit-quote-sales) are associated with the opportunity.
 
-### Issue 1 - Can't close an opportunity
-
-Here are some errors you might see when you close an opportunity:
-
-1. [Error 1 - The opportunity can't be closed](#error-1---the-opportunity-cant-be-closed)
-2. [Error 2 - Access denied or Insufficient permissions](#error-2---access-denied-or-insufficient-permissions)
-3. [Error 3 - The opportunity has already been closed](#error-3---the-opportunity-has-already-been-closed)
-
-The following sections describe each of these errors and how you can resolve them.
-
-#### Error 1 - The opportunity can't be closed
-
-##### Cause
-
-There might be active or draft quotes associated with the opportunity.
-
-##### Resolution
+To resolve this problem:
 
 1. In the opportunity record, go to the **Quotes** tab (or **Quotes line item** tab).
-2. Make sure none of the quotes is in the Draft or Active status.
+1. Make sure none of the quotes are in the **Draft** or **Active** status.
 
-    :::image type="content" source="media/troubleshoot-opportunities-issues/quotes-in-draft-state.png" alt-text="Quotes in the Draft status.":::
+    :::image type="content" source="media/troubleshoot-opportunities-issues/quotes-in-draft-state.png" alt-text="Screenshot of quotes in the Draft status on the Quotes tab of an opportunity.":::
 
-#### Error 2 - Access denied or Insufficient permissions
+### Access denied or insufficient permissions
 
-##### Cause
+You don't have sufficient permissions on the opportunity that you're trying to close.
 
-You don't have sufficient permissions on the opportunity you're trying to close.
-
-##### Resolution
-
-Ask your system administrator to grant you the necessary permissions.
-
-#### Error 3 - The opportunity has already been closed
-
-##### Cause
-
-The opportunity that you're trying to close is already marked as Won or Lost.
-
-##### Resolution
-
-If you want to make changes to the already closed opportunity, reopen the opportunity, make changes, and close it again.
-
-### Issue 2 - Can't edit an opportunity
-
-If you've already closed an opportunity as Won or Lost, it becomes read-only and you can't change it. To make any changes to a closed opportunity, reopen it.
-
-To reopen, open the opportunity, and on the command bar, select **Reopen Opportunity**.
-
-:::image type="content" source="media/troubleshoot-opportunities-issues/reopen-opportunity.png" alt-text="Reopen opportunity to make any changes to a closed opportunity.":::
-
-### Issue 3 - Can't add products to an opportunity
-
-Here are some errors you might see when you add products to an opportunity:
-
-1. [Error 1 - You must select a price list before attempting to add a product](#error-1---you-must-select-a-price-list-before-attempting-to-add-a-product)
-2. [Error 2 - You must provide a value for product description](#error-2---you-must-provide-a-value-for-product-description)
-3. [Error 3 - You can only add active products](#error-3---you-can-only-add-active-products)
-
-#### Error 1 - You must select a price list before attempting to add a product
-
-##### Cause
-
-You haven't selected a price list for the opportunity. Selecting a price list is required to add products to an opportunity.
-
-##### Resolution
-
-1. In the opportunity record, go to the **Product Line Item** tab.
-2. In the **Price List** field, select a price list for the opportunity.
-
-#### Error 2 - You must provide a value for product description
-
-##### Cause
-
-When creating a write-in product, you haven't entered the product name.
-
-##### Resolution
-
-Enter the product name.
-
-#### Error 3 - You can only add active products
-
-##### Cause
-
-When adding an existing product, you selected a product in the **Draft** status.
-
-##### Resolution
-
-Make sure the product you want to add is in the Active state, and then add the product.
-
-## Opportunity close issues and resolution for system administrators
-
-### Issue: Insufficient permissions or Access denied error when a user is trying to close an opportunity
-
-#### Cause
-
-The user trying to close the opportunity doesn't have sufficient permissions on the opportunity they're working on.
-
-#### Resolution
+Ask your system administrator to grant you the required permissions. The administrator can follow these steps to grant the necessary permissions:
 
 1. Go to **Settings** > **Security Role**.
-2. Open the security role of the user.
-3. Assign **Read**, **Create**, **Append**, **Append To** permissions to the user's Security Role at User level on the Opportunity entity and custom entity.
+1. Open the [security role](/power-platform/admin/security-roles-privileges) of the user.
+1. Assign **Read**, **Create**, **Append**, and **Append To** permissions to the user's security role at user level on the Opportunity entity and the custom entity.
 
-## Stakeholder and Sales team subgrids
+### The opportunity has already been closed
 
-### Issue: Can't see the connection records added from the Stakeholders subgrid
+The opportunity that you're trying to close is already marked as **Won** or **Lost**. To change a closed opportunity, reopen it, make your changes, and then close it again.
 
-#### Cause
+### The opportunity close dialog doesn't open or shows unexpected behavior
 
-The out-of-the-box **Stakeholders** subgrid only shows connections that have a connection role category of **Stakeholder**. For more information, see [How are stakeholders and sales team members tracked for opportunities?](/dynamics365/sales/stakeholders-sales-team-members).
+One of the following issues might cause the opportunity close dialog to not open correctly:
 
-#### Resolution
+- A required metadata flag is turned off.
+- Active customization [solution layers](/power-platform/alm/solution-layers-alm) exist on the opportunity close entity.
+- The opportunity close entity isn't added to the required [model-driven app](/power-apps/maker/model-driven-apps/model-driven-app-overview).
+- The **Custom fields on closing form** setting isn't turned on in Sales Hub settings.
+
+To resolve this problem:
+
+1. Check whether any active layers exist on the opportunity close entity. To validate the scenario, remove these layers.
+
+    > [!NOTE]
+    > Removing active layers causes the system to lose all changes that are made as part of that solution.
+
+1. Add the opportunity close entity to the required model-driven apps.
+1. Make sure that the opportunity close customization is turned on in Sales Hub settings:
+
+    1. Go to **App Settings** > **Lead + opportunity management** > **Opportunity closing**.
+    1. Make sure the **Custom fields on closing form** toggle is turned on.
+
+    :::image type="content" source="media/troubleshoot-opportunities-issues/opportunity-closing-custom-fields-setting.png" alt-text="Screenshot of the Opportunity closing settings page in Sales Hub showing the Custom fields on closing form toggle.":::
+
+1. If you customized the opportunity close form by adding extra fields, make sure that scripts or fields don't cause errors. To isolate the issue, try to remove customizations, and then close the opportunity again.
+
+### Multiple cascading relationships on the close form
+
+When you try to close an opportunity, you receive the following error message:
+
+> More than one parent exists
+
+> MultipleParentEntitiesFoundByEntity
+
+This error occurs because multiple fields in the opportunity close form have cascading relationships with the same entity. This configuration isn't supported.
+
+To resolve this problem, remove one of the fields that has a cascading relationship with the same entity from the opportunity close form. For example, if a custom field and the **Regarding** field both reference the same entity, remove one of them. For more information, see [Create and edit 1:N (one-to-many) relationships](/dynamics365/customerengagement/on-premises/customize/create-and-edit-1n-relationships).
+
+### Close as Won or Close as Lost button isn't visible
+
+An active layer or managed component might be updating the ribbon definition. This update activity hides the close buttons.
+
+To resolve this problem, check whether an active layer or managed component modifies the ribbon definition. Use the [Command Checker](/power-apps/maker/model-driven-apps/use-command-designer) to inspect the visibility rules for the **Close as Won** and **Close as Lost** buttons.
+
+### Currency mismatch error
+
+The actual revenue currency in the **Opportunity Close** entity doesn't match the transaction currency of the opportunity.
+
+To resolve this problem:
+
+1. Open the opportunity record, and check its transaction currency (for example, Japanese Yen).
+1. Open the opportunity close form, and find the **Actual Revenue** field.
+1. Make sure that the actual revenue currency matches the transaction currency of the opportunity.
+
+## Can't edit an opportunity
+
+After you close an opportunity as **Won** or **Lost**, the opportunity becomes read-only, and you can't change it. To change it, you need to reopen it. Select the opportunity, and then select **Reopen Opportunity** on the command bar.
+
+:::image type="content" source="media/troubleshoot-opportunities-issues/reopen-opportunity.png" alt-text="Screenshot of the Reopen Opportunity button on the command bar of a closed opportunity.":::
+
+## Can't add products to an opportunity
+
+When you try to add products to an opportunity, the following errors might occur:
+
+- [You must select a price list before attempting to add a product](#you-must-select-a-price-list-before-attempting-to-add-a-product)
+- [You must provide a value for product description](#you-must-provide-a-value-for-product-description)
+- [You can only add active products](#you-can-only-add-active-products)
+
+### You must select a price list before attempting to add a product
+
+This error occurs because you didn't select a [price list](/dynamics365/sales/create-price-lists-price-list-items-define-pricing-products) for the opportunity. You need a price list to add products to an opportunity.
+
+To resolve this problem:
+
+1. In the opportunity record, go to the **Product Line Item** tab.
+1. In the **Price List** field, select a price list for the opportunity.
+
+### You must provide a value for product description
+
+This error occurs because you didn't enter the product name for the write-in product.
+
+To resolve this problem, enter the product name.
+
+### You can only add active products
+
+This error occurs because the product that you selected is in the **Draft** status.
+
+To resolve this problem, make sure that the product is in the **Active** status, and then add it.
+
+## Can't see connection records added from the Stakeholders subgrid
+
+The out-of-the-box **Stakeholders** subgrid shows only connections that have a connection role category of **Stakeholder**. For more information, see [How are stakeholders and sales team members tracked for opportunities?](/dynamics365/sales/stakeholders-sales-team-members).
+
+To resolve this problem:
 
 1. In the opportunity record, select the **Related** tab, and then select **Connections**.
-1. In the **Connections** subgrid, select the connection record you added.
-1. Open the connection role selected in the **As this role** field.
-1. Make sure that **Connection Role Category** is set to **Stakeholder**. If it isn't, select **Stakeholder** in the **Connection Role Category** drop-down list.
+1. In the **Connections** subgrid, select the connection record that you added.
+1. On the connection record, open the connection role that's listed in the **As this role** field.
+1. On the connection role record, make sure that the **Connection Role Category** field is set to **Stakeholder**.
 
 ## Opportunity pipeline view issues
 
-### Issue 1: Pipeline view doesn't display bubbles in the Deal tracker
+The following issues might occur when you work with the opportunity pipeline view:
 
-#### Cause
+- [Pipeline view doesn't display bubbles in the Deal tracker](#pipeline-view-doesnt-display-bubbles-in-the-deal-tracker)
+- [Deal manager access privileges are automatically assigned to newly created roles](#deal-manager-access-privileges-are-automatically-assigned-to-newly-created-roles)
 
-There are several reasons why the bubbles might not be visible:
+### Pipeline view doesn't display bubbles in the Deal tracker
 
-- The [bubble chart](/dynamics365/sales/use-opportunity-pipeline-view#understand-the-opportunity-pipeline-charts) shows only the first 50 valid opportunity entries, meaning those with the defined x-axis, y-axis, radius data, and **Segment by** fields. This might result in some or all of the bubbles not showing up on the graph despite being present in the grid view.
-- If the [msdyn_Score](/dynamics365/sales/developer/entities/msdyn_predictivescore#BKMK_msdyn_Score) (opportunity score) and [msdyn_Grade](/dynamics365/sales/developer/entities/msdyn_predictivescore#BKMK_msdyn_Grade) (opportunity grade) fields are selected as the **Tooltips** fields for the Deal tracker, the "not null" filters of these fields will be applied to the opportunities for the bubble chart, potentially filtering out all opportunities from the chart despite being visible in the grid view.
+The bubbles might not be visible for the following reasons:
 
-#### Resolution
+- To maintain clarity, the [bubble chart](/dynamics365/sales/use-opportunity-pipeline-view#understand-the-opportunity-pipeline-charts) shows only the first 50 valid opportunity entries. Valid entries are those that have defined x-axis, y-axis, radius data, and **Segment by** fields. As a result, some or all bubbles might not appear on the graph even though they exist in the grid view.
+- If you select the [msdyn_Score](/dynamics365/sales/developer/entities/msdyn_predictivescore#BKMK_msdyn_Score) (opportunity score) and [msdyn_Grade](/dynamics365/sales/developer/entities/msdyn_predictivescore#BKMK_msdyn_Grade) (opportunity grade) fields as the **Tooltips** fields for the Deal tracker, the "not null" filters of these fields are applied to the opportunities for the bubble chart. This action might filter out all opportunities from the chart even though they're visible in the grid view.
 
-To solve this issue, take the following steps:
+To resolve this problem:
 
-1. Ensure that the fields selected for the **Deal tracker** setting in **App Settings** on the [opportunity pipeline settings page](/dynamics365/sales/opportunity-pipeline-view-for-admins#open-the-opportunity-pipeline-view-settings-page) have values for the x-axis, y-axis, radius data, and **Segment by** fields.
+1. Make sure that the fields you select for the **Deal tracker** setting in **App Settings** on the [opportunity pipeline settings page](/dynamics365/sales/opportunity-pipeline-view-for-admins#open-the-opportunity-pipeline-view-settings-page) have values for the x-axis, y-axis, radius data, and **Segment by** fields.
+1. Avoid using the [msdyn_Score](/dynamics365/sales/developer/entities/msdyn_predictivescore#BKMK_msdyn_Score) (opportunity score) and [msdyn_Grade](/dynamics365/sales/developer/entities/msdyn_predictivescore#BKMK_msdyn_Grade) (opportunity grade) fields as the **Tooltips**, x-axis, y-axis, radius, or **Segment by** fields so that the bubbles appear in the Deal tracker. Alternatively, [turn on predictive opportunity scoring](/dynamics365/sales/digital-selling-scoring#set-up-lead-and-opportunity-scoring) in the organization to populate data for the `msdyn_Score` and `msdyn_Grade` fields.
 
-1. Avoid using the [msdyn_Score](/dynamics365/sales/developer/entities/msdyn_predictivescore#BKMK_msdyn_Score) (opportunity score) and [msdyn_Grade](/dynamics365/sales/developer/entities/msdyn_predictivescore#BKMK_msdyn_Grade) (opportunity grade) fields as the **Tooltips**, x-axis, y-axis, radius, and **Segment by** fields to ensure the bubbles appear in the Deal tracker. Alternatively, [enable predictive opportunity scoring](/dynamics365/sales/digital-selling-scoring#set-up-lead-and-opportunity-scoring) in the organization to populate data for the `msdyn_Score` and `msdyn_Grade` fields.
-
-### Issue 2: Pipeline view doesn't show all the bubbles in the Deal tracker
-
-The bubble chart is designed to display a maximum of 50 opportunities to maintain clarity of the bubble chart.
-
-### Issue 3: Deal manager access privileges are automatically assigned to newly created roles
+### Deal manager access privileges are automatically assigned to newly created roles
 
 When an administrator publishes deal manager settings from **App Settings** on the [opportunity pipeline settings page](/dynamics365/sales/opportunity-pipeline-view-for-admins#open-the-opportunity-pipeline-view-settings-page), the `prvReadmsdyn_dealmanageraccess` and `prvReadmsdyn_dealmanagersettings` privileges are automatically granted to all newly created roles in the environment.
 
-This behavior is by design. It allows users to read the deal manager settings configuration to display the bubble chart in the pipeline view.
+This behavior is by design. It lets users read the deal manager settings configuration to show the bubble chart in the pipeline view.
 
 For more information, see [Manage opportunities](/dynamics365/sales/opportunity-management-overview).
+
+## Related content
+
+- [Add products to an opportunity](/dynamics365/sales/add-products-opportunity)
+- [Troubleshoot issues with currency and price lists](troubleshoot-currency-and-price-lists-issues.md)
+- [Troubleshoot issues with a product](troubleshoot-products-issues.md)
+- [Troubleshoot issues with Sales Pipeline chart and its phases](troubleshoot-sales-pipeline-issues.md)
