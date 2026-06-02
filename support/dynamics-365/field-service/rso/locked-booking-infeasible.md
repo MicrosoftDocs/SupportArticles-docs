@@ -1,11 +1,13 @@
 ---
 title: Locked Booking Is Infeasible in Resource Scheduling Optimization
 description: Resolves issues with booking locks in the Resource Scheduling Optimization add-in for Microsoft Dynamics 365 Field Service.
-ms.reviewer: mhart
-ms.date: 02/18/2025
+ms.reviewer: anclear, v-wendysmith
+ms.date: 06/02/2026
 ms.custom: sap:Resource Scheduling Optimization
 ---
 # Locked booking is infeasible in Resource Scheduling Optimization
+
+## Summary
 
 This article helps you resolve the "Locked booking is infeasible" error that occurs in the [Resource Scheduling Optimization add-in](/dynamics365/field-service/rso-overview) for Microsoft Dynamics 365 Field Service.
 
@@ -34,7 +36,7 @@ The tracing data points in the error message can help you identify what went wro
 
   For more information, see [Resource Scheduling Optimization constraints](/dynamics365/field-service/rso-optimization-goal#understand-constraints).
 
-## Resolution
+## Solution
 
 To solve the issue, update the booking settings, and then rerun Resource Scheduling Optimization:
 
