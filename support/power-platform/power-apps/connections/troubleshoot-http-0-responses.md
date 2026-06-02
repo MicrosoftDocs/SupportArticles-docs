@@ -1,16 +1,15 @@
 ---
-title: Troubleshoot HTTP 0 responses and other blocked connector calls in Power Apps
-description: Explains how to identify and investigate connector calls that fail with HTTP status 0 or with proxy-issued errors such as 403, and how to work with network administrators to resolve them.
+title: Troubleshoot HTTP 0 responses and other blocked calls in Power Apps
+description: Explains how to identify and investigate calls that fail with HTTP status 0 or with proxy-issued errors such as 403, and how to work with network administrators to resolve them.
 ms.reviewer: jelopezf
 ms.date: 05/20/2026
 author: jelopezf
 ms.author: jelopezf
-ms.custom: sap:Connections\Connectors
 ---
 
-# Troubleshoot HTTP 0 responses and other blocked connector calls in Power Apps
+# Troubleshoot HTTP 0 responses and other blocked calls in Power Apps
 
-_Applies to:_ &nbsp; Power Apps, Power Automate, Custom Connectors
+_Applies to:_ &nbsp; Power Apps, Power Automate
 
 ## Symptoms
 
@@ -31,7 +30,7 @@ Common causes include:
 
 - Transient network outages or unstable device connectivity (for example, Wi-Fi drops, VPN disconnections, or cellular handoffs).
 - Corporate proxies, firewalls, or SSL/TLS inspection devices terminating, throttling, or silently dropping the connection.
-- Network appliances rewriting or stripping CORS headers (for example, changing `Access-Control-Allow-Origin` to a restrictive value), which can cause browser-side request failures before a connector call completes.
+- Network appliances rewriting or stripping CORS headers (for example, changing `Access-Control-Allow-Origin` to a restrictive value), which can cause browser-side request failures before a network call completes.
 - DNS resolution failures or DNS-based filtering that prevents the client from resolving the Power Platform service endpoint.
 - Security and zero-trust products such as Zscaler, Netskope, or similar SASE and secure web gateway solutions that intercept traffic and block, rewrite, or return a custom error page for connections to Power Platform endpoints.
 - Browser extensions (ad blockers, privacy tools) or local antivirus software that cancel the request before it's sent.
