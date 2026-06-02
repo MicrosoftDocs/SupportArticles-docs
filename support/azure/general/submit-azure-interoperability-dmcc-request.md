@@ -1,6 +1,6 @@
 ---
-title: How to Request Azure Interoperability Under UK DMCC
-description: Request Azure interoperability under the UK DMCC through Microsoft's dedicated mechanism. Submit your request for transparent, timely assessment.
+title: How to Request Azure Interoperability
+description: Request Azure interoperability through Microsoft's dedicated mechanism. Submit your request for transparent, timely assessment.
 ms.date: 06/02/2026
 author: kaushika-msft
 ms.author: kaushika
@@ -8,7 +8,7 @@ ms.reviewer: kaushika, jivers
 ms.topic: how-to
 ms.service: azure
 ---
-# Request Azure interoperability under UK DMCC
+# Azure interoperability request
 
 ## Summary  
 
@@ -34,17 +34,15 @@ Other factors may be taken into consideration as needed.
 
 ## Azure interoperability request process   
 
-To submit a DMCC request for Azure interoperability, follow these steps:
+To submit an Azure interoperability request, follow these steps:
 
 1. Go to the [Azure interoperability request form](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR81I6umkbRREse8OtVrQOPhUN0s3OUdGNk5BSzA1Mjg3R1o1TllWQjZZVi4u) and fill out the required fields. Provide as much detail as possible about your use scenario, goal, and the Azure product or service you need access to.
 
-1. Submit the Azure interoperability request form. 
-
-1. Within three business days, a Microsoft representative contacts you to acknowledge your request and provide you with a case number. The representative might ask you for additional information to understand your request.
-
-1. Microsoft investigates and evaluates your request, working with you as needed to understand the parameters of your request. 
-
-1. A Microsoft representative replies once a final determination is made.
+1. Submit the Azure interoperability request form.
+   
+1. Once submitted, you will receive an email acknowledging receipt of your request along with a case number.
+  
+1. Microsoft will evaluate your request and seek additional information, if needed, to understand the parameters of your request. 
 
 > [!NOTE]
 > The response time for a final determination can vary depending on the nature and complexity of your request. Microsoft strives to provide clear and timely communication throughout the process.
