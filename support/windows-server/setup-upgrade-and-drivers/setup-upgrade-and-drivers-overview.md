@@ -4,7 +4,7 @@ description: Overview of setup upgrade and drivers troubleshooting articles for 
 ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
-ms.topic: troubleshooting
+ms.topic: landing-page
 ms.reviewer: kaushika
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
