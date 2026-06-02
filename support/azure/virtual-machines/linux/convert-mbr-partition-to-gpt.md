@@ -196,6 +196,11 @@ sudo gdisk -l /dev/sdd | grep -A4 '^Partition table scan:'
     sudo zypper install gdisk
     ```
     
+    #### [Azure Linux](#tab/azurelinux)
+    
+    ```bash
+    sudo dnf install gdisk -y
+    ```
     ---
 
 2. Verify the current size of the data disk：
