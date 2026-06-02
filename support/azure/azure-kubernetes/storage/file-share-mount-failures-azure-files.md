@@ -39,12 +39,41 @@ Manually update the `azurestorageaccountkey` field in an Azure file secret to ad
 
 1. Change the `azurestorageaccountkey` field to use the new base64-encoded storage account key, and then save the file.
 
-1. Redeploy your pods.
+1. Ensure proper unmount and recovery by using one of the following options. Redeploying pods alone often fails to fix the issue if an existing mount with a stale account key is reused.
 
-> [!NOTE]
-> Simply deleting the pod and allowing it to be re-created might not resolve the issue. Make sure that you redeploy the pod.
+    **Option A: Cordon the node (single pod/node scenario)**
 
-After a few minutes, the agent node will retry the Azure File mount operation by using the updated storage key.
+    1. Cordon the current node where the pod is running:
+
+        ```console
+        kubectl cordon <node-name>
+        ```
+
+    1. Force the pod to restart on a different node:
+
+        ```console
+        kubectl delete pod <pod-name>
+        ```
+
+    1. The new pod mounts the file share by using the updated credential.
+
+    **Option B: Scale replicas (Deployment/StatefulSet - recommended)**
+
+    1. Scale replicas down to 0:
+
+        ```console
+        kubectl scale deployment <deployment-name> --replicas=0
+        ```
+
+    1. Wait 3-5 minutes for the account key cache to expire.
+
+    1. Scale replicas back to the original count:
+
+        ```console
+        kubectl scale deployment <deployment-name> --replicas=<original-count>
+        ```
+
+    1. The new pods mount the file share by using the updated credentials.
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
