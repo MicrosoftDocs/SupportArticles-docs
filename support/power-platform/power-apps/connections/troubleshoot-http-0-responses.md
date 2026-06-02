@@ -37,7 +37,7 @@ Common causes include:
 - The user navigating away, closing the tab, or putting the device to sleep before the request completed.
 
 > [!IMPORTANT]
-> These failures originate on the client side or within the customer's network path, not on the Power Platform service. In most cases, resolution requires coordination with your network administrator to identify why the request is being blocked, redirected, or losing connectivity. Microsoft Support can assist with interpreting the evidence you collect, but cannot modify network configuration on your behalf.
+> These failures originate on the client side or within the customer's network path, not on the Power Platform service. In most cases, resolution requires coordination with your network administrator to identify why the request is being blocked, redirected, or losing connectivity. Start with your network team to review HAR and proxy logs and apply required allow-list or inspection changes.
 
 ## Investigation
 
@@ -101,7 +101,7 @@ Because these failures are produced on the client side or by intermediary networ
 - Stabilize device connectivity (Wi-Fi, VPN, cellular) for affected users.
 - Disable or reconfigure browser extensions or endpoint security products that cancel or rewrite requests to Power Platform endpoints.
 
-Microsoft Support can help interpret the evidence you collect, but cannot modify your network configuration or override blocks placed by your organization's security stack.
+If issues continue after your network team validates endpoint allow-listing, DNS resolution, and SSL inspection bypasses, collect updated traces and continue troubleshooting with your internal networking and security teams.
 
 ## More information
 
