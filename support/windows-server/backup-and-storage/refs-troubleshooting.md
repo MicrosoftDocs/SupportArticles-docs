@@ -23,11 +23,34 @@ The Resilient File System (ReFS) is designed to maximize data availability, scal
 
 ## Troubleshooting checklist
 
-### Before you begin
+Follow these steps to document the current state of your environment and start to isolate the cause of your issue.
 
-- **Confirm the environment**: Identify the OS version, ReFS volume version, type of system (standalone, cluster, virtualized), and workload.
-- **Review recent changes**: Hardware replacements, OS/service pack or firmware updates, power outages, unclean shutdowns, or storage configuration changes.
-- **Check backups**: Ensure recent backups are available before you attempt repairs or changes.
+> [!NOTE]  
+> If Windows Server is not responding, restart the system into Safe mode.
+
+1. Make sure that recent backups are available before you attempt repairs or changes.
+
+   > [!NOTE]  
+   > If a recent backup is not available, consider cloning the volume or using [Microsoft Disk2VHD](https://aka.ms/disk2vhd) to create a virtual hard disk copy.
+
+1. Document the following information:
+
+   - Operating system version
+   - ReFS volume version
+   - Firmware and driver versions for the storage hardware
+   - System type (for example, standalone, cluster, or virtualized)
+   - Workload that the volume supports
+
+     > [!IMPORTANT]  
+     > Verify that the operating system version that you're using supports the ReFS volume version.
+
+1. Review the recent history of the environment for changes or unusual incidents, such as the following events:
+
+   - Hardware replacements
+   - Operating system or firmware updates
+   - Changes to the storage configuration
+   - Power outages or other unclean shutdowns
+
 
 ### Gather initial information
 
@@ -37,15 +60,13 @@ The Resilient File System (ReFS) is designed to maximize data availability, scal
 
 ### Initial action steps
 
-- Verify hardware health and firmware/driver versions.
-- Confirm that the version of ReFS is supported by the server OS.
+- Verify hardware health
+
 - Boot into Safe Mode if the system is unresponsive.
 
-## Issues and resolutions
+## Common issues and Solutions
 
 ### 1. Volume becomes RAW or inaccessible
-
-**Symptoms**
 
 Volume status is RAW; data is inaccessible; repeated mount or repair failures occur; Event IDs 133 or 135 are logged.
 
