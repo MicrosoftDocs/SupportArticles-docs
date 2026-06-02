@@ -1,3 +1,4 @@
+items:
 - name: Dynamics 365 Sales
   href: welcome-sales.yml
 - name: Customization
@@ -94,3 +95,7 @@
       href: dialer-not-available-in-custom-app.md
     - name: Teams dialer isn't visible in Dynamics 365 Sales
       href: dialer-not-visible-in-sales.md
+- name: Visual hierarchy
+  items:
+    - name: View hierarchy button is missing
+      href: view-hierarchy-button-missing.md
