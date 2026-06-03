@@ -16,6 +16,10 @@ items:
         href: manageability/update-install-rollback-failures.md
   - name: Security and Privacy
     items:
+      - name: Fix a Microsoft Edge profile that won't load or shows an error
+        href: security/edge-profile-wont-load-locked.md
+      - name: Saved site icons change unexpectedly on the new tab page
+        href: security/site-icons-change-new-tab-page.md
       - name: Troubleshoot common sign-in problems
         href: security/troubleshoot-sign-in-issues.md
   - name: Stability and Performance
@@ -40,8 +44,4 @@ items:
         href: development/unexpected-block-warning.md
       - name: WebView2 is unexpectedly installed on Windows Server operating systems
         href: development/webview2-unexpected-install-windows-server.md
-  - name: Security and Privacy
-    items:
-      - name: Saved site icons change unexpectedly on the new tab page
-        href: security/site-icons-change-new-tab-page.md
 
