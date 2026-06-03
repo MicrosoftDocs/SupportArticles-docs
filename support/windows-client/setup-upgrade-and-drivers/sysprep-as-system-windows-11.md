@@ -1,5 +1,5 @@
 ---
-title: Fix Black Screen After Running Sysprep as System on Windows 11
+title: Fix Black Screen After Running Sysprep as System on Windows 11 or Windows Server 2025
 description: Resolve black screen and missing GUI elements after running sysprep as System on Windows 11. Learn workarounds to register missing XAML packages.
 ms.date: 05/28/2026
 manager: dcscontentpm
@@ -10,6 +10,7 @@ ms.custom:
 - sap:windows setup,upgrade and deployment\installing or upgrading windows
 - pcy:WinComm Devices Deploy
 appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
   - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Fix black screen after running Sysprep as system on Windows 11
