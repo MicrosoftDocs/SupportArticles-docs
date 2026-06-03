@@ -19,13 +19,19 @@ This article explains how to troubleshoot errors that occur when you deploy clus
 
 ### Overview
 
-[Azure Monitor](/azure/azure-monitor/containers/kubernetes-monitoring-overview) services, including [Container Insights](/azure/azure-monitor/containers/kubernetes-monitoring-enable?tabs=cli), [Managed Prometheus](/azure/azure-monitor/containers/kubernetes-monitoring-enable?tabs=cli), and [Application Insights](/azure/azure-monitor/containers/kubernetes-codeless?tabs=portal) are transitioning to a cluster extension-based back-end model. This change updates AKS monitoring [add-ons](/azure/aks/integrations) to an extension-based management model without changing functionality or user experience.
+[Azure Monitor](/azure/azure-monitor/containers/kubernetes-monitoring-overview) services, including [Container Insights](/azure/azure-monitor/containers/kubernetes-monitoring-enable?tabs=cli), [Managed Prometheus](/azure/azure-monitor/containers/kubernetes-monitoring-enable?tabs=cli), and [Application Insights](/azure/azure-monitor/containers/kubernetes-codeless?tabs=portal) are transitioning to a cluster extension based backend model. This change updates AKS monitoring [add-ons](/azure/aks/integrations) to an extension‑based management model, with no change to functionality or user experience.
 
-This back-end migration is nondisruptive. It doesn't change the user experience or require customer action.
+- This backend migration is nondisruptive and doesn't change user experience or require customer action.
 
-There's no impact to workloads, data collection, or monitoring functionality.
+- There's no impact to workloads, data collection, or monitoring functionality.
 
-Azure CLI, Azure portal, and all client experiences continue to work as expected.
+- Azure CLI, Azure portal, and all client experiences continue to work as expected.
+
+> [!NOTE]
+> - **Azure policy restrictions:** Custom Azure policies that block creation or updates to the [cluster extensions resource type](/rest/api/kubernetesconfiguration/extensions/extensions/create?view=rest-kubernetesconfiguration-extensions-2025-03-01&tabs=HTTP) must be updated or exempted.
+> - **Azure resource locks:** Azure resource locks can block management of [cluster extensions resource type](/rest/api/kubernetesconfiguration/extensions/extensions/create?view=rest-kubernetesconfiguration-extensions-2025-03-01&tabs=HTTP). 
+>
+> More details on mitigations below.
 
 #### What’s changing 
 
@@ -47,11 +53,11 @@ If your Monitoring solution was migrated to the extension-based back end, Monito
 
 Each Monitoring service is represented and managed by its own extension, as shown in the following table.
 
-| Monitoring capability            | Extension type                     | Extension name                                   |
+| Monitoring capability            | Extension name                     | Extension type                                   |
 |----------------------------------|------------------------------------|--------------------------------------------------|
-| Logging                          | aks-managed-azure-monitor-logs     | microsoft.azuremonitor.containers                |
-| Managed Prometheus (Metrics)     | aks-managed-azure-monitor-metrics  | microsoft.azuremonitor.containers.metrics        |
-| Application Insights / Monitoring| aks-managed-app-monitoring         | microsoft.azuremonitor.appmonitoring             |
+| [Container Insights](https://learn.microsoft.com/en-us/azure/azure-monitor/containers/kubernetes-monitoring-enable?tabs=azure-cli#enable-container-insights-and-logging-on-an-aks-cluster)               | aks-managed-azure-monitor-logs     | microsoft.azuremonitor.containers                |
+| [Managed Prometheus](https://learn.microsoft.com/en-us/azure/azure-monitor/containers/kubernetes-monitoring-enable?tabs=azure-cli#enable-prometheus-metrics-on-an-aks-cluster)               | aks-managed-azure-monitor-metrics  | microsoft.azuremonitor.containers.metrics        |
+| [Application Insights](https://learn.microsoft.com/en-us/azure/azure-monitor/containers/kubernetes-codeless?tabs=portal)             | aks-managed-app-monitoring         | microsoft.azuremonitor.appmonitoring             |
 
 ### Troubleshooting
 
@@ -63,8 +69,8 @@ A `Failed` provisioning state indicates that the monitoring service was not enab
 
 #### Solution
 
-• Verify that all required monitoring configuration values were provided correctly. 
-• Try again to enable the monitoring add-on by disabling and then re-enabling it on the AKS cluster.
+- Verify that all required monitoring configuration values were provided correctly. 
+- Try again to enable the monitoring add-on by disabling and then re-enabling it on the AKS cluster.
 
 Monitoring add-ons are now managed as extensions in the back end. However, the customer experience for enabling or disabling monitoring remains unchanged.
 
@@ -82,25 +88,22 @@ If you try to update an extension directly, you might receive an error message t
 
 This behavior is expected. Customers should enable, disable, or configure monitoring by using the AKS monitoring add-on experience (Azure portal, CLI, or ARM) instead of trying to modify the extension directly.
 
-### Problem 3: Resource locks prevent extension deletion
+### Problem 3: Resource locks prevent disablement of monitoring addons
 
 #### Error
 
-When you deploy or manage Azure Monitor services (Container Insights, Managed Prometheus, and Application Insights) on AKS clusters, the operation fails and returns an error message that resembles the following example:
+When you disable Azure Monitor services (Container Insights, Managed Prometheus, and Application Insights) on AKS clusters, the operation fails and returns an error message that resembles the following example:
 
 ```
 Delete of core cluster extension aks-managed-azure-monitor-metrics of type microsoft.azuremonitor.containers.metrics failed.
-
 Please refer https://aka.ms/akscoreextensions-tsg for additional details.
-
 The scope '/subscriptions/<subscription-id>/resourceGroups/<resource-group>/providers/Microsoft.ContainerService/managedClusters/<cluster-name>/providers/Microsoft.KubernetesConfiguration/extensions/aks-managed-azure-monitor-metrics' cannot perform delete operation because following scope(s) are locked: '/subscriptions/<subscription-id>/resourceGroups/<resource-group>/providers/microsoft.containerservice/managedClusters/<cluster-name>'.
-
 Please remove the lock and try again.
 ```
 
 #### Cause
 
-Azure resource locks prevent accidental deletion or modification of critical resources. When a **Delete lock** or **ReadOnly lock** is applied at any of the following scopes, extension deletion operations are blocked:
+Azure resource locks prevent accidental deletion or modification of critical resources. When a **Delete lock** or **ReadOnly lock** is applied at any of the following scopes, monitoring addons disable operations are blocked:
 
 **Subscription level**: Locks all resources in the subscription
 
@@ -108,7 +111,7 @@ Azure resource locks prevent accidental deletion or modification of critical res
 
 **Resource level**: Locks the specific AKS cluster resource
 
-The extension deletion operation requires write/delete permissions on the cluster resource. These permissions are blocked by the lock.
+The monitoring addons disable operation requires write/delete permissions on the cluster resource. These permissions are blocked by the lock.
 
 #### Common scenarios in which locks are applied:
 
@@ -131,9 +134,7 @@ The extension deletion operation requires write/delete permissions on the cluste
 # Check locks at cluster level
 
 az lock list --resource-group <resource-group> \
-
   --resource-name <cluster-name> \
-
   --resource-type Microsoft.ContainerService/managedClusters
 
 # Check locks at resource group level
@@ -147,7 +148,7 @@ az lock list
 
 #### Step 2: Remove or Temporarily Disable the Lock
 
-> ?? **Warning:** Make sure that you have appropriate permissions and authorization before you remove resource locks. Coordinate with your organization's security or compliance team, if it's necessary.
+> **Warning:** Make sure that you have appropriate permissions and authorization before you remove resource locks. Coordinate with your organization's security or compliance team, if it's necessary.
 
 **Using Azure portal:**
 
@@ -165,40 +166,32 @@ az lock delete --name <lock-name> --resource-group <resource-group>
 # For cluster-level lock
 
 az lock delete --name <lock-name> \
-
   --resource-group <resource-group> \
-
   --resource-name <cluster-name> \
-
   --resource-type Microsoft.ContainerService/managedClusters
 ```
 
-#### Step 3: Retry the extension deletion
+#### Step 3: Retry monitoring addons disable operation
 
-After you remove the lock, retry the extension deletion operation:
+After you remove the lock, retry the monitoring addons disable operation:
 
 **Using Azure CLI:**
 
 ```azurecli
 az aks update --resource-group <resource-group> --name <cluster-name> \
-
   --disable-azure-monitor-metrics
 ```
 
 #### Step 4: Reapply the lock (recommended)
 
-If protection for the lock was intentionally applied for, reapply protection after the extension operation finishes:
+If protection for the lock was intentionally applied for, reapply protection after monitoring addons disable operation finishes:
 
 ```azurecli
 
 az lock create --name <lock-name> \
-
   --resource-group <resource-group> \
-
   --resource-name <cluster-name> \
-
   --resource-type Microsoft.ContainerService/managedClusters \
-
   --lock-type CanNotDelete
 
 ```
@@ -306,21 +299,17 @@ If the policy is required for compliance, but Azure Monitor extensions should be
 1. Set the scope to the AKS cluster resource or resource group.
 1. Select **Waiver** or **Mitigated** as the exemption category.
 
-1. Provide a justification (for example, "Azure Monitor metrics extension are core cluster extensions managed by AKS").
+1. Provide a justification (for example, "Azure Monitor extensions are core cluster extensions managed by AKS").
 
 **Using Azure CLI:**
 
 ```azurecli
+
 az policy exemption create \
-
   --name "Allow-Azure-Monitor-Extensions" \
-
   --policy-assignment <assignment-id> \
-
   --scope "/subscriptions/<subscription-id>/resourceGroups/<resource-group>/providers/Microsoft.ContainerService/managedClusters/<cluster-name>" \
-
   --exemption-category Waiver \
-
   --description "Exemption to allow Azure Monitor core extensions for cluster monitoring"
 
 ```
@@ -343,45 +332,25 @@ If you have permissions to modify the policy, update it to allow Azure Monitor e
 
 ```
 {
-
   "if": {
-
     "allOf": [
-
       {
-
         "field": "type",
-
         "equals": "Microsoft.KubernetesConfiguration/extensions"
-
       },
-
       {
-
         "field": "Microsoft.KubernetesConfiguration/extensions/extensionType",
-
         "notIn": [
-
           "microsoft.azuremonitor.containers.metrics",
-
           "microsoft.azuremonitor.containers",
-
           "microsoft.azuremonitor.appmonitoring"
-
         ]
-
       }
-
     ]
-
   },
-
   "then": {
-
     "effect": "deny"
-
   }
-
 } 
 ```
 
@@ -395,13 +364,11 @@ After you create an exemption or modifying the policy, retry the extension opera
 # Enable Azure Monitor metrics
 
 az aks update --resource-group <resource-group> --name <cluster-name> \
-
   --enable-azure-monitor-metrics
 
 # Enable Container Insights
 
 az aks enable-addons --resource-group <resource-group> --name <cluster-name> \
-
   -a monitoring --workspace-resource-id <workspace-id>
 ```
  
