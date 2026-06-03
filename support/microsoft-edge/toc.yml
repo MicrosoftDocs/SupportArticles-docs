@@ -16,8 +16,20 @@ items:
         href: manageability/update-install-rollback-failures.md
   - name: Security and Privacy
     items:
+      - name: Fix a Microsoft Edge profile that won't load or shows an error
+        href: security/edge-profile-wont-load-locked.md
+      - name: Fix Microsoft Edge not saving cookies or sign-in sessions across launches
+        href: security/cookies-sessions-not-persisting.md
+      - name: Saved site icons change unexpectedly on the new tab page
+        href: security/site-icons-change-new-tab-page.md
       - name: Troubleshoot common sign-in problems
         href: security/troubleshoot-sign-in-issues.md
+  - name: Stability and Performance
+    items:
+      - name: Fix high CPU or memory usage in Microsoft Edge
+        href: performance/edge-high-cpu-memory.md
+      - name: Microsoft Edge crashes or fails to launch
+        href: performance/edge-crashes-fails-to-launch.md
   - name: Web Platform and Development
     items:
       - name: Failure to deploy self-hosted extension via group policy
@@ -36,8 +48,4 @@ items:
         href: development/unexpected-block-warning.md
       - name: WebView2 is unexpectedly installed on Windows Server operating systems
         href: development/webview2-unexpected-install-windows-server.md
-  - name: Security and Privacy
-    items:
-      - name: Saved site icons change unexpectedly on the new tab page
-        href: security/site-icons-change-new-tab-page.md
 
