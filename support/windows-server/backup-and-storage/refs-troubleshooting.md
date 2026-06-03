@@ -225,17 +225,25 @@ This issue typically indicates that the ReFS version isn't supported on the curr
 
 1. After you upgrade, make sure that all backup and storage software is compatible with the current operating system version and the current ReFS version.
 
-### 5. Backup, VSS, and snapshot failures
+### 5. Backup, VSS, and snapshot issues (Event IDs 12289 or 8193)
 
-**Symptoms**
+#### Symptoms
 
-Backups fail, shadow copies aren't created or deleted, errors occur from VSS writers, or Event IDs 12289 or 8193 are logged.
+- Backups fail
+- Shadow copies aren't created or deleted
+- VSS writers generate errors
+- The event log lists event IDs 12289 or 8193
 
-**Root causes**
+#### Cause
 
-Orphaned or corrupted VSS snapshots, unsupported ReFS snapshots, system resource exhaustion, or incompatible backup tools.
+This issue typically indicates that one of the following conditions occurred:
 
-**Resolution steps**
+- VSS snapshots are orphaned or corrupted
+- ReFS snapshots are unsupported
+- System resources are exhausted
+- The backup tools aren't compatible with ReFS
+
+#### Resolution
 
 1. Run the following command to review snapshots:
 
@@ -246,7 +254,7 @@ Orphaned or corrupted VSS snapshots, unsupported ReFS snapshots, system resource
 2. Delete shadow storage associations:
 
    ```console
-   vssadmin delete shadowstorage /for=[drive]
+   vssadmin delete shadowstorage /for=[Drive]
    ```
 
 3. Uninstall or disable third-party antivirus or backup agents that might conflict with VSS.
@@ -334,6 +342,7 @@ For effective troubleshooting and escalation, collect the following information:
 
 - [refsutil](/windows-server/administration/windows-commands/refsutil)
 - [fsutil](/windows-server/administration/windows-commands/fsutil)
+- [vssadmin](/windows-server/administration/windows-commands/vssadmin)
 - [Resilient File System (ReFS) overview](/windows-server/storage/refs/refs-overview)
 - [Fix heavy memory usage in ReFS](fix-heavy-memory-usage-refs.md)
 - [Local disk volume is inaccessible after ReFS.sys errors in Windows Server 2022 Standard](windows-server-2022-standard-local-refs-disk-inaccessible-bsod.md)
