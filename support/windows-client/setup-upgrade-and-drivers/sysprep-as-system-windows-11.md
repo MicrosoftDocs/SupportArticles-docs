@@ -10,7 +10,8 @@ ms.custom:
 - sap:windows setup,upgrade and deployment\installing or upgrading windows
 - pcy:WinComm Devices Deploy
 appliesto:
-  - Windows 11 24H2, Windows 1125H2, Windows Server 2025
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Fix black screen after running Sysprep as system on Windows 11
 
