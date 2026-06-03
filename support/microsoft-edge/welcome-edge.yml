@@ -47,6 +47,8 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
+          - text: Fix high CPU or memory usage in Microsoft Edge
+            url: performance/edge-high-cpu-memory.md
           - text: Microsoft Edge crashes or fails to launch
             url: performance/edge-crashes-fails-to-launch.md
 

@@ -24,6 +24,8 @@ items:
         href: security/troubleshoot-sign-in-issues.md
   - name: Stability and Performance
     items:
+      - name: Fix high CPU or memory usage in Microsoft Edge
+        href: performance/edge-high-cpu-memory.md
       - name: Microsoft Edge crashes or fails to launch
         href: performance/edge-crashes-fails-to-launch.md
   - name: Web Platform and Development
