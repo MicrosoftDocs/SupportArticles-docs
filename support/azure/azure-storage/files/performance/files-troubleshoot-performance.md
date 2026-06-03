@@ -62,7 +62,7 @@ The system throttles requests when the I/O operations per second (IOPS), ingress
 
 To understand the limits for standard and premium file shares, see [File share and file scale targets](/azure/storage/files/storage-files-scale-targets#azure-file-share-scale-targets). Depending on your workload, you can often avoid throttling by moving from HDD (standard) to SSD (premium) file shares.
 
-To learn more about how throttling at the share level or storage account level can cause high latency, low throughput, and general performance issues, see [Share or storage account is being throttled](#cause-1-share-or-storage-account-is-being-throttled).
+To learn more about how throttling at the share level or storage account level can cause high latency, low throughput, and general performance issues, see [Share or storage account is throttled](#cause-1-share-or-storage-account-is-throttled).
 
 ## High latency, low throughput, or low IOPS
 
