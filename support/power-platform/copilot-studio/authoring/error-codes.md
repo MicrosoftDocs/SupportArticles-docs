@@ -136,11 +136,11 @@ For more information, see [Create a prompt action](/ai-builder/use-a-custom-prom
 
 **Error messages:**
 
-- Authentication isn't configured for this bot.
+- Authentication is not configured for this bot.
 
-- The bot requires sign in, but isn't configured for authentication. Update the authentication method for the bot.
+- The bot requires sign in, but is not configured for authentication. Please update the authentication method for the bot.
 
-- Integrated authentication isn't supported in channel `{channel}`.
+- Integrated authentication is not supported in channel `{channel}`.
 
 **Resolution:** This error occurs if your agent uses actions or features that require user authentication, but authentication isn't configured. To resolve the problem:
 
@@ -734,7 +734,7 @@ This restriction includes, but isn't limited to, content about:
 
 #### OutgoingMessageSizeTooBig
 
-**Error message**: Outgoing message size too big.
+**Error message**: Outgoing message size too large.
 
 **Resolution**: Depending on the channel that you use to transfer files, such as Direct Line or Facebook, you might receive the following error message: "The request content length exceeded limit of 262,144 bytes." The [channel](/azure/bot-service/bot-service-resources-faq-general?azure-bot-service-4.0#what-is-the-size-limit-of-a-file-transferred-using-channels&preserve-view=true) imposes these limits, not Copilot Studio.
 
