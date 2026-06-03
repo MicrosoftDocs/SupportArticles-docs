@@ -38,6 +38,8 @@ landingContent:
         links:
           - text: Fix a Microsoft Edge profile that won't load or shows an error
             url: security/edge-profile-wont-load-locked.md
+          - text: Fix Microsoft Edge not saving cookies or sign-in sessions across launches
+            url: security/cookies-sessions-not-persisting.md
           - text: Saved site icons change unexpectedly on the new tab page
             url: security/site-icons-change-new-tab-page.md
           - text: Troubleshoot common sign-in problems
