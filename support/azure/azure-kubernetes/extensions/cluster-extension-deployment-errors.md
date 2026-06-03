@@ -35,9 +35,9 @@ This article explains how to troubleshoot errors that occur when you deploy clus
 
 #### What’s changing 
 
-• Monitoring add-ons are now implemented and managed as AKS cluster extensions.
+- Monitoring add-ons are now implemented and managed as AKS cluster extensions.
 
-• Each monitoring service is represented by its own extension.
+- Each monitoring service is represented by its own extension.
 
 ### Check the Monitoring solution migration
 
@@ -88,7 +88,7 @@ If you try to update an extension directly, you might receive an error message t
 
 This behavior is expected. Customers should enable, disable, or configure monitoring by using the AKS monitoring add-on experience (Azure portal, CLI, or ARM) instead of trying to modify the extension directly.
 
-### Problem 3: Resource locks prevent disablement of monitoring addons
+### Problem 3: Resource locks prevent monitoring addons disable operation
 
 #### Error
 
@@ -132,17 +132,14 @@ The monitoring addons disable operation requires write/delete permissions on the
 
 ```azurecli
 # Check locks at cluster level
-
 az lock list --resource-group <resource-group> \
   --resource-name <cluster-name> \
   --resource-type Microsoft.ContainerService/managedClusters
 
 # Check locks at resource group level
-
 az lock list --resource-group <resource-group>
 
 # Check locks at subscription level
-
 az lock list
 ```
 
@@ -160,24 +157,23 @@ az lock list
 
 ```azurecli
 # Delete a lock (you need the lock name from Step 1)
-
 az lock delete --name <lock-name> --resource-group <resource-group>
 
 # For cluster-level lock
-
 az lock delete --name <lock-name> \
   --resource-group <resource-group> \
   --resource-name <cluster-name> \
   --resource-type Microsoft.ContainerService/managedClusters
 ```
 
-#### Step 3: Retry monitoring addons disable operation
+#### Step 3: Retry the failing operation
 
 After you remove the lock, retry the monitoring addons disable operation:
 
 **Using Azure CLI:**
 
 ```azurecli
+# Disable Azure Monitor metrics
 az aks update --resource-group <resource-group> --name <cluster-name> \
   --disable-azure-monitor-metrics
 ```
@@ -187,28 +183,23 @@ az aks update --resource-group <resource-group> --name <cluster-name> \
 If protection for the lock was intentionally applied for, reapply protection after monitoring addons disable operation finishes:
 
 ```azurecli
-
 az lock create --name <lock-name> \
   --resource-group <resource-group> \
   --resource-name <cluster-name> \
   --resource-type Microsoft.ContainerService/managedClusters \
   --lock-type CanNotDelete
-
 ```
 
-### Problem 4: Azure policy blocks extension creation or update
+### Problem 4: Azure policy blocks monitoring addons enable operation
 
 #### Error
 
-When you deploy or manage Azure Monitor services (Container Insights, Managed Prometheus, and Application Insights) on AKS clusters, the operation fails and returns an error message that resembles the following example:
+When you enable or deploy Azure Monitor services (Container Insights, Managed Prometheus, and Application Insights) on AKS clusters, the operation fails and returns an error message that resembles the following example:
 
 ```
 Create or update of core cluster extension aks-managed-azure-monitor-metrics of type microsoft.azuremonitor.containers.metrics failed.
-
 Please refer https://aka.ms/akscoreextensions-tsg for additional details.
-
 Resource 'aks-managed-azure-monitor-metrics' was disallowed by policy.
-
 Policy identifiers: '[{"policyAssignment":{"name":"Restrict Extensions","id":"/subscriptions/<subscription-id>/providers/Microsoft.Authorization/policyAssignments/<assignment-id>"},"policyDefinition":{"name":"Restrict Extensions","id":"/subscriptions/<subscription-id>/providers/Microsoft.Authorization/policyDefinitions/<definition-id>","version":"1.0.0"}}]'
 ```
 
@@ -259,15 +250,12 @@ Extract the policy information from the error message:
 
 ```azurecli
 # Get details of the policy assignment
-
 az policy assignment show --name <assignment-id> --scope /subscriptions/<subscription-id>
 
 # List all policy assignments at subscription level
-
 az policy assignment list --scope /subscriptions/<subscription-id>
 
 # Get the policy definition details
-
 az policy definition show --name <definition-id>
 ```
 
@@ -304,14 +292,12 @@ If the policy is required for compliance, but Azure Monitor extensions should be
 **Using Azure CLI:**
 
 ```azurecli
-
 az policy exemption create \
   --name "Allow-Azure-Monitor-Extensions" \
   --policy-assignment <assignment-id> \
   --scope "/subscriptions/<subscription-id>/resourceGroups/<resource-group>/providers/Microsoft.ContainerService/managedClusters/<cluster-name>" \
   --exemption-category Waiver \
   --description "Exemption to allow Azure Monitor core extensions for cluster monitoring"
-
 ```
 
 #### Step 4: Alternative – Modify the Policy (If Appropriate)
@@ -354,20 +340,18 @@ If you have permissions to modify the policy, update it to allow Azure Monitor e
 } 
 ```
 
-#### Step 5: Retry the extension operation
+#### Step 5: Retry the failing operation
 
-After you create an exemption or modifying the policy, retry the extension operation:
+After you create an exemption or modifying the policy, retry the failing monitoring addon enable operation:
 
 **Using Azure CLI:**
 
 ```azurecli
 # Enable Azure Monitor metrics
-
 az aks update --resource-group <resource-group> --name <cluster-name> \
   --enable-azure-monitor-metrics
 
 # Enable Container Insights
-
 az aks enable-addons --resource-group <resource-group> --name <cluster-name> \
   -a monitoring --workspace-resource-id <workspace-id>
 ```
