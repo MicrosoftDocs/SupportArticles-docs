@@ -16,12 +16,18 @@ items:
         href: manageability/update-install-rollback-failures.md
   - name: Security and Privacy
     items:
+      - name: Fix a Microsoft Edge profile that won't load or shows an error
+        href: security/edge-profile-wont-load-locked.md
       - name: Fix Microsoft Edge not saving cookies or sign-in sessions across launches
         href: security/cookies-sessions-not-persisting.md
       - name: Saved site icons change unexpectedly on the new tab page
         href: security/site-icons-change-new-tab-page.md
       - name: Troubleshoot common sign-in problems
         href: security/troubleshoot-sign-in-issues.md
+  - name: Stability and Performance
+    items:
+      - name: Microsoft Edge crashes or fails to launch
+        href: performance/edge-crashes-fails-to-launch.md
   - name: Web Platform and Development
     items:
       - name: Failure to deploy self-hosted extension via group policy

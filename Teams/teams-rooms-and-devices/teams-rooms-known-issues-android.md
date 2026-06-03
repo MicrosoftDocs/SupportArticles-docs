@@ -3,7 +3,7 @@ title: Known issues with Teams on Android devices
 description: Provides a list of known issues with Android devices that run Teams.
 ms.author: meerak
 author: Cloud-Writer
-ms.reviewer: sohailta, garyanselme, czawideh
+ms.reviewer: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -23,7 +23,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 01/27/2026
+ms.date: 05/29/2026
 ---
 # Known issues with Teams on Android devices
 
@@ -51,6 +51,7 @@ ms.date: 01/27/2026
 | --- | --- | --- |
 |Sign in loops or fails for Teams Phones.|You can't sign in or the sign-in continually loops when both the MFA and the Terms of Use (ToU) Conditional Access (CA) policies are used. |The combination of MFA CA and ToU CA isn't supported. You should exclude it from being used. <br><br> To avoid the sign-in error, ensure that only the MFA CA or only the Mobile Device Management (MDM) CA is used. When only the MFA CA is used, make sure that it's enabled in Device Registration Services (DRS). For more information, see [Conditional Access: Cloud apps, actions, and authentication context](/azure/active-directory/conditional-access/concept-conditional-access-cloud-apps#user-actions).|
 |Incoming calls generate a "Just me" chat automatically.|When you receive a call from a main call queue on a Teams Phone, a "Just Me" chat is generated automatically in the Teams desktop app. This chat only includes you and it remains in the chat notifications list until you delete it manually. A new chat is generated with each incoming call.<br/><br/>The problem occurs specifically when answering calls from a call queue on a Teams Phone device, but not when they're answered by using the Teams desktop app.|To work around the issue, turn on Conference mode for the call queue. Use the following steps:<br/><ol><li>In the Microsoft Teams admin center, select **Call queues**.</li><li>Select **Edit a call queue** > **Call answering**.</li><li>On the Call answering page, toggle the **Conference mode** button to turn it on.</li></ol>|
+|Unable to save app configuration settings in the Teams admin center.|In the Microsoft Teams admin center you're not able to access the **Allowed apps** feature to remove applications that're installed on Teams Phone devices. This feature has been rolled back temporarily.|No workaround is available at this time.|
 
 ## Limitations
 
