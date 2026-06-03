@@ -122,7 +122,7 @@ This issue typically indicates that the file system is corrupted. Any of the fol
 
 #### Symptoms
 
-- The volume fails to mount
+- The volume doesn't mount
 - The event log lists event IDs 134, 137, or 140
 - Error messages indicate that there are invalid metadata pages or checksum failures, or that the "device is busy."
 
@@ -143,9 +143,9 @@ This issue typically indicates that one of the following conditions occurred:
 
    1. On the system where the volume is mounted, open Registry Editor and locate the `HKLM\SYSTEM\CurrentControlSet\Control\FileSystem\` subkey.
 
-1. To disable metadata validation, set the `RefsDisableVolumeIntegrityValidation` value to **1**
+   1. To disable metadata validation, set the `RefsDisableVolumeIntegrityValidation` value to **1**
 
-1. Restart the system (in a clustered system, restart all nodes).
+   1. Restart the system (in a clustered system, restart all nodes).
 
 1. Try again to mount the volume.
 
@@ -153,47 +153,77 @@ This issue typically indicates that one of the following conditions occurred:
 
 1. If the issue persists, you might need registry or kernel hotfixes. Escalate as needed to review this option, and contact Microsoft Support for assistance.
 
-### 3. System hangs, high resource or memory usage, or freeze on volume attach
+### After the volume mounts, the system freezes or experiences high resource or memory usage
 
-**Symptoms**
+#### Symptoms
 
-The server becomes unresponsive after mount; CPU and memory usage are very high; backup jobs are slow or hung; Event IDs indicate large volume activity.
+After you mount the ReFS volume on a computer, you encounter the following symptoms:
 
-**Root causes**
+- The computer becomes unresponsive
+- The computer's CPU and memory usage are very high
+- Backup jobs are slow or hang
+- Events in the event log indicate high activity on the volume
 
-Known ReFS issues (especially on Windows Server 2022 and 2025), aggressive memory trimming by third-party backup software, memory pressure on large volumes, or excessive metafile consumption.
+#### Cause
 
-**Resolution steps**
+Causes for this issue include the following conditions:
 
-1. Install the latest cumulative updates for the OS.
-2. If you use third-party backup software, consult vendor documentation on recommended registry settings (for example, set `FileCacheLimitPercent` to an appropriate percentage).
-3. Consider disabling aggressive memory trimming via the registry as advised by support.
-4. If necessary, detach problematic volumes and test system stability.
+- Known ReFS issues (especially on Windows Server 2022 and 2025)
+- Aggressive memory trimming by third-party backup software
+- Memory pressure on large volumes
+- Excessive metafile consumption
 
-> [!TIP]
-> For tunable registry parameters that address memory pressure caused by large ReFS metadata streams, see [Fix heavy memory usage in ReFS](fix-heavy-memory-usage-refs.md).
+#### Resolution
 
-### 4. Incompatibility after OS upgrade or ReFS version mismatch
+1. Install the latest cumulative updates for Windows Server.
 
-**Symptoms**
+1. If you use third-party backup software, consult your vendor documentation for recommended registry settings (for example, set `FileCacheLimitPercent` to an appropriate percentage).
 
-A volume that worked on one OS version doesn't mount after an upgrade or downgrade; files are inaccessible; Event IDs 137 or 133 are logged.
+1. If the earlier steps don't help, try detaching the affected volume, and then test the stability of the system.
 
-**Root causes**
+1. Consider setting registry values that disable aggressive memory trimming. Consult Microsoft Support for assistance.
 
-The ReFS version isn't supported on the current OS, the volume wasn't upgraded or downgraded properly, or an in-place upgrade missed N-1 steps.
+   > [!TIP]  
+   > For tunable registry parameters that address memory pressure caused by large ReFS metadata streams, see [Fix heavy memory usage in ReFS](fix-heavy-memory-usage-refs.md).
 
-**Resolution steps**
+### After an operating system upgrade or downgrade, ReFS isn't compatible with the operating system
 
-1. Run the following command to confirm the volume version:
+Incompatibility after OS upgrade or ReFS version mismatch
 
-   ```console
-   fsutil fsinfo refsinfo <drive>
+#### Symptoms
+
+After you upgrade or downgrade Windows Server on a computer where the ReFS volume is mounted, you see the following symptoms:
+
+- The volume doesn't mount
+- Data on the volume is inaccessible
+- The event log lists event IDs 133 or 137
+
+#### Cause
+
+This issue typically indicates that the ReFS version isn't supported on the current operating system version. The volume or the operating system might not have been upgrade or downgraded correctly. Or an in-place upgrade might have missed a prerequisite step.
+
+#### Resolution
+
+> [!IMPORTANT]  
+> When you upgrade or downgrade the ReFS volume or the operating system it's mounted on, follow the Microsoft-recommended upgrade paths and don't skip major versions.
+
+1. On the system where the volume is mounted, open an administrative Command Prompt window.
+
+1. To check the version of the ReFS volume, run the following command:
+
+   ```cmd
+   fsutil fsinfo refsinfo <Drive>
    ```
 
-2. If needed, connect the volume to the original OS environment to perform an intermediate upgrade step, or move the disk to a supported system for ReFS version reconciliation.
-3. Follow the Microsoft recommended OS upgrade paths and don't skip major versions.
-4. Ensure all backup and storage software is compatible with the current OS and ReFS version.
+   > [!NOTE]  
+   > In this command, \<Drive> is the drive letter of the ReFS volume.
+
+1. If the ReFS volume's version doesn't support the operating system version, try one of the following actions:
+
+   - Connect the volume temporarily to a computer that runs the original operating system version, install all applicable updates, and then try again to upgrade.
+   - Connect the volume to a computer that runs a version of Windows Server that the ReFS version supports.
+
+1. After you upgrade, make sure that all backup and storage software is compatible with the current operating system version and the current ReFS version.
 
 ### 5. Backup, VSS, and snapshot failures
 
@@ -303,6 +333,7 @@ For effective troubleshooting and escalation, collect the following information:
 ## Additional resources
 
 - [refsutil](/windows-server/administration/windows-commands/refsutil)
+- [fsutil](/windows-server/administration/windows-commands/fsutil)
 - [Resilient File System (ReFS) overview](/windows-server/storage/refs/refs-overview)
 - [Fix heavy memory usage in ReFS](fix-heavy-memory-usage-refs.md)
 - [Local disk volume is inaccessible after ReFS.sys errors in Windows Server 2022 Standard](windows-server-2022-standard-local-refs-disk-inaccessible-bsod.md)
