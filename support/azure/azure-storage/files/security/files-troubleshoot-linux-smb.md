@@ -3,36 +3,30 @@ title: Troubleshoot Azure Files issues in Linux (SMB)
 description: Troubleshooting Azure Files issues in Linux. See general issues related to SMB Azure file shares when you connect from Linux clients and possible resolutions.
 ms.service: azure-file-storage
 ms.custom: sap:Security, linux-related-content
-ms.date: 05/12/2025
+ms.date: 06/02/2026
 ms.reviewer: kendownie, v-weizhu
 ---
 
 # Troubleshoot Azure Files issues in Linux (SMB)
 
-This article lists common issues that can occur when using SMB Azure file shares with Linux clients. It also provides possible causes and resolutions for these problems.
+**Applies to:** :heavy_check_mark: SMB Azure file shares
+
+This article lists common problems that can occur when using SMB Azure file shares with Linux clients. It also provides possible causes and resolutions for these problems.
 
 > [!IMPORTANT]
 > This article only applies to SMB shares. For details on NFS shares, see [Troubleshoot NFS Azure file shares](/azure/storage/files/files-troubleshoot-linux-nfs).
 
-## Applies to
-
-| File share type | SMB | NFS |
-|-|:-:|:-:|
-| Standard file shares (GPv2), LRS/ZRS | :::image type="icon" source="media/files-troubleshoot-smb-authentication/yes-icon.png" border="false"::: | :::image type="icon" source="media/files-troubleshoot-smb-authentication/no-icon.png" border="false"::: |
-| Standard file shares (GPv2), GRS/GZRS | :::image type="icon" source="media/files-troubleshoot-smb-authentication/yes-icon.png" border="false"::: | :::image type="icon" source="media/files-troubleshoot-smb-authentication/no-icon.png" border="false"::: |
-| Premium file shares (FileStorage), LRS/ZRS | :::image type="icon" source="media/files-troubleshoot-smb-authentication/yes-icon.png" border="false"::: | :::image type="icon" source="media/files-troubleshoot-smb-authentication/no-icon.png" border="false"::: |
-
 ## Run diagnostics
 
-Diagnostics tools can help ensure that clients have the correct prerequisites and collect debug information on field issues that can be hard to reproduce.
+Diagnostic tools can help ensure that clients have the correct prerequisites and collect debug information on field problems that can be hard to reproduce.
 
 ### Use AzFileDiagnostics
 
-You can use [AzFileDiagnostics](https://github.com/Azure-Samples/azure-files-samples/tree/master/AzFileDiagnostics/Linux) to automate symptom detection and ensure that the Linux client has the correct prerequisites. It helps set up your environment to get optimal performance.
+Use [AzFileDiagnostics](https://github.com/Azure-Samples/azure-files-samples/tree/master/AzFileDiagnostics/Linux) to automate symptom detection and ensure that the Linux client has the correct prerequisites. It helps set up your environment to get optimal performance.
 
 ### Use the Always-On Diagnostics tool
 
-You can also use the Always-On Diagnostics (AOD) tool to collect logs on SMB and NFSv4 Linux clients. The daemon runs in the background as a system service and can be configured to detect anomalies in various sources, such as dmesg logs, debug data, error metrics, and latency metrics. It can capture data from tcpdump, nfsstat, mountstsat, and other sources, along with the system's CPU and memory usage.
+You can also use the Always-On Diagnostics (AOD) tool to collect logs on SMB and NFSv4 Linux clients. The daemon runs in the background as a system service and can be configured to detect anomalies in various sources, such as dmesg logs, debug data, error metrics, and latency metrics. It can capture data from tcpdump, nfsstat, mountstats, and other sources, along with the system's CPU and memory usage.
 
 The Always-On Diagnostics tool is currently compatible with systems running SUSE Linux Enterprise Server 15 (SLES 15) and Red Hat Enterprise Linux 8 (RHEL 8). Follow the installation steps that correspond to your operating system:
 
@@ -47,19 +41,19 @@ In SLES 15, follow these instructions to install the Always-On Diagnostics tool:
     sudo zypper addrepo --check --refresh --name 'Microsoft' https://packages.microsoft.com/sles/15/prod microsoft
     ```
 
-2. Refresh the repositories.
+1. Refresh the repositories.
 
     ```bash
     sudo zypper refresh
     ```
 
-3. Check if the repo has been added and the `aod` package is available for installation.
+1. Check if the repo is added and the `aod` package is available for installation.
 
     ```bash
     zypper search aod
     ```
 
-4. Install the package.
+1. Install the package.
 
     ```bash
     sudo zypper install aod
@@ -69,26 +63,26 @@ In SLES 15, follow these instructions to install the Always-On Diagnostics tool:
 
 In RHEL 8, follow these instructions to install the Always-On Diagnostics tool:
 
-1. Download the repo config package.
+1. Download the repo configuration package.
 
     ```bash
     curl -ssl -O https://packages.microsoft.com/config/rhel/8/packages-microsoft-prod.rpm
     ```
 
-2. Install the repo config package.
+1. Install the repo configuration package.
 
     ```bash
     sudo rpm -i packages-microsoft-prod.rpm
     ```
 
-3. Delete the repo config package after installing and updating the package index files.
+1. Delete the repo configuration package after installing and updating the package index files.
 
     ```bash
     rm packages-microsoft-prod.rpm
     sudo dnf update
     ```
 
-4. Install the package.
+1. Install the package.
 
     ```bash
     sudo dnf install aod
@@ -96,7 +90,7 @@ In RHEL 8, follow these instructions to install the Always-On Diagnostics tool:
 
 ---
 
-## <a id="timestampslost"></a>Time stamps were lost when copying files
+## <a id="timestampslost"></a>Time stamps are lost when copying files
 
 On Linux/Unix platforms, the `cp -p` command fails if different users own file 1 and file 2.
 
@@ -122,12 +116,12 @@ When you try to list files in an Azure file share by using the `ls` command, the
 
 ### Solution
 
-Upgrade the Linux kernel to the following versions that have a fix for this problem:
+Upgrade the Linux kernel to a version that includes a fix for this problem. Use one of the following versions:
 
 - 4.4.87+
 - 4.9.48+
 - 4.12.11+
-- All versions that are greater than or equal to 4.13
+- Any version that's 4.13 or later
 
 ## Can't create symbolic links - ln: failed to create symbolic link 't': Operation not supported
 
@@ -145,9 +139,9 @@ ln: failed to create symbolic link 't': Operation not supported
 
 ### Solution
 
-The Linux SMB client doesn't support creating Windows-style symbolic links over the SMB 2 or 3 protocol. Currently, the Linux client supports another style of symbolic links called [Minshall+French symlinks](https://wiki.samba.org/index.php/UNIX_Extensions#Minshall.2BFrench_symlinks) for both create and follow operations. Customers who need symbolic links can use the "mfsymlinks" mount option. We recommend "mfsymlinks" because it's also the format that Macs use.
+The Linux SMB client doesn't support creating Windows-style symbolic links over the SMB 2 or 3 protocol. Currently, the Linux client supports another style of symbolic links called [Minshall+French symlinks](https://wiki.samba.org/index.php/UNIX_Extensions#Minshall.2BFrench_symlinks) for both create and follow operations. Customers who need symbolic links can use the `mfsymlinks` mount option. Use `mfsymlinks` because it's also the format that Macs use.
 
-To use symlinks, add the following to the end of your SMB mount command:
+To use symlinks, add the following option to the end of your SMB mount command:
 
 ```bash
 ,mfsymlinks
@@ -163,15 +157,15 @@ You can then create symlinks as suggested on the [wiki](https://wiki.samba.org/i
 
 ## Unable to access folders or files
 
-You can't access folders or files from the Azure file share while mounted on Linux. Commands like du and ls and/or third-party applications might fail with a "No such file or directory" error while accessing the share.
+You can't access folders or files from the Azure file share while mounted on Linux. Commands like `du` and `ls`, and third-party applications, might fail with a "No such file or directory" error while accessing the share.
 
 ### Cause 1
 
-The folders or files were uploaded from a system that encodes the characters at the end of the name to a different character. Files uploaded from a Macintosh computer might have a "0xF028" or "0xF029" character instead of 0x20 (space) or 0X2E (dot).
+The folders or files have names that include characters encoded differently by the system that uploads them. For example, files uploaded from a macOS client might have a `0xF028` or `0xF029` character instead of `0x20` (space) or `0x2E` (dot).
 
 ### Solution 1
 
-Use the mapchars option when mounting the share on Linux.
+Use the `mapchars` option when mounting the share on Linux.
 
 Instead of:
 
@@ -187,7 +181,7 @@ sudo mount -t cifs $smbPath $mntPath -o vers=3.0,username=$storageAccountName,pa
 
 ### Cause 2
 
-When a file is deleted while a handle remains open, the SMB server continues to maintain a zombie file until the final handle to the file is closed. Any attempts to perform operations on this zombie file might result in "No such file or directory" errors on Linux.
+When you delete a file but keep the handle open, the SMB server keeps a zombie file until it closes the final handle to the file. Any attempts to perform operations on this zombie file might result in "No such file or directory" errors on Linux.
 
 ### Solution 2
 
@@ -202,12 +196,12 @@ Status code returned 0xc000006d STATUS_LOGON_FAILURE
 cifs_setup_session: 2 callbacks suppressed
 CIFS VFS: \\contoso.file.core.windows.net Send error in SessSetup = -13
 ```
-You'll also see that the server FQDN now resolves to a different IP address than the one it's currently connected to. This issue might occur in any scenario where the server IP address can change, such as account migration. Another known scenario is storage account failover because the DNS mapping can change.
+You also see that the server FQDN now resolves to a different IP address than the one it's currently connected to. This problem might occur in any scenario where the server IP address can change, such as account migration. Another known scenario is storage account failover because the DNS mapping can change.
 
 
 ### Cause
 
-For capacity load balancing purposes, storage accounts are sometimes live-migrated from one storage cluster to another. Account migration triggers Azure Files traffic to be redirected from the source cluster to the destination cluster by updating the DNS mappings to point to the destination cluster. This blocks all traffic to the source cluster from that account. It's expected that the SMB client picks up the DNS updates and redirects further traffic to the destination cluster. However, due to a bug in the Linux SMB kernel client, this redirection doesn't take effect. As a result, the data traffic keeps going to the source cluster, which has stopped serving this account post migration.
+For capacity load balancing purposes, the system sometimes live-migrates storage accounts from one storage cluster to another. Account migration updates the DNS mappings to point to the destination cluster, which redirects Azure Files traffic from the source cluster to the destination cluster. This update blocks all traffic to the source cluster from that account. The SMB client is expected to pick up the DNS updates and redirect further traffic to the destination cluster. However, due to a bug in the Linux SMB kernel client, this redirection doesn't take effect. As a result, the data traffic keeps going to the source cluster, which stops serving this account after migration.
 
 ### Workaround
 
@@ -229,13 +223,13 @@ To better work around this issue, clear the kernel DNS resolver cache:
     132b6bbf I------     1 perm 1f030000     0     0 keyring   .dns_resolver: 1
     ```
 
-2. Clear the kernel DNS resolver cache by running the following command:
+1. Clear the kernel DNS resolver cache by running the following command:
 
     ```bash
     sudo keyctl clear $((16#$(grep '.dns_resolver' /proc/keys | cut -f1 -d\ ) ))
     ```
 
-3. Display the status of the kernel `dns_resolver` module again:
+1. Display the status of the kernel `dns_resolver` module again:
 
     ```bash
     grep '.dns_resolver' /proc/keys
@@ -247,21 +241,21 @@ To better work around this issue, clear the kernel DNS resolver cache:
     132b6bbf I------     1 perm 1f030000     0     0 keyring   .dns_resolver: empty
     ```
 
-4. Unmount and remount the share to mitigate the issue.
+1. Unmount and remount the share to mitigate the issue.
 
 > [!NOTE]
-> On some older Linux distros, the mitigation steps might not work. In such cases, rebooting the client OS will solve the issue temporarily. For a permanent fix, you can add a private endpoint to your storage account and connect to the file share using a private link.
+> On some older Linux distros, the mitigation steps might not work. In such cases, rebooting the client OS temporarily solves the issue. For a permanent fix, add a private endpoint to your storage account and connect to the file share using a private link.
 
 ### Solution
 
-For a permanent fix, upgrade your client OS to a Linux distro version with account migration support. Several fixes for the Linux SMB kernel client have been submitted to the mainline Linux kernel. The following distros have the fixes:
+For a permanent fix, upgrade your client OS to a Linux distro version with account migration support. Several fixes for the Linux SMB kernel client are submitted to the mainline Linux kernel. The following distros include these fixes:
 
 - Ubuntu: 20.04, 22.04, 24.04, and AKS 22.04 (the fixes are rolled out in kernel version 5.15.0-1068)
 - RHEL: 8.6+
 - SLES: 15SP2, 15SP3, 15SP4, and 15SP5
 - Azure Linux: 2.0 (the fixes are rolled out in kernel version 5.15.159.1) and 3.0
 
-Some distros have backported these fixes. You can check if the following fixes exist in the distro version you're using:
+Some distros backport these fixes. Check if the following fixes exist in the distro version you're using:
 
 - [cifs: On cifs_reconnect, resolve the hostname again](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=4e456b30f78c429b183db420e23b26cde7e03a78)
 
@@ -277,9 +271,9 @@ Some distros have backported these fixes. You can check if the following fixes e
 
 - [keys: Fix overwrite of key expiration on instantiation](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=9da27fb65a14c18efd4473e2e82b76b53ba60252)
 
-## Unable to mount SMB file share when FIPS is enabled
+## Can't mount SMB file share when FIPS is enabled
 
-When **Federal Information Processing Standard (FIPS)** is enabled in a Linux VM,  the SMB file share can't be mounted. The Linux dmesg logs on the client display errors such as:
+When you enable **Federal Information Processing Standard (FIPS)** in a Linux VM, you can't mount the SMB file share. The Linux dmesg logs on the client display errors such as:
 
 ```output
 kernel: CIFS: VFS: Could not allocate crypto hmac(md5)
@@ -309,29 +303,29 @@ To resolve this issue, enable Kerberos authentication for SMB file share. If FIP
 
 **Option 1:  Enable Kerberos authentication for SMB file share**
 
-To mount a SMB file share on the Linux VM where FIPS is enabled, use Kerberos/Azure AD authentication. For more information, see [Enable Active Directory authentication over SMB for Linux clients accessing Azure Files](/azure/storage/files/storage-files-identity-auth-linux-kerberos-enable).
+To mount a SMB file share on the Linux VM where FIPS is enabled, use identity-based authentication. For more information, see [Enable Active Directory authentication over SMB for Linux clients accessing Azure Files](/azure/storage/files/storage-files-identity-auth-linux-kerberos-enable).
 
 **<a name="option2"> </a> Option 2:  Disable FIPS to mount the Samba share**
 
 1. Change the sysctl value of `crypto.fips_enabled` to 0 in `/etc/sysctl.conf`.
 
-2. Modify the `GRUB_CMDLINE_LINUX_DEFAULT` in `/etc/default/grub` file and remove the parameter `fips=1`.
+1. Modify the `GRUB_CMDLINE_LINUX_DEFAULT` in `/etc/default/grub` file and remove the parameter `fips=1`.
 
-3. Rebuilt the grub2 config file with the following command:
+1. Rebuild the grub2 config file with the following command:
 
     ```bash
     sudo grub2-mkconfig -o /boot/grub2/grub.cfg
     ```
 
-4. Rebuild the initramfs image with the following command:
+1. Rebuild the initramfs image with the following command:
 
     ```bash
     sudo dracut -fv
     ```
 
-5. Reboot the VM.
+1. Reboot the VM.
 
-For more information, see to the following documents from Linux distributors:
+For more information, see the following documents from Linux distributors:
 
 -    [RedHat: Why would enabling FIPS mode in the kernel break CIFS mounts](https://access.redhat.com/solutions/256053)
 -    [SUSE: CIFS mount fails with error "mount error(2): No such file or directory"](https://www.suse.com/support/kb/doc/?id=000021162)
