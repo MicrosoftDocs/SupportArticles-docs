@@ -8,11 +8,13 @@ author: Batre-MSFT
 
 # HCW8078 - Migration endpoint can't be created
 
-When you run the Hybrid Configuration Wizard (HCW), the wizard fails with the error "HCW8078 - Migration Endpoint can't be created". This article helps you resolve this error so that you can complete the hybrid configuration between Exchange On-Premises and Exchange Online.
+When you run the Hybrid Configuration Wizard (HCW), the wizard fails with the error "HCW8078 - Migration Endpoint can't be created". This article helps you resolve this error so that you can complete the hybrid configuration between Exchange on-premises and Exchange Online.
 
 ## Symptoms
 
-HCW fails with the error message "HCW8078 - Migration Endpoint could not be created".
+HCW fails with the following error message:
+
+> 'HCW8078 - Migration Endpoint could not be created.'
 
 :::image type="content" source="media/migration-endpoint-could-not-be-created/hcw-error.png" alt-text="Screenshot of the Office 365 Hybrid Configuration Wizard with the error.":::
 
@@ -34,11 +36,11 @@ Connect to Exchange Online PowerShell and create the migration endpoint. You can
 
 :::image type="content" source="media/migration-endpoint-could-not-be-created/commandtocreateendpoint.png" alt-text="Screenshot of Exchange Online PowerShell command to create a new migration endpoint for an Exchange server.":::
 
-## Solution 2: Re-run HCW and skip the Migration Endpoint option
+## Solution 2: Rerun HCW and skip the Migration Endpoint option
 
-Use this solution if you're not doing any migrations from or to Exchange On-Premises to Exchange Online.
+Use this solution if you're not doing any migrations from or to Exchange on-premises to Exchange Online.
 
-1. Re-run HCW. At the option selection, select **Choose Exchange Hybrid Configuration** and select **Next**.
+1. Rerun HCW. At the option selection, select **Choose Exchange Hybrid Configuration** and select **Next**.
 
    :::image type="content" source="media/migration-endpoint-could-not-be-created/hybrid-options.png" alt-text="Screenshot of the Office 365 Hybrid Configuration Wizard configuration page showing options for Full and Modern Hybrid Topologies.":::
 
