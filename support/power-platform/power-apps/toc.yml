@@ -12,7 +12,7 @@
       href: ../power-automate/connections/troubleshoot-broken-connections.md?context=/troubleshoot/power-platform/power-apps/context/context
     - name: Troubleshoot Power Apps flow integration errors
       href: connections/best-practices-when-updating-a-flow.md
-    - name: Troubleshoot HTTP 0 responses and other blocked connector calls
+    - name: Troubleshoot HTTP 0 responses and other blocked calls
       href: connections/troubleshoot-http-0-responses.md
     - name: Troubleshoot Power Query
       href: connections/troubleshoot-power-query-issues.md

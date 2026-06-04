@@ -61,7 +61,7 @@ landingContent:
             url: ../power-automate/connections/troubleshoot-broken-connections.md?context=/troubleshoot/power-platform/power-apps/context/context      
           - text: Connection errors when running flows in Power Apps
             url: connections/best-practices-when-updating-a-flow.md
-          - text: Troubleshoot HTTP 0 responses and other blocked connector calls
+          - text: Troubleshoot HTTP 0 responses and other blocked calls
             url: connections/troubleshoot-http-0-responses.md
 
   # Card
