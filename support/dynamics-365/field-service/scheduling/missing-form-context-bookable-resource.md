@@ -1,7 +1,7 @@
 ---
 title: Missing Form Context for Internal Handlers on Customized Bookable Resource Forms
 description: Addresses issues with customized forms that are based on the default bookable resource form for Dynamics 365 Field Service.
-ms.reviewer: mkelleher, v-wendysmith
+ms.reviewer: mkelleher, v-wendysmith, v-shaywood
 ms.date: 06/02/2026
 ms.custom: sap:Schedule Board
 ---
