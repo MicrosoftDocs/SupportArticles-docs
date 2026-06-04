@@ -95,7 +95,7 @@ If failures affect users in only specific regions, also consider DNS response-si
 
 ### Work with your network administrator
 
-If the evidence points to the corporate network (for example, missing remote IP, failures only on the corporate network, or other users being affected), engage your network administrator. Share the following information:
+The evidence might point to the corporate network. For example, you might notice missing remote IP, or that failures occur only on the corporate network, or that other users are affected. In these cases, engage your network administrator. Share the following information:
 
 - The HAR file that you captured earlier
 - The exact URLs of the failing requests (host name and path)
@@ -107,7 +107,7 @@ Ask your network team to verify the following conditions:
 - DNS resolves Power Platform endpoints correctly.
 - Allowlist rules cover dynamic host names and subdomains. Power Platform requests can use long, environment-specific host names under service domains instead of a single fixed host. A rule that allows only a previously observed subdomain can fail at the next routing change, even though no app logic changed.
 - CORS headers returned by Power Platform are preserved end-to-end. Header rewrite or removal can cause browser-level failures (including HTTP status `0`), even if endpoint allow-listing is otherwise correct.
-- Inspection devices support larger DNS responses and EDNS behavior. This is especially important if failures are concentrated by region or office location.
+- Inspection devices support larger DNS responses and EDNS behavior. This condition is especially important if failures are concentrated by region or office location.
 - Secure all allowlist Power Platform host names in web gateways (Zscaler, Netskope, or similar), and protect them from SSL/TLS inspection. SSL inspection is a frequent root cause of HTTP `0` responses and unexpected `403` or `502` errors. The inspection device can break long-lived or chunked connections that the connector runtime relies on. It can also return its own block page if a policy match occurs.
 
 If you suspect browser local-network protections, review the relevant browser guidance. For Chromium, see [Private Network Access: introducing preflights](https://developer.chrome.com/blog/private-network-access-preflight).
@@ -120,7 +120,7 @@ If the issue persists after the network team verifies the configuration:
 - Use the Power Apps Live Monitor tool to verify whether the failure is consistent across requests or limited to specific connectors.
 - Review HAR entries for proxy-identifying headers such as `Via`.
 - Look for protocol downgrade patterns, such as `HTTP/1.1` responses where you expect modern `HTTP/2`. Connector traffic should use modern HTTP. Therefore, repeated downgrades often indicate intermediary inspection or proxy fallback, and they can affect reliability and performance.
-- If a browser local-network access prompt appears (or appears to have been denied), collect that detail for the network team. Some proxy designs that use non-routable or private address ranges can trigger local-network protections and block requests.
+- If a browser local-network access prompt appears, or if it appears that access was denied, collect that detail for the network team. Some proxy designs that use nonroutable or private address ranges can trigger local-network protections and block requests.
 - Note whether the failures correlate with specific times of day, specific users, specific geographic locations, or specific connectors. This information often helps your network team pinpoint the device or policy that's responsible.
 
 ## Solution
