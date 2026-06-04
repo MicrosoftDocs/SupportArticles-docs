@@ -688,7 +688,7 @@ items:    # Please do not delete this line, it is required for the yaml format
     - name: ReFS
       items:
         - name: "Troubleshooting guidance: ReFS volumes"
-          href: ./backup-and-storage/refs-troubleshooting.md
+          href: ./backup-and-storage/troubleshoot-refs-volumes.md
         - name: Fix heavy memory usage in ReFS
           href: ./backup-and-storage/fix-heavy-memory-usage-refs.md
         - name: Local disk volume is inaccessible after ReFS.sys errors in Windows Server 2022 Standard

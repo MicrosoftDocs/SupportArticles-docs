@@ -1,10 +1,7 @@
 ---
 title: Guidance for troubleshooting ReFS volumes
-description: Provides guidance to help IT administrators investigate and resolve issues with Resilient File System (ReFS) volumes on Windows Server.
+description: Discusses how to investigate and resolve Resilient File System (ReFS) issues on Windows Server.
 ms.date: 06/04/2026
-manager: dcscontentpm
-audience: itpro
-ms.topic: troubleshooting-general
 ms.reviewer: kaushika, v-appelgatet
 ms.custom:
 - sap:backup, recovery, disk, and storage\refs
@@ -17,7 +14,7 @@ appliesto:
 
 ## Summary
 
-This article helps IT administrators investigate and resolve issues with Resilient File System (ReFS) volumes on Windows Server. Use the troubleshooting checklist to document your environment and isolate the cause of the issue, then refer to the relevant section for guidance on common issues and their resolutions.
+This article helps you investigate and resolve issues that affect Resilient File System (ReFS) volumes on Windows Server. Use the troubleshooting checklist to document your environment and isolate the cause of the issue, then refer to the relevant section for guidance on common issues and their resolutions.
 
 ## Troubleshooting checklist
 
