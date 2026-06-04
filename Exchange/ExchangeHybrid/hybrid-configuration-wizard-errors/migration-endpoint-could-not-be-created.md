@@ -21,7 +21,7 @@ When you run the Hybrid Configuration Wizard (HCW), it fails with the following 
 
 > `HCW8078 - Migration Endpoint can't be created`. 
 
-:::image type="content" source="media/migration-endpoint-could-not-be-created/hcw-error.png" alt-text="Screenshot of the Office 365 Hybrid Configuration Wizard with the error.":::
+:::image type="content" source="media/migration-endpoint-could-not-be-created/hybrid-configuration-wizard-error.png" alt-text="Screenshot of the Office 365 Hybrid Configuration Wizard with the error.":::
 
 Also you might see the following error in the logs:
 
@@ -55,6 +55,6 @@ Use this solution if you're don't have a current migration from or to Exchange o
 
    :::image type="content" source="media/migration-endpoint-could-not-be-created/uncheck-migration-endpoint.png" alt-text="Screenshot of the Office 365 Hybrid Configuration wizard showing Migration Endpoint option unchecked":::
 
-1. Select the rest of the configuration as required and complete the wizard.
+1. Select the rest of the configuration as required and complete running the wizard.
 
-   :::image type="content" source="media/migration-endpoint-could-not-be-created/hcw-success.png" alt-text="Screenshot of the successful configuration of hybrid configuration wizard.":::
+   :::image type="content" source="media/migration-endpoint-could-not-be-created/hybrid-configuration-wizard-success.png" alt-text="Screenshot of the successful configuration of hybrid configuration wizard.":::
