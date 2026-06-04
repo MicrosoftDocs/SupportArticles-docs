@@ -207,7 +207,11 @@ After you upgrade or downgrade Windows Server on a computer on which the ReFS vo
 
 #### Cause
 
-This issue typically indicates that the ReFS version isn't supported on the current operating system version. The volume or the operating system might not have been upgraded or downgraded correctly. Or an in-place upgrade might have missed a prerequisite step.
+This issue typically indicates one of the following conditions:
+
+- The ReFS version isn't supported on the current operating system version.
+- The volume or the operating system wasn't upgraded or downgraded correctly.
+- An in-place upgrade missed a prerequisite step.
 
 #### Resolution
 
