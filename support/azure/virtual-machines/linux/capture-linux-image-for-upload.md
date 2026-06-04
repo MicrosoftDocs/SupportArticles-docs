@@ -2,7 +2,7 @@
 title: Capture Linux Images for Upload Preparation
 description: Offers the steps to capture a Linux image for upload preparation.
 ms.topic: how-to
-ms.custom: sap:Cannot create a VM, linux-related-content
+ms.custom: VM Performance
 ms.service: azure-virtual-machines
 ms.date: 05/20/2025
 ms.reviewer: srijangupta, scotro, maries, jarrettr, v-weizhu
@@ -10,6 +10,8 @@ ms.reviewer: srijangupta, scotro, maries, jarrettr, v-weizhu
 # How to capture a Linux image for upload preparation
 
 **Applies to:** :heavy_check_mark: Linux VMs
+
+## Summary
 
 This article provides step-by-step instructions for capturing a Linux image to prepare it for upload to Azure.
 

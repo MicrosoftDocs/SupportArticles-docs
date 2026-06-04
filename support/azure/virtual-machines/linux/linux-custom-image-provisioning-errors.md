@@ -1,7 +1,7 @@
 ---
 title: Custom Linux image provisioning errors
 description: Provides solutions to provisioning errors when you upload or capture a generalized virtual machine image as a specialized Linux VM image or vice versa.
-ms.custom: sap:Cannot create a VM, linux-related-content
+ms.custom: VM Extensions not operating correctly
 ms.service: azure-virtual-machines
 ms.date: 05/20/2025
 ms.reviewer: srijangupta, scotro, maries, jarrettr, v-weizhu
@@ -10,7 +10,7 @@ ms.reviewer: srijangupta, scotro, maries, jarrettr, v-weizhu
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
-## Overview
+## Summary
 
 When you upload or capture a generalized virtual machine (VM) image as a specialized VM image, a [provisioning timeout error](#provisioning-timeout-error-during-an-upload-process) will occur.
 

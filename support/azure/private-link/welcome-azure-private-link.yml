@@ -1,0 +1,28 @@
+### YamlMime:Landing
+
+title: Azure Private Link troubleshooting documentation
+summary: Welcome to Azure Private Link troubleshooting. These articles explain how to determine, diagnose, and fix various problems that you might encounter when you use Azure Private Link. In the navigation pane on the left, browse through the article list or use the search box to find problems and solutions.
+
+metadata:
+  title: Troubleshoot common problems with Azure Private Link
+  description: Documentation for troubleshooting common problems with Azure Private Link. # Required; article description that is displayed in search results. < 160 chars.
+  services: azure
+  ms.service: azure-private-link 
+  ms.topic: landing-page # Required
+  author: JarrettRenshaw  #Required; your GitHub user alias, with correct capitalization.
+  ms.author: jarrettr #Required; microsoft alias of author; optional team alias.
+  ms.date: 04/06/2026
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+# Card
+  - title: Azure Private Link
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot Azure Private Endpoint connectivity problems
+            url: troubleshoot-private-endpoint-connectivity.md
+          - text: Troubleshoot Azure Private Link Service connectivity problems
+            url: troubleshoot-private-link-connectivity.md

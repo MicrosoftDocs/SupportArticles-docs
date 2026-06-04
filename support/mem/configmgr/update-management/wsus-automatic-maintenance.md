@@ -3,7 +3,8 @@ title: Manual and automatic WSUS database maintenance
 description: Describes steps and scripts to perform the maintenance of the Windows Server Update Services (WSUS) database manually or automatically.
 author: danschuh
 ms.author: daschuh
-ms.date: 12/19/2025
+ms.reviewer: daschuh
+ms.date: 05/23/2026
 ms.custom: sap:Software Update Management (SUM)\WSUS Database Maintenance
 ---
 # Maintain the Windows Server Update Services (WSUS) database manually or automatically
@@ -795,9 +796,27 @@ function WSUSCleanUpWizard {
 function CleanUpDeclined {
 
     Write-log -Message "--> Begin cleanup declined" -severity 1 -component "Cleanup Declined"
-    [reflection.assembly]::LoadWithPartialName("Microsoft.UpdateServices.Administration")
-    $wsus = [Microsoft.UpdateServices.Administration.AdminProxy]::GetUpdateServer();
-    $wsus.GetUpdates() | Where-Object { $_.IsDeclined -eq $true } | ForEach-Object { $wsus.DeleteUpdate($_.Id.UpdateId.ToString()); Write-Host $_.Title removed } 
+    
+    # Load WSUS administration assembly
+    [void][Reflection.Assembly]::LoadWithPartialName("Microsoft.UpdateServices.Administration")
+    
+    # Connect to WSUS
+    $wsus = [Microsoft.UpdateServices.Administration.AdminProxy]::GetUpdateServer()
+    
+    # Attempt to delete all declined updates, but skip those that are referenced
+    $wsus.GetUpdates() |
+        Where-Object { $_.IsDeclined -eq $true } |
+        ForEach-Object {
+            try {
+                # Use the UpdateId GUID directly (no ToString() needed)
+                $wsus.DeleteUpdate($_.Id.UpdateId)
+                Write-log -Message "Removed: $($_.Title)" -severity 1 -component "Cleanup Declined"
+            }
+            catch {
+                Write-log -Message "Skipped: $($_.Title)" -severity 2 -component "Cleanup Declined"
+            }
+        }
+    
     Write-log -Message "--> End cleanup declined" -severity 1 -component "Cleanup Declined"
 }
 

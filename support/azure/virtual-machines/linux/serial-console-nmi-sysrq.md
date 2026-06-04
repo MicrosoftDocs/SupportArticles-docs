@@ -6,7 +6,9 @@ documentationcenter: ''
 author: JarrettRenshaw
 manager: dcscontentpm
 tags: azure-resource-manager
-ms.custom: sap:Cannot connect to my VM, linux-related-content
+ms.custom: 
+ - Kernel Upgrades
+ - Package Management issue (Yum, Zypper, RPM, DPKG, APT)
 ms.service: azure-virtual-machines
 ms.collection: linux
 ms.tgt_pltfrm: vm-linux
@@ -19,6 +21,10 @@ ms.author: jarrettr
 # Use the Azure Serial Console for SysRq and NMI calls
 
 **Applies to:** :heavy_check_mark: Linux Virtual Machines(VMs)
+
+## Summary
+
+This article describes how to use the Azure Serial Console to send System Request (SysRq) and Non-Maskable Interrupt (NMI) calls to a Linux virtual machine (VM) in Azure. SysRq and NMI calls are often used for troubleshooting and debugging purposes, especially when a VM is unresponsive or experiencing critical issues. The Serial Console provides a way to send these commands directly to the VM's kernel, allowing you to perform actions such as safely rebooting the system, killing processes, or generating crash dumps for analysis.
 
 ## System Request (SysRq)
 

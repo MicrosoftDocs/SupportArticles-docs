@@ -9,14 +9,14 @@ ms.author: meerak
 ms.custom: 
   - Reliability
   - CSSTroubleshoot
-ms.reviewer: lauraho, ammert
+  - CI 10891
+ms.reviewer: lauraho, ammert, akeeler, v-lisalozano
 search.appverid: 
   - MET150
 appliesto: 
   - Excel for Microsoft 365
-  - Excel 2016
-  - Excel 2013
-ms.date: 05/26/2025
+  - Microsoft Excel 2016
+ms.date: 03/31/2026
 ---
 
 # Large Address Aware capability change for Excel

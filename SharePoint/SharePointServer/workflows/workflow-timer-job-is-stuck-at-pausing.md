@@ -84,7 +84,7 @@ Check the ULS logs every five minutes to see whether the issue was reproduced, a
 2. Find the last workflow that was being processed. Mostly likely, this is the workflow instance that caused the issue. Here is an example:
 
    ```
-   SharePoint Foundation Legacy Workflow Infrastructure ahk8y Verbose In RunWorkflowElev(), begin processing events for instance: bb7e3f4f-74ac-43f7-a31e-faa7e900843e      8329f59d-0342-20c3-fa1a-56f9161ded9f
+   SharePoint Foundation Legacy Workflow Infrastructure ahk8y Verbose In RunWorkflowElev(), begin processing events for instance: bb7e3f4f-74ac-43f7-a31e-faa7e900843e      aaaa0000-bb11-2222-33cc-444444dddddd
    ```       
 3. Clear all filters, and then apply the following filter:
 
@@ -93,12 +93,12 @@ Check the ULS logs every five minutes to see whether the issue was reproduced, a
    [EventID  Contains b6p4  Or  
    EventID  Contains tzkv  ]  
 
-   In the example, the Correlation ID is 8329f59d-0342-20c3-fa1a-56f9161ded9f.     
+   In the example, the Correlation ID is aaaa0000-bb11-2222-33cc-444444dddddd.     
 4. Locate the last occurrences of events **b6p4** and **tzkv**, and then find the ListId, SiteId, ItemId and WebId. Here is an example:
 
    ```     
-   05/25/2017 12:28:43.27 OWSTIMER.EXE (0x9318) 0x6DF0 SharePoint Foundation Database b6p4 VerboseEx SqlCommand: ; EXEC proc_getworkflowassociations '8dd5c889-47a6-4798-93ef-8652609278f4', 'j3952987-5ca6-4eae-8530-13e83acf1bb0', 'e22969ea-f883-4e99-8cbd-4b799a884d2d', 'm82r99b0-ff01-4448-9907-e2cbbbca0586', @contenttypeid, @RequestGuid OUTPUT 8329f59d-0342-20c3-fa1a-56f9161ded9f   
-   05/25/2017 12:28:43.27 OWSTIMER.EXE (0x9318) 0x6DF0 SharePoint Foundation Database tzkv Verbose SqlCommand: 'proc_GetWorkflowAssociations' CommandType: StoredProcedure CommandTimeout: 0 Parameter: '@RETURN_VALUE' Type: Int Size: 0 Direction: ReturnValue Value: Parameter: '@SiteId' Type: UniqueIdentifier Size: 0 Direction: Input Value: '8dd5c889-47a6-4798-93ef-8652609278f4' Parameter: '@WebId' Type: UniqueIdentifier Size: 0 Direction: Input Value: 'j3952987-5ca6-4eae-8530-13e83acf1bb0' Parameter: '@Id' Type: UniqueIdentifier Size: 0 Direction: Input Value: 'e22969ea-f883-4e99-8cbd-4b799a884d2d' Parameter: '@ListId' Type: UniqueIdentifier Size: 0 Direction: Input Value: 'm82r99b0-ff01-4448-9907-e2cbbbca0586' Parameter: '@ContentTypeId' Type: VarBinary Size: 512 Direction: Input Value: Parameter: '@RequestGuid' Type: UniqueIdentifier Size: 0 Direction: Input Value: '8329f59d-0342-20c3-fa1a-56f9161ded9f' 8329f59d-0342-20c3-fa1a-56f9161ded9f
+   05/25/2017 12:28:43.27 OWSTIMER.EXE (0x9318) 0x6DF0 SharePoint Foundation Database b6p4 VerboseEx SqlCommand: ; EXEC proc_getworkflowassociations '8dd5c889-47a6-4798-93ef-8652609278f4', 'j3952987-5ca6-4eae-8530-13e83acf1bb0', 'e22969ea-f883-4e99-8cbd-4b799a884d2d', 'm82r99b0-ff01-4448-9907-e2cbbbca0586', @contenttypeid, @RequestGuid OUTPUT aaaa0000-bb11-2222-33cc-444444dddddd   
+   05/25/2017 12:28:43.27 OWSTIMER.EXE (0x9318) 0x6DF0 SharePoint Foundation Database tzkv Verbose SqlCommand: 'proc_GetWorkflowAssociations' CommandType: StoredProcedure CommandTimeout: 0 Parameter: '@RETURN_VALUE' Type: Int Size: 0 Direction: ReturnValue Value: Parameter: '@SiteId' Type: UniqueIdentifier Size: 0 Direction: Input Value: '8dd5c889-47a6-4798-93ef-8652609278f4' Parameter: '@WebId' Type: UniqueIdentifier Size: 0 Direction: Input Value: 'j3952987-5ca6-4eae-8530-13e83acf1bb0' Parameter: '@Id' Type: UniqueIdentifier Size: 0 Direction: Input Value: 'e22969ea-f883-4e99-8cbd-4b799a884d2d' Parameter: '@ListId' Type: UniqueIdentifier Size: 0 Direction: Input Value: 'm82r99b0-ff01-4448-9907-e2cbbbca0586' Parameter: '@ContentTypeId' Type: VarBinary Size: 512 Direction: Input Value: Parameter: '@RequestGuid' Type: UniqueIdentifier Size: 0 Direction: Input Value: 'aaaa0000-bb11-2222-33cc-444444dddddd' aaaa0000-bb11-2222-33cc-444444dddddd
    ```     
 
    In the example, the ListId is *m82r99b0-ff01-4448-9907-e2cbbbca0586*, the SiteId is *8dd5c889-47a6-4798-93ef-8652609278f4*, the ItemId is *e22969ea-f883-4e99-8cbd-4b799a884d2d*, and the WebId is *j3952987-5ca6-4eae-8530-13e83acf1bb0*.       

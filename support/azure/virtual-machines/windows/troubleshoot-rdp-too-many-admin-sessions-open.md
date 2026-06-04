@@ -19,6 +19,8 @@ ms.custom: sap:Cannot connect to my VM
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
+## Summary
+
 This article helps you troubleshoot the "too many admin sessions open" error when you try to connect to an Azure Windows virtual machine (VM).
 
 ## Symptoms

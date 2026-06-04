@@ -5,11 +5,13 @@ editor: v-jsitser
 ms.service: azure-virtual-machines
 ms.date: 09/15/2025
 ms.reviewer: srijangupta, v-leedennis
-ms.custom: sap:Cannot create a VM
+ms.custom: VM Performance
 ---
 # Cloud–init-enabled VM takes a long time to start up
 
 **Applies to:** :heavy_check_mark: Linux VMs
+
+## Summary
 
 This article describes how to troubleshoot an unexpected startup delay on an [Azure Virtual Machine (VM) that uses the cloud-init feature](/azure/virtual-machines/linux/using-cloud-init). This delay can cause a cloud-init-enabled Azure VM deployment to require more than two minutes (120 seconds) to start up.
 

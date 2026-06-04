@@ -4,19 +4,20 @@ description: This article provides two resolutions for the problem where Object 
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
-ms.reviewer: simonxjx, v-kccross
+ms.reviewer: simonxjx, v-kccross, akeeler, v-lisalozano 
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
   - Extensibility\Macros
   - CSSTroubleshoot
+  - CI 10982
 appliesto:
-- Excel 2013
-- Excel 2016
-- Excel 2019
-- Excel 2021
+  - Excel for Microsoft 365 
+  - Microsoft Excel 2024 
+  - Microsoft Excel 2021 
+  - Microsoft Excel 2016 
 search.appverid: MET150
-ms.date: 05/26/2025
+ms.date: 04/01/2026
 ---
 
 # Object Model calls may fail from WorkbookOpen event when exiting Protected View

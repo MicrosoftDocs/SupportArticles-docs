@@ -1,7 +1,7 @@
 ---
 title: Can't update enrollment when enrolling devices in the Intune Company Portal
 description: Fixes an issue in which you can't update enrollment when you enroll devices in Intune.
-ms.date: 02/11/2025
+ms.date: 03/30/2026
 search.appverid: MET150
 ms.custom: sap:Enroll Devices - Android\Advisory
 ms.reviewer: kaushika

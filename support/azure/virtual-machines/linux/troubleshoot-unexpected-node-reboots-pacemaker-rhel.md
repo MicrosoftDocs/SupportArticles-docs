@@ -15,6 +15,8 @@ ms.custom: sap:Issue with Pacemaker cluster, and fencing
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
+## Summary
+
 This article provides guidance for troubleshooting, analysis, and resolution of most common scenarios for unexpected node restarts in RedHat Enterprise Linux (RHEL) Pacemaker Clusters.
 
 ## Prerequisites

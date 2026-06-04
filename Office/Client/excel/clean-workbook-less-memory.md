@@ -8,13 +8,17 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: meerak
+ms.reviewer: akeeler, v-lisalozano
 ms.custom: 
   - Reliability
   - CSSTroubleshoot
+  - CI 10745
 appliesto: 
-  - Excel 2016
-  - Excel 2013
-ms.date: 05/26/2025
+  - Excel for Microsoft 365
+  - Microsoft Excel 2024
+  - Microsoft Excel 2021
+  - Microsoft Excel 2016
+ms.date: 03/23/2026
 ---
 
 # How to clean up an Excel workbook so that it uses less memory

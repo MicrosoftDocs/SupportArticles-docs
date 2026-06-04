@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot MDT
 description: Troubleshooting reference for the Microsoft Deployment Toolkit (MDT)
-ms.date: 02/11/2025
+ms.date: 03/30/2025
 ms.reviewer: kaushika
 ms.custom: sap:Operating Systems Deployment (OSD)\MDT Integration or User Driven Installation (UDI)
 ---

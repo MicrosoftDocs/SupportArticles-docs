@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot the VMExtensionProvisioningTimeout error code
-description: Learn how to troubleshoot the VMExtensionProvisioningTimeout error when you try to create and deploy an Azure Kubernetes Service (AKS) cluster.
+description: Fix the VMExtensionProvisioningTimeout error in AKS. Learn to identify the cause and resolve the issue quickly.
 ms.date: 09/20/2024
 editor: v-jsitser
 ms.reviewer: rissing, chiragpa, erbookbi, mariochaves, v-leedennis, v-weizhu
@@ -8,7 +8,9 @@ ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the VMExtensionProvisioningTimeout error code so that I can successfully create and deploy an Azure Kubernetes Service (AKS) cluster.
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
-# Troubleshoot the VMExtensionProvisioningTimeout error code
+# Troubleshoot the VMExtensionProvisioningTimeout error code in AKS
+
+## Summary
 
 This article discusses how to identify and resolve the `VMExtensionProvisioningTimeout` error that occurs when you try to create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster.
 
@@ -20,19 +22,11 @@ This article discusses how to identify and resolve the `VMExtensionProvisioningT
 
 When you try to create an AKS cluster by using the Azure CLI, you receive the "VMExtensionProvisioningTimeout" error with text like the following example:
 
-```output
-Failed to reconcile agent pool agentpool0: err: VMSSAgentPoolReconciler retry failed:
-Category: InternalError;
-SubCode: VMExtensionProvisioningTimeout;
-Dependency: Microsoft.Compute/VirtualMachineScaleSet;
-OrginalError:
-Code="VMExtensionProvisioningTimeout"
-Message="Provisioning of VM extension vmssCSE has timed out. Extension provisioning has taken too long to complete. The extension last reported \"Plugin enabled\".\r\n\r\nMore information on troubleshooting is available at <https://aka.ms/VMExtensionCSELinuxTroubleshoot>";
-AKSTeam: NodeProvisioning,
-Retriable: true
-```
-
-You also can [view the error details in the Azure portal](../create-upgrade-delete/troubleshoot-aks-cluster-creation-issues.md#view-error-details-in-the-azure-portal).
+> Code: "VMExtensionProvisioningTimeout"
+>
+> Message: "Provisioning of VM extension `[extension name]` has timed out. Extension provisioning has taken too long to complete. The extension did not report a message. More information on troubleshooting is available at `https://aka.ms/vmextensionlinuxtroubleshoot`". 
+>
+> You also can [view the error details in the Azure portal](../create-upgrade-delete/troubleshoot-aks-cluster-creation-issues.md#view-error-details-in-the-azure-portal).
 
 ## Cause
 

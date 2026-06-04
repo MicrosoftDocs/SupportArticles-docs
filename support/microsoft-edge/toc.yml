@@ -2,16 +2,50 @@ items:
   - name: Welcome
     href: welcome-edge.yml
 
+  - name: Experiences and Services
+    items:
+      - name: Copilot Chat loading problems in the Edge sidebar
+        href: experience/copilot-chat-loading-issues.md
+      - name: Copilot icon doesn't appear in the Edge sidebar
+        href: experience/copilot-icon-missing-sidebar.md
   - name: Manage and Deploy
     items:
       - name: Can't enable extensions for InPrivate browsing by using Group Policy
         href: manageability/enable-extension-inprivate-policy.md
       - name: Install, update, or roll back failures for Edge and Edge WebView2
         href: manageability/update-install-rollback-failures.md
+  - name: Security and Privacy
+    items:
+      - name: Fix a Microsoft Edge profile that won't load or shows an error
+        href: security/edge-profile-wont-load-locked.md
+      - name: Fix Microsoft Edge not saving cookies or sign-in sessions across launches
+        href: security/cookies-sessions-not-persisting.md
+      - name: Saved site icons change unexpectedly on the new tab page
+        href: security/site-icons-change-new-tab-page.md
+      - name: Troubleshoot common sign-in problems
+        href: security/troubleshoot-sign-in-issues.md
+  - name: Stability and Performance
+    items:
+      - name: Fix high CPU or memory usage in Microsoft Edge
+        href: performance/edge-high-cpu-memory.md
+      - name: Microsoft Edge crashes or fails to launch
+        href: performance/edge-crashes-fails-to-launch.md
   - name: Web Platform and Development
     items:
       - name: Failure to deploy self-hosted extension via group policy
         href: development/self-host-extension-deploy.md
+      - name: Geolocation doesn't work in Microsoft Edge but works in other browsers
+        href: development/edge-geolocation-not-working.md
+      - name: IE mode blocks add-on installation because of unverified publisher
+        href: development/ie-mode-blocks-addon.md
+      - name: Self-hosted extension doesn't update automatically
+        href: development/self-host-extension-update.md
+      - name: Troubleshoot download failures
+        href: development/download-failures.md
+      - name: Troubleshoot video playback problems in Microsoft Edge
+        href: development/video-playback-issues.md
       - name: Unexpected SmartScreen block or warning on website
         href: development/unexpected-block-warning.md
+      - name: WebView2 is unexpectedly installed on Windows Server operating systems
+        href: development/webview2-unexpected-install-windows-server.md
 

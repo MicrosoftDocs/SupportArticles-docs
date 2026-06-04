@@ -1,0 +1,40 @@
+### YamlMime:Landing
+
+title: Azure Load Balancer troubleshooting documentation
+summary: Welcome to Azure Load Balancer troubleshooting. These articles explain how to determine, diagnose, and fix various issues that you might encounter when you use Azure Load Balancer. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+
+metadata:
+  title: Troubleshoot common issues with Azure Load Balancer
+  description: Documentation for troubleshooting common issues with Azure Load Balancer. # Required; article description that is displayed in search results. < 160 chars.
+  services: azure
+  ms.service: azure-load-balancer 
+  ms.topic: landing-page # Required
+  author: JarrettRenshaw  #Required; your GitHub user alias, with correct capitalization.
+  ms.author: jarrettr #Required; microsoft alias of author; optional team alias.
+  ms.date: 04/06/2026
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+# Card
+  - title: Azure Load Balancer
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot Azure Load Balancer common problems
+            url: troubleshoot-common-problems/load-balancer-troubleshoot.md
+          - text: Troubleshoot no outbound connectivity from Standard internal load balancers
+            url: troubleshoot-common-problems/no-outbound-connectivity-standard-internal-load-balancers.md
+          - text: Troubleshoot no inbound connectivity to Standard external load balancers
+            url: troubleshoot-common-problems/no-inbound-connectivity-standard-external-load-balancers.md
+          - text: Troubleshoot common deployment errors
+            url: load-balancer-common-deployment-errors.md
+          - text: Troubleshoot Azure Load Balancer
+            url: load-balancer-troubleshoot.md
+          - text: Troubleshoot load balancer health event logs
+            url: load-balancer-troubleshoot-health-event-logs.md
+          - text: Troubleshoot Azure Load Balancer backend traffic responses
+            url: troubleshoot-backend-traffic-responses/load-balancer-troubleshoot-backend-traffic.md
+          - text: Troubleshoot virtual machines not responding to traffic on the configured data port
+            url: troubleshoot-backend-traffic-responses/vms-no-response-traffic.md

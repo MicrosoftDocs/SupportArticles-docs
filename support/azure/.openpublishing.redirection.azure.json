@@ -1346,11 +1346,6 @@
         "redirect_document_id": true
       },
       {
-        "source_path": "virtual-machines/how-to-use-perfInsights-linux.md",
-        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/how-to-use-perfInsights-linux",
-        "redirect_document_id": true
-      },
-      {
         "source_path": "virtual-machines/how-to-videos-windows-virtual-desktop.md",
         "redirect_url": "/troubleshoot/azure/virtual-machines/windows/how-to-videos-windows-virtual-desktop",
         "redirect_document_id": true
@@ -1641,18 +1636,8 @@
         "redirect_document_id": true
       },
       {
-        "source_path": "virtual-machines/perfinsights-and-scale-set-vm-instances.md",
-        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/perfinsights-and-scale-set-vm-instances",
-        "redirect_document_id": true
-      },
-      {
         "source_path": "virtual-machines/performance-diagnostics.md",
         "redirect_url": "/troubleshoot/azure/virtual-machines/windows/performance-diagnostics",
-        "redirect_document_id": true
-      },
-      {
-        "source_path": "virtual-machines/performance-diagnostics-vm-extension.md",
-        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/performance-diagnostics-vm-extension",
         "redirect_document_id": true
       },
       {
@@ -3762,7 +3747,7 @@
       },
       {
         "source_path": "azure-monitor/log-analytics/linux-agent-missing-heartbeats.md",
-        "redirect_url": "/troubleshoot/azure/azure-monitor/log-analytics/linux-agents/linux-agent-missing-heartbeats",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/azure-monitor-agent/linux-agents/linux-agent-missing-heartbeats",
         "redirect_document_id": true
       },
       {
@@ -6501,7 +6486,7 @@
       },
       {
         "source_path": "devops/antivirus-scanning-exclusions.md",
-        "redirect_url": "/azure/devops/pipelines/security/misc"
+        "redirect_url": "/azure/devops/pipelines/troubleshooting/anti-virus-exclusion"
       },
       {
         "source_path": "devops/overview-of-azure-resource-manager-service-connections.md",
@@ -6656,6 +6641,50 @@
         {
         "source_path": "azure-kubernetes/extensions/cannot-pull-image-from-acr-to-aks-cluster.md",
         "redirect_url": "/troubleshoot/azure/azure-kubernetes/connectivity/cannot-pull-image-from-acr-to-aks-cluster"
+      },
+        {
+        "source_path": "azure-kubernetes/create-upgrade-delete/error-code-vmextensionprovisioningtimeout.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/error-codes/vmextensionerror-provisioningtimeout"
+            },
+        {
+        "source_path": "azure-monitor/log-analytics/linux-agents/linux-agent-missing-heartbeats.md",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/azure-monitor-agent/linux-agents/linux-agent-missing-heartbeats"
+      },
+        {
+        "source_path": "azure-monitor/log-analytics/linux-agents/linux-agent-performance-counter-missing.md",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/azure-monitor-agent/linux-agents/linux-agent-performance-counter-missing"
+      },
+        {
+        "source_path": "azure-monitor/log-analytics/windows-agents/mma-troubleshoot-basics.md",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/azure-monitor-agent/windows-agents/mma-troubleshoot-basics"
+      },
+        {
+        "source_path": "azure-monitor/log-analytics/windows-agents/ssl-connectivity-mma-windows-powershell.md",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/azure-monitor-agent/windows-agents/ssl-connectivity-mma-windows-powershell"
+      },
+        {
+        "source_path": "azure-monitor/log-analytics/windows-agents/windows-could-not-start-mma.md",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/azure-monitor-agent/windows-agents/windows-could-not-start-mma"
+      },
+        {
+        "source_path": "azure-monitor/log-analytics/windows-agents/resolve-windows-agent-installation-issues.md",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/azure-monitor-agent/windows-agents/resolve-windows-agent-installation-issues"
+      },
+        {
+        "source_path": "azure-monitor/log-analytics/windows-agents/erased-proxy-settings-microsoft-monitoring-agent.md",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/azure-monitor-agent/windows-agents/erased-proxy-settings-microsoft-monitoring-agent"
+      },
+        {
+        "source_path": "virtual-network/connectivity/sdp3fdcb6045-5616-45b4-bb68-0bd11081c184-vnet.md",
+        "redirect_url": "/troubleshoot/azure/virtual-network/welcome-virtual-network"
+      },
+        {
+        "source_path": "load-balancer/load-balancer-troubleshoot-backend-traffic.md ",
+        "redirect_url": "/troubleshoot/azure/load-balancer/troubleshoot-backend-traffic-responses/load-balancer-troubleshoot-backend-traffic.md"
+            },
+        {
+        "source_path": "load-balancer/load-balancer-troubleshoot.md ",
+        "redirect_url": "/troubleshoot/azure/load-balancer/troubleshoot-common-problems/load-balancer-troubleshoot"
       }
   ]
 }

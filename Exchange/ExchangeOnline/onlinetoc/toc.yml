@@ -320,6 +320,8 @@ items:
               href: ../email-delivery/ndr/fix-error-code-5-7-13-or-5-7-135-in-exchange-online.md
             - name: 550 5.7.23
               href: ../email-delivery/ndr/fix-error-code-5-7-23-in-exchange-online.md
+            - name: 550 5.7.367
+              href: ../email-delivery/ndr/forwarded-message-rejected-5-7-367-ndr.md
             - name: 550 5.7.57
               href: ../email-delivery/ndr/fix-error-code-5-7-57-in-exchange-online.md
             - name: 550 5.7.64

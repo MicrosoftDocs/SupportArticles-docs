@@ -1,6 +1,6 @@
 ---
 title: Retain privileged mode while adding capabilities
-description: Learn how to retain privileged mode while you add capabilities when you use the Azure Policy Add-on for Azure Kubernetes Service (AKS).
+description: Learn how to retain privileged mode while adding capabilities in AKS with Azure Policy Add-on to meet policy requirements and secure node access. Start now.
 ms.date: 04/23/2024
 author: mosbahmajed
 ms.author: momajed
@@ -13,9 +13,11 @@ ms.custom: sap:Extensions, Policies and Add-Ons
 ---
 # Retain privileged mode while adding capabilities
 
-This article discusses how to retain privileged mode while you add capabilities when you use the Microsoft Azure Policy Add-on for Azure Kubernetes Service (AKS).
+## Summary
 
-## Overview
+This article explains how to retain privileged mode while adding capabilities in AKS by using the Azure Policy Add-on. Use this guidance to improve security while meeting policy requirements.
+
+## Policy requirements for node access
 
 Node access always requires a certain level of privilege. Default policies flag these access levels. Even if you don't grant full node access, there are policies that detect access to the file system. In most cases, you have to create exceptions or carefully fine-tune policies based on your requirements.
 

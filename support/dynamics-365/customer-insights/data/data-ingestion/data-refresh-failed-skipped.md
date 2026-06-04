@@ -9,8 +9,6 @@ ms.custom: sap:Data Ingestion\Connect to a Power Query data source
 ---
 # Data refresh fails and dataflow refresh is skipped
 
-[!INCLUDE [consolidated-sku](../../includes/consolidated-sku.md)]
-
 This article provides a resolution for an issue where the Power Query data source isn't refreshed successfully in Microsoft Dynamics 365 Customer Insights - Data.
 
 ## Symptoms

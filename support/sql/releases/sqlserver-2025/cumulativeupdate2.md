@@ -17,7 +17,7 @@ _Version:_ &nbsp; 17.0.4015.4
 
 ## Summary
 
-This article describes Cumulative Update (CU2) for Microsoft SQL Server 2025. This update package contains six [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the initial release of SQL Server 2025. It updates components in the following builds:
+This article describes Cumulative Update (CU2) for Microsoft SQL Server 2025. This update package contains six [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2025 Cumulative Update 1. It updates components in the following builds:
 
 - SQL Server - Product version: **17.0.4015.4**, file version: **2025.170.4015.4**
 - Analysis Services - Product version: **17.0.25.223**, file version: **2025.170.25.223**

@@ -9,8 +9,6 @@ ms.custom: sap:Data Ingestion\Connect to a Power Query data source
 ---
 # "Delta Lake ingestion job failed to get version" error
 
-[!INCLUDE [consolidated-sku](../../includes/consolidated-sku.md)]
-
 This article helps you resolve the "Delta Lake ingestion job failed to get version" error that might occur when you [connect to data stored in Delta format](/dynamics365/customer-insights/data/connect-delta-lake) in Microsoft Dynamics 365 Customer Insights - Data.
 
 ## Symptoms

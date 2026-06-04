@@ -12,7 +12,7 @@ ms.tgt_pltfrm: vm-windows
 ms.date: 08/01/2024
 editor: v-jsitser
 ms.reviewer: azurevmcptcic, v-leedennis
-ms.topic: troubleshooting-general
+ms.topic: troubleshooting
 ms.custom: sap:My VM is not booting
 ---
 
@@ -21,6 +21,8 @@ ms.custom: sap:My VM is not booting
 **Applies to:** :heavy_check_mark: Windows VMs
 
 *Original KB number:* &nbsp; 4010138
+
+## Summary
 
 This article provides steps to resolve startup issues in which a `0xC0000225` error code occurs on Azure Virtual Machines. This error states that the status or object isn't found.
 

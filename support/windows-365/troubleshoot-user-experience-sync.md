@@ -1,10 +1,10 @@
 ---
-title: Troubleshoot User Experience Sync for Windows 365 Frontline in shared mode
-description: Troubleshoot User Experience Sync for Windows 365 Frontline in shared mode
+title: Troubleshoot User Experience Sync for Windows 365 Flex in shared mode
+description: Troubleshoot User Experience Sync for Windows 365 Flex in shared mode
 manager: dcscontentpm
-ms.date: 03/03/2026
+ms.date: 05/05/2026
 ms.topic: troubleshooting
-ms.reviewer: msft-jasonparker, stulimat, scottduf
+ms.reviewer: kaushika, msft-jasonparker, stulimat, scottduf
 ms.custom:
 - pcy:WinComm User Experience
 - sap:Configuration and Management\Managing Devices with Intune
@@ -13,9 +13,9 @@ ms.collection:
 - tier2
 ---
 
-# Troubleshoot User Experience Sync for Windows 365 Frontline in shared mode
+# Troubleshoot User Experience Sync for Windows 365 Flex in shared mode
 
-This article provides troubleshooting steps for the most common issues that are related to User Experience Sync in Windows 365 Frontline shared mode environments.
+This article provides troubleshooting steps for the most common issues that are related to User Experience Sync in Windows 365 Flex shared mode environments.
 
 ## Users receive a warning about a temporary user experience
 
@@ -30,7 +30,7 @@ To start troubleshooting this issue, check the status of the user's individual u
 
 User Experience Sync doesn't support policies that affect write access to fixed or removable drives. When policies prevent or change access permissions to individual user storage, the drive attaches. However, when the user signs in, Windows creates a temporary profile (temporary user experience).
 
-Windows 365 uses Microsoft managed keys (MMK) to encrypt individual user storage instead of using BitLocker or other products. Review your organization policies that target the Frontline Cloud PCs in shared mode to verify that the following settings aren't enabled.
+Windows 365 uses Microsoft managed keys (MMK) to encrypt individual user storage instead of using BitLocker or other products. Review your organization policies that target the Windows 365 Flex Cloud PCs in shared mode to verify that the following settings aren't enabled.
 
 | Policy | Setting |
 | --- | --- |
@@ -99,7 +99,7 @@ After the seven-day tolerance period expires:
 - **Service protection**: The service begins deleting individual user storage starting at the oldest (based on the last attach timestamp). The quantity of individual user storage that's deleted is determined by the amount of space that's required for the policy to be under the policy limit.
 
 > [!NOTE]  
-> Monitor your storage usage regularly and configure the [Frontline Cloud PC User Experience Sync Storage Limits](/windows-365/enterprise/alerts) alert to avoid reaching the exceeded condition. Consider increasing your storage limit before reaching capacity to ensure uninterrupted user experience.
+> Monitor your storage usage regularly and configure the [Windows 365 Flex Cloud PC User Experience Sync Storage Limits](/windows-365/enterprise/alerts) alert to avoid reaching the exceeded condition. Consider increasing your storage limit before reaching capacity to ensure uninterrupted user experience.
 
 ## Users experience low or full user storage issues
 

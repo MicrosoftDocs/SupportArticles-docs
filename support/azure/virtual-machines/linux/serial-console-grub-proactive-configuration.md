@@ -6,7 +6,9 @@ documentationcenter: ''
 author: mimckitt
 manager: dcscontentpm
 tags: azure-resource-manager
-ms.custom: sap:Cannot connect to my VM, linux-related-content
+ms.custom: 
+ - Kernel Upgrades
+ - Package Management issue (Yum, Zypper, RPM, DPKG, APT)
 ms.service: azure-virtual-machines
 ms.collection: linux
 ms.tgt_pltfrm: vm-linux
@@ -20,6 +22,10 @@ ms.author: jarrettr
 **Applies to:** :heavy_check_mark: Linux VMs
 
 [!INCLUDE [VM assist troubleshooting tools](~/includes/azure/vmassist-include.md)]
+
+## Summary
+
+This article shows how to proactively configure GRUB and the Azure Serial Console to ensure you have access to recovery options for your Linux Virtual Machine (VM) in Azure.
 
 Having access to the Serial Console and GRUB will improve recovery times of your IaaS Linux Virtual Machine in most cases. GRUB offers recovery options that otherwise would take longer to recover your VM.
 

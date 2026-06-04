@@ -90,4 +90,4 @@ For more information, see [Private Application Gateway deployment](/azure/applic
 
 - ✅ No public IP is attached to front-end configurations.
 
-- ✅ A dedicated subnet is available for Application Gate.
+- ✅ A dedicated subnet is available for Application Gateway.

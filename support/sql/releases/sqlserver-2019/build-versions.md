@@ -50,10 +50,16 @@ This article lists the Microsoft SQL Server 2019 builds that were released after
 | CU1           | 15.0.4003.23 | 2019.150.4003.23  | 15.0.32.52 | 2018.150.32.52 | [KB4527376](cumulativeupdate1.md)  | January 07, 2020   |
 | RTM | 15.0.2000.5 | 2019.150.2000.5 | 15.0.32.50 | 2018.150.32.50 | [SQL Server 2019 release notes](/sql/sql-server/sql-server-2019-release-notes) | November 04, 2019 |
 
-## SQL Server 2019 GDR builds
+## SQL Server 2019 General Distribution Release (GDR) builds
 
 | GDR name | SQL Server build version | SQL Server (sqlservr.exe) file version | Analysis Services build version | Analysis Services (msmdsrv.exe) file version | Knowledge Base number | Release date|
 |-------------------------|--------------|------------------|------------|----------------|---------------------------------------------------------|-------------------|
+| CU32 + GDR              | 15.0.4470.1  | 2019.150.4470.1  | 15.0.35.56 | 2018.150.35.56 | [KB5090407](https://support.microsoft.com/help/5090407) | May 12, 2026  |
+| GDR                     | 15.0.2170.1  | 2019.150.2170.1  | 15.0.32.69 | 2018.150.32.69 | [KB5090408](https://support.microsoft.com/help/5090408) | May 12, 2026  |
+| CU32 + GDR              | 15.0.4465.1  | 2019.150.4465.1  | 15.0.35.56 | 2018.150.35.56 | [KB5084816](https://support.microsoft.com/help/5084816) | April 14, 2026  |
+| GDR                     | 15.0.2165.1  | 2019.150.2165.1  | 15.0.32.69 | 2018.150.32.69 | [KB5084817](https://support.microsoft.com/help/5084817) | April 14, 2026  |
+| CU32 + GDR              | 15.0.4460.4  | 2019.150.4460.4  | 15.0.35.56 | 2018.150.35.56 | [KB5077469](https://support.microsoft.com/help/5077469) | March 10, 2026  |
+| GDR                     | 15.0.2160.4  | 2019.150.2160.4  | 15.0.32.69 | 2018.150.32.69 | [KB5077470](https://support.microsoft.com/help/5077470) | March 10, 2026  |
 | CU32 + GDR              | 15.0.4455.2  | 2019.150.4455.2  | 15.0.35.56 | 2018.150.35.56 | [KB5068404](https://support.microsoft.com/help/5068404) | November 11, 2025  |
 | GDR                     | 15.0.2155.2  | 2019.150.2155.2  | 15.0.32.69 | 2018.150.32.69 | [KB5068405](https://support.microsoft.com/help/5068405) | November 11, 2025  |
 | CU32 + GDR              | 15.0.4445.1  | 2019.150.4445.1  | 15.0.35.51 | 2018.150.35.51 | [KB5065222](https://support.microsoft.com/help/5065222) | September 09, 2025  |

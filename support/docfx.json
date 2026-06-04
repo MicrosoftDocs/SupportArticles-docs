@@ -233,10 +233,10 @@
         "dynamics-365/field-service/**/**.*": "dynamics-365-field-service",
         "devices/**.*": "surface",
         "mem/intune/**/*.md": "microsoft-intune",
-        "sales-copilot/**/*.md": "microsoft-sales-copilot",
+        "sales-copilot/**/*.md": "microsoft-365-copilot-sales",
         "power-platform/ai-builder/**/**.*": "ai-builder",
         "sql/**/*.md": "sql",
-        "sql/analysis-services/**/*.md": "analysis-services",
+        "sql/analysis-services/**/*.md": "azure-analysis-services",
         "sql/azure-sql/**/*.md": "azure-vm-sql-server",
         "sql/reporting-services/**/*.md": "reporting-services",
         "developer/dotnet/**/*.md": "dotnet",
@@ -314,7 +314,7 @@
         "power-platform/power-pages/**/*.md": "Power Pages",
         "power-platform/administration/**/*.md": "Power Platform",
         "power-platform/copilot-studio/**/*.md": "Copilot Studio",
-        "sales-copilot/**/*.md": "Sales in Microsoft 365 Copilot",
+        "sales-copilot/**/*.md": "Sales agent",
         "dynamics/gp/**/*.md": "Dynamics GP"
       },
       "searchScope": {

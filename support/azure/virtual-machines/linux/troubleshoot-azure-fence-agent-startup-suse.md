@@ -14,6 +14,8 @@ ms.custom: sap:Issue with Pacemaker clustering, and fencing
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
+## Summary
+
 This article lists the common causes of startup issues for Microsoft Azure Fence Agent, offers guidance for identifying the causes through log reviews, and provides resolutions for the issues.
 
 ## How Azure Fence Agent works
@@ -47,20 +49,20 @@ Online: [ VM1 VM2 ]
 Full list of resources:
  
 Clone Set: cln_SAPHanaTopology_SS2_HDB00 [rsc_SAPHanaTopology_SS2_HDB00]
-	 Started: [ VM1 VM2 ]
+     Started: [ VM1 VM2 ]
 Clone Set: msl_SAPHana_SS2_HDB00 [rsc_SAPHana_SS2_HDB00] (promotable)
-	 Main: [ VM1 ]
-	 Sub: [ VM2 ]
+     Main: [ VM1 ]
+     Sub: [ VM2 ]
 Resource Group: g_ip_SS2_HDB00
-	 rsc_ip_SS2_HDB00   (ocf::heartbeat:IPaddr2):       Started VM1
-	 rsc_nc_SS2_HDB00   (ocf::heartbeat:azure-lb):      Started VM1
+     rsc_ip_SS2_HDB00   (ocf::heartbeat:IPaddr2):       Started VM1
+     rsc_nc_SS2_HDB00   (ocf::heartbeat:azure-lb):      Started VM1
 rsc_st_azure   (stonith:fence_azure_arm):      Stopped
  
 Failed Resource Actions:
 * rsc_st_azure_start_0 on VM2 'unknown error' (1): call=102, status=complete, exitreason='',
-	last-rc-change='Mon Apr  6 13:50:57 2020', queued=0ms, exec=1790ms
+    last-rc-change='Mon Apr  6 13:50:57 2020', queued=0ms, exec=1790ms
 * rsc_st_azure_start_0 on VM1 'unknown error' (1): call=121, status=complete, exitreason='',
-	last-rc-change='Mon Apr  6 13:50:59 2020', queued=0ms, exec=1760ms
+    last-rc-change='Mon Apr  6 13:50:59 2020', queued=0ms, exec=1760ms
 ```
 ## Cause 1: Endpoint connectivity or credential issues
 
@@ -264,17 +266,17 @@ Check the log in `/var/log/messages`. The following log entries indicate that th
 SUSE has rebuilt the Azure Fence Agent package as `fence-agents-azure-arm` for Python 3.11. For more information, see [Azure Fence Agent failed to start after Python 3.11 interpreter was installed](https://www.suse.com/support/kb/doc/?id=000021504). To fix the issue, follow these steps to install the package:
  
 1. Put the cluster under maintenance mode:
-	 ```bash
-	 sudo crm configure property maintenance-mode=true
-	 ```
+     ```bash
+     sudo crm configure property maintenance-mode=true
+     ```
 2. Install the following package on all nodes (VMs) of the cluster:
-	```bash
-	sudo zypper in fence-agents-azure-arm
-	```
+    ```bash
+    sudo zypper in fence-agents-azure-arm
+    ```
 3. Remove the cluster from maintenance mode:
-	```bash
-	sudo crm configure property maintenance-mode=false
-	```
+    ```bash
+    sudo crm configure property maintenance-mode=false
+    ```
 4. Make sure that the fencing agent issue is resolved. To do this, run `crm status` to check the cluster status.
 
 ## Next steps

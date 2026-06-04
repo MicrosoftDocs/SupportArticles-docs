@@ -18,6 +18,8 @@ ms.custom: sap:Cannot connect to my VM
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
+## Summary
+
 This article describes a problem in which you cannot remote desktop to Azure Windows Virtual Machines (VMs) after a static IP is configured in the VM.
 
 ## Symptoms
@@ -68,7 +70,7 @@ To resolve this issue, use Serial control to enable DHCP or [reset network inter
     netsh interface ip set address name="Ethernet 2" source=dhcp
     ```
 
-4. Query the IP configuration again to make sure that the network interface is now correctly set up. The new IP address should match the one that’s provided by the Azure.
+4. Query the IP configuration again to make sure that the network interface is now correctly set up. The new IP address should match the one that's provided by the Azure.
 
     ```console
     netsh interface ip show config

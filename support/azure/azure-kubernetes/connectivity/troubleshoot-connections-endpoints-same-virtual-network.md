@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot connections to endpoints in the same virtual network
-description: Troubleshoot connections to endpoints in the same virtual network from an Azure Kubernetes Service (AKS) cluster.
+description: Troubleshoot connections to endpoints in the same virtual network from an AKS cluster. Use this guide to quickly identify egress blockers and restore connectivity.
 ms.date: 10/23/2024
 ms.reviewer: chiragpa, rissing, v-leedennis, andbar
 editor: v-jsitser
@@ -10,7 +10,9 @@ ms.custom: sap:Connectivity
 ---
 # Troubleshoot connections to endpoints in the same virtual network
 
-This article discusses how to troubleshoot connections to endpoints in the same virtual network from a Microsoft Azure Kubernetes Service (AKS) cluster.
+## Summary
+
+This article helps you troubleshoot connections to endpoints in the same virtual network from an Azure Kubernetes Service (AKS) cluster so you can identify and fix outbound connectivity issues faster.
 
 ## Troubleshooting checklist
 

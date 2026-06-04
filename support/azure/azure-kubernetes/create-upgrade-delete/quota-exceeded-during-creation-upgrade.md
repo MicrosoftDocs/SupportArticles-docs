@@ -10,6 +10,8 @@ ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool
 ---
 # "QuotaExceeded" or "InsufficientVCPUQuota" error during AKS creation or upgrade
 
+## Summary
+
 This article provides a solution to a "QuotaExceeded" or "InsufficientVCPUQuota" error that occurs during an Azure Kubernetes Service (AKS) creation or upgrade operation.
 
 ## Symptoms

@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot error when you sign in to Intune Connector for Active Directory
 description: Fixes an unexpected error problem that occurs when you sign in to Intune Connector for Active Directory.
-ms.date: 02/11/2025
+ms.date: 03/30/2026
 search.appverid: MET150
 ms.custom: sap:Configure Devices - Windows\SCEP Certificates
 ms.reviewer: kaushika, saurkosh, intunecic

@@ -1,16 +1,18 @@
 ---
 title: Failed to assume control of Edge or Chrome or Firefox error
 description: Describes potential causes and solutions for an error that occurs when running a desktop flow that has a "Launch browser" action in Power Automate.
-ms.reviewer: nimoutzo, jefernn, v-shaywood
-ms.date: 04/09/2025
+ms.reviewer: chtzirtz, iomimtso, adanas, nimoutzo, v-shaywood
+ms.date: 04/03/2026
 ms.custom: sap:Desktop flows\UI or browser automation
 ---
 # "Failed to assume control of Microsoft Edge/Chrome/Firefox" error
 
-This article provides guidance to resolve an error that might occur when you run a desktop flow that contains a Launch Browser action in Microsoft Power Automate. 
-
 _Applies to:_ &nbsp; Power Automate  
 _Original KB number:_ &nbsp; 5001691
+
+## Summary
+
+When you run a desktop flow that contains a Launch Browser action in Microsoft Power Automate, you might receive a "Failed to assume control" error for Microsoft Edge, Chrome, or Firefox. This error can occur if the browser extension isn't installed correctly, the browser takes longer to start than the default timeout, different user accounts are used to start the browser and run Power Automate for desktop, or browser profile conflicts prevent the browser from starting. This article provides troubleshooting steps for each cause.
 
 ## Symptoms
 
@@ -23,7 +25,7 @@ When you run a desktop flow that has a [Launch new Microsoft Edge](/power-automa
 > [!IMPORTANT]
 > To resolve the error, run the **Troubleshoot UI/Web automation issues** diagnostic by using the [Power Automate for desktop troubleshooter](/power-automate/desktop-flows/troubleshooter). When the diagnostic runs, it generates a report that identifies issues. Resolve these issues by pressing the **Fix** button that appears after the diagnostics check finishes. If the troubleshooter doesn't resolve the error, refer to the potential causes and solutions that are provided in this article.
 
-## Cause 1: Web extension isn't installed correctly or enabled
+## Web extension isn't installed correctly or enabled
 
 The Microsoft Edge, Google Chrome, or Firefox web extension isn't installed correctly or enabled.
 
@@ -41,14 +43,14 @@ The Microsoft Edge, Google Chrome, or Firefox web extension isn't installed corr
 
 ### Solution
 
-1. Install the respective web extension from the Power Automate for desktop designer.
+1. Install the respective web extension from the [Power Automate for desktop designer](/power-automate/desktop-flows/flow-designer).
 
    :::image type="content" source="media/failed-to-assume-control-of-edge-chrome-firefox-error/browser-extensions.png" alt-text="Illustration of how to install the web extension from the list.":::
 
 1. Even if the extension seems to be installed and enabled, remove and reinstall it.
 1. Restart the browser.
 
-## Cause 2: Launch Browser action takes longer than the default timeout
+## Launch Browser action takes longer than the default timeout
 
 Starting the browser takes longer than the Launch Browser action's default timeout. The automation process tries to assume control of the browser before it starts, causing the Launch Browser action to fail. This behavior might be inconsistent, where some executions fail while others are successful.
 
@@ -146,7 +148,7 @@ Use the **Launch Browser** action to start the process of the corresponding brow
 
         :::image type="content" source="media/failed-to-assume-control-of-edge-chrome-firefox-error/replace-variables-produced-browser.png" alt-text="How to replace the new browser variable with the name of the variable produced in step 1.":::
 
-## Cause 3: Different user accounts for starting browser and running Power Automate for desktop
+## Different user accounts for starting browser and running Power Automate for desktop
 
 You start the browser by using a different system user than the one you use to run Power Automate for desktop (version 2.38 or higher). This issue can occur in attended and unattended desktop flow modes.
 
@@ -154,7 +156,7 @@ You start the browser by using a different system user than the one you use to r
 
 To resolve the issue, make sure you start the browser by using the same system user account that you use to run Power Automate for desktop.
 
-## Cause 4: Browser doesn't start because of profile conflicts
+## Browser doesn't start because of profile conflicts
 
 The browser doesn't start, or it starts one time but doesn't start in subsequent attempts. Running a desktop flow by using a **Launch Browser** action fails, and the browser either doesn't appear or terminates immediately after launch.
 
@@ -181,4 +183,10 @@ If the preceding actions don't resolve the issue, check the following items:
 
 ## WebDriver support
 
-Starting in version 2.62, Power Automate for desktop supports [WebDriver](/power-automate/desktop-flows/actions-reference/webautomation#webdriver-based-browser-automation-preview) as an alternative communication method for browser automation. This approach eliminates the need to install a browser extension to enable web automation in Power Automate for Desktop.
+Starting in version 2.62, Power Automate for desktop supports [WebDriver](/power-automate/desktop-flows/actions-reference/webautomation#webdriver-based-browser-automation) as an alternative communication method for browser automation. This approach eliminates the need to install a browser extension to enable web automation in Power Automate for Desktop.
+
+## Related content
+
+- [UIPI issues with UI and browser automation actions](../ui-automation/uipi-issues.md)
+- [Browser extension policies for Power Automate for desktop](web-extensions-policies.md)
+- [Power Automate for desktop browser extensions](/power-automate/desktop-flows/install-browser-extensions)

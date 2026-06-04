@@ -64,7 +64,7 @@ landingContent:
   linkLists:
     - linkListType: how-to-guide
       links:
-        - text: Troubleshoot user access issues for different environments
+        - text: Troubleshoot user access problems for different environments
           url: environment-app-access/troubleshooting-user-needs-read-write-access-organization.md
         - text: Troubleshoot missing environments
           url: environment-app-access/troubleshoot-missing-environments.md   

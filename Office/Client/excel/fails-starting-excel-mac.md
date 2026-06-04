@@ -10,10 +10,12 @@ ms.topic: troubleshooting
 ms.custom: 
   - Open\Errors
   - CSSTroubleshoot
+  - CI 10891
 ms.author: meerak
+ms.reviewer: akeeler, v-lisalozano
 appliesto: 
   - Excel for Mac
-ms.date: 05/26/2025
+ms.date: 03/31/2026
 ---
 
 # "Microsoft Excel has encountered a problem and needs to close" when starting Excel for Mac

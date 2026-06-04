@@ -3,11 +3,13 @@ title: Troubleshoot NFS file shares - Azure Files
 description: Troubleshoot issues with NFS Azure file shares.
 ms.service: azure-file-storage
 ms.custom: sap:Security, linux-related-content
-ms.date: 09/12/2025
+ms.date: 06/03/2026
 ms.reviewer: kendownie
 ---
 
 # Troubleshoot NFS Azure file shares
+
+**Applies to:** :heavy_check_mark: NFS Azure file shares
 
 [!INCLUDE [CentOS End Of Life](../../../../includes/centos-end-of-life-note.md)]
 
@@ -16,44 +18,39 @@ This article lists common issues related to NFS Azure file shares and provides p
 > [!IMPORTANT]
 > The content of this article only applies to NFS shares. To troubleshoot SMB issues in Linux, see [Troubleshoot Azure Files problems in Linux (SMB)](files-troubleshoot-linux-smb.md). NFS Azure file shares aren't supported for Windows.
 
-## Applies to
-
-| File share type | SMB | NFS |
-|-|:-:|:-:|
-| Standard file shares (GPv2), LRS/ZRS | :::image type="icon" source="media/files-troubleshoot-linux-nfs/no-icon.png" border="false"::: | :::image type="icon" source="media/files-troubleshoot-linux-nfs/no-icon.png" border="false"::: |
-| Standard file shares (GPv2), GRS/GZRS | :::image type="icon" source="media/files-troubleshoot-linux-nfs/no-icon.png" border="false"::: | :::image type="icon" source="media/files-troubleshoot-linux-nfs/no-icon.png" border="false"::: |
-| Premium file shares (FileStorage), LRS/ZRS | :::image type="icon" source="media/files-troubleshoot-linux-nfs/no-icon.png" border="false"::: | :::image type="icon" source="media/files-troubleshoot-linux-nfs/yes-icon.png" border="false":::|
-
 ## Use the Always-On Diagnostics tool
 
 You can use the Always-On Diagnostics (AOD) tool to collect logs on NFSv4 and SMB Linux clients. The daemon runs in the background as a system service and can be configured to detect anomalies in various sources, such as dmesg logs, debug data, error metrics, and latency metrics. It can capture data from tcpdump, nfsstat, mountstsat, and other sources, along with the system's CPU and memory usage. The tool is useful for collecting debug information on field issues that are difficult to reproduce.
 
 The Always-On Diagnostics tool is currently compatible with systems running SUSE Linux Enterprise Server 15 (SLES 15) and Red Hat Enterprise Linux 8 (RHEL 8). Follow the installation steps that correspond to your operating system:
 
+> [!IMPORTANT]
+> Always-On Diagnostics doesn't support NFS volumes with encryption in transit enabled. To enable log collection on the impacted NFS share, you must mount the share without EiT.
+
 ### [RHEL](#tab/RHEL)
 
 In RHEL 8, follow these instructions to install the Always-On Diagnostics tool:
 
-1. Download the repo config package.
+1. Download the repo configuration package.
 
     ```bash
     curl -ssl -O https://packages.microsoft.com/config/rhel/8/packages-microsoft-prod.rpm
     ```
 
-2. Install the repo config package.
+1. Install the repo configuration package.
 
     ```bash
     sudo rpm -i packages-microsoft-prod.rpm
     ```
 
-3. Delete the repo config package after installing and updating the package index files.
+1. Delete the repo configuration package after installing and updating the package index files.
 
     ```bash
     rm packages-microsoft-prod.rpm
     sudo dnf update
     ```
 
-4. Install the package.
+1. Install the package.
 
     ```bash
     sudo dnf install aod
@@ -70,19 +67,19 @@ In SLES 15, follow these instructions to install the Always-On Diagnostics tool:
     sudo zypper addrepo --check --refresh --name 'Microsoft' https://packages.microsoft.com/sles/15/prod microsoft
     ```
 
-2. Refresh the repositories.
+1. Refresh the repositories.
 
     ```bash
     sudo zypper refresh
     ```
 
-3. Check if the repo has been added and the `aod` package is available for installation.
+1. Check if the repo is added and the `aod` package is available for installation.
 
     ```bash
     zypper search aod
     ```
 
-4. Install the package.
+1. Install the package.
 
     ```bash
     sudo zypper install aod
@@ -100,23 +97,23 @@ The Always-On Diagnostics tool isn't currently available for Ubuntu.
 
 Because Azure Files disallows alphanumeric UID/GID, you must disable idmapping.
 
-### Cause 2: idmapping was disabled, but got re-enabled after encountering bad file/dir name
+### Cause 2: Disabled idmapping gets re-enabled after encountering bad file or directory name
 
-Even if you correctly disable idmapping, it can be automatically re-enabled in some cases. For example, when Azure Files encounters a bad file name, it sends back an error. Upon seeing this error code, an NFS 4.1 Linux client decides to re-enable idmapping, and sends future requests with alphanumeric UID/GID. For a list of unsupported characters on Azure Files, see this [article](/rest/api/storageservices/naming-and-referencing-shares--directories--files--and-metadata). Colon is one of the unsupported characters.
+Even if you disable idmapping, the system can automatically re-enable it in some cases. For example, when Azure Files encounters a bad file name, it sends back an error. Upon seeing this error code, an NFS 4.1 Linux client decides to re-enable idmapping, and sends future requests with alphanumeric UID or GID. For a list of unsupported characters on Azure Files, see [Naming and referencing shares, directories, files, and metadata](/rest/api/storageservices/naming-and-referencing-shares--directories--files--and-metadata). Colon is one of the unsupported characters.
 
 ### Workaround
 
-Make sure you've disabled idmapping and that nothing is re-enabling it. Then perform the following steps:
+Make sure you disable idmapping and that nothing re-enables it. Then perform the following steps:
 
 1. Unmount the share.
-1. Disable idmapping with:
+1. Disable idmapping by running the following command:
 
     ```bash
     sudo echo Y > /sys/module/nfs/parameters/nfs4_disable_idmapping
     ```
 
 1. Mount the share back.
-1. If running rsync, run rsync with the `-numeric-ids` argument from a directory that doesn't have a bad directory or file name.
+1. If you're running `rsync`, run `rsync` with the `-numeric-ids` argument from a directory that doesn't have a bad directory or file name.
 
 ## Unable to create an NFS share
 
@@ -133,16 +130,16 @@ Follow the instructions in [Create an NFS file share](/azure/storage/files/stora
 
 ## Can't connect to or mount an NFS Azure file share
 
-### Cause 1: Request originates from a client in an untrusted network/untrusted IP
+### Cause 1: Request originates from a client in an untrusted network or untrusted IP
 
-Unlike SMB, NFS doesn't have user-based authentication. The authentication for a share is based on your network security rule configuration. To ensure that clients only establish secure connections to your NFS share, you must use either the service endpoint or private endpoints. To access shares from on-premises in addition to private endpoints, you must set up a VPN or ExpressRoute connection. IPs added to the storage account's allowlist for the firewall are ignored. You must use one of the following methods to set up access to an NFS share:
+Unlike SMB, NFS doesn't support user-based authentication. Authentication for a share depends on your network security rule configuration. To ensure clients only establish secure connections to your NFS share, you must use either the service endpoint or private endpoints. To access shares from on-premises in addition to private endpoints, you must set up a VPN or Azure ExpressRoute connection. The storage account firewall ignores IPs added to the allowlist. To set up access to an NFS share, use one of the following methods:
 
 - [Service endpoint](/azure/storage/files/storage-files-networking-endpoints#restrict-access-to-the-public-endpoint-to-specific-virtual-networks)
   - Accessed by the public endpoint.
   - Only available in the same region.
   - You can't use VNet peering for share access.
   - You must add each virtual network or subnet individually to the allowlist.
-  - For on-premises access, you can use service endpoints with ExpressRoute, point-to-site, and site-to-site VPNs. We recommend using a private endpoint because it's more secure.
+  - For on-premises access, you can use service endpoints with ExpressRoute, point-to-site, and site-to-site VPNs. Use a private endpoint because it's more secure.
 
     The following diagram depicts connectivity using public endpoints:
 
@@ -156,7 +153,7 @@ Unlike SMB, NFS doesn't have user-based authentication. The authentication for a
 
     :::image type="content" source="media/files-troubleshoot-linux-nfs/connectivity-using-private-endpoints.png" alt-text="Diagram of private endpoint connectivity." lightbox="media/files-troubleshoot-linux-nfs/connectivity-using-private-endpoints.png":::
 
-### Cause 2: nfs-utils, nfs-client or nfs-common package isn't installed
+### Cause 2: nfs-utils, nfs-client, or nfs-common package isn't installed
 
 Before running the `mount` command, install the nfs-utils, nfs-client, or nfs-common package.
 
@@ -188,7 +185,7 @@ sudo dpkg -l | grep nfs-common
 
 #### Solution
 
-If the package isn't installed, install the package using your distro-specific command.
+If the package isn't installed, install the package by using your distro-specific command.
 
 #### [RHEL](#tab/RHEL)
 
@@ -243,24 +240,24 @@ If you're unable to mount the file share due to **error: connection timed out**,
 
 [Recover the storage account](/azure/storage/common/storage-account-recover). Then, delete and re-create the private endpoint so it's associated with the new storage account resource ID.
 
-### Cause 5: You're trying to mount the share using the NFS client mount instead of the AZNFS mount helper, and the **Secure transfer required** setting is enabled on the storage account.
+### Cause 5: You're trying to mount the share using the NFS client mount instead of the AZNFS mount helper, and the **Secure transfer required** and/or **Require encryption in transit for NFS** setting is enabled on the storage account.
 
-The **Secure transfer required** setting enforces encryption in transit for all file shares within the storage account. For NFS file shares, using encryption in transit requires mounting the share using the AZNFS Mount Helper, a client utility package that abstracts the complexity of establishing secure tunnels for NFSv4.1 traffic.
+The **Secure transfer required** setting enforces encryption in transit for all file shares within the storage account unless the **Require encryption in transit for NFS** setting is enabled, in which case **Secure transfer required** only applies to REST/HTTPS traffic. For NFS file shares, using encryption in transit requires mounting the share using the AZNFS Mount Helper, a client utility package that abstracts the complexity of establishing secure tunnels for NFSv4.1 traffic.
 
 #### Solution
 
-Either disable the **Secure transfer required** setting on the storage account or use the AZNFS mount helper to mount the share. For more information, see [Encryption in transit for NFS Azure file shares](/azure/storage/files/encryption-in-transit-for-nfs-shares).
+Either disable both the [Secure transfer required](/azure/storage/common/storage-require-secure-transfer) setting and the [Require encryption in transit for NFS](/azure/storage/files/encryption-in-transit-for-nfs-shares#where-to-configure-the-setting) setting on the storage account, or use the AZNFS mount helper to mount the share. For more information, see [Encryption in transit for NFS Azure file shares](/azure/storage/files/encryption-in-transit-for-nfs-shares).
 
 ## ls hangs for large directory enumeration on some kernels
 
-### Cause: A bug was introduced in Linux kernel v5.11 and was fixed in v5.12.5
+### Cause: A bug was introduced in Linux kernel v5.11 and fixed in v5.12.5
 
 Some kernel versions have a bug that causes directory listings to result in an endless READDIR sequence. Small directories where all entries can be shipped in one call don't have this problem.
-The bug was introduced in Linux kernel v5.11 and was fixed in v5.12.5. So anything in between has the bug. RHEL 8.4 has this kernel version.
+The bug was introduced in Linux kernel v5.11 and fixed in v5.12.5. So, any version in between has the bug. RHEL 8.4 uses this kernel version.
 
 #### Workaround: Downgrade or upgrade the kernel
 
-Downgrading or upgrading the kernel to anything outside the affected kernel should resolve the issue.
+Downgrade or upgrade the kernel to a version outside the affected range to resolve the issue.
 
 ## System commands fail with the "File not found" error
 
@@ -282,13 +279,13 @@ You can also persist this kernel boot option in the *grub.conf* file. For more i
 
 ### Cause
 
-Permissions on NFS file shares are enforced by the client OS rather than the Azure Files service. If the **Root Squash** setting is enabled on an NFS file share, the root user on the client system is treated as an anonymous (non-privileged) user for access control purposes. This means that even if you're logged in as root on the client system, you can't use the `chown` command to change the ownership of files and directories that you don't own.
+The client OS enforces permissions on NFS file shares, not the Azure Files service. If you enable the **Root Squash** setting on an NFS file share, the root user on the client system becomes an anonymous (non-privileged) user for access control purposes. This restriction means that even if you're logged in as root on the client system, you can't use the `chown` command to change the ownership of files and directories that you don't own.
 
 ### Solution
 
-In the Azure portal, navigate to the file share and select **Properties**. Change the **Root Squash** setting to **No Root Squash**. For more information, see [Configure root squash for Azure Files](/azure/storage/files/nfs-root-squash).
+In the Azure portal, go to the file share and select **Properties**. Change the **Root Squash** setting to **No Root Squash**. For more information, see [Configure root squash for Azure Files](/azure/storage/files/nfs-root-squash).
 
-With **No Root Squash** enabled, the root user on the client system has the same privileges as the root user on the server system. You can now use `chown` to change the ownership of any file or directory in the share, regardless of the current owner. After you make the changes, you can re-enable **Root Squash** if necessary.
+When you enable **No Root Squash**, the root user on the client system has the same privileges as the root user on the server system. You can now use `chown` to change the ownership of any file or directory in the share, regardless of the current owner. After you make the changes, you can re-enable **Root Squash** if necessary.
 
 ## Need help?
 
