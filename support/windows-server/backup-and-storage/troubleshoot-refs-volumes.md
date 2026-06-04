@@ -72,7 +72,7 @@ Follow these steps to document the current state of your environment and start t
 | --- | --- |
 | <ul><li>Volume status is RAW</li><li>Data on the volume is inaccessible</li><li>Repeated mount or repair failures</li><li>Events: event IDs 133 or 135</li></ul> | [Volume is RAW or inaccessible (Event IDs 133 or 135)](#volume-is-raw-or-inaccessible-event-ids-133-or-135) |
 | <ul><li>The volume doesn't mount</li><li>Events: event IDs 134, 137, or 140</li><li>Error messages: invalid metadata pages or checksum failures, or that the "device is busy."</li></ul> | [Metadata corruption or mount failures (Event IDs 134, 137, or 140)](#metadata-corruption-or-mount-failures-event-ids-134-137-or-140) |
-| After the volume mounts:<ul><li>The computer becomes unresponsive</li><li>CPU and memory usage are very high</li><li>Backup jobs are slow or stop responding (hang)</li><li>Events: high activity on the volume</li></ul> | [After the volume mounts, the system freezes or experiences high resource or memory usage](#after-the-volume-mounts-the-system-freezes-or-experiences-high-resource-or-memory-usage) |
+| After the volume mounts:<ul><li>The computer becomes unresponsive</li><li>CPU and memory usage are very high</li><li>Backup jobs are slow or stop responding (hang)</li><li>Events: high activity on the volume</li></ul> | [After the volume mounts, the system stops responding or experiences high resource or memory usage](#after-the-volume-mounts-the-system-stops-responding-or-experiences-high-resource-or-memory-usage) |
 | After you upgrade or downgrade:<ul><li>The volume doesn't mount</li><li>Data on the volume is inaccessible</li><li>Events: event IDs 133 or 137</li></ul> | [After an operating system upgrade or downgrade, ReFS isn't compatible with the operating system](#after-an-operating-system-upgrade-or-downgrade-refs-isnt-compatible-with-the-operating-system) |
 | <ul><li>Backups fail</li><li>Shadow copies aren't created or deleted</li><li>VSS writers generate errors</li><li>Events: event IDs 12289 or 8193</li></ul> | [Backup, VSS, and snapshot issues (Event IDs 12289 or 8193)](#backup-vss-and-snapshot-issues-event-ids-12289-or-8193) |
 | <ul><li>Events: I/O errors, and event IDs 7, 51, or 153</li><li>The storage pool is degraded</li><li>Virtual disks that are hosted on the ReFS volume are offline</li></ul> | [I/O errors, disk hardware failures, and pool degradation](#io-errors-disk-hardware-failures-and-pool-degradation) |
@@ -193,7 +193,7 @@ Causes for this issue include the following conditions:
 1. Consider setting registry values that disable aggressive memory trimming. Consult Microsoft Support for assistance.
 
    > [!TIP]  
-   > For tunable registry parameters that address memory pressure that's caused by large ReFS metadata streams, see [Fix heavy memory usage in ReFS](fix-heavy-memory-usage-refs.md).
+   > For tunable registry parameters that address memory pressure that's caused by large ReFS metadata streams, see [Tuning memory usage in ReFS](fix-heavy-memory-usage-refs.md).
 
 ### After an operating system upgrade or downgrade, ReFS isn't compatible with the operating system
 
