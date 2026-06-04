@@ -23,12 +23,12 @@ The issue occurs because the system uses a customized form that is based on an o
 
 ## Solution
 
-Use one of the listed resolutions to ensure that the execution context is passed as the first parameter.
+Use one of the solutions in the following sections to ensure that the execution context is passed as the first parameter.
 
 > [!IMPORTANT]
-> The following resolutions assume that the script error references the `Mscrm.userid_onchange` function. If the error refers to other fields or functions, such as `Mscrm.accountid_onchange` or `Mscrm.contactid_onchange`, adjust the steps accordingly.
+> The following solutions assume that the script error references the `Mscrm.userid_onchange` function. If the error refers to other fields or functions, such as `Mscrm.accountid_onchange` or `Mscrm.contactid_onchange`, adjust the steps accordingly.
 
-### Resolution 1: Update the form in Power Apps
+### Update the form in Power Apps
 
 1. Sign in to Power Apps and open the solution that contains the form.
 
@@ -49,7 +49,7 @@ Use one of the listed resolutions to ensure that the execution context is passed
 
 1. Save and publish the updated form.
 
-### Resolution 2: Validate the customizations.xml file
+### Validate the customizations.xml file
 
 1. Open the **customizations.xml** file from the solution associated with the customized form that shows the error in an editor.
 
@@ -57,7 +57,7 @@ Use one of the listed resolutions to ensure that the execution context is passed
 
 1. Republish the solution.
 
-### Resolution 3: Run a script in the browser console
+### Run a script in the browser console
 
 To ensure this script has permission to find and update the required information, run it in a browser tab that has an active session with your environment. Additionally, your user account needs permission to update the XML of the customized bookable resource form.
 
