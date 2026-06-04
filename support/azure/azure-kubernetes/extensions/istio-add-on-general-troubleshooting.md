@@ -1,6 +1,6 @@
 ---
 title: General Istio Service Mesh Add-on Troubleshooting
-description: Troubleshoot the Istio service mesh add-on in Azure Kubernetes Service (AKS) with proven steps, common errors, and fixes to restore mesh health quickly.
+description: Troubleshoot the Istio service mesh add-on in Azure Kubernetes Service (AKS) by using proven steps and fixes to address common mesh errors quickly.
 ms.date: 03/18/2025
 author: nshankar13
 ms.author: nshankar
@@ -43,7 +43,7 @@ kubectl logs --selector app=istiod --namespace aks-istio-system
 
 ### Step 2: Bounce (delete) a pod
 
-You might have a good reason to restart a pod. Because Istiod is a deployment, it's safe to simply delete the pod by running the [kubectl delete](https://kubernetes.io/docs/reference/kubectl/generated/kubectl_delete/) command:
+You might have a good reason to restart a pod. Because Istiod is a deployment, you can safely delete the pod by running the [kubectl delete](https://kubernetes.io/docs/reference/kubectl/generated/kubectl_delete/) command:
 
 ```bash
 kubectl delete pods <istio-pod> --namespace aks-istio-system
@@ -181,7 +181,7 @@ istioctl proxy-config all <pod-name> \
 
 ### Step 5: Check the injection status
 
-To check the injection status of the resource, run the following [istioctl experimental check-inject]() command:
+To check the injection status of the resource, run the following `istioctl experimental check-inject` command:
 
 ```bash
 istioctl experimental check-inject --istioNamespace aks-istio-system \
@@ -208,7 +208,7 @@ If you encounter high memory consumption in Envoy, double-check your Envoy setti
 
 By default, Istio adds information about all services that are in the cluster to every Envoy configuration. The [sidecar](https://istio.io/latest/docs/reference/config/networking/sidecar/) can limit the scope of this addition to workloads that are within specific namespaces only. For more information, see [Watch out for this Istio proxy sidecar memory pitfall](https://medium.com/geekculture/watch-out-for-this-istio-proxy-sidecar-memory-pitfall-8dbd99ea7e9d).
 
-For example, the following `Sidecar` definition in the `aks-istio-system` namespace restricts the Envoy configuration for all proxies across the mesh to `aks-istio-system` and other workloads within the same namespace as that specific application:
+For example, the following `Sidecar` definition in the `aks-istio-system` namespace restricts the Envoy configuration for all proxies across the mesh to `aks-istio-system`, and other workloads within the same namespace as that specific application:
 
 ```yaml
 apiVersion: networking.istio.io/v1alpha3
@@ -231,13 +231,17 @@ To address common traffic management and security misconfiguration issues that I
 
 For links to discussion about other issues, such as sidecar injection, observability, and upgrades, see [Common problems](https://istio.io/latest/docs/ops/common-problems/) on the Istio documentation site.
 
+#### Verify AuthorizationPolicy evaluation rules
+
+When you apply multiple authorization policies to a particular workload, consider the order in which Istio processes the different access control types. For more information, see the [Istio Authorization Policy documentation](https://istio.io/latest/docs/reference/config/security/authorization-policy/)
+
 ### Step 3: Verify protocol selection
 
-Although Istio can automatically detect any TCP-based protocol, in certain cases, the protocol in the `Service` spec may have to be [explicitly declared](https://istio.io/latest/docs/ops/configuration/traffic-management/protocol-selection/) to unblock communication issues. This can be done by setting the protocol in the port `name` or in `appProtocol`. In this case, `appProtocol` takes precedence. For instance, certain scenarios might require you to set the protocol to `tcp` to proxy traffic as raw TCP, as opposed to HTTP or HTTPS.
+Although Istio can automatically detect any TCP-based protocol, in certain cases, the protocol in the `Service` spec may have to be [explicitly declared](https://istio.io/latest/docs/ops/configuration/traffic-management/protocol-selection/) in order to unblock communication issues. To make this declaration, set the protocol in the port `name` or in `appProtocol`. In this case, `appProtocol` takes precedence. For instance, certain scenarios might require you to set the protocol to `tcp` in order to proxy traffic as raw TCP, as opposed to HTTP or HTTPS.
 
 ### Step 4: Avoid CoreDNS overload
 
-Issues that relate to CoreDNS overload might require you to change certain Istio DNS settings, such as the `dnsRefreshRate` field in the Istio MeshConfig definition. 
+Issues that relate to CoreDNS overload might require that you change certain Istio DNS settings, such as the `dnsRefreshRate` field in the Istio MeshConfig definition. 
 
 ### Step 5: Fix pod and sidecar race conditions
 
@@ -245,9 +249,9 @@ If your application pod starts before the Envoy sidecar starts, the application 
 
 ### Step 6: Verify OutboundTrafficPolicy mode and Service Entry configuration for outbound access
 
-Issues that relate to outbound access or [egress gateways](./istio-add-on-egress-gateway.md) might occur because of certain Istio configurations that pertain to external service configuration. Verify whether the `outboundTrafficPolicy.mode` either in the [Shared MeshConfig](./istio-add-on-meshconfig.md) or `Sidecar` custom resources is set to `REGISTRY_ONLY`. If so, then a `ServiceEntry` must be explicitly declared for external service to enable outbound access. When you use egress gateways, the resolution for the ServiceEntry must be set to `DNS`.
+Issues that relate to outbound access or [egress gateways](./istio-add-on-egress-gateway.md) might occur because of certain Istio configurations that pertain to external service configuration. Verify whether the `outboundTrafficPolicy.mode` is set to `REGISTRY_ONLY` in either the [Shared MeshConfig](./istio-add-on-meshconfig.md) or `Sidecar` custom resources. If it is, then a `ServiceEntry` must be explicitly declared for external service to enable outbound access. When you use egress gateways, the resolution for the ServiceEntry must be set to `DNS`.
 
-Also, keep in mind that, by default, `ServiceEntries` is exported across all namespaces. To restrict the scope of a `ServiceEntry` to a particular namespace, you should use the `exportTo` field in the [spec](https://istio.io/latest/docs/reference/config/networking/service-entry/#ServiceEntry-export_to).
+Also, remember that `ServiceEntries` is exported across all namespaces by default. To restrict the scope of a `ServiceEntry` to a particular namespace, use the `exportTo` field in the [spec](https://istio.io/latest/docs/reference/config/networking/service-entry/#ServiceEntry-export_to).
 
 ### Step 7: Configure a Service Entry when using an HTTP proxy for outbound traffic
 
@@ -255,7 +259,7 @@ If your cluster uses an HTTP proxy for outbound internet access, you have to con
 
 ### Step 8: Enable Envoy access logging
 
-Enabling Envoy [access logging](https://istio.io/latest/docs/tasks/observability/logs/access-log/) helps identify and pinpoint issues in the gateways and sidecar proxies. For more information about logging and telemetry collection for the Istio add-on, see the documentation on [mesh configuration](/azure/aks/istio-meshconfig), [Telemetry API](/azure/aks/istio-telemetry), and [Istio metrics collection](/azure/aks/istio-metrics-managed-prometheus).
+You can enable [access logging](https://istio.io/latest/docs/tasks/observability/logs/access-log/) for Envoy to help identify and pinpoint issues in the gateways and sidecar proxies. For more information about logging and telemetry collection for the Istio add-on, see the documentation on [mesh configuration](/azure/aks/istio-meshconfig), [Telemetry API](/azure/aks/istio-telemetry), and [Istio metrics collection](/azure/aks/istio-metrics-managed-prometheus).
 
 ## Error messages
 
@@ -292,5 +296,3 @@ The following table contains a list of possible error messages (for deploying th
 - [Istio service mesh add-on plug-in CA certificate troubleshooting](istio-add-on-plug-in-ca-certificate.md)
 
 [!INCLUDE [Third-party information disclaimer](../../../includes/third-party-disclaimer.md)]
-
- 

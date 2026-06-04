@@ -4,7 +4,8 @@ description: Troubleshoot managed namespace errors in AKS when enabling ManagedN
 ms.date: 08/05/2025
 ms.reviewer: jackjiang
 ms.service: azure-kubernetes-service
-ms.custom: sap:Extensions, references_regions
+ms.custom: sap:extensions, policies and add-ons
+
 ---
 # Troubleshoot managed namespace errors
 

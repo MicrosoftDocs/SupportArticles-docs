@@ -4,10 +4,10 @@ description: Troubleshoot problems connecting to and accessing SMB Azure file sh
 services: storage
 ms.service: azure-file-storage
 ms.custom: sap:Connectivity, devx-track-azurepowershell, linux-related-content
-ms.date: 04/08/2026
+ms.date: 05/29/2026
 ms.reviewer: kendownie, jarrettr, v-weizhu, v-six, hanagpal, justingross
 ---
-# Troubleshoot Azure Files connectivity and access issues (SMB)
+# Troubleshoot Azure Files connectivity and access problems (SMB)
 
 This article lists common problems that might occur when you try to connect to and access Server Message Block (SMB) Azure file shares from Windows or Linux clients. It also provides possible causes and resolutions for these problems.
 
@@ -107,17 +107,17 @@ TcpTestSucceeded : True
 ```
 
 > [!NOTE]
-> This command returns the current IP address of the storage account. This IP address is not guaranteed to remain the same, and may change at any time. Don't hardcode this IP address into any scripts, or into a firewall configuration.
+> This command returns the current IP address of the storage account. This IP address isn't guaranteed to remain the same, and it may change at any time. Don't hardcode this IP address into any scripts or into a firewall configuration.
 
 #### Solutions for cause 1
 
 **Solution 1 — Use Azure File Sync as a QUIC endpoint** You can use Azure File Sync as a workaround to access Azure Files from clients that have port 445 blocked. Although Azure Files doesn't directly support SMB over QUIC, Windows Server 2022 Azure Edition does support the QUIC protocol. You can create a lightweight cache of your Azure file shares on a Windows Server 2022 Azure Edition VM using Azure File Sync. This configuration uses port 443, which is widely open outbound to support HTTPS, instead of port 445. To learn more about this option, see [SMB over QUIC with Azure File Sync](/azure/storage/files/storage-files-networking-overview#smb-over-quic).
 
-**Solution 2 — Use VPN or ExpressRoute** By setting up a virtual private network (VPN) or ExpressRoute from on-premises to your Azure storage account, with Azure Files exposed on your internal network using private endpoints, the traffic will go through a secure tunnel as opposed to over the internet. Follow the [instructions to setup a VPN](/azure/storage/files/storage-files-configure-p2s-vpn-windows) to access Azure Files from Windows.
+**Solution 2 — Use VPN or Azure ExpressRoute** By setting up a virtual private network (VPN) or ExpressRoute from on-premises to your Azure storage account, with Azure Files exposed on your internal network using private endpoints, the traffic goes through a secure tunnel as opposed to over the internet. Follow the [instructions to setup a VPN](/azure/storage/files/storage-files-configure-p2s-vpn-windows) to access Azure Files from Windows.
 
 **Solution 3 — Unblock port 445 with help from your ISP/IT admin** Work with your IT department or ISP to open port 445 outbound to [Azure IP ranges](https://www.microsoft.com/download/details.aspx?id=56519).
 
-**Solution 4 — Use REST API-based tools like Storage Explorer or PowerShell** Azure Files also supports REST in addition to SMB. REST access works over port 443 (standard tcp). There are various tools that are written using REST API that enable a rich UI experience. [Storage Explorer](/azure/vs-azure-tools-storage-manage-with-storage-explorer?tabs=windows) is one of them. [Download and Install Storage Explorer](https://azure.microsoft.com/features/storage-explorer/) and connect to your file share backed by Azure Files. You can also use [PowerShell](/azure/storage/files/storage-how-to-use-files-portal) that also uses REST API.
+**Solution 4 — Use REST API-based tools like Storage Explorer or PowerShell** Azure Files also supports REST in addition to SMB. REST access works over port 443 (standard tcp). Various tools that are written using REST API enable a rich UI experience. [Storage Explorer](/azure/vs-azure-tools-storage-manage-with-storage-explorer?tabs=windows) is one of them. [Download and Install Storage Explorer](https://azure.microsoft.com/features/storage-explorer/) and connect to your file share backed by Azure Files. You can also use [PowerShell](/azure/storage/files/storage-how-to-use-files-portal) that also uses REST API.
 
 #### Cause 2: NTLMv1 is enabled
 
@@ -135,9 +135,9 @@ Revert the `LmCompatibilityLevel` value to the default value of 3 in the followi
 
 `HKLM\SYSTEM\CurrentControlSet\Control\Lsa`  
 
-#### Cause 3: The file share name doesn't exist or there is a typo in the share name
+#### Cause 3: The file share name doesn't exist or there's a typo in the share name
 
-Error 67 can occur when the storage account exists and the SMB endpoint is reachable, but the SMB namespace or share path can't be resolved. This isn't a DNS issue, an authentication issue, or a permissions issue.
+Error 67 can occur when the storage account exists and the SMB endpoint is reachable, but the SMB namespace or share path can't be resolved. This problem isn't a DNS issue, an authentication issue, or a permissions issue.
 
 ##### Solution for cause 3
 
@@ -145,33 +145,33 @@ Double check the file share name. Azure file share names must be exact. Check fo
 
 ### <a id="error-64"></a> Error 64 when you mount an Azure file share
 
-When mounting a file share from on-premises or another datacenter, you might see the following error:
+When you mount a file share from on-premises or another datacenter, you might see the following error message:
 
 > System error 64 has occurred. The specified network name is no longer available.
 
 #### Cause
 
-This issue is likely caused by a proxy server or another type of Network Address Translation (NAT) device in the datapath that blocks the connection to map the Azure file share. In this case, the PowerShell cmdlet `Test-NetConnection` still might test connectivity on port 445 successfully.
+A proxy server or another type of Network Address Translation (NAT) device in the datapath blocks the connection to map the Azure file share. In this case, the PowerShell cmdlet `Test-NetConnection` might still test connectivity on port 445 successfully.
 
-This issue occurs when the Active Directory computer or user account corresponding to the Azure storage account that hosts the FSLogix user profiles can't process Kerberos authentications. The underlying reasons might include incorrect modifications to the `msDS-SupportedEncryptionTypes` attribute, or the rotation of the storage account's access keys without updating the new keys on the Active Directory account.
+This problem occurs when the Active Directory computer or user account corresponding to the Azure storage account that hosts the FSLogix user profiles can't process Kerberos authentications. The underlying reasons might include incorrect modifications to the `msDS-SupportedEncryptionTypes` attribute, or the rotation of the storage account's access keys without updating the new keys on the Active Directory account.
 
 #### Solution
 
-To resolve this issue, reproduce it and collect a network trace to get more information about the error's origin. In most cases, you must work with your network/firewall administrator to allow the content to pass through the network device.
+To resolve this problem, reproduce it and collect a network trace to get more information about the error's origin. In most cases, you must work with your network or firewall administrator to allow the content to pass through the network device.
 
-Kerberos errors can be seen in a network trace, such as flows labeled as KRB Error in a `netsh` trace. To resolve them, [enable Active Directory Domain Services authentication for Azure file shares](/azure/storage/files/storage-files-identity-ad-ds-enable) to set up the authentication parameters properly.
+You can see Kerberos errors in a network trace, such as flows labeled as KRB Error in a `netsh` trace. To resolve them, [enable Active Directory Domain Services authentication for Azure file shares](/azure/storage/files/storage-files-identity-ad-ds-enable) to set up the authentication parameters properly.
 
 ### <a id="error-0x800704b3"></a> Failed with error code 0x800704b3
 
-When you try to mount an Azure file share, you receive the following error:
+When you try to mount an Azure file share, you receive the following error message:
 
 > Error code: 0x800704b3  
 > Symbolic Name: ERROR_NO_NET_OR_BAD_PATH  
-> Error description: The network path was either typed incorrectly, does not exist, or the network provider is not currently available. Please try retyping the path or contact your network administrator.
+> Error description: The network path was either typed incorrectly, doesn't exist, or the network provider isn't currently available. Retype the path or contact your network administrator.
 
 #### Cause
 
-This error can occur if any core Windows network related services are disabled as any service that explicitly depends on those network services will fail to start. 
+This error can occur if any core Windows network related services are disabled. Any service that explicitly depends on those network services fails to start.  
 
 #### Solution
 
@@ -191,7 +191,7 @@ If you find any, start the service(s) and retry mounting the Azure file share.
 
 #### Cause
 
-Drives are mounted per user. If your application or service is running under a different user account than the one that mounted the drive, the application won't see the drive.
+You mount drives per user. If your application or service runs under a different user account than the one that mounts the drive, the application can't see the drive.
 
 #### Solution
 
@@ -199,7 +199,7 @@ Use one of the following solutions:
 
 - Mount the drive from the same user account that contains the application. You can use a tool such as PsExec.
 - Pass the storage account name and key in the user name and password parameters of the `net use` command.
-- Use the `cmdkey` command to add the credentials into Credential Manager. Perform this action from a command line under the service account context, either through an interactive login or by using `runas`.
+- Use the `cmdkey` command to add the credentials into Credential Manager. Perform this action from a command line under the service account context, either through an interactive sign-in or by using `runas`.
   
     ```console
     cmdkey /add:<storage-account-name>.file.core.windows.net /user:AZURE\<storage-account-name> /pass:<storage-account-key>
@@ -209,7 +209,7 @@ Use one of the following solutions:
 
   `net use * \\storage-account-name.file.core.windows.net\share`
 
-After you follow these instructions, you might receive the following error message when you run net use for the system/network service account: "System error 1312 has occurred. A specified logon session does not exist. It may already have been terminated." If this error appears, make sure that the username that's passed to `net use` includes domain information (for example: `[storage account name].file.core.windows.net`).
+After you follow these instructions, you might receive the following error message when you run `net use` for the system or network service account: "System error 1312 has occurred. A specified logon session does not exist. It may already have been terminated." If this error appears, make sure that the user name that you pass to `net use` includes domain information (for example: `[storage account name].file.core.windows.net`).
 
 ### <a id="shareismissing"></a>No folder with a drive letter in "My Computer" or "This PC"
 
@@ -231,7 +231,7 @@ The `net use` command interprets a forward slash (/) as a command-line option. I
 
 #### Solution
 
-You can use either of the following steps to work around the problem:
+To work around this problem, use either of the following steps:
 
 - Run the following PowerShell command:
 
@@ -243,7 +243,7 @@ You can use either of the following steps to work around the problem:
 
   `Echo new-smbMapping ... | powershell -command –`
 
-- Put double quotation marks around the key to work around this problem--unless the forward slash is the first character. If it is, either use the interactive mode and enter your password separately or regenerate your keys to get a key that doesn't start with a forward slash.
+- Put double quotation marks around the key to work around this problem unless the forward slash is the first character. If it is, either use the interactive mode and enter your password separately, or regenerate your keys to get a key that doesn't start with a forward slash.
 
 ### <a id="newpsdrive"></a>New-PSDrive command fails with "the network resource type is not correct" error
 
@@ -259,14 +259,14 @@ Make sure port 445 is open and [check DNS resolution and connectivity to your fi
 
 Linux clients can use [AzFileDiagnostics](https://github.com/Azure-Samples/azure-files-samples/tree/master/AzFileDiagnostics/Linux) to automate symptom detection and ensure that they have the correct prerequisites.
 
-Common causes for this problem are:
+Common causes for this problem include:
 
 - You're using a Linux distribution with an outdated SMB client. See [Use Azure Files with Linux](/azure/storage/files/storage-how-to-use-files-linux) for more information on common Linux distributions available in Azure that have compatible clients.
 - SMB utilities (cifs-utils) aren't installed on the client.
 - The minimum SMB version, 2.1, isn't available on the client.
 - SMB 3.x encryption isn't supported on the client. The preceding table provides a list of Linux distributions that support mounting from on-premises and cross-region using encryption. Other distributions require kernel 4.11 and later versions.
 - You're trying to connect to an Azure file share from an Azure VM, and the VM isn't in the same region as the storage account.
-- If the [Secure transfer required](/azure/storage/common/storage-require-secure-transfer) setting or the [Require encryption in transit for SMB](/azure/storage/files/files-smb-protocol#smb-security-settings) setting is enabled on the storage account, Azure Files will allow only connections that use SMB 3.x with encryption.
+- If the [Secure transfer required](/azure/storage/common/storage-require-secure-transfer) setting or the [Require encryption in transit for SMB](/azure/storage/files/files-smb-protocol#smb-security-settings) setting is enabled on the storage account, Azure Files accepts only connections that use SMB 3.x with encryption.
 
 ### Solution
 
@@ -290,15 +290,41 @@ To learn more, see [Prerequisites for mounting an Azure file share with Linux an
 ##### Solution for cause 1
 
 1. Connect from a client that supports SMB encryption or connect from a virtual machine in the same datacenter as the Azure storage account that's used for the Azure file share.
-2. Verify the [Secure transfer required](/azure/storage/common/storage-require-secure-transfer) setting is disabled on the storage account if the client doesn't support SMB encryption.
+1. Verify the [Secure transfer required](/azure/storage/common/storage-require-secure-transfer) setting is disabled on the storage account if the client doesn't support SMB encryption.
 
 ##### Cause 2: Virtual network or firewall rules are enabled on the storage account, or port 445 is blocked
 
-If virtual network (VNET) and firewall rules are configured on the storage account, network traffic will be denied access unless the client IP address or virtual network is allowed access. In addition, if your company or ISP blocks port 445 outbound, you won't be able to mount the share.
+If virtual network (VNET) and firewall rules are configured on the storage account, network traffic is denied unless the client IP address or virtual network is allowed access. This restriction includes scenarios where the storage account firewall blocks the VM's subnet, even when the VM and storage account are in the same region. In addition, if your company or ISP blocks port 445 outbound, you can't mount the share.
 
 ##### Solution for cause 2
 
-Verify that the VNET and firewall rules are configured properly on the storage account, and that port 445 is allowlisted. To test if virtual networks or firewall rules cause the issue, you can temporarily change the setting on the storage account to **Allow access from all networks**. To learn more, see [Configure Azure Storage firewalls and virtual networks](/azure/storage/common/storage-network-security).
+Verify that the VM's subnet is allowlisted in the storage account firewall, and that port 445 isn't blocked. To test if virtual networks or firewall rules cause the issue, you can temporarily change the setting on the storage account to **Allow access from all networks**. 
+
+To check and update the virtual network rules, use the Azure portal or Azure CLI.
+
+To use the Azure portal, follow these steps:
+
+1. In the [Azure portal](https://portal.azure.com), go to your storage account.
+1. Under **Security + networking**, select **Networking**.
+1. On the **Firewalls and virtual networks** tab, confirm that **Enabled from selected virtual networks and IP addresses** is selected and that your VM's virtual network and subnet appear under **Virtual networks**.
+1. If the subnet isn't listed, select **+ Add existing virtual network**, select the virtual network and subnet, and then select **Add**. Select **Save** to apply the changes.
+
+To list the current virtual network rules by using Azure CLI, run the following command:
+
+```azurecli
+az storage account network-rule list --resource-group "<resource-group>" --account-name "<storage-account>" --query virtualNetworkRules
+```
+
+To add your VM's subnet, run:
+
+```azurecli
+subnetid=$(az network vnet subnet show --resource-group "<resource-group>" --vnet-name "<vnet-name>" --name "<subnet-name>" --query id --output tsv)
+az storage account network-rule add --resource-group "<resource-group>" --account-name "<storage-account>" --subnet $subnetid
+```
+
+To test SMB connectivity after verifying the network rules, use the [AzFileDiagnostics](https://github.com/Azure-Samples/azure-files-samples/tree/master/AzFileDiagnostics/Windows) tool.
+
+For more information, see [Configure Azure Storage firewalls and virtual networks](/azure/storage/common/storage-network-security).
 
 ##### Cause 3: SMB client is configured to use NTLMv1
 
@@ -310,15 +336,15 @@ Ensure that SMB mount commands don't override the default NTLMv2 authentication 
 
 ##### Cause 4: Storage account key access is disabled or disallowed via a policy
 
-When storage account key access is disabled or disallowed for a storage account, SAS tokens and access keys won't work.
+When you disable or disallow storage account key access for a storage account, SAS tokens and access keys stop working.
 
 ##### Solution for cause 4
 
-Use identity-based authentication instead. See [Enable Active Directory authentication over SMB for Linux clients accessing Azure Files](/azure/storage/files/storage-files-identity-auth-linux-kerberos-enable) for prerequisites and instructions.
+Use identity-based authentication instead. For prerequisites and instructions, see [Enable Active Directory authentication over SMB for Linux clients accessing Azure Files](/azure/storage/files/storage-files-identity-auth-linux-kerberos-enable).
 
 ##### Cause 5: SMB channel encryption is set to AES-256-GCM only
 
-If your Azure storage account is configured to use only AES-256-GCM for SMB channel encryption, mount operations fail when the client defaults to AES-128-GCM.
+If you configure your Azure storage account to use only AES-256-GCM for SMB channel encryption, mount operations fail when the client defaults to AES-128-GCM.
 
 ##### Solution for cause 5
 
@@ -345,13 +371,13 @@ Some Linux distributions don't yet support encryption features in SMB 3.x. Users
 
 ##### Solution
 
-The encryption feature for SMB 3.x for Linux was introduced in the 4.11 kernel. This feature enables the mounting of an Azure file share from on-premises or a different Azure region. Some Linux distributions may have backported changes from the 4.11 kernel to older versions of the Linux kernel that they maintain. To help determine if your version of Linux supports SMB 3.x with encryption, consult with [Use Azure Files with Linux](/azure/storage/files/storage-how-to-use-files-linux).
+The encryption feature for SMB 3.x for Linux was introduced in the 4.11 kernel. This feature enables the mounting of an Azure file share from on-premises or a different Azure region. Some Linux distributions might backport changes from the 4.11 kernel to older versions of the Linux kernel that they maintain. To help determine if your version of Linux supports SMB 3.x with encryption, consult [Use Azure Files with Linux](/azure/storage/files/storage-how-to-use-files-linux).
 
-If your Linux SMB client doesn't support encryption, mount Azure Files using SMB 2.1 from a Linux VM that's in the same Azure datacenter as the file share. Verify that the [Secure transfer required](/azure/storage/common/storage-require-secure-transfer) setting is disabled on the storage account.
+If your Linux SMB client doesn't support encryption, mount Azure Files by using SMB 2.1 from a Linux VM that's in the same Azure datacenter as the file share. Verify that the [Secure transfer required](/azure/storage/common/storage-require-secure-transfer) setting is disabled on the storage account.
 
 #### <a id="error112"></a>"Mount error(112): Host is down" because of a reconnection time-out
 
-A "112" mount error occurs on the Linux client when the client has been idle for a long time. After an extended idle time, the client disconnects, and the connection times out.  
+A "112" mount error occurs on the Linux client when the client is idle for a long time. After an extended idle time, the client disconnects, and the connection times out.  
 
 ##### Cause
 
@@ -373,9 +399,9 @@ However, these changes might not be ported yet to all Linux distributions. If yo
 
 ##### Workaround
 
-You can work around this problem by specifying a hard mount. A hard mount forces the client to wait until a connection is established or until it's explicitly interrupted. You can use it to prevent errors because of network time-outs. However, this workaround might cause indefinite waits. Be prepared to stop connections as necessary.
+You can work around this problem by specifying a hard mount. A hard mount forces the client to wait until a connection is established or until it's explicitly interrupted. Use it to prevent errors because of network time-outs. However, this workaround might cause indefinite waits. Be prepared to stop connections as necessary.
 
-If you can't upgrade to the latest kernel versions, you can work around this problem by keeping a file in the Azure file share that you write to every 30 seconds or less. This must be a write operation, such as rewriting the created or modified date on the file. Otherwise, you might get cached results, and your operation might not trigger the reconnection.
+If you can't upgrade to the latest kernel versions, you can work around this problem by keeping a file in the Azure file share that you write to every 30 seconds or less. This operation must be a write operation, such as rewriting the created or modified date on the file. Otherwise, you might get cached results, and your operation might not trigger the reconnection.
 
 ---
 
@@ -383,11 +409,11 @@ If you can't upgrade to the latest kernel versions, you can work around this pro
 
 ### "The user name or password is incorrect" error after a customer-initiated failover
 
-In a customer-initiated failover scenario with geo-redundant storage accounts, file handles and leases aren't retained on failover. Clients must unmount and remount the file shares.
+In a customer-initiated failover scenario with geo-redundant storage accounts, the failover process doesn't retain file handles and leases. Clients must unmount and remount the file shares.
 
 ### <a id="noaaccessfailureportal"></a>Error "No access" when you try to access or delete an Azure file share
 
-When you try to access or delete an Azure file share using the Azure portal, you might receive the following error:
+When you try to access or delete an Azure file share by using the Azure portal, you might receive the following error:
 
 > No access Error code: 403
 
@@ -405,18 +431,18 @@ Browse to the storage account in which the Azure file share is located, select *
 
 ### File locks and leases
 
-If you can't modify or delete an Azure file share or snapshot, it might be due to file locks or leases. Azure Files provides two ways to prevent accidental modification or deletion of Azure file shares and share snapshots: 
+If you can't modify or delete an Azure file share or snapshot, file locks or leases might be the cause. Azure Files provides two ways to prevent accidental modification or deletion of Azure file shares and share snapshots:  
 
-- **Storage account resource locks**: All Azure resources, including the storage account, support [resource locks](/azure/azure-resource-manager/management/lock-resources). Locks might be put on the storage account by an administrator or by services such as Azure Backup. Two variations of resource locks exist: **modify**, which prevents all modifications to the storage account and its resources, and **delete**, which only prevents deletions of the storage account and its resources. When modifying or deleting shares through the `Microsoft.Storage` resource provider, resource locks are enforced on Azure file shares and share snapshots. Most portal operations, Azure PowerShell cmdlets for Azure Files with `Rm` in the name (for example, `Get-AzRmStorageShare`), and Azure CLI commands in the `share-rm` command group (for example, `az storage share-rm list`) use the `Microsoft.Storage` resource provider. Some tools and utilities such as Storage Explorer, legacy Azure Files PowerShell management cmdlets without `Rm` in the name (for example, `Get-AzStorageShare`), and legacy Azure Files CLI commands under the `share` command group (for example, `az storage share list`) use legacy APIs in the FileREST API that bypass the `Microsoft.Storage` resource provider and resource locks. For more information on legacy management APIs exposed in the FileREST API, see [control plane in Azure Files](/rest/api/storageservices/file-service-rest-api#control-plane).
+- **Storage account resource locks**: All Azure resources, including the storage account, support [resource locks](/azure/azure-resource-manager/management/lock-resources). An administrator or services such as Azure Backup can put locks on the storage account. Two variations of resource locks exist: **modify**, which prevents all modifications to the storage account and its resources, and **delete**, which only prevents deletions of the storage account and its resources. When you modify or delete shares through the `Microsoft.Storage` resource provider, Azure Files and share snapshots enforce resource locks. Most portal operations, Azure PowerShell cmdlets for Azure Files with `Rm` in the name (for example, `Get-AzRmStorageShare`), and Azure CLI commands in the `share-rm` command group (for example, `az storage share-rm list`) use the `Microsoft.Storage` resource provider. Some tools and utilities such as Storage Explorer, legacy Azure Files PowerShell management cmdlets without `Rm` in the name (for example, `Get-AzStorageShare`), and legacy Azure Files CLI commands under the `share` command group (for example, `az storage share list`) use legacy APIs in the FileREST API that bypass the `Microsoft.Storage` resource provider and resource locks. For more information on legacy management APIs exposed in the FileREST API, see [control plane in Azure Files](/rest/api/storageservices/file-service-rest-api#control-plane).
 
-- **Share/share snapshot leases**: Share leases are a kind of proprietary lock for Azure file shares and file share snapshots. Leases might be put on individual Azure file shares or file share snapshots by administrators by calling the API through a script or by value-added services such as Azure Backup. When a lease is put on an Azure file share or file share snapshot, modifying or deleting the file share/share snapshot can be done with the lease ID. Admins can also release the lease before modification operations, which requires the lease ID, or break the lease, which doesn't require the lease ID. For more information on share leases, see [lease share](/rest/api/storageservices/lease-share).
+- **Share and share snapshot leases**: Share leases are a kind of proprietary lock for Azure file shares and file share snapshots. Administrators can put leases on individual Azure file shares or share snapshots by calling the API through a script or by value-added services such as Azure Backup. When a lease is put on an Azure file share or share snapshot, you can modify or delete the file share or share snapshot by using the lease ID. Admins can also release the lease before modification operations, which requires the lease ID, or break the lease, which doesn't require the lease ID. For more information on share leases, see [lease share](/rest/api/storageservices/lease-share).
 
-Because resource locks and leases might interfere with intended administrator operations on your storage account/Azure file shares, you might wish to remove any resource locks/leases that have been put on your resources manually or automatically by value-added services such as Azure Backup. The following script removes all resource locks and leases. Remember to replace `<resource-group>` and `<storage-account>` with the appropriate values for your environment.
+Because resource locks and leases might interfere with intended administrator operations on your storage account/file shares, you might wish to remove any resource locks or leases that an administrator or value-added services such as Azure Backup put on your resources. The following script removes all resource locks and leases. Remember to replace `<resource-group>` and `<storage-account>` with the appropriate values for your environment.
 
-Before running the following script, you should [install the latest version](https://www.powershellgallery.com/packages/Az.Storage/) of the Azure Storage PowerShell module.
+Before running the following script, [install the latest version](https://www.powershellgallery.com/packages/Az.Storage/) of the Azure Storage PowerShell module.
 
 > [!Important]
-> Value-added services that take resource locks and share/share snapshot leases on your Azure Files resources may periodically reapply locks and leases. Modifying or deleting locked resources by value-added services may impact the regular operation of those services, such as deleting share snapshots that were managed by Azure Backup.
+> Value-added services that take resource locks and share or share snapshot leases on your Azure Files might periodically reapply locks and leases. Modifying or deleting locked resources by value-added services might impact the regular operation of those services, such as deleting share snapshots that were managed by Azure Backup.
 
 ```powershell
 # Parameters for storage account resource
@@ -447,7 +473,7 @@ Get-AzStorageShare -Context $storageAccount.Context | `
     }
 ```
 
-## <a id="open-handles"></a>Unable to modify, move/rename, or delete a file or directory
+## <a id="open-handles"></a>Unable to modify, move, rename, or delete a file or directory
 
 Select the Windows or Linux tab depending on the client operating system you're using to access Azure file shares.
 
@@ -457,46 +483,46 @@ In Windows, you might see the following errors.
 
 ### Orphaned file handles or leases
 
-One of the key purposes of a file share is that multiple users and applications may simultaneously interact with files and directories in the share. To assist with this interaction, file shares provide several ways of mediating access to files and directories.
+One of the key purposes of a file share is that multiple users and applications can simultaneously interact with files and directories in the share. To assist with this interaction, file shares provide several ways of mediating access to files and directories.
 
-When you open a file from a mounted Azure file share over SMB, your application/operating system requests a file handle, which is a reference to the file. Among other things, your application specifies a file-sharing mode when it requests a file handle, which specifies the level of exclusivity of your access to the file enforced by Azure Files:
+When you open a file from a mounted Azure file share over SMB, your application or operating system requests a file handle, which is a reference to the file. Among other things, your application specifies a file-sharing mode when it requests a file handle. This mode specifies the level of exclusivity of your access to the file that Azure Files enforces:
 
 - `None`: you have exclusive access.
-- `Read`: others may read the file while you have it open.
-- `Write`: others may write to the file while you have it open.
+- `Read`: others can read the file while you have it open.
+- `Write`: others can write to the file while you have it open.
 - `ReadWrite`: a combination of both the `Read` and `Write` sharing modes.
-- `Delete`: others may delete the file while you have it open.
+- `Delete`: others can delete the file while you have it open.
 
-Although as a stateless protocol, the FileREST protocol doesn't have a concept of file handles, it does provide a similar mechanism to mediate access to files and folders that your script, application, or service may use: file leases. When a file is leased, it's treated as equivalent to a file handle with a file sharing mode of `None`.
+Although the FileREST protocol is a stateless protocol and doesn't have a concept of file handles, it does provide a similar mechanism to mediate access to files and folders that your script, application, or service can use: file leases. When you lease a file, treat it as equivalent to a file handle with a file sharing mode of `None`.
 
-Although file handles and leases serve an important purpose, sometimes file handles and leases might be orphaned. When this happens, this can cause problems in modifying or deleting files. You might see error messages like:
+Although file handles and leases serve an important purpose, sometimes they're orphaned. When this situation occurs, it can cause problems in modifying or deleting files. You might see error messages like:
 
 - The process can't access the file because the file is being used by another process.
 - The action can't be completed because the file is open in another program.
 - The document is locked for editing by another user.
 - The specified resource is marked for deletion by an SMB client.
 
-The resolution to this issue depends on whether this is being caused by an orphaned file handle or lease.
+The resolution to this issue depends on whether an orphaned file handle or lease causes the problem.
 
 > [!NOTE]
-> REST leases are used by applications to prevent files from being deleted or modified. Before breaking any leases, you should identify which application is acquiring them. Otherwise, you might break the application behavior.
+> Applications use REST leases to prevent files from being deleted or modified. Before breaking any leases, identify which application is acquiring them. Otherwise, you might break the application behavior.
 
 #### Cause 1
 
-A file handle is preventing a file/directory from being modified or deleted. You can use the [Get-AzStorageFileHandle](/powershell/module/az.storage/get-azstoragefilehandle) PowerShell cmdlet to view open handles.
+A file handle prevents a file or directory from being modified or deleted. Use the [Get-AzStorageFileHandle](/powershell/module/az.storage/get-azstoragefilehandle) PowerShell cmdlet to view open handles.
 
-If all SMB clients have closed their open handles on a file/directory and the issue continues to occur, you can force close a file handle.
+If all SMB clients close their open handles on a file or directory and the issue continues to occur, you can force close a file handle.
 
 #### Solution 1
 
-To force a file handle to be closed, use the [Close-AzStorageFileHandle](/powershell/module/az.storage/close-azstoragefilehandle) PowerShell cmdlet.
+To force close a file handle, use the [Close-AzStorageFileHandle](/powershell/module/az.storage/close-azstoragefilehandle) PowerShell cmdlet.
 
-> [!Note]  
+> [!NOTE]  
 > The `Get-AzStorageFileHandle` and `Close-AzStorageFileHandle` cmdlets are included in Az PowerShell module version 2.4 or later. To install the latest Az PowerShell module, see [Install the Azure PowerShell module](/powershell/azure/install-azure-powershell).
 
 #### Cause 2
 
-A file lease is preventing a file from being modified or deleted. You can check if a file has a file lease with the following PowerShell commands. Replace `<resource-group>`, `<storage-account>`, `<file-share>`, and `<path-to-file>` with the appropriate values for your environment.
+A file lease prevents a file from being modified or deleted. You can check if a file has a file lease by using the following PowerShell commands. Replace `<resource-group>`, `<storage-account>`, `<file-share>`, and `<path-to-file>` with the appropriate values for your environment.
 
 ```powershell
 # Set variables 
@@ -522,7 +548,7 @@ $fileClient = $file.ShareFileClient
 $fileClient.GetProperties().Value
 ```
 
-If a file has a lease, the returned object should contain the following properties:
+If a file has a lease, the returned object contains the following properties:
 
 ```output
 LeaseDuration         : Infinite
@@ -532,7 +558,7 @@ LeaseStatus           : Locked
 
 #### Solution 2
 
-To remove a lease from a file, you can release the lease or break the lease. To release the lease, you need the LeaseId of the lease, which you set when you create the lease. You don't need the LeaseId to break the lease.
+To remove a lease from a file, release the lease or break the lease. To release the lease, you need the LeaseId of the lease, which you set when you create the lease. You don't need the LeaseId to break the lease.
 
 The following example shows how to break the lease for the file indicated in cause 2 (this example continues with the PowerShell variables from cause 2):
 
@@ -555,13 +581,13 @@ This issue typically occurs if the file or directory has an open handle.
 
 #### Solution
 
-If the SMB clients have closed all open handles and the issue continues to occur, perform the following:
+If the SMB clients close all open handles and the issue continues, perform the following steps:
 
 - Use the [Get-AzStorageFileHandle](/powershell/module/az.storage/get-azstoragefilehandle) PowerShell cmdlet to view open handles.
 
 - Use the [Close-AzStorageFileHandle](/powershell/module/az.storage/close-azstoragefilehandle) PowerShell cmdlet to close open handles.
 
-> [!Note]  
+> [!NOTE]  
 > The `Get-AzStorageFileHandle` and `Close-AzStorageFileHandle` cmdlets are included in Az PowerShell module version 2.4 or later. To install the latest Az PowerShell module, see [Install the Azure PowerShell module](/powershell/azure/install-azure-powershell).
 
 ---
@@ -572,17 +598,17 @@ If the SMB clients have closed all open handles and the issue continues to occur
 
 #### Cause
 
-If the `snapshot` option for the `mount` command isn't passed in a recognized format, the `mount` command can fail with this error. To confirm it, check kernel log messages (dmesg), and dmesg will show a log entry such as `cifs: Bad value for 'snapshot'`.
+If you don't pass the `snapshot` option for the `mount` command in a recognized format, the `mount` command fails with this error. To confirm it, check kernel log messages (`dmesg`). The `dmesg` output shows a log entry such as `cifs: Bad value for 'snapshot'`.
 
 #### Solution
 
-Make sure you're passing the `snapshot` option for the `mount` command in the correct format. Refer to the mount.cifs manual page (e.g. `man mount.cifs`). A common error is passing the GMT timestamp in the wrong format, such as using hyphens or colons in place of periods. For more information, see [Mount a file share snapshot](/azure/storage/files/storage-how-to-use-files-linux#mount-a-file-share-snapshot).
+Make sure you're passing the `snapshot` option for the `mount` command in the correct format. Refer to the `mount.cifs` manual page (for example, `man mount.cifs`). A common error is passing the GMT timestamp in the wrong format, such as using hyphens or colons in place of periods. For more information, see [Mount a file share snapshot](/azure/storage/files/storage-how-to-use-files-linux#mount-a-file-share-snapshot).
 
 ### <a id="badsnapshottoken"></a>"Bad snapshot token" when trying to mount an Azure file share snapshot on Linux
 
 #### Cause
 
-If the snapshot `mount` option is passed starting with `@GMT`, but the format is still wrong (such as using hyphens and colons instead of periods), the `mount` command can fail with this error.
+If you pass the snapshot `mount` option starting with `@GMT`, but the format is still wrong (such as using hyphens and colons instead of periods), the `mount` command fails with this error.
 
 #### Solution
 
@@ -592,7 +618,7 @@ Make sure you're passing the GMT timestamp in the correct format, which is `@GMT
 
 #### Cause
 
-If the snapshot you're attempting to mount doesn't exist, the `mount` command can fail with this error. To confirm it, check kernel log messages (dmesg), and dmesg will show a log entry such as:
+If the snapshot you want to mount doesn't exist, the `mount` command returns this error. To confirm it, check kernel log messages (`dmesg`). The `dmesg` output shows a log entry such as:
 
 ```output
 [Mon Dec 12 10:34:09 2022] CIFS: Attempting to mount \\snapshottestlinux.file.core.windows.net\snapshot-test-share1
@@ -601,7 +627,7 @@ If the snapshot you're attempting to mount doesn't exist, the `mount` command ca
 
 #### Solution
 
-Make sure the snapshot you're attempting to mount exists. For more information on how to list the available snapshots for a given Azure file share, see [Mount a file share snapshot](/azure/storage/files/storage-how-to-use-files-linux#mount-a-file-share-snapshot).
+Make sure the snapshot you want to mount exists. For more information on how to list the available snapshots for a given Azure file share, see [Mount a file share snapshot](/azure/storage/files/storage-how-to-use-files-linux#mount-a-file-share-snapshot).
 
 ## Disk quota or network errors from too many open handles
 
@@ -613,7 +639,7 @@ Select the Windows or Linux tab depending on the client operating system you're 
 
 #### Cause
 
-Error 1816 happens when you reach the upper limit of concurrent open handles that are allowed for a file or directory on the Azure file share. For more information, see [Azure Files scale targets](/azure/storage/files/storage-files-scale-targets#azure-files-scale-targets).
+Error 1816 occurs when you reach the upper limit of concurrent open handles that are allowed for a file or directory on the Azure file share. For more information, see [Azure Files scale targets](/azure/storage/files/storage-files-scale-targets#azure-files-scale-targets).
 
 #### Solution
 
@@ -623,20 +649,20 @@ To view open handles for a file share, directory, or file, use the [Get-AzStorag
 
 To close open handles for a file share, directory, or file, use the [Close-AzStorageFileHandle](/powershell/module/az.storage/close-azstoragefilehandle) PowerShell cmdlet.
 
-> [!Note]
+> [!NOTE]
 > The `Get-AzStorageFileHandle` and `Close-AzStorageFileHandle` cmdlets are included in Az PowerShell module version 2.4 or later. To install the latest Az PowerShell module, see [Install the Azure PowerShell module](/powershell/azure/install-azure-powershell).
 
 ### <a id="networkerror59"></a>ERROR_UNEXP_NET_ERR (59) when doing any operations on a handle
 
 #### Cause
 
-If you cache/hold a large number of open handles for a long time, you might see this server-side failure due to throttling reasons. When a large number of handles are cached by the client, many of those handles can go into a reconnect phase at the same time, building up a queue on the server which needs to be throttled. The retry logic and the throttling on the backend for reconnect takes longer than the client's timeout. This situation manifests itself as a client not being able to use an existing handle for any operation, with all operations failing with ERROR_UNEXP_NET_ERR (59).
+If you cache or hold a large number of open handles for a long time, you might see this server-side failure due to throttling. When the client caches many handles, many of those handles enter a reconnect phase at the same time. This phase builds up a queue on the server that needs to be throttled. The retry logic and the throttling on the backend for reconnect take longer than the client's timeout. This situation manifests itself as a client not being able to use an existing handle for any operation, with all operations failing with ERROR_UNEXP_NET_ERR (59).
 
 There are also edge cases in which the client handle becomes disconnected from the server (for example, a network outage lasting several minutes) that could cause this error.
 
 #### Solution
 
-Don't keep a large number of handles cached. Close handles, and then retry. Use `Get-AzStorageFileHandle` and `Close-AzStorageFileHandle` PowerShell cmdlets to view/close open handles.
+Don't keep a large number of handles cached. Close handles, and then retry. Use `Get-AzStorageFileHandle` and `Close-AzStorageFileHandle` PowerShell cmdlets to view and close open handles.
 
 If you're using Azure file shares to store profile containers or disk images for a large-scale virtual desktop deployment or other workloads that open handles on files, directories, and/or the root directory, you might reach the upper [scale limits](/azure/storage/files/storage-files-scale-targets) for concurrent open handles. In this case, use an additional Azure file share and distribute the containers or images between the shares.
 
@@ -644,7 +670,7 @@ If you're using Azure file shares to store profile containers or disk images for
 
 Linux clients can use [AzFileDiagnostics](https://github.com/Azure-Samples/azure-files-samples/tree/master/AzFileDiagnostics/Linux) to automate symptom detection and ensure that they have the correct prerequisites.
 
-### <a id="permissiondenied"></a>"[permission denied] Disk quota exceeded" when you try to open a file
+### <a id="permissiondenied"></a>"[permission denied] Disk quota exceeded" error when you try to open a file
 
 In Linux, you might receive an error message that resembles the following:
 
@@ -652,29 +678,29 @@ In Linux, you might receive an error message that resembles the following:
 
 #### Cause
 
-You've reached the upper limit of concurrent open handles that are allowed for a file or directory.
+You reached the upper limit of concurrent open handles that are allowed for a file or directory.
 
 Azure Files supports 10,000 open handles on the root directory and 2,000 open handles per file and directory within the share.
 
 #### Solution
 
-Reduce the number of concurrent open handles by closing some handles and then retry the operation.
+Reduce the number of concurrent open handles by closing some handles, and then retry the operation.
 
 To view open handles for a file share, directory, or file, use the [Get-AzStorageFileHandle](/powershell/module/az.storage/get-azstoragefilehandle) PowerShell cmdlet.  
 
 To close open handles for a file share, directory, or file, use the [Close-AzStorageFileHandle](/powershell/module/az.storage/close-azstoragefilehandle) PowerShell cmdlet.
 
-> [!Note]  
+> [!NOTE]  
 > The `Get-AzStorageFileHandle` and `Close-AzStorageFileHandle` cmdlets are included in Az PowerShell module version 2.4 or later. To install the latest Az PowerShell module, see [Install the Azure PowerShell module](/powershell/azure/install-azure-powershell).
 
 ---
 
 ## <a id="doesnotsupportencryption"></a>Error "You are copying a file to a destination that does not support encryption"
 
-When a file is copied over the network, the file is decrypted on the source computer, transmitted in plaintext, and re-encrypted at the destination. However, you might see the following error when you're trying to copy an encrypted file: "You are copying the file to a destination that does not support encryption."
+When you copy a file over the network, the source computer decrypts the file, transmits it in plaintext, and re-encrypts it at the destination. However, you might see the following error when you're trying to copy an encrypted file: "You are copying the file to a destination that does not support encryption."
 
 ### Cause
-This problem can occur if you are using Encrypting File System (EFS). BitLocker-encrypted files can be copied to Azure Files. However, Azure Files doesn't support NTFS EFS.
+This problem can occur if you're using Encrypting File System (EFS). You can copy BitLocker-encrypted files to Azure Files. However, Azure Files doesn't support NTFS EFS.
 
 ### Workaround
 To copy a file over the network, you must first decrypt it. Use one of the following methods:
@@ -686,7 +712,7 @@ To copy a file over the network, you must first decrypt it. Use one of the follo
   - Name = CopyFileAllowDecryptedRemoteDestination
   - Value = 1
 
-Be aware that setting the registry key affects all copy operations that are made to network shares.
+Setting the registry key affects all copy operations that are made to network shares.
 
 ## Error ConditionHeadersNotSupported from a Web Application using Azure Files from Browser
 
@@ -696,11 +722,11 @@ The ConditionHeadersNotSupported error occurs when accessing content hosted in A
 
 ### Cause
 
-Conditional headers aren't yet supported. Applications implementing them will need to request the full file every time the file is accessed.
+Conditional headers aren't yet supported. Applications implementing them need to request the full file every time the file is accessed.
 
 ### Workaround
 
-When a new file is uploaded, the **CacheControl** property by default is **no-cache**. To force the application to request the file every time, the file's **CacheControl** property needs to be updated from **no-cache** to **no-cache, no-store, must-revalidate**. This can be achieved using Azure Storage Explorer.
+When you upload a new file, the **CacheControl** property defaults to **no-cache**. To make the application request the file every time, update the file's **CacheControl** property from **no-cache** to **no-cache, no-store, must-revalidate**. You can make this change by using Azure Storage Explorer.
 
 :::image type="content" source="media/files-troubleshoot-smb-connectivity/storage-explorer-cache.png" alt-text="Screeshot that shows the CacheControl file property." lightbox="media/files-troubleshoot-smb-connectivity/storage-explorer-cache.png":::
 
