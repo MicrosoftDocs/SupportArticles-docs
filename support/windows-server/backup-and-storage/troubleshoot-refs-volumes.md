@@ -21,12 +21,12 @@ This article helps you investigate and resolve issues that affect Resilient File
 Follow these steps to document the current state of your environment and start to isolate the cause of your issue.
 
 > [!NOTE]  
-> If Windows Server is not responding, restart the system in [Safe mode](../performance/troubleshoot-startup-problems#how-to-start-the-computer-in-safe-mode).
+> If Windows Server isn't responding, restart the system in [Safe mode](../performance/troubleshoot-startup-problems#how-to-start-the-computer-in-safe-mode).
 
 1. Make sure that recent backups are available before you attempt repairs or changes.
 
    > [!NOTE]  
-   > If a recent backup is not available, consider cloning the volume or using [Microsoft Disk2VHD](https://aka.ms/disk2vhd) to create a virtual hard disk copy.
+   > If a recent backup isn't available, consider cloning the volume or using [Microsoft Disk2VHD](https://aka.ms/disk2vhd) to create a virtual hard disk copy.
 
 1. Document the following information:
 
@@ -75,7 +75,7 @@ Follow these steps to document the current state of your environment and start t
 | After the volume mounts:<ul><li>The computer becomes unresponsive</li><li>CPU and memory usage are very high</li><li>Backup jobs are slow or hang</li><li>Events: high activity on the volume</li></ul> | [After the volume mounts, the system freezes or experiences high resource or memory usage](#after-the-volume-mounts-the-system-freezes-or-experiences-high-resource-or-memory-usage) |
 | After you upgrade or downgrade:<ul><li>The volume doesn't mount</li><li>Data on the volume is inaccessible</li><li>Events: event IDs 133 or 137</li></ul> | [After an operating system upgrade or downgrade, ReFS isn't compatible with the operating system](#after-an-operating-system-upgrade-or-downgrade-refs-isnt-compatible-with-the-operating-system) |
 | <ul><li>Backups fail</li><li>Shadow copies aren't created or deleted</li><li>VSS writers generate errors</li><li>Events: event IDs 12289 or 8193</li></ul> | [Backup, VSS, and snapshot issues (Event IDs 12289 or 8193)](#backup-vss-and-snapshot-issues-event-ids-12289-or-8193) |
-| <ul><li>Events: I/O errors, and event IDs 7, 51, or 153</li><li>The storage pool is degraded</li><li>Virtual disks that're hosted on the ReFS volume are offline</li></ul> | [I/O errors, disk hardware failures, and pool degradation](#io-errors-disk-hardware-failures-and-pool-degradation) |
+| <ul><li>Events: I/O errors, and event IDs 7, 51, or 153</li><li>The storage pool is degraded</li><li>Virtual disks that are hosted on the ReFS volume are offline</li></ul> | [I/O errors, disk hardware failures, and pool degradation](#io-errors-disk-hardware-failures-and-pool-degradation) |
 | After you upgrade or migrate:<ul><li>A disk appears to be offline</li><li>Mount points aren't claimed</li><li>Message: "Offline (The disk is offline due to a policy established by an administrator)."</li></ul> | [After an operating system upgrade or migration, you experience mount point or volume policy issues](#after-an-operating-system-upgrade-or-migration-you-experience-mount-point-or-volume-policy-issues) |
 
 ### Volume is RAW or inaccessible (Event IDs 133 or 135)
@@ -297,7 +297,7 @@ This issue typically indicates that one of the following conditions occurred:
 
 - The event log lists I/O errors, and event IDs 7, 51, or 153
 - The storage pool is degraded
-- Virtual disks that're hosted on the ReFS volume are offline
+- Virtual disks that are hosted on the ReFS volume are offline
 
 #### Cause
 
@@ -371,8 +371,8 @@ For effective troubleshooting and escalation to Microsoft Support, collect the f
 - [NTFS overview](/windows-server/storage/file-server/ntfs-overview)
 - [Volume Shadow Copy Service (VSS)](/windows-server/storage/file-server/volume-shadow-copy-service)
 - [Storage Spaces Direct overview](/windows-server/storage/storage-spaces/storage-spaces-direct-overview)
-- [refsutil](/windows-server/administration/windows-commands/refsutil)
-- [fsutil](/windows-server/administration/windows-commands/fsutil)
-- [vssadmin](/windows-server/administration/windows-commands/vssadmin)
-- [vssadmin delete shadowstorage](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc785461(v=ws.10))
-- [diskpart](/windows-server/administration/windows-commands/diskpart)
+- [`refsutil`](/windows-server/administration/windows-commands/refsutil)
+- [`fsutil`](/windows-server/administration/windows-commands/fsutil)
+- [`vssadmin`](/windows-server/administration/windows-commands/vssadmin)
+- [`vssadmin delete shadowstorage`](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc785461(v=ws.10))
+- [`diskpart`](/windows-server/administration/windows-commands/diskpart)
