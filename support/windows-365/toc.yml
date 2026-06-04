@@ -1,3 +1,4 @@
+items:   # Please do not delete this line, it is required for the yaml format
 - name: Windows 365
   href: ./welcome-windows-365.yml
 - name: Windows 365 Business
@@ -82,3 +83,9 @@
       items:
         - name: Windows 365 BCDR known issues
           href: windows-365-bcdr-known-issues.md
+- name: Windows 365 for Agents
+  items:
+    - name: Cloud PC agent pools
+      items:
+        - name: Provisioning errors
+          href: windows-365-agents-pool-errors.md

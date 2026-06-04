@@ -1,5 +1,10 @@
+items:
 - name: Dynamics 365 Sales
   href: welcome-sales.yml
+- name: Copilot
+  items:
+    - name: Troubleshoot Copilot feature settings in Sales Hub
+      href: copilot-settings-sales-hub.md
 - name: Customization
   items:
     - name: Button in command bar doesn't appear after grid item selection
@@ -96,3 +101,7 @@
       href: dialer-not-available-in-custom-app.md
     - name: Teams dialer isn't visible in Dynamics 365 Sales
       href: dialer-not-visible-in-sales.md
+- name: Visual hierarchy
+  items:
+    - name: View hierarchy button is missing
+      href: view-hierarchy-button-missing.md

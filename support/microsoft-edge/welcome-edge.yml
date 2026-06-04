@@ -36,11 +36,24 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
+          - text: Fix a Microsoft Edge profile that won't load or shows an error
+            url: security/edge-profile-wont-load-locked.md
+          - text: Fix Microsoft Edge not saving cookies or sign-in sessions across launches
+            url: security/cookies-sessions-not-persisting.md
           - text: Saved site icons change unexpectedly on the new tab page
             url: security/site-icons-change-new-tab-page.md
           - text: Troubleshoot common sign-in problems
             url: security/troubleshoot-sign-in-issues.md
-  
+
+  - title: Stability and Performance
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Fix high CPU or memory usage in Microsoft Edge
+            url: performance/edge-high-cpu-memory.md
+          - text: Microsoft Edge crashes or fails to launch
+            url: performance/edge-crashes-fails-to-launch.md
+
   - title: Web Platform and Development
     linkLists:
     - linkListType: how-to-guide
