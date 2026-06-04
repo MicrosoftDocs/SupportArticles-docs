@@ -188,7 +188,7 @@ Causes for this issue include the following conditions:
 
 1. If you use third-party backup software, consult your vendor documentation for recommended registry settings (for example, set `FileCacheLimitPercent` to an appropriate percentage).
 
-1. If the previous steps don't help, try to detach the affected volume, and then test the stability of the system.
+1. If the previous steps don't help, detach the affected volume, and then test the stability of the system.
 
 1. Consider setting registry values that disable aggressive memory trimming. Consult Microsoft Support for assistance.
 
