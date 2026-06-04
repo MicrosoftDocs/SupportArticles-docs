@@ -1,35 +1,34 @@
 ---
 title: Tuning memory usage in ReFS
 description: Discusses how to apply a cumulative update and configure registry entries to reduce ReFS memory usage.
-ms.date: 03/09/2026
+ms.date: 06/05/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika
+ms.reviewer: kaushika, v-appelgatet
 ms.custom:
-- sap:backup, recovery, disk, and storage\partition and volume management
+- sap:backup, recovery, disk, and storage\refs
 - pcy:WinComm Storage High Avail
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Tuning memory usage in ReFS on Windows
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2016, Windows Server 2019  
 _Original KB number:_ &nbsp; 4016173
 
 ## Summary
 
-Resilient File System (ReFS) can consume large amounts of memory because of its allocate-on-write metadata semantics and block caching logic. On systems that run Windows Server 2019, Windows Server 2016, or related versions, this behavior can cause memory pressure that degrades server performance.
+Resilient File System (ReFS) can consume large amounts of memory because of its allocate-on-write metadata semantics and block caching logic. This behavior can cause memory pressure that degrades server performance.
 
 This article describes the cause of the issue and explains how to apply a cumulative update and configure registry entries to reduce ReFS memory usage.
 
 ## Symptoms
 
-You notice heavy memory usage on a computer that's running Windows 10, Windows Server 2019, Windows Server 2016, Windows Server, version 1909, or Windows Server, version 1903.
+You notice heavy memory usage on a computer that uses the Resilient File System (ReFS).
 
 ## Cause
 
-To provide greater resiliency for its metadata, Resilient File System (ReFS) in Windows Server 2016 uses *allocate-on-write* semantics for all metadata updates. This approach means that ReFS never makes in-place updates to metadata. Instead, it makes all writes to newly allocated regions.
+To provide greater resiliency for its metadata, ReFS uses *allocate-on-write* semantics for all metadata updates. This approach means that ReFS never makes in-place updates to metadata. Instead, it makes all writes to newly allocated regions.
 
 However, using allocate-on-write causes ReFS to issue more metadata I/O to new regions of the volume than write-in-place file systems do. Additionally, ReFS uses block caching logic to cache its metadata in RAM. It isn't as resource efficient as file caching logic.
 
@@ -37,11 +36,7 @@ Because of the ReFS block caching logic and allocate-on-write semantics, ReFS us
 
 ## Resolution
 
-This issue is addressed in cumulative update (CU) 4013429 that was released on March 14, 2017. The update introduces three tunable registry entries that you can use to adjust large ReFS metadata streams.
-
-CU 4013429 is available through Windows Update. You can also download it directly from the [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=4013429).
-
-For more information, see [March 14, 2017—KB4013429 (OS Build 14393.953)](https://support.microsoft.com/help/4013429/)
+Cumulative update (CU) 4013429 that was released on March 14, 2017 introduced three tunable registry entries that you can use to adjust large ReFS metadata streams.
 
 ### How to set the tunable registry entries
 
