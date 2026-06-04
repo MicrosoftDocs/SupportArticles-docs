@@ -1,13 +1,13 @@
 ---
 title: Missing Form Context for Internal Handlers on Customized Bookable Resource Forms
 description: Addresses issues with customized forms that are based on the default bookable resource form for Dynamics 365 Field Service.
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: mhart
-ms.date: 04/08/2025
+ms.reviewer: mkelleher, v-wendysmith, v-shaywood
+ms.date: 06/02/2026
 ms.custom: sap:Schedule Board
 ---
 # Form context for internal handlers is missing on customized bookable resource forms
+
+## Summary
 
 This article helps resolve an issue caused by missing form context for internal handlers on bookable resource forms in Microsoft Dynamics 365 Field Service.
 
@@ -21,14 +21,14 @@ While [creating a bookable resource](/dynamics365/field-service/set-up-bookable-
 
 The issue occurs because the system uses a customized form that is based on an outdated version of the bookable resource form. A change to the internal handlers for `onchange` events now requires the execution context to be passed in from the form.
 
-## Resolution
+## Solution
 
-Use one of the listed resolutions to ensure that the execution context is passed as the first parameter.
+Use one of the solutions in the following sections to ensure that the execution context is passed as the first parameter.
 
 > [!IMPORTANT]
-> The following resolutions assume that the script error references the `Mscrm.userid_onchange` function. If the error refers to other fields or functions, such as `Mscrm.accountid_onchange` or `Mscrm.contactid_onchange`, adjust the steps accordingly.
+> The following solutions assume that the script error references the `Mscrm.userid_onchange` function. If the error refers to other fields or functions, such as `Mscrm.accountid_onchange` or `Mscrm.contactid_onchange`, adjust the steps accordingly.
 
-### Resolution 1: Update the form in Power Apps
+### Update the form in Power Apps
 
 1. Sign in to Power Apps and open the solution that contains the form.
 
@@ -49,7 +49,7 @@ Use one of the listed resolutions to ensure that the execution context is passed
 
 1. Save and publish the updated form.
 
-### Resolution 2: Validate the customizations.xml file
+### Validate the customizations.xml file
 
 1. Open the **customizations.xml** file from the solution associated with the customized form that shows the error in an editor.
 
@@ -57,9 +57,9 @@ Use one of the listed resolutions to ensure that the execution context is passed
 
 1. Republish the solution.
 
-### Resolution 3: Run a script in the browser console
+### Run a script in the browser console
 
-To ensure this script has permission to find and update the required information, you need to run it in a browser tab that has an active session with your environment. Additionally, your user account needs permisssion to update the XML of the customized bookable resource form.
+To ensure this script has permission to find and update the required information, run it in a browser tab that has an active session with your environment. Additionally, your user account needs permission to update the XML of the customized bookable resource form.
 
 1. Open the environment in your browser. The following instructions use Microsoft Edge as an example.
 

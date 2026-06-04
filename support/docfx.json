@@ -236,7 +236,7 @@
         "sales-copilot/**/*.md": "microsoft-365-copilot-sales",
         "power-platform/ai-builder/**/**.*": "ai-builder",
         "sql/**/*.md": "sql",
-        "sql/analysis-services/**/*.md": "analysis-services",
+        "sql/analysis-services/**/*.md": "azure-analysis-services",
         "sql/azure-sql/**/*.md": "azure-vm-sql-server",
         "sql/reporting-services/**/*.md": "reporting-services",
         "developer/dotnet/**/*.md": "dotnet",
