@@ -21,7 +21,7 @@ This article helps you investigate and resolve issues that affect Resilient File
 Follow these steps to document the current state of your environment and start to isolate the cause of your issue.
 
 > [!NOTE]  
-> If Windows Server isn't responding, restart the system in [Safe mode](../performance/troubleshoot-startup-problems#how-to-start-the-computer-in-safe-mode.md).
+> If Windows Server isn't responding, restart the system in [Safe mode](../performance/troubleshoot-startup-problems.md#how-to-start-the-computer-in-safe-mode).
 
 1. Make sure that recent backups are available before you attempt repairs or changes.
 
