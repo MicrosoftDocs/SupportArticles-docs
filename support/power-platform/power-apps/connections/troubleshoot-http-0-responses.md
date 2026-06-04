@@ -2,7 +2,7 @@
 title: Troubleshoot HTTP 0 Responses and Blocked Calls
 description: Diagnose Power Apps and Power Automate calls that fail with HTTP 0, proxy errors like 403 or 502, or canceled requests, then work with your network team on a fix.
 ms.reviewer: jelopezf, v-shaywood
-ms.date: 05/20/2026
+ms.date: 06/04/2026
 ms.custom: sap:Connections\Connection errors
 ---
 
@@ -76,7 +76,7 @@ The **Remote Address** field is one of the clearest signals:
 - If it shows an IP address and port (for example, `192.0.2.10:443`), the request reached a remote server. The failure is then more likely a TLS, CORS, or service-side issue.
 - If it shows **only a port** (such as `:443` or `:80`) with **no IP address**, the connection was blocked, intercepted, or short-circuited before it left the device or local network. That strongly suggests a proxy, firewall, DNS filter, or security agent (such as Zscaler) is handling the request locally instead of forwarding it. The same pattern often appears alongside a proxy-issued `403` or `407` response.
 
-    :::image type="content" source="media/troubleshoot-http-0-responses/remote-address-no-ip.png" alt-text="Screenshot of a failed network request in browser developer tools where the Remote Address field shows only a port number with no IP address, indicating that the connection was blocked or intercepted before reaching the remote server.":::
+    :::image type="content" source="media/troubleshoot-http-0-responses/remote-address-no-ip.png" alt-text="Screenshot of a failed network request in browser developer tools showing the Remote Address field with only a port and no IP address.":::
 
 Capture a [HAR file](/azure/azure-portal/capture-browser-trace) of the session so you can share it with your network team.
 
@@ -105,10 +105,10 @@ Ask your network team to verify the following:
 
 - All required Power Platform endpoints are allowed end-to-end through proxies, firewalls, and SSL inspection devices. The authoritative list of host names and IP ranges is at [Power Platform URLs and IP address ranges](/power-platform/admin/online-requirements).
 - DNS resolves Power Platform endpoints correctly.
-- Allow-listing handles dynamic host names and subdomains. Power Platform requests can use long, environment-specific host names under service domains rather than a single fixed host. A rule that allows only a previously observed subdomain can fail at the next routing change, even though no app logic changed.
+- Allowlist rules cover dynamic host names and subdomains. Power Platform requests can use long, environment-specific host names under service domains rather than a single fixed host. A rule that allows only a previously observed subdomain can fail at the next routing change, even though no app logic changed.
 - CORS headers returned by Power Platform are preserved end-to-end. Header rewrite or removal can cause browser-level failures (including HTTP status `0`) even when endpoint allow-listing is otherwise correct.
 - Inspection devices support larger DNS responses and EDNS behavior. This is especially important when failures are concentrated by region or office location.
-- Secure web gateways (Zscaler, Netskope, or similar) allow-list Power Platform host names and bypass them from SSL/TLS inspection. SSL inspection is a frequent root cause of HTTP `0` responses and unexpected `403` or `502` errors. The inspection device can break long-lived or chunked connections that the connector runtime relies on. It can also return its own block page when a policy match occurs.
+- Secure web gateways (Zscaler, Netskope, or similar) allowlist Power Platform host names and bypass them from SSL/TLS inspection. SSL inspection is a frequent root cause of HTTP `0` responses and unexpected `403` or `502` errors. The inspection device can break long-lived or chunked connections that the connector runtime relies on. It can also return its own block page when a policy match occurs.
 
 If you suspect browser local-network protections, review the relevant browser guidance. For Chromium, see [Private Network Access: introducing preflights](https://developer.chrome.com/blog/private-network-access-preflight).
 
