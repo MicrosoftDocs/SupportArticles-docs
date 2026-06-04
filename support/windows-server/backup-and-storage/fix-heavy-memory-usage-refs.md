@@ -12,7 +12,7 @@ ms.custom:
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
-# Tuning memory usage in ReFS on Windows
+# Tuning memory usage in ReFS
 
 _Original KB number:_ &nbsp; 4016173
 
