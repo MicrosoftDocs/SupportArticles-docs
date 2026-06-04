@@ -9,8 +9,6 @@ items:
   items:
     - name: Button in command bar doesn't appear after grid item selection
       href: button-in-command-bar-not-appear-after-grid-item-selection.md
-    - name: Hierarchy column is missing from views
-      href: hierarchy-column-missing-after-upgrade.md
 - name: Enterprise Marketing
   items:
     - name: Troubleshoot in-app marketing
@@ -103,5 +101,7 @@ items:
       href: dialer-not-visible-in-sales.md
 - name: Visual hierarchy
   items:
+    - name: Hierarchy column is missing from views
+      href: hierarchy-column-missing-after-upgrade.md
     - name: View hierarchy button is missing
       href: view-hierarchy-button-missing.md
