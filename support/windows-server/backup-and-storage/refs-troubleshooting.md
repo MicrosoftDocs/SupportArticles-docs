@@ -13,11 +13,11 @@ appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 
-# ReFS volumes troubleshooting guidance
+# ReFS volume troubleshooting guidance
 
 ## Summary
 
-The Resilient File System (ReFS) maximizes data availability, scalability, and integrity for modern workloads such as backup repositories, large file servers, virtualization environments, and Storage Spaces. This guide helps IT administrators and support personnel investigate and resolve ReFS issues if they arise.
+This article helps IT administrators investigate and resolve issues with Resilient File System (ReFS) volumes on Windows Server. Use the troubleshooting checklist to document your environment and isolate the cause of the issue, then refer to the relevant section for guidance on common issues and their resolutions.
 
 ## Troubleshooting checklist
 
@@ -63,7 +63,7 @@ Follow these steps to document the current state of your environment and start t
    - Cluster logs from all nodes. To collect logs, run the following command on one of the cluster nodes:
 
      ```powershell
-      Get-ClusterLog -UseLocalTime -Destination <folder path></folder>
+      Get-ClusterLog -UseLocalTime -Destination <folder path>
      ```
 
    - Microsoft-Windows-DeviceSetupManager/Admin event log. In particular, look for event IDs 131, 133, 135, or 140
@@ -74,7 +74,7 @@ Follow these steps to document the current state of your environment and start t
 | Common collections of symptoms | See section |
 | --- | --- |
 | <ul><li>Volume status is RAW</li><li>Data on the volume is inaccessible</li><li>Repeated mount or repair failures</li><li>Events: event IDs 133 or 135</li></ul> | [Volume is RAW or inaccessible (Event IDs 133 or 135)](#volume-is-raw-or-inaccessible-event-ids-133-or-135) |
-| <ul><li>The volume doesn't mount</li><li>Events: event IDs 134, 137, or 140</li><li>Error messages: invalid metadata pages or checksum failures, or that the "device is busy."</li></ul> | [Metadata corruption or mount failures (Event IDs 134, 135, or 140)](#metadata-corruption-or-mount-failures-event-ids-134-135-or-140) |
+| <ul><li>The volume doesn't mount</li><li>Events: event IDs 134, 137, or 140</li><li>Error messages: invalid metadata pages or checksum failures, or that the "device is busy."</li></ul> | [Metadata corruption or mount failures (Event IDs 134, 137, or 140)](#metadata-corruption-or-mount-failures-event-ids-134-137-or-140) |
 | After the volume mounts:<ul><li>The computer becomes unresponsive</li><li>CPU and memory usage are very high</li><li>Backup jobs are slow or hang</li><li>Events: high activity on the volume</li></ul> | [After the volume mounts, the system freezes or experiences high resource or memory usage](#after-the-volume-mounts-the-system-freezes-or-experiences-high-resource-or-memory-usage) |
 | After you upgrade or downgrade:<ul><li>The volume doesn't mount</li><li>Data on the volume is inaccessible</li><li>Events: event IDs 133 or 137</li></ul> | [After an operating system upgrade or downgrade, ReFS isn't compatible with the operating system](#after-an-operating-system-upgrade-or-downgrade-refs-isnt-compatible-with-the-operating-system) |
 | <ul><li>Backups fail</li><li>Shadow copies aren't created or deleted</li><li>VSS writers generate errors</li><li>Events: event IDs 12289 or 8193</li></ul> | [Backup, VSS, and snapshot issues (Event IDs 12289 or 8193)](#backup-vss-and-snapshot-issues-event-ids-12289-or-8193) |
@@ -126,7 +126,7 @@ This issue typically indicates that the file system is corrupted. Any of the fol
    - If recent backups are available, reformat the volume and restore the data
    - Contact Microsoft Support for assistance. Attach the salvage process logs and event log information to the support request.
 
-### Metadata corruption or mount failures (Event IDs 134, 135, or 140)
+### Metadata corruption or mount failures (Event IDs 134, 137, or 140)
 
 #### Symptoms
 
@@ -145,19 +145,21 @@ This issue typically indicates that one of the following conditions occurred:
 
 #### Resolution
 
+[!INCLUDE [Registry important alert](../../../includes/registry-important-alert.md)]
+
 1. If the volume was previously mounted on an older version of Windows Server and is now mounted on a newer version, make sure that the operating system is up to date and that the versions of the ReFS utilities match the version of the volume.
 
 1. If checksum errors occurred, follow these steps (in a clustered system, follow these steps on all nodes):
 
    1. On the system where the volume is mounted, open Registry Editor and locate the `HKLM\SYSTEM\CurrentControlSet\Control\FileSystem\` subkey.
 
-   1. To disable metadata validation, set the `RefsDisableVolumeIntegrityValidation` value to **1**
+   1. To disable metadata validation, set the `RefsDisableVolumeIntegrityValidation` value to **1**.
 
    1. Restart the system (in a clustered system, restart all nodes).
 
 1. Try again to mount the volume.
 
-1. If you still can't mount the volume, try to salvage the volume as described in [Volume is RAW or inaccessible (Event IDs 133 or 135)].(#volume-is-raw-or-inaccessible-event-ids-133-or-135).
+1. If you still can't mount the volume, try to salvage the volume as described in [Volume is RAW or inaccessible (Event IDs 133 or 135)](#volume-is-raw-or-inaccessible-event-ids-133-or-135).
 
 1. If the issue persists, you might need registry or kernel hotfixes. Escalate as needed to review this option, and contact Microsoft Support for assistance.
 
@@ -183,6 +185,8 @@ Causes for this issue include the following conditions:
 
 #### Resolution
 
+[!INCLUDE [Registry important alert](../../../includes/registry-important-alert.md)]
+
 1. Install the latest cumulative updates for Windows Server.
 
 1. If you use third-party backup software, consult your vendor documentation for recommended registry settings (for example, set `FileCacheLimitPercent` to an appropriate percentage).
@@ -206,7 +210,7 @@ After you upgrade or downgrade Windows Server on a computer where the ReFS volum
 
 #### Cause
 
-This issue typically indicates that the ReFS version isn't supported on the current operating system version. The volume or the operating system might not have been upgrade or downgraded correctly. Or an in-place upgrade might have missed a prerequisite step.
+This issue typically indicates that the ReFS version isn't supported on the current operating system version. The volume or the operating system might not have been upgraded or downgraded correctly. Or an in-place upgrade might have missed a prerequisite step.
 
 #### Resolution
 
@@ -253,7 +257,7 @@ This issue typically indicates that one of the following conditions occurred:
 
 1. Make sure that the operating system, ReFS volume, and backup agents are all up to date and are compatible with each other.
 
-1. To get a list of the available snapshots, open a Command Prompt window on the computer that the volume is mounted on, and the run the following command:
+1. To get a list of the available snapshots, open a Command Prompt window on the computer that the volume is mounted on, and then run the following command:
 
    ```cmd
    vssadmin list shadows
@@ -334,7 +338,7 @@ The disk signature or the storage area network (SAN) policy changed during the u
 > [!IMPORTANT]  
 > Before you upgrade or migrate critical production clusters, document the SAN policies.
 
-1. To start the `diskpart` tool, open a Command Prompt window on the computer that the volume is mounted on, and the run the `diskpart` command.
+1. To start the `diskpart` tool, open a Command Prompt window on the computer that the volume is mounted on, and then run the `diskpart` command.
 
 1. At the `diskpart` prompt, select the ReFS volume and then run the `san` command to view the current policy settings.
 
@@ -350,12 +354,12 @@ For effective troubleshooting and escalation to Microsoft Support, collect the f
   - System and application event logs (focus on storage, ReFS, NTFS, and VSS event sources).
   - Backup software logs and configuration files.
   - Performance logs (disk queue, IOPS, latency, memory consumption).
-  - Storage Spaces Direct (S2D) logs, cluster logs, and CSV health.
+  - Storage Spaces Direct (S2D) logs, cluster logs, and cluster shared volume (CSV) health.
   - Logs that are generated by any troubleshooting utilities (such as Procmon or other Sysinternals utilities).
 - Status and diagnostic reports
   - Output from `chkdsk /f /scan` and `fsutil fsinfo` commands.
   - Output from `refsutil` and `diskpart` operations on the ReFS volume.
-  - Ouput from `vssadmin` operations such as `vssadmin list shadows` and `vssadmin list providers`.
+  - Output from `vssadmin` operations such as `vssadmin list shadows` and `vssadmin list providers`.
   - Hardware diagnostics and SMART data.
 - Other information:
   - Version information for the operating system, the ReFS volume, controllers, and firmware.
