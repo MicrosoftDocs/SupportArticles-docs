@@ -8,7 +8,7 @@ ms.topic: troubleshooting
 ms.reviewer: kaushika, simonw, v-appelgatet
 ai.usage: ai-assisted
 ms.custom:
-- sap:backup, recovery, disk, and storage\data corruption and disk errors
+- sap:backup, recovery, disk, and storage\refs
 - pcy:WinComm Storage High Avail
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>

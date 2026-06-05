@@ -6,7 +6,7 @@ documentationcenter: virtual-machines
 author: JarrettRenshaw
 manager: dcscontentpm
 tags: azure-resource-manager,top-support-issue
-ms.custom: sap:VM Admin - Linux (Guest OS), devx-track-azurecli, linux-related-content
+ms.custom: sap:Cannot connect to my VM
 ms.service: azure-virtual-machines
 ms.collection: linux
 ms.topic: troubleshooting
