@@ -1,7 +1,7 @@
 ---
 title: Guidance for troubleshooting ReFS volumes
 description: Describes how to investigate and resolve Resilient File System (ReFS) issues in Windows Server.
-ms.date: 06/04/2026
+ms.date: 06/05/2026
 ms.reviewer: kaushika, v-appelgatet
 ms.custom:
 - sap:backup, recovery, disk, and storage\refs
@@ -150,7 +150,7 @@ This issue typically indicates that one of the following conditions occurred:
 
    1. On the system on which the volume is mounted, open Registry Editor, and locate the `HKLM\SYSTEM\CurrentControlSet\Control\FileSystem\` subkey.
 
-   1. To disable metadata validation, set the `RefsDisableVolumeIntegrityValidation` value to **1**.
+   1. To disable metadata validation, set the `RefsDisableVolumeIntegrityValidation` value to **0**.
 
    1. Restart the system (in a clustered system, restart all nodes).
 
@@ -186,7 +186,7 @@ Causes for this issue include the following conditions:
 
 1. Install the latest cumulative updates for Windows Server.
 
-1. If you use third-party backup software, consult your vendor documentation for recommended registry settings (for example, set `FileCacheLimitPercent` to an appropriate percentage).
+1. If you use third-party backup software, consult your vendor documentation for recommended registry settings.
 
 1. If the previous steps don't help, detach the affected volume, and then test the stability of the system.
 
