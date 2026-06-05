@@ -4,13 +4,13 @@ description: This article guides you through removing extensions from Azure VMs 
 services: virtual-machines
 ms.collection: linux
 ms.service: azure-virtual-machines
-author: GabstaMSFT
+author: JarrettRenshaw
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-linux
 ms.workload: infrastructure
 ms.date: 08/25/2025
-ms.author: Gabsta
-ms.custom: VM Extensions not operating correctly
+ms.author: jarrettr
+ms.custom: sap:VM Extensions not operating correctly
 ---
 
 # Removing extensions from VMs created from NetApp CVO images
