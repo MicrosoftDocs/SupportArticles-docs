@@ -14,8 +14,8 @@
       href: email-domains-support-agent.md
     - name: Zonal enablement request for restricted VM series
       href: zonal-enablement-request-for-restricted-vm-series.md
-    - name: Request Azure Interoperability Under UK DMCC
-      href: submit-azure-interoperability-dmcc-request.md
+    - name: Azure Interoperability request
+      href: submit-azure-interoperability-request.md
 - name: Other common issues
   items:
     - name: Users and groups lists disappear

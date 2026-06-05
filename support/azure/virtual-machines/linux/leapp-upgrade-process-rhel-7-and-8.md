@@ -4,8 +4,8 @@ description: Provides steps to upgrade virtual machines that use RHEL pay-as-you
 ms.reviewer: divargas, msaenzbo, v-weizhu
 ms.date: 06/27/2025
 ms.service: azure-virtual-machines
-ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
-ms.topic: how-to
+ms.custom: sap:Kernel Upgrades, Package Management issue (Yum, Zypper, RPM, DPKG, APT)
+ms.topic: troubleshooting
 ---
 # How to perform an upgrade for RHEL PAYG virtual machines using Leapp
 
