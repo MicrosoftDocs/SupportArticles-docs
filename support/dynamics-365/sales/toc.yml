@@ -101,5 +101,7 @@ items:
       href: dialer-not-visible-in-sales.md
 - name: Visual hierarchy
   items:
+    - name: Hierarchy column is missing from views
+      href: hierarchy-column-missing-after-upgrade.md
     - name: View hierarchy button is missing
       href: view-hierarchy-button-missing.md

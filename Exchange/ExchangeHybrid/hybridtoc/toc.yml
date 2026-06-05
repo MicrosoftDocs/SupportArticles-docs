@@ -164,6 +164,8 @@ items:
           href: ../hybrid-configuration-wizard-errors/hcw8034-or-hcw8057-error-when-runninghybrid-configuration-wizard.md
         - name: HCW8039 error in the Hybrid Configuration Wizard
           href: ../hybrid-configuration-wizard-errors/hcw8039-address-space-error.md
+        - name: HCW8078 - Migration endpoint can't be created
+          href: ../hybrid-configuration-wizard-errors/migration-endpoint-could-not-be-created.md
         - name: HCW8091 error when running Hybrid Configuration Wizard
           href: ../hybrid-configuration-wizard-errors/hcw8091-error-when-running-hybrid-configuratio-wizard.md
         - name: HCW8100, HCW8084, or HCW8083 error when running Hybrid Configuration Wizard
