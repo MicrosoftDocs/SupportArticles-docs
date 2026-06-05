@@ -4,8 +4,9 @@ description: Describes how to perform a upgrade from RHEL 7.9 to RHEL 8.x on SAP
 ms.reviewer: divargas, msaenzbo, v-weizhu
 ms.date: 06/27/2025
 ms.service: azure-virtual-machines
-ms.topic: how-to
-ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
+ms.topic: troubleshooting
+ms.custom: sap:Kernel Upgrades, Package Management issue (Yum, Zypper, RPM, DPKG, APT)
+
 ---
 
 # How to upgrade SAP-HANA and SAP-APPS PAYG virtual machines from RHEL 7.9 to RHEL 8.x using Leapp
