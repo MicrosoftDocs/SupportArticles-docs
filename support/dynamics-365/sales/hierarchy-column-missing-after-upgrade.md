@@ -1,7 +1,7 @@
 ---
 title: Fix missing Hierarchy column in views
 description: Learn why the Hierarchy column that has the linked icon is missing from Dynamics 365 Sales views, and how to use the new visual hierarchy instead.
-ms.reviewer: ramakris
+ms.reviewer: ramakris, v-shaywood
 ms.date: 05/29/2026
 ms.custom: sap:Visual hierarchy\Where did the old Hierarchy column go?
 ai-usage: ai-assisted
