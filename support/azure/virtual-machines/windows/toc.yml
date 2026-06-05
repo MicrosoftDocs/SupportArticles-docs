@@ -341,6 +341,15 @@ items:
   - name: Troubleshooting Tool
     href: windows-vm-imds-tool.md
 
+- name: Secure Boot certificate updates (Trusted Launch)
+  items:
+  - name: Troubleshoot Secure Boot certificate updates
+    href: troubleshoot-secure-boot-cert-updates-trusted-launch.md
+  - name: Secure Boot certificate update overview (KB 5062710)
+    href: https://support.microsoft.com/topic/7ff40d33-95dc-4c3c-8725-a9b95457578e
+  - name: Known issues for Secure Boot certificate updates (KB 5085790)
+    href: https://support.microsoft.com/topic/5813673d-2577-4718-ad28-2554a9178e40
+
 - name: My VM is not booting
   items:
   - name: Boot diagnostics
