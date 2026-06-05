@@ -4,6 +4,7 @@ description: Diagnose and resolve Secure Boot certificate update issues on Azure
 ms.date: 06/05/2026
 author: scotro
 ms.author: scotro
+ms.service: azure-virtual-machines
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

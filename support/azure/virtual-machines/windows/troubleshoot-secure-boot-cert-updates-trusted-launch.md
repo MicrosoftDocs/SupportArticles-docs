@@ -4,6 +4,7 @@ description: Diagnose and resolve Secure Boot certificate update issues on Azure
 ms.date: 06/05/2026
 author: scotro
 ms.author: scotro
+ms.service: azure-virtual-machines
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -107,7 +108,7 @@ The host-side fix was included in the Azure 2605_2 host OS servicing package, wh
 
 If Event ID 1795 persists after restarting:
 1. Redeploy the VM (`az vm redeploy`) to force placement on a different host node.
-2. If the issue continues, [create an Azure support request](https://learn.microsoft.com/azure/azure-portal/supportability/how-to-create-azure-support-request) referencing Event ID 1795.
+2. If the issue continues, [create an Azure support request](/azure/azure-portal/supportability/how-to-create-azure-support-request) referencing Event ID 1795.
 
 > [!NOTE]
 > There is no guest-side workaround for Event ID 1795. The host node must have the firmware update. The guest OS cannot resolve this independently.
