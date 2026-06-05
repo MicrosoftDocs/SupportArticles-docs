@@ -52,7 +52,7 @@ It's important to read the output of each command for more clues. Save the resul
 
 ### <a id="step1"></a>Step 1: Run a repository diagnostic script
 
-Run the [SUSEcloud repocheck script](https://raw.githubusercontent.com/SUSE/susecloud-repocheck/main/sc-repocheck.py) provided by Rich Paredes, a SUSE engineer. This Python script performs the following tasks:
+Run the [SUSEcloud repocheck script](https://raw.githubusercontent.com/SUSE/susecloud-repocheck/main/sc-repocheck.py) provided by SUSE engineering. This Python script performs the following tasks:
 
 1. Checks for connectivity to the SUSE public cloud repositories.
 
