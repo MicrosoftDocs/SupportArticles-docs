@@ -28,8 +28,8 @@ This article explains how to troubleshoot errors that occur when you deploy clus
 - Azure CLI, Azure portal, and all client experiences continue to work as expected.
 
 > [!NOTE]
-> - **Azure policy restrictions:** Custom Azure policies that block creation or updates to the [cluster extensions resource type](/rest/api/kubernetesconfiguration/extensions/extensions/create?view=rest-kubernetesconfiguration-extensions-2025-03-01&tabs=HTTP) must be updated or exempted.
-> - **Azure resource locks:** Azure resource locks can block management of [cluster extensions resource type](/rest/api/kubernetesconfiguration/extensions/extensions/create?view=rest-kubernetesconfiguration-extensions-2025-03-01&tabs=HTTP). 
+> - **Azure policy restrictions:** Custom Azure policies that block creation or updates to the [cluster extensions resource type](/rest/api/kubernetesconfiguration/extensions/extensions/create) must be updated or exempted.
+> - **Azure resource locks:** Azure resource locks can block management of [cluster extensions resource type](/rest/api/kubernetesconfiguration/extensions/extensions/create).
 >
 > More details on mitigations below.
 
@@ -55,9 +55,9 @@ Each Monitoring service is represented and managed by its own extension, as show
 
 | Monitoring capability            | Extension name                     | Extension type                                   |
 |----------------------------------|------------------------------------|--------------------------------------------------|
-| [Container Insights](https://learn.microsoft.com/en-us/azure/azure-monitor/containers/kubernetes-monitoring-enable?tabs=azure-cli#enable-container-insights-and-logging-on-an-aks-cluster)               | aks-managed-azure-monitor-logs     | microsoft.azuremonitor.containers                |
-| [Managed Prometheus](https://learn.microsoft.com/en-us/azure/azure-monitor/containers/kubernetes-monitoring-enable?tabs=azure-cli#enable-prometheus-metrics-on-an-aks-cluster)               | aks-managed-azure-monitor-metrics  | microsoft.azuremonitor.containers.metrics        |
-| [Application Insights](https://learn.microsoft.com/en-us/azure/azure-monitor/containers/kubernetes-codeless?tabs=portal)             | aks-managed-app-monitoring         | microsoft.azuremonitor.appmonitoring             |
+| [Container Insights](/azure/azure-monitor/containers/kubernetes-monitoring-enable?tabs=azure-cli#enable-container-insights-and-logging-on-an-aks-cluster)               | aks-managed-azure-monitor-logs     | microsoft.azuremonitor.containers                |
+| [Managed Prometheus](/azure/azure-monitor/containers/kubernetes-monitoring-enable?tabs=azure-cli#enable-prometheus-metrics-on-an-aks-cluster)               | aks-managed-azure-monitor-metrics  | microsoft.azuremonitor.containers.metrics        |
+| [Application Insights](/azure/azure-monitor/containers/kubernetes-codeless?tabs=portal)             | aks-managed-app-monitoring         | microsoft.azuremonitor.appmonitoring             |
 
 ### Troubleshooting
 
