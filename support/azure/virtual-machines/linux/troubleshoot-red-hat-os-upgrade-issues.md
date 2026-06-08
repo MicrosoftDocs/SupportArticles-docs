@@ -5,7 +5,7 @@ author: msaenzbosupport
 ms.author: msaenzbo
 ms.reviewer: divargas
 ms.service: azure-virtual-machines
-ms.custom: sap:VM Admin - Linux (Guest OS)
+ms.custom: sap:Kernel Upgrades, Package Management issue (Yum, Zypper, RPM, DPKG, APT)
 ms.collection: linux
 ms.topic: troubleshooting
 ms.workload: infrastructure-services
