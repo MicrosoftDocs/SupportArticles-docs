@@ -1,11 +1,12 @@
 ---
 title: Upgrade RHEL-SAP-HANA and RHEL-SAP-APPS PAYG VMs from 8.x to 8.10
 description: Provides steps to help you upgrade RHEL-SAP-HANA and RHEL-SAP-APPS pay-as-you-go virtual machines from 8.x to 8.10.
-ms.reviewer: divargas, msaenzbo, v-weizhu
+ms.reviewer: divargas, msaenzbo
 ms.date: 09/14/2024
 ms.topic: how-to
 ms.service: azure-virtual-machines
-ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
+ms.custom: sap:Kernel Upgrades, Package Management issue (Yum, Zypper, RPM, DPKG, APT)
+
 ---
 
 # How to upgrade RHEL-SAP-HANA and RHEL-SAP-APPS pay-as-you-go virtual machines from 8.x to 8.10
