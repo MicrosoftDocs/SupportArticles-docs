@@ -9,7 +9,7 @@ manager: dcscontentpm
 editor: v-jesits
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-linux
-ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
+ms.custom: sap:Azure Disk Encryption (ADE) not operating correctly
 ms.workload: infrastructure
 ms.date: 10/17/2024
 ms.author: diambroi
