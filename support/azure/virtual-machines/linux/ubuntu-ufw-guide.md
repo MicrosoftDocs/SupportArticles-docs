@@ -6,7 +6,7 @@ ms.author: msaenzbo
 ms.reviewer: divargas-msft
 ms.date: 08/23/2024
 ms.service: azure-virtual-machines
-ms.custom: Cannot connect to my VM
+ms.custom: sap:Cannot connect to my VM
 ---
 
 # Use UFW to troubleshoot connectivity issues in Azure Ubuntu VMs
