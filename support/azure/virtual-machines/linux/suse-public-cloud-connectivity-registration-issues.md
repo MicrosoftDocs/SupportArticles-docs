@@ -2,12 +2,12 @@
 title: Troubleshoot Connectivity and Registration for SUSE SLES VMs
 description: "Learn how to troubleshoot SUSE SLES VM connectivity and registration issues with the SUSE SMT repository on Azure. Find fixes for common scenarios."
 ms.date: 05/12/2025
-author: rnirek
-ms.author: hokamath
-ms.reviewer: adelgadohell, mahuss, esanchezvela, scotro, v-weizhu, divargas, vkchilak
+author: JarrettRenshaw
+ms.author: jarrettr
+ms.reviewer: scotro, divargas
 editor: v-jsitser
 ms.service: azure-virtual-machines
-ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
+ms.custom: sap:Kernel Upgrades, Package Management issue (Yum, Zypper, RPM, DPKG, APT)
 keywords:
 #Customer intent: As a user who wants to set up an Azure virtual machine by using a SUSE Linux Enterprise Server image, I want establish an internet connection to the SUSE Subscription Management Tool repository so that I can successfully register the virtual machine.
 ---
