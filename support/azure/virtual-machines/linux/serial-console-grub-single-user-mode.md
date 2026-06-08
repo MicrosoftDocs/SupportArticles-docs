@@ -6,7 +6,7 @@ documentationcenter: ''
 author: JarrettRenshaw
 manager: dcscontentpm
 tags: azure-resource-manager
-ms.custom: VM Admin - Linux (Guest OS)
+ms.custom: sap:Cannot connect to my VM
 ms.service: azure-virtual-machines
 ms.collection: linux
 ms.tgt_pltfrm: vm-linux
