@@ -1,7 +1,7 @@
 ---
 title: Fix Network-Related or Instance-Specific Errors in SQL Server
 description: Troubleshoot and resolve network-related or instance-specific errors when connecting to SQL Server. Follow step-by-step guidance to fix common configuration issues.
-ms.date: 01/10/2025
+ms.date: 06/02/2026
 ms.custom: sap:Database Connectivity and Authentication
 ms.reviewer: jopilov, v-shaywood
 ---
@@ -307,8 +307,8 @@ In some installations of SQL Server, an administrator must manually enable conne
     | Value name            | Implication                                                                                                                                                                     | More information                                                                                                                                                    |
     | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
     | Shared Memory Enabled | Can be either true or false. Only affects local connections.                                                                                                                    | [Creating a Valid Connection String Using Shared Memory Protocol](/sql/tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol) |
-    | Named Pipes Enabled   | If false, both local and remote connections using Named Pipes fail.                                                                                                             | [Choosing a Network Protocol](/previous-versions/sql/sql-server-2016/ms187892(v=sql.130))                                                                           |
-    | TCP Enabled           | If false, both local and remote connections using TCP/IP fail. <br/>**Note:** Most SQL Server installations use TCP/IP as the communication protocol between server and client. | [Choosing a Network Protocol](/previous-versions/sql/sql-server-2016/ms187892(v=sql.130))                                                                           |
+    | Named Pipes Enabled   | If false, both local and remote connections using Named Pipes fail.                                                                                                             | [Enable or disable a server network protocol](/sql/database-engine/configure-windows/enable-or-disable-a-server-network-protocol)                                                                           |
+    | TCP Enabled           | If false, both local and remote connections using TCP/IP fail. <br/>**Note:** Most SQL Server installations use TCP/IP as the communication protocol between server and client. | [Enable or disable a server network protocol](/sql/database-engine/configure-windows/enable-or-disable-a-server-network-protocol)                                                                         |
 
 1. Enable required protocols by using SQL Server Configuration Manager or SQL Server PowerShell. For more information, see [Enable or Disable a Server Network Protocol](/sql/database-engine/configure-windows/enable-or-disable-a-server-network-protocol).
 
@@ -337,7 +337,7 @@ To connect to SQL Server by using TCP/IP, Windows needs to establish the connect
 1. If your network is configured correctly, `ping` returns `Reply from <IP address>` followed by additional information. If you can successfully ping the server computer by IP address but receive an error such as `Destination host unreachable` or `Request timed out` when pinging by computer name, name resolution isn't correctly configured. For more information, see [Troubleshoot Basic TCP/IP Problems](/previous-versions/tn-archive/bb727023(v=technet.10)). Successful name resolution isn't required to connect to SQL Server. However, if the computer name can't be resolved to an IP address, you must specify the IP address when connecting. You can fix name resolution later.
 
 > [!NOTE]
-> You can also use either the [Test-NetConnection](/previous-versions/windows/powershell-scripting/dn372891(v=wps.630)) or [Test-Connection](/powershell/module/microsoft.powershell.management/test-connection) cmdlet to test TCP connectivity according to the PowerShell version that's installed on the computer. For more information about PowerShell cmdlets, see [Cmdlet Overview](/powershell/scripting/developer/cmdlet/cmdlet-overview).
+> You can also use either the [Test-NetConnection](/powershell/module/nettcpip/test-netconnection) or [Test-Connection](/powershell/module/microsoft.powershell.management/test-connection) cmdlet to test TCP connectivity. For more information about PowerShell cmdlets, see [Cmdlet Overview](/powershell/scripting/developer/cmdlet/cmdlet-overview).
 
 ## Test local connection
 
@@ -348,7 +348,7 @@ This procedure requires [SQL Server Management Studio](/sql/ssms/sql-server-mana
 If you can't install Management Studio, you can test the connection by using the [sqlcmd utility](/sql/tools/sqlcmd-utility). The `sqlcmd.exe` file is installed with the Database Engine.
 
 1. Sign in to the computer where SQL Server is installed by using a sign-in that has access to SQL Server. During installation, SQL Server requires at least one sign-in to be specified as a SQL Server administrator. If you don't know an administrator, see [Connect to SQL Server When System Administrators Are Locked Out](/sql/database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out).
-1. On the **Start** page, type _SQL Server Management Studio_, or on the **Start** menu of older versions of Windows, select **All Programs** > **Microsoft SQL Server** > **SQL Server Management Studio**.
+1. In the **Start** search bar, type _SQL Server Management Studio_.
 1. On the **Connect** drop-down menu, select **Database Engine**. In the **Authentication** box, select **Windows Authentication**. In the **Server name** box, type one of the following connection types:
 
     | Connecting to    | Type                            | Example           |
