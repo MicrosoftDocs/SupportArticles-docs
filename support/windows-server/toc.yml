@@ -3031,6 +3031,8 @@ items:    # Please do not delete this line, it is required for the yaml format
           href: ./installing-updates-features-roles/fix-windows-update-errors.md
         - name: Troubleshoot Windows Update download errors
           href: ./installing-updates-features-roles/troubleshoot-windows-update-download-errors.md
+        - name: Troubleshoot Windows Update error 0x80004004
+          href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x80004004.md
         - name: Troubleshoot Windows Update error 0x80070002
           href: installing-updates-features-roles/troubleshoot-windows-update-error-0x80070002.md
         - name: Troubleshoot Windows Update error 0x80070005
