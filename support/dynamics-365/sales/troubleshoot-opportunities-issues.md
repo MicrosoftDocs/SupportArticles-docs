@@ -1,8 +1,8 @@
 ---
-title: Fix opportunity errors in Dynamics 365 Sales
-description: Resolve common opportunity errors in Dynamics 365 Sales, such as close opportunity failures, missing permissions, currency mismatches, product errors, and pipeline view issues.
-ms.date: 05/21/2026
-ms.reviewer: shjais, ramakris, josaw, v-shaywood
+title: Fix Opportunity Closing and Pipeline Errors
+description: Fix common Dynamics 365 Sales opportunity errors, including close failures, Opportunity Close form issues, missing permissions, and pipeline view problems.
+ms.date: 06/08/2026
+ms.reviewer: shjais, ramakris, josaw, lavanyakr, v-shaywood
 ms.custom: sap:Opportunity
 ai-usage: ai-assisted
 ---
@@ -16,15 +16,88 @@ Use this article to troubleshoot issues that you might encounter when you work w
 
 The following errors or issues might occur when you try to close an opportunity:
 
+- [Quick Create form doesn't appear](#quick-create-form-doesnt-appear)
+- [Custom fields don't appear on the Opportunity Close form](#custom-fields-dont-appear-on-the-opportunity-close-form)
+- [Error when you close an opportunity with custom fields turned on](#error-when-you-close-an-opportunity-with-custom-fields-turned-on)
+- [Custom status reasons don't appear on the Opportunity Close form](#custom-status-reasons-dont-appear-on-the-opportunity-close-form)
+- [Customization option is missing from settings](#customization-option-is-missing-from-settings)
+- [Errors after you customize the Opportunity Close form](#errors-after-you-customize-the-opportunity-close-form)
 - [The opportunity can't be closed](#the-opportunity-cant-be-closed)
 - [Access denied or insufficient permissions](#access-denied-or-insufficient-permissions)
-- [The opportunity has already been closed](#the-opportunity-has-already-been-closed)
+- [The opportunity is already closed](#the-opportunity-is-already-closed)
 - [The opportunity close dialog doesn't open or shows unexpected behavior](#the-opportunity-close-dialog-doesnt-open-or-shows-unexpected-behavior)
 - [Multiple cascading relationships on the close form](#multiple-cascading-relationships-on-the-close-form)
 - [Close as Won or Close as Lost button isn't visible](#close-as-won-or-close-as-lost-button-isnt-visible)
 - [Currency mismatch error](#currency-mismatch-error)
 
 The following sections describe each error and how to resolve it.
+
+### Quick Create form doesn't appear
+
+When you close an opportunity, the **Main** form appears instead of the [Quick Create form](/power-apps/maker/model-driven-apps/create-edit-quick-create-forms).
+
+To resolve this problem:
+
+1. In Sales Hub, go to **App Settings** > **General Settings** > **Lead + Opportunity management** > **Opportunity Closing**, and make sure the **Custom fields on closing form** toggle is set to **Yes**.
+1. In **Advanced Settings**, go to **Administration** > **System Settings** > **Sales** tab, and make sure **Customize close opportunity form** is set to **Yes**.
+1. In the solution explorer, go to **Entities** > **Opportunity Close** > **General** tab, and make sure that **Allow quick create** and **Enable for Unified Client** are both turned on.
+1. If the settings are correct in one environment but the issue occurs only in production, compare the **Opportunity Close** entity configuration across environments.
+
+### Custom fields don't appear on the Opportunity Close form
+
+You added custom fields to the Opportunity Close form, but they don't appear in the app.
+
+To resolve this problem:
+
+1. [Add the Opportunity Close entity to your custom app module](/power-apps/maker/model-driven-apps/add-edit-app-components).
+   1. In the app designer, select **Add** > **Entities**.
+   1. Search for **Opportunity Close**, add it, and then select **Include entity metadata**.
+1. Publish the app again.
+
+### Error when you close an opportunity with custom fields turned on
+
+When you turn on the **Custom fields on closing form** toggle and try to close an opportunity, you receive the following error message:
+
+> Selected entity is not valid for this client
+
+To resolve this problem:
+
+1. Make sure your app is built on Unified Interface. Opportunity Close form customization is only supported in Unified Interface apps.
+1. Make sure the **Opportunity Close** entity is added to your custom app module with all assets included.
+1. Check for any unmanaged solution layers on the Sales Hub app that might override the configuration.
+   1. Go to **Settings** > **Advanced Settings** > **Customizations** > **Customize the System** > **Client Extensions**, select the affected app, and then review the solution layers.
+
+### Custom status reasons don't appear on the Opportunity Close form
+
+You added new status reason values to the [Opportunity Close entity](/dynamics365/sales/developer/entities/opportunityclose), but they don't appear in the form.
+
+To resolve this problem:
+
+1. Make sure you add custom values to the `opportunitystatuscode` attribute (not the `statuscode` attribute) on the Opportunity Close entity.
+1. Make sure matching values exist for both the **Status Reason** field on the Opportunity entity and the `opportunitystatuscode` attribute on the Opportunity Close entity.
+1. Check for and remove any unmanaged layers that might override the field options.
+1. Publish all customizations, and then clear your browser cache.
+
+### Customization option is missing from settings
+
+You can't find the option to enable Opportunity Close form customization.
+
+To resolve this problem:
+
+1. In Sales Hub, go to **App Settings** > **General Settings** > **Lead + Opportunity management** > **Opportunity Closing**.
+1. If the option isn't visible, check for an active solution layer on the app that might hide it.
+   1. Go to **Settings** > **Advanced Settings** > **Customizations** > **Customize the System** > **Client Extensions**.
+   1. Select the Sales Hub app, and then review and remove any blocking solution layer.
+
+### Errors after you customize the Opportunity Close form
+
+You receive errors when you close an opportunity after you customize the form. The issue might be caused by customizations on the **Quick Create** form.
+
+To resolve this problem:
+
+1. Temporarily disable any custom JavaScript or business rules on the Opportunity Close form to isolate the issue.
+1. If you have customizations on the **Opportunity Line Quick Create** form, review them for conflicts.
+1. Make sure all required fields have valid values before closing.
 
 ### The opportunity can't be closed
 
@@ -47,7 +120,7 @@ Ask your system administrator to grant you the required permissions. The adminis
 1. Open the [security role](/power-platform/admin/security-roles-privileges) of the user.
 1. Assign **Read**, **Create**, **Append**, and **Append To** permissions to the user's security role at user level on the Opportunity entity and the custom entity.
 
-### The opportunity has already been closed
+### The opportunity is already closed
 
 The opportunity that you're trying to close is already marked as **Won** or **Lost**. To change a closed opportunity, reopen it, make your changes, and then close it again.
 
@@ -70,7 +143,7 @@ To resolve this problem:
 1. Add the opportunity close entity to the required model-driven apps.
 1. Make sure that the opportunity close customization is turned on in Sales Hub settings:
 
-    1. Go to **App Settings** > **Lead + opportunity management** > **Opportunity closing**.
+    1. Go to **App Settings** > **Lead + Opportunity management** > **Opportunity Closing**.
     1. Make sure the **Custom fields on closing form** toggle is turned on.
 
     :::image type="content" source="media/troubleshoot-opportunities-issues/opportunity-closing-custom-fields-setting.png" alt-text="Screenshot of the Opportunity closing settings page in Sales Hub showing the Custom fields on closing form toggle.":::
@@ -180,6 +253,8 @@ For more information, see [Manage opportunities](/dynamics365/sales/opportunity-
 
 ## Related content
 
+- [Enable customization of the Opportunity Close form](/dynamics365/sales/enable-opportunity-close-customization)
+- [Customize the Opportunity Close form](/dynamics365/sales/customize-opportunity-close-experience)
 - [Add products to an opportunity](/dynamics365/sales/add-products-opportunity)
 - [Troubleshoot issues with currency and price lists](troubleshoot-currency-and-price-lists-issues.md)
 - [Troubleshoot issues with a product](troubleshoot-products-issues.md)
