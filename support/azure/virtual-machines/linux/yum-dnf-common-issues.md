@@ -4,15 +4,13 @@ description: Learn how to resolve common troubleshooting issues involving the yu
 author: msaenzbosupport
 ms.author: msaenzbo
 editor: v-jsitser
-ms.reviewer: divargas, adelgadohell
+ms.reviewer: divargas
 ms.service: azure-virtual-machines
 ms.collection: linux
 ms.topic: troubleshooting
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
-ms.custom: 
-  - Kernel Upgrades
-  - Package Management issue (Yum, Zypper, RPM, DPKG, APT)
+ms.custom: sap:Package Management issue (Yum, Zypper, RPM, DPKG, APT)
 ms.date: 07/10/2025
 #customer intent: As an Azure Linux VM administrator, I want troubleshoot issues in the yum and dnf tools so that I can successfully install or update applications on my VMs.
 ---

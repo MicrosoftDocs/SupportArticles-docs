@@ -6,7 +6,7 @@ documentationcenter: ''
 author: JarrettRenshaw
 manager: dcscontentpm
 tags: ''
-ms.custom: sap:My VM is not booting, linux-related-content
+ms.custom: sap:VM Admin - Linux (Guest OS)
 ms.service: azure-virtual-machines
 ms.collection: linux
 ms.topic: troubleshooting

@@ -2,7 +2,7 @@
 title: Upgrade Canonical Ubuntu 18.04 LTS
 description: Describes why users need to upgrade Azure Linux virtual machines running Ubuntu 18.04 LTS.
 ms.service: azure-virtual-machines
-ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
+ms.custom: sap:Kernel Upgrades, Package Management issue (Yum, Zypper, RPM, DPKG, APT)
 ms.date: 05/09/2024
 ms.reviewer: patcatun, clausw, divargas, rondom, azurevmlnxcic, v-weizhu
 ---

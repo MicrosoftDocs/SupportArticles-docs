@@ -2,12 +2,12 @@
 title: Troubleshoot Connectivity and Registration for SUSE SLES VMs
 description: "Learn how to troubleshoot SUSE SLES VM connectivity and registration issues with the SUSE SMT repository on Azure. Find fixes for common scenarios."
 ms.date: 05/12/2025
-author: rnirek
-ms.author: hokamath
-ms.reviewer: adelgadohell, mahuss, esanchezvela, scotro, v-weizhu, divargas, vkchilak
+author: JarrettRenshaw
+ms.author: jarrettr
+ms.reviewer: scotro, divargas
 editor: v-jsitser
 ms.service: azure-virtual-machines
-ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
+ms.custom: sap:Kernel Upgrades, Package Management issue (Yum, Zypper, RPM, DPKG, APT)
 keywords:
 #Customer intent: As a user who wants to set up an Azure virtual machine by using a SUSE Linux Enterprise Server image, I want establish an internet connection to the SUSE Subscription Management Tool repository so that I can successfully register the virtual machine.
 ---
@@ -52,7 +52,7 @@ It's important to read the output of each command for more clues. Save the resul
 
 ### <a id="step1"></a>Step 1: Run a repository diagnostic script
 
-Run the [SUSEcloud repocheck script](https://raw.githubusercontent.com/SUSE/susecloud-repocheck/main/sc-repocheck.py) provided by Rich Paredes, a SUSE engineer. This Python script performs the following tasks:
+Run the [SUSEcloud repocheck script](https://raw.githubusercontent.com/SUSE/susecloud-repocheck/main/sc-repocheck.py) provided by SUSE engineering. This Python script performs the following tasks:
 
 1. Checks for connectivity to the SUSE public cloud repositories.
 

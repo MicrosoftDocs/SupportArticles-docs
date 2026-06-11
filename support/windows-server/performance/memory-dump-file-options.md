@@ -33,7 +33,7 @@ Windows can generate any one of the following memory dump file types:
 
 A complete memory dump records all the contents of system memory when your computer stops unexpectedly. A complete memory dump may contain data from processes that were running when the memory dump was collected.
 
-If you select the **Complete memory dump** option, you must have a paging file on the boot volume that is sufficient to hold all the physical RAM plus 257 megabyte (MB).
+If you select the **Complete memory dump** option, you must have a paging file on a local volume that is sufficient to hold all the physical RAM plus 257 megabyte (MB).
 
 If the following conditions are true, the previous file is overwritten.
 

@@ -106,6 +106,8 @@ items:
       href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-download-errors.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Error code 0x8000ffff
       href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-0x8000ffff.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
+    - name: Error code 0x80004004 (E_ABORT)
+      href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-0x80004004.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Error code 0x80070002
       href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-0x80070002.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Error 0x80070003 when Windows Update fails

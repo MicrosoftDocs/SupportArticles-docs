@@ -6,9 +6,7 @@ documentationcenter: ''
 author: mimckitt
 manager: dcscontentpm
 tags: azure-resource-manager
-ms.custom: 
- - Kernel Upgrades
- - Package Management issue (Yum, Zypper, RPM, DPKG, APT)
+ms.custom: sap:Cannot connect to my VM
 ms.service: azure-virtual-machines
 ms.collection: linux
 ms.tgt_pltfrm: vm-linux
