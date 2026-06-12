@@ -8,7 +8,7 @@ items:
       - name: Changing work order lifecycle state doesn't generate fault cause or fault remedy error
         href: asset-management/change-lifecycle-state-doesnt-create-fault.md
       - name: Can't create work orders based on your maintenance schedule
-        href: asset-management/conversion-of-maintenance-schedule-to-workorder-is-failing.md  
+        href: asset-management/conversion-of-maintenance-schedule-to-workorder-is-failing.md
   - name: Inventory costing and closing
     items:
       - name: An update conflict occurs when the inventory valuation method is either standard cost or moving average
@@ -138,9 +138,9 @@ items:
       - name: Can't change accounting date or do a budget check
         href: procurement/cannot-change-accounting-date.md
       - name: Can't cancel a purchase order within a closed period
-        href: procurement/unable-to-cancel-po.md  
+        href: procurement/unable-to-cancel-po.md
       - name: Can't delete a purchase order line after it's confirmed
-        href: procurement/purchase-order-line-deletion-restriction.md  
+        href: procurement/purchase-order-line-deletion-restriction.md
       - name: Can't add a line to a purchase requisition after requesting a change
         href: procurement/cant-add-line-to-purchase-requisition-after-change.md
       - name: Can't change the effective date for an approved vendor
@@ -165,8 +165,8 @@ items:
         href: procurement/purchase-order-line-data-issues.md
       - name: Purchase orders don't reflect the language settings of the legal entity
         href: procurement/purchase-order-language-not-reflect-legal-entity-settings.md
-      - name: '"Source document lines cannot be finalized" error'
-        href: procurement/source-document-lines-cannot-be-finalized.md  
+      - name: "\"Source document lines cannot be finalized\" error"
+        href: procurement/source-document-lines-cannot-be-finalized.md
       - name: Transactions can be posted to a suspended ledger account
         href: procurement/canceled-receipts-posted.md
       - name: The delivery name isn't synced after changing a purchase order delivery address
@@ -179,6 +179,8 @@ items:
         href: procurement/po-unit-prices-not-calculated.md
       - name: Vendor can't access Vendor Collaboration Portal after reonboarding
         href: procurement/vendor-unable-to-access-vendor-collaboration-portal.md
+      - name: Vendor invoice not linked to purchase order
+        href: procurement/invoice-not-linked-purchase-order.md
       - name: Workflow approval fails with "Accounting distribution validation failed"
         href: procurement/po-workflow-accounting-distribution.md
       - name: You can only complete a purchase order action for fully distributed line numbers
@@ -257,7 +259,7 @@ items:
     items:
       - name: Warehouse mobile app
         items:
-          - name: '"Infinite loop detected" error during warehouse mobile app operations'
+          - name: "\"Infinite loop detected\" error during warehouse mobile app operations"
             href: warehousing/infinite-loop-detected.md
           - name: Trust anchor for certification path not found when setting up app connection
             href: warehousing/certification-path-app-connection-error.md
@@ -330,7 +332,7 @@ items:
       - name: Location profile disallows negative inventory, but negative on-hand is permitted
         href: warehousing/location-profile-set.md
       - name: Many printing jobs are queued in the Document Routing Agent (DRA)
-        href: warehousing/clear-document-rounting-agent-printing-queue.md  
+        href: warehousing/clear-document-rounting-agent-printing-queue.md
       - name: Multiple SKU option doesn't evaluate multiple location directive actions
         href: warehousing/evaluate-multiple-location-directive-actions.md
       - name: Mixed license plate receiving doesn't work for any disposition code but Credit
@@ -375,7 +377,7 @@ items:
         href: warehousing/shipment-confirmed-no-posting.md
       - name: Slotting templates don't consider on-hand inventory for batch-above items
         href: warehousing/slotting-templates-inventory-batch-above.md
-      - name: '"The size of the request xml exceeds the maximum allowed value" in the mobile app'
+      - name: "\"The size of the request xml exceeds the maximum allowed value\" in the mobile app"
         href: warehousing/request-xml-size-exceeds-maximum-allowed-value.md
       - name: The last closed work line must be a put
         href: warehousing/the-last-closed-work-link-must-be-a-put-error.md
