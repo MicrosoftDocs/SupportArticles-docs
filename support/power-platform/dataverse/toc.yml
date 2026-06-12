@@ -253,6 +253,8 @@ items:
       href: working-with-solutions/maximum-row-size-exceeds.md
     - name: Missing dependencies during solution import
       href: working-with-solutions/missing-dependency-on-solution-import.md
+    - name: Missing Sales dependencies during solution import
+      href: working-with-solutions/missing-sales-dependency-on-solution-import.md
     - name: My Apps area is missing from navigation
       href: working-with-solutions/my-apps-area-is-missing.md
     - name: New components don't appear in the app
