@@ -4,6 +4,7 @@ description: Troubleshoot HTTP 504 Gateway Timeout errors in Azure Application G
 ms.service: azure-application-gateway
 ms.topic: troubleshooting
 ms.date: 5/14/2026
+ms.custom: sap:Facing 5xx errors
 ai.hint.symptom-tags:
   - 504-error
   - gateway-timeout
