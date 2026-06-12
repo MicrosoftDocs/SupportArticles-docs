@@ -42,7 +42,7 @@ Azure App Service provides several ways to observe app behavior.
 
 ### Track service health
 
-Azure publicizes service interruptions and performance degradations in App Service. You can track the health of the service in the [Azure portal](https://portal.azure.com/). For more information, see [View service health notifications from the Azure portal](https://docs.azure.cn/en-us/service-health/service-notifications-old).
+Azure publicizes service interruptions and performance degradations in App Service. You can track the health of the service in the [Azure portal](https://portal.azure.com/). For more information, see [View service health notifications from the Azure portal](/azure/service-health/service-notifications-old).
 
 ### Monitor your app
 

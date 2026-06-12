@@ -31,6 +31,36 @@
     {
       "source_path": "Office/Client/excel/memory-usage-32-bit-edition-of-excel.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },    
+    {
+      "source_path": "Office/Client/onenote/couldnt-start-onenote-the-last-time-error.md",
+      "redirect_url": "../../../../../../SupportArticles-docs-archive-pr/support/previous-versions/office/client/onenote/couldnt-start-onenote-the-last-time-error.md",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/onenote/error-sync-notebook.md",
+      "redirect_url": "../../../../../../SupportArticles-docs-archive-pr/support/previous-versions/office/client/onenote/error-sync-notebook.md",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/onenote/onenote-error-content-not-yet-available.md",
+      "redirect_url": "../../../../../../SupportArticles-docs-archive-pr/support/previous-versions/office/client/onenote/onenote-error-content-not-yet-available.md",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/onenote/send-to-onenote-and-meeting-notes-buttons-not-working.md",
+      "redirect_url": "../../../../../../SupportArticles-docs-archive-pr/support/previous-versions/office/client/onenote/send-to-onenote-and-meeting-notes-buttons-not-working.md",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/onenote/temp-change-onenote-file-size-download.md",
+      "redirect_url": "../../../../../../SupportArticles-docs-archive-pr/support/previous-versions/office/client/onenote/temp-change-onenote-file-size-download.md",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/onenote/notebook-offline-location.md",
+      "redirect_url": "../../../../../../SupportArticles-docs-archive-pr/support/previous-versions/office/client/onenote/notebook-offline-location.md",
+      "redirect_document_id": false
     }
   ]
 }

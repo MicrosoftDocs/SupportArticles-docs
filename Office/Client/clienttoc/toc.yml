@@ -1,4 +1,4 @@
-﻿items:
+﻿﻿items:
 - name: Microsoft 365 Apps Troubleshooting
   href: ../office-client-welcome.yml
   items:
@@ -574,20 +574,6 @@
           href: ../office-suite-issues/cannot-install-office-add-in.md
         - name: Your system is low on virtual memory
           href: ../office-suite-issues/your-system-is-low-on-virtual-memory.md
-    - name: OneNote
-      items:
-        - name: Content Not Yet Available
-          href: ../onenote/onenote-error-content-not-yet-available.md
-        - name: Errors when you sync a notebook
-          href: ../onenote/error-sync-notebook.md
-        - name: Send to OneNote and Meeting Notes buttons don't work
-          href: ../onenote/send-to-onenote-and-meeting-notes-buttons-not-working.md
-        - name: Temporary change to file size download limit in OneNote
-          href: ../onenote/temp-change-onenote-file-size-download.md
-        - name: Warning when a notebook is in an offline location
-          href: ../onenote/notebook-offline-location.md
-        - name: We couldn't start OneNote the last time we tried
-          href: ../onenote/couldnt-start-onenote-the-last-time-error.md
     - name: Outlook
       items:
         - name: Outlook for iOS and Android
