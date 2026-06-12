@@ -130,6 +130,13 @@ Avoid taking dependencies on deprecated applications. Deprecated applications ar
 
 Remove any dependencies between solution components and deprecated applications before importing your solution.
 
+### Keep environments aligned
+
+To minimize version-related dependency errors, follow these best practices:
+
+- Keep all environments (such as development, test, and production) aligned to the same Dataverse and app versions.
+- Install standard first-party solutions in every target environment before you import a dependent solution.
+
 ## Related content
 
 - [Organize your solutions](/power-platform/alm/organize-solutions)
