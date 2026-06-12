@@ -70,7 +70,7 @@ Here's the full process of this mechanism for the two scenarios:
 
 ### Scenario 3: The client uses public endpoints with network security perimeter enforced
 
-In this scenario, you need to configure network security perimeter access rules so the request succeeds for all three paths: client-to-destination, client-to-source, and destination-to-source. If there's no authorized access across any of the three paths, the copy operation fails and usually shows a **403 Forbidden** error. For more information about network security perimeters, see [What is a network security perimeter?](https://docs.azure.cn/private-link/network-security-perimeter-concepts#components-of-a-network-security-perimeter)
+In this scenario, you need to configure network security perimeter access rules so the request succeeds for all three paths: client-to-destination, client-to-source, and destination-to-source. If there's no authorized access across any of the three paths, the copy operation fails and usually shows a **403 Forbidden** error. For more information about network security perimeters, see [What is a network security perimeter?](/azure/private-link/network-security-perimeter-concepts#components-of-a-network-security-perimeter)
 
 **Client, source, and destination accounts in the same perimeter** 
 
