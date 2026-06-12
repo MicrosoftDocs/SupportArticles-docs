@@ -30,7 +30,7 @@ To resolve this issue, perform the following steps:
 
 <a id="cloud-endpoint-authfailed"></a>**Cloud endpoint creation fails, with this error: "AuthorizationFailed"**
   
-This error occurs if your user account doesn't have sufficient rights to create a cloud endpoint.
+This error occurs if your user account doesn't have sufficient rights to create or update a cloud endpoint, or doesn't have the required permissions on the storage account that contains the Azure file share.
 
 To create a cloud endpoint, your user account must have the following Microsoft Authorization permissions:
   
@@ -38,12 +38,20 @@ To create a cloud endpoint, your user account must have the following Microsoft 
 - Write: Create or update custom role definition
 - Read: Get role assignment
 - Write: Create role assignment
-
 The following built-in roles have the required Microsoft Authorization permissions:
 
 - Azure File Sync Administrator
 - Owner
 - User Access Administrator
+
+Azure File Sync requires additional storage account permissions for cloud endpoint create and update operations. Users who previously had only storage account read permissions can no longer create or update cloud endpoints.
+
+For non-managed identity deployments, the administrator must have a role that includes:
+- Microsoft.Storage/storageAccounts/listKeys/action
+- Microsoft.Storage/storageAccounts/ListAccountSas/action
+  
+For managed identity deployments, ensure the Azure File Sync managed identity or service principal has the required storage account roles, such as Reader and Data Access or Storage File Data Privileged Contributor, as applicable.
+  
 
 To determine whether your user account role has the required permissions:
 

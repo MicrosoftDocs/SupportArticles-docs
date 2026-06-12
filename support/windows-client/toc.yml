@@ -965,6 +965,10 @@ items:    # Please do not delete this line, it is required for the yaml format
           href: ./shell-experience/kiosk-mode-issues-troubleshooting.md
         - name: Kiosk mode known issues
           href: ./shell-experience/kiosk-mode-known-issues.md
+    - name: Language Packs, MUI, and IME
+      items:
+        - name: Microsoft IME common issues and solutions
+          href: ./shell-experience/troubleshoot-ime-common-issues.md
     - name: Lock Screen or Screensaver
       items:
         - name: Lock screen isn't displayed
