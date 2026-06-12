@@ -1,7 +1,7 @@
 ---
 title: Resolve responsible AI content filter errors
 description: Learn how to identify, troubleshoot, and resolve Responsible AI content filter errors in Microsoft Copilot Studio using Application Insights and conversation transcripts.
-ms.date: 09/09/2025
+ms.date: 06/09/2026
 ms.reviewer: 
   - camogas
   - erickinser
@@ -9,9 +9,11 @@ ms.reviewer:
 ms.custom: sap:Generative Answers\Generative answers do not return a response
 ---
 
-# Resolve responsible AI content filter errors
+# Resolve responsible AI content filter errors in Copilot Studio
 
-Use the steps in this article to identify and clarify why Responsible AI guidelines filter Copilot Studio agent messages.
+## Summary
+
+This article helps you identify and resolve Responsible AI content filter errors in Microsoft Copilot Studio agents. When an agent detects content that violates Responsible AI guidelines, it blocks the response and displays a `ContentFiltered` error. Use Azure Application Insights telemetry and conversation transcripts to diagnose the issue, and then review responsible AI guidance or content moderation settings as appropriate.
 
 ## Symptoms 
 
@@ -32,7 +34,7 @@ These policies also address actions such as jailbreaking, prompt injection, prom
 
 Content is evaluated twice: once at the stage of user input and again before the agent provides a response. If harmful, offensive, or malicious content is detected, the system blocks the agent from responding and displays an error message to the user.
 
-## Troubleshooting 
+## Troubleshoot responsible AI filter errors
 
 ### Check error exceptions with Azure Application Insights
 
@@ -84,14 +86,12 @@ You can also review conversation transcripts to understand what was the message 
 
 If your agent responses are being filtered due to Responsible AI guardrails, and based on the information retrieved from conversation transcripts, you can reinforce responsible AI guidelines with your agent users to avoid this situation.
 
-Optionally, you can also update the agent [content moderation](/microsoft-copilot-studio/knowledge-copilot-studio#content-moderation) policies.
+Optionally, you can also update the agent [content moderation](/microsoft-copilot-studio/knowledge-copilot-studio#content-moderation) policies to adjust the filtering threshold for your specific use case.
 
-## Related information
+## Related content
 
 - [Responsible AI FAQs](/microsoft-copilot-studio/responsible-ai-overview)
-
 - [FAQ for generative answers](/microsoft-copilot-studio/faqs-generative-answers)
-
 - [Application Insights telemetry with Microsoft Copilot Studio - Dynamics 365](/dynamics365/guidance/resources/copilot-studio-appinsights)
-
 - [Content moderation](/microsoft-copilot-studio/knowledge-copilot-studio#content-moderation)
+- [Resolve usage limit and agent unavailable errors in Copilot Studio agents](~/power-platform/copilot-studio/licensing/throttling-errors-agents.md)

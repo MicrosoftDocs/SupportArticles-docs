@@ -84,6 +84,8 @@
           href: general-ledger/dimensions-missing-use-values-from-source.md
         - name: Source record not found error for a financial dimension value
           href: general-ledger/source-record-not-found.md
+        - name: Trial balance shows duplicate rows with the same dimension values
+          href: general-ledger/trial-balance-duplicate-rows-same-dimension-values.md
     - name: A custom Excel template for financial journals isn't available on the menu
       href: general-ledger/custom-excel-template-financial-journals-not-available.md
     - name: Can't post a journal due to imbalance
