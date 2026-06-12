@@ -1,7 +1,7 @@
 ---
 title: Resolve usage limit and agent unavailable errors in Copilot Studio agents
 description: Learn how to identify and resolve usage limit errors that occur due to quotas and limits in Microsoft Copilot Studio agents.
-ms.date: 09/09/2025
+ms.date: 06/09/2026
 ms.reviewer: 
   - camogas
   - erickinser
@@ -9,9 +9,11 @@ ms.reviewer:
 ms.custom: sap:Licensing\Quotas and limits
 ---
 
-# Resolve usage limit errors in agents
+# Resolve usage limit and agent unavailable errors in Copilot Studio agents
 
-This article describes common throttling errors you might encounter when using Copilot Studio agents. It explains the underlying causes, which typically stem from capacity limitations or licensing constraints, and outlines solutions for resolving these issues.
+## Summary
+
+This article helps you resolve common throttling and usage limit errors in Microsoft Copilot Studio agents. These errors occur when agent consumption exceeds available capacity or when generative AI rate limits are reached in a Dataverse environment. Use the steps in this article to identify the cause and restore agent availability.
 
 ## Symptoms
 
@@ -30,7 +32,7 @@ For messages generated with the usage of generative AI and for topic orchestrati
 
 ## Solution
 
-### Confirm the licensing and capacity model
+### Confirm the Copilot Studio licensing and capacity model
 
 Review the [Copilot Studio quotas and limits](/microsoft-copilot-studio/requirements-quotas) for the plan you're using, and compare it against your recent usage. To view consumption in the Power Platform admin center, see [View Copilot Credit consumption](/microsoft-copilot-studio/requirements-messages-management#view-copilot-credit-consumption).
 
@@ -41,12 +43,13 @@ If you reach the limits, an administrator can either:
   > [!NOTE]
   > Currently, only production and sandbox environments support pay-as-you-go.
 
-### Request a rate-limit increase
+### Request a rate-limit increase for Copilot Studio
 
 [Contact Microsoft Support](/microsoft-copilot-studio/fundamentals-support#microsoft-support) and request a rate-limit increase. This option doesn't guarantee that an exception or increase is granted. Each request is subject to review and approval based on eligibility and current licensing. Only pay-as-you-go environments are eligible; environments operating solely on message-based functionality aren't eligible for consideration.
 
-## Related information
+## Related content
 
 - [Copilot Studio licensing](/microsoft-copilot-studio/billing-licensing)
 - [Quotas and limits](/microsoft-copilot-studio/requirements-quotas#generative-ai-messages-to-an-agent)
 - [Understand agent error codes](~/power-platform/copilot-studio/authoring/error-codes.md)
+- [Manage Copilot Studio messages capacity](/power-platform/admin/manage-copilot-studio-messages-capacity)
