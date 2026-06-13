@@ -1,6 +1,6 @@
 ---
-title: Active Directory error 0x52 when installing Edge role
-description: Provides a workaround to solve the Active Directory 0x52 error that occurs when installing Exchange Server 2016 Edge role.
+title: Active Directory error 0x52 if you install Edge Transport server role
+description: Provides a workaround to solve the Active Directory 0x52 error that occurs when you install Edge Transport server role.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -10,33 +10,42 @@ ms.custom:
   - sap:Plan and Deploy\Exchange Install Issues, Cumulative or Security updates
   - Exchange Server
   - CSSTroubleshoot
-ms.reviewer: v-six
+  - CI 9823
+  - CI 11997
+ms.reviewer: v-six, v-kccross
 appliesto: 
-  - Exchange Server 2016 Enterprise Edition
-  - Exchange Server 2016 Enterprise Edition
+  - Exchange Server SE
+  - Exchange Server 2019
+  - Exchange Server 2016
 search.appverid: MET150
-ms.date: 05/12/2026
+ms.date: 06/05/2026
 ---
 
-# Active Directory error 0x52 at Exchange Server 2016 Edge role installation
+# Active Directory error 0x52 at Microsoft Exchange Server Edge Transport server role installation
 
 _Original KB number:_ &nbsp; 4093253
 
+## Summary
+
+You receive "Active Directory error 0x52" when you install the [Edge Transport server role](/exchange/architecture/edge-transport-servers/edge-transport-servers) in a multi-domain environment. This issue occurs because you use an account from a different domain than the one that the Edge Transport server is joined to in order to install the role. Therefore, Exchange can’t validate the local server against Active Directory. To resolve the issue and sign in, use an account from the same domain that the server is joined to. Then, run the Edge Transport server role installation again.
+
 ## Symptoms
 
-Consider this scenario:
+Consider the following scenario:
 
-- There are multiple domains in a forest.
+- An Active Directory forest contains multiple domains.
 - You sign in to a domain-joined server by using a user account from another domain.
-- You try to install Microsoft Exchange Server 2016 Edge role with Cumulative Update 8 or Cumulative Update 7 on this server.
+- You install the Edge Transport server role on this computer.
 
-In this scenario, the installation fails with the following error. The PowerShell execution also fails with a similar error.
+In this scenario, the installation fails and returns the following error message. The PowerShell execution also fails and generates a similar error.
 
-> The following error was generated when "$error.Clear();  
+```console
+The following error was generated when "$error.Clear();  
 Set-TopologyMode;  
 Start-Sleep -s 5;  
 " was run: "Microsoft.Exchange.Data.Directory.NoSuitableServerFoundException: An Active Directory error 0x52 occurred when trying to check the suitability of server 'localhost'. Error: 'Active directory response: A local error occurred.' ---> Microsoft.Exchange.Data.Directory.SuitabilityDirectoryException: An Active Directory error 0x52 occurred when trying to check the suitability of server 'localhost'. Error: 'Active directory response: A local error occurred.' ---> System.DirectoryServices.Protocols.LdapException: A local error occurred.
+```
 
 ## Workaround
 
-Install the Edge server by using an account from the same domain.
+To install the Edge Transport server role, use an account from the same domain as the domain that's joined to the server.
