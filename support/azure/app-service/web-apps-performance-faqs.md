@@ -29,7 +29,7 @@ System processes will run on App Service Plans even if there are no Web Apps run
 
 The platform processes will consume a minimum amount of resources (such as CPU, Memory and Disk space), and the same should be accounted during the capacity planning, monitoring, and auto-scaling trigger configuration of an App Service Plan.
 
-## My app perfromance is slow
+## My app performance is slow
 
 Multiple factors might contribute to slow app performance. For detailed troubleshooting steps, see [Troubleshoot slow web app performance](/azure/app-service/troubleshoot-performance-degradation).
 
