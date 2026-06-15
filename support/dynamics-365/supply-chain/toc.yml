@@ -385,6 +385,8 @@ items:
         href: warehousing/weight-fields-on-load-lines-dont-match-weight-fields-error.md
       - name: Unconfirmed purchase orders are confirmed after running Update product receipts
         href: warehousing/unconfirmed-purchase-orders-confirmed.md
+      - name: Warehouse work completion fails without Key Vault configuration
+        href: warehousing/warehouse-work-completion-key-vault-error.md
       - name: Wave isn't eligible for cleanup
         href: warehousing/wave-is-not-eligible.md
       - name: Weight must be positive
