@@ -2,14 +2,18 @@
 title: Can't sign in to Power Automate for desktop
 description: Helps troubleshoot sign-in related issues with Power Automate for desktop.
 ms.reviewer: pefelesk, matp
-ms.date: 03/01/2024
+ms.date: 06/11/2026
 ms.custom: sap:Desktop flows\Cannot access Power Automate for desktop application
 ---
 # Can't sign in to Power Automate for desktop
 
-This article provides resolutions and workarounds for several sign-in related issues in Power Automate for desktop.
+_Applies to:_ &nbsp; Power Automate
 
-## Generic sign-in or sign-out issues
+## Summary
+
+This article helps you troubleshoot and resolve sign-in issues in Power Automate for desktop. Common causes include corrupted token caches, Web Account Manager (WAM) errors, incorrect region selection, blocked cookies, network connectivity problems, and named pipe conflicts. Each section covers a specific sign-in scenario with steps to diagnose and fix the problem so you can successfully authenticate and use Power Automate for desktop.
+
+## Fix generic sign-in or sign-out issues by clearing the token cache
 
 Power Automate for desktop uses a file named *msalcache.bin3* to acquire tokens and authenticate users.
 
@@ -22,19 +26,19 @@ To delete the file, navigate to `%localappdata%\Microsoft\Power Automate Deskt
 
 After deleting the *msalcache.bin3* file, close the Power Automate console, exit Power Automate from the system tray or restart the Power Automate service, and then try again to sign in.
 
-## Web Account Manager (WAM) errors
+## Troubleshoot Web Account Manager (WAM) authentication errors
 
 By default, Power Automate for desktop authenticates users through the Web Account Manager (WAM); a Windows component that ships with the operating system and acts as an authentication broker.
 
 For more information about WAM and related errors, see [Using MSAL.NET with Web Account Manager (WAM)](https://aka.ms/msal-net-wam) and [Interactive with WAM](/entra/identity-platform/scenario-desktop-acquire-token-wam).
 
-## Wrong region issues
+## Fix sign-in failures caused by wrong region selection
 
 Before signing in, make sure you have selected the correct region from the **Change region** option.
 
 :::image type="content" source="media/cannot-sign-in-to-power-automate-for-desktop/change-region.png" alt-text="Screenshot that shows the Change region option in the Power Automate console." lightbox="media/cannot-sign-in-to-power-automate-for-desktop/change-region.png":::
 
-## Browser blocks cookies
+## Resolve sign-in issues due to browser blocking cookies
 
 When you sign in to Power Automate for desktop, you receive the following error message:
 
@@ -50,21 +54,17 @@ When you sign in to Power Automate for desktop, you receive the following error 
     - `login.microsoftonline.com`
     - `secure.aadcdn.microsoftonline-p.com`
 
-## Can't sign in due to a connectivity issue
+## Fix sign-in failures caused by network connectivity issues
 
 When you sign in to Power Automate for desktop, you receive the following error message:
 
 > There was an issue during sign in. Try again later or contact an administrator.
 
-### Verify the issue
-
-Try to sign in to [Power Automate](https://make.powerautomate.com/). If it works as expected, the issue should be related to the local network configuration of the machine that hosts Power Automate for desktop.
-
-### Resolution
+To identify the root cause, try signing in to [Power Automate](https://make.powerautomate.com/). If it works as expected, the issue should be related to the local network configuration of the machine that hosts Power Automate for desktop.
 
 For more information about possible causes and steps to resolve this issue, see [Can't create, edit, save, or view desktop flows](cannot-sign-in-create-edit-save-view-desktop-flows.md#cause).
 
-## Login window keeps popping up
+## Fix login window that keeps popping up due to named pipe conflicts
 
 While signing in to Power Automate for desktop, the **login to your account** window pops up when you enter the credentials. If you select the question mark (**?**) icon to reset the account in **Login to your Microsoft account**, the login window disappears.
 
@@ -104,3 +104,10 @@ To fix this issue, stop the process identified in the previous step, or if it's 
 - As an alternate, ensure Power Automate for desktop is closed (also from the taskbar), kill the process identified in the previous steps, and then try again to restart Power Automate for desktop.
 
 - If the other solutions aren't possible, specify Power Automate for desktop executables to run as administrator. This workaround might only solve the issue in some cases, and it causes a User Account Control (UAC) prompt to appear each time.
+
+## Related content
+
+- [Power Automate for desktop troubleshooter](/power-automate/desktop-flows/troubleshooter#sign-in-issues)
+- [Invalid credentials error when running desktop flows](invalid-credentials-errors-running-desktop-flows.md)
+- [Install Power Automate for desktop](/power-automate/desktop-flows/install)
+- [Prerequisites and limitations for Power Automate for desktop](/power-automate/desktop-flows/requirements#prerequisites)
