@@ -1,18 +1,20 @@
 ---
-title: Installation issues in Power Automate for desktop
-description: Helps troubleshoot stallation issues in Power Automate for desktop.
+title: Installation Issues in Power Automate for Desktop
+description: Troubleshoot Power Automate for desktop installation issues, fix service and permissions errors, and follow step-by-step solutions to complete setup successfully.
 ms.reviewer: guco, johndund
-ms.date: 01/20/2025
+ms.date: 06/11/2026
 ms.custom: sap:Desktop flows\Installation issues
 ---
 # Troubleshoot installation issues in Power Automate for desktop
 
-This article provides troubleshooting steps to resolve issues that might occur when you install Power Automate for desktop.
-
 _Applies to:_ &nbsp; Power Automate  
 _Original KB number:_ &nbsp; 5001534
 
-## General steps
+## Summary
+
+This article helps you diagnose and resolve common installation issues in Power Automate for desktop. Problems covered include the Power Automate service failing to start due to missing DLLs, session enumeration failures, service account errors, insufficient privileges, and LanmanServer service dependencies. Each section provides specific symptoms, root causes, and step-by-step workarounds to ensure a successful installation of Power Automate for desktop on Windows.
+
+## General steps to ensure a successful installation
 
 To ensure a successful installation, make sure that:
 
@@ -27,13 +29,13 @@ To ensure a successful installation, make sure that:
 
 For a complete list of prerequisites, see [Prerequisites and limitations](/power-automate/desktop-flows/requirements#prerequisites).
 
-## Gather diagnostic information
+## Gather diagnostic information from installation logs
 
 Installation logs can provide useful details about the installation and help you diagnose and fix issues. For more information about where to find the logs, see [Power Automate for desktop installation logs](how-to-get-power-automate-desktop-installer-logs.md#installer-logs).
 
-## Known issues and workarounds
+## Known Power Automate for desktop installation issues and workarounds
 
-### Power Automate service fails to start: Unable to load DLL 'uiflowsclient.dll'
+### Power Automate service fails to start: "Unable to load DLL 'uiflowsclient.dll'" error
 
 The installation fails with this error if the Power Automate Windows service fails to start. The Windows Event Viewer shows that the reason why it couldn't start is "System.DllNotFound Exception: Unable to load DLL 'uiflowsclient.dll'".
 
@@ -42,13 +44,13 @@ The installation fails with this error if the Power Automate Windows service fai
 To work around this issue, uninstall "Microsoft Visual C++ 2015-2022 Redistributable" and then reinstall Power Automate for desktop by following these steps:
 
 1. Go to **Settings** > **Apps** > **Installed apps**.
-2. Find "Microsoft Visual C++ 2015-2022 Redistributable" and uninstall it.
+1. Find "Microsoft Visual C++ 2015-2022 Redistributable" and uninstall it.
 
    :::image type="content" source="media/power-automate-desktop-installation-issues/visual-c-2015-2022-installed-app.png" alt-text="Screenshot that shows how to find and uninstall Microsoft Visual C++ 2015-2022 Redistributable.":::
 
-3. Reinstall Power Automate for desktop. The Power Automate for desktop installer reinstalls the C++ redistributable as part of the installation.
+1. Reinstall Power Automate for desktop. The Power Automate for desktop installer reinstalls the C++ redistributable as part of the installation.
 
-### Power Automate service crashes at startup: Failed to enumerate sessions
+### Power Automate service crashes at startup: "FailedToEnumerateSessions" error
 
 The installation fails with this error if the Power Automate service crashes at startup. The Windows Event Viewer shows the "FailedToEnumerateSessions" error.
 
@@ -60,19 +62,19 @@ The installation fails with this error if the Power Automate service crashes at 
 
 #### Cause
 
-The installer grants permissions to the Power Automate service to enumerate user sessions on the machine. You might need to retart your machine for these permissions to take effect.
+The installer grants permissions to the Power Automate service to enumerate user sessions on the machine. You might need to restart your machine for these permissions to take effect.
 
 #### Resolution
 
-To solve this issue, you can prevent the Power Automate service from starting automatically during the installation by running the installer from a command line and passing the `/SKIPSTARTINGPOWERAUTOMATESERVICE` argument.
+To solve this issue, prevent the Power Automate service from starting automatically during the installation by running the installer from a command line and passing the `/SKIPSTARTINGPOWERAUTOMATESERVICE` argument.
 
 :::image type="content" source="media/power-automate-desktop-installation-issues/skipstartingpowerautomateservice.png" alt-text="Screenshot that shows how to prevent the Power Automate service from starting automatically by using a command.":::
 
 Then, manually restart the machine right after the installation. If the restart is successful, the Power Automate Windows service will run successfully after the restart, and should no longer crash or generate the "FailedToEnumerateSessions" error in the event log.
 
-### Power Automate service fails to start: Service account errors
+### Power Automate service fails to start: "UIFlowServiceSecretStore backing store is unhealthy" error
 
-The installation fails because the Power Automate service crashes at startup, and the Windows Event Viewer shows the following errors:
+The installation fails because the Power Automate service crashes at startup. The Windows Event Viewer shows the following errors:
 
 > UIFlowService  
 > Exception caught during service startup:  
@@ -107,7 +109,7 @@ First run the installer from a command line and pass the `/SKIPSTARTINGPOWERAUTO
 
 When the installation completes, run the Power Automate Machine runtime application and use the **Troubleshoot** menu to change the service account. For more information on changing the service account, see [Change the on-premises Service account](/power-automate/desktop-flows/troubleshoot#change-the-on-premises-service-account).
 
-### Power Automate service fails to start: Verify that you have sufficient privileges to start system services
+### Power Automate service fails to start: "Verify that you have sufficient privileges" error
 
 You see the following event logged in the Windows Event Viewer:
 
@@ -135,7 +137,7 @@ Update the **Deny log on as a service** policy setting to remove the account or 
 
 :::image type="content" source="media/power-automate-desktop-installation-issues/deny-log-on-as-a-service.png" alt-text="Screenshot that shows the Deny log on as a service setting.":::
 
-### The LanmanServer service can't be started
+### The LanmanServer service can't be started during Power Automate installation
 
 You see the following error message in the [installation logs](how-to-get-power-automate-desktop-installer-logs.md):
 
@@ -143,14 +145,21 @@ You see the following error message in the [installation logs](how-to-get-power-
 
 #### Cause
 
-The Power Automate installer depends on the LanmanServer service and attempts to start it if it isn't already running. If the service can't be started, installation steps that depend on it fail.
+The Power Automate installer depends on the LanmanServer service and attempts to start it if it isn't already running. If the service can't start, installation steps that depend on it fail.
 
 #### Resolution
 
-To solve this issue,
+To solve this problem,
 
-1. Select Windows logo key+<kbd>R</kbd> and type _services.msc_ or _services_ in the **Run** window to open the Services manager. Find the service named "Server", right-click it and select **Properties**.
-1. In the **General** tab, make sure that its **Startup type** isn't disabled (it should be **Automatic** by default.)
+1. Select Windows logo key+<kbd>R</kbd> and type _services.msc_ or _services_ in the **Run** window to open the Services manager. Find the service named "Server", right-click it, and select **Properties**.
+1. In the **General** tab, make sure that its **Startup type** isn't disabled (it should be **Automatic** by default).
 1. Select **Apply** to update the startup type.
 1. You can then start the service manually by right-clicking it in the services manager tool and selecting **Start**.
 1. Once the service runs, you can attempt the installation again.
+
+## Related content
+
+- [Install Power Automate for desktop](/power-automate/desktop-flows/install)
+- [Prerequisites and limitations for Power Automate for desktop](/power-automate/desktop-flows/requirements#prerequisites)
+- [Power Automate for desktop installation logs](how-to-get-power-automate-desktop-installer-logs.md)
+- [Can't sign in to Power Automate for desktop](cannot-sign-in-to-power-automate-for-desktop.md)

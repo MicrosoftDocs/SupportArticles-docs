@@ -2,7 +2,7 @@
 title: Power Automate needs an update but we're unable to apply the update right now
 description: Provides a resolution for an issue where Power Automate for desktop can't be updated when you open it for the first time.
 ms.reviewer: chtzirtz, iomimtso, adanas, v-shaywood
-ms.date: 04/03/2026
+ms.date: 06/11/2026
 ms.custom: sap:Desktop flows\Working with Power Automate for desktop
 ---
 # "Power Automate needs an update" message occurs when opening Power Automate for desktop
@@ -15,25 +15,25 @@ When you open Power Automate for desktop for the first time, you might receive a
 
 ## Symptoms
 
-When you try to open Power Automate for desktop for the first time, you receive the following message:
+When you try to open Power Automate for desktop for the first time, you receive the following error message:
 
 > Power Automate needs an update, but we're unable to apply the update right now.
 
 :::image type="content" source="media/cannot-update-power-automate-for-desktop/power-automate-needs-an-update.png" alt-text="Screenshot of the message that states Power Automate needs an update but we're unable to apply the update right now.":::
 
-To verify the problem, check if you have an active internet connection and go to **Windows Services** to confirm that the **Windows Update** service isn't running.
+To verify the problem, check if you have an active internet connection and go to Windows **Services** to confirm that the **Windows Update** service isn't running.
 
 ## Cause
 
 This problem typically occurs when the **Windows Update** service isn't running or is disabled.
 
-## Solution
+## Solution: Enable Windows Update and restart Power Automate
 
 To resolve this problem, first check that you have an active internet connection, then try one of the following solutions:
 
 ### Enable the Windows Update service
 
-1. Go to **Windows Services** and enable the **Windows Update** service.
+1. Go to **Services** and enable the **Windows Update** service.
 1. Launch Power Automate.
 
 ### Run the Windows Update troubleshooter
@@ -52,4 +52,5 @@ To resolve this problem, first check that you have an active internet connection
 
 - [Install Power Automate](/power-automate/desktop-flows/install)
 - [Update Power Automate for desktop](/power-automate/desktop-flows/install#update-power-automate-for-desktop)
+- [Troubleshoot installation issues in Power Automate for desktop](power-automate-desktop-installation-issues.md)
 - [Power Automate for desktop logs](how-to-get-power-automate-desktop-installer-logs.md)
