@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Azure point-to-site connection problems
 titleSuffix: Azure VPN Gateway
-description: Learn to troubleshoot and solve common point-to-site connection problems and other virtual private network errors and issues.
+description: Troubleshoot Azure point-to-site connection problems and fix common VPN client and gateway errors. Follow these steps to restore secure access now.
 author: JarrettRenshaw
 ms.author: jarrettr
 ms.service: azure-vpn-gateway
@@ -11,13 +11,13 @@ ms.custom: sap:Connectivity
 
 # Customer intent: As a network administrator, I want to troubleshoot common point-to-site VPN connection issues, so that I can ensure seamless connectivity and resolve client errors effectively.
 ---
-# Troubleshooting: Azure point-to-site connection problems
+# Troubleshoot Azure point-to-site connection problems
 
 ## Summary
 
 This article lists common point-to-site connection problems that you might experience. It also discusses possible causes and solutions for these problems.
 
-## VPN client error: A certificate couldn't be found
+## VPN client error: A certificate could not be found
 
 ### Symptom
 
@@ -33,7 +33,7 @@ This problem occurs if the client certificate is missing from **Certificates - C
 
 To resolve this problem, follow these steps:
 
-1. Open Certificate Manager: Click **Start**, type **manage computer certificates**, and then click **manage computer certificates** in the search result.
+1. Open Certificate Manager: Select **Start**, type **manage computer certificates**, and then select **manage computer certificates** in the search result.
 
 1. Make sure that the following certificates are in the correct location:
 
@@ -43,29 +43,31 @@ To resolve this problem, follow these steps:
     | AzureRoot.cer    | Local Computer\Trusted Root Certification Authorities|
 
 3. Go to C:\Users\<UserName>\AppData\Roaming\Microsoft\Network\Connections\Cm\<GUID>, manually install the certificate (*.cer file) on the user and computer's store.
+   
+1. If you just updated or installed a new certificate, reboot the client machine to make sure the new certificate is used.
 
 For more information about how to install the client certificate, see [Generate and export certificates for point-to-site connections](/azure/vpn-gateway/vpn-gateway-certificates-point-to-site).
 
 > [!NOTE]
-> When you import the client certificate, do not select the **Enable strong private key protection** option.
+> When you import the client certificate, don't select the **Enable strong private key protection** option.
 
 ## The network connection between your computer and the VPN server couldn't be established because the remote server isn't responding
 
 ### Symptom
 
-When you try to connect to an Azure virtual network gateway using IKEv2 on Windows, you get the following error message:
+When you try to connect to an Azure virtual network gateway by using IKEv2 on Windows, you get the following error message:
 
 **The network connection between your computer and the VPN server could not be established because the remote server is not responding**
 
 ### Cause
 
-The problem occurs if the version of Windows doesn't have support for IKE fragmentation.
+This problem occurs if the version of Windows doesn't support IKE fragmentation.
 
 ### Solution
 
-IKEv2 is supported on Windows 10 and Server 2016. However, in order to use IKEv2, you must install updates and set a registry key value locally. OS versions prior to Windows 10 aren't supported and can only use SSTP.
+Windows 10 and Server 2016 support IKEv2. However, to use IKEv2, you must install updates and set a registry key value locally. OS versions prior to Windows 10 aren't supported and can only use SSTP.
 
-To prepare Windows 10, or Server 2016 for IKEv2:
+To prepare Windows 10 or Server 2016 for IKEv2:
 
 1. Install the update.
 
@@ -89,8 +91,8 @@ When you try to connect to an Azure virtual network by using the VPN client, you
 
 This problem occurs if one of the following conditions is true:
 
-- The use user-defined routes (UDR) with default route on the Gateway Subnet is set incorrectly.
-- The root certificate public key isn't uploaded into the Azure VPN gateway. 
+- You incorrectly set up user-defined routes (UDR) with the default route on the Gateway Subnet.
+- You don't upload the root certificate public key into the Azure VPN gateway. 
 - The key is corrupted or expired.
 
 ### Solution
@@ -98,7 +100,7 @@ This problem occurs if one of the following conditions is true:
 To resolve this problem, follow these steps:
 
 1. Remove UDR on the Gateway Subnet. Make sure UDR forwards all traffic properly.
-1. Check the status of the root certificate in the Azure portal to see whether it was revoked. If it isn't revoked, try to delete the root certificate and reupload. For more information, see [Create certificates](/azure/vpn-gateway/vpn-gateway-howto-point-to-site-classic-azure-portal#generatecerts).
+1. Check the status of the root certificate in the [Azure portal](https://portal.azure.com) to see whether it's revoked. If it isn't revoked, try to delete the root certificate and reupload it. For more information, see [Create certificates](/azure/vpn-gateway/vpn-gateway-howto-point-to-site-classic-azure-portal#generatecerts).
 
 ## VPN client error: A certificate chain processed but terminated 
 
@@ -146,7 +148,7 @@ When you try to connect to an Azure virtual network by using the VPN client, you
 
 ### Cause
 
-This problem might occur if you're trying to open the site-to-point VPN connection by using a shortcut.
+This problem occurs if you try to open the site-to-point VPN connection by using a shortcut.
 
 ### Solution 
 
@@ -158,14 +160,14 @@ Open the VPN package directly instead of opening it from the shortcut.
 
 - The VPN connection disconnects during, or shortly after, an Intune synchronization.
 - The VPN profile appears to be deleted and then reprovisioned, even though no configuration changes were made.
-- This behavior is observed primarily on Windows 11 devices.
+- You observe this behavior primarily on Windows 11 devices.
 
 ### Cause
 
 This issue occurs due to differences in how Intune and Windows handle the VPN profile XML:
 - During an Intune sync, Intune compares the VPN profile assigned to the device with the profile currently present on the system.
-- Windows does not store the original VPN profile XML exactly as it was provided to Intune. When queried, Windows regenerates the XML representation of the profile.
-- The regenerated XML may differ in formatting, ordering, or normalization from the original XML uploaded to Intune.
+- Windows doesn't store the original VPN profile XML exactly as it was provided to Intune. When queried, Windows regenerates the XML representation of the profile.
+- The regenerated XML might differ in formatting, ordering, or normalization from the original XML uploaded to Intune.
 - Although the effective VPN configuration is the same, these formatting differences can cause Intune to interpret the profile as changed.
 - When Intune detects a difference, it deletes the existing VPN profile and provisions a new one, which causes the VPN connection to disconnect.
 
@@ -191,7 +193,7 @@ The recommended approach is to extract the profile XML from a device where the V
    [System.IO.File]::WriteAllText("VPN-Corrected.xml", $vpns[0].ProfileXML)
    ```
    
-1. Use the exported XML file as the VPN profile definition in Intune
+1. Use the exported XML file as the VPN profile definition in Intune.
 
 Using the XML generated by Windows helps ensure consistency between the profile stored on the device and the profile evaluated by Intune, reducing the likelihood of profile deletion and VPN disconnections during sync.
 
@@ -199,7 +201,7 @@ Using the XML generated by Windows helps ensure consistency between the profile 
 
 ### Cause 
 
-An additional certificate is required to trust the VPN gateway for your virtual network. The certificate is included in the VPN client configuration package that is generated from the Azure portal.
+You need an extra certificate to trust the VPN gateway for your virtual network. The Azure portal includes this certificate in the VPN client configuration package that it generates.
 
 ### Solution
 
@@ -228,7 +230,7 @@ This problem might occur if the root certificate public key that you uploaded co
 
 Make sure that the data in the certificate doesn't contain invalid characters, such as line breaks (carriage returns). The entire value should be one long line. The following example shows the area to copy within the certificate:
 
-:::image type="content" source="media/vpn-gateway-troubleshoot-vpn-point-to-site-connection-problems/certificate.png" alt-text="Screenshot of certificate flow." lightbox="media/vpn-gateway-troubleshoot-vpn-point-to-site-connection-problems/certificate.png":::
+:::image type="content" source="media/vpn-gateway-troubleshoot-vpn-point-to-site-connection-problems/certificate.png" alt-text="Screenshot of certificate details used to copy the root certificate public key for point-to-site VPN setup." lightbox="media/vpn-gateway-troubleshoot-vpn-point-to-site-connection-problems/certificate.png":::
 
 ## Azure portal error: Failed to save the VPN gateway, and the resource name is invalid
 
@@ -254,11 +256,11 @@ When you try to download the VPN client configuration package, you receive the f
 
 This error can be caused by a temporary network problem. Try to download the VPN package again after a few minutes.
 
-## Azure VPN Gateway upgrade: All point-to-site clients are unable to connect
+## Azure VPN Gateway upgrade: All point-to-site clients can't connect
 
 ### Cause
 
-If the certificate is more than 50 percent through its lifetime, the certificate is rolled over.
+The certificate is more than 50 percent through its lifetime, so it's rolled over.
 
 ### Solution
 
@@ -266,17 +268,17 @@ To resolve this problem, redownload and redeploy the point-to-site package on al
 
 ## Too many VPN clients connected at once
 
-The maximum number of allowable connections is reached. You can see the total number of connected clients in the Azure portal.
+You reached the maximum number of connections. You can see the total number of connected clients in the Azure portal.
 
 ## VPN client can't access network file shares
 
 ### Symptom
 
-The VPN client has connected to the Azure virtual network. However, the client can't access network shares.
+The VPN client connects to the Azure virtual network. However, the client can't access network shares.
 
 ### Cause
 
-The SMB protocol is used for file share access. When the connection is initiated, the VPN client adds the session credentials, and the failure occurs. After the connection is established, the client is forced to use the cache credentials for Kerberos authentication. This process initiates queries to the Key Distribution Center (a domain controller) to get a token. Because the client connects from the Internet, it might not be able to reach the domain controller. Therefore, the client can't fail over from Kerberos to NTLM. 
+The SMB protocol is used for file share access. When you initiate the connection, the VPN client adds the session credentials, and the failure occurs. After the connection is established, the client uses the cache credentials for Kerberos authentication. This process initiates queries to the Key Distribution Center (a domain controller) to get a token. Because the client connects from the Internet, it might not be able to reach the domain controller. Therefore, the client can't fail over from Kerberos to NTLM. 
 
 The only time that the client is prompted for a credential is when it has a valid certificate (with SAN=UPN) issued by the domain to which it's joined. The client also must be physically connected to the domain network. In this case, the client tries to use the certificate and reaches out to the domain controller. Then the Key Distribution Center returns a "KDC_ERR_C_PRINCIPAL_UNKNOWN" error. The client is forced to fail over to NTLM. 
 
@@ -314,37 +316,37 @@ To resolve the problem, make sure that the Azure DNS servers that used on the Az
 
 ### Cause
 
-This problem might occur if VPN client doesn't get the routes from Azure VPN gateway.
+This problem occurs if the VPN client doesn't get the routes from Azure VPN gateway.
 
 ### Solution
 
-To resolve this problem, [reset Azure VPN gateway](/azure/vpn-gateway/reset-gateway). To make sure that the new routes are being used, the Point-to-Site VPN clients must be downloaded again after virtual network peering has been successfully configured.
+To resolve this problem, [reset Azure VPN gateway](/azure/vpn-gateway/reset-gateway). To make sure that the new routes are used, download the Point-to-Site VPN clients again after virtual network peering is successfully configured.
 
 ## Error: "The revocation function was unable to check revocation because the revocation server was offline. (Error 0x80092013)"
 
 ### Causes
 
-This error message occurs if the client can't access http://crl3.digicert.com/ssca-sha2-g1.crl and http://crl4.digicert.com/ssca-sha2-g1.crl. The revocation check requires access to these two sites. This problem typically happens on the client that has proxy server configured. In some environments, if the requests aren't going through the proxy server, it will be denied at the edge firewall.
+This error message occurs if the client can't access http://crl3.digicert.com/ssca-sha2-g1.crl and http://crl4.digicert.com/ssca-sha2-g1.crl. The revocation check requires access to these two sites. This problem typically happens on the client that has proxy server configured. In some environments, if the requests aren't going through the proxy server, the edge firewall denies them.
 
 ### Solution
 
-Check the proxy server settings, make sure that the client can access http://crl3.digicert.com/ssca-sha2-g1.crl and http://crl4.digicert.com/ssca-sha2-g1.crl.
+Check the proxy server settings. Make sure that the client can access http://crl3.digicert.com/ssca-sha2-g1.crl and http://crl4.digicert.com/ssca-sha2-g1.crl.
 
 ## VPN client error: The connection was prevented because of a policy configured on your RAS/VPN server. (Error 812)
 
 ### Cause
 
-This error occurs if the RADIUS server that you used for authenticating VPN client has incorrect settings, or Azure Gateway can't reach the Radius server.
+This error occurs if the RADIUS server that you used for authenticating VPN client has incorrect settings, or Azure Gateway can't reach the RADIUS server.
 
 ### Solution
 
-Make sure that RADIUS server is configured correctly. For More information, see [Integrate RADIUS authentication with Azure Multi-Factor Authentication Server](/azure/active-directory/authentication/howto-mfaserver-dir-radius).
+Make sure that RADIUS server is configured correctly. For more information, see [Integrate RADIUS authentication with Azure Multi-Factor Authentication Server](/azure/active-directory/authentication/howto-mfaserver-dir-radius).
 
 ## "Error 405" when you download root certificate from VPN Gateway
 
 ### Cause
 
-Root certificate hasn't been installed. The root certificate is installed in the client's **Trusted certificates** store.
+You didn't install the root certificate. Install the root certificate in the client's **Trusted certificates** store.
 
 ## VPN client error: The remote connection was not made because the attempted VPN tunnels failed. (Error 800) 
 
@@ -356,9 +358,9 @@ The NIC driver is outdated.
 
 Update the NIC driver:
 
-1. Click **Start**, type **Device Manager**, and select it from the list of results. If you're prompted for an administrator password or confirmation, type the password or provide confirmation.
+1. Select **Start**, type **Device Manager**, and select it from the list of results. If you're prompted for an administrator password or confirmation, type the password or provide confirmation.
 1. In the **Network adapters** categories, find the NIC that you want to update.
-1. Double-click the device name, select **Update driver**, select **Search automatically for updated driver software**.
+1. Double-click the device name, select **Update driver**, and select **Search automatically for updated driver software**.
 1. If Windows doesn't find a new driver, you can try looking for one on the device manufacturer's website and follow their instructions.
 1. Restart the computer and try the connection again.
 
@@ -374,44 +376,44 @@ or
 
 ### Cause
 
-The point-to-site connection is disconnected because the current refresh token has expired or becomes invalid. New access tokens can’t be fetched for authenticating the user.
+The point-to-site connection is disconnected because the current refresh token has expired or becomes invalid. New access tokens can't be fetched for authenticating the user.
 
-When an Azure VPN Client tries to establish connection with an Azure VPN gateway using Microsoft Entra ID authentication, an access token is required to authenticate the user. This token gets renewed approximately every hour. A valid access token can only be issued when the user has a valid refresh token. If the user doesn’t have a valid refresh token, the connection gets disconnected.
+When an Azure VPN Client tries to establish connection with an Azure VPN gateway using Microsoft Entra ID authentication, an access token is required to authenticate the user. This token gets renewed approximately every hour. A valid access token can only be issued when the user has a valid refresh token. If the user doesn't have a valid refresh token, the connection gets disconnected.
 
-The refresh token can show as expired/invalid due to several reasons. You can check User Entra sign-in logs for debugging. See [Microsoft Entra sign-in logs](/entra/identity/monitoring-health/concept-sign-ins).
+Several reasons can cause the refresh token to expire or become invalid. Check User Entra sign-in logs for debugging. For more information, see [Microsoft Entra sign-in logs](/entra/identity/monitoring-health/concept-sign-ins).
 
-* **Refresh token has expired**
+* **Refresh token expires**
 
-  * The default lifetime for the refresh tokens is 90 days. After 90 days, users need to reconnect to get a new refresh token.
-  * Entra tenant admins can add conditional access policies for sign-in frequency that trigger periodic reauthentication every 'X' hrs. (Refresh token will expire in 'X' hrs). By using custom conditional access policies, users are forced use an interactive sign-in every 'X' hrs. For more information, see [Refresh tokens in the Microsoft identity platform](/entra/identity-platform/refresh-tokens) and [Configure adaptive session lifetime policies](/entra/identity/conditional-access/howto-conditional-access-session-lifetime).
+  * Refresh tokens expire after 90 days by default. After 90 days, users need to reconnect to get a new refresh token.
+      * Entra tenant admins can add conditional access policies for sign-in frequency that trigger periodic reauthentication every 'X' hours. (Refresh token expires in 'X' hours). By using custom conditional access policies, users must use an interactive sign-in every 'X' hours. For more information, see [Refresh tokens in the Microsoft identity platform](/entra/identity-platform/refresh-tokens) and [Configure adaptive session lifetime policies](/entra/identity/conditional-access/howto-conditional-access-session-lifetime).
 
-* **Refresh token is invalid**
+* **Refresh token becomes invalid**
 
-  * The user has been removed from tenant.
-  * The user's credentials have changed.
-  * Sessions have been revoked by the Entra tenant Admin.
-  * The device has become noncompliant (if it’s a managed device).
-  * Other Entra policies configured by Entra Admins that require users to periodically use interactive sign-in.
+  * The user is removed from tenant.
+  * The user's credentials change.
+  * Entra tenant admin revokes sessions.
+  * The device has become noncompliant (if it's a managed device).
+  * Other Entra policies configured by Entra admins that require users to periodically use interactive sign-in.
 
 ### Solution
 
-In these scenarios, users need to reconnect. This triggers an interactive sign-in process in Microsoft Entra that issues a new refresh token and access token.
+In these scenarios, users need to reconnect. This action triggers an interactive sign-in process in Microsoft Entra that issues a new refresh token and access token.
 
 ## <a name="reauthenticate"></a>Azure VPN Client with Entra ID authentication doesn't prompt the user to reauthenticate every time it disconnects
 
 ### Cause
 
-An Azure VPN client connecting using point-to-site with Entra ID authentication doesn't require interactive reauthentication when disconnected.
+An Azure VPN client connecting by using point-to-site with Entra ID authentication doesn't require interactive reauthentication when disconnected.
 
-The recommended sign-in frequency (SIF) or refresh token expiry time for the best experience with the Azure VPN Client should be set to greater than 2 hours, depending on what works best for the customer. This means the customer will remain connected for that duration without needing to reauthenticate interactively.
+Set the recommended sign-in frequency (SIF) or refresh token expiry time for the best experience with the Azure VPN Client to a value greater than 2 hours, depending on what works best for you. This setting keeps you connected without needing to reauthenticate interactively.
 
-Setting the SIF to "every time" is not recommended, as it would require interactive reauthentication every hour, causing frequent disconnects.
+Don't set the SIF to "every time," as it requires interactive reauthentication every hour and causes frequent disconnects.
 
-With the sign-in cache enabled (default), the token is stored in permanent storage, allowing reconnection without interactive reauthentication even after disconnection, as long as the refresh token is valid. Meaning, the reconnection duration is within the SIF or refresh token expiry time.
+When the sign-in cache is enabled (default), the token is stored in permanent storage. This storage allows reconnection without interactive reauthentication even after disconnection, as long as the refresh token is valid. This condition means the reconnection duration is within the SIF or refresh token expiry time.
 
 ### Solution
 
-To ensure the Azure VPN client is prompted for reauthentication every time it gets disconnected, the customer can use the "sign-in cache disabled" option in the Azure VPN Client (version 4.0.0.0 and later). The customer can modify the user profile (XML) setting `cachesigninuser` to `false`.
+To ensure the Azure VPN client prompts for reauthentication every time it disconnects, use the **sign-in cache disabled** option in the Azure VPN Client (version 4.0.0.0 and later). Modify the user profile (XML) setting `cachesigninuser` to `false`.
 
 ```
 <azvpnprofile> 
@@ -423,36 +425,36 @@ To ensure the Azure VPN client is prompted for reauthentication every time it ge
 </azvpnprofile> 
 ```
 
-When the sign-in cache is disabled, the token is stored in in-memory storage, valid for one connection (or session), regardless of its duration (from 30 minutes to 90 days). Once the connection is disconnected, the in-memory token is dropped. The duration of one connection depends on the refresh token expiry time or the SIF.
+When you disable the sign-in cache, the token is stored in in-memory storage and is valid for one connection (or session), regardless of its duration (from 30 minutes to 90 days). Once the connection is disconnected, the in-memory token is dropped. The duration of one connection depends on the refresh token expiry time or the SIF.
 
-## VPN client error: Dialing VPN connection \<VPN Connection Name\>, Status = VPN Platform did not trigger connection
+## VPN client error: Dialing VPN connection \<VPN Connection Name\>, Status = VPN Platform didn't trigger connection
 
 You might also see the following error in Event Viewer from RasClient: "The user \<User\> dialed a connection named \<VPN Connection Name\> which has failed. The error code returned on failure is 1460."
 
 ### Cause
 
-The Azure VPN Client doesn't have the "Background apps" App Permission enabled in App Settings for Windows.
+The Azure VPN Client doesn't have the **Background apps** app permission enabled in **App Settings** for Windows.
 
 ### Solution
 
-1. In Windows, go to Settings -> Privacy -> Background apps
-1. Toggle the "Let apps run in the background" to On
+1. In Windows, go to **Settings** > **Privacy** > **Background apps**.
+1. Toggle the **Let apps run in the background** to **On**.
 
 ## Error: 'File download error Target URI is not specified'
 
 ### Cause
 
-This is caused by an incorrect gateway type is configured.
+This error occurs when you configure an incorrect gateway type.
 
 ### Solution
 
-The Azure VPN gateway type must be VPN and the VPN type must be **RouteBased**.
+Set the Azure VPN gateway type to **VPN** and the VPN type to **RouteBased**.
 
 ## VPN package installer doesn't complete
 
 ### Cause
 
-This problem can be caused by the previous VPN client installations.
+Previous VPN client installations can cause this problem.
 
 ### Solution
 
@@ -462,26 +464,26 @@ Delete the old VPN client configuration files from **C:\Users\UserName\AppData\R
 
 ### Solution
 
-Check the sleep and hibernate settings in the computer that the VPN client is running on.
+Check the sleep and hibernate settings on the computer that the VPN client is running on.
 
 ## I can't resolve records in Private DNS Zones using Private Resolver from point-to-site clients.
 
 ### Symptom
 
-When you're using Azure provided (168.63.129.16) DNS server on the virtual network, point-to-site clients won't be able to resolve records present in Private DNS Zones (including private endpoints).
+When you use the Azure provided (168.63.129.16) DNS server on the virtual network, point-to-site clients can't resolve records in Private DNS Zones (including private endpoints).
 
-:::image type="content" source="./media/vpn-gateway-troubleshoot-vpn-point-to-site-connection-problems/private-dns-zone-resolver.png" alt-text="Screenshot shows the Azure VPN Client, an open PowerShell window, and the Azure portal DNS servers page." lightbox="./media/vpn-gateway-troubleshoot-vpn-point-to-site-connection-problems/private-dns-zone-resolver.png":::
+:::image type="content" source="./media/vpn-gateway-troubleshoot-vpn-point-to-site-connection-problems/private-dns-zone-resolver.png" alt-text="Screenshot of the Azure VPN Client, an open PowerShell window, and the Azure portal DNS servers page." lightbox="./media/vpn-gateway-troubleshoot-vpn-point-to-site-connection-problems/private-dns-zone-resolver.png":::
 
 ### Cause
 
-Azure DNS server IP address (168.63.129.16) is resolvable only from Azure platform.
+Only the Azure platform can resolve the Azure DNS server IP address (168.63.129.16).
 
 ### Solution
 
-The following steps help you resolve records from Private DNS zone:
+To resolve records from a Private DNS zone, follow these steps:
 
-Configuring Private resolver's inbound IP address as custom DNS servers on virtual network help you resolve records in private DNS zone (including those created from Private Endpoints). Note the Private DNS zones must be associated with the virtual network that has the Private Resolver.
+By configuring the Private resolver's inbound IP address as custom DNS servers on the virtual network, you can resolve records in the private DNS zone (including those created from Private Endpoints). The Private DNS zones must be associated with the virtual network that has the Private Resolver.
 
-:::image type="content" source="./media/vpn-gateway-troubleshoot-vpn-point-to-site-connection-problems/private-dns-zone.png" alt-text="Screenshot shows the Azure VPN Client, an open PowerShell window, and the Azure portal open to DNS servers page." lightbox="./media/vpn-gateway-troubleshoot-vpn-point-to-site-connection-problems/private-dns-zone.png":::
+:::image type="content" source="./media/vpn-gateway-troubleshoot-vpn-point-to-site-connection-problems/private-dns-zone.png" alt-text="Screenshot of the Azure VPN Client, an open PowerShell window, and the Azure portal open to DNS servers page." lightbox="./media/vpn-gateway-troubleshoot-vpn-point-to-site-connection-problems/private-dns-zone.png":::
 
-By default, DNS servers that are configured on a virtual network will be pushed to point-to-site clients that are connected via VPN gateway. Hence, configuring Private resolver inbound IP address as custom DNS servers on the virtual network will automatically push these IP address to clients as the VPN DNS server and you can seamlessly resolve records from private DNS zones (including private endpoints).
+By default, the VPN gateway pushes DNS servers that you configure on a virtual network to point-to-site clients. When you configure the Private resolver inbound IP address as custom DNS servers on the virtual network, you automatically push these IP addresses to clients as the VPN DNS server. You can seamlessly resolve records from private DNS zones (including private endpoints).
