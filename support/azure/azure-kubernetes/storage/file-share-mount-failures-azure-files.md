@@ -14,9 +14,10 @@ ms.custom: sap:Storage
 
 This article discusses how to troubleshoot file share mounting failures for Azure Files so that you can set up storage successfully on your Microsoft Azure Kubernetes Service (AKS) clusters.
 
-## Common cause
+## Cause
 
-Your storage account key has changed. This problem can cause a range of errors. The following pod error is typical:
+Your storage account key changed. This problem can cause a range of errors. The following pod error is typical:
+
 ```
 Error: failed to generate container "56907e9807c6f4203c3aace8c5a6e3a75832cf07d3080a3869d355114657b54f" spec: failed to generate spec: failed to stat "/var/lib/kubelet/pods/xxxxxxxx-9fe6-46d7-b12e-339951b8d2f5/volumes/kubernetes.io~csi/pvc-xxxxxxxx-3b70-498c-b357-3488e1c1f429/mount": stat /var/lib/kubelet/pods/xxxxxxxx-9fe6-46d7-b12e-339951b8d2f5/volumes/kubernetes.io~csi/pvc-xxxxxxxx-3b70-498c-b357-3488e1c1f429/mount: host is down
 ```
@@ -27,25 +28,52 @@ Manually update the `azurestorageaccountkey` field in an Azure file secret to ad
 
 1. Encode your storage account key in base64 by running the following command:
 
-    ```console
-    echo <storage-account-key> | base64
-    ```
+```console
+echo <storage-account-key> | base64
+```
 
 1. [Update your Azure secret file](https://kubernetes.io/docs/concepts/configuration/secret/#editing-a-secret) by running the `kubectl edit secret` command to open the secret file in your default text editor:
 
-    ```console
-    kubectl edit secret azure-storage-account-<storage-account-name>-secret
-    ```
+```console
+kubectl edit secret azure-storage-account-<storage-account-name>-secret
+```
 
 1. Change the `azurestorageaccountkey` field to use the new base64-encoded storage account key, and then save the file.
 
-1. Redeploy your pods.
+1. Ensure proper unmount and recovery by using one of the following options. Redeploying pods alone often fails to fix the issue if an existing mount with a stale account key is reused. 
 
-> [!NOTE]
-> Simply deleting the pod and allowing it to be re-created might not resolve the issue. Make sure that you redeploy the pod.
+**Option 1: Cordon the node (single pod or node scenario)**
 
-After a few minutes, the agent node will retry the Azure File mount operation by using the updated storage key.
+1. Cordon the current node where the pod is running:
+
+```console
+kubectl cordon <node-name>
+```
+
+2. Force the pod to restart on a different node:
+
+```console
+kubectl delete pod <pod-name>
+```
+
+The new pod mounts the file share by using the updated credential.
+
+**Option 2: Scale replicas (recommended for Deployment or StatefulSet scenarios)**
+
+1. Scale replicas down to 0:
+
+```console
+kubectl scale deployment <deployment-name> --replicas=0
+```
+
+2. Wait 3-5 minutes for the account key cache to expire.
+
+3. Scale replicas back to the original count:
+
+```console
+kubectl scale deployment <deployment-name> --replicas=<original-count>
+```
+
+The new pods mount the file share by using the updated credentials.
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
-
- 
