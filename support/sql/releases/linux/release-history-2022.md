@@ -4,7 +4,7 @@ description: This article contains the release history for SQL Server 2022 runni
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh, atsingh
-ms.date: 05/20/2026
+ms.date: 06/17/2026
 ms.update-cycle: 1095-days
 appliesto:
   - SQL Server 2022
@@ -819,9 +819,9 @@ This is the General Availability (GA) release of [!INCLUDE [sql-server-2022](../
 Package details and download locations for the RPM and Debian packages are listed in the following table. You don't need to download these packages directly if you use the steps in the following installation guides:
 
 - [Install SQL Server package](/sql/linux/sql-server-linux-setup)
-- [Install SQL Server Full-Text Search on Linux](/sql/linux/sql-server-linux-setup-full-text-search)
-- [Install SQL Server Agent on Linux](/sql/linux/sql-server-linux-setup-sql-agent)
-- [Install SQL Server Integration Services (SSIS) on Linux](/sql/linux/sql-server-linux-setup-ssis)
+- [Install SQL Server Full-Text Search on Linux](/sql/linux/install-upgrade/setup-full-text-search)
+- [Install SQL Server Agent on Linux](/sql/linux/install-upgrade/setup-sql-agent)
+- [Install SQL Server Integration Services (SSIS) on Linux](/sql/linux/install-upgrade/setup-ssis)
 
 | Distribution | Package version | Downloads |
 | --- | --- | --- |
@@ -836,9 +836,9 @@ Go back to the [release history](#release-history).
 ## Related content
 
 - [SQL Server on Linux FAQ](/sql/linux/sql-server-linux-faq)
-- [Quickstart: Install SQL Server and create a database on Red Hat](/sql/linux/quickstart-install-connect-red-hat)
-- [Quickstart: Install SQL Server and create a database on SUSE Linux Enterprise Server](/sql/linux/quickstart-install-connect-suse)
-- [Quickstart: Install SQL Server and create a database on Ubuntu](/sql/linux/quickstart-install-connect-ubuntu)
-- [Quickstart: Run SQL Server Linux container images with Docker](/sql/linux/quickstart-install-connect-docker)
+- [Quickstart: Install SQL Server and create a database on Red Hat Enterprise Linux](/sql/linux/install-upgrade/quickstart-install-red-hat)
+- [Quickstart: Install SQL Server and create a database on SUSE Linux Enterprise Server](/sql/linux/install-upgrade/quickstart-install-suse)
+- [Quickstart: Install SQL Server and create a database on Ubuntu](/sql/linux/install-upgrade/quickstart-install-ubuntu)
+- [Quickstart: Run SQL Server Linux container images with Docker](/sql/linux/install-upgrade/quickstart-install-docker)
 - [Provision a Linux virtual machine running SQL Server in the Azure portal](/azure/azure-sql/virtual-machines/linux/sql-vm-create-portal-quickstart)
-- [Quickstart: Run SQL Server in the cloud](/sql/linux/quickstart-install-connect-clouds)
+- [Quickstart: Run SQL Server in the cloud](/sql/linux/install-upgrade/quickstart-install-clouds)
