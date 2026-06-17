@@ -2,15 +2,15 @@
 title: Get support for Viva Glint
 description: Provides steps to submit an online support request for Microsoft Viva Glint issues.
 manager: dcscontentpm
-ms.reviewer: aweixelman, amywheater
-ms.date: 05/08/2026
+ms.reviewer: amywheater
+ms.date: 06/10/2026
 audience: ITPro
 ms.topic: troubleshooting
 search.appverid: MET150
 ms.custom: 
-  - CSSTroubleshoot
-  - CI 195092
-  - CI 5250
+- CSSTroubleshoot
+- CI 195092
+- CI 5250
 ---
 
 # Get support for Viva Glint
@@ -48,7 +48,7 @@ Follow these steps:
    :::image type="content" source="./media/get-support-viva-glint/select-contact-support.png" alt-text="Screenshot of the Contact Support option.":::
 1. In the **Contact Support** pane, specify your preferred contact settings. Then, select a contact method and provide the following information:
 
-   - **Title**: Enter **Viva **, and then add a brief summary. If the issue is urgent, include the word **Urgent**.
+   - **Title**: Enter **Viva**, and then add a brief summary. If the issue is urgent, include the word **Urgent**.
    - **Description**: Add a detailed description of the issue, including (if applicable):
      - Users who are experiencing this issue and their Viva Glint user roles
      - The date and time (including time zone) that the issue occurred

@@ -20,7 +20,7 @@ This article provides a list of operating systems that are supported by Azure VM
 
 VM extensions enable post-deployment configuration of a virtual machine (VM), including installing and configuring software. VM extensions also enable recovery features, such as resetting the administrative password of a VM. Without the Azure VM Agent, VM extensions can't be run.
 
-* In order to run, the Windows VM Agent requires at least Windows Server 2008 SP2 (64-bit) and .NET Framework 4.0.
+* In order to run the Windows VM Agent ensure that your VM meets the [prerequisites](https://learn.microsoft.com/en-us/azure/virtual-machines/extensions/agent-windows#prerequisites).
 * The Linux agent runs on [multiple systems](/azure/virtual-machines/extensions/agent-linux#requirements). However, the extensions framework has a limit for the systems that support extensions.
 
 Some extensions aren't supported across all systems. They might return Error Code 51, 'Unsupported OS'. Check the individual extension documentation for supportability.
