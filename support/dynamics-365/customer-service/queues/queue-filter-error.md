@@ -2,7 +2,6 @@
 title: Personal view queue filter not working correctly
 description: Provides a resolution for an issue where personal view queue filters aren't working properly in Customer Service.
 ms.reviewer: laalexan
-ms.author: nickstinnett
 ms.date: 05/20/2024
 ms.custom: sap:Queues\Unable to view queue item
 ---
