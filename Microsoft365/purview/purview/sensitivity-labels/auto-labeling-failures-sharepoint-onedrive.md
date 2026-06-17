@@ -35,7 +35,7 @@ Auto-labeling might fail due to any of the following reasons:
 
 The failures that occur due to infrastructure conditions that affect the SharePoint or OneDrive service are transient. In this scenario, the service automatically retries the labeling operation. The other reasons that cause the failures need to be resolved manually.
 
-[!Note]
+> [!NOTE]
 > When a labeling operation fails, the affected file retains the same label from before the labeling or has no label if a label wasn’t assigned already.
 
 ## Details of auto-labeling failures
@@ -61,8 +61,8 @@ Use the following steps:
 
 Select the failure code from the following table and follow the instructions provided in the Recommended action column to resolve the cause of the failure.
 
-[!Tip]
-> If multiple files that’re processed by an auto-labeling policy fail with the same failure code, check the [SharePoint Online service health dashboard](https://admin.microsoft.com/Adminportal/Home#/servicehealth) for an active incident in the same time window before investigating further. A spike in the `SqlThrottled\`, `TransientErrorStorageConnection\`, or `Unknown_SPException\` failure codes often corresponds to a known service event.
+> [!TIP]
+> If multiple files that are processed by an auto-labeling policy fail with the same failure code, check the [SharePoint Online service health dashboard](https://admin.microsoft.com/Adminportal/Home#/servicehealth) for an active incident in the same time window before investigating further. A spike in the `SqlThrottled\`, `TransientErrorStorageConnection\`, or `Unknown_SPException\` failure codes often corresponds to a known service event.
 
 | Failure code | Description | Recommended action |
 |---|---|---|
