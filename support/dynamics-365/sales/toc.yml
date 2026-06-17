@@ -71,7 +71,7 @@ items:
   items:
     - name: Troubleshoot emails
       href: troubleshoot-emails-issues.md
-    - name: Troubleshoot Sales Premium
+    - name: '"One or more processes are disabled" error in Sales Insights'
       href: troubleshoot-sales-premium-issues.md
     - name: Troubleshoot relationship intelligence
       href: troubleshoot-relationship-intelligence.md
