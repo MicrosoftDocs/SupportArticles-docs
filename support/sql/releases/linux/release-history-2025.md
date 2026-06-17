@@ -4,7 +4,7 @@ description: This article contains the release history for SQL Server 2025 runni
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh, atsingh
-ms.date: 05/20/2026
+ms.date: 06/17/2026
 ms.update-cycle: 1095-days
 appliesto:
   - SQL Server 2025
@@ -16,6 +16,7 @@ The following table lists the release history for [!INCLUDE [sql-server-2025](..
 
 | Release | Version | Release date |
 | --- | --- | --- |
+| [CU 6](#17-0-4055) | 17.0.4055.5 | 2026-06-17 |
 | [CU 5](#17-0-4045) | 17.0.4045.5 | 2026-05-20 |
 | [CU 4 GDR (May 2026)](#17-0-4040) | 17.0.4040.1 | 2026-05-12 |
 | [CU 4](#17-0-4035) | 17.0.4035.5 | 2026-04-16 |
@@ -36,17 +37,34 @@ For release history on other editions, see the following articles:
 
 - Starting with [!INCLUDE [sql-server-2025](../../includes/versions/sql-server-2025.md)], **SUSE Linux Enterprise Server** (SLES) isn't supported.
 
-  Customers using earlier versions of [!INCLUDE [sql-server-no-version](../../includes/versions/sql-server-no-version.md)] on SLES aren't affected, and there are no changes to your support for existing deployments. For more information about version lifecycle policies, see [SQL Server 2022](/lifecycle/products/sql-server-2022), [SQL Server 2019](/lifecycle/products/sql-server-2019), and [SQL Server 2017](/lifecycle/products/sql-server-2017). To upgrade to [!INCLUDE [sql-server-2025](../../includes/versions/sql-server-2025.md)], [back up your databases and restore them](/sql/linux/sql-server-linux-backup-and-restore-database) to a [supported distribution](/sql/linux/sql-server-linux-release-notes-2025#supported-platforms).
+  Customers using earlier versions of [!INCLUDE [sql-server-no-version](../../includes/versions/sql-server-no-version.md)] on SLES aren't affected, and there are no changes to your support for existing deployments. For more information about version lifecycle policies, see [SQL Server 2022](/lifecycle/products/sql-server-2022), [SQL Server 2019](/lifecycle/products/sql-server-2019), and [SQL Server 2017](/lifecycle/products/sql-server-2017). To upgrade to [!INCLUDE [sql-server-2025](../../includes/versions/sql-server-2025.md)], [back up your databases and restore them](/sql/linux/business-continuity/backup-restore/database-backup-restore) to a [supported distribution](/sql/linux/sql-server-linux-release-notes-2025#supported-platforms).
 
 - Some GDR releases apply only to Windows. These Windows-only GDRs aren't published for Linux, and don't appear in this article.
 
 - Container tags can vary by release. For a list of available tags, see [RHEL](https://mcr.microsoft.com/product/mssql/rhel/server/tags) and [Ubuntu](https://mcr.microsoft.com/product/mssql/server/tags) in the Microsoft Artifact Registry.
 
+<a id="17-0-4055"></a>
+
+## CU 6 (June 2026)
+
+This is the Cumulative Update 6 (CU 6) release of [!INCLUDE [sql-server-2025](../../includes/versions/sql-server-2025.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 17.0.4055.5. For information about the fixes and improvements in this release, see the [Support article](../sqlserver-2025/cumulativeupdate6.md).
+
+### Package details
+
+For manual or offline package installations, you can download the RPM and Debian packages with the information in the following table:
+
+| Distribution | Package version | Downloads |
+| --- | --- | --- |
+| **RHEL 10.x RPM packages**<br /><br />(Get RPM packages for [RHEL 9.x](https://packages.microsoft.com/rhel/9.0/mssql-server-2025/Packages/m/)) | 17.0.4055.5-1 | [Database Engine RPM package](https://packages.microsoft.com/rhel/10/mssql-server-2025/Packages/m/mssql-server-17.0.4055.5-1.x86_64.rpm)<br />[Extensibility RPM package](https://packages.microsoft.com/rhel/10/mssql-server-2025/Packages/m/mssql-server-extensibility-17.0.4055.5-1.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/rhel/10/mssql-server-2025/Packages/m/mssql-server-fts-17.0.4055.5-1.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/rhel/10/mssql-server-2025/Packages/m/mssql-server-ha-17.0.4055.5-1.x86_64.rpm)<br />[PolyBase RPM package](https://packages.microsoft.com/rhel/10/mssql-server-2025/Packages/m/mssql-server-polybase-17.0.4055.5-1.x86_64.rpm) |
+| **Ubuntu 24.04 Debian packages**<br /><br />(Get Debian packages for [Ubuntu 22.04](https://packages.microsoft.com/ubuntu/22.04/mssql-server-2025/pool/main/m/mssql-server/)) | 17.0.4055.5-1 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/24.04/mssql-server-2025/pool/main/m/mssql-server/mssql-server_17.0.4055.5-1_amd64.deb)<br />[Extensibility Debian package](https://packages.microsoft.com/ubuntu/24.04/mssql-server-2025/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_17.0.4055.5-1_amd64.deb)<br />[Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/24.04/mssql-server-2025/pool/main/m/mssql-server-fts/mssql-server-fts_17.0.4055.5-1_amd64.deb)<br />[High Availability Debian package](https://packages.microsoft.com/ubuntu/24.04/mssql-server-2025/pool/main/m/mssql-server-ha/mssql-server-ha_17.0.4055.5-1_amd64.deb)<br />[PolyBase Debian package](https://packages.microsoft.com/ubuntu/24.04/mssql-server-2025/pool/main/m/mssql-server-polybase/mssql-server-polybase_17.0.4055.5-1_amd64.deb) |
+
+Go back to the [release history](#release-history).
+
 <a id="17-0-4045"></a>
 
 ## CU 5 (May 2026)
 
-This is the Cumulative Update 5 (CU 5) release of [!INCLUDE [sql-server-2025](../../includes/versions/sql-server-2025.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 17.0.4045.5. For information about the fixes and improvements in this release, see the [Support article](/troubleshoot/sql/releases/sqlserver-2025/cumulativeupdate5).
+This is the Cumulative Update 5 (CU 5) release of [!INCLUDE [sql-server-2025](../../includes/versions/sql-server-2025.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 17.0.4045.5. For information about the fixes and improvements in this release, see the [Support article](../sqlserver-2025/cumulativeupdate5.md).
 
 ### Package details
 
@@ -195,9 +213,9 @@ This is the General Availability (GA) release of [!INCLUDE [sql-server-2025](../
 Package details and download locations for the RPM and Debian packages are listed in the following table. You don't need to download these packages directly if you use the steps in the following installation guides:
 
 - [Install SQL Server package](/sql/linux/sql-server-linux-setup)
-- [Install SQL Server Full-Text Search on Linux](/sql/linux/sql-server-linux-setup-full-text-search)
-- [Install SQL Server Agent on Linux](/sql/linux/sql-server-linux-setup-sql-agent)
-- [Install SQL Server Integration Services (SSIS) on Linux](/sql/linux/sql-server-linux-setup-ssis)
+- [Install SQL Server Full-Text Search on Linux](/sql/linux/install-upgrade/setup-full-text-search)
+- [Install SQL Server Agent on Linux](/sql/linux/install-upgrade/setup-sql-agent)
+- [Install SQL Server Integration Services (SSIS) on Linux](/sql/linux/install-upgrade/setup-ssis)
 
 | Distribution | Package version | Downloads |
 | --- | --- | --- |
@@ -209,9 +227,9 @@ Go back to the [release history](#release-history).
 ## Related content
 
 - [SQL Server on Linux FAQ](/sql/linux/sql-server-linux-faq)
-- [Quickstart: Install SQL Server and create a database on Red Hat](/sql/linux/quickstart-install-connect-red-hat)
-- [Quickstart: Install SQL Server and create a database on SUSE Linux Enterprise Server](/sql/linux/quickstart-install-connect-suse)
-- [Quickstart: Install SQL Server and create a database on Ubuntu](/sql/linux/quickstart-install-connect-ubuntu)
-- [Quickstart: Run SQL Server Linux container images with Docker](/sql/linux/quickstart-install-connect-docker)
+- [Quickstart: Install SQL Server and create a database on Red Hat Enterprise Linux](/sql/linux/install-upgrade/quickstart-install-red-hat)
+- [Quickstart: Install SQL Server and create a database on SUSE Linux Enterprise Server](/sql/linux/install-upgrade/quickstart-install-suse)
+- [Quickstart: Install SQL Server and create a database on Ubuntu](/sql/linux/install-upgrade/quickstart-install-ubuntu)
+- [Quickstart: Run SQL Server Linux container images with Docker](/sql/linux/install-upgrade/quickstart-install-docker)
 - [Provision a Linux virtual machine running SQL Server in the Azure portal](/azure/azure-sql/virtual-machines/linux/sql-vm-create-portal-quickstart)
-- [Quickstart: Run SQL Server in the cloud](/sql/linux/quickstart-install-connect-clouds)
+- [Quickstart: Run SQL Server in the cloud](/sql/linux/install-upgrade/quickstart-install-clouds)
