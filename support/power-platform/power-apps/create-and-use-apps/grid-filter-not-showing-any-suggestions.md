@@ -1,8 +1,6 @@
 ---
 title: Grid filter for lookup column not showing any suggestions
 description: The grid column filter for the lookup type field doesn't show any record suggestions or says no records found.
-author: akshay-viz
-ms.author: akmaloo
 ms.reviewer: akmaloo
 ms.date: 10/10/2024
 ms.custom: sap:Using grids and lists in model-driven apps
