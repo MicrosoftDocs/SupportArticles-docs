@@ -174,6 +174,10 @@ To prevent this issue from reoccurring, make sure that each pod is matched by no
 
 The [Eviction Autoscaler](https://github.com/Azure/eviction-autoscaler) extension can automatically create and manage PDBs for your deployments. This setup helps you to avoid misconfigured or conflicting PDBs.
 
+> [!NOTE]
+>
+> Skips PDB creation for deployments that have a [maxUnavailable](https://github.com/Azure/eviction-autoscaler#deployments-with-maxunavailable) value other than 0 in their rolling update strategy.
+
 When installed together with `controllerConfig.pdb.create=true`, the extension automatically creates PDBs for deployments that don't already have one. You can control this behavior per deployment by using the `eviction-autoscaler.azure.com/pdb-create` annotation.
 
 - To **prevent** automatic PDB creation for a specific deployment, set the annotation to `"false"`:
