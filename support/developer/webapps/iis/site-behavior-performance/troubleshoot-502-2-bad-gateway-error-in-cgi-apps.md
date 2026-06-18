@@ -35,7 +35,7 @@ This problem occurs because the CGI process terminates unexpectedly before the C
 
 When sending a request to a CGI application running via IIS, the user is presented with the following error instead of the expected response:
 
-> The specified CGI application misbehaved by not returning a complete set of HTTP headers
+> The specified CGI application misbehaved by not returning a complete set of HTTP headers.
 
 Capture a [Netmon](/windows-hardware/drivers/portable/using-the-netmon-tool) trace. It shows:
 
@@ -78,7 +78,13 @@ HTTP: Data: Number of data bytes remaining = 232 (0x00E8)
 001A0: 3E 3C 2F 68 74 6D 6C 3E ></html>
 ```
 
-Capture [FREB](../health-diagnostic-performance/troubleshoot-php-with-failed-request-tracing.md) log for the HTTP error message and locate which module is throwing this error message.
+Capture [FREB](../health-diagnostic-performance/troubleshoot-php-with-failed-request-tracing.md) log for the HTTP error message and locate which module is throwing this error message. Example FREB output 
+
+> MODULE_SET_RESPONSE_ERROR_STATUS
+> ModuleName="CgiModule"
+> Notification="EXECUTE_REQUEST_HANDLER"
+> HttpStatus="500"
+> HttpReason="Internal Server Error"
 
 Troubleshoot the CGI process executable file to determine why the CGI process terminates unexpectedly. You might have to generate a memory dump file of the CGI process when the access violation occurs.
 
