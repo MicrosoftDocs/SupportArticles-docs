@@ -1,6 +1,6 @@
 ---
-title: Azure Extension Supported Operating Systems
-description: Provides a list of operating systems that extensions can support.
+title: Azure Extension supported operating systems
+description: Learn which operating systems support Azure VM extensions. Find supported Windows and Linux OS versions, prerequisites, and troubleshooting guidance for VM extensions.
 ms.date: 07/21/2020
 ms.reviewer: 
 ms.service: azure-virtual-machines
@@ -16,20 +16,20 @@ _Original KB number:_ &nbsp; 4078134
 
 ## Summary
 
-This article provides a list of operating systems that are supported by Azure VM extensions. Extensions are small applications that provide post-deployment configuration and automation tasks on Azure VMs. Each extension has its own set of supported operating systems, which may include specific versions and editions of Windows and Linux.
+This article provides a list of operating systems that Azure VM extensions support. Extensions are small applications that provide post-deployment configuration and automation tasks on Azure VMs. Each extension supports its own set of operating systems, which might include specific versions and editions of Windows and Linux.
 
-VM extensions enable post-deployment configuration of a virtual machine (VM), including installing and configuring software. VM extensions also enable recovery features, such as resetting the administrative password of a VM. Without the Azure VM Agent, VM extensions can't be run.
+VM extensions enable post-deployment configuration of a virtual machine (VM), including installing and configuring software. VM extensions also enable recovery features, such as resetting the administrative password of a VM. Without the Azure VM Agent, you can't run VM extensions.
 
-* In order to run the Windows VM Agent ensure that your VM meets the [prerequisites](https://learn.microsoft.com/en-us/azure/virtual-machines/extensions/agent-windows#prerequisites).
-* The Linux agent runs on [multiple systems](/azure/virtual-machines/extensions/agent-linux#requirements). However, the extensions framework has a limit for the systems that support extensions.
+- To run extensions, ensure that your VM meets these [prerequisites](/azure/virtual-machines/extensions/agent-windows#prerequisites).
+- The Linux agent runs on [multiple systems](/azure/virtual-machines/extensions/agent-linux#requirements). However, the extensions framework has a limit for the systems that support extensions.
 
 Some extensions aren't supported across all systems. They might return Error Code 51, 'Unsupported OS'. Check the individual extension documentation for supportability.
 
 For a discussion about Windows and Linux extensions and how to troubleshoot extensions, see [Azure virtual machine extensions and features](/azure/virtual-machines/extensions/overview).
 
-Further troubleshooting guidance can be found at:
+For further troubleshooting guidance, see:
 
-* [Azure VM extensions and features for Windows](/azure/virtual-machines/extensions/features-windows#troubleshoot-vm-extensions)
-* [Azure VM extensions and features for Linux](/azure/virtual-machines/extensions/features-linux#troubleshoot-vm-extensions)
+- [Azure VM extensions and features for Windows](/azure/virtual-machines/extensions/features-windows#troubleshoot-vm-extensions)
+- [Azure VM extensions and features for Linux](/azure/virtual-machines/extensions/features-linux#troubleshoot-vm-extensions)
 
  
