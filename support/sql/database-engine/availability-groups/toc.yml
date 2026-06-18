@@ -19,7 +19,7 @@ items:
   href: troubleshooting-automatic-failover-problems.md
 - name: Troubleshoot availability group database in reverting state
   href: troubleshoot-availability-group-database-reverting-state.md
-- name: Intermittent connection timeouts between availability group replicas
+- name: Troubleshoot intermittent connection timeouts between availability group replicas
   href: troubleshooting-intermittent-connection-timeouts-availability-groups.md
 - name: Troubleshoot log send queuing in an Always On availability group
   href: troubleshooting-log-send-queuing-in-alwayson-availability-group.md

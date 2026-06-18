@@ -36,6 +36,6 @@ The terminal emulator requires access to some extra DLL files that aren't presen
 
        :::image type="content" source="media/terminal-not-found/imports-tab-dll-files.png" alt-text="Screenshot of the Imports tab that contains the HLLAPI DLL files.":::
 
-1. Copy the DLL files from the terminal emulator installation directory to the Power Automate for desktop installation directory. The default installation path for Power Automate for desktop is usually **C:\Program Files (x86)\Power Automate Desktop**.
+1. Copy the DLL files from the terminal emulator installation directory to the Power Automate for desktop installation directory. The default installation path for Power Automate for desktop is usually **C:\Program Files (x86)\Power Automate Desktop\dotnet**.
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
