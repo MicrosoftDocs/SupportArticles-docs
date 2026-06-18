@@ -1,7 +1,7 @@
 ---
 title: InsufficientSubnetSize error code
 description: Fix the InsufficientSubnetSize error in AKS advanced networking. Learn how to restore subnet IP capacity and deploy your cluster successfully today.
-ms.date: 02/20/2025
+ms.date: 06/09/2026
 author: jotavar
 ms.author: jotavar
 ms.reviewer: chiragpa, nickoman, v-leedennis

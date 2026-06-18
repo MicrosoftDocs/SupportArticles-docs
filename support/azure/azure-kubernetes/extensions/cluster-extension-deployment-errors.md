@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot AKS cluster extension deployment errors
-description: Troubleshoot AKS cluster extension deployment errors, including Helm, creation, and scheduling failures. Follow this guide to diagnose and fix issues fast.
-ms.date: 03/26/2024
+description: Troubleshoot errors when deploying AKS cluster extensions. Learn how to diagnose and fix extension creation, Helm, and scheduling errors in AKS.
+ms.date: 06/15/2026
 author: JarrettRenshaw
 ms.author: jarrettr
 editor: v-jsitser

@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot AKS image pull errors from Azure Container Registry
 description: Fix AKS image pull errors from Azure Container Registry with steps for 401, 403, timeout, and platform issues. Start troubleshooting now.
-ms.date: 06/05/2025
+ms.date: 06/12/2026
 author: JarrettRenshaw
 ms.author: jarrettr
 ms.reviewer: chiragpa, andbar, albarqaw, v-weizhu, v-leedennis, v-ryanberg
