@@ -4,7 +4,9 @@ items:
 - name: Availability
   items:
     - name: Function App Down or Reporting Errors
-      href: availability/functions-troubleshoot-issues.md  
+      href: availability/functions-troubleshoot-issues.md
+    - name: Language and runtime version upgrade issues
+      href: lang-runtime-upgrade/functions-troubleshoot-language-runtime-upgrade.md
 - name: Application Code Deployment
   items:
     - name: Application issues post deployment
