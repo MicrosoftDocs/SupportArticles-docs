@@ -159,6 +159,7 @@ The helper pod has a prefix of `node-debugger-aks`, as shown in the third row. R
 ```bash
 kubectl cp node-debugger-aks-nodepool1-38878740-vmss000000-jfsq2:/capture.cap capture.cap
 ```
+
 > [!NOTE]
 > If you use the `chroot /host` command when entering the debug pod, add `/host` before `/capture.cap` for the source file.
 
