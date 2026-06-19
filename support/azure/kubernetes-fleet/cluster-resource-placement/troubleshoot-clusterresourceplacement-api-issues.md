@@ -60,11 +60,11 @@ Check the status of `ClusterSchedulingPolicySnapshot` to determine which cluster
 ### How can I debug if a selected cluster doesn't have the expected resources or if ClusterResourcePlacement doesn't pick up the latest changes?
 
 1. Check whether the `ClusterResourcePlacementRolloutStarted` condition in the `ClusterResourcePlacement` status is set to **true** or **false**.
-    - If **false**, see [How to debug ClusterResourcePlacementScheduled condition status set to false]().
+    - If **false**, see [How to debug ClusterResourcePlacementScheduled condition status set to false](crp-clusterresourceplacementapplied-false.md).
     - If **true**, go to step 2.
 2. Check whether the `ClusterResourcePlacementApplied` condition is set to **unknown**, **false**, or **true**.
     - If **unknown**, wait for the process to finish because the resources are still being applied to the member cluster. If the status remains **unknown** for a while, open an [issue](https://github.com/Azure/fleet/issues) because this is unusual behavior.
-    - If **false**, see [How to debug ClusterResourcePlacementApplied condition status set to false]().
+    - If **false**, see [How to debug ClusterResourcePlacementApplied condition status set to false](crp-clusterresourceplacementapplied-false.md).
     - If **true**, verify that the resource exists on the hub cluster.
 3. Check the `placementStatuses` section in the `ClusterResourcePlacement` status for the particular cluster. The `FailedPlacements` section should provide reasons for any resource application failures.
 
