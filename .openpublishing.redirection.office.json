@@ -34,32 +34,347 @@
     },    
     {
       "source_path": "Office/Client/onenote/couldnt-start-onenote-the-last-time-error.md",
-      "redirect_url": "../../../../../../SupportArticles-docs-archive-pr/support/previous-versions/office/client/onenote/couldnt-start-onenote-the-last-time-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/onenote/couldnt-start-onenote-the-last-time-error",
       "redirect_document_id": false
     },
     {
       "source_path": "Office/Client/onenote/error-sync-notebook.md",
-      "redirect_url": "../../../../../../SupportArticles-docs-archive-pr/support/previous-versions/office/client/onenote/error-sync-notebook.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/onenote/error-sync-notebook",
       "redirect_document_id": false
     },
     {
       "source_path": "Office/Client/onenote/onenote-error-content-not-yet-available.md",
-      "redirect_url": "../../../../../../SupportArticles-docs-archive-pr/support/previous-versions/office/client/onenote/onenote-error-content-not-yet-available.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/onenote/onenote-error-content-not-yet-available",
       "redirect_document_id": false
     },
     {
       "source_path": "Office/Client/onenote/send-to-onenote-and-meeting-notes-buttons-not-working.md",
-      "redirect_url": "../../../../../../SupportArticles-docs-archive-pr/support/previous-versions/office/client/onenote/send-to-onenote-and-meeting-notes-buttons-not-working.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/onenote/send-to-onenote-and-meeting-notes-buttons-not-working",
       "redirect_document_id": false
     },
     {
       "source_path": "Office/Client/onenote/temp-change-onenote-file-size-download.md",
-      "redirect_url": "../../../../../../SupportArticles-docs-archive-pr/support/previous-versions/office/client/onenote/temp-change-onenote-file-size-download.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/onenote/temp-change-onenote-file-size-download",
       "redirect_document_id": false
     },
     {
       "source_path": "Office/Client/onenote/notebook-offline-location.md",
-      "redirect_url": "../../../../../../SupportArticles-docs-archive-pr/support/previous-versions/office/client/onenote/notebook-offline-location.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/onenote/notebook-offline-location",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/access/access-crashes-updating-linked-list.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/access-crashes-updating-linked-list",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/access/access-linked-table-return-deleted.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/access-linked-table-return-deleted",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/access/cdec-function-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/cdec-function-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/access/deploy-dacpac-access-web-app-package.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/deploy-dacpac-access-web-app-package",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/access/error-query-against-linked-sharepoint-view.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/error-query-against-linked-sharepoint-view",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/access/how-to-parse-city-state-zip-to-separate-values.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/how-to-parse-city-state-zip-to-separate-values",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/access/id-field-increment-by-one.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/id-field-increment-by-one",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/access/load-access-web-app-in-ie.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/load-access-web-app-in-ie",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/access/switchboard-manager-option-disappears.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/switchboard-manager-option-disappears",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/access/user-defined-function-fail-displayed.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/user-defined-function-fail-displayed",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/access/access-database-digital-signature-invalidated.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/access-database-digital-signature-invalidated",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/access/access-linked-table-deleted.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/access-linked-table-deleted",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/access/calculate-age-in-months-years.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/calculate-age-in-months-years",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/access/cannot-use-odbc-or-oledb.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/cannot-use-odbc-or-oledb",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/access/cant-update-database-or-object-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/cant-update-database-or-object-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/access/change-dates-by-functions-operators.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/change-dates-by-functions-operators",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/access/clipboard-data-damaged.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/clipboard-data-damaged",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/access/database-connection-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/database-connection-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/access/database-contain-missing-reference.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/database-contain-missing-reference",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/access/database-normalization-description.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/database-normalization-description",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/access/database-or-object-is-read-only.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/database-or-object-is-read-only",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/access/database-requires-newer-access.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/database-requires-newer-access",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/access/decimal-value-rounded-up-down-integer.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/decimal-value-rounded-up-down-integer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/access/define-table-relationships.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/define-table-relationships",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/access/error-compiling-module-running-procedure.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/error-compiling-module-running-procedure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/access/error-double-clicking-database.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/error-double-clicking-database",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/access/error-inserting-table-record-autonumber.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/error-inserting-table-record-autonumber",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/access/error-launching-access.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/error-launching-access",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/access/error-opening-database.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/error-opening-database",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/access/error-opening-sql-linked-table.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/error-opening-sql-linked-table",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/access/error-running-macro.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/error-running-macro",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/access/error-saving-database.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/error-saving-database",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/access/errors-publishing-exporting.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/errors-publishing-exporting",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/access/errors-updating-query-form-data.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/errors-updating-query-form-data",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/access/error-using-special-characters.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/error-using-special-characters",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/access/expressions-to-count-yes-no-other-reponses.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/expressions-to-count-yes-no-other-reponses",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/access/floating-calculations-info.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/floating-calculations-info",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/access/functions-return-wrong-week-number.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/functions-return-wrong-week-number",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/access/hide-combo-box-drop-down-arrow.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/hide-combo-box-drop-down-arrow",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/access/how-to-change-query-properties.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/how-to-change-query-properties",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/access/incorrect-current-version-registry-key.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/incorrect-current-version-registry-key",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/access/invalid-teradata-token.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/invalid-teradata-token",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/access/jet-odbc-driver-available-32-bit-version.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/jet-odbc-driver-available-32-bit-version",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/access/library-unregistered-runtime-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/library-unregistered-runtime-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/access/linked-table-data-truncated.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/linked-table-data-truncated",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/access/lock-files-introduction.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/lock-files-introduction",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/access/long-integer-numbers-converted-double-data-type.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/long-integer-numbers-converted-double-data-type",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/access/odbc-administrator-crashes.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/odbc-administrator-crashes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/access/optimize-odbc-data-sources.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/optimize-odbc-data-sources",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/access/print-preview-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/print-preview-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/access/query-must-have-at-least-one-destination-field.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/query-must-have-at-least-one-destination-field",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/access/reserved-words.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/reserved-words",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/access/resolve-reference-issues.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/resolve-reference-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/access/retrieve-sharepoint-list-in-access.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/retrieve-sharepoint-list-in-access",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/access/running-wizard-error-loading-dll.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/running-wizard-error-loading-dll",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/access/save-password-checkbox-unavailable.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/save-password-checkbox-unavailable",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/access/saving-changes-require-exclusive-lock.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/saving-changes-require-exclusive-lock",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/access/stop-responding-when-create-mde-accde-ade-files.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/stop-responding-when-create-mde-accde-ade-files",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/access/store-calculate-compare-datetime-data.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/store-calculate-compare-datetime-data",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/access/text-box-control-information-incorrectly.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/text-box-control-information-incorrectly",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/access/too-many-fields-defined-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/too-many-fields-defined-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/access/use-query-form-qbf-technique.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/use-query-form-qbf-technique",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/access/your-network-access-was-interrupted-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/your-network-access-was-interrupted-error",
       "redirect_document_id": false
     }
   ]
