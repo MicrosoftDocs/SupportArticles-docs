@@ -3,7 +3,7 @@ title: Troubleshoot Function App language and runtime version upgrades
 description: Resolve common issues when upgrading Azure Function App language versions, runtime versions, or migrating to the isolated worker model.
 ms.date: 06/19/2026
 ms.custom: sap:Configuring and Managing Function Apps/Updating Function App Language Version
-ms.reviewer: gasridha, v-sidong, agaltrai
+ms.reviewer: v-sidong, agaltrai
 ---
 
 # Troubleshoot Function App language and runtime version upgrades
