@@ -37,13 +37,13 @@ For more information about how to copy or move library files by using "Open with
 
 When you browse to a SharePoint Online document library, you may receive intermittent connectivity issues, and you may receive one of the following error messages:
 
-- > Your client does not support opening this list with Windows Explorer.
+- `Your client does not support opening this list with Windows Explorer.`
 
-- > We're having a problem opening this location in File Explorer. Add this web site to your Trusted Sites list and try again.
+- `We're having a problem opening this location in File Explorer. Add this web site to your Trusted Sites list and try again.`
 
-- > We're having a problem opening this location in File Explorer. To open with File Explorer, you'll need to add this site to your Trusted Sites list and select the "Keep me signed in" check box when you sign in to the SharePoint Online site. For more information, see [https://support.microsoft.com/kb/2629108]().
+- `We're having a problem opening this location in File Explorer. To open with File Explorer, you'll need to add this site to your Trusted Sites list and select the "Keep me signed in" check box when you sign in to the SharePoint Online site. For more information, see https://support.microsoft.com/kb/2629108.`
 
-- > We're having trouble opening this library in File Explorer. Syncing this library will give you a better experience.
+- `We're having trouble opening this library in File Explorer. Syncing this library will give you a better experience.`
 
    :::image type="content" source="media/troubleshoot-issues-using-open-with-explorer/error-have-trouble-open-library.png" alt-text="Screenshot of the error dialog, showing We're having trouble opening this library in File Explorer." border="false":::
 
@@ -59,15 +59,15 @@ Make sure that you're authenticated to Microsoft 365. Use one of the following m
 
 Sign in to the SharePoint Online site by using your Microsoft 365 work or school account credentials. When you do so, make sure that you select the **Keep me signed in** check box.
 
-   > [!NOTE]
-   > If you didn't previously select this setting, you might find that you're already signed in when you browse to a SharePoint Online site or the Microsoft 365 portal. In this case, you must first sign out and then sign in again by having the **Keep me signed in* check box selected. To do this, follow these steps:
-   >
-   > 1. On the Microsoft 365 ribbon, select the arrow next to your user name.
-   > 1. Select **Sign out**.
-   > 1. Close all browser windows.
-   > 1. Browse to the Microsoft 365 portal.
-   > 1. Select the **Keep me signed in** check box, enter your Microsoft 365 work or school account credentials, and then select **Sign in** (if it is necessary).
-   > 1. Open a document library in Explorer view.
+> [!NOTE]
+> If you didn't previously select this setting, you might find that you're already signed in when you browse to a SharePoint Online site or the Microsoft 365 portal. In this case, you must first sign out and then sign in again by having the **Keep me signed in* check box selected. To do this, follow these steps:
+>
+> 1. On the Microsoft 365 ribbon, select the arrow next to your user name.
+> 1. Select **Sign out**.
+> 1. Close all browser windows.
+> 1. Browse to the Microsoft 365 portal.
+> 1. Select the **Keep me signed in** check box, enter your Microsoft 365 work or school account credentials, and then select **Sign in** (if it is necessary).
+> 1. Open a document library in Explorer view.
 
 #### Method 2: Use a persistent cookie
 
@@ -95,11 +95,11 @@ Make sure that the SharePoint Online or Open with Explorer URL is added to your 
    - Select the **Tools** menu, and then select **Internet options**.
    - Select the gear icon, and then select **Internet options**.
 
-    :::image type="content" source="media/troubleshoot-issues-using-open-with-explorer/internet-options.png" alt-text="Screenshot of Tools menu. Internet Options is selected.":::  
+   :::image type="content" source="media/troubleshoot-issues-using-open-with-explorer/internet-options.png" alt-text="Screenshot of Tools menu. Internet Options is selected.":::  
 
 1. Select the **Security** tab, select **Trusted sites**, and then select **Sites**.
 
-    :::image type="content" source="media/troubleshoot-issues-using-open-with-explorer/trusted-sites.png" alt-text="Screenshot of Internet Options window. Under Security tab, showing Trusted sites.":::  
+   :::image type="content" source="media/troubleshoot-issues-using-open-with-explorer/trusted-sites.png" alt-text="Screenshot of Internet Options window. Under Security tab, showing Trusted sites.":::  
 
 1. In the **Add this website to the zone** box, enter the URL for the website that you want to add to the **Trusted sites** zone, and then select **Add**. The URL is for one of the following websites:
 
@@ -116,8 +116,8 @@ Make sure that the SharePoint Online or Open with Explorer URL is added to your 
 
    To make sure that "Open with Explorer" works correctly, you must include the SharePoint site URL or the OneDrive URL in addition to the "-files" (for a site) URL or the "-myfiles" (for a OneDrive library) URL.
 
-    :::image type="content" source="media/troubleshoot-issues-using-open-with-explorer/adding-site.png" alt-text="Screenshot of Trusted sites window. You can add and remove websites from this zone.":::
-  
+   :::image type="content" source="media/troubleshoot-issues-using-open-with-explorer/adding-site.png" alt-text="Screenshot of Trusted sites window. You can add and remove websites from this zone.":::
+
 1. After you add each site to the **Websites** list, select **Close**, and then select **OK**.
 
 ### Check the status of the WebClient service
