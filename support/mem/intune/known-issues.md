@@ -35,7 +35,8 @@ For more information about this known issue, see our blog [Remediation message d
 
 ## A limited number of macOS devices may be unexpectedly unenrolled from the Microsoft Intune service
 
-- **Status:** Active
+- **Status:** Resolved
+- **Apple's Doc**: The fix was introduced by Apple with [macOS 26.4](https://support.apple.com/en-us/124963). If a new identity certificate fails to install during device management enrollment renewal, the original certificate is retained to prevent unenrollment. 
 
 There's a known issue (originally posted on the Service Health Dashboard as IT393575) where, occasionally, the enrollment of a macOS device fails or the device might become unenrolled because the MDM agent mishandles failed MDM certificate installations. When this issue occurs and the MDM agent doesn't receive the expected headers, the client automatically removes its MDM enrollment profile. To fix this issue, you have to re-enroll the device.
 
