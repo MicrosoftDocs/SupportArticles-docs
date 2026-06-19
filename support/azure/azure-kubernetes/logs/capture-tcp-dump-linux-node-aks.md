@@ -1,7 +1,7 @@
 ---
 title: Capture a TCP dump from a Linux node in an AKS cluster
 description: Learn how to capture a TCP dump from a Linux node in an AKS cluster to troubleshoot network issues quickly. Follow the steps and start diagnosing now.
-ms.date: 09/26/2024
+ms.date: 06/11/2026
 ms.topic: how-to
 ms.reviewer: erbookbi, amaljuna, kuzhao, v-rekhanain, v-leedennis, v-weizhu
 ms.service: azure-kubernetes-service
@@ -86,8 +86,63 @@ tcpdump: listening on eth0, link-type EN10MB (Ethernet), capture size 262144 byt
 526 packets received by filter
 0 packets dropped by kernel
 ```
+## Step 5: Capture traffic for a specific pod from the node
 
-## Step 5: Transfer the capture locally
+In some scenarios, you might need to capture traffic for a specific pod from the node hosting the pod instead of performing a packet capture within the pod itself. This method is useful when packet capture tools aren't available in the container image, security restrictions prevent running packet capture utilities inside the pod, or the pod is restarting frequently.
+
+> [!NOTE]
+> Ensure that you create the debug pod on the same node that hosts the affected pod. Otherwise, the packet capture might not contain the pod's traffic.
+
+1. Identify the pod IP address and the node hosting the pod by running the following command.
+
+```console
+kubectl get pod <pod-name> -n <namespace> -o wide
+Example output:
+NAME        READY   STATUS    IP            NODE
+sample-pod  1/1     Running   10.244.1.15   aks-nodepool1-12345678-vmss000001
+```
+
+Record the pod IP address and node name.
+
+2. Create a debug pod on the node hosting the affected pod.
+
+```console
+kubectl debug node/<node-name> -it --image=mcr.microsoft.com/cbl-mariner/busybox:2.0
+```
+
+3. Access the host filesystem.
+
+```console
+chroot /host
+```
+
+4. Start the packet capture. Capture all traffic to and from the pod by filtering on the pod IP address.
+
+```console
+tcpdump -i any host <pod-ip-address> -vvv -w /tmp/pod-capture.pcap
+```
+
+The following example shows the command with the pod IP address.
+
+```console
+tcpdump -i any host 10.244.1.15 -vvv -w /tmp/pod-capture.pcap
+```
+
+5. Reproduce the issue while the packet capture is running. After the issue is reproduced, stop the packet capture by pressing Ctrl+C.
+
+6. Copy the packet capture file from the debug pod to your local machine.
+
+```console
+kubectl cp <namespace>/<debug-pod-name>:/host/tmp/pod-capture.pcap ./pod-capture.pcap
+```
+
+7. Delete the debug pod after the packet capture is collected.
+
+```console
+kubectl delete pod <debug-pod-name>
+```
+
+## Step 6: Transfer the capture locally
 
 After you complete the packet capture, identify the helper pod so you can copy the dump locally. Open a second console, and then get a list of pods by running `kubectl get pods`, as shown in the following example.
 
@@ -104,6 +159,7 @@ The helper pod has a prefix of `node-debugger-aks`, as shown in the third row. R
 ```bash
 kubectl cp node-debugger-aks-nodepool1-38878740-vmss000000-jfsq2:/capture.cap capture.cap
 ```
+
 > [!NOTE]
 > If you use the `chroot /host` command when entering the debug pod, add `/host` before `/capture.cap` for the source file.
 
