@@ -1,8 +1,6 @@
 ---
 title: Troubleshoot LocalDNS problems in AKS
 description: Learn a step-by-step workflow to troubleshoot LocalDNS issues in AKS, identify DNS failure patterns, and resolve problems faster. Start now.
-author: vaibhavarora
-ms.author: vaibhavarora
 ms.date: 09/17/2025
 ms.reviewer: v-rekhanain, v-leedennis, josebl, v-weizhu, qasimsarfraz
 editor: vaibhavarora

@@ -40,7 +40,7 @@ ASP.NET Core autoinstrumentation on Azure App Service uses the `ASPNETCORE_HOSTI
 
 When this occurs and `Microsoft.ApplicationInsights.StartupBootstrapper` is not included, the Application Insights agent can't attach and telemetry isn't collected even though Application Insights appears enabled in the Azure portal.
 
-To resolve this, remove custom hosting startup configuration or ensure `Microsoft.ApplicationInsights.StartupBootstrapper` is explicitly included in the configured hosting startup assemblies. If you intend to control startup assemblies programmatically, host configuration takes precedence over the `ASPNETCORE_HOSTINGSTARTUPASSEMBLIES` environment variable. For more information, see [Use hosting startup assemblies in ASP.NET Core](/aspnet/core/fundamentals/host/platform-specific-configuration?view=aspnetcore-8.0#specify-the-hosting-startup-assembly).
+To resolve this, remove custom hosting startup configuration or ensure `Microsoft.ApplicationInsights.StartupBootstrapper` is explicitly included in the configured hosting startup assemblies. If you intend to control startup assemblies programmatically, host configuration takes precedence over the `ASPNETCORE_HOSTINGSTARTUPASSEMBLIES` environment variable. For more information, see [Use hosting startup assemblies in ASP.NET Core](/aspnet/core/fundamentals/host/platform-specific-configuration#specify-the-hosting-startup-assembly).
 
 ### A diagnostics library is detected
 
