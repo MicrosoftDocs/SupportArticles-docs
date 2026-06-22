@@ -1,3 +1,4 @@
+items:    # Please do not delete this line, it is required for the yaml format
 - name: Windows Server
   href: welcome-windows-server.yml
 - name: Active Directory
