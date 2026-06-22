@@ -1141,68 +1141,68 @@ items:    # Please do not delete this line, it is required for the yaml format
           href: ./high-availability/troubleshoot-site-configuration.md
 - name: Licensing and activation
   items:
-  - name: Licensing and activation
-    href: ./licensing-and-activation/licensing-and-activation-overview.md
-  - name: Windows volume activation
-    items:
-    - name: Application Event Log Warning ID 1058
-      href: ./licensing-and-activation/application-event-log-warning-id-1058.md
-    - name: Error 0x80070005 "Access denied" when you activate Windows
-      href: ./licensing-and-activation/error-0x80070005-access-denied.md
-    - name: Error 0x8007000D when you activate a machine
-      href: ./licensing-and-activation/0x8007000d-activate-machine.md
-    - name: Error 0x8007232A "DNS server failure" when you activate Windows
-      href: ./licensing-and-activation/activation-error-0x8007232a-dns-server-failure.md
-    - name: Error 0x8007232B "DNS name does not exist" when activating Windows
-      href: ./licensing-and-activation/activation-error-0x8007232b-dns-name-does-not-exist.md
-    - name: Error 0xC004C003 "product key is blocked" when you use MAK to activate Windows
-      href: ./licensing-and-activation/activation-error-0xc004c003-product-key-blocked.md
-    - name: Error 0xC004C008 "The specified product key could not be used" when you activate Windows
-      href: ./licensing-and-activation/activation-error-0xc004c008-product-key-not-used.md
-    - name: Error 0xC004E002 during activation
-      href: ./licensing-and-activation/error-0xc004e002-during-activation.md
-    - name: Error 0xC004E015 (SL_E_EUL_CONSUMPTION_FAILED)
-      href: ./licensing-and-activation/error-0xc004e015-sl-e-eul-consumption-failed-activate-windows.md
-    - name: Error 0xC004F015 when you activate Windows 10
-      href: ./licensing-and-activation/error-0xc004f015-activate-windows-10.md
-    - name: Error 0xC004F038 "The count reported by your Key Management Service (KMS) is insufficient" when you activate Windows
-      href: ./licensing-and-activation/activation-error-0xc004cf038-insufficient-kms-host-pool-count.md
-    - name: Error 0xC004F042 "The specified Key Management Service (KMS) can't be used" when you activate Windows
-      href: ./licensing-and-activation/activation-error-0xc004cf042-cant-use-specified-kms.md
-    - name: Error 0xC004F063 when activating an OEM version
-      href: ./licensing-and-activation/0xc004f063-when-activating-oem-version.md
-    - name: Error 0xC004F06C when you activate Windows
-      href: ./licensing-and-activation/error-0xc004f06c-activate-windows.md
-    - name: Error 0xC004F074 when you activate Windows
-      href: ./licensing-and-activation/error-0xc004f074-activate-windows.md
-    - name: Error when you validate a copy of Windows
-      href: ./licensing-and-activation/error-when-you-validate-copy-windows.md
-    - name: Event 12293 when registering a KMS host record
-      href: ./licensing-and-activation/event-12293-error-0x800723-set-kms-host.md
-    - name: Event 8198, error 0xC0020017 or 0x8007139F "KMS contact failure" when activating Windows
-      href: ./licensing-and-activation/activation-event-8198-error-0xc0020017-0x8007139f-kms-contact-failure.md
-    - name: Event ID 8208, 8200, or 900 is logged
-      href: ./licensing-and-activation/event-id-8208-8200-900.md
-    - name: Fail to activate Windows Server over the Internet
-      href: ./licensing-and-activation/message-number-32777.md
-    - name: How to change the Volume Licensing product key
-      href: ./licensing-and-activation/change-volume-licensing-product-key.md
-    - name: How to rebuild the Tokens.dat file
-      href: ./licensing-and-activation/rebuild-tokens-dotdat-file.md
-    - name: Local policy of this system does not permit you to logon interactively
-      href: ./licensing-and-activation/remote-local-policy-not-permit-logon.md
-    - name: Specified database is not a valid VAMT database error
-      href: ./licensing-and-activation/specified-database-not-valid-vamt-error.md
-    - name: Troubleshoot ADBA clients that don't activate
-      href: ./licensing-and-activation/troubleshoot-adba-clients-not-activate.md
-    - name: Troubleshoot Windows activation error codes
-      href: ./licensing-and-activation/troubleshoot-activation-error-codes.md
-    - name: Windows Activation fails with error 0x8007267C
-      href: ./licensing-and-activation/windows-activation-fails-with-error-0x8007267.md
-    - name: Windows installation fails with error
-      href: ./licensing-and-activation/error-product-key-not-match-windows-images-installation.md
-    - name: '"Windows is not genuine" error'
-      href: ./licensing-and-activation/windows-not-genuine-error.md
+    - name: Licensing and activation
+      href: ./licensing-and-activation/licensing-and-activation-overview.md
+    - name: Windows volume activation
+      items:
+        - name: Application Event Log Warning ID 1058
+          href: ./licensing-and-activation/application-event-log-warning-id-1058.md
+        - name: Error 0x80070005 "Access denied" when you activate Windows
+          href: ./licensing-and-activation/error-0x80070005-access-denied.md
+        - name: Error 0x8007000D when you activate a machine
+          href: ./licensing-and-activation/0x8007000d-activate-machine.md
+        - name: Error 0x8007232A "DNS server failure" when you activate Windows
+          href: ./licensing-and-activation/activation-error-0x8007232a-dns-server-failure.md
+        - name: Error 0x8007232B "DNS name does not exist" when activating Windows
+          href: ./licensing-and-activation/activation-error-0x8007232b-dns-name-does-not-exist.md
+        - name: Error 0xC004C003 "product key is blocked" when you use MAK to activate Windows
+          href: ./licensing-and-activation/activation-error-0xc004c003-product-key-blocked.md
+        - name: Error 0xC004C008 "The specified product key could not be used" when you activate Windows
+          href: ./licensing-and-activation/activation-error-0xc004c008-product-key-not-used.md
+        - name: Error 0xC004E002 during activation
+          href: ./licensing-and-activation/error-0xc004e002-during-activation.md
+        - name: Error 0xC004E015 (SL_E_EUL_CONSUMPTION_FAILED)
+          href: ./licensing-and-activation/error-0xc004e015-sl-e-eul-consumption-failed-activate-windows.md
+        - name: Error 0xC004F015 when you activate Windows 10
+          href: ./licensing-and-activation/error-0xc004f015-activate-windows-10.md
+        - name: Error 0xC004F038 "The count reported by your Key Management Service (KMS) is insufficient" when you activate Windows
+          href: ./licensing-and-activation/activation-error-0xc004cf038-insufficient-kms-host-pool-count.md
+        - name: Error 0xC004F042 "The specified Key Management Service (KMS) can't be used" when you activate Windows
+          href: ./licensing-and-activation/activation-error-0xc004cf042-cant-use-specified-kms.md
+        - name: Error 0xC004F063 when activating an OEM version
+          href: ./licensing-and-activation/0xc004f063-when-activating-oem-version.md
+        - name: Error 0xC004F06C when you activate Windows
+          href: ./licensing-and-activation/error-0xc004f06c-activate-windows.md
+        - name: Error 0xC004F074 when you activate Windows
+          href: ./licensing-and-activation/error-0xc004f074-activate-windows.md
+        - name: Error when you validate a copy of Windows
+          href: ./licensing-and-activation/error-when-you-validate-copy-windows.md
+        - name: Event 12293 when registering a KMS host record
+          href: ./licensing-and-activation/event-12293-error-0x800723-set-kms-host.md
+        - name: Event 8198, error 0xC0020017 or 0x8007139F "KMS contact failure" when activating Windows
+          href: ./licensing-and-activation/activation-event-8198-error-0xc0020017-0x8007139f-kms-contact-failure.md
+        - name: Event ID 8208, 8200, or 900 is logged
+          href: ./licensing-and-activation/event-id-8208-8200-900.md
+        - name: Fail to activate Windows Server over the Internet
+          href: ./licensing-and-activation/message-number-32777.md
+        - name: How to change the Volume Licensing product key
+          href: ./licensing-and-activation/change-volume-licensing-product-key.md
+        - name: How to rebuild the Tokens.dat file
+          href: ./licensing-and-activation/rebuild-tokens-dotdat-file.md
+        - name: Local policy of this system does not permit you to logon interactively
+          href: ./licensing-and-activation/remote-local-policy-not-permit-logon.md
+        - name: Specified database is not a valid VAMT database error
+          href: ./licensing-and-activation/specified-database-not-valid-vamt-error.md
+        - name: Troubleshoot ADBA clients that don't activate
+          href: ./licensing-and-activation/troubleshoot-adba-clients-not-activate.md
+        - name: Troubleshoot Windows activation error codes
+          href: ./licensing-and-activation/troubleshoot-activation-error-codes.md
+        - name: Windows Activation fails with error 0x8007267C
+          href: ./licensing-and-activation/windows-activation-fails-with-error-0x8007267.md
+        - name: Windows installation fails with error
+          href: ./licensing-and-activation/error-product-key-not-match-windows-images-installation.md
+        - name: "\"Windows is not genuine\" error"
+          href: ./licensing-and-activation/windows-not-genuine-error.md
 - name: Networking
   items:
     - name: Networking
@@ -2799,6 +2799,8 @@ items:    # Please do not delete this line, it is required for the yaml format
           href: ./windows-security/security-identifier-could-not-be-resolved.md
         - name: Users and groups can't be added to trusted forest
           href: ./windows-security/rpc-endpoint-mapper-prevents-users-added-to-trust-forest.md
+        - name: Gmsa auth failures multiple keys
+          href: active-directory/gmsa-auth-failures-multiple-keys.md
     - name: Kerberos authentication
       items:
         - name: Event ID 7 on a domain controller running Windows Server 2025
