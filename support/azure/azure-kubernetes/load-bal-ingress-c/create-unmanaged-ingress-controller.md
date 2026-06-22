@@ -1,15 +1,27 @@
 ---
 title: Create an AKS unmanaged ingress controller
 description: Create and configure an unmanaged ingress controller in an AKS cluster to route multiple apps through one IP address. Follow the steps to get started.
-ms.reviewer: allensu, v-rekhanain, jamielo, v-weizhu
+ms.reviewer: allensu, v-rekhanain, jamielo, v-weizhu, andraciobanu
 ms.service: azure-kubernetes-service
 ms.custom: sap:Load balancer and Ingress controller
 ms.topic: how-to
-ms.date: 03/10/2025
+ms.date: 06/10/2026
 ---
 # Create an unmanaged ingress controller
 
 ## Summary
+
+This article provides guidance for creating an unmanaged (OSS) ingress-nginx controller. It's being retired in the future as it focuses on an unmanaged OSS ingress-nginx controller which is no longer aligned with current Azure Kubernetes Service (AKS)-supported ingress solutions.
+
+> [!IMPORTANT]
+> The Kubernetes SIG Network and the Security Response Committee announced the upcoming retirement of the Ingress NGINX project, with maintenance ending in March 2026. There's no immediate action required today for AKS clusters using the application routing add-on with NGINX. Microsoft provides official support for critical security patches for application routing add-on NGINX Ingress resources through November 2026.
+> AKS is aligning with upstream Kubernetes by moving to Azure API Gateway as the long-term standard for ingress and L7 traffic management. Start planning your migration path based on your current setup.
+> - Application routing add-on users: Production workloads remain fully supported through November 2026. Migrate to the application routing API Gateway implementation for an API Gateway-based ingress traffic management experience.
+> - OSS NGINX users have several options:
+>   - Migrate to the application routing add-on with NGINX to benefit from official support through November 2026 while planning your long-term API Gateway migration.
+>   - Migrate to the application routing API Gateway implementation for an API Gateway-based ingress traffic management experience.
+>   - Migrate to Application Gateway for Containers, which supports both Application Gateway Ingress Controller (AGIC) and API Gateway.
+> - Service mesh users: If you plan to adopt a service mesh, consider the Istio-based service mesh add-on. Use Istio Ingress today and plan to migrate to Istio API Gateway  support when it becomes available.
 
 An ingress controller is a piece of software that provides reverse proxy, configurable traffic routing, and TLS termination for Kubernetes services. Use Kubernetes ingress resources to configure the ingress rules and routes for individual Kubernetes services. When you use an ingress controller and ingress rules, you can use a single IP address to route traffic to multiple services in a Kubernetes cluster.
 
@@ -482,7 +494,7 @@ Now add the */hello-world-two* path to the IP address, such as *EXTERNAL_IP/hell
     apt-get update && apt-get install -y curl
     ```
 
-1. Access the address of your Kubernetes ingress controller by using `curl`, such as *http://10.224.0.42*. Provide your own internal IP address specified when you deployed the ingress controller.
+1. Access the address of your Kubernetes ingress controller by using `curl`, such as `http://10.224.0.42`. Provide your own internal IP address specified when you deployed the ingress controller.
 
     ```console
     curl -L http://10.224.0.42
@@ -499,7 +511,7 @@ Now add the */hello-world-two* path to the IP address, such as *EXTERNAL_IP/hell
     [...]
     ```
 
-1. Add the */hello-world-two* path to the address, such as *http://10.224.0.42/hello-world-two*.
+1. Add the */hello-world-two* path to the address, such as `http://10.224.0.42/hello-world-two`.
 
     ```console
     curl -L -k http://10.224.0.42/hello-world-two

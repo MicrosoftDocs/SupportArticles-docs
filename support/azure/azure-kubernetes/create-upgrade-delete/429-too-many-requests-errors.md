@@ -1,8 +1,8 @@
 ---
 title: 429 Too Many Requests errors
 description: Troubleshoot why you receive 429 Too Many Requests errors on your Kubernetes clusters.
-ms.date: 02/20/2025
-ms.reviewer: chiragpa, nickoman, v-leedennis, v-weizhu
+ms.date: 06/12/2026
+ms.reviewer: chiragpa, nickoman, v-leedennis, v-weizhu, fagonzal, andraciobanu
 ms.service: azure-kubernetes-service
 keywords:
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the 429 Too Many Requests errors that I'm receiving so that I can successfully use my Kubernetes cluster configured without exceeding the assigned quota for my Azure subscription.
@@ -30,8 +30,8 @@ You receive errors that resemble the following text:
 > **\"code\":\"TooManyRequests\",**  
 > \"message\":\"{  
 > \\\"operationGroup\\\":\\\"HighCostGetVMScaleSet30Min\\\",  
-> \\\"startTime\\\":\\\"2020-09-20T07:13:55.2177346+00:00\\\",  
-> \\\"endTime\\\":\\\"2020-09-20T07:28:55.2177346+00:00\\\",  
+> \\\"startTime\\\":\\\"2026-05-20T07:13:55.2177346+00:00\\\",  
+> \\\"endTime\\\":\\\"2026-05-20T07:28:55.2177346+00:00\\\",  
 > \\\"allowedRequestCount\\\":1800,  
 > \\\"measuredRequestCount\\\":2208  
 > }\",  
@@ -46,19 +46,16 @@ A Kubernetes cluster on Azure (with or without AKS) that does a frequent scale u
 
 For more information about these errors, see [Throttling Azure Resource Manager requests](/azure/azure-resource-manager/management/request-limits-and-throttling) and [Troubleshooting API throttling errors](../../virtual-machines/windows/troubleshooting-throttling-errors.md). For information about how to analyze and identify the cause of these errors and get recommendations to resolve them, see [Analyze and identify errors by using AKS Diagnose and Solve Problems](#analyze-and-identify-errors-by-using-aks-diagnose-and-solve-problems).
 
-## Solution 1: Upgrade to a later version of Kubernetes
 
-Run Kubernetes 1.18.*x* or later. These versions contain many improvements that are described in [AKS throttling/429 errors](https://github.com/Azure/AKS/issues/1413) and [Support large clusters without throttling](https://github.com/kubernetes-sigs/cloud-provider-azure/issues/247). However, if you still see throttling (due to the actual load or number of clients in the subscription), you can try the following solutions.
-
-## Solution 2: Increase the autoscaler scan interval
+## Solution 1: Increase the autoscaler scan interval
 
 If you [find the "Cluster Auto-Scaler Throttling has been detected" diagnostic reports throttling](#analyze-and-identify-errors-by-using-aks-diagnose-and-solve-problems) caused by the cluster autoscaler, you can try to increase the [autoscaler scan interval](/azure/aks/cluster-autoscaler) to reduce the number of calls to virtual machine scale sets (VMSS) from the cluster autoscaler.
 
-## Solution 3: Reconfigure third-party applications to make fewer calls
+## Solution 2: Reconfigure third-party applications to make fewer calls
 
 When you [filter by user agents in the "View request rate and throttle details" diagnostic](#analyze-and-identify-errors-by-using-aks-diagnose-and-solve-problems), if you find third-party applications (such as monitoring applications) that make an excessive number of GET requests, change the settings of these applications to reduce the frequency of the GET calls. In addition, make sure that the application clients use exponential backoff when calling Azure APIs.
 
-## Solution 4: Split your clusters into different subscriptions or regions
+## Solution 3: Split your clusters into different subscriptions or regions
 
 If there are numerous clusters and node pools that use virtual machine scale sets, try to split the clusters into different subscriptions or regions (within the same subscription). Most Azure API limits are shared limits at the subscription-region level. For example, all clusters and clients within sub one and the East US region share a limit for the virtual machine scale sets GET API. Hence, you can move or scale new AKS clusters in a new region and get unblocked on Azure API throttling. This technique helps if you expect the clusters to have high activity (for example, if you have an active cluster autoscaler). It also helps if you have many clients (such as Rancher, Terraform, and so on). Since all clusters are different in their elasticity and the number of clients polling Azure APIs, there are no generic guidelines on the number of clusters that you can run per subscription-region level. For specific guidance, you can create a support ticket.
 
@@ -73,7 +70,7 @@ For an AKS cluster, you can use [AKS Diagnose and Solve Problems](/azure/aks/aks
   To reduce the volume of requests from the cluster autoscaler, use the following methods:
 
   - Increase the autoscaler scan interval to reduce the number of calls from the cluster autoscaler to virtual machine scale sets. This method may have a negative latency impact on the time taken to scale up because the cluster autoscaler waits longer before calling Azure Compute Resource Provider (CRP) for a new virtual machine.
-  - Make sure the cluster is on a minimum Kubernetes version of 1.18. Kubernetes version 1.18 and later versions handle request rate backoff better when 429 throttling responses are received. We highly recommend staying within supported Kubernetes versions to receive security patches.
+
 
 - **Throttling - Azure Resource Manager**: This diagnostic shows the number of throttled requests in the specified time range in the AKS cluster.
 
@@ -137,6 +134,6 @@ You can also filter by operations to find out that the throttled operation is "N
 
 :::image type="content" source="media/429-too-many-requests-errors/cp-throtlle-by-operation.png" alt-text="Diagram of throttles by operation." lightbox="media/429-too-many-requests-errors/cp-throtlle-by-operation.png" border="false":::
 
-You can use the AKS preview feature [Node IP-based Load Balancer](/azure/aks/load-balancer-standard#change-the-inbound-pool-type-preview) to reduce this throttle.
+Use the [Node IP-based Load Balancer](/azure/aks/load-balancer-standard#change-the-inbound-pool-type-preview) to reduce this throttle.
 
  
