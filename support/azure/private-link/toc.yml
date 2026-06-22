@@ -6,6 +6,8 @@ items:
     href: troubleshoot-private-endpoint-permission-denied.md
   - name: Troubleshoot Azure Private Endpoint connectivity problems
     href: troubleshoot-private-endpoint-connectivity.md   
+  - name: Troubleshoot connectivity failure to an approved private endpoint
+    href: troubleshoot-private-endpoint-connectivity-failure.md
   - name: Troubleshoot Azure Private Link Service connectivity problems
     href: troubleshoot-private-link-connectivity.md
   - name: Troubleshoot Azure Private Link service and resource limits or scale ceilings reached
