@@ -26,6 +26,7 @@ Based on the problem you're experiencing, review the appropriate troubleshooting
 |Files fail to tier or recall|[Troubleshoot Azure File Sync cloud tiering](file-sync-troubleshoot-cloud-tiering.md)|
 |Storage Sync Agent service (FileSyncSvc) fails to start|[Storage Sync Agent service (FileSyncSvc) fails to start](file-sync-troubleshoot-service-fails-start.md)|
 |High memory usage on the server|[Troubleshoot high memory usage](file-sync-troubleshoot-high-memory-usage.md)|
+|Server cloning and duplicate identity problems|[Troubleshoot server cloning and duplicate identity](file-sync-troubleshoot-server-cloning.md)|
 
 If you're unsure where to start, see [General troubleshooting steps](#general-troubleshooting-steps).
 
@@ -48,5 +49,3 @@ If you're experiencing problems with Azure File Sync, start by completing the fo
 - [Use Debug-StorageSyncServer cmdlet](file-sync-use-debug-cmdlet.md)
 - [Collect logs and traces on the Azure File Sync server](file-sync-collect-logs-traces.md)
 - [Troubleshoot Auto Update for expired Azure File Sync agents](file-sync-troubleshoot-auto-update-expired-agent.md)
-
- 
