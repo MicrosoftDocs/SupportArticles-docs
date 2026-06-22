@@ -27,6 +27,8 @@ items:
       href: create-upgrade-delete/node-count-is-not-in-autoscaler-min-max-range.md
     - name: Troubleshoot pods remain in a Pending state scenario
       href: create-upgrade-delete/troubleshoot-pods-remain-pending-state-scenario.md 
+    - name: Troubleshoot errors when creating or switching to an AKS Automatic cluster
+      href: create-upgrade-delete/aks-automatic-troubleshoot.md
   - name: Start operations
     items:
     - name: Basic troubleshooting

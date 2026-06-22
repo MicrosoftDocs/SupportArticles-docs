@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot the AksCapacityHeavyUsage error code
 description: Learn how to troubleshoot the AksCapacityHeavyUsage error when you create or start an AKS cluster, and use the recommended fixes to deploy successfully.
-ms.date: 05/29/2024
+ms.date: 06/15/2026
 author: axelgMS
 ms.author: axelg
 editor: v-jsitser
@@ -30,17 +30,21 @@ You're trying to create a cluster in a region that has limited capacity.
 
 When you create an AKS cluster, Microsoft Azure allocates compute resources to your subscription. You might occasionally experience the `AksCapacityHeavyUsage` error because of significant growth in demand for Azure Kubernetes Service in specific regions.
 
+If you're creating an AKS Automatic cluster with managed system node pools preconfigured, Microsoft Azure allocates compute resources for the system node pools in Azure subscriptions instead of your subscriptions. You might occasionally experience the `AksCapacityHeavyUsage` error because of significant growth in demand for AKS in specific regions. 
+
 ## Resolution
 
 ### Solution 1: Select a different region
 
 The easiest and quickest solution is to try to deploy to a different region (for example, NorthEurope instead of WestEurope or UAENorth instead of QatarCentral). To find nearby regions, visit the [Azure Geographies page](https://azure.microsoft.com/explore/global-infrastructure/geographies/#overview).
 
+For AKS Automatic clusters, you can try to deploy to [one of the GA regions](/azure/aks/automatic/aks-automatic-managed-system-node-pools-about#limitations). 
+
 This approach might not be feasible if you already have existing resources in the requested region, but it's the preferred solution in a dev/test scenario.
 
 ### Solution 2: Deploy a cluster that has different settings
 
-The infrastructure that hosts AKS-managed clusters have different allocation reservations. Therefore, AKS might have more capacity for public clusters than it has for private clusters. If you experience the `AksCapacityHeavyUsage` error when you try to create a private cluster, try to create a public cluster instead (or vice versa).
+The infrastructure that hosts AKS-managed clusters uses different allocation reservations. Therefore, AKS might have more capacity for public clusters than it has for private clusters. If you experience the `AksCapacityHeavyUsage` error when you try to create a private cluster, try to create a public cluster instead (or vice versa).
 
 ### Solution 3: Use an Azure Enterprise subscription
 
@@ -52,9 +56,9 @@ Capacity is often reclaimed when other users stop or delete their AKS clusters. 
 
 ## More information
 
-- Ensuring capacity for users is a top priority for Microsoft, and we're working to scale up our infrastructure to accommodate the increasing popularity of Azure services.
+- Ensuring capacity for users is a top priority for Microsoft, and the company is working to scale up its infrastructure to accommodate the increasing popularity of Azure services.
 
-    For more information about improvements that we're making toward delivering a resilient cloud supply chain, see [this September 2021 Azure Blog article](https://azure.microsoft.com/blog/advancing-reliability-through-a-resilient-cloud-supply-chain/).
+    For more information about improvements that Microsoft is making toward delivering a resilient cloud supply chain, see [this September 2021 Azure Blog article](https://azure.microsoft.com/blog/advancing-reliability-through-a-resilient-cloud-supply-chain/).
 
 - [General troubleshooting of AKS cluster creation issues](../create-upgrade-delete/troubleshoot-aks-cluster-creation-issues.md)
 
