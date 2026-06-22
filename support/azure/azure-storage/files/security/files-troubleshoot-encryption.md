@@ -152,7 +152,7 @@ There are two options to upgrade your storage account to AES-256. We strongly re
 - **PowerShell modules:** Current version of [AzFilesHybrid](https://www.powershellgallery.com/packages/AzFilesHybrid/) is installed and imported.
 - **Authenticated session:** You're signed in to the correct subscription (`Connect-AzAccount` followed by `Set-AzContext -Subscription <subscriptionId>`).
 
-Once the prerequisites are in place, run the following PowerShell script:
+Once the prerequisites are in place, run the following cmdlet from an elevated PowerShell session:
 
 ```PowerShell
 $ResourceGroupName = "<resource-group-name-here>"
