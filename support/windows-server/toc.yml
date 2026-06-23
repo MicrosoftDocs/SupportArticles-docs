@@ -2797,10 +2797,10 @@ items:    # Please do not delete this line, it is required for the yaml format
           href: windows-security/remove-orphaned-domains.md
         - name: Security identifier could not be resolved
           href: ./windows-security/security-identifier-could-not-be-resolved.md
+        - name: Troubleshoot gMSA authentication failures
+          href: ./active-directory/gmsa-auth-failures-multiple-keys.md
         - name: Users and groups can't be added to trusted forest
           href: ./windows-security/rpc-endpoint-mapper-prevents-users-added-to-trust-forest.md
-        - name: Gmsa auth failures multiple keys
-          href: active-directory/gmsa-auth-failures-multiple-keys.md
     - name: Kerberos authentication
       items:
         - name: Event ID 7 on a domain controller running Windows Server 2025
