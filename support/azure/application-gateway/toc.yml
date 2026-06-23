@@ -16,6 +16,8 @@ items:
   href: error-codes/applicationgatewayskunotspecified.md
 - name: Troubleshoot HTTP 504 Gateway Timeout
   href: troubleshoot-http-504-gateway-timeout.md
+- name: Troubleshoot certificate management and Key Vault integration in Application Gateway
+  href: troubleshoot-application-gateway-key-vault-certificate.md
 - name: Troubleshoot HTTP 502 Bad Gateway
   href: troubleshoot-http-502-bad-gateway.md
 - name: ApplicationGatewayFrontendIpCannotHavePublicIpAndSubnet error
