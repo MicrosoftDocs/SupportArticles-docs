@@ -23,7 +23,7 @@ This article provides guidance on how to correctly configure your NAT gateway an
 
 - [Add or remove subnet](#add-or-remove-subnet) 
 
-- [Add or remove public IPs](#add-or-remove-public-ip-addresses) 
+- [Add or remove public IPs](#add-or-remove-public-ip-addresses)
 
 ## NAT gateway configuration basics
 
@@ -59,25 +59,58 @@ StandardV2 NAT Gateway isn't available in the following Azure regions:
 
 ### Validate NAT gateway connectivity
 
-[NAT gateway](/azure/nat-gateway/nat-overview#azure-nat-gateway-basics) supports User Datagram Protocol (UDP) and Transmission Control Protocol (TCP) protocols. 
+[NAT gateway](/azure/nat-gateway/nat-overview#azure-nat-gateway-basics) supports User Datagram Protocol (UDP), Transmission Control Protocol (TCP), and Internet Control Message Protocol (ICMP) Echo Request and Echo Reply.
 
 > [!NOTE]
-> NAT Gateway doesn't support ICMP protocol. Ping using ICMP protocol isn't supported and is expected to fail. 
+> Azure StandardV2 NAT Gateway supports outbound ICMP Echo Request and Echo Reply traffic (ping) for IPv4 and IPv6 scenarios. Other ICMP message types are not supported. 
+
+ #### Validate outbound connectivity using ICMP (ping)
+
+To validate basic outbound connectivity, run an ICMP ping from a workload deployed in a subnet associated with the StandardV2 NAT gateway:
+
+1. Connect to the workload (for example, a virtual machine).
+
+1. Run the following command: `ping 8.8.8.8`
+
+1. Review the result:
+
+  * If the ping succeeds: Outbound connectivity through the NAT gateway is functioning as expected.
+    
+    ```bash
+    azureuser@vm-1:~$ ping 8.8.8.8
+    PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+    64 bytes from 8.8.8.8: icmp_seq=1 ttl=115 time=7.87 ms
+    64 bytes from 8.8.8.8: icmp_seq=2 ttl=115 time=5.67 ms
+    64 bytes from 8.8.8.8: icmp_seq=3 ttl=115 time=5.64 ms
+    
+    --- 8.8.8.8 ping statistics ---
+    3 packets transmitted, 3 received, 0% packet loss
+    ```
+
+  * If the ping times out:
+      * Subnet is not associated with a NAT gateway
+      * Outbound ICMP is blocked by NSG
+      * Routing issues
+      * Upstream firewall restrictions
+
+For more information about ICMP support in Azure StandardV2 NAT Gateway, see [ICMP Support for Azure StandardV2 NAT Gateway](https://aka.ms/nat-icmp).
 
 To validate end-to-end connectivity of NAT gateway, follow these steps: 
+
+1. Validate outbound connectivity for StandardV2 NAT Gateway using ICMP Echo Request and Echo Reply (ping) from a workload deployed in a subnet associated with the NAT gateway.
 
 1. Validate that your [NAT gateway public IP address is being used](/azure/nat-gateway/quickstart-create-nat-gateway-portal#test-nat-gateway).
 
 1. Conduct TCP connection tests and UDP-specific application layer tests.
 
-1. Look at NSG flow logs to analyze outbound traffic flows from NAT gateway.
+1. Review NSG flow logs to analyze outbound traffic flows from NAT gateway.
 
 Refer to the following table for tools to use to validate NAT gateway connectivity.
 
-| Operating system | Generic TCP connection test | TCP application layer test | UDP |
-|---|---|---|---|
-| Linux | `nc` (generic connection test) | `curl` (TCP application layer test) | application specific |
-| Windows | [PsPing](/sysinternals/downloads/psping) | PowerShell [Invoke-WebRequest](/powershell/module/microsoft.powershell.utility/invoke-webrequest) | application specific |
+| Operating system | ICMP validation | Generic TCP connection test | TCP application layer test | UDP |
+|---|---|---|---|---|
+| Linux | `ping` | `nc` (generic connection test) | `curl` (TCP application layer test) | application specific |
+| Windows | `ping` | [PsPing](/sysinternals/downloads/psping) | PowerShell [Invoke-WebRequest](/powershell/module/microsoft.powershell.utility/invoke-webrequest) | application specific |
 
 ### Analyze outbound connectivity with NAT gateway
 
