@@ -16,12 +16,16 @@ items:
   href: error-codes/applicationgatewayskunotspecified.md
 - name: Troubleshoot HTTP 504 Gateway Timeout
   href: troubleshoot-http-504-gateway-timeout.md
+- name: Troubleshoot certificate management and Key Vault integration in Application Gateway
+  href: troubleshoot-application-gateway-key-vault-certificate.md
 - name: Troubleshoot HTTP 502 Bad Gateway
   href: troubleshoot-http-502-bad-gateway.md
 - name: ApplicationGatewayFrontendIpCannotHavePublicIpAndSubnet error
   href: error-codes/application-gateway-frontend-ip-cannot-have-public-ip-subnet-error.md
 - name: Troubleshoot WAF anomaly scoring behavior and rule 949110 blocks
   href: troubleshoot-waf-anomaly-scoring-rule-949110-blocks.md
+- name: Troubleshoot WAF blocking legitimate requests (403) in Azure Application Gateway
+  href: troubleshoot-waf-blocking-legitimate-requests-403.md
 - name: Troubleshoot an Application Gateway in Azure (ILB ASE)
   href: create-gateway-internal-load-balancer-app-service-environment.md 
 - name: Troubleshoot redirection to App Service URL
