@@ -16,7 +16,7 @@ When accessing Azure Blob Storage through the Azure portal, you may encounter er
 
 When accessing blob containers or blobs in the Azure portal, requests are authorized using either your Microsoft Entra ID account or the storage account access key.
 
-### Verify required permissions
+#### Verify required permissions
 
 - If using **Microsoft Entra ID**:
   - You must have at least the **Reader** role for control plane access.
@@ -40,7 +40,7 @@ When accessing blob containers or blobs in the Azure portal, requests are author
 
 For more information, see [Data access from the Azure portal](/azure/storage/blobs/authorize-access-azure-active-directory#data-access-from-the-azure-portal).
 
-### Validate browser and network configuration
+#### Validate browser LocalNetworkAccessAllowedForUrl policy
 
 If you're using **Microsoft Edge** or **Google Chrome** to access storage through a **private endpoint**, configure the `LocalNetworkAccessAllowedForUrl` browser policy to allow the Azure portal: `https://portal.azure.com`
 
@@ -49,7 +49,7 @@ For more information, see:
 - [Microsoft Edge policy: LocalNetworkAccessAllowedForUrls](/deployedge/microsoft-edge-policies/localnetworkaccessallowedforurls)
 - [Chrome policy: LocalNetworkAccessAllowedForUrls](https://chromeenterprise.google/policies/local-network-access-allowed-for-urls/)
 
-### Use the Connectivity check tool
+#### Use the Connectivity check tool
 
 Use the built-in connectivity diagnostics in the Azure portal:
 
@@ -94,7 +94,7 @@ Your Microsoft Entra identity doesn't have sufficient permissions for the reques
 
 ### Solution
 
-#### If the error occurs when viewing containers
+**If the error occurs when viewing containers**
 
 The following control plane permissions are required at the storage account level:
 
@@ -106,9 +106,9 @@ Microsoft.Storage/storageAccounts/blobServices/containers/read
 
 The built-in **Reader** role includes these permissions.
 
-#### If the error occurs when creating, deleting, or modifying blob data
+**If the error occurs when performing a data plane operation (creating a blob, deleting a blob, etc.)**
 
-Your identity must be assigned a role that includes the required data plane permissions.
+Your identity must be assigned a role that includes the required data plane permissions, such as:
 
 | Role | Description |
 |---|---|
@@ -135,7 +135,7 @@ Microsoft.Storage/storageAccounts/blobServices/containers/blobs/read
 
 ### Solution
 
-Assign a role that includes the required permission, such as:
+Your identity must be assigned a role that includes the required data plane permissions, such as:
 
 | Role | Description |
 |---|---|
@@ -161,7 +161,7 @@ This error can occur when:
 
 ### Solution
 
-#### If you're using Access Key
+**If you're using Access Key**
 
 Assign a role that includes the following permission:
 
@@ -176,7 +176,7 @@ Built-in roles that include this permission include:
 - **Contributor**
 - **Owner**
 
-#### If you're using Microsoft Entra ID
+**If you're using Microsoft Entra ID**
 
 Verify that you have the following control plane permissions at the storage account scope:
 
@@ -185,7 +185,9 @@ Microsoft.Storage/storageAccounts/read
 Microsoft.Storage/storageAccounts/blobServices/read
 Microsoft.Storage/storageAccounts/blobServices/containers/read
 ```
-#### If you're using a private endpoint
+The built-in **Reader** role includes these permissions.
+
+**If you're using a private endpoint**
 
 Verify that the `LocalNetworkAccessAllowedForUrl` browser policy allows the Azure portal URL: `https://portal.azure.com`
 
