@@ -1,103 +1,81 @@
 ---
-title: Senders do not receive Out of Office notifications
-description: Describes that senders don't receive Out of Office replies from a Microsoft 365 user although an Out of Office MailTip is displayed in the mail clients of the senders. Provides a solution and a workaround.
+title: No out of office replies received from a mailbox that has automatic replies enabled
+description: Describes the scenarios in which a sender doesn't receive an out of office reply from the recipient, and provides a resolution to fix the issue.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
-  - sap:Mail Flow
+  - sap:Exchange Online\Mail Flow
+  - sap:Exchange Server SE\Mailflow
+  - CI 11886
   - Exchange Online
   - CSSTroubleshoot
-ms.reviewer: v-six
+ms.reviewer: arindamt
 appliesto: 
   - Exchange Online
+  - Exchange Server SE
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 06/22/2026
 ---
-# Senders don't receive Out of Office notifications from a Microsoft 365 user when Forwarding is enabled
+# No out of office replies received from a mailbox that has automatic replies enabled
 
-_Original KB number:_ &nbsp; 2866165
+## Summary
+
+This article describes the situations when out-of-office replies aren't sent to a user who sends an email message to a recipient who has out-of-office replies configured. The article also provides resolutions to fix the issue.
 
 ## Symptoms
 
-People who send an email message to a Microsoft 365 user who set up an Out of Office notification don't receive the notification. However, an Out of Office MailTip for the user is displayed in the mail clients of the senders.
+When a user in your organization sends an email to a recipient whose mailbox has out-of-office automatic replies enabled, they don't receive an out-of-office reply. However, the user's mail client still displays the **Automatic reply** mailtip for the recipient.
 
 ## Cause
 
-This issue may occur if one of the following conditions is true:
+This issue might occur in one of the following scenarios:
 
-- An external forwarding rule, or an automatic reply notification is set up in the user's mailbox.
-- A global Exchange transport rule is created for this mailbox.By design, a mailbox cannot have forwarding rules and an Out of Office notification active at the same time.
+- [Email forwarding](/exchange/recipients-in-exchange-online/manage-user-mailboxes/configure-email-forwarding) is configured in the recipient's mailbox but the **Deliver message to both forwarding address and mailbox** option isn't selected.
+- An Exchange transport rule is configured to redirect email messages that are sent to the recipient's mailbox.
 
-## Resolution - Step 1: Identify and remove the forwarding rule
+In these scenarios, the user's email message isn't delivered to the recipient's mailbox and no automatic reply is triggered. This behavior is by design.
 
-To identify and remove a forwarding rule from an Exchange Online mailbox, follow these steps:
+## Resolution
 
-1. [Connect to Exchange Online by using Windows Remote PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
+Determine the cause of the issue and then use the appropriate resolution to fix it.
+
+### Email forwarding
+
+To check whether email forwarding is set up in the recipient's mailbox and disable it if it's configured, use the following steps:
+
+1. If the recipient's mailbox is hosted on Exchange Online, navigate to [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).<br/>
+   If the recipient's mailbox is hosted on Exchange Server SE, navigate to [Exchange Management Shell](/powershell/exchange/open-the-exchange-management-shell).
 2. Run the following command:
   
     ```powershell
-    Get-mailbox -identity <UserID> | FL *forwarding*,*deliver*
+    Get-mailbox -identity <UserID> | FL *forwarding*
     ```
 
-    If forwarding is enabled on the mailbox, the command output resembles the following example:
-
-    ```console
-    ForwardingAddress:
-    ForwardingSmtpAddress: abc@contoso.com
-    DeliverToMailboxAndForward: True
-    ```
-
-3. If forwarding is enabled, disable it by running the following command:
+    If email forwarding is enabled on the mailbox, you see a value displayed in the command's output for either the **ForwardingAddress** parameter or the **ForwardingSmtpAddress** parameter.
+3. If email forwarding is enabled, disable it by running the following command:
 
     ```powershell
-    Set-Mailbox -Identity <UserID> -DeliverToMailboxAndForward $false -ForwardingSMTPAddress $null
+    Set-Mailbox -Identity <UserID> -ForwardingAddress $null -ForwardingSMTPAddress $null
     ```
 
-## Resolution - Step 2: Identify and remove Exchange transport rules
+    If email forwarding is a requirement for your organization and can't be disabled, then set the **DeliverToMailboxAndForward** parameter to **True**. This setting ensures that the user's email message is delivered to the recipient's mailbox and the configured out-of-office reply is generated.
 
-To identify and remove Exchange transport rules from an Exchange Online mailbox, follow these steps:
-
-1. [Connect to Exchange Online by using Remote PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
-2. Run the following command:
+    Run the following command:
 
     ```powershell
-    Get-TransportRule | FL Name,Description
+    Set-Mailbox -Identity <UserID> -DeliverToMailboxAndForward $true
     ```
 
-3. If Exchange transport rules are enabled, follow these steps:
+### Exchange transport rule
 
-   1. Sign in to the [Microsoft 365 portal](https://portal.office.com/) as an administrator.
-   2. To open the Exchange admin center, select **Admin**, and then select **Exchange**.
-   3. In the navigation pane, select **mail flow**, clear the rules that you want to delete, and then press **Delete**.
+To check for and remove an Exchange transport rule from a mailbox, use the following steps:
 
-## Workaround
-
-To set up email forwarding rules and an Out of Office notification at the same time, you have to set up Inbox rules for the mailbox instead of setting up a transport rule. To do so, follow these steps:
-
-1. Sign in to the [Microsoft 365 portal](https://portal.office.com/) as an administrator.
-2. To open the Exchange admin center, select **Admin**, and then select **Exchange**.
-3. In the upper-right corner, select your name, and then select **Open Another user**.
-4. Select **Organize Mail**, and then select **Inbox Rules**.
-5. Select **New** (:::image type="icon" source="media/senders-not-receiving-out-of-office-notifications/plus-sign-icon.png" border="false":::), and then select **Create a new rule for arriving messages**.
-6. In the **Name** box, specify a name for the rule, and then select **More options**.
-7. Under **When the Message Arrives**, select **Apply to all messages**.
-8. Under **Do the Following**, point to **Move, copy or delete**, and then select **Copy the Message to the Folder**.
-9. Select the **Select Folder** option, and then select **Inbox**.
-10. Select **Add Conditions**.
-11. Under **Forward the Messages to**, select **User whom you have to forward**.
-12. Select **Save**.
+1. If the recipient's mailbox is hosted on Exchange Online, navigate to [Exchange admin center in Exchange Online](https://admin.exchange.microsoft.com/) > **Mail flow** > **Rules**.<br/>
+   If the recipient's mailbox is hosted on Exchange Server SE, navigate to [Exchange admin center in Exchange Server](/exchange/architecture/client-access/exchange-admin-center#accessing-the-eac) > **Mail flow** > **Rules**.
+2. From the list of transport rules that are displayed, either disable or delete all forwarding rules that are created for the recipient's mailbox.
 
 > [!NOTE]
-> If you want to forward the message to a user outside your organization, you must add that user as an external contact.
-
-## More information
-
-- For more information about mail contacts, see [Manage mail contacts](/exchange/recipients-in-exchange-online/manage-mail-contacts).
-- For more information about how to use the Out of Office functionality in Exchange Online, see [Send automatic replies when you're out of the office](https://support.microsoft.com/office/video-set-up-automatic-replies-and-inbox-rules-b7b63910-c402-48a3-a313-50d5bd5f80c3).
-- For more information about how to create rules to forward mail, see [Use rules to automatically forward messages](https://support.microsoft.com/office/use-rules-to-automatically-forward-messages-45aa9664-4911-4f96-9663-ece42816d746).
-- For more information about how to set up automatic replies, see [Automatic replies (formerly Out of Office assistant)](https://support.microsoft.com/office/automatic-replies-formerly-out-of-office-assistant-48d40166-0129-4653-98f1-eb85f9bd8c20).
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com).
+> To enable automatic replies in a mailbox that has email forwarding configured, set up [Inbox rules](https://support.microsoft.com/office/use-rules-to-automatically-forward-messages-45aa9664-4911-4f96-9663-ece42816d746) for the mailbox. This option is better than setting up either a transport rule or SMTP forwarding for the mailbox.

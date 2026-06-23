@@ -23,4 +23,5 @@ items:
     href: file-sync-troubleshoot-sync-errors.md
   - name: Troubleshoot managed identities
     href: file-sync-troubleshoot-managed-identities.md
-
+  - name: Troubleshoot server cloning and duplicate identity problems
+    href: file-sync-troubleshoot-server-cloning.md
