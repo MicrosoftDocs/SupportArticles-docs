@@ -624,7 +624,7 @@ items:
           href: ../public-folders/unable-expand-public-folder-tree.md
     - name: Send Emails
       items:
-        - name: Can't receive Out of Office notifications
+        - name: Don't receive out-of-office replies
           href: ../send-emails/senders-not-receiving-out-of-office-notifications.md
         - name: Change the message format to prevent Winmail.dat attachments
           href: ../send-emails/how-to-specify-email-message-format.md
