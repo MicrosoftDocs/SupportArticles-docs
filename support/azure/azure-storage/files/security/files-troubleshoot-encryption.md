@@ -259,6 +259,18 @@ $identity = $saAdObject.DistinguishedName
 
 To determine your account type, check the `AccountType` value from the domain properties check, or run `$saAdObject.objectClass`. If the object class is `computer`, use `Set-ADComputer`. If it's `user`, use `Set-ADUser`.
 
+> [!IMPORTANT]
+> If the domain object representing the storage account is a **service logon (user) account** (`AccountType` = `User`), make sure the user principal name (UPN) is set to match the SPN **before** you refresh the domain object password. Storage accounts enabled with the manual AD DS steps before 2023 (or where the UPN step was skipped) often have the SPN set but **not** the UPN. Once AES-256 is enabled, the UPN must align with the `cifs/<storage-account-name>.file.core.windows.net` SPN, and a missing or mismatched UPN causes SMB authentication to fail with **error 1396 "The target account name is incorrect"** and **`KRB_AP_ERR_MODIFIED`**. This step doesn't apply to computer accounts.
+>
+> Run the following command, replacing `<domain-name>` and `<domain-dns-root>` with values for your environment:
+>
+> ```PowerShell
+> Set-ADUser `
+>     -Identity $identity `
+>     -Server <domain-name> `
+>     -UserPrincipalName cifs/$StorageAccountName.file.core.windows.net@<domain-dns-root>
+> ```
+
 To enable AES-256 encryption on a **computer account**, run the following command.
 
 ```PowerShell
