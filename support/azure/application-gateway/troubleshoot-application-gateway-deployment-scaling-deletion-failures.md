@@ -1305,7 +1305,7 @@ az group export \
 6. To remove the orphaned references, edit `appgw-template.json`. 
 7. Before you redeploy, apply the following mandatory edits (the raw `az group export` output isn't redeployable verbatim):
 
-- Remove the Application Gateway's top-level `dependsOn` array. `az group export` omits a circular dependency for Application Gateway resources. Therefore, the redeployment fails and returns `InvalidTemplate: Circular dependency detected`. ARM infers the correct ordering from the `resourceId(...)` property references. Therefore, you can delete the top-level `dependsOn` on the `Microsoft.Network/applicationGateways` resource to resolve it.
+- Remove the Application Gateway's top-level `dependsOn` array. `az group export` issues a circular dependency for Application Gateway resources. Therefore, the redeployment fails and returns `InvalidTemplate: Circular dependency detected`. ARM infers the correct ordering from the `resourceId(...)` property references. Therefore, you can delete the top-level `dependsOn` on the `Microsoft.Network/applicationGateways` resource to resolve it.
 - Supply values for the exported resource-name parameters. `az group export` creates name parameters (for example, the gateway, virtual network, and public IP name parameters) without any `defaultValue`. Therefore, the redeployment stalls in a `stdin` state as it waits for input unless you pass them. Provide a value for each exported name parameter by using `--parameters <paramName>=<value>` on the redeploy command (see the following commands).
 
 8. Redeploy the edited template. Supply a value for each exported name parameter.
