@@ -2,14 +2,14 @@
 title: Resolve file upload warnings related to manager hierarchy
 description: Fix warnings that occur when you upload employee attribute data to Microsoft Viva Glint. These warnings are related to manager hierarchy calculation.
 manager: dcscontentpm
-ms.reviewer: aweixelman
-ms.date: 06/21/2024
+ms.reviewer: amywheater
+ms.date: 06/23/2026
 audience: ITPro
 ms.topic: troubleshooting
 search.appverid: MET150
 ms.custom: 
-  - CSSTroubleshoot
-  - CI190692
+- CSSTroubleshoot
+- CI190692
 ---
 
 # Resolve file upload warnings related to manager hierarchy

@@ -2,14 +2,14 @@
 title: Tenant provisioning and licensing errors 
 description: Provides resolutions for errors in Viva Glint when setting up a tenant or creating a new program. 
 manager: dcscontentpm
-ms.reviewer: aweixelman; meerak
-ms.date: 04/26/2024
+ms.reviewer: amywheater
+ms.date: 06/23/2026
 audience: ITPro
 ms.topic: troubleshooting
 search.appverid: MET150
 ms.custom: 
-  - CSSTroubleshoot
-  - CI189769
+- CSSTroubleshoot
+- CI189769
 ---
 
 # Tenant provisioning and licensing errors
