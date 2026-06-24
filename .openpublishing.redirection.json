@@ -15645,11 +15645,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "support/mem/configmgr/client-management/multiple-instances-of-unknown-computers-collection.md",
-      "redirect_url": "/previous-versions/troubleshoot/configmgr/multiple-instances-of-unknown-computers-collection",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "support/mem/configmgr/client-management/remote-control-fails-error-c000012.md",
       "redirect_url": "/previous-versions/troubleshoot/configmgr/remote-control-fails-error-c000012",
       "redirect_document_id": false
@@ -15657,11 +15652,6 @@
     {
       "source_path": "support/mem/configmgr/cloud-services/contributor-role-not-assigned-for-web-app.md",
       "redirect_url": "/previous-versions/troubleshoot/configmgr/contributor-role-not-assigned-for-web-app",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/mem/configmgr/console-management/windows-10-servicing-dashboard-empty.md",
-      "redirect_url": "/previous-versions/troubleshoot/configmgr/windows-10-servicing-dashboard-empty",
       "redirect_document_id": false
     },
     {
@@ -15710,11 +15700,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "support/mem/configmgr/os-deployment/computer-hangs-task-sequence-debug-mode.md",
-      "redirect_url": "/previous-versions/troubleshoot/configmgr/computer-hangs-task-sequence-debug-mode",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "support/mem/configmgr/os-deployment/custom-port-settings-not-added-to-boot-media.md",
       "redirect_url": "/previous-versions/troubleshoot/configmgr/custom-port-settings-not-added-to-boot-media",
       "redirect_document_id": false
@@ -15752,16 +15737,6 @@
     {
       "source_path": "support/mem/configmgr/setup-migrate-backup-recovery/failed-to-find-folder-or-file-error.md",
       "redirect_url": "/previous-versions/troubleshoot/configmgr/failed-to-find-folder-or-file-error",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/mem/configmgr/setup-migrate-backup-recovery/maintenance-tasks-default-settings.md",
-      "redirect_url": "/previous-versions/troubleshoot/configmgr/maintenance-tasks-default-settings",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/mem/configmgr/setup-migrate-backup-recovery/support-policy-for-manual-database-changes.md",
-      "redirect_url": "/previous-versions/troubleshoot/configmgr/support-policy-for-manual-database-changes",
       "redirect_document_id": false
     },
     {
