@@ -28,7 +28,7 @@ When accessing blob containers or blobs in the Azure portal, requests are author
 - If using **Access Key**:
   - You must have an Azure Resource Manager role that includes the following control plane permission:
 
-    ```azurecli
+    ```
     Microsoft.Storage/storageAccounts/listkeys/action
     ```
 
@@ -63,7 +63,7 @@ This tool can help identify whether an issue is related to permissions, network 
 
 You may see the following error when accessing a blob container or blob in the Azure portal:
 
-```output
+```
 This request is not authorized to perform this operation
 Error code: 403
 ```
@@ -84,7 +84,7 @@ Common causes include:
 
 You may see the following error when accessing a blob container or performing an operation on a blob in the Azure portal:
 
-```output
+```
 This request is not authorized to perform this operation using this permission
 Error code: 403
 ```
@@ -98,7 +98,7 @@ Your Microsoft Entra identity doesn't have sufficient permissions for the reques
 
 The following control plane permissions are required at the storage account level:
 
-```azurecli
+```
 Microsoft.Storage/storageAccounts/read
 Microsoft.Storage/storageAccounts/blobServices/read
 Microsoft.Storage/storageAccounts/blobServices/containers/read
@@ -122,14 +122,14 @@ For more information, see [Data access from the Azure portal](/azure/storage/blo
 
 You may see the following error when accessing a blob container or blob in the Azure portal:
 
-```output
+```
 You do not have permissions to list the data using your user account with Microsoft Entra ID. Click to learn more about authenticating with Microsoft Entra ID. This request is not authorized to perform this operation using this permission.
 ```
 ### Cause
 
 Your Microsoft Entra identity is missing the following data plane permission:
 
-```azurecli
+```
 Microsoft.Storage/storageAccounts/blobServices/containers/blobs/read
 ```
 
@@ -149,7 +149,7 @@ For more information, see [Data access from the Azure portal](/azure/storage/blo
 
 You may see the following error when accessing a blob container or blob in the Azure portal:
 
-```output
+```
 You do not have permissions to use the access key to list data.
 ```
 ### Cause
@@ -165,7 +165,7 @@ This error can occur when:
 
 Assign a role that includes the following permission:
 
-```azurecli
+```
 Microsoft.Storage/storageAccounts/listkeys/action
 ```
 
@@ -180,7 +180,7 @@ Built-in roles that include this permission include:
 
 Verify that you have the following control plane permissions at the storage account scope:
 
-```azurecli
+```
 Microsoft.Storage/storageAccounts/read
 Microsoft.Storage/storageAccounts/blobServices/read
 Microsoft.Storage/storageAccounts/blobServices/containers/read
@@ -201,7 +201,7 @@ For more information, see:
 
 You may see the following error when accessing a blob container in the Azure portal:
 
-```output
+```
 You don't have access
 Error code: 403
 ```
@@ -213,7 +213,7 @@ Your Microsoft Entra identity doesn't have the required control plane permission
 
 The following control plane permissions are required at the storage account level:
 
-```azurecli
+```
 Microsoft.Storage/storageAccounts/read
 Microsoft.Storage/storageAccounts/blobServices/read
 Microsoft.Storage/storageAccounts/blobServices/containers/read
@@ -227,7 +227,7 @@ For more information, see [Data access from the Azure portal](/azure/storage/blo
 
 You may see the following error when accessing a blob container or blob in the Azure portal:
 
-```output
+```
 Network request failed – cannot access storage endpoint
 Your firewall settings may be preventing network access from this client to the storage data endpoint.
 CORS settings on your storage account may be preventing network access from this client.
