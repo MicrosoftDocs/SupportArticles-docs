@@ -1,4 +1,4 @@
-﻿﻿﻿﻿items:
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿items:
 - name: Microsoft 365 Apps Troubleshooting
   href: ../office-client-welcome.yml
   items:
@@ -22,92 +22,6 @@
           href: ../access/error-when-perform-operation-on-table.md
         - name: Can't process transactions in a multi-user environment
           href: ../access/file-sharing-lock-count-exceeded.md
-    - name: Activation
-      items:
-        - name: Account or subscription verification errors activating Microsoft 365 Apps
-          href: ../activation/account-or-subscription-errors.md
-        - name: Activating Microsoft 365 Apps for Business with a product key
-          href: ../activation/activate-with-product-key.md
-        - name: Activation error Sorry, we are having some temporary server issues
-          href: ../activation/temporary-server-issues.md
-        - name: Activation error That Microsoft account doesn’t exist
-          href: ../activation/account-doesnt-exist.md
-        - name: Activation error Trusted Platform Module malfunctioned
-          href: ../activation/tpm-malfunctioned.md
-        - name: Can't sign in to an Office 2016 for Mac app
-          href: ../activation/sign-in-to-office-2016-for-mac-fail.md
-        - name: Can't sign in to Microsoft 365 desktop applications
-          href: ../activation/cannot-sign-in-microsoft-365-desktop-apps.md
-        - name: Can't verify the license for this product
-          href: ../activation/license-issue-when-start-office-application.md
-        - name: Can't verify subscription
-          href: ../activation/subscription-issue-in-office-mobile.md
-        - name: Connection issues when signing in Office 2016
-          href: ../activation/connection-issue-when-sign-in-office-2016.md
-        - name: Disabling ADAL or WAM not supported for fixing sign-in or activation issues
-          href: ../activation/disabling-adal-wam-not-recommended.md
-        - name: Error code 80070520, -2147023584, or 2147943712 when signing in to Microsoft 365 apps
-          href: ../activation/error-80070520-sign-in-microsoft-365-apps.md
-        - name: Errors activating Microsoft 365 on older Windows versions
-          href: ../activation/errors-activating-on-older-windows.md
-        - name: Office activation process issues
-          href: ../activation/office-activation-process-issues.md
-        - name: Issue when activating Microsoft 365 Apps for enterprise
-          href: ../activation/issue-when-activate-office-365-proplus.md
-        - name: Issue when activating Office from Microsoft 365
-          href: ../activation/issue-when-activate-office-from-office-365.md
-        - name: Issues with shared computer activation for Microsoft 365 Apps
-          href: ../activation/shared-computer-activation.md
-        - name: Microsoft 365 Apps activation error 0xCAA50021
-          href: ../activation/activation-error-0xcaa50021.md
-        - name: Microsoft 365 Apps activation error 0x80070005
-          href: ../activation/activation-error-0x80070005.md
-        - name: Microsoft 365 Apps activation error AADSTS9002313 Invalid Request
-          href: ../activation/aadsts9002313-invalid-request.md
-        - name: Microsoft 365 Apps activation error codes 0xCAA70007 and 0xCAA80000
-          href: ../activation/0xcaa70007-and-0xcaa80000.md
-        - name: Microsoft 365 Apps activation error There’s a problem with your account
-          href: ../activation/problem-with-your-account.md
-        - name: Microsoft 365 Apps activation error Your account doesn’t allow editing on a Mac
-          href: ../activation/doesnt-allow-editing-on-mac.md
-        - name: Microsoft 365 Apps activation error Your organization has disabled this device
-          href: ../activation/your-organization-disabled-this-device.md
-        - name: Microsoft 365 Apps activation limits
-          href: ../activation/activation-limits.md
-        - name: Microsoft 365 Apps activation network connection issues
-          href: ../activation/network-connection-issues.md
-        - name: Microsoft 365 Apps activation Product deactivated
-          href: ../activation/product-deactivated.md
-        - name: Microsoft 365 Apps activation Subscription expired error
-          href: ../activation/subscription-expired.md
-        - name: Microsoft 365 Apps activation usage report issues
-          href: ../activation/activation-usage-report-issues.md
-        - name: Microsoft 365 users aren't automatically signed into Office
-          href: ../activation/office-365-users-not-signed-in-office.md
-        - name: Office for Mac activation An unknown error has occurred
-          href: ../activation/mac-unknown-error.md
-        - name: Sign in issues when activating Microsoft 365 Apps
-          href: ../activation/sign-in-issues.md
-        - name: Sorry, another account from your organization is already signed in on this computer
-          href: ../activation/another-account-already-signed-in.md
-        - name: The account isn't associated with this Office product
-          href: ../activation/account-not-associated-with-office.md
-        - name: The products we found in your account can't be used to activate
-          href: ../activation/cant-be-used-to-activate.md
-        - name: Troubleshooting device-based licensing for Microsoft 365 Apps
-          href: ../activation/device-based-licensing.md
-        - name: Use Fiddler trace logs for MFA
-          href: ../activation/fiddler-trace-logs-for-mfa.md
-        - name: Use MSOAID for authentication issues
-          href: ../activation/use-msoaid-for-authentication-issues.md
-        - name: We've run into a problem with your Microsoft 365 subscription
-          href: ../activation/run-into-a-problem.md
-        - name: You currently have not been assigned an office license that includes the Office desktop apps
-          href: ../activation/license-not-assigned.md
-    - name: Copilot
-      items:
-        - name: Copilot is missing, disabled, or doesn't work correctly
-          href: ../copilot/copilot-missing-disabled-not-work-correctly.md
     - name: End of Support
       items:
         - name: Office 2007 has reached end of extended support
@@ -248,44 +162,6 @@
           href: ../excel/mentions-not-resolve-user-information.md
         - name: VBA writes to cells slowly when ActiveX controls are invisible
           href: ../excel/vba-writes-to-cells-slowly.md
-    - name: Forms
-      items:
-        - name: Resolve file upload errors in Microsoft Forms
-          href: ../forms/resolve-file-upload-errors-microsoft-forms.md
-    - name: Installation
-      items:
-        - name: Automatic updating isn't enabled
-          href: ../installation/automatic-updates.md
-        - name: Error 1935 when install Office 2010
-          href: ../installation/error-1935-when-install-office-2010.md
-        - name: Error code 30010-45 or 30088-26 installing Microsoft 365 Apps
-          href: ../installation/error-code-30010-45-or-30088-26.md
-        - name: Error starting Microsoft Office third-party .NET add-in
-          href: ../installation/access-denied-error-when-starting-third-party-apps.md
-        - name: Error when installing Microsoft 365 apps
-          href: ../installation/cannot-access-powershell-file-error.md
-        - name: Error when you install an Office program
-          href: ../installation/error-run-office-setup-program.md
-        - name: How to download and run Office LTSC installation files not in VLSC
-          href: ../installation/how-to-download-office-install-not-in-vlsc.md
-        - name: ForceUpgrade and ForceDowngrade attributes
-          href: ../installation/forceupgrade-forcedowngrade-removed-odt-config.md
-        - name: Install Office Pro 2013 on a Terminal Server
-          href: ../installation/install-and-activate-office-2013.md
-        - name: Office setup issues
-          href: ../installation/office-setup-issues.md
-        - name: Prioritize BITS for Office 2016 updates
-          href: ../installation/prioritize-bits-for-office-2016-updates.md
-        - name: Use SaRA to collect data about Microsoft 365 Apps installations
-          href: ../installation/use-sara-to-collect-install-info.md
-    - name: Loop
-      items:
-        - name: Workspaces are unexpectedly stored in SharePoint Online sites
-          href: ../loop/loop-workspace-unexpectedly-stored-in-sharepoint-online-site.md
-    - name: Mobile
-      items:
-        - name: Block use of Office add-ins from work or school accounts
-          href: ../mobile/prevent-office-add-in-work-account.md
     - name: Office for Mac
       items:
         - name: Known issues with Office for Mac
@@ -306,8 +182,6 @@
       items:
         - name: "0x80004005: General Error Unable to Open Registry Key"
           href: ../office-suite-issues/fails-accessing-page-connected-access-database.md
-        - name: Another account is already signed in
-          href: ../office-suite-issues/another-account-already-signed-in.md
         - name: Applications crash when opening IRM document
           href: ../office-suite-issues/office-applications-crash-when-open-irm-doc.md
         - name: Apps for Office don't start

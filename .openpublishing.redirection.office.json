@@ -376,6 +376,291 @@
       "source_path": "Office/Client/access/your-network-access-was-interrupted-error.md",
       "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/your-network-access-was-interrupted-error",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/activation/0xcaa70007-and-0xcaa80000.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/activation/0xcaa70007-and-0xcaa80000",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/activation/aadsts9002313-invalid-request.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/activation/aadsts9002313-invalid-request",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/activation/account-doesnt-exist.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/activation/account-doesnt-exist",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/activation/account-not-associated-with-office.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/activation/account-not-associated-with-office",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/activation/account-or-subscription-errors.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/activation/account-or-subscription-errors",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/activation/activate-with-product-key.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/activation/activate-with-product-key",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/activation/activation-error-0x80070005.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/activation/activation-error-0x80070005",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/activation/activation-error-0xcaa50021.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/activation/activation-error-0xcaa50021",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/activation/activation-limits.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/activation/activation-limits",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/activation/activation-usage-report-issues.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/activation/activation-usage-report-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/activation/another-account-already-signed-in.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/activation/another-account-already-signed-in",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/activation/cannot-sign-in-microsoft-365-desktop-apps.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/activation/cannot-sign-in-microsoft-365-desktop-apps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/activation/cant-be-used-to-activate.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/activation/cant-be-used-to-activate",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/activation/connection-issue-when-sign-in-office-2016.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/activation/connection-issue-when-sign-in-office-2016",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/activation/device-based-licensing.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/activation/device-based-licensing",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/activation/disabling-adal-wam-not-recommended.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/activation/disabling-adal-wam-not-recommended",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/activation/doesnt-allow-editing-on-mac.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/activation/doesnt-allow-editing-on-mac",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/activation/error-80070520-sign-in-microsoft-365-apps.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/activation/error-80070520-sign-in-microsoft-365-apps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/activation/errors-activating-on-older-windows.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/activation/errors-activating-on-older-windows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/activation/fiddler-trace-logs-for-mfa.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/activation/fiddler-trace-logs-for-mfa",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/activation/issue-when-activate-office-365-proplus.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/activation/issue-when-activate-office-365-proplus",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/activation/issue-when-activate-office-from-office-365.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/activation/issue-when-activate-office-from-office-365",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/activation/license-issue-when-start-office-application.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/activation/license-issue-when-start-office-application",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/activation/license-not-assigned.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/activation/license-not-assigned",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/activation/mac-unknown-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/activation/mac-unknown-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/activation/network-connection-issues.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/activation/network-connection-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/activation/office-365-users-not-signed-in-office.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/activation/office-365-users-not-signed-in-office",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/activation/office-activation-process-issues.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/activation/office-activation-process-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/activation/problem-with-your-account.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/activation/problem-with-your-account",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/activation/product-deactivated.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/activation/product-deactivated",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/activation/run-into-a-problem.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/activation/run-into-a-problem",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/activation/shared-computer-activation.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/activation/shared-computer-activation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/activation/sign-in-issues.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/activation/sign-in-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/activation/sign-in-to-office-2016-for-mac-fail.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/activation/sign-in-to-office-2016-for-mac-fail",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/activation/subscription-expired.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/activation/subscription-expired",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/activation/subscription-issue-in-office-mobile.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/activation/subscription-issue-in-office-mobile",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/activation/temporary-server-issues.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/activation/temporary-server-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/activation/tpm-malfunctioned.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/activation/tpm-malfunctioned",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/activation/unlicensed-product-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/activation/unlicensed-product-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/activation/use-msoaid-for-authentication-issues.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/activation/use-msoaid-for-authentication-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/activation/your-organization-disabled-this-device.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/activation/your-organization-disabled-this-device",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/forms/resolve-file-upload-errors-microsoft-forms.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/forms/resolve-file-upload-errors-microsoft-forms",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/installation/access-denied-error-when-starting-third-party-apps.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/installation/access-denied-error-when-starting-third-party-apps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/installation/automatic-updates.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/installation/automatic-updates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/installation/cannot-access-powershell-file-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/installation/cannot-access-powershell-file-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/installation/error-1935-when-install-office-2010.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/installation/error-1935-when-install-office-2010",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/installation/error-code-30010-45-or-30088-26.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/installation/error-code-30010-45-or-30088-26",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/installation/error-run-office-setup-program.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/installation/error-run-office-setup-program",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/installation/forceupgrade-forcedowngrade-removed-odt-config.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/installation/forceupgrade-forcedowngrade-removed-odt-config",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/installation/how-to-download-office-install-not-in-vlsc.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/installation/how-to-download-office-install-not-in-vlsc",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/installation/install-and-activate-office-2013.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/installation/install-and-activate-office-2013",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/installation/office-setup-issues.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/installation/office-setup-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/installation/prioritize-bits-for-office-2016-updates.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/installation/prioritize-bits-for-office-2016-updates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/installation/use-sara-to-collect-install-info.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/installation/use-sara-to-collect-install-info",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/loop/loop-workspace-unexpectedly-stored-in-sharepoint-online-site.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/loop/loop-workspace-unexpectedly-stored-in-sharepoint-online-site",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/mobile/prevent-office-add-in-work-account.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/mobile/prevent-office-add-in-work-account",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/copilot/copilot-missing-disabled-not-work-correctly.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/copilot/copilot-missing-disabled-not-work-correctly",
+      "redirect_document_id": false
     }
   ]
 }
