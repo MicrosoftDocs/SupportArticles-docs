@@ -23,6 +23,6 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Troubleshoot Azure Private Endpoint connectivity problems
-            url: troubleshoot-private-endpoint-connectivity.md
+            url: troubleshoot-private-endpoint-connectivity-problems.md
           - text: Troubleshoot Azure Private Link Service connectivity problems
             url: troubleshoot-private-link-connectivity.md
