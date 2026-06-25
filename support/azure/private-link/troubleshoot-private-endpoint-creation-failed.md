@@ -620,8 +620,8 @@ c. Select the **Private Link** or private endpoint quota, and include the `x-ms-
 
 ## References
 
-- `[Manage private endpoints in Azure Private Link](/azure/private-link/manage-private-endpoint)`
-- `[Disable network policies for private endpoints](/azure/private-link/disable-private-endpoint-network-policy)`
+- [Manage private endpoints in Azure Private Link](/azure/private-link/manage-private-endpoint)
+- [Disable network policies for private endpoints](/azure/private-link/disable-private-endpoint-network-policy)
 - [Azure resource providers and types](/azure/azure-resource-manager/management/resource-providers-and-types)
 - [Azure subscription and service limits, quotas, and constraints](/azure/azure-resource-manager/management/azure-subscription-service-limits)
 - [What is Azure Private Link?](/azure/private-link/private-link-overview)
