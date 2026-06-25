@@ -10,6 +10,8 @@ items:
     href: troubleshoot-private-endpoint-connectivity-failure.md
   - name: Troubleshoot Azure Private Link Service connectivity problems
     href: troubleshoot-private-link-connectivity.md
+  - name: Troubleshoot Azure private endpoint or Private DNS zone deletion failures
+    href: troubleshoot-private-endpoint-dns-zone-deletion-failed.md
   - name: Troubleshoot private endpoint creation failures in Azure Private Link
     href: troubleshoot-private-endpoint-creation-failed.md
   - name: Troubleshoot Azure Private Link service and resource limits or scale ceilings reached
