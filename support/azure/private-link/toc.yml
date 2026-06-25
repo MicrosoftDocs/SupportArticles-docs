@@ -2,6 +2,8 @@ items:
 - name: Azure Private Link troubleshooting documentation
   href: welcome-azure-private-link.yml
   items:
+  - name: Troubleshoot 403 access denied to Storage or Key Vault through an approved private endpoint
+    href: troubleshoot-403-access-denied-private-endpoint.md
   - name: Troubleshoot AuthorizationFailed and permission errors creating or approving an Azure private endpoint
     href: troubleshoot-private-endpoint-permission-denied.md
   - name: Troubleshoot Azure Private Endpoint connectivity problems
