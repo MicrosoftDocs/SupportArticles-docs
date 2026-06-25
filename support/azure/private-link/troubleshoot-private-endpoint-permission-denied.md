@@ -736,7 +736,7 @@ az network private-endpoint create \
 
 ## References
 
-- `[Troubleshoot private endpoint creation that fails or stalls](/azure/private-link/troubleshoot-private-endpoint-creation-failed)`
+- [Troubleshoot private endpoint creation that fails or stalls](troubleshoot-private-endpoint-creation-failed.md)
 - [Azure built-in roles — Networking](/azure/role-based-access-control/built-in-roles/networking)
 - [Manage a Private Endpoint connection](/azure/private-link/manage-private-endpoint)
 - [Cross-tenant private endpoints](/azure/private-link/private-endpoint-overview#private-link-and-dns-integration)
