@@ -661,6 +661,391 @@
       "source_path": "Office/Client/copilot/copilot-missing-disabled-not-work-correctly.md",
       "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/copilot/copilot-missing-disabled-not-work-correctly",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-for-mac/excel-mac-error-application-quit-unexpectedly.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-for-mac/excel-mac-error-application-quit-unexpectedly",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-for-mac/office-2016-for-mac-64-bit-upgrade.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-for-mac/office-2016-for-mac-64-bit-upgrade",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-for-mac/office-for-mac-issues-macos-10-7.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-for-mac/office-for-mac-issues-macos-10-7",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-for-mac/office-for-mac-prompted-for-authentication.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-for-mac/office-for-mac-prompted-for-authentication",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-for-mac/powerpoint-mac-closes-unexpectedly.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-for-mac/powerpoint-mac-closes-unexpectedly",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/64-bit-cant-install-with-click-to-run.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/64-bit-cant-install-with-click-to-run",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/another-account-already-signed-in.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/another-account-already-signed-in",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/apps-for-office-not-start.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/apps-for-office-not-start",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/background-task-activation-spurious.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/background-task-activation-spurious",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/cannot-access-sharepoint-online-place.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/cannot-access-sharepoint-online-place",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/cannot-guarantee-complete-repair-corrupted-files.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/cannot-guarantee-complete-repair-corrupted-files",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/cannot-install-64-bit-office-with-32-bit.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/cannot-install-64-bit-office-with-32-bit",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/cannot-install-office-add-in.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/cannot-install-office-add-in",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/cannot-locate-server-when-click-hyperlink.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/cannot-locate-server-when-click-hyperlink",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/cannot-open-add-in-from-localhost.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/cannot-open-add-in-from-localhost",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/cant-create-dsn-for-office-system-driver.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/cant-create-dsn-for-office-system-driver",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/click-hyperlink-to-sso-website.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/click-hyperlink-to-sso-website",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/click-to-run-app-repair-process.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/click-to-run-app-repair-process",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/click-to-run-office-on-terminal-server.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/click-to-run-office-on-terminal-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/collect-office-diagnostic-logs.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/collect-office-diagnostic-logs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/compile-error-procedure-too-large.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/compile-error-procedure-too-large",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/control-block-ole-com.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/control-block-ole-com",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/document-information-panel-deprecate.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/document-information-panel-deprecate",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/enable-collaboration.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/enable-collaboration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/enable-disable-hyperlink-warning.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/enable-disable-hyperlink-warning",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/error-open-document.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/error-open-document",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/error-open-word-excel.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/error-open-word-excel",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/errors-when-office-add-ins-start.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/errors-when-office-add-ins-start",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/error-when-starting-apps.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/error-when-starting-apps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/error-when-uninstall-office.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/error-when-uninstall-office",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/fails-accessing-page-connected-access-database.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/fails-accessing-page-connected-access-database",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/fails-embedding-adobe-opentype-font.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/fails-embedding-adobe-opentype-font",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/fails-opening-long-folder-name-files.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/fails-opening-long-folder-name-files",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/file-cannot-be-saved.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/file-cannot-be-saved",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/file-not-found-when-open-file-from-unc.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/file-not-found-when-open-file-from-unc",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/files-fail-to-open.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/files-fail-to-open",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/getobject-createobject-behavior.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/getobject-createobject-behavior",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/install-sara-from-intune.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/install-sara-from-intune",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/invalid-product-key-or-license-mismatch-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/invalid-product-key-or-license-mismatch-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/issue-support-limitations.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/issue-support-limitations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/issue-when-edit-equation-in-office.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/issue-when-edit-equation-in-office",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/manage-office-program-templates.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/manage-office-program-templates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/microsoft-program-cannot-be-opened.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/microsoft-program-cannot-be-opened",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/missing-fonts-opening-documents.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/missing-fonts-opening-documents",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/mobile-viewing-pdf-files.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/mobile-viewing-pdf-files",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/network-document-connection-lost.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/network-document-connection-lost",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/no-default-mail-client-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/no-default-mail-client-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/no-file-previews-file-explorer-switching-to-32-bit.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/no-file-previews-file-explorer-switching-to-32-bit",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/numbering-scheme-for-product-guid.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/numbering-scheme-for-product-guid",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/numbering-scheme-product-code-guids.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/numbering-scheme-product-code-guids",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/office-365-activates-skype.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/office-365-activates-skype",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/office-365-third-party-network-devices.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/office-365-third-party-network-devices",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/office-add-in-not-loaded.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/office-add-in-not-loaded",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/office-applications-crash-when-open-irm-doc.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/office-applications-crash-when-open-irm-doc",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/office-docuemnt-image-quality-loss.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/office-docuemnt-image-quality-loss",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/office-end-user-license-agreement.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/office-end-user-license-agreement",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/office-feature-updates-task-faq.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/office-feature-updates-task-faq",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/office-file-fails-validation.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/office-file-fails-validation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/office-install-error-1401-1402-1406.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/office-install-error-1401-1402-1406",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/office-not-entitled-on-device.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/office-not-entitled-on-device",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/office-not-start-safe-mode-windows.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/office-not-start-safe-mode-windows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/office-opens-outdated-files.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/office-opens-outdated-files",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/office-stops-responding.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/office-stops-responding",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/product-ids-supported-office-deployment-click-to-run.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/product-ids-supported-office-deployment-click-to-run",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/saving-file-to-network-server-slow.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/saving-file-to-network-server-slow",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/set-default-font.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/set-default-font",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/subscription-license-renewal-fail.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/subscription-license-renewal-fail",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/this-file-cant-be-previewed.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/this-file-cant-be-previewed",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/updates-provided-for-nonexistent-office.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/updates-provided-for-nonexistent-office",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/use-multiple-versions-of-office.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/use-multiple-versions-of-office",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/username-contains-special-character.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/username-contains-special-character",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/user-not-seeing-add-ins.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/user-not-seeing-add-ins",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/view-error-signatures.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/view-error-signatures",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/web-page-missing-file-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/web-page-missing-file-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/windows-cannot-access-device.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/windows-cannot-access-device",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/your-system-is-low-on-virtual-memory.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/office-suite-problems/your-system-is-low-on-virtual-memory",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/planner/guests-cannot-comment-assigned-tasks.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/planner/guests-cannot-comment-assigned-tasks",
+      "redirect_document_id": false
     }
   ]
 }
