@@ -20,6 +20,8 @@
   items:
   - name: Troubleshoot portal access issues
     href: authentication/storage-troubleshoot-portal-access-issues.md
+  - name: Troubleshoot PublicAccessNotPermitted error
+    href: authentication/storage-troubleshoot-publicaccessnotpermitted-error.md
   - name: Troubleshoot 403 errors
     href: authentication/storage-troubleshoot-403-errors.md
   - name: Sticky bit causes 403 authorization error
