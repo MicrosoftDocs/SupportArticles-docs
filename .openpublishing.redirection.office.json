@@ -1046,6 +1046,406 @@
       "source_path": "Office/Client/planner/guests-cannot-comment-assigned-tasks.md",
       "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/planner/guests-cannot-comment-assigned-tasks",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/powerpoint/cannot-edit-video-or-audio.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/powerpoint/cannot-edit-video-or-audio",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/powerpoint/cannot-use-videos-as-slide-backgrounds.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/powerpoint/cannot-use-videos-as-slide-backgrounds",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/powerpoint/change-export-slide-resolution.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/powerpoint/change-export-slide-resolution",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/powerpoint/damaged-presentation.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/powerpoint/damaged-presentation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/powerpoint/fails-starting-powerpoint-mac.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/powerpoint/fails-starting-powerpoint-mac",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/powerpoint/files-not-rendering-office-online-server-after-security-update.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/powerpoint/files-not-rendering-office-online-server-after-security-update",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/powerpoint/fonts-not-embedded.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/powerpoint/fonts-not-embedded",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/powerpoint/not-enought-printer-memory-available.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/powerpoint/not-enought-printer-memory-available",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/powerpoint/office-opens-blank-from-sharepoint.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/powerpoint/office-opens-blank-from-sharepoint",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/powerpoint/powerpoint-fails-loading-add-in.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/powerpoint/powerpoint-fails-loading-add-in",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/powerpoint/powerpoint-stops-responding.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/powerpoint/powerpoint-stops-responding",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/powerpoint/save-presentation-as-webpage-unavailable.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/powerpoint/save-presentation-as-webpage-unavailable",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/powerpoint/slide-transition-sounds-missing.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/powerpoint/slide-transition-sounds-missing",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/powerpoint/viewing-presentation-fails.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/powerpoint/viewing-presentation-fails",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/project/cant-save-to-global.mpt-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/project/cant-save-to-global",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/project/circular-relationship-error-when-indenting-task.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/project/circular-relationship-error-when-indenting-task",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/project/custom-toolbarribbon-available-to-all-users.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/project/custom-toolbarribbon-available-to-all-users",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/project/definition-of-project-constraints.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/project/definition-of-project-constraints",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/project/error-when-access-pwa.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/project/error-when-access-pwa",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/project/error-when-add-edit-resource.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/project/error-when-add-edit-resource",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/project/gantt-chart-usage-view-print-issues.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/project/gantt-chart-usage-view-print-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/project/import-task-outline-structure.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/project/import-task-outline-structure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/project/print-gantt-chart-view-without-table.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/project/print-gantt-chart-view-without-table",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/project/progress-bars-not-drawn-for-tasks.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/project/progress-bars-not-drawn-for-tasks",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/project/remove-leading-split-in-task.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/project/remove-leading-split-in-task",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/project/running-macro-automatically-when-starting.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/project/running-macro-automatically-when-starting",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/project/sync-with-tasks-from-project.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/project/sync-with-tasks-from-project",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/project/tasks-not-scheduled.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/project/tasks-not-scheduled",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/settings/clear-most-recently-used-file.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/settings/clear-most-recently-used-file",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/settings/file-blocked-in-office.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/settings/file-blocked-in-office",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/settings/how-to-securely-open-office-documents-that-have-dde-fields.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/settings/how-to-securely-open-office-documents-that-have-dde-fields",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/settings/how-to-use-problem-steps-recorder.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/settings/how-to-use-problem-steps-recorder",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/settings/office-display-issues.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/settings/office-display-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/sway/disabled-sway-tile-appear.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/sway/disabled-sway-tile-appear",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/third-party-add-ins/converter-sspdfcg-x64.cnv.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/third-party-add-ins/converter-sspdfcg-x64",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/third-party-add-ins/incompatibilities-between-office-and-adobe.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/third-party-add-ins/incompatibilities-between-office-and-adobe",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/third-party-add-ins/office-crash-with-sendtobluetooth.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/third-party-add-ins/office-crash-with-sendtobluetooth",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/third-party-add-ins/third-party-installed-font-fails-appearing.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/third-party-add-ins/third-party-installed-font-fails-appearing",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/visio/cant-change-text-or-shape-fill-color.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/visio/cant-change-text-or-shape-fill-color",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/visio/create-flexible-organization-charts-visio.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/visio/create-flexible-organization-charts-visio",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/visio/data-graphics-not-displayed.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/visio/data-graphics-not-displayed",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/visio/file-blocked-by-registry-policy.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/visio/file-blocked-by-registry-policy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/visio/fit-to-drawing-command-not-work.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/visio/fit-to-drawing-command-not-work",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/visio/not-a-valid-win32-application-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/visio/not-a-valid-win32-application-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/visio/open-visio-files-in-visio-web-access.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/visio/open-visio-files-in-visio-web-access",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/visio/search-for-shapes-use-windows-search.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/visio/search-for-shapes-use-windows-search",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/visio/troubleshoot-damaged-drawings.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/visio/troubleshoot-damaged-drawings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/word/cant-use-mouse-draw-selection-rectangle.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/word/cant-use-mouse-draw-selection-rectangle",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/word/configure-search-engine-in-word.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/word/configure-search-engine-in-word",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/word/connector-not-move-with-shapes.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/word/connector-not-move-with-shapes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/word/corrupt-global-template-causes-errors-automating-word.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/word/corrupt-global-template-causes-errors-automating-word",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/word/create-toc-entries-no-page-number.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/word/create-toc-entries-no-page-number",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/word/cross-reference-links-update.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/word/cross-reference-links-update",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/word/custom-xml-elements-not-supported.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/word/custom-xml-elements-not-supported",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/word/damaged-documents-in-word.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/word/damaged-documents-in-word",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/word/document-building-blocks-missing.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/word/document-building-blocks-missing",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/word/embedded-doc-with-activex-control-flickers.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/word/embedded-doc-with-activex-control-flickers",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/word/end-tag-error-when-open-docx.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/word/end-tag-error-when-open-docx",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/word/fails-clear-embed-linguistic-data-check-box.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/word/fails-clear-embed-linguistic-data-check-box",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/word/file-larger-than-512-megabytes.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/word/file-larger-than-512-megabytes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/word/headers-footers-remain-after-remove-sensitivity-label.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/word/headers-footers-remain-after-remove-sensitivity-label",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/word/image-dpi-change-after-print-to-pdf.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/word/image-dpi-change-after-print-to-pdf",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/word/image-part-relationship-rld8-not-found-error-microsoft-word.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/word/image-part-relationship-rld8-not-found-error-microsoft-word",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/word/issues-when-start-or-use-word.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/word/issues-when-start-or-use-word",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/word/mail-merge-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/word/mail-merge-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/word/merge-word-documents.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/word/merge-word-documents",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/word/not-recognize-misspelled-words-in-word.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/word/not-recognize-misspelled-words-in-word",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/word/object-not-appear-in-word-2010.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/word/object-not-appear-in-word-2010",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/word/operating-parameter-limitation.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/word/operating-parameter-limitation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/word/performance-issue-on-autorecover-location.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/word/performance-issue-on-autorecover-location",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/word/printer-fonts-in-word.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/word/printer-fonts-in-word",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/word/recover-lost-unsaved-corrupted-document.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/word/recover-lost-unsaved-corrupted-document",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/word/reset-options-and-settings-in-word.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/word/reset-options-and-settings-in-word",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/word/save-as-dialog-box-appears-two-times.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/word/save-as-dialog-box-appears-two-times",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/word/save-changes-to-global-template.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/word/save-changes-to-global-template",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/word/spell-checker-not-check-form-field-text.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/word/spell-checker-not-check-form-field-text",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/word/spelling-grammar-checker-underline-color.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/word/spelling-grammar-checker-underline-color",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/word/track-changes-disabled.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/word/track-changes-disabled",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/word/word-stops-responding.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/word/word-stops-responding",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/word/autoexec-autoopen-macros-word.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/word/autoexec-autoopen-macros-word",
+      "redirect_document_id": false
     }
   ]
 }
