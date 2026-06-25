@@ -51,7 +51,7 @@ The most common root causes of these issues are:
 - A PFX certificate is uploaded to Key Vault in the wrong format (missing private key, wrong encoding, or incomplete chain).
 
 > [!NOTE]
-> This article describes listener certificate issues. Application Gateway can't retrieve or use the TLS certificate from Key Vault for its HTTPS listeners. For back-end TLS certificate chain issues (such as common name (CN) or subject alternative name (SAN) mismatches or missing intermediate CAs between Application Gateway and the back-end server), see `[Troubleshoot HTTP 502 errors — Resolution F](troubleshoot-http-502-bad-gateway.md#resolution-f)`.
+> This article describes listener certificate issues. Application Gateway can't retrieve or use the TLS certificate from Key Vault for its HTTPS listeners. For back-end TLS certificate chain issues (such as common name (CN) or subject alternative name (SAN) mismatches or missing intermediate CAs between Application Gateway and the back-end server), see [Troubleshoot HTTP 502 errors — Resolution F](troubleshoot-http-502-bad-gateway.md#resolution-f).
 
 ## Symptoms
 

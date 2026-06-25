@@ -6685,6 +6685,10 @@
         {
         "source_path": "load-balancer/load-balancer-troubleshoot.md ",
         "redirect_url": "/troubleshoot/azure/load-balancer/troubleshoot-common-problems/load-balancer-troubleshoot"
+      },
+        {
+        "source_path": "private-link/troubleshoot-private-endpoint-connectivity.md",
+        "redirect_url": "/troubleshoot/azure/private-link/troubleshoot-private-endpoint-connectivity-problems.md"
       }
   ]
 }
