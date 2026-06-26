@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Operating System Disk Sector Size Greater Than 4 KB
 description: This article troubleshoots SQL Server installation or startup failures related to some new storage devices and device drivers exposing a disk sector size greater than the supported 4-KB sector size.
-ms.date: 04/17/2025
+ms.date: 06/25/2026
 ms.custom: sap:File, Filegroup, Database Operations or Corruption
 ms.reviewer: dpless, briancarrig, sureshka, rdorr, jopilov
 author: WilliamDAssafMSFT
@@ -10,15 +10,15 @@ ms.author: wiassaf
 
 # Troubleshoot SQL Server errors related to system disk sector size greater than 4 KB
 
-This article provides solutions for troubleshooting errors during installation or starting an instance of SQL Server on Windows. This article is valid for all released versions of SQL Server.
+## Summary
 
-This article discusses errors related to system disk sector size greater than 4 KB. When you try to install a SQL Server instance on a machine with system disk sector size greater than 4 KB, you might encounter the following scenarios:
+This article provides solutions to troubleshoot SQL Server installation and startup failures that are caused by a system disk sector size greater than the supported 4 KB. These errors occur when modern storage devices, such as NVMe solid-state drives (SSDs), report a system disk sector size larger than 4 KB. Symptoms include SQL Setup failures, errors 5178 and 5179, a failed Database Engine startup or recovery handle, "misaligned log IOs" warnings, and `ntdll.dll` application faults. The solutions apply to all released versions of SQL Server, including LocalDB.
 
-_Applies to_: &nbsp; SQL Server all versions
+Installing SQL Server on a machine with a system disk sector size greater than 4 KB can result in the following scenarios.
 
 ## Scenario 1: Move the file to a volume with a compatible sector size
 
-If you try to use sector size greater than 4 KB, you see the following error message:
+When you try to use sector size greater than 4 KB, you see the following error message:
 
 ```output
 Error: 5179, Severity: 16, State: 1.
@@ -27,7 +27,7 @@ Cannot use file 'data file path', because it is on a volume with sector size 819
 
 ## Scenario 2: Could not find the Database Engine startup handle
 
-When you try to install a SQL Server instance on an Azure virtual machine (VM) running Windows, the installation fails, and you receive the following error message in the SQL Server error log when the engine tries to start during the installation:
+When you try to install a SQL Server instance on an Azure virtual machine (VM) running Windows, the installation fails, and you receive the following error message in the [SQL Server error log](/sql/tools/configuration-manager/viewing-the-sql-server-error-log?view=sql-server-ver16&preserve-view=true) when the engine tries to start during the installation:
 
 > Cannot use file '...\master.mdf' because it was originally formatted with sector size 4096 and is now on a volume with sector size 8192. Move the file to a volume with a sector size that is the same as or smaller than the original sector size.
 
@@ -48,7 +48,7 @@ For more information, see [SQL Server installation fails with sector size error 
 
 ## Scenario 3: Wait on the Database Engine recovery handle failed
 
-When you install any version of SQL Server, you see errors that resemble the following message for the Database Engine Services component of SQL Server:
+When you install any version of SQL Server, you see the following error for the Database Engine Services component of SQL Server:
 
 ```output
 Feature: Database Engine Services 
@@ -99,7 +99,7 @@ You install LocalDB on a Windows 11 device and the setup fails. In the SQL Serve
 2021-12-15 23:25:04.28 spid5s      Cannot use file 'C:\Users\Administrator\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\TestInstance\master.mdf' because it was originally formatted with sector size 4096 and is now on a volume with sector size 16384. Move the file to a volume with a sector size that is the same as or smaller than the original sector size.
 ```
 
-In the Windows 11 Application Event Log, you notice the following entries:
+In the [Windows Application Event Log](/sql/tools/configuration-manager/viewing-the-windows-application-log?view=sql-server-ver16&preserve-view=true) on the Windows 11 device, you notice the following entries:
 
 ```output
 Message            : Windows API call WaitForMultipleObjects returned error code: 575. Windows system error message is: {Application Error}
@@ -131,12 +131,12 @@ For example, to analyze the E: volume, run the following command:
 fsutil fsinfo sectorinfo E:
 ```
 
-Look for the values `PhysicalBytesPerSectorForAtomicity` and `PhysicalBytesPerSectorForPerformance`, returned in bytes, and if they're different, retain the _largest_ one to ascertain the disk sector size. A value of 4096 indicates a sector storage size of 4 KB.
+Look for the values `PhysicalBytesPerSectorForAtomicity` and `PhysicalBytesPerSectorForPerformance`, returned in bytes. If they're different, retain the _largest_ one to ascertain the disk sector size. A value of 4096 indicates a sector storage size of 4 KB.
 
-Additionally, be aware of the Windows support policy for file system and storage sector size support. For more information, see the [Microsoft support policy for 4-KB sector hard drives in Windows](../../../windows-server/backup-and-storage/support-policy-4k-sector-hard-drives.md) article.
+Additionally, refer to the [Microsoft support policy for 4-KB sector hard drives in Windows](../../../windows-server/backup-and-storage/support-policy-4k-sector-hard-drives.md) article.
 
 > [!NOTE]
-> There's no released version of SQL Server compatible with sector sizes greater than 4 KB. For more information, see the [Hard disk drive sector-size support boundaries in SQL Server](https://support.microsoft.com/topic/hard-disk-drive-sector-size-support-boundaries-in-sql-server-4d5b73fa-7dc4-1d8a-2735-556e6b60d046) article.
+> There's no released version of SQL Server compatible with sector sizes greater than 4 KB. For more information, see [Hard disk drive sector-size support boundaries in SQL Server](https://support.microsoft.com/topic/hard-disk-drive-sector-size-support-boundaries-in-sql-server-4d5b73fa-7dc4-1d8a-2735-556e6b60d046).
 
 ## Resolution steps for disk sector size errors in SQL Server
 
@@ -166,7 +166,7 @@ Additionally, be aware of the Windows support policy for file system and storage
      REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\stornvme\Parameters\Device" /v "ForcedPhysicalSectorSizeInBytes" /t   REG_MULTI_SZ /d "* 4095" /f
      ```
 
-  1. Run the following command to validate if the key is added successfully:
+  1. Run the following command to check if the key is added successfully:
 
      ```console
      REG QUERY "HKLM\SYSTEM\CurrentControlSet\Services\stornvme\Parameters\Device" /v 
@@ -182,7 +182,7 @@ Additionally, be aware of the Windows support policy for file system and storage
      New-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\stornvme\Parameters\Device" -Name   "ForcedPhysicalSectorSizeInBytes" -PropertyType MultiString        -Force -Value "* 4095"
      ```
 
-  1. Run the following command to validate if the key is added successfully:
+  1. Run the following command to check if the key is added successfully:
 
      ```Powershell
      Get-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\stornvme\Parameters\Device" -Name   "ForcedPhysicalSectorSizeInBytes"
@@ -192,15 +192,15 @@ Additionally, be aware of the Windows support policy for file system and storage
 - If you don't add the registry key and you have multiple drives on this system, you can specify a different location for the database files after the installation of SQL Server is complete. Make sure that the drive reflects a supported sector size when querying the `fsutil` commands. SQL Server currently supports sector storage sizes of 512 bytes and 4,096 bytes.
 
 > [!CAUTION]
-> If you've already created a storage pool with disks that have a sector size greater than 4 KB to host SQL Server files, you must first remove the storage pool, apply one of the troubleshooting methods mentioned in this article, and then rebuild the storage pool before attempting to install SQL Server on the storage pool or pools.
+> If you already created a storage pool with disks that have a sector size greater than 4 KB to host SQL Server files, you must first remove the storage pool, apply one of the troubleshooting methods mentioned in this article, and then rebuild the storage pool before attempting to install SQL Server on the storage pool or pools.
 
 ## More information
 
 Windows 11 native NVMe drivers were updated to include the actual sector size reported directly by the NVMe storage devices. This was done rather than relying on the information that's emulated from the filesystem drivers.  
 
-The Windows 10 drivers don't report the source sector size of the physical storage.  
+Windows 10 drivers don't report the source sector size of the physical storage.  
 
-The improved Windows 11 drivers disregard the emulation that common NVMe storage devices are using. As an example, `fsutil` displays a sector size of 8 KB or 16 KB, rather than emulating the required 4-KB sector size required by Windows.
+The improved Windows 11 drivers disregard the emulation that common NVMe storage devices use. As an example, `fsutil` displays a sector size of 8 KB or 16 KB, rather than emulating the required 4-KB sector size required by Windows.
 
 The following table provides a comparison of the sector sizes reported by the operating systems. This example illustrates the differences between Windows 10 and Windows 11 using the same storage device. For the values of `PhysicalBytesPerSectorForAtomicity` and `PhysicalBytesPerSectorForPerformance`, Windows 10 displays 4 KB and Windows 11 displays 16 KB.
 
@@ -222,5 +222,4 @@ The following table provides a comparison of the sector sizes reported by the op
 ## Related content
 
 - [SQL Server storage types for data files](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2019?view=sql-server-ver16&preserve-view=true#StorageTypes)
-- [KB3009974 - FIX: Slow synchronization when disks have different sector sizes for primary and secondary replica log files in SQL Server AG and Logshipping environments](https://support.microsoft.com/topic/kb3009974-fix-slow-synchronization-when-disks-have-different-sector-sizes-for-primary-and-secondary-replica-log-files-in-sql-server-ag-and-logshipping-environments-ed181bf3-ce80-b6d0-f268-34135711043c)
 - [SQL Server LocalDB](/sql/database-engine/configure-windows/sql-server-express-localdb)
