@@ -20,7 +20,7 @@ _Original KB number:_ &nbsp; 3087759
 
 ## Links to download the Administrative Templates files based on the operating system version
 
-- [Administrative Templates (.admx) for Windows 11 2025 Update (25H2)](https://www.microsoft.com/download/details.aspx?id=108394)
+- [Administrative Templates (.admx) for Windows 11 2025 Update (25H2) - v2.0](https://www.microsoft.com/download/details.aspx?id=108428)
 - [Administrative Templates (.admx) for Windows 11 2024 Update (24H2)](https://www.microsoft.com/download/details.aspx?id=106254)
 - [Administrative Templates (.admx) for Windows 11 2023 Update (23H2)](https://www.microsoft.com/download/details.aspx?id=105667)
 - [Administrative Templates (.admx) for Windows 11 2022 Update (22H2) - v3.0](https://www.microsoft.com/download/details.aspx?id=105390)
@@ -33,7 +33,7 @@ _Original KB number:_ &nbsp; 3087759
 
 To view ADMX spreadsheets of the new settings that are available in later operating system versions, see the following spreadsheets:
 
-- [Group Policy Settings Reference Spreadsheet for Windows 11 2025 Update (25H2)](https://www.microsoft.com/download/details.aspx?id=108395)
+- [Group Policy Settings Reference Spreadsheet for Windows 11 2025 Update (25H2) - v2.0](https://www.microsoft.com/download/details.aspx?id=108431)
 - [Group Policy Settings Reference Spreadsheet for Windows 11 2024 Update (24H2)](https://www.microsoft.com/download/details.aspx?id=106255)
 - [Group Policy Settings Reference Spreadsheet for Windows 11 2023 Update (23H2) - v2.0](https://www.microsoft.com/download/details.aspx?id=106067)
 - [Group Policy Settings Reference Spreadsheet for Windows 11 2023 Update (23H2)](https://www.microsoft.com/download/details.aspx?id=105668)
