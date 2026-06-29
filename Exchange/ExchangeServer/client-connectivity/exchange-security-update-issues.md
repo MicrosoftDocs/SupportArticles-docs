@@ -13,16 +13,34 @@ ms.custom:
   - CI 145217
   - CI 3850
 appliesto:
-  - Exchange Server 2019
-  - Exchange Server 2016
+  - Exchange Server SE
 search.appverid: MET150
 ms.reviewer: batre, meerak, v-shorestris
-ms.date: 02/27/2025
+ms.date: 06/29/2026
 ---
 
 # Fix failed Exchange Server updates
 
-If you encounter an error when you try to install a cumulative update (CU) or security update (SU) for Microsoft Exchange Server, select the applicable error description from the list at the top of the article, and follow the appropriate resolution.
+If you encounter an error when you try to install a cumulative update (CU) or security update (SU) for Microsoft Exchange Server, select the applicable error description from the list, and follow the appropriate resolution.
+
+## Insert the 'Microsoft Exchange Server' disk
+
+### Issue
+
+You see the following error message when you either install or uninstall an Exchange CU:
+
+> The feature you are trying to use is on a CD-ROM or other removable disk that is not available.
+> Insert the 'Microsoft Exchange Server' disk and click OK.
+> :::image type="content" source="media/exchange-security-update-issues/insert-disk-error.png" alt-text="Screenshot of the error to insert the Microsoft Exchange Server disk.":::
+
+### Resolution
+
+1. Determine the version of the Exchange CU that's installed. 
+   Navigate to **Control Panel** > **Uninstall a program** and make a note of the Exchange CU that's installed.
+1. [Download the ISO for the CU you identified in step 1](/exchange/new-features/build-numbers-and-release-dates).
+1. Mount the ISO (for example, to drive `E:`).
+1. When the dialog appears, browse to the mounted Exchange media (usually the root of the ISO or the location of `ExchangeServer.msi`).
+1. Continue the setup.
 
 ## HTTP 500 errors in Outlook on the web or ECP
 
@@ -502,7 +520,7 @@ Use the following steps to remove the invalid object entry:
 
 If the script prompts you to verify the results, follow these steps:
 
-   1. Review the _ExchangeContainerImport.txt_ file for the changes that were made by the script.
+1. Review the _ExchangeContainerImport.txt_ file for the changes that were made by the script.
 
    2. Import the _ExchangeContainerImport.txt_ file into Active Directory by following the instructions that are provided by the script.
 
@@ -611,38 +629,39 @@ Use the following steps to check the state of Microsoft Exchange services and, i
 
 1. Restart the Exchange server on which the installation failed.
 
-2. Run the following PowerShell command to check the state of Exchange services:
+1. Run the following PowerShell command to check the state of Exchange services:
 
    ```PS
    Get-Service -DisplayName "Microsoft Exchange*" | FT DisplayName, StartType, Status
    ```
-
+   
    > [!NOTE]
    > By default, the POP3 and IMAP4 services (MSExchangeIMAP4, MSExchangeIMAP4BE, MSExchangePOP3, and MSExchangePOP3BE) are stopped and not set to automatically start. Don't configure POP3 and IMAP4 services to run unless users require them.
    > Check the Exchange log that's located at _C:\ExchangeSetupLogs\ServiceControl.log_ to see which Exchange services were disabled during a CU or SU installation. Restore only the Exchange services that were active before the installation attempt.
-
-3. If the value of the **StartType** parameter for an Exchange service is `Disabled`, run the following commands in PowerShell to restore the value to `Automatic`:​​
+   
+   
+1. If the value of the **StartType** parameter for an Exchange service is `Disabled`, run the following commands in PowerShell to restore the value to `Automatic`:​​
 
    ```PS
    cd "C:\Program Files\Microsoft\Exchange Server\V15\Bin"
    ​​​​​​Add-PSSnapin -Name Microsoft.Exchange.Management.PowerShell.Setup -ErrorAction SilentlyContinue
    .\ServiceControl.ps1 AfterPatch
    ```
-
+   
    ​​​​​You can confirm that the value of the **StartType** parameter is `Automatic` by running the following PowerShell command:
-
+   
    ```PS
    Get-Service -DisplayName "Microsoft Exchange*" | FT DisplayName, StartType, Status
    ```
-
-4. Run the following PowerShell command to manually start all Exchange services:
+   
+1. Run the following PowerShell command to manually start all Exchange services:
 
    ```PS
    Get-Service -DisplayName "Microsoft Exchange*" | Start-Service
    ```
-
+   
    Or, run the following command to manually start all services except POP3 and IMAP4 services:
-
+   
    ```PS
    Get-Service -DisplayName "Microsoft Exchange*" | Where-Object { $_.DisplayName -notlike "*POP3*" -and $_.DisplayName -notlike "*IMAP4*" } | Start-Service
    ```
