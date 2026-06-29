@@ -2,15 +2,15 @@
 title: Resolve upload errors and warnings related to employee ID updates
 description: Fix errors and warnings that occur when you update employee IDs by uploading a file to Microsoft Viva Glint.
 manager: dcscontentpm
-ms.reviewer: aweixelman
-ms.date: 12/10/2024
+ms.reviewer: amywheater
+ms.date: 06/26/2026
 audience: ITPro
 ms.topic: troubleshooting
 search.appverid: MET150
 ms.custom: 
-  - sap:User Management\Add or Remove or Update users
-  - CSSTroubleshoot
-  - CI2675
+- sap:User Management\Add or Remove or Update users
+- CSSTroubleshoot
+- CI2675
 ---
 
 # Resolve upload errors and warnings related to employee ID updates
