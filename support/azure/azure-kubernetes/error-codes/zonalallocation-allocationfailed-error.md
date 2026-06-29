@@ -1,11 +1,11 @@
 ---
 title: Troubleshoot the ZonalAllocationFailed, AllocationFailed, or OverconstrainedAllocationRequest error code
 description: Troubleshoot ZonalAllocationFailed and AllocationFailed errors in AKS create or update operations. Follow steps to fix capacity constraints quickly.
-ms.date: 09/05/2024
+ms.date: 06/12/2026
 author: axelgMS
 ms.author: axelg
 editor: v-jsitser
-ms.reviewer: rissing, chiragpa, erbookbi, v-weizhu, v-ryanberg
+ms.reviewer: rissing, chiragpa, erbookbi, andraciobanu
 ms.service: azure-kubernetes-service
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
@@ -17,7 +17,7 @@ This article describes how to identify and resolve the `ZonalAllocationFailed`, 
 
 ## Prerequisites
 
-- [Azure CLI](/cli/azure/install-azure-cli) (optional), version 2.0.59, or a later version. If Azure CLI is already installed, you can find the version number by using `az --version`.
+- [Azure CLI](/cli/azure/install-azure-cli) (optional), version 2.86.0, or a later version. If Azure CLI is already installed, you can find the version number by using `az --version`.
 
 - [Azure PowerShell](/powershell/azure/install-az-ps) (optional).
 

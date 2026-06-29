@@ -1,8 +1,8 @@
 ---
 title: Tunnel connectivity issues
 description: Resolve tunnel connectivity issues in your Azure Kubernetes Service (AKS) cluster to restore logs, exec, and port-forward access. Follow the troubleshooting steps.
-ms.date: 03/23/2025
-ms.reviewer: chiragpa, andbar, v-leedennis, v-weizhu, albarqaw
+ms.date: 06/18/2026
+ms.reviewer: chiragpa, andbar, v-leedennis, v-weizhu, albarqaw, andraciobanu
 ms.service: azure-kubernetes-service
 keywords: Azure Kubernetes Service, AKS cluster, Kubernetes cluster, tunnels, connectivity, tunnel-front, aks-link, Konnectivity agent, Cluster Proportional Autoscaler, CPA, Resource allocation, Performance bottlenecks, Networking reliability, Azure Kubernetes troubleshooting, AKS performance issues
 #Customer intent: As an Azure Kubernetes user, I want to avoid tunnel connectivity issues so that I can use an Azure Kubernetes Service (AKS) cluster successfully.
@@ -12,12 +12,14 @@ ms.custom: sap:Connectivity
 
 ## Summary
 
-Tunnel connectivity issues in Azure Kubernetes Service (AKS) can disrupt secure communication between cluster nodes and the control plane. This article explains how to troubleshoot and resolve these issues to restore expected cluster operations.
+Tunnel connectivity problems in Azure Kubernetes Service (AKS) can disrupt secure communication between cluster nodes and the control plane. This article explains how to troubleshoot and resolve these problems to restore expected cluster operations.
+
+Tunnel connectivity is used specifically for API server to kubelet communication (not general pod-to-pod) or ingress traffic.
 
 :::image type="content" source="./media/tunnel-connectivity-issues/kubernetes-tunnel-architecture.png" alt-text="Screenshot of AKS tunnel architecture showing node-to-control-plane communication through the tunnel pod." border="false" lightbox="./media/tunnel-connectivity-issues/kubernetes-tunnel-architecture.png":::
 
 > [!NOTE]
-> Previously, the AKS tunnel component was `tunnel-front`. It has now been migrated to the [Konnectivity service](https://kubernetes.io/docs/concepts/architecture/control-plane-node-communication/#konnectivity-service), an upstream Kubernetes component. For more information about this migration, see the [AKS release notes and changelog](https://github.com/Azure/AKS/blob/master/CHANGELOG.md).
+> Previously, the AKS tunnel component was `tunnel-front`. It's now migrated to the [Konnectivity service](https://kubernetes.io/docs/concepts/architecture/control-plane-node-communication/#konnectivity-service), an upstream Kubernetes component. For more information about this migration, see the [AKS release notes and changelog](https://github.com/Azure/AKS/blob/master/CHANGELOG.md).
 
 ## Prerequisites
 
@@ -27,32 +29,34 @@ Tunnel connectivity issues in Azure Kubernetes Service (AKS) can disrupt secure 
 
 You receive an error message that resembles the following examples about port 10250:
 
-> Error from server: Get "https\://\<aks-node-name>:10250/containerLogs/\<namespace>/\<pod-name>/\<container-name>": dial tcp \<aks-node-ip>:10250: i/o timeout
+- Error from server: `Get "https\://\<aks-node-name>:10250/containerLogs/\<namespace>/\<pod-name>/\<container-name>": dial tcp \<aks-node-ip>:10250: i/o timeout`
 
-> Error from server: error dialing backend: dial tcp \<aks-node-ip>:10250: i/o timeout
+- Error from server: `error dialing backend: dial tcp \<aks-node-ip>:10250: i/o timeout`
 
-> Error from server: Get "https\://\<aks-node-name>:10250/containerLogs/\<namespace>/\<pod-name>/\<container-name>": http: server gave HTTP response to HTTPS client
+- Error from server: `Get "https\://\<aks-node-name>:10250/containerLogs/\<namespace>/\<pod-name>/\<container-name>": http: server gave HTTP response to HTTPS client`
 
-The Kubernetes API server uses port 10250 to connect to a node's kubelet to retrieve the logs. If port 10250 is blocked, the kubectl logs and other features will only work for pods that run on the nodes in which the tunnel component is scheduled. For more information, see [Kubernetes ports and protocols: Worker nodes](https://kubernetes.io/docs/reference/ports-and-protocols/#node).
+The Kubernetes API server uses port 10250 to connect to a node's kubelet to retrieve the logs. If port 10250 is blocked, the `kubectl logs` and other features only work for pods that run on the nodes where the tunnel component is scheduled. This condition often results in partial failures, where commands succeed for some pods but fail for others depending on node placement.
 
-Because the tunnel components or the connectivity between the server and client can't be established, functionality such as the following won't work as expected:
+For more information, see [Kubernetes ports and protocols: Worker nodes](https://kubernetes.io/docs/reference/ports-and-protocols/#node).
+
+Because the tunnel components or the connectivity between the server and client can't be established, functionality such as the following features doesn't work as expected:
 
 - Admission controller webhooks
 
-- Ability of log retrieval (using the [kubectl logs](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#logs) command)
+- Ability to retrieve logs (using the [kubectl logs](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#logs) command)
 
 - Running a command in a container or getting inside a container (using the [kubectl exec](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#exec) command)
 
 - Forwarding one or more local ports of a pod (using the [kubectl port-forward](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#port-forward) command)
 
-## Cause 1: A network security group (NSG) is blocking port 10250
+## Cause 1: A network security group (NSG) blocks port 10250
 
 > [!NOTE]
-> This cause is applicable to any tunnel components that you might have in your AKS cluster.
+> This cause applies to any tunnel components that you might have in your AKS cluster.
 
-You can use an [Azure network security group](/azure/virtual-network/network-security-groups-overview) (NSG) to filter network traffic to and from Azure resources in an Azure virtual network. A network security group contains security rules that allow or deny inbound and outbound network traffic between several types of Azure resources. For each rule, you can specify source and destination, port, and protocol. For more information, see [How network security groups filter network traffic](/azure/virtual-network/network-security-group-how-it-works).
+Use an [Azure network security group](/azure/virtual-network/network-security-groups-overview) (NSG) to filter network traffic to and from Azure resources in an Azure virtual network. A network security group contains security rules that allow or deny inbound and outbound network traffic between several types of Azure resources. For each rule, you can specify source and destination, port, and protocol. For more information, see [How network security groups filter network traffic](/azure/virtual-network/network-security-group-how-it-works).
 
-If the NSG blocks port 10250 at the virtual network level, tunnel functionalities (such as logs and code execution) will work for only the pods that are scheduled on the nodes where tunnel pods are scheduled. The other pods won't work because their nodes won't be able to reach the tunnel, and the tunnel is scheduled on other nodes. To verify this state, you can test the connectivity by using [netcat](https://nc110.sourceforge.io/) (`nc`) or telnet commands. You can run the [az vmss run-command invoke](/cli/azure/vmss/run-command#az-vmss-run-command-invoke) command to conduct the connectivity test and verify whether it succeeds, times out, or causes some other issue:
+If the NSG blocks port 10250 at the virtual network level, tunnel functionalities (such as logs and code execution) work only for the pods that are scheduled on the nodes where tunnel pods are scheduled. The other pods don't work because their nodes can't reach the tunnel, and the tunnel is scheduled on other nodes. To verify this state, test the connectivity by using [netcat](https://nc110.sourceforge.io/) (`nc`) or telnet commands. Run the [az vmss run-command invoke](/cli/azure/vmss/run-command#az-vmss-run-command-invoke) command to conduct the connectivity test and verify whether it succeeds, times out, or causes some other issue:
 
 ```azurecli
 az vmss run-command invoke --resource-group <infra-or-MC-resource-group> \
@@ -66,25 +70,29 @@ az vmss run-command invoke --resource-group <infra-or-MC-resource-group> \
 
 ### Solution 1: Add an NSG rule to allow access to port 10250
 
-If you use an NSG, and you have specific restrictions, make sure that you add a security rule that allows traffic for port 10250 at the virtual network level. The following [Azure portal](https://portal.azure.com) image shows an example security rule:
+If you use an NSG and you have specific restrictions, make sure that you add a security rule that allows traffic for port 10250 at the virtual network level. The following [Azure portal](https://portal.azure.com) image shows an example security rule:
 
 :::image type="content" source="./media/tunnel-connectivity-issues/add-inbound-security-rule.png" alt-text="Screenshot of the Add inbound security rule pane in the Azure portal. The Destination port ranges box is set to 10250 for the new security rule.":::
 
 If you want to be more restrictive, you can allow access to port 10250 at the subnet level only.
 
 > [!NOTE]
-> - The **Priority** field must be adjusted accordingly. For example, if you have a rule that denies multiple ports (including port 10250), the rule that's shown in the image should have a lower priority number (lower numbers have higher priority). For more information about **Priority**, see [Security rules](/azure/virtual-network/network-security-groups-overview#security-rules).
->
-> - If you don't see any behavioral change after you apply this solution, you can re-create the tunnel component pods. Deleting these pods causes them to be re-created.
+> Adjust the **Priority** field accordingly. For example, if you have a rule that denies multiple ports (including port 10250), the rule that's shown in the preceding image should have a lower priority number (lower numbers have higher priority). For more information about **Priority**, see [Security rules](/azure/virtual-network/network-security-groups-overview#security-rules). If you don't see any behavioral change after you apply this solution, you can re-create the tunnel component pods. Deleting these pods causes them to be re-created.
 
-## Cause 2: The Uncomplicated Firewall (UFW) tool is blocking port 10250
+- Validate NSG rules for inbound and outbound port 10250.
+- Use Netcat (nc), Telnet, or Azure Network Watcher checks.
+- Verify node-to-node connectivity.
+
+For more information, see [Troubleshoot connection issues to an app that's hosted in an AKS cluster](connection-issues-application-hosted-aks-cluster.md).
+
+## Cause 2: The Uncomplicated Firewall (UFW) tool blocks port 10250
 
 > [!NOTE]
 > This cause applies to any tunnel component that you have in your AKS cluster.
 
 [Uncomplicated Firewall](https://wiki.ubuntu.com/UncomplicatedFirewall) (UFW) is a command-line program for managing a [netfilter](https://www.netfilter.org/) firewall. AKS nodes use Ubuntu. Therefore, UFW is installed on AKS nodes by default, but UFW is disabled.
 
-By default, if UFW is enabled, it will block access to all ports, including port 10250. In this case, it's unlikely that you can use Secure Shell (SSH) to [connect to AKS cluster nodes for troubleshooting](/azure/aks/node-access). This is because UFW might also be blocking port 22. To troubleshoot, you can run the [az vmss run-command invoke](/cli/azure/vmss/run-command#az-vmss-run-command-invoke) command to invoke a [ufw command](https://manpages.ubuntu.com/manpages/trusty/en/man8/ufw.8.html) that checks whether UFW is enabled:
+By default, if you enable UFW, it blocks access to all ports, including port 10250. In this case, you can't use Secure Shell (SSH) to [connect to AKS cluster nodes for troubleshooting](/azure/aks/node-access). This restriction exists because UFW might also block port 22. To troubleshoot, run the [az vmss run-command invoke](/cli/azure/vmss/run-command#az-vmss-run-command-invoke) command to invoke a [ufw command](https://manpages.ubuntu.com/manpages/trusty/en/man8/ufw.8.html) that checks whether UFW is enabled:
 
 ```azurecli
 az vmss run-command invoke --resource-group <infra-or-MC-resource-group> \
@@ -96,13 +104,13 @@ az vmss run-command invoke --resource-group <infra-or-MC-resource-group> \
     --query 'value[0].message'
 ```
 
-What if the results indicate that UFW is enabled, and it doesn't specifically allow port 10250? In this case, tunnel functionalities (such as logs and code execution) won't work for the pods that are scheduled on the nodes that have UFW enabled. To fix the problem, apply one of the following solutions on UFW.
+What if the results indicate that UFW is enabled, and it doesn't specifically allow port 10250? In this case, tunnel functionalities (like logs and code execution) don't work for the pods that are scheduled on the nodes that have UFW enabled. To fix the problem, apply one of the following solutions on UFW.
 
 > [!IMPORTANT]
 > Before you use this tool to make any changes, review the [AKS support policy](/azure/aks/support-policies) (especially [node maintenance and access](/azure/aks/support-policies#node-maintenance-and-access)) to prevent your cluster from entering into an unsupported scenario.
 
 > [!NOTE]
-> If you don't see any behavioral change after you apply a solution, you can re-create the tunnel component pods. Deleting these pods will cause them to be re-created.
+> If you don't see any behavioral change after you apply a solution, you can re-create the tunnel component pods. Deleting these pods causes them to be re-created.
 
 ### Solution 2a: Disable Uncomplicated Firewall
 
@@ -168,7 +176,7 @@ iptables --delete INPUT --jump DROP --protocol tcp --source <ip-number> --destin
 iptables --delete INPUT <input-rule-number>
 ```
 
-To address your exact or potential scenario, we recommend that you check the [iptables manual](https://ipset.netfilter.org/iptables.man.html) by running the `iptables --help` command.
+To address your exact or potential scenario, check the [iptables manual](https://ipset.netfilter.org/iptables.man.html) by running the `iptables --help` command.
 
 > [!IMPORTANT]
 > Before you use this tool to make any changes, review the [AKS support policy](/azure/aks/support-policies) (especially [node maintenance and access](/azure/aks/support-policies#node-maintenance-and-access)) to prevent your cluster from entering into an unsupported scenario.
@@ -176,15 +184,15 @@ To address your exact or potential scenario, we recommend that you check the [ip
 ## Cause 4: Egress port 1194 or 9000 isn't opened
 
 > [!NOTE]
-> This cause applies to only the `tunnel-front` and `aks-link` pods.
+> This cause applies only to the `tunnel-front` and `aks-link` pods.
 
-Are there any egress traffic restrictions, such as from an AKS firewall? If there are, port 9000 is required in order to enable correct functionality of the `tunnel-front` pod. Similarly, port 1194 is required for the `aks-link` pod.
+Are there any egress traffic restrictions, such as from an AKS firewall? If there are, port 9000 is required to enable correct functionality of the `tunnel-front` pod. Similarly, port 1194 is required for the `aks-link` pod.
 
 Konnectivity relies on port 443. By default, this port is open. Therefore, you don't have to worry about connectivity issues on that port.
 
 ### Solution 4: Open port 9000
 
-Although `tunnel-front` has been moved to the [Konnectivity service](https://kubernetes.io/docs/concepts/architecture/control-plane-node-communication/#konnectivity-service), some AKS clusters still use `tunnel-front`, which relies on port 9000. Make sure that the virtual appliance or any network device or software allows access to port 9000. For more information about the required rules and dependencies, see [Azure Global required network rules](/azure/aks/limit-egress-traffic#azure-global-required-network-rules).
+Although `tunnel-front` is moved to the [Konnectivity service](https://kubernetes.io/docs/concepts/architecture/control-plane-node-communication/#konnectivity-service), some AKS clusters still use `tunnel-front`, which relies on port 9000. Make sure that the virtual appliance or any network device or software allows access to port 9000. For more information about the required rules and dependencies, see [Azure Global required network rules](/azure/aks/limit-egress-traffic#azure-global-required-network-rules).
 
 ## Cause 5: Source Network Address Translation (SNAT) port exhaustion
 
@@ -241,34 +249,34 @@ To use service diagnostics to view the SNAT ports, follow these steps:
 
 </details>
 
-### Solution 5a: Make sure the application is using connection pooling
+### Solution 5a: Make sure the application uses connection pooling
 
-This behavior might occur because an application isn't reusing existing connections. We recommend that you don't create one outbound connection per request. Such a configuration can cause connection exhaustion. Check whether the application code is following best practices and using connection pooling. Most libraries support connection pooling. Therefore, you shouldn't have to create a new outbound connection per request.
+This behavior might occur because an application isn't reusing existing connections. Don't create one outbound connection per request. Such a configuration can cause connection exhaustion. Check whether the application code follows best practices and uses connection pooling. Most libraries support connection pooling. Therefore, you shouldn't have to create a new outbound connection per request.
 
 ### Solution 5b: Adjust the allocated outbound ports
 
-If everything is OK within the application, you'll have to adjust the allocated outbound ports. For more information about outbound port allocation, see [Configure the allocated outbound ports](/azure/aks/load-balancer-standard#configure-the-allocated-outbound-ports).
+If everything is OK within the application, adjust the allocated outbound ports. For more information about outbound port allocation, see [Configure the allocated outbound ports](/azure/aks/load-balancer-standard#configure-the-allocated-outbound-ports).
 
 ### Solution 5c: Use a Managed Network Address Translation (NAT) Gateway when you create a cluster
 
-You can set up a new cluster to use a Managed Network Address Translation (NAT) Gateway for outbound connections. For more information, see [Create an AKS cluster with a Managed NAT Gateway](/azure/aks/nat-gateway#create-an-aks-cluster-with-a-managed-nat-gateway).
+Set up a new cluster to use a Managed Network Address Translation (NAT) Gateway for outbound connections. For more information, see [Create an AKS cluster with a Managed NAT Gateway](/azure/aks/nat-gateway#create-an-aks-cluster-with-a-managed-nat-gateway).
 
-## Cause 6: Konnectivity agents performance issues with cluster growth
+## Cause 6: Konnectivity agents performance problems with cluster growth
 
 As the cluster grows, the performance of Konnectivity Agents might degrade because of increased network traffic, more requests, or resource constraints.
 
 > [!NOTE]
-> This cause applies to only the `Konnectivity-agent` pods.
+> This cause applies only to the `Konnectivity-agent` pods.
 
 ### Solution 6: Cluster Proportional Autoscaler for Konnectivity Agent
 
- To manage scalability challenges in large clusters, we implement the Cluster Proportional Autoscaler for our Konnectivity Agents. This approach aligns with industry standards and best practices. It ensures optimal resource usage and enhanced performance.
+ To manage scalability challenges in large clusters, implement the Cluster Proportional Autoscaler for your Konnectivity Agents. This approach aligns with industry standards and best practices. It ensures optimal resource usage and enhanced performance.
 
-**Why this change was made**
-Previously, the Konnectivity agent had a fixed replica count that could create a bottleneck as the cluster grew. By implementating the Cluster Proportional Autoscaler, we enable the replica count to adjust dynamically, based on node-scaling rules, to provide optimal performance and resource usage.
+**Why make this change**
+Previously, the Konnectivity agent had a fixed replica count that could create a bottleneck as the cluster grew. By implementing the Cluster Proportional Autoscaler, you enable the replica count to adjust dynamically, based on node-scaling rules, to provide optimal performance and resource usage.
 
 **How the Cluster Proportional Autoscaler works**
-The Cluster Proportional Autoscaler work uses a ladder configuration to determine the number of Konnectivity agent replicas based on the cluster size. The ladder configuration is defined in the konnectivity-agent-autoscaler configmap in the kube-system namespace. Here is an example of the ladder configuration:
+The Cluster Proportional Autoscaler uses a ladder configuration to determine the number of Konnectivity agent replicas based on the cluster size. The ladder configuration is defined in the `konnectivity-agent-autoscaler` configmap in the `kube-system` namespace. Here's an example of the ladder configuration:
 
 ```
 nodesToReplicas": [
@@ -281,25 +289,25 @@ nodesToReplicas": [
 ]
 ```
 
-This configuration makes sure that the number of replicas scales appropriately with the number of nodes in the cluster to provide optimal resource allocation and improved networking reliability.
+This configuration ensures that the number of replicas scales appropriately with the number of nodes in the cluster to provide optimal resource allocation and improved networking reliability.
 
-**How to use the Cluster Proportional Autoscaler?**
-You can override default values by updating the konnectivity-agent-autoscaler configmap in the kube-system namespace. Here is a sample command to update the configmap:
+**How to use the Cluster Proportional Autoscaler**
+You can override default values by updating the `konnectivity-agent-autoscaler` configmap in the `kube-system` namespace. Here's a sample command to update the configmap:
 
 ```bash
 kubectl edit configmap <pod-name> -n kube-system
 ```
-This command opens the configmap in an editor to enable you to make the necessary changes.
+This command opens the configmap in an editor so you can make the necessary changes.
 
 **What you should check** 
 
-You have to monitor for Out Of Memory (OOM) kills on the nodes because misconfiguration of the Cluster Proportional Autoscaler can cause insufficient memory allocation for the Konnectivity agents. This misconfiguration occurs for the following key reasons:
+You need to monitor for Out Of Memory (OOM) kills on the nodes because misconfiguration of the Cluster Proportional Autoscaler can cause insufficient memory allocation for the Konnectivity agents. This misconfiguration occurs for the following key reasons:
 
-**High Memory Usage:** As the cluster grows, the memory usage of Konnectivity agents can increase significantly. This increase can occur especially during peak loads or when handling large numbers of connections. If the Cluster Proportional Autoscaler configuration does not scale the replicas appropriately, the agents may run out of memory.
+**High Memory Usage:** As the cluster grows, the memory usage of Konnectivity agents can increase significantly. This increase can occur especially during peak loads or when handling large numbers of connections. If the Cluster Proportional Autoscaler configuration doesn't scale the replicas appropriately, the agents might run out of memory.
 
 **Fixed Resource Limits:** If the resource requests and limits for the Konnectivity agents are set too low, they might not have enough memory to handle the workload, leading to OOM kills. Misconfigured Cluster Proportional Autoscaler settings can exacerbate this issue by not providing enough replicas to distribute the load.
 
-**Cluster Size and Workload Variability:** The CPU and memory that are needed by the Konnectivity agents can vary widely depending on the size of the cluster and the workload. If the Cluster Proportional Autoscaler ladder configuration is not right-sized and adaptively resized for the cluster's usage patterns, it can cause memory overcommitment and OOM kills.
+**Cluster Size and Workload Variability:** The CPU and memory that the Konnectivity agents need can vary widely depending on the size of the cluster and the workload. If the Cluster Proportional Autoscaler ladder configuration isn't right-sized and adaptively resized for the cluster's usage patterns, it can cause memory overcommitment and OOM kills.
 
 To identify and troubleshoot OOM kills, follow these steps:
 
