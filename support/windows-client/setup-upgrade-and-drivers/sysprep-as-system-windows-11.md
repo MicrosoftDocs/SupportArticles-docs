@@ -23,14 +23,13 @@ This article applies to Windows 11 version 24H2 and 25H2, and Windows Server 202
 
 You might encounter one or more of the following symptoms after deploying a Windows image and running `sysprep.exe` under the Local System account:
 
-*   Black screen appears when signing in due to `explorer.exe` crashing.
-*   Certain GUI elements in modern apps, such as the Settings app, fail to render.
-*   The Start menu or other XAML-based apps close unexpectedly or fail to start.
+- Black screen appears when signing in due to `explorer.exe` crashing.
+- Certain GUI elements in modern apps, such as the Settings app, fail to render.
+- The Start menu or other XAML-based apps close unexpectedly or fail to start.
 
 These symptoms can occur immediately after first sign-in or later following Windows updates.
 
-For documented conditions, see [Sysprep (System Preparation) Overview | Microsoft Learn](/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview?view=windows-11).
-
+For documented conditions, see [Sysprep (System Preparation) Overview | Microsoft Learn](/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview).
 
 ## Cause: Running Sysprep as system
 
@@ -38,9 +37,7 @@ Running `sysprep.exe` under the Local System account isn't supported. This proce
 
 Older Windows versions aren't affected because they don't rely on these XAML AppX packages. Known cases include third-party automation solutions, such as VMware/Broadcom automation, that run Sysprep as system.
 
-If you don't run Sysprep as system but the symptoms occur, other causes might be responsible. For additional causes and solutions, see [KB5072911](https://support.microsoft.com/topic/kb5072911-explorer-the-start-menu-and-other-xaml-dependent-apps-might-not-start-or-close-unexpectedly-on-some-enterprise-devices-d2d30684-4e2b-47f5-9899-a00a8e0acb09).
-
-
+If you don't run Sysprep as system but the symptoms occur, other causes might be responsible. For additional causes and solutions, see [KB5072911: Explorer, the Start menu, and other XAML-dependent apps might not start or close unexpectedly on some enterprise devices](https://support.microsoft.com/topic/kb5072911-explorer-the-start-menu-and-other-xaml-dependent-apps-might-not-start-or-close-unexpectedly-on-some-enterprise-devices-d2d30684-4e2b-47f5-9899-a00a8e0acb09).
 
 ## Solution 1: Manually register missing packages
 
@@ -63,20 +60,18 @@ Add-AppxPackage -Register -Path "C:\\Windows\\SystemApps\\MicrosoftWindows.Clien
 
 After running these commands, restart `SiHost` or restart the device.
 
-
 ## Solution 2: Logon script for non-persistent OS installations
 
 For non-persistent environments, use a logon script to register the packages before `explorer.exe` launches. This approach ensures that the required packages are provisioned before the desktop loads.
 
 Create a batch file wrapper with the following commands:
 
-
 ### Run the sample PowerShell script on non-persistent OS installations
 
 For non-persistent environments, a logon script approach remains the best option for IT administrators. Create a batch file wrapper to execute synchronously before Explorer launches.
 
 > [!NOTE]
-> Deploy this script to run synchronously during user logon, blocking `explorer.exe` from starting until package registration completes.
+> Deploy this script to run synchronously during user sign-in, blocking `explorer.exe` from starting until package registration completes.
 
 ```powershell
 @echo off 
@@ -95,6 +90,6 @@ powershell.exe -ExecutionPolicy Bypass -Command "Add-AppxPackage -Register -P
 
 ## Determine the cause of the black screen problem
 
-- If you use a third-party product that runs `sysprep.exe` as System, contact the vendor to adjust their process. 
+- If you use a third-party product that runs `sysprep.exe` as System, contact the vendor to adjust their process.
 
-- If Sysprep isn't running as System and symptoms persist, see [KB5072911](https://support.microsoft.com/topic/kb5072911-explorer-the-start-menu-and-other-xaml-dependent-apps-might-not-start-or-close-unexpectedly-on-some-enterprise-devices-d2d30684-4e2b-47f5-9899-a00a8e0acb09) for other possible causes and solutions.
+- If Sysprep isn't running as System and symptoms persist, see [KB5072911: Explorer, the Start menu, and other XAML-dependent apps might not start or close unexpectedly on some enterprise devices](https://support.microsoft.com/topic/kb5072911-explorer-the-start-menu-and-other-xaml-dependent-apps-might-not-start-or-close-unexpectedly-on-some-enterprise-devices-d2d30684-4e2b-47f5-9899-a00a8e0acb09) for other possible causes and solutions.

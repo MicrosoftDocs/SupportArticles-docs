@@ -26,6 +26,8 @@ items:
       href: troubleshoot-backend-traffic-responses/vms-receive-uneven-traffic-distribution.md 
     - name: Troubleshoot uneven traffic distribution in Azure Load Balancer
       href: troubleshoot-azure-load-balancer-uneven-traffic-distribution.md
+  - name: Troubleshoot platform limitations in Azure Load Balancer
+    href: troubleshoot-load-balancer-platform-limitations.md
   - name: Troubleshoot common deployment errors
     href: load-balancer-common-deployment-errors.md
   - name: Troubleshoot load balancer health event logs
