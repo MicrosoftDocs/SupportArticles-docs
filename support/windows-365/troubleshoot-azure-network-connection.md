@@ -26,13 +26,13 @@ When a Cloud PC is provisioned, it's automatically joined to the provided domain
 - The subnet being used can reach a domain controller.
 - You test `Add-Computer` using the domain join credentials on a virtual machine (VM) connected to the Cloud PC vNet/subnet.
 - You troubleshoot domain join failures like any physical computer in your organization.
-- If you have a domain name that can be resolved on the internet (like `contoso.com`), make sure that your Domain Name System (DNS) servers are configured as internal. Also, make sure that they can resolve Active Directory domain DNS records, not your public domain name.
+- If you have a domain name that can be resolved on the internet (such as `contoso.com`), make sure that your Domain Name System (DNS) servers are configured as internal. Also, make sure that they can resolve Active Directory domain DNS records, not your public domain name.
 
 If you encounter the following errors in your ANC health checks, consider the suggestions in the following two sections to ensure your Azure and on-premises configurations can successfully reach the required Windows 365 endpoints:
 
-> Internal Server Error
+> `Internal Server Error`
 
-> InternalServerErrorUnableToRunDscScript
+> `InternalServerErrorUnableToRunDscScript`
 
 ### Domain controller line of sight
 
@@ -114,7 +114,7 @@ This test attempts to resolve the domain name provided. For example, contoso.com
 - The subnet/vNet is routed correctly so that the Cloud PC can reach the DNS server provided.
 - The Cloud PCs/VMs in the declared subnet can `NSLOOKUP` on the DNS server, and it responds with internal names.
 
-Along with the standard DNS lookup on the supplied domain name, we also check for the existence of `_ldap._tcp.yourDomain.com` records. This record indicates the DNS server provided is an Active Directory domain controller. The record is a reliable way to confirm that AD domain DNS is reachable. Make sure that these records are accessible through the virtual network provided in your ANC.
+Along with the standard DNS lookup on the supplied domain name, we also check for the existence of `_ldap._tcp.<SuppliedDomainName>.com` records. This record indicates the DNS server provided is an Active Directory domain controller. The record is a reliable way to confirm that AD domain DNS is reachable. Make sure that these records are accessible through the virtual network provided in your ANC.
 
 ## Endpoint connectivity
 

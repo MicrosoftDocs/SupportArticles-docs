@@ -18,7 +18,7 @@ When a license is removed from a user, Windows 365 Business Cloud PCs enter a se
 This article provides step-by-step instructions for using Microsoft Graph Explorer and the Microsoft Graph API to perform this deprovision.
 
 > [!NOTE]
-> For most scenarios, administrators can now end the grace period and deprovision Windows 365 Business Cloud PCs directly from the Microsoft 365 admin center or Intune by using the __Deprovision now__ option. This article describes how to perform the same action by using Microsoft Graph and is intended for automation or advanced troubleshooting scenarios.
+> For most scenarios, administrators can now end the grace period and deprovision Windows 365 Business Cloud PCs directly from the Microsoft 365 admin center or Intune by using the **Deprovision now** option. This article describes how to perform the same action by using Microsoft Graph and is intended for automation or advanced troubleshooting scenarios.
 
 ## Prerequisites
 
@@ -32,59 +32,59 @@ This article provides step-by-step instructions for using Microsoft Graph Explor
 
 ## Step 1: Sign in to Graph Explorer
 
-1.  Go to [Graph Explorer \| Try Microsoft Graph APIs - Microsoft Graph](https://developer.microsoft.com/en-us/graph/graph-explorer).
+1. Go to [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer).
 
-1.  Select **Sign in to Graph Explorer** (top right corner).
+1. Select **Sign in to Graph Explorer** (top right corner).
 
-1.  Authenticate by using your administrator credentials and set the tenant.
+1. Authenticate by using your administrator credentials and set the tenant.
 
 ## Step 2: Identify Cloud PCs in grace period
 
-1.  In the query box, set the following **GET** request:
+1. In the query box, set the following `GET` request:
 
-```
-https://graph.microsoft.com/beta/deviceManagement/virtualEndpoint/cloudPCs?$filter=status eq 'inGracePeriod'
-```
+   ```html
+   https://graph.microsoft.com/beta/deviceManagement/virtualEndpoint/cloudPCs?$filter=status eq 'inGracePeriod'
+   ```
 
-1.  In Graph Explorer, select **Modify Permissions**.
+1. In Graph Explorer, select **Modify Permissions**.
 
-1.  Consent to the following permissions for your session:
+1. Consent to the following permissions for your session:
 
-- CloudPC.Read.All
+   - CloudPC.Read.All
 
-- CloudPC.ReadWrite.All
+   - CloudPC.ReadWrite.All
 
-1.  If not already granted, select **Consent** to add these permissions.
+1. If not already granted, select **Consent** to add these permissions.
 
-1.  Select **Run Query**.
+1. Select **Run Query**.
 
-1.  Review the results to locate the Cloud PCs you want to remove. Note the **id** value for each relevant Cloud PC.
+1. Review the results to locate the Cloud PCs you want to remove. Note the **id** value for each relevant Cloud PC.
 
 ## Step 3: Remove a Cloud PC from grace
 
-1.  For each Cloud PC, send a **POST** request to remove it from grace. In the query box, select **POST** and use the following request:
+1. For each Cloud PC, send a `POST` request to remove it from grace. In the query box, select **POST** and use the following request:
 
-```
-https://graph.microsoft.com/beta/deviceManagement/virtualEndpoint/cloudPCs/{cloudPCId}/endGracePeriod
-```
+   ```html
+   https://graph.microsoft.com/beta/deviceManagement/virtualEndpoint/cloudPCs/{cloudPCId}/endGracePeriod
+   ```
 
-1.  Replace `{cloudPCId}` with the actual ID of the Cloud PC. For example:
+1. Replace `{cloudPCId}` by using the actual ID of the Cloud PC. For example:
 
-```
-https://graph.microsoft.com/beta/deviceManagement/virtualEndpoint/cloudPCs/4b18de4b-ab05-4059-8c61-0323a7df4ced/endGracePeriod
-```
+   ```html
+   https://graph.microsoft.com/beta/deviceManagement/virtualEndpoint/cloudPCs/4b18de4b-ab05-4059-8c61-0323a7df4ced/endGracePeriod
+   ```
 
-1.  Leave the request body empty.
+1. Leave the request body empty.
 
-1.  Select **Run Query**.
+1. Select **Run Query**.
 
-1.  If successful, you receive a **No Content - 204** response.
+1. If successful, you receive a `No Content - 204` response.
 
 ## Step 4: Verify removal
 
-1.  To confirm removal from grace, repeat the **GET** request from Step 3.
+1. To confirm removal from grace, repeat the `GET` request from Step 3.
 
-1.  The Cloud PC shouldn't appear with status eq 'inGracePeriod'.
+1. The Cloud PC shouldn't appear with status eq 'inGracePeriod'.
 
 ## Troubleshooting and notes
 
@@ -94,10 +94,10 @@ https://graph.microsoft.com/beta/deviceManagement/virtualEndpoint/cloudPCs/4b18d
 
 - Removing a Cloud PC from grace permanently deletes the Cloud PC and any associated user data.
 
-## Additional resources
+## More information
 
 - Microsoft Graph Cloud PC Documentation
 
-  - [List cloudPCs - Microsoft Graph beta](/graph/api/virtualendpoint-list-cloudpcs?view=graph-rest-beta&tabs=http)
+  - [List cloudPCs](/graph/api/virtualendpoint-list-cloudpcs)
 
-  - [cloudPC: endGracePeriod - Microsoft Graph beta](/graph/api/cloudpc-endgraceperiod?view=graph-rest-beta&tabs=http)
+  - [cloudPC: endGracePeriod](/graph/api/cloudpc-endgraceperiod)
