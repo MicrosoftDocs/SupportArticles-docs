@@ -1,7 +1,7 @@
 ---
 title: Recommended and useful mountOptions settings on Azure Files
 description: Learn recommended mountOptions settings for Azure Files storage classes in AKS to improve performance and reliability, and use them to optimize your deployments.
-ms.date: 04/27/2025
+ms.date: 06/17/2026
 ms.reviewer: chiragpa, nickoman, v-leedennis
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to learn about mount option settings so that I can set up my Azure Files storage class object optimally on my Azure Kubernetes Service (AKS) cluster.
@@ -11,11 +11,11 @@ ms.custom: sap:Storage
 
 ## Summary
 
-This article explains recommended mountOptions settings for Azure Files storage classes. Use these settings to provision Kubernetes storage with better performance and reliability.
+This article explains the recommended mountOptions settings for Azure Files storage classes. Use these settings to provision Kubernetes storage with better performance and reliability.
 
 ## Recommended settings
 
-The following `mountOptions` settings are recommended for Server Message Block (SMB) and Network File System (NFS) shares:
+Use the following `mountOptions` settings for Server Message Block (SMB) and Network File System (NFS) shares:
 
 - **SMB shares**
 
@@ -40,6 +40,11 @@ The following `mountOptions` settings are recommended for Server Message Block (
       - nobrl  # disable sending byte range lock requests to the server and for applications which have challenges with posix locks
     ```
 
+These permissions can grant broader permissions than applications require. Consider using a least-privilege approach first, like the following examples: 
+
+- `dir_mode=0755`, `file_mode=0755`, `uid=1000`, and `gid=1000`. 
+- `dir_mode=0777`, `file_mode=0777`, `uid=0`, `gid=0` might be more appropriate when applications require root or broader access.
+
 - **NFS shares**
 
     ```yaml
@@ -60,11 +65,16 @@ The following `mountOptions` settings are recommended for Server Message Block (
       - actimeo=30  # reduces latency for metadata-heavy workloads
     ```
 
-> [!NOTE]
-> The location for configuring mount options (`mountOptions`) depends on whether you provision dynamic or static persistent volumes. If you [dynamically provision a volume](/azure/aks/azure-csi-files-storage-provision#dynamically-provision-a-volume) with a storage class, specify the mount options on the storage class object (`kind: StorageClass`). If you [statically provision a volume](/azure/aks/azure-csi-files-storage-provision#statically-provision-a-volume), specify the mount options on the `PersistentVolume` object (`kind: PersistentVolume`). If you [mount the file share as an inline volume](/azure/aks/azure-csi-files-storage-provision#mount-file-share-as-an-inline-volume), specify the mount options on the `Pod` object (`kind: Pod`).
+For more information on `rsize` and `wsize` options for NFS, see [Optimize read and write size options](/azure/aks/create-volume-azure-files#optimize-read-and-write-size-options).
 
-## More information
+The `actimeo` and `nconnect` options are analyzed in depth in the following Microsoft documentation:
+
+- [Recommended mount options](/azure/storage/files/nfs-large-directories#recommended-mount-options)
+- [NFS nconnect](/azure/storage/files/nfs-performance#nfs-nconnect)
+
+> [!NOTE]
+> The location for configuring mount options (`mountOptions`) depends on whether you provision dynamic or static persistent volumes. If you [dynamically provision a volume](/azure/aks/azure-csi-files-storage-provision#dynamically-provision-a-volume) by using a storage class, specify the mount options on the storage class object (`kind: StorageClass`). If you [statically provision a volume](/azure/aks/azure-csi-files-storage-provision#statically-provision-a-volume), specify the mount options on the `PersistentVolume` object (`kind: PersistentVolume`). If you [mount the file share as an inline volume](/azure/aks/azure-csi-files-storage-provision#mount-file-share-as-an-inline-volume), specify the mount options on the `Pod` object (`kind: Pod`).
+
+## References
 
 For Azure Files best practices, see [Provision Azure Files storage](/azure/aks/azure-csi-files-storage-provision#best-practices).
-
- 
