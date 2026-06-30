@@ -1,32 +1,37 @@
 ---
-title: Owner cannot create modern public folders by using Outlook in Exchange Server 2013 or Exchange Server 2016
-description: Resolves an issue in which you cannot create public folders in Outlook even if you have sufficient access permissions. This issue occurs in an Exchange Server 2013 or Exchange Server 2016 environment.
+title: Owner cannot create modern public folders by using Outlook in Microsoft Exchange Server
+description: Resolves an issue in which you cannot create public folders in Outlook even if you have sufficient access permissions.
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
   - sap:Migration\Issues with Public Folder Migration
   - CSSTroubleshoot
+  - CI 9823
+  - CI 12056
 appliesto: 
-- Exchange Server 2016 Enterprise Edition 
-- Exchange Server 2016 Standard Edition 
-- Exchange Server 2013 Enterprise 
-- Exchange Server 2013 Standard Edition
+- Exchange Server SE
+- Exchange Server 2019
+- Exchange Server 2016
 search.appverid: MET150
-ms.reviewer: batre, aartigoyle, jarrettr, v-six
+ms.reviewer: batre, aartigoyle, jarrettr, v-six, v-kccross
 author: cloud-writer
 ms.author: meerak
-ms.date: 05/12/2026
+ms.date: 06/29/2026
 ---
 
-# Owner cannot create modern public folders by using Outlook in Exchange Server 2013 or Exchange Server 2016
+# Owner cannot create modern public folders by using Outlook in Microsoft Exchange Server
+
+## Summary
+
+Users can’t create modern public folders in Outlook even when they have sufficient permissions if the default public folder mailbox uses a secondary hierarchy. This issue occurs when the LmCompatibilityLevel setting on the Exchange server is too low, which causes authentication failures during folder creation. Updating this setting to a supported value restores the ability to create public folders.
 
 ## Symptoms
 
-Assume that you are the owner of a public folder mailbox or have sufficient access permissions to create a public folder in a Microsoft Exchange Server 2013 or Microsoft Exchange Server 2016 environment. The mailbox uses the secondary hierarchy as the default public folder mailbox. In this situation, when you try to create a public folder by using Microsoft Outlook, you receive the following error message:
+Assume that you are the owner of a public folder mailbox or have sufficient access permissions to create a public folder in Microsoft Exchange Server. The mailbox uses the secondary hierarchy as the default public folder mailbox. In this situation, when you try to create a public folder by using Microsoft Outlook, you receive the following error message:
 
 > Cannot create the folder. You do not have sufficient permission to perform this operation on this object.
-See the folder contact or your system administrator.
+> See the folder contact or your system administrator.
 
 > [!NOTE]
 > If the default public folder mailbox is changed to a public folder mailbox that contains the primary hierarchy, you can create public folders by using Outlook.
@@ -50,7 +55,7 @@ To work around this issue, follow these steps on the Exchange Server Mailbox Ser
     > The entry is located under the following registry path:  
     > _HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa_
 
-2. Restart the following services:
+1. Restart the following services:
 
    - Microsoft Exchange Information Store  
    - Microsoft Exchange RPC Client Access
@@ -66,7 +71,7 @@ For more information about the LmCompatibilityLevel setting, see the following a
 
 ### More information to troubleshoot this issue
 
-When this issue occurs, other than the error message, you can also find the following information that may help troubleshoot this issue.
+When this issue occurs, other than the error message, you can also find the following information that might help troubleshoot this issue.
 
 - The following message is logged under the "RPC Client Access" log in Event Viewer:
 
