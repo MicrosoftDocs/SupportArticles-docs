@@ -18,27 +18,96 @@ metadata:
 landingContent:
 
  # Card
-  - title: Azure Application Gateway
+  - title: Connection timed out
     linkLists:
       - linkListType: how-to-guide
         links:
           - text: Troubleshoot TCP connection timeout issues in Application Gateway
             url: troubleshoot-tcp-connection-timeout-issues.md
+
+ # Card
+  - title: Issues with create, update and delete (CRUD)
+    linkLists:
+      - linkListType: how-to-guide
+        links:
           - text: Troubleshoot private frontend IP allocation issues in Application Gateway
             url: troubleshoot-private-frontend-ip-allocation-issues.md
           - text: Troubleshoot DNS Resolution issues in Application Gateway
             url: troubleshoot-dns-resolution-issues.md
           - text: Troubleshoot Failed State issues in Application Gateway
             url: troubleshoot-appgw-failed-state-issues.md
-          - text: Troubleshoot rewrite rules in Application Gateway
-            url: troubleshoot-url-rewrite-rules.md
           - text: ApplicationGatewayFrontendIpCannotHavePublicIpAndSubnet error
             url: error-codes/application-gateway-frontend-ip-cannot-have-public-ip-subnet-error.md
+
+ # Card
+  - title: WAF
+    linkLists:
+      - linkListType: how-to-guide
+        links:
           - text: Troubleshoot WAF anomaly scoring behavior and rule 949110 blocks
             url: troubleshoot-waf-anomaly-scoring-rule-949110-blocks.md
-          - text: Azure Application Gateway Resource Health overview  
+
+ # Card
+  - title: Performance and scaling
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Azure Application Gateway Resource Health overview 
             url: resource-health-overview.md
-          - text: Use Log Analytics to examine Application Gateway Logs 
+
+ # Card
+  - title: Monitoring and logging 
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Examining logs using Azure Log Analytics
             url: log-analytics.md
-          - text: Troubleshoot backend health issues in Application Gateway 
+
+ # Card
+  - title: Backend health
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot backend health issues in Azure Application Gateway
             url: application-gateway-backend-health-troubleshooting.md
+
+ # Card
+  - title: Configuration and setup
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Common key vault errors in Application Gateway
+            url: application-gateway-key-vault-common-errors.md
+
+ # Card
+  - title: Connectivity
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: HTTP response codes - Azure Application Gateway
+            url: http-response-codes.md
+
+ # Card
+  - title: Facing 5xx errors
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot HTTP 504 Gateway Timeout
+            url: troubleshoot-http-504-gateway-timeout.md
+
+ # Card
+  - title: Routing
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot routing, redirect, and hostname issues in Application Gateway
+            url: troubleshoot-application-gateway-routing-redirect-hostname-issues.md
+
+ # Card
+  - title: Agentic-focused
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot HTTP 502 Bad Gateway
+            url: troubleshoot-http-502-bad-gateway.md
+
