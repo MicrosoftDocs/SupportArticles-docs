@@ -11,16 +11,22 @@ ms.custom:
   - Exchange Server
   - CSSTroubleshoot
   - CI 122535
-ms.reviewer: yusenko, v-six
+ms.reviewer: yusenko, v-six, v-kccross
 appliesto: 
+  - Exchange Server SE
   - Exchange Server 2019
   - Exchange Server 2016
-  - Exchange Server 2013
 search.appverid: MET150
-ms.date: 05/12/2026
+ms.date: 06/29/2026
 ---
 
 # Can't install Exchange Cumulative Update on a localized version of Windows Server
+
+## Summary
+
+Microsoft Exchange Server Setup can fail or stall when you install a cumulative update (CU) on a localized version of Windows Server. This issue occurs because the Exchange server attempts to resolve isolated security identifiers (SIDs) or account names across trusted domains. In some environments, domain controllers perform external name lookups that delay or prevent the required permissions changes. These lookups cause setup failures or long installation times.
+
+Configure domain controllers to restrict isolated name lookups by setting the `LsaLookupRestrictIsolatedNameLevel` registry value to 1. This change limits name resolution to the local domain and prevents the lookup behavior that disrupts Exchange Setup.
 
 ## Symptoms
 
@@ -47,24 +53,24 @@ The calling server (Exchange server) uses an isolated username or security ident
 
 ## Resolution
 
-To resolve this problem, set **LsaLookupRestrictIsolatedNameLevel** to **1** on all DCs that communicate with the server that's running Exchange Server.
+To resolve this problem, set `LsaLookupRestrictIsolatedNameLevel` to 1 on all DCs that communicate with the server that's running Exchange Server.
 
 > [!NOTE]
-> Create this registry entry only on DCs.
+> Create this registry entry only on Domain Controllers.
 
 > [!WARNING]
 > Serious problems might occur if you modify the registry incorrectly. These problems could cause you to have to reinstall the operating system or even prevent your machine from starting. Microsoft can't guarantee that these problems can be solved. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur. Modify the registry at your own risk.
 
 1. Select **Start** > **Run**.
-2. In the **Open** box, type `regedit`, and then select **OK**.
-3. In Registry Editor, locate and select the following registry subkey:
+1. In the **Open** box, type `regedit`, and then select **OK**.
+1. In Registry Editor, locate and select the following registry subkey:
 
     `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Lsa`
 
-4. On the **Edit** menu, point to **New**, and then select **DWORD Value**.
-5. Type **LsaLookupRestrictIsolatedNameLevel**, and press Enter.
-6. On the **Edit** menu, select **Modify**.
-7. To disable the lookup of isolated names in external trusted domains, type **1** in the **Value data** box.
-8. Select **OK**, and exit Registry Editor.
+1. On the **Edit** menu, point to **New**, and then select **DWORD Value**.
+1. Type `LsaLookupRestrictIsolatedNameLevel`, and press Enter.
+1. On the **Edit** menu, select **Modify**.
+1. To disable the lookup of isolated names in external trusted domains, type `1` in the **Value data** box.
+1. Select **OK**, and exit Registry Editor.
 
-If the **LsaLookupRestrictIsolatedNameLevel** registry value is set on a DC, you don't have to restart the services or the computer.
+If the `LsaLookupRestrictIsolatedNameLevel` registry value is set on a DC, you don't have to restart the services or the computer.

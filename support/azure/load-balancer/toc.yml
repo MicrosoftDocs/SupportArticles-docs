@@ -24,8 +24,10 @@ items:
       href: troubleshoot-backend-traffic-responses/vms-no-response-traffic.md
     - name: Virtual machines receive uneven distribution of traffic 
       href: troubleshoot-backend-traffic-responses/vms-receive-uneven-traffic-distribution.md 
-    - name: Troubleshoot uneven traffic distribution in Azure Load Balancer
-      href: troubleshoot-azure-load-balancer-uneven-traffic-distribution.md
+  - name: Troubleshoot a Load Balancer that can't be deleted
+    href: troubleshoot-cannot-delete-load-balancer.md
+  - name: Troubleshoot uneven traffic distribution in Azure Load Balancer
+    href: troubleshoot-azure-load-balancer-uneven-traffic-distribution.md
   - name: Troubleshoot platform limitations in Azure Load Balancer
     href: troubleshoot-load-balancer-platform-limitations.md
   - name: Troubleshoot common deployment errors
