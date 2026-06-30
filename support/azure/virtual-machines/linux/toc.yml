@@ -162,6 +162,8 @@ items:
     href: troubleshoot-vm-boot-error.md
   - name: Troubleshoot VM boot issues due to disabled Hyper-V drivers
     href: linux-hyperv-issue.md
+  - name: Troubleshoot VM boot failure after SCSI-to-NVMe disk controller change
+    href: ../windows/troubleshoot-nvme-boot-failure.md?context=/troubleshoot/azure/virtual-machines/linux/context/context  
   - name: Can't boot after a host node upgrade
     href: linux-kernel-panics-upgrade.md
   - name: Device names are changed

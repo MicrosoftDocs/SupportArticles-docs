@@ -18,5 +18,7 @@ items:
     href: troubleshoot-private-endpoint-dns-zone-deletion-failed.md
   - name: Troubleshoot private endpoint creation failures in Azure Private Link
     href: troubleshoot-private-endpoint-creation-failed.md
+  - name: Troubleshoot a private endpoint connection stuck in Pending state
+    href: troubleshoot-private-endpoint-pending-approval.md
   - name: Troubleshoot Azure Private Link service and resource limits or scale ceilings reached
     href: troubleshoot-private-link-scale-limits-reached.md
