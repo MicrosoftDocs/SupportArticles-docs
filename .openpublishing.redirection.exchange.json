@@ -221,12 +221,141 @@
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
+      "source_path": "Exchange/ExchangeServer/setup/installing-exchange-2010-sp2-fails.md",
+      "redirect_url": "installing-exchange-authorization-manager-check-fails"
+    },
+    {
       "source_path": "Exchange/ExchangeServer/Administration/incorrect-edge-transport-server-version-eac-ecp.md",
       "redirect_url": "incorrect-edge-transport-server-version-eac"
     },
     {
       "source_path": "Exchange/ExchangeServer/setup/ex2019-setup-does-not-run-correctly-started-powershell.md",
       "redirect_url": "exchange-setup-does-not-run-correctly-started-powershell"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/administration/400-bad-request-access-options-page.md",
+      "redirect_url": "/previous-versions/troubleshoot/exchange/exchangeserver/400-bad-request-access-options-page",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/administration/can't-manage-ex19-database-eac.md",
+      "redirect_url": "/previous-versions/troubleshoot/exchange/exchangeserver/can't-manage-ex19-database-eac",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/administration/connecting-remote-server-failed.md",
+      "redirect_url": "/previous-versions/troubleshoot/exchange/exchangeserver/connecting-remote-server-failed",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/administration/could-not-load-file-or-assembly-browsing-ews-or-autodiscover.md",
+      "redirect_url": "/previous-versions/troubleshoot/exchange/exchangeserver/could-not-load-file-or-assembly-browsing-ews-or-autodiscover",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/administration/outlook-unable-download-offline-address-book.md",
+      "redirect_url": "/previous-versions/troubleshoot/exchange/exchangeserver/outlook-unable-download-offline-address-book",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/administration/avoid-unsupported-integration-methods.md",
+      "redirect_url": "/previous-versions/troubleshoot/exchange/exchangeserver/avoid-unsupported-integration-methods",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/administration/cannot-update-password-windows.md",
+      "redirect_url": "/previous-versions/troubleshoot/exchange/exchangeserver/cannot-update-password-windows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/administration/cross-forest-free-busy-lookup-fails.md",
+      "redirect_url": "/previous-versions/troubleshoot/exchange/exchangeserver/cross-forest-free-busy-lookup-fails",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/administration/default-anonymous-permission-cannot-restore.md",
+      "redirect_url": "/previous-versions/troubleshoot/exchange/exchangeserver/default-anonymous-permission-cannot-restore",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/administration/low-disk-space-on-database-logs-drivers.md",
+      "redirect_url": "/previous-versions/troubleshoot/exchange/exchangeserver/low-disk-space-on-database-logs-drivers",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/administration/existing-public-folder-deployment-detected-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/exchange/exchangeserver/existing-public-folder-deployment-detected-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/administration/fail-to-start-ems-canot-find-path.md",
+      "redirect_url": "/previous-versions/troubleshoot/exchange/exchangeserver/fail-to-start-ems-canot-find-path",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/administration/mailboxes-quarantined-databases-fail-over.md",
+      "redirect_url": "/previous-versions/troubleshoot/exchange/exchangeserver/mailboxes-quarantined-databases-fail-over",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/administration/managed-availability-messages-journaled.md",
+      "redirect_url": "/previous-versions/troubleshoot/exchange/exchangeserver/managed-availability-messages-journaled",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/administration/no-result-use-number-to-search-excel-attachment.md",
+      "redirect_url": "/previous-versions/troubleshoot/exchange/exchangeserver/no-result-use-number-to-search-excel-attachment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/administration/winrm-time-out-add-mailbox-server-to-existing-dag.md",
+      "redirect_url": "/previous-versions/troubleshoot/exchange/exchangeserver/winrm-time-out-add-mailbox-server-to-existing-dag",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/migration/eac-not-show-mailbox-move-request.md",
+      "redirect_url": "/previous-versions/troubleshoot/exchange/exchangeserver/eac-not-show-mailbox-move-request",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/migration/error-move-mailbox-to-database-exchange-2010.md",
+      "redirect_url": "/previous-versions/troubleshoot/exchange/exchangeserver/error-move-mailbox-to-database-exchange-2010",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/migration/no-free-busy-info-mailbox-move.md",
+      "redirect_url": "/previous-versions/troubleshoot/exchange/exchangeserver/no-free-busy-info-mailbox-move",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/setup/cannot-uninstall-server-role-via-setup-exe.md",
+      "redirect_url": "/previous-versions/troubleshoot/exchange/exchangeserver/cannot-uninstall-server-role-via-setup-exe",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/setup/cumulative-update-20-is-shown-not-22.md",
+      "redirect_url": "/previous-versions/troubleshoot/exchange/exchangeserver/cumulative-update-20-is-shown-not-22",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/setup/error-occurred-while-configuring-search-foundation.md",
+      "redirect_url": "/previous-versions/troubleshoot/exchange/exchangeserver/error-occurred-while-configuring-search-foundation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/setup/language-pack-bundle-not-found.md",
+      "redirect_url": "/previous-versions/troubleshoot/exchange/exchangeserver/language-pack-bundle-not-found",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/setup/network-path-was-not-found-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/exchange/exchangeserver/network-path-was-not-found-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/setup/setup-of-mailbox-role-fails-with-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/exchange/exchangeserver/setup-of-mailbox-role-fails-with-error",
+      "redirect_document_id": false
     }
   ]
 }
