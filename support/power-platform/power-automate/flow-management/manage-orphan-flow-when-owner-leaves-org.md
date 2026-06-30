@@ -20,7 +20,7 @@ This article helps you manage orphaned flows in Power Automate after a flow owne
 > [!NOTE]
 > Only users with appropriate privileges can view flows that don't have any valid owners.
 
-On the [environment page from Power Platform admin center](https://admin.powerplatform.microsoft.com/environments), go to the **Resources** tab and select **Flows**. Look for flows that don't have an owner listed in the **Owners** column.
+On the [environment page from Power Platform admin center](https://admin.powerplatform.microsoft.com/environments), select an environment, then go to the **Resources** tab and select **Flows**. Look for flows that don't have an owner listed in the **Owners** column.
 
 If there are many flows, select **Load more** to load the next set of flows. This way, you can ensure you look through all flows that might be orphaned.
 
