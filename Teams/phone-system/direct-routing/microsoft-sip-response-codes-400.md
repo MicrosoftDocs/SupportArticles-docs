@@ -19,6 +19,8 @@ ms.reviewer: mikebis
 
 # SIP response code 400
 
+[!INCLUDE [Teams Direct Routing note](../../../includes/teams-direct-routing-note.md)]
+
 This article provides troubleshooting information for the combination of the SIP 400 error and Microsoft response code 540400.
 
 ## 540400 400 Bad Request

@@ -19,6 +19,8 @@ ms.date: 11/25/2025
 ---
 # Issues that affect call transfers
 
+[!INCLUDE [Teams Direct Routing note](../../../includes/teams-direct-routing-note.md)]
+
 This article focuses on how to troubleshoot issues that are related to call transfers that are initiated by Microsoft. This article does not apply to issues that are related to call transfers that are initiated from Session Border Controller (SBC) or Public Switched Telephone Network (PSTN) sources.
 
 Call transfers that are initiated by Microsoft can occur in multiple scenarios, such as user-initiated call transfers, transfers from an auto attendant, and transfers from a call queue. Before you troubleshoot issues, review the following background information.

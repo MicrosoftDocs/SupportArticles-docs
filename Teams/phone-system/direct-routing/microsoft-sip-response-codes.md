@@ -23,6 +23,8 @@ ms.reviewer: rishire, teddygyabaah, mikebis
 
 # Microsoft and SIP response codes
 
+[!INCLUDE [Teams Direct Routing note](../../../includes/teams-direct-routing-note.md)]
+
 When you troubleshoot Direct Routing issues, the specific cause of a call failure can be identified through a combination of the following response codes:
 
 - SIP response code (CallEndReason): A three-digit response code that shows the request status. This code is received from the Session Border Controller (SBC) or Direct Routing SIP interface. It explains what occurred. For example, the SBC didn't reply in a timely manner. The SIP response codes are defined in [RFC 3261](https://www.rfc-editor.org/rfc/rfc3261#page-182).

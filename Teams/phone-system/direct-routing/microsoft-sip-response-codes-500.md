@@ -22,6 +22,8 @@ ms.reviewer: teddygyabaah; mikebis
 
 # SIP response code 500
 
+[!INCLUDE [Teams Direct Routing note](../../../includes/teams-direct-routing-note.md)]
+
 This article provides troubleshooting information for various combinations of the SIP 500 error and various Microsoft response codes.
 
 ## 510482 500 Loop detected

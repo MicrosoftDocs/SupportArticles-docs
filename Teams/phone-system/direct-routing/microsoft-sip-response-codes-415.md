@@ -21,6 +21,8 @@ ms.reviewer: teddygyabaah
 
 # SIP response code 415
 
+[!INCLUDE [Teams Direct Routing note](../../../includes/teams-direct-routing-note.md)]
+
 This article provides troubleshooting information for the combination of the SIP 415 error and Microsoft response code 510415.
 
 ## 540415 415 Unsupported Media Type

@@ -20,6 +20,8 @@ ms.reviewer: teddygyabaah
 
 # SIP response code 403
 
+[!INCLUDE [Teams Direct Routing note](../../../includes/teams-direct-routing-note.md)]
+
 This article provides troubleshooting information for various combinations of the SIP 403 error and Microsoft response codes.
 
 ## 10199 403 Call rejected as private calling is disabled for the callee

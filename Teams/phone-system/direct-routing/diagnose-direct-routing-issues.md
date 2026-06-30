@@ -18,6 +18,8 @@ ms.custom:
 
 # Diagnose issues that affect Direct Routing
 
+[!INCLUDE [Teams Direct Routing note](../../../includes/teams-direct-routing-note.md)]
+
 ## Summary
 
 As a tenant administrator, you can troubleshoot issues that affect Direct Routing by using the test capabilities built into the Microsoft 365 admin center. The test results provide suggestions about how to resolve the issues.

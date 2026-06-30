@@ -20,6 +20,8 @@ ms.reviewer: teddygyabaah
 
 # SIP response code 488
 
+[!INCLUDE [Teams Direct Routing note](../../../includes/teams-direct-routing-note.md)]
+
 This article provides troubleshooting information for various combinations of the SIP 488 error and various Microsoft response codes.
 
 ## 531000 488 InternalDiagCode: CannotSupportAnyMedia, InternalErrorPhrase: Invalid SDP offer: no media acceptable
