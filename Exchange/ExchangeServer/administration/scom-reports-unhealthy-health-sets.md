@@ -11,15 +11,22 @@ ms.custom:
   - CI 178865
   - Exchange Server
   - CSSTroubleshoot
+  - CI 9823
+  - CI 12257
 ms.reviewer: helmutk, lusassl, meerak, v-trisshores
 appliesto:
+  - Exchange Server SE
   - Exchange Server 2019
   - Exchange Server 2016
 search.appverid: MET150
-ms.date: 05/12/2026
+ms.date: 06/29/2026
 ---
 
-# SCOM reports unhealthy health sets
+# System Center Operations Manager reports unhealthy health sets
+
+## Summary
+
+Operations Manager reports unhealthy Microsoft Exchange server health sets when Managed Availability probes can’t locate or validate health mailboxes. This issue occurs when health mailbox configuration becomes inconsistent. This issue is typically due to Active Directory replication delays. As a result, the email address policy remains enabled when it shouldn't or the primary SMTP address doesn’t match the user principal name (UPN), which causes probe failures and triggers unhealthy health set alerts.
 
 ## Symptoms
 
@@ -46,7 +53,8 @@ Active Directory operation failed on <FQDN of domain controller>. The object <DN
 does not exist."
 ```
 
-**Note**: The ActiveMonitoringTraceLogs folder is located at `%ExchangeInstallPath%\Logging\Monitoring\Monitoring\MSExchangeHMWorker\ActiveMonitoringTraceLogs`.
+> [!NOTE]
+> The ActiveMonitoringTraceLogs folder is located at %ExchangeInstallPath%\Logging\Monitoring\Monitoring\MSExchangeHMWorker\ActiveMonitoringTraceLogs.
 
 ## Cause
 
@@ -68,7 +76,7 @@ To fix the issue, follow these steps:
    Get-Mailbox -Monitoring | Set-Mailbox -EmailAddressPolicyEnabled $False
    ```
 
-2. Run the following command to make sure that the primary SMTP address of each health mailbox matches the UPN:
+1. Run the following command to make sure that the primary SMTP address of each health mailbox matches the UPN:
 
    ```powershell
    Get-Mailbox -Monitoring | Select-Object UserPrincipalName | foreach {Set-Mailbox -Identity $_.UserPrincipalName -PrimarySmtpAddress $_.UserPrincipalName}
