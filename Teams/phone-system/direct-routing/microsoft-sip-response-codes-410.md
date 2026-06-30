@@ -21,6 +21,8 @@ ms.reviewer: teddygyabaah
 
 # SIP response code 410
 
+[!INCLUDE [Teams Direct Routing note](../../../includes/teams-direct-routing-note.md)]
+
 This article provides troubleshooting information for various combinations of the SIP 410 error and Microsoft response codes.
 
 ## 531000 410 SdpParsingFailure

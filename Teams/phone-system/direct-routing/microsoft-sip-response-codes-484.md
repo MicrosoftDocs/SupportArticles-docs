@@ -21,6 +21,8 @@ ms.reviewer: teddygyabaah
 
 # SIP response code 484
 
+[!INCLUDE [Teams Direct Routing note](../../../includes/teams-direct-routing-note.md)]
+
 This article provides troubleshooting information for the combination of the SIP 484 error and Microsoft response code 560484.
 
 ## 560484 484 Invalid number format. SBC rejected the call

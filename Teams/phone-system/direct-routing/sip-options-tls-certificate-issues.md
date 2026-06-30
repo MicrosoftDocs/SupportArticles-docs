@@ -22,6 +22,8 @@ ms.reviewer: mikebis
 
 # SBC connectivity issues
 
+[!INCLUDE [Teams Direct Routing note](../../../includes/teams-direct-routing-note.md)]
+
 When you set up Direct Routing, you might experience the following Session Border Controller (SBC) connectivity issues:
 
 - Session Initiation Protocol (SIP) options are not received.
