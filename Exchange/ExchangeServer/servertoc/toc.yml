@@ -6,32 +6,24 @@ items:
       items:
         - name: '"The term New-Mailbox is not recognized" error'
           href: ../administration/term-new-mailbox-not-recognized-error.md
-        - name: 400 Bad Request when accessing the Options page
-          href: ../administration/400-bad-request-access-options-page.md
         - name: 403 Forbidden when viewing cross-forest free/busy information
           href: ../administration/403-forbidden-view-free-busy-information.md
         - name: Access Denied when deleting federation trust
           href: ../administration/1007-access-denied-delete-federation-trust.md
         - name: Active Sync URL is in an invalid format
           href: ../administration/url-invalid-format.md
-        - name: Avoid unsupported integration methods for Exchange
-          href: ../administration/avoid-unsupported-integration-methods.md
         - name: Can't access OWA or EAC with expired OAuth certificate
           href: ../administration/cannot-access-owa-or-ecp-if-oauth-expired.md
         - name: Can't access public folders
           href: ../administration/outlook-users-cannot-access-public-folders.md
         - name: Can't back up a passive database copy in DAG
           href: ../administration/vss-e-writererror-retryable-error.md
-        - name: Can't download or update OAB
-          href: ../administration/outlook-unable-download-offline-address-book.md
         - name: Can't export to PST with EAC
           href: ../administration/cannot-use-eac-export-pst-file.md
         - name: Can't install add-ins in Microsoft Store
           href: ../administration/unable-install-add-ins-microsoft-store.md
         - name: Can't look up free/busy information
           href: ../administration/cross-forest-or-hybrid-free-busy-lookups-fail.md
-        - name: Can't manage Exchange 2019 databases in EAC
-          href: ../administration/can't-manage-ex19-database-eac.md
         - name: Can't manage Send on Behalf permissions
           href: ../administration/send-on-behalf-for-shared-mailbox.md          
         - name: Can't mount databases that are larger than 1024 GB
@@ -57,11 +49,6 @@ items:
         - name: Cmdlet/parameter combinations not working
           href: ../administration/cmdlet-parameter-combinations-not-working.md
         - name: Connecting to the remote server failed
-          href: ../administration/connecting-remote-server-failed.md
-        - name: Could not load file or assembly error when browsing EWS or Autodiscover sites
-          href: ../administration/could-not-load-file-or-assembly-browsing-ews-or-autodiscover.md
-        - name: Cross forest free/busy lookup fails
-          href: ../administration/cross-forest-free-busy-lookup-fails.md
         - name: DAG network Misconfigured error
           href: ../administration/dag-network-misconfigured-error.md
         - name: Database switchover causes ExAssertException
@@ -76,8 +63,6 @@ items:
           href: ../administration/email-received-via-eop-not-journaled.md
         - name: Empty StorageLimitStatus when running Get-MailboxStatistics
           href: ../administration/empty-storagelimitstatus-run-get-mailboxstatistics.md
-        - name: EMS fails to start with error
-          href: ../administration/fail-to-start-ems-canot-find-path.md
         - name: Error 0x6f7 when adding server to DAG
           href: ../administration/error-0x6f7-add-server-to-dag.md
         - name: Error 0x80004005 when mounting a database
@@ -86,8 +71,6 @@ items:
           href: ../administration/ad-error-0x52-install-edge-role.md
         - name: Error occurs when tracing a message
           href: ../administration/object-reference-not-set-to-instance-error.md
-        - name: Error when creating a public folder mailbox
-          href: ../administration/existing-public-folder-deployment-detected-error.md
         - name: Error when making changes to federation trust
           href: ../administration/federation-certificate-with-thumbprint-cannot-be-found.md
         - name: Error when managing a user in EAC
@@ -122,14 +105,9 @@ items:
           href: ../administration/http-500-error-during-eac-sign-in.md
         - name: HTTP error 500 when starting EMS or EMC
           href: ../administration/http-error-500-start-ems-emc.md
-        - name: Low disk space on database logs or drives
-          href: ../administration/low-disk-space-on-database-logs-drivers.md
         - name: Mailbox UPN and SamAccountName contain a GUID
           href: ../administration/mailbox-upn-samaccountname-contain-guid.md
         - name: Mailboxes are quarantined and databases fail over
-          href: ../administration/mailboxes-quarantined-databases-fail-over.md
-        - name: Managed Availability messages are journaled
-          href: ../administration/managed-availability-messages-journaled.md
         - name: MAPI applications can't access archive mailboxes
           href: /outlook/troubleshoot/user-interface/mapi-apps-cannot-access-archive-mailboxes
         - name: MAPI is the only way to change profiles
@@ -142,12 +120,8 @@ items:
           href: ../administration/multipart-mixed-mime-message-format.md
         - name: No active public folder mailboxes were found error
           href: ../administration/no-active-public-folder-mailboxes-were-found-error.md
-        - name: No result using a number to search for an Excel attachment
-          href: ../administration/no-result-use-number-to-search-excel-attachment.md
         - name: On-premises EAC link goes to product comparison
           href: ../administration/o365-link-eac-redirect-product-comparison.md
-        - name: Removed Default or Anonymous permission can't be restored
-          href: ../administration/default-anonymous-permission-cannot-restore.md
         - name: Restarts frequently with Stop error
           href: ../administration/exchange-restarts-frequently-stop-error.md
         - name: Running Test-IRMConfiguration in EMS fails
@@ -162,8 +136,6 @@ items:
           href: ../administration/requestor-changed-server-component.md
         - name: Set-ServerComponentState ends Exchange Frontend Transport service
           href: ../administration/frontend-transport-service-terminate-run-set-servercomponentstate.md
-        - name: Unable to update the password for Windows in Exchange
-          href: ../administration/cannot-update-password-windows.md
         - name: Unexpected Automapping results when adding mailbox permissions
           href: ../administration/unwanted-automapping-results-add-remove-mailbox-permission.md
         - name: Unexpected PublicFolderMailBoxes dynamic distribution groups
@@ -174,8 +146,6 @@ items:
           href: ../administration/unifiedcontent-folder-fills-up-drive.md
         - name: Use event ID 2080 to help solve AD  access issues
           href: ../administration/msexchangedsaccess-event-id-2080.md
-        - name: WinRM times out when adding a mailbox server to an existing DAG
-          href: ../administration/winrm-time-out-add-mailbox-server-to-existing-dag.md
     - name: Client Connectivity
       items:
         - name: '"Insecure connection" error in Outlook for iOS or Android'
