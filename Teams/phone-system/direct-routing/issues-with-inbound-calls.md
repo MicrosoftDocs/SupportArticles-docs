@@ -19,6 +19,8 @@ ms.reviewer: mikebis
 
 # Issues that affect inbound Direct Routing calls
 
+[!INCLUDE [Teams Direct Routing note](../../../includes/teams-direct-routing-note.md)]
+
 You might experience issues when you receive Public Switched Telephone Network (PSTN) calls through Direct Routing. This article discusses some of these issues and provides resolutions that you can try.
 
 ## No ringback tone when Teams receives a call from a PSTN endpoint

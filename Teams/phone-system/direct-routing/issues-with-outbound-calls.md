@@ -22,6 +22,8 @@ ms.custom:
 
 # Issues that affect outbound direct routing calls
 
+[!INCLUDE [Teams Direct Routing note](../../../includes/teams-direct-routing-note.md)]
+
 You might experience various issues when you use Direct Routing to make outbound calls from a Microsoft Teams client to a Session Border Controller (SBC). These issues include the following:
 
 - An incorrect caller ID is displayed to the call recipient.

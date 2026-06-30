@@ -21,6 +21,8 @@ ms.reviewer: teddygyabaah
 
 # SIP response code 486
 
+[!INCLUDE [Teams Direct Routing note](../../../includes/teams-direct-routing-note.md)]
+
 This article provides troubleshooting information for the combination of the SIP 486 error and Microsoft response code 10321.
 
 ## 10321 486 Bot rejects the incoming call because it is busy

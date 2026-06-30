@@ -20,6 +20,8 @@ ms.date: 10/30/2023
 ---
 # Issues with Local Media Optimization for Direct Routing
 
+[!INCLUDE [Teams Direct Routing note](../../../includes/teams-direct-routing-note.md)]
+
 You might find that Local Media Optimization (LMO) for Direct Routing doesn't work as expected. For instance, Microsoft Teams doesn't send the `X-Ms-UserLocation` and `X-Ms-MediaPath` headers, or the `X-Ms-UserLocation` header contains the wrong location, or calls fail.
 
 This article provides some resolutions that you can try to fix these issues.

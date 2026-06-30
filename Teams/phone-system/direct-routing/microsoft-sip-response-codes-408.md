@@ -21,6 +21,8 @@ ms.reviewer: teddygyabaah
 
 # SIP response code 408
 
+[!INCLUDE [Teams Direct Routing note](../../../includes/teams-direct-routing-note.md)]
+
 This article provides troubleshooting information for various combinations of the SIP 408 error and Microsoft response codes.
 
 ## 1106 408 An acknowledgement was not received for the call acceptance in the allotted time
