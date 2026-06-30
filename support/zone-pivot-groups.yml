@@ -20,6 +20,8 @@ groups:
     title: GitHub Actions OIDC
   - id: google-identity
     title: Google Identity
+  - id: keycloak-self-hosted
+    title: Keycloak (self-hosted)
 #Owner: britaniar
 - id: cluster-namespace-scope
   title: Fleet resource scope
