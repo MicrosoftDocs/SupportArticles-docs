@@ -221,6 +221,10 @@
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
+      "source_path": "Exchange/ExchangeServer/setup/installing-exchange-2010-sp2-fails.md",
+      "redirect_url": "installing-exchange-authorization-manager-check-fails"
+    },
+    {
       "source_path": "Exchange/ExchangeServer/Administration/incorrect-edge-transport-server-version-eac-ecp.md",
       "redirect_url": "incorrect-edge-transport-server-version-eac"
     },

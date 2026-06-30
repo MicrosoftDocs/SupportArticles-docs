@@ -370,8 +370,8 @@ items:
           href: ../setup/exchange-setup-does-not-run-correctly-started-powershell.md
         - name: Exchange Server Setup fails and returns “Database is mandatory on UserMailbox” error 
           href: ../setup/database-mandatory-on-usermailbox.md
-        - name: Install Exchange Server 2010 SP2 fails
-          href: ../setup/installing-exchange-2010-sp2-fails.md
+        - name: AuthorizationManager check failed error during Exchange Server installation
+          href: ../setup/installing-exchange-authorization-manager-check-fails.md
         - name: Install updates for Mailbox-role server fails
           href: ../setup/error-occurred-while-configuring-search-foundation.md
         - name: Installation in RecoverServer mode fails
