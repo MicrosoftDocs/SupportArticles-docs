@@ -280,7 +280,7 @@ If your flow takes longer than expected to trigger, check for these two common p
 1. A communication problem prevents Power Automate from reacting to trigger events. Potentially, a service outage, policy change, password expiry, or similar problem caused the delay. You can view [Help + support](https://admin.powerplatform.microsoft.com/support) to learn whether any active outages exist. You can also clear the cache of the browser, and then try triggering the flow again.
 
 > [!NOTE]
-> The recurrence trigger might not fire at the exact second shown in the user interface. The service's best-effort architecture can add a delay of up to a few seconds.
+> The recurrence trigger might not fire at the exact second shown in the user interface. The service's best-effort architecture can miss by a few seconds (early/late).
 
 ## Power Apps trigger issues
 
