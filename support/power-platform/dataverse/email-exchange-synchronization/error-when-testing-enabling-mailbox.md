@@ -34,7 +34,7 @@ Follow these steps to change the **Auto Discover Server Location** setting:
 3. Open your email server profile record for your Exchange on-premises configuration.
 4. Change the **Auto Discover Server Location** setting to **No**.
 
-5. Enter your EWS URL in the **Incoming Server Location** and **Outgoing Server Location** fields. For example, `https://mail.yourdomain.com/EWS/Exchange.asmx`.
+5. Enter your EWS URL in the **Incoming Server Location** and **Outgoing Server Location** fields. For example, `https://mail.contoso.com/EWS/Exchange.asmx`.
 
 6. Select **Save**.
 7. [Test and enable the mailbox](/power-platform/admin/connect-exchange-online#test-the-configuration-of-mailboxes) again.
