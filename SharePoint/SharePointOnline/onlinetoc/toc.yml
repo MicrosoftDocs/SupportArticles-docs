@@ -2,6 +2,9 @@ items:
 - name: SharePoint Online Troubleshooting
   href: ../sharepoint-online-welcome.yml
   items:
+  - name: SharePoint Online Troubleshooting
+    href: ../sharepoint-online-welcome.yml
+    items:
   - name: Administration
     items:
     - name: '"Access denied" error for PIM-managed accounts in SharePoint or OneDrive admin center'
