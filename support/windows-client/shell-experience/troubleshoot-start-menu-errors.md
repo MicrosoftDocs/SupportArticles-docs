@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Start menu errors
 description: Learn how to troubleshoot common Start menu errors in Windows 10. For example, learn to troubleshoot errors related to deployment, crashes, and performance.
-ms.date: 02/12/2026
+ms.date: 06/30/2026
 manager: dcscontentpm
 ms.topic: troubleshooting
 ms.collection: highpri
@@ -265,6 +265,9 @@ This issue is known. The first-time sign-in experience isn't detected and doesn'
 This issue has been fixed for Windows 10, version 1709 in [KB 4089848](https://support.microsoft.com/help/4089848) March 22, 2018-KB4089848 (OS Build 16299.334)
 
 ### Symptom: When attempting to customize the Start menu layout, the customizations don't apply or results aren't expected
+
+>[!NOTE]
+> A known issue might affect the view of the updated Start menu's "All" section (category, grid, or list view). This can occur even if you enable the **Hide Category View** policy. For the Start menu that doesn't reflect the last used view or the expected configuration, the issue will be resolved in upcoming Windows monthly updates in the next couple of months. Keep devices up to date to get the resolution as soon as it's available.
 
 #### Cause
 
