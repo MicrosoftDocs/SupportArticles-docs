@@ -97,6 +97,7 @@ The following tables list the diagnostics that are currently available in the Mi
 |Checks whether the user is correctly configured to record a meeting in Teams.|[Run Tests: Meeting Recording](https://aka.ms/MeetingRecordingDiag)|[Teams Meeting Recording](https://testconnectivity.microsoft.com/tests/TeamsRecording/input)|[Teams cloud meeting recording](/microsoftteams/cloud-recording#meeting-recording-diagnostic-tools)<br/><br/>[Issues with meeting recordings](../meetings/troubleshoot-meeting-recording-issues.md)|
 |Checks whether a user account meets the requirements to schedule a Teams Meeting on behalf of a delegator.||[Teams Meeting Delegation](https://testconnectivity.microsoft.com/tests/TeamsMeetingDelegation/input)|[Resolve interaction issues between Teams and Exchange Server](../exchange-integration/teams-exchange-interaction-issue.md)|
 |Checks whether a user account meets the requirements to transcribe a Teams meeting.|[Run Tests: Unable to transcribe a meeting in Teams](https://aka.ms/MeetingTranscribeDiag)||[Admins- Manage transcription and captions for Teams meetings](/microsoftteams/meeting-transcription-captions)|
+|Checks whether a user account meets the requirements to create and schedule town halls or webinars in Teams.||[Teams Virtual Events](https://testconnectivity.microsoft.com/tests/TeamsVirtualEvents/input)|[Overview of meetings, webinars, and town halls](/microsoftteams/overview-meetings-webinars-town-halls)|
 
 ### Presence
 
