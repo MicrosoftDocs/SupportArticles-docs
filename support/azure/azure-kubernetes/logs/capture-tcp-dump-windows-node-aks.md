@@ -253,6 +253,112 @@ Next, copy the dump files from the jump VM to your machine:
 
 The dump files are now in the root directory of your machine's c: drive.
 
+## Step 5 Capture traffic for a specific pod from a Windows node
+In some troubleshooting scenarios, you might need to capture traffic for a specific pod instead of capturing all traffic traversing the Windows node.
+This approach is useful when:
+•	Packet capture tools aren't available in the application container.
+•	The application container uses a minimal or distroless image.
+•	The workload is unstable or restarting frequently.
+•	Packet captures must be collected without modifying the application container.
+[!NOTE]
+This procedure uses pktmon because netsh trace captures all traffic traversing the Windows node and doesn't support filtering traffic for a specific pod.
+
+Step 1: Identify the pod IP address and hosting node
+Retrieve the pod IP address and the Windows node hosting the pod.
+```output
+kubectl get pod <pod-name> -n <namespace> -o wide
+Example:
+NAME         READY   STATUS    IP             NODE
+sample-pod   1/1     Running   10.244.3.171   akswin000001
+```
+Record the following information:
+•	Pod IP address
+•	Node name
+________________________________________
+Step 2: Connect to the Windows node
+
+Connect to the Windows node identified in the previous step by following Step 2: Connect to a Windows node in this article.
+
+The supported connection methods are:
+•	HostProcess
+•	SSH
+•	RDP
+After connecting to the Windows node, continue with the next step.
+________________________________________
+Step 3: Configure pktmon
+
+Remove any existing packet filters.
+pktmon filter remove
+Configure a filter for the target pod IP address.
+```output
+pktmon filter add -i <pod-ip-address>
+Example:
+pktmon filter add -i 10.244.3.171
+(Optional) Verify the configured filter.
+pktmon filter list
+```
+________________________________________
+Step 4: Start the packet capture
+
+Start the packet capture.
+```output
+pktmon start --capture
+Reproduce the issue.
+Stop the packet capture.
+pktmon stop
+```
+The packet capture is saved as PktMon.etl.
+Because pktmon was configured with the pod IP address, the generated packet capture primarily contains traffic associated with the specified pod instead of all traffic traversing the Windows node.
+________________________________________
+Step 5: Transfer the capture locally
+
+Transfer the generated PktMon.etl file by following Step 4: Transfer the capture locally in this article.
+
+The supported transfer methods are:
+```output
+•	HostProcess
+•	SSH
+•	RDP
+After transferring the ETL file, you can optionally convert it to PCAPNG for analysis in Wireshark.
+pktmon pcapng PktMon.etl -o capture.pcapng
+```
+________________________________________
+Rationale
+Capturing traffic for a specific pod from a Windows node is a common networking troubleshooting scenario handled by Azure Kubernetes Service support.
+Documenting this workflow provides customers with a supported and repeatable process while reusing the existing connection and file transfer procedures already documented in the article.
+________________________________________
+Impact / Urgency
+Without this guidance:
+•	Customers may incorrectly collect node-wide packet captures when only pod-specific traffic is required.
+•	Additional support engagement is required to explain the pktmon filtering workflow.
+•	Troubleshooting Windows networking issues takes longer.
+•	Customers may incorrectly assume that netsh trace supports pod-level filtering.
+The impact is moderate and primarily affects customers troubleshooting networking issues involving Windows workloads.
+________________________________________
+Validation Notes
+Validated in an AKS Windows cluster by:
+
+1.	Identifying the pod IP address and hosting node.
+kubectl get pod -o wide
+2.	Connecting to the Windows node using the existing HostProcess workflow.
+3.	Configuring the pktmon filter.
+pktmon filter remove
+
+pktmon filter add -i <pod-ip-address>
+
+4.	Starting the packet capture.
+pktmon start --capture
+5.	Reproducing application traffic.
+6.	Stopping the packet capture.
+pktmon stop
+7.	Copying the generated ETL file using the existing Step 4: Transfer the capture locally procedure.
+8.	Opening the ETL file (or converting it to PCAPNG) and verifying that the capture primarily contained traffic associated with the specified pod IP.
+________________________________________
+References
+•	Existing article: Capture a TCP dump from a Windows node in an AKS cluster.
+•	Existing article: How to capture a TCP dump from a pod running on an AKS cluster.
+•	Internal AKS networking validation using Windows HostProcess containers and pktmon pod IP filtering.
+
 ---
 
  
