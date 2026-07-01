@@ -21,11 +21,13 @@ This article explains how to troubleshoot errors that occur when you deploy clus
 
 [Azure Monitor](/azure/azure-monitor/containers/kubernetes-monitoring-overview) services, including [Container Insights](/azure/azure-monitor/containers/kubernetes-monitoring-enable?tabs=cli), [Managed Prometheus](/azure/azure-monitor/containers/kubernetes-monitoring-enable?tabs=cli), and [Application Insights](/azure/azure-monitor/containers/kubernetes-codeless?tabs=portal) are transitioning to a cluster extension-based backend model. This change updates AKS monitoring [add-ons](/azure/aks/integrations) to an extension-based management model, with no change to functionality or user experience.
 
-This backend migration is nondisruptive. It doesn't change the user experience or require customer action There's no impact to workloads, data collection, or monitoring functionality. Azure CLI, Azure portal, and all client experiences continue to work as expected.
+This backend migration is nondisruptive. It doesn't change the user experience or require customer action. There's no impact to workloads, data collection, or monitoring functionality. Azure CLI, Azure portal, and all client experiences continue to work as expected.
 
 > [!IMPORTANT]
-> - **Azure policy restrictions** - Custom Azure policies that block creation or updates to the [cluster extensions resource type](/rest/api/kubernetesconfiguration/extensions/extensions/create) must be updated or exempted.
-> - **Azure resource locks** - Azure resource locks can block management of [cluster extensions resource types](/rest/api/kubernetesconfiguration/extensions/extensions/create).
+- **Azure policy restrictions** - Update or exempt custom Azure policies that block creation or updates to the [cluster extensions resource type](/rest/api/kubernetesconfiguration/extensions/extensions/create).
+- **Azure resource locks** - Azure resource locks can block management of [cluster extensions resource types](/rest/api/kubernetesconfiguration/extensions/extensions/create). Temporarily disable the lock to prevent migration failures.
+
+For more information about types of extensions, see [Categories of cluster extensions](/azure/aks/cluster-extensions#categories-of-cluster-extensions).
 
 #### What's changing 
 
@@ -34,11 +36,11 @@ This backend migration is nondisruptive. It doesn't change the user experience o
 
 ### Check the Monitoring solution migration
 
-If your Monitoring solution was migrated to the extension-based back end, Monitoring services appear as extensions. To check whether the solution is migrated, follow these steps:
+If you migrated your Monitoring solution to the extension-based back end, Monitoring services appear as extensions. To check whether the solution is migrated, follow these steps:
 
 1. Go to the [Azure portal](https://portal.azure.com).
-1. Navigate to your AKS cluster resource.
-1. under **Settings**, select **Extensions + applications**.
+1. Go to your AKS cluster resource.
+1. In **Settings**, select **Extensions + applications**.
 1. Verify that the Monitoring extensions are listed.
 1. Verify that each extension shows the **Provisioning State** value as **Succeeded**.
 
@@ -62,16 +64,16 @@ A `Failed` provisioning state indicates that the monitoring service isn't enable
 
 #### Solution
 
-- Verify that all required monitoring configuration values were provided correctly. 
+- Verify that you provided all required monitoring configuration values correctly. 
 - Try again to enable the monitoring add-on by disabling and then re-enabling it on the AKS cluster.
 
-Monitoring add-ons are now managed as extensions in the back end. However, the customer experience for enabling or disabling monitoring remains unchanged.
+The back end now manages monitoring add-ons as extensions. However, the customer experience for enabling or disabling monitoring remains unchanged.
 
 ### Problem 2: Can't update or edit a monitoring extension
 
 #### Cause
 
-Monitoring extensions are managed by the AKS resource provider. They aren't user-editable.
+The AKS resource provider manages monitoring extensions. You can't edit them.
 
 If you try to update an extension directly, you might receive an error message that resembles the following example:
 
@@ -79,7 +81,7 @@ If you try to update an extension directly, you might receive an error message t
 
 #### Solution
 
-This behavior is expected. Customers should enable, disable, or configure monitoring by using the AKS monitoring add-on experience (Azure portal, CLI, or ARM) instead of trying to modify the extension directly.
+This behavior is expected. Use the AKS monitoring add-on experience (Azure portal, CLI, or ARM) to enable, disable, or configure monitoring instead of trying to modify the extension directly.
 
 ### Problem 3: Resource locks prevent monitoring add-on disable operations
 
@@ -96,30 +98,30 @@ Please remove the lock and try again.
 
 #### Cause
 
-Azure resource locks prevent accidental deletion or modification of critical resources. When a **Delete lock** or **ReadOnly lock** is applied at any of the following scopes, monitoring add-on disable operations are blocked:
+Azure resource locks prevent accidental deletion or modification of critical resources. When you apply a **Delete lock** or **ReadOnly lock** at any of the following scopes, monitoring add-on disable operations are blocked:
 
 **Subscription level**: Locks all resources in the subscription
 
-**Resource group level**: Locks all resources in the resource group
+- **Resource group level**: Locks all resources in the resource group
 
 **Resource level**: Locks the specific AKS cluster resource
 
-The monitoring add-on disable operation requires write/delete permissions on the cluster resource. These permissions are blocked by the lock.
+The monitoring add-on disable operation requires write and delete permissions on the cluster resource. The lock blocks these permissions.
 
-#### Common scenarios in which locks are applied:
+#### Common scenarios in which you apply locks
 
 - Organization policies that enforce resource locks for production resources
 - Compliance requirements (for example, Azure Policy automatically applying locks)
-- Manual locks that are applied by administrators to prevent accidental deletion
+- Manual locks that administrators apply to prevent accidental deletion
 
 #### Solution
 
 #### Step 1: Identify the lock
 
-1. Navigate to the Azure portal.
+1. Go to the Azure portal.
 1. Go to the AKS cluster resource, resource group, or subscription (depending on the lock scope that's mentioned in the error message).
 1. In the left menu, select **Settings** > **Locks**.
-1. Identify the locks that are blocking the operation.
+1. Identify the locks that block the operation.
 
 **Using Azure CLI:**
 
@@ -141,7 +143,7 @@ az lock list
 
 **Using Azure portal:**
 
-1. Navigate to the lock location that you identified in Step 1.
+1. Go to the lock location that you identified in Step 1.
 1. Select the lock, and select **Delete**.
 1. Verify the deletion.
  
@@ -171,7 +173,7 @@ az aks update --resource-group <resource-group> --name <cluster-name> \
 
 #### Step 4: Reapply the lock (recommended)
 
-If protection for the lock was intentionally applied for, reapply protection after the monitoring add-on disable operation finishes:
+If you intentionally protect the lock, reapply protection after the monitoring add-on disable operation finishes:
 
 ```azurecli
 az lock create --name <lock-name> \
@@ -181,7 +183,7 @@ az lock create --name <lock-name> \
   --lock-type CanNotDelete
 ```
 
-### Problem 4: Azure policy blocks monitoring add-on enable operations
+### Problem 4: Azure Policy blocks monitoring add-on enable operations
 
 #### Error
 
@@ -198,25 +200,25 @@ Policy identifiers: '[{"policyAssignment":{"name":"Restrict Extensions","id":"/s
 
 Azure Policy is enforcing restrictions that prevent the creation or modification of cluster extensions. This action typically occurs when:
 
-- **Deny policies** are configured to restrict which extensions can be installed on AKS clusters
+- **Deny policies** restrict which extensions you can install on AKS clusters.
 
-- **Allowed extension types policies** exist that do not include the Azure Monitor extensions in the allowlist
+- **Allowed extension types policies** don't include the Azure Monitor extensions in the allowlist.
 
-- **Naming convention policies** block resources that don't match specific naming patterns
+- **Naming convention policies** block resources that don't match specific naming patterns.
  
-- **Tag enforcement policies** require specific tags that don't exist on the extension resource
+- **Tag enforcement policies** require specific tags that don't exist on the extension resource.
  
 The policy identifiers in the error message indicate:
 
-**policyAssignment**: The specific policy assignment blocking the operation
+- **policyAssignment**: The specific policy assignment blocking the operation.
 
-**policyDefinition**: The underlying policy definition being enforced
+- **policyDefinition**: The underlying policy definition being enforced.
 
-#### Common scenarios:
+#### Common scenarios
 
-- Organization security policies that restrict third-party or specific extensions
-- Policies intended to control cost or resource sprawl
-- Compliance policies that inadvertently block Microsoft-managed extensions
+- Organization security policies that restrict third-party or specific extensions.
+- Policies intended to control cost or resource sprawl.
+- Compliance policies that inadvertently block Microsoft-managed extensions.
 
 #### Solution
 
@@ -224,15 +226,15 @@ The policy identifiers in the error message indicate:
 
 Extract the policy information from the error message:
 
-**Policy Assignment Name:** `Restrict Extensions` (example)
+- **Policy Assignment Name:** `Restrict Extensions` (example).
 
-**Policy Assignment ID:** `/subscriptions/<subscription-id>/providers/Microsoft.Authorization/policyAssignments/<assignment-id>`
+- **Policy Assignment ID:** `/subscriptions/<subscription-id>/providers/Microsoft.Authorization/policyAssignments/<assignment-id>`.
 
-**Policy Definition Name:** `Restrict Extensions` (example)
+- **Policy Definition Name:** `Restrict Extensions` (example).
 
 **Using Azure portal:**
 
-1. Navigate to **Policy**.
+1. Go to **Policy**.
 1. In the left menu, select **Assignments**.
 1. In the error message, search for the policy assignment name.
 1. Select the assignment to view its details and scope.
@@ -250,11 +252,11 @@ az policy definition show --name <definition-id>
 
 #### Step 2: Review the policy rule
 
-Examine the policy definition to understand which conditions are blocking the extension:
+Examine the policy definition to understand which conditions block the extension:
 
 **Using Azure portal:**
 
-1. Navigate to **Policy** > **Definitions**.
+1. Go to **Policy** > **Definitions**.
 1. Search for the policy definition name.
 1. Review the **Policy rule** JSON to understand the deny conditions.
 
@@ -266,11 +268,11 @@ Examine the policy definition to understand which conditions are blocking the ex
 
 #### Step 3: Create a policy exemption (recommended approach)
 
-If the policy is required for compliance, but Azure Monitor extensions should be allowed, create an exemption:
+If the policy is required for compliance but Azure Monitor extensions should be allowed, create an exemption:
 
 **Using Azure portal:**
 
-1. Navigate to **Policy** > **Assignments**.
+1. Go to **Policy** > **Assignments**.
 1. Select the blocking policy assignment.
 1. Select **Create exemption**.
 1. Set the scope to the AKS cluster resource or resource group.
@@ -293,7 +295,7 @@ az policy exemption create \
 
 If you have permissions to modify the policy, update it to allow Azure Monitor extensions:
 
-1. Navigate to **Policy** > **Definitions**.
+1. Go to **Policy** > **Definitions**.
 1. Clone the existing policy definition (if it's a built-in policy).
 1. Modify the policy rule to exclude Azure Monitor extension types:
 
@@ -331,7 +333,7 @@ If you have permissions to modify the policy, update it to allow Azure Monitor e
 
 #### Step 5: Retry the failing operation
 
-After you create an exemption or modifying the policy, retry the failing monitoring add-on enable operation:
+After you create an exemption or modify the policy, retry the failing monitoring add-on enable operation:
 
 **Using Azure CLI:**
 
@@ -378,7 +380,7 @@ This problem has the following common causes:
 
 To resolve this problem, follow these steps:
 
-1. Check resources: Make sure that your Kubernetes cluster has sufficient resources, and that pod scheduling is permitted on the nodes (you should consider taints). Verify that memory and CPU resources meet the requirements.
+1. Check resources: Make sure that your Kubernetes cluster has sufficient resources, and that pod scheduling is permitted on the nodes (consider taints). Verify that memory and CPU resources meet the requirements.
 
 1. Inspect events: Check the events within the Kubernetes namespace to identify potential problems that might prevent pods, jobs, or other Kubernetes resources from reaching a ready state.
 
