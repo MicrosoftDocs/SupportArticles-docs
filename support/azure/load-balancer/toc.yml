@@ -42,3 +42,5 @@ items:
     href: troubleshoot-rhc.md
   - name: Troubleshoot Azure Load Balancer outbound connectivity issues
     href: troubleshoot-outbound-connection.md
+  - name: Troubleshoot health probe failures in Azure Load Balancer
+    href: troubleshoot-load-balancer-health-probe-failures.md
