@@ -105,8 +105,10 @@ Use the following methods to verify that Autodiscover can be resolved from an ex
 
 1. From an external computer, open Command Prompt and type the following commands and press ENTER after each command:
 
-   - NSLookup
-   - autodiscover.<*Your_Domain.com*>
+   ```cmd
+   NSLookup
+   autodiscover.<DomainName>.com
+   ```
 
 2. In the response to the command, the "Address" value should be the external IP of the on-premises Exchange CAS server. For example: Name: `autodiscover.contoso.com` Address: 38.96.29.10
 
@@ -156,11 +158,11 @@ To verify the domain name value in the Organization Relationship, follow these s
     Get-OrganizationRelationship -Identity "Exchange Online to On Premises Organization Relationship" | FL
     ```
 
-3. Check **DomainName** value. The vanity domain (`yourdomain.com`) should be present.
+3. Check **DomainName** value. The vanity domain (for example, `contoso.com`) should be present.
 4. If the **DomainName** value is missing your vanity domain, run the following command:
 
     ```powershell
-    Set-OrganizationRelationship -Identity "Exchange Online to On Premises Organization Relationship" -DomainName yourdomain.com
+    Set-OrganizationRelationship -Identity "Exchange Online to On Premises Organization Relationship" -DomainName <DomainName>.com
     ```
 
  **Did this solve your issue?**

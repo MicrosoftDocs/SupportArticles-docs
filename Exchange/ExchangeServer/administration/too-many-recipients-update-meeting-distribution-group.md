@@ -1,6 +1,6 @@
 ---
 title: Can't update a meeting in large distribution group
-description: Describes an issue that triggers a non-delivery report when you send an update to a meeting, and provides resolutions.
+description: Fixes an issue that generates a non-delivery report when you send an update to a meeting.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -10,22 +10,29 @@ ms.custom:
   - sap:Recipients\Issues with Mailbox, DG, MEU/MEC Management
   - Exchange Server
   - CI 119623
+  - CI 9823
+  - CI 11508
   - CSSTroubleshoot
-ms.reviewer: tmoore, gregmans, v-six
+ms.reviewer: tmoore, gregmans, v-six, v-kccross
 search.appverid: 
   - MET150
 appliesto: 
   - Exchange Online
-  - Exchange Server 2013 Enterprise
-  - Exchange Server 2010 Enterprise
+  - Exchange Server SE
+  - Exchange Server 2019
+  - Exchange Server 2016
   - Outlook 2013
   - Outlook 2010
-ms.date: 05/12/2026
+ms.date: 06/29/2026
 ---
 
-# Error (too many recipients) when you update a meeting in a large Outlook distribution group
+# Too many recipients error when you update a meeting in a large Outlook distribution group
 
 _Original KB number:_ &nbsp; 3024804
+
+## Summary
+
+Updating a meeting for a large distribution group can fail with a “too many recipients” error when the total number of recipients exceeds the organization’s message recipient limit. This issue occurs because meeting responses from individual recipients are added to the **To** or **Cc** field along with the distribution group, which can cause subsequent updates to exceed the allowed recipient count. Limiting or removing additional recipients prevents the error when sending meeting updates.
 
 ## Symptoms
 
@@ -45,9 +52,9 @@ When you open the meeting on the calendar, the **To** field contains a number of
 
 ## Cause
 
-This issue may occur if the number of recipients who responded to the earlier meeting request exceeds the recipient limit for messages. Each recipient who sends a response to the meeting request is added to the **To**  field in the updates to the meeting request, in addition to the distribution group. For a large distribution group, the resulting **To**  field may exceed the number of allowed recipients. This triggers the NDR.
+This issue may occur if the number of recipients who responded to the earlier meeting request exceeds the recipient limit for messages. Each recipient who sends a response to the meeting request is added to the **To** field or **Cc** field in the updates to the meeting request, in addition to the distribution group. For a large distribution group, the resulting **To** or **Cc** field may exceed the number of allowed recipients. This triggers the NDR.
 
-Use one of the following methods to prevent meeting updates from being sent with additional recipients on the **To** line.
+Use one of the following methods to prevent meeting updates from being sent with additional recipients on the **To** or **Cc** line.
 
 ## Resolution 1: Disable responses for the meeting request
 
@@ -63,21 +70,23 @@ This prevents responding recipients from being added to the **To** field on subs
 
 ## Resolution 2: Manually delete additional responses before you send the update
 
-When you reopen the meeting to send an update, delete the additional recipient entries from the **To** field before you click **Send Update**.
+When you reopen the meeting to send an update, delete the additional recipient entries from the **To** or **Cc** field before you select **Send Update**.
 
 > [!NOTE]
 > When you use this method, removed recipients may receive a cancellation notice for the original meeting, and the update may be applied as a new meeting on the recipient's calendar.
 
 ## More information
 
-The `MaxRecipientEnvelopeLimit` value in Exchange is where the organization limit for recipients is stored. The default setting in Exchange 2010 and Exchange 2013 is 5000 recipients per message. However, this setting can be configured by your Exchange administrator.
+The `MaxRecipientEnvelopeLimit` value in Exchange is where the organization limit for recipients is stored. 
 
-Exchange Online and Microsoft 365 have an organization limit of 500 recipients per message, and this setting can't be modified. Where applicable, this value is configured through the following PowerShell command:
+Exchange Online and Microsoft 365 have an organization limit of 500 recipients per message, and this setting can't be modified.
+
+The default setting in Exchange Server is 5000 recipients per message. However, this setting can be configured by your Exchange administrator. This value is configured through the following PowerShell command:
 
 ```powershell
 Set-TransportConfig -maxrecipientenvelopelimit: value
 ```
 
-The `MaxRecipientEnvelopeLimit` parameter specifies the maximum number of recipients for a message. The default value is 5000. The valid input range for this parameter runs from 0 through 2147483647. If you enter a value of **Unlimited**, no limit is imposed on the number of recipients for a message. Exchange treats an unexpanded distribution group as one recipient. This parameter is available only in on-premises installations of Exchange 2013.
+The `MaxRecipientEnvelopeLimit` parameter specifies the maximum number of recipients for a message. The default value for Exchange Server is `5000`. The valid input range for this parameter is 0 through `2147483647`. If you enter a value of `Unlimited`, no limit is imposed on the number of recipients for a message. Exchange treats an unexpanded distribution group as one recipient. This parameter is available only in on-premises installations of Exchange Server.
 
 For more information, see [Set-TransportConfig](/powershell/module/exchange/set-transportconfig).

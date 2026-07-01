@@ -1,31 +1,39 @@
 ---
-title: WinRM can't determine content type of HTTP response
-description: Provides resolutions to resolve the error (The WinRM client... cannot determine the content type of the HTTP response from the destination computer) when you try to start Exchange Management Shell/Console.
+title: WinRM can't determine the content type of HTTP response
+description: Provides resolutions to resolve the error (The WinRM client... cannot determine the content type of the HTTP response from the destination computer) when you try to start Exchange Management Shell or Console.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
-  - sap:OWA  And Exchange Admin Center\Issues connecting to Exchange Management Shell
+  - sap:OWA And Exchange Admin Center\Issues connecting to Exchange Management Shell
   - Exchange Server
   - CI 119623
   - CSSTroubleshoot
-ms.reviewer: benwinz, v-six
+  - CI 9823
+  - CI 11545
+ms.reviewer: benwinz, v-six, v-kccross
 search.appverid: 
   - MET150
 appliesto: 
-  - Exchange Server 2010
-ms.date: 05/12/2026
+  - Exchange Server SE
+  - Exchange Server 2019
+  - Exchange Server 2016
+ms.date: 06/29/2026
 ---
 
-# Error (The WinRM client... cannot determine the content type of the HTTP response from the destination computer) when you try to start Exchange Management Shell/Console
+# Error (The WinRM client... cannot determine the content type of the HTTP response from the destination computer) when you try to start Exchange Management Shell or Console
 
 _Original KB number:_ &nbsp; 2028305
 
+## Summary
+
+Exchange Management Shell (EMS) or Exchange Management Console (EMC) can fail to start with a WinRM error indicating that the server can’t determine the content type of the HTTP response. This issue typically occurs because of incorrect IIS configuration or missing components that affect remote PowerShell connectivity, such as misconfigured authentication modules, missing WSMan entries, or disabled Remote PowerShell access. Correcting these configuration issues restores the connection to Exchange and resolves the error.
+
 ## Symptoms
 
-When you try to start Exchange Management Shell (EMS) or Exchange Management Console (EMC) on a computer that is running Exchange Server 2010, you receive the following error message:
+When you try to start Exchange Management Shell (EMS) or Exchange Management Console (EMC) on a computer that is running Exchange Server, you receive the following error message:
 
 > Connecting to remote server failed with the following error message: The WinRM client cannot process the request. It cannot determine the content type of the HTTP response from the destination computer. The content type is absent or invalid. For more information, see the about_Remote_Troubleshooting Help topic.
 
@@ -43,7 +51,7 @@ This problem occurs because one or more of the following conditions are true:
 This causes the WSMan module to be displayed as a Managed module in the PowerShell virtual directory.
 
 > [!NOTE]
-> The WSMan Module entry may also be missing from the ApplicationHost.config file if the WinRM IIS Extension feature is installed on the server.
+> The WSMan Module entry might also be missing from the ApplicationHost.config file if the WinRM IIS Extension feature is installed on the server.
 
 ## Resolution
 
@@ -51,7 +59,7 @@ To resolve this problem, use one of the following methods:
 
 - Make sure that the Kerbauth module is not enabled on the default website but is, instead, enabled only for the PowerShell virtual directory. Remote PowerShell uses Kerberos authentication for the user connection. Internet Information Services (IIS) implements this Kerberos authentication method by using a Native module.
 
-    In IIS Manager, Kerbauth should be listed as a Native module in the PowerShell virtual directory. The DLL location for this module should point to `C:\Program Files\Microsoft\Exchange Server\v14\Bin\kerbauth.dll`.
+    In IIS Manager, Kerbauth should be listed as a Native module in the PowerShell virtual directory. The DLL location for this module should point to `C:\Program Files\Microsoft\Exchange Server\v15\Bin\kerbauth.dll`.
 
     > [!NOTE]
     > The Local entry type for the Kerbauth module indicates that the module was enabled directly on this level and was not inherited from a parent level.
