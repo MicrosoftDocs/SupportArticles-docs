@@ -80,7 +80,7 @@ When certificate verification fails, you typically receive an error that resembl
 
   If the FQDN is not in Reverse DNS, you can add an entry to the hosts file located on the management server to provide name resolution. The hosts file is located in the `\Windows\System32\Drivers\etc` folder. An entry in the hosts file is a combination of the IP address and the FQDN.
 
-  For example, to add an entry for the host named *newhostname.newdomain.name* with an IP address of 192.168.1.1, add the following to the end of the hosts file:
+  For example, to add an entry for the host named `newhostname.newdomain.name` with an IP address of 192.168.1.1, add the following to the end of the hosts file:
 
   `192.168.1.1 newhostname.newdomain.name`
 
@@ -217,7 +217,7 @@ netsh winhttp show proxy
 If a WinHTTP proxy server is configured, add the FQDN of the server that you're trying to discover to the bypass list by running the following command:
 
 ```console
-netsh winhttp set proxy proxy-server="<proxyserver:port>" bypass-list="*.ourdomain.com;*.yourdomain.com*;<serverFQDN>"
+netsh winhttp set proxy proxy-server="<proxyserver:port>" bypass-list="*.<domain_1>.com;*.<domain_2>.com*;<serverFQDN>"
 ```
 
 Once the bypass list is configured, check if the agent discovery is successful.
@@ -324,8 +324,8 @@ For more information, see [How to Configure sudo Elevation and SSH Keys](/previo
 
 **Error description**
 
-> .[?1034hopsuser@lx1:~> su - root -c 'sh /tmp/scx-opsuser/GetOSVersion.sh; EC=$?; rm -rf
-/tmp/scx-opsuser;exit $EC'  
+> `.[?1034hopsuser@lx1:~> su - root -c 'sh /tmp/scx-opsuser/GetOSVersion.sh; EC=$?; rm -rf
+/tmp/scx-opsuser;exit $EC'`  
 > Password:  
 > exit  
 > su: incorrect password  
