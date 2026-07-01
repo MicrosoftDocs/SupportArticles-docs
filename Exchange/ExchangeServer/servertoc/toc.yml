@@ -4,8 +4,6 @@ items:
   items:
     - name: Administration
       items:
-        - name: '"The term New-Mailbox is not recognized" error'
-          href: ../administration/term-new-mailbox-not-recognized-error.md
         - name: 403 Forbidden when viewing cross-forest free/busy information
           href: ../administration/403-forbidden-view-free-busy-information.md
         - name: Access Denied when deleting federation trust
@@ -25,7 +23,7 @@ items:
         - name: Can't look up free/busy information
           href: ../administration/cross-forest-or-hybrid-free-busy-lookups-fail.md
         - name: Can't manage Send on Behalf permissions
-          href: ../administration/send-on-behalf-for-shared-mailbox.md          
+          href: ../administration/send-on-behalf-for-shared-mailbox.md                 
         - name: Can't mount databases that are larger than 1024 GB
           href: ../administration/exchange-cannot-mount-database-larger-than-1024-gb.md
         - name: Can't open a mailbox with Receive-As permissions
@@ -48,7 +46,6 @@ items:
           href: ../administration/certificate-assignment-fails-invalid-characters.md
         - name: Cmdlet/parameter combinations not working
           href: ../administration/cmdlet-parameter-combinations-not-working.md
-        - name: Connecting to the remote server failed
         - name: DAG network Misconfigured error
           href: ../administration/dag-network-misconfigured-error.md
         - name: Database switchover causes ExAssertException
@@ -107,7 +104,6 @@ items:
           href: ../administration/http-error-500-start-ems-emc.md
         - name: Mailbox UPN and SamAccountName contain a GUID
           href: ../administration/mailbox-upn-samaccountname-contain-guid.md
-        - name: Mailboxes are quarantined and databases fail over
         - name: MAPI applications can't access archive mailboxes
           href: /outlook/troubleshoot/user-interface/mapi-apps-cannot-access-archive-mailboxes
         - name: MAPI is the only way to change profiles
@@ -136,6 +132,8 @@ items:
           href: ../administration/requestor-changed-server-component.md
         - name: Set-ServerComponentState ends Exchange Frontend Transport service
           href: ../administration/frontend-transport-service-terminate-run-set-servercomponentstate.md
+        - name: '"The term New-Mailbox is not recognized" error'
+          href: ../administration/term-new-mailbox-not-recognized-error.md
         - name: Unexpected Automapping results when adding mailbox permissions
           href: ../administration/unwanted-automapping-results-add-remove-mailbox-permission.md
         - name: Unexpected PublicFolderMailBoxes dynamic distribution groups
@@ -316,18 +314,12 @@ items:
           href: ../migration/ad-property-homemdb-not-writeable.md
         - name: Can't access mailbox after adding mailbox server to a DAG
           href: ../migration/cannot-access-move-mailbox.md
-        - name: Can't move a mailbox to a database
-          href: ../migration/error-move-mailbox-to-database-exchange-2010.md
         - name: Can't move mailboxes due to Exchange Online limits
           href: ../migration/save-changes-made-item-store-migrate-mailbox.md
-        - name: Can't see free/busy info after a mailbox move
-          href: ../migration/no-free-busy-info-mailbox-move.md
         - name: Cross-forest move to an Exchange 2013 database fails
           href: ../migration/cannot-move-mailbox-to-Exchange-2013-database.md
         - name: Error when you move a mailbox
           href: ../migration/cannot-set-folder-security-descriptor-non-canonical-acl.md
-        - name: Mailbox move request isn't showing in EAC
-          href: ../migration/eac-not-show-mailbox-move-request.md
         - name: Mailboxes are stalled during a migration
           href: ../migration/mailboxes-stalled-during-migration.md
         - name: Moving migration mailbox fails
@@ -362,27 +354,15 @@ items:
           href: ../setup/owa-your-request-cannot-be-completed.md
         - name: Can't get child of ADObjectId
           href: ../setup/edge-transport-setup-fails-domain-joined-server.md
-        - name: Can't use Setup.exe to uninstall server role
-          href: ../setup/cannot-uninstall-server-role-via-setup-exe.md
-        - name: Cumulative Update 20 shown instead of CU22
-          href: ../setup/cumulative-update-20-is-shown-not-22.md
         - name: Exchange Server setup doesn't run correctly using PowerShell
           href: ../setup/exchange-setup-does-not-run-correctly-started-powershell.md
         - name: Exchange Server Setup fails and returns “Database is mandatory on UserMailbox” error 
           href: ../setup/database-mandatory-on-usermailbox.md
-        - name: AuthorizationManager check failed error during Exchange Server installation
-          href: ../setup/installing-exchange-authorization-manager-check-fails.md
-        - name: Install updates for Mailbox-role server fails
-          href: ../setup/error-occurred-while-configuring-search-foundation.md
-        - name: Installation in RecoverServer mode fails
-          href: ../setup/language-pack-bundle-not-found.md
+        - name: Install Exchange Server 2010 SP2 fails
+          href: ../setup/installing-exchange-2010-sp2-fails.md
         - name: Issues occur if arbitration mailbox isn't upgraded
           href: ../setup/issues-occur-if-arbitration-mailbox-not-upgraded.md
-        - name: Run Update cmdlet fails
-          href: ../setup/network-path-was-not-found-error.md
         - name: Service Pack upgrade fails
           href: ../setup/service-pack-upgrade-fails.md
-        - name: Setup of Mailbox role fails
-          href: ../setup/setup-of-mailbox-role-fails-with-error.md
         - name: Version error in RecoverServer mode install
           href: ../setup/version-error-in-recover-server-mode-install.md
