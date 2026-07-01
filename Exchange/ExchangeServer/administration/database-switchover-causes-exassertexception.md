@@ -1,25 +1,32 @@
 ---
 title: Database switchover causes an ExAssertException error
-description: Provides a resolution for an issue in which a database switchover fails and the Exchange Information Store service (MSExchangeIS) logs an ExAssertException error for StoreCommonServices.
+description: Fixes an issue in which a database switchover fails and the Exchange Information Store service (MSExchangeIS) logs an ExAssertException error for StoreCommonServices.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
-  - sap:High Availability, Health, Performance, Content Indexing\Database or Server Failed Over Unexpectedly
+  - sap:Performance Issues
   - CI 183142
   - Exchange Server
+  - CI 9823
+  - CI 12054
   - CSSTroubleshoot
-ms.reviewer: batre, meerak, v-trisshores
+ms.reviewer: batre, meerak, v-trisshores, v-kccross
 appliesto:
+  - Exchange Server SE
   - Exchange Server 2019
   - Exchange Server 2016
 search.appverid: MET150
-ms.date: 05/12/2026
+ms.date: 06/29/2026
 ---
 
 # Database switchover causes an ExAssertException error
+
+## Summary
+
+A database switchover can fail and generate an ExAssertException error in the Microsoft Exchange Information Store service when performance counter memory allocation is insufficient. This issue occurs because the default page file size for performance counters is too small, which prevents Exchange from correctly initializing database performance counters during the switchover. Increasing the performance counter memory allocation resolves the issue and allows the switchover to complete successfully.
 
 ## Symptoms
 
@@ -77,21 +84,21 @@ To fix the issue, increase the size of the page file for the performance counter
 
 1. Run regedit.
 
-2. Delete the following registry subkey:
+1. Delete the following registry subkey:
 
    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSExchangeIS\<server name>-NonReplicated`
 
-3. (Optional) If another Exchange server that doesn't have the issue is available, copy the *MSExchangeISStorePerfCounters.xml* file from that server to the affected server. The file is in the *%ExchangeInstallPath%Setup\Perf* folder.
+1. (Optional) If another Exchange server that doesn't have the issue is available, copy the *MSExchangeISStorePerfCounters.xml* file from that server to the affected server. The file is in the *%ExchangeInstallPath%Setup\Perf* folder.
 
-4. Increase the size of the page file for the performance counters by running the following PowerShell commands to update the registry:
+1. Increase the size of the page file for the performance counters by running the following PowerShell commands to update the registry:
 
    ```powershell
    Add-PSSnapin Microsoft.Exchange.Management.PowerShell.Setup
    New-PerfCounters -DefinitionFileName "$env:exchangeinstallpath\Setup\Perf\MSExchangeISStorePerfCounters.xml" -FileMappingSize 10485760
    ```
 
-5. Verify that the `FileMappingSize` registry value under the following registry subkey matches the updated size of the page file:
+1. Verify that the `FileMappingSize` registry value under the following registry subkey matches the updated size of the page file:
 
    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSExchangeIS Store\Performance`
 
-6. Restart the server.
+1. Restart the server.
