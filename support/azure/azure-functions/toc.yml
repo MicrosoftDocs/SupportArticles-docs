@@ -4,14 +4,14 @@ items:
 - name: Availability
   items:
     - name: Function App Down or Reporting Errors
-      href: availability/functions-troubleshoot-issues.md  
+      href: availability/functions-troubleshoot-issues.md
 - name: Application Code Deployment
   items:
     - name: Application issues post deployment
       href: deployment/functions-deploying-runtime-issues-post-deployment.md
 - name: Configuring and Managing Function Apps
   items:
-    - name: Migration of runtime/language version
+    - name: Language and runtime version upgrades
       href: config-mgmt/functions-configuring-updateversion.md
 - name: Creating or Deleting Function Apps
   items:
