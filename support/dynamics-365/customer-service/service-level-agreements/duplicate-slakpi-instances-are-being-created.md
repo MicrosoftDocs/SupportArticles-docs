@@ -1,8 +1,7 @@
 ---
 title: Duplicate SLA KPI Instances are Created
 description: Resolves duplicate SLA KPI instances caused by custom logic, privilege issues, or SLA items ordering in Microsoft Dynamics 365 Customer Service.
-ms.reviewer: sdas, ghoshsoham
-ms.author: v-heenaattar
+ms.reviewer: v-heenaattar, sdas, ghoshsoham
 ms.date: 03/26/2025
 ms.custom: sap:Service Level Agreements
 ---
