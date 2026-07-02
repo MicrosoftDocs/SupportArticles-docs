@@ -21,9 +21,11 @@ ms.date: 06/29/2026
 
 # Fix failed Exchange Server updates
 
-If you encounter an error when you try to install a cumulative update (CU) or security update (SU) for Microsoft Exchange Server, select the applicable error description from the list, and follow the appropriate resolution.
+## Summary
 
-## Insert the 'Microsoft Exchange Server' disk
+This article describes a list of the potential errors that you might see when you install a cumulative update (CU) or security update (SU) for Microsoft Exchange Server. It also provides resolutions to fix them and unblock the installation.
+
+## Insert the 'Microsoft Exchange Server' disk error
 
 ### Issue
 
@@ -31,6 +33,7 @@ You see the following error message when you either install or uninstall an Exch
 
 > The feature you are trying to use is on a CD-ROM or other removable disk that is not available.
 > Insert the 'Microsoft Exchange Server' disk and click OK.
+>
 > :::image type="content" source="media/exchange-security-update-issues/insert-disk-error.png" alt-text="Screenshot of the error to insert the Microsoft Exchange Server disk.":::
 
 ### Resolution
