@@ -41,7 +41,10 @@ To resolve this issue, follow these steps:
 
 3. Review the [container registry private link](/azure/container-registry/container-registry-private-link) to ensure that the connection configuration is correct, including the private Domain Name System (DNS) zone and private link.
 
-4. Access any failed VM instance using Secure Shell (SSH) and run curl on the ACR host. If successful, reconcile the cluster. If it still fails, return to step 3.
+4. Verify that the AKS kubelet identity has `AcrPull` access to the bootstrap ACR:                   
+AKS requires permission to pull images and artifacts from the bootstrap Azure Container Registry (ACR). Verify that the AKS kubelet identity has the required permissions (AcrPull) on the bootstrap Azure Container Registry (ACR).
+
+5. Access any failed VM instance using Secure Shell (SSH) and run curl on the ACR host. If successful, reconcile the cluster. If it still fails, return to step 3.
 
 ## References
 
@@ -50,6 +53,7 @@ To resolve this issue, follow these steps:
 - [Network isolated Azure Kubernetes Service (AKS) clusters](/azure/aks/concepts-network-isolated)
 
 - [Container registry private link](/azure/container-registry/container-registry-private-link)
+- [The AKS-ACR integration](https://learn.microsoft.com/en-us/azure/aks/cluster-container-registry-integration?pivots=azure-cli)
 
  
 
