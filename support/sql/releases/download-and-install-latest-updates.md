@@ -281,7 +281,7 @@ Each of the following links provides information for all of the applicable produ
 | 14.0.2000.63            | None         | GDR                | [KB4057122](https://support.microsoft.com/help/4057122) | January 03, 2018              |
 | 14.0.3008.27            | None         | CU2                | [KB4052574](sqlserver-2017/cumulativeupdate2.md)        | November 28, 2017             |
 | 14.0.3006.16            | None         | CU1                | [KB4038634](sqlserver-2017/cumulativeupdate1.md)        | October 24, 2017              |
-| 14.0.1000.169           | None         | RTM                | NA                                                      | SeptGDR for SP3ember 29, 2017 |
+| 14.0.1000.169           | None         | RTM                | NA                                                      | September 29, 2017            |
 
 ### SQL Server 2016
 
