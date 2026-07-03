@@ -21,7 +21,7 @@ search.appverid: MET150
 ms.date: 06/03/2026
 ---
 
-# The Exchange Frontend Transport service terminates unexpectedly when you run Set-ServerComponentState
+# The Exchange Frontend Transport service terminates unexpectedly when you run Exchange maintenance scripts or Set-ServerComponentState
 
 _Original KB number:_ &nbsp;4043629
 
@@ -31,7 +31,7 @@ The Microsoft Exchange Frontend Transport service can terminate unexpectedly and
 
 ## Symptoms
 
-The Microsoft Exchange Frontend Transport service crashes when you do one of the following things:
+The Microsoft Exchange Frontend Transport service terminates unexpectedly when you do one of the following things:
 
 - Run the `Set-ServerComponentState` PowerShell cmdlet on the `ServerWideOffline` server component.
 - Run the Exchange Server DAG Maintenance scripts.
