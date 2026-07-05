@@ -196,7 +196,7 @@ IIS defines the following HTTP status codes that indicate a more specific cause 
 | 404.6 | Verb denied. | The request is made by using an HTTP verb that isn't configured or that isn't valid. |
 | 404.7 | File extension denied. | The requested file name extension isn't allowed. |
 | 404.8 | Hidden namespace. | The requested URL is denied because the directory is hidden. |
-| 404.9 | Files attribute hidden. | The requested file is hidden. |
+| 404.9 | Files attribute hidden. | The requested file is hidden. For more information, see [HTTP Error 404.9 - Not Found](../site-behavior-performance/hidden-static-files-http-404-access-denied.md). |
 | 404.10 | Request header too long. | The request is denied because the request headers are too long. |
 | 404.11 | Request contains double escape sequence. | The request contains a double escape sequence. |
 | 404.12 | Request contains high-bit characters. | The request contains high-bit characters, and the server is configured not to allow high-bit characters. |
