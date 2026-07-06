@@ -4,3 +4,5 @@ items:
   items:
   - name: Troubleshoot Azure DNS
     href: troubleshoot-dns.md   
+  - name: Troubleshoot conditional forwarder misconfiguration
+    href: troubleshoot-azure-dns-resolution-fails-conditional-forwarder-misconfiguration.md
