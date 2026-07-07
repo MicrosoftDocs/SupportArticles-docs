@@ -10,6 +10,8 @@ ms.custom:
   - sap:Clients and Mobile\Need help with IMAP, POP Clients
   - Exchange Server
   - CSSTroubleshoot
+  - CI 9823
+  - CI 12201
 ms.reviewer: danba, brijs, catagh, gbratton, dvespa, v-six
 appliesto: 
   - Microsoft Outlook 2010
@@ -19,8 +21,9 @@ appliesto:
   - Exchange Server 2013 Standard Edition
   - Exchange Server 2016 Standard Edition
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 07/07/2026
 ---
+
 # Developer Support limitations for public protocols
 
 _Original KB number:_ &nbsp;2269506

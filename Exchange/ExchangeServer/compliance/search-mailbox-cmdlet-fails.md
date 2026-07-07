@@ -9,6 +9,8 @@ ms.topic: troubleshooting
 ms.custom: 
   - sap:Messaging Policy and Compliance\Issues with eDiscovery, import/export of mailbox
   - CI 163129
+  - CI 9823
+  - CI 12201
   - Exchange Server
   - CSSTroubleshoot
 ms.reviewer: jeffrem, johage, lindabr
@@ -19,9 +21,14 @@ appliesto:
   - Exchange Server 2016 Enterprise Edition
   - Exchange Server 2019
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 07/07/2026
 ---
+
 # Error when using the Search-Mailbox cmdlet
+
+## Summary
+
+This article describes an issue in which the `Search-Mailbox` cmdlet fails and returns a "Cannot save changes made to an item to store" error when the LogLevel parameter is set to Full. The issue occurs when a retention policy on the target mailbox modifies the search results log message before the cmdlet can attach the log file. The article explains the cause of the failure and provides alternative search methods and workarounds to successfully perform mailbox searches and generate detailed results.
 
 ## Symptoms
 

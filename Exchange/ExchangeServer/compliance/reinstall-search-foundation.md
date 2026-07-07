@@ -9,6 +9,8 @@ ms.topic: troubleshooting
 ms.custom: 
   - sap:High Availability, Health, Performance, Content Indexing\Need help with Content Indexing (Search issues)
   - CI 161581
+  - CI 9823
+  - CI 12201
   - Exchange Server
   - CSSTroubleshoot
 ms.reviewer: dpaul, batre, meerak
@@ -16,9 +18,16 @@ appliesto:
   - Exchange Server 2019
   - Exchange Server 2016 
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 07/07/2026
 ---
-# Reinstall Search Foundation in Exchange Server
+
+# Reinstall Search Foundation in Microsoft Exchange Server
+
+## Summary
+
+This article provides guidance for reinstalling Search Foundation in Exchange Server 2016 and Exchange Server 2019 when troubleshooting Exchange Search issues. It outlines the steps required to rebuild the Search Foundation components, including stopping search services, recreating Search Foundation data files, and updating configuration settings when necessary. The article also notes that Exchange Server 2016 databases must be reindexed after reinstallation and provides recommendations to help minimize performance impact during the reindexing process.
+
+## Reinstall Search Foundation
 
 If you're troubleshooting issues that affect Microsoft Exchange Search, a Microsoft Support agent might advise you to reinstall Search Foundation in Exchange Server.
 

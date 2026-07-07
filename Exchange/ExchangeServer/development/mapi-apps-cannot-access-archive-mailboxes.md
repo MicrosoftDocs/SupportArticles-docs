@@ -11,15 +11,21 @@ ms.custom:
   - Exchange Server
   - CSSTroubleshoot
   - CI 177580
+  - CI 9823
+  - CI 12201
 ms.reviewer: liantan, lusassl, sfellman, nasira, sgriffin, terrya, meerak, v-trisshores
 appliesto:
   - Exchange Server 2019
   - Exchange Server 2016
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 07/07/2024
 ---
 
 # MAPI applications can't access archive mailboxes in Exchange Server 2016 and later versions
+
+## Summary
+
+This article describes a limitation in Exchange Server 2016 and later versions that prevents MAPI-only applications from accessing archive mailboxes. The issue occurs because archive mailboxes can no longer be accessed by using the mailbox X.500 address (LegacyExchangeDn) and instead require the archive mailbox SMTP address, which is available through Autodiscover. The article explains the design change and provides guidance for updating applications to use Autodiscover-supported interfaces to locate and access archive mailboxes.
 
 ## Symptoms
 

@@ -9,16 +9,22 @@ ms.topic: troubleshooting
 ms.custom: 
   - sap:Messaging Policy and Compliance\Issues with eDiscovery, import/export of mailbox
   - CI 175754
+  - CI 9823
+  - CI 12201
   - Exchange Server
   - CSSTroubleshoot
 ms.reviewer: svajda, batre, meerak, v-trisshores
 appliesto:
   - Exchange Server 2019
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 07/07/2026
 ---
 
 # In-Place eDiscovery search doesn't search the file names of attached mail items
+
+## Summary
+
+This article describes a limitation in Exchange Server 2019 in which In-Place eDiscovery searches that use the attachment property don't return messages that contain attached mail items whose names match the search criteria. The issue occurs because Exchange doesn't store attachment filename information for mail item attachments in the same way that it does for file attachments. The article explains the cause of the behavior and provides a workaround that uses a free-text query to search the names and contents of messages and attachments.
 
 ## Symptoms
 
