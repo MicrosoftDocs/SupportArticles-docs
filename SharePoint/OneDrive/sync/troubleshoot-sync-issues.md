@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot OneDrive for work or school sync issues
+title: Resolve sync issues in OneDrive for work or school
 description: Helps you resolve issues that you can't sync OneDrive for work or school.
 author: Cloud-Writer
 ms.author: meerak
@@ -13,7 +13,7 @@ appliesto:
 search.appverid: MET150
 ms.date: 01/03/2025
 ---
-# Troubleshooting OneDrive for work or school sync issues
+# Resolve sync issues in OneDrive for work or school
 
 ## Summary
 
@@ -36,40 +36,25 @@ Before we are starting to troubleshoot OneDrive for work or school sync issue, w
 
 ### Review conflicts
 
-Sometimes a conflict is detected between the local and server copies of files you're trying to sync.
+Sometimes a conflict is detected between the local and server copies of Office files you're trying to sync. When a conflict is detected, in File Explorer you see that the affected file is marked with the following sync icon:
 
-When a conflict is detected, you may see a sync error notification briefly. After that, the OneDrive for work or school icon will display an error indicator in your system tray.
+:::image type="content" source="media/troubleshoot-sync-issues/sync-icon.png" alt-text="Screenshot of the sync icon.":::
 
-:::image type="icon" source="media/troubleshoot-sync-issues/sync-error-icon.png":::
+This icon doesn't always mean there's a conflict. It also appears while a file is syncing, but when it stays on a file that isn't actively syncing, that indicates a conflict which you must resolve. To resolve the conflicts in most Office files, you might only need to open the file. If other changes are needed, open the file in the Office app to start a conflict resolution experience in Office. This experience provides the following options:
 
-To resolve the conflict, right-click or press and hold the OneDrive for work or school icon, and then choose **Resolve**. You can see the options available for your conflict.
+- **Save a Copy**: Use this option to save a copy of your Office file's version outside the synced folder.
+- **Discard**: Use this option to discard your changes and fetch the new version from the server.
 
-If a conflict occurred with an Office file type, you should see the following options:
-
-- **Open to Resolve** opens the file in a coauthor view. First select **Save** to refresh the open copy with the new content. That appears highlighted, so you can easily reconcile changes.
-- **Save a Copy** lets you save a copy of your version outside the synced folder.
-- **Discard** discards your changes and fetches the new version from the server.
-
-In most cases, select **Open to Resolve**.
-
-If a conflict occurred with a non-Office file type, you should see the following options:
-
-- **Choose** displays information about both versions, and lets you choose whether to keep the server version, your version, or both. Only the server version is saved in the synced folder and library.
-- **Save a Copy** lets you save a copy of your version outside the synced folder.
-- **Discard** discards your changes and fetches the new version from the server.
-
-In some cases, OneDrive for work or school may not mark conflicts in a non-Office file as an error, but instead save both versions locally. This situation results from editing conflicts. Editing conflicts with Office files are reported as sync problems and you can fix them as described above. But editing conflicts with other types of files are not reported as sync problems. Instead, OneDrive for work or school creates a new version of the file, and appends the device name to the file name. For example:
-
-:::image type="content" source="media/troubleshoot-sync-issues/new-version-of-file.png" alt-text="Screenshot of the new version of the example file.":::
+If a conflict occurred with a non-Office file type, OneDrive automatically keeps both versions. The online version keeps the original file name and is downloaded, and the copy on your computer has your device name appended to the file name such as Report-JOHNS-SURFACE.txt.
 
 When you see this happen, it's up to you to decide how to treat these file versions. You might consider one of these actions:
 
-- If possible, compare the file versions by opening them in an application, merge changes into one, consolidated version, and then delete the other versions.
+- Compare the file versions by opening them in an application, merge changes into a single consolidated version, and then delete the other versions.
 - Rename file versions to distinguish them.
 - Keep both versions of the file.
 
 > [!NOTE]
-> OneDrive for work or school creates up to 10 conflict versions for these types of files.
+> OneDrive for work or school creates up to 5 conflict versions for non-Office file types.
 
 Did it solve your problem?
 
