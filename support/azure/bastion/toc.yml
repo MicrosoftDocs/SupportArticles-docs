@@ -18,3 +18,5 @@ items:
     href: troubleshoot-shareable-links-problems.md
   - name: Troubleshoot virtual network peering problems
     href: troubleshoot-virtual-network-peering-problems.md
+  - name: Troubleshoot connection failures caused by routing or forced tunneling
+    href: troubleshoot-connection-fails-routing-forced-tunneling.md
