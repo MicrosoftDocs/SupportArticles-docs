@@ -10,11 +10,13 @@ ms.custom:
   - sap:High Availability, Health, Performance, Content Indexing\Need Help Configuring DAG
   - Exchange Server
   - CSSTroubleshoot
+  - CI 9823
+  - CI 12201
 ms.reviewer: mnanjund, benwinz, v-six
 appliesto: 
   - Exchange Server
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 07/07/2026S
 ---
 # Operation failed with message: Error 0x6f7 when adding a server to a database availability group in Exchange Server
 

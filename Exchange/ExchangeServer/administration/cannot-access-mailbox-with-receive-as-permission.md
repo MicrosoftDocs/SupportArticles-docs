@@ -10,6 +10,8 @@ ms.custom:
   - sap:Permissions\Need help with RBAC, Role Groups, Role Assignment policy
   - Exchange Server
   - CSSTroubleshoot
+  - CI 9823
+  - CI 12201
 ms.reviewer: yusenko, v-six
 appliesto: 
   - Exchange Server 2016 Enterprise Edition
@@ -17,11 +19,15 @@ appliesto:
   - Exchange Server 2013 Enterprise
   - Exchange Server 2013 Standard Edition
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 07/07/2026
 ---
 # Unable to access a mailbox with Receive-As permissions on a mailbox database
 
 _Original KB number:_ &nbsp;3176596
+
+## Summary
+
+This article describes an issue in which an account that has Receive-As permissions on a mailbox database can't open another user's mailbox in Exchange Server. The issue occurs because Exchange Server restricts mailbox access for members of the Organization Management role group unless Full Access permissions are explicitly assigned. To resolve the issue, use an account that isn't a member of the Organization Management group or grant explicit Full Access permissions to the mailbox.
 
 ## Symptoms
 

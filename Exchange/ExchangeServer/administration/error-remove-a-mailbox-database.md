@@ -11,16 +11,22 @@ ms.custom:
   - Exchange Server
   - CSSTroubleshoot
   - CI 186972
+  - CI 9823
+  - CI 12201
 search.appverid: 
   - MET150
 appliesto: 
   - Exchange Server 2019
   - Exchange Server 2016
-ms.date: 02/14/2024
+ms.date: 07/07/2026
 ms.reviewer: batre, meerak, v-trisshores
 ---
 
 # Error when you try to remove a mailbox database
+
+## Summary
+
+This article describes an issue in which the Remove-MailboxDatabase cmdlet fails because the mailbox database still contains one or more enabled mailboxes. Exchange Server prevents the removal of a database that hosts active user, archive, public folder, arbitration, or audit log mailboxes. To remove the database, identify any remaining mailbox objects and move, disable, or remove them as appropriate before retrying the database removal operation.
 
 ## Symptoms
 

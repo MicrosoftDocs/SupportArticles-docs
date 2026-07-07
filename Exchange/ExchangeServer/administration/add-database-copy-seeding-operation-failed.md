@@ -8,11 +8,13 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.reviewer: dpaul, v-six
+ms.reviewer: dpaul, v-six, v-kccross
 ms.custom: 
   - sap:High Availability, Health, Performance, Content Indexing\Need Help Configuring DAG
   - CSSTroubleshoot
   - CI 124887
+  - CI 9823
+  - CI 12201
   - Exchange Server
 appliesto: 
   - Exchange Server 2019
@@ -22,6 +24,10 @@ ms.date: 01/24/2024
 ---
 
 # Error when running Add-MailboxDatabaseCopy command: The seeding operation failed
+
+## Summary
+
+This article describes an issue in which the `Add-MailboxDatabaseCopy` PowerShell cmdlet returns a "The seeding operation failed" error when you add a mailbox database copy in a Database Availability Group (DAG). The error occurs when the source and target Exchange servers use different domain controllers and the target server hasn't refreshed its cached configuration information before seeding starts. Although the error message is reported, the database copy operation isn't affected and eventually succeeds. To avoid the error, add the database copy by using the ConfigurationOnly switch and then manually suspend and seed the database copy.
 
 ## Symptoms
 

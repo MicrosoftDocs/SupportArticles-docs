@@ -10,6 +10,8 @@ ms.custom:
   - sap:High Availability, Health, Performance, Content Indexing\Unable to Mount Database
   - Exchange Server
   - CI 119623
+  - CI 9823
+  - CI 12201
   - CSSTroubleshoot
 ms.reviewer: dpaul, honche, jarrettr, jarrettr, aartigoyle, v-six
 search.appverid: 
@@ -18,7 +20,7 @@ appliesto:
   - Exchange Server 2019 Standard Edition
   - Exchange Server 2013 Standard Edition
   - Exchange Server 2016 Standard Edition
-ms.date: 01/24/2024
+ms.date: 07/07/2026
 ---
 # Exchange Server 2013, 2016 and 2019 Standard Edition can't mount databases that are larger than 1024 GB
 

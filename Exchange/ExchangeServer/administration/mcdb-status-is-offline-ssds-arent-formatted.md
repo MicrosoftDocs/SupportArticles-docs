@@ -10,16 +10,22 @@ ms.custom:
   - sap:High Availability, Health, Performance, Content Indexing\Need Help Configuring DAG
   - Exchange Server
   - CI 107238
+  - CI 9823
+  - CI 12202
   - CSSTroubleshoot
 ms.reviewer: ralfle, v-six
 appliesto: 
   - Exchange Server 2019
 search.appverid: 
   - MET150
-ms.date: 01/24/2024
+ms.date: 07/07/2026
 ---
 
 # MCDB status is "Offline" and SSDs are not formatted in Exchange Server 2019
+
+## Summary
+
+This article describes an issue in Exchange Server 2019 in which MetaCacheDatabase (MCDB) remains in an Offline state and the designated solid-state drives (SSDs) aren't formatted correctly after you use the `Manage-MetaCacheDatabase.ps1` script to enable MCDB. The issue occurs because a change in Windows Server 2019 causes the script to incorrectly identify and process disks across DAG members. A workaround is provided that updates the script to correctly identify local SSDs before rerunning the MCDB configuration process.
 
 ## Symptoms
 

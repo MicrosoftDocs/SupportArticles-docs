@@ -7,22 +7,28 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
-  - sap:OWA  And Exchange Admin Center\Need help in configuring EAC
+  - sap:OWA And Exchange Admin Center\Need help in configuring EAC
   - Exchange Server
   - CI 119623
+  - CI 9823
+  - CI 12201
   - CSSTroubleshoot
-ms.reviewer: tmoore, gregmans, v-six
+ms.reviewer: tmoore, gregmans, v-six, v-kccross
 search.appverid: 
   - MET150
 appliesto: 
   - Exchange Server 2019
   - Exchange Server 2016
   - Exchange Server 2013
-ms.date: 01/24/2024
+ms.date: 07/07/2026
 ---
 # Exchange Server doesn't display all OUs when it creates a new mailbox
 
 _Original KB number:_ &nbsp; 3038717
+
+## Summary
+
+This article describes an issue in which Exchange Server doesn't display all organizational units (OUs) when you create a new mailbox and associated user account. The issue occurs because the Exchange Control Panel (ECP) limits OU searches to 500 results by default. To resolve the issue, increase the `GetListDefaultResultSize` value in the ECP web.config file so that it exceeds the total number of OUs in the organization, and then restart the `MSExchangeECPAppPool` application pool.
 
 ## Symptoms
 
