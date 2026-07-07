@@ -11,6 +11,8 @@ ms.custom:
   - sap:Clients and Mobile\Can't Connect to Mailbox with Outlook
   - Exchange Server
   - CSSTroubleshoot
+  - CI 9823
+  - CI 12201
 search.appverid: 
   - MET150
 appliesto: 
@@ -18,11 +20,17 @@ appliesto:
   - Outlook 2016
   - Outlook 2013
   - Outlook for Microsoft 365
-ms.date: 01/24/2024
+ms.date: 07/07/2026
 ---
 # Issues when you synchronize your Exchange Server mailbox with your .ost file in Outlook
 
 _Original KB number:_ &nbsp; 842284
+
+## Summary
+
+This article provides guidance for troubleshooting synchronization issues between an Exchange Server mailbox and an Offline Outlook Data File (.ost) in Outlook. It describes common symptoms, such as missing or outdated messages, folder synchronization failures, and mismatched item counts between Outlook and Outlook on the web. The article also includes steps to verify synchronization status, manually or automatically synchronize folders, rebuild a damaged .ost file, and repair Exchange Server support files.
+
+## Symptoms
 
 When you try to synchronize a Microsoft Exchange Server mailbox with an Offline Outlook Data File (.ost), the synchronization fails, and you experience any of the following issues:
 

@@ -7,6 +7,8 @@ ms.topic: troubleshooting
 ms.custom: 
   - sap:Clients and Mobile\Can't Connect to Mailbox with OWA
   - CSSTroubleshoot
+  - CI 9823
+  - CI 12201
 appliesto: 
 - Exchange Server 2016 Enterprise Edition 
 - Exchange Server 2016 Standard Edition 
@@ -19,9 +21,13 @@ search.appverid: MET150
 ms.reviewer: abdallaa, excontent, ninob, kellybos, jmartin, v-six
 author: cloud-writer
 ms.author: meerak
-ms.date: 01/24/2024
+ms.date: 07/07/2026
 ---
 # Can't open a shared folder in Outlook on the web in Exchange Server
+
+## Summary
+
+This article describes a limitation that prevents users from opening shared mailboxes in Outlook on the web when the mailbox and the user are located in different Exchange environments, such as Exchange Server coexistence deployments or hybrid Exchange environments. Although the shared mailbox can be added successfully, users receive an error when they try to expand it. The article explains the cause of the issue and provides a workaround for accessing the mailbox by using the Open another mailbox option.
 
 ## Symptoms
 

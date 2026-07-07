@@ -9,16 +9,22 @@ ms.custom:
   - sap:Clients and Mobile\Can't Connect to Mailbox with OWA
   - Exchange Server
   - CSSTroubleshoot
+  - CI 9823
+  - CI 12201
 manager: dcscontentpm
 search.appverid: 
   - MET150
 appliesto: 
   - Outlook on the web
-ms.date: 01/24/2024
+ms.date: 07/07/2026
 ms.reviewer: v-six
 ---
 
 # The "Sent" time stamp on email messages is incorrect in Outlook on the web
+
+## Summary
+
+This article describes an issue in which the Sent time stamp on email messages and meeting requests appears incorrect in Outlook on the web. The issue occurs when a mailbox is hosted on an Exchange Server in a region that observes daylight saving time (DST), while users are located in a region that doesn't. The article provides guidance for configuring server and client time zone settings to correct the displayed time.
 
 ## Symptoms
 

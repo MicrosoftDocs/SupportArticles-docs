@@ -10,6 +10,8 @@ ms.custom:
   - sap:Migration\Issues with Public Folder Migration
   - Exchange Server
   - CSSTroubleshoot
+  - CI 9823
+  - CI 12201
 ms.reviewer: nickul, jmartin, v-six
 appliesto: 
   - Exchange Server 2016 Enterprise Edition
@@ -19,11 +21,15 @@ appliesto:
   - Exchange Server 2013 Enterprise
   - Exchange Server 2013 Standard Edition
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 07/07/2026
 ---
 # Outlook can't access public folders hosted on legacy Exchange servers
 
 _Original KB number:_ &nbsp;3177600
+
+## Summary
+
+This article describes an issue in which Outlook users who have mailboxes on Exchange Server 2013 or Exchange Server 2016 can't access public folders that are hosted on Exchange Server 2010. The issue occurs in coexistence environments that use multiple public folder databases when the mailbox database is associated with a different public folder database than the public folder discovery mailbox. The article provides steps to align the public folder configuration and restore access to legacy public folders.
 
 ## Symptoms
 

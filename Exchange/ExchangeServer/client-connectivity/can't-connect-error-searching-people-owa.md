@@ -10,15 +10,21 @@ ms.custom:
   - sap:Clients and Mobile\Can't Connect to Mailbox with OWA
   - Exchange Server
   - CI 116313
+  - CI 9823
+  - CI 12201
   - CSSTroubleshoot
 ms.reviewer: jcoiffin, v-six
 appliesto: 
   - Exchange Server 2019
 search.appverid: 
   - MET150
-ms.date: 01/24/2024
+ms.date: 07/07/2026
 ---
 # "Can't connect. Please try again later" error when searching people in OWA in Exchange Server 2019
+
+## Summary
+
+This article describes an issue in which users receive a "Can't connect. Please try again later" error when searching the global address list (GAL) in Outlook on the web in Exchange Server 2019. The issue occurs when Exchange Server is installed on Windows Server 2019 and the server's language and regional settings aren't configured for U.S. English, preventing the Advanced Query Syntax (AQS) component from functioning correctly. The article provides guidance for installing the required language pack and configuring the appropriate regional settings to restore people search functionality.
 
 ## Symptoms
 

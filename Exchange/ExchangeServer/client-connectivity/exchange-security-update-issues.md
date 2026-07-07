@@ -12,11 +12,13 @@ ms.custom:
   - CSSTroubleshoot
   - CI 145217
   - CI 3850
+  - CI 9823
+  - CI 12201
 appliesto:
   - Exchange Server SE
 search.appverid: MET150
 ms.reviewer: batre, meerak, v-shorestris
-ms.date: 06/29/2026
+ms.date: 07/07/2026
 ---
 
 # Fix failed Exchange Server updates

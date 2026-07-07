@@ -10,6 +10,8 @@ ms.custom:
   - sap:Clients and Mobile\Can't Connect to Mailbox with Active Sync Device
   - Exchange Server
   - CSSTroubleshoot
+  - CI 9823
+  - CI 12201
 ms.reviewer: mhendric, exchblt, v-six
 appliesto: 
   - Exchange Server 2010 Enterprise
@@ -19,11 +21,15 @@ appliesto:
   - Exchange Server 2016 Enterprise Edition
   - Exchange Server 2016 Standard Edition
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 07/07/2026
 ---
 # Exchange ActiveSync users can't synchronize an EAS device for the first time in an Exchange Server environment
 
 _Original KB number:_ &nbsp;2579075
+
+## Summary
+
+This article describes an issue in which Exchange ActiveSync users can't synchronize a device for the first time and Event ID 1053 is logged in Exchange Server. The issue occurs when Exchange ActiveSync doesn't have sufficient permissions to create and manage the msExchActiveSyncDevices container in Active Directory. The article explains the permission-related cause and provides steps to grant the required permissions so that device synchronization can succeed.
 
 ## Symptoms
 

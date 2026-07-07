@@ -10,15 +10,21 @@ ms.custom:
   - sap:Clients and Mobile\Can't Connect to Mailbox with Active Sync Device
   - Exchange Server
   - CSSTroubleshoot
+  - CI 9823
+  - CI 12201
 ms.reviewer: austinmc, pabbott, v-six
 appliesto: 
   - Exchange Server
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 07/07/2026
 ---
 # EAS devices still sync after an account is disabled or a password is changed
 
 _Original KB number:_ &nbsp; 2612821
+
+## Summary
+
+This article describes a by-design behavior in which Exchange ActiveSync devices continue to synchronize after a user account is disabled or a password is changed. The behavior occurs because devices that use Direct Push maintain a persistent connection to Exchange Server and don't immediately recognize account or credential changes. The article provides several methods to force the connection to reset so that the updated account status or password is enforced.
 
 ## Symptoms
 

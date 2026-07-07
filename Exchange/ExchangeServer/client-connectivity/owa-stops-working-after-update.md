@@ -11,6 +11,8 @@ ms.custom:
   - sap:Plan and Deploy\Exchange Install Issues, Cumulative or Security updates
   - CI 144977
   - CI 147050
+  - CI 9823
+  - CI 12201
   - Exchange Server
   - CSSTroubleshoot
 search.appverid: 
@@ -20,10 +22,14 @@ appliesto:
   - Exchange Server 2016
   - Exchange Server 2013
   - Exchange Server 2010 Service Pack 3
-ms.date: 01/24/2024
+ms.date: 07/07/2026
 ---
 
 # OWA or ECP stops working after you install a security update
+
+## Summary
+
+This article describes an issue in which Outlook on the web (OWA), Exchange Control Panel (ECP), or both stop working after you install a security update on Exchange Server. The issue occurs when the update is manually installed without elevated permissions on a server that has User Account Control (UAC) enabled, which can leave Exchange files and configuration settings in an inconsistent state. To resolve the issue, reinstall the security update by using an elevated command prompt and, if necessary, repair the ECP configuration and update Exchange virtual directory files.
 
 ## Symptoms
 

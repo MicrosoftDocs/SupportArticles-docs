@@ -11,6 +11,8 @@ ms.custom:
   - Exchange Server
   - CI 113906
   - CSSTroubleshoot
+  - CI 9823
+  - CI 12201
 ms.reviewer: cmcgurk
 appliesto: 
   - Exchange Server 2010 Service Pack 3
@@ -19,10 +21,14 @@ appliesto:
   - Exchange Server 2016
   - Exchange Server 2019
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 07/07/2026
 ---
 
 # "NoPrimarySmtpAddress" error when accessing shared mailboxes through POP/IMAP in Exchange Server
+
+## Summary
+
+This article describes an issue in which users can't access shared mailboxes through POP3 or IMAP by using a service account that has mailbox permissions but isn't mail-enabled. The issue occurs because POP and IMAP authentication require the authenticated account to have a primary SMTP address. The article explains the cause and provides methods to resolve the issue by either creating a mailbox for the service account or assigning a primary SMTP address to the account.
 
 ## Symptoms
 
