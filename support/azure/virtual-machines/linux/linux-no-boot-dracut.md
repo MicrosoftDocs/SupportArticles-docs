@@ -134,7 +134,7 @@ The serial console is the fastest method to resolve issues. It allows you to dir
 
 ## <a id="dracut-ade-without-vfat"></a>ADE encrypted VM fails to boot because VFAT is disabled
 
-For more information,see [ADE encrypted VMs fail to boot](vfat-disabled-boot-issues.md#offline-troubleshooting-encrypted).
+For more information, see [ADE encrypted VMs fail to boot](vfat-disabled-boot-issues.md#offline-troubleshooting-encrypted).
 
 ## <a id="dracut-hyperv-drivers-disabled"></a>Hyper-V drivers are missing
 
