@@ -10,23 +10,29 @@ ms.custom:
   - sap:Sharing\Issue viewing Free Busy
   - Exchange Server
   - CSSTroubleshoot
+  - CI 9823
+  - CI 12201
 ms.reviewer: benwinz, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 07/07/2026
 ---
 # Free/busy lookups fail from Exchange Online to on-premises in a hybrid deployment
 
 _Original KB number:_ &nbsp; 4456110
 
+## Summary
+
+This article describes an issue in a hybrid Exchange deployment in which free/busy lookups from Exchange Online to on-premises mailboxes fail. The issue occurs when the `ExternalEmailAddress` value of a synchronized mail-enabled user is incorrect because it was overwritten by the on-premises `TargetAddress` attribute. As a result, Exchange Online routes free/busy requests to an unexpected location. A workaround is provided that clears the incorrect `TargetAddress` value, updates the user's email addresses, and performs a Microsoft Entra Connect synchronization to restore the expected `ExternalEmailAddress` value.
+
 ## Symptoms
 
 Assume that you have a hybrid deployment that has a Microsoft 365 tenant. In this deployment, `contoso.com` is configured as the primary on-premises domain. For on-premises mailbox users, Microsoft Entra Connect synchronizes mailbox users in the on-premises Exchange organization, and creates mail-enabled users in Exchange Online.
 
-The `TargetAddress` (`ExternalEmailAddress`) attribute‎ value is automatically calculated as `SMTP:user@contoso.com`. However, for one or more mail-enabled users, the `ExternalEmailAddress` attribute‎ value is set to another domain, such as `SMTP:user@fourthcoffee.com`.
+The `TargetAddress` (`ExternalEmailAddress`) attribute value is automatically calculated as `SMTP:user@contoso.com`. However, for one or more mail-enabled users, the `ExternalEmailAddress` attribute value is set to another domain, such as `SMTP:user@fourthcoffee.com`.
 
-You can verify the `ExternalEmailAddress` attribute‎ value on a mail-enabled user from Exchange Online Remote PowerShell by running the following command:
+You can verify the `ExternalEmailAddress` attribute value on a mail-enabled user from Exchange Online Remote PowerShell by running the following command:
 
 ```powershell
 Get-MailUser "Identity of MailUser" | fl name, *ext*
@@ -38,7 +44,7 @@ Notice that the `ExternalEmailAddress` value in the output is the following:
 ExternalEmailAddress : SMTP:user@fourthcoffee.com
 ```
 
-You can also verify the `ExternalEmailAddress` attribute‎ value from the Microsoft 365 Exchange Admin Center. To do this, locate **Recipients**, and then select **Contacts**. Double-click the mail user in question, and then view the email addresses section. Scroll down to the bottom of the page to see the external email address.
+You can also verify the `ExternalEmailAddress` attribute value from the Microsoft 365 Exchange Admin Center. To do this, locate **Recipients**, and then select **Contacts**. Double-click the mail user in question, and then view the email addresses section. Scroll down to the bottom of the page to see the external email address.
 
 :::image type="content" source="media/hybrid-freebusy-lookups-fail/set-external-email.png" alt-text="Screenshot for ExternalEmailAddress value from Microsoft 365 Exchange Admin Center.":::
 

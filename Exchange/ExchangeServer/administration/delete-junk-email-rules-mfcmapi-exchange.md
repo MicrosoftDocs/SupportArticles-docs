@@ -10,8 +10,10 @@ ms.custom:
   - sap:Clients and Mobile\Can't Configure Outlook Profile
   - Exchange Server
   - CI 119623
+  - CI 9823
+  - CI 12201
   - CSSTroubleshoot
-ms.reviewer: ChrisBur, MHAQUE, DJBall, ChrisBur, jarrettr, v-six
+ms.reviewer: ChrisBur, MHAQUE, DJBall, ChrisBur, jarrettr, v-six, v-kccross
 search.appverid: 
   - MET150
 appliesto: 
@@ -21,11 +23,15 @@ appliesto:
   - Exchange Server 2013 Standard Edition
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard
-ms.date: 01/24/2024
+ms.date: 06/30/2026
 ---
 # How to delete junk email rules by using MFCMAPI in an Exchange Server environment
 
 _Original KB number:_ &nbsp; 2860406
+
+## Summary
+
+This article describes how to use MFCMAPI to delete a corrupted or problematic Junk E-mail rule from a mailbox in Exchange Server. Deleting the rule can help resolve issues such as Junk E-mail validation errors, exceeded Junk E-mail list limits, or Outlook Junk E-mail settings that don't work as expected. Before you delete the rule, export the Safe Senders, Safe Recipients, and Blocked Senders lists because a permanent deletion removes all entries and the data can't be recovered.
 
 ## How to delete a junk email rule
 

@@ -10,6 +10,8 @@ ms.custom:
   - sap:High Availability, Health, Performance, Content Indexing\Health set unhealthy
   - Exchange Server
   - CSSTroubleshoot
+  - CI 9823
+  - CI 12201
 ms.reviewer: batre, jarrettr, v-six
 appliesto: 
   - Exchange Server 2016 Enterprise Edition
@@ -17,11 +19,15 @@ appliesto:
   - Exchange Server 2013 Enterprise
   - Exchange Server 2013 Standard Edition
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 07/07/2026
 ---
 # Remove MailboxDatabase operation fails to clean up health mailboxes
 
 _Original KB number:_ &nbsp; 3046530
+
+## Summary
+
+This article describes an issue in which the Remove-MailboxDatabase operation removes the mailbox database but can't clean up the associated health mailbox accounts in Active Directory. The issue occurs because the Exchange Servers security group doesn't have the required permissions to delete objects in the Monitoring Mailboxes container. A workaround is provided that grants the necessary Delete subtree permission so that health mailbox accounts can be removed successfully.
 
 ## Symptoms
 

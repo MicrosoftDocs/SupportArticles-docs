@@ -11,15 +11,21 @@ ms.custom:
   - Exchange Server
   - CSSTroubleshoot
   - CI 122584
+  - CI 9823
+  - CI 12201
 ms.reviewer: cmcgurk, v-six
 appliesto: 
   - Exchange Server 2016
   - Exchange Server 2013
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 07/07/2026
 ---
 
 # Error when you install add-ins by using Microsoft Store on Exchange Server 2016: The app couldn't be downloaded
+
+## Summary
+
+This article describes an issue in which Exchange Server can't install add-ins from Microsoft Store and returns a "The app couldn't be downloaded" error. The issue occurs because TLS 1.2 client functionality is disabled on the Exchange server, preventing secure connections to Microsoft Store services. To resolve the issue, enable TLS 1.2 in Windows Schannel and configure supported .NET Framework versions to use the operating system's default TLS settings.
 
 ## Symptoms
 

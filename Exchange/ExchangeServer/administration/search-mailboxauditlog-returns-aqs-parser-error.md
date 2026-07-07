@@ -11,14 +11,20 @@ ms.custom:
   - CI 175995
   - Exchange Server
   - CSSTroubleshoot
+  - CI 9823
+  - CI 12202
 ms.reviewer: jcoiffin, lusassl, meerak, v-trisshores
 appliesto:
   - Exchange Server 2019
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 07/07/2026
 ---
 
 # Search-MailboxAuditLog returns "AQS parser has been removed"
+
+## Summary
+
+This article describes an issue in which the `Search-MailboxAuditLog` PowerShell cmdlet fails in Exchange Server 2019 and returns an "AQS parser has been removed" error on servers that run Windows Server Core. The issue occurs when the default locale of the system account isn't set to English (United States), which can cause localization-related problems when mailbox audit logs are searched. To resolve the issue, change the system account locale to "en-US" and then restart the server.
 
 ## Symptoms
 

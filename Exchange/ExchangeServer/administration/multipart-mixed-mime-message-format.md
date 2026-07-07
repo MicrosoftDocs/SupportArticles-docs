@@ -10,15 +10,21 @@ ms.custom:
   - sap:Mail Flow\Need help with loss of email format, content conversion
   - Exchange Server
   - CSSTroubleshoot
-ms.reviewer: v-six
+  - CI 9823
+  - CI 12201
+ms.reviewer: v-six, v-kccross
 appliesto: 
   - Exchange Server
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 07/07/2026
 ---
 # A description of the multipart/mixed Internet message format
 
 _Original KB number:_ &nbsp; 323226
+
+## Summary
+
+This article describes the multipart/mixed MIME message format that Exchange Server uses to send email messages that contain attachments. It explains how multipart/mixed messages use boundaries to separate different content types, how Exchange determines the MIME content type based on message content, and how attachments are represented within the message structure. The article also describes a message formatting issue that can occur when MIME clients generate multipart/mixed messages without required attachment name or filename parameters.
 
 ## More information
 
