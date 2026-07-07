@@ -15,16 +15,23 @@ ms.reviewer: ruxandra, lusassl, meerak, v-trisshores
 appliesto: 
   - Exchange Server 2019
   - Exchange Server 2016
-  - Exchange Server 2013
   - Exchange Online
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 07/06/2026
 ---
 
 # Resolve free/busy sharing issues in a hybrid Exchange environment
 
-## Free/busy sharing and MailTips issues
+## Summary
 
+This article lists the potential errors that you might see when using features such as free/busy and mailtips, creating a federation trust, adding a domain to a federation trust, or testing OAuth connectivity. The errors occur when TLS 1.2 isn't configured correctly on all Exchange-based servers in your organization. Fix the TLS configuration to resolve the errors.
+
+> [!NOTE]
+> 
+> We recommend that you first run the [Hybrid Free Busy Checker](https://microsoft.github.io/CSS-Exchange/Diagnostics/FreeBusyChecker/FreeBusyChecker/). This is a script that checks the current hybrid availability configuration and validates whether it follows the recommended default configuration.
+
+## Free/busy sharing and MailTips issues  
+  
 After you set up a hybrid Microsoft Exchange environment, the following issues might occur:
 
 - When a user who has an on-premises mailbox tries to use the Scheduling Assistant in Microsoft Outlook to retrieve [free/busy](/exchange/shared-free-busy) information for another user who has an Exchange Online mailbox, free/busy sharing either doesn't work or works intermittently.
@@ -35,7 +42,7 @@ After you set up a hybrid Microsoft Exchange environment, the following issues m
 
 ## Federation trust and authorization errors
 
-When you try to configure the components that are required for free/busy sharing by using Hybrid Configuration wizard (HCW) or the Exchange Management Shell (EMS), you might encounter any of the following errors.
+When you try to configure the components that are required for free/busy sharing by using the Hybrid Configuration wizard (HCW) or the Exchange Management Shell (EMS), you might encounter any of the following errors.
 
 ### Errors when creating a federation trust
 
