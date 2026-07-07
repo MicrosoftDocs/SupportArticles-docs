@@ -10,6 +10,8 @@ ms.custom:
   - sap:High Availability, Health, Performance, Content Indexing\Exchange Service or Server Crashed/Stopped, Cluster service issues
   - Exchange Server
   - CSSTroubleshoot
+  - CI 9823
+  - CI 12201
 ms.reviewer: v-six
 appliesto: 
   - Exchange Server 2016 Enterprise Edition
@@ -17,11 +19,15 @@ appliesto:
   - Exchange Server 2013 Enterprise
   - Exchange Server 2013 Standard Edition
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 07/07/2026
 ---
 # Responder ServiceHealthMSExchangeReplForceReboot causes Exchange Server to restart with Stop Error
 
 _Original KB number:_ &nbsp; 2969070
+
+## Summary
+
+This article describes an issue in which Exchange Server 2013 or Exchange Server 2016 restarts unexpectedly and generates a Stop error because the `ServiceHealthMSExchangeReplForceReboot` Managed Availability responder initiates a forced reboot. The issue occurs when a network adapter is misconfigured and DNS name resolution fails, preventing the Microsoft Exchange Replication service from passing health checks. To resolve the issue, ensure that the appropriate network adapter is configured to register its addresses in DNS and verify that the Exchange network configuration follows recommended DAG networking guidelines.
 
 ## Symptoms
 

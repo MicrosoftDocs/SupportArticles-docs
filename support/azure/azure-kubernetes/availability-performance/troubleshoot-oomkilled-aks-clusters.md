@@ -1,7 +1,7 @@
 --- 
 title: Troubleshoot OOMKilled errors in AKS clusters
 description: Troubleshoot OOMKilled issues in AKS clusters and resolve memory-related pod restarts fast. Use this guide to identify causes and fix them.
-ms.date: 08/18/2025
+ms.date: 07/01/2026
 editor: v-jsitser
 ms.reviewer: v-liuamson
 ms.service: azure-kubernetes-service

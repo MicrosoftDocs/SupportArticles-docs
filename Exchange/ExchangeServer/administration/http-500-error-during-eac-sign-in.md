@@ -7,19 +7,25 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
-  - sap:OWA  And Exchange Admin Center\Need help in configuring EAC
+  - sap:OWA And Exchange Admin Center\Need help in configuring EAC
   - CI 181061
+  - CI 9823
+  - CI 12201
   - Exchange Server
   - CSSTroubleshoot
-ms.reviewer: batre, meerak, v-trisshores
+ms.reviewer: batre, meerak, v-trisshores, v-kccross
 appliesto:
   - Exchange Server 2019
   - Exchange Server 2016
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 07/07/2026
 ---
 
 # HTTP server error status (500) when signing in to EAC
+
+## Summary
+
+This article describes an issue in which administrators receive an HTTP 500 error when they sign in to the Exchange Admin Center (EAC). The issue occurs when the administrator account doesn't have a mailbox and Exchange can't locate a healthy arbitration mailbox to proxy the sign-in request. To resolve the issue, create a mailbox for the administrator account, repair missing or unhealthy arbitration mailboxes, or do both.
 
 ## Symptoms
 

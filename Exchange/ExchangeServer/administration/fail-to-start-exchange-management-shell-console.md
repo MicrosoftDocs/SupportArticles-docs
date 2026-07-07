@@ -10,19 +10,25 @@ ms.custom:
   - sap:OWA  And Exchange Admin Center\Issues connecting to Exchange Management Shell
   - Exchange Server
   - CI 119623
+  - CI 9823
+  - CI 12201
   - CSSTroubleshoot
-ms.reviewer: benwinz, v-six
+ms.reviewer: benwinz, v-six, v-kccross
 search.appverid: 
   - MET150
 appliesto: 
   - Exchange Server 2016
   - Exchange Server 2013
   - Exchange Server 2010
-ms.date: 01/24/2024
+ms.date: 07/07/2026
 ---
 # Error (The connection to the specified remote host was refused) when you try to start Exchange Management Shell or Exchange Management Console
 
 _Original KB number:_ &nbsp; 2027064
+
+## Summary
+
+This article describes an issue in which Exchange Management Shell (EMS) or Exchange Management Console (EMC) fails to start and returns a "The connection to the specified remote host was refused" error. The issue can occur if the `MSExchangePowerShellAppPool` application pool isn't functioning correctly, the user isn't enabled for Remote PowerShell, or Windows Remote Management (WinRM) is configured incorrectly. To resolve the issue, verify the status of the PowerShell application pool, confirm that Remote PowerShell is enabled for the user account, and validate the WinRM configuration and listener settings on the Exchange server.
 
 ## Symptoms
 

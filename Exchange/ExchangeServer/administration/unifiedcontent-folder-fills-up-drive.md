@@ -9,18 +9,24 @@ ms.topic: troubleshooting
 ms.custom: 
   - sap:Mail Flow\Need help with Transport Logs
   - CI 163530
+  - CI 9823
+  - CI 12201
   - Exchange Server
   - CSSTroubleshoot
-ms.reviewer: mialin, arindam, batre, meerak, v-trisshores
+ms.reviewer: mialin, arindam, batre, meerak, v-trisshores, v-kccross
 appliesto:
   - Exchange Server 2019
   - Exchange Server 2016
   - Exchange Server 2013
 search.appverid: MET150
-ms.date: 08/28/2024
+ms.date: 07/07/2026
 ---
 
 # Exchange UnifiedContent folder fills up the drive
+
+## Summary
+
+This article describes an issue in which the *UnifiedContent* folder grows unexpectedly and consumes large amounts of disk space on an Exchange Server. The issue occurs because Exchange Health Manager can't locate the folder to perform its scheduled cleanup when Exchange is installed in a nondefault location or when the folder path has been changed. To resolve the issue, update the `CleanupFolderResponderFolderPaths` setting in `Antimalware.xml` to point to the correct *UnifiedContent* folder location, either manually or by using the `SetUnifiedContentPath` PowerShell script.
 
 ## Symptoms
 

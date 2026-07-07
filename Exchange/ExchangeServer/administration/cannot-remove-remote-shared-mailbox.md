@@ -11,14 +11,20 @@ ms.custom:
   - Exchange Server
   - CSSTroubleshoot
   - CI 163381
-ms.reviewer: macodero, ninob
+  - CI 9823
+  - CI 12201
+ms.reviewer: macodero, ninob, v-kccross
 appliesto: 
-  - Exchange Server 2016
   - Exchange Server 2019
+  - Exchange Server 2016
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 07/07/2026
 ---
 # Can't remove a remote shared mailbox by using the Exchange admin center on Exchange Server
+
+## Summary
+
+This article describes an issue in Exchange hybrid deployments in which administrators can't remove a remote shared mailbox by using the Exchange admin center (EAC) and receive an error that the mailbox isn't a mailbox user. The issue occurs because EAC uses the `Remove-Mailbox` PowerShell cmdlet, which can't locate the remote shared mailbox object. As a workaround, remove the mailbox by running the `Remove-RemoteMailbox` cmdlet in Exchange Management Shell (EMS).
 
 ## Symptoms
 

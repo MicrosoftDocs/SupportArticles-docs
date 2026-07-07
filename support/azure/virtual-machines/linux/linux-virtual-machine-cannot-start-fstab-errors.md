@@ -46,7 +46,7 @@ Check the current boot state of the VM in the serial log within the [Boot diagno
 [[1;33mDEPEND[0m] Dependency failed for /data.
 [[1;33mDEPEND[0m] Dependency failed for Local File Systems.
 …
-Welcome to emergency mode! After logging in, type "journalctl -xb" to viewsystem logs, "systemctl reboot" to reboot, "systemctl default" to try again to boot into default mode.
+Welcome to emergency mode! After logging in, type "journalctl -xb" to view system logs, "systemctl reboot" to reboot, "systemctl default" to try again to boot into default mode.
 Give root password for maintenance
 (or type Control-D to continue)
 ```
