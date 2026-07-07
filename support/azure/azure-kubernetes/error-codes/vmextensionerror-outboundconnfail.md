@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot the VMExtensionError_OutboundConnFail error code
 description: Fix the VMExtensionError_OutboundConnFail error in AKS. Learn to diagnose and resolve outbound connectivity failures when creating or starting an AKS cluster.
-ms.date: 12/30/2024
+ms.date: 07/01/2026
 ms.reviewer: rissing, chiragpa, v-leedennis, jovieir
 ms.service: azure-kubernetes-service
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
