@@ -105,3 +105,5 @@ items:
       href: hierarchy-column-missing-after-upgrade.md
     - name: View hierarchy button is missing
       href: view-hierarchy-button-missing.md
+    - name: Visual hierarchy not shown on the App Settings menu
+      href: visual-hierarchy-not-shown-app-settings.md

@@ -237,6 +237,8 @@ items:
     href: extensions/managed-gateway-api.md
   - name: Troubleshoot the Application Routing Gateway API Implementation
     href: extensions/application-routing-gateway-api.md
+  - name: Troubleshoot Azure DNS and TLS integration for the Application Routing Gateway API Implementation
+    href: extensions/application-routing-gateway-api-dns-tls.md
   - name: Troubleshoot the Istio-based service mesh add-on
     items:
     - name: General Istio add-on troubleshooting

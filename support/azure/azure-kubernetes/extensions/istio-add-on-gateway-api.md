@@ -56,9 +56,6 @@ service.beta.kubernetes.io/port_<gateway_port>_health-probe_request-path: /healt
 
 These annotations tell Azure Load Balancer the path, protocol, and port for health probing the node or back-end pods before forwarding traffic to the pod. By default, this configuration sets the port to the one that `kube-proxy` listens on to make sure that the `kube-proxy` instance on the node is healthy and can forward traffic to the destination pods. 
 
-> [!NOTE]
-> These health probes take effect only if `externalTrafficPolicy` is set to `cluster`. If `externalTrafficPolicy` is set to `local`, Azure Load Balancer uses the `healthCheckNodePort` for health probing the node.
-
 Verify this setting by running `kubectl get service <gateway-svc-name> -n <gateway-svc-namespace> -o yaml` in the cluster. If the service doesn't have these annotations, or if you overwrite these annotations with your own resource customizations, failing health probes can block traffic from Azure Load Balancer to the Istio Gateway API deployment. 
 
 Add [Azure Load Balancer annotations](https://cloud-provider-azure.sigs.k8s.io/topics/loadbalancer/) for the health probe path, port, or protocol directly to the `Gateway` object, or by [customizing](#gateway-resource-customization-problems) the `GatewayClass`-level ConfigMap or the per-`Gateway` ConfigMap.
@@ -93,6 +90,19 @@ data:
 ```
 
 You can also see whether health probes are failing by inspecting the `LoadBalancer` in the infrastructure resource group for the cluster in the [Azure portal](https://portal.azure.com) in the **Settings** > **Properties** section.
+
+> [!NOTE]
+> These health probes are configured for the default `externalTrafficPolicy` setting of "cluster." If you set `spec.externalTrafficPolicy` to "Local," you must unset the following annotations either in the [GatewayClass-level ConfigMap or the per-Gateway ConfigMap](/azure/aks/istio-gateway-api#resource-customizations):
+> ```yaml
+>  service: |
+>     spec:
+>        externalTrafficPolicy: Local
+>     metadata:
+>       annotations:
+>         service.beta.kubernetes.io/port_80_health-probe_port:
+>         service.beta.kubernetes.io/port_80_health-probe_protocol:
+>         service.beta.kubernetes.io/port_80_health-probe_request-path:
+> ```
 
 #### Step 2: Make sure no firewall or NSG rules block ingress traffic
 
