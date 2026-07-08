@@ -72,7 +72,7 @@ To troubleshoot effectively, you must have the following prerequisite items:
 
 | Variable | Description | Example |
 |---|---|---|
-| `{SUBSCRIPTION_ID}` | Azure subscription ID where the private endpoint is created | `897f8215-ca14-442a-9a1b-408d8fef053a` |
+| `{SUBSCRIPTION_ID}` | Azure subscription ID where the private endpoint is created | `aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e` |
 | `{RESOURCE_GROUP}` | Resource group for the private endpoint | `myResourceGroup` |
 | `{PE_NAME}` | Name of the private endpoint you're trying to create | `myPrivateEndpoint` |
 | `{VNET_NAME}` | Virtual network that contains the target subnet | `myVNet` |

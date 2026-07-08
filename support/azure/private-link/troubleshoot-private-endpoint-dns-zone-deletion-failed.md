@@ -61,7 +61,7 @@ To troubleshoot this issue, you need the following items:
 
 | Variable | Description | Example |
 |---|---|---|
-| `{SUBSCRIPTION_ID}` | Azure subscription ID hosting the stuck resource | `897f8215-ca14-442a-9a1b-408d8fef053a` |
+| `{SUBSCRIPTION_ID}` | Azure subscription ID hosting the stuck resource | `8aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e` |
 | `{RESOURCE_GROUP}` | Resource group containing the stuck resource | `myResourceGroup` |
 | `{RESOURCE_NAME}` | Name of the stuck private endpoint or Private DNS zone | `myPrivateEndpoint` / `privatelink.blob.core.windows.net` |
 | `{RESOURCE_TYPE}` | Either `privateEndpoint` or `privateDnsZone` — determines which diagnostic branches apply | `privateEndpoint` |

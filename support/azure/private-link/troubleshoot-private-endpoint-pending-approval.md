@@ -70,13 +70,13 @@ To troubleshoot this issue, you need:
 
 | Variable | Description | Example |
 |---|---|---|
-| `{SUBSCRIPTION_ID}` | Subscription where the private endpoint (consumer side) lives. | `897f8215-ca14-442a-9a1b-408d8fef053a` |
+| `{SUBSCRIPTION_ID}` | Subscription where the private endpoint (consumer side) lives. | `aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e` |
 | `{RESOURCE_GROUP}` | Resource group of the private endpoint (consumer side). | `myResourceGroup` |
 | `{PE_NAME}` | Name of the private endpoint. | `myPrivateEndpoint` |
 | `{TARGET_RESOURCE_ID}` | Full resource ID of the target the endpoint connects to (like storage account, key vault, SQL server, and Private Link service). | `/subscriptions/.../resourceGroups/rg-target/providers/Microsoft.Storage/storageAccounts/mystorage` |
 | `{TARGET_SUBSCRIPTION_ID}` | Subscription that owns the target resource (can differ from the consumer subscription). | `aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa` |
-| `{APPROVER}` | Object ID (GUID) of the principal expected to approve the connection on the target side. You can also use a User Principal Name (UPN), but if the CLI returns `Insufficient privileges to complete the operation` when resolving the UPN using Microsoft Graph API, use the object ID instead (find it under **Microsoft Entra ID** > **Users** > *user* > **Object ID**). | `deb83df2-4886-477c-91eb-19c16d93add3` |
-| `{CONSUMER_SUBSCRIPTION_ID}` | Subscription that owns the source private endpoint, used when adding it to an auto-approval allow-list. | `897f8215-ca14-442a-9a1b-408d8fef053a` |
+| `{APPROVER}` | Object ID (GUID) of the principal expected to approve the connection on the target side. You can also use a User Principal Name (UPN), but if the CLI returns `Insufficient privileges to complete the operation` when resolving the UPN using Microsoft Graph API, use the object ID instead (find it under **Microsoft Entra ID** > **Users** > *user* > **Object ID**). | `aaaabbbb-0000-cccc-1111-dddd2222eeee` |
+| `{CONSUMER_SUBSCRIPTION_ID}` | Subscription that owns the source private endpoint, used when adding it to an auto-approval allow-list. | `aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e` |
 
 > **TIP:** Each script that's provided in the following sections prompts you for the required values interactively. To open Cloud Shell and answer the prompts, select **Try It**. The values are cached for that session. Therefore, you enter them only one time.
 
