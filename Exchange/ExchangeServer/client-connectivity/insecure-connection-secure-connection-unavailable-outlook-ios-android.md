@@ -10,16 +10,22 @@ ms.custom:
   - sap:Clients and Mobile\Need help with Outlook for iOS and Android
   - Exchange Server
   - CSSTroubleshoot
+  - CI 9823
+  - CI 12201
 ms.reviewer: mhaque, daweiler, v-six
 appliesto: 
   - Outlook for iOS
   - Outlook for Android
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 07/07/2026
 ---
 # Error when Outlook for iOS or Android connects to Exchange Server: Insecure connection or Secure connection unavailable
 
 _Original KB number:_ &nbsp;4056392
+
+## Summary
+
+This article describes an issue in which Outlook for iOS or Android displays an "Insecure connection" or "Secure connection unavailable" error when connecting to Exchange Server. The issue occurs when the SSL certificate used by Exchange Server is expired, invalid, or not trusted by the certificate authorities recognized by the mobile app. The article explains the cause of the error, provides guidance on using a supported SSL certificate, and describes how to verify whether a certificate is trusted by the Java certificate authority store.
 
 ## Symptoms
 

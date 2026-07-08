@@ -10,6 +10,8 @@ ms.custom:
   - sap:Clients and Mobile\Can't Connect to Mailbox with Active Sync Device
   - Exchange Server
   - CSSTroubleshoot
+  - CI 9823
+  - CI 12201
 ms.reviewer: v-six
 appliesto: 
   - Exchange Server 2016 Enterprise Edition
@@ -21,11 +23,15 @@ appliesto:
   - Exchange Online via Office 365 E Plans
   - Exchange Online via Office 365 P Plans
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 07/07/2024
 ---
 # Exchange ActiveSync device is blocked unexpectedly by ABQ list
 
 _Original KB number:_ &nbsp; 3013802
+
+## Summary
+
+This article describes a scenario in which an Exchange ActiveSync device is unexpectedly blocked or quarantined after the device is restored, reset, or wiped. The issue occurs because the device generates a new Exchange ActiveSync Device ID, which no longer matches the allowed device list or access rules configured in Exchange Server or Exchange Online. The article explains the behavior and provides guidance for updating the allowed device list to restore synchronization.
 
 ## Symptoms
 

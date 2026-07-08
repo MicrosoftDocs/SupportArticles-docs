@@ -18,11 +18,15 @@ appliesto:
   - Exchange Server 2010
   - Exchange Online
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 07/07/2026
 ---
 # On-premises users can't access cloud archive mailboxes with Full Access permission in Outlook
 
 _Original KB number:_ &nbsp; 4486479
+
+## Summary
+
+This article describes a limitation in Exchange Server hybrid environments where users who have Full Access permission to another user's mailbox can't access that user's cloud-based archive mailbox in Outlook. The issue occurs because automapping doesn't support this scenario. The article provides workarounds for accessing the archive mailbox by using Outlook on the web or by creating a separate Outlook profile for the delegated mailbox.
 
 ## Symptoms
 

@@ -10,6 +10,8 @@ ms.custom:
   - sap:OWA  And Exchange Admin Center\Need help in configuring EAC
   - Exchange Server
   - CSSTroubleshoot
+  - CI 9823
+  - CI 12201
 ms.reviewer: jmartin, excontent, batre, v-six
 appliesto: 
   - Exchange Server 2016 Enterprise Edition
@@ -17,11 +19,15 @@ appliesto:
   - Exchange Server 2013 Enterprise
   - Exchange Server 2013 Standard Edition
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 07/07/2026
 ---
 # Event ID 1309 and you can't access OWA and ECP after you install Exchange Server 2016 or Exchange Server 2013
 
 _Original KB number:_ &nbsp;3099532
+
+## Summary
+
+This article describes an issue in which users can't access Outlook on the web or Exchange Control Panel (ECP) after Exchange Server 2013 or Exchange Server 2016 is installed, and Event ID 1309 is logged in the Application log. The issue occurs when the `SharedWebConfig.config` file is missing from the Exchange installation folder. The article provides steps to regenerate the missing file and restore access to Outlook on the web and ECP.
 
 ## Symptoms
 

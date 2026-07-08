@@ -1,7 +1,7 @@
 ---
 title: DNS query failed when email stuck in Draft
 description: Email messages are stuck in the Draft folder if the Register this connection's addresses in DNS check box is not selected. DNS query failed error occurs in this scenario. Provides resolutions to solve the problem.
-ms.date: 01/24/2024
+ms.date: 07/07/2026
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -11,6 +11,8 @@ ms.custom:
   - sap:Mail Flow\Need Help with Configuring Mailflow, Mail routing (Connectors, Domains)
   - Exchange Server
   - CSSTroubleshoot
+  - CI 9823
+  - CI 12201
 ms.reviewer: ajama, navesai, v-six
 appliesto: 
   - Exchange Server 2016 Enterprise Edition
@@ -19,9 +21,14 @@ appliesto:
   - Exchange Server 2013 Standard Edition
 search.appverid: MET150
 ---
+
 # DNS query failed error when an email message is stuck in the Draft folder in Exchange Server 2013
 
 _Original KB number:_ &nbsp; 3007623
+
+## Summary
+
+This article describes an issue in which email messages remain in the Drafts folder and Microsoft Exchange Server reports a "4.4.0 DNS query failed" error. The issue occurs when Exchange Server can't use DNS because the network adapter isn't configured to register its addresses in DNS. The article provides steps to restore DNS functionality by enabling DNS registration or configuring the required registry setting.
 
 ## Symptoms
 

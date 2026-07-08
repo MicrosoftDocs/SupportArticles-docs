@@ -11,14 +11,20 @@ ms.custom:
   - Exchange Server
   - CSSTroubleshoot
   - CI 171618
+  - Ci 9823
+  - CI 12201
 ms.reviewer: matbyrd, ninob, meerak, v-trisshores
 appliesto: 
   - Exchange Server 2019
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 07/07/2026
 ---
 
 # Mailboxes are stalled during a migration
+
+## Summary
+
+This article explains why mailbox moves in Exchange Server 2019 can appear to stall during migrations. The behavior occurs because workload management (WLM) throttling limits the number of concurrent mailbox moves to help protect server performance, causing additional mailboxes to remain in various stalled states until active moves complete. The article describes this behavior, explains why it's expected, and provides guidance for increasing the workload management limits when faster migration throughput is required.
 
 ## Symptoms
 

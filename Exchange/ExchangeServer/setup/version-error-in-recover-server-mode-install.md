@@ -10,6 +10,8 @@ ms.reviewer: batre, ninob, meerak, v-trisshores
 ms.custom: 
   - sap:Plan and Deploy\Exchange Install Issues, Cumulative or Security updates
   - CI 171721
+  - CI 9823
+  - CI 12201
   - Exchange Server
   - CSSTroubleshoot
 search.appverid:
@@ -17,10 +19,14 @@ search.appverid:
 appliesto:
   - Exchange Server 2019
   - Exchange Server 2016
-ms.date: 01/24/2024
+ms.date: 07/07/2026
 ---
 
 # Version error when you install Exchange Server in RecoverServer mode
+
+## Summary
+
+This article describes an issue in which Exchange Server recovery fails in RecoverServer mode and returns a version prerequisite error. The issue occurs because the January 2023 Exchange Server security update incorrectly updates the server's SerialNumber attribute in Active Directory to the security update version instead of the cumulative update version. The article explains the cause of the failure and provides steps to restore the correct SerialNumber value so that server recovery can complete successfully.
 
 ## Symptoms
 

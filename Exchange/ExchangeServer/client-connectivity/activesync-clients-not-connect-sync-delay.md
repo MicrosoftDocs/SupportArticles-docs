@@ -11,16 +11,22 @@ ms.custom:
   - sap:Clients and Mobile\Can't Connect to Mailbox with Active Sync Device
   - Exchange Server
   - CSSTroubleshoot
+  - CI 9823
+  - CI 12201
 search.appverid: 
   - MET150
 appliesto: 
   - Exchange Server 2016
   - Exchange Server 2013
-ms.date: 01/24/2024
+ms.date: 07/07/2026
 ---
 # ActiveSync clients cannot connect or synchronizing is delayed in an Exchange Server environment
 
 _Original KB number:_ &nbsp; 4456227, 4337638
+
+## Summary
+
+This article describes a known issue in Exchange Server 2013 and Exchange Server 2016 in which Exchange ActiveSync clients can't connect or experience synchronization delays after the Exchange ActiveSync application pool runs for an extended period. The issue is caused by stranded Exchange ActiveSync ping requests that accumulate in the application pool, leading to increased memory consumption, connection exhaustion, and degraded Client Access services. The article provides a workaround for Exchange Server 2013 and identifies the cumulative update that resolves the issue in Exchange Server 2016.
 
 ## Symptoms
 

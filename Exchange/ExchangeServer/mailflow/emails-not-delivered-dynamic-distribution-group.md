@@ -11,16 +11,23 @@ ms.custom:
   - sap:Mail Flow\Need Help with Configuring Mailflow, Mail routing (Connectors, Domains)
   - Exchange Server
   - CSSTroubleshoot
+  - CI 9823
+  - CI 12201
 search.appverid: 
   - MET150
 appliesto: 
   - Exchange Server 2016 Standard Edition
   - Exchange Server 2016 Enterprise Edition
-ms.date: 01/24/2024
+ms.date: 07/07/2026
 ---
+
 # Email messages sent to a Dynamic Distribution Group aren't delivered to all recipients
 
 _Original KB number:_ &nbsp; 4090655
+
+## Summary
+
+This article describes an issue in which messages sent to a Dynamic Distribution Group aren't delivered to all expected recipients. The issue occurs when the group's `RecipientContainer` setting limits membership evaluation to a specific organizational unit (OU). The article explains how recipient scope affects message delivery and provides guidance for configuring the correct `RecipientContainer` and validating group membership.
 
 ## Symptoms
 

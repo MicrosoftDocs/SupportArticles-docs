@@ -1,6 +1,6 @@
 ---
-title: Emails sent to Poison queue with Unable to reserve MSAM error
-description: Fixes an issue in which you receive the Unable to reserve MSAM for file parsing error message when email messages are sent to the Poison queue.
+title: Emails sent to poison queue with Unable to reserve MSAM error
+description: Fixes an issue in which you receive the Unable to reserve MSAM for file parsing error message when email messages are sent to the poison queue.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -9,6 +9,8 @@ ms.topic: troubleshooting
 ms.custom: 
   - sap:Mail Flow\Need Help with Configuring Mailflow, Mail routing (Connectors, Domains)
   - CI 144794
+  - CI 9823
+  - CI 12201
   - Exchange Server
   - CSSTroubleshoot
 ms.reviewer: jolarrew
@@ -17,11 +19,18 @@ appliesto:
   - Exchange Server 2016
   - Exchange Server 2019
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 07/07/2026
 ---
-# Emails sent to Poison queue with "Unable to reserve MSAM" error
 
-If email messages are stuck in the Poison queue on one of the servers in your environment that's running Microsoft Exchange Server, try the following steps to troubleshoot the issue:
+# Emails sent to poison queue with "Unable to reserve MSAM" error
+
+## Summary
+
+This article describes an issue in which email messages are moved to the poison queue and Microsoft Exchange Server logs "Unable to reserve MSAM for file parsing" errors. The issue occurs because required FIP-FS scanning engine files are missing from the Exchange installation directory, preventing transport rules and message scanning from processing messages correctly. The article explains how to identify the issue and restore the missing files to resume normal mail flow.
+
+## Symptoms
+
+If email messages are stuck in the poison queue on one of the servers in your environment that's running Microsoft Exchange Server, try the following steps to troubleshoot the issue:
 
 1. Check the event log on the server. You might find several relevant events logged, such as Event IDs 10001, 4010, 4007, 1051, 17025, 4999, or 2203. The messages in event IDs 4010, 4999, and 2203 should resemble the following samples, and will contain the text that's shown as bold.
 
@@ -37,11 +46,11 @@ If email messages are stuck in the Poison queue on one of the servers in your en
 
 If the affected Exchange-based server has the Transport Rule agent enabled, disable the agent, and resubmit the messages. This action removes the blockage in the message queue. However, when you enable the Transport Rule agent again, the issue recurs.
 
-## Cause of the error
+## Cause
 
-If you see the bold text from the sample messages in the event logs entries, this indicates that the issue occurs because the required files are missing from the *:::no-loc text="<%Exchange_Installation_Path%>FIP-FS\\Data\\Engines\\amd64":::* folder. When the FIP-FS engine tries to scan messages while they are being categorized, it requires the files in this folder to complete the process. If the files are missing, the event IDs that are listed in the previous section are generated, and the email messages are put into the Poison queue.  
+If you see the bold text from the sample messages in the event logs entries, this indicates that the issue occurs because the required files are missing from the *:::no-loc text="<%Exchange_Installation_Path%>FIP-FS\\Data\\Engines\\amd64":::* folder. When the FIP-FS engine tries to scan messages while they are being categorized, it requires the files in this folder to complete the process. If the files are missing, the event IDs that are listed in the previous section are generated, and the email messages are put into the poison queue.  
 
-## Resolve the error
+## Resolution
 
 To resolve this issue, copy all the files in the *:::no-loc text="<%Exchange_Installation_Path%>FIP-FS\\Data\\Engines\\amd64":::* folder on an unaffected Exchange-based server to the same folder on the affected Exchange-based server.
 

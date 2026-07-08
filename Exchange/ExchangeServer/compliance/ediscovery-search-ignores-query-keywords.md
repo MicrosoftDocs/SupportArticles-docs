@@ -9,16 +9,22 @@ ms.topic: troubleshooting
 ms.custom: 
   - sap:Messaging Policy and Compliance\Issues with eDiscovery, import/export of mailbox
   - CI 174132
+  - CI 9823
+  - CI 12201
   - Exchange Server
   - CSSTroubleshoot
 ms.reviewer: svajda, lindabr, meerak, v-trisshores
 appliesto:
   - Exchange Server 2019
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 07/07/2026
 ---
 
 # eDiscovery search ignores some keywords in a query
+
+## Summary
+
+This article describes an issue in which eDiscovery searches in Exchange Server 2019 don't return the expected results when a keyword query contains multiple space-separated keywords and uses the `hu-HU`, `sk-SK`, or `tr-TR` search locale. The issue occurs because these locales can incorrectly process keyword tokenization, causing the search to ignore keywords after the first one. The article explains the cause of the behavior and provides workarounds that use a different locale or explicit Boolean operators to ensure that all search keywords are evaluated correctly.
 
 ## Symptoms
 

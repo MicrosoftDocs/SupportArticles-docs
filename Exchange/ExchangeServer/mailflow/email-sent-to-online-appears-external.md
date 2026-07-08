@@ -10,6 +10,8 @@ ms.custom:
   - sap:Mail Flow\Need Help with Configuring Mailflow, Mail routing (Connectors, Domains)
   - Exchange Server
   - CSSTroubleshoot
+  - CI 9823
+  - CI 12201
 search.appverid: 
   - MET150
 appliesto: 
@@ -17,12 +19,17 @@ appliesto:
   - Exchange Server 2013 Enterprise Edition
   - Exchange Server 2016 Standard Edition
   - Exchange Server 2016 Enterprise Edition
-ms.date: 01/24/2024
+ms.date: 07/07/2026
 ms.reviewer: v-six
 ---
+
 # Emails sent from on-premises to Exchange Online appears to be external after running HCW
 
 _Original KB number:_ &nbsp; 4052493
+
+## Summary
+
+This article describes an issue in which messages sent from Microsoft Exchange Server to Exchange Online appear as external messages after the Hybrid Configuration Wizard (HCW) runs. The issue occurs when EdgeSync can't synchronize the `TLSCertificateName` attribute to Edge Transport servers because the certificate information exceeds the supported attribute length. The article provides several methods to resolve the synchronization issue and restore correct internal message recognition in hybrid environments.
 
 ## Symptoms
 

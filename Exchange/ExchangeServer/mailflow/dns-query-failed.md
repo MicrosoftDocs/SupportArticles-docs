@@ -10,6 +10,8 @@ ms.custom:
   - sap:Mail Flow\Need Help with Configuring Mailflow, Mail routing (Connectors, Domains)
   - Exchange Server
   - CSSTroubleshoot
+  - CI 9823
+  - CI 12201
 search.appverid: 
   - MET150
 appliesto: 
@@ -19,13 +21,17 @@ appliesto:
   - Exchange Server 2010 Standard
   - Exchange Server 2016 Enterprise Edition
   - Exchange Server 2016 Standard Edition
-ms.date: 01/24/2024
+ms.date: 07/07/2026
 ms.reviewer: v-six
 ---
 
 # 451 4.4.0 DNS query failed Exchange Server error in message queue
 
-## Error occurs when you send email to specific remote domains 
+## Summary
+
+This article describes an issue in which Microsoft Exchange Server queues email messages and returns a 451 4.4.0 DNS query failed error when attempting to deliver mail to remote domains. The issue can occur because of problems with DNS resolution, such as unexpected responses to DNS queries from remote domains or issues with the DNS servers used by Exchange Server. The article provides troubleshooting guidance and configuration changes to help restore reliable mail routing and message delivery.
+
+## Error occurs when you send email to specific remote domains
 
 This problem may occur because the remote DNS servers ignore the AAAA query or return an unexpected response. 
 

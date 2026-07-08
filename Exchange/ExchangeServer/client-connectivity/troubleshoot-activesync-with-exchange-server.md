@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot ActiveSync with Exchange Server
 description: Resolves ActiveSync issues with Exchange Server.
-ms.date: 07/04/2024
+ms.date: 07/07/2026
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -11,11 +11,14 @@ ms.custom:
   - sap:Clients and Mobile\Can't Connect to Mailbox with Active Sync Device
   - Exchange Server
   - CSSTroubleshoot
+  - CI 9823
+  - CI 12201
 ms.reviewer: v-six
 appliesto: 
   - Exchange Server
 search.appverid: MET150
 ---
+
 # Troubleshoot ActiveSync with Exchange Server
 
 _Original KB number:_ &nbsp; 10047
@@ -31,6 +34,10 @@ We'll begin by asking you the issue you are facing. Then we'll take you through 
 **Estimated time of completion:**
 
 60-90 minutes.
+
+## Summary
+
+This article provides a guided workflow for troubleshooting Microsoft Exchange ActiveSync connectivity and synchronization issues in Exchange Server. It helps administrators diagnose common problems that prevent mobile devices from creating profiles, connecting to Exchange, synchronizing email, or updating calendar data. The article also includes troubleshooting steps for Autodiscover, authentication, device policies, mail flow, calendar issues, and performance-related delays.
 
 ## What is the issue you are facing
 

@@ -10,6 +10,8 @@ ms.custom:
   - sap:Mail Flow\Issues with Internal Mail Flow
   - Exchange Server
   - CSSTroubleshoot
+  - CI 9823
+  - CI 12201
 ms.reviewer: scottlan, deedi, v-six
 appliesto: 
   - Exchange Server 2019
@@ -20,11 +22,15 @@ appliesto:
   - Exchange Server 2010 Standard
   - Exchange Server 2010 Enterprise
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 07/07/2026
 ---
 # 454 4.7.0 Temporary authentication failure in Exchange Server
 
 _Original KB number:_ &nbsp; 979174
+
+## Summary
+
+This article describes an issue in which an email message becomes stuck in a remote delivery queue and generates a 454 4.7.0 Temporary authentication failure error in Exchange Server. The issue occurs when Exchange servers can't authenticate with each other for internal message routing because of problems such as time synchronization, Active Directory replication, Service Principal Name (SPN) configuration, Kerberos connectivity, or receive connector authentication settings. The article provides troubleshooting steps to identify and resolve the underlying authentication failure.
 
 ## Symptoms
 

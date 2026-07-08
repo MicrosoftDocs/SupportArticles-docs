@@ -1,7 +1,7 @@
 ---
 title: Attachments dropped during IMAIL conversion
 description: Email messages with attachments sent to Exchange users are intermittently dropped during IMAIL conversion. Provides a resolution.
-ms.date: 01/24/2024
+ms.date: 07/07/2026
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -11,6 +11,8 @@ ms.custom:
   - sap:Mail Flow\Need Help with Configuring Mailflow, Mail routing (Connectors, Domains)
   - Exchange Server
   - CSSTroubleshoot
+  - CI 9823
+  - CI 12201
 ms.reviewer: michlee, v-six
 appliesto: 
   - Exchange Server
@@ -19,6 +21,10 @@ search.appverid: MET150
 # Attachments intermittently dropped during IMAIL conversion
 
 _Original KB number:_ &nbsp; 2249287
+
+## Summary
+
+This article describes an issue in which email messages that contain attachments are intermittently dropped during IMAIL conversion in Microsoft Exchange Server. The issue occurs when the Temporary File Path or Working Directory used during attachment processing is invalid, inaccessible, or incorrectly configured. The article explains how to identify the configuration problem and restore message delivery by correcting the path settings and permissions.
 
 ## Symptoms
 
