@@ -68,7 +68,7 @@ To troubleshoot effectively, you must have the following prerequisite items:
 
 | Variable | Description | Example |
 |---|---|---|
-| `{SUBSCRIPTION_ID}` | Azure subscription ID where the resources live | `897f8215-ca14-442a-9a1b-408d8fef053a` |
+| `{SUBSCRIPTION_ID}` | Azure subscription ID where the resources live | `aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e` |
 | `{RESOURCE_GROUP}` | Resource group for the private endpoint, Private Link Service, or load balancer | `myResourceGroup` |
 | `{VNET_NAME}` | Virtual network that hosts the private endpoint network interface cards (NICs) | `myVNet` |
 | `{TARGET_RESOURCE_ID}` | Resource ID of the resource the endpoint connects to (like Azure Storage account, Azure Key Vault, SQL server, or Private Link Service) | `/subscriptions/.../providers/Microsoft.Storage/storageAccounts/mystorage` |
