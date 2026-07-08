@@ -33,7 +33,7 @@ If you capture either a Fiddler trace or an HTTP Archive (HAR) trace, you see an
 
 **Error response 1**:
 
-`{"appsManagementStatus": [{"appId": "657e833a-c931-4ad9-a378-c781ec631057","workload": "WXPO","status": "Failed",`
+`{"appsManagementStatus": [{"appId": "00001111-aaaa-2222-bbbb-3333cccc4444","workload": "WXPO","status": "Failed",`
 
 `"commandType":"Deploy","errorReason": "Error while processing app management request for f9005841-826f-45bb-be31-3e4e62b36027 with message = {\"ResponseResult\":\"**FailedWriteToExchange**\",\"ResponseResultDetails\":{\"Code\":\"**FailedWriteToExchange**\"},\"ErrorMessages\":null} Error Response : , Error Message : , Response …} and status code = OK",`
 
@@ -41,7 +41,7 @@ If you capture either a Fiddler trace or an HTTP Archive (HAR) trace, you see an
 
 **Error response 2**:
 
-`{"appsManagementStatus":[{"appId":"921e76ef-d73e-567f-adae-5a76b39052cf","workload":"WXPO","status":"Failed",`
+`{"appsManagementStatus":[{"appId":"11112222-bbbb-3333-cccc-4444dddd5555","workload":"WXPO","status":"Failed",`
 
 `"commandType":"Deploy","errorReason":"Error while processing app management request for 38758492-9790-4f10-8db5-7f348d19f46f with message = {\"ResponseResult\":\"**FailedWriteToExchange**\",\"ResponseResultDetails\":{\"Code\":\"**UnableToParseManifest**\"}}}]}`
 
