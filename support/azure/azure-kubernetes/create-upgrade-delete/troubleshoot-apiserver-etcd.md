@@ -15,7 +15,7 @@ ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool
 
 This article helps you troubleshoot API server and etcd problems in large Azure Kubernetes Service (AKS) deployments.
 
-Microsoft tests the reliability and performance of the API server at a scale of 5,000 nodes and 200,000 pods. The cluster that contains the API server can automatically scale out and deliver [Kubernetes Service Level Objectives (SLOs)](https://github.com/kubernetes/community/blob/master/sig-scalability/slos/slos.md). If you experience high latencies or timeouts, the cause is likely a resource leakage on the distributed `etc` directory (etcd), or an offending client that has excessive API calls.
+Microsoft tests the reliability and performance of the API server at a scale of 5,000 nodes and 200,000 pods. The cluster that contains the API server can automatically scale out and deliver [Kubernetes Service Level Objectives (SLOs)](https://github.com/kubernetes/community/blob/master/sig-scalability/slos/slos.md). If you experience high latencies or timeouts, the cause is likely a resource leakage on the distributed `etcd`, or an offending client that has excessive API calls.
 
 ## Prerequisites
 
