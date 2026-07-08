@@ -10,6 +10,8 @@ ms.custom:
   - sap:Clients and Mobile\Can't Connect to Mailbox with OWA
   - Exchange Server
   - CSSTroubleshoot
+  - CI 9823
+  - CI 12201
 ms.reviewer: batre, jarrettr, v-six
 appliesto: 
   - Exchange Server 2016 Enterprise Edition
@@ -17,11 +19,15 @@ appliesto:
   - Exchange Server 2013 Standard Edition
   - Exchange Server 2013 Enterprise
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 07/07/2026
 ---
 # The FBA page is displayed when a user accesses Outlook Web App or EAC to sign in to Exchange Server 2016 and 2013
 
 _Original KB number:_ &nbsp; 2871485
+
+## Summary
+
+This article describes an issue in which the forms-based authentication (FBA) sign-in page continues to appear when users try to access Outlook on the web or Exchange Admin Center (EAC) after an Exchange Server upgrade. The issue occurs because the upgrade process replaces customized `Web.config` settings, causing authentication configuration changes to be lost. The article provides steps to restore the intended authentication settings and regain access to Outlook on the web and EAC.
 
 ## Symptoms
 

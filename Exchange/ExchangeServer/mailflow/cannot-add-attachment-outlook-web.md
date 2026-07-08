@@ -10,6 +10,8 @@ ms.custom:
   - sap:Mail Flow\Need Help with Configuring Mailflow, Mail routing (Connectors, Domains)
   - Exchange Server
   - CSSTroubleshoot
+  - CI 9823
+  - CI 12201
 ms.reviewer: hafizk, jmartin, v-six
 appliesto: 
   - Exchange Server 2016 Enterprise Edition
@@ -17,11 +19,15 @@ appliesto:
   - Exchange Server 2013 Enterprise
   - Exchange Server 2013 Service Pack 1
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 07/07/2026
 ---
 # Error when adding a large attachment in Outlook on the web
 
 _Original KB number:_ &nbsp;2957856
+
+## Summary
+
+This article describes an issue in which users can't attach large files in Outlook on the web and receive errors indicating that the attachment couldn't be added or that the message exceeds the maximum size limit. The issue occurs when the attachment size exceeds one or more message size limits configured in Microsoft Exchange Server, IIS, Outlook on the web, or Exchange Web Services (EWS). The article provides guidance for increasing the relevant message size limits and updating web configuration settings to allow larger attachments.
 
 ## Symptoms
 

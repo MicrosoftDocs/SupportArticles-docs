@@ -13,9 +13,11 @@ search.appverid: MET150
 ms.reviewer: kellybos, v-six
 author: cloud-writer
 ms.author: meerak
-ms.date: 01/24/2024
+ms.date: 07/07/2026
 ---
 # Public folder permissions for Exchange Server
+
+## Summary
 
 This article describes the permissions that can be granted to a public folder in Microsoft Exchange Server.
 

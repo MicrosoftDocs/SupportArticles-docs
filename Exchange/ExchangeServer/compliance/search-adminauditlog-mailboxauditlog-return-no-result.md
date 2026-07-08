@@ -11,6 +11,8 @@ ms.custom:
   - Exchange Server
   - CSSTroubleshoot
   - CI 165075
+  - CI 9823
+  - CI 12201
 ms.reviewer: batre, dkhrebin, nourdinb
 appliesto: 
   - Exchange Server 2019 Enterprise Edition
@@ -20,11 +22,16 @@ appliesto:
   - Exchange Server 2013 Enterprise Edition
   - Exchange Server 2013 Standard Edition
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 07/07/2026
 ---
+
 # Search-AdminAuditLog and Search-MailboxAuditLog with parameters return empty results
 
 _Original KB number:_ &nbsp;3054391
+
+## Summary
+
+This article describes an issue in which the `Search-AdminAuditLog` and `Search-MailboxAuditLog` PowerShell cmdlets return incomplete or empty results when the Cmdlets or Parameters filters are used. The article provides the updates that resolve the problem and outlines a workaround for environments in which regional language settings for system accounts prevent audit log searches from returning the expected results.
 
 ## Symptoms
 

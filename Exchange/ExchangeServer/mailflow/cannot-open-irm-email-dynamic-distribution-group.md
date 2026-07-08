@@ -11,16 +11,23 @@ ms.custom:
   - sap:Messaging Policy and Compliance\Information Rights Management
   - Exchange Server
   - CSSTroubleshoot
+  - CI 9823
+  - CI 12201
 search.appverid: 
   - MET150
 appliesto: 
   - Microsoft 365 Business
   - Outlook
-ms.date: 01/24/2024
+ms.date: 07/07/2026
 ---
+
 # Can't view Microsoft 365 IRM-encrypted message for dynamic distribution group
 
 _Original KB number:_ &nbsp; 4459264
+
+## Summary
+
+This article describes a limitation in which Microsoft 365 Information Rights Management (IRM)–protected messages can't be read when they're sent to a dynamic distribution group. Recipients might be redirected to Outlook on the web but can't open the message. The article explains that IRM encryption doesn't support dynamic distribution groups and recommends using a standard distribution group instead.
 
 ## Symptoms
 

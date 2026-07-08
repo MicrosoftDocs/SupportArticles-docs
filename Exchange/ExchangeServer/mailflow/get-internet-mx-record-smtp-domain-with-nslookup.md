@@ -9,12 +9,14 @@ ms.topic: troubleshooting
 ms.custom: 
   - sap:Mail Flow\Need Help with Configuring Mailflow, Mail routing (Connectors, Domains)
   - Exchange Server
+  - CI 9823
+  - CI 12201
   - CSSTroubleshoot
 search.appverid: 
   - MET150
 appliesto: 
   - Exchange Server
-ms.date: 01/24/2024
+ms.date: 07/07/2026
 ms.reviewer: v-six
 ---
 # Obtain internet mail exchanger records with the nslookup.exe utility
@@ -22,6 +24,10 @@ ms.reviewer: v-six
 _Original KB number:_ &nbsp; 203204
 
 ## Summary
+
+This article explains how to use the `nslookup.exe` utility to obtain Domain Name System (DNS) mail exchanger (MX) records for an SMTP domain. It provides step-by-step instructions for querying DNS, identifying mail exchanger hosts and their corresponding IP addresses, and collecting information that can help troubleshoot SMTP mail flow and mail routing issues.
+
+## Introduction
 
 When you troubleshoot SMTP problems, you may want to obtain the Domain Name System (DNS) records for the SMTP domain in question. You can use the nslookup.exe utility to collect this information.
 

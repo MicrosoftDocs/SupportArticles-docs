@@ -10,16 +10,22 @@ ms.custom:
   - sap:Clients and Mobile\Can't Connect to Mailbox with OWA
   - Exchange Server
   - CSSTroubleshoot
+  - CI 9823
+  - CI 12201
 ms.reviewer: v-six
 appliesto: 
   - Exchange Server 2016 Enterprise Edition
   - Exchange Server 2013 Enterprise
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 07/07/2026
 ---
 # Unable to open OWA, ECP, or EMS after a self-signed certificate is removed from the Exchange Back End website
 
 _Original KB number:_ &nbsp;2779694
+
+## Summary
+
+This article describes an issue in which OWA, ECP, Exchange ActiveSync, and Exchange Management Shell can't connect after the Microsoft Exchange self-signed certificate is removed from the Exchange Back End website and the IIS cache is cleared. It explains why the issue occurs and provides steps to create a new self-signed certificate, bind it to the Exchange Back End website, and restore connectivity.
 
 ## Symptoms
 

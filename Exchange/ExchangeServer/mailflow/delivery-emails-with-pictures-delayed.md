@@ -10,16 +10,23 @@ ms.custom:
   - sap:Mail Flow\Need Help with Configuring Mailflow, Mail routing (Connectors, Domains)
   - Exchange Server
   - CSSTroubleshoot
+  - CI 9823
+  - CI 12201
 ms.reviewer: shanbram, jarrettr, aartigoyle, v-six
 appliesto: 
   - Exchange Server 2016 Enterprise Edition
   - Exchange Server 2016 Standard Edition
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 07/07/2026
 ---
+
 # Delivery of emails with picture attachments is delayed in Exchange Server 2016
 
 _Original KB number:_ &nbsp;4013607
+
+## Summary
+
+This article describes an issue in which email messages that contain picture attachments are delivered slowly in Microsoft Exchange Server 2016, especially when they're sent to large distribution groups. The delay occurs because Exchange Server generates thumbnails for image attachments by using the Windows Imaging Component (WIC), which increases message processing time. The article provides a workaround to disable thumbnail generation and improve message delivery performance.
 
 ## Symptoms
 

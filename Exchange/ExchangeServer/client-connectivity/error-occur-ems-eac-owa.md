@@ -17,11 +17,15 @@ appliesto:
   - Exchange Server 2013 Standard Edition
   - Exchange Server 2013 Enterprise
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 07/07/2026
 ---
 # Error occurs in EMS, EAC, ECP, OWA, or Outlook on the web in Exchange Server 2013 or Exchange Server 2016
 
 _Original KB number:_ &nbsp;2898571
+
+## Summary
+
+This article describes an issue in which Exchange Management Shell (EMS), Exchange admin center (EAC), Exchange Control Panel (ECP), or Outlook on the web can't be accessed in Exchange Server 2013 or Exchange Server 2016. The issue occurs when an Exchange server computer account is subject to a denied ms-Exch-EPI-Token-Serialization permission through group membership. The article explains how to identify the affected permissions and restore access by removing the computer account from the restricted group.
 
 ## Symptoms
 

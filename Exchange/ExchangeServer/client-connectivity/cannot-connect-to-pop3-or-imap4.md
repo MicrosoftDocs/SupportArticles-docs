@@ -10,6 +10,8 @@ ms.custom:
   - sap:Clients and Mobile\Need help with IMAP, POP Clients
   - Exchange Server
   - CSSTroubleshoot
+  - CI 9823
+  - CI 12201
 ms.reviewer: batre, v-six
 appliesto: 
   - Exchange Server 2016 Enterprise Edition
@@ -17,11 +19,15 @@ appliesto:
   - Exchange Server 2013 Enterprise
   - Exchange Server 2013 Standard Edition
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 07/07/2026
 ---
 # Users cannot connect to POP3 or IMAP4
 
 _Original KB number:_ &nbsp; 3025138
+
+## Summary
+
+This article describes an issue in which users can't connect to POP3 or IMAP4 mailboxes in Exchange Server 2013 or Exchange Server 2016. The issue occurs when the PopProxy or ImapProxy server components are inactive, causing authentication failures and preventing client connections. The article provides steps to identify the component state and reactivate the affected service to restore POP3 and IMAP4 connectivity.
 
 ## Symptom 1
 

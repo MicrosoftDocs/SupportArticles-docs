@@ -10,15 +10,21 @@ ms.custom:
   - sap:OWA  And Exchange Admin Center\Need help in configuring EAC
   - Exchange Server
   - CSSTroubleshoot
+  - CI 9823
+  - CI 12201
 ms.reviewer: balinger, v-six
 appliesto: 
   - Exchange Server
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 07/07/2026
 ---
 # Users get a security warning when trying to connect OWA and ECP
 
 _Original KB number:_ &nbsp; 4469384
+
+## Summary
+
+This article describes a known issue in Exchange Server 2019 RTM in which users receive a browser security warning and can't access Outlook on the web or Exchange Control Panel (ECP). The issue occurs because Exchange Setup configures an incorrect set of TLS cipher suites that doesn't fully support HTTP/2 across supported browsers. The article provides a workaround to reconfigure the cipher suite settings. The issue is resolved in Exchange Server 2019 Cumulative Update 1 and later versions.
 
 ## Symptom
 

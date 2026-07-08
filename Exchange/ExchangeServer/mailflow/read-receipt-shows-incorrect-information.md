@@ -9,6 +9,8 @@ ms.topic: troubleshooting
 ms.custom: 
   - sap:Mail Flow\Generic DSNs and NDR
   - CI 174527
+  - CI 9823
+  - CI 12201
   - Exchange Server
   - Outlook for Windows
   - Outlook for Mac
@@ -28,10 +30,14 @@ appliesto:
   - Outlook for iOS
   - Outlook for Android
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 07/07/2026
 ---
 
 # Outlook read receipt shows incorrect information
+
+## Summary
+
+This article describes an issue in which Outlook read receipts display incorrect message details, such as missing recipients or inaccurate sent timestamps. The issue occurs when the `DSNConversionMode` setting in Microsoft Exchange Server is configured to use Exchange-formatted delivery status notifications. The article explains the cause and provides steps to update the transport configuration so that read receipts display the correct information.
 
 ## Symptoms
 

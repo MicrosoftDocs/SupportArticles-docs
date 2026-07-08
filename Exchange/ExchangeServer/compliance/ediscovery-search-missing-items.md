@@ -9,15 +9,22 @@ ms.topic: troubleshooting
 ms.custom: 
   - sap:Messaging Policy and Compliance\Issues with eDiscovery, import/export of mailbox
   - CI 161580
+  - CI 9823
+  - CI 12201
   - Exchange Server
   - CSSTroubleshoot
 ms.reviewer: dpaul
 appliesto: 
   - Exchange Server 2019
 search.appverid: MET150
-ms.date: 08/18/2025
+ms.date: 07/07/2026
 ---
+
 # Missing items in eDiscovery search results in Exchange Server 2019
+
+## Summary
+
+This article describes an issue in which eDiscovery searches in Exchange Server 2019 return incomplete results when a search is expected to return a large number of items. The issue occurs because of how Exchange Server processes and pages broad search queries, which can cause some matching items to be skipped. The article explains the cause of the behavior and provides a workaround that changes the search query configuration to improve the completeness of eDiscovery search results.
 
 ## Symptoms
 

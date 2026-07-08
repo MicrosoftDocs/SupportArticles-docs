@@ -16,13 +16,17 @@ ms.reviewer: mnanjund, benwinz, v-six
 appliesto: 
   - Exchange Server
 search.appverid: MET150
-ms.date: 07/07/2026S
+ms.date: 07/07/2026
 ---
 # Operation failed with message: Error 0x6f7 when adding a server to a database availability group in Exchange Server
 
 _Original KB number:_ &nbsp;2032601
 
 ## Summary
+
+This article describes an issue in which adding the first or an additional Exchange Server to a database availability group (DAG) fails with Error 0x6f7 (The Stub Received Bad Data). The issue occurs when the cluster creation process encounters invalid network configuration, such as network adapters that don't have a valid default gateway configuration. The article explains the cause of the error and provides guidance for configuring network adapters correctly so that the server can be added to the DAG successfully.
+
+## Symptom
 
 When you add the first or an additional server to a database availability group (DAG), the error message occurs:
 

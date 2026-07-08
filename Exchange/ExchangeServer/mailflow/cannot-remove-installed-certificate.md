@@ -9,6 +9,8 @@ ms.topic: troubleshooting
 ms.custom: 
   - sap:Mail Flow\Need Help with Configuring Mailflow, Mail routing (Connectors, Domains)
   - CI 170888
+  - CI 9823
+  - CI 12201
   - Exchange Server
   - CSSTroubleshoot
 ms.reviewer: dugolini, arindamt, batre, meerak, v-trisshores
@@ -17,10 +19,14 @@ appliesto:
   - Exchange Server 2016
   - Exchange Server 2013
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 07/07/2026
 ---
 
 # Can't remove a certificate that's installed in Exchange Server
+
+## Summary
+
+This article describes an issue in which Exchange Server administrators can't remove a certificate even after a renewed replacement certificate has been assigned to Exchange services. The issue occurs when the old and new certificates share the same issuer and subject names, and the certificate is still referenced by the `TlsCertificateName` property of one or more Send connectors. The article explains why Exchange blocks the certificate removal to protect mail flow and provides steps to safely update Send connector certificate associations and remove the old certificate.
 
 ## Symptoms
 

@@ -9,6 +9,8 @@ ms.topic: troubleshooting
 ms.custom: 
   - sap:Migration\Issues with Move Mailbox within same organization
   - CI 151458
+  - CI 9823
+  - CI 12201
   - Exchange Server
   - CSSTroubleshoot
 ms.reviewer: meerak, batre, jcoiffin, v-chazhang
@@ -17,9 +19,13 @@ appliesto:
   - Exchange Server 2016
   - Exchange Server 2019
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 07/07/2026
 ---
 # "MapiExceptionCorruptData" error when moving a mailbox to an Exchange Server 2013 database
+
+## Summary
+
+This article describes an issue in which a cross-forest mailbox move to an Exchange Server 2013 mailbox database fails with a MapiExceptionCorruptData: Unable to write mailbox info error. The issue occurs when the move is initiated from the target forest by using the Remote switch against mailboxes hosted on Exchange Server 2016 or Exchange Server 2019. The article provides a workaround that initiates the move from the source forest by using the Outbound switch to complete the migration successfully.
 
 ## Symptoms
 

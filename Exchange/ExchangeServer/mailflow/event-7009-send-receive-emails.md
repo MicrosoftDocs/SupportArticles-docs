@@ -11,17 +11,24 @@ ms.custom:
   - sap:Mail Flow\Not Able to Send or Receive Emails from Internet
   - Exchange Server
   - CSSTroubleshoot
+  - CI 9823
+  - CI 12201
 search.appverid: 
   - MET150
 appliesto: 
   - Exchange Server 2016 Enterprise Edition
   - Exchange Server 2016 Standard Edition
   - Exchange Server 2013 Enterprise Edition
-ms.date: 01/24/2024
+ms.date: 07/07/2026
 ---
+
 # Event 7009 when users try to send or receive email in Exchange Server 2013 or Exchange Server 2016
 
 _Original KB number:_ &nbsp; 2866822
+
+## Summary
+
+This article describes an issue in which users can't send or receive email in Exchange Server 2013 or Exchange Server 2016, and Event ID 7009 is logged. The issue occurs when the Hub Transport component is inactive, such as when a server is placed in Maintenance mode. The article provides steps to verify the component state, reactivate transport services, and restore mail flow.
 
 ## Symptoms
 

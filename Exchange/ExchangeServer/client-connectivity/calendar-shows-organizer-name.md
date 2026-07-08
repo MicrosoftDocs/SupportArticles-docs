@@ -9,6 +9,8 @@ ms.custom:
   - sap:Sharing\Issue viewing Free Busy
   - Exchange Server
   - CSSTroubleshoot
+  - CI 9823
+  - CI 12201
 manager: dcscontentpm
 search.appverid: 
   - MET150
@@ -19,11 +21,15 @@ appliesto:
   - Exchange Server 2010 Standard
   - Exchange Server 2016 Enterprise Edition
   - Exchange Server 2016 Standard Edition
-ms.date: 01/24/2024
+ms.date: 07/07/2026
 ms.reviewer: v-six
 ---
 
 # Resource mailbox's calendar shows the organizer's name instead of the subject in an Exchange Server environment
+
+## Summary
+
+This article describes a behavior in which a resource mailbox calendar displays the meeting organizer's name instead of the meeting subject. This behavior occurs by design when the `AddOrganizerToSubject` and `DeleteSubject` calendar processing settings are enabled on the resource mailbox. To display the original meeting subject, configure the resource mailbox to preserve the subject and stop replacing it with the organizer's name.
 
 ## Symptoms
 

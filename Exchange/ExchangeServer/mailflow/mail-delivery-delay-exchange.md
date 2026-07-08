@@ -10,6 +10,8 @@ ms.custom:
   - sap:Mail Flow\Issues with Transport Rules
   - Exchange Server
   - CSSTroubleshoot
+  - CI 9823
+  - CI 12201
 ms.reviewer: dpaul, v-six
 appliesto: 
   - Exchange Server 2016 Enterprise Edition
@@ -19,11 +21,15 @@ appliesto:
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 07/07/2026
 ---
 # Slow mail delivery in an Exchange environment that has transport rules configured
 
 _Original KB number:_ &nbsp;3145489
+
+## Summary
+
+This article describes an issue in which mail delivery is slow in Microsoft Exchange Server environments that use transport rules with "Matches Patterns" conditions. These conditions require more processing and can delay messages in the Categorizer, especially when messages are sent to large recipient lists. The article explains the cause of the delays and recommends using "Contains Word" conditions instead to improve mail flow performance.
 
 ## Symptoms
 
