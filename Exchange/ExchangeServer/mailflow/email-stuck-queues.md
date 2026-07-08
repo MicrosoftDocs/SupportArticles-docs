@@ -13,16 +13,22 @@ ms.custom:
   - sap:Mail Flow\Need Help with Configuring Mailflow, Mail routing (Connectors, Domains)
   - CSSTroubleshoot
   - CI 124314
+  - CI 9823
+  - CI 12201
   - Exchange Server
 appliesto: 
   - Exchange Online
   - Exchange Server 2019
   - Exchange Server 2016
   - Exchange Server 2013
-ms.date: 01/24/2024
+ms.date: 07/07/2026
 ---
 
 # Email messages are stuck in Exchange Server queues for several minutes
+
+## Summary
+
+This article describes an issue in which email messages remain in Microsoft Exchange Server queues for several minutes before they're delivered to Exchange Online. The issue occurs because Exchange Server limits the number of concurrent connections and message throughput to a single destination to help balance transport workloads. The article explains how these throttling settings can affect environments that primarily route mail to Exchange Online and provides configuration changes that can improve throughput and reduce queue buildup.
 
 ## Symptoms
 

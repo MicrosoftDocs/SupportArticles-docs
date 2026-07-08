@@ -9,6 +9,8 @@ ms.topic: troubleshooting
 ms.custom: 
   - sap:Mail Flow\Need Help with Configuring Mailflow, Mail routing (Connectors, Domains)
   - CI 169978
+  - CI 9823
+  - CI 12201
   - Exchange Server
   - CSSTroubleshoot
 ms.reviewer: janogu, arindamt, meerak, v-trisshores
@@ -17,10 +19,14 @@ appliesto:
   - Exchange Server 2016
   - Exchange Server 2013
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 07/07/2026
 ---
 
 # Error when remote IP address limit for Exchange Receive connector is exceeded
+
+## Summary
+
+This article describes an issue in which administrators can't add more remote IP addresses to an Exchange Server Receive connector and receive an "The administrative limit for this request was exceeded" error. The issue occurs because Receive connectors have a limit on the number of remote IP address entries that can be assigned. The article explains the limit and provides workarounds, such as using IP ranges or creating additional Receive connectors.
 
 ## Symptoms
 

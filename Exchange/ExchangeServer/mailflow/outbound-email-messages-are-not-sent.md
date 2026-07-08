@@ -10,6 +10,8 @@ ms.custom:
   - sap:Mail Flow\Need Help with Configuring Mailflow, Mail routing (Connectors, Domains)
   - Exchange Server
   - CSSTroubleshoot
+  - CI 9823
+  - CI 12201
 ms.reviewer: rrajan, scottlan, v-six
 appliesto: 
   - Exchange Server 2016 Standard Edition
@@ -19,11 +21,15 @@ appliesto:
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 07/07/2026
 ---
 # Outbound email messages are not sent on the Exchange Hub Transport or Edge server
 
 _Original KB number:_ &nbsp; 4051498
+
+## Summary
+
+This article describes an issue in which outbound email messages remain queued and aren't delivered to external recipients from Microsoft Exchange Server. The issue occurs when the certificate that Exchange uses for TLS-secured SMTP communication isn't bound to the SMTP service, causing TLS negotiation failures and message delivery timeouts. The article provides steps to identify the affected certificate, bind it to the SMTP service, and restore outbound mail flow.
 
 ## Symptoms
 

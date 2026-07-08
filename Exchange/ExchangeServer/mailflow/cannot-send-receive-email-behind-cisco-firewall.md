@@ -10,6 +10,8 @@ ms.custom:
   - sap:Mail Flow\Need Help with Configuring Mailflow, Mail routing (Connectors, Domains)
   - Exchange Server
   - CSSTroubleshoot
+  - CI 9823
+  - CI 12201
 ms.reviewer: alanmalm, v-darmac, v-six
 appliesto: 
   - Exchange Server 2013
@@ -17,11 +19,14 @@ appliesto:
   - Exchange Server 2016
   - Exchange Server 2019
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 07/07/2026
 ---
+
 # Can't send or receive email messages behind a Cisco PIX or Cisco ASA firewall with the Mailguard feature turned on
 
 _Original KB number:_ &nbsp;320027
+
+## Summary
 
 This article discusses the cause of the behavior that you can't send or receive email messages if an Exchange server is placed behind a Cisco PIX or Cisco ASA firewall device and the PIX or ASA firewall has the Mailguard feature turned on. It provides steps to turn off the Mailguard feature of the PIX or ASA firewall.
 

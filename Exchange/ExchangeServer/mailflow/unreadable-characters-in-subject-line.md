@@ -11,16 +11,22 @@ ms.custom:
   - Exchange Server
   - CSSTroubleshoot
   - CI 5055
+  - CI 9823
+  - CI 12201
 ms.reviewer: dkhrebin, arindamt, meerak, v-shorestris
 appliesto:
   - Exchange Server 2019
   - Exchange Server 2016
   - Exchange Online
 search.appverid: MET150
-ms.date: 04/29/2025
+ms.date: 07/07/2026
 ---
 
 # Unreadable characters in the subject line of received email messages
+
+## Summary
+
+This article describes an issue in which recipients see unreadable or garbled characters in email subject lines. The issue occurs when applications that use older versions of the .NET Framework send messages that contain non-ASCII characters by using the `SmtpClient` class. The article explains the cause and provides solutions to correct subject encoding, including updating the application or modifying Exchange Server Receive connector settings.
 
 ## Symptoms
 
@@ -28,7 +34,7 @@ A user reports that recipients of their email messages see unreadable or garbled
 
 ## Cause
 
-This issue occurs if a mail client application that targets a legacy Microsoft .NET Framework version uses the [System.Net.Mail.SmtpClient](/dotnet/api/system.net.mail.smtpclient.send) class to send email messages that contain non-ASCII characters in the subject line. In earlier .NET Framework versions, the SmtpClient implementation incorrectly handles non-ASCII characters in the subject line when connected to an SMTP server that supports the SMTPUTF8 extension. Instead of using the standard header encoding (RFC 2047), the client application sends raw UTF-8 bytes in the subject header. Consequently, mail clients that receive the affected messages display unreadable or garbled characters in the subject line.
+This issue occurs if a mail client application that targets a legacy Microsoft .NET Framework version uses the [System.Net.Mail.SmtpClient](/dotnet/api/system.net.mail.smtpclient.send) class to send email messages that contain non-ASCII characters in the subject line. In earlier .NET Framework versions, the `SmtpClient` implementation incorrectly handles non-ASCII characters in the subject line when connected to an SMTP server that supports the SMTPUTF8 extension. Instead of using the standard header encoding (RFC 2047), the client application sends raw UTF-8 bytes in the subject header. Consequently, mail clients that receive the affected messages display unreadable or garbled characters in the subject line.
 
 ## Solution
 

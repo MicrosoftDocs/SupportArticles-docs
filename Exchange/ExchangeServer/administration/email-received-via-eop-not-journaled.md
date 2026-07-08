@@ -1,7 +1,7 @@
 ---
 title: Email received through Microsoft 365 isn't journaled
 description: Provides a resolution for an issue in which internet email that is received through Microsoft 365 is not journaled in a hybrid Exchange Server and Microsoft 365 environment.
-ms.date: 01/24/2024
+ms.date: 07/07/2026
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -11,6 +11,8 @@ ms.custom:
   - sap:Mail Flow\Issues with Transport Rules
   - Exchange Server
   - CSSTroubleshoot
+  - CI 9823
+  - CI 12201
 ms.reviewer: jarrettr, davidsan, v-six
 appliesto: 
   - Exchange Server
@@ -21,6 +23,10 @@ search.appverid: MET150
 # Internet email received through Microsoft 365 isn't journaled in an Exchange Server hybrid environment
 
 _Original KB number:_ &nbsp; 4344001
+
+## Summary
+
+This article describes an issue in which internet email received through Microsoft 365 isn't journaled in a hybrid Exchange environment. The issue occurs because messages processed by Microsoft 365 contain a journaling header that indicates they have already been journaled, preventing on-premises Microsoft Exchange Server from journaling them again. The article explains the behavior and provides guidance for creating matching journal rules in both Microsoft 365 and Exchange Server to ensure that all messages are journaled as expected.
 
 ## Symptoms
 

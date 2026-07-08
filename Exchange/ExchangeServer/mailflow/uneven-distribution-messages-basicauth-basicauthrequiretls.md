@@ -10,6 +10,8 @@ ms.custom:
   - sap:Mail Flow\Not Able to Send or Receive Emails from Internet
   - Exchange Server
   - CSSTroubleshoot
+  - CI 9823
+  - CI 12201
 ms.reviewer: dpaul, jarrettr, v-six
 appliesto: 
   - Exchange Server 2016 Enterprise Edition
@@ -18,11 +20,16 @@ appliesto:
   - Exchange Server 2013 Standard Edition
   - Exchange Server 2019
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 07/07/2026
 ---
+
 # Messages aren't evenly distributed if BasicAuth, BasicAuthRequireTLS or NTLM is used in Exchange Server 2019, 2016, or 2013
 
 _Original KB number:_ &nbsp;3195087
+
+## Summary
+
+This article describes a by-design behavior in Exchange Server 2013, Exchange Server 2016, and Exchange Server 2019 in which messages authenticated by using Basic Authentication, Basic Authentication over TLS, or NTLM aren't distributed evenly across Transport services. Instead, authenticated messages are routed to the server hosting the active mailbox database copy for the authenticated user. This action can cause uneven load distribution and mail queue growth. The article explains the behavior and provides workarounds to improve load balancing and mail flow distribution.
 
 ## Symptoms
 

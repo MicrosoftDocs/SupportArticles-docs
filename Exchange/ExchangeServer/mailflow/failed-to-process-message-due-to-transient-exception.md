@@ -9,6 +9,8 @@ ms.topic: troubleshooting
 ms.custom: 
   - sap:Mail Flow\Not Able to Send or Receive Emails from Internet
   - CI 179711
+  - CI 9823
+  - CI 12201
   - Exchange Server
   - CSSTroubleshoot
 ms.reviewer: nourdinb, arindamt, meerak, v-trisshores
@@ -16,10 +18,14 @@ appliesto:
   - Exchange Server 2019
   - Exchange Server 2016
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 07/07/2026
 ---
 
 # "Failed to process message due to a transient exception" error in message tracking logs
+
+## Summary
+
+This article describes an issue in which email messages that contain attachments aren't delivered and Microsoft Exchange Server logs a "Failed to process message due to a transient exception" error. The issue occurs when the drive that hosts the system temporary folder doesn't have enough free disk space for the Mailbox Transport Submission service to process large attachments. The article explains the cause of the failure and provides guidance for monitoring and managing disk space to prevent message submission and delivery issues.
 
 ## Symptoms
 

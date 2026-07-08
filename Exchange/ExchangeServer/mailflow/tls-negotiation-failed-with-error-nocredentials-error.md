@@ -10,15 +10,21 @@ ms.custom:
   - sap:Mail Flow\Not Able to Send or Receive Emails from Internet
   - Exchange Server
   - CSSTroubleshoot
+  - CI 9823
+  - CI 12201
 ms.reviewer: rrajan, batre, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 07/07/2026
 ---
 # TLS negotiation failed with error NoCredentials error if messages to external domains are deferred
 
 _Original KB number:_ &nbsp; 4495258
+
+## Summary
+
+This article describes an issue in which messages to external domains remain queued and Microsoft Exchange Server logs a "TLS negotiation failed with error NoCredentials" error. The issue occurs when the certificate configured for outbound TLS is missing its private key. The article explains how to identify the affected certificate, replace it with a valid certificate, and restore outbound mail delivery.
 
 ## Symptoms
 
