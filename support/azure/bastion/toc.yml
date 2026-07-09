@@ -20,5 +20,7 @@ items:
     href: troubleshoot-virtual-network-peering-problems.md
   - name: Troubleshoot connection failures caused by routing or forced tunneling
     href: troubleshoot-connection-fails-routing-forced-tunneling.md
+  - name: Troubleshoot host deployment failures 
+    href: troubleshoot-host-deployment-failures.md 
   - name: Troubleshoot session failures due to unhealthy target VM
     href: troubleshoot-session-fails-target-vm-unhealthy.md
