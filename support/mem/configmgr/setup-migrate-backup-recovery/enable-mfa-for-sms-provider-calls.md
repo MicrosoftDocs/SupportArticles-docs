@@ -17,6 +17,9 @@ _Original KB number:_ &nbsp; 4042963
 > [!IMPORTANT]
 > You must be a member of the Full Administrator role that has access to the All scope to set and change MFA setting for SMS Provider calls.
 
+> [!IMPORTANT]
+> You must be a logged in with the same MFA method you are trying to enable for the SMS Provider, or the change will fail to apply.
+
 > [!NOTE]
 > You can enable MFA from any server that hosts the SMS Provider because it is a global setting.
 
