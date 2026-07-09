@@ -22,7 +22,7 @@ ms.reviewer: divargas, jarrettr
 
 ## Summary
 
-This article helps you troubleshoot issues that occur when deploying a new Linux virtual machine (VM) in Azure. It helps you identify the stage at which the deployment failed (deployment, provisioning, or OS boot) and guides you to the appropriate diagnostic tools and remediation steps.
+This article helps you diagnose and resolve issues that occur when deploying Linux virtual machines (VMs) in Azure. It focuses on identifying *where* the deployment failed (deployment, provisioning, or OS boot) and shows you *which logs and tools* to use at each stage.
 
 ## Identify the Linux VM deployment failure stage
 
@@ -168,9 +168,20 @@ When you create the VM, cloud-init starts up and tries to take the following act
 - Mount the ephemeral disk (on supported VM sizes).
 - Notify the Azure platform that the initial OS config is completed.
 
-The serial log captures early system boot, networking initialization, cloud-init execution, and Azure Linux VM Agent activity.
 
-Use the following table for reference, not as a checklist. You don't need to identify every entry. Instead, focus on the section that corresponds to where provisioning appears to stop (for example, networking, cloud-init, SSH startup, or the Azure Linux VM Agent).
+## How to interpret the serial console log
+
+The serial console captures early boot activity, including:
+- Kernel initialization
+- Network configuration
+- cloud-init execution
+- Azure Linux VM Agent startup
+
+You do **not** need to understand every entry. Instead:
+1. Identify the **last successful subsystem** (networking, cloud-init, SSH).
+2. Look immediately after for errors such as `error`, `fail`, or `exception`.
+3. Match the failure point to the common errors section below.
+
 
 | System events and key information | Serial log | Notes |
 |---|---|---|
