@@ -246,6 +246,29 @@ NAT gateway connections to internet destinations fail or time out.
 
 * If reducing the rate of connections decreases the occurrence of failures, check if the destination reached its API rate limits or other constraints.
 
+## NAT64 traffic fails to connect to IPv4-only destinations
+
+**Scenario**
+
+You observe that connections to IPv4-only destinations via synthesized `64:ff9b::` addresses time out or fail.
+
+**Possible causes**
+
+- NAT64 is not enabled on the NAT gateway.
+- No IPv4 public IP address is attached to the NAT gateway.
+- The NAT gateway SKU is Standard (not StandardV2).
+- The subnet is not associated with the NAT gateway.
+- NSG rules are blocking outbound IPv6 traffic.
+
+**Troubleshooting steps**
+
+- Verify that `nat64` is set to `Enabled` on the NAT gateway resource. Navigate to your NAT gateway > **Configuration** and confirm NAT64 is enabled.
+- Verify that at least one StandardV2 IPv4 public IP is attached to the NAT gateway. NAT64 requires an IPv4 public IP for outbound SNAT.
+- Verify the NAT gateway SKU is **StandardV2**. NAT64 is only supported on StandardV2.
+- Verify the VM's subnet has the NAT gateway associated. Navigate to the subnet > **NAT gateway** setting.
+- Check NSG rules on the subnet or NIC for rules blocking outbound traffic on IPv6 source addresses.
+- Test a second IPv4-only destination to rule out remote endpoint filtering.
+
 ## Connection failures at FTP server for active or passive mode
 
 **Scenario**
