@@ -46,18 +46,28 @@ Upgrading an existing Cloud PC between release versions of Windows 10 to Windows
 Find and manage the Cloud PC in Microsoft Intune by using the unchanged Intune device name, either through the **Devices** > **All devices** list or the **Devices** > **Windows 365** > **All Cloud PCs** list.
 
 ## Windows 365 provisioning fails<!--38483005-->
-
-Windows 365 provisioning might fail if both of the following conditions are met:
-
-- The Desired State Configuration (DSC) extension isn't signed.
-- The PowerShell Execution policy is set to **AllSigned** in the GPO.
-
-### Solution
-
-1. Check if the Azure network connection (ANC) fails with the error "An internal error occurred. The virtual machine deployment timed out." If yes, review the related GPO.
-1. Check if the PowerShell Execution policy is set to **AllSigned**. If it is, either remove the GPO or reset the PowerShell Execution policy to **Unrestricted**.
-1. Retry the ANC health check. If the check succeeds, retry provisioning.
-
+   
+   Windows 365 provisioning might fail if the Desired State Configuration (DSC) extension is used and the PowerShell 
+  execution policy is set to **AllSigned** through Group Policy.
+   
+   Windows 365 sets the PowerShell execution policy to `RemoteSigned` at the `LocalMachine` scope during provisioning. 
+  This policy allows locally created scripts and scripts run through the Custom Script Extension (CSE), while requiring 
+  downloaded scripts to be digitally signed. If a customer-configured GPO sets the execution policy to `AllSigned` at the 
+  `MachinePolicy` scope, it overrides the default configuration and blocks unsigned scripts.
+   
+   You might see either of the following errors:
+   
+   - **Custom Script Extension authorization manager validation failed.** Script execution was blocked by an authorization
+   manager validation failure in the Custom Script Extension.
+   - "An internal error occurred. The virtual machine deployment timed out."
+   
+   ### Solution
+   
+   1. Ensure that the execution policy and App Control for Business policies allow required scripts to run.
+   1. Review any applied GPOs that set the PowerShell execution policy to **AllSigned**.
+   1. Remove the GPO or change the policy to **RemoteSigned**.
+   1. Retry the ANC health check. If the check succeeds, retry provisioning.
+      
 ## Cloud PC reports as not compliant with the compliance policy
 
 The following device compliance settings report as **Not applicable** when being evaluated for a Cloud PC:

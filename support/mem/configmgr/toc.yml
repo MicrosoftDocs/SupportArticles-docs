@@ -264,6 +264,14 @@ items:
       items:
         - name: Clients don't get software updates
           href: update-management/clients-not-get-software-updates.md
+    - name: Best Practices
+      items:
+        - name: Implement a shared SUSDB for Configuration Manager software update points
+          href: update-management/wsus-configure-shared-database.md
+        - name: Windows Server Update Services best practices
+          href: update-management/windows-server-update-services-best-practices.md
+        - name: WSUS maintenance guide
+          href: update-management/wsus-maintenance-guide.md
     - name: Understand software update management
       items:
         - name: Software updates introduction
@@ -316,8 +324,6 @@ items:
           href: update-management/troubleshoot-wsus-import-sync-issues.md 
         - name: WSUS and Windows Update Agent diagnostics
           href: update-management/wsus-and-windows-update-agent-diagnostics.md
-        - name: WSUS best practices
-          href: update-management/windows-server-update-services-best-practices.md
         - name: WSUS client computers restart without any notification
           href: update-management/wsus-client-computers-restart-automatically.md
         - name: WSUS client takes too long to finish an update scan
@@ -326,7 +332,5 @@ items:
           href: update-management/wsus-console-crashes.md
         - name: WSUS database maintenance
           href: update-management/wsus-automatic-maintenance.md
-        - name: WSUS maintenance guide
-          href: update-management/wsus-maintenance-guide.md
         - name: WSUS synchronization fails with SoapException
           href: update-management/wsus-synchronization-fails-with-soapexception.md
