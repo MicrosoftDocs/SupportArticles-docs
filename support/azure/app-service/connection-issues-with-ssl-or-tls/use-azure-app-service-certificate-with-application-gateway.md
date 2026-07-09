@@ -62,8 +62,7 @@ You can use App Service Certificate in Azure Application Gateway, but not direct
 
 2. **Enable Managed Identity for Application Gateway**: Enable user-assigned.
 
-3. **Grant Access to key vault**: In the key vault, go to **Access Policies**, and add a policy for Application Gateway identity that has `get`, `list`,
-      and `secret management` permissions.
+3. **Grant Access to key vault**: In the key vault, go to **Access Policies**, and add a policy for Application Gateway identity that has `secret get` permissions.
 
 4. Due to current limitations, it's necessary to assign user-assigned managed identity and SSL certificate to Application Gateway. This can be done using Azure PowerShell.
 
