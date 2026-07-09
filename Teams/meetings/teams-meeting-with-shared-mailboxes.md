@@ -1,5 +1,5 @@
 ---
-title: Available Teams Meeting Features for Shared Mailboxes
+title: Teams Meeting Features for Shared Mailboxes
 description: Discusses available features when you schedule and manage Microsoft Teams meetings by using shared mailboxes.
 manager: dcscontentpm
 audience: ITPro
@@ -12,17 +12,19 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 10/08/2025
+ms.date: 07/09/2026
 ---
 # Teams meeting features for shared mailboxes
 
 For Microsoft Teams meetings that are managed by using a shared mailbox, only a limited number of features are available. The following table lists the details of each feature.
 
 > [!NOTE]
-
 > - Keep the shared mailbox account in the **Disabled** state, and avoid resetting its password.
-> - Don't sign in by using the credentials of the shared mailbox user account. Only users that the shared mailbox is shared with can log in with their user credentials.
-> - To create a Teams meeting in a shared mailbox calendar, a valid Teams license must be assigned either to the shared mailbox or to the user who is logged in to the shared mailbox.
+> - Don't sign in by using the credentials of the shared mailbox user account. Only users that the shared mailbox is shared with can sign in by using their user credentials.
+> - To create a Teams meeting in a shared mailbox calendar, either the shared mailbox or the user that's scheduling the meeting must be assigned a valid Teams license.
+> - If you use Microsoft Outlook, add the shared mailbox as a separate account to schedule Teams meetings from the shared mailbox calendar.<br/> 
+>   **Note**: Scheduling Teams meetings from a shared mailbox calendar in Outlook is not supported when the mailbox is accessed only through automapping.
+
 
 |Available feature|Details|
 |----------|-----------|

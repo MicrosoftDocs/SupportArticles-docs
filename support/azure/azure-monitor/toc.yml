@@ -61,6 +61,8 @@ items:
       href: app-insights/telemetry/troubleshoot-app-service-issues.md
     - name: Troubleshoot high data ingestion
       href: app-insights/telemetry/troubleshoot-high-data-ingestion.md
+    - name: Support boundaries and support options for App Center telemetry migration
+      href: app-insights/telemetry/support-boundaries-options.md
     - name: Application Insights classic SDK troubleshooting
       items:
       - name: SDK support guidance
