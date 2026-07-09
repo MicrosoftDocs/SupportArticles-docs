@@ -150,6 +150,9 @@
       },
       "ms.author": {
         "**/*.md": "meerak"
+      },
+      "manager": {
+        "**/*.md": "dcscontentpm"
       }
     },
     "template": [],
