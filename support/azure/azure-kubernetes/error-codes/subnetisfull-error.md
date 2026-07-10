@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot SubnetIsFull error during AKS cluster upgrade
 description: Resolve the SubnetIsFull error during an AKS cluster upgrade. Learn how to fix IP address capacity issues and complete your upgrade successfully.
-ms.date: 04/21/2026
+ms.date: 07/10/2026
 editor: v-jsitser
 ms.reviewer: chiragpa, albarqaw, v-leedennis
 ms.service: azure-kubernetes-service
@@ -102,6 +102,9 @@ If the number of available IPs is low (for example, fewer than the number of nod
 
 ## Solution
 
+> [!IMPORTANT]
+> The steps in this section are **preventive**. They're effective when applied *before* an upgrade or scale operation that would otherwise exhaust the subnet. If the upgrade has already failed and the affected node pool is in a `Failed` provisioning state, also follow the steps in [Recovery when the node pool is in a Failed provisioning state](#recovery-when-the-node-pool-is-in-a-failed-provisioning-state).
+
 Reduce the cluster nodes to reserve IP addresses for the upgrade.
 
 If scaling down isn't an option, and your virtual network CIDR has enough IP addresses, try to add a node pool that has a [unique subnet](/azure/aks/use-multiple-node-pools#add-a-node-pool-with-a-unique-subnet-preview):
@@ -110,6 +113,34 @@ If scaling down isn't an option, and your virtual network CIDR has enough IP add
 1. Switch the original node pool to a system node pool type.
 1. Scale up the user node pool.
 1. Scale down the original node pool.
+
+## Recovery when the node pool is in a Failed provisioning state
+
+When an upgrade fails with `SubnetIsFull`, the affected AKS node pool and its underlying Virtual Machine Scale Set (VMSS) can be left in a `Failed` provisioning state. To check the state, run:
+
+```azurecli
+az aks nodepool show \
+    --resource-group <RESOURCE_GROUP> \
+    --cluster-name <CLUSTER_NAME> \
+    --name <NODEPOOL_NAME> \
+    --query "provisioningState" \
+    --output tsv
+```
+
+After the node pool is in this state:
+
+- Subsequent operations against the same node pool (such as `az aks nodepool scale`, `az aks nodepool upgrade`, or retrying the original upgrade) **aren't guaranteed to succeed**, even after IP addresses are freed by scaling down other node pools.
+- Freeing IP addresses *after* the failure isn't a reliable recovery mechanism on its own.
+
+The recommended recovery path is to add a new node pool in a subnet with sufficient IP capacity and move workloads off the failed pool:
+
+1. Add a new node pool in a subnet that has enough free IPs for your target node count and `maxPods` setting. See [Add a node pool with a unique subnet](/azure/aks/use-multiple-node-pools#add-a-node-pool-with-a-unique-subnet-preview).
+1. [Cordon and drain](/azure/aks/upgrade-cluster#optional-settings) workloads from the failed node pool so they're rescheduled to the new node pool.
+1. Delete the failed node pool by using `az aks nodepool delete`.
+1. Plan future upgrades by using [IP address planning for AKS clusters](/azure/aks/concepts-network-ip-address-planning) to avoid recurrence.
+
+> [!NOTE]
+> Don't rely on scaling the failed node pool to zero and back up as a recovery mechanism. This pattern isn't guaranteed to reconcile a VMSS that's already in a `Failed` provisioning state because of `SubnetIsFull`. If the cluster has only one node pool and it's in this state, contact [Azure support](https://azure.microsoft.com/support/create-ticket/) before attempting destructive operations.
 
 ## Resources
 
