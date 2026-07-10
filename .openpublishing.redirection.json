@@ -7147,17 +7147,17 @@
     },
     {
       "source_path": "support/dynamics-365/marketing/welcome-marketing.yml",
-      "redirect_url": "/troubleshoot/dynamics-365/customer-insights/welcome-customer-insights",
+      "redirect_url": "/troubleshoot/dynamics-365/customer-insights/data/welcome-customer-insights-data",
       "redirect_document_id": false
     },
     {
       "source_path": "support/dynamics-365/marketing/dynamics-365-marketing-entitlement-does-not-match-your-tenant.md",
-      "redirect_url": "/troubleshoot/dynamics-365/customer-insights/welcome-customer-insights",
+      "redirect_url": "/troubleshoot/dynamics-365/customer-insights/data/welcome-customer-insights-data",
       "redirect_document_id": false
     },
     {
       "source_path": "support/dynamics-365/marketing/dynamics-365-marketing-problem-with-deployment.md",
-      "redirect_url": "/troubleshoot/dynamics-365/customer-insights/welcome-customer-insights",
+      "redirect_url": "/troubleshoot/dynamics-365/customer-insights/data/welcome-customer-insights-data",
       "redirect_document_id": false
     },
     {
@@ -7222,7 +7222,7 @@
     },
     {
       "source_path": "support/dynamics-365/customer-insights/index.md",
-      "redirect_url": "/troubleshoot/dynamics-365/customer-insights/welcome-customer-insights",
+      "redirect_url": "/troubleshoot/dynamics-365/customer-insights/data/welcome-customer-insights-data",
       "redirect_document_id": false
     },
     {
@@ -15872,6 +15872,10 @@
       "source_path": "support/azure/virtual-machines/windows/windows-vm-activation-error-0xc004f038.md",
       "redirect_url": "/troubleshoot/windows-server/licensing-and-activation/activation-error-0xc004cf038-insufficient-kms-host-pool-count.md?context=/troubleshoot/azure/virtual-machines/windows/context/context",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/customer-insights/welcome-customer-insights.yml",
+      "redirect_url": "/troubleshoot/dynamics-365/customer-insights/data/welcome-customer-insights-data"
     }
   ]
 }

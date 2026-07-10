@@ -1,0 +1,38 @@
+items:
+- name: Dynamics 365 Customer Insights - Journeys
+  href: welcome-customer-insights-journeys.yml
+  items:
+    - name: Channels
+      items:
+        - name: Troubleshoot custom channels
+          href: channels/troubleshoot-custom-channels.md
+        - name: Troubleshooting push notifications setup
+          href: channels/troubleshoot-push-notifications.md
+    - name: Email
+      items:
+        - name: Domain authentication errors
+          href: email/troubleshoot-domain-authentication.md
+        - name: Email deliverability issues
+          href: email/email-troubleshoot-delivery.md
+        - name: Email engagement drops
+          href: email/email-troubleshoot-engagement.md
+        - name: Email rendering issues
+          href: email/email-troubleshoot-rendering.md
+    - name: Event Management
+      items:
+        - name: Troubleshoot event management issues
+          href: event-management/troubleshoot-event-management.md
+        - name: Troubleshoot Teams integration issues for event management
+          href: event-management/troubleshoot-teams-integration.md
+    - name: Forms
+      items:
+        - name: Troubleshoot forms in Customer Insights - Journeys
+          href: forms/troubleshooting-forms.md
+    - name: General
+      items:
+        - name: Use Solution Health Hub to troubleshoot problems
+          href: general/troubleshoot-marketing-solution-health.md
+    - name: Segments
+      items:
+        - name: Segments show incorrect member count
+          href: segments/segment-member-count.md

@@ -1,0 +1,94 @@
+### YamlMime:Landing
+
+title: Dynamics 365 Customer Insights - Journeys troubleshooting
+summary: Welcome to Dynamics 365 Customer Insights - Journeys troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Dynamics 365 Customer Insights - Journeys. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+metadata:
+  title: Dynamics 365 Customer Insights - Journeys troubleshooting
+  description: LLanding page for Dynamics 365 Customer Insights - Journeys troubleshooting articles.
+  ms.topic: landing-page
+  ms.service: customer-insights
+  author: aartig13
+  ms.author: aartigoyle
+  ms.date: 06/29/2026
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+  # Card
+  - title: Channels
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot custom channels
+            url: channels/troubleshoot-custom-channels.md
+          - text: Troubleshoot push notifications setup
+            url: channels/troubleshoot-push-notifications.md
+
+  # Card
+  - title: Email
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Email deliverability issues
+            url: email/email-troubleshoot-delivery.md
+          - text: Email engagement drops
+            url: email/email-troubleshoot-engagement.md
+          - text: Fix email rendering issues
+            url: email/email-troubleshoot-rendering.md
+          - text: Troubleshoot domain authentication errors
+            url: email/troubleshoot-domain-authentication.md
+
+  # Card
+  - title: Event Management
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot event management issues
+            url: event-management/troubleshoot-event-management.md
+          - text: Troubleshoot Teams integration issues for event management
+            url: event-management/troubleshoot-teams-integration.md
+
+  # Card
+  - title: Forms
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot forms in Customer Insights - Journeys
+            url: forms/troubleshooting-forms.md
+
+  # Card
+  - title: General
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Use Solution Health Hub to troubleshoot problems
+            url: general/troubleshoot-marketing-solution-health.md
+
+  # Card
+  - title: Segments
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Segments show incorrect member count
+            url: segments/segment-member-count.md
+
+  # Card
+  - title: Documentation and training
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: Customer Insights - Journeys documentation
+            url: /dynamics365/customer-insights/journeys
+          - text: Customer Insights training
+            url: /training/dynamics365/
+
+  # Card
+  - title: Support Resources
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: Customer Insights forum
+            url: https://community.dynamics.com/forums/thread/?partialUrl=aicustomerinsights
+          - text: Share your ideas
+            url: https://go.microsoft.com/fwlink/?linkid=2074172
