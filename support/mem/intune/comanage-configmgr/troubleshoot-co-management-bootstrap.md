@@ -10,7 +10,7 @@ ms.reviewer: kaushika, meerak, aaronmiller
 
 This article helps you understand and troubleshoot issues that you may encounter when you set up co-management by taking path 2: [Bootstrap the Configuration Manager client with modern provisioning](/mem/configmgr/comanage/quickstart-paths#bkmk_path2).
 
-This scenario occurs when you have new Windows 10 devices that join Microsoft Entra ID and automatically enroll to Intune, and then you install the Configuration Manager client to reach a co-management state.
+This scenario occurs when you have new Windows 11 devices that join Microsoft Entra ID and automatically enroll to Intune, and then you install the Configuration Manager client to reach a co-management state.
 
 ## Before you start
 
@@ -27,8 +27,6 @@ Before you start troubleshooting, it's important to collect some basic informati
 Most issues occur because one or more of these steps were not completed. If you find that a step was skipped or was not completed successfully, check the details of each step, or see the following tutorial:
 
 [Tutorial: Enable co-management for modern provisioned clients](/mem/configmgr/comanage/tutorial-co-manage-new-devices)
-
-<a name='troubleshooting-hybrid-azure-ad-configuration'></a>
 
 ## Troubleshooting hybrid Microsoft Entra configuration
 
@@ -58,27 +56,18 @@ You can use the following log file on Windows 10 devices:
 
 `%WinDir%\CCM\logs\CoManagementHandler.log`
 
-### How do I validate that my cloud service has a unique DNS name?
-
-To do this, follow these steps:
-
-1. Sign in to the [Azure portal](https://portal.azure.com), go to **All Services** > **Cloud Services (Classic)**, and then click **Add**.
-2. In the in **DNS name** field, enter a name that you want to use.
-3. When you have a name that is available for you to use, note it without creating it in the **Cloud Service** pane.
-4. Create a CNAME record that maps your domain to *\<name>.cloudapp.net* in both internal and external DNS servers.
-
 ### Where can I find the Configuration Manager client setup MSI?
 
 You can find the **ccmsetup.msi** file in the following folder on the Configuration Manager site server:
 
 `<ConfigMgr installation directory>\bin\i386`
 
-### How do I verify the Configuration Manager client deployment from Intune to the managed Windows 10 devices?
+### How do I verify the Configuration Manager client deployment from Intune to the managed Windows 11 devices?
 
 To verify the deployment, follow these steps on the Windows 10 device:
 
 1. Open File Explorer, and go to `%WinDir%\CCM\logs`.
-2. Open the ADALOperationProvider.log file with [CMTrace](/mem/configmgr/core/support/cmtrace), and look for **Getting Microsoft Entra ID (User) token and Getting Microsoft Entra ID (device) token** to verify the tokens.
+1. Open the CcmAAD.log file with [CMTrace](/mem/configmgr/core/support/cmtrace), and look for **Getting Microsoft Entra ID (User) token and Getting Microsoft Entra ID (device) token** to verify the tokens.
 3. In CMTrace, open the CoManagementHandler.log file, look for **Device is already enrolled with MDM and Device Provisioned** to verify the enrollment.
 4. Open Control Panel, type **Configuration Manager** in the search box, and then select it.
 5. Select the **General** tab, and verify the **Assigned management point**.
@@ -86,34 +75,16 @@ To verify the deployment, follow these steps on the Windows 10 device:
 
 ## Common issues
 
-<a name='configuration-manager-allows-only-an-https-enabled-management-point-for-azure-ad-joined-clients'></a>
+### Whether PKI certificates are still a valid option for client communication
 
-### Configuration Manager allows only an HTTPS-enabled management point for Microsoft Entra joined clients
-
-This issue occurs if you use Configuration Manager current branch version 1802 or an earlier version. In these versions, management points that you enable for CMG must be HTTPS. Starting in version 1806, the management point can be HTTP.
-
-To fix the issue, update to Configuration Manager current branch version 1806 or a later version.
-
-### Whether PKI certificates are still a valid option instead of enhanced HTTP
-
-PKI certificates are still a valid option for you, but they have the following requirements:
+PKI certificates are still an option, but they have the following limitations:
 
 - All client communication is done over HTTPS.
 - You must have advanced control of the signing infrastructure.
 
+- [Autopilot into Co-Management](/intune/configmgr/comanage/autopilot-enrollment#limitations) is not supported using PKI certificates
+
 For more information, see [Enhanced HTTP](/mem/configmgr/core/plan-design/hierarchy/enhanced-http).
-
-### I can't find the Client Computer Communication tab in Site Configuration
-
-Starting in Configuration Manager current branch version 1906, this tab is renamed to **Communication Security**.
-
-### The Use Configuration Manager-generated certificates for HTTP site systems option is enabled, but no certificate is received
-
-This behavior is expected. It can take up to 30 minutes for the management point to receive and configure the new certificate from the site. You can use the following log to track, monitor, and verify this:
-
-`<ConfigMgr installation directory>\Logs\CloudMgr.log`
-
-<a name='records-for-the-resources-and-their-associated-information-from-azure-ad-arent-created-in-the-configuration-manager-database'></a>
 
 ### Records for the resources and their associated information from Microsoft Entra ID aren't created in the Configuration Manager database
 
@@ -135,9 +106,9 @@ To fix the issue, follow the steps in [Microsoft Entra user Discovery](/mem/conf
 
 ### CoManagementHandler.log shows **Queuing enrollment timer to fire at...**
 
-The ADALOperationProvider.log file on the Windows devices shows **Getting Microsoft Entra ID (User) token and Getting Microsoft Entra ID (device) token**. However, the device isn't enrolled, and the last line in CoManagementHandler.log is **Queuing enrollment timer to fire at...**.
+The CcmAAD.log file on the Windows devices shows **Getting Microsoft Entra ID (User) token and Getting Microsoft Entra ID (device) token**. However, the device isn't enrolled, and the last line in CoManagementHandler.log is **Queuing enrollment timer to fire at...**.
 
-This behavior is expected in Configuration Manager current branch version 1806 and later versions. Starting in version 1806, automatic enrollment isn't immediate for all clients. This behavior helps enrollment scale better for large environments. Configuration Manager randomizes enrollment based on the number of clients. For example, if your environment has 100,000 clients, enrollment may occur over several days.
+This behavior is expected. Starting in version 1806, automatic enrollment isn't immediate for all clients. This behavior helps enrollment scale better for large environments. Configuration Manager randomizes enrollment based on the number of clients. For example, if your environment has 100,000 clients, enrollment may occur over several days.
 
 To monitor co-management, go to **Monitoring** > **Co-Management** in the Configuration Manager console.  
 
@@ -186,7 +157,7 @@ If the `ClientHealthLastSyncTime` value is up-to-date, but the last check-in tim
 
 ### The CMG connection point shows as disconnected
 
-The issue occurs because of a permissions issue between the remote site system where the CMG connection point role is installed and the primary site.
+The issue can occur because of a permissions issue between the remote site system where the CMG connection point role is installed and the primary site.
 
 The remote site system collects the `TrafficData` report from the CMG, then sends the data to the primary site through state messages. Here is a sample log snippet of SMS_Cloud_ProxyConnector.log:
 
@@ -213,7 +184,7 @@ Additionally, the following error is logged in SMS_Cloud_ProxyConnector.log on t
 
 > MessageID: \<ID> RequestURI: https://\<FQDN>/SMS_MP/.sms_aut?SITESIGNCERT EndpointName: SMS_MP ResponseHeader: HTTP/1.1 **403** CMGConnector_Clientcertificaterequired~~ ResponseBodySize: 5274 ElapsedTime: 44 ms SMS_CLOUD_PROXYCONNECTOR
 
-If the CMG connection point server has a valid client authentication certificate, the most possible cause is failure to validate the Certificate Revocation List (CRL) for the certificate. If this is the case, you receive the 0x87d0027e error, and the following error is logged in the CAPI2 event log:
+If there are any HTTPS Management Points enabled for CMG traffic, the CMG connection point server needs a valid client authentication certificate. This error can be due to a failure to validate the Certificate Revocation List (CRL) for the certificate. If this is the case, you receive the 0x87d0027e error, and the following error is logged in the CAPI2 event log:
 
 > The revocation function was unable to check revocation because the revocation server was offline.  80092013
 

@@ -172,7 +172,7 @@ To fix these issues, follow these steps:
 1. Open an administrative Windows Command Prompt window, and then run the following command:
 
    ```console
-   chkdsk with /f /r
+   chkdsk /f /r
    ```
 
    This command repairs and recovers sectors.
