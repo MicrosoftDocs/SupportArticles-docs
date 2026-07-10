@@ -7,9 +7,9 @@ metadata:
   description: Landing page for Dynamics 365 Customer Insights - Data troubleshooting articles.
   ms.topic: landing-page
   ms.service: customer-insights
-  author: m-hartmann
-  ms.author: mhart
-  ms.date: 04/30/2025
+  author: aartig13
+  ms.author: aartigoyle
+  ms.date: 06/29/2026
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -21,17 +21,17 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Data refresh fails and dataflow refresh is skipped
-            url: data/data-ingestion/data-refresh-failed-skipped.md
-          - text: '"Delta Lake ingestion job failed to get version" error'
-            url: data/data-ingestion/delta-lake-ingestion-failed.md
+            url: data-ingestion/data-refresh-failed-skipped.md
           - text: '"Data source credentials are missing or invalid" error'
-            url: data/data-ingestion/power-query-multi-factor-authentication.md
+            url: data-ingestion/power-query-multi-factor-authentication.md
+          - text: '"Delta Lake ingestion job failed to get version" error'
+            url: data-ingestion/delta-lake-ingestion-failed.md
           - text: Power Query Text/CSV connector authentication fails
-            url: data/data-ingestion/power-query-text-csv-connector-auth.md
+            url: data-ingestion/power-query-text-csv-connector-auth.md
           - text: Troubleshoot ingestion errors or corrupt data
-            url: data/data-ingestion/common-data-ingestion-errors.md
+            url: data-ingestion/common-data-ingestion-errors.md
           - text: Troubleshoot Power Query data source refresh issues
-            url: data/data-ingestion/power-query-data-source-refresh-issues-dataflows.md
+            url: data-ingestion/power-query-data-source-refresh-issues-dataflows.md
 
   # Card
   - title: Data unification
@@ -39,25 +39,25 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: '"Detected DataVerse dependencies in msdynci_customerprofile" error'
-            url: data/profile-unification/remove-dataverse-dependencies.md
+            url: profile-unification/remove-dataverse-dependencies.md
           - text: Match failed error
-            url: data/profile-unification/match-failed.md
+            url: profile-unification/match-failed.md
           - text: Merge failed error
-            url: data/profile-unification/merge-failed.md
+            url: profile-unification/merge-failed.md
           - text: Missing business unit values
-            url: data/profile-unification/missing-business-unit.md
+            url: profile-unification/missing-business-unit.md
           - text: Troubleshoot deduplication, match, or merge results
-            url: data/profile-unification/troubleshoot-unification-results.md
+            url: profile-unification/troubleshoot-unification-results.md
           - text: Troubleshoot unification output tables
-            url: data/profile-unification/troubleshoot-unification-output-tables.md
-            
+            url: profile-unification/troubleshoot-unification-output-tables.md
+
   # Card
   - title: Environment management
     linkLists:
       - linkListType: how-to-guide
         links:
           - text: '"The service principal for resource is disabled" error when signing in'
-            url: data/environment-management/service-principal-disabled.md
+            url: environment-management/service-principal-disabled.md
 
   # Card
   - title: Exports
@@ -65,16 +65,15 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Environment doesn't show in Power BI
-            url: data/exports/environment-not-showing-in-power-bi.md
+            url: exports/environment-not-showing-in-power-bi.md
           - text: Errors on date fields when loading entities in Power BI Desktop
-            url: data/exports/error-date-fields-power-bi-connector.md
+            url: exports/error-date-fields-power-bi-connector.md
           - text: Exports fail with error stating that the following name already exists
-            url: data/exports/export-fails-name-already-exists.md
+            url: exports/export-fails-name-already-exists.md
           - text: Troubleshoot controls from Customer Card Add-in
-            url: data/exports/controls-customer-card-add-in.md
+            url: exports/controls-customer-card-add-in.md
           - text: Troubleshoot segment not eligible for export
-            url: data/exports/ineligible-segments-b-to-b.md
-
+            url: exports/ineligible-segments-b-to-b.md
 
   # Card
   - title: Insights
@@ -82,16 +81,15 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Segments return no members
-            url: data/insights/segment-no-results.md
-  
+            url: insights/segment-no-results.md
 
   # Card
   - title: Documentation and training
     linkLists:
       - linkListType: reference
         links:
-          - text: Customer Insights documentation
-            url: /dynamics365/customer-insights/
+          - text: Customer Insights - Data documentation
+            url: /dynamics365/customer-insights/data
           - text: Customer Insights training
             url: /training/dynamics365/
 

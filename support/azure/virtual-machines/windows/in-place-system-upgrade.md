@@ -1,8 +1,8 @@
 ---
 title: In-place upgrade for supported VMs running Windows in Azure (Windows Client)
-description: Learn how to perform an in-place upgrade for Windows VMs in Azure, which versions are supported, and workarounds for unsupported configurations like Azure Virtual Desktop hosts.
-ms.date: 04/14/2026
-ms.reviewer: joscon, scotro, azurevmcptcic, maulikshah, yogitagohel, v-weizhu
+description: Learn how to perform an in-place upgrade for Windows VMs in Azure, which versions and upgrade methods are supported, and guidance for Azure Virtual Desktop session hosts.
+ms.date: 07/10/2026
+ms.reviewer: joscon, scotro, ericor, azurevmcptcic, maulikshah, yogitagohel, v-weizhu
 ms.service: azure-virtual-machines
 ms.collection: windows
 ms.custom: 
@@ -30,6 +30,16 @@ This article describes how to do an in-place system upgrade of supported Windows
 
 [!INCLUDE [Azure VM Windows Update / Windows OS Upgrade Diagnostic Tools](~/includes/azure/virtual-machines-runcmd-wu-tools.md)]
 
+## Understanding in-place upgrades
+
+The term "in-place upgrade" refers to updating the Windows operating system version on an existing VM while retaining user data, applications, and settings. In-place upgrades can be performed through the following methods:
+
+- **ISO-based upgrade** — Mounting a Windows installation ISO and running `setup.exe /auto upgrade`
+- **Windows Update via Settings app** — Using **Settings** > **Windows Update** to install a feature update
+- **Windows Server Update Services (WSUS)** — Deploying feature updates through WSUS to managed VMs
+
+> [!IMPORTANT]
+> An in-place upgrade that changes the Windows version (for example, Windows 10 to Windows 11) is an **OS version upgrade**. An in-place upgrade that updates to a newer feature release of the same version (for example, Windows 11 24H2 to 25H2) is a **feature update**. These scenarios have different supportability depending on the VM type and Azure Virtual Desktop configuration. See [Azure Virtual Desktop in-place upgrade support matrix](#azure-virtual-desktop-in-place-upgrade-support-matrix) for details.
 
 ## Symptoms
 
@@ -61,7 +71,30 @@ In-place system upgrades are supported for specific versions of Azure Windows VM
 - Windows 7 Enterprise
 
 > [!IMPORTANT]
-> **Azure Virtual Desktop session hosts:** In-place upgrade **isn't supported** for pooled or multisesion Azure Virtual Desktop session hosts. These VMs use Windows 10/11 Enterprise multisesion, which doesn't support in-place feature updates. Attempting an in-place upgrade (IPU) on an Azure Virtual Desktop session host can result in a broken session host, failed user connections, and loss of session host availability. For Azure Virtual Desktop environments, use image-based replacement instead. See [Azure Virtual Desktop session host upgrade guidance](#azure-virtual-desktop-session-host-upgrade-guidance) later in this article.
+> **Azure Virtual Desktop session hosts:** In-place upgrade supportability depends on the session host type, Windows SKU, and upgrade scenario. See the following support matrix and [Azure Virtual Desktop session host upgrade guidance](#azure-virtual-desktop-session-host-upgrade-guidance) for details.
+
+### Azure Virtual Desktop in-place upgrade support matrix
+
+The following table shows in-place upgrade supportability for Azure Virtual Desktop session hosts and standard Azure VMs. **All upgrade methods** (ISO, Settings app, WSUS) follow the same supportability.
+
+**Summary:** Feature updates within the same Windows version are supported. OS version upgrades (Windows 10 to Windows 11) aren't supported on any session host type or standard Azure VM — deploy new VMs instead.
+
+| Upgrade scenario | AVD single-session (personal) | AVD multi-session (pooled) | Azure VM (non-AVD) | Recommendation |
+|---|---|---|---|---|
+| **Windows 10 feature update** (for example, 21H2 to 22H2) | Supported | Supported | Supported | Deploy new environment (recommended) |
+| **Windows 10 to Windows 11** (OS version upgrade) | Not supported | Not supported | Not supported | Deploy new VMs with the target OS |
+| **Windows 11 feature update** (for example, 24H2 to 25H2) | Supported | Supported | Supported | Deploy new environment (recommended) |
+
+> [!IMPORTANT]
+> **⚠ The VM SKU and configuration must meet Windows 11 hardware requirements.** Even for upgrade scenarios marked **Supported** in the preceding matrix, the underlying VM must satisfy the [Windows 11 virtual machine requirements](/windows/whats-new/windows-11-requirements#virtual-machine-support) — including **Generation 2**, **Trusted Launch with vTPM** (virtual TPM 2.0) enabled, **Secure Boot**, and a supported virtual CPU. A common cause of failed or unsupported in-place upgrades is selecting a Generation 1 VM, or a Generation 2 VM that doesn't have Trusted Launch / vTPM enabled. Verify the VM meets these requirements **before** attempting any in-place upgrade. VMs that don't meet the requirements aren't eligible for Windows 11 feature updates or OS version upgrades, regardless of the support matrix.
+
+> [!NOTE]
+> - For WSUS-distributed feature updates, ensure the correct feature updates are published to WSUS and the target VMs meet the OS hardware requirements described in the preceding callout.
+> - **Windows 10 to Windows 11:** Not supported for any session host type or standard Azure VM as an in-place upgrade. Deploy new VMs with the target Windows version instead.
+> - **Windows 11 feature updates (for example, 24H2 to 25H2):** Supported for single-session (personal) hosts, multi-session (pooled) hosts, and standard Azure VMs, provided the VM meets Windows 11 hardware requirements.
+
+> [!CAUTION]
+> Even for supported upgrade scenarios, Microsoft recommends **deploying a new Azure Virtual Desktop environment** rather than upgrading existing session hosts in place. Continuing to use an existing AVD environment after an in-place upgrade carries risk of failed upgrades, broken session host registration, and loss of FSLogix profile connectivity. If issues occur after an in-place upgrade on an AVD session host, the resolution may require deleting and redeploying the AVD environment.
 
 ## In-place system upgrade process for a Windows 10 VM
 
@@ -110,12 +143,19 @@ Follow the steps in the following article to upload the VHD to Azure and to depl
 
 ## Azure Virtual Desktop session host upgrade guidance
 
-Azure Virtual Desktop session hosts that use Windows 10 or Windows 11 Enterprise multi-session don't support IPUs. Attempting an IPU on these VMs can cause:
+Azure Virtual Desktop session hosts have specific supportability considerations for in-place upgrades. While some scenarios are technically supported (see [support matrix](#azure-virtual-desktop-in-place-upgrade-support-matrix)), Microsoft strongly recommends image-based replacement for all AVD environments.
+
+> [!WARNING]
+> Performing an in-place upgrade on an AVD session host — even in a supported scenario — carries inherent risk. If the upgrade fails or causes issues, Microsoft support may require you to **delete and redeploy the AVD environment** as the resolution path. Customers must fully understand this risk before proceeding.
+
+### Why in-place upgrades are risky for AVD
+
+Attempting an in-place upgrade on AVD session hosts can cause:
 
 - Broken session host registration with the Azure Virtual Desktop host pool.
 - User connection failures.
 - Loss of FSLogix profile container connectivity.
-- Session host unavailability requiring manual recovery.
+- Session host unavailability requiring manual recovery or full redeployment.
 
 ### Recommended approach: Image-based replacement
 
@@ -131,12 +171,23 @@ For more information, see:
 - [Create a golden image in Azure](/azure/virtual-desktop/set-up-golden-image)
 - [Host pool management approaches for Azure Virtual Desktop](/azure/virtual-desktop/host-pool-management-approaches)
 
+### WSUS feature updates for AVD session hosts
+
+Windows Enterprise multi-session session hosts can receive feature updates through WSUS (for example, Windows 11 24H2 to 25H2), provided that:
+
+- The correct feature updates are published to WSUS.
+- The VM meets the target OS hardware requirements (for example, [Windows 11 requirements](/windows/whats-new/windows-11-requirements#virtual-machine-support)).
+
+Although WSUS-based feature updates are technically possible, the same risk applies — if the update fails, the session host may require redeployment. Microsoft recommends image-based replacement over WSUS feature updates for production AVD environments.
+
 ### Azure Virtual Desktop personal desktop exception
 
-For Azure Virtual Desktop **personal desktop** session hosts that use Windows 10 or Windows 11 **single-session** (not multisesion), in-place upgrade follows the same process as standard Azure VMs. See [In-place system upgrade process for a Windows 10 VM](#in-place-system-upgrade-process-for-a-windows-10-vm) earlier in this article.
+For Azure Virtual Desktop **personal desktop** session hosts that use Windows 10 or Windows 11 **single-session** (not multi-session), in-place upgrade follows the same process as standard Azure VMs. See [In-place system upgrade process for a Windows 10 VM](#in-place-system-upgrade-process-for-a-windows-10-vm) earlier in this article.
 
 > [!NOTE]
-> Personal desktops that use single-session Windows are eligible for in-place upgrade, but personal desktops that use multisesion Windows aren't. Verify the Windows SKU before attempting an upgrade. Run `winver` or check `SystemInfo` on the session host to confirm whether it's single-session or multisesion.
+> - Personal desktops that use single-session Windows are eligible for in-place feature updates (for example, Windows 10 21H2 to 22H2, or Windows 11 24H2 to 25H2). OS version upgrades (Windows 10 to Windows 11) are not supported. See the [support matrix](#azure-virtual-desktop-in-place-upgrade-support-matrix) for details.
+> - Personal desktops that use multi-session Windows aren't eligible for in-place upgrade. Verify the Windows SKU before attempting an upgrade. Run `winver` or check `SystemInfo` on the session host to confirm whether it's single-session or multi-session.
+> - For Azure Virtual Desktop personal host pools, see also: [Can I do an in-place upgrade of a session host's OS?](/azure/virtual-desktop/faq#can-i-do-an-in-place-upgrade-of-a-session-host-s-operating-system)
 
 ## References
 
