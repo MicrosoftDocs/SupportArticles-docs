@@ -5,7 +5,7 @@ author: Cloud-Writer
 ms.reviewer: PramodBalusu
 ms.author: meerak
 manager: dcscontentpm
-ms.date: 07/24/2025
+ms.date: 07/09/2026
 audience: Admin
 ms.topic: troubleshooting
 ms.custom: 
@@ -17,11 +17,16 @@ search.appverid:
   - MET150
 appliesto: 
   - SharePoint Online
+ai-usage: ai-assisted
 ---
 
 # Errors when you rename a SharePoint domain  
 
 This article lists common error messages that you might receive when you try to change a Microsoft SharePoint Online (SPO) domain name. By using the information in each message, you can determine why the SharePoint domain can't be renamed and how to fix the errors.
+
+## Summary
+
+This article lists common error codes and messages that you might encounter when renaming a SharePoint Online domain. It explains the cause of each error and provides recommended resolutions, including validating domain names, addressing tenant limitations and licensing requirements, removing unsupported configurations, and resolving scheduling or site-related issues. The article also includes guidance for large-scale tenant renames and links to related SharePoint domain rename resources.
 
 ## Errors
 
@@ -29,7 +34,7 @@ This article lists common error messages that you might receive when you try to 
 |---|---|---|---|
 |755|SPO Tenant Rename is already in progress.|Tenant renaming is in progress. You can't trigger a tenant rename process while another rename process is running.|Wait for the current process to finish.|
 |756|An unexpected error occurred while trying to update the tenant URLs.|An unexpected run-time error occurred when you started the tenant renaming job.|Retry the rename action after some time passes.|
-|757|The domain name isn't valid.|The domain name isn't in the list of verified domains for the tenant.|Add a verified domain, and start a rename action by using the domain.|
+|757|The domain name isn't valid.|The domain name isn't in the list of verified domains for the tenant.|Add a verified the domain, confirm that it is showing a Healthy status in the Microsoft 365 Admin Center Domains page, and then start the rename action using the verified domain. See [Add a new onmicrosoft.com](/microsoft-365/admin/setup/add-or-replace-your-onmicrosoftcom-domain).|
 |758|The domain name isn't valid.|The domain name could be null (empty), is longer than 48 characters, or contains a hyphen or other special characters.|The domain name that you're trying to use isn't in a valid format. The `-DomainName` parameter should be only the name portion of the domain. For example, if the domain is `fabrikam.onmicrosoft.com`, the parameter would be only `fabrikam`.|
 |759|SharePoint Online Tenant Rename isn't supported for your tenant.|The tenant has a Microsoft Business Productivity Online Suite (BPOS) site for which renaming isn't supported.<br/>These sites were created several years ago when SharePoint Online was named Business Productivity Office Suite (BPOS).|BPOS sites and configuration must be removed before you can schedule tenant renaming.<br/>Submit a support request by selecting [Rename a SharePoint Tenant with BPOS sites](https://admin.microsoft.com/AdminPortal/?searchSolutions=Rename%20a%20SharePoint%20Tenant%20with%20BPOS%20sites)|
 |760|A site at [site URL] already exists.|Both the source and target sites are created by using redirect templates that aren't supported for renaming. The template of the target site isn't in the allowed templates (redirect site).|Remove target sites that have a redirect template, and then try the rename action again.|
@@ -42,12 +47,12 @@ This article lists common error messages that you might receive when you try to 
 |773|Not Implemented.|Tenant renaming isn't enabled for the customer.|Tenant renaming isn't enabled yet for this customer. Wait for this feature to be implemented for your tenant.|
 |775|The scheduled date/time must be within 30 days.|The scheduled time is greater than 30 days from the current time.|Provide a schedule date/time value that's 30 days or fewer from the current day, and then start the rename action.|
 |776|SPO Tenant Rename isn't supported for Multi-Geo tenants.|Multi-Geo tenants aren't supported.|Tenant renaming currently can't be scheduled for tenants that have, or previously had, Multi-Geo status configured.|
-|777|SPO Tenant Rename isn't supported for your tenant.|The tenant has a public site. Therefore, the tenant rename action is canceled.|The public site on the tenant has to be removed before you can try to schedule tenant renaming.<br/>Submit a support request by selecting [Rename a SharePoint Tenant with Public site](https://admin.microsoft.com/AdminPortal/?searchSolutions=Rename%20a%20SharePoint%20Tenant%20with%20Public%20site)|
+|777|SPO Tenant Rename isn't supported for your tenant.|The tenant has a public site. Therefore, the tenant rename action is canceled.|The public site on the tenant has to be removed before you can try to schedule tenant renaming.<br/>Submit a support request by selecting [Rename a SharePoint Tenant with Public site](https://admin.microsoft.com/AdminPortal/?searchSolutions=Rename%20a%20SharePoint%20Tenant%20with%20Public%20site).|
 |779|Cannot schedule due to system maintenance.|Tenant renaming can't be scheduled because of maintenance events.|Retry the renaming action after some time passes.|
 |780|Cannot perform a rename as you exceed the maximum number of allowed Sites and OneDrive.|There are too many sites in the tenant.|The tenant has more sites than is currently allowed.|
 |781|Canceled by the system due to system maintenance.|Tenant renaming is canceled because a maintenance event is occurring.|Retry the rename action after some time passes.|
-|783|Your organization has already reached the allowed number of SPO tenant renames.|The tenant can be renamed only one time, and your organization has already been renamed.|If you have to do additional renaming, submit a support request by selecting [Rename a SharePoint Tenant more than once](https://admin.microsoft.com/AdminPortal/?searchSolutions=Rename%20a%20SharePoint%20Tenant%20more%20than%20once)|
-|-1076|No applicable licenses found for this feature. Please check the documentation for more information.|SharePoint Advanced Management licenses are required. |Activate the [Syntex SharePoint Advanced Management ](/sharepoint/advanced-management#licensing) offering in your tenant.|
+|783|Your organization has already reached the allowed number of SPO tenant renames.|The tenant can be renamed only one time, and your organization has already been renamed.|If you have to do additional renaming, submit a support request by selecting [Rename a SharePoint Tenant more than once](https://admin.microsoft.com/AdminPortal/?searchSolutions=Rename%20a%20SharePoint%20Tenant%20more%20than%20once).|
+|-1076|No applicable licenses found for this feature. Please check the documentation for more information.|SharePoint Advanced Management licenses are required. |Activate the [Syntex SharePoint Advanced Management](/sharepoint/advanced-management#licensing) offering in your tenant.|
 |-1077|There is no applicable tenant rename scheduled in your organization. |Tenant renaming isn't scheduled. |Run the `Start-SPOTenantRename` cmdlet, and then try again.|
 |-1078|Prioritizing sites cannot be performed since the tenant rename is in progress. |Prioritization isn't allowed while a rename action is in progress.|None. |
 |-1086|The limit on the number of prioritized sites has been reached. No further sites can be added unless some are removed first. |The 4,000-site limit for prioritization was reached.|Remove a site that was already prioritized, and then try again to prioritize the desired site. For more information, see [prioritizing sites](/sharepoint/change-your-sharepoint-domain-name#prioritizing-sites).|
@@ -59,9 +64,11 @@ This article lists common error messages that you might receive when you try to 
 |1089|Max no. of allowed sites exceeded.|During a tenant renaming, the maximum number of sites that are allowed by the standard rename process was exceeded.|For larger organizations, use [Advanced Tenant Rename](https://aka.ms/AdvancedTenantRename).|
 |1104|Renames to older domains are not supported. Please try again with a different domain.| Renaming to a domain name that was used previously is not supported.|Use a new domain name.|
 
-**Note:** You might encounter different errors about individual site renaming if the actions fail as part of the domain rename process. For more information, see [Errors when you rename a SharePoint site address](https://support.microsoft.com/office/errors-when-you-rename-a-sharepoint-site-address-165b7c11-1325-4813-b160-ecbe87bc1a86).
+> [!NOTE]
+> You might encounter different errors about individual site renaming if the actions fail as part of the domain rename process. For more information, see [Errors when you rename a SharePoint site address](https://support.microsoft.com/office/errors-when-you-rename-a-sharepoint-site-address-165b7c11-1325-4813-b160-ecbe87bc1a86).
 
-**Note for tenant renames for more-than-100K sites**: The Start-SPOTenantRename cmdlet might time out and return the following message:
+> [!NOTE]
+> **For tenant renames for more-than-100K sites**: The Start-SPOTenantRename cmdlet might time out and return the following message:
 
 _It looks like the command has timed out. Please do not retry at this time. Continue monitoring the status using `Get-SPOTenantRenameStatus`_." 
 
