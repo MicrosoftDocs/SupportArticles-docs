@@ -24,3 +24,5 @@ items:
     href: troubleshoot-host-deployment-failures.md 
   - name: Troubleshoot session failures due to unhealthy target VM
     href: troubleshoot-session-fails-target-vm-unhealthy.md
+  - name: Troubleshoot Azure Bastion connection failures 
+    href: troubleshoot-connection-blocked-ports.md

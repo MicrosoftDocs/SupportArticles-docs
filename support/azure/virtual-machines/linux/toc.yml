@@ -358,6 +358,14 @@ items:
     items:
     - name: APT common issues
       href: apt-common-issues-in-ubuntu.md
+- name: Instance Metadata Service (IMDS)
+  items:
+  - name: Overview
+    href: /azure/virtual-machines/instance-metadata-service?context=/troubleshoot/azure/virtual-machines/linux/context/context
+  - name: Verification Tool
+    href: linux-vm-imds-tool.md
+  - name: Certificate chain issues
+    href: linux-vm-imds-certissues.md
 - name: Serial Console
   items:
   - name: Overview
