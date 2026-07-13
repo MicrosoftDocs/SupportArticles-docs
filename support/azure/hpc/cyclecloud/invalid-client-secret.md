@@ -1,7 +1,7 @@
 ---
 title: Client secret key is expired error
 description: "Fix the client secret key expired error in Azure CycleCloud that occurs when deploying or terminating VMs. Learn how to reset your client secret keys in the Azure portal."
-ms.date: 05/22/2025
+ms.date: 07/10/2026
 ms.service: azure-cyclecloud
 ms.reviewer: hclvteam, v-weizhu
 ms.custom: sap:Azure CycleCloud
@@ -43,9 +43,17 @@ To resolve this issue, reset the client secret keys in the Azure portal.
 
 1. Go to the CycleCloud portal and select **Configure**. Select the account in **Cloud Provider Accounts**, and then select **Credentials** > **Edit**. In the **Edit Credential** dialog, enter the password in **Application Secret**, and then select **Validate**. If the validation succeeds, select **Save**.
 
+## Prevent this error
+
+Client secrets expire, so plan to rotate them before they lapse:
+
+- When you create a client secret, record its expiration date and set a reminder to renew it before it expires.
+- Use the shortest practical expiration and rotate secrets on a schedule.
+- To improve security and avoid secret expiry altogether, use [certificate credentials](/entra/identity-platform/certificate-credentials) or a managed identity instead of a client secret.
+
 ## More information
 
-- [Microsoft identity platform application authentication certificate credentials](/azure/active-directory/develop/active-directory-certificate-credentials)
+- [Microsoft identity platform application authentication certificate credentials](/entra/identity-platform/certificate-credentials)
 
 - [Using Service Principal](/azure/cyclecloud/how-to/service-principals)
 
