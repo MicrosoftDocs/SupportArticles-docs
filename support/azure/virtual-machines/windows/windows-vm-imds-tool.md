@@ -1,75 +1,146 @@
 ---
 title: Azure VM Instance Metadata Service Verification Tool
-description: Azure VM Instance Metadata Service Verification Tool
+description: Learn how to use the IMDS Verification Tool to diagnose certificate chain, connectivity, and store issues on Azure Windows VMs.
 ms.service: azure-virtual-machines
-ms.date: 06/04/2024
+ms.date: 07/10/2026
+author: kaushika-msft
+ms.author: kaushika
 ms.custom: sap:Cannot create a VM, H1Hack27Feb2017
-ms.reviewer: macla, scotro, glimoli, jarrettr, azurevmcptcic
+ms.reviewer: macla, scotro, glimoli, jugross, azurevmcptcic
 ---
-# Azure VM Instance Metadata Service Verification Tool
+# Azure VM Instance Metadata Service verification tool
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
 ## Summary
 
-This article provides information about the Azure VM Instance Metadata Service Verification Tool, a PowerShell script designed to help diagnose and resolve issues related to the Azure Instance Metadata Service (IMDS) on Windows virtual machines (VMs). The tool checks the reachability of the IMDS endpoint, validates the presence and correctness of IMDS certificates, and identifies certificate-related failures.
+The Azure VM Instance Metadata Service (IMDS) Verification Tool is a PowerShell script that diagnoses certificate chain, connectivity, and certificate store problems related to IMDS on Windows VMs. You can use the tool as an Azure Run Command (`Windows_IMDSValidation`) or download it from GitHub.
 
-The Azure Instance Metadata Service (IMDS) is a REST API that's available at a well-known, non-routable IP address (`169.254.169.254`). You can access the API only from within the virtual machine (VM). Communication between the VM and IMDS never leaves the host. HTTP clients must bypass web proxies within the VM when they query IMDS. The IMDS IP address (`169.254.169.254`) must be handled in the same manner as the `168.63.129.16` IP address. For more information, see [Azure Instance Metadata Service (IMDS)](/azure/virtual-machines/instance-metadata-service)
+## How the tool works
 
-IMDS problems on Azure VMs can occur because of configuration, certificate, or connectivity issues. Microsoft provides a script-based tool to help diagnose and resolve most activation-related problems.
+The tool runs six diagnostic phases:
 
-This PowerShell script confirms the attestation signature that's provided by the Azure Instance Metadata Service (IMDS). The script makes sure that the certificate that's used in attestation is valid and trusted. It performs this action by trying to build a complete certificate chain. This process helps confirm the integrity and authenticity of an Azure VM's identity. The script is also available through the Run command.
+| Phase | Check | What it does |
+|---|---|---|
+| 1 | **IMDS Reachability** | Tests TCP connectivity to `169.254.169.254:80` |
+| 2 | **Attestation Fetch** | Retrieves the attested document from IMDS and displays the signing certificate details (subject, issuer, thumbprint, validity) |
+| 3 | **Chain Validation** | Builds the X509 certificate chain and walks **each element** to identify the exact certificate causing a failure, including the specific error status |
+| 4 | **Store Inventory** | Checks whether each certificate in the chain is permanently installed in the correct store. Flags certificates that were auto-downloaded through AIA, certificates in the wrong store, and certificates in the Disallowed store |
+| 5 | **Connectivity** | Tests TCP port 80 connectivity to AIA, CRL, and OCSP endpoints needed for certificate download and revocation checking |
+| 6 | **Summary** | Provides actionable recommendations with specific download URLs for any missing certificates |
+| 7 | **AutoFix** (optional) | When you specify `-AutoFix`: downloads missing certificates, installs them, re-validates the chain, and runs `fclip.exe` to clear the activation watermark |
 
-## Key features  
+## Certificate chain architecture
 
-- Confirms that `169.254.169.254` is reachable.
-- Validates IMDS certificate presence and correctness.
-- Identifies certificate-related IMDS failures.
-- Suggests corrective steps.
+The tool validates the following four-level IMDS attestation certificate chain:
 
 ```
-Example Warning
-Certificate not found: 'CN=Microsoft Azure XXXX, ...'
+DigiCert Global Root G2 (Root CA)
+  +-- Microsoft TLS RSA Root G2 (cross-signed intermediate)
+        +-- Microsoft TLS G2 RSA CA OCSP xx (OCSP responder intermediate)
+              +-- CN=metadata.azure.com (leaf certificate)
 ```
 
-For more information, see: 
+> [!IMPORTANT]
+> **OCSP intermediate rotation:** Azure rotates which OCSP responder intermediate it uses (numbered 02, 04, 06, 08, 10, 12, 14, 16). The tool dynamically detects which OCSP intermediate your VM is currently using rather than checking only a single hardcoded thumbprint.
 
-- [Cause: Azure Instance Metadata Service connection issue](activation-watermark-appears.md#cause-1-azure-instance-metadata-service-connection-issue).
-- [Azure VM Attested Metadata Verification Script](https://github.com/Azure/azure-support-scripts/blob/master/RunCommand/Windows/Windows_IMDSValidation).
+> [!NOTE]
+> **"Microsoft TLS RSA Root G2" isn't a root CA** despite its name. It's a cross-signed intermediate certificate issued by DigiCert Global Root G2.
 
 ## How to run the tool
 
-You can run the tool in any of the following manners.
+## [Azure portal](#tab/portal)
 
-### 1. Download from GitHub and run within the VM 
+1. In the Azure portal, go to your VM.
+1. Select **Operations** > **Run Command**.
+1. Select **Windows_IMDSValidation** from the script list.
+1. Select **Run**.
 
-Download the scripts from GitHub, and then run them manually. To access the scripts, follow the resource links in the previous sections.
+:::image type="content" source="media/windows-vm-imds-tool/windows-vm-imds-tool-portal-runcmd.png" alt-text="Screenshot of the Azure portal Run command view showing the Windows_IMDSValidation IMDS verification script." lightbox="media/windows-vm-imds-tool/windows-vm-imds-tool-portal-runcmd.png":::
 
-### 2. Use Azure Run command
-   
-- Navigate to your VM in the Azure portal: **Operations** > **Run Command**.
-- Select the script from the list (see the following screenshot).
+## [Azure CLI](#tab/cli)
 
-:::image type="content" source="media/windows-vm-imds-tool/windows-vm-imds-tool-portal-runcmd.png" alt-text="Azure portal view Run command example." lightbox="media/windows-vm-imds-tool/windows-vm-imds-tool-portal-runcmd.png":::   
-  
+```azurecli
+az vm run-command invoke \
+    --resource-group <resource-group> \
+    --name <vm-name> \
+    --command-id RunPowerShellScript \
+    --scripts @Windows_IMDSValidation.ps1
+```
+
+## [Azure PowerShell](#tab/powershell)
+
+```azurepowershell
+Invoke-AzVMRunCommand -ResourceGroupName <resource-group> `
+    -VMName <vm-name> `
+    -CommandId RunPowerShellScript `
+    -ScriptPath .\Windows_IMDSValidation.ps1
+```
+
+## [Run locally](#tab/local)
+
+1. Download the script from [GitHub](https://github.com/Azure/azure-support-scripts/blob/master/RunCommand/Windows/Windows_IMDSValidation).
+1. Open PowerShell as an administrator on the VM.
+1. Run the script:
+
+```powershell
+Set-ExecutionPolicy Bypass -Force
+.\Windows_IMDSValidation.ps1
+```
+
+To automatically fix missing certificates, add `-AutoFix`:
+
+```powershell
+.\Windows_IMDSValidation.ps1 -AutoFix
+```
+
 > [!NOTE]
-> Alternatively, you can run these commands by using a command-line interface (CLI) tool, Windows PowerShell, or Windows on ARM.
+> Without `-AutoFix`, the script is diagnostic only and makes no changes to the system. With `-AutoFix`, the script downloads missing intermediate certificates, installs them to the correct store, revalidates the chain, and runs `fclip.exe` to clear any activation watermark. The script skips certificates in the Disallowed store because they represent explicit policy decisions.
 
-### 3. Use prepackaged Run command scripts
+---
 
-For more information, see [Run scripts in your Windows VM by using action Run Commands](/azure/virtual-machines/windows/run-command).
+## Interpret results
 
-## Recommended workflow
+### Phase 3: Chain validation
 
-1. Run **IMDS Cert Check** to verify the activation status and detect common issues.
-2. Apply the suggested fixes, or refer to the official documentation for advanced troubleshooting.
+| Output | Meaning |
+|---|---|
+| `[OK]` for all elements | Certificate chain is healthy |
+| `[FAIL]` with `Revoked` / `ExplicitDistrust` | Certificate is in the Disallowed store |
+| `[FAIL]` with `UntrustedRoot` | Root CA is missing or distrusted |
+| `[FAIL]` with `PartialChain` | An intermediate certificate is missing |
+| `[FAIL]` with `RevocationStatusUnknown` | Cannot reach CRL/OCSP endpoints for revocation checking |
+
+### Phase 4: Store inventory
+
+| Output | Meaning | Action |
+|---|---|---|
+| `[OK]` | Certificate in correct store | None needed |
+| `[MISS] (active chain)` | Certificate used in the chain but not permanently installed | Download and install from the URL shown |
+| `[MISS] (active chain) (was auto-downloaded via AIA)` | Certificate was fetched at runtime but is only cached, not permanently installed | Install permanently to avoid failures if AIA is later blocked |
+| `[MISS] (known)` | Certificate is in the known list but not used by this VM's current chain | May not be needed for this VM (OCSP rotation) |
+| `[WARN] Also found in:` | Certificate exists in a non-standard store | Chain validation still works but consider moving to the correct store |
+| `[WARN] Certificate is in the DISALLOWED store!` | Certificate is explicitly blocked | Remove from Disallowed store |
+
+### Phase 5: Connectivity
+
+| Output | Meaning |
+|---|---|
+| `[+]` for all endpoints | All certificate download and validation endpoints reachable |
+| `[-] BLOCKED` for AIA endpoints | Firewall or proxy is blocking certificate downloads. This action prevents auto-download of missing intermediates |
+| `[-] BLOCKED` for CRL/OCSP endpoints | Revocation checking fails. Chain validation reports `RevocationStatusUnknown` |
+
+## Common scenarios
+
+For detailed troubleshooting steps for each scenario, see [IMDS certificate chain issues](windows-vm-imds-certissues.md).
 
 ## Additional resources
 
 - [Azure Instance Metadata Service (IMDS)](/azure/virtual-machines/instance-metadata-service)
-- [Azure Instance Metadata Service-Attested data TLS: Critical changes are here](https://techcommunity.microsoft.com/t5/azure-governance-and-management/azure-instance-metadata-service-attested-data-tls-critical/ba-p/2888953)
+- [IMDS Certificate Chain Issues](windows-vm-imds-certissues.md)
+- [IMDS Connection Issues](windows-vm-imds-connection.md)
+- [Azure Certificate Authority Details](/azure/security/fundamentals/azure-ca-details?tabs=certificate-authority-chains)
 - [Certificate downloads and revocation lists](/azure/security/fundamentals/azure-ca-details#certificate-downloads-and-revocation-lists)
-
- 
+- [Source code on GitHub](https://github.com/Azure/azure-support-scripts/blob/master/RunCommand/Windows/Windows_IMDSValidation)
 
 [!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]
