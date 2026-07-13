@@ -504,22 +504,32 @@ items:
     href: /azure/virtual-machines/faq-for-disks?context=/troubleshoot/azure/virtual-machines/windows/context/context
   - name: FAQ - Azure IaaS VM disks, and managed and unmanaged premium disks
     href: azure-iaas-vm-disks-managed-unmanaged.md
-  - name: Common issues
+  - name: Disk resize troubleshooting
     items:
-    - name: Downsize a data disk without losing data
-      href: downsize-data-disk-without-losing-data.md
-    - name: Troubleshoot Azure disk resize failures
-      href: troubleshoot-disk-resize.md
-    - name: Troubleshoot disk resize blocked by an active SAS token
-      href: troubleshoot-disk-resize-sas-block.md
+    - name: Start here for disk resize issues
+      href: troubleshoot-disk-resize-overview.md
+    - name: Troubleshoot disk resize errors
+      href: troubleshoot-disk-resize-errors.md
+    - name: Troubleshoot live resize failure
+      href: troubleshoot-live-resize-failure.md
+    - name: Can't extend a volume on a Windows VM
+      href: cannot-extend-volume-windows-vm.md
     - name: Cannot extend an encrypted OS volume in Windows
       href: cannot-extend-encrypted-os-volume.md
     - name: Cannot extend OS volume because a recovery partition blocks the extend
       href: cannot-extend-volume-recovery-partition.md
     - name: Cannot extend volume on a SQL standalone server virtual machine
       href: cannot-extend-volume-sql-server.md
+    - name: Downsize a data disk without losing data
+      href: downsize-data-disk-without-losing-data.md
+    - name: Troubleshoot Azure disk resize failures
+      href: troubleshoot-disk-resize.md
+    - name: Troubleshoot disk resize blocked by an active SAS token
+      href: troubleshoot-disk-resize-sas-block.md
     - name: Convert an Azure VM disk from MBR to GPT partition style
       href: convert-mbr-to-gpt-azure-virtual-machine.md
+  - name: Other disk issues
+    items:
     - name: Disk <number> has been surprise removed
       href: disk-has-been-surprise-removed-event-id-157.md
     - name: Errors when deleting storage resources
