@@ -4,6 +4,8 @@ items:
   items:
   - name: Troubleshoot Azure DNS
     href: troubleshoot-dns.md   
+  - name: Troubleshoot Azure DNS Private Resolver hybrid resolution failures
+    href: troubleshoot-azure-dns-private-resolver-hybrid-resolution-failure.md
   - name: Troubleshoot private DNS zone deletion or migration failures
     href: troubleshoot-private-dns-zone-deletion-migration-failure.md
   - name: Troubleshoot conditional forwarder misconfiguration
