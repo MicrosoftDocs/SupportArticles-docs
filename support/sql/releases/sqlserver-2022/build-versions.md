@@ -47,6 +47,8 @@ This article lists the Microsoft SQL Server 2022 builds that were released after
 
 | GDR name | SQL Server build version | SQL Server (sqlservr.exe) file version | Analysis Services build version | Analysis Services (msmdsrv.exe) file version | Knowledge Base number | Release date |
 |------------|-------------|-----------------|-------------|-----------------|---------------------------------------------------------|-------------------|
+| CU25 + GDR  | 16.0.4262.2 | 2022.160.4262.2 | 16.0.43.252 | 2022.160.43.252 | [KB5101347](https://support.microsoft.com/help/5101347) | July 14, 2026  |
+| GDR         | 16.0.1190.2 | 2022.160.1190.2 | 16.0.42.229 | 2022.160.42.229 | [KB5102334](https://support.microsoft.com/help/5102334) | July 14, 2026  |
 | CU24 + GDR  | 16.0.4252.3 | 2022.160.4252.3 | 16.0.43.252 | 2022.160.43.252 | [KB5089900](https://support.microsoft.com/help/5089900) | May 12, 2026  |
 | GDR         | 16.0.1180.1 | 2022.160.1180.1 | 16.0.42.229 | 2022.160.42.229 | [KB5091158](https://support.microsoft.com/help/5091158) | May 12, 2026  |
 | CU24 + GDR  | 16.0.4250.1 | 2022.160.4250.1 | 16.0.43.252 | 2022.160.43.252 | [KB5083252](https://support.microsoft.com/help/5083252) | April 14, 2026  |
