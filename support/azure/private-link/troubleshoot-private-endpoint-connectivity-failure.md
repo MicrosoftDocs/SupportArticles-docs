@@ -4,7 +4,7 @@ description: Diagnose failures in private endpoint connectivity to an approved p
 ms.service: azure-private-link
 ms.topic: troubleshooting
 ms.custom: sap:Private Endpoints
-ms.date: 6/12/2026
+ms.date: 07/14/2026
 ai.hint.symptom-tags:
   - private-endpoint-timeout
   - private-endpoint-connectivity
@@ -86,7 +86,7 @@ To troubleshoot effectively, you must have the following prerequisite items:
 
 ### Step 1
 
-Check whether DNS resolves the target FQDN to the private endpoint's private IP address (not a public IP). If DNS returns a public IP, the problem is DNS configuration, not connectivity. For more information, see `[Troubleshoot private endpoint DNS resolution](troubleshoot-private-endpoint-dns-integration.md)`.
+Check whether DNS resolves the target FQDN to the private endpoint's private IP address (not a public IP). If DNS returns a public IP, the problem is DNS configuration, not connectivity. For more information, see [Troubleshoot private endpoint DNS resolution](troubleshoot-private-endpoint-dns-resolution.md).
 
 Run the following commands in Azure CLI:
 
@@ -102,7 +102,7 @@ nslookup "$TARGET_FQDN"
 | Observation | Meaning | Next steps |
 |---|---|---|
 | Response contains a private IP (for example, `10._x_._x_._x_`, `172.16._x_._x_`, `192.168._x_._x_`). | DNS correctly resolves to the private endpoint private IP. | Perform [Step 2](#step-2). |
-| Response contains a public IP address. | DNS isn't resolving through a private DNS zone. Traffic goes over the public path. | Fix private DNS zone configuration. For more information, see `[Troubleshoot private endpoint DNS resolution](troubleshoot-private-endpoint-dns-integration.md)`. |
+| Response contains a public IP address. | DNS isn't resolving through a private DNS zone. Traffic goes over the public path. | Fix private DNS zone configuration. For more information, see [Troubleshoot private endpoint DNS resolution](troubleshoot-private-endpoint-dns-resolution.md). |
 | `** server can't find` or `NXDOMAIN`. | DNS can't resolve the FQDN. | Verify that the private DNS zone exists, is linked to the source VNet, and has an A record for the private endpoint. |
 | Response contains `privatelink` CNAME but resolves to a public IP. | The Azure Private DNS zone link to the source VNet is missing. | Link the private link DNS zone to the source VNet. |
 
@@ -148,7 +148,7 @@ echo "Private Endpoint IP: $PE_IP"
 | `provisioningState: Succeeded` and `connectionState: Approved`. | The private endpoint is properly provisioned and approved. | Perform [Step 3](#step-3). |
 | `connectionState: Pending`. | The resource owner hasn't approved the private endpoint connection. | Approve the private endpoint connection on the target resource before proceeding. |
 | `connectionState: Rejected`. | The connection is explicitly rejected. | Re-create the private endpoint or request approval from the resource owner. |
-| `provisioningState: Failed`. | Private endpoint deployment failed. | Delete and re-create the private endpoint. For more information, see [Troubleshoot private endpoint creation failures](/azure/private-link/troubleshoot-private-endpoint-connectivity). |
+| `provisioningState: Failed`. | Private endpoint deployment failed. | Delete and re-create the private endpoint. For more information, see [Troubleshoot private endpoint creation failures](troubleshoot-private-endpoint-connectivity-failure.md). |
 | `peIP` is null or empty. | Private endpoint network adapter has no IP assigned. | Delete and re-create the private endpoint. |
 
 > Record the `peIP` value (the private endpoint private IP). You'll need it in subsequent steps.
@@ -356,7 +356,7 @@ Use the following decision map table to determine the appropriate next steps bas
 
 | Diagnostic result | Next actions |
 |---|---|
-| DNS resolves to a public IP. | Fix the private DNS zone link. For more information, see `[Troubleshoot private endpoint DNS resolution](troubleshoot-private-endpoint-dns-integration.md)`. |
+| DNS resolves to a public IP. | Fix the private DNS zone link. For more information, see [Troubleshoot private endpoint DNS resolution](troubleshoot-private-endpoint-dns-resolution.md). |
 | The private endpoint connection state is `Pending` or `Rejected`. | Approve or re-create the private endpoint connection. |
 | The private endpoint `/32` route overrides UDR and, therefore, bypasses the firewall or NVA. | Perform [Resolution A](#resolution-a). |
 | An NSG deny rule blocks outbound to private endpoint IP traffic on the source subnet. | Perform [Resolution B](#resolution-b). |
@@ -882,8 +882,8 @@ All 10 attempts should finish without timeouts. If intermittent failures persist
 
 ## References
 
-- [Troubleshoot Azure Private Endpoint connectivity problems](/azure/private-link/troubleshoot-private-endpoint-connectivity)
-- `[Private endpoint DNS integration](/azure/private-link/private-endpoint-dns-integration)`
+- [Troubleshoot Azure Private Endpoint connectivity problems](troubleshoot-private-endpoint-connectivity-problems.md)
+- [Private endpoint DNS integration](troubleshoot-private-endpoint-dns-resolution.md)
 - [Manage network policies for private endpoints](/azure/private-link/disable-private-endpoint-network-policy)
 - [Virtual network traffic routing](/azure/virtual-network/virtual-networks-udr-overview)
 - [Integrate your app with an Azure virtual network](/azure/app-service/overview-vnet-integration)

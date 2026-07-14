@@ -3,7 +3,9 @@ items:
   href: welcome-azure-dns.yml
   items:
   - name: Troubleshoot Azure DNS
-    href: troubleshoot-dns.md   
+    href: troubleshoot-dns.md
+  - name: Troubleshoot NXDOMAIN from a Private DNS zone
+    href: troubleshoot-private-dns-zone-override-nxdomain.md
   - name: Troubleshoot Azure DNS Private Resolver hybrid resolution failures
     href: troubleshoot-azure-dns-private-resolver-hybrid-resolution-failure.md
   - name: Troubleshoot private DNS zone deletion or migration failures

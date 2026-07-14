@@ -611,7 +611,7 @@ If large queries still fail after MTU is corrected, capture packets at both ends
 
 ## Related articles
 
-- `[Azure DNS Private Resolver overview](https://learn.microsoft.com/azure/dns/dns-private-resolver-overview)`
+- [Azure DNS Private Resolver overview](/azure/dns/dns-private-resolver-overview)
 - [Private Resolver endpoints and forwarding rulesets](/azure/dns/private-resolver-endpoints-rulesets)
 - [Azure DNS Private Resolver hybrid DNS architecture](/azure/architecture/networking/architecture/azure-dns-private-resolver)
 - [Hybrid DNS resolution with Private Resolver](/azure/dns/private-resolver-hybrid-dns)
