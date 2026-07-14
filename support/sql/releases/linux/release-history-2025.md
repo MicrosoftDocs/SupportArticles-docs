@@ -4,7 +4,7 @@ description: This article contains the release history for SQL Server 2025 runni
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh, atsingh
-ms.date: 06/17/2026
+ms.date: 07/14/2026
 ms.update-cycle: 1095-days
 appliesto:
   - SQL Server 2025
@@ -16,6 +16,7 @@ The following table lists the release history for [!INCLUDE [sql-server-2025](..
 
 | Release | Version | Release date |
 | --- | --- | --- |
+| [CU 6 GDR (Jul 2026)](#17-0-4060) | 17.0.4060.2 | 2026-07-14 |
 | [CU 6](#17-0-4055) | 17.0.4055.5 | 2026-06-17 |
 | [CU 5](#17-0-4045) | 17.0.4045.5 | 2026-05-20 |
 | [CU 4 GDR (May 2026)](#17-0-4040) | 17.0.4040.1 | 2026-05-12 |
@@ -42,6 +43,23 @@ For release history on other editions, see the following articles:
 - Some GDR releases apply only to Windows. These Windows-only GDRs aren't published for Linux, and don't appear in this article.
 
 - Container tags can vary by release. For a list of available tags, see [RHEL](https://mcr.microsoft.com/product/mssql/rhel/server/tags) and [Ubuntu](https://mcr.microsoft.com/product/mssql/server/tags) in the Microsoft Artifact Registry.
+
+<a id="17-0-4060"></a>
+
+## CU 6 GDR (July 2026)
+
+This is the Cumulative Update 6-GDR (CU 6 GDR) release of [!INCLUDE [sql-server-2025](../../includes/versions/sql-server-2025.md)]. This is a security update that also includes the previously released CU (CU 6). The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 17.0.4060.2. For information about the fixes and improvements in this release, see [KB 5101346](https://support.microsoft.com/help/5101346).
+
+### Package details
+
+For manual or offline package installations, you can download the RPM and Debian packages with the information in the following table:
+
+| Distribution | Package version | Downloads |
+| --- | --- | --- |
+| **RHEL 10.x RPM packages**<br /><br />(Get RPM packages for [RHEL 9.x](https://packages.microsoft.com/rhel/9.0/mssql-server-2025/Packages/m/)) | 17.0.4060.2-1 | [Database Engine RPM package](https://packages.microsoft.com/rhel/10/mssql-server-2025/Packages/m/mssql-server-17.0.4060.2-1.x86_64.rpm)<br />[Extensibility RPM package](https://packages.microsoft.com/rhel/10/mssql-server-2025/Packages/m/mssql-server-extensibility-17.0.4060.2-1.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/rhel/10/mssql-server-2025/Packages/m/mssql-server-fts-17.0.4060.2-1.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/rhel/10/mssql-server-2025/Packages/m/mssql-server-ha-17.0.4060.2-1.x86_64.rpm)<br />[PolyBase RPM package](https://packages.microsoft.com/rhel/10/mssql-server-2025/Packages/m/mssql-server-polybase-17.0.4060.2-1.x86_64.rpm) |
+| **Ubuntu 24.04 Debian packages**<br /><br />(Get Debian packages for [Ubuntu 22.04](https://packages.microsoft.com/ubuntu/22.04/mssql-server-2025/pool/main/m/mssql-server/)) | 17.0.4060.2-1 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/24.04/mssql-server-2025/pool/main/m/mssql-server/mssql-server_17.0.4060.2-1_amd64.deb)<br />[Extensibility Debian package](https://packages.microsoft.com/ubuntu/24.04/mssql-server-2025/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_17.0.4060.2-1_amd64.deb)<br />[Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/24.04/mssql-server-2025/pool/main/m/mssql-server-fts/mssql-server-fts_17.0.4060.2-1_amd64.deb)<br />[High Availability Debian package](https://packages.microsoft.com/ubuntu/24.04/mssql-server-2025/pool/main/m/mssql-server-ha/mssql-server-ha_17.0.4060.2-1_amd64.deb)<br />[PolyBase Debian package](https://packages.microsoft.com/ubuntu/24.04/mssql-server-2025/pool/main/m/mssql-server-polybase/mssql-server-polybase_17.0.4060.2-1_amd64.deb) |
+
+Go back to the [release history](#release-history).
 
 <a id="17-0-4055"></a>
 
