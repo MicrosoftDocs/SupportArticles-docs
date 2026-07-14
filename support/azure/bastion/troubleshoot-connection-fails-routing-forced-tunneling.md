@@ -3,7 +3,7 @@ title: Troubleshoot Azure Bastion routing and forced tunneling
 description: Learn to diagnose and fix Azure Bastion connection failures caused by routing issues, forced tunneling, or DNS conflicts. Follow step-by-step guidance to restore connectivity.
 ms.service: azure-bastion
 ms.topic: troubleshooting
-ms.date: 6/17/2026
+ms.date: 07/14/2026
 ms.custom: Connectivity
 ai.hint.symptom-tags:
   - bastion-connection-failure
@@ -50,7 +50,7 @@ You might encounter one or more of the following symptoms:
 - The [Azure portal](https://portal.azure.com) shows the Azure Bastion resource in a `Succeeded` provisioning state but sessions still fail.
 
 > [!NOTE]
-> These symptoms are identical to those caused by NSG or firewall port blocks. If this article's diagnostics all pass without finding a cause, see `[Troubleshoot Azure Bastion connection failures caused by blocked ports](../connection-fails-nsg-blocked-ports/troubleshoot-bastion-connection-blocked-ports.md)`.
+> These symptoms are identical to those caused by NSG or firewall port blocks. If this article's diagnostics all pass without finding a cause, see [Troubleshoot Azure Bastion connection failures caused by blocked ports](troubleshoot-connection-blocked-ports.md).
 
 ## Prerequisites
 
@@ -98,7 +98,7 @@ az network bastion show \
 | If you see... | Meaning | Next steps |
 |---|---|---|
 | `"provisioningState": "Succeeded"`. | Azure Bastion is provisioned. | Perform [Step 2a](#step-2a). |
-| `"provisioningState": "Failed"`. | Azure Bastion deployment failed. Routing or subnet issues might have caused the failure. | Fix the provisioning error first using `[Troubleshoot Azure Bastion host deployment failures](../deployment-fails-subnet-capacity-prereqs/troubleshoot-bastion-deployment-fails-prerequisites.md)`, then re-run [Step 1](#step-1). |
+| `"provisioningState": "Failed"`. | Azure Bastion deployment failed. Routing or subnet issues might have caused the failure. | Fix the provisioning error first using [Troubleshoot Azure Bastion host deployment failures](troubleshoot-host-deployment-failures.md), then re-run [Step 1](#step-1). |
 | `"provisioningState": "Updating"`. | Azure Bastion is mid-update. | Wait for the operation to complete, then re-run [Step 1](#step-1). |
 | `ResourceNotFound` error. | Subscription, resource group, or Azure Bastion name is incorrect. | Verify your variables and re-run [Step 1](#step-1). |
 
@@ -334,7 +334,7 @@ Look at routes with a destination matching the `AzureBastionSubnet` address pref
 
 | If you see... | Meaning | Next steps |
 |---|---|---|
-| Traffic from the VM to `AzureBastionSubnet` routes through `VirtualNetwork` (next hop `VNetLocal`). | Direct path. No NVA in the way. | All routing diagnostics pass. Check `[blocked ports](../connection-fails-nsg-blocked-ports/troubleshoot-bastion-connection-blocked-ports.md)` next, then file an Azure support request if it's still unresolved. |
+| Traffic from the VM to `AzureBastionSubnet` routes through `VirtualNetwork` (next hop `VNetLocal`). | Direct path. No NVA in the way. | All routing diagnostics pass. Check [blocked ports](troubleshoot-connection-blocked-ports.md) next, then file an Azure support request if it's still unresolved. |
 | Traffic from the VM to `AzureBastionSubnet` routes through `VirtualAppliance` (next hop is an NVA IP). | An NVA is in the return path between the VM and Azure Bastion. This condition causes asymmetric routing and breaks the session. | Perform [Resolution D](#resolution-d). |
 | A 0.0.0.0/0 route through `VirtualAppliance` on the VM subnet and not a more specific route for the Azure Bastion subnet. | All VM traffic including Azure Bastion return traffic is forced through the NVA. | Perform [Resolution D](#resolution-d). |
 
@@ -349,7 +349,7 @@ Use the following decision map table to determine the appropriate next steps bas
 | Route Server, VPN, or ExpressRoute Gateway is advertising 0.0.0.0/0 into the Azure Bastion VNet. | Perform [Resolution B](#resolution-b). |
 | Private DNS zone with a blocked name is linked to the Azure Bastion VNet. | Perform [Resolution C](#resolution-c). |
 | NVA or UDR on the VM subnet breaks the return path to Azure Bastion. | Perform [Resolution D](#resolution-d). |
-| All diagnostics pass but problems persist. | See `[Troubleshoot Azure Bastion connection failures caused by blocked ports](../connection-fails-nsg-blocked-ports/troubleshoot-bastion-connection-blocked-ports.md)` for more information and guidance. Then file an Azure support request if it's still unresolved. |
+| All diagnostics pass but problems persist. | See [Troubleshoot Azure Bastion connection failures caused by blocked ports](troubleshoot-connection-blocked-ports.md) for more information and guidance. Then file an Azure support request if it's still unresolved. |
 
 ## Resolution A
 
@@ -699,11 +699,11 @@ az network nic show-effective-route-table \
 
 Confirm the route to the `AzureBastionSubnet` prefix shows `VnetLocal` as the next hop. Then test the Azure Bastion connection.
 
-If the issue persists after you check all four resolutions, routing isn't the problem. Continue with `[Troubleshoot Azure Bastion connection failures caused by blocked ports](../connection-fails-nsg-blocked-ports/troubleshoot-bastion-connection-blocked-ports.md)`. If that article also passes without resolution, file an Azure support request.
+If the issue persists after you check all four resolutions, routing isn't the problem. Continue with [Troubleshoot Azure Bastion connection failures caused by blocked ports](troubleshoot-connection-blocked-ports.md). If that article also passes without resolution, file an Azure support request.
 
 ## References
 
-- `[Troubleshoot Azure Bastion connection failures caused by blocked ports](../connection-fails-nsg-blocked-ports/troubleshoot-bastion-connection-blocked-ports.md)`
+- [Troubleshoot Azure Bastion connection failures caused by blocked ports](troubleshoot-connection-blocked-ports.md)
 - [Azure Bastion FAQ](/azure/bastion/bastion-faq)
 - [Azure Bastion and VNet peering](/azure/bastion/vnet-peering)
 - [Configure forced tunneling for Azure services](/azure/firewall/forced-tunneling)

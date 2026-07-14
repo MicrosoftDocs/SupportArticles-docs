@@ -1,10 +1,8 @@
 ---
 title: Troubleshoot Windows Update Errors That Require In-Place Upgrades for Azure VMs
 description: Learn how to resolve Windows Update errors that require in-place upgrades for Azure VMs.
-author: JarrettRenshaw
-ms.author: jarrettr
 ms.service: azure-virtual-machines
-ms.date: 04/16/2026
+ms.date: 07/13/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -16,14 +14,16 @@ ms.custom:
 
 # Troubleshoot Windows Update errors that require in-place upgrades for Azure VMs
 
+**Applies to:** :heavy_check_mark: Windows VMs
+
+## Summary
+
+This article lists Windows Update error codes that indicate severe Component-Based Servicing (CBS) or servicing stack corruption on Azure virtual machines (VMs). When one of these errors appears in the CBS log, the only reliable resolution is an in-place upgrade (IPU) of the Windows Server OS. The IPU reinstalls the OS while preserving your data, applications, and settings.
+
 > [!IMPORTANT]
 > This article covers the Windows Server upgrade process for Microsoft Azure servers and virtual machines (VMs) only. To upgrade an instance of Windows Server that isn't running on an Azure VM, see [In-place upgrade for VMs not running Windows Server in Azure](/windows-server/get-started/perform-in-place-upgrade).
 >
 > This article doesn't cover Windows Client scenarios.
-
-## Summary
-
-This article provides guidance on how to troubleshoot Windows Update errors that require an in-place upgrade for Azure virtual machines (VMs). It explains how to identify the specific errors that necessitate an in-place upgrade and provides steps to perform the upgrade safely.
 
 [!INCLUDE [Azure VM Windows Update / Windows OS Upgrade Diagnostic Tools](~/includes/azure/virtual-machines-runcmd-wu-tools.md)]
 
@@ -35,7 +35,7 @@ Make sure that you have administrative access to perform in-place upgrades.
 
 ## How to identify the errors
 
-To identify Windows Update errors, check the `C:\Windows\Logs\CBS` file path for **CBS.log**, **CbsPersist_XXXXXXXXXXXXXX.log**, or the **CbsPersist_XXXXXXXXXXXXXX.cab** file for one of the following error entries.
+To identify Windows Update errors, check the `C:\Windows\Logs\CBS` file path for the Component-Based Servicing (CBS) log file (**CBS.log**), **CbsPersist_XXXXXXXXXXXXXX.log**, or the **CbsPersist_XXXXXXXXXXXXXX.cab** file for one of the following error entries.
 
 | Error code | Symbolic name                          | Description / Notes                                                           |
 |------------|----------------------------------------|-------------------------------------------------------------------------------|
@@ -86,7 +86,7 @@ Example of error 0x80073712 - ERROR_SXS_COMPONENT_STORE_CORRUPT
 
 ### Cause
 
-The Azure VM is experiencing internal corruption in the Windows servicing stack. This stack is responsible for managing updates and system components. When it becomes damaged because of missing files, an invalid configuration, or corrupted metadata, Windows can no longer apply updates or service the OS correctly.
+The Azure VM has internal corruption in the Windows servicing stack. This stack manages updates and system components. When it's damaged due to missing files, an invalid configuration, or corrupted metadata, Windows can't apply updates or service the OS correctly.
 
 [!INCLUDE [Azure VM Windows Update / Windows OS Upgrade Diagnostic Tools](~/includes/azure/virtual-machines-runcmd-wu-tools.md)]
 
@@ -100,28 +100,40 @@ To resolve this issue, we recommend that you perform an in-place upgrade of Wind
    1. Make sure that you have administrative access to the VM.
    1. Verify that the VM is running on Azure.
 
-2. Back up the VM. Use Azure Backup or take a snapshot to make sure that you can restore the VM, if it's necessary.
+1. Back up the VM. Use Azure Backup or take a snapshot to make sure that you can restore the VM, if it's necessary.
 
-3. Review the following logs for known error codes:
+1. Review the following logs for known error codes:
    - `CBS.log`
    - `CbsPersist_*.log`
    - `CbsPersist_*.cab`
 
-4. Follow the guidance in [In-place upgrade for VMs running Windows Server in Azure](/azure/virtual-machines/windows-in-place-upgrade?context=/troubleshoot/azure/virtual-machines/windows/context/context).
+1. Follow the guidance in [In-place upgrade for VMs running Windows Server in Azure](/azure/virtual-machines/windows-in-place-upgrade?context=/troubleshoot/azure/virtual-machines/windows/context/context).
 
-5. Run the upgrade:
+1. Run the upgrade:
     1. At an elevated command prompt, change to **drive with ISO**.
     1. Enter setup.exe /auto upgrade /dynamicupdate disable.
     1. When you're prompted, select **Keep personal files and apps**.
     1. To complete the upgrade, follow the on-screen instructions.
 
-6. Post-upgrade checks
+1. Post-upgrade checks
    1. Verify system functionality.
    1. Reapply any custom configurations or policies as necessary.
    1. Re-enable any services, such as **Azure Backup** or **monitoring agents**, if they were paused.
 
+## Collect logs for further investigation
+
+If you can't resolve the issue by using the steps in this article, collect the following logs before you contact Azure support:
+
+- **CBS logs:** Located at `C:\Windows\Logs\CBS\CBS.log` and archived `CbsPersist_*.cab` files in the same folder.
+- **DISM log:** Located at `C:\Windows\Logs\DISM\dism.log`.
+- **SetupDiag output:** If the in-place upgrade fails, run [SetupDiag](/windows/deployment/upgrade/setupdiag) to identify the root cause.
+
 ## References
 
-1. [In-place upgrade for VMs not running Windows Server in Azure](/windows-server/get-started/perform-in-place-upgrade)
-1. [Troubleshoot a faulty Azure VM by using nested virtualization in Azure](troubleshoot-vm-by-use-nested-virtualization.md)
-1. [In-place upgrade for VMs running Windows Server in Azure](/azure/virtual-machines/windows-in-place-upgrade?context=/troubleshoot/azure/virtual-machines/windows/context/context)
+- [Troubleshoot Windows Update failures on Azure VMs](troubleshoot-windows-update-azure-vm.md)
+- [Troubleshoot CBS and component store corruption on Azure VMs](troubleshoot-cbs-component-store-corruption-azure-vm.md)
+- [In-place upgrade for VMs not running Windows Server in Azure](/windows-server/get-started/perform-in-place-upgrade)
+- [Troubleshoot a faulty Azure VM by using nested virtualization in Azure](troubleshoot-vm-by-use-nested-virtualization.md)
+- [In-place upgrade for VMs running Windows Server in Azure](/azure/virtual-machines/windows-in-place-upgrade?context=/troubleshoot/azure/virtual-machines/windows/context/context)
+
+[!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]

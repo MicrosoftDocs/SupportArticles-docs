@@ -60,6 +60,8 @@
   items:
     - name: A card payment fails due to an unsupported card type
       href: payments/card-payments-fail-with-unsupported-card-type.md
+    - name: Payment amount is 0.00 in Online store transactions
+      href: payments/payment-amount-zero-online-store-transactions.md
     - name: Payments are automatically settled before orders are invoiced or shipped
       href: payments/payments-auto-settled.md
     - name: Refund on a return order is declined
