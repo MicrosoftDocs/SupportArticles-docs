@@ -107,7 +107,7 @@ az network bastion show \
 | If you see... | Meaning | Next steps |
 |---|---|---|
 | `provisioningState: Succeeded`. | Azure Bastion host is healthy. | Perform [Step 2](#step-2). |
-| `provisioningState: Failed` or `Updating`. | Azure Bastion host itself has a problem. | This guidance covers VM-side issues only. See `[Troubleshoot Azure Bastion host deployment failures](../deployment-fails-subnet-capacity-prereqs/troubleshoot-bastion-deployment-fails-prerequisites.md)`. |
+| `provisioningState: Failed` or `Updating`. | Azure Bastion host itself has a problem. | This guidance covers VM-side issues only. See [Troubleshoot Azure Bastion host deployment failures](troubleshoot-host-deployment-failures.md). |
 | `ResourceNotFound` error. | Azure Bastion name or resource group is incorrect. | Verify your variables and re-run. |
 
 ### Step 2
