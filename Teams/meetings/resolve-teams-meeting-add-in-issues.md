@@ -1,6 +1,6 @@
 ---
-title: Resolve issues that affect the Teams Meeting add-in for classic Outlook
-description: Provides steps to troubleshoot issues that affect the Teams Meeting add-in for classic Outlook.
+title: Fix Teams Meeting add-in problems in Classic Outlook
+description: Troubleshoot the Teams Meeting add-in for classic Outlook to fix missing installs, restore it after upgrades, and recover meeting join details.
 author: Cloud-Writer
 ms.author: meerak
 manager: dcscontentpm
@@ -9,28 +9,35 @@ ms.topic: troubleshooting
 ms.custom: 
   - sap:Teams Meetings\Meeting Scheduling
   - CSSTroubleshoot
-  - SME:randyto
   - CI 162959
   - CI 171788
 appliesto: 
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 03/06/2026
+ms.reviewer: djball, randyto
+ai-usage: ai-assisted
+ms.date: 07/13/2026
 ---
 
-# Resolve issues that affect the Teams Meeting add-in for classic Outlook
+# Resolve Teams Meeting add-in issues in classic Outlook
+
+## Summary
+
+This article describes how to troubleshoot problems with the Teams Meeting add-in for classic Outlook. It provides steps to resolve missing or failed add-in installations, restore the add-in after upgrading from classic Teams to new Teams, and fix missing meeting join details when a mailbox is hidden from the Global Address List (GAL).
 
 > [!IMPORTANT]
 > The new Outlook for Windows doesn't support the Teams COM add-in, also known as Teams add-in for Outlook. The new Outlook contains a native Teams meeting capability that enables users to [schedule meetings](https://support.microsoft.com/office/schedule-a-microsoft-teams-meeting-from-outlook-883cc15c-580f-441a-92ea-0992c00a9b0f#bkmk_schedule). If you don't see the Teams meeting capability in new Outlook, see [Teams meeting add-in missing in new Outlook](https://support.microsoft.com/office/teams-meeting-add-in-missing-in-new-outlook-2ba1d660-29d9-4bdb-b651-c62d9d790865) for information on how to fix the issue.
 
+## Symptoms
+
 If you're a Microsoft Teams administrator, and your users can't install the Teams Meeting add-in for classic Outlook, schedule Outlook meetings from Teams, or schedule Teams meetings from Outlook, the issue might be caused by a problematic installation of the Teams Meeting add-in, a switch from classic Teams to new Teams, or because the users' mailboxes are hidden from the Global Address List (GAL).
 
-## Teams Meeting add-in is missing or its installation fails
+### Teams Meeting add-in is missing or its installation fails
 
-If you've configured the add-in for all users but it's missing for some users, try the following steps to troubleshoot and resolve the issue.
+If you configured the add-in for all users but it's missing for some users, try the following steps to troubleshoot and resolve the issue.
 
-### Check the status of the add-in in Outlook
+#### Check the status of the add-in in Outlook
 
 Make sure that the Teams Meeting add-in is enabled in Outlook.
 
@@ -41,7 +48,9 @@ Make sure that the Teams Meeting add-in is enabled in Outlook.
 1. Select the checkbox that's next to **Microsoft Teams Meeting Add-in for Microsoft Office**.
 1. Select **OK** on every open dialog box, and then restart Outlook.
 
-### Reregister the Teams Addin Loader
+Microsoft Teams Meeting Add-in for Microsoft Office appears in Active Application Add-ins after Outlook restarts.
+
+#### Reregister the Teams Addin Loader
 
 Use the following steps:
 
@@ -52,8 +61,8 @@ Use the following steps:
 1. Exit Teams.
 1. Reregister Microsoft.Teams.AddinLoader.dll:
 
-   1. Open File Explorer, and then navigate to the `%LocalAppData%\Microsoft\TeamsMeetingAddin` folder.
-   1. Select the subfolder that has a name that's the same as the version number. If there are multiple subfolders that have the same version number, select the subfolder that has the highest build number. Then, copy the path of this subfolder. For example, `%LocalAppData%\Microsoft\TeamsMeetingAddin\1.0.23334.11`.
+   1. Open File Explorer, and then go to the `%LocalAppData%\Microsoft\TeamsMeetingAddin` folder.
+   1. Select the subfolder that has a name that matches the version number. If multiple subfolders have the same version number, select the subfolder with the highest build number. Then, copy the path of this subfolder. For example, `%LocalAppData%\Microsoft\TeamsMeetingAddin\1.0.23334.11`.
    1. Open an elevated Command Prompt window, and then run the following command that's appropriate for your Office installation:
 
      - For 64-bit Office
@@ -72,17 +81,17 @@ Use the following steps:
 1. Sign out and then sign in to the Teams desktop client.
 1. Restart the Outlook desktop client. Make sure that Outlook isn't running in Administrator mode.
 
-### Verify registry settings
+#### Verify registry settings
 
 If the add-in still doesn't appear, follow these steps to check the registry settings.
 
 > [!WARNING]
-> Follow this section's steps carefully. Incorrect registry entries can cause serious system issues. As a precaution, [back up the registry for restoration](https://support.microsoft.com/help/322756/how-to-back-up-and-restore-the-registry-in-windows).
+> Follow this section's steps carefully. Incorrect registry entries can cause serious system problems. As a precaution, [back up the registry for restoration](https://support.microsoft.com/help/322756/how-to-back-up-and-restore-the-registry-in-windows).
 
 1. Check the load behavior of the add-in:
 
    1. Open RegEdit.exe.
-   1. Navigate to `HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\Outlook\Addins\TeamsAddin.FastConnect`.
+   1. Go to `HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\Outlook\Addins\TeamsAddin.FastConnect`.
    1. Check the value of the `LoadBehavior` entry. It should be set to **3**.
    1. If `LoadBehavior` has a value other than **3**, change it to **3**, and then restart Outlook.
       
@@ -90,10 +99,10 @@ If the add-in still doesn't appear, follow these steps to check the registry set
 1. Check whether the *Configure Outlook object model prompt when reading address information* policy setting is configured:
 
    1. Open RegEdit.exe.
-   1. Navigate to `HKEY_CURRENT_USER\SOFTWARE\Policies\Microsoft\Office\16.0\Outlook\Security`. If you applied the policy settings by using [Cloud Policy service](/deployoffice/admincenter/overview-cloud-policy), navigate to `HKEY_CURRENT_USER\SOFTWARE\Policies\Microsoft\Cloud\Office\16.0\Outlook\Security`.
+   1. Go to `HKEY_CURRENT_USER\SOFTWARE\Policies\Microsoft\Office\16.0\Outlook\Security`. If you applied the policy settings by using [Cloud Policy service](/deployoffice/admincenter/overview-cloud-policy), go to `HKEY_CURRENT_USER\SOFTWARE\Policies\Microsoft\Cloud\Office\16.0\Outlook\Security`.
    
       **Note:** Policy settings that are implemented by using Cloud Policy take precedence over policy settings that are implemented by using Group Policy on Windows.
-   1. Check for the `promptoomaddressinformationaccess` registry entry and whether a value is set for it. If the value is **0**, this indicates that the policy setting is set to the *Automatically deny* option. If it is, Outlook will automatically deny programmatic access requests from any program. In this situation, go to step 2d.
+   1. Check for the `promptoomaddressinformationaccess` registry entry and whether a value is set for it. If the value is **0**, this value indicates that the policy setting is set to the *Automatically deny* option. If it is, Outlook automatically denies programmatic access requests from any program. In this situation, go to step 2d.
    1. Check the *Configure trusted add-ins* policy setting.
    
       If this policy setting is configured, Teams administrators can use one of the following options:
@@ -103,7 +112,7 @@ If the add-in still doesn't appear, follow these steps to check the registry set
       
         **Note:** The *Microsoft.Teams.AddinLoader.dll* file that's used is automatically updated with the Teams client. Therefore, the hash value must be constantly updated to pair with the .dll file.
 
-## Teams Meeting add-in is missing after updating from classic Teams to New Teams
+### Teams Meeting add-in is missing after updating from classic Teams to new Teams
 
 Either you or your organization uninstalls classic Teams and then upgrades to new Teams. You uninstall the program by using one of the following methods:
 
@@ -135,7 +144,7 @@ To reinstall the Teams meeting add-in in non-VDI environments, follow these step
 1. Wait until the Teams meeting add-in appears in the list in **Start** > **Settings** > **Apps** > **Installed apps**.
 1. Restart the Outlook app.
 
-## Details to join a meeting are missing
+### Details to join a meeting are missing
 
 When a delegate schedules a Teams meeting in a delegated calendar on behalf of the delegator, the following meeting join details aren't added to the body of the meeting request:
 
@@ -143,9 +152,9 @@ When a delegate schedules a Teams meeting in a delegated calendar on behalf of t
 -	Meeting ID and passcode
 -	Dial-in numbers
 
-This issue occurs if the delegator's mailbox is hidden from the global address list (GAL). In this case, the Teams Meeting add-in can't get the required information to populate the meeting details.
+This problem occurs if the delegator's mailbox is hidden from the global address list (GAL). In this case, the Teams Meeting add-in can't get the required information to populate the meeting details.
 
-To fix the issue, run the following Exchange Online PowerShell cmdlet to unhide the delegator's mailbox:
+To fix the problem, run the following Exchange Online PowerShell cmdlet to unhide the delegator's mailbox:
 
 ```powershell
 Set-Mailbox -Identity <delegator’s email address> -HiddenFromAddressListsEnabled $false
