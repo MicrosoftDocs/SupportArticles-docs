@@ -136,7 +136,7 @@ items:
       href: ./meetings/known-issues-teams-certified-peripherals.md
     - name: New Teams desktop app fails to render video
       href: ./meetings/new-teams-desktop-app-fail-render-video.md
-    - name: Resolve Teams Meeting add-in issues
+    - name: Resolve Teams Meeting add-in problems
       href: ./meetings/resolve-teams-meeting-add-in-issues.md
     - name: Teams meeting features for shared mailboxes
       href: ./meetings/teams-meeting-with-shared-mailboxes.md
