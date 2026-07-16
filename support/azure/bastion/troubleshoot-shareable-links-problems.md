@@ -2,8 +2,8 @@
 title: Troubleshoot shareable links problems in Azure Bastion
 description: Troubleshoot shareable links problems in Azure Bastion, including custom domain and password reset limitations. Find resolutions and fix problems quickly.
 services: bastion
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 manager: dcscontentpm
 ms.service: azure-bastion
 ms.topic: troubleshooting

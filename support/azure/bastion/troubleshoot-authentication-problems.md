@@ -2,8 +2,8 @@
 title: Troubleshoot authentication problems in Azure Bastion
 description: Troubleshoot Azure Bastion authentication problems, including SSH key errors and domain-joined VM sign-in problems. Learn how to resolve these problems quickly.
 services: bastion
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 manager: dcscontentpm
 ms.service: azure-bastion
 ms.topic: troubleshooting

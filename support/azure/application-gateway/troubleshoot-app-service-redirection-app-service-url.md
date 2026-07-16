@@ -3,8 +3,8 @@ title: Troubleshoot App Service redirects
 titleSuffix: Azure Application Gateway
 description: Troubleshoot App Service redirection problems with Azure Application Gateway to preserve URLs and cookies. Follow these steps to fix them.
 services: application-gateway
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 ms.service: azure-application-gateway
 ms.topic: troubleshooting
 ms.date: 03/27/2026

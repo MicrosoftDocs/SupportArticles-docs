@@ -2,7 +2,7 @@
 title: Troubleshoot VM boot failure after SCSI-to-NVMe disk controller change
 description: Fix VM boot failure after a SCSI-to-NVMe controller change, including Windows BSOD and Linux kernel panic scenarios; use the recovery steps now.
 services: virtual-machines
-author: JarrettRenshaw
+author: kaushika-msft
 ms.service: azure-virtual-machines
 ms.collection: windows, linux
 ms.tgt_pltfrm: vm-windows

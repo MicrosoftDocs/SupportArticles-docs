@@ -2,8 +2,8 @@
 title: Azure ExpressRoute gateway migration - Troubleshooting errors and best practices
 description: Learn how to troubleshoot Azure ExpressRoute gateway migration errors and apply best practices to avoid failures. Use these steps to migrate with confidence.
 services: expressroute
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 ms.service: azure-expressroute
 ms.topic: troubleshooting
 ms.date: 05/01/2025

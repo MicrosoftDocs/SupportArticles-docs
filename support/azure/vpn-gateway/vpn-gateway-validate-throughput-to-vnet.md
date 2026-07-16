@@ -2,8 +2,8 @@
 title: Validate VPN throughput to a virtual network
 description: Learn how to validate the network throughput from your on-premises resources to an Azure virtual machine.
 titleSuffix: Azure VPN Gateway
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 manager: dcscontentpm
 ms.service: azure-vpn-gateway
 ms.topic: troubleshooting

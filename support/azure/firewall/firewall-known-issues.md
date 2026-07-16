@@ -3,8 +3,8 @@ title: Azure Firewall known issues and limitations
 description: Learn Azure Firewall known issues and limitations so you can plan deployments, avoid common failures, and troubleshoot faster. Read now.
 services: firewall
 ms.service: azure-firewall
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 manager: dcscontentpm
 ms.topic: troubleshooting
 ms.date: 04/20/2026

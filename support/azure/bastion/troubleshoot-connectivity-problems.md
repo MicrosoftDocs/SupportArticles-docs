@@ -2,8 +2,8 @@
 title: Troubleshoot Azure Bastion connectivity problems
 description: Learn how to troubleshoot common Azure Bastion connectivity problems, including black screens, file transfer problems, and session errors. Find resolutions now.
 services: bastion
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 manager: dcscontentpm
 ms.service: azure-bastion
 ms.topic: troubleshooting

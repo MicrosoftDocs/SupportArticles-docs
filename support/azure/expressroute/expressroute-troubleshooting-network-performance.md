@@ -2,8 +2,8 @@
 title: Troubleshoot network link performance - Azure ExpressRoute
 description: Use this guide to troubleshoot Azure network link performance with repeatable latency and bandwidth tests, and isolate bottlenecks faster.
 services: expressroute
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 ms.service: azure-expressroute
 ms.topic: troubleshooting
 ms.date: 01/31/2025

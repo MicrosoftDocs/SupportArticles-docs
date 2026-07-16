@@ -2,7 +2,7 @@
 title: Can't create a Confluent connector
 description: Resolve failures that occur when you try to create a Confluent connector in Azure.
 author:  praveenrajap
-ms.author: jarrettr 
+ms.author: kaushika 
 ms.reviewer: v-ryanberg
 ms.service: partner-services 
 ms.topic: troubleshooting-problem-resolution

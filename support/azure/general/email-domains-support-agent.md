@@ -4,8 +4,8 @@ description: Explains how to determine if an email claiming to be from Microsoft
 ms.date: 03/24/2026
 ms.reviewer: jarrettr
 ms.service: azure-common-issues-support
-ms.author: jarrettr
-author: JarrettRenshaw
+ms.author: kaushika
+author: kaushika-msft
 ---
 # How to determine if an email from Microsoft support is genuine
 

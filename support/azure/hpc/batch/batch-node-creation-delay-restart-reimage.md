@@ -2,8 +2,8 @@
 title: Resolve batch node creation delays when restarting or reimaging
 description: Resolve batch node creation delays when restarting or reimaging. Avoid delays and errors because of installing the large Python runtime and Python packages.
 ms.date: 05/23/2025
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 editor: v-jsitser
 ms.reviewer: jaygong, biny
 ms.service: azure-batch

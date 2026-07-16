@@ -12,7 +12,7 @@ ms.collection: linux
 ms.tgt_pltfrm: vm-linux
 ms.workload: infrastructure-services
 ms.date: 10/16/2025
-ms.author: jarrettr
+ms.author: kaushika
 ---
 
 # Proactively ensuring you have access to GRUB and sysrq could save you lots of down time

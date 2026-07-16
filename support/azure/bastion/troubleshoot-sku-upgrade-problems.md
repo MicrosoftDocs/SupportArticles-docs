@@ -2,8 +2,8 @@
 title: Troubleshoot Azure Bastion SKU upgrade problems
 description: Troubleshoot Azure Bastion SKU upgrade problems, including subnet errors, timeouts, and missing features. Learn how to resolve each problem quickly.
 services: bastion
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 manager: dcscontentpm
 ms.service: azure-bastion
 ms.topic: troubleshooting

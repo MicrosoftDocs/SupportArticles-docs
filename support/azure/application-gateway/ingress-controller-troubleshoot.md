@@ -2,8 +2,8 @@
 title: Troubleshoot Application Gateway Ingress Controller
 description: Learn how to troubleshoot Application Gateway Ingress Controller issues in AKS and verify your configuration to restore app access.
 services: application-gateway
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 ms.service: azure-application-gateway
 ms.topic: troubleshooting
 ms.date: 03/27/2026

@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot Red Hat RHUI connectivity issues
 description: Learn how to resolve issues that prevent Linux virtual machines from connecting to Red Hat Update Infrastructure (RHUI) repositories hosted in Microsoft Azure.
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 editor: v-jsitser
 ms.reviewer: azurevmlnxcic, divargas, v-leedennis
 ms.service: azure-virtual-machines

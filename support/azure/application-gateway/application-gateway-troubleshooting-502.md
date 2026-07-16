@@ -2,8 +2,8 @@
 title: Troubleshoot Bad Gateway errors - Azure Application Gateway
 description: Troubleshoot Azure Application Gateway 502 Bad Gateway errors and restore backend connectivity quickly. Follow this guide to identify and fix root causes.
 services: application-gateway
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 ms.service: azure-application-gateway
 ms.topic: troubleshooting
 ms.date: 03/27/2026

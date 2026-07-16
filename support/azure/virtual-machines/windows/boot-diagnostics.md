@@ -8,7 +8,7 @@ tags: azure-resource-manager
 ms.service: azure-virtual-machines
 ms.topic: troubleshooting
 ms.date: 05/17/2022
-ms.author: jarrettr
+ms.author: kaushika
 ms.custom: sap:My VM is not booting
 ---
 

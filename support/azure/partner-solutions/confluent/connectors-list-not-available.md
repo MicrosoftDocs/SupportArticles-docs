@@ -2,7 +2,7 @@
 title: List of Confluent Connectors Isn't Available
 description: Troubleshoot missing Confluent connectors list in the Azure portal.
 author: praveenrajap
-ms.author: jarrettr 
+ms.author: kaushika 
 ms.reviewer: v-ryanberg
 ms.custom: sap:Confluent on Azure
 ms.service: partner-services 

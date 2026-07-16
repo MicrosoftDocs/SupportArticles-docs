@@ -4,8 +4,8 @@ titleSuffix: Azure Load Balancer
 description: Troubleshoot Azure Load Balancer error codes, fix common deployment issues faster, and restore traffic flow—review solutions now.
 services: load-balancer
 ms.service: azure-load-balancer
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 manager: dcscontentpm
 ms.topic: troubleshooting
 ms.date: 04/06/2026

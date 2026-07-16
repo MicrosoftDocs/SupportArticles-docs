@@ -1,8 +1,8 @@
 ---
 title: Diagnose Problems That Cause Availability Tests to Fail in Application Insights
 description: This article discusses how to diagnose common issues that cause availability tests to fail in Application Insights.
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 manager: dcscontentpm
 ms.date: 9/22/2025
 editor: v-jsitser

@@ -2,7 +2,7 @@
 title: Resolve diagnostic setting limit problems in Azure
 description: Learn how to resolve diagnostic setting limit problems in Azure, including ghost settings and log profiles. Use this article to fix the issue.
 ms.date: 03/31/2026
-ms.author: jarrettr
+ms.author: kaushika
 ms.editor: v-gsitser
 ms.reviewer: v-ryanberg 
 ms.service: azure-monitor

@@ -3,8 +3,8 @@ title: Troubleshoot Azure Load Balancer health probe status
 description: Learn how to troubleshoot Azure Load Balancer health probe status issues so backend VMs stay healthy and in rotation—follow these steps now.
 services: load-balancer
 ms.service: azure-load-balancer
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 manager: dcscontentpm
 ms.topic: troubleshooting
 ms.date: 04/06/2026

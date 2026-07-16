@@ -3,8 +3,8 @@ title: Troubleshoot Azure Load Balancer backend traffic responses
 description: Troubleshoot Azure Load Balancer traffic issues affecting backend VM connectivity and distribution. Use this guide to identify and fix problems fast.
 services: load-balancer
 ms.service: azure-load-balancer
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 manager: dcscontentpm
 ms.topic: overview
 ms.date: 04/06/2026

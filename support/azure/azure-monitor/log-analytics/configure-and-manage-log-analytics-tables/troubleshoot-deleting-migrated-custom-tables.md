@@ -2,8 +2,8 @@
 title: Troubleshoot Deleting Migrated Custom Tables in Log Analytics
 description: Troubleshooting guide to deleting migrated custom tables in Log Analytics.
 ms.date: 09/30/2025
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 ms.reviewer: v-gsitser, v-ryanberg, neghuman, vikamala
 ms.service: azure-monitor
 ms.custom: Configure and manage Log Analytics tables

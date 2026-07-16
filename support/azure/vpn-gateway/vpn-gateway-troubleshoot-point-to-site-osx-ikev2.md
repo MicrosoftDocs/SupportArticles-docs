@@ -2,8 +2,8 @@
 title: Troubleshoot point-to-site connections - macOS X clients
 titleSuffix: Azure VPN Gateway
 description: Learn how to troubleshoot point-to-site connectivity issues from macOS X using the native VPN client.
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 ms.service: azure-vpn-gateway
 ms.topic: troubleshooting
 ms.date: 09/04/2024

@@ -6,8 +6,8 @@ ms.reviewer: divargas
 ms.service: azure-virtual-machines
 ms.custom: sap:VM Performance
 ms.collection: linux
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 ---
 # Out of memory error occurs in Linux Azure virtual machine
 

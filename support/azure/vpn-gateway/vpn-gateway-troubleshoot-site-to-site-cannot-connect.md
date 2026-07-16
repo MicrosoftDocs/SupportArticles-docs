@@ -2,8 +2,8 @@
 title: Troubleshoot an Azure S2S VPN connection that can't connect
 titleSuffix: Azure VPN Gateway
 description: Learn how to troubleshoot a site-to-site VPN connection that suddenly stops working and can't be reconnected.
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 ms.service: azure-vpn-gateway
 ms.topic: troubleshooting
 ms.date: 03/31/2025

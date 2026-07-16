@@ -1,11 +1,11 @@
 ---
 title: Error 403 - This web app is stopped message
 description: This article provides guidance on addressing the "Error 403 - This web app is stopped" message. 
-author: JarrettRenshaw
+author: kaushika-msft
 manager: dcscontentpm
 ms.topic: troubleshooting
 ms.date: 12/17/2025
-ms.author: jarrettr
+ms.author: kaushika
 ms.reviewer: v-ryanberg
 ms.service: azure-app-service
 ms.custom: sap:Availability, Performance, and Application Issues

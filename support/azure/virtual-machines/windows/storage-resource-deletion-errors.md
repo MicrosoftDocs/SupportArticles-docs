@@ -5,7 +5,7 @@ tags: top-support-issue,azure-service-management,azure-resource-manager
 ms.custom: sap:Assistance with disk operations
 ms.service: azure-virtual-machines
 ms.date: 10/22/2025
-ms.author: jarrettr
+ms.author: kaushika
 ms.revieweer: scotro
 ---
 # Troubleshoot storage resource deletion errors

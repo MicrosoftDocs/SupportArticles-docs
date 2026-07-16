@@ -2,8 +2,8 @@
 title: Troubleshoot virtual network peering problems in Azure Bastion
 description: Troubleshoot virtual network peering problems in Azure Bastion, including connectivity and permission problems. Learn how to resolve access issues and restore connectivity quickly.
 services: bastion
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 manager: dcscontentpm
 ms.service: azure-bastion
 ms.topic: troubleshooting

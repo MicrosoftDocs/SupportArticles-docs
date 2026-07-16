@@ -2,8 +2,8 @@
 title: Troubleshoot Azure Private Link connectivity problems
 description: Diagnose and resolve Azure Private Link connectivity problems with this step-by-step troubleshooting guide. Follow these steps to fix your setup today.
 ms.service: azure-private-link
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 manager: dcscontentpm
 ms.topic: troubleshooting
 ms.date: 04/06/2026

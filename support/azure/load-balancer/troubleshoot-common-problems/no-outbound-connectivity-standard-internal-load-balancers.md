@@ -3,8 +3,8 @@ title: Troubleshoot no outbound connectivity from Standard internal load balance
 description: Learn why a Standard internal load balancer has no outbound connectivity and configure Azure NAT Gateway to restore internet access. Fix it now.
 services: load-balancer
 ms.service: azure-load-balancer
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 manager: dcscontentpm
 ms.topic: troubleshooting
 ms.date: 04/29/2026

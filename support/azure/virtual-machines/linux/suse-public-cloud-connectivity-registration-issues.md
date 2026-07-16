@@ -2,8 +2,8 @@
 title: Troubleshoot Connectivity and Registration for SUSE SLES VMs
 description: "Learn how to troubleshoot SUSE SLES VM connectivity and registration issues with the SUSE SMT repository on Azure. Find fixes for common scenarios."
 ms.date: 05/12/2025
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 ms.reviewer: scotro, divargas
 editor: v-jsitser
 ms.service: azure-virtual-machines

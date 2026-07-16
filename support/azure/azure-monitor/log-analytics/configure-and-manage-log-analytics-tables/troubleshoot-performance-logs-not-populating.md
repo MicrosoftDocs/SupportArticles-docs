@@ -2,8 +2,8 @@
 title: Troubleshoot Performance Logs Not Populating in Azure Government
 description: Troubleshooting guide for performance logs not populating in Azure Government.
 ms.date: 09/30/2025
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 ms.reviewer: v-gsitser, v-ryanberg, neghuman, vikamala
 ms.service: azure-monitor
 ms.custom: Configure and Manage Log analytics tables

@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot Work Item Integration Issues in Application Insights
 description: Provides general recommendations and specific suggestions for issues that affect work item integration in Application Insights.
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 manager: dcscontentpm
 ms.topic: troubleshooting
 ms.date: 10/28/2025

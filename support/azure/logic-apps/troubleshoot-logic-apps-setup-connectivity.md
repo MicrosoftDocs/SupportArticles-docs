@@ -6,8 +6,8 @@ ms.reviewer: xuehongg, shrahman, v-ryanberg, v-gsitser
 ms.topic: troubleshooting
 ms.custom: Networking
 ms.date: 11/5/2025
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 ---
 
 # Troubleshoot Azure Logic Apps setup and connectivity

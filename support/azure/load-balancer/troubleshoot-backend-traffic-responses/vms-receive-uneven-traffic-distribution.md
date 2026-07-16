@@ -3,8 +3,8 @@ title: Virtual machines receive uneven distribution of traffic
 description: Troubleshoot uneven traffic distribution across Azure Load Balancer VMs. Learn to identify configuration issues and verify traffic is balanced evenly across backend pool members.
 services: load-balancer
 ms.service: azure-load-balancer
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 manager: dcscontentpm
 ms.topic: troubleshooting
 ms.date: 04/30/2026

@@ -2,8 +2,8 @@
 title: Troubleshoot VPN Gateway configurations and connections
 titleSuffix: Azure VPN Gateway
 description: This article helps link you to articles to troubleshoot your VPN Gateway configuration, connection, and to validate throughput.
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 ms.service: azure-vpn-gateway
 ms.custom: sap:Connectivity
 ms.topic: troubleshooting

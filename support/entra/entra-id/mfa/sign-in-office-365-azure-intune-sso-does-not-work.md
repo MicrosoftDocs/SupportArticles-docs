@@ -2,7 +2,7 @@
 title: Single sign-on doesn't work from some devices in Office 365, Azure, or Intune
 description: Follow these troubleshooting steps to fix single sign-on issues when users can't sign in to Office 365, Azure, or Intune from some devices.
 ms.date: 04/21/2026
-ms.author: jarrettr
+ms.author: kaushika
 ms.service: entra-id
 ms.custom: sap:AD domain-joined Seamless SSO with PTA or PHS
 ---

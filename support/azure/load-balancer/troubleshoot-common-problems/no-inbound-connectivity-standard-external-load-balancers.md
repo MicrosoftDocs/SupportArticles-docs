@@ -3,8 +3,8 @@ title: Troubleshoot no inbound connectivity to Standard external load balancers
 description: Resolve no inbound connectivity on a Standard external load balancer by checking NSG rules, load-balancing rules, and health probes. Start troubleshooting now.
 services: load-balancer
 ms.service: azure-load-balancer
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 manager: dcscontentpm
 ms.topic: troubleshooting
 ms.date: 04/06/2026

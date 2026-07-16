@@ -2,7 +2,7 @@
 title: Unable to use single sign-on in Astronomer portal
 description: Troubleshoot issues with single sign-on (SSO) for the Astronomer portal in Azure, including consent and email requirements.
 author: ProfessorKendrick
-ms.author: jarrettr
+ms.author: kaushika
 ms.reviewer: kkendrick, v-ryanberg
 ms.service: partner-services
 ms.topic: troubleshooting-problem-resolution 
