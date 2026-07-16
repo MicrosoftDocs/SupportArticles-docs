@@ -43,9 +43,15 @@ sections:
           When the grace period expires and Windows is still not activated, Windows Server 2008 R2 and later versions of Windows show more notifications about activating. The desktop wallpaper remains black, and Windows Update installs security and critical updates only, but it doesn't install optional updates. See the *Notifications* section at the bottom of the [Licensing Conditions](/previous-versions/tn-archive/ff793403(v=technet.10)) page.
 
       - question: |
-          My memory is limited to 2 GB on a new Windows Server VM
+          My memory is limited to 2 GB (or the CPU count is reduced) on a new Windows Server VM
         answer: |
-          Windows activation has a significant impact on the amount of hardware recognized in terms of RAM/processor. If the Windows VM isn't activated properly, you must complete the activation for the Windows guest OS.
+          Windows enforces edition-specific licensed limits on the amount of usable RAM and the number of processors. These limits are applied from the Windows licensing (product policy) state that's established when the guest OS is correctly licensed and activated. They aren't controlled by the activation grace period.
+
+          If a new VM's licensing was never successfully established (for example, the guest OS couldn't reach the activation or KMS endpoint during provisioning), Windows applies a conservative fallback and might report only 2 GB of RAM and a reduced processor count until licensing is completed.
+
+          This isn't caused by the activation grace period expiring. If the grace period lapses on a VM that was already licensed, you see activation notifications (see the previous question), but RAM and CPU aren't reduced. A 2-GB memory cap specifically indicates that the VM was never licensed or activated correctly.
+
+          To resolve this, complete Windows activation for the guest OS. Make sure the VM can reach the Azure KMS endpoint and has the correct KMS client setup key or Azure Hybrid Benefit configuration, and then restart the VM. After licensing is established, Windows recognizes the full amount of RAM and all processors.
           
 additionalContent: |
   ## More information
