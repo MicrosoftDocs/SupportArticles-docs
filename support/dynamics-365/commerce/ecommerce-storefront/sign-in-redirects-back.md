@@ -1,8 +1,6 @@
 ---
 title: Sign-in link redirects back to an e-commerce site in Dynamics 365 Commerce
-description: Provides a resolution for an issue where a sign-in link redirects back to the e-commerce site instead of going to the sign-in page in Microsoft Dynamics 365 Commerce.
-author: josaw1 
-ms.author: josaw
+description: Provides a resolution for an issue where a sign-in link redirects back to the e-commerce site instead of going to the sign-in page in Microsoft Dynamics 365 Commerce. 
 ms.reviewer: rassadi, brstor
 ms.date: 05/22/2025
 ms.custom: sap:site builder content management\Issues with URLs and redirects
