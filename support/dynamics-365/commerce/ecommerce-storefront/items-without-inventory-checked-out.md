@@ -1,8 +1,6 @@
 ---
 title: Items without inventory can be checked out in Dynamics 365 Commerce
-description: Provides a resolution for an issue where you can add out-of-stock items to your cart and proceed to check out in Microsoft Dynamics 365 Commerce.
-author: josaw1 
-ms.author: josaw
+description: Provides a resolution for an issue where you can add out-of-stock items to your cart and proceed to check out in Microsoft Dynamics 365 Commerce. 
 ms.reviewer: rassadi, brstor
 ms.date: 05/22/2025
 ms.custom: sap:Order management\Issues with cart and checkout in e-commerce storefront

@@ -4,8 +4,6 @@ description: Describes an issue in which import solutions or publish changes fai
 ms.reviewer: matp
 ms.custom: sap:Working with Solutions\Solution import - Other errors
 ms.date: 04/17/2025
-author: nhelgren
-ms.author: risquass
 ---
 # Can't import solutions or publish unmanaged changes in Power Platform
 

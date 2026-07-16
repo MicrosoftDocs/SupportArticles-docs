@@ -1,8 +1,6 @@
 ---
 title: Products and categories are missing after copying a site in Dynamics 365 Commerce
-description: Resolves an issue where products and categories are missing after a site is copied between environments or within the same environment in Microsoft Dynamics 365 Commerce.
-author: josaw1 
-ms.author: josaw
+description: Resolves an issue where products and categories are missing after a site is copied between environments or within the same environment in Microsoft Dynamics 365 Commerce. 
 ms.reviewer: rassadi, brstor
 ms.date: 09/01/2023
 ms.custom: sap:Product management, search, and recommendations\Issues with products, attributes, and categories in e-commerce storefront

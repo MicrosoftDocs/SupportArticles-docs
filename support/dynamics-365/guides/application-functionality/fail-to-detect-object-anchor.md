@@ -1,8 +1,6 @@
 ---
 title: Fail to detect an object anchor in the HoloLens app
 description: Provides a resolutin for an issue where you fail to detect an object anchor in the Microsoft HoloLens app.
-author: alwinv
-ms.author: alwinv
 ms.date: 10/27/2023
 ms.reviewer: v-wendysmith, mhart
 ms.custom: sap:Application Functionality

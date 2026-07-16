@@ -1,8 +1,6 @@
 ---
 title: Save for my next payment option doesn't appear in Dynamics 365 Commerce
-description: Provides a resolution for an issue where the Save for my next payment option doesn't appear under PAYMENT METHOD on an e-commerce site's checkout page in Microsoft Dynamics 365 Commerce.
-author: josaw1 
-ms.author: josaw
+description: Provides a resolution for an issue where the Save for my next payment option doesn't appear under PAYMENT METHOD on an e-commerce site's checkout page in Microsoft Dynamics 365 Commerce. 
 ms.reviewer: rassadi, brstor
 ms.date: 05/22/2025
 ms.custom: sap:Payments\Issues with payment method or digital wallet configuration

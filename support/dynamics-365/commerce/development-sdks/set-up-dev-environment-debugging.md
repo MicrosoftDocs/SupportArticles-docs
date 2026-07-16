@@ -1,8 +1,6 @@
 ---
 title: Errors when debugging against a Tier 1 Retail Server virtual machine
-description: Resolves errors that occur when you debug a Tier 1 Retail Server VM in an e-commerce development environment in Microsoft Dynamics 365 Commerce.
-author: josaw1 
-ms.author: josaw
+description: Resolves errors that occur when you debug a Tier 1 Retail Server VM in an e-commerce development environment in Microsoft Dynamics 365 Commerce. 
 ms.reviewer: rassadi, brstor
 ms.date: 05/22/2025
 ms.custom: sap:Development and SDKs\Issues with e-commerce module development

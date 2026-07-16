@@ -4,8 +4,6 @@ description: Learn how to update a record's owner, an Owning Business Unit, or b
 ms.component: pa-admin
 ms.date: 08/25/2025
 ms.custom: sap:Microsoft Dataverse\Environment and app access issues
-author: davidme-ms
-ms.author: davidme 
 ms.reviewer: iyanni, sericks, saminmalik
 search.audienceType: 
   - admin

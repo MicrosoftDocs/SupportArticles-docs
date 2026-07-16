@@ -4,8 +4,6 @@ description: Describes an issue in which required fields are missing in Datavers
 ms.reviewer: squassina
 ms.custom: sap:Dataverse Web API and SDK
 ms.date: 04/17/2025
-author: squassina
-ms.author: risquass
 ---
 # Dataverse records are created without required fields
 

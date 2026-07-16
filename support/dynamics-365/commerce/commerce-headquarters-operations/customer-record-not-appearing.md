@@ -1,8 +1,6 @@
 ---
 title: Customer records don't appear in Commerce headquarters
-description: Provides a resolution for an issue where customer records don't immediately appear in Commerce headquarters.
-author: josaw1 
-ms.author: josaw
+description: Provides a resolution for an issue where customer records don't immediately appear in Commerce headquarters. 
 ms.reviewer: rassadi, brstor
 ms.date: 09/01/2023
 ms.custom: sap:Customer accounts and loyalty\Issues with customer account in point of sale (POS)
