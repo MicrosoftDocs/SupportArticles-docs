@@ -2,8 +2,8 @@
 title: Troubleshoot upgrade failure because of conflicting PodDisruptionBudgets
 description: Learn how to troubleshoot AKS upgrade failures caused by conflicting PodDisruptionBudgets that block node drain. Use this guide to fix the issue fast.
 ms.date: 03/11/2026
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 editor: v-jsitser
 ms.reviewer: v-leedennis
 ms.service: azure-kubernetes-service

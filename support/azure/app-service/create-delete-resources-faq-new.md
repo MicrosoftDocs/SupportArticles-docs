@@ -2,11 +2,11 @@
 title: FAQ about creating or deleting web apps in Azure App Service
 description: Get answers to common questions about creating and deleting web apps in Azure App Service. Learn about naming, quotas, permissions, billing, and how to restore deleted apps.
 services: active-directory
-author: JarrettRenshaw
+author: kaushika-msft
 ms.reviewer: amehrot, rimarr, jarrettr
 ms.topic: faq
 ms.date: 11/24/2025
-ms.author: jarrettr
+ms.author: kaushika
 ms.service: azure-app-service
 ms.custom: sap:Configuration and Management
 ---

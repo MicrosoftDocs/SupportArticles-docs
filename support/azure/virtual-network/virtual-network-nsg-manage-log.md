@@ -3,8 +3,8 @@ title: Diagnostic resource logging for a network security group
 titleSuffix: Azure Virtual Network
 description: Learn how to enable event and rule counter diagnostic resource logs for an Azure network security group.
 services: virtual-network
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 manager: mtillman
 ms.service: azure-virtual-network
 ms.topic: troubleshooting

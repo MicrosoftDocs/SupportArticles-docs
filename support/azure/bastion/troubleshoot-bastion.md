@@ -2,8 +2,8 @@
 title: Troubleshoot Azure Bastion
 description: Use Azure Bastion troubleshooting guidance to quickly diagnose and resolve connectivity, authentication, and configuration issues—start fixing problems now.
 services: bastion
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 manager: dcscontentpm
 ms.service: azure-bastion
 ms.topic: troubleshooting

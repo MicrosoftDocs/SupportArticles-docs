@@ -2,8 +2,8 @@
 title: Troubleshoot site-to-site connections with digital certificate authentication
 description: Learn how to troubleshoot Azure Site-to-Site VPN Gateway connections that use digital certificate authentication. Resolve error codes, fix connectivity problems, and ensure stable VPN operations.
 titleSuffix: Azure VPN Gateway
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 ms.service: azure-vpn-gateway
 ms.topic: troubleshooting
 ms.custom: sap:Connectivity

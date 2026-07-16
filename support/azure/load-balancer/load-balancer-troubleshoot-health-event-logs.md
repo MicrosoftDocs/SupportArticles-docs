@@ -3,8 +3,8 @@ title: Troubleshoot load balancer health event logs
 titleSuffix: Azure Load Balancer
 description: Troubleshoot Azure Load Balancer health event logs to resolve probe, SNAT, and platform issues fast, maintain app availability, and start fixes now.
 ms.service: azure-load-balancer
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 manager: dcscontentpm
 ms.topic: troubleshooting
 ms.date: 04/06/2026

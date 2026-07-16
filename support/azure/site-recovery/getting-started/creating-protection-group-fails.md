@@ -4,8 +4,8 @@ description: Work around an issue in which you can't create a protection group i
 ms.date: 04/09/2024
 ms.reviewer: wenca, markstan
 ms.service: azure-site-recovery
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 ms.custom: sap:I need help getting started with Site Recovery
 ---
 # Error retrieving the list of servers when you create a protection group in Azure Site Recovery

@@ -2,7 +2,7 @@
 title: Conflict Error When Creating a Confluent Cloud Organization Resource
 description: Resolve the Conflict error that can appear when you create a Confluent Cloud organization resource in Azure.
 author:  praveenrajap
-ms.author: jarrettr
+ms.author: kaushika
 ms.reviewer: v-ryanberg
 ms.custom: sap:Confluent on Azure
 ms.service: partner-services

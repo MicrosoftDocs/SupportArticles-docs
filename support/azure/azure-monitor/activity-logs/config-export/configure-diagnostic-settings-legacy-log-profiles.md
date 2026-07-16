@@ -2,7 +2,7 @@
 title: Resolve problems when configuring Azure Diagnostic Settings for legacy log profiles
 description: Resolve Azure Diagnostic Settings problems for deprecated legacy log profiles, and keep Activity Log export working. Follow the migration steps today.
 ms.date: 03/31/2026
-ms.author: jarrettr
+ms.author: kaushika
 ms.editor: v-gsitser
 ms.reviewer: v-ryanberg 
 ms.service: azure-monitor

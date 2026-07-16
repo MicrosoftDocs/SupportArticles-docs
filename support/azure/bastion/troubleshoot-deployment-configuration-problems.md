@@ -2,8 +2,8 @@
 title: Troubleshoot deployment and configuration problems in Azure Bastion
 description: Troubleshoot common Azure Bastion deployment and configuration problems, including subnet errors, deployment failures, and force-tunneling problems. Learn how to resolve them.
 services: bastion
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 manager: dcscontentpm
 ms.service: azure-bastion
 ms.topic: troubleshooting

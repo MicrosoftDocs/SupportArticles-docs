@@ -1,8 +1,8 @@
 ---
 title: Troubleshooting Tool for Linux Guest Agent - VM assist
 description: Provides script-based tool to help diagnose and resolve Azure Guest Agent issues on Azure virtual machines running Linux.
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 manager: dcscontentpm
 ms.date: 12/04/2025
 ms.reviewer: v-jsitser, scotro, v-ryanberg

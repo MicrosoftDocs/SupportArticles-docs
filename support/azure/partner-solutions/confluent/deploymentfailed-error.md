@@ -2,7 +2,7 @@
 title: DeploymentFailed Error When Creating a Confluent Cloud Resource
 description: Resolve the DeploymentFailed error that can occur when you create a Confluent Cloud resource in Azure.
 author:  praveenrajap
-ms.author: jarrettr 
+ms.author: kaushika 
 ms.reviewer: v-ryanberg
 ms.custom: sap:Confluent on Azure
 ms.service: partner-services 

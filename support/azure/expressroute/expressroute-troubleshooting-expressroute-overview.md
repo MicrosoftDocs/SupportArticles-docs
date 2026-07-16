@@ -2,8 +2,8 @@
 title: Verify Azure ExpressRoute connectivity - troubleshooting guide
 description: Troubleshoot and validate end-to-end Azure ExpressRoute circuit connectivity to quickly identify network issues and restore reliable service. Start now.
 services: expressroute
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 ms.service: azure-expressroute
 ms.topic: troubleshooting
 ms.date: 11/18/2024

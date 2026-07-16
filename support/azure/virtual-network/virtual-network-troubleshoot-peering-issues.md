@@ -2,8 +2,8 @@
 title: Troubleshoot virtual network peering issues
 description: Troubleshoot virtual network peering issues in Azure with practical checks and fixes to restore connectivity across subscriptions and regions. Start now.
 services: virtual-network
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 manager: dcscontentpm
 ms.assetid: 1a3d1e84-f793-41b4-aa04-774a7e8f7719
 ms.service: azure-virtual-network

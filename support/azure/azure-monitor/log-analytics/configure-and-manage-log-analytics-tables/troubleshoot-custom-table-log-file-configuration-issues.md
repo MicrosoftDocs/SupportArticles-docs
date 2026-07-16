@@ -2,8 +2,8 @@
 title: Troubleshoot Log File Configuration Issues when Managing Custom Tables in Azure
 description: Troubleshooting guide for log file configuration issues when managing custom tables in Azure.
 ms.date: 12/08/2025
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 ms.reviewer: v-ryanberg, neghuman
 ms.service: azure-monitor
 ms.custom: Configure and Manage Log analytics tables

@@ -3,7 +3,7 @@ title: Troubleshoot Linux VM boot issues due to filesystem errors
 description: Describes how to troubleshoot Linux VM not starting issues that are caused by filesystem errors.
 services: virtual-machines
 documentationcenter: ''
-author: JarrettRenshaw
+author: kaushika-msft
 manager: dcscontentpm
 tags: ''
 ms.custom: sap:My VM is not booting, linux-related-content
@@ -14,7 +14,7 @@ ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 ms.devlang: azurecli
 ms.date: 09/15/2025
-ms.author: jarrettr
+ms.author: kaushika
 ms.reviewer: maries, v-weizhu
 ---
 # Troubleshoot Linux virtual machine boot issues due to filesystem errors

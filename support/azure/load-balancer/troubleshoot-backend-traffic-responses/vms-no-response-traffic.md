@@ -3,8 +3,8 @@ title: Troubleshoot virtual machines not responding to traffic on the configured
 description: "Troubleshoot why Azure Load Balancer backend VMs show as healthy but don't respond to traffic. Identify causes like misconfigured ports and NSG rules. Learn to fix connectivity issues now."
 services: load-balancer
 ms.service: azure-load-balancer
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 manager: dcscontentpm
 ms.topic: troubleshooting
 ms.date: 04/30/2026

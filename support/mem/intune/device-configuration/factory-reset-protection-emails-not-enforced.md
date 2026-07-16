@@ -30,12 +30,12 @@ If the Intune setting, **Factory reset protection emails**, is configured, FRP i
 
   | Enrollment method | Settings > Factory data reset | Settings > Recovery/bootloader | Intune [wipe](/intune/intune-service/configuration/device-restrictions-android-for-work) |
   | --- | --- | --- | --- |
-  | **Corporate-owned devices with work profile** (COPE) | ✅ factory reset protection | ✅ factory reset protection | ❌ no factory reset protection |
+  | **Corporate-owned devices with work profile** (COPE) | ❌ no factory reset protection | ✅ factory reset protection | ❌ no factory reset protection |
   | **Fully managed** (COBO) | ❌ no factory reset protection | ✅ factory reset protection | ❌ no factory reset protection |
   | **Dedicated** (COSU) | ❌ no factory reset protection | ✅ factory reset protection | ❌ no factory reset protection |
 
 > [!NOTE]
-> - For the COPE method: FRP is enforced. The device requires one of the specified Google accounts to complete setup.
+> - For the COPE method: FRP is no longer enforced for a Settings reset. This is a change as of July, 2026.
 > - For the Intune wipe method: By default, FRP isn’t enforced because Intune doesn’t preserve FRP data in this flow.
 
 If **Factory reset protection emails** is set to **Not configured** (default), Intune doesn't change or update this setting.

@@ -2,8 +2,8 @@
 title: HTTP response codes - Azure Application Gateway
 description: 'Troubleshoot Application Gateway HTTP response codes, identify client and server error causes, and apply fixes to keep apps available. Start now.'
 services: application-gateway
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 ms.service: azure-application-gateway
 ms.topic: troubleshooting
 ms.date: 03/27/2026

@@ -3,7 +3,7 @@ title: Azure Serial Console for Windows
 description: Bi-Directional Serial Console for Azure Virtual Machines and Virtual Machine Scale Sets using a Windows example.
 services: virtual-machines
 documentationcenter: ''
-author: JarrettRenshaw
+author: kaushika-msft
 manager: dcscontentpm
 tags: azure-resource-manager
 ms.service: azure-virtual-machines
@@ -11,7 +11,7 @@ ms.collection: windows
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure-services
 ms.date: 11/20/2025
-ms.author: jarrettr
+ms.author: kaushika
 ms.reviewer: mbifeld
 ms.custom: sap:Cannot connect to my VM
 ---

@@ -3,8 +3,8 @@ title: Troubleshoot Azure NAT Gateway connectivity problems
 titleSuffix: Azure NAT Gateway
 description: Troubleshoot Azure NAT Gateway connectivity problems, including SNAT port exhaustion, connection failures, and outbound connectivity errors. Find solutions now.
 services: virtual-network
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 manager: dcscontentpm
 ms.service: azure-nat-gateway
 ms.topic: troubleshooting

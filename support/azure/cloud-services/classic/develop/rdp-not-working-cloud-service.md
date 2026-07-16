@@ -1,48 +1,49 @@
 ---
 title: Remote Desktop Protocol not working for classic cloud service resource
-description: Provides information about troubleshooting issues in which Remote Desktop Protocol is not working for Azure customers who are using classic cloud service resource.
+description: Learn how to troubleshoot when Remote Desktop Protocol (RDP) isn't working in a classic cloud service resource and restore access quickly.
 ms.date: 09/26/2022
-ms.reviewer: 
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 ms.service: azure-cloud-services-classic
 ms.custom: sap:Development
 ---
 # Remote Desktop Protocol not working for classic cloud service resource
 
-This article provides information about troubleshooting issues in which Remote Desktop Protocol (RDP) is not working for Azure customers who are using classic cloud service resource.
+## Summary
+
+This article provides information about troubleshooting issues where Remote Desktop Protocol (RDP) isn't working for Azure customers who use classic cloud service resources.
 
 _Original product version:_ &nbsp; API Management Service  
 _Original KB number:_ &nbsp; 4464927
 
 ## Symptoms
 
-This article discusses one of the most common scenarios faced by the Azure customers who are using classic cloud service resource - RDP is not working with this error:
+This article discusses one of the most common scenarios faced by Azure customers who use classic cloud service resources - RDP isn't working with this error message:
 
-:::image type="content" source="media/rdp-not-working-cloud-service/rdp-error.png" alt-text="Screenshot of the RDP error.":::
+:::image type="content" source="media/rdp-not-working-cloud-service/rdp-error.png" alt-text="Screenshot of an RDP connection error shown for a classic cloud service resource." lightbox="media/rdp-not-working-cloud-service/rdp-error.png":::
 
-Sometimes you will not be able to download the RDP file itself and will get this error:
+Sometimes, you can't download the RDP file and get this error message:
 
 > "Failed to download the file. Error details: error 400 Bad Request".
 
 ## Cause
 
-You may get the above errors for multiple reasons:
+You might see the preceding errors for multiple reasons:
 
-- RDP user account or Encryption certificate is expired.
-- TCP Port 3389 for RDP is blocked.
+- RDP user account or encryption certificate expired.
+- TCP port 3389 for RDP is blocked.
 - RDP extension is disabled.
 
 ## Resolution
 
-Sometimes while troubleshooting the RDP issues, you might find that resetting the RDP user account expiration date or renewing the encryption certificate doesn't work. In those cases, follow these steps:
+While troubleshooting RDP problems, you might find that resetting the RDP user account expiration date or renewing the encryption certificate doesn't fix the problem. In those cases, follow these steps:
 
 1. Create a self-signed certificate in .pfx format.
-2. Upload the self-signed certificate in cloud service certificate store from the Azure portal.
-3. Delete all the existing RDP extensions if present.
-4. Re-enable Remote Desktop for the roles by using the self-signed certificate that you created in the step 1.
+1. Upload the self-signed certificate to the cloud service certificate store from the Azure portal.
+1. Delete all the existing RDP extensions if present.
+1. Re-enable Remote Desktop for the roles by using the self-signed certificate that you created in step 1.
 
-You can also perform the above four steps using a PowerShell script. Run the below PowerShell script in admin or elevated mode. Make sure you have [Azure PowerShell Service Management module](/powershell/azure/servicemanagement/install-azure-ps?view=azuresmps-4.0.0&preserve-view=true)  installed in your system before running it.
+You can also perform the preceding four steps by using a PowerShell script. Run the following PowerShell script in admin or elevated mode. Make sure you have the [Azure PowerShell module](/powershell/azure/new-azureps-module-az) installed on your system before running it.
 
 ```powershell
 $SubscriptionId = "your-subscription-id" # Subscription Id
@@ -90,19 +91,19 @@ Set-AzureServiceRemoteDesktopExtension -ServiceName $CloudServiceName -Creden
 Write-Host (Get-Date).ToString()" : Remote desktop extension applied successfully." -ForegroundColor Magenta
 ```
 
-Output of the script will be something like below:
+The output of the script is similar to the following screenshot:
 
-:::image type="content" source="media/rdp-not-working-cloud-service/powershell-outputs.png" alt-text="Screenshot of an example output of the PowerShell script." border="false":::
+:::image type="content" source="media/rdp-not-working-cloud-service/powershell-outputs.png" alt-text="Screenshot of an example output of the PowerShell script." border="false" lightbox="media/rdp-not-working-cloud-service/powershell-outputs.png":::
 
-If you are not able to RDP after running the above script, then definitely it's a networking issue. There are few possible reasons:
+If you can't RDP after running the preceding script, then it's definitely a networking problem. A few possible reasons are:
 
-- The network from where you are trying to RDP is blocking the traffic.
-- There are some ACL rules configured in your cloud service.
-- Firewall rules configured using startup tasks.
-- If your cloud service is sitting behind an NSG, you may need to create rules that allow traffic on ports **3389** and **20000**. The RemoteForwarder and RemoteAccess agents require that port 20000* is open, which may be blocked if you have an NSG.
+- The network from where you're trying to RDP is blocking the traffic.
+- Some ACL rules are configured in your cloud service.
+- Firewall rules configured by using startup tasks.
+- If your cloud service is sitting behind an NSG, you might need to create rules that allow traffic on ports **3389** and **20000**. The RemoteForwarder and RemoteAccess agents require that port **20000** is open, which might be blocked if you have an NSG.
 
-Most of time your corporate network blocks the RDP traffic due to security reasons. So the first thing you should check if you are able to reach to RDP ports 3389 and 20000 (if applicable as mentioned above) using [PsPing](/sysinternals/downloads/psping)  or [PortQry](https://www.microsoft.com/download/details.aspx?id=24009) or [Telnet](https://blogs.technet.microsoft.com/danielmauser/2015/03/18/tip-installing-telnet-client-via-command-line/).
+Most of the time, your corporate network blocks the RDP traffic due to security reasons. So the first thing you should check is if you can reach the RDP ports 3389 and 20000 (if applicable as mentioned earlier) by using [PsPing](/sysinternals/downloads/psping), [PortQry](https://www.microsoft.com/download/details.aspx?id=24009), or [Telnet](https://blogs.technet.microsoft.com/danielmauser/2015/03/18/tip-installing-telnet-client-via-command-line/).
 
-You can refer this [article](https://support.microsoft.com/help/4464850) where discusses how to troubleshoot RDP issues using various tools like PsPing and Network monitor. If you are not getting any response, try to RDP from a different network, may be home network or mobile hotspot, etc.
+Refer to [this article](https://support.microsoft.com/help/4464850) that discusses how to troubleshoot RDP problems by using various tools like PsPing and Network Monitor. If you don't get any response, try to RDP from a different network, such as a home network or mobile hotspot.
 
  

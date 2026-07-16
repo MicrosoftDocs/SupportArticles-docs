@@ -3,8 +3,8 @@ title: Troubleshoot common problems with Azure Load Balancer
 description: Learn how to troubleshoot Azure Load Balancer connectivity issues, including probe, inbound, and outbound failures, to restore traffic fast. Start diagnosing now.
 services: load-balancer
 ms.service: azure-load-balancer
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 manager: dcscontentpm
 ms.topic: overview
 ms.date: 04/29/2026

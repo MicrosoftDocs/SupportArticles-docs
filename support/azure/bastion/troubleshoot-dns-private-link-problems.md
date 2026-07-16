@@ -2,8 +2,8 @@
 title: Troubleshoot DNS and Private Link problems with Azure Bastion
 description: Troubleshoot DNS and Private Link problems with Azure Bastion by identifying common causes and fixes for name resolution and Private Link problems. Find fixes.
 services: bastion
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 manager: dcscontentpm
 ms.service: azure-bastion
 ms.topic: troubleshooting

@@ -3,8 +3,8 @@ title: Azure API Management Troubleshooting Scenario 5 - Request throttling prob
 description: Provides troubleshooting steps to an issue in which GetPosts operation throws HTTP 403 - Forbidden error.
 ms.date: 08/14/2020
 ms.service: azure-api-management
-ms.author: jarrettr
-author: JarrettRenshaw
+ms.author: kaushika
+author: kaushika-msft
 ms.reviewer: 
 ms.custom: sap:Availability or Unexpected API Responses
 ---

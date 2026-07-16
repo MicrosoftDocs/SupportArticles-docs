@@ -2,7 +2,7 @@
 title: Metrics Not Being Emitted
 description: Resolve the problem in which Datadog doesn't receive metrics from Azure resources because of a missing or incorrect role assignment.
 author: agrimayadav
-ms.author: jarrettr
+ms.author: kaushika
 ms.service: partner-services
 ms.topic: troubleshooting-problem-resolution
 ms.date: 09/19/2025

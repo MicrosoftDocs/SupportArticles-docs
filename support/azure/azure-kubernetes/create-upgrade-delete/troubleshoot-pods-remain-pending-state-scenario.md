@@ -2,7 +2,7 @@
 title: Troubleshoot Pods Remain in a Pending State Scenario
 description: This article helps you troubleshoot a scenario in which pods remain in a pending state.
 ms.date: 01/12/2026
-ms.author: jarrettr
+ms.author: kaushika
 ms.editor: v-jsitser
 ms.reviewer: chiragpa, rorylen, v-ryanberg 
 ms.service: azure-kubernetes-service

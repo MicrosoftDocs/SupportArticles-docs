@@ -1,8 +1,8 @@
 ---
 title: Troubleshooting Tools for Windows Activation 
 description: Provides script-based tools to help diagnose and resolve Windows activation problems on Azure virtual machines.
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 manager: dcscontentpm
 ms.date: 10/24/2025
 ms.reviewer: v-jsitser, scotro, v-ryanberg

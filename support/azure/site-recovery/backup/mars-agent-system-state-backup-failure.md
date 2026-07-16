@@ -3,8 +3,8 @@ title: Microsoft Azure Recovery Services Agent System State backup failure (erro
 description: Error when you back up System State by using the Microsoft Azure Recovery Services (MARS) Agent.
 ms.date: 08/14/2020
 ms.service: azure-site-recovery
-ms.author: jarrettr
-author: JarrettRenshaw
+ms.author: kaushika
+author: kaushika-msft
 ms.reviewer: jarrettr
 ms.custom: sap:I need help with Azure Backup
 ---

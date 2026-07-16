@@ -2,8 +2,8 @@
 title: Troubleshoot Windows Boot Manager error  - 0xC0000225 Status not found
 description: Resolve issues in which the 0xC0000225 error code occurs in Windows Boot Manager on an Azure Virtual Machine.
 services: virtual-machines, azure-resource-manager
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 tags: azure-resource-manager
 ms.service: azure-virtual-machines
 ms.collection: windows

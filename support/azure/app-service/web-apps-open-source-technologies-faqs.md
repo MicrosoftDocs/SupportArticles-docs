@@ -1,8 +1,8 @@
 ---
 title: Open-source technologies FAQs
 description: Get answers to frequently asked questions about open-source technologies in Azure App Service.
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 ms.service: azure-app-service
 ms.date: 02/20/2026
 ms.reviewer: toan, shrahman

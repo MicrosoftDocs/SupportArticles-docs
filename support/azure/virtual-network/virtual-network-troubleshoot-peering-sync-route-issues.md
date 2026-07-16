@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot virtual network peering route propagation and sync problems
 description: Troubleshoot route propagation delays, peering sync failures, DNS resolution, and peering health monitoring for Azure virtual network peering. Use this guide to restore connectivity between peered virtual networks.
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 ms.service: azure-virtual-network
 ms.topic: troubleshooting
 ms.date: 03/17/2026

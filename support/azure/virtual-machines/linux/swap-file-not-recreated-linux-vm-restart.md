@@ -5,8 +5,8 @@ ms.date: 04/15/2024
 ms.service: azure-virtual-machines
 ms.custom: sap:VM Admin - Linux (Guest OS)
 ms.collection: linux
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 ms.reviewer: danis, divargas
 ---
 # Swap file isn't  re-created after a Linux VM restarts

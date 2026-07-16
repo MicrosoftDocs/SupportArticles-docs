@@ -2,7 +2,7 @@
 title: Troubleshoot activity log export configuration issues
 description: Fix Azure activity log export configuration issues by checking permissions and settings. Use this guide to restore log exports and verify success.
 ms.date: 09/17/2025
-ms.author: jarrettr
+ms.author: kaushika
 ms.reviewer: v-ryanberg; v-gsitser
 ms.service: azure-monitor
 ms.custom: I can't configure export of activity logs

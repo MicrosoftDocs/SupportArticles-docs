@@ -9,8 +9,8 @@ metadata:
   services: azure
   ms.service: azure-firewall 
   ms.topic: landing-page # Required
-  author: JarrettRenshaw  #Required; your GitHub user alias, with correct capitalization.
-  ms.author: jarrettr #Required; microsoft alias of author; optional team alias.
+  author: kaushika-msft  #Required; your GitHub user alias, with correct capitalization.
+  ms.author: kaushika #Required; microsoft alias of author; optional team alias.
   ms.date: 04/06/2026
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new

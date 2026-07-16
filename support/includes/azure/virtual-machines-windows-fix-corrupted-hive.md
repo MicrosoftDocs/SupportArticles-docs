@@ -1,6 +1,6 @@
 ---
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 ms.service: azure-virtual-machines
 ms.topic: include
 ms.date: 06/17/2024

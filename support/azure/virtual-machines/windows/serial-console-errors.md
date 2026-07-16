@@ -3,14 +3,14 @@ title: Azure Serial Console errors
 description: Common errors within the Azure Serial Console
 services: virtual-machines
 documentationcenter: ''
-author: JarrettRenshaw
+author: kaushika-msft
 manager: dcscontentpm
 tags: azure-resource-manager
 ms.service: azure-virtual-machines
 ms.tgt_pltfrm: vm
 ms.workload: infrastructure-services
 ms.date: 10/16/2025
-ms.author: jarrettr
+ms.author: kaushika
 ms.custom: sap:Cannot connect to my VM
 ---
 

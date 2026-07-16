@@ -2,8 +2,8 @@
 title: Troubleshoot an Application Gateway in Azure – ILB ASE
 description: "Troubleshoot backend certificate issues with Application Gateway using an internal load balancer ASE in Azure. Get solutions now."
 services: application-gateway
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 manager: dcscontentpm
 ms.service: azure-application-gateway
 ms.topic: troubleshooting

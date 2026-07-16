@@ -3,8 +3,8 @@ title: Troubleshoot session affinity issues
 titleSuffix: Azure Application Gateway
 description: Troubleshoot session affinity issues in Azure Application Gateway to keep user requests on the same backend server and improve app reliability. Follow the steps now.
 services: application-gateway
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 ms.service: azure-application-gateway
 ms.topic: troubleshooting
 ms.date: 03/27/2026

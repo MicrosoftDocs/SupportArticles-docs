@@ -4,8 +4,8 @@ description: Describes how to get the Azure Cloud Service (extended support) con
 ms.date: 04/01/2024
 ms.topic: how-to
 ms.reviewer: maheshallu, piw, v-weizhu
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 ms.service: azure-service-fabric
 ms.custom: sap:Service Availability and Performance
 ---

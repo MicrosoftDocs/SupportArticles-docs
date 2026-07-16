@@ -2,8 +2,8 @@
 title: Troubleshoot network security group configuration problems in Azure Bastion
 description: Resolve network security group (NSG) configuration problems in Azure Bastion by identifying common causes and fixes for NSG-related problems. Find fixes.
 services: bastion
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 manager: dcscontentpm
 ms.service: azure-bastion
 ms.topic: troubleshooting

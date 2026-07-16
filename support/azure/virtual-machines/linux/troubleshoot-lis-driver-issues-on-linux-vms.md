@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot LIS/Hyper-V Driver Issues on Linux Virtual Machines
 description: Provides solutions to Azure Linux VM issues that occur because Hyper-V drivers are missing or disabled.
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 ms.service: azure-virtual-machines
 ms.date: 02/26/2025
 ms.reviewer: divargas, msaenzbo, v-weizhu

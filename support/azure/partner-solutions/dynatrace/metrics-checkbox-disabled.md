@@ -2,7 +2,7 @@
 title: Metrics Collection Checkbox for Dynatrace Is Unavailable  
 description: Resolve the issue in which the metrics collection checkbox is unavailable because the user lacks Owner permissions on the subscription.
 author: agrimayadav
-ms.author: jarrettr
+ms.author: kaushika
 ms.reviewer: v-ryanberg
 manager: dcscontentpm
 ms.service: partner-services
