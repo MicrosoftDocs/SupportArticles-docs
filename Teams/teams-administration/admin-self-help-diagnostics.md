@@ -1,8 +1,8 @@
 ---
 title: Self-help diagnostics for Teams administrators
 manager: dcscontentpm
-ms.reviewer: salarson, v-kccross
-ms.date: 02/27/2025
+ms.reviewer: salarson, djball, v-kccross
+ms.date: 07/13/2026
 audience: Admin|ITPro|Developer
 ms.topic: troubleshooting
 search.appverid:
@@ -16,10 +16,17 @@ ms.custom:
   - CI 188816
   - CI 193380
   - CSSTroubleshoot
+ai-usage: ai-assisted
 description: Describes how to run self-help diagnostics for Teams administrators.
 ---
 
 # Self-help diagnostics for Microsoft Teams administrators
+
+## Summary
+
+This article describes the diagnostics that administrators can run in the Microsoft 365 admin center and the connectivity tests that users can run in the Microsoft Remote Connectivity Analyzer tool to diagnose issues with the Teams app. 
+
+## Diagnostics and Connectivity tests
 
 To keep pace with the growth in usage of Microsoft Teams, Microsoft has developed Teams-specific diagnostics that cover top support issues and configuration tasks for which administrators most commonly request help. These diagnostics can't make changes to your tenant, but they provide insights into the issues that affect them and instructions to fix the issues quickly.
 
@@ -98,6 +105,7 @@ The following tables list the diagnostics that are currently available in the Mi
 |Checks whether a user account meets the requirements to schedule a Teams Meeting on behalf of a delegator.||[Teams Meeting Delegation](https://testconnectivity.microsoft.com/tests/TeamsMeetingDelegation/input)|[Resolve interaction issues between Teams and Exchange Server](../exchange-integration/teams-exchange-interaction-issue.md)|
 |Checks whether a user account meets the requirements to transcribe a Teams meeting.|[Run Tests: Unable to transcribe a meeting in Teams](https://aka.ms/MeetingTranscribeDiag)||[Admins- Manage transcription and captions for Teams meetings](/microsoftteams/meeting-transcription-captions)|
 |Checks whether a user account meets the requirements to create and schedule town halls or webinars in Teams.||[Teams Virtual Events](https://testconnectivity.microsoft.com/tests/TeamsVirtualEvents/input)|[Overview of meetings, webinars, and town halls](/microsoftteams/overview-meetings-webinars-town-halls)|
+|Checks meeting policies, guest access settings, external access settings, federation configuration, lobby settings, cross-tenant access settings, and identity classification to diagnose common issues that may prevent external users from joining Teams meetings.||[Teams Calendar App](https://testconnectivity.microsoft.com/tests/TeamsCalendarMissing/input)|[Plan for meetings with external participants in Microsoft Teams](/microsoftteams/plan-meetings-external-participants)|
 
 ### Presence
 
