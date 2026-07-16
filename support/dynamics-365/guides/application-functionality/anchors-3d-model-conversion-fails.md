@@ -1,8 +1,6 @@
 ---
 title: Fail to convert a 3D model to an object anchor
 description: Provides a resolution for an issue where you fail to convert a 3D model to an object anchor in Microsoft Dynamics 365 Guides.
-ms.author: alwinv
-author: alwinv
 ms.date: 11/14/2023
 ms.reviewer: v-wendysmith, mhart
 ms.custom: sap:Application Functionality

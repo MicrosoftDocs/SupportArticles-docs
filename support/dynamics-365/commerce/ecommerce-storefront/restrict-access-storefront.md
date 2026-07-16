@@ -1,8 +1,6 @@
 ---
 title: Restrict access to a storefront during testing or development in Dynamics 365 Commerce
-description: Introduces how to restrict access to a Microsoft Dynamics 365 Commerce storefront while performing internal testing or development.
-author: josaw1 
-ms.author: josaw
+description: Introduces how to restrict access to a Microsoft Dynamics 365 Commerce storefront while performing internal testing or development. 
 ms.reviewer: rassadi, brstor
 ms.date: 09/01/2023
 ms.custom: sap:Deployment and provisioning\Issues with e-commerce custom domains and Azure Front Door

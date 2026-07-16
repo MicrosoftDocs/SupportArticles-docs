@@ -3,8 +3,6 @@ title: Duplicate security roles after importing a solution
 description: Provides a workaround for an issue where duplicate security roles occur after you import a solution.
 ms.reviewer: matp
 ms.date: 04/17/2025
-author: nhelgren
-ms.author: risquass
 ms.custom: sap:Working with Solutions\Solution import - Other errors
 ---
 # Duplicate security roles occur after you import a solution
