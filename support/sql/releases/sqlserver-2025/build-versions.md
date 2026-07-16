@@ -1,7 +1,7 @@
 ---
 title: SQL Server 2025 build versions (KB5005684)
 description: This article lists cumulative update and GDR builds for SQL Server 2025.
-ms.date: 06/17/2026
+ms.date: 07/16/2026
 ms.update-cycle: 1095-days
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5005684
 appliesto:
@@ -16,7 +16,8 @@ This article lists the Microsoft SQL Server 2025 builds that were released after
 
 | Cumulative update name | SQL Server build version | SQL Server (sqlservr.exe) file version | Analysis Services build version | Analysis Services (msmdsrv.exe) file version | Knowledge Base number             | Release date      |
 | ---------------------- | ------------------------ | -------------------------------------- | ------------------------------- | -------------------------------------------- | --------------------------------- | ----------------- |
-| CU6 (Latest)           | 17.0.4055.5              | 2025.170.4055.5                        | 17.0.25.223                     | 2025.170.25.223                              | [KB5093421](cumulativeupdate6.md) | June 17, 2026     |
+| CU7 (Latest)           | 17.0.4065.4              | 2025.170.4065.4                        | 17.0.25.223                     | 2025.170.25.223                              | [KB5096981](https://support.microsoft.com/help/5096981) | July 16, 2026     |
+| CU6                    | 17.0.4055.5              | 2025.170.4055.5                        | 17.0.25.223                     | 2025.170.25.223                              | [KB5093421](cumulativeupdate6.md) | June 17, 2026     |
 | CU5                    | 17.0.4045.5              | 2025.170.4045.5                        | 17.0.25.223                     | 2025.170.25.223                              | [KB5084896](cumulativeupdate5.md) | May 20, 2026      |
 | CU4                    | 17.0.4035.5              | 2025.170.4035.5                        | 17.0.25.223                     | 2025.170.25.223                              | [KB5081495](cumulativeupdate4.md) | April 16, 2026    |
 | CU3                    | 17.0.4025.3              | 2025.170.4025.3                        | 17.0.25.223                     | 2025.170.25.223                              | [KB5077896](cumulativeupdate3.md) | March 12, 2026    |
