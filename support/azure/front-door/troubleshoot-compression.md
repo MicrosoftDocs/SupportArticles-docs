@@ -2,8 +2,8 @@
 title: Troubleshoot file compression
 titleSuffix: Azure Front Door
 description: Learn how to troubleshoot issues with file compression in Azure Front Door. This article covers several possible causes.
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 ms.service: azure-frontdoor
 ms.topic: troubleshooting
 ms.date: 11/18/2024

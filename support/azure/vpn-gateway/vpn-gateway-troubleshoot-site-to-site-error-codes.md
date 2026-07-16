@@ -2,8 +2,8 @@
 title: Troubleshoot Azure site-to-site issues using error codes
 titleSuffix: Azure VPN Gateway
 description: Common error codes and solutions for Azure VPN Gateway site-to-site connections.
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 ms.service: azure-vpn-gateway
 ms.topic: troubleshooting
 ms.date: 03/31/2025

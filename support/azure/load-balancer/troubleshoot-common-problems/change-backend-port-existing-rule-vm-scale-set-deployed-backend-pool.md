@@ -3,8 +3,8 @@ title: Troubleshoot changing the backend port for an existing load-balancing rul
 description: Learn how to troubleshoot changing the backend port for an existing load-balancing rule of a load balancer that has a virtual machine scale set deployed in the backend pool, including the steps to remove the health probe, update the port, and reconfigure the health probe.
 services: load-balancer
 ms.service: azure-load-balancer
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 manager: dcscontentpm
 ms.topic: troubleshooting
 ms.date: 04/29/2026

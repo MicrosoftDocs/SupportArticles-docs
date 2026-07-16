@@ -4,8 +4,8 @@ description: Learn how to troubleshoot intermittent connection errors and relate
 ms.topic: troubleshooting
 ms.date: 10/14/2025
 ms.custom: sap:Networking,security-recommendations
-ms.author: jarrettr
-author: JarrettRenshaw
+ms.author: kaushika
+author: kaushika-msft
 manager: dcscontentpm
 ms.reviewer: msangapu
 ms.service: azure-app-service

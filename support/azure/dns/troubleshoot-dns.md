@@ -2,8 +2,8 @@
 title: Troubleshoot Azure DNS
 description: Learn how to troubleshoot Azure DNS zone delegation, record creation, and name resolution issues so you can restore reliable DNS quickly-start now.
 services: dns
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 manager: dcscontentpm
 ms.service: azure-dns
 ms.topic: troubleshooting

@@ -3,7 +3,7 @@ title: OS start-up – Computer restarted unexpectedly or encountered an unexpec
 description: This article provides steps to resolve issues where the VM experiences an unexpected restart or error while installing Windows.
 services: virtual-machines, azure-resource-manager
 documentationcenter: ''
-author: JarrettRenshaw
+author: kaushika-msft
 manager: dcscontentpm
 tags: azure-resource-manager
 ms.service: azure-virtual-machines

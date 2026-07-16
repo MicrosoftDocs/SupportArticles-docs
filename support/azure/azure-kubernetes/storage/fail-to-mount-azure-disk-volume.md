@@ -2,8 +2,8 @@
 title: Unable to Mount Azure Disk Volumes
 description: Troubleshoot Azure disk volume mount errors in AKS, identify common causes, and apply fixes to restore pod startup. Start resolving issues now.
 ms.date: 03/22/2025
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 ms.reviewer: chiragpa, akscsscic, v-weizhu
 ms.service: azure-kubernetes-service
 ms.custom: sap:Storage

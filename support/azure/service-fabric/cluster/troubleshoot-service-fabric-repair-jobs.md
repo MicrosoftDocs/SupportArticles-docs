@@ -2,7 +2,7 @@
 title: Troubleshoot unapproved repair jobs using Service Fabric Explorer
 description: Learn how to troubleshoot stuck repair jobs in Azure Service Fabric clusters by using Service Fabric Explorer. Analyze repair task states, safety checks, and health checks to resolve approval issues.
 ms.topic: troubleshooting
-ms.author: jarrettr
+ms.author: kaushika
 ms.reviewer: ashukumar, v-ryanberg
 ms.editor: v-gsitser
 ms.service: azure-service-fabric

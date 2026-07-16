@@ -2,8 +2,8 @@
 title: Troubleshoot using Reference String
 titleSuffix: Azure Front Door
 description: This article provides information about what a Reference String is, how to collect them, and use the Azure portal diagnostic tool for troubleshooting 4xx and 5xx errors.
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 ms.service: azure-frontdoor 
 ms.topic: troubleshooting
 ms.date: 12/03/2024

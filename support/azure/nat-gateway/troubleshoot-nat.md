@@ -3,8 +3,8 @@ title: Troubleshoot Azure NAT Gateway
 titleSuffix: Azure NAT Gateway
 description: Troubleshoot Azure NAT Gateway configuration, deployment, and connectivity issues. Learn how to fix common errors and restore outbound internet access.
 services: virtual-network
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 manager: dcscontentpm
 ms.service: azure-nat-gateway
 ms.topic: troubleshooting

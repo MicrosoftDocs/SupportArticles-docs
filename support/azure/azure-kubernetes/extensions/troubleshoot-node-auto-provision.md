@@ -2,8 +2,8 @@
 title: Troubleshoot Node Auto-Provisioning Managed Add-on
 description: Troubleshoot node auto-provisioning (NAP) issues in Azure Kubernetes Service (AKS) and fix scaling, networking, and quota errors to restore reliability. Start now.
 ms.service: azure-kubernetes-service
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 manager: dcscontentpm
 ms.topic: troubleshooting
 ms.date: 04/09/2026

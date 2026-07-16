@@ -4,7 +4,7 @@ description: Describes common scenarios that use Application Insights to trouble
 ms.date: 04/01/2024
 ms.reviewer: patcatun
 author: JerryZhangMS
-ms.author: jarrettr
+ms.author: kaushika
 ms.service: azure-service-fabric
 ms.custom: sap:Service Availability and Performance
 ---

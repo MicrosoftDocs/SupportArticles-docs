@@ -2,8 +2,8 @@
 title: Azure Kubernetes Service (AKS) Common Error Codes
 description: Find common AKS error codes, understand causes, and follow mitigation links to fix cluster create, upgrade, and networking issues quickly. Start troubleshooting now.
 ms.date: 10/23/2025
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 manager: dcscontentpm
 ms.topic: error-reference
 ms.reviewer: v-ryanberg, chiragpa, albarqaw

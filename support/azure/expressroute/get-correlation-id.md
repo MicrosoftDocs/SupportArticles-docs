@@ -2,8 +2,8 @@
 title: Get operation correlation ID from Activity Log
 titleSuffix: Azure ExpressRoute
 description: Learn how to find the correlation ID for an ExpressRoute operation in the Azure Activity Log to troubleshoot faster across services—get started now.
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 ms.topic: troubleshooting
 ms.service: azure-expressroute
 ms.date: 11/18/2024

@@ -2,8 +2,8 @@
 title: Troubleshoot Azure VPN Client
 titleSuffix: Azure VPN Gateway
 description: Learn how to troubleshoot VPN Gateway point-to-site connections that use the Azure VPN Client.
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 ms.service: azure-vpn-gateway
 ms.topic: troubleshooting
 ms.date: 09/05/2024

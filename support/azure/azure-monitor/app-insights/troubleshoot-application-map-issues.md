@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot Application Map Issues
 description: Provides general recommendations and specific suggestions for Application map issues.
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 manager: dcscontentpm
 ms.topic: troubleshooting
 ms.date: 10/14/2025

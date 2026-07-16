@@ -2,8 +2,8 @@
 title: Azure ExpressRoute ARP tables - Troubleshooting
 description: Learn how to get and use ExpressRoute ARP tables to troubleshoot layer 2 connectivity issues on your circuit. Follow the steps to diagnose problems faster.
 services: expressroute
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 ms.service: azure-expressroute
 ms.topic: troubleshooting
 ms.date: 01/31/2025

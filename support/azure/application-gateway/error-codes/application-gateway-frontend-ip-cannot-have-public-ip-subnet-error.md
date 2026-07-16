@@ -2,7 +2,7 @@
 title: Troubleshoot ApplicationGatewayFrontendIpCannotHavePublicIpAndSubnet error 
 description: This article discusses how to resolve the ApplicationGatewayFrontendIpCannotHavePublicIpAndSubnet error when you try to create or modify a private-only application gateway.
 ms.date: 02/13/2026
-ms.author: jarrettr
+ms.author: kaushika
 ms.editor: v-gsitser
 ms.reviewer: giverm, v-ryanberg
 ms.service: azure-application-gateway

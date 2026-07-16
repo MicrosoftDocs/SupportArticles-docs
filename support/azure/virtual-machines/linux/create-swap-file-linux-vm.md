@@ -5,8 +5,8 @@ ms.date: 10/22/2025
 ms.service: azure-virtual-machines
 ms.custom: VM Performance
 ms.collection: linux
-ms.author: jarrettr
-author: JarrettRenshaw
+ms.author: kaushika
+author: kaushika-msft
 ms.reviewer: mabicca
 ---
 

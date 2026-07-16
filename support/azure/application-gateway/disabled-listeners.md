@@ -2,8 +2,8 @@
 title: Understanding disabled listeners
 titleSuffix: Azure Application Gateway
 description: The article explains the details of a disabled listener and ways to resolve the problem.
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 ms.service: azure-application-gateway
 ms.topic: troubleshooting
 ms.date: 03/27/2026

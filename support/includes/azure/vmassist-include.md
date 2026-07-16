@@ -1,5 +1,5 @@
 ---
-author: JarrettRenshaw
+author: kaushika-msft
 manager: dcscontentpm
 ms.service: azure-virtual-machines
 ms.topic: include

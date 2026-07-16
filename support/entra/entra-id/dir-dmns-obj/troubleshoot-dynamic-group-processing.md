@@ -1,8 +1,8 @@
 ---
 title: Troubleshooting Groups with dynamic membership processing in Microsoft Entra ID
 description: Learn how to troubleshoot dynamic membership processing by using pause and resume PowerShell samples for groups and administrative units.
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 ms.reviewer: yuhko, barclayn, v-weizhu
 ms.date: 04/24/2025
 ms.service: entra-id

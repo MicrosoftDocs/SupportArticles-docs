@@ -2,7 +2,7 @@
 title: Resolve Issues in Configuring Long-Term Storage for Azure Activity Logs
 description: Discusses how to configure long-term storage for Azure Activity Logs past the default 90 days. 
 ms.date: 01/14/2026
-ms.author: jarrettr
+ms.author: kaushika
 ms.editor: v-gsitser
 ms.reviewer: v-ryanberg 
 ms.service: azure-monitor

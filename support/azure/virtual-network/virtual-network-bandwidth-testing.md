@@ -2,8 +2,8 @@
 title: Test virtual machine network throughput by using NTTTCP
 description: Use the NTTTCP tool to test network bandwidth and throughput performance for Windows and Linux VMs on a virtual network.
 services: virtual-network
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 ms.service: azure-virtual-network
 ms.custom: sap:Performance,linux-related-content
 ms.topic: troubleshooting

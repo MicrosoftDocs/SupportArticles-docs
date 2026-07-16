@@ -2,8 +2,8 @@
 title: Troubleshoot Outbound SMTP Connectivity in Azure
 description: Resolve outbound SMTP connectivity issues in Azure VMs, choose a reliable email delivery method, and fix port 25 blocks to restore mail flow.
 services: virtual-network
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 manager: dcscontentpm
 ms.service: azure-virtual-network
 ms.topic: troubleshooting

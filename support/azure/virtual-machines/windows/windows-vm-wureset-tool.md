@@ -1,8 +1,8 @@
 ---
 title: Azure Virtual Machines (VM) Windows Servicing Stack Reset Tool
 description: Azure VM Windows Servicing Stack Reset Tool
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 manager: dcscontentpm
 ms.service: azure-virtual-machines
 ms.date: 11/18/2025

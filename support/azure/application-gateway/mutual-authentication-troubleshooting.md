@@ -2,8 +2,8 @@
 title: Troubleshoot mutual authentication on Azure Application Gateway 
 description: Learn how to troubleshoot mutual authentication on Application Gateway
 services: application-gateway
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 ms.service: azure-application-gateway
 ms.topic: troubleshooting
 ms.date: 03/27/2026

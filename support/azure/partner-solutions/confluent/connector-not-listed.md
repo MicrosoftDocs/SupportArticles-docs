@@ -2,7 +2,7 @@
 title: Confluent connector isn't in the list of connectors
 description: Troubleshoot the scenario in which the Confluent connector isn't in the list of connectors in Azure.
 author: praveenrajap
-ms.author: jarrettr
+ms.author: kaushika
 ms.reviewer: v-ryanberg
 ms.custom: sap:Confluent on Azure
 ms.service: partner-services

@@ -2,7 +2,7 @@
 title: Dynatrace Free Trial Limitations on Azure
 description: Understand the limitations of Dynatrace free trial resources on Azure.
 author: agrimayadav
-ms.author: jarrettr 
+ms.author: kaushika 
 ms.reviewer: v-ryanberg
 manager: dcscontentpm
 ms.service: partner-services 

@@ -3,8 +3,8 @@ title: Troubleshoot WAF for Azure Application Gateway
 titleSuffix: Azure Web Application Firewall
 description: Troubleshoot Web Application Firewall (WAF) for Azure Application Gateway to diagnose rule violations, reduce false positives, and allow valid traffic. Start now.
 ms.service: azure-web-application-firewall
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 manager: dcscontentpm
 ms.topic: troubleshooting
 ms.date: 04/06/2026

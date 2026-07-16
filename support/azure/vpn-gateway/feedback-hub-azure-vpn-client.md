@@ -1,8 +1,8 @@
 ---
 title: Report an Azure VPN Client problem with Feedback Hub
 description: Learn how to report problems for the Azure VPN Client using the Microsoft Feedback Hub app.
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 ms.service: azure-vpn-gateway
 ms.topic: how-to
 ms.date: 07/16/2024

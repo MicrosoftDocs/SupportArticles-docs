@@ -3,8 +3,8 @@ title: Troubleshoot outbound connectivity with Azure services
 titleSuffix: Azure NAT Gateway
 description: Troubleshoot outbound connectivity issues with Azure NAT Gateway and Azure services including AKS, App Services, and Azure Firewall. Resolve common NAT gateway problems now.
 services: virtual-network
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 manager: dcscontentpm
 ms.service: azure-nat-gateway
 ms.topic: troubleshooting

@@ -3,8 +3,8 @@ title: Troubleshoot Load Balancer in a failed state
 description: Learn how to identify and resolve issues when an Azure Load Balancer enters a failed state, including steps to recover the resource and restore traffic flow.
 services: load-balancer
 ms.service: azure-load-balancer
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 manager: dcscontentpm
 ms.topic: troubleshooting
 ms.date: 04/29/2026

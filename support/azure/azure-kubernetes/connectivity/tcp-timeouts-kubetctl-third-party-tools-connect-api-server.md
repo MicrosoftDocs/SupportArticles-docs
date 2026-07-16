@@ -3,8 +3,8 @@ title: TCP time-outs when kubectl or other 3rd-party tools connect to API
 description: Learn how to troubleshoot TCP time-outs when kubectl or third-party tools connect to the API server in Azure Kubernetes Service (AKS).
 ms.topic: article
 ms.date: 06/03/2024
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 ms.service: azure-kubernetes-service
 ms.custom: sap:Connectivity,innovation-engine
 ---

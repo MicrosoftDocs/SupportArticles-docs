@@ -1,8 +1,8 @@
 ---
 title: "Error AADSTS76021 (ApplicationRequiresSignedRequests) in SAML authentication: The request sent by client is not signed"
 description: Discusses a problem in which a user receives error AADSTS76021 when trying to sign in.
-ms.author: jarrettr
-author: JarrettRenshaw
+ms.author: kaushika
+author: kaushika-msft
 ms.topic: troubleshooting
 ms.service: entra-id
 ms.date:     01/14/2026

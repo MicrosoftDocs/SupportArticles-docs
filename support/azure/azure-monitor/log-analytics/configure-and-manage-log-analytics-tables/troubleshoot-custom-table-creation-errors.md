@@ -2,8 +2,8 @@
 title: Troubleshoot Custom Table Creation Errors in Azure
 description: Troubleshooting guide for custom table creation errors in Azure.
 ms.date: 09/30/2025
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 ms.reviewer: v-gsitser, v-ryanberg, neghuman, vikamala
 ms.service: azure-monitor
 ms.custom: Configure and Manage Log analytics tables

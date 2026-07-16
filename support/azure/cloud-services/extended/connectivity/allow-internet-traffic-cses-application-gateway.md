@@ -3,8 +3,8 @@ title: Allow internet traffic to Cloud Services (extended support) by using an a
 description: Configure traffic from the internet to Azure Cloud Services (extended support) by using a public application gateway together with an internal load balancer.
 ms.date: 02/19/2024
 ms.topic: how-to
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 editor: v-jsitser
 ms.reviewer: maheshallu, piw, v-leedennis
 ms.service: azure-service-fabric

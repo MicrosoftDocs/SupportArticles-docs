@@ -2,7 +2,7 @@
 title: Troubleshoot forwarding Azure activity logs to diagnostic settings
 description: Learn why Azure activity logs stop forwarding and scripts fail after moving to diagnostic settings. Use this article to fix the problem.
 ms.date: 03/31/2026
-ms.author: jarrettr
+ms.author: kaushika
 ms.editor: v-gsitser
 ms.reviewer: v-ryanberg 
 ms.service: azure-monitor

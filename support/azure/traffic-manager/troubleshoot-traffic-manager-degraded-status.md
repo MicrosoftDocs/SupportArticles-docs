@@ -3,8 +3,8 @@ title: Troubleshoot Azure Traffic Manager degraded status
 description: Learn how to troubleshoot Azure Traffic Manager degraded status by enabling logging and resolving endpoint probe failures. Fix your profile today.
 services: traffic-manager
 ms.service: azure-traffic-manager
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 manager: dcscontentpm
 ms.topic: troubleshooting
 ms.date: 04/06/2026

@@ -2,8 +2,8 @@
 title: Troubleshoot network virtual appliance issues in Azure
 description: Troubleshoot Network Virtual Appliance (NVA) issues in Azure, validate core platform requirements, and use these steps to restore reliable connectivity.
 services: virtual-network
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 manager: dcscontentpm
 ms.service: azure-virtual-network
 ms.topic: troubleshooting

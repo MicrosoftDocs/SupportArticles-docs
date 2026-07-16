@@ -9,7 +9,7 @@ ms.service: azure-virtual-machines
 ms.tgt_pltfrm: vm
 ms.workload: infrastructure-services
 ms.date: 01/27/2026
-ms.author: jarrettr
+ms.author: kaushika
 ms.reviewer: mbifeld
 ms.custom: sap:Cannot connect to my VM
 ---

@@ -2,8 +2,8 @@
 title: Troubleshoot Azure Private Endpoint connectivity problems
 description: Diagnose and fix Azure Private Endpoint connectivity problems with step-by-step guidance. Validate your setup and restore secure access today.
 ms.service: azure-private-link
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 manager: dcscontentpm
 ms.topic: troubleshooting
 ms.date: 04/06/2026

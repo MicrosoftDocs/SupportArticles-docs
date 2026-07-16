@@ -2,7 +2,7 @@
 title: Can't connect to Azure Kubernetes Fleet Manager hub cluster
 description: This article provides guidance for actions to take when you can't connect to an Azure Kubernetes Fleet Manager hub cluster.
 ms.date: 01/29/2026
-ms.author: jarrettr
+ms.author: kaushika
 ms.reviewer: chiragpa, v-ryanberg 
 ms.service: azure-kubernetes-fleet-manager
 ms.custom: sap:Other issue or questions related to Fleet manager

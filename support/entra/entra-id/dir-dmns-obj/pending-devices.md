@@ -1,8 +1,8 @@
 ---
 title: Pending devices in Microsoft Entra ID
 description: Learn why pending devices occur in Microsoft Entra ID and how to troubleshoot registration issues for hybrid joined devices. Resolve problems now.
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 ms.date: 10/10/2023
 ms.service: entra-id
 ms.custom: sap:Devices

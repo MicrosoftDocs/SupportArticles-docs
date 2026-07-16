@@ -1,8 +1,8 @@
 ---
 title: Diagnose a virtual machine network traffic filter problem
 description: Learn how to diagnose a virtual machine network traffic filter problem by viewing the effective security rules for a virtual machine.
-author: JarrettRenshaw
-ms.author: jarrettr
+author: kaushika-msft
+ms.author: kaushika
 ms.service: azure-virtual-network
 ms.topic: troubleshooting
 ms.date: 04/01/2025

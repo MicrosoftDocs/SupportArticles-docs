@@ -2,7 +2,7 @@
 title: Troubleshoot Default API Key Problems in Datadog
 description: Resolve Datadog agent installation failures caused by a missing default API key, or change an incorrect default API key. 
 author: agrimayadav
-ms.author: jarrettr
+ms.author: kaushika
 ms.service: partner-services
 ms.topic: troubleshooting
 ms.date: 09/22/2025
