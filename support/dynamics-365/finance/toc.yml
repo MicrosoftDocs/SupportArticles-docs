@@ -1,3 +1,4 @@
+items:
 - name: Dynamics 365 Finance
   href: welcome-finance.yml
 - name: Budgeting
@@ -66,8 +67,6 @@
       items:
         - name: Can't delete a financial dimension value
           href: general-ledger/blocked-deleting-dimension-value.md
-        - name: Common dimension-related errors
-          href: general-ledger/common-dimension-related-errors.md
         - name: Default financial dimension values are incorrect
           href: general-ledger/incorrect-default-dimension-values.md
         - name: Financial dimension activation errors
@@ -80,6 +79,8 @@
           href: general-ledger/cant-find-dimension-value.md
         - name: Financial tags are missing or not populated on journals, postings, or imports
           href: general-ledger/financial-tags-missing-not-populated.md
+        - name: Fix financial dimension-related errors
+          href: general-ledger/common-dimension-related-errors.md
         - name: Source entity isn't available in the "Use values from" list
           href: general-ledger/dimensions-missing-use-values-from-source.md
         - name: Source record not found error for a financial dimension value
