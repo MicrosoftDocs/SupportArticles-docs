@@ -21,6 +21,13 @@ This article requires Azure CLI version 2.67.0 or a later version. To find the v
 
 For more detailed information about the upgrade process, see the "Upgrade an AKS cluster" section in [Upgrade an Azure Kubernetes Service (AKS) cluster](/azure/aks/upgrade-cluster#upgrade-an-aks-cluster).
 
+> [!TIP]
+> Before starting an AKS upgrade, run the **Upgrade readiness** check in the Azure portal:
+>
+> **AKS cluster** > **Settings** > **Upgrades** > **Upgrade version**
+>
+> After selecting the target Kubernetes version, select **Check** next to **Upgrade readiness**. This pre-validation can identify potential upgrade blockers, including Pod Disruption Budget (PDB) configurations that might prevent successful node draining during the upgrade.
+
 ## Symptoms
 
 An AKS cluster upgrade operation fails with one of the following error messages:
