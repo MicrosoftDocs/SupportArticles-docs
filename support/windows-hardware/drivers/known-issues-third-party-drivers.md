@@ -2,7 +2,7 @@
 ms.custom: SourcePlatform=Content
 ai-usage: ai-assisted
 ms.custom.created: 07/17/2026
-author: Ryoichi Iwaida
+author: riwaida
 ms.author: riwaida
 ms.service: windows-hardware-driver-quality
 ms.topic: troubleshooting
