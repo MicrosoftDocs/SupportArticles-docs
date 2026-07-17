@@ -75,6 +75,8 @@
     href: mediatype-default-value-not-applied-in-psa.md
   - name: Recurring icon is black when printing a calendar
     href: recurring-icon-background-is-black.md
+  - name: Third-party drivers fail on USB IPP multi-function printers
+    href: known-issues-third-party-drivers.md
 
 - name: Storage Driver
   items:
