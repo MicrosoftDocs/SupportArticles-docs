@@ -1,12 +1,13 @@
 ---
 title: Fix Financial Dimension Errors in Dynamics 365 Finance
 description: Troubleshoot and fix financial dimension issues, such as inactive dimensions, suspended values, and derived dimension rule conflicts, in Dynamics 365 Finance.
-ms.date: 03/10/2026
+ms.date: 07/17/2026
 ms.reviewer: anaborges, setharvila, ethankallett, twheeloc, v-shaywood
 ms.custom: sap:General ledger - Setup, transactions and reporting\Issues with financial dimensions and financial tags
+ai-usage: ai-assisted
 ---
 
-# Common dimension-related errors
+# Fix financial dimension-related errors in Dynamics 365 Finance
 
 ## Summary
 
@@ -16,137 +17,18 @@ This article helps you resolve common [financial dimension](/dynamics365/finance
 
 You might receive one of the following error messages when you work with financial dimensions in Dynamics 365 Finance:
 
-- [Unable to return DimensionAttributeValue record for \<DimensionName>](#unable-to-return-dimensionattributevalue-record)
-- [The financial dimension name \<DimensionName> contains invalid characters.](#financial-dimension-name-contains-invalid-characters)
-- [The value \<Value> doesn't exist for \<DimensionName>.](#value-doesnt-exist-for-financial-dimension)
-- [\<DimensionName> is suspended.](#dimension-value-is-suspended)
-- [\<DimensionName> isn't active.](#dimension-value-isnt-active)
 - [The combination wasn't validated beyond the \<DimensionName> financial dimension.](#combination-not-validated-beyond-financial-dimension)
 - [You must select a value in the \<DimensionName> field in combination with the following dimensions values that are valid.](#blank-isnt-allowed-for-dimension-in-combination)
 - [Blank isn't allowed for \<DimensionName> for the combination.](#blank-isnt-allowed-for-dimension-in-combination)
 - [\<DimensionName> is not an allowed value in combination with the following dimensions values that are valid.](#dimension-value-not-allowed-in-combination)
+- [\<DimensionName> is suspended.](#dimension-value-is-suspended)
+- [\<DimensionName> isn't active.](#dimension-value-isnt-active)
 - [Dimension values were validated with this advanced rule structure or account structure \<RuleOrAccountStructureName>](#dimension-values-validated-with-account-structure-or-advanced-rule)
 - [\<DimensionValue> isn't a valid dimension value in account structure.](#not-a-valid-dimension-value-in-account-structure)
 - [The \<DimensionName> dimension with value \<Value> isn't allowed due to derived dimension rules. The allowed value should be \<AllowedValue>.](#value-isnt-allowed-due-to-derived-dimension-rules)
-
-## Unable to return DimensionAttributeValue record
-
-You receive the following error message:
-
-> Unable to return DimensionAttributeValue record for \<DimensionName>
-
-This error message means that the system can't find the dimension value. Several conditions can cause this issue.
-
-### Add the missing dimension value
-
-1. Go to **General ledger** > **Chart of accounts** > **Dimensions** > **Financial dimensions**.
-1. On the **Action Pane**, select **Financial dimension values**.
-1. Check whether the dimension value exists.
-1. If the value doesn't exist, add it.
-
-### Check XDS and security role restrictions
-
-[Extensible data security (XDS)](/dynamics365/fin-ops-core/dev-itpro/sysadmin/extensible-data-security-policies) policies that are combined with an insufficient security role might prevent you from viewing the dimension value. If XDS filters are applied to the backing entity, and your role doesn't include access to the company or entity where the value resides, the dimension value might appear blank or missing.
-
-To check and assign the appropriate security role, follow these steps:
-
-1. Go to **System administration** > **Users** > **Users**.
-1. Select the affected user.
-1. Select **Roles** > **Assign organizations**.
-1. Review the access scope, and grant access to the required organizations. To test whether access restrictions cause the issue:
-   1. Select **Grant access to all organizations**, and check whether the dimension value appears.
-   1. If the dimension value appears, clear the **Grant access to all organizations** checkbox, and then grant access to only the required organizations.
-
-## Financial dimension name contains invalid characters
-
-You receive the following error message:
-
-> The financial dimension name \<DimensionName> contains invalid characters.
-
-[Financial dimension](/dynamics365/finance/general-ledger/financial-dimensions) names must follow specific naming conventions:
-
-- Must start by using an underscore or a letter (either lowercase or uppercase)
-- Can contain only underscores, letters, or digits after the first character
-- Can't contain system field names such as `RecId`
-
-To fix this issue, follow these steps:
-
-1. Go to **General ledger** > **Chart of accounts** > **Dimensions** > **Financial dimensions**.
-1. Review the dimension name to make sure that it follows the naming conventions.
-1. Rename the dimension, if it's necessary. Don't use system field names or invalid characters.
-
-## Value doesn't exist for financial dimension
-
-You receive the following error message:
-
-> The value \<Value> doesn't exist for \<DimensionName>.
-
-This error typically means that the dimension value that you entered doesn't exist in the system.
-
-To verify the dimension value, follow these steps:
-
-1. Go to **General ledger** > **Chart of accounts** > **Dimensions** > **Financial dimensions**.
-1. On the **Action Pane**, select **Financial dimension values**.
-1. Search for the value to verify that it exists.
-
-If the dimension value doesn't appear, verify that you're in the correct legal entity. Certain entity-backed dimensions are company-specific and don't appear outside the company where you created them.
-
-If the dimension value exists but you still receive this error message, try the following workaround:
-
-1. Rename the dimension value to a temporary name.
-1. Revert the name to the original name.
-
-> [!NOTE]
-> The rename process takes time because it runs as a background job through the Data Maintenance portal. To monitor the progress:
->
-> 1. Go to **System administration** > **Periodic tasks** > **Data maintenance**.
-> 1. Check the *Dimension value rename and modify chart of accounts delimiter process* job.
-
-## Dimension value is suspended
-
-You receive the following error message:
-
-> \<DimensionName> is suspended.
-
-The dimension value is suspended, either at the header level or as a legal entity override.
-
-### Reactivate the suspended dimension value
-
-1. Go to **General ledger** > **Chart of accounts** > **Dimensions** > **Financial dimensions**.
-1. Select the dimension type, and then select **Dimension values**.
-1. Check whether the dimension value is marked as suspended. Reactivate it, if necessary.
-
-### Check for default or derived dimensions that apply suspended values
-
-If you didn't directly enter the suspended segment into the ledger account, default dimensions or [derived dimensions](/dynamics365/finance/general-ledger/financial-dimensions#derived-dimensions) in your setup might be applying it. To investigate this issue:
-
-1. Review the main account for fixed dimensions that are suspended.
-1. Check the journal header default dimensions that might be automatically applied.
-1. Review the derived dimensions setup against each segment in the ledger account.
-1. Update your default dimension setup accordingly.
-
-## Dimension value isn't active
-
-You receive the following error message:
-
-> \<DimensionName> isn't active.
-
-The dimension value is inactive on the date of the transaction, either at the header level or as a legal entity override.
-
-### Reactivate the inactive dimension value
-
-1. Go to **General ledger** > **Chart of accounts** > **Dimensions** > **Financial dimensions**.
-1. Select the dimension type, and then select **Dimension values**.
-1. Check whether the dimension value is marked as inactive on the transaction date.
-
-### Check for default or derived dimensions that apply inactive values
-
-If you didn't directly enter the inactive segment into the ledger account, default dimensions or [derived dimensions](/dynamics365/finance/general-ledger/financial-dimensions#derived-dimensions) in your setup might be applying it:
-
-1. Review the main account for fixed dimensions that are inactive.
-1. Check the journal header default dimensions that might be automatically applied.
-1. Review the derived dimensions setup against each segment in the ledger account.
-1. Update your default dimension setup accordingly.
+- [Unable to return DimensionAttributeValue record for \<DimensionName>](#unable-to-return-dimensionattributevalue-record)
+- [The financial dimension name \<DimensionName> contains invalid characters.](#financial-dimension-name-contains-invalid-characters)
+- [The value \<Value> doesn't exist for \<DimensionName>.](#value-doesnt-exist-for-financial-dimension)
 
 ## Combination not validated beyond financial dimension
 
@@ -276,6 +158,52 @@ If you didn't directly enter the violating value, default dimensions or [derived
 1. Check the journal header default dimensions that might be automatically applied.
 1. Review the derived dimensions setup against each segment in the ledger account.
 1. Check whether [interunit dimensions](/dynamics365/finance/general-ledger/example-balanced-journals-interunit-accounting) are enabled. Interunit balancing can cause the system to validate a different main account or dimension value than what you entered.
+1. Update your default dimension setup accordingly.
+
+## Dimension value is suspended
+
+You receive the following error message:
+
+> \<DimensionName> is suspended.
+
+The dimension value is suspended, either at the header level or as a legal entity override.
+
+### Reactivate the suspended dimension value
+
+1. Go to **General ledger** > **Chart of accounts** > **Dimensions** > **Financial dimensions**.
+1. Select the dimension type, and then select **Dimension values**.
+1. Check whether the dimension value is marked as suspended. Reactivate it, if necessary.
+
+### Check for default or derived dimensions that apply suspended values
+
+If you didn't directly enter the suspended segment into the ledger account, default dimensions or [derived dimensions](/dynamics365/finance/general-ledger/financial-dimensions#derived-dimensions) in your setup might be applying it. To investigate this issue:
+
+1. Review the main account for fixed dimensions that are suspended.
+1. Check the journal header default dimensions that might be automatically applied.
+1. Review the derived dimensions setup against each segment in the ledger account.
+1. Update your default dimension setup accordingly.
+
+## Dimension value isn't active
+
+You receive the following error message:
+
+> \<DimensionName> isn't active.
+
+The dimension value is inactive on the date of the transaction, either at the header level or as a legal entity override.
+
+### Reactivate the inactive dimension value
+
+1. Go to **General ledger** > **Chart of accounts** > **Dimensions** > **Financial dimensions**.
+1. Select the dimension type, and then select **Dimension values**.
+1. Check whether the dimension value is marked as inactive on the transaction date.
+
+### Check for default or derived dimensions that apply inactive values
+
+If you don't directly enter the inactive segment into the ledger account, default dimensions or [derived dimensions](/dynamics365/finance/general-ledger/financial-dimensions#derived-dimensions) in your setup might apply it:
+
+1. Review the main account for fixed dimensions that are inactive.
+1. Check the journal header default dimensions that might be automatically applied.
+1. Review the derived dimensions setup against each segment in the ledger account.
 1. Update your default dimension setup accordingly.
 
 ## Dimension values validated with account structure or advanced rule
@@ -420,6 +348,79 @@ To resolve this issue, follow these steps:
 1. Select each dimension that's used in the account structure.
 1. Review the derived dimension rules for each dimension.
 1. If you don't want the derived dimension to automatically populate the specified segment, disable the **Prevent changes** option.
+
+## Unable to return DimensionAttributeValue record
+
+You receive the following error message:
+
+> Unable to return DimensionAttributeValue record for \<DimensionName>
+
+This error message means that the system can't find the dimension value. Several conditions can cause this issue.
+
+### Add the missing dimension value
+
+1. Go to **General ledger** > **Chart of accounts** > **Dimensions** > **Financial dimensions**.
+1. On the **Action Pane**, select **Financial dimension values**.
+1. Check whether the dimension value exists.
+1. If the value doesn't exist, add it.
+
+### Check XDS and security role restrictions
+
+[Extensible data security (XDS)](/dynamics365/fin-ops-core/dev-itpro/sysadmin/extensible-data-security-policies) policies that are combined with an insufficient security role might prevent you from viewing the dimension value. If XDS filters are applied to the backing entity, and your role doesn't include access to the company or entity where the value resides, the dimension value might appear blank or missing.
+
+To check and assign the appropriate security role, follow these steps:
+
+1. Go to **System administration** > **Users** > **Users**.
+1. Select the affected user.
+1. Select **Roles** > **Assign organizations**.
+1. Review the access scope, and grant access to the required organizations. To test whether access restrictions cause the issue:
+   1. Select **Grant access to all organizations**, and check whether the dimension value appears.
+   1. If the dimension value appears, clear the **Grant access to all organizations** checkbox, and then grant access to only the required organizations.
+
+## Financial dimension name contains invalid characters
+
+You receive the following error message:
+
+> The financial dimension name \<DimensionName> contains invalid characters.
+
+[Financial dimension](/dynamics365/finance/general-ledger/financial-dimensions) names must follow specific naming conventions:
+
+- Must start with an underscore or a letter (either lowercase or uppercase)
+- Can contain only underscores, letters, or digits after the first character
+- Can't contain system field names such as `RecId`
+
+To fix this issue, follow these steps:
+
+1. Go to **General ledger** > **Chart of accounts** > **Dimensions** > **Financial dimensions**.
+1. Review the dimension name to make sure that it follows the naming conventions.
+1. Rename the dimension, if necessary. Don't use system field names or invalid characters.
+
+## Value doesn't exist for financial dimension
+
+You receive the following error message:
+
+> The value \<Value> doesn't exist for \<DimensionName>.
+
+This error typically means that the dimension value that you entered doesn't exist in the system.
+
+To verify the dimension value, follow these steps:
+
+1. Go to **General ledger** > **Chart of accounts** > **Dimensions** > **Financial dimensions**.
+1. On the **Action Pane**, select **Financial dimension values**.
+1. Search for the value to verify that it exists.
+
+If the dimension value doesn't appear, verify that you're in the correct legal entity. Certain entity-backed dimensions are company-specific and don't appear outside the company where you created them.
+
+If the dimension value exists but you still receive this error message, try the following workaround:
+
+1. Rename the dimension value to a temporary name.
+1. Revert the name to the original name.
+
+> [!NOTE]
+> The rename process takes time because it runs as a background job through the Data Maintenance portal. To monitor the progress:
+>
+> 1. Go to **System administration** > **Periodic tasks** > **Data maintenance**.
+> 1. Check the *Dimension value rename and modify chart of accounts delimiter process* job.
 
 ## Related content
 
