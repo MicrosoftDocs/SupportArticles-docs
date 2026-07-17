@@ -16,7 +16,7 @@ appliesto:
   - Exchange Online
   - Outlook
 search.appverid: MET150
-ms.date: 03/24/2026
+ms.date: 07/16/2026
 ---
 # Self-help diagnostics for issues in Exchange Online and Outlook
 
@@ -25,7 +25,8 @@ It's vital that administrators be able to diagnose and resolve issues quickly in
 Currently, we provide diagnostics through text analytics. It's important to note that while these diagnostics can't make automatic changes to your tenant without your consent, they do offer insights into known issues, and provide instructions to fix those issues quickly. We also want to make it easier for you to find our diagnostics within the current experience. Therefore, we have created a new set of queries to help administrators.
 
 > [!NOTE]
-> These diagnostics aren't available for the GCC High or DoD environments, or for Microsoft 365 operated by 21Vianet.
+> These diagnostics aren't available for the GCC High or DoD environments, or for Microsoft 365 operated by 21Vianet in the Microsoft 365 admin center.  
+> However, a subset of these diagnostics is available in Exchange Online PowerShell and the Exchange admin center (EAC).
 
 |Example for an Exchange Online issue|Example for an Outlook issue|
 |----------|----------|
