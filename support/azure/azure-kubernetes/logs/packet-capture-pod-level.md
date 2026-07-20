@@ -1,9 +1,8 @@
 ---
 title: How to capture a TCP dump from a pod running on an AKS cluster
 description: Learn how to capture a TCP dump from a pod on an AKS cluster, download the capture to your local computer, and troubleshoot connectivity issues. Get started now.
-ms.date: 02/27/2024
-ms.author: kaushika
-author: y2kdread
+ms.date: 07/20/2026
+ms.reviewer: addobres
 ms.service: azure-kubernetes-service
 ms.custom: sap:Monitoring and Logging
 ---
