@@ -41,7 +41,7 @@ This article helps you find and troubleshoot Azure Kubernetes Service (AKS) node
 > - To access the BCC tools, use [kubectl node-shell](https://github.com/kvaps/kubectl-node-shell) *only*.
 > - All the following commands in this section are run as the root user on a Linux node that has the BCC tools installed.
 
-1. On the Linux node that experiences SNAT port exhaustion, install [kubectl node-shell](https://github.com/kvaps/kubectl-node-shell):
+1. On your running terminal, install [kubectl node-shell](https://github.com/kvaps/kubectl-node-shell):
     
     ```bash
     curl -LO https://github.com/kvaps/kubectl-node-shell/raw/master/kubectl-node_shell
@@ -49,7 +49,7 @@ This article helps you find and troubleshoot Azure Kubernetes Service (AKS) node
     sudo mv ./kubectl-node_shell /usr/local/bin/kubectl-node_shell
     ```
 
-2. Use SSH to connect to the node that experiences SNAT port exhaustion and use `tcptracer` to trace TCP established connections:
+2. Use kube node-shell plugin to connect to the node that experiences SNAT port exhaustion and use `tcptracer` to trace TCP established connections:
 
     ```bash
     kubectl node-shell <node name>
