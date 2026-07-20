@@ -24,3 +24,17 @@ landingContent:
         links:
           - text: Troubleshoot Azure DNS
             url: troubleshoot-dns.md
+
+  # Card
+  - title: Agentic-focused
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot hybrid DNS resolution failures with Azure DNS Private Resolver
+            url: troubleshoot-azure-dns-private-resolver-hybrid-resolution-failure.md
+          - text: Troubleshoot DNS resolution failures in Azure
+            url: troubleshoot-azure-dns-resolution-fails-conditional-forwarder-misconfiguration.md
+          - text: Troubleshoot Azure private DNS zone deletion failure
+            url: troubleshoot-private-dns-zone-deletion-migration-failure.md
+          - text: Troubleshoot NXDOMAIN from a Private DNS zone
+            url: troubleshoot-private-dns-zone-override-nxdomain.md
