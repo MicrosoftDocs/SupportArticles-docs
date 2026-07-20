@@ -38,3 +38,17 @@ landingContent:
             url: troubleshoot-backend-traffic-responses/load-balancer-troubleshoot-backend-traffic.md
           - text: Troubleshoot virtual machines not responding to traffic on the configured data port
             url: troubleshoot-backend-traffic-responses/vms-no-response-traffic.md
+
+  # Card
+  - title: Agentic-focused
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot uneven traffic distribution in Azure Load Balancer
+            url: troubleshoot-azure-load-balancer-uneven-traffic-distribution.md
+          - text: Troubleshoot Azure Load Balancer limitations
+            url: troubleshoot-load-balancer-platform-limitations.md
+          - text: Troubleshoot an Azure Load Balancer that can't be deleted
+            url: troubleshoot-cannot-delete-load-balancer.md
+          - text: Troubleshoot health probe failures in Azure Load Balancer
+            url: troubleshoot-load-balancer-health-probe-failures.md
