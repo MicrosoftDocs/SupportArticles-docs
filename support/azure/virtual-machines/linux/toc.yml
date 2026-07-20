@@ -144,6 +144,15 @@ items:
     - name: Troubleshoot SLES migration issues
       href: linux-upgrade-sles.md
 
+- name: Secure Boot certificate updates (Trusted Launch)
+  items:
+  - name: Troubleshoot Secure Boot certificate updates on Linux
+    href: linux-vm-secure-boot-cert-updates-trusted-launch.md
+  - name: Trusted Launch for Azure virtual machines
+    href: /azure/virtual-machines/trusted-launch?context=/troubleshoot/azure/virtual-machines/linux/context/context
+  - name: Secure Boot update for TVM and CVM (KB 5085395)
+    href: https://support.microsoft.com/topic/845ec199-03fa-4629-bdc3-822ae0bbe6ca
+
 - name: My VM is not booting
   items:
   - name: Linux - Specific scenarios
