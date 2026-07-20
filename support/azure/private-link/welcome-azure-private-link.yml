@@ -26,3 +26,25 @@ landingContent:
             url: troubleshoot-private-endpoint-connectivity-problems.md
           - text: Troubleshoot Azure Private Link Service connectivity problems
             url: troubleshoot-private-link-connectivity.md
+
+  # Card
+  - title: Agentic-focused
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot private endpoint or Private DNS zone deletion that fails or is stuck in Azure Private Link
+            url: troubleshoot-private-endpoint-dns-zone-deletion-failed.md
+          - text: Troubleshoot private endpoint DNS resolution failure in Azure Private Link
+            url: troubleshoot-private-endpoint-dns-resolution.md
+          - text: Troubleshoot private endpoint creation that fails or stalls in Azure Private Link
+            url: troubleshoot-private-endpoint-creation-failed.md
+          - text: Troubleshoot private endpoint connectivity failures
+            url: troubleshoot-private-endpoint-connectivity-failure.md
+          - text: Troubleshoot Private Link service and resource limits or scale ceilings reached in Azure Private Link
+            url: troubleshoot-private-link-scale-limits-reached.md
+          - text: Troubleshoot AuthorizationFailed errors for Azure private endpoints
+            url: troubleshoot-private-endpoint-permission-denied.md
+          - text: Troubleshoot 403 access denied errors for Azure Storage or Azure Key Vault through an approved private endpoint
+            url: troubleshoot-403-access-denied-private-endpoint.md
+          - text: Troubleshoot a private endpoint connection stuck in Pending state
+            url: troubleshoot-private-endpoint-pending-approval.md
