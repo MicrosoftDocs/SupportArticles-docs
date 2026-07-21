@@ -45,8 +45,7 @@ Before troubleshooting, determine where the deployment failed:
 > This article focuses on **Linux VM provisioning failures**, most commonly seen when deploying from **custom images**.
 >
 > If the deployment fails due to **capacity, SKU availability, or regional allocation**, see:
-> - [Troubleshoot Azure VM allocation failures](https://learn.microsoft.com/troubleshoot/azure/virtual-machines/allocation-failure)
-> - [Troubleshoot issues when creating virtual machines in Azure](https://learn.microsoft.com/troubleshoot/azure/virtual-machines/troubleshoot-deployment-overview)
+> - [Troubleshoot Azure VM allocation failures](../windows/allocation-failure.md)
 
 Most Linux VM provisioning failures described in this article occur when you deploy a virtual machine (VM) from a **custom image** that wasn't prepared or generalized correctly. When this failure occurs, the VM status is shown as `creating` for up to 40 minutes, and you receive one of the following error messages:
 ### Provisioning failure
