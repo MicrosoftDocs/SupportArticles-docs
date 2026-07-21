@@ -1,21 +1,22 @@
 ---
-title: Troubleshoot common issues with Power Automate triggers
+title: Troubleshoot common problems with Power Automate triggers
 description: Diagnose and fix Power Automate trigger problems including trigger not firing, duplicate runs, delays, and skipped conditions.
 suite: flow
-ms.date: 06/11/2026
+ms.date: 07/17/2026
 ms.custom: sap:Flow run issues\Triggers
 ms.update-cycle: 180-days
 ms.reviewer: angieandrews, kenseongtan, kisubedi, v-aangie, v-shaywood
 search.audienceType: 
   - flowadmin
+ai-usage: ai-assisted
 ---
-# Troubleshoot Power Automate trigger issues and errors
+# Troubleshoot Power Automate trigger problems and errors
 
 ## Summary
 
 When Power Automate flows don't run as expected, the trigger might be the problem. [Triggers](/power-automate/triggers-introduction) are the entry point for your flows. They can fail for several reasons, such as connection problems, expired authentication tokens, licensing problems, and misconfigured conditions.
 
-This article describes the most common trigger problems and their solutions. You'll learn how to diagnose connection problems, check licensing requirements, review trigger conditions, and handle environment-specific problems.
+This article describes the most common trigger problems and their solutions. You learn how to diagnose connection problems, check licensing requirements, review trigger conditions, and handle environment-specific problems.
 
 The first step to troubleshoot your flows is to [identify the specific flow run](/power-automate/fix-flow-failures#identify-specific-flow-runs) that is failing. This step helps you determine whether the problem is with the trigger itself or another part of your flow.
 
@@ -49,7 +50,7 @@ If you see the following error, it means that Power Automate tried multiple time
 
 > There's a problem with the flow's trigger. Fix the trigger.
 
-:::image type="content" source="./media/triggers-troubleshoot/fix-trigger.png" alt-text="Error message about the flow's trigger." lightbox="media/triggers-troubleshoot/fix-trigger.png":::
+:::image type="content" source="./media/triggers-troubleshoot/fix-trigger.png" alt-text="Screenshot of the error message about the flow's trigger." lightbox="media/triggers-troubleshoot/fix-trigger.png":::
 
 One common reason for this failure is that the Power Automate service endpoints aren't part of the allowlist. To fix it, check that your IT department added the necessary [IP addresses and domains](/power-automate/ip-address-configuration) to your allowlist.
 
@@ -73,14 +74,14 @@ Follow these steps to check if your connections are broken:
 1. Find the connection that your flow uses.
 1. To fix a broken connection, select the link next to the **Status** column, and follow the instructions.
 
-   :::image type="content" source="./media/triggers-troubleshoot/fix-link.png" alt-text="The Fix connection link to fix a broken connection." lightbox="media/triggers-troubleshoot/fix-link.png":::
+   :::image type="content" source="./media/triggers-troubleshoot/fix-link.png" alt-text="Screenshot of the Fix connection link to fix a broken connection." lightbox="media/triggers-troubleshoot/fix-link.png":::
 
 ### Check if the flow uses a premium connector trigger
 
 1. Edit your flow to find the connector name for the trigger.
 1. Go to the [list of connectors](https://make.powerautomate.com/connectors), and search for that connector. If the connector is a premium connector, _PREMIUM_ displays under the name of the connector.
 
-    :::image type="content" source="./media/triggers-troubleshoot/premium-connector.png" alt-text="Screenshot of a premium connector." lightbox="media/triggers-troubleshoot/premium-connector.png":::
+    :::image type="content" source="./media/triggers-troubleshoot/premium-connector.png" alt-text="Screenshot of a premium connector in the connectors list." lightbox="media/triggers-troubleshoot/premium-connector.png":::
 
 To access premium, on-premises, and custom connectors, you need a standalone Power Apps or Power Automate license. Check your license plan and adjust your plan, if needed, to access the connectors.
 
@@ -101,7 +102,7 @@ To check for skipped trigger runs:
 1. Select **My flows** in the left pane, and then select the flow.
 1. In the **28-day run history**, select **All runs**.
 
-    :::image type="content" source="./media/triggers-troubleshoot/all-runs.png" alt-text="The 28-day run history view showing all runs." lightbox="media/triggers-troubleshoot/all-runs.png":::
+    :::image type="content" source="./media/triggers-troubleshoot/all-runs.png" alt-text="Screenshot of the 28-day run history view showing all runs." lightbox="media/triggers-troubleshoot/all-runs.png":::
 
 If a run was expected but didn't happen, look for the specific run to see if the trigger check was skipped. A skipped check means the trigger condition wasn't met, and the flow wasn't initiated. [Review the flow's inputs and trigger conditions](#review-flow-inputs-and-trigger-conditions) to confirm they align with your expectations. You might need to adjust the condition expression to fix the issue.
 
@@ -119,14 +120,14 @@ Locate the flow's trigger conditions and verify that the condition expressions c
 1. Select **Edit** on the command bar.
 1. Select the first card to see which folders, sites, mailboxes, and other items the trigger uses in the configuration pane.
 
-    :::image type="content" source="./media/triggers-troubleshoot/copilot-triggers.png" alt-text="Trigger site in Copilot." lightbox="media/triggers-troubleshoot/copilot-triggers.png":::
+    :::image type="content" source="./media/triggers-troubleshoot/copilot-triggers.png" alt-text="Screenshot of the trigger site configuration pane in the new designer." lightbox="media/triggers-troubleshoot/copilot-triggers.png":::
 
 1. In the configuration pane, select the **Settings** tab.
 1. Locate **Trigger conditions**.
 
    If the field is empty, there are no other customizations. The title of the card (in this case, **When an item is created or modified**) indicates when the trigger fires.
 
-   :::image type="content" source="./media/triggers-troubleshoot/copilot-trigger-conditions.png" alt-text="Trigger conditions in Copilot." lightbox="media/triggers-troubleshoot/copilot-trigger-conditions.png":::
+   :::image type="content" source="./media/triggers-troubleshoot/copilot-trigger-conditions.png" alt-text="Screenshot of the trigger conditions in the new designer settings tab." lightbox="media/triggers-troubleshoot/copilot-trigger-conditions.png":::
 
    If you see other customizations in **Trigger Conditions**, make sure you're using the expected or correct inputs to trigger the flow.
 
@@ -143,7 +144,7 @@ Locate the flow's trigger conditions and verify that the condition expressions c
 
    If you see other customizations in **Trigger Conditions**, make sure you're using the expected or correct inputs to trigger the flow.
 
-   :::image type="content" source="./media/triggers-troubleshoot/trigger-conditions.png" alt-text="Trigger conditions." lightbox="media/triggers-troubleshoot/trigger-conditions.png":::
+   :::image type="content" source="./media/triggers-troubleshoot/trigger-conditions.png" alt-text="Screenshot of the trigger conditions in the classic designer settings." lightbox="media/triggers-troubleshoot/trigger-conditions.png":::
 
 ---
 
@@ -153,7 +154,7 @@ Verify that you have access to the folders, sites, or mailboxes that the trigger
 
 ### Check whether admin mode is enabled
 
-If you enable admin mode for an environment, you turn off all background processes, including flows. Enabling this setting prevents the flow from triggering.
+If you enable admin mode with background operations disabled, Dataverse asynchronous operations are turned off. Flows that use a **Dataverse** trigger (for example, **When a row is added, modified, or deleted**) don't fire because they depend on the Dataverse asynchronous service. Scheduled (recurrence) cloud flows and other flows that aren't triggered by Dataverse continue to run, because they run in the Power Automate service.
 
 Follow these steps to check the admin mode and disable it, if necessary:
 
@@ -197,17 +198,17 @@ Follow these steps to determine the type of trigger that your flow uses:
 1. In the configuration pane on the left, select **Code View**.
 1. Find the `recurrence` section that has an interval `frequency` element. If this section is available, the trigger is a _polling_ trigger.
 
-    :::image type="content" source="./media/triggers-troubleshoot/copilot-recurrence.png" alt-text="The recurrence section in Copilot." lightbox="media/triggers-troubleshoot/copilot-recurrence.png":::
+    :::image type="content" source="./media/triggers-troubleshoot/copilot-recurrence.png" alt-text="Screenshot of the recurrence section in the new designer code view." lightbox="media/triggers-troubleshoot/copilot-recurrence.png":::
 
 # [Classic designer](#tab/classic-designer)
 
 1. On the title bar, select the ellipsis button (**...**) > **Peek code**.
 
-    :::image type="content" source="./media/triggers-troubleshoot/peek-code.png" alt-text="Peek code." lightbox="media/triggers-troubleshoot/peek-code.png":::
+    :::image type="content" source="./media/triggers-troubleshoot/peek-code.png" alt-text="Screenshot of the Peek code option in the classic designer." lightbox="media/triggers-troubleshoot/peek-code.png":::
 
 1. Find the `recurrence` section that has an interval `frequency` element. If this section is available, the trigger is a _polling_ trigger.
 
-    :::image type="content" source="./media/triggers-troubleshoot/frequency.png" alt-text="The recurrence section." lightbox="media/triggers-troubleshoot/frequency.png":::
+    :::image type="content" source="./media/triggers-troubleshoot/frequency.png" alt-text="Screenshot of the recurrence section with the frequency element." lightbox="media/triggers-troubleshoot/frequency.png":::
 
 ---
 
@@ -249,7 +250,7 @@ To check the trigger wake-up frequency, follow these steps:
 1. On the configuration tab, select the **Code view** tab.
 1. Find the `interval` and `frequency` values.
 
-    :::image type="content" source="./media/triggers-troubleshoot/copilot-recurrence.png" alt-text="The frequency element in Copilot." lightbox="media/triggers-troubleshoot/copilot-recurrence.png":::
+    :::image type="content" source="./media/triggers-troubleshoot/copilot-recurrence.png" alt-text="Screenshot of the interval and frequency values in the new designer code view." lightbox="media/triggers-troubleshoot/copilot-recurrence.png":::
 
 # [Classic designer](#tab/classic-designer)
 
@@ -258,11 +259,11 @@ To check the trigger wake-up frequency, follow these steps:
 1. Select **Edit** on the command bar.
 1. On your flow trigger, select the ellipsis button (**...**) > **Peek code**.
 
-    :::image type="content" source="./media/triggers-troubleshoot/peek-code.png" alt-text="Peek code setting." lightbox="media/triggers-troubleshoot/peek-code.png":::
+    :::image type="content" source="./media/triggers-troubleshoot/peek-code.png" alt-text="Screenshot of the Peek code setting on the flow trigger." lightbox="media/triggers-troubleshoot/peek-code.png":::
 
 1. Find the `interval` and `frequency` values.
 
-    :::image type="content" source="./media/triggers-troubleshoot/frequency.png" alt-text="The frequency element." lightbox="media/triggers-troubleshoot/frequency.png":::
+    :::image type="content" source="./media/triggers-troubleshoot/frequency.png" alt-text="Screenshot of the interval and frequency values in the classic designer." lightbox="media/triggers-troubleshoot/frequency.png":::
 
 ---
 
@@ -280,9 +281,9 @@ If your flow takes longer than expected to trigger, check for these two common p
 1. A communication problem prevents Power Automate from reacting to trigger events. Potentially, a service outage, policy change, password expiry, or similar problem caused the delay. You can view [Help + support](https://admin.powerplatform.microsoft.com/support) to learn whether any active outages exist. You can also clear the cache of the browser, and then try triggering the flow again.
 
 > [!NOTE]
-> The recurrence trigger might not fire at the exact second shown in the user interface. The service's best-effort architecture can miss by a few seconds (early/late).
+> The recurrence trigger might not fire at the exact second shown in the user interface. The service's best-effort architecture can miss by a few seconds (early or late).
 
-## Power Apps trigger issues
+## Power Apps trigger problems
 
 The following error is a known problem for flows that use Power Apps triggers:
 
@@ -297,7 +298,7 @@ To work around this problem and rename actions, follow these steps:
 
 After you publish an app, make copies of the flows that the app uses to make any updates. If you update a cloud flow that's referenced by a published app, you can break existing users. Don't delete or turn off existing flows until all users upgrade to the new published version of the app.
 
-## SharePoint trigger issues
+## SharePoint trigger problems
 
 SharePoint triggers, such as _When a file is created or modified_, don't fire if you add or update a file in a subfolder. If the flow must trigger on subfolders, create multiple flows.
 
@@ -376,7 +377,7 @@ To make sure that your flows continue to function as expected, follow these step
 
    The banner displays the old URL that was replaced. This warning is a reminder to update any references to the outdated URL by using the new URL. If you don't see the warning banner on flows that have an HTTP or Teams webhook trigger, your environment is most likely on Self Host Multitenant architecture, and your flows aren't affected.
 
-  :::image type="content" source="./media/triggers-troubleshoot/http-trigger-url.png" alt-text="The warning banner that reminds you to update the old URL." lightbox="media/triggers-troubleshoot/http-trigger-url.png":::
+  :::image type="content" source="./media/triggers-troubleshoot/http-trigger-url.png" alt-text="Screenshot of the warning banner that reminds you to update the old trigger URL." lightbox="media/triggers-troubleshoot/http-trigger-url.png":::
 
 > [!NOTE]
 > If a flow uses an HTTP action to call another flow, the parent flow is considered to be an external system. Update the URL in the parent flow by using the new URL that the child flow's trigger card displays. However, if the child flow is called through the **Run a child flow** action, no change is needed.

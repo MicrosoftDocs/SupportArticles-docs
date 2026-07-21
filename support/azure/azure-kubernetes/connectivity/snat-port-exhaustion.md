@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot SNAT port exhaustion on AKS nodes
 description: Learn how to troubleshoot SNAT port exhaustion on AKS nodes, identify high-connection pods, and take action to reduce outbound connectivity issues.
-ms.date: 10/12/2024
-ms.reviewer: v-rekhanain, v-weizhu
+ms.date: 07/21/2026
+ms.reviewer: v-rekhanain, v-weizhu, mariusbutuc
 ms.service: azure-kubernetes-service
 ms.custom: sap:Connectivity
 ---
