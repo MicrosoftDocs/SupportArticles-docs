@@ -1,9 +1,9 @@
 --- 
 title: Troubleshoot memory saturation in AKS clusters
 description: Find and fix memory saturation in AKS clusters across nodes, namespaces, and containers. Use this guide to identify pressure points and take action.
-ms.date: 08/18/2025
+ms.date: 07/15/2026
 editor: v-jsitser
-ms.reviewer: chiragpa, aritraghosh, v-leedennis, v-liuamson
+ms.reviewer: chiragpa, aritraghosh, v-leedennis, v-liuamson, mariusbutuc
 ms.service: azure-kubernetes-service
 ms.custom: sap:Node/node pool availability and performance
 ---
