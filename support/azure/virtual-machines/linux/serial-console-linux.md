@@ -11,7 +11,7 @@ ms.service: azure-virtual-machines
 ms.collection: linux
 ms.tgt_pltfrm: vm-linux
 ms.workload: infrastructure-services
-ms.date: 11/20/2025
+ms.date: 7/17/2026
 ms.author: mbifeld
 ---
 
@@ -27,7 +27,7 @@ This article describes how to use the Azure Serial Console to access a text-base
 
 Serial Console works in the same manner for VMs and virtual machine scale set instances. In this doc, all mentions of VMs will implicitly include virtual machine scale set instances unless otherwise stated.
 
-Serial Console is generally available in global Azure regions and in public preview in Azure Government. It is not yet available in the Azure China cloud.
+Serial Console is generally available in global Azure regions, Azure Government, and the Azure China cloud.
 
 For Serial Console documentation for Windows, see [Serial Console for Windows](../windows/serial-console-windows.md).
 

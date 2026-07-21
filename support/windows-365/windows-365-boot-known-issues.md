@@ -6,8 +6,8 @@ ms.date: 02/12/2026
 ms.topic: troubleshooting
 ms.reviewer: elluthra, erikje
 ms.custom:
-- pcy:Windows 365 Boot
-- sap:WinComm User Experience
+- sap:Windows 365 Boot
+- pcy:WinComm User Experience
 ms.collection:
 - M365-identity-device-management
 - tier2
@@ -105,9 +105,9 @@ Camera permissions must be granted to the Azure Virtual Desktop (HostApp) applic
 ### Solution
 
 1. [Remove Windows 365 Boot from the physical device](troubleshoot-windows-365-boot.md#remove-windows-365-boot-from-the-physical-device).
-2. On the physical device, open **Settings** > **Privacy & Security** > **Camera** > **Let apps access your camera**.
-3. Set **Azure Virtual Desktop (HostApp)** to **On**.
-4. [Add Windows 365 Boot back onto the physical device](troubleshoot-windows-365-boot.md#add-windows-365-boot-back-to-the-physical-device).
+1. On the physical device, open **Settings** > **Privacy & Security** > **Camera** > **Let apps access your camera**.
+1. Set **Azure Virtual Desktop (HostApp)** to **On**.
+1. [Add Windows 365 Boot back onto the physical device](troubleshoot-windows-365-boot.md#add-windows-365-boot-back-to-the-physical-device).
 
 ## Users can still interact with physical device features like Settings, Task Manager, and Notifications
 
@@ -151,10 +151,10 @@ Windows 365 Boot is configured by using the [CloudDesktop CSP](/windows/client-m
 If you configured your device for Windows 365 Boot using the [Windows 365 Boot Guided Scenario](/windows-365/enterprise/windows-365-boot-guide):
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and select **Devices** > **Configuration profiles**.
-2. Search for the device configuration profile that contains "Windows 365 Boot Device Configuration Policy" in its name.
-3. Make sure that the "Cloud Desktop" configuration is configured with the **Windows 365 Boot Mode** setting set to **Enable Windows 365 Boot Desktop**.
-4. Select **Device assignment status** and make sure that the configuration policy was successfully applied to it.
-5. If the check-in status isn't successful, see [Troubleshooting policies and profiles in Microsoft Intune](../mem/intune/device-configuration/troubleshoot-policies-in-microsoft-intune.md).
+1. Search for the device configuration profile that contains "Windows 365 Boot Device Configuration Policy" in its name.
+1. Make sure that the "Cloud Desktop" configuration is configured with the **Windows 365 Boot Mode** setting set to **Enable Windows 365 Boot Desktop**.
+1. Select **Device assignment status** and make sure that the configuration policy was successfully applied to it.
+1. If the check-in status isn't successful, see [Troubleshooting policies and profiles in Microsoft Intune](../mem/intune/device-configuration/troubleshoot-policies-in-microsoft-intune.md).
 
 If the problem persists, reinstall the physical device's operating system as explained in [Windows 365 Boot physical device requirements](/windows-365/enterprise/windows-365-boot-physical-device-requirements).
 
@@ -167,10 +167,10 @@ Windows 365 Boot is configured through the [Windowslogon CSP](/windows/client-ma
 If you configured your device for Windows 365 Boot using the [Windows 365 Boot Guided Scenario](/windows-365/enterprise/windows-365-boot-guide):
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select > **Devices** > **Configuration profiles**.
-2. Search for the device configuration profile that contains "Windows 365 Boot Device Configuration Policy" in its name.
-3. Make sure that the "Windows Logon" configuration is configured with the **Override Shell Program** setting set to **Apply Lightweight shell**.
-4. Select **Device assignment status** and make sure that the configuration policy was successfully applied to it.
-5. If the check-in status isn't successful, see [Troubleshooting policies and profiles in Microsoft Intune](../mem/intune/device-configuration/troubleshoot-policies-in-microsoft-intune.md).
+1. Search for the device configuration profile that contains "Windows 365 Boot Device Configuration Policy" in its name.
+1. Make sure that the "Windows Logon" configuration is configured with the **Override Shell Program** setting set to **Apply Lightweight shell**.
+1. Select **Device assignment status** and make sure that the configuration policy was successfully applied to it.
+1. If the check-in status isn't successful, see [Troubleshooting policies and profiles in Microsoft Intune](../mem/intune/device-configuration/troubleshoot-policies-in-microsoft-intune.md).
 
 If the problem persists, reinstall the physical device's operating system as explained in [Windows 365 Boot physical device requirements](/windows-365/enterprise/windows-365-boot-physical-device-requirements).
 

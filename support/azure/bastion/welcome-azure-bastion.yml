@@ -80,3 +80,17 @@ landingContent:
         links:
           - text: Troubleshoot Azure Bastion virtual network peering problems
             url: troubleshoot-virtual-network-peering-problems.md
+
+  # Card
+  - title: Agentic-focused
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot Azure Bastion connection failures
+            url: troubleshoot-connection-blocked-ports.md
+          - text: Troubleshoot Azure Bastion routing and forced tunneling
+            url: troubleshoot-connection-fails-routing-forced-tunneling.md
+          - text: Troubleshoot Azure Bastion session failures due to unhealthy target virtual machines
+            url: troubleshoot-session-fails-target-vm-unhealthy.md
+          - text: Troubleshoot Azure Bastion host deployment failures
+            url: troubleshoot-host-deployment-failures.md

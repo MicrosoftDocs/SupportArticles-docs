@@ -6,8 +6,8 @@ ms.date: 02/12/2026
 ms.topic: troubleshooting
 ms.reviewer: kaushika, erikje, v-lianna
 ms.custom:
-- pcy:Configuration and Management\Managing Devices with Intune
-- sap:WinComm User Experience
+- sap:Configuration and Management\Managing Devices with Intune
+- pcy:WinComm User Experience
 ---
 # Windows 365 Link fails to load OOBE with error "An error has occurred"
 

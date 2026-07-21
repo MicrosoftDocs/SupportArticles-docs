@@ -6,8 +6,8 @@ ms.date: 02/12/2026
 ms.topic: troubleshooting
 ms.reviewer: chbrinkhoff, erikje
 ms.custom:
-- pcy:Configuration and Management\Application Issues
-- sap:WinComm User Experience
+- sap:Configuration and Management\Application Issues
+- pcy:WinComm User Experience
 ms.collection:
 - M365-identity-device-management
 - tier2
@@ -15,7 +15,7 @@ ms.collection:
 
 # Troubleshoot issues with the Windows 365 app
 
-This article helps you identify and solve issues with the [Windows 365 app](https://support.microsoft.com/topic/cbb0d4d5-69d4-4f00-b050-6dc7a02d02d0).
+This article helps you identify and solve issues with the [Windows 365 app](/windows-app/overview).
 
 ## Limitations
 
@@ -32,8 +32,8 @@ When you select the **Connect** button to connect to your Cloud PC, you might re
 To fix this issue:
 
 1. In the **Settings** app on your Windows device, select **Apps** > **Default apps**.
-2. Find the **AVD host app** and update the default app for `.avd` files.
-3. Run the following command to clear the old Remote Desktop client cache:
+1. Find the **AVD host app** and update the default app for `.avd` files.
+1. Run the following command to clear the old Remote Desktop client cache:
 
    `reg delete "HKEY_CLASSES_ROOT\progF3672D4C2FFE4422A53C78C345774E2D" /f`
 
@@ -53,4 +53,4 @@ If the Windows 365 app doesn't show any Cloud PCs, you might sign in with the wr
 
 ## Next steps
 
-For more information about Windows 365 app, see [Installing the Windows 365 app](https://support.microsoft.com/topic/cbb0d4d5-69d4-4f00-b050-6dc7a02d02d0).
+For more information about Windows 365 app, see [What is Windows App?](/windows-app/overview).

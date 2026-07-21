@@ -6,8 +6,8 @@ ms.date: 02/12/2026
 ms.topic: troubleshooting
 ms.reviewer: mattsha, erikje
 ms.custom:
-- pcy:Azure Network Connection\Health Check Issues
-- sap:WinComm User Experience
+- sap:Azure Network Connection\Health Check Issues
+- pcy:WinComm User Experience
 ms.collection:
 - M365-identity-device-management
 - tier2

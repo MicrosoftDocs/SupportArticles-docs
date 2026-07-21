@@ -10,7 +10,7 @@ ms.service: azure-virtual-machines
 ms.collection: windows
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure-services
-ms.date: 11/20/2025
+ms.date: 7/17/2026
 ms.author: kaushika
 ms.reviewer: mbifeld
 ms.custom: sap:Cannot connect to my VM
@@ -30,7 +30,7 @@ The Serial Console in the Azure portal provides access to a text-based console f
 
 Serial Console works in the same manner for VMs and virtual machine scale set instances. In this doc, all mentions to VMs will implicitly include virtual machine scale set instances unless otherwise stated.
 
-Serial Console is generally available in global Azure regions and in public preview in Azure Government. It is not yet available in the Azure China cloud.
+Serial Console is generally available in global Azure regions, Azure Government, and the Azure China cloud.
 
 For serial console documentation for Linux, see [Azure Serial Console for Linux](../linux/serial-console-linux.md).
 
@@ -48,7 +48,7 @@ The prerequisites to access the Azure Serial Console can be found [here](serial-
 
 ### Enable the serial console in custom or older images
 
-Newer Windows Server images on Azure have [Special Administration Console](/previous-versions/windows/it-pro/windows-server-2003/cc787940(v=ws.10)) (SAC) enabled by default. SAC is supported on server versions of Windows but isn't available on client versions (for example, Windows 10, Windows 8, or Windows 7).
+Newer Windows Server images on Azure have [Special Administration Console](/previous-versions/windows/it-pro/windows-server-2003/cc787940(v=ws.10)) (SAC) enabled by default. SAC is supported on server versions of Windows. On client versions of Windows, SAC is available on Windows 10, version 2004 or later, and on Windows 11. Serial Console is available for these images when SAC is enabled. SAC isn't available on older client versions (for example, earlier builds of Windows 10, Windows 8, or Windows 7).
 
 For older Windows Server images (created before February 2018), you can automatically enable the serial console through the Azure portal's run command feature. In the Azure portal, select **Run command**, then select the command named **EnableEMS** from the list.
 

@@ -6,14 +6,13 @@ ms.date: 02/12/2026
 ms.topic: troubleshooting
 ms.reviewer: kaushika, erikje, v-lianna
 ms.custom:
-- pcy:Session connectivity\Users see random or intermittent disconnects
-- sap:WinComm User Experience
+- pcy:WinComm User Experience
+- sap:Session connectivity\Users see random or intermittent disconnects
 ---
 # Windows 365 Link connection fails with error "an interactive window could not be shown"
 
-
->[!NOTE]
->With the release of Windows 365 Link December Quality Update version 26100.7462, users should no longer encounter this error message for the reasons stated below.  If such an error is encountered first check that Windows 365 Link is on version 26100.7462 or greater. For more information on updating the device, see [Windows 365 Link update behavior and control](/windows-365/link/update-behavior-control). 
+> [!NOTE]
+> With the release of Windows 365 Link December Quality Update version 26100.7462, users should no longer encounter this error message for the reasons stated below. If such an error is encountered first check that Windows 365 Link is on version 26100.7462 or greater. For more information on updating the device, see [Windows 365 Link update behavior and control](/windows-365/link/update-behavior-control). 
 
 This article helps resolve the connection error "an interactive window could not be shown."
 
@@ -54,29 +53,30 @@ A Conditional Access policy applied to resources might use controls that are una
 Conditional Access sign-in logs can be used to verify how Conditional Access policies are (or aren't) being applied to the sign-in and connection attempts.
 
 1. Sign in to the [Microsoft Entra admin center](https://entra.microsoft.com/) > **Protection** > **Conditional Access** > **Sign-in logs**.
-2. Select the **User sign-ins (interactive)** tab and use filters to find entries for the sign-in. For example, try using:
 
-    - **Resource**: **Device Registration Service**
-    - **Username**: \<enter the UPN of the user>
-    - **Date**: \<select a relevant interval>
+1. Select the **User sign-ins (interactive)** tab and use filters to find entries for the sign-in. For example, try using:
 
-3. Select an entry to review if the details are:
+   - **Resource**: **Device Registration Service**
+   - **Username**: \<enter the UPN of the user>
+   - **Date**: \<select a relevant interval>
 
-    - **Basic info** / **Authentication requirement**: **Single-factor**
-    - **Basic info** / **Status**: **Success**
-    - **Conditional Access** / **Result**: **Not Applied**
+1. Select an entry to review if the details are:
 
-4. Select the **User sign-ins (non-interactive)** tab and use filters to find entries for the connection. For example, try using:
+   - **Basic info** / **Authentication requirement**: **Single-factor**
+   - **Basic info** / **Status**: **Success**
+   - **Conditional Access** / **Result**: **Not Applied**
 
-    - **Application**: **Windows 365 Client**
-    - **Username**: \<enter the UPN of the user>
-    - **Date**: \<select a relevant interval>
+1. Select the **User sign-ins (non-interactive)** tab and use filters to find entries for the connection. For example, try using:
 
-5. Expand the results and select an entry to review if the details are:
+   - **Application**: **Windows 365 Client**
+   - **Username**: \<enter the UPN of the user>
+   - **Date**: \<select a relevant interval>
 
-    - **Basic info** / **Authentication requirement**: **Multifactor**
-    - **Basic info** / **Status**: **Interrupted**
-    - **Conditional Access** / **Result**: \<any failures occurred>
+1. Expand the results and select an entry to review if the details are:
+
+   - **Basic info** / **Authentication requirement**: **Multifactor**
+   - **Basic info** / **Status**: **Interrupted**
+   - **Conditional Access** / **Result**: \<any failures occurred>
 
 If you encounter entries similar to the preceding ones, then a combination of those Conditional Access policies likely causes the error.
 

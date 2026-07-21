@@ -6,8 +6,8 @@ ms.date: 02/12/2026
 ms.topic: troubleshooting
 ms.reviewer: traceyadams, erikje
 ms.custom:
-- pcy:Session connectivity\Users are not able to make a connection
-- sap:WinComm User Experience
+- pcy:WinComm User Experience
+- sap:Session connectivity\Users are not able to make a connection
 ms.collection:
 - M365-identity-device-management
 - tier2
@@ -35,14 +35,14 @@ Either the Cloud PC or the user's physical device denied PKU2U protocol requests
 Turn on PKU2U protocol requests on both the Cloud PC and the user's physical device:
 
 1. [Create a filter for all Cloud PCs](/windows-365/enterprise/create-filter#create-a-filter-for-all-cloud-pcs).
-2. Create a device configuration policy [using the settings catalog](/mem/intune/configuration/settings-catalog).
-3. On the **Configuration settings** page, search for and select **Network Security Allow PKU2U Authentication Requests** > **Allow**.
+1. Create a device configuration policy [using the settings catalog](/mem/intune/configuration/settings-catalog).
+1. On the **Configuration settings** page, search for and select **Network Security Allow PKU2U Authentication Requests** > **Allow**.
 
-    :::image type="content" source="./media/connection-errors/allow-pku2u.png" alt-text="Screenshot showing the Network Security Allow PKU2U Authentication Requests option set to Allow.":::
+   :::image type="content" source="./media/connection-errors/allow-pku2u.png" alt-text="Screenshot showing the Network Security Allow PKU2U Authentication Requests option set to Allow.":::
 
-4. On the **Assignments** page, select **Add all devices** > **Edit filter** > **Include filtered devices in assignment**, and then select the filter you created for all Cloud PCs.
-5. On the **Assignments** page, also select a Microsoft Entra group containing the user or the user's physical device.
-6. Complete the creation of the device configuration policy.
+1. On the **Assignments** page, select **Add all devices** > **Edit filter** > **Include filtered devices in assignment**, and then select the filter you created for all Cloud PCs.
+1. On the **Assignments** page, also select a Microsoft Entra group containing the user or the user's physical device.
+1. Complete the creation of the device configuration policy.
 
 If you only manage the user's physical device through Group Policy or you don't manage the user's physical device, you (or the user) can manage this setting through the [Allow PKU2U authentication requests to this computer to use online identities](/windows/security/threat-protection/security-policy-settings/network-security-allow-pku2u-authentication-requests-to-this-computer-to-use-online-identities) policy.
 
