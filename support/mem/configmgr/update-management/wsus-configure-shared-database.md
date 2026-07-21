@@ -2,7 +2,7 @@
 title: Implement a shared SUSDB for Configuration Manager SUPs
 description: "Learn how to deploy and validate a shared WSUS SUSDB for Configuration Manager software update points, troubleshoot common issues, and optimize performance."
 ms.reviewer: kaushika, payur
-ms.date: 07/09/2026
+ms.date: 07/21/2026
 ai-usage: ai-assisted
 ms.custom: sap:Software Update Management (SUM)\Software Update Point
 ---
@@ -44,8 +44,8 @@ Also verify SQL requirements in [Size and scale numbers for Configuration Manage
 > [!IMPORTANT]
 >
 > - WID (Windows Internal Database) isn't supported for this shared SUSDB design.
-> - Use a shared WSUS content path (UNC share or DFS path), and grant WSUS computer accounts Change permissions.
-> - The shared SUPs must belong to the same primary site code. You can't share a SUP installed under the central administration site (CAS) with one from a primary site, or a SUP from a primary site with one from a secondary site.
+> - Use a shared WSUS content path (UNC share or DFS path), and grant each front-end WSUS computer account Change permissions.
+> - SUPs that share a SUSDB must belong to the same site. Cross-site sharing isn't supported: for example, between a CAS and a primary site, or between a primary site and a secondary site.
 
 ### Prepare a shared content location
 
@@ -104,29 +104,29 @@ You can install WSUS from Server Manager or PowerShell. For more information, se
 
 ### Run post-installation tasks
 
-Run `WsusUtil.exe` from the command line to configure shared settings directly.
+You can run the post-installation tasks in the following ways:
 
-**Option 1:** WSUS console
+- **Option 1:** WSUS console
 
-:::image type="content" source="./media/wsus-configure-shared-database/wsus-post-install-via-console.png" alt-text="Screenshot of the Complete WSUS Installation dialog launched from the WSUS console for post-installation configuration.":::
+    :::image type="content" source="./media/wsus-configure-shared-database/wsus-post-install-via-console.png" alt-text="Screenshot of the Complete WSUS Installation dialog launched from the WSUS console for post-installation configuration.":::
 
-**Option 2:** Server Manager notification
+- **Option 2:** Server Manager notification
 
-:::image type="content" source="./media/wsus-configure-shared-database/wsus-post-install-from-server-manager.png" alt-text="Screenshot of the WSUS post-installation configuration notification displayed in Windows Server Manager.":::
+    :::image type="content" source="./media/wsus-configure-shared-database/wsus-post-install-from-server-manager.png" alt-text="Screenshot of the WSUS post-installation configuration notification displayed in Windows Server Manager.":::
 
-**Option 3 (recommended):** `WsusUtil.exe` command line. Open PowerShell as an administrator and run:
+- **Option 3 (recommended):** `WsusUtil.exe` command line. Open PowerShell as an administrator and run:
 
-```powershell
-cd "C:\Program Files\Update Services\Tools"
-.\WsusUtil.exe postinstall SQL_INSTANCE_NAME="SQLServer\Instance" CONTENT_DIR="\\FileServer\WSUS"
-```
-
-:::image type="content" source="./media/wsus-configure-shared-database/wsusutil-postinstall-command.png" alt-text="Screenshot of the WsusUtil.exe postinstall command output in PowerShell for shared SUSDB configuration.":::
-
-> [!NOTE]
->
-> - Keep `.\` in front of `WsusUtil.exe` when running it in PowerShell.
-> - For a default SQL instance, use the server name only.
+    ```powershell
+    cd "C:\Program Files\Update Services\Tools"
+    .\WsusUtil.exe postinstall SQL_INSTANCE_NAME="SQLServer\Instance" CONTENT_DIR="\\FileServer\WSUS"
+    ```
+    
+    :::image type="content" source="./media/wsus-configure-shared-database/wsusutil-postinstall-command.png" alt-text="Screenshot of the WsusUtil.exe postinstall command output in PowerShell for shared SUSDB configuration.":::
+    
+    > [!NOTE]
+    >
+    > - Keep `.\` in front of `WsusUtil.exe` when running it in PowerShell.
+    > - For a default SQL instance, use the server name only.
 
 ### Repeat on other nodes and configure SSL if needed
 
@@ -205,32 +205,32 @@ Install SUP roles by using [Install and configure a software update point](/intu
 
 1. Monitor `SUPSetup.log` on the SUP server for the installation result.
 
-```output
-====================================================================
-SMSWSUS Setup Started....
-Parameters: E:\ConfigMgr\bin\x64\rolesetup.exe /install /siteserver:SiteServer.contoso.com SMSWSUS 0
-INFO: Checking MSODBC version on ServerName SUPServer
-INFO: MSODBC version is 18.4.1.1
-INFO: Microsoft ODBC 18 Driver for SQL Server had been installed already.
-Installing Pre Reqs for SMSWSUS
-        ======== Installing Pre Reqs for Role SMSWSUS ========
-Found 0 Pre Reqs for Role SMSWSUS
-        ======== Completed Installation of Pre Reqs for Role SMSWSUS ========
-Installing the SMSWSUS
-Checking for supported version of WSUS (min WSUS 4.0)
-Checking runtime v4.0.30319...
-Found supported assembly Microsoft.UpdateServices.Administration version 4.0.0.0, file version 6.2.20348.1
-Found supported assembly Microsoft.UpdateServices.BaseApi version 4.0.0.0, file version 6.2.20348.143
-Supported WSUS version found
-Supported WSUS Server version (6.2.20348.143) is installed.
-CTool::RegisterManagedBinary: run command line: "C:\Windows\Microsoft.NET\Framework64\v2.0.50727\RegAsm.exe" "E:\ConfigMgr\bin\x64\wsusmsp.dll"
-CTool::RegisterManagedBinary: Failed to register E:\ConfigMgr\bin\x64\wsusmsp.dll with .Net Fx 2.0
-CTool::RegisterManagedBinary: run command line: "C:\Windows\Microsoft.NET\Framework64\v4.0.30319\RegAsm.exe" "E:\ConfigMgr\bin\x64\wsusmsp.dll"
-CTool::RegisterManagedBinary: Registered E:\ConfigMgr\bin\x64\wsusmsp.dll successfully
-Registered DLL E:\ConfigMgr\bin\x64\wsusmsp.dll
-Installation was successful.
-~RoleSetup().
- ```
+    ```output
+    ====================================================================
+    SMSWSUS Setup Started....
+    Parameters: E:\ConfigMgr\bin\x64\rolesetup.exe /install /siteserver:SiteServer.contoso.com SMSWSUS 0
+    INFO: Checking MSODBC version on ServerName SUPServer
+    INFO: MSODBC version is 18.4.1.1
+    INFO: Microsoft ODBC 18 Driver for SQL Server had been installed already.
+    Installing Pre Reqs for SMSWSUS
+            ======== Installing Pre Reqs for Role SMSWSUS ========
+    Found 0 Pre Reqs for Role SMSWSUS
+            ======== Completed Installation of Pre Reqs for Role SMSWSUS ========
+    Installing the SMSWSUS
+    Checking for supported version of WSUS (min WSUS 4.0)
+    Checking runtime v4.0.30319...
+    Found supported assembly Microsoft.UpdateServices.Administration version 4.0.0.0, file version 6.2.20348.1
+    Found supported assembly Microsoft.UpdateServices.BaseApi version 4.0.0.0, file version 6.2.20348.143
+    Supported WSUS version found
+    Supported WSUS Server version (6.2.20348.143) is installed.
+    CTool::RegisterManagedBinary: run command line: "C:\Windows\Microsoft.NET\Framework64\v2.0.50727\RegAsm.exe" "E:\ConfigMgr\bin\x64\wsusmsp.dll"
+    CTool::RegisterManagedBinary: Failed to register E:\ConfigMgr\bin\x64\wsusmsp.dll with .Net Fx 2.0
+    CTool::RegisterManagedBinary: run command line: "C:\Windows\Microsoft.NET\Framework64\v4.0.30319\RegAsm.exe" "E:\ConfigMgr\bin\x64\wsusmsp.dll"
+    CTool::RegisterManagedBinary: Registered E:\ConfigMgr\bin\x64\wsusmsp.dll successfully
+    Registered DLL E:\ConfigMgr\bin\x64\wsusmsp.dll
+    Installation was successful.
+    ~RoleSetup().
+     ```
 
 1. Monitor `WCM.log` for the configuration refresh. If needed, restart the `SMS_WSUS_CONFIGURATION_MANAGER` component by using Configuration Manager Service Manager.
 
@@ -295,7 +295,7 @@ HResult: 0x80240033 Context: uecGeneral Msg: The license terms of one or more up
 
 You can find more details in `WindowsUpdate.log` on the client and in IIS logs on the WSUS front-end server. The following scenarios are common:
 
-**Scenario 1:** The `Content` virtual directory is misconfigured
+#### Scenario 1: The `Content` virtual directory is misconfigured
 
 In this case, `WindowsUpdate.log` on the client shows:
 
@@ -341,7 +341,7 @@ Validate the `Content` virtual directory configuration for affected WSUS servers
    State Machine Reset Agent Finished
    ```
 
-**Scenario 2:** Misconfigured ACLs on the shared content directory
+#### Scenario 2: Misconfigured ACLs on the shared content directory
 
 In this case, `WindowsUpdate.log` fails with a different error code:
 
