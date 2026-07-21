@@ -6,8 +6,8 @@ ms.reviewer: kaushika, anwill
 ms.date: 05/15/2026
 ms.topic: troubleshooting
 ms.custom:
-- pcy:Provisioning\Grace Period Issues
-- sap:WinComm User Experience
+- sap:Provisioning\Grace Period Issues
+- pcy:WinComm User Experience
 ---
 # Remove Windows 365 Business Cloud PCs from grace period using Graph Explorer and Microsoft Graph API
 

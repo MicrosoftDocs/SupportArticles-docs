@@ -6,8 +6,8 @@ ms.date: 02/12/2026
 ms.topic: troubleshooting
 ms.reviewer: ivivano, erikje
 ms.custom:
-- pcy:Onboarding issues
-- sap:WinComm User Experience
+- sap:Onboarding issues
+- pcy:WinComm User Experience
 ms.collection:
 - M365-identity-device-management
 - tier2
@@ -57,8 +57,8 @@ When users sign in to their Cloud PCs from [Windows 365](https://windows365.micr
 To turn on Narrator when accessing your Cloud PC from the web interface:
 
 1. Go to [Windows 365](https://windows365.microsoft.com/).
-2. Sign in to your Cloud PC.
-3. On your keyboard, press <kbd>Alt</kbd>+<kbd>F3</kbd>+<kbd>Ctrl</kbd>, and then press <kbd>Enter</kbd>.
+1. Sign in to your Cloud PC.
+1. On your keyboard, press <kbd>Alt</kbd>+<kbd>F3</kbd>+<kbd>Ctrl</kbd>, and then press <kbd>Enter</kbd>.
 
 ## Sending outbound email messages using port 25 isn't supported
 

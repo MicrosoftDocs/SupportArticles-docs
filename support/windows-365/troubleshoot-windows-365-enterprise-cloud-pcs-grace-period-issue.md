@@ -6,8 +6,8 @@ ms.date: 02/12/2026
 ms.topic: troubleshooting
 ms.reviewer: anwill
 ms.custom:
-- pcy:Provisioning\Grace Period Issues
-- sap:WinComm User Experience
+- sap:Provisioning\Grace Period Issues
+- pcy:WinComm User Experience
 ---
 # Troubleshoot Windows 365 Enterprise Cloud PC grace period issues
 
@@ -30,12 +30,12 @@ In any of these scenarios, the Cloud PC remains operational for seven days, allo
 To return Cloud PCs to a provisioned state, check the following two key areas:
 
 1. The original license assignments are in place.
-2. The connection to the relevant provisioning policy is in place.
+1. The connection to the relevant provisioning policy is in place.
 
 The following sections provide the necessary actions to address the grace period. The sections include the following steps:
 
 1. Reassign Windows 365 Enterprise licenses to users via group-based licensing or direct assignment.
-2. Ensure the user is a member of any group assigned to a provisioning policy and that the assignments are in place.
+1. Ensure the user is a member of any group assigned to a provisioning policy and that the assignments are in place.
 
 ## Missing Windows 365 licenses
 
@@ -46,12 +46,12 @@ There are two primary methods to reassign Windows 365 licenses to users: group-b
 Group-based licensing allows administrators to assign licenses to users through Microsoft Entra ID groups. This method simplifies management by automating license assignments based on group membership. Follow these steps to manage group-based licensing:
 
 1. Sign in to the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?linkid=2024339) as at least a License Administrator.
-2. Go to the **Billing** > [Licenses](https://go.microsoft.com/fwlink/p/?linkid=842264) page.
-3. On the **Subscriptions** tab, select the Windows 365 license that you want to assign.
-4. On the **License details** page, select the **Groups** tab, and then select **Assign licenses**.
-5. In the details panel, search for the group that you want to assign licenses to, and then select its name from the **Suggested groups** list.
-6. To assign or remove access to specific items, select **Turn apps and services on or off**.
-7. When finished, select **Assign**, and then close the right pane.
+1. Go to the **Billing** > [Licenses](https://go.microsoft.com/fwlink/p/?linkid=842264) page.
+1. On the **Subscriptions** tab, select the Windows 365 license that you want to assign.
+1. On the **License details** page, select the **Groups** tab, and then select **Assign licenses**.
+1. In the details panel, search for the group that you want to assign licenses to, and then select its name from the **Suggested groups** list.
+1. To assign or remove access to specific items, select **Turn apps and services on or off**.
+1. When finished, select **Assign**, and then close the right pane.
 
 ### Direct assignment
 
@@ -60,8 +60,8 @@ Direct assignment involves manually assigning licenses to individual users. Foll
 1. Sign in to the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?linkid=2024339) as at least a License Administrator.
 2. Go to the **Billing** > [Licenses](https://go.microsoft.com/fwlink/p/?linkid=842264) page.
 3. On the **Subscriptions** tab, select the Windows 365 license that you want to assign.
-4. On the **License details** page, select the **Users** tab, and then select **Assign licenses**.
-5. In the **Assign licenses to users** pane, type a name, and then choose it from the results to add it to the list. You can add up to 20 users at a time.
+1. On the **License details** page, select the **Users** tab, and then select **Assign licenses**.
+1. In the **Assign licenses to users** pane, type a name, and then choose it from the results to add it to the list. You can add up to 20 users at a time.
 6. To assign or remove access to specific items, select **Turn apps and services on or off**.
 7. When finished, select **Assign**, and then close the right pane.
 
@@ -76,9 +76,9 @@ Provisioning policies in Windows 365 require users to be part of specific Micros
 To do so, follow these steps:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then select **Groups** > **All groups**.
-2. Choose the relevant group associated with the provisioning policy.
-3. Select **Members** > **Add members**.
-4. Add the users who require Cloud PCs to this group and select **Select**.
+1. Choose the relevant group associated with the provisioning policy.
+1. Select **Members** > **Add members**.
+1. Add the users who require Cloud PCs to this group and select **Select**.
 
 ### Validate group assignment to provisioning policies
 
@@ -87,9 +87,9 @@ If a group is removed from a provisioning policy, all Cloud PCs associated with 
 To do so, follow these steps:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then select **Devices** > **Windows 365**.
-2. Navigate to **Provisioning policies** and open the provisioning policy the Cloud PCs in the grace period were created from.
-3. Under **Assignments**, select **Edit**.
-4. On the **Assignments** page, select **Add groups**, choose the groups you want this policy assigned to, and then select **Select**.
+1. Navigate to **Provisioning policies** and open the provisioning policy the Cloud PCs in the grace period were created from.
+1. Under **Assignments**, select **Edit**.
+1. On the **Assignments** page, select **Add groups**, choose the groups you want this policy assigned to, and then select **Select**.
 
    > [!NOTE]
    > Nested groups aren't currently supported.
@@ -103,8 +103,8 @@ After reassigning licenses and ensuring group memberships, it's important to ver
 To do so, follow these steps:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then select **Devices** > **Windows 365**.
-2. Navigate to **All Cloud PCs** and check the status of the affected Cloud PCs.
-3. Ensure that the Cloud PCs are in the **Provisioned** status and that the users can sign in to the Cloud PCs without issues.
+1. Navigate to **All Cloud PCs** and check the status of the affected Cloud PCs.
+1. Ensure that the Cloud PCs are in the **Provisioned** status and that the users can sign in to the Cloud PCs without issues.
 
 ## End the grace period by deprovisioning Cloud PCs
 
@@ -116,8 +116,8 @@ If a Cloud PC is no longer needed, you can end the grace period, thus circumvent
 To do so, follow these steps:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then select **Devices** > **Windows 365**.
-2. Navigate to **All Cloud PCs** and locate the Cloud PC that is in a grace period and no longer required.
-3. In the **Status** column of the list, select **In grace period** > **Deprovision now** > **Yes**.
+1. Navigate to **All Cloud PCs** and locate the Cloud PC that is in a grace period and no longer required.
+1. In the **Status** column of the list, select **In grace period** > **Deprovision now** > **Yes**.
 
 For more information, see [End grace period for Cloud PCs in Windows 365](/windows-365/enterprise/end-grace-period).
 
