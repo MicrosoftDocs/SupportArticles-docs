@@ -1,6 +1,6 @@
 ---
 title: Issues with Teams webinars
-description: Troubleshoot issues that affect Teams webinars, including missing or inactive Webinar and For Everyone options.
+description: Describes issues that affect Teams webinars, including missing or inactive Webinar and For Everyone options. Provides resolutions for the issues.
 author: Cloud-Writer
 ms.author: meerak
 manager: dcscontentpm
@@ -10,16 +10,18 @@ ms.custom:
   - sap:Teams Meetings\Webinars
   - CI 150942
   - CSSTroubleshoot
-ms.reviewer: billkau; sherimehmood; musingh
+ms.reviewer: cafarric; sherimehmood; musingh
 appliesto: 
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 03/19/2024
+ms.date: 07/17/2026
 ---
 # Issues that affect Teams webinars
 
-Microsoft Teams recently unveiled the webinar feature as an alternative to standard meetings. To learn how to manage webinars, see [Set up for webinars in Microsoft Teams](/microsoftteams/set-up-webinars). To learn how to use webinars, see [Get started with Teams webinars](https://support.microsoft.com/office/get-started-with-teams-webinars-42f3f874-22dc-4289-b53f-bbc1a69013e3) and [Schedule a webinar](https://support.microsoft.com/office/schedule-a-webinar-0719a9bd-07a0-47fd-8415-6c576860f36a). This article discusses known issues that might occur when your users use webinars, and provides resolutions and workarounds that you can try.
+## Summary
+
+This article explains known problems such as missing webinar options, registration settings that aren't available, attendee join issues, and missing webinar invitations. It provides troubleshooting steps, resolutions, and workarounds to restore webinar functionality. 
 
 ## The Webinar option is missing
 
@@ -67,31 +69,35 @@ This issue may occur if **Require Registration** is set to **None** when the web
 
 To work around this issue, set **Require Registration** to **For people in your org** or **For everyone** when you schedule a webinar.
 
-## Webinar invitations aren't received by attendees
+## Attendees don't receive Webinar invitations and registration confirmation emails
 
-In Teams, the invitations to webinars are sent by using the email delivery service in Microsoft Dynamics 365. If you set up security policies for external email messages that are received by your tenant, your users might not get the messages from this service because they're quarantined by your spam filter.
+Webinar invitations are sent by the organizer and registration confirmation and notification emails are sent to an attendee after they register, including the message that contains the link to join the webinar. These email messages are sent by the email delivery service in Microsoft Dynamics 365. 
 
-To fix this issue, add the [IP addresses that's used by the Dynamics email delivery service](/dynamics365/customer-insights/journeys/public-ip-addresses-for-email-sending) to the allow list of your spam filter. See your spam filter's documentation for instructions to modify the allow list settings.
+If you set up security policies for the external email messages that your tenant receives, your users might not get the webinar invitations and registration confirmation messages because they're quarantined by your spam filter.
 
-If your users are still not receiving invitations to Teams webinars, modify the default Connection filter policy by using the following steps:
+If the missing message is a registration confirmation email, use the following steps to identify the cause of the issue and resolve it:
 
-1. Navigate to the [Anti-spam policies](https://security.microsoft.com/antispam) page on the Microsoft 365 Defender portal.
-1. Select **Connection filter policy (Default)** from the list (but don't select the checkbox that's next to the name).
-1. In the flyout pane, select **Edit connection filter policy** in the **Connection filtering** section.
-1. Select the **Always allow messages from the following IP addresses or address range** option, and enter one of the IP addresses that are used by the email delivery service.
-1. Either press the Enter key or select the complete IP address value that's displayed below the box.
-1. Select **Save**.
-1. If you're prompted to enable customization, select **Yes**. This step might take some time to finish.
-
-- If you see an error message that mentions customization being disabled, use the following steps:
-
-  1. Wait a few hours, repeat steps 1 to 7, and then add one IP address range for the email delivery service that you entered in step 4.
-  1. If the addition is successful, add the remaining IP address ranges, and then select **Save**.
+1. Open the webinar item from your Teams calendar and navigate to **Registration** > **Attendee status**.
+    - If the registration status is **Pending approval**, the user's registration isn't complete yet. This happens if the organizer selects the **Require manual approval of all event registrations** option.<br/> 
+      To fix the issue, approve the user's registration by selecting **Approve**. The confirmation email with the join link is sent after the registration is approved.
+    - If the registration status is **Waitlisted**, the event reached its capacity. When a spot opens up either because a registrant cancels or the organizer increases capacity, the user's registration status either changes to **Pending approval** or the registration is completed automatically.
+    - If the registration status is **Confirmed**, the user confirms that the correct email address is used for registration but they still didn't receive the registration confirmation message, add the [public IP addresses used by the Dynamics email delivery service](/dynamics365/customer-insights/journeys/public-ip-addresses-for-email-sending) to the allow list of your spam filter. Refer to your spam filter's documentation for instructions to modify the allow list settings.
   
-- If you still can't add the IP addresses, use the following steps:
-
-  1. [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
-  1. Run the [Enable-OrganizationCustomization](/powershell/module/exchange/enable-organizationcustomization) PowerShell cmdlet to enable customization.
-  1. After customization is enabled, add the remaining IP address ranges, and then select **Save**.
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+2. If your users are still not receiving the registration confirmation email messages, modify the default Connection filter policy by using the following steps:
+    1. Navigate to the [Anti-spam policies](https://security.microsoft.com/antispam) page on the Microsoft 365 Defender portal.
+    2. Select **Connection filter policy (Default)** from the list (but don't select the checkbox that's next to the name).
+    3. In the flyout pane, select **Edit connection filter policy** in the **Connection filtering** section.
+    4. Select the **Always allow messages from the following IP addresses or address range** option, and enter one of the IP addresses that are used by the email delivery service.
+    5. Either press the Enter key or select the complete IP address value that's displayed below the box.
+    6. Select **Save**.
+    7. If you're prompted to enable customization, select **Yes**. This step might take some time to finish.
+       - If you see an error message that mentions customization being disabled, use the following steps:
+        
+          1. Wait a few hours, repeat steps 1 to 7, and then add one IP address range for the email delivery service that you entered in step 4.
+          2. If the addition is successful, add the remaining IP address ranges, and then select **Save**.
+          
+       - If you still can't add the IP addresses, use the following steps:
+        
+          1. [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
+          2. Run the [Enable-OrganizationCustomization](/powershell/module/exchange/enable-organizationcustomization) PowerShell cmdlet to enable customization.
+          3. After customization is enabled, add the remaining IP address ranges, and then select **Save**.
