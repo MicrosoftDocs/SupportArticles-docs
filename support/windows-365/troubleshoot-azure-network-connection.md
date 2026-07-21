@@ -6,8 +6,8 @@ ms.date: 02/12/2026
 ms.topic: troubleshooting
 ms.reviewer: ericor, erikje, joeno
 ms.custom:
-- pcy:Azure Network Connection\VNET Setup and Config Issues
-- sap:WinComm User Experience
+- sap:Azure Network Connection\VNET Setup and Config Issues
+- pcy:WinComm User Experience
 ms.collection:
 - M365-identity-device-management
 - tier2

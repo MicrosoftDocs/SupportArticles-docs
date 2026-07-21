@@ -7,8 +7,8 @@ ms.date: 02/12/2026
 ms.reviewer: wincicuex, erikje
 ms.topic: troubleshooting
 ms.custom:
-- pcy:Session connectivity\Users are not able to make a connection
-- sap:WinComm User Experience
+- pcy:WinComm User Experience
+- sap:Session connectivity\Users are not able to make a connection
 ---
 # Windows 365 Link connection fails with "Cloud PC does not support Entra ID single sign-on"
 
@@ -28,10 +28,10 @@ Windows 365 Link requires that [SSO is enabled on the Cloud PC](/windows-365/lin
 To confirm the status of SSO on the Cloud PC, follow these steps:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Navigate to **Devices** > **Device onboarding** > **Windows 365** > **All Cloud PCs**.
-3. Select **Columns** > **Using single sign-on**.
-4. Search the list for the Cloud PC in question by device name or the user's User Principal Name (UPN).
-5. If **Using single sign-on** shows **No**, Windows 365 Link can't connect to it.
+1. Navigate to **Devices** > **Device onboarding** > **Windows 365** > **All Cloud PCs**.
+1. Select **Columns** > **Using single sign-on**.
+1. Search the list for the Cloud PC in question by device name or the user's User Principal Name (UPN).
+1. If **Using single sign-on** shows **No**, Windows 365 Link can't connect to it.
 
 ## Reference
 

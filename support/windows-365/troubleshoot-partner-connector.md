@@ -6,8 +6,8 @@ ms.date: 02/12/2026
 ms.topic: troubleshooting
 ms.reviewer: aradinger, erikje
 ms.custom:
-- pcy:Partner Solutions for W365
-- sap:WinComm User Experience
+- sap:Partner Solutions for W365
+- pcy:WinComm User Experience
 ms.collection:
 - M365-identity-device-management
 - tier2

@@ -6,8 +6,8 @@ ms.date: 02/12/2026
 ms.topic: troubleshooting
 ms.reviewer: ivivano, erikje
 ms.custom:
-- pcy:Configuration and Management\Managing Devices with Intune
-- sap:WinComm User Experience
+- sap:Configuration and Management\Managing Devices with Intune
+- pcy:WinComm User Experience
 ms.collection:
 - M365-identity-device-management
 - tier2

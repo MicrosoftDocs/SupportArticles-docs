@@ -6,8 +6,8 @@ ms.date: 02/12/2026
 ms.topic: troubleshooting
 ms.reviewer: elluthra, erikje
 ms.custom:
-- pcy:Windows 365 Switch
-- sap:WinComm User Experience
+- sap:Windows 365 Switch
+- pcy:WinComm User Experience
 ms.collection:
 - M365-identity-device-management
 - tier2
@@ -28,8 +28,8 @@ If your Task view has a Cloud PC that you no longer have access to, you can remo
 ### Solution
 
 1. Uninstall the [Windows App](/windows-app/overview).
-2. Reinstall the Windows App.
-3. Select the Windows App **Add to Task view** button on the Cloud PC you want to add.
+1. Reinstall the Windows App.
+1. Select the Windows App **Add to Task view** button on the Cloud PC you want to add.
 
 ## Limited gestures
 
