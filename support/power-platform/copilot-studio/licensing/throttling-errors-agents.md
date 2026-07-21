@@ -1,12 +1,14 @@
 ---
-title: Resolve usage limit and agent unavailable errors in Copilot Studio agents
-description: Learn how to identify and resolve usage limit errors that occur due to quotas and limits in Microsoft Copilot Studio agents.
-ms.date: 06/09/2026
+title: Fix Copilot Studio Usage Limits and Agent Unavailable Errors
+description: Resolve usage limit and agent unavailable errors in Copilot Studio. Identify causes tied to quotas and Copilot credits, then follow clear steps to restore access.
+ms.date: 07/17/2026
 ms.reviewer: 
   - camogas
   - erickinser
+  - manuelap
   - v-shaywood
 ms.custom: sap:Licensing\Quotas and limits
+ai-usage: ai-assisted
 ---
 
 # Resolve usage limit and agent unavailable errors in Copilot Studio agents
@@ -34,7 +36,7 @@ For messages generated with the usage of generative AI and for topic orchestrati
 
 ### Confirm the Copilot Studio licensing and capacity model
 
-Review the [Copilot Studio quotas and limits](/microsoft-copilot-studio/requirements-quotas) for the plan you're using, and compare it against your recent usage. To view consumption in the Power Platform admin center, see [View Copilot Credit consumption](/microsoft-copilot-studio/requirements-messages-management#view-copilot-credit-consumption).
+Review the [Copilot Studio quotas and limits](/microsoft-copilot-studio/requirements-quotas) for the plan you're using, and compare them against your recent usage. To view consumption in the Power Platform admin center, see [View Copilot Credit consumption](/microsoft-copilot-studio/requirements-messages-management#view-copilot-credit-consumption).
 
 If you reach the limits, an administrator can either:
 
@@ -46,6 +48,12 @@ If you reach the limits, an administrator can either:
 ### Request a rate-limit increase for Copilot Studio
 
 [Contact Microsoft Support](/microsoft-copilot-studio/fundamentals-support#microsoft-support) and request a rate-limit increase. This option doesn't guarantee that an exception or increase is granted. Each request is subject to review and approval based on eligibility and current licensing. Only pay-as-you-go environments are eligible; environments operating solely on message-based functionality aren't eligible for consideration.
+
+### Plan agent deployments for throughput and rate limits
+
+Proactive throughput planning before user acceptance testing (UAT), load testing, or production launch can help you avoid throttling errors. Review the rate limits that apply across Copilot Studio, Power Automate, Dataverse, connectors, and any downstream APIs your agent uses. Estimate peak traffic windows rather than relying on monthly averages, and consider design optimizations to reduce throughput pressure before requesting a limit increase.
+
+For more information, see [Plan Copilot Studio agent deployments for throughput and rate limits](/microsoft-copilot-studio/guidance/plan-agent-throughput-rate-limits).
 
 ## Related content
 
