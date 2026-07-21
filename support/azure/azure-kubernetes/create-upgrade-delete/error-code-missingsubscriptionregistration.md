@@ -1,9 +1,9 @@
 ---
 title: Troubleshoot the MissingSubscriptionRegistration error
 description: Describes how to troubleshoot the MissingSubscriptionRegistration error when you try to create and deploy an Azure Kubernetes Service (AKS) cluster.
-ms.date: 09/16/2024
+ms.date: 07/21/2026
 editor: v-jsitser
-ms.reviewer: rissing, chiragpa, erbookbi, v-leedennis
+ms.reviewer: rissing, chiragpa, erbookbi, v-leedennis, addobres
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the MissingSubscriptionRegistration error code so that I can successfully create and deploy an Azure Kubernetes Service (AKS) cluster.
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
