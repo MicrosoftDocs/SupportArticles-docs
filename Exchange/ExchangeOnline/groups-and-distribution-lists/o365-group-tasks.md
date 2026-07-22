@@ -16,7 +16,7 @@ ms.reviewer: batre, meerak, v-shorestris
 appliesto:
   - Exchange Online
 search.appverid: MET150
-ms.date: 02/19/2026
+ms.date: 07/22/2026
 ---
 
 # Common management tasks for Microsoft 365 Groups
@@ -336,12 +336,14 @@ To check the message status of members who have subscribed to group email messag
 Get-UnifiedGroup <group name> | Get-UnifiedGroupLinks -LinkType Subscribers
 ```
 
-To configure all group members to receive messages that are sent to a Microsoft 365 group, run the following command:
+To resubscribe all group members to receive messages that are sent to a Microsoft 365 group, run the following command:
 
 ```powershell
 $group = "<address of Microsoft 365 group>"
 Get-UnifiedGroupLinks $group -LinkType Member | % {Add-UnifiedGroupLinks -Identity $group -LinkType subscriber -Links $_.Guid.ToString() -Confirm:$false}
 ```
+> [!NOTE]
+> The group members who didn't receive messages earlier will only get the new messages that're sent to the group after you run the command. The older messages will remain in the group. 
 
 Here's an example that resubscribes all members of the group `testg@contoso.onmicrosoft.com` to receive messages in their Inbox:
 
