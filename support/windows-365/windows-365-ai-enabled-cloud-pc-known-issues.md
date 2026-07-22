@@ -6,7 +6,7 @@ ms.date: 02/12/2026
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-tappelgate
 ms.custom:
-- sap:Configuration and Management
+- sap:Configuration and Management\Cloud PC AI-enablement
 - pcy:WinComm User Experience
 appliesto:
 - ✅ <a href=https://learn.microsoft.com/lifecycle/products/windows-365target=_blank>Supported versions of Windows 365</a>
