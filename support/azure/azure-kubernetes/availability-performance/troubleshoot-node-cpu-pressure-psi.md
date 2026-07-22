@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot CPU pressure in AKS clusters
 description: Learn how to troubleshoot CPU pressure in AKS clusters with PSI metrics to find real contention issues faster. Use these steps to improve performance.
-ms.date: 05/21/2025
-ms.reviewer: aritraghosh, dafell, alvinli, v-weizhu
+ms.date: 07/22/2026
+ms.reviewer: aritraghosh, dafell, alvinli, v-weizhu, addobres
 ms.service: azure-kubernetes-service
 ms.custom: sap:Node/node pool availability and performance
 ---
