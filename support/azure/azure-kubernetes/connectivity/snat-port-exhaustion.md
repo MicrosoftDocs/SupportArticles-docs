@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot SNAT port exhaustion on AKS nodes
 description: Learn how to troubleshoot SNAT port exhaustion on AKS nodes, identify high-connection pods, and take action to reduce outbound connectivity issues.
-ms.date: 07/21/2026
+ms.date: 07/22/2026
 ms.reviewer: v-rekhanain, v-weizhu, mariusbutuc
 ms.service: azure-kubernetes-service
 ms.custom: sap:Connectivity
@@ -72,23 +72,36 @@ This article helps you find and troubleshoot Azure Kubernetes Service (AKS) node
     9xxxx7      close        18633  curl             4  1.2.3.4           13.14.15.16      35690  80     4026532785
     ```
 
-3. Write the previous command output to a log file, and then sort the output to review a list of high connections:
+3. Write the previous command output to a log file, and then sort the output to review a list of high connections.
+
+    Because SNAT port exhaustion is caused only by outbound connections to *public* endpoints, filter the trace on the destination address (`DADDR`, the `$7` column) to keep only public IPv4 destinations before aggregating. This removes noise from traffic that doesn't consume SNAT ports, such as private (RFC 1918) addresses, localhost, the Azure Instance Metadata Service (IMDS), and Azure WireServer:
 
     ```bash
     python3 tcptracer -t4v > log
-    head -n +2 log | tail -n 1 | awk '{print "Count",$6,$10}'; awk '{print $6,$10}' log | sort | uniq -c | sort -nrk 1 | column -t
+    head -n +2 log | tail -n 1 | awk '{print "Count",$6,$7,$10}'
+    awk '$7 ~ /^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$/ &&
+         $7 !~ /^(10\.|127\.|169\.254\.|192\.168\.|172\.(1[6-9]|2[0-9]|3[01])\.|168\.63\.129\.16$)/ \
+         {print $6,$7,$10}' log | sort | uniq -c | sort -nrk 1 | column -t
     ```
+
+    The filter excludes the following non-public destinations:
+
+    - Private RFC 1918 ranges: `10.0.0.0/8`, `172.16.0.0/12`, and `192.168.0.0/16`
+    - Localhost: `127.0.0.0/8`
+    - Link-local addresses, including the IMDS endpoint `169.254.169.254`: `169.254.0.0/16`
+    - Azure WireServer: `168.63.129.16`
 
     Here's a command output example:
 
     ```output
-    Count SADDR        NETNS
-    387   1.2.3.4      4026532785
-    8     11.22.33.44  4026532184
-    8     55.66.77.88  4026531992
+    Count  SADDR         DADDR          NETNS
+    10     10.224.0.6    8.8.8.8        4026531840
+    6      10.244.1.190  13.89.174.133  4026532293
     ```
 
-4. Map the IP address with the most connections from the previous output to a pod. If it doesn't work, you can continue.
+    The remaining sources (`SADDR`) are the pods that establish connections to public destinations, which are the ones actually consuming SNAT ports.
+
+4. Map the source IP address (`SADDR`) with the most connections from the previous output to a pod. If it doesn't work, you can continue.
 
 5. Note the `SADDR` or `NETNS` value with the most connections from the previous output, and then run the following [lsns](https://man7.org/linux/man-pages/man8/lsns.8.html) command to map it to a PID. Lsns is a Linux tool that lists namespaces and maps namespaces to PIDs in the Linux process tree.
 
