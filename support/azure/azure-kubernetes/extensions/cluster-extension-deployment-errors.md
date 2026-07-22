@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot AKS cluster extension deployment errors
 description: Troubleshoot errors when deploying AKS cluster extensions. Learn how to diagnose and fix extension creation, Helm, and scheduling errors in AKS.
-ms.date: 06/15/2026
+ms.date: 07/22/2026
 author: kaushika-msft
 ms.author: kaushika
 editor: v-jsitser
@@ -14,6 +14,25 @@ ms.custom: sap:Extensions, Policies and Add-Ons
 ## Summary
 
 This article explains how to troubleshoot errors that occur when you deploy cluster extensions for Microsoft Azure Kubernetes Service (AKS), including extension creation failures, Helm errors, and scheduling problems.
+
+## Identifying the extension category
+
+start by identifying the extension category, then choose the matching section in this article:
+
+- **Core extension: Azure Monitor extension**
+
+  - Provisioning state is `Failed`: [Problem 1: Extension provisioning state shows "Failed"](#problem-1-extension-provisioning-state-shows-failed).
+  - Direct extension update is denied: [Problem 2: Can't update or edit a monitoring extension](#problem-2-cant-update-or-edit-a-monitoring-extension).
+  - A lock blocks disabling the monitoring add-on: [Problem 3: Resource locks prevent monitoring add-on disable operations](#problem-3-resource-locks-prevent-monitoring-add-on-disable-operations).
+  - Azure Policy blocks enabling the monitoring add-on: [Problem 4: Azure Policy blocks monitoring add-on enable operations](#problem-4-azure-policy-blocks-monitoring-add-on-enable-operations).
+
+- **Standard extension or Kubernetes application: Helm-based deployment**
+
+  - Resource readiness timeout or `BackoffLimitExceeded`: [Error: Timed out waiting for resource readiness](#error-timed-out-waiting-for-resource-readiness).
+  - Helm chart download failure: [Error: Unable to download the Helm chart from the repo URL](#error-unable-to-download-the-helm-chart-from-the-repo-url).
+  - Helm chart rendering failure: [Error: Helm chart rendering failed with given values](#error-helm-chart-rendering-failed-with-given-values).
+  - Existing Kubernetes resource conflict: [Error: Resource already exists in your cluster](#error-resource-already-exists-in-your-cluster).
+  - Another Helm operation is in progress: [Error: Operation is already in progress for Helm](#error-operation-is-already-in-progress-for-helm).
 
 ## Add-on to core extension migration
 
@@ -266,85 +285,11 @@ Examine the policy definition to understand which conditions block the extension
 - Resource name pattern restrictions
 - Required tag conditions
 
-#### Step 3: Create a policy exemption (recommended approach)
+#### Step 3: Resolve the policy restriction
 
-If the policy is required for compliance but Azure Monitor extensions should be allowed, create an exemption:
+Work with your Azure Policy administrator to update a custom policy or its assignment so that it allows the required Azure Monitor extensions. If the policy must remain in effect, consider creating a narrowly scoped policy exemption for the affected AKS cluster, in accordance with your organization's governance requirements. After the policy change propagates, retry the monitoring add-on operation.
 
-**Using Azure portal:**
-
-1. Go to **Policy** > **Assignments**.
-1. Select the blocking policy assignment.
-1. Select **Create exemption**.
-1. Set the scope to the AKS cluster resource or resource group.
-1. Select **Waiver** or **Mitigated** as the exemption category.
-
-1. Provide a justification (for example, "Azure Monitor metrics extension are core cluster extensions managed by AKS").
-
-**Using Azure CLI:**
-
-```azurecli
-az policy exemption create \
-  --name "Allow-Azure-Monitor-Extensions" \
-  --policy-assignment <assignment-id> \
-  --scope "/subscriptions/<subscription-id>/resourceGroups/<resource-group>/providers/Microsoft.ContainerService/managedClusters/<cluster-name>" \
-  --exemption-category Waiver \
-  --description "Exemption to allow Azure Monitor core extensions for cluster monitoring"
-```
-
-#### Step 4: Alternative – modify the policy (if appropriate)
-
-If you have permissions to modify the policy, update it to allow Azure Monitor extensions:
-
-1. Go to **Policy** > **Definitions**.
-1. Clone the existing policy definition (if it's a built-in policy).
-1. Modify the policy rule to exclude Azure Monitor extension types:
-
-- `microsoft.azuremonitor.containers.metrics`
-- `microsoft.azuremonitor.containers`
-- `microsoft.azuremonitor.appmonitoring`
-
-1. Update or create a policy assignment that uses the modified definition.
-
-**Example policy rule modification to allow Azure Monitor extensions:**
-
-```
-{
-  "if": {
-    "allOf": [
-      {
-        "field": "type",
-        "equals": "Microsoft.KubernetesConfiguration/extensions"
-      },
-      {
-        "field": "Microsoft.KubernetesConfiguration/extensions/extensionType",
-        "notIn": [
-          "microsoft.azuremonitor.containers.metrics",
-          "microsoft.azuremonitor.containers",
-          "microsoft.azuremonitor.appmonitoring"
-        ]
-      }
-    ]
-  },
-  "then": {
-    "effect": "deny"
-  }
-} 
-```
-
-#### Step 5: Retry the failing operation
-
-After you create an exemption or modify the policy, retry the failing monitoring add-on enable operation:
-
-**Using Azure CLI:**
-
-```azurecli
-# Enable Azure Monitor metrics
-az aks update --resource-group <resource-group> --name <cluster-name> \
-  --enable-azure-monitor-metrics
-# Enable Container Insights
-az aks enable-addons --resource-group <resource-group> --name <cluster-name> \
-  -a monitoring --workspace-resource-id <workspace-id>
-```
+For more information, see [Troubleshoot common errors in Azure Policy](/azure/governance/policy/troubleshoot/general) and [Azure Policy exemption structure](/azure/governance/policy/concepts/exemption-structure).
  
 ## Extension creation errors
 
