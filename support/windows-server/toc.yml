@@ -494,7 +494,7 @@ items:    # Please do not delete this line, it is required for the yaml format
         - name: Turn on debug logging in Windows Time Service
           href: ./active-directory/turn-on-debug-logging-in-windows-time-service.md
         - name: W32time settings fail when starting Windows Time Service in a workgroup
-          href: ./active-directory/w32time-sync-specialpollInterval-ignored.md
+          href: ./active-directory/w32time-sync-specialpollinterval-ignored.md
         - name: Windows Time Service settings aren't preserved in an upgrade
           href: ./active-directory/windows-time-service-values-reverted.md
 - name: Admin Development
@@ -1540,7 +1540,7 @@ items:    # Please do not delete this line, it is required for the yaml format
             - name: Troubleshoot setting entry point domain controller
               href: ./networking/troubleshoot-setting-entry-point-domain-controller.md
         - name: Troubleshoot DirectAccess
-          href: ./networking/troubleshoot-directAccess.md
+          href: ./networking/troubleshoot-directaccess.md
         - name: "Troubleshoot DirectAccess Server console: domain controller and Kerberos"
           href: ./networking/troubleshoot-directaccess-server-console-dc-kerberos.md
         - name: "Troubleshoot DirectAccess Server console: IP-Https and IPSec"
@@ -1686,7 +1686,7 @@ items:    # Please do not delete this line, it is required for the yaml format
     - name: Windows NIC Teaming (Load Balance Failover)
       items:
         - name: Kernel event ID 2 when MSFT_NetLbfoTeamNic is called
-          href: ./networking/kernel-event-id-2-msft-netLbfoteamnic-class.md
+          href: ./networking/kernel-event-id-2-msft-netlbfoteamnic-class.md
         - name: LACP Timer configured incorrectly when creating a new NIC Team for LBFO
           href: ./networking/lacp-timer-configured-incorrectly-create-nic-lbfo.md
         - name: Poor network performance on VMs when VMQ is enabled
@@ -1748,7 +1748,7 @@ items:    # Please do not delete this line, it is required for the yaml format
         - name: Stop code DRIVER_VERIFIER_DMA_VIOLATION
           href: ./performance/stop-code-driver-verifier-dma-violation.md
         - name: Stop error code 0x0000007F
-          href: ./performance/stop-error-code-0x0000007F.md
+          href: ./performance/stop-error-code-0x0000007f.md
         - name: Stop error when Windows tries to repair a drive while restarting
           href: ./backup-and-storage/stop-error-from-drive-repair-restart.md
         - name: "Troubleshoot stop errors: Best practices and dump configuration recommendations"
@@ -2471,8 +2471,8 @@ items:    # Please do not delete this line, it is required for the yaml format
       items:
         - name: Error 0x800f0805 when Server Manager and DISM fail to list the available features
           href: ./system-management-components/error-0x800f0805-server-manager-dism-fail-list-available-features.md
-        - name: error code 0x800706BE
-          href: ./system-management-components/unable-view-roles-features-error-code-0x800706BE.md
+        - name: Error code 0x800706BE
+          href: ./system-management-components/unable-view-roles-features-error-code-0x800706be.md
         - name: Error when you select Roles in Server Manager
           href: ./system-management-components/error-event-1601-click-roles-server-manager.md
         - name: Remote Server Administration Tools
@@ -2918,7 +2918,7 @@ items:    # Please do not delete this line, it is required for the yaml format
         - name: Security auditing settings aren't applied when you deploy domain-based policy
           href: ./windows-security/security-auditing-settings-not-applied-when-deploy-domain-based-policy.md
         - name: SeImpersonatePrivilege and SeCreateGlobalPrivilege
-          href: ./windows-security/seImpersonateprivilege-secreateglobalprivilege.md
+          href: ./windows-security/seimpersonateprivilege-secreateglobalprivilege.md
         - name: SIDs not resolve into friendly names
           href: ./windows-security/sids-not-resolve-into-friendly-names.md
         - name: User Account Control and remote restrictions
