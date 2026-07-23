@@ -1,8 +1,8 @@
 ---
 title: Basic troubleshooting for Node Not Ready problems in Azure Kubernetes Service
 description: Troubleshoot Node Not Ready problems in Azure Kubernetes Service (AKS) cluster nodes. Follow these steps to identify causes and recover your nodes quickly.
-ms.date: 09/26/2024
-ms.reviewer: rissing, chiragpa, momajed, v-leedennis, wonkilee, v-weizhu
+ms.date: 07/20/2026
+ms.reviewer: rissing, chiragpa, momajed, v-leedennis, wonkilee, v-weizhu, mariusbutuc
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to take basic troubleshooting steps so that I can avoid Node Not Ready issues in Azure Kubernetes Service (AKS) cluster nodes.
 ms.custom: sap:Node/node pool availability and performance
