@@ -1,10 +1,10 @@
 ---
 title: Fix NDR error 5.7.133 in Exchange Online
-ms.date: 01/24/2024
+ms.date: 07/23/2026
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
-ms.reviewer: v-six
+ms.reviewer: arindamt
 audience: Admin
 ms.topic: troubleshooting
 f1.keywords:
@@ -19,12 +19,14 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: 991abc19-7756-438f-abcb-39f69b80f284
-description: Learn how to fix email issues for error code 5.7.133 in Exchange Online (the group recipient is configured to reject messages from external or unauthenticated senders).
+description: Learn how to fix email issues for error code 5.7.133 in Exchange Online.
 ---
 
 # Fix NDR error "550 5.7.133" in Exchange Online
 
-It's frustrating when you get an error after sending an email message. This topic describes what you can do if you see error code 550 5.7.133 in a non-delivery report (also known as an NDR, bounce message, delivery status notification, or DSN). You'll see this automated notification when the recipient is a group that's configured to reject messages from external senders, that is, senders from outside the organization.
+## Summary
+
+This article describes what you can do if you see error code 550 5.7.133 in a non-delivery report (also known as an NDR, bounce message, delivery status notification, or DSN). You'll see this automated notification when the recipient is a group that's configured to reject messages from external senders who are from outside the organization.
 
 |&nbsp;|&nbsp;|&nbsp;|&nbsp;|
 |---|---|---|---|
@@ -42,37 +44,22 @@ To open the Exchange admin center (EAC), see [Exchange admin center in Exchange 
 
 ### Method 1: Allow all internal and external senders to send messages to this group
 
-#### New Exchange admin center (EAC)
-
-1. Go to **Recipients** \> **Groups**.
-
-2. Select a group from the list and click it. The group properties screen appears.
+1. Open the [Exchange admin center (EAC)](/exchange/exchange-admin-center).
+2. Go to **Recipients** \> **Groups**.
+3. Select a group from the list and click it. The group properties screen appears.
 
    :::image type="content" source="media/fix-error-code-5-7-133-in-exchange-online/group-properties.png" alt-text="The screen displaying the properties of the chosen group.":::
 
-3. Click the **Settings** tab.
+4. Click the **Settings** tab.
 
    :::image type="content" source="media/fix-error-code-5-7-133-in-exchange-online/group-screen.png" alt-text="The screen on which group details are displayed.":::
 
-4. Under **Delivery management**, click **Edit delivery management**. The **Delivery management** screen appears.
- 
-5. Under **Sender options**, choose **Allow messages from people inside and outside my organization**.
+5. Under **Delivery management**, click **Edit delivery management**. The **Delivery management** screen appears. 
+6. Under **Sender options**, choose **Allow messages from people inside and outside my organization**.
  
    :::image type="content" source="media/fix-error-code-5-7-133-in-exchange-online/adding-all-senders-to-group.png" alt-text="The screen on which all the senders are added to the senders group.":::
 
-6. Click **Save changes**.
-
-#### Classic EAC
-
-1. In the EAC, go to **Recipients** \> **Groups** \> select the group from the list, and then click **Edit** :::image type="icon" source="media/edit-icon.png":::.
-
-    :::image type="content" source="media/fix-error-code-5-7-133-in-exchange-online/groups.png" alt-text="Screenshot of the group lists.":::
-
-2. In the group properties dialog box that opens, go to **Delivery management** \> select **Senders inside and outside of my organization**.
-
-    :::image type="content" source="media/fix-error-code-5-7-133-in-exchange-online/no-restriction-on-any-sender.png" alt-text="The Delivery Management screen to configure all senders to send mails.":::
-
-3. Click **Save**.
+7. Click **Save changes**.
 
 ### Method 2: Use the group's allowed senders list
 
@@ -88,44 +75,22 @@ Instead of allowing all external senders to send messages to this group, you can
 
 To configure the group's allowed senders list, perform the following steps:
 
-#### New EAC
-
-1. Go to **Recipients** \> **Groups**.
-
-2. Select a group from the list and click it. The group properties screen appears.
+1. Open the [Exchange admin center (EAC)](/exchange/exchange-admin-center).
+2. Go to **Recipients** \> **Groups**.
+3. Select a group from the list and click it. The group properties screen appears.
 
    :::image type="content" source="media/fix-error-code-5-7-133-in-exchange-online/group-properties.png" alt-text="The screen displaying the properties of the chosen group.":::
 
-3. Click the **Settings** tab.
-
-4. Under **Delivery management**, click **Edit delivery management**. The **Delivery management** screen appears.
-
-5. Under **Sender options**, choose **Allow messages from people inside and outside my organization**.
-
-6. Under **Specified senders**, click inside the text box. The list of senders (internal and external) is displayed.
+4. Click the **Settings** tab.
+5. Under **Delivery management**, click **Edit delivery management**. The **Delivery management** screen appears.
+6. Under **Sender options**, choose **Allow messages from people inside and outside my organization**.
+7. Under **Specified senders**, click inside the text box. The list of senders (internal and external) is displayed.
 
    :::image type="content" source="media/fix-error-code-5-7-133-in-exchange-online/list-of-senders.png" alt-text="The screen that lists the internal and external senders who can be added to the senders list.":::
 
-7. Choose the senders you want to add to the senders list, and click **Save changes**.
+8. Choose the senders you want to add to the senders list, and click **Save changes**.
 
    :::image type="content" source="media/fix-error-code-5-7-133-in-exchange-online/choosing-profile-of-a-sender.png" alt-text="The screen on which a chosen sender is added to the senders group.":::
-
-#### Classic EAC
-
-1. Go to **Recipients** \> **Groups** \> select the group from the list, and then click **Edit** :::image type="icon" source="media/edit-icon.png":::.
-
-2. In the group properties dialog box that opens, go to **Delivery management** and configure the following settings:
-   - Select **Senders inside and outside of my organization**.
-
-   - Click **Add** :::image type="icon" source="media/add-icon.png":::. In the **Select Allowed Senders** dialog box, select and add the external senders and the "all internal users" group. When you're finished, click **OK**.
-
-     :::image type="content" source="media/fix-error-code-5-7-133-in-exchange-online/option-to-add-sender.png" alt-text="The screen on which the option to add a sender is displayed.":::
-
-     :::image type="content" source="media/fix-error-code-5-7-133-in-exchange-online/add-sender.png" alt-text="The screen on which you can add a sender who is to be added into the.":::
-
-     :::image type="content" source="media/fix-error-code-5-7-133-in-exchange-online/add-user.png" alt-text="Screenshot of adding allowed external sender to a distribution group.":::
-
-3. Click **Save**.
 
 ## Still need help with error code 550 5.7.133?
 
