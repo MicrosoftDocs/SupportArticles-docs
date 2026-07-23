@@ -1,7 +1,7 @@
 ---
 title: Fix Financial Dimension Errors in Dynamics 365 Finance
-description: Troubleshoot and fix financial dimension issues, such as inactive dimensions, suspended values, and derived dimension rule conflicts, in Dynamics 365 Finance.
-ms.date: 07/17/2026
+description: Troubleshoot financial dimension errors in Dynamics 365 Finance, including inactive or suspended values and derived rule conflicts. Follow the steps to fix them.
+ms.date: 07/21/2026
 ms.reviewer: anaborges, setharvila, ethankallett, twheeloc, v-shaywood
 ms.custom: sap:General ledger - Setup, transactions and reporting\Issues with financial dimensions and financial tags
 ai-usage: ai-assisted
@@ -29,6 +29,8 @@ You might receive one of the following error messages when you work with financi
 - [Unable to return DimensionAttributeValue record for \<DimensionName>](#unable-to-return-dimensionattributevalue-record)
 - [The financial dimension name \<DimensionName> contains invalid characters.](#financial-dimension-name-contains-invalid-characters)
 - [The value \<Value> doesn't exist for \<DimensionName>.](#value-doesnt-exist-for-financial-dimension)
+- [The row with \<DimensionName> \<Criteria> overlaps with the row with \<Criteria>.](#rows-overlap-in-an-account-structure-or-advanced-rule)
+- [The row with \<DimensionName> values \<Values> overlaps with the row with values \<Values>.](#rows-overlap-in-an-account-structure-or-advanced-rule)
 
 ## Combination not validated beyond financial dimension
 
@@ -55,7 +57,7 @@ For more information, see [Configure account structures](/dynamics365/finance/ge
 
 ### Check for default or derived dimensions that cause invalid segments
 
-If you didn't directly enter the violating segment into the ledger account, default dimensions or [derived dimensions](/dynamics365/finance/general-ledger/financial-dimensions#derived-dimensions) in your setup might be applying it:
+If you didn't directly enter the violating segment into the ledger account, default dimensions or [derived dimensions](/dynamics365/finance/general-ledger/derived-dimensions) in your setup might be applying it:
 
 1. Review the main account for fixed dimensions that conflict with your entry.
 1. Check the journal header default dimensions that might be automatically applied.
@@ -80,7 +82,7 @@ These errors appear if a ledger combination has a blank value that contradicts t
 
 ### Check for default or derived dimensions that cause blanks
 
-If you didn't directly leave the field blank, default dimensions or [derived dimensions](/dynamics365/finance/general-ledger/financial-dimensions#derived-dimensions) in your setup might cause blank values:
+If you didn't directly leave the field blank, default dimensions or [derived dimensions](/dynamics365/finance/general-ledger/derived-dimensions) in your setup might cause blank values:
 
 1. Review the main account for fixed dimensions that should populate automatically.
 1. Check the journal header default dimensions that might be automatically applied.
@@ -152,7 +154,7 @@ A [fixed dimension value](/dynamics365/finance/general-ledger/dimensions-default
 
 ### Check for default or derived dimensions that cause incorrect values
 
-If you didn't directly enter the violating value, default dimensions or [derived dimensions](/dynamics365/finance/general-ledger/financial-dimensions#derived-dimensions) in your setup might be applying it:
+If you didn't directly enter the violating value, default dimensions or [derived dimensions](/dynamics365/finance/general-ledger/derived-dimensions) in your setup might be applying it:
 
 1. Review the main account for fixed dimensions that conflict with your entry.
 1. Check the journal header default dimensions that might be automatically applied.
@@ -176,7 +178,7 @@ The dimension value is suspended, either at the header level or as a legal entit
 
 ### Check for default or derived dimensions that apply suspended values
 
-If you didn't directly enter the suspended segment into the ledger account, default dimensions or [derived dimensions](/dynamics365/finance/general-ledger/financial-dimensions#derived-dimensions) in your setup might be applying it. To investigate this issue:
+If you didn't directly enter the suspended segment into the ledger account, default dimensions or [derived dimensions](/dynamics365/finance/general-ledger/derived-dimensions) in your setup might be applying it. To investigate this issue:
 
 1. Review the main account for fixed dimensions that are suspended.
 1. Check the journal header default dimensions that might be automatically applied.
@@ -199,7 +201,7 @@ The dimension value is inactive on the date of the transaction, either at the he
 
 ### Check for default or derived dimensions that apply inactive values
 
-If you don't directly enter the inactive segment into the ledger account, default dimensions or [derived dimensions](/dynamics365/finance/general-ledger/financial-dimensions#derived-dimensions) in your setup might apply it:
+If you don't directly enter the inactive segment into the ledger account, default dimensions or [derived dimensions](/dynamics365/finance/general-ledger/derived-dimensions) in your setup might apply it:
 
 1. Review the main account for fixed dimensions that are inactive.
 1. Check the journal header default dimensions that might be automatically applied.
@@ -224,7 +226,7 @@ For more information, see [Configure account structures](/dynamics365/finance/ge
 
 ### Check for default or derived dimensions that cause the violation
 
-If you didn't manually enter the segment that caused the error, default or [derived dimensions](/dynamics365/finance/general-ledger/financial-dimensions#derived-dimensions) might provide the value:
+If you didn't manually enter the segment that caused the error, default or [derived dimensions](/dynamics365/finance/general-ledger/derived-dimensions) might provide the value:
 
 1. Review the main account for fixed dimension values that conflict with the account structure.
 1. Check the journal header default dimensions that might be automatically applied.
@@ -289,7 +291,7 @@ If no error appears after you re-enter the account number, the form now correctl
 
 ### Check for derived dimensions
 
-[Derived dimensions](/dynamics365/finance/general-ledger/financial-dimensions#derived-dimensions) might apply a value that you don't expect, based on another value earlier in the combination.
+[Derived dimensions](/dynamics365/finance/general-ledger/derived-dimensions) might apply a value that you don't expect, based on another value earlier in the combination.
 
 1. Go to **General ledger** > **Chart of accounts** > **Dimensions** > **Financial dimensions**.
 1. Review the derived dimension rules for each dimension that's used in the account structure.
@@ -340,7 +342,7 @@ You receive the following error message:
 
 > The \<DimensionName> dimension with value \<Value> isn't allowed due to derived dimension rules. The allowed value should be \<AllowedValue>.
 
-This error occurs if a [derived dimension](/dynamics365/finance/general-ledger/financial-dimensions#derived-dimensions) rule has the **Prevent changes** option enabled for the segment that caused the error. If you enable this option, the derived dimension automatically populates the segment and prevents manual changes.
+This error occurs if a [derived dimension](/dynamics365/finance/general-ledger/derived-dimensions) rule has the **Prevent changes** option enabled for the segment that caused the error. If you enable this option, the derived dimension automatically populates the segment and prevents manual changes.
 
 To resolve this issue, follow these steps:
 
@@ -421,6 +423,72 @@ If the dimension value exists but you still receive this error message, try the 
 >
 > 1. Go to **System administration** > **Periodic tasks** > **Data maintenance**.
 > 1. Check the *Dimension value rename and modify chart of accounts delimiter process* job.
+
+## Rows overlap in an account structure or advanced rule
+
+You receive one of the following error messages:
+
+> The row with \<DimensionName> \<Criteria> overlaps with the row with \<Criteria>.
+
+> The row with \<DimensionName> values \<Values> overlaps with the row with values \<Values>.
+
+An overlap means that two rows allow the same dimension value, so the system can't tell which rule to follow. It doesn't let you activate the account structure until you fix the overlap.
+
+The following list describes common situations that produce this error:
+
+- **The overlap is with a different account structure** When you activate an account structure, the system checks it against every other active account structure on the same ledger, not just the one you're editing. The system always compares against the currently *active* versions of the other account structures, never the drafts. So even if you already fixed the overlap in another account structure, the overlap error still appears until you activate that other account structure.
+
+  *Example:* Account structure A allows main accounts 100–199 and account structure B allows 200–299. To move account 250 into account structure A, you add 250 to account structure A and remove 250 from account structure B. Activating account structure A still fails on 250, because account structure B isn't activated yet and its active version still allows 250.
+
+  *Fix:* Activate one account structure at a time so each change takes effect before you rely on it. Activate account structure B first to remove 250, then activate account structure A to add 250.
+
+- **Two or more criteria in the same account structure have overlapping dimension values.** The system evaluates the rows like branches of a tree, comparing the criteria for each dimension from left to right. Criteria with identical values follow the same branch, and criteria with completely separate values break off into their own branches. An overlap happens when the values only partly overlap because the branch can't cleanly split, causing shared values to belong to multiple branches at once.
+
+  In this structure, the cost center splits the rows into clean branches, so the criteria in both row 1 and row 2 can have `D1` in the Department dimension:
+
+  | Main account | Cost center | Department |
+  | ------------ | ----------- | ---------- |
+  | 100–399      | C1          | D1         |
+  | 100–399      | C2          | D1;D3      |
+
+  ```tree
+  100–399
+  ├── C1 → D1
+  └── C2 → D1;D3
+  ```
+
+  In this example, the main accounts are identical and the departments only partly overlap, so account `250` with department `D1` could follow either account structure rule - an overlap conflict:
+
+  | Main account | Department | Cost center |
+  | ------------ | ---------- | ----------- |
+  | 100–399      | D1         | C2;C3       |
+  | 100–399      | D1,D3      | C5          |
+
+  ```tree
+  100–399
+  ├── D1    → C2;C3
+  └── D1,D3 → C5      ← both include D1
+  ```
+
+  *Fix:* Remove the overlap in the Department dimension:
+
+  | Main account | Department | Cost center |
+  | ------------ | ---------- | ----------- |
+  | 100–399      | D1         | C2;C3;C5    |
+  | 100–399      | D3         | C5          |
+
+- **Reordering the columns can create an overlap.** Because the system reads each row from left to right, moving a dimension to a different column without adjusting the criteria can create an overlap that wasn't there before. After you reorder, recheck the criteria so each row is still uniquely identified from left to right.
+
+### Identify the overlapping rows
+
+1. Go to **General ledger** > **Chart of accounts** > **Structures** > **Configure account structures**. For an advanced rule, go to **General ledger** > **Chart of accounts** > **Structures** > **Advanced rule structures**.
+1. Open the account structure or advanced rule structure that you're configuring.
+1. Locate the two rows that use the dimension and the criteria values named in the error message.
+1. Change the value ranges or discrete values so that each value appears in only one row.
+1. Use explicit, non-overlapping ranges instead of ranges that share endpoints or wildcards (`*`) that cover values already defined in another row.
+1. Validate and activate the structure again.
+
+For more information on overlapping criteria, see [Overlapping criteria in account structures](/dynamics365/finance/general-ledger/configure-account-structures#overlapping-criteria).
 
 ## Related content
 
