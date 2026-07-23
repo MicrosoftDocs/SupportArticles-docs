@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot "Forbidden" error when trying to access AKS cluster resources
 description: Fix "Error from server (Forbidden)" RBAC errors in AKS so users can access Kubernetes resources again. Follow these steps to restore access quickly.
-ms.date: 08/26/2024
-ms.reviewer: rissing chiragpa, v-leedennis
+ms.date: 07/23/2026
+ms.reviewer: rissing chiragpa, v-leedennis, addobres
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes administrator, I want to fix RBAC-related errors so that users can access their cluster resources.
 ms.custom: sap:Connectivity,innovation-engine
