@@ -1,9 +1,9 @@
 ---
 title: Troubleshoot the InvalidResourceReference error code
 description: Learn how to troubleshoot the InvalidResourceReference error when you try to create and deploy an Azure Kubernetes Service (AKS) cluster or update an AKS cluster.
-ms.date: 01/11/2024
+ms.date: 07/24/2026
 editor: v-jsitser
-ms.reviewer: rissing, chiragpa, erbookbi, v-leedennis, v-weizhu
+ms.reviewer: rissing, chiragpa, erbookbi, erifernandez, v-leedennis, v-weizhu
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the InvalidResourceReference error code so that I can successfully create and deploy an Azure Kubernetes Service (AKS) cluster.
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
@@ -62,6 +62,31 @@ This issue might occur if the default outbound rule "aksOutboundRule" on the loa
 ### Solution 2
 
 Rerun the `az aks update` command with the `load-balancer-outbound-ips` parameter to update your cluster. Use the resource ID of the public IP as the parameter value. For more information, see [Update the cluster with your own outbound public IP](/azure/aks/load-balancer-standard#update-the-cluster-with-your-own-outbound-public-ip).
+
+## Symptom 3
+
+When you create, scale, upgrade, or update a node pool, the operation fails with an `InvalidResourceReference` error message that resembles the following example:
+
+> Code="InvalidResourceReference"  
+> Message="Create or update VMSS  
+> **/subscriptions/*\<subscription-id-guid>*/resourceGroups/MC_MyResourceGroup_MyCluster/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool-vmss**  
+> failed. Resource  
+> **/subscriptions/*\<subscription-id-guid>*/resourceGroups/*\<vnet-resource-group>*/providers/Microsoft.Network/virtualNetworks/*\<vnet-name>***  
+> referenced by resource  
+> **/subscriptions/*\<subscription-id-guid>*/resourceGroups/MC_MyResourceGroup_MyCluster/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool-vmss**  
+> was not found."
+
+### Cause 3
+
+This issue occurs when the virtual network that was associated with the AKS cluster during cluster creation is moved to another resource group or subscription. AKS and the underlying Virtual Machine Scale Set (VMSS) continue to reference the original virtual network resource ID. As a result, node pool operations that require VMSS updates fail because the virtual network can no longer be found at its original resource path.
+
+Moving the virtual network of an AKS cluster isn't supported. As documented in [Move operation support for networking resources](/azure/azure-resource-manager/management/move-limitations/networking-move-limitations), if you move the virtual network for an AKS cluster, the AKS cluster stops working.
+
+### Solution 3
+
+There's no supported method to update an existing AKS cluster to reference the virtual network after it's moved. Microsoft Support and the AKS product group can't modify the cluster's underlying network references.
+
+To resolve the issue, create a new AKS cluster that references the virtual network in its current location, migrate your workloads to the new cluster, and then decommission the affected cluster.
 
 ## More information
 
