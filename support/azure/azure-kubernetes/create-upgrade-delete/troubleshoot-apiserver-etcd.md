@@ -1,11 +1,11 @@
 ---
 title: Troubleshoot API server and etcd problems in AKS
 description: Diagnose and resolve AKS API server and etcd problems faster with practical steps for latency, timeouts, and throttling. Start troubleshooting now.
-author: seguler
-ms.author: segule
-ms.date: 07/22/2025
+ms.date: 07/24/2026
+author: kaushika-msft
+ms.author: kaushika
 ms.service: azure-kubernetes-service
-ms.reviewer: kthakar1990, v-weizhu, axelg, josebl, aritraghosh, v-leedennis, v-liuamson
+ms.reviewer: kthakar1990, v-weizhu, axelg, josebl, aritraghosh, v-leedennis, v-liuamson, segule, shuyingqin
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
 
@@ -15,15 +15,15 @@ ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool
 
 This article helps you troubleshoot API server and etcd problems in large Azure Kubernetes Service (AKS) deployments.
 
-Microsoft tests the reliability and performance of the API server at a scale of 5,000 nodes and 200,000 pods. The cluster that contains the API server can automatically scale out and deliver [Kubernetes Service Level Objectives (SLOs)](https://github.com/kubernetes/community/blob/master/sig-scalability/slos/slos.md). If you experience high latencies or timeouts, the cause is likely a resource leakage on the distributed `etc` directory (etcd), or an offending client that has excessive API calls.
+Microsoft tests the reliability and performance of the API server at a scale of 5,000 nodes and 200,000 pods. The cluster that contains the API server can automatically scale out and deliver [Kubernetes Service Level Objectives (SLOs)](https://github.com/kubernetes/community/blob/main/sig-scalability/slos/slos.md). If you experience high latencies or timeouts, the cause is likely a resource leak in etcd (the distributed key-value store that backs the API server), or an offending client that makes excessive API calls.
 
 ## Prerequisites
 
 - The [Azure CLI](/cli/azure/install-azure-cli).
 
-- The Kubernetes [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) tool. To install kubectl by using Azure CLI, run the [az aks install-cli](/cli/azure/aks#az-aks-install-cli) command.
+- The Kubernetes [kubectl](https://kubernetes.io/docs/reference/kubectl/) tool. To install kubectl by using Azure CLI, run the [az aks install-cli](/cli/azure/aks#az-aks-install-cli) command.
 
-- AKS diagnostics logs (specifically, kube-audit events) that are enabled and sent to a [Log Analytics workspace](/azure/aks/monitor-apiserver). To determine whether logs are collected by using [resource-specific](/azure/azure-monitor/essentials/resource-logs#resource-specific) or [Azure diagnostics](/azure/azure-monitor/essentials/resource-logs#azure-diagnostics-mode) mode, check the **Diagnostic Settings** blade in the Azure portal.
+- AKS diagnostics logs (specifically, kube-audit events) that are enabled and sent to a [Log Analytics workspace](/azure/aks/monitor-aks#aks-control-plane-resource-logs). To determine whether logs are collected by using [resource-specific](/azure/azure-monitor/platform/resource-logs#resource-specific) or [Azure diagnostics](/azure/azure-monitor/platform/resource-logs#azure-diagnostics-mode) mode, check the **Diagnostic Settings** blade in the Azure portal.
 
 - The Standard tier for AKS clusters. If you're using the Free tier, the API server and etcd contain limited resources. AKS clusters in the Free tier don't provide high availability. This condition is often the root cause of API server and etcd problems.
 
@@ -49,10 +49,10 @@ The following table outlines the common symptoms of API server failures.
 
 | Symptom | Description |
 |---|---|
-| API server pod in `CrashLoopbackOff` status or facing webhook call failures | Verify that you don't have any custom admission webhook (such as the [Kyverno](https://kyverno.io/docs/introduction/) policy engine) that's blocking the calls to the API server. |
+| API server pod in `CrashLoopBackOff` status or facing webhook call failures | Verify that you don't have any custom admission webhook (such as the [Kyverno](https://kyverno.io/docs/introduction/) policy engine) that's blocking the calls to the API server. |
 | Timeouts from the API server | Frequent timeouts that are beyond the guarantees in [the AKS API server SLA](/azure/aks/free-standard-pricing-tiers#uptime-sla-terms-and-conditions). For example, `kubectl` commands timeout. |
 | High latencies | High latencies that make the Kubernetes SLOs fail. For example, the `kubectl` command takes more than 30 seconds to list pods. |
-| * Elevated HTTP 429 responses from the API server <br> <br> * Following message for **kubectl get** commands: <br> "The server is currently unable to handle the request" | API server is overloaded and is throttling calls. Refer to Cause 4 and Cause 5 |
+| * Elevated HTTP 429 responses from the API server <br> <br> * Following message for **kubectl get** commands: <br> "The server is currently unable to handle the request" | API server is overloaded and is throttling calls. Refer to [Cause 4](#cause-4-aks-managed-api-server-guard-was-applied) and [Cause 5](#cause-5-an-offending-client-makes-excessive-list-or-put-calls). |
 
 
 ## Cause and resolution
@@ -89,7 +89,7 @@ Check the events that are related to your API server. You might see event messag
 
 > Internal error occurred: failed calling webhook "mutate.kyverno.svc-fail": failed to call webhook: Post "https\://kyverno-system-kyverno-system-svc.kyverno-system.svc:443/mutate/fail?timeout=10s": write unix @->/tunnel-uds/proxysocket: write: broken pipe
 
-#### Retrieve API Server Logs
+#### Retrieve API server logs
 
 ##### [**Resource-specific**](#tab/resource-specific)
 
@@ -114,15 +114,46 @@ AzureDiagnostics
 | project TimeGenerated, event, Category
 ```
 ---
-In this example, the validating webhook is blocking the creation of some API server objects. Because this scenario might occur during bootstrap time, the API server and Konnectivity pods can't be created. Therefore, the webhook can't connect to those pods. This sequence of events causes the deadlock and the error message.
+In this example, the validating webhook blocks the creation of some API server objects. Because this scenario might occur during bootstrap time, the API server and Konnectivity pods can't be created. Therefore, the webhook can't connect to those pods. This sequence of events causes the deadlock and the error message.
+
+A custom webhook can also fail outside of bootstrap. If a webhook uses `failurePolicy: Fail` and its backend becomes unavailable, the API server rejects every request that matches the webhook rules while the rest of the cluster keeps running. On AKS, the API server reaches the webhook through the Konnectivity tunnel, so an unreachable backend often surfaces as a gateway timeout wrapped in an HTTP 500 error:
+
+> Internal error occurred: failed calling webhook "\<name\>": failed to call webhook: Post "https\://\<host\>/validate?timeout=\<n\>s": proxy error from localhost:9443 while dialing \<host\>, code 504: 504 Gateway Timeout
+
+Because controllers can't create objects, the impact spreads. For example, a Deployment's ReplicaSet reports `ReplicaFailure` with `FailedCreate` events that carry the same webhook error. To confirm, make sure kube-audit diagnostics logs are enabled and sent to a Log Analytics workspace (see [Prerequisites](#prerequisites)), and then query the `AKSAudit` table for the failing operations:
+
+##### [**Resource-specific**](#tab/resource-specific)
+
+```kusto
+AKSAudit
+| where TimeGenerated between(now(-1h)..now()) // When you experienced the problem
+| where ResponseStatus.code == 500
+| where ResponseStatus.message has "failed calling webhook"
+| extend Resource = tostring(ObjectRef.resource), User = tostring(User.username)
+| project TimeGenerated, Verb, Resource, User, Message = tostring(ResponseStatus.message)
+```
+
+##### [**Azure diagnostics**](#tab/azure-diagnostics)
+
+```kusto
+AzureDiagnostics
+| where TimeGenerated between(now(-1h)..now())  // When you experienced the problem
+| where Category == "kube-audit"
+| extend event = parse_json(log_s)
+| where event.responseStatus.code == 500
+| where event.responseStatus.message has "failed calling webhook"
+| extend Resource = tostring(event.objectRef.resource), User = tostring(event.user.username)
+| project TimeGenerated, Verb = tostring(event.verb), Resource, User, Message = tostring(event.responseStatus.message)
+```
+---
 
 ### Solution 2: Delete webhook configurations
 
-To fix this problem, delete the validating and mutating webhook configurations. To delete these webhook configurations in Kyverno, review the [Kyverno troubleshooting article](https://kyverno.io/docs/troubleshooting/).
+To fix this problem, delete the validating and mutating webhook configurations. To delete these webhook configurations in Kyverno, review the [Kyverno troubleshooting article](https://kyverno.io/docs/guides/troubleshooting/).
 
 ### Cause 3: An offending client leaks etcd objects and causes a slowdown of etcd
 
-A common situation is that objects are continuously created even though existing unused objects in the etcd database aren't removed. This situation can cause performance problems if etcd handles too many objects (more than 10,000) of any type. A rapid increase of changes on such objects could also cause the default size of the etcd database (by default, either eight (8) gigabytes) to be exceeded.
+A common situation is that objects are continuously created even though existing unused objects in the etcd database aren't removed. This situation can cause performance problems if etcd handles too many objects (more than 10,000) of any type. A rapid increase of changes on such objects could also cause the etcd database to exceed its size limit (8 GB by default).
 
 To check the etcd database usage, go to **Diagnose and Solve problems** > **Cluster and Control Plane Availability and Performance** in the Azure portal. Run the **Etcd Capacity Issues** and **Etcd Performance Issues** diagnosis tool. The diagnosis tool shows the usage breakdown and the total database size.
 
@@ -137,11 +168,11 @@ kubectl get --raw /metrics | grep -E "etcd_db_total_size_in_bytes|apiserver_stor
 > [!NOTE]
 > If your control plane is unavailable, the kubectl commands don't work. Use **Diagnose and Solve problems** in Azure portal as shown in the section above. 
 
-The metric name in the previous command is different for different Kubernetes versions. For Kubernetes 1.25 and earlier versions, use `etcd_db_total_size_in_bytes`. For Kubernetes 1.26 to 1.28, use `apiserver_storage_db_total_size_in_bytes`. An etcd database with size greater than two (2) gigabytes is considered a large etcd db.
+The metric name in the previous command is different for different Kubernetes versions. For Kubernetes 1.25 and earlier versions, use `etcd_db_total_size_in_bytes`. For Kubernetes 1.26 and 1.27, use `apiserver_storage_db_total_size_in_bytes`. For Kubernetes 1.28 and later, use `apiserver_storage_size_bytes`. The `grep` command above matches all three names, so it returns a value regardless of your cluster version. An etcd database with size greater than two (2) gigabytes is considered a large etcd db.
 
 ### Solution 3: Define quotas for object creation, delete objects, or limit object lifetime in etcd
 
-To prevent etcd from reaching capacity and causing cluster downtime, limit the maximum number of resources that are created. You can also slow the number of revisions that are generated for resource instances. To limit the number of objects that you can create, [define object quotas](https://kubernetes.io/docs/concepts/policy/resource-quotas/#object-count-quota).
+To prevent etcd from reaching capacity and causing cluster downtime, limit the maximum number of resources that you create. You can also slow the number of revisions that are generated for resource instances. To limit the number of objects that you can create, [define object quotas](https://kubernetes.io/docs/concepts/policy/resource-quotas/#quota-on-object-count).
 
 If you identify objects that are no longer in use but consume resources, consider deleting them. For example, delete completed jobs to free up space:
 
@@ -155,9 +186,9 @@ Also refer to [Solution 6](#solution-6-use-existing-diagnostic-tools-to-identify
 
 ### Cause 4: AKS managed API server guard was applied
 
-If you see a high rate of HTTP 429 errors, one possible cause is that AKS applies a managed API server guard. AKS applies this guard by using a FlowSchema and PriorityLevelConfiguration named **"aks-managed-apiserver-guard"**. This safeguard triggers when the API server encounters frequent out-of-memory (OOM) events after scaling efforts on the API server fail to stabilize it. This guard acts as a last-resort measure to protect the API server by throttling non-system client requests to the API server and preventing it from becoming completely unresponsive.
+If you see a high rate of HTTP 429 errors, one possible cause is that AKS applies a managed API server guard. AKS applies this guard by using a FlowSchema and PriorityLevelConfiguration named **"aks-managed-apiserver-guard"**. This safeguard triggers when the API server encounters frequent out-of-memory (OOM) events after scaling efforts on the API server fail to stabilize it. This guard acts as a last-resort measure to protect the API server by throttling non-system client requests to the API server and preventing it from becoming completely unresponsive. For more information, see [Control plane safeguards](/azure/aks/concepts-scale#control-plane-safeguards).
 
-- Check the cluster for the presence of **"aks-managed-apiserver-guard"** FlowSchema and PriorityLevelConfiguration, or check Kubernetes events. 
+- Check the cluster for the presence of **"aks-managed-apiserver-guard"** FlowSchema and PriorityLevelConfiguration. 
 
 > [!NOTE]
 > Kubectl commands might take longer than expected or time out when the API server is overloaded. Retry if it fails.
@@ -168,26 +199,19 @@ kubectl get prioritylevelconfigurations
 ```
 <br>
 
-<img src="media/troubleshoot-apiserver-etcd/flow-schema.png" alt="FlowSchema" width="600">
+:::image type="content" source="media/troubleshoot-apiserver-etcd/flow-schema.png" alt-text="Screenshot of the aks-managed-apiserver-guard FlowSchema configuration in an AKS cluster.":::
 
 <br>
 
-<img src="media/troubleshoot-apiserver-etcd/priority-level-configuration.png" alt="PriorityLevelConfiguration" width="600">
+:::image type="content" source="media/troubleshoot-apiserver-etcd/priority-level-configuration.png" alt-text="Screenshot of the aks-managed-apiserver-guard PriorityLevelConfiguration in an AKS cluster.":::
 
 <br>
-
-- Check Kubernetes events. 
-
-```bash
-kubectl get events -n kube-system aks-managed-apiserver-throttling-enabled
-```
-
 
 ### Solution 4: Identify unoptimized clients and mitigate 
 
 #### Step 1: Identify unoptimized clients
 
-- See [Cause 5](#cause-5-an-offending-client-makes-excessive-list-or-put-calls) to identify problematic clients and refine their LIST call patterns - especially those clients generating high-frequency or high-latency requests as they are the primary contributors to API server degradation. Refer to [best practices](/azure/aks/best-practices-performance-scale-large#kubernetes-clients) for further guidance on client optimization.
+- See [Cause 5](#cause-5-an-offending-client-makes-excessive-list-or-put-calls) to identify problematic clients and refine their LIST call patterns - especially those clients generating high-frequency or high-latency requests as they are the primary contributors to API server degradation. Refer to [best practices](/azure/aks/best-practices-performance-scale-large#kubernetes-client-best-practices) for further guidance on client optimization.
 
 #### Step 2: Mitigation
 
@@ -200,9 +224,9 @@ kubectl delete flowschema aks-managed-apiserver-guard
 kubectl delete prioritylevelconfiguration aks-managed-apiserver-guard
 ```
 > [!WARNING]
-> Avoid scaling the cluster back to the originally intended scale point  until client call patterns have been optimized, refer to **[best practices](/azure/aks/best-practices-performance-scale-large#kubernetes-clients)**. Premature scaling may cause the API server to crash again.
+> Avoid scaling the cluster back to the originally intended scale point until client call patterns are optimized. Refer to **[best practices](/azure/aks/best-practices-performance-scale-large#kubernetes-client-best-practices)**. Premature scaling might cause the API server to crash again.
 
-- You can also [modify the aks-managed-apiserver-guard FlowSchema and PriorityLevelConfiguration](https://kubernetes.io/docs/concepts/cluster-administration/flow-control/#good-practice-apf-settings) by applying the label **aks-managed-skip-update-operation: true**. This label preserves the modified configurations and prevents AKS from reconciling them back to default values. This is relevant if you are applying a custom FlowSchema and PriorityLevelConfiguration tailored to your cluster's requirements as specified in [solution 5b](#solution-5b-throttle-a-client-thats-overwhelming-the-control-plane) and do not want AKS to automatically manage client throttling.
+- You can also [modify the aks-managed-apiserver-guard FlowSchema and PriorityLevelConfiguration](https://kubernetes.io/docs/concepts/cluster-administration/flow-control/#good-practice-apf-settings) by applying the label **aks-managed-skip-update-operation: true**. This label preserves the modified configurations and prevents AKS from reconciling them back to default values. This setting is relevant if you're applying a custom FlowSchema and PriorityLevelConfiguration tailored to your cluster's requirements as specified in [solution 5b](#solution-5b-throttle-a-client-thats-overwhelming-the-control-plane) and don't want AKS to automatically manage client throttling.
 
 ```bash
 kubectl label prioritylevelconfiguration aks-managed-apiserver-guard aks-managed-skip-update-operation=true
@@ -244,11 +268,14 @@ AzureDiagnostics
 ---
 
 > [!NOTE]
-> If your query returns no results, you might have selected the wrong table to query diagnostics logs. In resource-specific mode, data is written to individual tables, depending on the category of the resource. Diagnostics logs are written to the `AKSAudit` table. In Azure diagnostics mode, all data is written to the `AzureDiagnostics` table. For more information, see [Azure resource logs](/azure/azure-monitor/essentials/resource-logs).
+> If your query returns no results, you might have selected the wrong table to query diagnostics logs. In resource-specific mode, data is written to individual tables, depending on the category of the resource. Diagnostics logs are written to the `AKSAudit` table. In Azure diagnostics mode, all data is written to the `AzureDiagnostics` table. For more information, see [Azure resource logs](/azure/azure-monitor/platform/resource-logs).
 
 Although it's helpful to know which clients generate the highest request volume, high request volume alone might not be a cause for concern. The response latency that clients experience is a better indicator of the actual load that each one generates on the API server.
 
-#### Step 2 - Identify and analyse latency for user agent
+> [!NOTE]
+> Watch/informer clients are underrepresented here - a long-lived watch is one audit entry even though it streams many objects - so use the **API server resource intensive listing detector** (next section) to catch them. Top rows are often health-check agents (for example, `Envoy/HC`, `kube-probe`), which are normal.
+
+#### Step 2: Identify and analyse latency for a user agent
 **Using Diagnose and Solve on Azure portal** 
 
 AKS now provides a built-in analyzer, the API Server Resource Intensive Listing Detector, to help you identify agents that make resource-intensive LIST calls. These calls are a leading cause of API server and etcd performance issues.
@@ -256,9 +283,9 @@ AKS now provides a built-in analyzer, the API Server Resource Intensive Listing 
 To access the detector, follow these steps:
 
 1. Open your AKS cluster in the Azure portal.
-2. Go to **Diagnose and solve problems**.
-3. Select **Cluster and Control Plane Availability and Performance**.
-4. Select **API server resource intensive listing detector**.
+1. Go to **Diagnose and solve problems**.
+1. Select **Cluster and Control Plane Availability and Performance**.
+1. Select **API server resource intensive listing detector**.
 
 The detector analyzes recent API server activity and highlights agents or workloads that generate large or frequent LIST calls. It provides a summary of potential effects, such as request timeouts, increased numbers of "408" and "503" errors, node instability, health probe failures, and OOM-Kills in API server or etcd.
 
@@ -280,7 +307,7 @@ The detector analyzes recent API server activity and highlights agents or worklo
 > [!NOTE]
 > * The API server resource intensive listing detector is available to all users who have access to the AKS resource in the Azure portal. No special permissions or prerequisites are required.
 > * Only successful LIST calls are counted. Failed or throttled calls are excluded.
-> * After you identify the offending agents and apply the recommendations, you can use [the API Priority and Fairness feature](https://kubernetes.io/docs/concepts/cluster-administration/flow-control/) to throttle or isolate problematic clients. Alternatively, refer to the "Cause 3" section of [Troubleshoot API server and etcd problems in Azure Kubernetes Services](/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/troubleshoot-apiserver-etcd?branch=pr-en-us-9260&tabs=resource-specific#cause-3-an-offending-client-makes-excessive-list-or-put-calls).
+> * After you identify the offending agents and apply the recommendations, you can use [the API Priority and Fairness feature](https://kubernetes.io/docs/concepts/cluster-administration/flow-control/) to throttle or isolate problematic clients. Alternatively, refer to [Cause 3](#cause-3-an-offending-client-leaks-etcd-objects-and-causes-a-slowdown-of-etcd).
 
 **Using Logs**
 
@@ -314,7 +341,7 @@ AzureDiagnostics
 ```
 ---
 
-This query is a follow-up to the query in the ["Identify top user agents by the number of requests"](#identifytopuseragents) section. It might give you more insights into the actual load that each user agent generates over time.
+This query follows the query in the ["Identify top user agents by the number of requests"](#identifytopuseragents) section. It might give you more insights into the actual load that each user agent generates over time.
 
 > [!TIP]
 > By analyzing this data, you can identify patterns and anomalies that indicate problems on your AKS cluster or applications. For example, you might notice that a particular user experiences high latency. This scenario can indicate the type of API calls that cause excessive load on the API server or etcd.
@@ -359,11 +386,11 @@ AzureDiagnostics
 ```
 ---
 
-The results from this query can help you identify the kinds of API calls that fail the upstream Kubernetes SLOs. In most cases, an offending client makes too many `LIST` calls on a large set of objects or objects that are too large. API server or etcd scalability limits are multidimensional and explained in [Kubernetes Scalability thresholds](https://github.com/kubernetes/community/blob/master/sig-scalability/configs-and-limits/thresholds.md).
+The results from this query can help you identify the kinds of API calls that fail the upstream Kubernetes SLOs. In most cases, an offending client makes too many `LIST` calls on a large set of objects or objects that are too large. API server or etcd scalability limits are multidimensional and explained in [Kubernetes Scalability thresholds](https://github.com/kubernetes/community/blob/main/sig-scalability/configs-and-limits/thresholds.md).
 
 ### Solution 5a: Tune your API call pattern
 
-To reduce the pressure on the control plane, consider tuning your client's API server call pattern. Refer to [best practices](/azure/aks/best-practices-performance-scale-large#kubernetes-clients#kubernetes-clients).
+To reduce the pressure on the control plane, consider tuning your client's API server call pattern. Refer to [best practices](/azure/aks/best-practices-performance-scale-large#kubernetes-client-best-practices).
 
 ### Solution 5b: Throttle a client that's overwhelming the control plane
 
@@ -374,7 +401,7 @@ The following procedure shows you how to throttle an offending client's LIST Pod
 1. Create a [FlowSchema](https://kubernetes.io/docs/concepts/cluster-administration/flow-control/#flowschema) that matches the API call pattern of the offending client:
 
     ```yaml
-    apiVersion: flowcontrol.apiserver.k8s.io/v1beta2
+    apiVersion: flowcontrol.apiserver.k8s.io/v1
     kind: FlowSchema
     metadata:
       name: restrict-bad-client
@@ -399,13 +426,13 @@ The following procedure shows you how to throttle an offending client's LIST Pod
 1. Create a lower priority configuration to throttle bad API calls of the client:
 
     ```yaml
-    apiVersion: flowcontrol.apiserver.k8s.io/v1beta2
+    apiVersion: flowcontrol.apiserver.k8s.io/v1
     kind: PriorityLevelConfiguration
     metadata:
       name: very-low-priority
     spec:
       limited:
-        assuredConcurrencyShares: 5
+        nominalConcurrencyShares: 5
         limitResponse:
           type: Reject
       type: Limited
@@ -423,7 +450,7 @@ You might receive an alert that states that etcd memory usage exceeds 20 GiB. Th
 
 To check the current etcd memory usage and understand the specific factors that contribute to the high memory consumption, go to **Diagnose and Solve Problems** in the Azure portal. Run the **Etcd Performance Analyzer** by searching for "_etcd performance_" in the Search box. The analyzer shows you the memory usage breakdown and helps identify whether the cause of the problem is high request rates, large object counts, or large object sizes.
 
-:::image type="content" source="media/troubleshoot-apiserver-etcd/ETCD-performance-analyzer.png" alt-text="Screenshot of the Etcd Performance Analyzer showing memory usage breakdown and top contributors in AKS." lightbox="media/troubleshoot-apiserver-etcd/ETCD-performance-analyzer.png":::
+:::image type="content" source="media/troubleshoot-apiserver-etcd/etcd-performance-analyzer.png" alt-text="Screenshot of the Etcd Performance Analyzer showing memory usage breakdown and top contributors in AKS." lightbox="media/troubleshoot-apiserver-etcd/etcd-performance-analyzer.png":::
 
 The root cause of high etcd memory usage is typically intensive API server load. This problem overlaps the other causes that this article discusses. To identify the specific problem that's affecting your cluster, use the following solution.
 
