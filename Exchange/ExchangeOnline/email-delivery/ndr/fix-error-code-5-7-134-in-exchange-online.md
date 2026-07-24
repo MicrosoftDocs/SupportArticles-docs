@@ -1,10 +1,10 @@
 ---
 title: Fix NDR error 5.7.134 in Exchange Online
-ms.date: 01/24/2024
+ms.date: 07/24/2026
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
-ms.reviewer: v-six
+ms.reviewer: v-six, arindamt
 audience: Admin
 ms.topic: troubleshooting
 f1.keywords:
@@ -18,13 +18,17 @@ search.appverid:
 - BCS160
 - MOE150
 - MET150
-ms.assetid: 033fcaaf-7916-47ae-b2cd-2a63456bb812
 description: Learn how to fix email issues for error code 5.7.134 in Exchange Online (the mailbox recipient is configured to reject messages from external or unauthenticated senders).
+ai-usage: ai-assisted
 ---
 
 # Fix NDR error "550 5.7.134" in Exchange Online
 
-It's frustrating when you get an error after sending an email message. This topic describes what you can do if you see error code 550 5.7.134 in a non-delivery report also known as an NDR, bounce message, delivery status notification, or DSN). You'll see this automated notification when the recipient is a mailbox that's configured to reject messages from external senders (senders from outside the organization).
+## Summary
+
+This article explains how to troubleshoot Exchange Online NDR 550 5.7.134, which occurs when a mailbox is configured to reject messages from external or unauthenticated senders. As a result, messages sent from outside the organization are blocked and returned to the sender with a non-delivery report. The article describes how administrators can resolve the issue by either allowing all external senders to send messages to the mailbox or by configuring the mailbox's allowed senders list to permit specific external senders while continuing to restrict all others.
+
+The rest of this article describes what you can do if you see error code 550 5.7.134 in a non-delivery report also known as an NDR, bounce message, delivery status notification, or DSN. You see this automated notification when the recipient is a mailbox that's configured to reject messages from external senders (senders from outside the organization).
 
 |&nbsp;|&nbsp;|&nbsp;|&nbsp;|
 |---|---|---|---|
@@ -36,77 +40,43 @@ Only an email admin in the recipient's organization can fix this issue. Contact 
 
 ## I'm an email admin. How do I fix this issue?
 
-The two methods that will allow an external sender to send messages to the mailbox in your organization are described in the following sections.
+The following sections describe two methods that allow an external sender to send messages to the mailbox in your organization.
 
-To open the New Exchange admin center (EAC), see [Exchange admin center in Exchange Online](/exchange/exchange-admin-center).
-
-To open the Classic EAC, click **Classic Exchange admin center** on the left pane of the **Exchange admin center** (New) home screen, as shown in the image below.
-
- :::image type="content" source="media/fix-error-code-5-7-134-in-exchange-online/navigation-to-classic-eac.png" alt-text="The screen on the New EAC from which you can switch to Classic EAC.":::
+To open the Exchange admin center (EAC), see [Exchange admin center in Exchange Online](/exchange/exchange-admin-center).
 
 ### Method 1: Allow all internal and external senders to send messages to this mailbox
 
-#### New EAC
+1. In Exchange admin center, select **Recipients** and then select **Mailboxes**.
 
-1. Go to **Recipients** \> **Mailboxes**.
+1. Select a user mailbox from the list. The user mailbox properties screen appears.
 
-2. Select a user mailbox from the list and click it. The user mailbox properties screen appears.
+   :::image type="content" source="media/fix-error-code-5-7-134-in-exchange-online/mailbox-properties.png" alt-text="The screen displaying the properties of the chosen user mailbox.":::
 
-   :::image type="content" source="media/fix-error-code-5-7-134-in-exchange-online/user-mailboxes-properties.png" alt-text="The screen displaying the properties of the chosen user mailbox.":::
-
-3. Under **Mail flow settings**, click **Manage mail flow settings**. The **Manage mail flow settings** screen appears.
-
-   :::image type="content" source="media/fix-error-code-5-7-134-in-exchange-online/manage-mail-flow-settings-screen.png" alt-text="The Manage mail flow settings screen.":::
-
-4. In the **Message delivery restriction** pane, click **Edit**. The **Message delivery restrictions** screen appears.
-
-5. Under **Accept messages from**, clear the check box for **Require senders to be authenticated**.
+1. Select **Manage message delivery restriction**.
+  
+1. In the **Manage message delivery restriction** pane, under **Accept messages from**, clear the check box for **Require senders to be authenticated**.
 
    :::image type="content" source="media/fix-error-code-5-7-134-in-exchange-online/settings-message-delivery-restrictions.png" alt-text="The screen on which the user can define settings for message delivery restrictions.":::
 
-6. Click **Save**.
-
-#### Classic EAC
-
-1. In the Classic EAC, go to **Recipients** \> **Mailboxes** > select the mailbox from the list, and then click **Edit** :::image type="icon" source="media/edit-icon.png":::.
-
-   :::image type="content" source="media/fix-error-code-5-7-134-in-exchange-online/mailbox.png" alt-text="Screenshot of the mailbox tab in which you can find mailboxes in Exchange admin center.":::
-
-2. In the mailbox properties dialog box that opens, go to **Mailbox features** \> **Message Delivery Restrictions** \> and then click **View details**.
-
-3. In the **Message delivery restrictions** dialog box that opens, clear the check box for **Require that all senders are authenticated** in the **Accept messages from** section.
-
-   :::image type="content" source="media/fix-error-code-5-7-134-in-exchange-online/message-delivery-restrictions.png" alt-text="Screenshot of the message delivery restrictions dialog box.":::
-
-4. Click **OK**, and then click **Save**.
+1. Select **Save**.
 
 ### Method 2: Use the mailbox's allowed senders list
 
-Instead of allowing all external senders to send messages to this mailbox, you can use the mailbox's allowed senders list to selectively allow messages from all internal senders and the specified external senders.
+Instead of allowing all external senders to send messages to this mailbox, use the mailbox's allowed senders list to selectively allow messages from all internal senders and the specified external senders.
 
-**Notes**:
-
-- To add an external sender to a mailbox's allowed senders list, you must first create a [mail contact](/exchange/recipients-in-exchange-online/manage-mail-contacts) or a [mail user](/exchange/recipients-in-exchange-online/manage-mail-users) to represent the external sender in your organization.
-- To add everyone in your organization to a mailbox's allowed sender's list, you can create a [distribution group](/exchange/recipients-in-exchange-online/manage-distribution-groups/manage-distribution-groups) or a [dynamic distribution group](/exchange/recipients-in-exchange-online/manage-dynamic-distribution-groups/manage-dynamic-distribution-groups) that contains everyone in your organization. After you create this group, you can add it to the mailbox's allowed senders list.
+- To add an external sender to a mailbox's allowed senders list, first create a [mail contact](/exchange/recipients-in-exchange-online/manage-mail-contacts) or a [mail user](/exchange/recipients-in-exchange-online/manage-mail-users) to represent the external sender in your organization.
+- To add everyone in your organization to a mailbox's allowed senders list, create a [distribution group](/exchange/recipients-in-exchange-online/manage-distribution-groups/manage-distribution-groups) or a [dynamic distribution group](/exchange/recipients-in-exchange-online/manage-dynamic-distribution-groups/manage-dynamic-distribution-groups) that contains everyone in your organization. After you create this group, add it to the mailbox's allowed senders list.
 - The mailbox's allowed senders list is different from the organization's allowed senders list for anti-spam that you manage in the EAC at **Protection** \> **Spam filter**.
 
-To configure the mailbox's allowed senders list, do the following steps:
+To configure the mailbox's allowed senders list, complete the following steps:
 
-#### New EAC
+1. Open EAC and select **Recipients** and then select **Mailboxes**.
 
-1. Go to **Recipients** \> **Mailboxes**.
+1. Select a user mailbox from the list. The user mailbox properties screen appears.
 
-2. Select a user mailbox from the list and click it. The user mailbox properties screen appears.
+   :::image type="content" source="media/fix-error-code-5-7-134-in-exchange-online/mailbox-properties.png" alt-text="The screen displaying the properties of the chosen user mailbox.":::
 
-   :::image type="content" source="media/fix-error-code-5-7-134-in-exchange-online/user-mailboxes-properties.png" alt-text="The screen displaying the properties of the chosen user mailbox.":::
-
-3. Under **Mail flow settings**, click **Manage mail flow settings**. The **Manage mail flow settings** screen appears.
-
-   :::image type="content" source="media/fix-error-code-5-7-134-in-exchange-online/manage-mail-flow-settings-screen.png" alt-text="The Manage Mail Flow Settings screen.":::
-
-4. In the **Message delivery restriction** pane, click **Edit**. The **Message delivery restrictions** screen appears.
-
-5. Under **Accept messages from**:
+1. In the **Manage message delivery restriction** pane, under **Accept messages from**:
 
    - Clear the check box for **Require senders to be authenticated**.
 
@@ -114,39 +84,21 @@ To configure the mailbox's allowed senders list, do the following steps:
 
      :::image type="content" source="media/fix-error-code-5-7-134-in-exchange-online/mdr-screen-select-senders.png" alt-text="The Message delivery restrictions screen on which specific people are configured as senders.":::
 
-   - Click **+ Add sender**. The **Accept messages from** screen appears.
+   - Select **+ Add sender**. The **Accept messages from** screen appears.
 
      :::image type="content" source="media/fix-error-code-5-7-134-in-exchange-online/accept-messages-from-screen.png" alt-text="The screen displaying the Accept Messages From pane.":::
 
    - Check the check boxes of the internal-senders group and the specific external users you want to add.
 
-   - Click **Confirm**.
+   - Select **Confirm**.
 
      :::image type="content" source="media/fix-error-code-5-7-134-in-exchange-online/configuring-accept-messages-from-settings.png" alt-text="The screen on which the senders of email messages are set.":::
 
     The **Message delivery restrictions** screen reappears.
 
-6. Click **Save**.
+1. Select **Save**.
 
    :::image type="content" source="media/fix-error-code-5-7-134-in-exchange-online/mdr-screen-after-adding-sender.png" alt-text="The screen on which the added senders are saved into the group.":::
-
-#### Classic EAC
-
-1. In the Classic EAC, go to **Recipients** \> **Mailboxes** > select the mailbox from the list, and then click **Edit** :::image type="icon" source="media/edit-icon.png":::.
-
-   :::image type="content" source="media/fix-error-code-5-7-134-in-exchange-online/mailbox.png" alt-text="Screenshot of the mailbox tab in which you can find mailboxes in Exchange admin center.":::
-
-2. In the mailbox properties dialog box that opens, go to **Mailbox features** \> **Message Delivery Restrictions** \> and then click **View details**.
-
-3. In the **Message delivery restrictions** dialog box that opens, configure the following settings in the **Accept messages from** section:
-   - Clear the check box for **Require that all senders are authenticated**.
-   - Select **Only senders in the following list**, and then click **Add** :::image type="icon" source="media/add-icon.png":::. In the **Select Members** dialog box that opens, select the external senders and the "all internal users" group.
-   - Add the external senders and the "all internal users" group.
-   - When you're finished, click **OK**.
-
-     :::image type="content" source="media/fix-error-code-5-7-134-in-exchange-online/add-sender.png" alt-text="Screenshot of the message delivery restrictions page in which you can configure settings.":::
-
-4. Click **OK**, and then click **Save**.
 
 ## Still need help with error code 550 5.7.134?
 
