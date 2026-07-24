@@ -356,6 +356,10 @@
       "source_path": "Exchange/ExchangeServer/setup/setup-of-mailbox-role-fails-with-error.md",
       "redirect_url": "/previous-versions/troubleshoot/exchange/exchangeserver/setup-of-mailbox-role-fails-with-error",
       "redirect_document_id": false
-    }
+    },
+    {
+      "source_path": "Exchange/ExchangeOnline/email-delivery/ndr/fix-error-code-5-7-12-in-exchange-online.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    }    
   ]
 }
