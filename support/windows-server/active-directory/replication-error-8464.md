@@ -297,3 +297,178 @@ In this scenario, the following processes occur:
 ## Data collection
 
 If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Active Directory replication issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-ad-replication.md).
+
+Additionally, this **SAMPLE** script can help identify *potential* problems with PAS values in an environment.  Environments that do not follow [How to configure a firewall for Active Directory domains and trusts](https://learn.microsoft.com/en-us/troubleshoot/windows-server/active-directory/config-firewall-for-ad-domains-and-trusts#windows-server-2008-and-later-versions) within a forest will experience reduced script functionality as the script depends on expected connectivty.  
+[!INCLUDE [Script disclaimer](../../includes/script-disclaimer.md)]
+
+```powershell
+#######################################################
+#Copyright (c) Microsoft Corporation.
+#MIT License
+#Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+#The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+#THE SOFTWARE IS PROVIDED *AS IS*, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+#######################################################
+#Get-PAS.ps1
+
+[CmdletBinding()]
+param()  
+
+Import-Module ActiveDirectory  
+
+Write-Host "`n=== Collecting Forest Information ===" -ForegroundColor Cyan  
+
+$forest = Get-ADForest  
+
+$schemaNC = (Get-ADRootDSE).schemaNamingContext  
+
+# Schema PAS (true PAS from schema)  
+$schemaPAS = Get-ADObject `  
+    -SearchBase $schemaNC `  
+    -LDAPFilter "(isMemberOfPartialAttributeSet=TRUE)" `  
+    -Properties lDAPDisplayName |  
+    Select-Object -ExpandProperty lDAPDisplayName  
+
+Write-Host "Schema PAS count: $($schemaPAS.Count)" -ForegroundColor Cyan  
+
+# -------------------------------  
+# Repadmin PAS text parser  
+# -------------------------------  
+function Parse-RepadminPAS {  
+    param([string]$text)  
+
+    # Extract cAttrs  
+    $cAttrs = [regex]::Match($text, "V1\.cAttrs\s*=\s*(\d+)").Groups[1].Value  
+    if (-not $cAttrs) { return $null }  
+
+    return $cAttrs  
+
+}  
+
+
+
+# -------------------------------  
+# Determine NCs (partitions) that each GC hosts  
+# -------------------------------  
+Write-Host "`nGathering all GC partitions…" -ForegroundColor Cyan  
+
+# All naming contexts shown on GCs  
+$allPartitions = $forest.Domains  
+
+
+# -------------------------------  
+# Compare each GC for each partition  
+# -------------------------------  
+Write-Host "`n=== Processing each GC and NC ===" -ForegroundColor Cyan  
+
+$globalCatalogs = (Get-ADForest).GlobalCatalogs  
+
+$results = @()  
+$ManualChecks=@()  
+$RehostSuggestion=@()  
+foreach ($gc in $globalCatalogs) {  
+
+    $DCoffline=$false  
+    Write-Host "`n--- GC: $gc ---" -ForegroundColor Yellow  
+
+    foreach ($nc in $allPartitions) {  
+
+        Write-Host "Checking NC: $nc"  
+        if(($gc -replace '^[^.]+\.', '') -eq $nc)  
+        {  
+            Write-Host "Skipping $gc because it is writable for $nc" -ForegroundColor DarkGray  
+            continue  
+        }  
+        # Run repadmin for this GC + NC  
+        if($DCoffline)  
+        {  
+            Write-Host "   DC $gc not reachable." -ForegroundColor DarkGray  
+            $ManualChecks+="repadmin /showattr $gc /gc `"$((($nc -split '\.') | ForEach-Object { "DC=$_" }) -join ',')`" /atts:partialattributeset"  
+            continue  
+        }  
+        $cmd = "repadmin /showattr $gc /gc `"$((($nc -split '\.') | ForEach-Object { "DC=$_" }) -join ',')`" /atts:partialattributeset"  
+        $text = cmd.exe /c $cmd 2>$null  
+        Write-Verbose $cmd  
+  
+        if ($text -match "Server Down") {  
+            Write-Warning "   DC $gc not reachable."  
+            $DCoffline=$true  
+            continue  
+        }  
+         if ($text -match "Referral") {  
+            Write-Warning "   DC $gc returned a referral for $((($nc -split '\.') | ForEach-Object { "DC=$_" }) -join ',')."  
+            $DCoffline=$true  
+            continue  
+        }  
+
+        # Parse repadmin output  
+        $pas = Parse-RepadminPAS -text $text  
+        if ($pas -eq $null) {  
+            Write-Warning "   Could not parse PAS for NC $nc on GC $($gc.HostName).  This may mean the PAS is <not set>"  
+            $pas="Needs Manual Check"  
+            $ManualChecks+="repadmin /showattr $gc /gc `"$((($nc -split '\.') | ForEach-Object { "DC=$_" }) -join ',')`" /atts:partialattributeset"  
+        }  
+        ElseIf ($pas -ne $schemaPAS.Count){  
+        Write-Warning "$pas does not match $($schemaPAS.Count)"  
+        $RehostSuggestion+="$nc likely needs to be rehosted on $gc"  
+        }  
+        Write-Verbose "Found pas of $pas"  
+
+        $results += [pscustomobject]@{  
+            GlobalCatalog  = $gc  
+            Partition      = $nc  
+            GCPASCount     = $pas  
+            SchemaPASCount = $schemaPAS.Count  
+            #ExtraInGC      = ($extra -join "; ")  
+        }  
+
+        #Write-Host "   PAS count: $($gcAttrNames.Count)"  
+        #Write-Host "   Missing: $($missing.Count), Extra: $($extra.Count)"  
+    }  
+}  
+
+Write-Host "`n=== Final PAS Comparison Results ===" -ForegroundColor Cyan  
+$results | Format-Table -AutoSize  
+
+
+# $results contains objects with these properties:  
+# GlobalCatalog, Partition, GCPASCount, SchemaPASCount  
+
+
+# Works in Windows PowerShell 5.x  
+# Manually render a table row-by-row so only GCPASCount is red when mismatched.  
+
+# 1) Header  
+$hdr = "{0,-25} {1,-25} {2,-12} {3,-12}" -f 'GlobalCatalog','Partition','GCPASCount','SchemaPASCount'  
+Write-Host $hdr  
+Write-Host ('-' * $hdr.Length)  
+
+# 2) Rows  
+foreach ($r in $results) {  
+    # Render the first two columns and the last column in default color  
+    $prefix = "{0,-25} {1,-25} " -f $r.GlobalCatalog, $r.Partition  
+    $suffix = " {0,-12}" -f $r.SchemaPASCount  
+
+    # Decide cell color for GCPASCount  
+    if ($r.GCPASCount -ne $r.SchemaPASCount) {  
+        # print prefix (normal), then the red cell, then suffix (normal)  
+        Write-Host $prefix -NoNewline  
+        Write-Host ("{0,-12}" -f $r.GCPASCount) -ForegroundColor Red -NoNewline  
+        Write-Host $suffix  
+    } else {  
+        # all normal  
+        Write-Host ("{0}{1,-12}{2}" -f $prefix, $r.GCPASCount, $suffix)  
+    }  
+}  
+
+if($ManualChecks)  
+{  
+Write-Host "`n=== Manual Checks to Run ===" -ForegroundColor Cyan  
+$ManualChecks  
+}  
+if($RehostSuggestion)  
+{  
+Write-Host "`n=== Possible Actions Needed ===" -ForegroundColor Cyan  
+$RehostSuggestion  
+}
+```
