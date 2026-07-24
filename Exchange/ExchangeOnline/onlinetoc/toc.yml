@@ -314,8 +314,6 @@ items:
               href: ../email-delivery/ndr/fix-error-code-550-5-6-11-in-exchange-online.md
             - name: 550 5.7.1
               href: ../email-delivery/ndr/fix-error-code-550-5-7-1-in-exchange-online.md
-            - name: 550 5.7.12 or 5.7.12
-              href: ../email-delivery/ndr/fix-error-code-5-7-12-in-exchange-online.md
             - name: 550 5.7.13 or 550 5.7.135
               href: ../email-delivery/ndr/fix-error-code-5-7-13-or-5-7-135-in-exchange-online.md
             - name: 550 5.7.23
