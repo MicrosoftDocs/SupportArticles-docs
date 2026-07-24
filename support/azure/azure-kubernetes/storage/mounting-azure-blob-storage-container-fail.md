@@ -5,7 +5,7 @@ author: AndreiBarbu95
 ms.author: andbar
 ms.service: azure-kubernetes-service
 ms,subservice: troubleshoot-azure-storage-issues
-ms.date: 09/06/2024
+ms.date: 07/24/2026
 ms.reviewer: cssakscic, chiragpa
 ms.custom: sap:Storage
 ---

@@ -3,7 +3,7 @@ title: Troubleshoot Azure Key Vault Secrets Provider add-on in AKS
 description: Troubleshoot Azure Key Vault Secrets Provider add-on issues in Azure Kubernetes Service (AKS), resolve mount errors faster, and follow the fixes in this guide.
 editor: v-jsitser
 ms.service: azure-kubernetes-service
-ms.date: 12/13/2024
+ms.date: 07/24/2026
 ms.reviewer: nickoman, cssakscic, v-ntjandra, v-leedennis, v-weizhu
 ms.custom: sap:Extensions, Policies and Add-Ons
 ---
