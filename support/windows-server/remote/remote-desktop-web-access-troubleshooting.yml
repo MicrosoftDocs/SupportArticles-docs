@@ -7,6 +7,9 @@ metadata:
   ms.author: kaushika
   ms.topic: faq
   ms.date: 02/12/2026
+  ms.custom:
+    - sap:Remote Desktop Services and Terminal Services\Web access (includes RemoteApp and desktop connections)
+
   appliesto:
     - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 title: Remote Desktop Web Access troubleshooting

@@ -9,8 +9,8 @@ audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
 ms.custom:
-- sap: clustering and high availability\cluster-aware updating (CAU)
-- pcy: High availability\Cluster-Aware Updating (CAU)
+- sap:clustering and high availability\cluster-aware updating (CAU)
+- pcy:High availability\Cluster-Aware Updating (CAU)
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
@@ -52,7 +52,7 @@ Use this checklist for systematic troubleshooting:
 #### Symptoms
 
 - CAU role cannot be managed or checked for status.
-- Errors: “The cluster resource could not be found,” WU_E_PT_ENDPOINT_DISCONNECTED, CAUUpdatePlugin failures.
+- Errors: "The cluster resource could not be found," WU_E_PT_ENDPOINT_DISCONNECTED, CAUUpdatePlugin failures.
 
 #### Resolution
 
@@ -66,7 +66,7 @@ Use this checklist for systematic troubleshooting:
 
 #### Symptoms
 
-- Update plugin reports “Access is denied.”
+- Update plugin reports "Access is denied."
 - Event IDs: 1194, 1069. CNO can't create VCO. Resources don't come online after update.
 
 #### Resolution
@@ -81,12 +81,12 @@ Use this checklist for systematic troubleshooting:
 #### Symptoms
 
 - Some nodes don't receive updates during update cycles.
-- Error: “Cluster-aware updating failed on one node,” consistent 0x80072ee2 in update logs.
+- Error: "Cluster-aware updating failed on one node," consistent 0x80072ee2 in update logs.
 
 #### Resolution
 
 - Compare registry settings for update source (for example, WSUS server) on all nodes (reg query).
-- Export working node’s update-related registry. Import to affected nodes.
+- Export working node's update-related registry. Import to affected nodes.
 - Check group policy for settings that might revert update sources.
 - Validate consistency post-restart, and make sure success of future CAU runs.
 
@@ -95,7 +95,7 @@ Use this checklist for systematic troubleshooting:
 #### Symptoms
 
 - VMs restart instead of migrating.
-- Event IDs: 158, 58, 155 (storage/fs), “Cluster network is down,” device removals.
+- Event IDs: 158, 58, 155 (storage/fs), "Cluster network is down," device removals.
 - Cluster shared volumes enter a paused state, loss of storage access.
 
 #### Resolution
@@ -140,7 +140,7 @@ Use this checklist for systematic troubleshooting:
 #### Symptoms
 
 - Cluster resources remain after removal attempts.
-- PowerShell returns: “WARNING: The current cluster isn't configured with a Cluster-Aware Updating clustered role.”
+- PowerShell returns: "WARNING: The current cluster isn't configured with a Cluster-Aware Updating clustered role."
 
 #### Resolution
 
@@ -175,12 +175,12 @@ Use this checklist for systematic troubleshooting:
 
 | Symptom/error | Root cause | Resolution |
 | --- | --- | --- |
-| CAU role missing or error “resource could not be found” | Role missing or misconfigured | Remove conflicting role, recreate in AD, re-add CAU role |
-| Update plugin “Access is denied”, VCO errors | AD permission/ delegation issues | Grant CNO/VCO full control, reset permissions, repair resource |
+| CAU role missing or error "resource could not be found" | Role missing or misconfigured | Remove conflicting role, recreate in AD, re-add CAU role |
+| Update plugin "Access is denied", VCO errors | AD permission/ delegation issues | Grant CNO/VCO full control, reset permissions, repair resource |
 | Update fails on a node, 0x80072ee2 codes, split update sources | GPO/Registry inconsistency | Align registry settings, fix GPO, make sure all nodes use same source |
 | VMs restart instead of migrate, storage/network fails, Event IDs 158/58/155 | Storage/network/driver failure | Check cables, validate cluster health, update drivers, review logs |
 | Updates run before draining, unexpected role failover | update algorithm change, missing flag | Use -ForcePauseAndDrain flag, adjust migration limits |
-| “Cluster resource remains after remove”, removal warnings | Stale/orphaned resource | Use Remove-ClusterRole... -force, move core group, clear in hive |
+| "Cluster resource remains after remove", removal warnings | Stale/orphaned resource | Use Remove-ClusterRole... -force, move core group, clear in hive |
 | SCCM or third-party update tool cannot update cluster nodes | No native tool integration | Use CAU separately, escalate for custom/unsupported integrations |
 | Host restarts, VM mass restart, memory corruption in dumps | Outdated driver (for example, Nvidia GRID) | Update driver to fixed version. Check for hardware defects |
 

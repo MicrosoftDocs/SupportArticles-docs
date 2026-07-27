@@ -9,8 +9,8 @@ audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
 ms.custom:
-- sap: virtualization and hyper-v\virtual machine state
-- pcy: Virtualization\virtual machine state
+- sap:virtualization and hyper-v\virtual machine state
+- pcy:Virtualization\virtual machine state
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
