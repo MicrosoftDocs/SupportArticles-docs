@@ -1,7 +1,7 @@
 ---
 title: SQL Server replication agents can't run
 description: This article provides workarounds for the problem that occurs when you configure many SQL Server replication agents to run on a server, and some replication agents can't run.
-ms.date: 06/18/2025
+ms.date: 07/27/2026
 ms.custom: sap:Replication, Change Tracking, Change Data Capture, Synapse Link
 ms.reviewer: akshaym, jopilov
 ---
@@ -43,7 +43,7 @@ You can change the following registry entries:
 
 - `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\SubSystems\Windows` (for example, increase the third value of `SharedSection` by 256 kilobytes)
 
-You have to apply the changes on both nodes. You have to save the registry keys before the change, and you have to restart the server after you apply the change.
+You have to apply this change to any server which can host the replication agents. After saving the registry key changes, restart the server.
 
 ### Change the replication agents from running continuously to running on a scheduled basis
   
