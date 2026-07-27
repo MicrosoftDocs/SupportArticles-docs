@@ -9,8 +9,8 @@ audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
 ms.custom:
-- sap: virtualization and hyper-v\shielded virtual machines
-- pcy: Virtualization\shielded VMs
+- sap:virtualization and hyper-v\shielded virtual machines
+- pcy:Virtualization\shielded VMs
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
@@ -27,7 +27,7 @@ The following symptoms occur when you try to enable HTTPS on the HGS:
 
 - Attestation and key unwrap operations for VMs fail.
 - TLS (Transport Layer Security) and certificate trust errors appear in browsers and clients.
-- The certificate’s Subject Alternative Name (SAN) includes only the DNS HGS service name and not individual node hostnames.
+- The certificate's Subject Alternative Name (SAN) includes only the DNS HGS service name and not individual node hostnames.
 - You receive the following error message:
 
 > TransientError Host Unreachable
@@ -37,8 +37,8 @@ When this issue occurs, the following conditions apply:
 - Failures occur during attestation and key unwrap processes over HTTPS.
 - The configuration functions correctly when HTTP is used instead of HTTPS.
 - Network trace and Test-NetConnection confirm communication on required ports.
-- The certificate’s Subject Alternative Name (SAN) includes only the DNS HGS service name and not individual node hostnames.
-- The issue isn't reproducible in other test environments, such as the support engineer’s lab environment.
+- The certificate's Subject Alternative Name (SAN) includes only the DNS HGS service name and not individual node hostnames.
+- The issue isn't reproducible in other test environments, such as the support engineer's lab environment.
 
 ## Cause
 

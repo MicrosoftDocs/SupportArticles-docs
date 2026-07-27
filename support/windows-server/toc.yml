@@ -309,37 +309,35 @@ items:    # Please do not delete this line, it is required for the yaml format
       items:
         - name: "Troubleshooting guidance: Active Directory domain join"
           href: ./active-directory/active-directory-domain-join-troubleshooting-guidance.md
-        - name: Cannot contect to the Internet or the domain
+        - name: Cannot connect to the Internet or the domain
           href: ./active-directory/cannot-connect-internet-domain.md
         - name: Default limit to workstation numbers
           href: ./active-directory/default-workstation-numbers-join-domain.md
         - name: Domain join log analysis
           href: active-directory/domain-join-log-analysis.md
-        - name: Error 0x6D9 "No more endpoints available from the endpoint mapper"
-          href: ./active-directory/domain-join-error-0x6d9-there-are-no-more-endpoints-available-from-the-endpoint-mapper.md
+        - name: Error code 0x0000232A
+          href: active-directory/error-code-0x0000232a.md
         - name: Error 0x40 "The specified network name is no longer available"
           href: ./active-directory/domain-join-error-0x40-the-specified-network-name-is-no-longer-available.md
         - name: Error 0x5 Access Denied when you rename a computer
           href: ./active-directory/error-0x5-access-denied-rename-computer.md
-        - name: Error 0x6D9 "No more endpoints available from the endpoint mapper"
-          href: ./active-directory/domain-join-error-0x6d9-there-are-no-more-endpoints-available-from-the-endpoint-mapper.md
-        - name: Error code 0x0000232A
-          href: active-directory/error-code-0x0000232a.md
-        - name: Error code 0x54b
+        - name: Error code 0x54B
           href: active-directory/error-code-0x54b.md
         - name: Error code 0x569
           href: ./active-directory/error-0x569-not-granted-logon-type.md
-        - name: Error code 0xa8b
+        - name: Error 0x6D9 "No more endpoints available from the endpoint mapper"
+          href: ./active-directory/domain-join-error-0x6d9-there-are-no-more-endpoints-available-from-the-endpoint-mapper.md
+        - name: Error code 0xA8B
           href: ./active-directory/error-0xa8b-resolve-dns-fail.md
         - name: Failure when you use an existing computer account to join a domain
           href: ./active-directory/failure-when-you-use-an-existing-computer-account-to-join-a-domain.md
         - name: Netlogon service doesn't keep settings after in-place upgrade
           href: ./active-directory/netlogon-service-not-start-automatically.md
-        - name: Status code 0x216d
+        - name: Status code 0x216D
           href: ./active-directory/status-code-0x216d-not-joined-domain.md
         - name: Status code 0x32 and you can't join a domain
           href: ./active-directory/status-code-0x32-cannot-join-domain.md
-        - name: "Status code 0x6ba: The RPC server is unavailable"
+        - name: "Status code 0x6BA: The RPC server is unavailable"
           href: ./active-directory/status-code-0x6ba-rpc-server-unavailable.md
         - name: Support boundaries for Active Directory over NAT
           href: ./active-directory/support-for-active-directory-over-nat.md
@@ -955,6 +953,8 @@ items:    # Please do not delete this line, it is required for the yaml format
           href: ./group-policy/group-policy-printer-preferences-not-set-default-printer.md
     - name: Managing removable devices through Group Policy
       items:
+        - name: "Troubleshooting guidance: Manageing removable devices thruogh Group Policy"
+          href: ./group-policy/backup-fails-vss-writer.md
         - name: How to use Group Policy to disable drivers
           href: ./group-policy/adm-template-disable-drivers.md
     - name: Problems applying Group Policy objects to users or computers
@@ -1025,9 +1025,9 @@ items:    # Please do not delete this line, it is required for the yaml format
           href: ./group-policy/events-6804-2843-rodcs-not-replicate-sysvol.md
         - name: Troubleshoot missing SYSVOL and NETLOGON shares
           href: ./group-policy/missing-sysvol-and-netlogon-shares.md
-- name: High Availability
+- name: High availability
   items:
-    - name: High Availability
+    - name: High availability
       href: ./high-availability/high-availability-overview.md
     - name: Cannot bring a resource online
       items:
@@ -1047,6 +1047,10 @@ items:    # Please do not delete this line, it is required for the yaml format
       items:
         - name: SMB 3.0 features in Windows Server 2012 file server
           href: ./high-availability/smb-3-file-server-features.md
+    - name: Cluster-aware updating (CAU)
+      items:
+        - name: "Troubleshooting guidance: CAU"
+          href: ./high-availability/cluster-aware-updating.md
     - name: Cluster node is hanging
       items:
         - name: Memory dump file is corrupted
@@ -1077,7 +1081,7 @@ items:    # Please do not delete this line, it is required for the yaml format
           href: ./high-availability/csv-offline-after-component-goes-offline-during-active-io.md
         - name: Cluster Shared Volumes don't respond during a planned cluster node drain
           href: ./virtualization/shared-volumes-do-not-respond.md
-    - name: Cluster Witness and quorum
+    - name: Cluster witness and quorum
       items:
         - name: "Troubleshooting guidance: Configuring Witness resource"
           href: ./high-availability/configuring-witness-resource.md
@@ -1091,7 +1095,11 @@ items:    # Please do not delete this line, it is required for the yaml format
           href: ./high-availability/parameter-incorrect-error-cluster-validation-fails.md
         - name: Validate hardware for a failover cluster
           href: ./high-availability/validate-hardware-failover-cluster.md
-    - name: Initial Cluster Creation or Adding node
+    - name: Health service
+      items:
+        - name: "Troubleshooting guidance: Windows Server failover cluster health service"
+          href: ./high-availability/windows-server-failover-cluster-health-service.md
+    - name: Initial cluster creation or adding node
       items:
         - name: Error 0x80090327 when adding a node to a cluster
           href: ./high-availability/error-0x80090327-adding-node-to-cluster.md
@@ -2689,6 +2697,8 @@ items:    # Please do not delete this line, it is required for the yaml format
       items:
         - name: Troubleshoot Guarded Hosts
           href: ./virtualization/troubleshoot-guarded-hosts.md
+        - name: Can't configure HGS for HTTPS key protection and attestation
+          href: ./virtualization/host-guardian-service-troubleshooting.md
         - name: Troubleshoot the Host Guardian Service
           href: ./virtualization/troubleshoot-guarded-fabric-hgs.md
         - name: Troubleshoot vTPM, shielded VM, and Host Guardian Service issues
@@ -2699,6 +2709,8 @@ items:    # Please do not delete this line, it is required for the yaml format
           href: ./virtualization/hyper-v-snapshots-checkpoints-differencing-disks.md
         - name: Can't delete a recovery checkpoint for a VM in DPM
           href: ./virtualization/cannot-delete-recovery-checkpoint-vm.md
+        - name: Can't restore a VM from a checkpoint in Hyper-V on Windows Server 2016
+          href: ./virtualization/cannot-restore-vm-from-checkpoint-in-hyper-v.md
         - name: Merging checkpoints that have multiple differencing disks
           href: ./virtualization/merge-checkpoints-with-many-differencing-disks.md
     - name: Storage configuration
@@ -2707,6 +2719,8 @@ items:    # Please do not delete this line, it is required for the yaml format
           href: ./virtualization/cant-connect-to-hyper-v-shared-storage-on-windows-server-2016.md
         - name: Can't take a disk offline in a standalone Windows Server 2022 VM
           href: ./virtualization/cant-take-disk-offline-standalone-ws2022-vm.md
+        - name: Troubleshoot storage issues in Hyper-V and Windows Server failover clusters
+          href: ./virtualization/storage-issues-in-hyper-v-and-windows-server-failover-clusters.md
     - name: Virtual machine creation
       items:
         - name: "Troubleshooting guidance: Creating Hyper-V virtual machines"
@@ -2719,10 +2733,16 @@ items:    # Please do not delete this line, it is required for the yaml format
           href: ./virtualization/non-microsoft-hardware-virtualization-software.md
         - name: Virtual machines are missing
           href: ./virtualization/vm-missing-0x800704c8-0x80070033-0x800703e3.md
+    - name: Virtual machine performance
+      items:
+        - name: Troubleshoot Hyper-V virtual machine performance
+          href: ./virtualization/troubleshoot-hyper-v-virtual-machine-performance.md  
     - name: Virtual machine state
       items:
         - name: "Troubleshooting guidance: Inaccessible or unresponsive Hyper-V VMs in clustered or standalone environments"
           href: ./virtualization/hyper-v-start-state-access-failures-clustered-standalone.md
+        - name: Can't power on Hyper-V VM and merge operations fail
+          href: ./virtualization/cannot-power-on-hyper-v-vm.md
         - name: Get-VMNetworkAdapter command doesn't report IP addresses
           href: ./virtualization/get-vmnetworkadapter-doesnt-report-ip-addresses.md
         - name: Hyper-V environments experience frequent power-offs and rapid disk space consumption
@@ -3065,6 +3085,8 @@ items:    # Please do not delete this line, it is required for the yaml format
           href: ./installing-updates-features-roles/troubleshoot-windows-update-installation-error-corruption.md
         - name: Troubleshoot Windows Update error 0x800f0920
           href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x800f0920.md
+        - name: Troubleshoot Windows Update error 0x8000FFFF
+          href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x8000ffff.md
         - name: Troubleshoot Windows Update error 0x8024001E
           href: ../windows-client/installing-updates-features-roles/troubleshoot-windows-update-error-0x8024001e.md?context=/troubleshoot/windows-server/context/context
         - name: Troubleshoot Windows Update error 0x8024002E

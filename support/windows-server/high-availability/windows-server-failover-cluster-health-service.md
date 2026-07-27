@@ -9,8 +9,8 @@ audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
 ms.custom:
-- sap: high availability\health service
-- pcy: High availability\health service
+- sap:clustering and high availability\health service
+- pcy:clustering and high availability\health service
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
