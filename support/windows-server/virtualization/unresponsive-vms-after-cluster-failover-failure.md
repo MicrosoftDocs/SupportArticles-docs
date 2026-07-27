@@ -9,8 +9,8 @@ audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
 ms.custom:
-- sap: virtualization and hyper-v\high availability virtual machines
-- pcy: Virtualization\high availability virtual machines
+- sap:virtualization and hyper-v\high availability virtual machines
+- pcy:Virtualization\high availability virtual machines
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
@@ -61,7 +61,7 @@ To perform a deeper analysis of the issue, collect and share the necessary logs 
     - Open a Command Prompt or PowerShell window that has administrative privileges.
     - Run the following command to generate the cluster logs:
        ```powershell
-	   get-clusterlog -uselocaltime -destination C:\Mslog 
+      get-clusterlog -uselocaltime -destination C:\Mslog 
        ```
     - Locate the generated logs, typically saved in the %SystemRoot%\Cluster\Reports directory.
 
@@ -69,11 +69,11 @@ To perform a deeper analysis of the issue, collect and share the necessary logs 
 
     - Use the TroubleShootingScript toolset (TSS) or any other recommended tool to gather Hyper-V logs.
     - Download the [Setup Report compressed file](https://aka.ms/getTSS).
-	- Save and extract this file to a TEMP\TSS directory.
-	- Open ADMIN PowerShell window.
-	- Navigate to the TEMP\TSS location.
-	- Run the following command:
-	   ```console
+   - Save and extract this file to a TEMP\TSS directory.
+   - Open ADMIN PowerShell window.
+   - Navigate to the TEMP\TSS location.
+   - Run the following command:
+      ```console
        .\TSS.ps1 -CollectLog SHA_support-all
        ```
     Logs are created here - C:\MS_DATA.

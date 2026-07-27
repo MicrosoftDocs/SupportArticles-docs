@@ -9,8 +9,8 @@ audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
 ms.custom:
-- sap: clustering and high availability\configuring witness resource
-- pcy: High availability\setup and configuration of clustered services and applications
+- sap:clustering and high availability\configuring witness resource
+- pcy:High availability\setup and configuration of clustered services and applications
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
