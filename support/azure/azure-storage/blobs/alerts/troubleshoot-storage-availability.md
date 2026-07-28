@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot availability issues in Azure Storage accounts
 description: Identifies and troubleshoots availability issues in Azure Storage accounts.
-ms.date: 07/30/2024
+ms.date: 07/27/2026
 ms.reviewer: normesta, azurestocic, jarrettr, v-weizhu
 ms.service: azure-storage
 ms.custom: sap:Alerts, Metrics, Logging and Monitoring
@@ -30,10 +30,13 @@ Throttling errors occur when you exceed the scalability targets of a storage ser
 
 If the **ClientThrottlingError** or **ServerBusyError** value of the **ResponseType** dimension shows an increase in the percentage of requests that are failing with a throttling error, you need to investigate one of two scenarios:
 
-- Transient increase in PercentThrottlingError
-- Permanent increase in PercentThrottlingError error
+- Transient increase in throttling errors
+- Permanent increase in throttling errors
 
 An increase in throttling errors often occurs at the same time as an increase in the number of storage requests or when you're initially load testing your application. This may also manifest itself in the client as "503 Server Busy" or "500 Operation Timeout" HTTP status messages from storage operations.
+
+> [!IMPORTANT]
+> Increased throttling doesn't always indicate that a storage account has reached its overall scalability limits. Throttling can occur when a workload concentrates a high volume of requests against a small set of partition keys, creating a hot partition. In these situations, applications might experience increased latency or receive HTTP 503 (Server Busy) and HTTP 500 (Operation Timeout) responses. To reduce throttling, implement an exponential backoff retry policy and design workloads so requests are distributed across partitions. Avoid naming patterns that concentrate traffic on a narrow range of blob names, and review hot partition mitigation guidance if throttling continues. For more information, see [Mitigate hot partitions in Azure Blob Storage](/azure/storage/blobs/storage-performance-mitigate-hot-partitions).
 
 ### Transient increase in throttling errors
 

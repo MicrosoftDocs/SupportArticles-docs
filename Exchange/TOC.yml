@@ -1,2 +1,4 @@
 - name: Index
   href: index.md
+- name: Email sent to recently restored Microsoft 365 Group aren't delivered
+  href: ExchangeOnline/email-delivery/ndr/email-to-group-ndr-after-restore.md
