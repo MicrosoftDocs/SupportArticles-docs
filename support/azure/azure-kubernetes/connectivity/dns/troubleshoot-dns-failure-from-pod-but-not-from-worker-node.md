@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot DNS resolution failures from inside the pod
 description: DNS resolution fails in AKS pods while nodes resolve correctly? Troubleshoot DNS resolution failures in Azure Kubernetes Service and restore outbound connectivity now.
-ms.date: 08/25/2024
+ms.date: 07/22/2026
 ms.reviewer: chiragpa, rissing, v-leedennis
 editor: v-jsitser
 ms.service: azure-kubernetes-service
@@ -16,11 +16,9 @@ This article discusses how to troubleshoot Domain Name System (DNS) resolution f
 
 ## Prerequisites
 
-- The Kubernetes [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) tool, or a similar tool to connect to the cluster. To install kubectl by using [Azure CLI](/cli/azure/install-azure-cli), run the [az aks install-cli](/cli/azure/aks#az-aks-install-cli) command.
+- The Kubernetes [kubectl](https://kubernetes.io/docs/reference/kubectl/) tool, or a similar tool to connect to the cluster. To install kubectl by using [Azure CLI](/cli/azure/install-azure-cli), run the [az aks install-cli](/cli/azure/aks#az-aks-install-cli) command.
 
-- The [apt-get](https://linux.die.net/man/8/apt-get) command-line tool for handling packages.
-
-- The [host](https://linux.die.net/man/1/host) command-line tool for DNS lookups.
+- A test container image that the cluster can pull and that includes DNS lookup tools such as [host](https://linux.die.net/man/1/host), `dig`, and `nslookup`. This article uses `mcr.microsoft.com/aks/fundamental/base-ubuntu`. If you instead use a minimal image that doesn't include these tools, you also need a package manager (such as [apt-get](https://linux.die.net/man/8/apt-get)) to install them. If you prefer a different image, use a [glibc](https://www.gnu.org/software/libc/)-based distribution (such as Ubuntu, Debian, or Azure Linux) rather than a musl-based one (such as Alpine or BusyBox). The resolver behavior described in this article (for example, the *resolv.conf* search-domain and `ndots` handling and the three name server limit) follows the glibc implementation, and a musl-based image can resolve DNS differently.
 
 - The [systemctl](https://man7.org/linux/man-pages/man1/systemctl.1.html) command-line tool.
 
@@ -85,17 +83,10 @@ If DNS resolution fails, follow these steps:
 1. Start a test pod in the cluster:
 
    ```bash
-   kubectl run -it --rm aks-ssh --namespace <namespace> --image=debian:stable
+   kubectl run -it --rm aks-ssh --namespace <namespace> --image=mcr.microsoft.com/aks/fundamental/base-ubuntu:v0.0.11
    ```
 
    When the test pod is running, you gain access to the pod.
-
-1. Run the following commands to install the required packages:
-
-   ```bash
-   apt-get update -y
-   apt-get install dnsutils -y
-   ```
 
 1. Verify that the *resolv.conf* file has the correct entries:
 
@@ -105,6 +96,9 @@ If DNS resolution fails, follow these steps:
    nameserver 10.0.0.10
    options ndots:5
    ```
+
+   > [!NOTE]
+   > If [LocalDNS](/azure/aks/localdns-custom) is enabled on the node pool, an incorrect LocalDNS configuration can cause DNS resolution to fail from the pod but not from the node. Check the LocalDNS configuration (such as the `kubeDNSOverrides` and `vnetDNSOverrides` settings) on the node pool.
   
 1. Use the `host` command to determine whether the DNS requests are routed to the upstream server:
 
@@ -141,6 +135,9 @@ If DNS resolution fails, follow these steps:
    ...
    Address: 20.81.111.85
    ```
+
+> [!NOTE]
+> If DNS works in a newly created test pod but *not* in the original pod, check the original pod's YAML for a custom DNS configuration (such as `dnsPolicy` or `dnsConfig`) that sends its queries to a different resolver.
 
 ### Step 3: Check whether DNS requests work when you explicitly specify the upstream DNS server
 
@@ -203,6 +200,9 @@ If DNS requests from pods work when you explicitly specify the upstream DNS serv
 
      Are there multiple servers? In this case, the resolver library queries them in the order that's listed. The strategy it uses is to try a name server first. If the query times out, it tries the next name server, and continues until the list of name servers is exhausted. Then, the query continues to try to connect to the name servers until the maximum number of retries are made.
 
+     > [!NOTE]
+     > The Linux resolver reads at most the first three `nameserver` entries from *resolv.conf* (the `MAXNS` limit). If the virtual network specifies more than three DNS servers, only the first three take effect, and the rest are ignored. For more information, see [resolv.conf](https://man7.org/linux/man-pages/man5/resolv.conf.5.html).
+
    - CoreDNS uses the [forward](https://coredns.io/plugins/forward/) plug-in to send requests to upstream DNS servers. This plug-in uses a random algorithm to select the upstream DNS server. In this sequence, the request can go to any of the DNS servers that are mentioned in the virtual network. For example, you might receive the following output:
 
      ```console
@@ -221,10 +221,13 @@ If DNS requests from pods work when you explicitly specify the upstream DNS serv
      .:53 {
          errors
          ready
-         health
+         health {
+           lameduck 5s
+         }
          kubernetes cluster.local in-addr.arpa ip6.arpa {
            pods insecure
            fallthrough in-addr.arpa ip6.arpa
+           ttl 30
          }
          prometheus :9153
          forward . /etc/resolv.conf                            # Here!
@@ -233,6 +236,14 @@ If DNS requests from pods work when you explicitly specify the upstream DNS serv
          reload
          loadbalance
          import custom/*.override
+         template ANY ANY internal.cloudapp.net {
+           match "^(?:[^.]+\.){4,}internal\.cloudapp\.net\.$"
+           rcode NXDOMAIN
+           fallthrough
+         }
+         template ANY ANY reddog.microsoft.com {
+           rcode NXDOMAIN
+         }
      }
      import custom/*.server
      
