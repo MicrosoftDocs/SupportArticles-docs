@@ -417,7 +417,7 @@ items:    # Please do not delete this line, it is required for the yaml format
           href: ./active-directory/phantoms-tombstones-infrastructure-master.md
         - name: Let nonadministrators view the contents of the deleted objects container
           href: ./active-directory/non-administrators-view-deleted-object-container.md
-        - name: Linux accounts can't get AES encrypted tickes in AD DS
+        - name: Linux accounts can't get AES-encrypted tickets in AD DS
           href: ./active-directory/linux-accounts-cannot-get-aes-tickets.md
         - name: Modify filtered properties of an object
           href: ./active-directory/modify-filtered-properties-of-object.md
@@ -953,7 +953,7 @@ items:    # Please do not delete this line, it is required for the yaml format
           href: ./group-policy/group-policy-printer-preferences-not-set-default-printer.md
     - name: Managing removable devices through Group Policy
       items:
-        - name: "Troubleshooting guidance: Manageing removable devices thruogh Group Policy"
+        - name: "Troubleshooting guidance: Managing removable devices through Group Policy"
           href: ./group-policy/backup-fails-vss-writer.md
         - name: How to use Group Policy to disable drivers
           href: ./group-policy/adm-template-disable-drivers.md
@@ -2736,7 +2736,7 @@ items:    # Please do not delete this line, it is required for the yaml format
     - name: Virtual machine performance
       items:
         - name: Troubleshoot Hyper-V virtual machine performance
-          href: ./virtualization/troubleshoot-hyper-v-virtual-machine-performance.md  
+          href: ./virtualization/troubleshoot-hyper-v-virtual-machine-performance.md
     - name: Virtual machine state
       items:
         - name: "Troubleshooting guidance: Inaccessible or unresponsive Hyper-V VMs in clustered or standalone environments"
