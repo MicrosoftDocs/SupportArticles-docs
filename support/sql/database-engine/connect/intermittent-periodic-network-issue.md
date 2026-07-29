@@ -1,20 +1,22 @@
 ---
-title: Intermittent or periodic issues with connecting to SQL Server
-description: Troubleshoots intermittent or periodic network issues in SQL Server connectivity.
-ms.date: 02/12/2025
+title: Troubleshoot Intermittent SQL Server Connectivity Issues
+description: Learn how to diagnose and fix intermittent or periodic SQL Server connectivity issues using network traces, SQLCHECK, SQLTRACE, and targeted empirical tests.
+ms.date: 07/28/2026
 ms.custom: sap:Database Connectivity and Authentication
 ms.reviewer: prmadhes, jopilov, v-sidong
 ---
 # Troubleshoot intermittent or periodic issues with connecting to SQL Server
 
+## Summary
+
+This article explains how to troubleshoot intermittent or periodic network-related issues that cause SQL Server connections to fail, time out, or reset unexpectedly. It describes the most common error messages, the underlying causes (such as dropped packets, antivirus filters, or exhausted ephemeral ports), and a data-driven troubleshooting process based on [SQLCHECK](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/SQLCHECK), [SQLTRACE](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/SQLTRACE), and network trace analysis with [SQL Network Analyzer (SQLNA)](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/SQLNA). Use it to identify whether the issue lies on the client, on the server, or in the network path between them.
+
 > [!NOTE]
-> Before you start troubleshooting, we recommend that you check the [prerequisites](resolve-connectivity-errors-checklist.md#recommended-prerequisites) and go through the checklist. For more information, see [Self-Help Articles](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/0015-Self-Help-Articles).
+> Before you start troubleshooting, check the [prerequisites](resolve-connectivity-errors-checklist.md#recommended-prerequisites) and go through the checklist. For more information, see [Self-Help Articles](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/0015-Self-Help-Articles).
 
-Network stability is essential for the smooth operation of various services and applications. However, there are times when network issues disrupt this stability. This article helps you understand and address intermittent or periodic network issues and their typical error messages. These issues can be frustrating, but you can resolve them more effectively with a better understanding and proper troubleshooting techniques.
+## Common error messages for intermittent SQL Server connectivity issues
 
-## The most common error messages
-
-Intermittent issues occur irregularly, while periodic issues tend to happen at predictable intervals. Identifying the type of issue is the first step in troubleshooting. When intermittent or periodic network issues occur, you might encounter the following error messages:
+Intermittent issues occur irregularly, while periodic issues tend to happen at predictable intervals. Identifying the type of issue is the first step in troubleshooting. When intermittent or periodic SQL Server connectivity issues occur, you might encounter the following error messages:
 
 - **Communication link failure**: This error indicates a disruption in communication between network components.
 - **Connection Timeout Expired**: The connection to the server timed out, suggesting a delay or unavailability of the server.
@@ -28,22 +30,22 @@ Intermittent issues occur irregularly, while periodic issues tend to happen at p
 - **The server was not found or was not accessible**: This error message suggests that the server you're trying to access is unavailable or can't be found.
 - **SQL Server does not exist or access denied**: This error can indicate the absence of the SQL Server or an authentication error when attempting to access SQL Server.
 
-## Cause
+## Common causes of intermittent SQL Server connectivity issues
 
-The most common issues are related to packet drops due to antivirus, network optimization, older network drivers, bad routers or switches, and non-pooled connections in the application.
+The most common problems are packet drops caused by antivirus software, network optimization, outdated network drivers, bad routers or switches, and non-pooled connections in the application.
 
-Some causes, such as antivirus, can be difficult to prove, but are still common. You might have to uninstall and reboot the computer to prove it, without clear evidence. Creating an exception for SQL Server might also work. But turning off the antivirus usually doesn't work because the network filter drivers are still loading even if they aren't being monitored.
+Some causes, such as antivirus software, can be difficult to prove but are still common. You might need to uninstall the software and reboot the computer to prove it, without clear evidence. Creating an exception for SQL Server might also work. But turning off the antivirus usually doesn't work because the network filter drivers still load even if they aren't being monitored.
 
 ## Troubleshooting process
 
 > [!NOTE]
-> This process is designed for SQL Server client and server connections. Other communications, such as SQL Server Mirroring, Always-On, and Service Broker synchronization traffic over port 5022, aren't addressed.
+> This process is designed for SQL Server client and server connections. It doesn't address other communications, such as SQL Server Mirroring, Always On, and Service Broker synchronization traffic over port 5022.
 
-In general, troubleshooting should be data driven, which may give way to empirical tests in a more focused context. If the issue is very intermittent and network traces will be difficult to capture, the [empirical methods](#empirical-and-other-actions) may be applied first.
+In general, troubleshooting should be data driven, which might give way to empirical tests in a more focused context. If the problem is very intermittent and network traces are difficult to capture, apply the [empirical methods](#empirical-and-other-actions) first.
 
 ### Collect a report using SQLCHECK on each machine
 
-Run [SQLCHECK](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/SQLCHECK) on each machine to produce a report. It's useful to determine why a connection may be failing.
+Run [SQLCHECK](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/SQLCHECK) on each machine to produce a report. It's useful to determine why a connection might be failing.
 
 ### Collect network traces on the client and server
 
@@ -76,7 +78,7 @@ Run [SQLCHECK](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/SQLCHE
      .\SQLTrace.ps1 -stop
      ```
 
-  An output folder is generated in the current directory and you can use it for further analysis.
+  The process creates an output folder in the current directory. Use this folder for further analysis.
 
 - On non-Windows computers, use TCPDUMP or WireShark to collect a packet capture.
 
@@ -165,7 +167,7 @@ If the client has a long delay before sending the SYN packet, you may see a patt
    .\SQLTrace.ps1 -stop
    ```
 
-An output folder is generated in the current directory and you can use it for further analysis.
+The process creates an output folder in the current directory. Use this folder for further analysis.
 
 To trace other Microsoft SQL Server drivers, see the following articles. Perform using a network trace.
 
@@ -181,9 +183,9 @@ To trace third-party drivers, see the vendor documentation.
 
 If both traces show a delay or no response on the server, or if the server closes the connection at an unexpected point in the login sequence, or if the server closes many connections at the same time, this indicates there are some problems on the server.
 
-The most likely causes are poor server performance, high MAXDOP, and large parallel queries and blocking. These can cause thread starvation, preventing a login request from being handled promptly, especially if many connection timeouts end at the same time and the LoginAck column shows "Late." The SQL Server *ERRORLOG* file may show IO operations taking longer than 15 seconds, which is another indicator of performance issues. In the network trace, you might also see many conversations in the Reset report with six frames or fewer, indicating the TCP 3-way handshake may not have been completed. For more information, see [Collect the Connectivity Ring Buffer](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/Collect-the-Connectivity-Ring-Buffer).
+The most likely causes are poor server performance, high MAXDOP, large parallel queries, and blocking. These conditions can cause thread starvation, which prevents a authentication request from being handled promptly, especially if many connection timeouts end at the same time and the LoginAck column shows "Late." The SQL Server *ERRORLOG* file might show IO operations taking longer than 15 seconds, which is another indicator of performance problems. In the network trace, you might also see many conversations in the Reset report with six frames or fewer, which indicates the TCP 3-way handshake might not be completed. For more information, see [Collect the Connectivity Ring Buffer](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/Collect-the-Connectivity-Ring-Buffer).
 
-Run the `RingBufferConnectivity` query and paste the results into Excel. Since this is a historical list, it can be run after the issue occurs. But for a busy server, it might end quickly. For a slow server, it might have data for a couple of days.
+Run the `RingBufferConnectivity` query and paste the results into Excel. Since this list is historical, you can run it after the problem occurs. But for a busy server, it might end quickly. For a slow server, it might have data for a couple of days.
 
 If your application uses Multiple Active Result Sets (MARS), it ends with a RESET as part of the closing sequence. This is benign if the SMP:FIN and ACK+FIN packets have already been sent from the client. The server's SMP:FIN packet will arrive after ACK+FIN from the client, and Windows will issue an ACK+RESET and then a RESET for any other server responses as part of the connection closing sequence.
 
@@ -191,47 +193,47 @@ If your application uses Multiple Active Result Sets (MARS), it ends with a RESE
 
 For more information, see [Connection pooling](intermittent-periodic-authentication.md#connection-pooling).
 
-If connection pooling is used, conversations in the network trace will typically be quite long. You can use the CSV file generated by [SQL Server Network Analyzer](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/SQLNA) to sort and filter by protocols and frames. You probably won't see the beginning or end frames if the network capture is less than half an hour. If many conversations are shorter than 30 frames from the SYN packet to the ACK+FIN packet, this indicates non-pooled connections. If these are mixed with a few longer conversations, suspect background non-pooled connections caused by executing commands on a non-MARS connection while reading a result set.
+If you use connection pooling, conversations in the network trace are typically quite long. You can use the CSV file generated by [SQL Server Network Analyzer](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/SQLNA) to sort and filter by protocols and frames. You probably don't see the beginning or end frames if the network capture is less than half an hour. If many conversations are shorter than 30 frames from the SYN packet to the ACK+FIN packet, this condition indicates non-pooled connections. If these non-pooled connections are mixed with a few longer conversations, suspect background non-pooled connections caused by executing commands on a non-MARS connection while reading a result set.
 
 The ephemeral port report will show the number of new connections over the lifetime of the trace. You can judge the connection rate by the number of connections per second.
 
 #### RESET vs. ACK+RESET
 
-ACK+RESET is typically seen when the application or Windows aborts a connection. This is generally due to a low-level TCP error. The packet informs the other computer to stop sending immediately. However, if the server is in the middle of transmitting, one or two packets may arrive at the client after the ACK+RESET is sent. Since the port is closed, the operating system sends a RESET packet. This also happens if packets arrive after the ACK+FIN packet that's not part of the normal closing handshake.
+You typically see ACK+RESET when the application or Windows aborts a connection. This condition is generally due to a low-level TCP error. The packet informs the other computer to stop sending immediately. However, if the server is in the middle of transmitting, one or two packets might arrive at the client after the ACK+RESET is sent. Since the port is closed, the operating system sends a RESET packet. This condition also happens if packets arrive after the ACK+FIN packet that's not part of the normal closing handshake.
 
-Some third-party drivers also send an ACK+RESET packet to close the connection instead of an ACK+FIN. Some probe connections can also do this. If the ACK+RESET packet isn't preceded by Keep-Alive packets, Retransmitted packets, or Zero Windows packets, and it comes from the client when a normal closing of ACK+FIN is expected, it might be benign.
+Some third-party drivers also send an ACK+RESET packet to close the connection instead of an ACK+FIN. Some probe connections can also do this action. If the ACK+RESET packet isn't preceded by Keep-Alive packets, Retransmitted packets, or Zero Windows packets, and it comes from the client when a normal closing of ACK+FIN is expected, it might be benign.
 
 ### Use NETSTAT to analyze network issues
 
-NETSTAT is automatically collected when running *SQLTrace.ps1* for data collection.
+NETSTAT is automatically collected when you run *SQLTrace.ps1* for data collection.
 
-Or, you can run `NETSTAT -abon > c:\ports.txt` in **Command Prompt** as an administrator to collect information related to network issues.
+Or, you can run `NETSTAT -abon > c:\ports.txt` in **Command Prompt** as an administrator to collect information related to network problems.
 
-The *ports.txt* file will contain a list of all inbound and outbound ports, port numbers, process IDs, and names of applications owning the ports. You can use this to see the worst offenders and whether the port limit has been reached. Turn on **Status bar** in Notepad and turn off **Word wrap**. The status bar will give a line count. You can divide by two to get an approximate port usage.
+The *ports.txt* file contains a list of all inbound and outbound ports, port numbers, process IDs, and names of applications owning the ports. Use this list to see the worst offenders and whether the port limit is reached. Turn on **Status bar** in Notepad and turn off **Word wrap**. The status bar gives a line count. You can divide by two to get an approximate port usage.
 
 ### Adjust TcpTimedWaitDelay and MaxUserPort
 
 If an application is exhausting the outbound ports on the host machine and you can't make any immediate changes to the application, you can decrease `TcpTimedWaitDelay` from 240 to as low as 30 seconds, thus allowing outbound ports to be recycled faster.
 
-For windows 2003 and later, you can also increase the `MaxUserPort`. For Windows Vista and later, you set this via the `NETSH` command. This course of action doesn't eliminate the inefficiencies of non-pooled connections or non-pooled background connections, and the developer should be highly encouraged to change their applications to use connection pooling.
+You can also widen the dynamic client port range on the host machine by using the `netsh int ipv4 set dynamicport tcp` (or `ipv6`) command. This action doesn't eliminate the inefficiencies of non-pooled connections or non-pooled background connections. Ideally the application should be changed to use connection pooling.
 
-For Windows 2008 and later, the range has been increased from about 4,000 ephemeral ports to 16,000 ports, by default.
+Current supported versions of Windows already use the IANA-compliant default dynamic client port range of 49152 through 65535, which provides approximately 16,384 ephemeral ports.
 
 For more information, see [Adjust the MaxUserPort and TcpTimedWaitDelay settings](/biztalk/technical-guides/settings-that-can-be-modified-to-improve-network-performance).
 
 ### Issues related to antivirus or network filter driver
 
-Almost all packets sent from the client to the server or the server to the client are responded to with an ACK packet going in the opposite direction. The *TCP.SYS* layer generates the ACK. If a packet is received on the client, and the client trace shows it coming in but no ACK is returned to the server, this is a good indication that the antivirus or some other network filter driver has lost or dropped the packet or held on to it for a long time (past the end of the network trace collection). Likewise, if the server trace shows a packet coming in from a client but no ACK is sent back to the client, this indicates the server antivirus on the server may have an issue.
+Almost all packets sent from the client to the server or the server to the client are responded to with an ACK packet going in the opposite direction. The *TCP.SYS* layer generates the ACK. If a packet is received on the client, and the client trace shows it coming in but no ACK is returned to the server, this condition is a good indication that the antivirus or some other network filter driver lost or dropped the packet or held on to it for a long time (past the end of the network trace collection). Likewise, if the server trace shows a packet coming in from a client but no ACK is sent back to the client, this condition indicates the server antivirus on the server might have a problem.
 
-However, when uploading or downloading a large amount of data, the ACK packets may come after a series of data packets to help with flow control.
+However, when uploading or downloading a large amount of data, the ACK packets might come after a series of data packets to help with flow control.
 
-The antivirus and filter drivers are very difficult to prove as the culprit. An empirical test is almost always required. Create an exception for the application or SQL Server in the antivirus, and then monitor it for 48 hours to see if the behavior improves. If an exception can't be set, uninstall the antivirus program and reboot. Disabling it typically doesn't help as the antivirus filter driver will still load. Only do this as a last resort if your edge protection is in place.
+It's very difficult to prove that the antivirus and filter drivers are the culprit. You almost always need to run an empirical test. Create an exception for the application or SQL Server in the antivirus, and then monitor it for 48 hours to see if the behavior improves. If you can't set an exception, uninstall the antivirus program and reboot. Disabling it typically doesn't help as the antivirus filter driver will still load. Only do this as a last resort if your edge protection is in place.
 
-Consult your network security admins. If the situation improves, you may need to work with the antivirus vendor to mitigate the issue. If it doesn't, other network filter drivers might be the culprit.
+Consult your network security admins. If the situation improves, you might need to work with the antivirus vendor to mitigate the problem. If it doesn't, other network filter drivers might be the culprit.
 
 ### Enable Windows Firewall auditing
 
-To determine whether the firewall has dropped any packets, [enable firewall auditing in Windows](../../../windows-client/networking/tcp-ip-connectivity-issues-troubleshooting.md#application-level-reset).
+To determine whether the firewall drops any packets, [enable firewall auditing in Windows](../../../windows-client/networking/tcp-ip-connectivity-issues-troubleshooting.md#application-level-reset).
 
 For SQL Server, this issue could be related to the client or server machine. The network trace will show that the machine received a packet but didn't respond. The packet may then be retransmitted, again get no response, and eventually, the connection is reset.
 
@@ -241,17 +243,17 @@ For SQL Server, this issue could be related to the client or server machine. The
 
 Running out of ephemeral ports is a relatively common cause of intermittent connection timeouts, especially if you don't see the SYN packet on the wire.
 
-For incoming requests on the server, ports, such as 80 or 1433, can take up to 64,000 incoming connections per client IP address and are generally "unlimited" for all practical purposes.
+For incoming requests on the server, ports such as 80 or 1433 can handle up to 64,000 incoming connections per client IP address and are generally unlimited for all practical purposes.
 
-For outbound connections, on the other hand, the number of ports is limited and shared among all server connections. For Windows Vista, Windows 2008, and later, the default range is from port 49152 to 65535 (2^16 = 16,384 ports).
+For outbound connections, the number of ports is limited and shared among all server connections. On current supported versions of Windows, the default dynamic client port range is 49152 through 65535, which provides approximately 16,384 ephemeral ports.
 
-Normally, ports are held for four minutes (240 seconds) by the operating system before they're recycled and allowed to be reused by applications. This is to prevent port spoofing by malicious software or accidental redirection of a new connection to the previous holder of that port. Because of this delay, on Windows 2003, a client application can make only 17 connections per second to SQL Server, and the outbound port range is exhausted in less than four minutes. For Windows Vista, that number rises to 68 connections per second.
+Normally, the operating system holds ports for four minutes (240 seconds) before recycling them and allowing applications to reuse them. This delay prevents port spoofing by malicious software or accidental redirection of a new connection to the previous holder of that port. Because of this delay, a client application that uses the default dynamic port range and the default `TcpTimedWaitDelay` of 240 seconds can open only about 68 new outbound connections per second to SQL Server before it exhausts the roughly 16,384 ephemeral ports. Lowering `TcpTimedWaitDelay` or widening the dynamic port range by using `netsh int ipv4 set dynamicport tcp` raises that ceiling.
 
-For applications such as IIS, each HTTP client may have one outgoing port to SQL Server. For a busy web server, running out of outbound ports is a real possibility when the load is high. A web farm can mitigate this situation.
+For applications such as IIS, each HTTP client might have one outgoing port to SQL Server. For a busy web server, running out of outbound ports is a real possibility when the load is high. A web farm can mitigate this situation.
 
 ### Adjust max server memory (MB)
 
-To solve issues related to low kernel memory, [adjust the max server memory (MB)](intermittent-periodic-authentication.md#issues-related-to-low-kernel-memory).
+To solve problems related to low kernel memory, [adjust the max server memory (MB)](intermittent-periodic-authentication.md#issues-related-to-low-kernel-memory).
 
 ### Disable offloading
 
@@ -264,7 +266,7 @@ netsh int tcp set global NetDMS=disabled
 netsh int tcp set global autotuninglevel=disabled
 ```
 
-Don't keep these settings disabled for a long time unless they alleviate an issue. They should be enabled by default on Windows 2008 and later.
+Don't keep these settings disabled for a long time unless they alleviate an issue. They're enabled by default on current supported versions of Windows.
 
 For other offloading, you have to go to the network adapter properties to view and disable them.
 
@@ -286,10 +288,11 @@ When RSS is disabled, the SQL Server host uses only a single CPU to process all 
 
 For more information, see [Introduction to Receive Side Scaling](/windows-hardware/drivers/network/introduction-to-receive-side-scaling) and [Receive Side Scaling Version 2 (RSSv2)](/windows-hardware/drivers/network/receive-side-scaling-version-2-rssv2-).
 
-## More information
+## Related content
 
-[Intermittent or periodic authentication issues in SQL Server](intermittent-periodic-authentication.md)
-
-[Collect a Network Trace](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/Collect-a-Network-Trace)
+- [Intermittent or periodic authentication issues in SQL Server](intermittent-periodic-authentication.md)
+- [Recommended prerequisites and checklist for troubleshooting SQL Server connectivity issues](resolve-connectivity-errors-checklist.md)
+- [Troubleshoot connectivity issues in SQL Server](resolve-connectivity-errors-overview.md)
+- [Collect a Network Trace](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/Collect-a-Network-Trace)
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
