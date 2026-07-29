@@ -1,0 +1,66 @@
+flowchart LR
+    START([What is failing?]):::start --> Q1{kubectl / API server<br/>itself failing?}
+
+    %% Control plane
+    Q1 -- Yes --> Q1A{TLS / handshake error<br/>or proxy in path?}
+    Q1A -- Yes --> S7TLS[["Section 7 API server<br/>+ Section 12 TLS path"]]:::sec
+    Q1A -- No --> S7[["Section 7 Cannot reach<br/>API server"]]:::sec
+
+    %% Direction split
+    Q1 -- No --> Q2{Traffic direction?}
+
+    %% Outbound branch
+    Q2 -- "Outbound<br/>(pod/node to internet)" --> Q3{Provisioning or<br/>image pull failure?<br/>MCR / ACR / Ubuntu}
+    Q3 -- Yes --> Q3A{Firewall / NVA /<br/>UDR in egress path?}
+    Q3A -- Yes --> S2_4[["Section 2 Firewall-NVA-UDR<br/>+ Section 4 Egress"]]:::sec
+    Q3A -- No --> S4[["Section 4 Outbound<br/>connectivity blocked"]]:::sec
+    Q3 -- No --> Q4{Intermittent under load<br/>TIME_WAIT / SNAT alert?}
+    Q4 -- Yes --> S5_13[["Section 5 LB / SNAT<br/>+ Section 13 Port exhaustion"]]:::sec
+    Q4 -- No --> Q5{dmesg: 'nf_conntrack<br/>table full'?}
+    Q5 -- Yes --> S14[["Section 14 Conntrack<br/>table full"]]:::sec
+    Q5 -- No --> Q6{Latency / retrans /<br/>packet loss?}
+    Q6 -- Yes --> S1[["Section 1 Network path<br/>performance"]]:::sec
+    Q6 -- No --> S2b[["Section 2 Firewall-NVA-UDR<br/>(first pass)"]]:::sec
+
+    %% Inbound branch
+    Q2 -- "Inbound<br/>(client to app)" --> Q7{Ingress type?}
+    Q7 -- "App Gateway / AGIC" --> S17[["Section 17 AppGW / AGIC<br/>+ Section 8"]]:::sec
+    Q7 -- "Service type LB<br/>not programming" --> S5_8[["Section 5 Load Balancer<br/>+ Section 8"]]:::sec
+    Q7 -- "Service / other Ingress" --> Q8{NSG suspected?}
+    Q8 -- Yes --> S11_8[["Section 11 NSG<br/>+ Section 8"]]:::sec
+    Q8 -- No --> S8[["Section 8 Service /<br/>Ingress path"]]:::sec
+
+    %% East-west branch
+    Q2 -- "East-west<br/>(pod to pod/Service)" --> Q9{Intermittent?}
+    Q9 -- Yes --> S16[["Section 16 Intermittent<br/>pod-to-pod/service"]]:::sec
+    Q9 -- No --> Q10{Service DNS<br/>lookup works?}
+    Q10 -- No --> S3[["Section 3 DNS resolution"]]:::sec
+    Q10 -- Yes --> Q11{Endpoints object<br/>populated?}
+    Q11 -- No --> S8b[["Section 8 Service / Ingress<br/>(no backends)"]]:::sec
+    Q11 -- Yes --> S16_11[["Section 16 + Section 11 NSG<br/>rule-out"]]:::sec
+
+    %% Hybrid branch
+    Q2 -- "Hybrid<br/>(on-prem to cluster)" --> Q12{Works from Azure VM<br/>in same VNet<br/>but NOT on-prem?}
+    Q12 -- Yes --> Q13{TLS errors only<br/>from on-prem?}
+    Q13 -- Yes --> S12[["Section 12 TLS<br/>(likely inspection)"]]:::sec
+    Q13 -- No --> S10_1[["Section 10 ExpressRoute/VPN<br/>+ Section 1 path perf"]]:::sec
+    Q12 -- No --> Q14{On-prem / peered<br/>ranges overlap<br/>pod/service CIDR?}
+    Q14 -- Yes --> S15[["Section 15 Overlapping<br/>CIDRs"]]:::sec
+    Q14 -- No --> S1b[["Section 1 Network path<br/>performance"]]:::sec
+
+    %% DNS branch
+    Q2 -- "Name resolution<br/>only" --> Q15{Name is<br/>*.privatelink.* ?}
+    Q15 -- Yes --> S6[["Section 6 Private endpoint<br/>/ private DNS"]]:::sec
+    Q15 -- No --> Q16{nslookup from inside<br/>a pod reproduces?}
+    Q16 -- Yes --> S3b[["Section 3 DNS resolution"]]:::sec
+    Q16 -- No --> S6b[["Section 6 + custom DNS<br/>config"]]:::sec
+
+    %% IPAM branch
+    Q2 -- "Pod cannot start<br/>IPAM / Pending" --> Q17{describe pod shows<br/>IPAM / sandbox /<br/>CNI error?}
+    Q17 -- Yes --> S9[["Section 9 Azure CNI / CNS<br/>/ IPAM"]]:::sec
+    Q17 -- No --> Q18{Subnet out of IPs or<br/>node at max-pods?}
+    Q18 -- Yes --> S9b[["Section 9 IP exhaustion"]]:::sec
+    Q18 -- No --> SFALL[["Section 1 as baseline<br/>+ open a case"]]:::sec
+
+    classDef sec fill:#C6E8B8,stroke:#2E7D32,color:#1B3D17,stroke-width:1px;
+    classDef start fill:#DDEBF7,stroke:#1F4E79,color:#1F4E79;

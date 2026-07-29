@@ -1,6 +1,6 @@
 ---
 title: 403 Forbidden and you can't see free/busy information at organization level
-description: Discusses 403 Forbidden error when you view organization-wide free/busy information.
+description: Describes a solution to a 403 Forbidden error in Exchange Server when you view organization-wide free/busy information.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -10,12 +10,11 @@ ms.custom:
   - sap:Sharing\Issue viewing Free Busy
   - Exchange Server
   - CSSTroubleshoot
-ms.reviewer: jmartin, excontent, message, v-six
+ms.reviewer: jmartin, excontent, message, v-six, v-kccross
 appliesto: 
-  - Exchange Server 2013 Enterprise
-  - Exchange Server 2010 Enterprise
+  - Exchange Server SE
 search.appverid: MET150
-ms.date: 05/12/2026
+ms.date: 07/29/2026
 ---
 
 # 403: Forbidden error when you try to view organization-wide free/busy information in Exchange
@@ -26,7 +25,7 @@ _Original KB number:_ &nbsp;3082946
 
 When you try to view organization-wide free/busy information, the attempt fails and generates a **403: Forbidden** error.
 
-For example, you have Forest A on a server that's running Microsoft Exchange 2007 and Forest B on a server that's running Exchange Server 2013 or Exchange Server 2010. In this situation, a user in Forest A can't see the free/busy information of a user in Forest B. Additionally, the following event is logged in the event log on the source server:
+For example, you have Forest A on a server that's running one version of Microsoft Exchange and Forest B on a server that's running a different version of Exchange Server. In this situation, a user in Forest A can't see the free/busy information of a user in Forest B. Additionally, the following event is logged in the event log on the source server:
 
 ```console
 Log Name:      Application
@@ -61,7 +60,7 @@ On the destination server, the following entry is logged in the Internet Informa
 IIS Logs:  2015-06-08 04:19:25 <IP Address> POST /EWS/Exchange.asmx &CorrelationID=<empty>;&ClientId=JQJLGECZ0MGEHVVWEBZG&cafeReqId=00001111-aaaa-2222-bbbb-3333cccc4444; 443 domain\serviceaccount <IP Address> ASProxy/CrossForest/EmailDomain/EXCH/08.03.0083.000 - 403 0 0 718
 ```
 
-On the server that is running Exchange Server 2013, the following entry is logged in the HTTPProxy log:
+In Forest B, on the computer that is running Exchange Server, the following entry is logged in the HTTPProxy log:
 
 ```console
 WebExceptionStatus=ProtocolError;ResponseStatusCode=403;WebException=System.Net.WebException: The remote server returned an error: (403) Forbidden.    at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)    at Microsoft.Exchange.HttpProxy.ProxyRequestHandler.<>c__DisplayClass2c.<OnResponseReady>b__2b();
