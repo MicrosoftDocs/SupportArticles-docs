@@ -1,6 +1,6 @@
 ---
-title: Moving migration mailbox fails
-description: This article describes an issue that can occur when you try to move a mailbox by using the New-MigrationBatch cmdlet.
+title: The migration mailbox for the organization is either missing or invalid
+description: This article describes an issue that can occur when you move a mailbox by using the New-MigrationBatch PowerShell cmdlet.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -10,51 +10,57 @@ ms.custom:
   - sap:Plan and Deploy\Exchange Install Issues, Cumulative or Security updates
   - Exchange Server
   - CSSTroubleshoot
+  - CI 9823
+  - CI 11517
 search.appverid: 
   - MET150
 appliesto: 
-  - Exchange Server 2016 Enterprise Edition
-  - Exchange Server 2016 Standard Edition
-ms.reviewer: v-six
-ms.date: 05/12/2026
+  - Exchange Server SE
+  - Exchange Server 2019
+  - Exchange Server 2016
+ms.date: 07/28/2026
+ms.reviewer: v-six, v-kccross
 ---
 
-# Error when you try to move a mailbox in Exchange Server 2016: The migration mailbox for the organization is either missing or invalid
+# Error when you try to move a mailbox in Exchange Server The migration mailbox for the organization is either missing or invalid
 
 _Original KB number:_ &nbsp; 2812509
 
+## Summary
+
+Use this article to troubleshoot the Exchange Server error "The migration mailbox for the organization is either missing or invalid" when you run the New-MigrationBatch cmdlet. It explains why the error occurs and provides steps to verify, recreate, and enable the required migration arbitration mailbox in Active Directory and Exchange.
+
 ## Symptoms
 
-When you try to move a mailbox by using the `New-MigrationBatch` cmdlet in Exchange Server 2016, you may receive an error message that resembles the following one:
+When you try to move a mailbox by using the [New-MigrationBatch](/powershell/module/exchange/new-migrationbatch) PowerShell cmdlet in Exchange Server, you might receive an error message that resembles the following one:
 
 > The migration mailbox for the organization is either missing or invalid.
 
 ## Cause
 
-This issue occurs if the migration mailbox isn't enabled or was deleted.
+This problem occurs if the migration mailbox isn't enabled or was deleted.
 
 > [!NOTE]
-> To move a mailbox by using the `New-MigrationBatch` cmdlet, the migration mailbox must be present and enabled.
+> To move a mailbox by using the `New-MigrationBatch` PowerShell cmdlet, the migration mailbox must be present and enabled.
 
 ## Resolution
 
 To resolve this issue, follow these steps:
 
-1. Start the Active Directory Users and Computers snap-in.
-2. Click **Users**, and then verify that the following account doesn't exist:
+1. Start the Active Directory Users and Computers (ADUC) snap-in.
+1. Select **Users**, and then verify that the following account doesn't exist:
 
-    Migration.8f3e7716-2011-43e4-96b1-aba62d229136
+    `Migration.8f3e7716-2011-43e4-96b1-aba62d229136`
 
-    > [!NOTE]
-    >  If this account exists in the **Users** container, go to step 4.
+   If this account exists in the **Users** container, go to step 4.
 
-3. Run the following cmdlet:
+1. Run the following command:
 
     ```console
     Setup /PrepareAD /IAcceptExchangeServerLicenseTerms
     ```
 
-4. Run the following cmdlets:
+1. Run the [Enable-Mailbox](/powershell/module/exchange/enable-mailbox) and [Set-Mailbox](/powershell/module/exchange/set-mailbox) cmdlets as shown in the following example:
 
     ```console
     Enable-Mailbox -Arbitration -Identity "Migration.8f3e7716-2011-43e4-96b1-aba62d229136"
@@ -64,6 +70,4 @@ To resolve this issue, follow these steps:
 
 ## References
 
-- [Mailbox Moves in Exchange 2013](/Exchange/recipients/mailbox-moves)
-
-- [New-MigrationBatch](/powershell/module/exchange/new-migrationbatch)
+- [Mailbox Moves in Exchange Server](/Exchange/recipients/mailbox-moves)
