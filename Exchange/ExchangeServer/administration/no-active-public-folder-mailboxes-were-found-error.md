@@ -1,6 +1,6 @@
 ---
 title: No active public folder mailboxes were found error
-description: No active public folder mailboxes were found error occurs when you try to create a public folder in Exchange Server 2016 and Exchange Server 2013. Provides a solution.
+description: No active public folder mailboxes were found error occurs when you try to create a public folder in Exchange Server.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -10,42 +10,40 @@ ms.custom:
   - sap:Collaboration and Public Folders\Issues with Public Folder Migration
   - Exchange Server
   - CSSTroubleshoot
+  - CI 9823
+  - CI 10027
 ms.reviewer: russwill, batre，benwinz, v-six
 appliesto: 
-  - Exchange Server 2016 Enterprise Edition
-  - Exchange Server 2016 Standard Edition
-  - Exchange Server 2013 Enterprise
-  - Exchange Server 2013 Standard Edition
+  - Exchange Server SE
+  - Exchange Server 2019
+  - Exchange Server 2016
 search.appverid: MET150
-ms.date: 05/12/2026
+ms.date: 07/28/2026
 ---
 
-# No active public folder mailboxes were found error when creating public folder
+# No active public folder mailboxes error when creating public folder
 
 _Original KB number:_ &nbsp; 2786607
 
+## Summary
+
+This article describes an error that occurs when you create mailboxes in Exchange Server by using the `HoldForMigration` parameter. This error occurs when you use the `HoldForMigration` parameter incorrectly. The article describes the process for fixing the error.
+
 ## Symptoms
 
-Assume that you create the first public folder mailbox with the `HoldForMigration` parameter in Exchange Server 2013 or Microsoft Exchange Server 2016. You perform one of the following actions in the environment:
+Assume that you create the first public folder mailbox in Exchange Server by using the `HoldForMigration` parameter. You perform one of the following actions in the environment:
 
-- You try to access the public folder hierarchy by running the `Get-PublicFolder` cmdlet in Exchange Management Shell (EMS) or by using Exchange Administration Center (EAC).
+- You try to access the public folder hierarchy by running the [Get-PublicFolder](/powershell/module/exchangepowershell/get-publicfolder) cmdlet in Exchange Management Shell (EMS) or by using Exchange admin center (EAC).
 - You try to create a new public folder on the Exchange server.
 
 In this situation, you receive the following error message:
 
-> No active public folder mailboxes were found. This happens when no public folder mailboxes are provisioned or they are provisioned in HoldForMigration mode. If you're not currently performing a migration, create a public folder mailbox.
-
-This is a sample screenshot of the error message in EMS:
-
-:::image type="content" source="media/no-active-public-folder-mailboxes-were-found-error/error-message-in-ems.png" alt-text="Screenshot of the error message in E M S.":::
-
-The following is a sample screenshot of the error message in EAC:
-
-:::image type="content" source="media/no-active-public-folder-mailboxes-were-found-error/error-message-in-eac.png" alt-text="Screenshot of the error message in E A C.":::
+> No active public folder mailboxes were found. This error happens when no public folder mailboxes are provisioned or they're provisioned in `HoldForMigration` mode. If you're not currently performing a migration, create a public folder mailbox.
 
 > [!NOTE]
-> The public folder mailbox should be created with the `HoldForMigration` parameter only if you are migrating from legacy public folders to modern public folders in Exchange Server 2013 or Exchange Server 2016. Specifying the `HoldForMigration` parameter locks the public folder hierarchy in Exchange Server 2013 or Exchange Server 2016 so that no public folders can be created by users until the migration is complete.  
-The following Exchange PowerShell command is an example of the output that can be used to verify that the first public folder mailbox is created with the `HoldForMigration` parameter:
+> Create the public folder mailbox by using the `HoldForMigration` parameter only if you're migrating from legacy public folders to modern public folders. When you specify the `HoldForMigration` parameter, it locks the public folder hierarchy in Exchange Server 2013 or Exchange Server 2016 so that users can't create public folders until the migration is complete.  
+
+Use the [Get-OrganizationConfig](/powershell/module/exchangepowershell/get-organizationconfig) Exchange PowerShell cmdlet to verify that the first public folder mailbox was created with the `HoldForMigration` parameter as shown in the following example:
 
 ```powershell
 [PS] C:\>(Get-OrganizationConfig).RootPublicFolderMailbox
@@ -56,50 +54,51 @@ HierarchySmtpAddress :
 LockedForMigration : True
 ```
 
-The **True** value of the **LockedForMigration** field indicates that the public folder hierarchy is locked.
+If the `LockedForMigration` attribute shows a value of `True`, the public folder hierarchy is locked and the first public folder mailbox was created by using the `HoldForMigration` parameter.
 
 ## Cause
 
-This issue occurs because the `HoldForMigration` parameter is specified when you create the first public folder mailbox. This behavior is by design.
+This issue occurs because you specify the `HoldForMigration` parameter when you create the first public folder mailbox. This behavior is by design.
 
 ## Resolution
 
-If you have created the first public folder mailbox with the `HoldForMigration` parameter for migrating legacy public folders, complete the migration. For more information about how the `HoldForMigration` parameter is used for public folder migration, see [How to migrate public folders from Exchange Server 2010 SP3 to Microsoft Exchange Server 2013](/previous-versions/exchange-server/exchange-150/jj150486(v=exchg.150)).
+If you create the first public folder mailbox by using the `HoldForMigration` parameter because you're migrating legacy public folders, complete the migration.
+For more information about how the `HoldForMigration` parameter is used for public folder migration, see [Use batch migration to migrate Exchange Server public folders to Exchange Online](/exchange/collaboration/public-folders/migrate-to-exchange-online).
 
-If you do not have legacy public folders in the organization and you accidentally created the first public folder mailbox with the `HoldForMigration` parameter, then you must delete all public folder mailboxes that are present in the organization. Then, you must create a new public folder mailbox without specifying the `HoldForMigration` parameter. To do this, use one of these methods.
+If your organization doesn't have legacy public folders and you accidentally create the first public folder mailbox by using the `HoldForMigration` parameter, you must delete all public folder mailboxes that are present in the organization. Then, create a new public folder mailbox without specifying the `HoldForMigration` parameter. To complete this task, use one of the following methods.
 
 ### Method 1: Delete the public folder mailbox by using EAC
 
-1. Go to the following Microsoft website to open EAC: `Https://CASServerName/ecp`.
-2. Sign in to EAC by using the administrator account.
-3. Select **Public Folders**, and then select **Public Folder mailboxes**.
-4. Delete all public folder mailboxes of the **Secondary Hierarchy** type.
-5. Delete the public folder mailbox of the **Primary Hierarchy** type.
-6. Select the **New public folder mailbox** icon to create a public folder mailbox.
-7. The new mailbox is displayed as a primary hierarchy mailbox.
+1. Using an account that has sufficient permissions on your Exchange Server, sign in to the Exchange admin center (EAC).
+1. Select **Public Folders**, and then select **Public Folder mailboxes**.
+1. Delete all public folder mailboxes of the **Secondary Hierarchy** type.
+1. Delete the public folder mailbox of the **Primary Hierarchy** type.
+1. Select the **New public folder mailbox** icon to create a public folder mailbox.
 
-### Method 2: Delete the public folder mailbox by using EMS
+### Method 2: Delete the public folder mailbox by using Exchange PowerShell
 
-1. Run the following cmdlet to return and delete public folder mailboxes of the **Secondary Hierarchy** type:
+1. Use an account that has [sufficient permissions](/exchange/permissions/permissions) on your Exchange Server to open the [Exchange Management Shell (EMS)](/powershell/exchange/open-the-exchange-management-shell) or [connect to your Exchange server by using remote PowerShell](/powershell/exchange/connect-to-exchange-servers-using-remote-powershell).
 
-    ```powershell
-    Get-Mailbox -PublicFolder | where {$_.IsRootPublicFolderMailbox -eq $False} | Remove-Mailbox -PublicFolder
-    ```
+1. To return and delete public folder mailboxes of the Secondary Hierarchy type, run the [Get-Mailbox](/powershell/module/exchangepowershell/get-mailbox) cmdlet as shown in the following example:
 
-2. Run the following cmdlet to return and delete public folder mailbox of the **Primary Hierarchy** type:
+   ```powershell
+   Get-Mailbox -PublicFolder | where {$_.IsRootPublicFolderMailbox -eq $False} | Remove-Mailbox -PublicFolder
+   ```
 
-    ```powershell
-    Get-Mailbox -PublicFolder | where {$_.IsRootPublicFolderMailbox -eq $true} | Remove-Mailbox -PublicFolder
-    ```
+1.To return and delete public folder mailboxes of the Primary Hierarchy type, run the [Get-Mailbox](/powershell/module/exchangepowershell/get-mailbox) cmdlet as shown in the following example:
 
-3. Create a public folder mailbox without specifying the `HoldForMigration` parameter by running the following cmdlet:
+  ```powershell
+  Get-Mailbox -PublicFolder | where {$_.IsRootPublicFolderMailbox -eq $true} | Remove-Mailbox -PublicFolder
+  ```
 
-    ```powershell
-    New-Mailbox -PublicFolder -Database "Mailbox Database Name" -Name "Public Folder Mailbox Name"
-    ```
+1.To create a public folder mailbox without specifying the `HoldForMigration` parameter, run the [New-Mailbox](/powershell/module/exchangepowershell/new-mailbox) cmdlet as shown in the following example:
+
+```powershell
+   New-Mailbox -PublicFolder -Database "Mailbox Database Name" -Name "Public Folder Mailbox Name"
+```
 
 ## More information
 
-For more information about how to remove public folders in an Exchange Server 2013 environment, see [How to remove public folders](/exchange/collaboration-exo/public-folders/remove-public-folder).
+For more information about how to remove public folders in an Exchange Server environment, see [How to remove public folders](/exchange/collaboration-exo/public-folders/remove-public-folder).
 
-For more information about the `HoldForMigration` parameter, see [General information about the New-Mailbox cmdlet together with the HoldForMigration parameter](/powershell/module/exchange/new-mailbox).
+For more information about the `HoldForMigration` parameter, see [General information about the New-Mailbox cmdlet with the HoldForMigration parameter](/powershell/module/exchangepowershell/new-mailbox).
