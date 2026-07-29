@@ -1,6 +1,6 @@
 ---
-title: Cross-forest or Hybrid free/busy lookups fail
-description: Cross-forest or hybrid free/busy information lookups fail in Microsoft Exchange Server. Provides a resolution.
+title: Cross-forest or hybrid free/busy lookups fail
+description: Provides a fix for an issue in which cross-forest or hybrid free/busy information lookups fail in Microsoft Exchange Server.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -10,45 +10,37 @@ ms.custom:
   - sap:Sharing\Issue viewing Free Busy
   - Exchange Server
   - CSSTroubleshoot
-ms.reviewer: brianday, grtaylor, wduff, v-six
+  - CI 9823
+  - CI 12057
+ms.reviewer: brianday, grtaylor, wduff, v-six, v-kccross
 appliesto: 
-  - Exchange Server 2016 Enterprise Edition
-  - Exchange Server 2016 Standard Edition
-  - Exchange Server 2013 Enterprise
-  - Exchange Server 2013 Standard Edition
-  - Microsoft Exchange Server 2010 Service Pack 2 (SP2) Update Rollup 1 and later versions
-  - Microsoft Exchange Server 2007 Service Pack 3 (SP3) Update Rollup 6 and later versions
-  - Microsoft Exchange Online
+  - Exchange Online
+  - Exchange Server SE
+  - Exchange Server 2019
+  - Exchange Server 2016
 search.appverid: MET150
-ms.date: 05/12/2026
+ms.date: 07/29/2026
 ---
 
-# Cross-forest or Hybrid free/busy availability lookups fail in Exchange Server
+# Cross-forest or hybrid free/busy availability lookups fail in Microsoft Exchange Server
 
 _Original KB number:_ &nbsp; 2734791
+
+## Summary
+
+Cross-forest or hybrid free/busy lookups fail when Microsoft Exchange Server can't retrieve availability data from the target organization. This problem typically occurs when the external URL for Exchange Web Services (EWS) isn't configured in the target environment. Without this URL, the Availability service can't locate or access the remote mailbox data. Configuring a valid EWS external URL restores free/busy lookups between organizations.
 
 ## Symptoms
 
 Cross-forest or hybrid free/busy information lookups fail in Microsoft Exchange Server. However, standard free/busy information lookups for users in the same forest work as expected.
 
-This issue occurs in these product versions:
-
-- Microsoft Exchange Server 2016
-- Microsoft Exchange Server 2013
-- Microsoft Exchange Server 2010 Service Pack 2 (SP2) Update Rollup 1 and later versions
-- Microsoft Exchange Server 2007 Service Pack 3 (SP3) Update Rollup 6 and later versions
-- Microsoft Exchange Online
-
-> [!NOTE]
-> The Hybrid Configuration wizard that's included in the Exchange Management Console in Microsoft Exchange Server 2010 is no longer supported. Therefore, you should no longer use the old Hybrid Configuration wizard. Instead, use the Microsoft 365 Hybrid Configuration wizard that's available at [Microsoft 365 Hybrid Configuration wizard](https://aka.ms/hybridwizard).
-
 ## Cause
 
-This issue occurs if the external URL for Exchange Web Services is not configured in the target forest.
+This problem occurs if the external URL for Exchange Web Services isn't configured in the target forest.
 
 ## Resolution
 
-Configure the external URL for Exchange Web Services for the target forest. To do this, run this command in Windows PowerShell for Exchange:
+Configure the external URL for Exchange Web Services for the target forest. To do this, run the [Set-WebServicesVirtualDirectory](/powershell/module/exchangepowershell/set-webservicesvirtualdirectory) PowerShell cmdlet as shown in the following example:
 
 ```powershell
 Set-WebServicesVirtualDirectory -identity "server_name\EWS (Default Web Site)" -ExternalURL
@@ -60,22 +52,12 @@ https://mail.contoso.com/ews/Exchange.asmx
 
 ## More information
 
-The versions of Exchange Server that are listed in the Symptoms section use the external URL for Exchange Web Services to connect to the target forest. Because the AutoDiscover service cannot return the external URL for Exchange Web Services if Outlook Anywhere is not enabled in the target forest, the cross-forest or hybrid lookup fails.
+Exchange Server uses the external URL for Exchange Web Services to connect to the target forest. Because the AutoDiscover service can't return the external URL for Exchange Web Services if Outlook Anywhere isn't enabled in the target forest, the cross-forest or hybrid lookup fails.
 
-If either of the following cmdlets returns a value of **$False**, the mailbox is not set to allow external connections by using Outlook Anywhere.
+If either of the following cmdlets returns a value of **$False**, the mailbox isn't set to allow external connections by using Outlook Anywhere.
 
-- To verify that the mailbox is set to allow connections by using Outlook Anywhere, run this cmdlet:
+To verify that the mailbox is set to allow external connections by using Outlook Anywhere, run the `Get-CASMailbox` cmdlet as shown in the following example:
 
-    ```powershell
-    Get-CASMailbox <mailbox identity> | fl MAPIBlockOutlookRpcHttp
-    ```
-
-- For Exchange Server 2016 and Exchange Server 2013, to verify that the mailbox is set to allow external connections by using Outlook Anywhere, run this cmdlet:
-
-    ```powershell
-    Get-CASMailbox <mailbox identity> | fl MAPIBlockOutlookExternalConnectivity
-    ```
-
-## References
-
-For more information about the `Set-WebServicesVirtualDirectory` cmdlet, see [Set-WebServicesVirtualDirectory](/previous-versions/office/exchange-server-2007/aa997233(v=exchg.80)).
+```powershell
+Get-CASMailbox <mailbox identity> | fl MAPIBlockOutlookExternalConnectivity
+```
