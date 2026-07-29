@@ -49,9 +49,7 @@ Check these settings to enable outbound traffic through a NAT gateway.
 
 StandardV2 NAT Gateway isn't available in the following Azure regions: 
 - Canada East
-- Indonesia Central
 - Israel Northwest
-- Qatar Central
 - Sweden South
 - West India
 
