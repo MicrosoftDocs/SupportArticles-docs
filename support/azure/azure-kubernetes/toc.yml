@@ -413,10 +413,10 @@ items:
       href: error-codes/throttled-error.md
     - name: Throttled error (429)
       href: create-upgrade-delete/error-code-aksrequeststhrottled.md
+    - name: Throttling errors (HTTP 429 - TooManyRequests, Throttled, TooManyRequestsReceived)
+      href: error-codes/toomanyrequestsreceived-error.md
     - name: tls - client offered only unsupported versions messages
       href: create-upgrade-delete/tls-client-offered-unsupported-versions.md
-    - name: TooManyRequestsReceived or SubscriptionRequestsThrottled error
-      href: error-codes/toomanyrequestsreceived-error.md
     - name: Troubleshoot the AKSCapacityError error code
       href: create-upgrade-delete/akscapacityerror.md
     - name: UnsatisfiablePDB error
