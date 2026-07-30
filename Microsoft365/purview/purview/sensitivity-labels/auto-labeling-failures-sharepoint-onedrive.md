@@ -14,7 +14,8 @@ ms.reviewer: richardstowe
 appliesto: 
   - Microsoft Purview
 search.appverid: MET150
-ms.date: 06/16/2026
+ms.date: 07/30/2026
+ai-usage: ai-assisted
 ---
 # Resolve auto-labeling failures in SharePoint and OneDrive files
 
@@ -68,7 +69,7 @@ Select the failure code from the following table and follow the instructions pro
 |---|---|---|
 | FileLocked | Another user or process has locked the file. | No action required. This operation is retried automatically. |
 | FileCheckOut | A user has the file checked out. | No action required. This operation is retried automatically. |
-| EncryptedFileNotSupported | The file is protected by external encryption (for example, password protection or non-Microsoft encryption) that prevents label application. | Remove the external encryption or password protection from the file to allow labeling. |
+| EncryptedFileNotSupported | The service can't modify the file to apply the label. This status can indicate external encryption (for example, password protection or non-Microsoft encryption). For PDF files, permissions or structural restrictions can also prevent modification. | Remove external encryption or password protection. For PDF files, inspect the security and document restrictions, and use the following checklist. |
 | FileNotSupported | The file type isn't supported for sensitivity labeling. | No action required. This file type doesn't support sensitivity labels. |
 | FileExtensionNotSupported | The file extension isn't supported for labeling. | No action required. This file extension doesn't support sensitivity labels. |
 | UnsupportedFileType | PDF Labeling isn't enabled. | Enable sensitivity labels for files in SharePoint and OneDrive. |
@@ -89,3 +90,14 @@ Select the failure code from the following table and follow the instructions pro
 | DirectoryNotFound | The folder no longer exists. | No action required. The folder was deleted after the file was classified. |
 | QuotaExceeded | The site storage quota is exceeded. | Free up storage on the site or increase the storage quota, and then rerun the policy. |
 | FileNotFound | The file no longer exists. | No action required. The file was deleted or moved after it was classified. |
+
+### Preflight PDF files for `EncryptedFileNotSupported`
+
+Before you escalate repeated failures for PDF files, inspect multiple representative files:
+
+- In Adobe Acrobat, open **File** > **Properties** > **Security**, and record the **Security Method**.
+- Confirm that the file doesn't have an open password, permissions password, or external encryption.
+- Review the **Document Restrictions Summary**. Check **Page Extraction**, **Content Copying**, **Changing the Document**, and other editing or modification permissions for restrictions.
+- Check whether a user or service can open the PDF but can't modify it. Being able to open or read the file doesn't confirm that the service can write label metadata.
+- Use a trusted PDF tool to create a safely normalized copy with passwords, external encryption, and restrictive permissions removed. Upload the copy as a separate test file, and compare its labeling result with the original.
+- Before you contact Microsoft Support, collect multiple representative failing samples and normalized test copies. Record the failure codes, timestamps, restrictions, and test outcomes for each sample.
