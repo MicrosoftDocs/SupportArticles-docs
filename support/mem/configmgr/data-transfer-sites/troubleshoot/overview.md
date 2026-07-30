@@ -4,10 +4,11 @@ description: Use these diagrams to help understand and troubleshoot Database Rep
 ms.manager: dcscontentpm
 audience: itpro
 ms.date: 03/25/2026
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: overview
 ms.collection: tier3
 ms.custom: sap:Configuration Manager Database\Database Replication Links
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Troubleshoot Configuration Manager Database Replication Service overview

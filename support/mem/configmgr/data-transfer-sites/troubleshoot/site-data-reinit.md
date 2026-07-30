@@ -4,10 +4,11 @@ description: Use this diagram to start troubleshooting DRS reinit for site data 
 ms.manager: dcscontentpm
 audience: itpro
 ms.date: 03/25/2026
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: reference
 ms.collection: tier3
 ms.custom: sap:Configuration Manager Database\Database Replication Links
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Troubleshoot site data reinit
