@@ -4,7 +4,7 @@ description: Discusses multiple scenarios that could lead to boot issues with UE
 author: saimsh-msft
 ms.author: saimsh
 ms.topic: troubleshooting
-ms.date: 04/15/2024
+ms.date: 07/21/2026
 ms.service: azure-virtual-machines
 ms.custom: sap:My VM is not booting, linux-related-content
 ms.collection: linux
@@ -17,10 +17,11 @@ ms.collection: linux
 [!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
 
 ## Summary
+Linux images available through Azure Marketplace support both Generation 1 (BIOS) and Generation 2 (UEFI) boot architectures.
 
-Linux partner images in Azure Marketplace are tagged and configured for both BIOS generation 1 boot and Unified Extensible Firmware Interface (UEFI) generation 2 boot.
+When deploying Generation 2 Linux virtual machines (VMs), UEFI-related boot issues can occasionally prevent the VM from starting successfully.
 
-When you deploy generation 2 Linux virtual machines (VMs) in Azure, you may encounter UEFI boot failures. This article discusses some scenarios where UEFI boot failures occur and provides solutions.
+This article describes common UEFI boot failure scenarios and provides guidance to diagnose and resolve them.
 
 ## Symptoms
 
@@ -55,15 +56,21 @@ The boot diagnostics screenshot shows the following error messages:
 
     :::image type="content" source="./media/azure-linux-vm-uefi-boot-failures/pxe-error.png" alt-text="Screenshot of the transition of hyper-V error to PXE boot issue.":::
 
-## Before you troubleshoot
+## Before you begin
 
-To perform the offline VM repair that's required for [Scenario 1: UEFI partition in boot image is missing](#scenario1) and [Scenario 2: UEFI partition in boot image is corrupted](#scenario2), make sure that you have access to Azure CLI or [Azure Cloud Shell](https://shell.azure.com).
+To perform the offline VM repair that's required for [Scenario 1: UEFI partition in boot image is missing](#scenario1) and [Scenario 2: UEFI partition in boot image is corrupted](#scenario2), ensure that you have:
+- Access to Azure CLI or Azure Cloud Shell.
+- Permissions to create and restore repair VMs.
+- A backup or snapshot of the OS disk.
+
+> [!IMPORTANT]
+> * Replace `/dev/sdc` with the corresponding copy of the OS disk device.
+> * Always take a backup of the OS disk and perform a dry run with the `-n` option before performing the file system check mentioned below.
+> * The `dosfsck` command can be used to perform the vfat file system check. Both commands are the same. For more information, see [fsck.vfat](https://linux.die.net/man/8/fsck.vfat).
 
 ## <a id="scenario1"></a>Scenario 1: UEFI partition in boot image is missing
 
-If the UEFI boot loader partition is missing or deleted, the generation 2 Linux VM will fail to boot.
-
-To resolve this issue, follow these steps:
+If the EFI System Partition (ESP) has been deleted or is missing, the VM cannot locate the UEFI boot loader and startup will fail. The following procedure recreates the EFI partition and restore boot functionality.
 
 1. Use the [az vm repair create](/cli/azure/vm/repair#az-vm-repair-create) command to create a repair VM. The repair VM will have a copy of the OS disk for the non-functional VM attached. For more information, see [Repair a Linux VM by using the Azure Virtual Machine repair commands](repair-linux-vm-using-azure-virtual-machine-repair-commands.md).
 
@@ -215,11 +222,6 @@ If the UEFI boot partition is corrupted, the generation 2 Linux VM will fail to 
     /dev/sdc3: 19 files, 1438/63326 clusters
     ```
 
-    > [!IMPORTANT]
-    >
-    > * Replace `/dev/sdc` with the corresponding copy of the OS disk device.
-    > * Always take a backup of the OS disk and perform a dry run with the `-n` option before performing the file system check mentioned above.
-    > * The `dosfsck` command can be used to perform the vfat file system check. Both commands are the same. For more information, see [fsck.vfat](https://linux.die.net/man/8/fsck.vfat).
 
 3. Once the partition is cleaned, restore the VM by swapping the repaired OS disk with the original OS disk of the VM by using the [az vm repair restore](/cli/azure/vm/repair#az-vm-repair-restore) command. For more information, see the step 5 in [Repair a Linux VM by using the Azure Virtual Machine repair commands](repair-linux-vm-using-azure-virtual-machine-repair-commands.md).
 
