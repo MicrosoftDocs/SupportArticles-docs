@@ -88,26 +88,20 @@ landingContent:
             url: http-response-codes.md
 
  # Card
-  - title: Facing 5xx errors
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Troubleshoot HTTP 504 Gateway Timeout
-            url: troubleshoot-http-504-gateway-timeout.md
-
- # Card
-  - title: Routing
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Troubleshoot routing, redirect, and hostname issues in Application Gateway
-            url: troubleshoot-application-gateway-routing-redirect-hostname-issues.md
-
- # Card
   - title: Agentic-focused
     linkLists:
       - linkListType: how-to-guide
         links:
           - text: Troubleshoot HTTP 502 Bad Gateway
             url: troubleshoot-http-502-bad-gateway.md
+          - text: Troubleshoot HTTP 504 Gateway Timeout errors in Azure Application Gateway
+            url: troubleshoot-http-504-gateway-timeout.md
+          - text: Troubleshoot WAF blocking legitimate requests (HTTP "403" Forbidden errors) in Azure Application Gateway
+            url: troubleshoot-waf-blocking-legitimate-requests-403.md
+          - text: Troubleshoot Application Gateway Key Vault certificate errors
+            url: troubleshoot-application-gateway-key-vault-certificate.md
+          - text: Troubleshoot Application Gateway deployment, scaling, and deletion failures
+            url: troubleshoot-application-gateway-deployment-scaling-deletion-failures.md
+          - text: Troubleshoot routing, redirect, and hostname issues in Azure Application Gateway
+            url: troubleshoot-application-gateway-routing-redirect-hostname-issues.md
 

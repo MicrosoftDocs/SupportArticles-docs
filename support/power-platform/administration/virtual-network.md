@@ -117,7 +117,7 @@ Test-DnsResolution -EnvironmentId "<EnvironmentId>" -HostName "<HostName>"
 If you experience issues that affect connectivity to a resource, use the [Test-NetworkConnectivity](/powershell/module/microsoft.powerplatform.enterprisepolicies/Test-NetworkConnectivity) function from the diagnostics PowerShell module to check for connectivity. Run the following command:
 
 ```powershell
-Test-NetworkConnectivity -EnvironmentId "<EnvironmentId>" -Destination "<ResourceAddress>" -Port 1433
+Test-NetworkConnectivity -EnvironmentId "<EnvironmentId>" -Destination "<ResourceAddress>" -Port "<ResourcePort>"
 ```
 
 This command tries to establish a TCP connection to the specified destination and port in the context of your Power Platform environment. The request initiates from your delegated subnet, and it tries to connect to the specified destination by using the network configuration from your virtual network. If the connection fails, you might have to check your network settings to make sure that the destination is reachable from your virtual network. A successful connection indicates that network connectivity exists between the Power Platform environment and the specified resource.
@@ -132,7 +132,7 @@ Some firewalls might allow TCP connections to be established, but then they bloc
 Use the [Test-TLSHandshake](/powershell/module/microsoft.powerplatform.enterprisepolicies/Test-TLSHandshake) function to diagnose why a handshake can't be established. Run the following command:
 
 ```powershell
-Test-TLSHandshake -EnvironmentId "<EnvironmentId>" -Destination "<ResourceAddress>" -Port 1433
+Test-TLSHandshake -EnvironmentId "<EnvironmentId>" -Destination "<ResourceAddress>" -Port "<ResourcePort>"
 ```
 
 This command returns information that can help you debug why the handshake failed. The output includes the certificate that the server presented, the cipher suite, the protocol, and any SSL error descriptions.

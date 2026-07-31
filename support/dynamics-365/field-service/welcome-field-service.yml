@@ -83,6 +83,8 @@ landingContent:
             url: mobile-app/settings-area-missing.md
           - text: Troubleshoot issues with publishing a mobile offline profile
             url: mobile-app/publish-mobile-offline-profile.md
+          - text: Troubleshoot slow or unnecessary network calls
+            url: mobile-app/unnecessary-network-calls.md
           - text: '"Validations have been restarted in the background" error'
             url: mobile-app/validation-restarted-background.md
           - text: WebView reset error

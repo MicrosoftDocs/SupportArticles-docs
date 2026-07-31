@@ -1,8 +1,9 @@
 ---
-title: Troubleshoot with Solution Health Hub in Customer Insights - Journeys
-description: Use Solution Health Hub to troubleshoot Dynamics 365 Customer Insights - Journeys. Run health checks, interpret return statuses, and fix common errors.
-ms.date: 07/06/2026
+title: Diagnose Customer Insights - Journeys with Solution Health Hub
+description: Solution Health Hub helps troubleshoot Dynamics 365 Customer Insights - Journeys. Run health checks, interpret results, and resolve common issues.
+ms.date: 07/29/2026
 ms.reviewer: alfergus, v-shaywood
+ai-usage: ai-assisted
 search.audienceType: 
   - admin
   - customizer
@@ -35,7 +36,7 @@ To run a health analysis job for Customer Insights - Journeys:
 
 1. Open the Solution Health Hub app.
 
-    :::image type="content" source="media/troubleshoot-marketing-solution-health/navigation.png" alt-text="Screenshot of the Solution Health Hub in the navigation." lightbox="media/troubleshoot-marketing-solution-health/navigation.png":::
+    :::image type="content" source="media/troubleshoot-marketing-solution-health/navigation.png" alt-text="Screenshot of Dynamics 365 navigation with Solution Health Hub highlighted." lightbox="media/troubleshoot-marketing-solution-health/navigation.png":::
 
 1. On the welcome screen, select **Continue** in the lower right.
 1. Select **Analysis Jobs** and create a new analysis job.
@@ -44,13 +45,12 @@ To run a health analysis job for Customer Insights - Journeys:
 
 The following rules are currently included for Customer Insights - Journeys:
 
-| Rule name                                 | What it checks                                                                                                                                                                                                                                                         |
-| ----------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| CheckIfSdkMessageProcessingStepsAreActive | Checks whether any [SDK message processing steps](/dynamics365/customerengagement/on-premises/developer/entities/sdkmessageprocessingstep) are disabled. Disabled SDK message processing steps result in incorrect behavior when you use Customer Insights - Journeys. |
-| CheckIfProcessOwnedByDisabledUsers        | Checks whether any process definitions in the system are assigned to disabled user accounts. If they are, the upgrade fails.                                                                                                                                           |
-| CheckIfProcessesAreActive                 | Checks whether any process definitions are in draft status. If processes are in draft status, Customer Insights - Journeys doesn't work correctly.                                                                                                                     |
-| MissingMktConfiguration                   | Checks for the presence of a Customer Insights - Journeys configuration entity record. If the configuration entity record is missing, Customer Insights - Journeys doesn't work properly.                                                                              |
-| MissingRolesToApplicationUser             | Checks whether MarketingServices ApplicationUser has all required roles assigned. If some of the roles are missing, the Customer Insights - Journeys application might not work properly.                                                                              |
+| Rule name | What it checks |
+| --- | --- |
+| CheckIfSdkMessageProcessingStepsAreActive | Checks whether any [SDK message processing steps](/power-apps/developer/data-platform/reference/entities/sdkmessageprocessingstep) are disabled. Disabled SDK message processing steps result in incorrect behavior when you use Customer Insights - Journeys. |
+| CheckIfProcessesOwnedByDisabledUsers | Checks whether any process definitions in the system are assigned to disabled user accounts. If they are, the upgrade fails. |
+| CheckIfProcessesAreActive | Checks whether any process definitions are in draft status. If processes are in draft status, Customer Insights - Journeys doesn't work correctly. |
+| MissingFieldSecurityProfiles | Checks whether Field Security Profiles are missing. If the profiles are missing, Customer Insights - Journeys text message and push notification flows won't work properly. |
 
 ## View health check results
 
@@ -61,12 +61,11 @@ The following table shows an example overview of a completed run:
 | Rule name                                 | Message          | Return status | Severity |
 | ----------------------------------------- | ---------------- | ------------- | -------- |
 | CheckIfSdkMessageProcessingStepsAreActive | No issues found. | Pass          | None     |
-| CheckIfProcessOwnedByDisabledUsers        | No issues found. | Pass          | None     |
+| CheckIfProcessesOwnedByDisabledUsers      | No issues found. | Pass          | None     |
 | CheckIfProcessesAreActive                 | No issues found. | Pass          | None     |
-| MissingMktConfiguration                   | No issues found. | Pass          | None     |
-| MissingRolesToApplicationUser             | No issues found. | Pass          | None     |
+| MissingFieldSecurityProfiles              | No issues found. | Pass          | None     |
 
-:::image type="content" source="media/troubleshoot-marketing-solution-health/rules-analysis.png" alt-text="Screenshot of a complete analysis job overview." lightbox="media/troubleshoot-marketing-solution-health/rules-analysis.png":::
+:::image type="content" source="media/troubleshoot-marketing-solution-health/rules-analysis.png" alt-text="Screenshot of a completed Solution Health Hub analysis job with four passed rules." lightbox="media/troubleshoot-marketing-solution-health/rules-analysis.png":::
 
 The **Return Status** indicates whether the rule passed, failed, or returned a configuration error. Failing rules also return a severity, which shows how severe each problem is. The following table lists all possible return status values:
 
@@ -84,11 +83,10 @@ In the Customer Insights - Journeys rule set, the following rules support **Reso
 | ----------------------------------------- | ----------------------------------------------------------------------------- |
 | CheckIfSdkMessageProcessingStepsAreActive | Reactivates deactivated SDK message processing steps.                         |
 | CheckIfProcessesAreActive                 | Reactivates deactivated processes that are listed on the failed records tab.  |
-| MissingRolesToApplicationUser             | Assigns required roles back to the Customer Insights - Journeys service user. |
 
 To fix problems found on the **Analysis Results** tab, select the rule that failed, and then select the **Resolve** button that appears above the rules.
 
-:::image type="content" source="media/troubleshoot-marketing-solution-health/resolve.png" alt-text="Screenshot of the Resolve button selection." lightbox="media/troubleshoot-marketing-solution-health/resolve.png":::
+:::image type="content" source="media/troubleshoot-marketing-solution-health/resolve.png" alt-text="Screenshot of a failed health check rule selected and the Resolve button highlighted." lightbox="media/troubleshoot-marketing-solution-health/resolve.png":::
 
 ## Opt out of automatic rule set execution
 
@@ -96,12 +94,12 @@ To opt out of automatically running the Customer Insights - Journeys rule set, c
 
 1. In Solution Health Hub, go to **Setup** in the left navigation pane and select **Solution Health Rule Sets**.
 
-    :::image type="content" source="media/troubleshoot-marketing-solution-health/deactivate-rule-sets.png" alt-text="Screenshot of Solution Health Rule Sets navigation." lightbox="media/troubleshoot-marketing-solution-health/deactivate-rule-sets.png":::
+    :::image type="content" source="media/troubleshoot-marketing-solution-health/deactivate-rule-sets.png" alt-text="Screenshot of Solution Health Rule Sets selected under Setup." lightbox="media/troubleshoot-marketing-solution-health/deactivate-rule-sets.png":::
 
 1. Select the **Customer Insights - Journeys rule set**.
 1. Select **Deactivate** in the top ribbon.
 
-    :::image type="content" source="media/troubleshoot-marketing-solution-health/deactivate-button.png" alt-text="Screenshot of the deactivate button selection." lightbox="media/troubleshoot-marketing-solution-health/deactivate-button.png":::
+    :::image type="content" source="media/troubleshoot-marketing-solution-health/deactivate-button.png" alt-text="Screenshot of the Marketing rule set with the Deactivate button highlighted." lightbox="media/troubleshoot-marketing-solution-health/deactivate-button.png":::
 
 1. A confirmation window appears. To confirm, select **Deactivate**.
 1. Inactive rule sets appear in the **Inactive Solution Health Rule Sets** section of **Solution Health Rule Sets**. You can reactivate inactive rule sets anytime.

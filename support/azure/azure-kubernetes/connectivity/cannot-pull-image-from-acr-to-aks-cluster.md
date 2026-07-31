@@ -1,14 +1,14 @@
 ---
-title: Troubleshoot AKS image pull errors from Azure Container Registry
-description: Troubleshoot AKS image pull errors from ACR. Learn how to fix 401, 403, timeout, and platform issues. Get solutions now.
-ms.date: 07/17/2026
+title: Troubleshoot AKS image pull errors
+description: Troubleshoot AKS image pull errors from ACR, MCR and other image registries. Learn how to fix 401, 403, timeout, and platform issues. Get solutions now.
+ms.date: 07/31/2026
 author: kaushika-msft
 ms.author: kaushika
 ms.reviewer: chiragpa, andbar, albarqaw, v-weizhu, v-leedennis, v-ryanberg
 ms.service: azure-kubernetes-service
 ms.custom: sap:Connectivity
 ---
-# Troubleshoot image pull failures from Azure Container Registry to AKS
+# Troubleshoot AKS image pull errors from Azure Container Registry
 
 [!INCLUDE [Feedback](../../../includes/feedback.md)]
 
@@ -30,13 +30,13 @@ You also need Azure CLI version 2.0.59 or a later version installed and configur
 
 ## Symptoms and initial troubleshooting
 
-The Kubernetes pod's **STATUS** is **ImagePullBackOff** or **ErrImagePull**. To get detailed error information, run the following command and check **Events** from the output.
+The Kubernetes pod **STATUS** shows **ImagePullBackOff** or **ErrImagePull**. To get detailed error information, run the following command and check **Events** in the output.
 
 ```console
 kubectl describe pod <podname> -n <namespace>
 ```
 
-Start troubleshooting by checking the [container registry's health](/azure/container-registry/container-registry-check-health) and checking whether the container registry is accessible from the AKS cluster.
+Start troubleshooting by checking the [container registry's health](/azure/container-registry/container-registry-check-health) and verifying whether the AKS cluster can access the container registry.
 
 To check the container registry's health, run the following command:
 
@@ -44,18 +44,18 @@ To check the container registry's health, run the following command:
 az acr check-health --name <myregistry> --ignore-errors --yes
 ```
 
-If a problem is detected, it provides an error code and description. For more information about the errors and possible solutions, see [Health check error reference](/azure/container-registry/container-registry-health-error-reference).
+If a problem exists, the command returns an error code and description. For more information about the errors and possible solutions, see [Health check error reference](/azure/container-registry/container-registry-health-error-reference).
 
 > [!NOTE]
-> If you get Helm-related or Notary-related errors, it doesn't mean that this issue is affecting the container registry or AKS. It can indicate that Helm or Notary isn't installed or that Azure CLI isn't compatible with the current installed version of Helm or Notary.
+> If you get Helm-related or Notary-related errors, it doesn't mean that this issue affects the container registry or AKS. It can indicate that Helm or Notary isn't installed or that Azure CLI isn't compatible with the current installed version of Helm or Notary.
 
-To validate whether the container registry is accessible from the AKS cluster, run the following [az aks check-acr](/cli/azure/aks#az-aks-check-acr) command:
+To validate whether the AKS cluster can access the container registry, run the following [az aks check-acr](/cli/azure/aks#az-aks-check-acr) command:
 
 ```azurecli
 az aks check-acr --resource-group <MyResourceGroup> --name <MyManagedCluster> --acr <myacr>.azurecr.io
 ```
 
-The following sections help you troubleshoot the most common errors that are displayed in **Events** in the output of the `kubectl describe pod` command.
+The following sections help you troubleshoot the most common errors that appear in **Events** in the output of the `kubectl describe pod` command.
 
 ## How the image pull flow works
 
@@ -72,7 +72,7 @@ Every image pull that kubelet performs goes through three distinct stages. Ident
 
 ## Find your error quickly
 
-Match the message you see in the **Events** output of `kubectl describe pod <podname> -n <namespace>`, and then go to the indicated section. The causes in this article fall into four areas: **authentication and authorization** (Cause 1), **networking and connectivity** (Causes 3, 4, and 7), **image, manifest, and scheduling** (Causes 2 and 5), and **rate limiting** (Cause 6).
+Match the message you see in the **Events** output of `kubectl describe pod <podname> -n <namespace>`, and then go to the indicated section. The causes in this article fall into five areas: **authentication and authorization** (Causes 1 and 10), **networking and connectivity** (Causes 3, 4, 7, and 8), **image, manifest, and scheduling** (Causes 2, 5, and 9), **rate limiting** (Causes 6 and 11), and **performance** (Cause 12).
 
 | Error signature in pod events | Likely area | Go to |
 | --- | --- | --- |
@@ -83,12 +83,16 @@ Match the message you see in the **Events** output of `kubectl describe pod <pod
 | `dial tcp ...:443: i/o timeout` | Private-link networking to the registry | [Cause 4](#cause-4-io-timeout-error) |
 | `pull QPS exceeded` | kubelet image pull rate limit | [Cause 6](#cause-6-kubelet-exceeds-the-default-image-pull-rate-limit) |
 | `net/http: TLS handshake timeout`, `connection reset by peer` | Network path (firewall, proxy, or network virtual appliance) | [Cause 7](#cause-7-tls-handshake-timeout-error-occurs-when-pulling-images-from-acr) |
+| Layer download fails or `connection reset` on `*.blob.core.windows.net` or `*.data.mcr.microsoft.com` | Data endpoint blocked (DNS or egress) | [Cause 8](#cause-8-data-endpoint-dns-or-egress-blocked) |
+| `manifest not found` after a tag was recently pushed or updated | Tag reuse causing stale digest on node | [Cause 9](#cause-9-tag-reuse-causes-stale-digest-on-node) |
+| `401 Unauthorized` despite correct role assignment, `context deadline exceeded` from credential provider | Node credential cache not refreshed | [Cause 10](#cause-10-node-credential-cache-not-refreshed) |
+| `429 Too Many Requests` from Docker Hub or third-party registry | External registry rate limiting | [Cause 11](#cause-11-public-or-third-party-registry-rate-limits) |
 
 ## Cause 1: `401 Unauthorized` error
 
 ### Cause 1a: `401 Unauthorized` error due to incorrect authorization
 
-An AKS cluster requires an identity. This identity can be either a managed identity or a service principal. If the AKS cluster uses a managed identity, the kubelet identity is used for authenticating with ACR. If the AKS cluster uses a service principal as its identity, the service principal itself is used for authenticating with ACR. Regardless of the identity, you need the proper authorization to pull an image from a container registry. Otherwise, you might get the following `401 Unauthorized` error:
+An AKS cluster requires an identity. This identity can be either a managed identity or a service principal. If the AKS cluster uses a managed identity, the kubelet identity authenticates with ACR. If the AKS cluster uses a service principal as its identity, the service principal authenticates with ACR. Regardless of the identity, you need the proper authorization to pull an image from a container registry. Otherwise, you might get the following `401 Unauthorized` error:
 
 `Failed to pull image "\<acrname>.azurecr.io/\<repository\:tag>": [rpc error: code = Unknown desc = failed to pull and unpack image "\<acrname>.azurecr.io/\<repository\:tag>": failed to resolve reference "\<acrname>.azurecr.io/\<repository\:tag>": failed to authorize: failed to fetch oauth token: unexpected status: 401 Unauthorized`
 
@@ -471,6 +475,184 @@ The following events and messages might occur when pulling images from ACR to AK
 ### Solution: Update Azure Virtual Network Appliance (NVAs) by using validated routes
  
 If you receive this `net/http: TLS handshake` time-out, check your network configuration, including firewall, proxy, and network connectivity settings. 
+
+
+## Cause 8: Data endpoint DNS or egress blocked
+
+The image manifest resolves successfully, but the layer (blob) download fails because the node can't reach the registry's **data endpoint**. For Azure Container Registry, the data endpoint is `<registry-name>.<region>.data.azurecr.io` or `*.blob.core.windows.net`. For the Microsoft Artifact Registry (MCR), it's `*.data.mcr.microsoft.com`.
+
+This situation occurs when a firewall or network virtual appliance (NVA) allows the registry authentication endpoint (`<registry>.azurecr.io`) but doesn't allow the separate data endpoint used for layer downloads (see [How the image pull flow works](#how-the-image-pull-flow-works), stage 3).
+
+The error typically appears as:
+
+`Failed to pull image "...": failed to copy: httpReadSeeker: failed open: failed to do request: ... dial tcp <IP>:443: i/o timeout`
+
+or:
+
+`Get "https://<region>.data.mcr.microsoft.com/...": connection reset by peer`
+
+### Solution 1: Add the data endpoint to your firewall or egress allowlist
+
+If you use Azure Firewall, a proxy, or an NVA for egress filtering, add the data endpoints to the allowlist:
+
+- For ACR: allow `*.blob.core.windows.net` (or the specific `<registry-name>.<region>.data.azurecr.io` host) on TCP 443.
+- For MCR: allow `*.data.mcr.microsoft.com` on TCP 443.
+- For Docker Hub: allow `production.cloudflare.docker.com` on TCP 443.
+
+For the full list of required endpoints, see [Azure Container Registry firewall access rules](/azure/container-registry/container-registry-firewall-access-rules).
+
+### Solution 2: Correct the private DNS zone for the data endpoint
+
+If you use a private endpoint for ACR, the data endpoint resolves through a separate private DNS zone (`privatelink.blob.core.windows.net`). If this zone is missing or misconfigured, layer downloads fail even though authentication succeeds.
+
+1. Verify DNS resolution from a debug pod or node.
+
+   ```console
+   nslookup <registry-name>.<region>.data.azurecr.io
+   ```
+
+1. If the data endpoint doesn't resolve or resolves to an unexpected IP, add or correct the `privatelink.blob.core.windows.net` private DNS zone and link it to the AKS virtual network.
+
+1. Confirm connectivity by testing TCP 443 to the resolved IP.
+
+   ```console
+   curl -v https://<registry-name>.<region>.data.azurecr.io
+   ```
+
+For more information, see [Azure DNS troubleshooting documentation](../../dns/welcome-azure-dns.yml).
+
+## Cause 9: Tag reuse causes stale digest on node
+
+When you overwrite a mutable tag (such as `latest` or `v1`) with new image content, nodes that previously pulled that tag might still reference the **old manifest digest** in their local cache. Depending on timing and `imagePullPolicy`, this situation can cause:
+
+- A `manifest not found` error because the old digest no longer exists in the registry.
+- `401 Unauthorized` when attempting to fetch a digest that's been garbage-collected.
+- No error but the pod runs **stale code** because `imagePullPolicy: IfNotPresent` sees the tag as already cached.
+
+The error appears as:
+
+`Failed to pull image "<acrname>.azurecr.io/<repository>:<tag>": ... manifest not found`
+
+### Solution 1: Use immutable (unique) tags
+
+Tag images with a unique identifier such as the Git commit SHA or build ID (for example, `myapp:abc123f`). This approach eliminates digest ambiguity entirely and ensures every deployment pulls exactly the intended image.
+
+### Solution 2: Set imagePullPolicy to Always for mutable tags
+
+If you must reuse tags like `latest`, set `imagePullPolicy: Always` so kubelet always checks the registry for the current digest:
+
+```yaml
+containers:
+- name: myapp
+  image: myacr.azurecr.io/myapp:latest
+  imagePullPolicy: Always
+```
+Refer to [Impage Pull Policy Behavior](https://kubernetes.io/docs/concepts/containers/images/#image-pull-policy) for more details.
+
+### Solution 3: Force a rollout restart to re-resolve the tag
+
+To immediately clear the stale digest from all pods, trigger a rolling restart:
+
+```console
+kubectl rollout restart deployment/<deployment-name> -n <namespace>
+```
+
+After the restart, kubelet re-resolves the tag to the current digest in the registry.
+
+## Cause 10: Node credential cache not refreshed
+
+After a credential change - such as migrating from a service principal to a managed identity, rotating a service principal secret, or reassigning the kubelet identity - image pulls can fail with `401 Unauthorized` even though the new credentials are correctly configured. This failure happens because:
+
+- The kubelet credential provider caches tokens and doesn't immediately pick up new identity bindings.
+- The `acr-credential-provider` process on the node might time out reaching IMDS (`169.254.169.254`) if the node's network path to IMDS is disrupted.
+
+The error appears as:
+
+`failed getting credential from external registry credential provider: ... context deadline exceeded`
+
+or:
+
+`failed to authorize: failed to fetch oauth token: unexpected status: 401 Unauthorized`
+
+Despite role assignments being correct when checked with `az role assignment list`.
+
+> [!NOTE]
+> Kubelet's credential cache typically refreshes within a few minutes. If pulls continue to fail beyond 5 minutes after a credential change, proceed with Solution 2 (node image upgrade).
+
+### Solution 1: Reconcile the cluster to propagate identity changes
+
+Run a reconcile operation to ensure all nodes pick up the new identity:
+
+```azurecli
+az aks update --resource-group <MyResourceGroup> --name <MyManagedCluster>
+```
+
+### Solution 2: Upgrade the node image to refresh credential state
+
+If reconcile doesn't resolve the issue (for example, after a service-principal-to-managed-identity migration), upgrade the node image so nodes rebind the identity from scratch:
+
+```azurecli
+az aks nodepool upgrade --resource-group <MyResourceGroup> --cluster-name <MyManagedCluster> --name <nodepool-name> --node-image-only
+```
+
+### Solution 3: Verify IMDS reachability from the node
+
+If the `acr-credential-provider` logs show `context deadline exceeded`, verify that the node can reach the Instance Metadata Service:
+
+```console
+curl -s -H "Metadata: true" "http://169.254.169.254/metadata/identity/oauth2/token?resource=https://management.azure.com&api-version=2018-02-01"
+```
+
+If this call times out, check that no NVA, network security group, or custom route is blocking traffic to `169.254.169.254`.
+
+
+## Cause 11: Public or third-party registry rate limits
+
+When pulling images from Docker Hub, GitHub Container Registry (`ghcr.io`), or other public registries, the AKS cluster shares a rate limit with all traffic from the node's outbound IP address. If the limit is exceeded, the pull fails with:
+
+`Failed to pull image "docker.io/library/nginx:latest": ... 429 Too Many Requests`
+
+or:
+
+`You have reached your pull rate limit. You may increase the limit by authenticating...`
+
+This commonly affects clusters that:
+
+- Pull many different public images during node scale-up.
+- Use `imagePullPolicy: Always` with frequently restarting pods.
+- Share an egress IP with other clusters or workloads.
+
+### Solution 1: Import public images into your own ACR
+
+Eliminate upstream rate limits by importing the images you need into your own Azure Container Registry:
+
+```azurecli
+az acr import --name <myacr> --source docker.io/library/nginx:latest --image nginx:latest
+```
+
+Then update your deployments to reference `<myacr>.azurecr.io/nginx:latest`.
+
+### Solution 2: Use ACR Artifact Cache (pull-through cache)
+
+Configure [ACR Artifact Cache](/azure/container-registry/container-registry-artifact-cache) to automatically cache upstream images. This provides a pull-through proxy that caches images from Docker Hub, `ghcr.io`, and other registries inside your ACR.
+
+### Solution 3: Authenticate with the upstream registry
+
+For Docker Hub, authenticated users get higher rate limits. Create a pull secret and reference it in your pod spec:
+
+```console
+kubectl create secret docker-registry dockerhub-secret \
+  --docker-server=https://index.docker.io/v1/ \
+  --docker-username=<username> \
+  --docker-password=<access-token> \
+  -n <namespace>
+```
+
+```yaml
+spec:
+  imagePullSecrets:
+  - name: dockerhub-secret
+```
 
 ## Other considerations
 

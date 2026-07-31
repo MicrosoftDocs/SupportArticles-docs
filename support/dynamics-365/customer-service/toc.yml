@@ -64,6 +64,10 @@
       href: knowledge-management/data-not-updated-integrated-search-providers.md  
     - name: Knowledge articles don't support multilingual search
       href: knowledge-management/knowledge-articles-not-supporting-multilingual-search.md  
+- name: Quality Management
+  items:
+    - name: Troubleshoot failed quality evaluations
+      href: omnichannel-for-customer-service/quality-evaluation-retry.md
 - name: Queues
   items:  
     - name: Personal view queue filters aren't working properly
@@ -180,36 +184,26 @@
       items:
         - name: Can't deploy a custom agent script solution
           href: omnichannel-for-customer-service/custom-agentscript-solution.md
-    - name: Customer summary and Closed conversation form
-      items:  
-        - name: Conversations remain active after an agent closes the browser
-          href: omnichannel-for-customer-service/conversations-still-active-after-closing-browser.md
-        - name: The Active Conversation form doesn't display as configured
-          href: omnichannel-for-customer-service/active-conversation-form-not-showing-as-configured.md  
     - name: Conversation control
       items:
         - name: Conversation is stuck in a wrap-up state
           href: omnichannel-for-customer-service/conversation-stuck-wrap-up-state.md
         - name: Conversation widget blank when changing browser tabs
           href: omnichannel-for-customer-service/conversation-widget-blank.md  
-    - name: Live chat channel
+    - name: Copilot Studio agents
       items:
-        - name: Agent doesn't receive chat
-          href: omnichannel-for-customer-service/agent-does-not-receive-chat.md
-        - name: Chat isn't initiated when starting a new chat from portal
-          href: omnichannel-for-customer-service/new-chat-not-initiated-portal.md
-        - name: Error when creating a chat widget or social channel
-          href: omnichannel-for-customer-service/error-create-chat-widget-social-channel.md
-    - name: Live Chat Widget (LCW)
-      items:
-        - name: Agents don't receive desktop notifications for new session messages
-          href: omnichannel-for-customer-service/agents-dont-receive-desktop-notifications-for-new-messages.md
-        - name: Chat widget icon doesn't load on portal
-          href: omnichannel-for-customer-service/chat-widget-icon-does-not-load-portal.md
-        - name: Chat widget doesn't load on the portal
-          href: omnichannel-for-customer-service/chat-widget-not-loading-portal.md     
-        - name: Email field validation in a Pre-conversation survey doesn't work as expected
-          href: omnichannel-for-customer-service/email-field-validation-in-pre-conversation-survey-not-working.md
+        - name: Copilot Studio agent conversations are active after a chat ends
+          href: omnichannel-for-customer-service/pva-conversations-active-dashboard.md
+        - name: Error in Conversation Start topic prevents survey agent from publishing
+          href: omnichannel-for-customer-service/error-in-conversation-start-topic.md
+        - name: Missing variables and actions in transfers from Copilot Studio agents to service representatives
+          href: omnichannel-for-customer-service/agent-transfer-pva-bot-issue.md
+    - name: Customer summary and Closed conversation form
+      items:  
+        - name: Conversations remain active after an agent closes the browser
+          href: omnichannel-for-customer-service/conversations-still-active-after-closing-browser.md
+        - name: The Active Conversation form doesn't display as configured
+          href: omnichannel-for-customer-service/active-conversation-form-not-showing-as-configured.md  
     - name: Licensing, provisioning, and installation
       items:
         - name: Agent capacity issue in customer support assignment
@@ -224,30 +218,44 @@
           href: omnichannel-for-customer-service/omnichannel-provision-fail-errors.md
         - name: Troubleshoot issues with provisioning channels
           href: omnichannel-for-customer-service/channel-provisioning-in-omnichannel-admin-center.md
+    - name: Live chat channel
+      items:
+        - name: Agent doesn't receive chat
+          href: omnichannel-for-customer-service/agent-does-not-receive-chat.md
+        - name: Chat isn't initiated when starting a new chat from portal
+          href: omnichannel-for-customer-service/new-chat-not-initiated-portal.md
+        - name: Error when creating a chat widget or social channel
+          href: omnichannel-for-customer-service/error-create-chat-widget-social-channel.md
+    - name: Live Chat Widget (LCW)
+      items:
+        - name: Agents don't receive desktop notifications for new session messages
+          href: omnichannel-for-customer-service/agents-dont-receive-desktop-notifications-for-new-messages.md
+        - name: Chat widget doesn't load on the portal
+          href: omnichannel-for-customer-service/chat-widget-not-loading-portal.md     
+        - name: Chat widget icon doesn't load on portal
+          href: omnichannel-for-customer-service/chat-widget-icon-does-not-load-portal.md
+        - name: Email field validation in a Pre-conversation survey doesn't work as expected
+          href: omnichannel-for-customer-service/email-field-validation-in-pre-conversation-survey-not-working.md
     - name: Messaging capabilities
       items:
         - name: '"This number cannot be upgraded, Calling and SMS capabilities maxed out" error'    
           href: omnichannel-for-customer-service/number-cannnot-upgraded-calling-sms-maxed-out-error.md
-    - name: Copilot Studio agents
-      items:
-        - name: Copilot Studio agent conversations are active after a chat ends
-          href: omnichannel-for-customer-service/pva-conversations-active-dashboard.md
-        - name: Error in Conversation Start topic prevents survey agent from publishing
-          href: omnichannel-for-customer-service/error-in-conversation-start-topic.md
-        - name: Missing variables and actions in transfers from Copilot Studio agents to service representatives
-          href: omnichannel-for-customer-service/agent-transfer-pva-bot-issue.md
     - name: Omnichannel dashboards
       items:
-        - name: Agent dashboard shows authentication error after provisioning
-          href: omnichannel-for-customer-service/agent-dashboard-error-omnichannel-provision.md
         - name: Agent dashboard doesn't load or displays error
           href: omnichannel-for-customer-service/agent-dashboard-auth-error.md
+        - name: Agent dashboard shows authentication error after provisioning
+          href: omnichannel-for-customer-service/agent-dashboard-error-omnichannel-provision.md
         - name: Communication panel doesn't load
           href: omnichannel-for-customer-service/communication-panel-load-issue.md
         - name: Dashboards don't appear
           href: omnichannel-for-customer-service/dashboard-not-appearing-omnichannel.md
         - name: Error in communication panel
           href: omnichannel-for-customer-service/error-communication-panel.md
+    - name: Quality Management
+      items:
+        - name: Troubleshoot failed quality evaluations
+          href: omnichannel-for-customer-service/quality-evaluation-retry.md
     - name: Social channels
       items:
         - name: Troubleshoot sync issue with social data
