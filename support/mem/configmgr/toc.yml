@@ -15,7 +15,8 @@ items:
   items:
   - name: Issues
     items:
-
+    - name: Clients fail to download content with HTTP 405 errors
+      href: app-management/issues/clients-fail-download-content-http-405-errors.md
     - name: Deploy Windows language packs
       href: app-management/deploy-language-pack.md
   - name: Understand application management
@@ -120,13 +121,21 @@ items:
     items:
     - name: Troubleshooting overview
       href: data-transfer-sites/troubleshoot/overview.md
+    - name: DRS synchronization internals
+      href: data-transfer-sites/troubleshoot/drs-synchronization-internals.md
+    - name: DRS activation internals
+      href: data-transfer-sites/troubleshoot/drs-activation-internals.md
+    - name: DRS reinitialization internals
+      href: data-transfer-sites/troubleshoot/drs-reinitialization-internals.md
+    - name: Troubleshoot DRS Service Broker certificate errors
+      href: data-transfer-sites/troubleshoot/drs-ssb-certificate-errors.md
     - name: DRS replication links
       href: data-transfer-sites/troubleshoot/sql-replication.md
-    - name: SQL Server instance configuration
+    - name: Troubleshoot the SQL Server instance configuration
       href: data-transfer-sites/troubleshoot/sql-configuration.md
     - name: DRS performance
       href: data-transfer-sites/troubleshoot/sql-performance.md
-    - name: DRS reinitialization
+    - name: Troubleshoot DRS reinitialization
       href: data-transfer-sites/troubleshoot/sql-replication-reinit.md
     - name: Reinitializing global data
       href: data-transfer-sites/troubleshoot/global-data-reinit.md

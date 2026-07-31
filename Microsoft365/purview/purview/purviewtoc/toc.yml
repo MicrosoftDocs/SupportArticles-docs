@@ -60,6 +60,8 @@ items:
       href: ../data-loss-prevention/data-loss-prevention-not-work.md
     - name: Diagnose DLP policy tip display issues
       href: ../data-loss-prevention/diagnose-dlp-policy-tip-display-issues.md
+    - name: Diagnose Paste to supported browser issues
+      href: ../data-loss-prevention/diagnose-paste-to-supported-browser-issues.md
   - name: Diagnostics
     items:
     - name: Self-help diagnostics for issues in Microsoft Purview
