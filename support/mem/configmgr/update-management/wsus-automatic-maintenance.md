@@ -219,6 +219,10 @@ This script will present the following menu options for performing SUSDB Mainten
 [12] Reindex and Update Statistics
 [RA] Run all above steps sequentially
 
+You can also run this script with no user interaction, using the following:
+
+.\SUSDB-Maintenance.ps1 -Action RA -DontShowLogs -DaysSupersededNotDeclined 180
+
 Sample scripts are not supported under any Microsoft standard support program or service. Sample scripts are provided AS IS without warranty of any kind.
 Microsoft further disclaims all implied warranties including, without limitation, any implied warranties of merchantability or of fitness for a particular purpose.
 The entire risk arising out of the use or performance of the sample script and documentation remains with you.
@@ -228,6 +232,12 @@ of or inability to use the sample script or documentation, even if Microsoft has
 
 #>
 
+param (
+    [string] $Action,
+    [switch] $DontShowLogs,
+    [int] $DaysSupersededNotDeclined
+)
+
 #Global Variables
 $Global:LogFile = $null
 $Global:SQLoutput = $null
@@ -236,8 +246,14 @@ $Global:progresspreference = 'SilentlyContinue'
 $Global:DaysSupersededNotDeclined = 30
 $Global:MaxXMLDefault = 5242880
 $Global:TestDetectoidPattern = 'Product Detectoid for ProductName TestProduct%'
+$Global:PromptForDaysSuperseeded = $true
 
 $ErrorActionPreference = "Stop"
+
+if ($DaysSupersededNotDeclined) {
+    $Global:DaysSupersededNotDeclined = $DaysSupersededNotDeclined
+    $Global:PromptForDaysSuperseeded = $false
+}
 
 try {
     $SQLsetup = (Get-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft\Update Services\Server\Setup' -Name SqlServerName).SqlServerName
@@ -1070,7 +1086,9 @@ else {
         try {
             $null = New-Item -ItemType File -Path $LogFile -Force -ErrorAction Stop
             Write-Host "The file [$LogFile] has been created."
-            Invoke-Expression $LogFile
+            if (!$DontShowLogs) {
+                Invoke-Expression $LogFile
+            }
         }
         catch {
             throw $_.Exception.Message
@@ -1078,7 +1096,9 @@ else {
     }
     else {
         Write-Host "Log file [$LogFile] already existed."
-        Invoke-Expression $LogFile
+        if (!$DontShowLogs) {
+            Invoke-Expression $LogFile
+        }
     }
     #EndRegion LogCheck
 
@@ -1090,7 +1110,13 @@ Write-Host "Script initialized - using native .NET SqlClient (no SQL module requ
 #Region ShowMenu
 do {
     Show-Menu -Title 'SUSDB Maintenance'
-    $selection = Read-Host "Please make a selection"
+    if ($Action) {
+        $selection = $Action
+        Write-Host "Selected: $Action"
+        Write-log -Message "Selected: $Action" -severity 1 -component "Show Menu"
+    } else {
+        $selection = Read-Host "Please make a selection"
+    }
     switch ($selection) {
         'S' {
             #Change SQL Server
@@ -1129,8 +1155,15 @@ do {
 
 }'6' {
             #Cleanup Superseded Updates
-            Write-Host "Specify the number of days between today and the release date for which the superseded updates must not be declined.`nThis should match configuration of supersedence rules in SUP component properties, if ConfigMgr is being used with WSUS.`n"
-            $Global:DaysSupersededNotDeclined = Read-Host -Prompt 'Days '
+            if ($Action -And $Global:PromptForDaysSuperseeded) {
+                Write-Host "`nMust provide -DaysSupersededNotDeclined when using -Action.`n" -ForegroundColor Red
+                Exit 1
+            }
+
+            if ($Global:PromptForDaysSuperseeded) {
+                Write-Host "Specify the number of days between today and the release date for which the superseded updates must not be declined.`nThis should match configuration of supersedence rules in SUP component properties, if ConfigMgr is being used with WSUS.`n"
+                $Global:DaysSupersededNotDeclined = Read-Host -Prompt 'Days '
+            }
             
             if ($Global:DaysSupersededNotDeclined -gt 0 -and $Global:DaysSupersededNotDeclined -le 99) {
                 Write-log -Message "Number of days entered :  $Global:DaysSupersededNotDeclined , proceeding with cleaning up superseded updates." -severity 1 -component "Cleanup Superseded Updates"
@@ -1167,9 +1200,16 @@ do {
         }'RA' {
             Write-log -Message "--> Begin run all" -severity 1 -component "Run All"
             
-            Write-Host "Specify the number of days between today and the release date for which the superseded updates must not be declined.`nThis should match configuration of supersedence rules in SUP component properties, if ConfigMgr is being used with WSUS.`n"
-            $Global:DaysSupersededNotDeclined = Read-Host -Prompt 'Days '
-            
+            if ($Action -And $Global:PromptForDaysSuperseeded) {
+                Write-Host "`nMust provide -DaysSupersededNotDeclined when using -Action.`n" -ForegroundColor Red
+                Exit 1
+            }
+
+            if ($Global:PromptForDaysSuperseeded) {
+                Write-Host "Specify the number of days between today and the release date for which the superseded updates must not be declined.`nThis should match configuration of supersedence rules in SUP component properties, if ConfigMgr is being used with WSUS.`n"
+                $Global:DaysSupersededNotDeclined = Read-Host -Prompt 'Days '
+            }
+
             if ($Global:DaysSupersededNotDeclined -gt 0 -and $Global:DaysSupersededNotDeclined -le 99) {
                 Write-log -Message "Number of days entered :  $Global:DaysSupersededNotDeclined , proceeding with cleaning up superseded updates." -severity 1 -component "Run All"                
             }
@@ -1199,6 +1239,7 @@ UpdateCount
         }'q' {
             Write-Host
             Write-Host "Have a nice day!`n" -ForegroundColor Yellow
+            Write-log -Message "Exited" -severity 1 -component "Run"
         }
         default {
             Write-Host
@@ -1206,7 +1247,10 @@ UpdateCount
         }
     }
 
-Pause
+    # Quit after action
+    if ($Action) {
+        $Action = "q"
+    }
 }
 until ($selection -eq 'q')
 #EndRegion ShowMenu
