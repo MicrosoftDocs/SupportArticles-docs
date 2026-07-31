@@ -15,7 +15,8 @@ items:
   items:
   - name: Issues
     items:
-
+    - name: Clients fail to download content with HTTP 405 errors
+      href: app-management/issues/clients-fail-download-content-http-405-errors.md
     - name: Deploy Windows language packs
       href: app-management/deploy-language-pack.md
   - name: Understand application management
