@@ -3,8 +3,8 @@ title: "Troubleshoot DNS resolution problems in AKS"
 description: "Learn how to troubleshoot DNS resolution problems in AKS with a structured workflow to diagnose and fix DNS failures in Azure Kubernetes Service. Start here."
 author: sturrent
 ms.author: seturren
-ms.date: 05/29/2025
-ms.reviewer: v-rekhanain, v-leedennis, josebl, v-weizhu, qasimsarfraz
+ms.date: 07/21/2026
+ms.reviewer: v-rekhanain, v-leedennis, josebl, v-weizhu, qasimsarfraz, mariusbutuc
 editor: v-jsitser
 ms.service: azure-kubernetes-service
 ms.custom: sap:Connectivity
