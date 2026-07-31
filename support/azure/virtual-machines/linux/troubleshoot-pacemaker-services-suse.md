@@ -201,19 +201,18 @@ To do this, follow these steps:
 2. Enter the interactive configuration mode:  
 
    ```bash
-   sudo crm configure edit rsc_azure-events
+   sudo crm configure edit health-azure-events
    ```
 
-3. Modify the `rsc_azure-events` parameters, as shown in the following output:
+3. Modify the `health-azure-events` parameters, as shown in the following output:
 
    ```bash
-   primitive rsc_azure-events azure-events \
-        op monitor interval=10s timeout=240s \
-        op start timeout=10s interval=0s start-delay=60s\
-        op stop timeout=10s interval=0s \
-        meta allow-unhealthy-nodes=true failure-timeout=120s
+   primitive health-azure-events azure-events-az \
+        meta failure-timeout=120s \
+        op start start-delay=60s interval=0s \
+        op monitor interval=10s
    ```
-4. Save your changes, and exit the editor.
+4. Save your changes and exit the editor.
 5. Verify the changes:
 
     ```bash
