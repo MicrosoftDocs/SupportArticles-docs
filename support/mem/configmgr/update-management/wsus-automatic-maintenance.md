@@ -230,6 +230,10 @@ This script will present the following menu options for performing SUSDB Mainten
 [12] Reindex and Update Statistics
 [RA] Run all above steps sequentially
 
+You can also run this script with no user interaction, using the following:
+
+.\SUSDB-Maintenance.ps1 -Action RA -DontShowLogs -MonthsSupersededNotDeclined 3
+
 Sample scripts are not supported under any Microsoft standard support program or service. Sample scripts are provided AS IS without warranty of any kind.
 Microsoft further disclaims all implied warranties including, without limitation, any implied warranties of merchantability or of fitness for a particular purpose.
 The entire risk arising out of the use or performance of the sample script and documentation remains with you.
@@ -239,12 +243,19 @@ of or inability to use the sample script or documentation, even if Microsoft has
 
 #>
 
+param (
+    [string] $Action,
+    [switch] $DontShowLogs,
+    [int] $MonthsSupersededNotDeclined
+)
+
 #Global Variables
 $Global:ScriptVersion = '2.8'
 $Global:LogFile = $null
 $Global:progresspreference = 'SilentlyContinue'
 # Expressed in months to match the supersedence rule in ConfigMgr SUP component properties.
 $Global:MonthsSupersededNotDeclined = 3
+$Global:PromptForMonthsSuperseded = $true
 $Global:MaxXMLDefault = 5242880
 # Cached MaxXMLPerRequest so the menu does not query SQL on every redraw. Null means "re-read".
 $Global:MaxXMLCache = $null
@@ -271,6 +282,11 @@ $Global:TrustServerCertificate = $true
 $Global:WindowsPowerShellPath = "$env:SystemRoot\System32\WindowsPowerShell\v1.0\powershell.exe"
 
 $ErrorActionPreference = "Stop"
+
+if ($MonthsSupersededNotDeclined) {
+    $Global:MonthsSupersededNotDeclined = $MonthsSupersededNotDeclined
+    $Global:PromptForMonthsSuperseded = $false
+}
 
 try {
     $SQLsetup = (Get-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft\Update Services\Server\Setup' -Name SqlServerName).SqlServerName
@@ -1464,11 +1480,13 @@ Write-log -Message "--> SUSDB-Maintenance $Global:ScriptVersion started by $env:
 Write-log -Message "PowerShell $($PSVersionTable.PSVersion) | SQL Server: $LocalSQLInstance | Log: $LogFile" -severity 1 -component "Initialize"
 
 # Opening the log is a convenience - a missing .log file association must not stop the script.
-try {
-    Invoke-Item -Path $LogFile
-}
-catch {
-    Write-Host "Could not open the log automatically: $($_.Exception.Message)" -ForegroundColor Yellow
+if (!$DontShowLogs) {
+    try {
+        Invoke-Item -Path $LogFile
+    }
+    catch {
+        Write-Host "Could not open the log automatically: $($_.Exception.Message)" -ForegroundColor Yellow
+    }
 }
 #EndRegion LogCheck
 
@@ -1478,7 +1496,13 @@ Write-Host "Script initialized - using native .NET SqlClient (no SQL module requ
 #Region ShowMenu
 do {
     Show-Menu -Title 'SUSDB Maintenance'
-    $selection = Read-Host "Please make a selection"
+    if ($Action) {
+        $selection = $Action
+        Write-Host "Selected: $Action"
+        Write-log -Message "Selected: $Action" -severity 1 -component "Show Menu"
+    } else {
+        $selection = Read-Host "Please make a selection"
+    }
 
     # Keeps a failed operation from terminating the whole script, since $ErrorActionPreference is Stop.
     try {
@@ -1520,14 +1544,18 @@ do {
 
 }'6' {
             #Cleanup Superseded Updates
-            Write-Host "Specify the number of months between today and the release date for which the superseded updates must not be declined.`nThis should match configuration of supersedence rules in SUP component properties, if ConfigMgr is being used with WSUS.`n"
-            $MonthsEntry = Read-Host -Prompt 'Months '
-            $MonthsValue = 0
+            if ($Global:PromptForMonthsSuperseded) {
+                Write-Host "Specify the number of months between today and the release date for which the superseded updates must not be declined.`nThis should match configuration of supersedence rules in SUP component properties, if ConfigMgr is being used with WSUS.`n"
+                $MonthsEntry = Read-Host -Prompt 'Months '
+                $MonthsValue = 0
 
-            # Read-Host returns a string, so the range test must be done on a parsed integer.
-            # 600 months (50 years) is far beyond the age of any update in SUSDB and keeps the calculated cutoff date clear of the SQL datetime floor of 01-01-1753.
-            if ([int]::TryParse($MonthsEntry.Trim(), [ref]$MonthsValue) -and $MonthsValue -gt 0 -and $MonthsValue -le 600) {
+                # Read-Host returns a string, so the range test must be done on a parsed integer.
+                [int]::TryParse($MonthsEntry.Trim(), [ref]$MonthsValue)
                 $Global:MonthsSupersededNotDeclined = $MonthsValue
+            }
+
+            # 600 months (50 years) is far beyond the age of any update in SUSDB and keeps the calculated cutoff date clear of the SQL datetime floor of 01-01-1753.
+            if ($Global:MonthsSupersededNotDeclined -gt 0 -and $Global:MonthsSupersededNotDeclined -le 600) {
                 Write-log -Message "Number of months entered :  $Global:MonthsSupersededNotDeclined , proceeding with cleaning up superseded updates." -severity 1 -component "Cleanup Superseded Updates"
                 CleanupSupersedUpdates 
             }
@@ -1562,14 +1590,18 @@ do {
         }'RA' {
             Write-log -Message "--> Begin run all" -severity 1 -component "Run All"
             
-            Write-Host "Specify the number of months between today and the release date for which the superseded updates must not be declined.`nThis should match configuration of supersedence rules in SUP component properties, if ConfigMgr is being used with WSUS.`n"
-            $MonthsEntry = Read-Host -Prompt 'Months '
-            $MonthsValue = 0
+            if ($Global:PromptForMonthsSuperseded) {
+                Write-Host "Specify the number of months between today and the release date for which the superseded updates must not be declined.`nThis should match configuration of supersedence rules in SUP component properties, if ConfigMgr is being used with WSUS.`n"
+                $MonthsEntry = Read-Host -Prompt 'Months '
+                $MonthsValue = 0
 
-            # Read-Host returns a string, so the range test must be done on a parsed integer.
-            # 600 months (50 years) is far beyond the age of any update in SUSDB and keeps the calculated cutoff date clear of the SQL datetime floor of 01-01-1753.
-            if ([int]::TryParse($MonthsEntry.Trim(), [ref]$MonthsValue) -and $MonthsValue -gt 0 -and $MonthsValue -le 600) {
+                # Read-Host returns a string, so the range test must be done on a parsed integer.
+                [int]::TryParse($MonthsEntry.Trim(), [ref]$MonthsValue)
                 $Global:MonthsSupersededNotDeclined = $MonthsValue
+            }
+
+            # 600 months (50 years) is far beyond the age of any update in SUSDB and keeps the calculated cutoff date clear of the SQL datetime floor of 01-01-1753.
+            if ($Global:MonthsSupersededNotDeclined -gt 0 -and $Global:MonthsSupersededNotDeclined -le 600) {
                 Write-log -Message "Number of months entered :  $Global:MonthsSupersededNotDeclined , proceeding with cleaning up superseded updates." -severity 1 -component "Run All"                
 
                 $RunAllSteps = 'UpdateCount', 'DeleteTestDetectoids', 'Update_spDeleteUpdate_Procedure',
@@ -1666,6 +1698,7 @@ do {
         }'q' {
             Write-Host
             Write-Host "Have a nice day!`n" -ForegroundColor Yellow
+            Write-log -Message "Exited" -severity 1 -component "Run"
         }
         default {
             Write-Host
@@ -1690,7 +1723,12 @@ do {
         Write-log -Message "Selection [$selection] failed - replica mode could not be re-enabled. Re-enable it manually in the WSUS console (Options > Update Source and Proxy Server)." -severity 3 -component "Menu"
     }
 
-    if ($selection -ne 'q') { Pause }
+    if ($Action) {
+        # Quit after action was run without prompting
+        $Action = "q"
+    } elseif ($selection -ne 'q') {
+        Pause
+    }
 }
 until ($selection -eq 'q')
 #EndRegion ShowMenu
