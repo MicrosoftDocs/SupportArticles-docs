@@ -1,49 +1,48 @@
 ---
 title: Troubleshoot app connection issues in an AKS cluster
 description: Troubleshoot app connection issues in an AKS cluster with basic steps to identify causes and restore connectivity. Start resolving issues now.
-ms.date: 10/08/2024
-ms.reviewer: chiragpa, pkc, rissing, ookour, v-leedennis, v-weizhu
+ms.date: 07/31/2026
+author: kaushika-msft
+ms.author: kaushika
+ms.reviewer: chiragpa, pkc, rissing, ookour, v-leedennis, v-weizhu, dandshi
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to take basic troubleshooting steps so that I can successfully connect to an application that's hosted on an Azure Kubernetes Service (AKS) cluster.
 ms.custom: sap:Connectivity
 ---
-# Troubleshoot connection issues to an app that's hosted in an AKS cluster
+# Troubleshoot app connection issues in an AKS cluster
 
 ## Summary
 
-If you experience app connection issues in an AKS cluster, this article helps you troubleshoot and resolve them. You'll learn basic checks for application, service, ingress, and network configuration so you can restore connectivity faster.
+If you experience app connection problems in an AKS cluster, this article helps you troubleshoot and resolve them. You learn basic checks for application, service, ingress, and network configuration so you can restore connectivity faster.
 
 > [!NOTE]
-> To troubleshoot common issues when you try to connect to the AKS API server, see [Basic troubleshooting of cluster connection issues with the API server](troubleshoot-cluster-connection-issues-api-server.md).
+> To troubleshoot common problems when you try to connect to the AKS API server, see [Basic troubleshooting of cluster connection problems with the API server](troubleshoot-cluster-connection-issues-api-server.md).
 
 ## Prerequisites
-
-- The Client URL ([cURL](https://www.tecmint.com/install-curl-in-linux/)) tool, or a similar command-line tool.
-
-- The [apt-get](https://linux.die.net/man/8/apt-get) command-line tool for handling packages.
-  
-- The [Netcat](https://linux.die.net/man/1/nc) (`nc`) command-line tool for TCP connections.
 
 - The Kubernetes [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) tool, or a similar tool to connect to the cluster. To install kubectl by using [Azure CLI](/cli/azure/install-azure-cli), run the [az aks install-cli](/cli/azure/aks#az-aks-install-cli) command.
 
 ## Factors to consider
 
-This section covers troubleshooting steps to take if you're having issues when you try to connect to the application that's hosted in an AKS cluster.
+This section covers troubleshooting steps to take if you're having problems connecting to the application that's hosted in an AKS cluster.
 
-In any networking scenario, administrators should consider the following important factors when troubleshooting:
+In any networking scenario, consider the following important factors when troubleshooting:
 
 - What's the source and the destination for a request?
-- What are the hops in between the source and the destination?
+- What are the hops between the source and the destination?
 - What's the request-response flow?
 - Which hops have extra security layers on top, such as the following items:
 
   - Firewall
   - Network security group (NSG)
-  - Network policy
+  - Kubernetes network policy
 
-When you check each component, [get and analyze HTTP response codes](../connectivity/get-and-analyze-http-response-codes.md). These codes are useful to identify the nature of the issue, and are especially helpful in scenarios in which the application responds to HTTP requests.
+When you check each component, [get and analyze HTTP response codes](../connectivity/get-and-analyze-http-response-codes.md). These codes are useful to identify the nature of the problem, and are especially helpful in scenarios in which the application responds to HTTP requests.
 
-If other troubleshooting steps don't provide any conclusive outcome, take packet captures from the client and server. Packet captures are also useful when non-HTTP traffic is involved between the client and server. For more information about how to collect packet captures for AKS environment, see the following articles in the data collection guide:
+> [!NOTE]
+> The examples in this article use HTTP-based tools (such as `cURL`) and HTTP response codes because HTTP is the most common case. The same *inside-out* methodology applies to applications that use other protocols (for example, databases, gRPC, or other TCP/UDP-based services). For those applications, use protocol-specific clients whenever possible&mdash;`curl -v` still reports whether the underlying TCP connection succeeds at each hop&mdash;and rely more on packet captures, because HTTP response codes aren't available.
+
+If other troubleshooting steps don't provide any conclusive outcome, take packet captures from the client and server. Packet captures are also useful when non-HTTP traffic is involved between the client and server. For more information about how to collect packet captures for an AKS environment, see the following articles in the data collection guide:
 
 - [Capture a TCP dump from a Linux node in an AKS cluster](../logs/capture-tcp-dump-linux-node-aks.md).
 
@@ -51,31 +50,48 @@ If other troubleshooting steps don't provide any conclusive outcome, take packet
 
 - [Capture TCP packets from a pod on an AKS cluster](../logs/packet-capture-pod-level.md).
 
-Knowing how to get the HTTP response codes and take packet captures makes it easier to troubleshoot a network connectivity issue.
+Knowing how to get the HTTP response codes and take packet captures makes it easier to troubleshoot a network connectivity problem.
 
 ## Basic network flow for applications on AKS
 
-In general, when applications are exposed using the Azure Load Balancer service type, the request flow to access them is as follows:
+In general, when you expose applications by using the Azure Load Balancer service type, the request flow to access them is as follows:
 
 > Client >> DNS name >> AKS load balancer IP address >> AKS nodes >> Pods
 
-There are other possible situations in which extra components might be involved. For example:
+Other situations might involve extra components. For example:
 
-- The managed NGINX ingress with the [application routing add-on](/azure/aks/app-routing) feature is enabled.
-- The application gateway is used through the [Application Gateway Ingress Controller](/azure/application-gateway/ingress-controller-overview) (AGIC) instead of Azure Load Balancer.
-- Azure Front Door and API Management might be used on top of the load balancer.
+- You enable the managed NGINX ingress with the [application routing add-on](/azure/aks/app-routing) feature.
+- You use the [Application Gateway Ingress Controller](/azure/application-gateway/ingress-controller-overview) (AGIC) instead of Azure Load Balancer.
+- You use Azure Front Door and API Management on top of the load balancer.
 - The process uses an internal load balancer.
-- The connection might not end at the pod and the requested URL. This could depend on whether the pod can connect to another entity, such as a database or any other service in the same cluster.
+- The connection might not end at the pod and the requested URL. This condition could depend on whether the pod can connect to another entity, such as a database or any other service in the same cluster.
 
 It's important to understand the request flow for the application.
 
-A basic request flow to applications in an AKS cluster would resemble the flow that's shown in the following diagram.
+A basic request flow to applications in an AKS cluster resembles the flow that's shown in the following diagram.
 
-:::image type="content" source="./media/connection-issues-application-hosted-aks-cluster/aks-cluster-app-request-flow.svg" lightbox="./media/connection-issues-application-hosted-aks-cluster/aks-cluster-app-request-flow.svg" alt-text="Screenshot of the basic request flow for app connection issues in an AKS cluster: client, DNS, load balancer IP, AKS nodes, and pods." border="false":::
+:::image type="content" source="./media/connection-issues-application-hosted-aks-cluster/aks-cluster-app-request-flow.svg" alt-text="Screenshot of the basic request flow for app connection issues in an AKS cluster: client, DNS, load balancer IP, AKS nodes, and pods." lightbox="./media/connection-issues-application-hosted-aks-cluster/aks-cluster-app-request-flow.svg":::
+
+## Quickly isolate the issue
+
+Before troubleshooting inside the cluster, run a quick test to determine whether the problem is inside AKS or in the network outside it.
+
+Use `curl` (or an equivalent command-line tool) for this test, for two reasons:
+
+- It keeps the tooling consistent across the whole troubleshooting flow, which relies on `curl` at each hop.
+- Its increased verbosity (`curl -v`) can reveal details about the nature of the problem itself, such as whether the failure is at the TCP connection level or the application level.
+
+From outside the cluster, send a `curl` request to the `LoadBalancer` service IP address of the affected application:
+
+```bash
+curl -v -m 5 http://<service-ip-address>:<port>
+```
+
+If you can access the load balancer IP address, the application inside the cluster is serving traffic, so the issue is most likely in the network *outside* AKS (for example, client-side DNS that resolves the host name to a stale or incorrect public IP address, or a firewall on the client path). If you can't access the load balancer IP address, continue with the inside-out troubleshooting steps to find the failing hop inside the cluster.
 
 ## Inside-out troubleshooting
 
-Troubleshooting connectivity issues might involve many checks, but the *inside-out* approach can help find the source of the issue and identify the bottleneck. In this approach, you start at the pod itself, checking whether the application is responding on the pod's IP address. Then, check each component in turn up to the end client.
+Troubleshooting connectivity issues might involve many checks, but the *inside-out* approach can help you find the source of the issue and identify the bottleneck. In this approach, you start at the pod itself, checking whether the application is responding on the pod's IP address. Then, check each component in turn up to the end client.
 
 ### Step 1: Check whether the pod is running and the app or container inside the pod is responding correctly
 
@@ -95,7 +111,7 @@ What if the pod isn't running? In this case, check the pod events by using the [
 kubectl describe pod <pod-name> -n <namespace-name>
 ```
 
-If the pod isn't in a `Ready` or `Running` state, or it restarted many times, check the `kubectl describe` output. The events will reveal any issues that prevent you from being able to start the pod. Or, if the pod has started, the application inside the pod might have failed, causing the pod to be restarted. [Troubleshoot the pod accordingly](https://github.com/feiskyer/kubernetes-handbook/blob/master/en/troubleshooting/pod.md) to make sure that it's in a suitable state.
+If the pod isn't in a `Ready` or `Running` state, or it restarted many times, check the `kubectl describe` output. The events reveal any issues that prevent you from starting the pod. Or, if the pod starts, the application inside the pod might fail, causing the pod to restart. [Troubleshoot the pod accordingly](https://github.com/feiskyer/kubernetes-handbook/blob/master/en/troubleshooting/pod.md) to make sure that it's in a suitable state.
 
 If the pod is running, it can also be useful to check the logs of the containers that are inside the pod. Run the following series of [kubectl logs](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#logs) commands:
 
@@ -112,32 +128,32 @@ kubectl logs <pod-name> --previous
 kubectl logs <pod-name> -c <container-name> --previous      
 ```
 
-Is the pod running? In this case, test the connectivity by starting a test pod in the cluster. From the test pod, you can directly access the application's pod IP address and check whether the application is responding correctly. Run the [kubectl run](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#run), `apt-get`, and `cURL` commands as follows:
+Is the pod running? In this case, test the connectivity by starting a test pod in the cluster. From the test pod, you can directly access the application's pod IP address and check whether the application is responding correctly. Use a test image that already includes `cURL` and DNS tools so that you don't have to install extra packages. Run the [kubectl run](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#run) and `cURL` commands as follows:
 
 ```bash
-# Start a test pod in the cluster:
-kubectl run -it --rm aks-ssh --image=debian:stable
+# Start a test pod that already includes curl and DNS tools (no package install needed):
+kubectl run -it --rm aks-ssh --image=mcr.microsoft.com/aks/fundamental/base-ubuntu:v0.0.11
 
 # After the test pod is running, you will gain access to the pod.
-# Then you can run the following commands:
-apt-get update -y && apt-get install dnsutils -y && apt-get install curl -y && apt-get install netcat-traditional -y
-
-# After the packages are installed, test the connectivity to the application pod:
-curl -Iv http://<pod-ip-address>:<port>
+# Then test the connectivity to the application pod:
+curl -v -m 5 http://<pod-ip-address>:<port>
 ```
 
-For applications that listen on other protocols, you can install relevant tools inside the test pod like the netcat tool, and then check the connectivity to the application pod by running the following command:
-
-```bash
-# After the packages are installed, test the connectivity to the application pod using netcat/nc command:
-nc -z -v <pod-ip-address> <port>
-```
+The verbose (`-v`) output reports the result of the TCP connection before any application-layer exchange. A `Connected to <pod-ip-address> port <port>` line confirms that the TCP connection succeeded, so the application is reachable at the network level. A `Connection refused` or `Connection timed out` message instead points to a network or TCP-level problem. Because `curl -v` already reports the TCP result, the same command also covers applications that use other TCP-based protocols - a separate `netcat` test isn't required.
 
 For more commands to troubleshoot pods, see [Debug running pods](https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/).
 
-### Step 2: Check whether the application is reachable from the service
+If the test pod can't reach the application pod's IP address, common causes include:
 
-For scenarios in which the application inside the pod is running, you can focus mainly on troubleshooting how the pod is exposed.
+- **The application isn't listening correctly.** It's bound to `localhost` (`127.0.0.1`) instead of `0.0.0.0`, or it's using a different port. Confirm the listening address and port inside the container.
+- **The pod isn't healthy.** A failing readiness or liveness probe, a `CrashLoopBackOff` state, or an `OOMKilled` event can interrupt the application. Recheck the `kubectl describe pod` output and the container logs.
+- **A Kubernetes network policy is blocking the traffic.** Check whether a `NetworkPolicy` denies ingress to the destination pod or egress from the source pod.
+- **Cross-node routing is broken (kubenet clusters).** Pods on different nodes can't connect if the [route table](/azure/aks/configure-kubenet) is missing routes, has incorrect routes, or isn't associated with the node subnet. Pods on the *same* node still work, so compare same-node against cross-node connectivity to isolate this cause.
+- **An NSG or user-defined route (UDR) is blocking or redirecting the traffic.** Verify that the NSGs on the node subnet allow traffic between nodes and the pod CIDR, and that a custom UDR (such as forced tunneling to a firewall) isn't dropping or misrouting it.
+
+### Step 2: Access the ClusterIP service
+
+For scenarios in which the application inside the pod is running, focus mainly on troubleshooting how the pod is exposed.
 
 Is the pod exposed as a service? In this case, check the service events. Also, check whether the pod IP address and application port are available as an endpoint in the service description:
 
@@ -178,48 +194,42 @@ If the endpoints aren't pointing to the correct pod IP address, verify the `Labe
 
 Are the endpoints in the service correct? If so, access the service, and check whether the application is reachable.
 
-### Access the ClusterIP service
-
 For the `ClusterIP` service, you can start a test pod in the cluster and access the service IP address:
 
-:::image type="content" source="./media/connection-issues-application-hosted-aks-cluster/test-pod-access-cluster-ip-address.svg" lightbox="./media/connection-issues-application-hosted-aks-cluster/test-pod-access-cluster-ip-address.svg" alt-text="Screenshot of a test pod in an AKS cluster accessing a ClusterIP service to validate app connectivity from inside the cluster." border="false":::
+:::image type="content" source="./media/connection-issues-application-hosted-aks-cluster/test-pod-access-cluster-ip-address.svg" alt-text="Screenshot of a test pod in an AKS cluster accessing a ClusterIP service to validate app connectivity from inside the cluster." lightbox="./media/connection-issues-application-hosted-aks-cluster/test-pod-access-cluster-ip-address.svg":::
 
 ```bash
-# Start a test pod in the cluster:
-kubectl run -it --rm aks-ssh --image=debian:stable
-  
+# Start a test pod that already includes curl and DNS tools (no package install needed):
+kubectl run -it --rm aks-ssh --image=mcr.microsoft.com/aks/fundamental/base-ubuntu:v0.0.11
+
 # After the test pod is running, you will gain access to the pod.
-# Then, you can run the following commands:
-apt-get update -y && apt-get install dnsutils -y && apt-get install curl -y && apt-get install netcat-traditional -y
-  
-# After the packages are installed, test the connectivity to the service:
-curl -Iv http://<service-ip-address>:<port>
+# Then test the connectivity to the service:
+curl -v -m 5 http://<service-ip-address>:<port>
 ```
 
-For applications that listen on other protocols, you can install relevant tools inside the test pod like the netcat tool, and then check the connectivity to the application pod by running the following command:
-
-```bash
-# After the packages are installed, test the connectivity to the application pod using netcat/nc command:
-nc -z -v <pod-ip-address> <port>
-```
+As with the pod check, the verbose (`-v`) output shows whether the TCP connection to the service succeeded (`Connected to <service-ip-address> port <port>`) or failed (`Connection refused` or `Connection timed out`), so the same command also covers services that use other TCP-based protocols.
 
 If the previous command doesn't return an appropriate response, check the service events for any errors.
 
-### Access the LoadBalancer service
+If the pod is reachable by its IP address but not through the service, common causes include:
+
+- **The service has no endpoints.** The service `Selector` doesn't match the pod `Labels`, so no pods back the service. Confirm the endpoints as shown earlier in this section.
+- **A port mismatch.** The service `targetPort` doesn't match the container's listening port, or the wrong `protocol` (TCP or UDP) is configured.
+- **Unhealthy backends are excluded.** Pods that fail their readiness probe are removed from the service endpoints. Verify that the backing pods are `Ready`.
+- **A Kubernetes network policy is blocking traffic** to the backend pods.
+- **`kube-proxy` isn't programming the service rules.** For example, the `kube-proxy` pods aren't running, or the node's connection-tracking (`conntrack`) table is full.
+
+### Step 3: Identify external to Kubernetes networking gap
 
 For the `LoadBalancer` service, you can access the load balancer IP address from outside the cluster.
 
-:::image type="content" source="./media/connection-issues-application-hosted-aks-cluster/access-load-balancer-ip-address-outside-cluster.svg" lightbox="./media/connection-issues-application-hosted-aks-cluster/access-load-balancer-ip-address-outside-cluster.svg" alt-text="Screenshot of external client access to a LoadBalancer IP for troubleshooting app connection issues in an AKS cluster." border="false":::
+:::image type="content" source="./media/connection-issues-application-hosted-aks-cluster/access-load-balancer-ip-address-outside-cluster.svg" alt-text="Screenshot of external client access to a LoadBalancer IP for troubleshooting app connection issues in an AKS cluster." lightbox="./media/connection-issues-application-hosted-aks-cluster/access-load-balancer-ip-address-outside-cluster.svg":::
 
 ```bash
-curl -Iv http://<service-ip-address>:<port>
+curl -v -m 5 http://<service-ip-address>:<port>
 ```
 
-For applications that listen on other protocols, you can install relevant tools inside the test pod like the netcat tool, and then check the connectivity to the application pod by running the following command:
-
-```bash
-nc -z -v <pod-ip-address> <port>
-```
+The verbose (`-v`) output shows whether the TCP connection to the load balancer succeeded or failed, so this command also works for services that use other TCP-based protocols.
 
 Does the `LoadBalancer` service IP address return a correct response? If it doesn't, follow these steps:
 
@@ -229,15 +239,21 @@ Does the `LoadBalancer` service IP address return a correct response? If it does
 
 For more commands to troubleshoot services, see [Debug services](https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/).
 
+If the `LoadBalancer` service IP address doesn't return a correct response, common causes include:
+
+- **An NSG is blocking inbound traffic.** The NSG that's associated with the AKS node subnet must allow the service port from the load balancer or the client.
+- **Load balancer health probes are failing,** so the backend nodes are marked unhealthy and traffic isn't forwarded. For more information, see [Troubleshoot health probe failures in Azure Load Balancer](/troubleshoot/azure/load-balancer/troubleshoot-load-balancer-health-probe-failures) and [Troubleshoot issues when enabling the AKS cluster service health probe mode](/troubleshoot/azure/azure-kubernetes/availability-performance/cluster-service-health-probe-mode-issues).
+- **A user-defined route (UDR) breaks the return path.** Forced tunneling (a `0.0.0.0/0` route to a firewall or network virtual appliance) can cause asymmetric routing that resets or times out external connections. To mitigate this, route the inbound traffic through the same appliance so that the path is symmetric&mdash;for example, add a destination network address translation (DNAT) rule on the firewall or appliance that translates its public IP address to the load balancer's frontend IP address, or expose the application through an internal load balancer that's placed behind the appliance. For more information, see [Limit network traffic with Azure Firewall in AKS](/azure/aks/limit-egress-traffic).
+
 ## Scenarios that use an ingress instead of a service
 
-For scenarios in which the application is exposed by using an `Ingress` resource, the traffic flow resembles the following progression:
+For scenarios in which you expose the application by using an `Ingress` resource, the traffic flow follows this progression:
 
 > Client >> DNS name >> Load balancer or application gateway IP address >> Ingress controller pods inside the cluster >> Service or pods
 
-:::image type="content" source="./media/connection-issues-application-hosted-aks-cluster/ingress-resource-app-traffic-flow.svg" lightbox="./media/connection-issues-application-hosted-aks-cluster/ingress-resource-app-traffic-flow.svg" alt-text="Screenshot of ingress traffic flow in an AKS cluster from client and DNS to load balancer, ingress controller, and backend services." border="false":::
+:::image type="content" source="./media/connection-issues-application-hosted-aks-cluster/ingress-resource-app-traffic-flow.svg" alt-text="Screenshot of ingress traffic flow in an AKS cluster from client and DNS to load balancer, ingress controller, and backend services." lightbox="./media/connection-issues-application-hosted-aks-cluster/ingress-resource-app-traffic-flow.svg":::
 
-You can apply the inside-out approach of troubleshooting here, too. You can also check the ingress kubernetes resource and ingress controller details for more information:
+You can apply the inside-out approach of troubleshooting here, too. You can also check the ingress Kubernetes resource and ingress controller details for more information:
 
 ```console
 $ kubectl get ing -n <namespace-of-ingress>  # Checking the ingress details and events.
@@ -275,7 +291,7 @@ This example contains an `Ingress` resource that:
 - Has two `Path` strings configured.
 - Routes to two `Services` in the back end.
 
-Verify that the back-end services are running, and respond to the port that's mentioned in the ingress description:
+Verify that the back-end services are running and respond to the port that's mentioned in the ingress description:
 
 ```console
 $ kubectl get svc -n <namespace-of-ingress>
@@ -285,7 +301,7 @@ ingress-basic   store-service                            ClusterIP      10.0.61.
 ingress-basic   nginx-ingress-ingress-nginx-controller   LoadBalancer   10.0.122.148   20.84.x.x     80:30217/TCP,443:32464/TCP   
 ```
 
-Verify the logs for the ingress controller pods if there's an error:
+Check the logs for the ingress controller pods if there's an error:
 
 ```console
 $ kubectl get pods -n <namespace-of-ingress>  # Get the ingress controller pods.
@@ -299,9 +315,9 @@ $ # Check logs from the pods.
 $ kubectl logs -n ingress-basic nginx-ingress-ingress-nginx-controller-9d8d5c57d-9vn8q
 ```
 
-What if the client is making requests to the ingress host name or IP address, but no entries are seen in the logs of the ingress controller pod? In this case, the requests might not be reaching the cluster, and the user might be receiving a `Connection Timed Out` error message.
+What if the client makes requests to the ingress host name or IP address, but you don't see any entries in the logs of the ingress controller pod? In this case, the requests might not reach the cluster, and the user might receive a `Connection Timed Out` error message.
 
-Another possibility is that the components on top of the ingress pods, such as Load Balancer or Application Gateway, aren't routing the requests to the cluster correctly. If this is true, you can check the back-end configuration of these resources.
+Another possibility is that the components on top of the ingress pods, such as Load Balancer or Application Gateway, aren't routing the requests to the cluster correctly. If this condition is true, you can check the back-end configuration of these resources.
 
 If you receive a `Connection Timed Out` error message, check the network security group that's associated with the AKS nodes. Also, check the AKS subnet. It could be blocking the traffic from the load balancer or application gateway to the AKS nodes.
 
