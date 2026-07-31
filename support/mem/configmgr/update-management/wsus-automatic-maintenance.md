@@ -201,6 +201,9 @@ Requirements
 This script will present the following menu options for performing SUSDB Maintenance.  SUSDB-Maintenance.log will be created and opened when the script is run.
 
 [S] Change SQL Server, currently set to 
+[M] Toggle MaxXMLPerRequest, currently set to 
+[D] Delete Test Detectoids
+
 [A] Update Count
 [1] Update spDeleteUpdate procedure
 [2] Shrink Files
@@ -231,6 +234,8 @@ $Global:SQLoutput = $null
 $Global:Spaceused = $null
 $Global:progresspreference = 'SilentlyContinue'
 $Global:DaysSupersededNotDeclined = 30
+$Global:MaxXMLDefault = 5242880
+$Global:TestDetectoidPattern = 'Product Detectoid for ProductName TestProduct%'
 
 $ErrorActionPreference = "Stop"
 
@@ -262,7 +267,6 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 
- 
 ALTER PROCEDURE [dbo].[spDeleteUpdate]
     @localUpdateID int
 AS
@@ -452,11 +456,70 @@ SELECT
     name,
        size * 8/1024 'Size (MB)'   
 FROM sys.database_files;"
+
+$GetMaxXML = "USE SUSDB;
+SELECT MaxXMLPerRequest FROM tbConfigurationC;"
+
+$CountTestDetectoids = "USE SUSDB;
+SELECT COUNT(*) AS MatchCount
+FROM dbo.tbUpdate u
+JOIN dbo.tbRevision r ON r.LocalUpdateID = u.LocalUpdateID AND r.IsLatestRevision = 1
+JOIN dbo.tbProperty p ON p.RevisionID = r.RevisionID
+JOIN dbo.tbLocalizedPropertyForRevision tbrp ON tbrp.RevisionID = r.RevisionID
+JOIN dbo.tbLocalizedProperty tlp ON tlp.LocalizedPropertyID = tbrp.LocalizedPropertyID
+WHERE p.UpdateType = 'Detectoid'
+  AND tbrp.LanguageID = p.DefaultPropertiesLanguageID
+  AND tlp.Title LIKE '$Global:TestDetectoidPattern';"
+
+# Deletes the test detectoids via the supported dbo.spDeleteUpdateByUpdateID.
+# Detectoids still referenced by other updates raise an error - those are caught and skipped.
+# Ends with a SELECT so the deleted/skipped counts are returned to the caller.
+$DeleteTestDetectoidsSql = "USE SUSDB;
+SET NOCOUNT ON;
+
+DECLARE @updateID uniqueidentifier;
+DECLARE @retcode  int;
+DECLARE @deleted  int = 0;
+DECLARE @skipped  int = 0;
+
+DECLARE detectoid_cur CURSOR LOCAL FAST_FORWARD FOR
+    SELECT u.UpdateID
+    FROM dbo.tbUpdate u
+    JOIN dbo.tbRevision r ON r.LocalUpdateID = u.LocalUpdateID AND r.IsLatestRevision = 1
+    JOIN dbo.tbProperty p ON p.RevisionID = r.RevisionID
+    JOIN dbo.tbLocalizedPropertyForRevision tbrp ON tbrp.RevisionID = r.RevisionID
+    JOIN dbo.tbLocalizedProperty tlp ON tlp.LocalizedPropertyID = tbrp.LocalizedPropertyID
+    WHERE p.UpdateType = 'Detectoid'
+      AND tbrp.LanguageID = p.DefaultPropertiesLanguageID
+      AND tlp.Title LIKE '$Global:TestDetectoidPattern';
+
+OPEN detectoid_cur;
+FETCH NEXT FROM detectoid_cur INTO @updateID;
+
+WHILE @@FETCH_STATUS = 0
+BEGIN
+    BEGIN TRY
+        EXEC @retcode = dbo.spDeleteUpdateByUpdateID @updateID;
+        IF @retcode = 0 SET @deleted += 1; ELSE SET @skipped += 1;
+    END TRY
+    BEGIN CATCH
+        SET @skipped += 1;
+        PRINT CONCAT('Skipped ', CONVERT(varchar(40), @updateID), ' : ', ERROR_MESSAGE());
+    END CATCH
+
+    FETCH NEXT FROM detectoid_cur INTO @updateID;
+END
+
+CLOSE detectoid_cur;
+DEALLOCATE detectoid_cur;
+
+PRINT CONCAT('Detectoids deleted: ', @deleted, '  |  skipped/referenced: ', @skipped);
+SELECT @deleted AS Deleted, @skipped AS Skipped;"
 #EndRegion SQL_Queries
 
 Function Write-log {
 
-    ############################
+############################
     #Write-Log in CMTrace Format
     ############################
  
@@ -473,7 +536,7 @@ Function Write-log {
  
     "<![LOG[$Message]LOG]!><time=$([char]34)$date$($TimeZoneBias.bias)$([char]34) date=$([char]34)$date2$([char]34) component=$([char]34)$component$([char]34) context=$([char]34)$([char]34) type=$([char]34)$severity$([char]34) thread=$([char]34)$([char]34) file=$([char]34)$([char]34)>" | Out-File -FilePath $Path -Append -NoClobber -Encoding default
 
-    #Write-Log -Message "Starting installation" -severity 1 -component "Installation"
+#Write-Log -Message "Starting installation" -severity 1 -component "Installation"
     #Write-Log -Message "Something went wrong" -severity 2 -component "Installation"
     #Write-Log -Message "BIG Error Message" -severity 3 -component "Installation"
 
@@ -610,10 +673,10 @@ function Invoke-CustomSqlCommand {
 
 function UpdateCount {
 
-    Write-log -Message "--> Begin Update Count" -severity 1 -component "Update Count"      
+Write-log -Message "--> Begin Update Count" -severity 1 -component "Update Count"      
     Write-log -Message "Update Count" -severity 1 -component "Update Count"
 
-    $result = Invoke-CustomSqlCommand -ServerInstance $LocalSQLInstance -Query $UpdateCount
+$result = Invoke-CustomSqlCommand -ServerInstance $LocalSQLInstance -Query $UpdateCount
     
     if ($result.Results -and $result.Results.Rows.Count -gt 0) {
         $SQLoutput = $result.Results.Rows[0]
@@ -636,7 +699,7 @@ function UpdateCount {
 
 function Update_spDeleteUpdate_Procedure {
 
-    Write-log -Message "--> Begin update spDeleteUpdate procedure" -severity 1 -component "Update spDeleteUpdate"
+Write-log -Message "--> Begin update spDeleteUpdate procedure" -severity 1 -component "Update spDeleteUpdate"
     $result = Invoke-CustomSqlCommand -ServerInstance $LocalSQLInstance -Query $spDeleteUpdate
     Write-log -Message ("Total execution time.........:" + ($result.ExecutionTime / 1000) + " seconds") -severity 1 -component "Update spDeleteUpdate"
     Write-log -Message "SQL Output is $($result.Results)" -severity 1 -component "Update spDeleteUpdate"
@@ -645,7 +708,7 @@ function Update_spDeleteUpdate_Procedure {
 
 function ShrinkFile {
 
-    Write-log -Message "--> Begin shrink file" -severity 1 -component "Shrink File"            
+Write-log -Message "--> Begin shrink file" -severity 1 -component "Shrink File"            
     $result = Invoke-CustomSqlCommand -ServerInstance $LocalSQLInstance -Query $Spaceused
     $SQLoutput = $result.Results
     Write-log -Message ("Total execution time for checking Space Used.........:" + ($result.ExecutionTime / 1000) + " seconds") -severity 1 -component "Shrink File"
@@ -654,7 +717,7 @@ function ShrinkFile {
         Write-log -Message ($SQLoutput.Rows[1].name + " " + $SQLoutput.Rows[1]."Size (MB)" + " MB") -severity 1 -component "Shrink Files"
     }
 
-    $result = Invoke-CustomSqlCommand -ServerInstance $LocalSQLInstance -Query $Shrinkfile
+$result = Invoke-CustomSqlCommand -ServerInstance $LocalSQLInstance -Query $Shrinkfile
     Write-log -Message ("Total execution time for Shrinking File.........:" + ($result.ExecutionTime / 1000) + " seconds") -severity 1 -component "Shrink File"    
     
     $result = Invoke-CustomSqlCommand -ServerInstance $LocalSQLInstance -Query $Spaceused
@@ -670,7 +733,7 @@ function ShrinkFile {
 
 function ShrinkDatabase {
 
-    Write-log -Message "--> Begin shrink database" -severity 1 -component "Shrink Database"
+Write-log -Message "--> Begin shrink database" -severity 1 -component "Shrink Database"
     $result = Invoke-CustomSqlCommand -ServerInstance $LocalSQLInstance -Query $Spaceused
     $SQLoutput = $result.Results
     Write-log -Message ("Total execution time for checking Space Used.........:" + ($result.ExecutionTime / 1000) + " seconds") -severity 1 -component "Shrink Database"
@@ -696,12 +759,12 @@ function ShrinkDatabase {
 
 function ReindexStatistics {
 
-    Write-log -Message "--> Begin reindex and update statistics" -severity 1 -component "IndexStats"
+Write-log -Message "--> Begin reindex and update statistics" -severity 1 -component "IndexStats"
     Write-log -Message "Reindexing" -severity 1 -component "IndexStats"
     $result = Invoke-CustomSqlCommand -ServerInstance $LocalSQLInstance -Query $Reindex
-    Write-log -Message ("Total execution time for Reindex.........:" + ($result.ExecutionTime / 1000) + " seconds") -severity 1 -component "IndexStats"    
+    Write-log -Message ("Total execution time for Reindex.........:" + ($result.ExecutionTime / 1000) + " seconds") -severity 1 -component "IndexStats"
 
-    Write-log -Message "Now Updating Statistics" -severity 1 -component "IndexStats"
+Write-log -Message "Now Updating Statistics" -severity 1 -component "IndexStats"
     $result = Invoke-CustomSqlCommand -ServerInstance $LocalSQLInstance -Query $UpdateStatistics
     Write-log -Message ("Total execution time for Updating Statistics.........:" + ($result.ExecutionTime / 1000) + " seconds") -severity 1 -component "IndexStats"    
     Write-log -Message "--> End reindex and update statistics" -severity 1 -component "IndexStats"
@@ -710,7 +773,7 @@ function ReindexStatistics {
 
 function CleanUpSyncHistory {
 
-    Write-log -Message "--> Begin cleanup sync history" -severity 1 -component "Cleanup Sync History"
+Write-log -Message "--> Begin cleanup sync history" -severity 1 -component "Cleanup Sync History"
     $result = Invoke-CustomSqlCommand -ServerInstance $LocalSQLInstance -Query $CleanupSyncHistory
     Write-log -Message ("Total execution time for Cleaning up Sync History.........:" + ($result.ExecutionTime / 1000) + " seconds") -severity 1 -component "Cleanup Sync History"    
     Write-log -Message "--> End cleanup sync history" -severity 1 -component "Cleanup Sync History"
@@ -720,7 +783,7 @@ function CleanupSupersedUpdates {
     Write-log -Message "--> Begin cleanup superseded updates" -severity 1 -component "Cleanup Superseded Updates"
     Write-log -Message "Days specified: $Global:DaysSupersededNotDeclined" -severity 1 -component "Cleanup Superseded Updates"
 
-    $CleanupSupersededUpdates = "DECLARE @thresholdDays INT = $Global:DaysSupersededNotDeclined   -- Specify the number of days between today and the release date for which the superseded updates must not be declined. This should match configuration of supersedence rules in SUP component properties, if ConfigMgr is being used with WSUS.
+$CleanupSupersededUpdates = "DECLARE @thresholdDays INT = $Global:DaysSupersededNotDeclined   -- Specify the number of days between today and the release date for which the superseded updates must not be declined. This should match configuration of supersedence rules in SUP component properties, if ConfigMgr is being used with WSUS.
 DECLARE @testRun BIT = 0          -- Set this to 1 to test without declining anything. 
 -- There shouldn't be any need to modify anything after this line.
 DECLARE @uid UNIQUEIDENTIFIER
@@ -749,8 +812,7 @@ CLOSE DU
 DEALLOCATE DU 
 PRINT CHAR(10) + 'Attempted to decline ' + CONVERT(NVARCHAR(10), @count) + ' updates.'"
 
-
-    $result = Invoke-CustomSqlCommand -ServerInstance $LocalSQLInstance -Query $CleanupSupersededUpdates -Database "SUSDB"
+$result = Invoke-CustomSqlCommand -ServerInstance $LocalSQLInstance -Query $CleanupSupersededUpdates -Database "SUSDB"
     Write-log -Message ("Total execution time for Cleaning up Superseded Updates.........:" + ($result.ExecutionTime / 1000) + " seconds") -severity 1 -component "Cleanup Superseded Updates"
     Write-log -Message "SQL Output is $($result.Results)" -severity 1 -component "Cleanup Superseded Updates"
     Write-log -Message "--> End cleanup superseded updates" -severity 1 -component "Cleanup Superseded Updates"
@@ -758,7 +820,7 @@ PRINT CHAR(10) + 'Attempted to decline ' + CONVERT(NVARCHAR(10), @count) + ' upd
 
 function CleanupObsoleteUpdates {
 
-    Write-log -Message "--> Begin cleanup obsolete updates" -severity 1 -component "Cleanup Obsolete Updates"
+Write-log -Message "--> Begin cleanup obsolete updates" -severity 1 -component "Cleanup Obsolete Updates"
     $result = Invoke-CustomSqlCommand -ServerInstance $LocalSQLInstance -Query $CleanupObsoleteUpdates -Database "SUSDB"
     Write-log -Message ("Total execution time for Cleaning up Obsolete Updates.........:" + ($result.ExecutionTime / 1000) + " seconds") -severity 1 -component "Cleanup Obsolete Updates"
     Write-log -Message "--> End cleanup obsolete updates" -severity 1 -component "Cleanup Obsolete Updates"
@@ -766,7 +828,7 @@ function CleanupObsoleteUpdates {
 
 function WSUSCleanUpWizard {
 
-    Write-log -Message "--> Begin WSUS cleanup wizard" -severity 1 -component "WSUS Cleanup Wizard"
+Write-log -Message "--> Begin WSUS cleanup wizard" -severity 1 -component "WSUS Cleanup Wizard"
     [reflection.assembly]::LoadWithPartialName("Microsoft.UpdateServices.Administration") | Out-Null
     $CleanUpWizard = {
         [reflection.assembly]::LoadWithPartialName("Microsoft.UpdateServices.Administration") | Out-Null
@@ -782,9 +844,9 @@ function WSUSCleanUpWizard {
         $cleanupManager.PerformCleanup($cleanupScope);                         
     }
 
-    $RunCleanUpWizard = Invoke-Command -ScriptBlock $CleanUpWizard
+$RunCleanUpWizard = Invoke-Command -ScriptBlock $CleanUpWizard
 
-    Write-log -Message ("Disk Space Freed " + $RunCleanUpWizard.DiskSpaceFreed + " MB") -severity 1 -component "WSUS Cleanup Wizard"
+Write-log -Message ("Disk Space Freed " + $RunCleanUpWizard.DiskSpaceFreed + " MB") -severity 1 -component "WSUS Cleanup Wizard"
     Write-log -Message ("Expired Updates Declined " + $RunCleanUpWizard.ExpiredUpdatesDeclined) -severity 1 -component "WSUS Cleanup Wizard"
     Write-log -Message ("Obsolete Computers Deleted " + $RunCleanUpWizard.ObsoleteComputersDeleted) -severity 1 -component "WSUS Cleanup Wizard"
     Write-log -Message ("Obsolete Updates Deleted " + $RunCleanUpWizard.ObsoleteUpdatesDeleted) -severity 1 -component "WSUS Cleanup Wizard"
@@ -795,7 +857,7 @@ function WSUSCleanUpWizard {
 
 function CleanUpDeclined {
 
-    Write-log -Message "--> Begin cleanup declined" -severity 1 -component "Cleanup Declined"
+Write-log -Message "--> Begin cleanup declined" -severity 1 -component "Cleanup Declined"
     
     # Load WSUS administration assembly
     [void][Reflection.Assembly]::LoadWithPartialName("Microsoft.UpdateServices.Administration")
@@ -820,6 +882,133 @@ function CleanUpDeclined {
     Write-log -Message "--> End cleanup declined" -severity 1 -component "Cleanup Declined"
 }
 
+function Get-MaxXMLPerRequest {
+    # Returns the current tbConfigurationC.MaxXMLPerRequest value, or $null if it cannot be read.
+    try {
+        $result = Invoke-CustomSqlCommand -ServerInstance $LocalSQLInstance -Query $GetMaxXML -Database "SUSDB"
+        if ($result.Results -and $result.Results.Rows.Count -gt 0) {
+            return [int]$result.Results.Rows[0]['MaxXMLPerRequest']
+        }
+    }
+    catch {
+        return $null
+    }
+    return $null
+}
+
+function ToggleMaxXML {
+    Write-log -Message "--> Begin toggle MaxXMLPerRequest" -severity 1 -component "MaxXMLPerRequest"
+
+    $current = Get-MaxXMLPerRequest
+    if ($null -eq $current) {
+        Write-Host "`nUnable to read the current MaxXMLPerRequest value from SUSDB. No change made.`n" -ForegroundColor Red
+        Write-log -Message "Unable to read the current MaxXMLPerRequest value from SUSDB." -severity 3 -component "MaxXMLPerRequest"
+        Write-log -Message "--> End toggle MaxXMLPerRequest" -severity 1 -component "MaxXMLPerRequest"
+        return
+    }
+
+    Write-log -Message "Current MaxXMLPerRequest value: $current" -severity 1 -component "MaxXMLPerRequest"
+
+    $target = $null
+    if ($current -eq 0) {
+        $target = $Global:MaxXMLDefault
+    }
+    elseif ($current -eq $Global:MaxXMLDefault) {
+        $target = 0
+    }
+    else {
+        # Unexpected value - warn and let the operator decide rather than changing silently.
+        Write-Host "`nMaxXMLPerRequest is currently set to an unexpected value: $current" -ForegroundColor Yellow
+        Write-Host "Expected either 0 or the default ($Global:MaxXMLDefault)." -ForegroundColor Yellow
+        Write-log -Message "MaxXMLPerRequest is an unexpected value: $current (expected 0 or $Global:MaxXMLDefault)." -severity 2 -component "MaxXMLPerRequest"
+        $choice = Read-Host "Enter [0] to set 0, [D] to set default ($Global:MaxXMLDefault), anything else to cancel"
+        switch ($choice) {
+            '0' { $target = 0 }
+            { $_ -in 'D', 'd' } { $target = $Global:MaxXMLDefault }
+            default {
+                Write-Host "`nCancelled - MaxXMLPerRequest unchanged.`n" -ForegroundColor Green
+                Write-log -Message "Operator cancelled MaxXMLPerRequest change (value left at $current)." -severity 1 -component "MaxXMLPerRequest"
+                Write-log -Message "--> End toggle MaxXMLPerRequest" -severity 1 -component "MaxXMLPerRequest"
+                return
+            }
+        }
+    }
+
+    try {
+        # $target is always an integer (0 or the default) - safe to embed in the statement.
+        $setQuery = "USE SUSDB; UPDATE tbConfigurationC SET MaxXMLPerRequest = $target;"
+        $result = Invoke-CustomSqlCommand -ServerInstance $LocalSQLInstance -Query $setQuery -Database "SUSDB"
+        $targetLabel = if ($target -eq $Global:MaxXMLDefault) { "$target (default)" } else { "$target" }
+        Write-Host "`nMaxXMLPerRequest changed from $current to $targetLabel.`n" -ForegroundColor Green
+        Write-log -Message "MaxXMLPerRequest changed from $current to $target." -severity 1 -component "MaxXMLPerRequest"
+        Write-log -Message ("Total execution time for setting MaxXMLPerRequest.........:" + ($result.ExecutionTime / 1000) + " seconds") -severity 1 -component "MaxXMLPerRequest"
+        Write-Host "An IISRESET is required for this change to take effect.`n" -ForegroundColor Yellow
+        Write-log -Message "An IISRESET is required for the MaxXMLPerRequest change to take effect." -severity 2 -component "MaxXMLPerRequest"
+    }
+    catch {
+        Write-Host "`nFailed to update MaxXMLPerRequest: $($_.Exception.Message)`n" -ForegroundColor Red
+        Write-log -Message "Failed to update MaxXMLPerRequest: $($_.Exception.Message)" -severity 3 -component "MaxXMLPerRequest"
+    }
+
+    Write-log -Message "--> End toggle MaxXMLPerRequest" -severity 1 -component "MaxXMLPerRequest"
+}
+
+function DeleteTestDetectoids {
+    Write-log -Message "--> Begin delete test detectoids" -severity 1 -component "Delete Test Detectoids"
+    Write-log -Message "Title pattern: $Global:TestDetectoidPattern" -severity 1 -component "Delete Test Detectoids"
+
+    # Count first so the delete is skipped when there is nothing to remove.
+    $matchCount = 0
+    try {
+        $countResult = Invoke-CustomSqlCommand -ServerInstance $LocalSQLInstance -Query $CountTestDetectoids -Database "SUSDB"
+        if ($countResult.Results -and $countResult.Results.Rows.Count -gt 0) {
+            $matchCount = [int]$countResult.Results.Rows[0]['MatchCount']
+        }
+    }
+    catch {
+        Write-Host "`nFailed to count test detectoids: $($_.Exception.Message)`n" -ForegroundColor Red
+        Write-log -Message "Failed to count test detectoids: $($_.Exception.Message)" -severity 3 -component "Delete Test Detectoids"
+        Write-log -Message "--> End delete test detectoids" -severity 1 -component "Delete Test Detectoids"
+        return
+    }
+
+    Write-log -Message "Matching test detectoids found: $matchCount" -severity 1 -component "Delete Test Detectoids"
+
+    if ($matchCount -le 0) {
+        Write-Host "`nNo test detectoids found - delete skipped.`n" -ForegroundColor Green
+        Write-log -Message "No test detectoids found - delete skipped." -severity 1 -component "Delete Test Detectoids"
+        Write-log -Message "--> End delete test detectoids" -severity 1 -component "Delete Test Detectoids"
+        return
+    }
+
+    Write-log -Message "Reference: Resolved: Windows Server Update Services sync operations issues and timeouts - https://support.microsoft.com/en-us/servicing/os/windows/docs/2026/07/kb5121986-windows-server-update-service-sync-operations-issues-and-timeouts" -severity 2 -component "Delete Test Detectoids"
+
+    Write-Host "`nDeleting $matchCount test detectoid(s) - this can take several minutes...`n" -ForegroundColor Cyan
+
+    try {
+        $result = Invoke-CustomSqlCommand -ServerInstance $LocalSQLInstance -Query $DeleteTestDetectoidsSql -Database "SUSDB"
+        $deleted = 0
+        $skipped = 0
+        if ($result.Results -and $result.Results.Rows.Count -gt 0) {
+            $deleted = [int]$result.Results.Rows[0]['Deleted']
+            $skipped = [int]$result.Results.Rows[0]['Skipped']
+        }
+        Write-log -Message ("Total execution time for deleting test detectoids.........:" + ($result.ExecutionTime / 1000) + " seconds") -severity 1 -component "Delete Test Detectoids"
+        Write-log -Message "Test detectoids deleted: $deleted | skipped (still referenced): $skipped" -severity 1 -component "Delete Test Detectoids"
+        Write-Host "`nDone. Test detectoids deleted: $deleted | skipped (still referenced): $skipped`n" -ForegroundColor Green
+        if ($deleted -gt 0) {
+            Write-Host "An IISRESET is required now that test detectoids have been deleted. (after script finishes)`n" -ForegroundColor Yellow
+            Write-log -Message "An IISRESET is required now that test detectoids have been deleted. (after script finishes)" -severity 2 -component "Delete Test Detectoids"
+        }
+    }
+    catch {
+        Write-Host "`nFailed to delete test detectoids: $($_.Exception.Message)`n" -ForegroundColor Red
+        Write-log -Message "Failed to delete test detectoids: $($_.Exception.Message)" -severity 3 -component "Delete Test Detectoids"
+    }
+
+    Write-log -Message "--> End delete test detectoids" -severity 1 -component "Delete Test Detectoids"
+}
+
 function ChangeSQL {
     Write-log -Message "--> Begin change SQL" -severity 1 -component "Change SQL"
     $global:LocalSQLInstance = Read-Host -Prompt 'Enter the name of the SQL Server'
@@ -833,6 +1022,19 @@ function Show-Menu {
       
     #Write-Color -Text "[S] ", "Change SQL Server, currently set to $LocalSQLInstance" -Color Yellow, Cyan
     Write-Color -Text "[S] ", "Change SQL Server, currently set to ", $LocalSQLInstance -Color Yellow, Cyan, Green
+    $currentMaxXML = Get-MaxXMLPerRequest
+    if ($null -eq $currentMaxXML) {
+        $maxXMLDisplay = "Unknown"
+    }
+    elseif ($currentMaxXML -eq $Global:MaxXMLDefault) {
+        $maxXMLDisplay = "$currentMaxXML (default)"
+    }
+    else {
+        $maxXMLDisplay = "$currentMaxXML"
+    }
+    Write-Color -Text "[M] ", "Toggle MaxXMLPerRequest, currently set to ", $maxXMLDisplay -Color Yellow, Cyan, Green
+    Write-Color -Text "[D] ", "Delete Test Detectoids" -Color Yellow, Cyan
+    Write-Host
     Write-Color -Text "[A] ", "Update Count" -Color Yellow, Cyan
     Write-Color -Text "[1] ", "Update spDeleteUpdate procedure" -Color Yellow, Cyan #https://docs.microsoft.com/en-US/troubleshoot/mem/configmgr/spdeleteupdate-slow-performance
     Write-Color -Text "[2] ", "Shrink Files" -Color Yellow, Cyan
@@ -880,7 +1082,7 @@ else {
     }
     #EndRegion LogCheck
 
-    Write-Host "Script initialized - using native .NET SqlClient (no SQL module required)" -ForegroundColor Green
+Write-Host "Script initialized - using native .NET SqlClient (no SQL module required)" -ForegroundColor Green
     
 }
 #EndRegion Initialize
@@ -894,15 +1096,23 @@ do {
             #Change SQL Server
             ChangeSQL
             
-        }'A' {
+        }'M' {
+            #Toggle MaxXMLPerRequest
+            ToggleMaxXML
+
+}'A' {
             #Update Count
             UpdateCount
 
-        }'1' {
+}'D' {
+            #Delete Test Detectoids
+            DeleteTestDetectoids
+
+}'1' {
             #Update spDeleteUpdate procedure --> https://docs.microsoft.com/en-US/troubleshoot/mem/configmgr/spdeleteupdate-slow-performance
             Update_spDeleteUpdate_Procedure
 
-        }'2' {
+}'2' {
             #Shrink Files
             ShrinkFile
         }'3' {
@@ -917,7 +1127,7 @@ do {
             #Cleanup Sync History
             CleanUpSyncHistory
 
-        }'6' {
+}'6' {
             #Cleanup Superseded Updates
             Write-Host "Specify the number of days between today and the release date for which the superseded updates must not be declined.`nThis should match configuration of supersedence rules in SUP component properties, if ConfigMgr is being used with WSUS.`n"
             $Global:DaysSupersededNotDeclined = Read-Host -Prompt 'Days '
@@ -930,13 +1140,12 @@ do {
                 Write-Host "`nInvalid entry, must be between 1-99.`n" -ForegroundColor Red
                 Write-log -Message "Number of days entered [$Global:DaysSupersededNotDeclined] is invalid, must be between 1-99." -severity 3 -component "Cleanup Superseded Updates"                
             }
-            
 
-        }'7' {
+}'7' {
             #Cleanup Obsolete Updates
             CleanupObsoleteUpdates
 
-        }'8' {
+}'8' {
             #WSUS Cleanup Wizard
             WSUSCleanUpWizard                 
             
@@ -944,7 +1153,7 @@ do {
             #Cleanup Declined
             CleanUpDeclined
 
-        }'10' {
+}'10' {
             #Shrink File
             ShrinkFile
         }'11' {
@@ -970,7 +1179,8 @@ do {
                 Exit
             }
 
-            UpdateCount
+UpdateCount
+            DeleteTestDetectoids
             Update_spDeleteUpdate_Procedure
             ShrinkFile
             ShrinkDatabase
@@ -996,7 +1206,7 @@ do {
         }
     }
 
-    Pause
+Pause
 }
 until ($selection -eq 'q')
 #EndRegion ShowMenu
