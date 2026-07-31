@@ -207,6 +207,33 @@ kubectl get prioritylevelconfigurations
 
 <br>
 
+- Check Kubernetes events. 
+
+```bash
+kubectl get events -n kube-system aks-managed-apiserver-throttling-enabled
+```
+When you observe HTTP 429 (“Too Many Requests”) errors, the API server is being throttled. This is often caused by one or more clients generating excessive API calls.
+Use kube-audit logs in Log Analytics to identify the top contributors.
+```kusto
+AzureDiagnostics
+| where Category == "kube-audit"
+| summarize RequestCount = count() by Caller = tostring(identity_username)
+| order by RequestCount desc
+| take 20
+```
+This shows users, service accounts, controllers sending requests to API server 
+and helps quickly spot “noisy” clients.
+
+If you wish to know which clients are actually being throttled  and to focus directly on root cause of API server overload, you can use the query below:
+
+```kusto
+Azure Diagnostics
+| where Category == "kube-audit"
+| where responseCode == 429
+| summarize ThrottledRequests = count() by Caller = tostring(identity_username)
+| order by ThrottledRequests desc
+```
+
 ### Solution 4: Identify unoptimized clients and mitigate 
 
 #### Step 1: Identify unoptimized clients
