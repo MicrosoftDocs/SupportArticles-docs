@@ -2,7 +2,8 @@
 title: AADSTS7000222 - BadRequest or InvalidClientSecret error
 description: Learn how to troubleshoot the BadRequest or InvalidClientSecret error when you try to create or upgrade an Azure Kubernetes Service (AKS) cluster.
 ms.topic: article
-ms.date: 06/13/2024
+ms.date: 07/20/2026
+ms.reviewer: mariusbutuc
 author: axelgMS
 ms.author: axelg
 ms.service: azure-kubernetes-service
