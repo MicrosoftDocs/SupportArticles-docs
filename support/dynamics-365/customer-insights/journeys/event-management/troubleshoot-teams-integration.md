@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Teams Event Integration in Customer Insights - Journeys
 description: Fix Microsoft Teams integration issues for event management in Dynamics 365 Customer Insights - Journeys, like webinar authentication, registrations, and attendance.
-ms.date: 07/06/2026
+ms.date: 07/30/2026
 ms.reviewer: alfergus, v-shaywood
 ms.custom: sap:Real-time journeys Event Management
 search.audienceType: 
@@ -76,6 +76,9 @@ https://login.microsoftonline.com/<TenantID>/v2.0
 ```
 
 :::image type="content" source="media/troubleshoot-teams-integration/federated-credential.png" alt-text="Screenshot of the federated credential issuer URL configured for Teams Webinar v2 authentication." lightbox="media/troubleshoot-teams-integration/federated-credential.png":::
+
+> [!IMPORTANT]
+> Replace the `<TenantID>` placeholder with your actual tenant ID.
 
 An incorrect tenant ID or a missing `/v2.0` causes the token exchange to fail. To fix this problem, make sure the issuer matches the required format exactly.
 
