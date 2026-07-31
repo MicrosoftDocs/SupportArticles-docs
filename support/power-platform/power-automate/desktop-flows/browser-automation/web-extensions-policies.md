@@ -1,13 +1,16 @@
 ---
-title: Troubleshoot issues in Power Automate browser extensions
-description: Provides a resolution for the Failed to assume control of browser (Internal error or communication failure) error or Get Extension message.
-ms.reviewer: nimoutzo, gtrantzas, jspantouris, v-shaywood 
-ms.date: 12/01/2025
+title: Troubleshoot Browser Extension Errors in Desktop Flows
+description: Fixes Power Automate browser extension issues in desktop flow web automation, including the missing extension message and blocked native messaging host policies.
+ms.reviewer: nimoutzo, gtrantzas, jspantouris, adanas, v-shaywood
+ms.date: 07/31/2026
 ms.custom: sap:Desktop flows\UI or browser automation
+ai-usage: ai-assisted
 ---
 # Troubleshoot issues in Power Automate browser extensions
 
-This article provides tips to troubleshoot and resolve issues related to Power Automate browser extensions when you use web automation in desktop flows.
+## Summary
+
+This article helps you fix Power Automate browser extension issues that affect web automation in desktop flows, including the "Failed to assume control of browser (Internal error or communication failure)" error and the "You need the Power Automate extension" message. It covers the `PAD.BrowserNativeMessageHost.exe` process, native messaging policies in Microsoft Edge, Google Chrome, and Mozilla Firefox, blocked `cmd.exe` execution, multiple browser profiles, and conflicting MSI and MSIX installations.
 
 ## Symptoms
 
@@ -291,7 +294,7 @@ Check whether the `ComSpec` variable exists in **Environment variable** under **
     > [!NOTE]
     > The system variables should include the `ComSpec` variable. The expected value for `ComSpec` is `C:\WINDOWS\system32\cmd.exe`.
 
-### Check if more than one browser profile exists
+### Check whether more than one browser profile exists
 
 To check if more than one profile exists, select the profile icon in the browser. A menu displaying the profiles should appear. The profile icon is usually located either on the top or right side of the browser window.
 
@@ -321,5 +324,9 @@ Some browser settings can interfere with the Power Automate extension. To resolv
 1. Turn off the following settings:
    1. **Continue running background extensions and apps when Microsoft Edge is closed** (or **Continue running background apps when Google Chrome is closed**).
    1. **Startup boost** (Microsoft Edge only).
+
+### Check whether both MSI and MSIX installations exist
+
+If both the MSI and Microsoft Store (MSIX) installations of Power Automate for desktop are present on the same machine, the web extension might fail to connect to the browser. For more information, see [Web automation action fails when the machine runtime and Microsoft Store (MSIX) versions are different](machine-runtime-msix-errors.md).
 
 [!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)]
