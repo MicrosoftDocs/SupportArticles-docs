@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.service: windows-server
 ms.reviewer: kaushika, v-tappelgate
 ms.custom:
-- sap:certificates-and-public-key-infrastructure-pki
+- sap:certificates and public key infrastructure (pki)\Active Directory Certificate Services (ADCS)
 - pcy:WinComm Directory Services
 keywords: 
 appliesto:
