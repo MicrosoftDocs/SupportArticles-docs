@@ -16,11 +16,53 @@ metadata:
 landingContent:
 
  # Card
-  - title: Troubleshooting web apps
+  - title: Configuration and Management
     linkLists:
       - linkListType: how-to-guide
         links:
           - text: FAQ about creating or deleting web apps
-            url: ./create-delete-resources-faq.yml
+            url: ./create-delete-resources-faq-new.md
+          - text: FAQ about scaling web apps
+            url: ./scaling-web-app-faq-new.md
+          - text: Backing up, restoring, and cloning web apps
+            url: ./backing-up-restoring-and-cloning-microsoft-azure-app-services.md
+  - title: Availability and Performance
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot slow web app performance
+            url: ./troubleshoot-performance-slow-web-app.md
+          - text: Troubleshoot instance-related issues
+            url: ./troubleshoot-instance-related-issues-on-Azure-app-service.md
+          - text: Troubleshoot temporary storage
+            url: ./temporary-storage-for-azure-app-service.md
+          - text: Fix HTTP 502 and HTTP 503 errors
+            url: ./troubleshoot-http-502-http-503.md
+  - title: Networking
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot virtual network integration
+            url: ./troubleshoot-vnet-integration-apps.md
+          - text: Troubleshoot intermittent outbound connection errors
+            url: ./troubleshoot-intermittent-outbound-connection-errors.md
+  - title: SSL/TLS, certificates, and domains
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot domain and TLS/SSL certificates
+            url: ./connection-issues-with-ssl-or-tls/troubleshoot-domain-and-tls-ssl-certificates.md
+          - text: Troubleshoot custom domain issues in Azure App Service for web apps on Windows and Linux
+            url: ./connection-issues-with-ssl-or-tls/troubleshoot-custom-domain-issues-azure-app-service.md
+          - text: Use Azure App Service Certificate with Azure Front Door
+            url: ./connection-issues-with-ssl-or-tls/use-azure-app-service-certificate-with-azure-front-door.md
+          - text: Use Azure App Service Certificate with Application Gateway
+            url: ./connection-issues-with-ssl-or-tls/use-azure-app-service-certificate-with-application-gateway.md    
+  - title: Questions about App Service security
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: App service security FAQs
+            url: ./faqs-web-app-security.md     
 
 

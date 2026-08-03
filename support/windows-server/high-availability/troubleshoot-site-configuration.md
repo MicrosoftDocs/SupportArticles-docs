@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-ryanberg, v-gsitser
 ms.custom:
-- sap:site configuration and high availability\site configuration issues
+- sap:Clustering and High Availability\Configuring Sites
 - pcy:WinComm Storage High Avail
 - appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
