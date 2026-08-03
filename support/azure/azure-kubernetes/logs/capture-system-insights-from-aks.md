@@ -1,13 +1,13 @@
 ---
-title:         Capture real-time system insights from an AKS cluster
-description:   Use Inspektor Gadget to capture real-time AKS diagnostics, trace DNS and file activity, and speed troubleshooting in your cluster—start monitoring now.
-author:        blanquicet
-ms.author:     josebl
-editor:        v-jsitser
-ms.reviewer:   cssakscic, josebl, v-leedennis, mayasingh
-ms.service:    azure-kubernetes-service
-ms.topic:      how-to
-ms.date:       07/02/2025
+title: Capture real-time system insights from an AKS cluster
+description: Use Inspektor Gadget to capture real-time AKS diagnostics, trace DNS and file activity, and speed troubleshooting in your cluster—start monitoring now.
+author: kaushika-msft
+ms.author: kaushika
+editor: v-jsitser
+ms.reviewer: cssakscic, josebl, v-leedennis, mayasingh
+ms.service: azure-kubernetes-service
+ms.topic: troubleshooting
+ms.date: 07/31/2026
 ms.custom: sap:Monitoring and Logging
 ---
 
@@ -78,7 +78,86 @@ To complement the demo that's presented at the beginning of this article, the fo
 
 ## How to install Inspektor Gadget in an AKS cluster
 
-Learn how to deploy Inspektor Gadget in your cluster.
+Learn how to deploy Inspektor Gadget in your cluster. Two installation methods are available:
+
+- **[AKS cluster extension (recommended)](#install-inspektor-gadget-by-using-the-aks-cluster-extension)**: Installs and manages Inspektor Gadget through the Azure resource management plane by using `az k8s-extension` CLI commands. This approach provides Azure Resource Manager-driven lifecycle management, including installation, configuration, updates, and removal.
+
+- **[kubectl gadget plug-in](#install-inspektor-gadget-by-running-the-kubectl-gadget-plug-in)**: Deploys Inspektor Gadget directly in your cluster by running the `kubectl gadget` plug-in. This approach requires manual lifecycle management but doesn't depend on the Azure resource management plane.
+
+### Install Inspektor Gadget by using the AKS cluster extension
+
+The [Inspektor Gadget cluster extension](/azure/aks/inspektor-gadget-overview) installs and manages Inspektor Gadget on your AKS cluster through the Azure resource management plane. This installation method is recommended because it provides a consistent, Azure Resource Manager-driven lifecycle for installation, configuration, updates, and removal. The extension pulls all container images and gadget images from Microsoft Artifact Registry (MCR).
+
+> [!IMPORTANT]
+> The Inspektor Gadget cluster extension is currently in preview. AKS preview features are available on a self-service, opt-in basis. Previews are provided "as is" and "as available," and they're excluded from the service-level agreements and limited warranty. For more information, see [AKS support policies](/azure/aks/support-policies).
+
+#### Prerequisites
+
+- An AKS cluster with `kubectl` access. If you don't have an AKS cluster, [create one by using Azure CLI](/azure/aks/learn/quick-kubernetes-deploy-cli) or [by using the Azure portal](/azure/aks/learn/quick-kubernetes-deploy-portal).
+
+- The Azure CLI with the `k8s-extension` extension installed.
+
+    ```azurecli
+    az extension add --name k8s-extension
+    ```
+
+- Any existing Inspektor Gadget installation removed before you install the extension. If you previously deployed it manually, run `kubectl gadget undeploy` or `helm uninstall`.
+
+In the commands in this section, replace `myResourceGroup` and `myAKSCluster` with the values for your environment.
+
+#### Install the extension
+
+Install the Inspektor Gadget extension on your AKS cluster by using the [az k8s-extension create](/cli/azure/k8s-extension#az-k8s-extension-create) command:
+
+```azurecli
+az k8s-extension create \
+    --cluster-type managedClusters \
+    --cluster-name myAKSCluster \
+    --resource-group myResourceGroup \
+    --name inspektor-gadget \
+    --extension-type microsoft.inspektorgadget \
+    --release-train preview
+```
+
+> [!NOTE]
+> By default, the extension automatically upgrades its minor version. To keep it on the installed version instead, add `--auto-upgrade-minor-version false` to the install command.
+
+#### Verify the installation
+
+Confirm that the extension is provisioned successfully and that the DaemonSet is running:
+
+```azurecli
+az k8s-extension show \
+    --cluster-type managedClusters \
+    --cluster-name myAKSCluster \
+    --resource-group myResourceGroup \
+    --name inspektor-gadget
+```
+
+```bash
+kubectl get ds gadget -n gadget
+kubectl get pods -n gadget -l k8s-app=gadget
+```
+
+The provisioning state should show `Succeeded`, and all gadget pods should be `Running` and `Ready`.
+
+After you install the extension, you can start running gadgets by using the `kubectl gadget` plug-in. For instructions on installing the `kubectl gadget` plug-in on your workstation, see [Part 1: Install the kubectl gadget plug-in on your workstation](#part-1-install-the-kubectl-gadget-plug-in-on-your-workstation).
+
+> [!NOTE]
+> You can configure the extension after installation by passing custom settings such as enabling Azure Monitor metrics export, changing the log level, or restricting which nodes run the DaemonSet. For the full list of configuration options, see [Install and configure the Inspektor Gadget extension on AKS](/azure/aks/inspektor-gadget-configure).
+
+#### Remove the extension
+
+When you no longer need Inspektor Gadget, delete the extension. This action removes the gadget pods, DaemonSet, and related resources:
+
+```azurecli
+az k8s-extension delete \
+    --cluster-type managedClusters \
+    --cluster-name myAKSCluster \
+    --resource-group myResourceGroup \
+    --name inspektor-gadget \
+    --yes
+```
 
 ### Install Inspektor Gadget by running the "kubectl gadget" plug-in
 
