@@ -7,7 +7,7 @@ ms.author: allensu
 manager: dcscontentpm
 ms.service: azure-virtual-network
 ms.topic: troubleshooting
-ms.date: 03/17/2026
+ms.date: 07/30/2026
 ms.custom: sap:Creating and troubleshooting Network Security Groups
 # Customer intent: "As a network administrator, I want to identify and fix NSG misconfigurations that are blocking expected traffic, so that my Azure virtual network resources can communicate correctly."
 ---
@@ -168,6 +168,33 @@ The default `DenyAllInBound` rule (priority 65500) blocks all inbound traffic th
    - **HTTP**: Allow TCP port 80.
    - **HTTPS**: Allow TCP port 443.
    - **Custom application**: Allow the specific protocol and port used by your application.
+
+### Windows management tools that require RPC and DCOM
+
+#### Symptom
+
+A Windows management tool that uses Windows Management Instrumentation (WMI) or Distributed Component Object Model (DCOM) can't connect to a remote VM. A connection test to TCP port 135 might succeed, but the management operation still fails.
+
+#### Cause
+
+The Remote Procedure Call (RPC) client first connects to the RPC Endpoint Mapper on TCP port 135. The endpoint mapper then directs the client to a dynamically assigned TCP port on the remote VM. If an NSG allows port 135 but blocks the assigned dynamic port, the management operation fails.
+
+The default dynamic TCP port range for Windows Server 2008 and later versions is `49152-65535`. Before you add an NSG rule, verify the configured range on the remote VM because it might differ from the default.
+
+#### Resolution
+
+1. On the remote Windows VM, run `netsh int ipv4 show dynamicport tcp` to view the configured dynamic TCP port range.
+2. For each NSG associated with the remote VM's subnet or network interface, add inbound allow rules for traffic from the trusted management source to these destination ports:
+
+   | Protocol | Destination port | Purpose |
+   |----------|------------------|---------|
+   | TCP | 135 | RPC Endpoint Mapper |
+   | TCP | Configured dynamic TCP port range (`49152-65535` by default) | RPC and DCOM dynamic ports |
+
+3. Use [IP flow verify](#use-azure-network-watcher-ip-flow-verify) to identify any NSG rule that denies traffic to port 135 or the dynamic port used by the connection.
+4. Retry the management operation.
+
+Limit each rule's source to the management host or trusted management subnet. For Windows port requirements, see [Service overview and network port requirements for Windows](/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements). To configure a restricted RPC range, see [Configure RPC dynamic port allocation to work with firewalls](/troubleshoot/windows-server/networking/configure-rpc-dynamic-port-allocation-with-firewalls).
 
 ## Diagnose NSG blocking problems
 
