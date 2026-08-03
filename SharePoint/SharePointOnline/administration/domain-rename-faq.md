@@ -1,8 +1,8 @@
 ---
 title: "SharePoint Domain Rename FAQ: OneDrive, 404 Errors"
 description: "SharePoint domain rename FAQ: Get answers about validating onmicrosoft.com domains, OneDrive sync, rename scheduling, and fixing 404 errors after a rename."
-ms.reviewer: prbalusu
-ms.date: 07/09/2026
+ms.reviewer: prbalusu, sowrabhmugi
+ms.date: 07/29/2026
 audience: Admin
 ms.topic: troubleshooting
 ai-usage: ai-assisted
@@ -84,7 +84,17 @@ No, you must schedule the rename for more than 24 hours and less than 30 days fr
 <details>
 <summary><b>Can we rename a tenant more than one time?</b></summary>
 
-No, you can rename a tenant only once. If you need to rename the tenant again, submit a support request by selecting [Rename a Tenant more than once](https://admin.microsoft.com/AdminPortal/?searchSolutions=Rename%20a%20SharePoint%20Tenant%20more%20than%20once). 
+Yes. You can rename your SharePoint domain up to two times during the lifetime of your organization.
+
+A second rename (re-rename) is intended for organizations with a business need such as rebranding, mergers, or acquisitions.
+
+The following restrictions apply:
+
+You can't schedule another rename within 30 days after a previous rename completes.
+
+Renaming back to a previously used SharePoint domain isn't supported.
+
+A second rename is a major tenant-wide operation and should be carefully planned.
 
 </details>
 <br/>
@@ -130,7 +140,7 @@ Then, install the latest version of the [SharePoint Online Management Shell](htt
 <details>
 <summary><b>Should we tell users to stop using SharePoint during the renaming process? When can they start using SharePoint again?</b></summary>
 
-The actual SharePoint Tenant rename doesn't cause business downtime. However, it can cause brief interruptions if someone is trying to access an individual SharePoint site while it's being renamed. Take steps to minimize user activity while the rename is running.
+The actual SharePoint tenant rename doesn't cause business downtime. However, it can cause brief interruptions if someone tries to access an individual SharePoint site while it's being renamed. Take steps to minimize user activity while the rename is running.
 
 </details>
 <br/>
