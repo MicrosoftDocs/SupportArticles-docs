@@ -7,7 +7,7 @@ ms.author: allensu
 manager: dcscontentpm
 ms.service: azure-virtual-network
 ms.topic: troubleshooting
-ms.date: 03/17/2026
+ms.date: 07/27/2026
 ms.custom:
   - sap:Connectivity
   - sap:Cannot delete Azure Virtual Network (VNet)
@@ -196,6 +196,10 @@ If service association links remain after you delete the resources:
 2. Wait 10-15 minutes for the platform to clean up the links.
 3. Retry the subnet deletion.
 4. If the links persist, open an Azure support request that references the specific `linkedResourceType`.
+
+**App Service (Microsoft.Web/serverFarms)**
+
+If the orphaned service association link shows `linkedResourceType` of `Microsoft.Web/serverFarms`, the link was created by Azure App Service VNet integration. To remove orphaned App Service service association links, see [Cleaning up orphaned Service Association Links](/azure/app-service/overview-vnet-integration#cleaning-up-orphaned-service-association-links-sal) in the App Service VNet integration documentation. That article covers two removal methods: using the `purgeUnusedVirtualNetworkIntegration` REST API call and the re-create-then-disconnect approach.
 
 For Azure Container Instances specifically, see [Clean up resources](/azure/container-instances/container-instances-vnet#clean-up-resources) for CLI commands to remove container groups and network profiles.
 
