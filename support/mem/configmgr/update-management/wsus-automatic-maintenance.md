@@ -540,7 +540,7 @@ SELECT @deleted AS Deleted, @skipped AS Skipped;"
 
 Function Write-log {
 
-############################
+    ############################
     #Write-Log in CMTrace Format
     ############################
  
@@ -564,7 +564,7 @@ Function Write-log {
         Write-Host "Unable to write to log [$Path]: $($_.Exception.Message)" -ForegroundColor DarkYellow
     }
 
-#Write-Log -Message "Starting installation" -severity 1 -component "Installation"
+    #Write-Log -Message "Starting installation" -severity 1 -component "Installation"
     #Write-Log -Message "Something went wrong" -severity 2 -component "Installation"
     #Write-Log -Message "BIG Error Message" -severity 3 -component "Installation"
 
@@ -972,10 +972,10 @@ function Resume-ReplicaMode {
 
 function UpdateCount {
 
-Write-log -Message "--> Begin Update Count" -severity 1 -component "Update Count"      
+    Write-log -Message "--> Begin Update Count" -severity 1 -component "Update Count"
     Write-log -Message "Update Count" -severity 1 -component "Update Count"
 
-$result = Invoke-CustomSqlCommand -ServerInstance $LocalSQLInstance -Query $UpdateCountQuery
+    $result = Invoke-CustomSqlCommand -ServerInstance $LocalSQLInstance -Query $UpdateCountQuery
     
     if ($result.Results -and $result.Results.Rows.Count -gt 0) {
         $SQLoutput = $result.Results.Rows[0]
@@ -998,7 +998,7 @@ $result = Invoke-CustomSqlCommand -ServerInstance $LocalSQLInstance -Query $Upda
 
 function Update_spDeleteUpdate_Procedure {
 
-Write-log -Message "--> Begin update spDeleteUpdate procedure" -severity 1 -component "Update spDeleteUpdate"
+    Write-log -Message "--> Begin update spDeleteUpdate procedure" -severity 1 -component "Update spDeleteUpdate"
     $result = Invoke-CustomSqlCommand -ServerInstance $LocalSQLInstance -Query $spDeleteUpdate
     Write-log -Message ("Total execution time.........:" + ($result.ExecutionTime / 1000) + " seconds") -severity 1 -component "Update spDeleteUpdate"
     Write-log -Message "--> End update spDeleteUpdate procedure" -severity 1 -component "Update spDeleteUpdate"
@@ -1006,7 +1006,7 @@ Write-log -Message "--> Begin update spDeleteUpdate procedure" -severity 1 -comp
 
 function ShrinkFile {
 
-Write-log -Message "--> Begin shrink file" -severity 1 -component "Shrink File"            
+    Write-log -Message "--> Begin shrink file" -severity 1 -component "Shrink File"
     $result = Invoke-CustomSqlCommand -ServerInstance $LocalSQLInstance -Query $Spaceused
     $SQLoutput = $result.Results
     Write-log -Message ("Total execution time for checking Space Used.........:" + ($result.ExecutionTime / 1000) + " seconds") -severity 1 -component "Shrink File"
@@ -1015,7 +1015,7 @@ Write-log -Message "--> Begin shrink file" -severity 1 -component "Shrink File"
         Write-log -Message ($SQLoutput.Rows[1].name + " " + $SQLoutput.Rows[1]."Size (MB)" + " MB") -severity 1 -component "Shrink Files"
     }
 
-$result = Invoke-CustomSqlCommand -ServerInstance $LocalSQLInstance -Query $Shrinkfile
+    $result = Invoke-CustomSqlCommand -ServerInstance $LocalSQLInstance -Query $Shrinkfile
     Write-log -Message ("Total execution time for Shrinking File.........:" + ($result.ExecutionTime / 1000) + " seconds") -severity 1 -component "Shrink File"    
     
     $result = Invoke-CustomSqlCommand -ServerInstance $LocalSQLInstance -Query $Spaceused
@@ -1031,7 +1031,7 @@ $result = Invoke-CustomSqlCommand -ServerInstance $LocalSQLInstance -Query $Shri
 
 function ShrinkDatabase {
 
-Write-log -Message "--> Begin shrink database" -severity 1 -component "Shrink Database"
+    Write-log -Message "--> Begin shrink database" -severity 1 -component "Shrink Database"
     $result = Invoke-CustomSqlCommand -ServerInstance $LocalSQLInstance -Query $Spaceused
     $SQLoutput = $result.Results
     Write-log -Message ("Total execution time for checking Space Used.........:" + ($result.ExecutionTime / 1000) + " seconds") -severity 1 -component "Shrink Database"
@@ -1057,12 +1057,12 @@ Write-log -Message "--> Begin shrink database" -severity 1 -component "Shrink Da
 
 function ReindexStatistics {
 
-Write-log -Message "--> Begin reindex and update statistics" -severity 1 -component "IndexStats"
+    Write-log -Message "--> Begin reindex and update statistics" -severity 1 -component "IndexStats"
     Write-log -Message "Reindexing" -severity 1 -component "IndexStats"
     $result = Invoke-CustomSqlCommand -ServerInstance $LocalSQLInstance -Query $Reindex
     Write-log -Message ("Total execution time for Reindex.........:" + ($result.ExecutionTime / 1000) + " seconds") -severity 1 -component "IndexStats"
 
-Write-log -Message "Now Updating Statistics" -severity 1 -component "IndexStats"
+    Write-log -Message "Now Updating Statistics" -severity 1 -component "IndexStats"
     $result = Invoke-CustomSqlCommand -ServerInstance $LocalSQLInstance -Query $UpdateStatistics
     Write-log -Message ("Total execution time for Updating Statistics.........:" + ($result.ExecutionTime / 1000) + " seconds") -severity 1 -component "IndexStats"    
     Write-log -Message "--> End reindex and update statistics" -severity 1 -component "IndexStats"
@@ -1071,7 +1071,7 @@ Write-log -Message "Now Updating Statistics" -severity 1 -component "IndexStats"
 
 function CleanUpSyncHistory {
 
-Write-log -Message "--> Begin cleanup sync history" -severity 1 -component "Cleanup Sync History"
+    Write-log -Message "--> Begin cleanup sync history" -severity 1 -component "Cleanup Sync History"
     $result = Invoke-CustomSqlCommand -ServerInstance $LocalSQLInstance -Query $CleanupSyncHistory
     Write-log -Message ("Total execution time for Cleaning up Sync History.........:" + ($result.ExecutionTime / 1000) + " seconds") -severity 1 -component "Cleanup Sync History"    
     Write-log -Message "--> End cleanup sync history" -severity 1 -component "Cleanup Sync History"
@@ -1085,7 +1085,7 @@ function CleanupSupersedUpdates {
     $ThresholdDays = [int]($Now - $Now.AddMonths(-$Global:MonthsSupersededNotDeclined)).TotalDays
     Write-log -Message "Months specified: $Global:MonthsSupersededNotDeclined ($ThresholdDays days, cutoff $($Now.AddMonths(-$Global:MonthsSupersededNotDeclined).ToString('MM-dd-yyyy')))" -severity 1 -component "Cleanup Superseded Updates"
 
-$CleanupSupersededUpdates = "DECLARE @thresholdMonths INT = $Global:MonthsSupersededNotDeclined   -- Specify the number of months between today and the release date for which the superseded updates must not be declined. This should match configuration of supersedence rules in SUP component properties, if ConfigMgr is being used with WSUS.
+    $CleanupSupersededUpdates = "DECLARE @thresholdMonths INT = $Global:MonthsSupersededNotDeclined   -- Specify the number of months between today and the release date for which the superseded updates must not be declined. This should match configuration of supersedence rules in SUP component properties, if ConfigMgr is being used with WSUS.
 DECLARE @thresholdDays INT = $ThresholdDays   -- Calendar-accurate day equivalent of @thresholdMonths, calculated by the script.
 DECLARE @testRun BIT = 0          -- Set this to 1 to test without declining anything. 
 -- There shouldn't be any need to modify anything after this line.
@@ -1131,7 +1131,7 @@ PRINT CHAR(10) + 'Attempted to decline ' + CONVERT(NVARCHAR(10), @count) + ' upd
 
 function CleanupObsoleteUpdates {
 
-Write-log -Message "--> Begin cleanup obsolete updates" -severity 1 -component "Cleanup Obsolete Updates"
+    Write-log -Message "--> Begin cleanup obsolete updates" -severity 1 -component "Cleanup Obsolete Updates"
     $result = Invoke-CustomSqlCommand -ServerInstance $LocalSQLInstance -Query $CleanupObsoleteUpdates -Database "SUSDB"
     Write-log -Message ("Total execution time for Cleaning up Obsolete Updates.........:" + ($result.ExecutionTime / 1000) + " seconds") -severity 1 -component "Cleanup Obsolete Updates"
     Write-log -Message "--> End cleanup obsolete updates" -severity 1 -component "Cleanup Obsolete Updates"
@@ -1139,7 +1139,7 @@ Write-log -Message "--> Begin cleanup obsolete updates" -severity 1 -component "
 
 function WSUSCleanUpWizard {
 
-Write-log -Message "--> Begin WSUS cleanup wizard" -severity 1 -component "WSUS Cleanup Wizard"
+    Write-log -Message "--> Begin WSUS cleanup wizard" -severity 1 -component "WSUS Cleanup Wizard"
 
     $CleanUpWizardBody = @'
 $wsus = [Microsoft.UpdateServices.Administration.AdminProxy]::GetUpdateServer()
@@ -1171,7 +1171,7 @@ $result = $wsus.GetCleanupManager().PerformCleanup($cleanupScope)
 
 function CleanUpDeclined {
 
-Write-log -Message "--> Begin cleanup declined" -severity 1 -component "Cleanup Declined"
+    Write-log -Message "--> Begin cleanup declined" -severity 1 -component "Cleanup Declined"
 
     # Emitted line by line so the parent can log and show progress while the deletes are still running.
     $CleanUpDeclinedBody = @'
@@ -1515,19 +1515,19 @@ do {
             #Toggle MaxXMLPerRequest
             ToggleMaxXML
 
-}'A' {
+        }'A' {
             #Update Count
             UpdateCount
 
-}'D' {
+        }'D' {
             #Delete Test Detectoids
             DeleteTestDetectoids
 
-}'1' {
+        }'1' {
             #Update spDeleteUpdate procedure --> https://docs.microsoft.com/en-US/troubleshoot/mem/configmgr/spdeleteupdate-slow-performance
             Update_spDeleteUpdate_Procedure
 
-}'2' {
+        }'2' {
             #Shrink Files
             ShrinkFile
         }'3' {
@@ -1542,7 +1542,7 @@ do {
             #Cleanup Sync History
             CleanUpSyncHistory
 
-}'6' {
+        }'6' {
             #Cleanup Superseded Updates
             if ($Global:PromptForMonthsSuperseded) {
                 Write-Host "Specify the number of months between today and the release date for which the superseded updates must not be declined.`nThis should match configuration of supersedence rules in SUP component properties, if ConfigMgr is being used with WSUS.`n"
@@ -1564,11 +1564,11 @@ do {
                 Write-log -Message "Number of months entered [$MonthsEntry] is invalid, must be a whole number between 1 and 600." -severity 3 -component "Cleanup Superseded Updates"                
             }
 
-}'7' {
+        }'7' {
             #Cleanup Obsolete Updates
             CleanupObsoleteUpdates
 
-}'8' {
+        }'8' {
             #WSUS Cleanup Wizard
             WSUSCleanUpWizard                 
             
@@ -1576,7 +1576,7 @@ do {
             #Cleanup Declined
             CleanUpDeclined
 
-}'10' {
+        }'10' {
             #Shrink File
             ShrinkFile
         }'11' {
