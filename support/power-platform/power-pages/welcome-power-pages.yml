@@ -23,6 +23,14 @@ landingContent:
             #url: best-practices-troubleshooting.md
 
   # Card
+  - title: Portal Management app
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot common Portal Management app issues
+            url: troubleshoot-portal-management-app.md
+
+  # Card
   - title: Site customization or browsing
     linkLists:
       - linkListType: how-to-guide
