@@ -254,6 +254,7 @@ In each section, assume that the VM has two network interfaces that have any of 
         PEERDNS=yes
         IPV6INIT=no
         PERSISTENT_DHCLIENT=yes
+        NM_CONTROLLED=yes
         ```
 
     - */etc/sysconfig/network-scripts/ifcfg-eth1*:
@@ -271,6 +272,7 @@ In each section, assume that the VM has two network interfaces that have any of 
         PEERDNS=yes
         IPV6INIT=no
         PERSISTENT_DHCLIENT=yes
+        NM_CONTROLLED=yes
         ```
 
 3. Run the following commands to add two routing tables to the */etc/iproute2/rt_tables* file:
