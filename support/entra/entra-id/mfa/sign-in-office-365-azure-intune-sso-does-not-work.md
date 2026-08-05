@@ -1,7 +1,8 @@
 ---
 title: Single sign-on doesn't work from some devices in Office 365, Azure, or Intune
 description: Follow these troubleshooting steps to fix single sign-on issues when users can't sign in to Office 365, Azure, or Intune from some devices.
-ms.date: 04/21/2026
+ms.date: 08/05/2026
+author: kaushika-msft
 ms.author: kaushika
 ms.service: entra-id
 ms.custom: sap:AD domain-joined Seamless SSO with PTA or PHS
@@ -37,15 +38,15 @@ When you use a web browser to access the cloud service portal from the same comp
 
 ## Cause
 
-This problem usually occurs on a client computer or on a group of client devices. This problem might occur for all users and client computers if SSO isn't fully functional. SSO might not be fully functional if the client settings weren't correctly set up. The following client device situations can cause this issue:
+This problem usually occurs on a client computer or on a group of client devices. This problem might occur for all users and client computers if SSO isn't fully functional. SSO might not be fully functional if the client settings aren't correctly set up. The following client device situations can cause this issue:
 
 - Network connectivity is limited.
 
-- The client device is receiving incorrect name resolution for the AD FS service from the internal split-brain DNS implementation.
+- The client device receives incorrect name resolution for the AD FS service from the internal split-brain DNS implementation.
 
-- If an internet proxy server is configured on the computer, the AD FS name isn't added to the proxy bypass list.
+- If you configure an internet proxy server on the computer, you don't add the AD FS name to the proxy bypass list.
 
-- The AD FS name isn't added to the local intranet security zone in the **Internet Options** settings.
+- You don't add the AD FS name to the local intranet security zone in the **Internet Options** settings.
 
 - The client computer isn't authenticated to Active Directory Domain Services (AD DS).
 
@@ -57,9 +58,9 @@ This problem usually occurs on a client computer or on a group of client devices
 
 Before you continue, make sure that the following conditions are true:
 
-- Access problems aren't limited to rich client applications on the client computer. If only rich client authentication (as opposed to browser-based authentication) isn't working, this condition likely indicates a rich client authentication issue. For example, it might be an issue that's related to the prerequisites or configuration of the rich-client application. For more information, see [How to troubleshoot non-browser apps that can't sign in to Office 365, Azure, or Intune](https://support.microsoft.com/office/how-to-troubleshoot-non-browser-apps-that-can-t-sign-in-to-microsoft-365-azure-or-intune-3ba1b268-66f6-462c-b0e5-070f5c2603c1).
+- Access problems aren't limited to rich client applications on the client computer. If only rich client authentication (as opposed to browser-based authentication) isn't working, this condition likely indicates a rich client authentication issue. For example, it might be an issue that's related to the prerequisites or configuration of the rich-client application. For more information, see [How to troubleshoot non-browser apps that can't sign in to Office 365, Azure, or Intune](https://support.microsoft.com/office/account-management/how-to-troubleshoot-non-browser-apps-that-can-t-sign-in-to-microsoft-365-azure-or-intune).
 
-- SSO authentication doesn't fail for all SSO-enabled user accounts. If all SSO-enabled users experience the same symptoms, this condition likely indicates a federation issue. For more information, see [Troubleshoot single sign-on setup issues in Office 365, Intune, or Azure](https://support.microsoft.com/topic/troubleshoot-single-sign-on-setup-issues-in-office-365-intune-or-azure-bfe00060-32cc-53bc-926f-4d3bcaefa8d0).
+- SSO authentication doesn't fail for all SSO-enabled user accounts. If all SSO-enabled users experience the same symptoms, this condition likely indicates a federation issue. For more information, see [Single sign-on doesn't work from some devices in Office 365, Azure, or Intune](sign-in-office-365-azure-intune-sso-does-not-work.md).
 
 - SSO authentication for the user account succeeds on other client computers. If the user account can't log on to any cloud services client, see the resolutions in this article that involve the client computer. There might also be some problem that affects the user account and not the client computer. For more information, see [Troubleshoot account issues for federated users in Microsoft 365, Azure, or Intune](/troubleshoot/microsoft-365/admin/authentication/account-issues-for-federated-users).
 
@@ -85,14 +86,14 @@ Try to browse to `http://www.msn.com`. If this attempt doesn't work, troubleshoo
 
 To resolve this problem, follow these steps:
 
-1. Eliminate IP connectivity issues by using [Resolution 1](#resolution-1-cant-connect-to-cloud-service-portal-or-ad-fs).
+1. Eliminate IP connectivity problems by using [Resolution 1](#resolution-1-cant-connect-to-cloud-service-portal-or-ad-fs).
 
-1. At the command prompt, enter `nslookup <AD FS 2.0 FQDN>`, and then press Enter to determine whether DNS is resolving the AD FS service name correctly.
+1. At the command prompt, enter `nslookup <AD FS 2.0 FQDN>`, and then press Enter to check if DNS is resolving the AD FS service name correctly.
 
 > [!NOTE]
 > In this command, `<AD FS FQDN>` represents the fully qualified domain name (FQDN) of the AD FS service name. It doesn't represent the Windows host name of the AD FS server.
 
-If the client is attached to the corporate network, make sure that the IP address that's resolved is a private IP address. The IP address should match one of the following patterns:
+If the client is connected to the corporate network, make sure that the IP address is a private IP address. The IP address should match one of the following patterns:
 
 - `10.x.x.x`
 
@@ -100,7 +101,7 @@ If the client is attached to the corporate network, make sure that the IP addres
 
 - `192.168.x.x`
 
-If the client is outside the corporate network, make sure that the IP address that's resolved is a public IP address. Make sure that it doesn't match one of the following patterns:
+If the client is outside the corporate network, make sure that the IP address is a public IP address. Make sure that it doesn't match one of the following patterns:
 
 - `10.x.x.x`
 
@@ -108,7 +109,7 @@ If the client is outside the corporate network, make sure that the IP address th
 
 - `192.168.x.x`
 
-If the IP address that's resolved is incorrect based on the previous steps, and other client computers don't experience the same behavior, follow these steps:
+If the IP address is incorrect based on the previous steps, and other client computers don't experience the same behavior, follow these steps:
 
 1. At the command prompt, enter `ipconfig /all`, and then check whether the Primary DNS Server entry is appropriate for the network to which the client is attached.
 
@@ -117,9 +118,9 @@ If the IP address that's resolved is incorrect based on the previous steps, and 
 1. At the command prompt, enter `ipconfig /flushdns` to clear the DNS cache.
 
 > [!NOTE]
-> If client devices are attached to only the corporate network, go to the next step.
+> If client devices are connected to only the corporate network, go to the next step.
 
-4. Add the AD FS FQDN to the proxy bypass list. For more information, see [Proxy Support in Microsoft Edge](/deployedge/configure-microsoft-edge-proxy-support).
+1. Add the AD FS FQDN to the proxy bypass list. For more information, see [Proxy Support in Microsoft Edge](/deployedge/configure-microsoft-edge-proxy-support).
 
 ### Resolution 3: Certificate warning when you connect to the AD FS endpoint
 
@@ -131,7 +132,7 @@ To resolve this problem, follow these steps:
 
 1. Make sure that the client computer is successfully signed in to the domain.
 
-1. Select **Start** > **Run**, enter `%logonserver%\sysvol`, and then select **OK**. If a credential prompt appears, log off, and then log back on by using corporate credentials.
+1. Select **Start** > **Run**, enter `%logonserver%\sysvol`, and then select **OK**. If a credential prompt appears, sign out, and then sign back in by using corporate credentials.
 
 1. Add the AD FS FQDN to the local intranet zone.
 
