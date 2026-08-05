@@ -9,7 +9,6 @@ ms.service: azure-application-gateway
 ms.topic: troubleshooting-general
 ms.custom: sap:Issues with Create, Update and Delete (CRUD)
 
-ai-usage: ai-assisted
 ---
 
 # Troubleshoot Failed state issues on Azure Application Gateway
