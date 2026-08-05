@@ -149,6 +149,7 @@ HTTP 502 errors can have several root causes, including:
 - Azure Application Gateway's [backend pool isn't configured or empty](/azure/application-gateway/application-gateway-troubleshooting-502#application-gateways-backend-pool-isnt-configured-or-empty).
 - None of the VMs or instances in [virtual machine scale set are healthy](/azure/application-gateway/application-gateway-troubleshooting-502#unhealthy-instances-in-backendaddresspool).
 - [Request time-out or connectivity issues](/azure/application-gateway/application-gateway-troubleshooting-502#backend-request-time-out-is-exceeded) with user requests-Azure application Gateway V1 SKU sent HTTP 502 errors if the backend response time exceeds the time-out value that is configured in the Backend Setting.
+- The Common Name (CN) of the backend server's certificate doesn't match the health probe or backend setting hostname. See [Common Name (CN) doesn't match](application-gateway-backend-health-troubleshooting.md#common-name-cn-doesnt-match).
 
 For information about scenarios where 502 errors occur, and how to troubleshoot them, see [Troubleshoot Bad Gateway errors](/azure/application-gateway/application-gateway-troubleshooting-502).
 
