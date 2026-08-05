@@ -1,5 +1,9 @@
 - name: Power Pages Troubleshooting
   href: welcome-power-pages.yml
+- name: Portal Management app
+  items:
+    - name: Troubleshoot common Portal Management app issues
+      href: troubleshoot-portal-management-app.md
 - name: Site customization or browsing
   items:
     - name: Missing filter label text in list components

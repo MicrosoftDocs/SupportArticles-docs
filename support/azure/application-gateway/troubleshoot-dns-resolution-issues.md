@@ -10,7 +10,6 @@ ms.custom: sap:Issues with Create, Update and Delete (CRUD)
 
 #customer intent: As an Azure administrator, I want to troubleshoot DNS resolution issues in Azure Application Gateway so that I can restore certificate, back-end, and provisioning functionality.
 
-ai-usage: ai-assisted
 ---
 
 # Troubleshoot DNS resolution scenarios for Azure Application Gateway

@@ -10,7 +10,6 @@ ms.topic: troubleshooting
 ms.date: 08/04/2026
 ms.custom: sap:Configuration and Setup
 # Customer intent: "As a network administrator, I want to troubleshoot connectivity issues with Azure Load Balancer, so that I can ensure reliable traffic distribution and maintain service availability for my virtual machine resources."
-ai-usage: ai-assisted
 ---
 
 # Troubleshoot no outbound connectivity from Standard internal load balancers
