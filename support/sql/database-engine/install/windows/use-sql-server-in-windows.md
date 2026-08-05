@@ -1,7 +1,7 @@
 ---
 title: Version Requirements for SQL Server in Windows Operating System
 description: This article describes the version requirements for SQL Server in the Windows operating system.
-ms.date: 06/10/2025
+ms.date: 08/05/2026
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall
 ms.reviewer: randolphwest, jopilov
 ---
@@ -11,19 +11,25 @@ ms.reviewer: randolphwest, jopilov
 
 # Version requirements for SQL Server in Windows operating system
 
-This article describes the version requirements for SQL Server in the Windows operating system (OS).
-
 _Original product version:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 2681562
 
+## Summary
+
+This article provides a compatibility matrix that shows which versions of SQL Server are supported on each version of the Windows operating system (OS). Use this reference to confirm the minimum SQL Server servicing level (RTM or Service Pack) required for the Windows OS you're targeting before you install, upgrade, or migrate SQL Server. This article covers both Windows client and Windows Server versions.
+
 > [!NOTE]
-> Unless noted otherwise, when an OS is supported for a major SQL Server version, it remains supported for all subsequent servicing releases. For example, if SQL Server 2016 release to manufacturing (RTM) is supported on Windows 10, this implies that any CUs on top of SQL Server 2016 RTM or SQL Server 2016 Service Pack 1 (SP1) are supported on Windows 10.
+> Unless noted otherwise, when an OS is supported for a major SQL Server version, it remains supported for all subsequent servicing releases. For example, if SQL Server 2016 release to manufacturing (RTM) is supported on Windows 10, this implies that any cumulative updates (CUs) on top of SQL Server 2016 RTM or SQL Server 2016 Service Pack 1 (SP1) are also supported on Windows 10.
 
-How to use this article:
+## How to use this article
 
-- Use the following table to find out the minimum requirements for the SQL Server version you're trying to install for the corresponding OS.
+- Use the [SQL Server and Windows compatibility matrix](#sql-server-and-windows-compatibility-matrix) table to find the minimum servicing level required for the SQL Server version you're installing on the corresponding Windows OS.
 
-- Use the links in the **Hardware and Software Requirements page** row to see specific details about the hardware and software requirements for each version of SQL Server.
+- Use the links in the **Hardware and Software Requirements page** row to review the full hardware and software requirements for each version of SQL Server.
+
+If a Windows version isn't in the compatibility matrix, that combination isn't covered by this article. This is common with older client and server operating systems that have reached the end of their support lifecycle. If you're running an out-of-support Windows or SQL Server version, plan an upgrade to a supported combination. For guidance on SQL Server versions that reach end of support, see [SQL Server end of support options](/sql/sql-server/end-of-support/sql-server-end-of-support-overview).
+
+## SQL Server and Windows compatibility matrix
 
 | Windows version/SQL version             | SQL Server 2025                                                                                              | SQL Server 2022                                                                                              | SQL Server 2019                                                                                               | SQL Server 2017                                                                                         | SQL Server 2016                                                                                         | SQL Server 2014                                                                                                                | SQL Server 2012                                                               | SQL Server 2008 R2                                                                        | SQL Server 2008                                                                     |
 | --------------------------------------- | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
@@ -38,3 +44,9 @@ How to use this article:
 | Windows 8                               | No                                                                                                           | No                                                                                                           | No                                                                                                            | Yes (RTM)                                                                                               | Yes (SP3)                                                                                               | Yes (SP3)                                                                                                                      | Yes (SP4)                                                                     | Yes (SP3)                                                                                 | Yes (SP4)                                                                           |
 | Windows Server 2012                     | No                                                                                                           | No                                                                                                           | No                                                                                                            | Yes (RTM)                                                                                               | Yes (SP3)                                                                                               | Yes (SP3)                                                                                                                      | Yes (SP4)                                                                     | Yes (SP3)                                                                                 | Yes (SP4)                                                                           |
 | Hardware and Software Requirements page | [SQL Server 2025](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2025) | [SQL Server 2022](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2022) | [SQL Server 2019](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15) | [SQL Server 2017](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server) | [SQL Server 2016](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server) | [SQL Server 2014](/previous-versions/sql/2014/sql-server/install/hardware-and-software-requirements-for-installing-sql-server) | [SQL Server 2012](/previous-versions/sql/sql-server-2012/ms143506(v=sql.110)) | [SQL Server 2008 R2](/previous-versions/sql/sql-server-2008-r2/ms143506%28v%3dsql.105%29) | [SQL Server 2008](/previous-versions/sql/sql-server-2008/ms143506%28v%3dsql.100%29) |
+
+## Related content
+
+- [Hardware and software requirements for SQL Server 2025](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2025)
+- [SQL Server end of support options](/sql/sql-server/end-of-support/sql-server-end-of-support-overview)
+- [Install SQL Server on Windows](/sql/database-engine/install-windows/install-sql-server)

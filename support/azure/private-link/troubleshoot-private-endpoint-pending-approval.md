@@ -4,7 +4,10 @@ description: Diagnose and fix a private endpoint connection stuck in Pending in 
 ms.service: azure-private-link
 ms.topic: troubleshooting
 ms.custom: sap:Private Endpoints
-ms.date: 6/12/2026
+ms.date: 08/05/2026
+author: kaushika-msft
+ms.author: kaushika
+ms.reviewer: chadmat
 ai.hint.symptom-tags:
   - pending-approval
   - private-endpoint-connection
@@ -74,11 +77,12 @@ To troubleshoot this issue, you need:
 | `{RESOURCE_GROUP}` | Resource group of the private endpoint (consumer side). | `myResourceGroup` |
 | `{PE_NAME}` | Name of the private endpoint. | `myPrivateEndpoint` |
 | `{TARGET_RESOURCE_ID}` | Full resource ID of the target the endpoint connects to (like storage account, key vault, SQL server, and Private Link service). | `/subscriptions/.../resourceGroups/rg-target/providers/Microsoft.Storage/storageAccounts/mystorage` |
-| `{TARGET_SUBSCRIPTION_ID}` | Subscription that owns the target resource (can differ from the consumer subscription). | `aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa` |
-| `{APPROVER}` | Object ID (GUID) of the principal expected to approve the connection on the target side. You can also use a User Principal Name (UPN), but if the CLI returns `Insufficient privileges to complete the operation` when resolving the UPN using Microsoft Graph API, use the object ID instead (find it under **Microsoft Entra ID** > **Users** > *user* > **Object ID**). | `aaaabbbb-0000-cccc-1111-dddd2222eeee` |
+| `{TARGET_SUBSCRIPTION_ID}` | Subscription that owns the target resource (can differ from the consumer subscription). | `aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb` |
+| `{APPROVER}` | Object ID (GUID) of the principal expected to approve the connection on the target side. You can also use a User Principal Name (UPN), but if the CLI returns `Insufficient privileges to complete the operation` when resolving the UPN using Microsoft Graph API, use the object ID instead (find it under **Microsoft Entra ID** > **Users** > *user* > **Object ID**). | `bbbbbbbb-1111-2222-3333-cccccccccccc` |
 | `{CONSUMER_SUBSCRIPTION_ID}` | Subscription that owns the source private endpoint, used when adding it to an auto-approval allow-list. | `aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e` |
 
-> **TIP:** Each script that's provided in the following sections prompts you for the required values interactively. To open Cloud Shell and answer the prompts, select **Try It**. The values are cached for that session. Therefore, you enter them only one time.
+> [!TIP]
+> Each script that's provided in the following sections prompts you for the required values interactively. To open Cloud Shell and answer the prompts, select **Try It**. The values are cached for that session. Therefore, you enter them only one time.
 
 ## Diagnostic steps
 
@@ -145,7 +149,7 @@ Record the following values from the output:
 
 ### Step 2
 
-List every private endpoint connection on the target resource and confirm that the row for your endpoint is `Pending` from the target's perspective. Also capture the full `connection-id` (used by every approve or reject command), the source `privateEndpoint.id`, and the source subscription or tenant. The source `privateEndpoint.id` is the most reliable signal for whether the connection originates from a service-managed private endpoint. Managed services place the source private endpoint in a Microsoft-owned or service-owned resource group whose name usually starts with a service-specific prefix.
+List every private endpoint connection on the target resource and confirm that the row for your endpoint is `Pending` from the target resource's perspective. Also capture the full `connection-id` (used by every approve or reject command), the source `privateEndpoint.id`, and the source subscription or tenant. The source `privateEndpoint.id` is the most reliable signal for whether the connection originates from a service-managed private endpoint. Managed services place the source private endpoint in a Microsoft-owned or service-owned resource group whose name usually starts with a service-specific prefix.
 
 Run these commands in Azure CLI:
 
@@ -170,7 +174,7 @@ az network private-endpoint-connection list \
 
 Record the following values from the output:
 
-- The full `connectionId` for the Pending row. This is `$CONNECTION_ID` for every approve or reject command in the following steps.
+- The full `connectionId` for the Pending row. This value is `$CONNECTION_ID` for every approve or reject command in the following steps.
 - The `sourcePeId`. Extract the source resource group (the segment between `/resourceGroups/` and `/providers/`) and the source subscription (the segment after `/subscriptions/`). 
 
 ### Interpret the results
@@ -179,13 +183,13 @@ Record the following values from the output:
 |---|---|---|
 | A row whose `sourcePeId` matches your private endpoint with `status: Pending`. | Confirmed `Pending` on the target side. | Perform [Step 3](#step-3). |
 | A row whose `sourcePeId` matches your private endpoint with `status: Approved` or `status: Rejected`. | The target side already responded and the consumer view in [Step 1](#step-1) might be stale or the connection was approved or rejected after [Step 1](#step-1) ran. | Re-run [Step 1](#step-1). If it's still `Pending` on the consumer side after several minutes, open an Azure support request as a control-plane inconsistency. |
-| No row matches the source private endpoint. | The connection request never reached the target. This is a private endpoint creation or configuration problem, not an approval problem. | See [Troubleshoot private endpoint creation failure](troubleshoot-private-endpoint-creation-failed.md). |
+| No row matches the source private endpoint. | The connection request never reached the target. This problem is a private endpoint creation or configuration problem, not an approval problem. | See [Troubleshoot private endpoint creation failure](troubleshoot-private-endpoint-creation-failed.md). |
 | `sourcePeId` points to a resource group with a service-managed prefix (for example `AzureFrontDoor-*`, `*-managed-rg-*`, `synapseworkspace-managedrg-*`, or `adf-managed-vnet-*`.) Confirm the canonical managed-resource group prefix names per service (for example, Front Door, App Service, Azure Synapse, Data Factory) against current Microsoft Learn documentation. | The source private endpoint is created by a managed Azure service. | Perform [Step 3](#step-3). |
 | `AuthorizationFailed` when listing on the target. | You don't have read permissions on the target resource. Get the target resource owner to run this step, or grant Reader permissions on the target. | Get access and re-run [Step 2](#step-2). |
 
 ### Step 3
 
-Check whether the target resource's auto-approval allow-list includes the consumer subscription. If the target is a Private Link service, the allow-list is `properties.autoApproval.subscriptions` on the Private Link service. For first-party Azure services exposed through Private Link (like Azure Storage, Key Vault, and SQL) the equivalent allow-list is a service-specific property on the target resource. A consumer subscription that isn't on the allow-list is an indicator of the problem.
+Check whether the target resource's auto-approval allow list includes the consumer subscription. If the target is a Private Link service, the allow list is `properties.autoApproval.subscriptions` on the Private Link service. For first-party Azure services exposed through Private Link (like Azure Storage, Key Vault, and SQL) the equivalent allow list is a service-specific property on the target resource. A consumer subscription that isn't on the allow list is an indicator of the problem.
 
 Run the following commands in Azure CLI:
 
@@ -339,7 +343,7 @@ az network private-endpoint-connection list \
 
 Copy the `connectionId` value. It's the full Azure Resource Manager (ARM) resource ID of the connection and is the only argument the approve command needs.
 
-2. Approve the connection. Run this as the approver signed in to the target subscription.
+1. Approve the connection. Run this as the approver signed in to the target subscription.
 
 > [!IMPORTANT]
 > This command approves the `Pending` private endpoint connection on the target resource. After approval succeeds, the consumer's `privateLinkServiceConnectionState.status` flips to `Approved`, the connection becomes active, and traffic begins to flow over the private IP. No other resource is modified.
@@ -388,7 +392,7 @@ az network private-endpoint-connection list \
 
 Confirm the `sourcePeId` matches the managed service you enabled (for example, a Front Door Premium origin onboarding flow). If `sourcePeId` instead points to a private endpoint your team created directly in your own subscription, return to [Resolution A](#resolution-a).
 
-2. Approve the connection on the target. The signed-in principal must be the target resource owner with the target's approve data action permissions.
+1. Approve the connection on the target. The signed-in principal must be the target resource owner with the target's approve data action permissions.
 
 > [!IMPORTANT]
 > This action approves the `Pending` connection from the managed service on the target resource. After approval, the managed service (like Front Door, App Service, Azure Synapse, and Data Factory) can begin sending traffic over the private endpoint. The managed service itself isn't modified. The change is only on the target resource's connection list.
@@ -405,7 +409,7 @@ az network private-endpoint-connection approve \
   --subscription "$TARGET_SUBSCRIPTION"
 ```
 
-3. Re-run [Step 2](#step-2) from the target side. The connection's `status` should now read `Approved`. For Front Door Premium, the origin's **Private endpoint status** in the Front Door portal blade also flips to `Approved` once propagation completes (usually minutes).
+1. Re-run [Step 2](#step-2) from the target side. The connection's `status` should now read `Approved`. For Front Door Premium, the origin's **Private endpoint status** in the Front Door portal blade also flips to `Approved` once propagation completes (usually minutes).
 
 If the approve call returned `AuthorizationFailed`, see [Resolution C](#resolution-c). If you have to repeat this approval frequently because the managed service recreates the connection (for example, after a Front Door origin reconfiguration), this is expected. Managed-service private endpoints don't benefit from auto-approval allow-lists and every recreate requires a fresh manual approve.
 
@@ -453,7 +457,7 @@ done
 echo "(If no GRANTED line printed, the approver is missing the action.)"
 ```
 
-2. Assign a role that includes the missing action. Replace `$BUILT_IN_ROLE` with the smallest built-in role that contains the action for your target service (or use a custom role with just the approve action if available).
+1. Assign a role that includes the missing action. Replace `$BUILT_IN_ROLE` with the smallest built-in role that contains the action for your target service (or use a custom role with just the approve action if available).
 
 > [!IMPORTANT]
 > This step grants the approver a service-specific built-in role that includes the `privateEndpointConnectionsApproval/action` data action, scoped to the target resource only. Resource-scoped assignment limits the radius and the approver gains the approve capability on just this one target. For example, **Storage Account Contributor** grants the storage approve action on storage. For Key Vault, the equivalent is **Key Vault Contributor**. For Private Link service, **Network Contributor**. 
@@ -475,7 +479,7 @@ az role assignment create \
   --subscription "$TARGET_SUBSCRIPTION"
 ```
 
-3. Wait for the role assignment to propagate. 
+1. Wait for the role assignment to propagate. 
 
  > [!NOTE]
 > Propagation typically completes within minutes but can take up to 30 minutes in some scenarios. 
@@ -541,8 +545,8 @@ az network private-link-service update \
 > [!NOTE]
 > For first-party targets (like Azure Storage, Key Vault, Azure Managed Grafana, and Azure API Management) there's no uniform `az <service> update --auto-approval` flag. Use the service-specific update command if one exists, or use `az resource update --ids "$TARGET_RESOURCE_ID" --set properties.<auto-approval-path>='["<sub-id>"]'` with the path you identified in step 1. 
 
-3. Re-run [Step 3](#step-3) to confirm `$CONSUMER_SUBSCRIPTION` now appears in the auto-approval list.
-4. After the connection is approved, re-run [Step 1](#step-1) from the consumer side. `status` should read `Approved` and traffic should flow.
+1. Re-run [Step 3](#step-3) to confirm `$CONSUMER_SUBSCRIPTION` now appears in the auto-approval list.
+1. After the connection is approved, re-run [Step 1](#step-1) from the consumer side. `status` should read `Approved` and traffic should flow.
 
 > [!NOTE]
 > The existing Pending connection isn't retroactively approved by the allow list change. Clear it by using one of the following options:

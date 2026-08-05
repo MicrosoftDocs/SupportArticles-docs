@@ -116,8 +116,6 @@ items:
           href: ../administration/multipart-mixed-mime-message-format.md
         - name: No active public folder mailboxes were found error
           href: ../administration/no-active-public-folder-mailboxes-were-found-error.md
-        - name: On-premises EAC link goes to product comparison
-          href: ../administration/o365-link-eac-redirect-product-comparison.md
         - name: Restarts frequently with Stop error
           href: ../administration/exchange-restarts-frequently-stop-error.md
         - name: Running Test-IRMConfiguration in EMS fails
@@ -280,8 +278,6 @@ items:
           href: ../mailflow/email-sent-to-online-appears-external.md
         - name: Emails with images delivery is delayed
           href: ../mailflow/delivery-emails-with-pictures-delayed.md
-        - name: Error 19738 when sending large emails using Outlook for Mac
-          href: ../mailflow/error-19738-send-large-email-outlook-mac.md
         - name: Error when adding a large attachment in OWA
           href: ../mailflow/cannot-add-attachment-outlook-web.md
         - name: Error when sending S/MIME encrypted mails from OWA
@@ -324,8 +320,6 @@ items:
           href: ../migration/mailboxes-stalled-during-migration.md
         - name: Moving migration mailbox fails
           href: ../migration/moving-migration-mailbox-fails.md
-        - name: New move request remains in queued status
-          href: ../migration/new-move-request-remains-queued-status.md
         - name: Public folder replication fails
           href: ../migration/public-folders-not-replicate.md
         - name: Error when migrating public folder batch
