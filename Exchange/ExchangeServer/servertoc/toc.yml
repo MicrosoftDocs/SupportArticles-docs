@@ -127,7 +127,7 @@ items:
         - name: Search-MailboxAuditLog returns AQS parser error
           href: ../administration/search-mailboxauditlog-returns-aqs-parser-error.md
         - name: Server component state remains Inactive after changed to Active
-          href: ../administration/requestor-changed-server-component.md
+          href: ../administration/server-component-state-remains-inactive.md
         - name: Set-ServerComponentState ends Exchange Frontend Transport service
           href: ../administration/frontend-transport-service-terminate-run-set-servercomponentstate.md
         - name: '"The term New-Mailbox is not recognized" error'

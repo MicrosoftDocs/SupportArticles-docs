@@ -372,6 +372,11 @@
     {
       "source_path": "Exchange/ExchangeServer/mailflow/error-19738-send-large-email-outlook-mac.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/administration/requestor-changed-server-component.md",
+      "redirect_url": "server-component-state-remains-inactive",
+      "redirect_document_id": false
     }
   ]
 }
