@@ -11,6 +11,7 @@ ms.custom:
    - sap:Facing 5xx errors,devx-track-azurepowershell
    - sap:backend health
 # Customer intent: As an IT administrator troubleshooting application performance, I want to identify and fix 502 Bad Gateway errors in the application gateway, so that I can ensure reliable access and functionality of web applications for users.
+ai-usage: ai-assisted
 ---
 
 # Troubleshoot bad gateway (502) errors in Azure Application Gateway

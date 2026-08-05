@@ -10,6 +10,7 @@ ms.topic: troubleshooting
 ms.date: 07/30/2026
 ms.custom: sap:Creating and troubleshooting Network Security Groups
 # Customer intent: "As a network administrator, I want to identify and fix NSG misconfigurations that are blocking expected traffic, so that my Azure virtual network resources can communicate correctly."
+ai-usage: ai-assisted
 ---
 
 # Troubleshoot network security group misconfigurations blocking traffic in Azure virtual networks
