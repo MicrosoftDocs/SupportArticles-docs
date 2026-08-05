@@ -6,7 +6,7 @@ author: kaushika-msft
 ms.author: kaushika
 ms.service: azure-application-gateway
 ms.topic: troubleshooting
-ms.date: 04/08/2026
+ms.date: 08/03/2026
 ms.custom: sap:backend health,sfi-image-nochange
 # Customer intent: As an IT admin, I want to troubleshoot backend health issues in Application Gateway, so that I can ensure my backend servers are operational and effectively serving requests.
 ---
@@ -220,6 +220,9 @@ For V2,
 * If you're using a Custom Probe – For Custom Probe, you can use the "host" field to specify the Common Name of the backend server certificate. Alternatively, if the Backend Setting is already configured with the same hostname, you can choose "Pick hostname from backend setting" in the probe settings.
 
 For V1, verify the backend pool target's FQDN is same the Common Name (CN).
+
+> [!NOTE]
+> For HTTPS backends, don't set the Custom Probe or Backend Settings hostname to an IP address. The SNI extension ([RFC 6066](https://www.rfc-editor.org/rfc/rfc6066)) doesn't permit literal IP addresses, so the application gateway sends no SNI and the backend can't select the matching certificate. Use the FQDN that matches the certificate's Common Name or SAN. If a V2 gateway's backend is reachable only by IP address, use the [backend HTTPS validation settings](/azure/application-gateway/configuration-http-settings?tabs=backendhttpsettings#backend-https-validation-settings) to set a specific SNI or to skip subject name validation, or use the [hostName override](/azure/application-gateway/configuration-http-settings?tabs=backendhttpsettings#host-name-override) property to replace the forwarded Host header with a value that matches the certificate's Common Name. In the V1 SKU, the probe **Host** value serves only as the host header — SNI comes from the backend pool FQDN. For the full comparison, see [SNI differences in the v1 and v2 SKU](/azure/application-gateway/ssl-overview#sni-differences-in-the-v1-and-v2-sku).
 
 **Tips:** To determine the Common Name (CN) of the backend server certificate, you can use any of these methods. Also note, as per [**RFC 6125**](https://www.rfc-editor.org/rfc/rfc6125#section-6.4.4) if a SAN exists the SNI verification is done only against that field. The common name field is matched if there's no SAN in the certificate.
 

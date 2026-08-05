@@ -11,6 +11,7 @@ ms.custom:
    - sap:Facing 5xx errors,devx-track-azurepowershell
    - sap:backend health
 # Customer intent: As an IT administrator troubleshooting application performance, I want to identify and fix 502 Bad Gateway errors in the application gateway, so that I can ensure reliable access and functionality of web applications for users.
+ai-usage: ai-assisted
 ---
 
 # Troubleshoot bad gateway (502) errors in Azure Application Gateway
@@ -116,7 +117,7 @@ The following table describes the additional properties you can set:
 | --- | --- |
 | Name |Name of the probe. Use this name to refer to the probe in backend HTTP settings. |
 | Protocol |Protocol used to send the probe. The probe uses the protocol defined in the backend HTTP settings. |
-| Host |Host name to send the probe. This property applies only when you configure multi-site on the application gateway. This host name is different from the VM host name. |
+| Host |Host name to send the probe to. This host name is different from the VM host name. In the v1 SKU, Application Gateway uses this value only as the host header of the probe request. In the v2 SKU, it uses the value as both the host header and the Server Name Indication (SNI) value. |
 | Path |Relative path of the probe. The valid path starts from '/'. The probe is sent to \<protocol\>://\<host\>:\<port\>\<path\>. |
 | Interval |Probe interval in seconds. This value sets the time interval between two consecutive probes. |
 | Time-out |Probe time-out in seconds. If a valid response isn't received within this time-out period, the probe is marked as failed. |
@@ -130,7 +131,7 @@ Validate that you configured the custom health probe correctly, as shown in the 
 * If you configure the application gateway for a single site, specify the default Host name as `127.0.0.1`, unless you configure otherwise in the custom probe.
 * Ensure that a call to `http://<host>:<port><path>` returns an HTTP result code of 200.
 * Ensure that Interval, Timeout, and UnhealthyThreshold values are within the acceptable ranges.
-* If you use an HTTPS probe, make sure that the backend server doesn't require SNI by configuring a fallback certificate on the backend server itself.
+* If you use an HTTPS probe in the v2 SKU, Application Gateway also sends the probe host name as the Server Name Indication (SNI) value. Make sure that the host name matches the backend certificate's subject alternative name (SAN), or its common name (CN) if the certificate has no SAN, as described in [RFC 6125](https://www.rfc-editor.org/rfc/rfc6125#section-6.4.4). Application Gateway doesn't send SNI when the host name is an IP address, including the default `127.0.0.1`. For steps to compare the probe host name against the certificate, see [Resolution F in Troubleshoot HTTP 502 errors in Azure Application Gateway](troubleshoot-http-502-bad-gateway.md#resolution-f). If you can't change the backend certificate, adjust the [backend HTTPS validation settings](/azure/application-gateway/configuration-http-settings#backend-https-validation-settings) to use a specific SNI value or to skip subject name validation.
 
 ## Backend request time-out is exceeded
 
@@ -253,3 +254,4 @@ www.contoso.com --> APP GW front end IP --> Listener with a rule that configures
 
 It's required that the DNS NAME of the TLS certificate installed on the backend server, matches the host name configured in the HTTP backend settings, otherwise the second part of the End-to-end communication that happens between the instances of the Application Gateway and the backend, fails with "Upstream SSL certificate doesn't match", and throws back a **Server Error: 502 - Web server received an invalid response while acting as a gateway or proxy server**
 
+For steps to align the probe host name and Server Name Indication (SNI) with the certificate's subject alternative name (SAN) or common name (CN), see [Resolution F in Troubleshoot HTTP 502 errors in Azure Application Gateway](troubleshoot-http-502-bad-gateway.md#resolution-f). For how the **Pick host name from backend target** and **Override with specific domain name** backend settings map to the certificate name that Application Gateway expects, see [Common Name (CN) doesn't match](application-gateway-backend-health-troubleshooting.md#common-name-cn-doesnt-match).

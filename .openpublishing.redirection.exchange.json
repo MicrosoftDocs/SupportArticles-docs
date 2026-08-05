@@ -360,6 +360,18 @@
     {
       "source_path": "Exchange/ExchangeOnline/email-delivery/ndr/fix-error-code-5-7-12-in-exchange-online.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
-    }    
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/migration/new-move-request-remains-queued-status.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/administration/o365-link-eac-redirect-product-comparison.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/mailflow/error-19738-send-large-email-outlook-mac.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    }
   ]
 }

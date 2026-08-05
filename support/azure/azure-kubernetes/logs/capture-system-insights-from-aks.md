@@ -1,13 +1,13 @@
 ---
-title: Capture real-time system insights from an AKS cluster
-description: Use Inspektor Gadget to capture real-time AKS diagnostics, trace DNS and file activity, and speed troubleshooting in your cluster—start monitoring now.
+title:         Capture real-time system insights from an AKS cluster
+description:   Use Inspektor Gadget to capture real-time system insights from an AKS cluster, trace DNS and file activity, and troubleshoot faster—start now.
 author: kaushika-msft
 ms.author: kaushika
-editor: v-jsitser
-ms.reviewer: cssakscic, josebl, v-leedennis, mayasingh
-ms.service: azure-kubernetes-service
-ms.topic: troubleshooting
-ms.date: 07/31/2026
+editor:        v-jsitser
+ms.reviewer:   cssakscic, josebl, v-leedennis, mayasingh
+ms.service:    azure-kubernetes-service
+ms.topic:      troubleshooting
+ms.date:       08/04/2026
 ms.custom: sap:Monitoring and Logging
 ---
 
@@ -159,7 +159,36 @@ az k8s-extension delete \
     --yes
 ```
 
-### Install Inspektor Gadget by running the "kubectl gadget" plug-in
+### Install Inspektor Gadget by using the AKS extension (preview)
+
+> [!NOTE]
+> The AKS extension for Inspektor Gadget is currently in preview. For legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability, see the [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/).
+
+#### Prerequisites
+
+- The Azure CLI. If you need to install or upgrade, see [Install Azure CLI](/cli/azure/install-azure-cli).
+
+- The `k8s-extension` Azure CLI extension. If you don't have it installed, run the following command:
+
+  ```azurecli
+  az extension add --name k8s-extension
+  ```
+
+#### Install the Inspektor Gadget extension
+
+To install Inspektor Gadget as an AKS extension, run the following Azure CLI command:
+
+```azurecli
+az k8s-extension create \
+  --name inspektor-gadget \
+  --extension-type microsoft.inspektorgadget \
+  --release-train preview \
+  --cluster-type managedClusters \
+  --cluster-name <AKS_CLUSTER_NAME> \
+  --resource-group <RESOURCE_GROUP_NAME>
+```
+
+### Alternative installation: Install Inspektor Gadget by running the "kubectl gadget" plug-in
 
 This section outlines the steps for installing Inspektor Gadget in your AKS cluster by running the `kubectl gadget` plug-in. The installation consists of two parts:
 
