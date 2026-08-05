@@ -10,6 +10,7 @@ ms.custom: sap:Issues with Create, Update and Delete (CRUD)
 
 #customer intent: As an Azure administrator, I want to troubleshoot DNS resolution issues in Azure Application Gateway so that I can restore certificate, back-end, and provisioning functionality.
 
+ai-usage: ai-assisted
 ---
 
 # Troubleshoot DNS resolution scenarios for Azure Application Gateway
@@ -61,6 +62,22 @@ To verify and correct DNS resolution for the Key Vault private endpoint, follow 
 
 1. Verify that the Key Vault private endpoint DNS is configured using the correct private DNS zone (`privatelink.vaultcore.azure.net`).
 1. Make sure that the private DNS zone is linked to the Application Gateway virtual network.
+
+#### Verify the Key Vault private endpoint A record
+
+A correctly named and linked private DNS zone can still be missing the A record for the Key Vault private endpoint. This condition also causes `ApplicationGatewayKeyVaultSecretException` even though the zone name and virtual network link are both correct. Common causes include a private endpoint that was deleted and re-created, or a zone that was created manually without the automatic DNS zone group registration.
+
+To verify and remediate the A record:
+
+1. Go to the `privatelink.vaultcore.azure.net` private DNS zone in the Azure portal, and select **Overview**. Confirm that an A record exists for the Key Vault name (for example, `contoso`), with no additional suffix.
+1. Confirm that the A record's IP address matches the private endpoint's network interface private IP address. To find this IP address, open the Key Vault resource, select **Networking** > **Private endpoint connections**, select the entry in the **Private endpoint** column to open the private endpoint resource, and then select its **Network interface**.
+1. Run `nslookup <key-vault-name>.vault.azure.net` from a virtual machine in the same virtual network as the Application Gateway, and check both the returned IP address and the alias chain:
+   - **Private IP address, with a `<key-vault-name>.privatelink.vaultcore.azure.net` alias in the response.** This response is the expected result. The private DNS zone is resolving correctly.
+   - **Public IP address, but the `<key-vault-name>.privatelink.vaultcore.azure.net` alias is still present in the response.** The private endpoint connection is approved, but the private DNS zone isn't returning the private IP address for the query. The A record is missing or has the wrong IP address.
+   - **Public IP address, and no `privatelink` alias appears anywhere in the response.** This result means the key vault has no private endpoint connection in an **Approved** state, not a missing A record. Check the private endpoint connection's status on the Key Vault's **Networking** > **Private endpoint connections** tab before you touch the private DNS zone.
+1. If the A record is missing or has the wrong IP address, create or correct it in the private DNS zone by using the Key Vault's simple name (no suffix) and the private endpoint's network interface private IP address. A TTL of 600 seconds (10 minutes) is sufficient for most scenarios.
+
+For more information, see [Diagnose private links configuration issues on Azure Key Vault](/azure/key-vault/general/private-link-diagnostics#5-validate-the-dns-resolution) and [Integrate Key Vault with Azure Private Link](/azure/key-vault/general/private-link-service#troubleshooting-guide).
 
 #### Behavior change with network isolation enabled**
 
