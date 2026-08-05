@@ -2,10 +2,10 @@
 title: Errors when you rename a SharePoint domain
 description: Explains error codes and messages that can occur when you rename a SharePoint domain.
 author: Cloud-Writer
-ms.reviewer: PramodBalusu
+ms.reviewer: PramodBalusu, sowrabhmugi 
 ms.author: meerak
 manager: dcscontentpm
-ms.date: 07/09/2026
+ms.date: 07/29/2026
 audience: Admin
 ms.topic: troubleshooting
 ms.custom: 
@@ -20,7 +20,7 @@ appliesto:
 ai-usage: ai-assisted
 ---
 
-# Errors when you rename a SharePoint domain  
+# Errors when you rename a SharePoint domain
 
 This article lists common error messages that you might receive when you try to change a Microsoft SharePoint Online (SPO) domain name. By using the information in each message, you can determine why the SharePoint domain can't be renamed and how to fix the errors.
 
@@ -51,7 +51,7 @@ This article lists common error codes and messages that you might encounter when
 |779|Cannot schedule due to system maintenance.|Tenant renaming can't be scheduled because of maintenance events.|Retry the renaming action after some time passes.|
 |780|Cannot perform a rename as you exceed the maximum number of allowed Sites and OneDrive.|There are too many sites in the tenant.|The tenant has more sites than is currently allowed.|
 |781|Canceled by the system due to system maintenance.|Tenant renaming is canceled because a maintenance event is occurring.|Retry the rename action after some time passes.|
-|783|Your organization has already reached the allowed number of SPO tenant renames.|The tenant can be renamed only one time, and your organization has already been renamed.|If you have to do additional renaming, submit a support request by selecting [Rename a SharePoint Tenant more than once](https://admin.microsoft.com/AdminPortal/?searchSolutions=Rename%20a%20SharePoint%20Tenant%20more%20than%20once).|
+|783|Your organization has already reached the allowed number of SPO tenant renames.|The tenant has already reached the maximum of two supported SharePoint domain renames.|If you have to do additional renaming, submit a support request by selecting [Rename a SharePoint Tenant more than once](https://admin.microsoft.com/AdminPortal/?searchSolutions=Rename%20a%20SharePoint%20Tenant%20more%20than%20once).|
 |-1076|No applicable licenses found for this feature. Please check the documentation for more information.|SharePoint Advanced Management licenses are required. |Activate the [Syntex SharePoint Advanced Management](/sharepoint/advanced-management#licensing) offering in your tenant.|
 |-1077|There is no applicable tenant rename scheduled in your organization. |Tenant renaming isn't scheduled. |Run the `Start-SPOTenantRename` cmdlet, and then try again.|
 |-1078|Prioritizing sites cannot be performed since the tenant rename is in progress. |Prioritization isn't allowed while a rename action is in progress.|None. |
@@ -70,7 +70,7 @@ This article lists common error codes and messages that you might encounter when
 > [!NOTE]
 > **For tenant renames for more-than-100K sites**: The Start-SPOTenantRename cmdlet might time out and return the following message:
 
-_It looks like the command has timed out. Please do not retry at this time. Continue monitoring the status using `Get-SPOTenantRenameStatus`_." 
+_It looks like the command has timed out. Please do not retry at this time. Continue monitoring the status using `Get-SPOTenantRenameStatus`_."
 
 In this situation, avoid retrying `Start-SPOTenantRename`. You can continue to check the status of the process by using `Get-SPOTenantRenameStatus`. Details of the rename action are available in this cmdlet output after the scheduled action finishes. If the status doesn't update after two hours, or if you observe unexpected behavior, contact Microsoft Support for assistance.
 

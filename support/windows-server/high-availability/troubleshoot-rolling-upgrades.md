@@ -5,10 +5,9 @@ ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.author: jeffhugh
 ms.reviewer: kaushika, v-ryanberg, v-gsitser
 ms.custom:
-- sap:rolling upgrade and high availability\rolling upgrade issues
+- sap:Clustering and High Availability\Rolling Upgrades
 - pcy:WinComm Storage High Avail
 - appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>

@@ -2,8 +2,6 @@
 title: Azure Storage Explorer troubleshooting guide
 description: Troubleshoot Azure Storage Explorer sign-in, proxy, certificate, and connection errors with step-by-step fixes to restore access quickly. Start now.
 services: storage
-author: jinglouMSFT
-ms.author: jinglou
 ms.service: azure-storage
 ms.custom: sap:Alerts, Metrics, Logging and Monitoring, linux-related-content
 ms.date: 06/13/2025

@@ -146,9 +146,9 @@ HTTP 502 errors can have several root causes, including:
 - NSG (Network security group), UDR (user-defined route), or custom DNS is blocking access to backend pool members.
 - Backend VMs or instances of [virtual machine scale sets](/azure/virtual-machine-scale-sets/overview) aren't responding to the default health probe.
 - Invalid or improper configuration of custom health probes.
-- Azure Application Gateway's [backend pool isn't configured or empty](/azure/application-gateway/application-gateway-troubleshooting-502#empty-backendaddresspool).
+- Azure Application Gateway's [backend pool isn't configured or empty](/azure/application-gateway/application-gateway-troubleshooting-502#application-gateways-backend-pool-isnt-configured-or-empty).
 - None of the VMs or instances in [virtual machine scale set are healthy](/azure/application-gateway/application-gateway-troubleshooting-502#unhealthy-instances-in-backendaddresspool).
-- [Request time-out or connectivity issues](/azure/application-gateway/application-gateway-troubleshooting-502#request-time-out) with user requests-Azure application Gateway V1 SKU sent HTTP 502 errors if the backend response time exceeds the time-out value that is configured in the Backend Setting.
+- [Request time-out or connectivity issues](/azure/application-gateway/application-gateway-troubleshooting-502#backend-request-time-out-is-exceeded) with user requests-Azure application Gateway V1 SKU sent HTTP 502 errors if the backend response time exceeds the time-out value that is configured in the Backend Setting.
 
 For information about scenarios where 502 errors occur, and how to troubleshoot them, see [Troubleshoot Bad Gateway errors](/azure/application-gateway/application-gateway-troubleshooting-502).
 

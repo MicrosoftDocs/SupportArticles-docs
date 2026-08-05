@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, fmu
 ms.custom:
-- sap:managing-internet-explorer-settings-through-group-policy
+- sap:Windows Apps\Manage Apps or App features with policy
 - pcy:WinComm Directory Services
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>

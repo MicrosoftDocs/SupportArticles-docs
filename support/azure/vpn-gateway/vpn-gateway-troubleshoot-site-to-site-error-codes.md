@@ -37,6 +37,8 @@ To resolve this problem, follow these steps:
    * Check on-premises VPN device logs to find why the device isn't responding to the IKE messages from Azure VPN gateway. 
    * Take mitigation steps to ensure that on-premises device responds to Azure VPN Gateway IKE requests. Engage device vendor for help, as needed.
 
+1. Verify that the on-premises VPN device supports the IKE Phase 1 proposals that Azure VPN Gateway sends by default. For the list of default algorithms and parameters, see [Default IPsec/IKE parameters](/azure/vpn-gateway/vpn-gateway-about-vpn-devices#ipsec).
+
 ## IKE authentication credentials are unacceptable (Error code: 13801, Hex: 0X35E9)
 
 ### Symptom

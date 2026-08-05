@@ -8,7 +8,7 @@ ms.topic: troubleshooting
 ms.reviewer: kaushika, herbertm, v-appelgatet
 ai.usage: ai-assisted
 ms.custom:
-- sap:active directory\user,computer,group,and object management
+- sap:active directory\Object attribute management, RID issues, and group scope
 - pcy:WinComm Directory Services
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>

@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot upgrade failure because of conflicting PodDisruptionBudgets
 description: Learn how to troubleshoot AKS upgrade failures caused by conflicting PodDisruptionBudgets that block node drain. Use this guide to fix the issue fast.
-ms.date: 03/11/2026
+ms.date: 08/03/2026
 author: kaushika-msft
 ms.author: kaushika
 editor: v-jsitser
@@ -132,15 +132,7 @@ For a node pool upgrade, run the following command:
 az aks nodepool upgrade -g <resource-group> --cluster-name <cluster-name> -n <nodepool-name> --kubernetes-version <version>
 ```
 
-#### Option 2: Use a Geneva action – `Reconcile Managed Cluster` or `Reconcile Agent Pool` 
-
-If the cluster is stuck in an `Upgrading` provisioning state:
-
-1. Use `hcpdebug` or a Geneva action to set the provisioning state to `Failed` for the managed cluster or agent pool.
-2. Use either Geneva action, `Reconcile Managed Cluster` or `Reconcile Agent Pool`, to retrigger the upgrade.
-3. Verify that the reconciliation finished successfully. To check the status, use the `Get Managed Cluster` Geneva action.
-
-#### Option 3: Empty `az aks update` 
+#### Option 2: Empty `az aks update` 
 
 To trigger back-end reconciliation without changing the configuration:
 
@@ -150,7 +142,7 @@ az aks update -g <resource-group> -n <cluster-name>
 
 This command issues an empty `PutManagedCluster` request that retriggers the back-end reconciliation logic.
 
-#### Option 4: Use `az resource update` 
+#### Option 3: Use `az resource update` 
 
 To trigger a resource-level reconciliation:
 
@@ -158,7 +150,7 @@ To trigger a resource-level reconciliation:
 az resource update --ids /subscriptions/<subscription-id>/resourceGroups/<resource-group>/providers/Microsoft.ContainerService/managedClusters/<cluster-name>
 ```
 
-#### Option 5: Perform a scale operation 
+#### Option 4: Perform a scale operation 
 
 If the upgrade left nodes in a bad state, reimage the problematic nodes, and run a scale operation to the desired count. This action automatically retriggers the failed upgrade:
 
@@ -172,7 +164,7 @@ To prevent this issue from reoccurring, make sure that each pod is matched by no
 
 ### Automatic PDB creation with the Eviction Autoscaler extension
 
-The [Eviction Autoscaler](https://github.com/Azure/eviction-autoscaler) extension can automatically create and manage PDBs for your deployments. This setup helps you to avoid misconfigured or conflicting PDBs.
+The [Automatic Pod Disruption Budget management in AKS (preview)](/azure/aks/automatic-pod-disruption-budget-management) extension can automatically create and manage PDBs for your deployments. This setup helps you to avoid misconfigured or conflicting PDBs.
 
 When installed together with `controllerConfig.pdb.create=true`, the extension automatically creates PDBs for deployments that don't already have one. You can control this behavior per deployment by using the `eviction-autoscaler.azure.com/pdb-create` annotation.
 
@@ -204,6 +196,6 @@ You can also control which namespaces the extension operates in by using the `ev
       eviction-autoscaler.azure.com/enable: "false"
   ```
 
-For more information, see [Eviction Autoscaler README](https://github.com/Azure/eviction-autoscaler).
+For more information, see [Automatic Pod Disruption Budget management in AKS (preview)](/azure/aks/automatic-pod-disruption-budget-management).
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]

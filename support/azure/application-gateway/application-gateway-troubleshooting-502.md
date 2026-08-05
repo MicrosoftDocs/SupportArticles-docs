@@ -6,7 +6,7 @@ author: kaushika-msft
 ms.author: kaushika
 ms.service: azure-application-gateway
 ms.topic: troubleshooting
-ms.date: 03/27/2026
+ms.date: 08/03/2026
 ms.custom: 
    - sap:Facing 5xx errors,devx-track-azurepowershell
    - sap:backend health
@@ -27,8 +27,8 @@ Learn how to troubleshoot bad gateway (502) errors in Azure Application Gateway 
 After you configure an application gateway, you might see the error **Server Error: 502 - Web server received an invalid response while acting as a gateway or proxy server**. This error can happen for the following reasons:
 
 - [Network security group (NSG), user-defined route (UDR), or custom DNS issue](/azure/application-gateway/application-gateway-troubleshooting-502#network-security-group-user-defined-route-or-custom-dns-issue).
-- [Default health probe can't reach backend VMs](/azure/application-gateway/application-gateway-troubleshooting-502#problems-with-custom-health-probe).
-- [Request time-out or connectivity issues with user requests](#request-time-out-or-connectivity-issues-with-user-requests).
+- [Default health probe can't reach backend VMs](#default-health-probe-cant-reach-backend-vms).
+- [Backend request time-out is exceeded](#backend-request-time-out-is-exceeded).
 - [Application Gateway's backend pool isn't configured or empty](#application-gateways-backend-pool-isnt-configured-or-empty).
 - [Unhealthy instances in BackendAddressPool](#unhealthy-instances-in-backendaddresspool).
 - [Upstream SSL certificate doesn't match](#upstream-ssl-certificate-doesnt-match).
@@ -132,19 +132,44 @@ Validate that you configured the custom health probe correctly, as shown in the 
 * Ensure that Interval, Timeout, and UnhealthyThreshold values are within the acceptable ranges.
 * If you use an HTTPS probe, make sure that the backend server doesn't require SNI by configuring a fallback certificate on the backend server itself.
 
-## Request time-out or connectivity issues with user requests
+## Backend request time-out is exceeded
 
 ### Cause
 
-When the application gateway receives a user request, it applies the configured rules to the request and routes it to a backend pool instance. It waits for a configurable interval of time for a response from the backend instance. By default, this interval is 20 seconds. In Application Gateway v1, if the application gateway doesn't receive a response from the backend application in this interval, the user request gets a 502 error. In Application Gateway v2, if the application gateway doesn't receive a response from the backend application in this interval, the request is tried against a second backend pool member. If the second request fails, the user request gets a 504 error.
+When the application gateway receives a user request, it applies the configured rules to the request and routes it to a backend pool instance. It waits for a configurable interval of time for a response from the backend instance. By default, this interval is 20 seconds. In Application Gateway v1, if the application gateway doesn't receive a response from the backend application within this interval, the user request gets a 502 error. In Application Gateway v2, if the application gateway doesn't receive a response from the backend application within this interval, the request is tried against a second backend pool member. If the second request also fails, the user request gets a 504 error instead. If users receive 504 errors instead of 502 errors, see [Troubleshoot HTTP 504 errors in Azure Application Gateway](troubleshoot-http-504-gateway-timeout.md).
+
+If your backend application routinely takes longer than the configured interval to respond (for example, a long-running query or report), increase the request time-out on the backend HTTP setting used by that backend pool.
 
 ### Solution
 
-You can configure this setting through the BackendHttpSetting, which you can apply to different pools. Different backend pools can have different BackendHttpSetting configurations and different request timeout settings.
+The request time-out is a property of the backend HTTP setting, so different backend pools can have different request time-out values. Increase it by using the Azure portal, Azure CLI, or Azure PowerShell. The accepted range is 1 to 86400 seconds; for more information, see [Request timeout](/azure/application-gateway/configuration-http-settings#request-timeout).
+
+#### Azure portal
+
+1. In the [Azure portal](https://portal.azure.com), go to your application gateway.
+1. Under **Settings**, select **Backend settings**.
+1. Select the backend setting used by the affected backend pool.
+1. Increase the **Request time-out (seconds)** value to allow more time for the backend to respond.
+1. Select **Save**.
+
+#### Azure CLI
+
+```azurecli
+az network application-gateway http-settings update \
+  --gateway-name <application-gateway-name> \
+  --resource-group <resource-group-name> \
+  --name <backend-http-settings-name> \
+  --timeout <time-out-in-seconds>
+```
+
+#### Azure PowerShell
 
 ```azurepowershell
-    New-AzApplicationGatewayBackendHttpSettings -Name 'Setting01' -Port 80 -Protocol Http -CookieBasedAffinity Enabled -RequestTimeout 60
+New-AzApplicationGatewayBackendHttpSettings -Name 'Setting01' -Port 80 -Protocol Http -CookieBasedAffinity Enabled -RequestTimeout 60
 ```
+
+> [!NOTE]
+> Increasing the request time-out only masks the symptom if the backend is slow because of an underlying issue, such as high CPU or memory pressure, database contention, or an inefficient query. Also investigate the backend application's response time before raising the time-out value.
 
 ## Application Gateway's backend pool isn't configured or empty
 

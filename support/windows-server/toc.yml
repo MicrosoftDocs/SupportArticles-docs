@@ -375,7 +375,7 @@ items:    # Please do not delete this line, it is required for the yaml format
           href: ./active-directory/use-online-dbdump-feature-ldp-dot-exe.md
         - name: View and set LDAP policy by using Ntdsutil
           href: ./active-directory/view-set-ldap-policy-using-ntdsutil.md
-    - name: User, computer, group, and object management
+    - name: Object attribute management, RID issues, and group scope issues
       items:
         - name: A batch of Event ID 4780 are logged in the PDC
           href: ./active-directory/a-batch-of-event-4780-logged-pdc.md
