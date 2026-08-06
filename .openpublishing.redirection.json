@@ -15876,6 +15876,11 @@
     {
       "source_path": "support/dynamics-365/customer-insights/welcome-customer-insights.yml",
       "redirect_url": "/troubleshoot/dynamics-365/customer-insights/data/welcome-customer-insights-data"
+    },
+    {
+      "source_path": "support/power-platform/copilot-studio/generative-answers/sharepoint-no-response.md",
+      "redirect_url": "/troubleshoot/power-platform/copilot-studio/knowledge/sharepoint-no-response",
+      "redirect_document_id": false
     }
   ]
 }
