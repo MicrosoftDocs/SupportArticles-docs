@@ -66,8 +66,6 @@ items:
           href: ../administration/event-9519-error-0x80004005-mount-database.md
         - name: Error occurs when installing Edge role
           href: ../administration/ad-error-0x52-install-edge-role.md
-        - name: Error occurs when tracing a message
-          href: ../administration/object-reference-not-set-to-instance-error.md
         - name: Error when making changes to federation trust
           href: ../administration/federation-certificate-with-thumbprint-cannot-be-found.md
         - name: Error when managing a user in EAC

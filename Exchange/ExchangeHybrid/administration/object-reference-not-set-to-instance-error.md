@@ -1,6 +1,6 @@
 ---
 title: Object reference not set to instance of object
-description: Describes that Exchange Server does not support tracing a message that is sent from on-premises to the cloud in a hybrid environment.
+description: Describes that Exchange Server doesn't support tracing a message that is sent from on-premises to the cloud in a hybrid environment.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -10,18 +10,23 @@ ms.custom:
   - sap:Mail Flow\Need Help with Message Tracking, Transport server logs
   - Exchange Server
   - CSSTroubleshoot
-ms.reviewer: bilong, ninob, v-six
+ms.reviewer: bilong, ninob, v-six, v-kccross
 appliesto: 
+  - Exchange Online
+  - Exchange Server SE
+  - Exchange Server 2019
   - Exchange Server 2016
-  - Exchange Server 2013
-  - Exchange Server 2010
 search.appverid: MET150
-ms.date: 05/12/2026
+ms.date: 08/06/2026
 ---
 
 # Object reference not set to an instance of an object error and message trace fails in an Exchange hybrid environment
 
 _Original KB number:_ &nbsp; 4481099
+
+## Summary
+
+In an Exchange hybrid environment, message tracing from the on-premises Exchange organization can fail with an "Object reference not set to an instance of an object" error when you trace a message sent from an on-premises mailbox to an Exchange Online mailbox. This behavior is by design because Exchange Server doesn't support tracing messages across the on-premises-to-cloud boundary. To investigate message delivery, run a message trace in Microsoft 365, which provides visibility into the cloud portion of the message path but doesn't show the on-premises routing path.
 
 ## Symptoms
 
@@ -37,7 +42,7 @@ In this scenario, the trace fails, and you receive this error message:
 
 ## Cause
 
-This is by design. Exchange Server does not support tracing a message that's sent from on-premises to the cloud in a hybrid environment.
+This result is by design. Exchange Server does not support tracing a message that's sent from on-premises to the cloud in a hybrid environment.
 
 ## Workaround
 

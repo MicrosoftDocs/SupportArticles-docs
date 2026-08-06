@@ -14,6 +14,8 @@ items:
           href: ../administration/hybrid-412-cookies-disabled-error.md
         - name: Delay when Outlook retrieves Autodiscover information
           href: ../administration/delay-when-outlook-retrieves-autodiscover-information.md
+        - name: Error occurs when tracing a message
+          href: ../administration/object-reference-not-set-to-instance-error.md
         - name: Free/busy lookups return hash marks
           href: ../administration/free-busy-lookups-return-hash-marks-in-hybrid.md
         - name: Invalid Product Key when activating
