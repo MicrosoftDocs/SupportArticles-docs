@@ -20,8 +20,6 @@ landingContent:
         links:
           - text: Generative AI isn't available error message
             url: generative-answers/generative-ai-not-available.md
-          - text: Generative answers pointing to SharePoint sources don't return results
-            url: generative-answers/sharepoint-no-response.md
           - text: Resolve responsible AI content filter errors
             url: generative-answers/agent-response-filtered-by-responsible-ai.md
 
@@ -32,6 +30,8 @@ landingContent:
         links:
           - text: Publish agent fails due to Bing sources
             url: knowledge/agent-publish-fails-bing-sources.md
+          - text: SharePoint knowledge sources don't return results
+            url: knowledge/sharepoint-no-response.md
           - text: Troubleshoot enterprise knowledge sources
             url: knowledge/enterprise-data.md
 
