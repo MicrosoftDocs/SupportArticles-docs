@@ -6,6 +6,8 @@ items:
       items:
         - name: 405 error for the connection to associated endpoint
           href: ../administration/endpoint-connection-405-error.md
+        - name: Active Sync URL is in an invalid format
+          href: ../administration/url-invalid-format.md
         - name: Can't add and verify a domain in hybrid
           href: ../administration/cannot-add-and-verify-domain.md
         - name: Can't set up a hybrid deployment when running Set-FederatedOrganizationIdentifier
@@ -18,6 +20,8 @@ items:
           href: ../administration/object-reference-not-set-to-instance-error.md
         - name: Free/busy lookups return hash marks
           href: ../administration/free-busy-lookups-return-hash-marks-in-hybrid.md
+        - name: HCW errors in Organization Configuration transfer
+          href: ../administration/hybrid-configuration-wizard-errors-organization-configuration-transfer.md
         - name: Invalid Product Key when activating
           href: /previous-versions/troubleshoot/content-retirement
         - name: Mail user who has proxy addresses isn't synced

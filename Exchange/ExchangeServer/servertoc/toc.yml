@@ -8,8 +8,6 @@ items:
           href: ../administration/403-forbidden-view-free-busy-information.md
         - name: Access Denied when deleting federation trust
           href: ../administration/1007-access-denied-delete-federation-trust.md
-        - name: Active Sync URL is in an invalid format
-          href: ../administration/url-invalid-format.md
         - name: Can't access OWA or EAC with expired OAuth certificate
           href: ../administration/cannot-access-owa-or-ecp-if-oauth-expired.md
         - name: Can't access public folders
@@ -92,8 +90,6 @@ items:
           href: ../administration/hybrid-freebusy-lookups-fail.md
         - name: Get-VirtualDirectory cmdlets run slowly
           href: ../administration/get-virtualdirectory-run-slowly.md
-        - name: HCW errors in Organization Configuration transfer
-          href: ../administration/hybrid-configuration-wizard-errors-organization-configuration-transfer.md
         - name: HTTP error 403 when starting EMS
           href: ../administration/http-403-error-start-ems.md
         - name: HTTP error 500 when signing in to EAC
