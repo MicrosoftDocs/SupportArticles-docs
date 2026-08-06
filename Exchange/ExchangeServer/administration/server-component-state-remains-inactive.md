@@ -54,7 +54,7 @@ This issue might occur because the value that you specified for the `Requester` 
    Get-ServerComponentState -Identity Exch1 | ?{$_.state -eq “Inactive”}
    ```
 
-   :::image type="content" source="media/requestor-changed-server-component/inactive-components.png" alt-text="Screenshot of Monitoring and RecoveryActionsEnabled components.":::
+   :::image type="content" source="media/server-component-state-remains-inactive/inactive-components.png" alt-text="Screenshot of Monitoring and RecoveryActionsEnabled components.":::
 
 1. To find the requester that last changed the state of the component you want to modify, run the [Get-ServerComponentState](/powershell/module/exchangepowershell/get-servercomponentstate) cmdlet with the following parameters:
 
@@ -62,21 +62,21 @@ This issue might occur because the value that you specified for the `Requester` 
    (Get-ServerComponentState -Identity <server name> -Component <component name>).LocalStates 
    ```
 
-   In the following example, the output lists Functional as the requestor that last modified the state of the Monitoring component. Make a note of this requestor's name to use in a later step.
+   In the following example, the output lists Functional as the requester that last modified the state of the Monitoring component. Make a note of this requester's name to use in a later step.
 
    ```PowerShell
    (Get-ServerComponentState -Identity Exch1 -Component Monitoring).LocalStates
    ```
 
-   :::image type="content" source="media/requestor-changed-server-component/find-requestor-changed-state.png" alt-text="Screenshot of finding Requestor that changed state.":::
+   :::image type="content" source="media/server-component-state-remains-inactive/find-requester-changed-state.png" alt-text="Screenshot of finding Requester that changed state.":::
 
 1. To change the server component state, run the [Set-ServerComponentState](/powershell/module/exchangepowershell/set-servercomponentstate) cmdlet by using the value of the requester you noted in an earlier step.
 
    ```PowerShell
-   Set-ServerComponentState -Identity <server name>-Component <component name> -State Active -Requester <requestor name>
+   Set-ServerComponentState -Identity <server name>-Component <component name> -State Active -Requester <requester name>
    ```
 
-   In the following example, the [Set-ServerComponentState](/powershell/module/exchangepowershell/set-servercomponentstate) cmdlet changes the state of the Monitoring component to Active by using the Functional requestor:
+   In the following example, the [Set-ServerComponentState](/powershell/module/exchangepowershell/set-servercomponentstate) cmdlet changes the state of the Monitoring component to Active by using the `Functional` requester:
 
    ```PowerShell
    Set-ServerComponentState -Identity Exch1 -Component Monitoring -State Active -Requester Functional
@@ -94,7 +94,7 @@ This issue might occur because the value that you specified for the `Requester` 
    Get-ServerComponentState -Identity exch1 -Component Monitoring).LocalStates
    ```
 
-   :::image type="content" source="media/requestor-changed-server-component/verify-component-state-changed.png" alt-text="Screenshot of showing that the component is active.":::
+   :::image type="content" source="media/server-component-state-remains-inactive/verify-component-state-changed.png" alt-text="Screenshot of showing that the component is active.":::
 
 ### Example walkthrough
 
@@ -104,7 +104,7 @@ In this example, the `ServerWideOffline` server component is `Inactive`, which m
 Get-ServerComponentState -Identity Exch1 | ?{$_.state -ne "active"}
 ```
 
-:::image type="content" source="media/requestor-changed-server-component/inactive-components-b.png" alt-text="Screenshot that demonstrates Monitoring and RecoveryActionsEnabled components.":::
+:::image type="content" source="media/server-component-state-remains-inactive/inactive-components-b.png" alt-text="Screenshot that demonstrates Monitoring and RecoveryActionsEnabled components.":::
 
 First, check for the name of the requester that set `ServerWideOffline` to be Inactive:
 
@@ -112,7 +112,7 @@ First, check for the name of the requester that set `ServerWideOffline` to be In
    (Get-ServerComponentState -Identity Exch1 -Component ServerWideOffline).LocalStates
 ```
 
-:::image type="content" source="media/requestor-changed-server-component/find-requestor.png" alt-text="Screenshot that demonstrates finding Requestor that changed state.":::
+:::image type="content" source="media/server-component-state-remains-inactive/find-requester.png" alt-text="Screenshot that demonstrates finding Requester that changed state.":::
 
 In this example, Maintenance is the Requester that changed state to Inactive.
 
@@ -122,7 +122,7 @@ Next, use the [Set-ServerComponentState](/powershell/module/exchangepowershell/s
 Set-ServerComponentState exch1 -Component ServerWideOffline -State Active -Requester Maintenance
 ```
 
-:::image type="content" source="media/requestor-changed-server-component/set-component-state-final.png" alt-text="Screenshot  that demonstrates setting the component state to Active.":::
+:::image type="content" source="media/server-component-state-remains-inactive/set-component-state-final.png" alt-text="Screenshot  that demonstrates setting the component state to Active.":::
 
 Finally, use the [Set-ServerComponentState](/powershell/module/exchangepowershell/set-servercomponentstate) cmdlet again to verify the state:
 
@@ -130,7 +130,7 @@ Finally, use the [Set-ServerComponentState](/powershell/module/exchangepowershel
    Get-ServerComponentState -Identity Exch1 | ?{$_.state -eq "active"}
 ```
 
-:::image type="content" source="media/requestor-changed-server-component/final-state-components.png" alt-text="Screenshot that demonstrates verifying Monitoring and RecoveryActionsEnabled components.":::
+:::image type="content" source="media/server-component-state-remains-inactive/final-state-components.png" alt-text="Screenshot that demonstrates verifying Monitoring and RecoveryActionsEnabled components.":::
 
 ## References
 

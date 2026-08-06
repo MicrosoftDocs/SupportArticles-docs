@@ -2893,7 +2893,7 @@ items:    # Please do not delete this line, it is required for the yaml format
           href: ./windows-security/performance-tuning-ntlm-authentication-maxconcurrentapi.md
         - name: Windows updates add new NTLM pass-through authentication protections for CVE-2022-21857
           href: ./windows-security/windows-updates-add-new-ntlm-pass-through-authentication-protections.md
-    - name: Netlogon, secure channel, DC Locator
+    - name: Netlogon issues, including Secure Channel and DC Locator
       items:
         - name: "Troubleshooting guidance: Secure channel"
           href: ./windows-security/broken-trust-relationship-domain-joined-device-its-domain-secure-channel-issues.md
@@ -2901,10 +2901,22 @@ items:    # Please do not delete this line, it is required for the yaml format
           href: ./windows-security/active-directory-has-newer-password-value-than-client-device.md
         - name: Client has a newer password than Active Directory
           href: ./windows-security/client-device-has-newer-password-value-than-active-directory.md
+        - name: A computer can't identify the network
+          href: ./windows-security/computer-cant-identify-network.md
+        - name: Configure preshared key to use L2TP
+          href: ./windows-security/configure-preshared-key-to-use-l2tp.md
+        - name: Deploy custom cipher suite ordering
+          href: ./windows-security/deploy-custom-cipher-suite-ordering.md
         - name: Event ID 5719 (STATUS_INTERNAL_ERROR) occurs when the NetLogon service restarts
           href: ./windows-security/event-id-5719-when-netlogon-service-restarts.md
         - name: Gather information for secure channel issues
           href: ./windows-security/data-collection-for-troubleshooting-secure-channel-issues.md
+        - name: Reset domain controller's password with Netdom.exe
+          href: ./windows-security/use-netdom-reset-domain-controller-password.md
+        - name: Secure Channel Problems Detected
+          href: ./windows-security/secure-channel-problems-detected.md
+        - name: SSL/TLS communication problems after installing an update
+          href: ./windows-security/ssltls-communication-problems-after-install-kb931125.md
         - name: Troubleshoot domain controller location issues
           href: windows-security/troubleshoot-domain-controller-location-issues.md
         - name: Troubleshoot Netlogon service startup failures
@@ -2945,20 +2957,6 @@ items:    # Please do not delete this line, it is required for the yaml format
           href: ./windows-security/user-account-control-and-remote-restriction.md
         - name: we are unable to Access the security log
           href: ./windows-security/error-unable-access-security-log.md
-    - name: Secure channel issues
-      items:
-        - name: A computer can't identify the network
-          href: ./windows-security/computer-cant-identify-network.md
-        - name: Configure preshared key to use L2TP
-          href: ./windows-security/configure-preshared-key-to-use-l2tp.md
-        - name: Deploy custom cipher suite ordering
-          href: ./windows-security/deploy-custom-cipher-suite-ordering.md
-        - name: Reset domain controller's password with Netdom.exe
-          href: ./windows-security/use-netdom-reset-domain-controller-password.md
-        - name: Secure Channel Problems Detected
-          href: ./windows-security/secure-channel-problems-detected.md
-        - name: SSL/TLS communication problems after installing an update
-          href: ./windows-security/ssltls-communication-problems-after-install-kb931125.md
     - name: Security templates
       items:
         - name: Apply predefined security templates
