@@ -140,7 +140,7 @@ Research these questions:
 
    - Which Outlook add-in or app created the namespace?
    - Can the add-in or app be removed or updated to a version that doesn't create excessive named property definitions?
-   - Once you have addressed the add-in or app causing the issue, go to [If you need assistance from Microsoft Support](#If-you-need-assistance-from-Microsoft-Support)
+   - Once you have addressed the add-in or app causing the issue, go to [If you need assistance from Microsoft Support](#if-you-need-assistance-from-microsoft-support)
 
 
 ### Repair the mailbox
