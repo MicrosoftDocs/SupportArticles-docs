@@ -106,8 +106,6 @@ items:
           href: ../administration/mcdb-status-is-offline-ssds-arent-formatted.md
         - name: MRSProxyConfiguration settings aren't honored
           href: ../administration/mrsproxyconfiguration-settings-not-honored.md
-        - name: Multipart/mixed Internet message format
-          href: ../administration/multipart-mixed-mime-message-format.md
         - name: No active public folder mailboxes were found error
           href: ../administration/no-active-public-folder-mailboxes-were-found-error.md
         - name: Restarts frequently with Stop error
