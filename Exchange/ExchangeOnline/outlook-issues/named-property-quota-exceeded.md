@@ -102,15 +102,28 @@ If the noted namespace is the InternetHeaders or PublicStrings namespace, go to 
 
 #### InternetHeaders or PublicStrings namespace
 
-1. Run the following PowerShell cmdlet to list the named property definitions for the applicable namespace:
+1. Run the following PowerShell cmdlets to create a csv list of named property definitions for your review. You can change the value of $outputPath if desired:
 
-   ```PowerShell
+   ```PowerShell  
    $userId = "<SMTP address or alias>"
-   $namespaceGuid = "<GUID>"
-   Get-MailboxExtendedProperty -Identity $userId | Where-Object {$_.PropertyNamespace -eq $namespaceGuid} | ForEach-Object { [PSCustomObject]@{Value = if ($_.PropertyName -ne $null) {$_.PropertyName} else {$_.PropertyId.ToString()}; PropertyType = $_.PropertyType} } | Sort-Object Value | Format-Table -AutoSize @{Label='PropertyName or PropertyId'; Expression={$_.Value}}, PropertyType
+   $publicStringsGuid = "00020329-0000-0000-c000-000000000046"
+   $internetHeadersGuid = "00020386-0000-0000-C000-000000000046"
+   $outputPath = "C:\Temp\MailboxExtendedProperties-$userId.csv"
+
+   Get-MailboxExtendedProperty -Identity $userId |
+    Where-Object { $_.PropertyNamespace -eq $publicStringsGuid -or $_.PropertyNamespace -eq $internetHeadersGuid } |
+    ForEach-Object {
+        [PSCustomObject]@{
+         Namespace = if ($_.PropertyNamespace -eq $publicStringsGuid) { 'PublicStrings' } else { 'InternetHeaders' }
+         'PropertyName or PropertyId' = if ($_.PropertyName -ne $null) { $_.PropertyName } else { $_.PropertyId.ToString() }
+         PropertyType = $_.PropertyType
+        }
+    } |
+    Sort-Object Namespace, 'PropertyName or PropertyId' |
+    Export-Csv -Path $outputPath -NoTypeInformation -Encoding UTF8
    ```
 
-   The command output alphabetically lists named property identifiers, either **PropertyName** or **PropertyId**, depending on which is populated in the named property definition. Check for instances where the number of **PropertyName** or **PropertyId** values that share a common prefix is greater than the allowed prefix quota. For example, you might find several thousand **PropertyName** values that start with `X-DG-Ref-`.
+   The command output alphabetically lists named property identifiers, either **PropertyName** or **PropertyId**, depending on which is populated in the named property definition, and groups them by namespace. It then ouputs to a csv file in the path specified. Check for instances where the number of **PropertyName** or **PropertyId** values that share a common prefix is greater than the allowed prefix quota. For example, you might find several thousand **PropertyName** values that start with `X-DG-`.
 
 2. Research these questions:
 
@@ -119,29 +132,29 @@ If the noted namespace is the InternetHeaders or PublicStrings namespace, go to 
 
    **Note**: For an example of an Outlook add-in that saturates the PublicStrings namespace, see [Outlook sync issues cause emails to be stuck in the Outbox and undeliverable mail items](https://support.microsoft.com/office/outlook-sync-issues-cause-emails-to-be-stuck-in-the-outbox-and-undeliverable-mail-items-d0f23200-a50b-4e89-9b96-54c602d5540f).
 
-3. If the excessive named property definitions exist in the **PublicStrings** namespace and are identified by a **PropertyName**, go to [Repair the mailbox](#repair-the-mailbox). Otherwise, contact [Microsoft Support](https://support.microsoft.com/contactus/) for further assistance.
+3. If the excessive named property definitions exist in the **PublicStrings** or **InternetHeaders** namespace and are identified by a **PropertyName**, go to [Repair the mailbox](#repair-the-mailbox). 
 
 #### Custom namespace
 
-1. Research these questions:
+Research these questions:
 
    - Which Outlook add-in or app created the namespace?
    - Can the add-in or app be removed or updated to a version that doesn't create excessive named property definitions?
-   - Do any unnecessary named properties that saturate the namespace have an identifiable pattern in **PropertyName** or **PropertyId**?
+   - Once you have addressed the add-in or app causing the issue, go to [If you need assistance from Microsoft Support](#If-you-need-assistance-from-Microsoft-Support)
 
-2. Contact [Microsoft Support](https://support.microsoft.com/contactus/) for further assistance.
 
 ### Repair the mailbox
 
 > [!IMPORTANT]
-> - This procedure applies only to named properties in the **PublicStrings** namespace. The named properties must be identified by a **PropertyName**. 
+> - This procedure applies only to named properties in the **PublicStrings** or **InternetHeaders** namespace. The named properties must be identified by a **PropertyName**. 
 > - Named properties that are reserved for Microsoft internal use (well-known properties) can't be removed.
 > - The cleanup task works at a low level, allowing it to remove named properties even from a mailbox under a compliance hold.
+> - Make sure that you have uninstalled the Outlook add-in or app that's causing the issue, or updated it to a working version. Otherwise, the issue will likely keep happening. 
 
-Make sure that you have uninstalled the Outlook add-in or app that's causing the issue, or updated it to a working version. Then, use the following steps to repair the mailbox.
+After the above is complete, use the following steps to repair the mailbox.
 
 > [!WARNING]
-> Incorrect use of this procedure can permanently damage a mailbox. Carefully check all the named properties that you specify. This procedure permanently deletes all instances of those properties and their associated values from messages, attachments, embedded messages, and folders. Although it's possible to cancel a scheduled cleanup request, canceling a cleanup request that has started won't undo any changes that are already made.
+> Incorrect use of this procedure can permanently damage a mailbox. Carefully check all the named properties that you specify. This procedure permanently deletes all instances of those properties and their associated values from messages, attachments, embedded messages, and folders. Although it's possible to cancel a scheduled cleanup request, canceling a cleanup request that has started won't undo any changes that are already made. If you have questions about the properties at issue, engage support for the add-in that is creating them.
 
 1. Run the following PowerShell commands to get the named properties that match the naming pattern (prefix) that you previously identified in the [PublicStrings namespace](#internetheaders-or-publicstrings-namespace):
 
@@ -149,7 +162,8 @@ Make sure that you have uninstalled the Outlook add-in or app that's causing the
    $userId = "<SMTP address or alias>"
    $pattern = "<wildcard pattern>" # e.g., "X-DG-Ref-*" or "MyApp_Setting_*"
    $publicStringsGuid = "00020329-0000-0000-c000-000000000046"
-   $namedProperties = Get-MailboxExtendedProperty -Identity $userId | Where-Object { $_.PropertyName -like $pattern -and $_.PropertyNamespace -eq $publicStringsGuid}
+   $internetHeadersGuid = "00020386-0000-0000-C000-000000000046"
+   $namedProperties = Get-MailboxExtendedProperty -Identity $userId | Where-Object { $_.PropertyName -like $pattern -and ($_.PropertyNamespace -eq $publicStringsGuid -or $_.PropertyNamespace -eq $internetHeadersGuid) }
    ```
 
 2. Run the following PowerShell command to generate a comma-separated string of formatted named property identifiers:
@@ -167,7 +181,7 @@ Make sure that you have uninstalled the Outlook add-in or app that's causing the
    New-MailboxExtendedPropertyCleanupRequest -Identity $userId -Properties $formattedProps -DetectOnly
    ```
 
-   This command makes no changes to the mailbox. The `CorruptionsDetected` parameter indicates the number of mailbox items found that have named properties that match the specified pattern. For information about errors that you might receive when you run this cmdlet, see [Cleanup request errors](#cleanup-request-errors).
+   **Note**: This command makes no changes to the mailbox. The `CorruptionsDetected` parameter indicates the number of mailbox items found that have named properties that match the specified pattern. For information about errors that you might receive when you run this cmdlet, see [Cleanup request errors](#cleanup-request-errors).
 
    <a id="step-4"></a>
 4. Run the following PowerShell cmdlet to clean up the named properties:
@@ -176,7 +190,7 @@ Make sure that you have uninstalled the Outlook add-in or app that's causing the
    $cleanupRequest = New-MailboxExtendedPropertyCleanupRequest -Identity $userId -Properties $formattedProps
    ```
 
-   Cleanup requests are queued until sufficient server resources are available and the mailbox load is low. Queued cleanup requests typically enter the `Running` state within 24 hours. After the cleanup request state transitions from `Queued` to `Running`, the request usually takes under an hour to complete. The duration depends on the mailbox size.
+   **Note**: Cleanup requests are queued until sufficient server resources are available and the mailbox load is low. Queued cleanup requests typically enter the `Running` state within 24 hours. After the cleanup request state transitions from `Queued` to `Running`, the request usually takes under an hour to complete. The duration depends on the mailbox size.
 
    If you want to cancel a scheduled cleanup request, run the following PowerShell cmdlet.
 
@@ -184,7 +198,7 @@ Make sure that you have uninstalled the Outlook add-in or app that's causing the
    Remove-MailboxExtendedPropertyCleanupRequest -Identity $cleanupRequest.Identity
    ```
 
-   Cancelling a cleanup request that has started won't undo any changes that are already made.
+   **Note**: Cancelling a cleanup request that has started won't undo any changes that are already made.
 
 5. Run the following PowerShell cmdlet to monitor your cleanup request:
 
@@ -192,7 +206,11 @@ Make sure that you have uninstalled the Outlook add-in or app that's causing the
    Get-MailboxExtendedPropertyCleanupRequest -Identity $cleanupRequest.Identity | Select-Object -Property * -ExcludeProperty Argument | Format-List
    ```
 
-   When the cleanup request finishes and its state shows as `Succeeded`, Exchange Online automatically schedules a mailbox move. The move finishes the cleanup process by removing the unwanted named property definitions from the mailbox. The move can take from a few hours to a few days, depending on the size of the mailbox and the availability of system resources in Exchange Online.
+   > [!IMPORTANT]
+   > - When the cleanup request finishes and its state shows as `Succeeded`, Exchange Online automatically schedules a mailbox move. 
+   > - The move finishes the cleanup process by removing the unwanted named property definitions from the mailbox. 
+   > - The move can take from a few hours to a few days, depending on the size of the mailbox and the availability of system resources in Exchange Online.
+   > - If the procedure is run again and no further properties are cleaned, there will be no relocation triggered for the mailbox.
 
    > [!TIP]
    > - If the state of the cleanup request shows as `Failed`, rerun the command from Step 4 to schedule a new request.
@@ -208,6 +226,34 @@ Make sure that you have uninstalled the Outlook add-in or app that's causing the
    Verify that the **Status** value is `Completed` and the **CompletionTimestamp** value is a past date.
 
 7. To verify that the targeted named properties are deleted, repeat Step 1. You can also check the number of named properties in each namespace by rerunning the [Test-MailboxExtendedProperty.ps1](https://microsoft.github.io/CSS-Exchange/M365/Test-MailboxExtendedProperty/) script.
+
+## If you need assistance from Microsoft Support
+
+Collect the following output:
+
+1. Open EXO Shell and start a transcript (change the path as needed)
+   ```PowerShell
+   Start-Transcript -Path C:\temp\Transcript.txt
+   ```
+ 
+2. Run the Test-MailboxExtendedProperty script
+[Test-MailboxExtendedProperty.ps1](https://microsoft.github.io/CSS-Exchange/M365/Test-MailboxExtendedProperty/)
+   ```PowerShell
+   .\Test-MailboxExtendedProperty.ps1 -Identity <SMTP of affected mailbox>
+   ```
+ 
+3. Collect the properties in xml format
+   ```PowerShell
+   Get-MailboxExtendedProperty -Identity <SMTP of affected mailbox> | Export-CliXml C:\temp\MailboxExtendedProperties_<SMTP of affected mailbox>.xml
+   ```
+
+4. Stop the transcript
+   ```PowerShell
+   Stop-Transcript
+   ```
+
+5. Contact [Microsoft Support](https://support.microsoft.com/contactus/) and provide the data collected for further assistance.
+
 
 ## Cleanup request errors
 
