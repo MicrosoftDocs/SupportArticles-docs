@@ -401,3 +401,11 @@ To find all affected flows across a tenant:
    ```
 
 1. Use `Get-AdminFlowWithMigratingTriggerUrl` to list the affected flows for each environment.
+
+
+
+## Update to HTTP or Teams Webhook trigger flow URL
+
+Starting on June 2, 2026, a change in the Power Automate proxy layer exposes the scale unit identifier in the HTTP trigger callback URL (for example, /direct/cu/20/workflows/... instead of /direct/workflows/...).
+
+We recommend that users update their integrations to use the new URL for better performance, but the old URL will continue to work.
