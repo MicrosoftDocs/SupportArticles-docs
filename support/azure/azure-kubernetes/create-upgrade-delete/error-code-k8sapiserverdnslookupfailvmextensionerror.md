@@ -34,7 +34,7 @@ When you try to start or create an AKS cluster, you receive the following error 
 >
 > "ExitCode": "52",
 >
-> "Output": "Fri Oct 15 10:06:00 UTC 2021,aks- nodepool1-36696444-vmss000000\\nConnection to mcr.microsoft.com 443 port [tcp/https]
+> "Output": "Fri Oct 15 10:06:00 UTC 2021,aks-nodepool1-36696444-vmss000000\\nConnection to mcr.microsoft.com 443 port [tcp/https]
 
 ## Cause
 
