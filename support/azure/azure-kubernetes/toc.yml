@@ -205,6 +205,8 @@ items:
     href: security/troubleshoot-seccomp-profiles.md
 - name: Extensions, policies, and add-ons
   items:
+  - name: Troubleshoot Azure Managed Lustre CSI Driver extension errors
+    href: extensions/troubleshoot-azurelustre-csi-extension-errors.md
   - name: Troubleshoot Azure Policy Add-On
     items:
     - name: Troubleshoot Azure Policy Add-On for AKS
