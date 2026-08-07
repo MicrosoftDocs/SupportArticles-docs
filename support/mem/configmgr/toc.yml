@@ -7,6 +7,8 @@ items:
       href: alerts-reports-queries/obtain-error-code-descriptions.md
     - name: Reports don't run as expected
       href: alerts-reports-queries/reports-not-run-as-expected.md
+    - name: Reports don't run when RBAC is enabled
+      href: alerts-reports-queries/reports-rbac-cannot-get-usersid.md
     - name: Reporting stops working
       href: alerts-reports-queries/reporting-stops-working.md
     - name: rsProcessingAborted error when running reports

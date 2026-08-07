@@ -10,19 +10,19 @@ ms.custom:
   - sap:Migration\Cross organization
   - Exchange Server
   - CSSTroubleshoot
-ms.reviewer: kchandra, v-six
+ms.reviewer: kchandra, v-six, v-kccross
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 08/06/2026
 ---
-# Hybrid Configuration Wizard errors when running the Organization Configuration transfer feature
+# Hybrid Configuration Wizard errors when running the Organization Configuration transfer
 
 _Original KB number:_ &nbsp;4337538
 
 ## Summary
 
-This article describes Hybrid Configuration Wizard (HCW) error codes HCW8109, HCW8110, and HCW8111 that you may receive when running the Organization Configuration transfer.
+This article describes Hybrid Configuration Wizard (HCW) error codes HCW8109, HCW8110, and HCW8111 that you might receive when running the Organization Configuration transfer.
 
 ## HCW8109
 

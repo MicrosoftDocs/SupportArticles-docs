@@ -8,8 +8,6 @@ items:
           href: ../administration/403-forbidden-view-free-busy-information.md
         - name: Access Denied when deleting federation trust
           href: ../administration/1007-access-denied-delete-federation-trust.md
-        - name: Active Sync URL is in an invalid format
-          href: ../administration/url-invalid-format.md
         - name: Can't access OWA or EAC with expired OAuth certificate
           href: ../administration/cannot-access-owa-or-ecp-if-oauth-expired.md
         - name: Can't access public folders
@@ -66,8 +64,6 @@ items:
           href: ../administration/event-9519-error-0x80004005-mount-database.md
         - name: Error occurs when installing Edge role
           href: ../administration/ad-error-0x52-install-edge-role.md
-        - name: Error occurs when tracing a message
-          href: ../administration/object-reference-not-set-to-instance-error.md
         - name: Error when making changes to federation trust
           href: ../administration/federation-certificate-with-thumbprint-cannot-be-found.md
         - name: Error when managing a user in EAC
@@ -94,8 +90,6 @@ items:
           href: ../administration/hybrid-freebusy-lookups-fail.md
         - name: Get-VirtualDirectory cmdlets run slowly
           href: ../administration/get-virtualdirectory-run-slowly.md
-        - name: HCW errors in Organization Configuration transfer
-          href: ../administration/hybrid-configuration-wizard-errors-organization-configuration-transfer.md
         - name: HTTP error 403 when starting EMS
           href: ../administration/http-403-error-start-ems.md
         - name: HTTP error 500 when signing in to EAC
@@ -112,8 +106,6 @@ items:
           href: ../administration/mcdb-status-is-offline-ssds-arent-formatted.md
         - name: MRSProxyConfiguration settings aren't honored
           href: ../administration/mrsproxyconfiguration-settings-not-honored.md
-        - name: Multipart/mixed Internet message format
-          href: ../administration/multipart-mixed-mime-message-format.md
         - name: No active public folder mailboxes were found error
           href: ../administration/no-active-public-folder-mailboxes-were-found-error.md
         - name: Restarts frequently with Stop error

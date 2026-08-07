@@ -377,6 +377,10 @@
       "source_path": "Exchange/ExchangeServer/administration/requestor-changed-server-component.md",
       "redirect_url": "server-component-state-remains-inactive",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/administration/multipart-mixed-mime-message-format.md",
+      "redirect_url": "/exchange/mail-flow/mail-routing/multipart-mixed-mime-message-format"
     }
   ]
 }
