@@ -7,7 +7,7 @@ ms.author: allensu
 manager: dcscontentpm
 ms.service: azure-virtual-network
 ms.topic: troubleshooting
-ms.date: 07/27/2026
+ms.date: 08/06/2026
 ms.custom:
   - sap:Connectivity
   - sap:Cannot delete Azure Virtual Network (VNet)
@@ -162,6 +162,10 @@ az network vnet subnet show \
 ### Solution
 
 1. Delete all resources from the delegated service that you deployed in the subnet.
+
+   > [!NOTE]
+   > If the delegation is `Microsoft.Web/serverFarms`, see [Disconnect virtual network integration before removing an App Service delegation](#disconnect-virtual-network-integration-before-removing-an-app-service-delegation) before you delete the app or App Service plan.
+
 2. Use Azure CLI to remove the delegation:
 
     ```azurecli
@@ -203,6 +207,35 @@ If service association links remain after you delete the resources:
 If the orphaned service association link shows `linkedResourceType` of `Microsoft.Web/serverFarms`, the link was created by Azure App Service VNet integration. To remove orphaned App Service service association links, see [Cleaning up orphaned Service Association Links](/azure/app-service/overview-vnet-integration#cleaning-up-orphaned-service-association-links-sal) in the App Service VNet integration documentation. That article covers two removal methods: using the `purgeUnusedVirtualNetworkIntegration` REST API call and the re-create-then-disconnect approach.
 
 For Azure Container Instances specifically, see [Clean up resources](/azure/container-instances/container-instances-vnet#clean-up-resources) for CLI commands to remove container groups and network profiles.
+
+### Disconnect virtual network integration before removing an App Service delegation
+
+App Service apps, Standard logic apps, and function apps that run on Elastic Premium or Dedicated plans can use App Service virtual network integration. This section applies when the subnet has a `Microsoft.Web/serverFarms` delegation or service association link. Before you remove that delegation, disconnect every integration that uses the subnet.
+
+**Identify virtual network integration**
+
+Run the [service association link query](#service-association-links). If `linkedResourceType` is `Microsoft.Web/serverFarms`, or if `link` includes `AppServiceLink`, virtual network integration is using the subnet.
+
+**Disconnect the integration**
+
+- **Azure portal:** In the Azure portal, go to the app, and select **Networking** > **VNet integration**. Select **Disconnect**. Repeat this step for each app that uses the subnet.
+- **Azure CLI for an App Service app:**
+
+  ```azurecli
+  az webapp vnet-integration remove \
+      --resource-group <resource-group> \
+      --name <app-name>
+  ```
+
+- **Azure CLI for a function app:**
+
+  ```azurecli
+  az functionapp vnet-integration remove \
+      --resource-group <resource-group> \
+      --name <function-app-name>
+  ```
+
+Run the [service association link query](#service-association-links) again. After the link no longer appears, remove the subnet delegation.
 
 ### Network profiles (Azure Container Instances)
 
@@ -397,7 +430,11 @@ You can resize a subnet that has active resources if the new address range still
 
 You can't change a subnet delegation while resources from the current delegation are deployed. To change the delegation:
 
-1. Remove all resources that use the current delegation (for example, delete the flexible server or app service plan).
+1. Remove all resources that use the current delegation (for example, delete the flexible server or App Service plan).
+
+   > [!NOTE]
+   > If the current delegation is `Microsoft.Web/serverFarms`, first disconnect each App Service virtual network integration that uses the subnet. See [Disconnect virtual network integration before removing an App Service delegation](#disconnect-virtual-network-integration-before-removing-an-app-service-delegation).
+
 2. Use Azure CLI to remove the existing delegation.
 
     ```azurecli
