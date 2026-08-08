@@ -48,6 +48,4 @@ For more information, see [Automatic discovery for firewall and Web Proxy client
 
 For more information about WinHTTP autoproxy support, see [WinHTTP AutoProxy support](/windows/win32/winhttp/winhttp-autoproxy-support).
 
-For more information about a similar scenario in Skype for Business Online (formerly Lync Online), see [Lync 2013 or Lync 2010 can't connect to the Skype for Business Online service because a proxy is blocking connections from MSOIDSVC.exe](/SkypeForBusiness/troubleshoot/online-sign-in/lync-cant-connect-to-sfb-online).
-
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

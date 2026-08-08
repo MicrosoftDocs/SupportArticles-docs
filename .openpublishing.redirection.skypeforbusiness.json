@@ -407,6 +407,70 @@
     {
       "source_path": "SkypeForBusiness/SkypeServer/server-conferencing/sfb-play-dial-tone-teams-call.md",
       "redirect_url": "/previous-versions/troubleshoot/skypeforbusiness/skypeserver/server-conferencing/sfb-play-dial-tone-teams-call"
+    },
+    {
+      "source_path": "SkypeForBusiness/SkypeOnline/sfbonline-end-of-support.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SkypeForBusiness/SkypeServer/server-configuration/central-management-store-replication-failures.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SkypeForBusiness/SkypeServer/server-configuration/collect-log-files.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SkypeForBusiness/SkypeServer/server-configuration/disable-automatic-gain-control.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SkypeForBusiness/SkypeServer/server-configuration/issue-attempt-move-or-enable-user-command.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SkypeForBusiness/SkypeServer/server-exchange-integration/mapi-unavailable.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SkypeForBusiness/SkypeServer/server-exchange-integration/sfb-and-exchange-integration-fails.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SkypeForBusiness/SkypeServer/server-im-presence/chat-history-not-show-conversation-window.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SkypeForBusiness/SkypeServer/server-install-or-uninstall/clean-uninstallation.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SkypeForBusiness/SkypeServer/server-install-or-uninstall/get-vm-not-recognized-during-install-cloud-connector.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SkypeForBusiness/SkypeServer/server-meetings/cannot-connect-you-to-this-meeting.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SkypeForBusiness/SkypeServer/server-meetings/issue-join-meeting-broadcast.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SkypeForBusiness/SkypeServer/server-mobile-devices/issues-for-android.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SkypeForBusiness/SkypeServer/server-sign-in/client-not-start-click-meeting-link.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SkypeForBusiness/SkypeServer/server-sign-in/sidebyside-event-id-35-logged.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SkypeForBusiness/SkypeServer/server-sign-in/unable-to-sign-in-to-sfb.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     }
   ]
 }

@@ -65,12 +65,6 @@ productDirectory:
         - url: /troubleshoot/exchange/exchange-hybrid-welcome
           text: Exchange Hybrid
     # Card
-    - title: Skype for Business
-      imageSrc: /media/logos/logo_Skype_for_Business.svg
-      links:
-        - url: /troubleshoot/skypeforbusiness/skype-server-welcome
-          text: Skype for Business Server
-    # Card
     - title: Microsoft Outlook
       imageSrc: /media/logos/logo-outlook.svg
       links:
