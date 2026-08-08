@@ -471,10 +471,6 @@
     {
       "source_path": "SkypeForBusiness/SkypeServer/server-sign-in/unable-to-sign-in-to-sfb.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
-    },
-    {
-      "source_path": "SkypeForBusiness/SkypeServer/skype-server-welcome.yml",
-      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     }
   ]
 }

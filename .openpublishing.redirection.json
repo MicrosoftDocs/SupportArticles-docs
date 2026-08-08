@@ -15881,6 +15881,10 @@
       "source_path": "support/power-platform/copilot-studio/generative-answers/sharepoint-no-response.md",
       "redirect_url": "/troubleshoot/power-platform/copilot-studio/knowledge/sharepoint-no-response",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "SkypeForBusiness/SkypeServer/skype-server-welcome.yml",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     }
   ]
 }
