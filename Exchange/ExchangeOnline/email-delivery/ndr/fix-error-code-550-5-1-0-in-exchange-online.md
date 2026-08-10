@@ -1,10 +1,10 @@
 ---
 title: Fix NDR error 550 5.1.0 in Exchange Online
-ms.date: 01/24/2024
+ms.date: 08/10/2026
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
-ms.reviewer: v-six
+ms.reviewer: v-six, v-kccross
 audience: Admin
 ms.topic: troubleshooting
 f1.keywords:
@@ -14,11 +14,11 @@ ms.custom:
   - Exchange Online
   - CSSTroubleshoot
   - CI 167832
+  - CI 12713
 search.appverid:
 - BCS160
 - MOE150
 - MET150
-ms.assetid: 477289e6-9150-4627-afce-f61fc7c4605b
 description: Learn how to fix email issues for error code 550 5.5.0 or address rejected "SPF Permanent Error in Exchange Online" (the destination email server won't accept messages from the sender or for the recipient).
 ---
 
@@ -31,10 +31,6 @@ Use the information in the NDR to help you decide how to fix the problem.
 ## Why did I get this bounce message?
 
 The destination email server that generated the 5.1.0 error won't accept messages from you (the sender) or messages for the recipient. This can happen if messages from you (your email address, your Exchange Online organization, or even all of Exchange Online) are being blocked by the recipient.
-
-|&nbsp;|&nbsp;|&nbsp;|&nbsp;|&nbsp;|&nbsp;|
-|---|---|---|---|---|---|
-|:::image type="icon" source="media/email-user-icon.png":::|[I got this bounce message. How do I fix it?](#i-got-this-bounce-message-how-do-i-fix-it)|:::image type="icon" source="media/email-admin-icon.png":::|[I'm an email admin. How do I fix this?](#im-an-email-admin-how-do-i-fix-this)|:::image type="icon" source="media/help-icon.png":::|[Details for error code 5.1.0](#details-for-error-code-510)|
 
 ## I got this bounce message. How do I fix it?
 
@@ -66,9 +62,9 @@ To remove recipients from your Auto-Complete list in Outlook on the web (formerl
 
 1. In Outlook on the web, click **New mail**.
 
-2. Start typing the recipient's name or email address in the **To** field until the recipient appears in the drop-down list.
+1. Start typing the recipient's name or email address in the **To** field until the recipient appears in the drop-down list.
 
-3. Use the Down Arrow and Up Arrow keys to select the recipient, and then press the Delete key.
+1. Use the Down Arrow and Up Arrow keys to select the recipient, and then press the Delete key.
 
 ##### Remove all recipients from your Outlook on the web Auto-Complete list
 
@@ -80,21 +76,21 @@ You can only clear your Auto-Complete list in the light version of Outlook on th
 
    1. In Outlook on the web, click **Settings** :::image type="icon" source="media/setting-icon.png":::.
 
-   2. In the **Search all settings** box, type **light** and select **Outlook on the web version** in the results.
+   1. In the **Search all settings** box, type **light** and select **Outlook on the web version** in the results.
 
-   3. In the page that opens, select **Use the light version of Outlook on the web**, and then click **Save**.
+   1. In the page that opens, select **Use the light version of Outlook on the web**, and then click **Save**.
 
-   4. Log off, close your web browser, and open the mailbox again in Outlook on the web.
+   1. Log off, close your web browser, and open the mailbox again in Outlook on the web.
 
 After you open your mailbox in the light version of Outlook on the web, do the following steps to clear all entries from your Auto-Complete list:
 
 1. Choose **Options** and verify that **Messaging** is selected.
 
-2. In the **E-Mail Name Resolution** section, click **Clear Most Recent Recipients list**, and then click **OK** in the confirmation dialog box.
+1. In the **E-Mail Name Resolution** section, click **Clear Most Recent Recipients list**, and then click **OK** in the confirmation dialog box.
 
-3. While you're still in **Options**, to return your mailbox to the full version of Outlook on the web, go to **Outlook version**, clear the check box for **Use the light version**, and then click **Save**.
+1. While you're still in **Options**, to return your mailbox to the full version of Outlook on the web, go to **Outlook version**, clear the check box for **Use the light version**, and then click **Save**.
 
-4. Log off and close your web browser. The next time you open your mailbox in a supported web browser, you'll use the full version of Outlook on the web.
+1. Log off and close your web browser. The next time you open your mailbox in a supported web browser, you'll use the full version of Outlook on the web.
 
 ## I'm an email admin. How do I fix this?
 
@@ -107,15 +103,3 @@ The NDR from Exchange Online for this specific error might contain some or all o
 - **User information section**: Address Rejected. A problem occurred during the delivery of this message to this email address.
 
 - **Diagnostic information for administrators section**: Recipient address rejected: SPF Permanent Error.
-
-## Still need help?
-
-[:::image type="icon" source="media/community-forum-icon.png":::](https://answers.microsoft.com/)
-
-[:::image type="icon" source="media/create-service-request-icon.png":::](https://admin.microsoft.com/AdminPortal/Home#/support)
-
-[:::image type="icon" source="media/call-support-icon.png":::](/microsoft-365/Admin/contact-support-for-business-products)
-
-## See also
-
-[Email non-delivery reports in Exchange Online](non-delivery-reports-in-exchange-online.md)

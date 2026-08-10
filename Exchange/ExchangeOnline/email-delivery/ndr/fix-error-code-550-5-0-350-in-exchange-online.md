@@ -1,10 +1,10 @@
 ---
 title: Fix NDR error 550 5.0.350 in Exchange Online
-ms.date: 01/24/2024
+ms.date: 08/10/2026
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
-ms.reviewer: v-six
+ms.reviewer: v-six, v-kccross
 audience: Admin
 ms.topic: troubleshooting
 f1.keywords:
@@ -14,23 +14,19 @@ ms.custom:
   - Exchange Online
   - CSSTroubleshoot
   - CI 167832
+  - CI 12713
 search.appverid:
 - BCS160
 - MOE150
 - MET150
-ms.assetid:
 description: Learn how to fix email issues for error code 550 5.0.350 or 550 x-dg-ref header is too long.
 ---
 
 # Fix NDR error "550 5.0.350" in Exchange Online
 
-It's frustrating when you get an error after sending an email message. This topic describes what you can do if you see error code 550 5.0.350 in a non-delivery report (also known as an NDR, bounce message, delivery status notification, or DSN).
+This topic describes what you can do if you see error code 550 5.0.350 in a non-delivery report (also known as an NDR, bounce message, delivery status notification, or DSN).
 
 Use the information in the NDR to help you decide how to fix the problem.
-
-|&nbsp;|&nbsp;|&nbsp;|&nbsp;|
-|---|---|---|---|
-|:::image type="icon" source="media/email-user-icon.png":::|[I got this bounce message. How do I fix it?](#i-got-this-bounce-message-how-do-i-fix-it)|:::image type="icon" source="media/email-admin-icon.png":::|[I'm an email admin. How can I fix this?](#im-an-email-admin-how-do-i-fix-this)|
 
 ## Why did I get this bounce message?
 
@@ -61,15 +57,3 @@ In Exchange Online, you can control TNEF (also known as the Transport Neutral En
 Typically, there's nothing that support can do for you, since the problem lies with the recipient's email system.
 
 The **Diagnostic information for administrators** section in the bounce message will contain the original error message when Microsoft 365 or Office 365 tried to send the message to the external email server or service. Use this information to help identify the issue, and to see if there's anything you can do to fix the problem.
-
-## Still need help with error code 550 5.0.350?
-
-[:::image type="icon" source="media/community-forum-icon.png":::](https://answers.microsoft.com/)
-
-[:::image type="icon" source="media/create-service-request-icon.png":::](https://admin.microsoft.com/AdminPortal/Home#/support)
-
-[:::image type="icon" source="media/call-support-icon.png":::](/microsoft-365/Admin/contact-support-for-business-products)
-
-## See also
-
-[Email non-delivery reports in Exchange Online](non-delivery-reports-in-exchange-online.md)

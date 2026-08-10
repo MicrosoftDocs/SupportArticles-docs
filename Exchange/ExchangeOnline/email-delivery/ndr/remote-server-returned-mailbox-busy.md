@@ -17,6 +17,7 @@ appliesto:
 search.appverid: MET150
 ms.date: 01/24/2024
 ---
+
 # "554 4.3.2 mailbox busy" when sending emails to a mailbox in Exchange Online
 
 _Original KB number:_ &nbsp; 4024024

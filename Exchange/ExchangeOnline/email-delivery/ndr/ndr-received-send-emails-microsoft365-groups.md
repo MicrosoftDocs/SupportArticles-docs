@@ -30,7 +30,6 @@ When you send an email message to a Microsoft 365 group, you receive a non-deliv
 >
 > `AggregateGroupMailbox.A.201708181918@contoso.onmicrosoft.com` the recipient's mailbox is full and can't accept messages now. Please try resending your message later, or contact the recipient directly.
 
-
 ## Cause
 
 The aggregate group mailbox is an arbitration mailbox. It was used to temporarily store messages that are sent to Microsoft 365 Groups to support a search-related feature. That feature is now deprecated, and the aggregate group mailbox is no longer used. This arbitration mailbox will be removed from all Microsoft 365 tenants in the future.
@@ -50,8 +49,8 @@ For example:
 ```powershell
 New-TransportRule -SentTo @("AggregateGroupMailbox.A.201708181918@contoso.onmicrosoft.com") -DeleteMessage:$true -Name 'rule name' -StopRuleProcessing:$false -Mode 'Enforce' -Comments '' -RuleErrorAction 'Ignore' -SenderAddressLocation 'Header' 
 ```
+
 **Notes**:
 
 - In this example, `<AggregateGroupMailbox.A.201708181918@contoso.onmicrosoft.com>` represents the SMTP address of the aggregate group mailbox that's mentioned in the NDR.
 - This transport rule deletes email messages before they arrive at the aggregate group mailbox. It doesn't affect email delivery to Microsoft 365 Groups.
-

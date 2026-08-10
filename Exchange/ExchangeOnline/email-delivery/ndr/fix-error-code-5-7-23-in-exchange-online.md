@@ -1,10 +1,10 @@
 ---
 title: Fix NDR error 5.7.23 in Exchange Online
-ms.date: 01/24/2024
+ms.date: 08/10/2026
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
-ms.reviewer: v-six
+ms.reviewer: v-six, v-kccross
 audience: Admin
 ms.topic: troubleshooting
 f1.keywords:
@@ -25,10 +25,6 @@ description: Learn how to fix email issues for error code 5.7.23 in Exchange Onl
 # Fix NDR error "550 5.7.23" in Exchange Online
 
 This topic describes what you can do if you see error code 550 5.7.23 in a non-delivery report (also known as an NDR, bounce message, delivery status notification, or DSN).
-
-|&nbsp;|&nbsp;|&nbsp;|&nbsp;|
-|---|---|---|---|
-|:::image type="icon" source="media/email-user-icon.png":::|[I got this bounce message. How do I fix it?](#i-got-this-bounce-message-how-do-i-fix-it)|:::image type="icon" source="media/email-admin-icon.png":::|[I'm an email admin. How can I fix this?](#im-an-email-admin-how-do-i-fix-this)|
 
 ## I got this bounce message. How do I fix it?
 
@@ -53,15 +49,3 @@ To fix this issue, do the following steps:
   To receive Bcc copies of outbound messages that are determined to be spam, see [Configure outbound spam policy notifications](/microsoft-365/security/office-365-security/configure-the-outbound-spam-policy).
 
   If you determine that the outbound message was incorrectly detected as spam by Microsoft 365 or Office 365, contact support.
-
-## Still need help with error code 550 5.7.23?
-
-[:::image type="icon" source="media/community-forum-icon.png":::](https://answers.microsoft.com/)
-
-[:::image type="icon" source="media/create-service-request-icon.png":::](https://admin.microsoft.com/AdminPortal/Home#/support)
-
-[:::image type="icon" source="media/call-support-icon.png":::](/microsoft-365/Admin/contact-support-for-business-products)
-
-## See also
-
-[Email non-delivery reports in Exchange Online](non-delivery-reports-in-exchange-online.md)

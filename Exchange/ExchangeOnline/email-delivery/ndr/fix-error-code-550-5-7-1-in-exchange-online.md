@@ -1,10 +1,10 @@
 ---
 title: Fix NDR error 550 5.7.1 in Exchange Online
-ms.date: 05/15/2025
+ms.date: 08/10/2026
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
-ms.reviewer: arindamt
+ms.reviewer: arindamt, v-kccross
 audience: Admin
 ms.topic: troubleshooting
 f1.keywords:
@@ -14,24 +14,17 @@ ms.custom:
   - Exchange Online
   - CSSTroubleshoot
   - CI 167832
+  - CI 12713
 search.appverid:
 - BCS160
 - MOE150
 - MET150
-ms.assetid: da1ff375-f88f-4a3e-b81f-06cdb6ecae3c
 description: Learn how to fix email issues for error code 5.7.1 (and also 5.7.0 to 5.7.999) in Exchange Online (the recipient is configured to reject email from the sender).
 ---
 
 # Fix NDR error "550 5.7.1" in Exchange Online
 
-> [!IMPORTANT]
-> Mail flow rules are now available in the new Exchange admin center. [Try it now](https://admin.exchange.microsoft.com/#/transportrules)!
-
-It's frustrating when you get an error after sending an email message. This topic describes what you can do if you see error code 5.7.1 in a non-delivery report (also known as an NDR, bounce message, delivery status notification, or DSN). This information also applies to error codes 5.7.0 through 5.7.999.
-
-|&nbsp;|&nbsp;|&nbsp;|&nbsp;|
-|---|---|---|---|
-|:::image type="icon" source="media/email-user-icon.png":::|[I got this bounce message. How do I fix this issue?](#i-got-this-bounce-message-how-do-i-fix-this-issue)|:::image type="icon" source="media/email-admin-icon.png":::|[I'm an email admin. How can I fix this issue?](#im-an-email-admin-how-can-i-fix-this-issue)|
+This topic describes what you can do if you see error code 5.7.1 in a non-delivery report (also known as an NDR, bounce message, delivery status notification, or DSN). This information also applies to error codes 5.7.0 through 5.7.999.
 
 This information also applies to error codes 5.7.0 through 5.7.999 in Exchange Online and Microsoft 365 or Office 365. There can be several causes for dsn error code 5.7.1, for which solutions are provided later in this topic.
 
@@ -100,21 +93,21 @@ To configure the public folder to accept messages from external senders, follow 
 
 1. Open the Exchange admin center (EAC). For more information, see [Exchange admin center in Exchange Online](/Exchange/exchange-admin-center).
 
-2. Go to **Public folders** \> **Public folders**.
+1. Go to **Public folders** \> **Public folders**.
 
-3. Choose a public folder from the list, and then click **Edit** :::image type="icon" source="media/edit-icon.png":::.
+1. Choose a public folder from the list, and then click **Edit** :::image type="icon" source="media/edit-icon.png":::.
 
    :::image type="content" source="media/fix-error-code-550-5-7-1-in-exchange-online/editing-a-public-folder.png" alt-text="The screen on which the details of a public folder can be edited.":::
 
-4. Click **Mail flow settings**.
+1. Click **Mail flow settings**.
 
-5. Under **Message Delivery Restrictions** \> **Accept messages from**, perform the following tasks:
+1. Under **Message Delivery Restrictions** \> **Accept messages from**, perform the following tasks:
    - Clear the check box for **Require that all senders are authenticated**.
    - Select **All senders**.
 
    :::image type="content" source="media/fix-error-code-550-5-7-1-in-exchange-online/allow-all-senders-public-folder.png" alt-text="The screen on which the users configure all the senders to send messages to the public folder.":::
 
-6. Click **Save**.
+1. Click **Save**.
 
 ### The sender is external and their source IP address is on Microsoft's blocklist
 
@@ -130,7 +123,6 @@ If your domain isn't fully enrolled in Microsoft 365 or Office 365, try the foll
 
 - Verify your domain appears as **Healthy** in the [Microsoft 365 admin center](https://admin.microsoft.com) at **Settings** \> **Domains**.
 - For information about adding your domain to Microsoft 365 or Office 365, see [Add a domain to Microsoft 365](/microsoft-365/admin/setup/add-domain).
-- To troubleshoot domain verification issues, see [Troubleshoot domain verification issues in Office 365](https://support.microsoft.com/topic/troubleshoot-domain-verification-issues-in-office-365-c99845be-aa0f-3438-63e6-b09ee71deaeb).
 
 ### Your domain's MX record has a problem
 
@@ -138,11 +130,11 @@ If you have an incorrect MX record, try the following steps:
 
 1. Check the sender and recipient domains for incorrect or stale MX records by using the **Advanced diagnostics** \> **Exchange Online** test in Microsoft Support and Recovery Assistant. For more information about the Support and Recovery Assistant, see [About Microsoft Support and Recovery Assistant](https://support.microsoft.com/office/e90bb691-c2a7-4697-a94f-88836856c72f).
 
-2. Check with your domain registrar or DNS hosting service to verify the MX record for your domain is correct. The MX record for a domain that's enrolled in Exchange Online uses the syntax  `_\<domain\ >_.mail.protection.outlook.com` or `_\<domain\ >_.subdomain.mx.microsoft`.
+1. Check with your domain registrar or DNS hosting service to verify the MX record for your domain is correct. The MX record for a domain that's enrolled in Exchange Online uses the syntax  `_\<domain\ >_.mail.protection.outlook.com` or `_\<domain\ >_.subdomain.mx.microsoft`.
 
-3. Verify **Inbound SMTP Email** and **Outbound SMTP Email** at **Office 365** \> **Mail Flow Configuration** in the [Microsoft Remote Connectivity Analyzer](https://testconnectivity.microsoft.com/tests/o365).
+1. Verify **Inbound SMTP Email** and **Outbound SMTP Email** at **Office 365** \> **Mail Flow Configuration** in the [Microsoft Remote Connectivity Analyzer](https://testconnectivity.microsoft.com/tests/o365).
 
-4. Verify you have only one MX record configured for your domain. Microsoft doesn't support using more than one MX record for a domain that's enrolled in Exchange Online.
+1. Verify you have only one MX record configured for your domain. Microsoft doesn't support using more than one MX record for a domain that's enrolled in Exchange Online.
 
 ### Your domain's SPF record has a problem
 
@@ -153,7 +145,7 @@ The Sender Policy Framework (SPF) record for your domain might be incomplete, an
 - If your domain is part of a hybrid deployment between on-premises Exchange and Exchange Online, the Hybrid Configuration Wizard should automatically configure the required connectors for mail flow. Even so, you can use the steps in this section to verify the connector settings.
   1. Open the Microsoft 365 admin center at <https://portal.microsoftonline.com>, and click **Admin** \> **Exchange**.
 
-  2. In the Exchange admin center, click **Mail Flow** \> **Connectors**. Select the connector that's used for hybrid, and choose **Edit**. Verify the following information:
+  1. In the Exchange admin center, click **Mail Flow** \> **Connectors**. Select the connector that's used for hybrid, and choose **Edit**. Verify the following information:
 
      - **Delivery**: If **Route mail through smart hosts** is selected, confirm the correct IP address or FQDN is specified. If **MX record associated with the recipient domain** is selected, confirm the MX record for the domain points to the correct mail server.
 
@@ -174,15 +166,3 @@ For more information, see DSN 5.7.129 Errors in Exchange Online and Microsoft 36
   Another solution would be to remove the license, but then you would need to create a mail flow rule (also known as a transport rule) to prevent the user from receiving email messages. Otherwise, the user would continue to receive messages for about 30 days after removal of the license.
 
   Consider this scenario as part of the workflow for disabling a user on Exchange Online.
-
-## Still need help?
-
-[:::image type="icon" source="media/community-forum-icon.png":::](https://answers.microsoft.com/)
-
-[:::image type="icon" source="media/create-service-request-icon.png":::](https://admin.microsoft.com/AdminPortal/Home#/support)
-
-[:::image type="icon" source="media/call-support-icon.png":::](/microsoft-365/Admin/contact-support-for-business-products)
-
-## See also
-
-[Email non-delivery reports in Exchange Online](non-delivery-reports-in-exchange-online.md)
