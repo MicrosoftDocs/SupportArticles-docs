@@ -7,7 +7,7 @@ ms.reviewer: kaushika, v-tappelgate
 ms.collection: Windows Security Technologies\BitLocker
 ms.topic: troubleshooting
 ms.custom:
-- sap:windows security technologies\bitlocker
+- sap:windows security technologies\BitLocker configuration and management
 - pcy:WinComm Devices Deploy
 audience: itpro
 appliesto:

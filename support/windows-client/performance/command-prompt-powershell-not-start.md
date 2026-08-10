@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
 ms.custom:
-- sap:system performance\system configuration (page file,startup or running apps,error handling),fix
+- sap:system performance\system configuration (page file,startup or running apps,error handling)
 - pcy:WinComm Performance
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>

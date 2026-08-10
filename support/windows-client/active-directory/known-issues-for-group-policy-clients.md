@@ -7,7 +7,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
 ms.custom:
-- sap:active directory\user,computer,group,and object management
+- sap:active directory\Object attribute management, RID issues, and group scope
 - pcy:WinComm Directory Services
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>

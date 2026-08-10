@@ -12,10 +12,7 @@ appliesto:
 ms.date: 04/23/2026
 ---
 
-# Resolve errors during orchestrated migration (preview)
-
-> [!IMPORTANT]
-> Tenant-to-tenant migration is currently available in preview. Features and availability might change before general availability (GA).
+# Resolve errors during orchestrated migration
 
 This article provides lists of errors that you might experience during user data migration, and the recommended actions that you can take to resolve them.
 

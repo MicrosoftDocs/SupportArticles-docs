@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
 ms.custom:
-- sap:application technologies and compatibility\.net framework installation
+- sap:Windows Servicing, Updates and Features on Demand\Issues installing Features on Demand(FoD)
 - pcy:WinComm User Experience
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>

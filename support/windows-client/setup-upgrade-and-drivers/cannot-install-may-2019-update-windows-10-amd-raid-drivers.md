@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, paudina, mingcheh, caroul, v-jesits, v-tea, tlavoy
 ms.custom:
-- sap:windows device and driver management\system driver installation or update
+- sap:windows device and driver management\Issues with drivers or updates for system components
 - pcy:WinComm Devices Deploy
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 4504107
 ## Symptoms
 
 When you install the May 2019 update on a Windows 10-based computer, the installation process stops, and you receive a message that resembles the following:
-> AMD Ryzen™ or AMD Ryzen™ Threadripper™ configured in SATA or NVMe RAID mode.  
+> AMD Ryzen&trade; or AMD Ryzen&trade; Threadripper&trade; configured in SATA or NVMe RAID mode.  
 A driver is installed that causes stability problems on Windows. This driver will be disabled. Check with your software/driver provider for an updated version that runs on this version of Windows.
 
 ## Cause
@@ -31,7 +31,7 @@ On computers that have AMD Ryzen or AMD Ryzen Threadripper processors, certain v
 
 Version 9.2.0.105 and later versions of the AMD RAID drivers do not cause this issue. A computer that has these drivers installed can receive the May 2019 update.
 
-For more information about this issue, see [Article PA-260, Unable to proceed with installation or upgrade of Windows® 10 May 2019 Update with SATA or NVMe RAID on AMD Ryzen™ systems](https://www.amd.com/en/support/kb/faq/pa-260) on the AMD website.
+For more information about this issue, see [Article PA-260, Unable to proceed with installation or upgrade of Windows&reg; 10 May 2019 Update with SATA or NVMe RAID on AMD Ryzen&trade; systems](https://www.amd.com/en/support/kb/faq/pa-260) on the AMD website.
 
 ## Resolution
 

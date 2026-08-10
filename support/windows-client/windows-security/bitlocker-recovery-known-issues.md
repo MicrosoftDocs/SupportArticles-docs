@@ -9,7 +9,7 @@ ms.collection:
 - highpri
 ms.topic: troubleshooting
 ms.custom:
-- sap:windows security technologies\bitlocker
+- sap:windows security technologies\BitLocker configuration and management
 - pcy:WinComm Devices Deploy
 audience: itpro
 appliesto:

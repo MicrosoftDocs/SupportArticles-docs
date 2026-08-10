@@ -82,7 +82,7 @@ Learn how to deploy Inspektor Gadget in your cluster. Two installation methods a
 
 - **[AKS cluster extension (recommended)](#install-inspektor-gadget-by-using-the-aks-cluster-extension)**: Installs and manages Inspektor Gadget through the Azure resource management plane by using `az k8s-extension` CLI commands. This approach provides Azure Resource Manager-driven lifecycle management, including installation, configuration, updates, and removal.
 
-- **[kubectl gadget plug-in](#install-inspektor-gadget-by-running-the-kubectl-gadget-plug-in)**: Deploys Inspektor Gadget directly in your cluster by running the `kubectl gadget` plug-in. This approach requires manual lifecycle management but doesn't depend on the Azure resource management plane.
+- **[kubectl gadget plug-in](#alternative-installation-install-inspektor-gadget-by-running-the-kubectl-gadget-plug-in)**: Deploys Inspektor Gadget directly in your cluster by running the `kubectl gadget` plug-in. This approach requires manual lifecycle management but doesn't depend on the Azure resource management plane.
 
 ### Install Inspektor Gadget by using the AKS cluster extension
 

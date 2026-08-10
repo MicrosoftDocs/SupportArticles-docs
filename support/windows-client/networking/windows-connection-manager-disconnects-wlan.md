@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
 ms.custom:
-- sap:networking\remote access
+- sap:network connectivity and file sharing\Remote access (VPN, RRAS, CMAK and AOVPN)
 - pcy:WinComm Networking
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>

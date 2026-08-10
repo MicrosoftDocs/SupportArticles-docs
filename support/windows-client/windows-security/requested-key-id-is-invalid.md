@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, manojse, lacranda
 ms.custom:
-- sap:windows security technologies\bitlocker
+- sap:windows security technologies\BitLocker configuration and management
 - pcy:WinComm Devices Deploy
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
