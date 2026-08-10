@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, amjosh
 ms.custom:
-- sap:application technologies and compatibility\.net framework installation
+- sap:Windows Servicing, Updates and Features on Demand\Issues installing Features on Demand(FoD)
 - pcy:WinComm User Experience
 adobe-target: true
 appliesto:

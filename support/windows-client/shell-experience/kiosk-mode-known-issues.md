@@ -1,7 +1,7 @@
 ---
 title: Kiosk mode known issues
 description: Learn about known issues for devices that run in single-app kiosk mode or restricted user experience mode.
-ms.date: 02/25/2026
+ms.date: 08/08/2026
 manager: dcscontentpm
 ms.topic: troubleshooting
 ms.reviewer: anthonychen
@@ -37,7 +37,7 @@ You have a kiosk that uses [File Explorer restrictions](/windows/configuration/a
 
 > We can't open This PC. To help you keep your data safe, the location is blocked.
 
-To work around this issue, configure the [SetAllowedFolderLocations](/windows/client-management/mdm/policy-csp-fileexplorer#setallowedfolderlocations) policy to use a value that doesn't include **This PC**.
+This issue is fixed in Windows builds 26100.8524, 26200.8524, and later builds.
 
 ## Packaged apps don't start when Microsoft Edge is an allowed app
 

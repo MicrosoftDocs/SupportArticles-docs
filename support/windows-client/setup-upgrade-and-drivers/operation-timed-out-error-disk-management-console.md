@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, jburrage
 ms.custom:
-- sap:windows device and driver management\peripherals driver installation or update
+- sap:windows device and driver management\Issues with drivers or updates for peripheral devices
 - pcy:WinComm Devices Deploy
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
