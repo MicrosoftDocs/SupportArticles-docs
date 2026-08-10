@@ -77,7 +77,7 @@ items:
     href: agent/intermittent-crashes.md
 
 - name: SQL Server resource usage (CPU, Memory, Storage) and Configuration
-  items: 
+  items:
   - name: 701 error with large batches
     href: performance/701-error-large-batches.md
   - name: Blocked column is populated for latch waits
@@ -92,6 +92,8 @@ items:
     href: performance/filtered-index-with-column-is-null.md
   - name: Generate a script to create a statistics-only database
     href: performance/stats-only-db-script.md
+  - name: Interoperability issues between batch mode processing and large page memory model
+    href: performance/batch-mode-with-large-page-memory-issues.md
   - name: Memory-optimized temppdb metadata out-of-memory errors
     href: performance/memory-optimized-tempdb-out-of-memory.md
   - name: Non-yielding error if the lock pages in memory option is disabled
@@ -100,24 +102,24 @@ items:
     href: performance/resource-monitor-nonyielding-condition.md
   - name: Operations that trigger buffer pool scan may run slowly on large-memory computers
     href: performance/buffer-pool-scan-runs-slowly-large-memory-machines.md
-  - name: Interoperability issues between batch mode processing and large page memory model
-    href: performance/batch-mode-with-large-page-memory-issues.md
   - name: Reducing allocation contention in tempdb
     href: performance/recommendations-reduce-allocation-contention.md
   - name: SchemaMgr Store entries degrade performance
     href: performance/schemamgr-store-degrades-performance.md
-  - name: Troubleshoot high-CPU-usage issues
-    href: performance/troubleshoot-high-cpu-usage-issues.md
-  - name: Troubleshoot SQL Server slow performance caused by IO
-    href: performance/troubleshoot-sql-io-performance.md
   - name: TokenAndPermUserStore related performance issues
     href: performance/token-and-perm-user-store-perf-issue.md
-  - name: Troubleshoot query time-out errors
-    href: performance/troubleshoot-query-timeouts.md
-  - name: Troubleshoot out of memory issues in SQL Server
-    href: performance/troubleshoot-memory-issues.md
+  - name: Troubleshoot high-CPU-usage issues
+    href: performance/troubleshoot-high-cpu-usage-issues.md
   - name: Troubleshoot memory grant issues in SQL Server
     href: performance/troubleshoot-memory-grant-issues.md
+  - name: Troubleshoot out of memory issues in SQL Server
+    href: performance/troubleshoot-memory-issues.md
+  - name: Troubleshoot performance after changing SQL Server editions
+    href: performance/troubleshoot-performance-edition-change.md
+  - name: Troubleshoot query time-out errors
+    href: performance/troubleshoot-query-timeouts.md
+  - name: Troubleshoot SQL Server slow performance caused by IO
+    href: performance/troubleshoot-sql-io-performance.md
   - name: Updates and configuration options for high-performance workloads (SQL Server 2014 and 2012)
     href: performance/recommended-updates-configuration-options.md
   - name: Updates and configuration options for high-performance workloads (SQL Server 2017 and 2016)
@@ -126,7 +128,7 @@ items:
     href: performance/dbcc-memorystatus-monitor-memory-usage.md
 
 - name: Slow query performance
-  items: 
+  items:
   - name: Different query performance between two SQL Servers
     href: performance/troubleshoot-query-perf-between-servers.md
   - name: Decreased query performance after upgrade
@@ -134,7 +136,7 @@ items:
   - name: High CPU or high memory grants with queries that use optimized nested loops
     href: performance/decreased-perf-high-cpu-optimized-nested-loop.md
   - name: Performance degradation when common criteria compliance is enabled
-    href: performance/performance-degradation-ccc-enabled.md  
+    href: performance/performance-degradation-ccc-enabled.md
   - name: Performance degradation with new CE join containment assumption
     href: performance/cardinality-estimator-degrades-query-performance.md
   - name: Resolve last-page insert PAGELATCH_EX contention
