@@ -2,7 +2,7 @@
 title: Troubleshoot common problems with Power Automate triggers
 description: Diagnose and fix Power Automate trigger problems including trigger not firing, duplicate runs, delays, and skipped conditions.
 suite: flow
-ms.date: 07/17/2026
+ms.date: 08/07/2026
 ms.custom: sap:Flow run issues\Triggers
 ms.update-cycle: 180-days
 ms.reviewer: angieandrews, kenseongtan, kisubedi, v-aangie, v-shaywood
@@ -401,3 +401,10 @@ To find all affected flows across a tenant:
    ```
 
 1. Use `Get-AdminFlowWithMigratingTriggerUrl` to list the affected flows for each environment.
+
+
+## Update to HTTP or Teams Webhook trigger flow URL
+
+Starting on June 2, 2026, a change in the Power Automate proxy layer exposes the scale unit identifier in the HTTP trigger callback URL (for example, /direct/cu/20/workflows/... instead of /direct/workflows/...).
+
+We recommend that you update your integrations to use the new URL for better performance, but the old URL will continue to work.
