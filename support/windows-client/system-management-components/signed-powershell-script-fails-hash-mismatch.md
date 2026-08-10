@@ -4,7 +4,7 @@ description: This article provides resolutions for an issue where the execution 
 ms.date: 02/12/2026
 ms.reviewer: v-sidong,milanmil
 ms.custom:
-- sap:system management components\powershell,fix
+- sap:system management components\powershell
 - pcy:WinComm User Experience
 audience: itpro
 appliesto:
