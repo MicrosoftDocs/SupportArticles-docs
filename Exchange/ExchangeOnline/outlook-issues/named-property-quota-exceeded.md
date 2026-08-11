@@ -161,11 +161,14 @@ After the above is complete, use the following steps to repair the mailbox.
 
    ```PowerShell
    $userId = "<SMTP address or alias>"
-   $pattern = "<wildcard pattern>" # e.g., "X-DG-Ref-*" or "MyApp_Setting_*"
+   $pattern = "<wildcard pattern>" # e.g., "X-DG-*" or "MyApp_Setting_*"
    $publicStringsGuid = "00020329-0000-0000-c000-000000000046"
    $internetHeadersGuid = "00020386-0000-0000-C000-000000000046"
    $namedProperties = Get-MailboxExtendedProperty -Identity $userId | Where-Object { $_.PropertyName -like $pattern -and ($_.PropertyNamespace -eq $publicStringsGuid -or $_.PropertyNamespace -eq $internetHeadersGuid) }
    ```
+
+  > [!TIP]
+  > If you get an error when running the above, double check that $userId is populated with a valid SMTP address or alias and that $pattern is a value that matches against the property identified in the section [InternetHeaders or PublicStrings namespace](#internetheaders-or-publicstrings-namespace)
 
 2. Run the following PowerShell command to generate a comma-separated string of formatted named property identifiers:
 
