@@ -1,10 +1,10 @@
 ---
 title: Fix NDR error 550 5.6.11 in Exchange Online
-ms.date: 01/24/2024
+ms.date: 08/10/2026
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
-ms.reviewer: v-six
+ms.reviewer: v-six, v-kccross
 audience: Admin
 ms.topic: troubleshooting
 f1.keywords:
@@ -14,20 +14,16 @@ ms.custom:
   - Exchange Online
   - CSSTroubleshoot
   - CI 167832
+  - CI 12713
 search.appverid: 
 - BCS160
 - MET150
-ms.assetid: 81dafee7-26af-4d79-b174-8f78980dfafb
 description: Learn how to fix email issues for error code 5.6.11 in Exchange Online (the destination email server rejects messages with bare line feeds).
 ---
 
 # Fix NDR error "550 5.6.11" in Exchange Online
 
-It's frustrating when you get an error after sending an email message. This topic describes what you can do if you see error code 5.6.11 in a non-delivery report (also known as an NDR, bounce message, delivery status notification, or DSN).
-
-|&nbsp;|&nbsp;|&nbsp;|&nbsp;|
-|---|---|---|---|
-|:::image type="icon" source="media/email-user-icon.png":::|[I got this bounce message. How do I fix it?](#i-got-this-bounce-message-how-do-i-fix-it)|:::image type="icon" source="media/email-admin-icon.png":::|[I'm an email admin. How can I fix this?](#im-an-email-admin-how-can-i-fix-this)|
+This topic describes what you can do if you see error code 5.6.11 in a non-delivery report (also known as an NDR, bounce message, delivery status notification, or DSN).
 
 ## Why did I get this bounce message?
 
@@ -66,19 +62,3 @@ Email servers that supports the SMTP BDAT command can accept messages with bare 
 ## What's a bare line feed?
 
 A _bare line feed_ is a single line feed character (LF or ASCII 10) that isn't immediately preceded by the carriage return character (CR or ASCII 13). The line separator in an email message is supposed to be CRLF, not LF.
-
-## Still need help?
-
-[:::image type="icon" source="media/community-forum-icon.png":::](https://answers.microsoft.com/)
-
-[:::image type="icon" source="media/create-service-request-icon.png":::](https://admin.microsoft.com/AdminPortal/Home#/support)
-
-[:::image type="icon" source="media/call-support-icon.png":::](/microsoft-365/Admin/contact-support-for-business-products)
-
-## See also
-
-[Email non-delivery reports in Exchange Online](non-delivery-reports-in-exchange-online.md)
-
-[RFC 6376 DomainKeys Identified Mail (DKIM) Signatures](https://tools.ietf.org/html/rfc6376)
-
-[RFC 3030 SMTP Service Extensions for Transmission of Large and Binary Mime Messages (BDAT Support)](https://tools.ietf.org/html/rfc3030)

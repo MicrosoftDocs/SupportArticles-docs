@@ -1,10 +1,10 @@
 ---
 title: Fix NDR error 5.7.136 in Exchange Online
-ms.date: 07/24/2026
+ms.date: 08/10/2026
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
-ms.reviewer: v-six, arindamt
+ms.reviewer: v-six, arindamt, v-kccross
 audience: Admin
 ms.topic: troubleshooting
 f1.keywords:
@@ -14,6 +14,7 @@ ms.custom:
   - Exchange Online
   - CSSTroubleshoot
   - CI 167832
+  - CI 12713
 search.appverid:
 - BCS160
 - MOE150
@@ -29,10 +30,6 @@ description: Learn how to fix email issues for error code 5.7.136 in Exchange On
 This article explains how to troubleshoot Exchange Online NDR 550 5.7.136, which occurs when a mail user is configured to reject messages from external or unauthenticated senders. As a result, messages sent from outside the organization are blocked and returned to the sender with a non-delivery report. The article describes how administrators can resolve the issue by either allowing all authenticated and external senders to send messages to the mail user or by configuring an allowed senders list that permits specific external senders while maintaining restrictions for others.
 
 The rest of this article describes what you can do if you see error code 550 5.7.136 in a non-delivery report, also known as an NDR, bounce message, or delivery status notification (DSN). You see this automated notification when the recipient is a mail user that's configured to reject messages from external senders, that is, senders from outside the organization.
-
-|&nbsp;|&nbsp;|&nbsp;|&nbsp;|
-|---|---|---|---|
-|:::image type="icon" source="media/email-user-icon.png":::|[I got this bounce message. How do I fix this issue?](#i-got-this-bounce-message-how-do-i-fix-this-issue)|:::image type="icon" source="media/email-admin-icon.png":::|[I'm an email admin. How do I fix this issue?](#im-an-email-admin-how-do-i-fix-this-issue)|
 
 ## I got this bounce message. How do I fix this issue?
 
@@ -91,15 +88,3 @@ To configure the mail user's allowed senders list, open the EAC and complete the
      :::image type="content" source="media/fix-error-code-5-7-136-in-exchange-online/add-sender.png" alt-text="Screenshot of the message delivery restrictions dialog box in which you can add an allowed sender.":::
 
 1. Select **OK**, and then select **Save**.
-
-## Still need help with error code 550 5.7.136?
-
-[:::image type="icon" source="media/community-forum-icon.png":::](https://answers.microsoft.com/)
-
-[:::image type="icon" source="media/create-service-request-icon.png":::](https://admin.microsoft.com/AdminPortal/Home#/support)
-
-[:::image type="icon" source="media/call-support-icon.png":::](/microsoft-365/Admin/contact-support-for-business-products)
-
-## See also
-
-[Email non-delivery reports in Exchange Online](non-delivery-reports-in-exchange-online.md)

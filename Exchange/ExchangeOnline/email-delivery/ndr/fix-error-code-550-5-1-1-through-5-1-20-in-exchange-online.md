@@ -4,7 +4,7 @@ description: Learn how to fix email issues for error code 5.1.1 through 5.1.20 i
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
-ms.reviewer: v-six, arindamt
+ms.reviewer: v-six, arindamt, v-kccross
 audience: Admin
 ms.topic: troubleshooting
 f1.keywords:
@@ -14,13 +14,14 @@ ms.custom:
   - Exchange Online
   - CSSTroubleshoot
   - CI 167832
+  - CI 12713
 search.appverid:
 - BCS160
 - MOE150
 - MET150
 appliesto: 
   - Exchange Online
-ms.date: 07/24/2026
+ms.date: 08/10/2026
 ai-usage: ai-assisted
 ---
 
@@ -31,10 +32,6 @@ ai-usage: ai-assisted
 This article explains how to troubleshoot Exchange Online NDR errors 550 5.1.1 through 550 5.1.20, which generally indicate that the recipient can't be found or that message routing information is invalid. Common causes include misspelled or outdated email addresses, corrupted Auto-Complete entries, forwarding rules that redirect messages to invalid recipients, compromised sender accounts, or recipient domain configuration issues. For administrators, troubleshooting focuses on verifying recipient and domain configuration, checking MX records and service health, and reviewing forwarding and mail flow rules that might redirect messages to nonexistent addresses.
 
 This rest of this article describes what you can do if you see error codes 550 5.1.1 through 5.1.20 in a non-delivery report (also known as an NDR, bounce message, delivery status notification, or DSN).
-
-|&nbsp;|&nbsp;|&nbsp;|&nbsp;|
-|---|---|---|---|
-|:::image type="icon" source="media/email-user-icon.png":::|[I got this bounce message. How do I fix it?](#i-got-this-bounce-message-how-do-i-fix-it)|:::image type="icon" source="media/email-admin-icon.png":::|[I'm an email admin. What can I do to fix this?](#im-an-email-admin-what-can-i-do-to-fix-this)|
 
 ## I got this bounce message. How do I fix it?
 
@@ -142,15 +139,3 @@ This NDR can occur due to a forwarded (unintended) recipient that's configured f
 - A mail flow rule (also known as a transport rule) configured by an email admin that copies or forwards messages sent to the recipient to another invalid recipient.
 
 For more information, see [Configure email forwarding for a mailbox](/exchange/recipients-in-exchange-online/manage-user-mailboxes/configure-email-forwarding).
-
-## Still need help with error code 5.1.1 to 5.1.20?
-
-[:::image type="icon" source="media/community-forum-icon.png":::](https://answers.microsoft.com/)
-
-[:::image type="icon" source="media/create-service-request-icon.png":::](https://admin.microsoft.com/AdminPortal/Home#/support)
-
-[:::image type="icon" source="media/call-support-icon.png":::](/microsoft-365/Admin/contact-support-for-business-products)
-
-## See also
-
-[Email non-delivery reports in Office 365](non-delivery-reports-in-exchange-online.md)

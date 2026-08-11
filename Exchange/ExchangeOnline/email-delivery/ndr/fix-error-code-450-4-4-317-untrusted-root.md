@@ -11,11 +11,12 @@ ms.custom:
   - Exchange Online
   - CSSTroubleshoot
   - CI 189299
-ms.reviewer: iamcdo, stanalek, arindamt, meerak, v-trisshores
+  - CI 12713
+ms.reviewer: iamcdo, stanalek, arindamt, meerak, v-trisshores, v-kccross
 appliesto:
   - Exchange Online
 search.appverid: MET150
-ms.date: 04/17/2024
+ms.date: 08/10/2026
 ---
 
 # NDR error code 450 4.4.317 "Cannot connect to remote server [Message=UntrustedRoot]"
@@ -28,13 +29,12 @@ This NDR is generated in the following scenarios:
 
 Exchange Online doesn't fetch intermediate certificates on–demand. Therefore, a remote MTA that provides a certificate should include the full certificate chain.
 
-> [!NOTE]
-> MTAs that are managed by Exchange Online always provide the full certificate chain.
+MTAs that are managed by Exchange Online always provide the full certificate chain.
 
 ## How do I fix this?
 
 If you're a user, contact your email admin.
 
-If you're an email admin in the remote MTA organization, configure your remote MTA to provide the full certificate chain.
+If you're an email admin in the remote MTA's organization, configure your remote MTA to provide the full certificate chain.
 
-If you're an email admin in the Exchange Online organization, notify an email admin in the remote MTA organization about the NDR.
+If you're an email admin in the Exchange Online organization, notify an email admin in the remote MTA's organization about the NDR.
