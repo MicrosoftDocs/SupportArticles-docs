@@ -19,7 +19,7 @@ appliesto:
   - Outlook 2013
   - Exchange Online
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 08/11/2026
 ---
 
 # Private items aren't displayed in a shared mailbox in Outlook
@@ -53,3 +53,12 @@ To work around this issue, use any of the following methods:
 - In Outlook, add the shared mailbox as an [additional account](https://support.microsoft.com/office/add-an-email-account-to-outlook-6e27792a-9267-4aa4-8bb6-c84ef146101b) by using the email address and password of the user who has permission for that mailbox.
 
     Make sure that automapping is removed and the mailbox is not added as an additional mailbox. To learn how to remove automapping for a shared mailbox, see [How to remove automapping for a shared mailbox in Outlook for Microsoft 365](/outlook/troubleshoot/profiles-and-accounts/remove-automapping-for-shared-mailbox).
+
+
+## Client and permission model behavior
+
+Private item visibility differs depending on the client access path and permission model:
+
+- In Outlook Classic for Windows when using the legacy MAPI access path (Cached Mode and Online Mode), private items remain hidden unless the delegate is explicitly granted permission to view private items.
+- In clients that use the Exchange Online REST access path, such as Outlook on the web (OWA), new Outlook for Windows, Outlook Mobile, and Outlook Classic when operating in the REST-based shared calendar model, access granted through Full Mailbox Access can result in private items being visible.
+- Administrators who want to prevent delegates from seeing private items should use the mailbox folder-level sharing permission model. Under this model, private items (for example, IPM.Note and IPM.Appointment items) remain hidden unless the CanViewPrivateItems permission is explicitly granted.

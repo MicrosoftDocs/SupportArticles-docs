@@ -28,6 +28,8 @@ items:
       items:
         - name: Troubleshoot forms in Customer Insights - Journeys
           href: forms/troubleshooting-forms.md
+        - name: Troubleshoot reCAPTCHA issues in forms
+          href: forms/troubleshoot-recaptcha.md
     - name: General
       items:
         - name: Use Solution Health Hub to troubleshoot problems
