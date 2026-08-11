@@ -18,7 +18,7 @@ appliesto:
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard
 search.appverid: MET150
-ms.date: 01/30/2024
+ms.date: 08/11/2026
 ---
 # Outlook or OWA doesn't display full details of private appointments on shared calendars
 
@@ -39,6 +39,13 @@ To fix this issue, use one of the following methods:
 
 - Grant the user full access to the target mailbox.
 - Grant the user delegate access to the target mailbox and access to see private items.
+
+## Client and permission model behavior
+Private item visibility differs depending on the client access path and permission model:
+
+- In Outlook Classic for Windows when using the legacy MAPI access path (Cached Mode and Online Mode), private items remain hidden unless the delegate is explicitly granted permission to view private items.
+- In clients that use the Exchange Online REST access path, such as Outlook on the web (OWA), new Outlook for Windows, Outlook Mobile, and Outlook Classic when operating in the REST-based shared calendar model, access granted through Full Mailbox Access can result in private items being visible.
+- Administrators who want to prevent delegates from seeing private items should use the mailbox folder-level sharing permission model. Under this model, private items (for example, IPM.Note and IPM.Appointment items) remain hidden unless the CanViewPrivateItems permission is explicitly granted.
 
 ## More information
 

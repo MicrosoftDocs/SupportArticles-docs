@@ -55,7 +55,7 @@ items:    # Please do not delete this line, it is required for the yaml format
           href: ../windows-server/active-directory/domain-join-authentication-errors.md?context=/troubleshoot/windows-client/context/context
         - name: Troubleshoot networking errors when joining computers to a domain
           href: ../windows-server/active-directory/domain-join-networking-errors.md?context=/troubleshoot/windows-client/context/context
-    - name: User, computer, group, and object management
+    - name: Object attribute management, RID issues, and group scope
       items:
         - name: Known issues for managing Group Policy clients
           href: ./active-directory/known-issues-for-group-policy-clients.md

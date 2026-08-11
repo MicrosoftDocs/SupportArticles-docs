@@ -56,6 +56,8 @@ landingContent:
         links:
           - text: Troubleshoot forms in Customer Insights - Journeys
             url: forms/troubleshooting-forms.md
+          - text: Troubleshoot reCAPTCHA issues in forms
+            url: forms/troubleshoot-recaptcha.md
 
   # Card
   - title: General
