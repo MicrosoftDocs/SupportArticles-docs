@@ -102,14 +102,14 @@ If the noted namespace is the InternetHeaders or PublicStrings namespace, go to 
 
 #### InternetHeaders or PublicStrings namespace
 
-1. Run the following PowerShell cmdlets to create a csv list of named property definitions for your review. You can change the value of $outputPath if desired:
+1. Run the following PowerShell cmdlets to create a csv list of named property definitions for your review. You can change the value of $outputPath if desired, otherwise the below will output to the current working directory:
 
-   ```PowerShell  
+   ```PowerShell
    $userId = "<SMTP address or alias>"
    $publicStringsGuid = "00020329-0000-0000-c000-000000000046"
    $internetHeadersGuid = "00020386-0000-0000-C000-000000000046"
-   $outputPath = "C:\Temp\MailboxExtendedProperties-$userId.csv"
-
+   $outputPath = Join-Path $PWD 'MailboxExtendedProperties-$userId.csv'
+   
    Get-MailboxExtendedProperty -Identity $userId |
     Where-Object { $_.PropertyNamespace -eq $publicStringsGuid -or $_.PropertyNamespace -eq $internetHeadersGuid } |
     ForEach-Object {
@@ -121,6 +121,7 @@ If the noted namespace is the InternetHeaders or PublicStrings namespace, go to 
     } |
     Sort-Object Namespace, 'PropertyName or PropertyId' |
     Export-Csv -Path $outputPath -NoTypeInformation -Encoding UTF8
+    Write-Information "Output written to $outputPath" -InformationAction Continue
    ```
 
    The command output alphabetically lists named property identifiers, either **PropertyName** or **PropertyId**, depending on which is populated in the named property definition, and groups them by namespace. It then ouputs to a csv file in the path specified. Check for instances where the number of **PropertyName** or **PropertyId** values that share a common prefix is greater than the allowed prefix quota. For example, you might find several thousand **PropertyName** values that start with `X-DG-`.
@@ -210,7 +211,7 @@ After the above is complete, use the following steps to repair the mailbox.
    > - When the cleanup request finishes and its state shows as `Succeeded`, Exchange Online automatically schedules a mailbox move. 
    > - The move finishes the cleanup process by removing the unwanted named property definitions from the mailbox. 
    > - The move can take from a few hours to a few days, depending on the size of the mailbox and the availability of system resources in Exchange Online.
-   > - If the procedure is run again and no further properties are cleaned, there will be no relocation triggered for the mailbox.
+   > - If the procedure is run again and no further properties are cleaned, there will be no move triggered for the mailbox.
 
    > [!TIP]
    > - If the state of the cleanup request shows as `Failed`, rerun the command from Step 4 to schedule a new request.
@@ -231,9 +232,9 @@ After the above is complete, use the following steps to repair the mailbox.
 
 Collect the following output:
 
-1. Open EXO Shell and start a transcript (change the path as needed)
+1. Open EXO Shell and start a transcript (change the path if desired)
    ```PowerShell
-   Start-Transcript -Path C:\temp\Transcript.txt
+   Start-Transcript -Path '.\Transcript.txt'
    ```
  
 2. Run the Test-MailboxExtendedProperty script
@@ -242,9 +243,9 @@ Collect the following output:
    .\Test-MailboxExtendedProperty.ps1 -Identity <SMTP of affected mailbox>
    ```
  
-3. Collect the properties in xml format
+3. Collect the properties in xml format (remember to edit both values with the proper smtp address)
    ```PowerShell
-   Get-MailboxExtendedProperty -Identity <SMTP of affected mailbox> | Export-CliXml C:\temp\MailboxExtendedProperties_<SMTP of affected mailbox>.xml
+   Get-MailboxExtendedProperty -Identity <SMTP of affected mailbox> | Export-CliXml '.\MailboxExtendedProperties_<SMTP of affected mailbox>.xml'
    ```
 
 4. Stop the transcript
