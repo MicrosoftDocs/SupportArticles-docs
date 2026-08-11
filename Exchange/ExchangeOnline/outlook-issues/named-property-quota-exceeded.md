@@ -157,7 +157,7 @@ After the above is complete, use the following steps to repair the mailbox.
 > [!WARNING]
 > Incorrect use of this procedure can permanently damage a mailbox. Carefully check all the named properties that you specify. This procedure permanently deletes all instances of those properties and their associated values from messages, attachments, embedded messages, and folders. Although it's possible to cancel a scheduled cleanup request, canceling a cleanup request that has started won't undo any changes that are already made. If you have questions about the properties at issue, engage support for the add-in that is creating them.
 
-1. Run the following PowerShell commands to get the named properties that match the naming pattern (prefix) that you previously identified in the [PublicStrings namespace](#internetheaders-or-publicstrings-namespace):
+1. Run the following PowerShell commands to get the named properties that match the naming pattern (prefix) that you previously identified in the [InternetHeaders or PublicStrings namespace](#internetheaders-or-publicstrings-namespace):
 
    ```PowerShell
    $userId = "<SMTP address or alias>"
