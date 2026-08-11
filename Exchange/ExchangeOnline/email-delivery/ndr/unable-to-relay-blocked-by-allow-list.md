@@ -18,6 +18,7 @@ appliesto:
 search.appverid: MET150
 ms.date: 01/24/2024
 ---
+
 # 5.7.1 Unable to Relay: Blocked by Customer Allow List
 
 _Original KB number:_ &nbsp; 3013740

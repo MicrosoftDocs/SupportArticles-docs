@@ -1,10 +1,10 @@
 ---
 title: Fix NDR error 5.7.134 in Exchange Online
-ms.date: 07/24/2026
+ms.date: 08/10/2026
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
-ms.reviewer: v-six, arindamt
+ms.reviewer: v-six, arindamt, v-kccross
 audience: Admin
 ms.topic: troubleshooting
 f1.keywords:
@@ -14,6 +14,7 @@ ms.custom:
   - Exchange Online
   - CSSTroubleshoot
   - CI 167832
+  - CI 12713
 search.appverid:
 - BCS160
 - MOE150
@@ -29,10 +30,6 @@ ai-usage: ai-assisted
 This article explains how to troubleshoot Exchange Online NDR 550 5.7.134, which occurs when a mailbox is configured to reject messages from external or unauthenticated senders. As a result, messages sent from outside the organization are blocked and returned to the sender with a non-delivery report. The article describes how administrators can resolve the issue by either allowing all external senders to send messages to the mailbox or by configuring the mailbox's allowed senders list to permit specific external senders while continuing to restrict all others.
 
 The rest of this article describes what you can do if you see error code 550 5.7.134 in a non-delivery report also known as an NDR, bounce message, delivery status notification, or DSN. You see this automated notification when the recipient is a mailbox that's configured to reject messages from external senders (senders from outside the organization).
-
-|&nbsp;|&nbsp;|&nbsp;|&nbsp;|
-|---|---|---|---|
-|:::image type="icon" source="media/email-user-icon.png":::|[I got this bounce message. How do I fix this issue?](#i-got-this-bounce-message-how-do-i-fix-this-issue)|:::image type="icon" source="media/email-admin-icon.png":::|[I'm an email admin. How do I fix this issue?](#im-an-email-admin-how-do-i-fix-this-issue)|
 
 ### I got this bounce message. How do I fix this issue?
 
@@ -99,15 +96,3 @@ To configure the mailbox's allowed senders list, complete the following steps:
 1. Select **Save**.
 
    :::image type="content" source="media/fix-error-code-5-7-134-in-exchange-online/mdr-screen-after-adding-sender.png" alt-text="The screen on which the added senders are saved into the group.":::
-
-## Still need help with error code 550 5.7.134?
-
-[:::image type="icon" source="media/community-forum-icon.png":::](https://answers.microsoft.com/)
-
-[:::image type="icon" source="media/create-service-request-icon.png":::](https://admin.microsoft.com/AdminPortal/Home#/support)
-
-[:::image type="icon" source="media/call-support-icon.png":::](/microsoft-365/Admin/contact-support-for-business-products)
-
-## See also
-
-[Email non-delivery reports in Exchange Online](non-delivery-reports-in-exchange-online.md)

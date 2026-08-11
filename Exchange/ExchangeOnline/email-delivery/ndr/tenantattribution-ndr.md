@@ -23,6 +23,7 @@ appliesto:
 search.appverid: MET150
 ms.date: 01/24/2024
 ---
+
 # "550 5.7.64 TenantAttribution" when sending emails through Microsoft 365
 
 _Original KB number:_ &nbsp; 3212877

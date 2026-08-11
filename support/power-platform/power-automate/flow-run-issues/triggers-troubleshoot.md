@@ -2,7 +2,7 @@
 title: Troubleshoot common problems with Power Automate triggers
 description: Diagnose and fix Power Automate trigger problems including trigger not firing, duplicate runs, delays, and skipped conditions.
 suite: flow
-ms.date: 07/17/2026
+ms.date: 08/07/2026
 ms.custom: sap:Flow run issues\Triggers
 ms.update-cycle: 180-days
 ms.reviewer: angieandrews, kenseongtan, kisubedi, v-aangie, v-shaywood
@@ -332,7 +332,6 @@ For triggers, the values of expressions are calculated only when the flow is sav
 >
 > - This change affects only flows that have HTTP or Teams Webhook triggers.
 > - This change affects only flows in current environment architecture (Logic Apps). If your environment is Self Host MultiTenant (MTA), you're not affected. To learn which environment architecture your flows are in, see [Power Automate environments move to new architecture](/power-automate/environment-architecture).
-> - This notice doesn't affect sovereign clouds.
 
 Starting on November 30, 2025, Power Automate flows with [HTTP triggers](/power-automate/oauth-authentication?tabs=classic-designer) or [Teams Webhook triggers](/connectors/teams/?tabs=text1%2Cdotnet#microsoft-teams-webhook) that have `logic.azure.com` in the URL move to a new URL. This change is part of an infrastructure upgrade to improve execution speed and provide new features. For more information, see [Power Automate environments move to new architecture](/power-automate/environment-architecture).
 
@@ -401,3 +400,10 @@ To find all affected flows across a tenant:
    ```
 
 1. Use `Get-AdminFlowWithMigratingTriggerUrl` to list the affected flows for each environment.
+
+
+## Update to HTTP or Teams Webhook trigger flow URL
+
+Starting on June 2, 2026, a change in the Power Automate proxy layer exposes the scale unit identifier in the HTTP trigger callback URL (for example, /direct/cu/20/workflows/... instead of /direct/workflows/...).
+
+We recommend that you update your integrations to use the new URL for better performance, but the old URL will continue to work.

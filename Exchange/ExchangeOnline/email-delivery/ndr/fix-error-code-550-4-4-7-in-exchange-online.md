@@ -1,10 +1,10 @@
 ---
 title: Fix NDR error 550 4.4.7 in Exchange Online
-ms.date: 07/24/2026
+ms.date: 08/10/2026
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
-ms.reviewer: arindamt
+ms.reviewer: arindamt, v-kccross
 audience: Admin
 ms.topic: troubleshooting
 f1.keywords:
@@ -14,6 +14,7 @@ ms.custom:
   - Exchange Online
   - CSSTroubleshoot
   - CI 167832
+  - CI 12713
 search.appverid:
 - BCS160
 - MOE150
@@ -37,10 +38,6 @@ This article explains how to troubleshoot Exchange Online NDR 550 4.4.7, a persi
 For more information, see the [Causes for error code 4.4.7](#causes-for-error-code-447) section later in this article.
 
 Use the information in the NDR to help you decide how to fix the problem.
-
-|&nbsp;|&nbsp;|&nbsp;|&nbsp;|&nbsp;|&nbsp;|
-|---|---|---|---|---|---|
-|:::image type="icon" source="media/email-user-icon.png":::|[I got this bounce message. How do I fix it?](#i-got-this-bounce-message-how-do-i-fix-it)|:::image type="icon" source="media/email-admin-icon.png":::|[I'm an email admin. How do I fix this?](#im-an-email-admin-how-do-i-fix-this)|:::image type="icon" source="media/help-icon.png":::|[Causes for error code 4.4.7](#causes-for-error-code-447)|
 
 ## I got this bounce message. How do I fix it?
 
@@ -101,49 +98,34 @@ The possible causes of this error are:
 If you receive 4.4.7 NDR with "Transient Failure during recipients lookup **AmbiguousRecipientTransientException**" error, it indicates Exchange Online couldn't uniquely resolve the recipient object. Exchange found multiple possible directory objects matching the same recipient, and the ambiguity is treated as a transient condition.
 
 Common causes include:
+
 - Duplicate mail-enabled objects in Entra ID / Exchange Online:
 
   - Mailbox and MailUser sharing the same SMTP address.
   - Mailbox and Mail Contact with the same proxy address.
   - Duplicate MailUsers or guest user created during migration.
 
-- Hybrid directory synchronization issues:
-  
-    - Object exists in both on-premises and Exchange Online with overlapping proxy addresses.
+- Hybrid directory synchronization issues, for example, the object exists in both on-premises and Exchange Online with overlapping proxy addresses.
 
 - Duplicate or conflicting proxy addresses:
 
   - Same SMTP address present on multiple recipients.
   - X500, SIP, or other proxy address conflicts in some scenarios.
 
-- Temporary directory inconsistency:
-  - Recent recipient changes aren't fully propagated through the service.
-
+- Temporary directory inconsistency, for example, recent recipient changes aren't fully propagated through the service.
 
 ## Details for error code 4.4.7
 
 The NDR from Exchange Online for this specific error might contain some or all of the following information:
 
-- **User information section**
+### User information section
 
-  - The server tries to deliver this message but can't. It stops trying. Try sending this message again. If the problem continues, contact your help desk.
+- The server tries to deliver this message but can't. It stops trying. Try sending this message again. If the problem continues, contact your help desk.
 
-- **Diagnostic information for administrators section**
+### Diagnostic information for administrators section
 
-  - `#550 4.4.7 QUEUE.Expired; message expired ##`
+- `#550 4.4.7 QUEUE.Expired; message expired ##`
 
-  - The rejecting system considers the message too old, either because it remained on that host too long or because the time-to-live value specified by the sender of the message was exceeded.
+- The rejecting system considers the message too old, either because it remained on that host too long or because the time-to-live value specified by the sender of the message was exceeded.
 
-  - `450 4.7.0 Proxy session setup failed on Frontend with '451 4.4.0 Primary target IP address responded with ...` Be sure to record the error that follows this string and the last end point attempted.
-
-## Still need help with error code 4.4.7?
-
-[:::image type="icon" source="media/community-forum-icon.png":::](https://answers.microsoft.com/)
-
-[:::image type="icon" source="media/create-service-request-icon.png":::](https://admin.microsoft.com/AdminPortal/Home#/support)
-
-[:::image type="icon" source="media/call-support-icon.png":::](/microsoft-365/Admin/contact-support-for-business-products)
-
-## See also
-
-[Email non-delivery reports in Exchange Online](non-delivery-reports-in-exchange-online.md)
+- `450 4.7.0 Proxy session setup failed on Frontend with '451 4.4.0 Primary target IP address responded with ...` Be sure to record the error that follows this string and the last end point attempted.
