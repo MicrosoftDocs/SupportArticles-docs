@@ -1,7 +1,7 @@
 ---
 title: Collect network data for AKS troubleshooting
 description: Collect AKS networking diagnostic data to resolve connectivity issues faster and reduce support case back-and-forth. Learn what data to gather for your symptom.
-ms.date: 07/28/2026
+ms.date: 08/12/2026
 author: kaushika-msft
 ms.author: kaushika
 ms.reviewer: chiragpa, arfallas, v-leedennis, v-weizhu
@@ -35,7 +35,7 @@ This article is a self-service data collection guide for Azure Kubernetes Servic
 
 Follow the diamonds. The green boxes are the section that you should go to and collect data from. If more than one path applies to your symptom, collect data for each section.
 
-:::image type="content" source="media/aks-networking-customer-data-collection/aks-network-troubleshooting-decision-flowchart.png" alt-text="Screenshot of an AKS network troubleshooting decision tree flowchart with branching decision points." lightbox="media/aks-networking-customer-data-collection/aks-network-troubleshooting-decision-flowchart.png":::
+:::image type="content" source="media/aks-networking-customer-data-collection/aks-network-troubleshooting-decision-flowchart.svg" alt-text="Screenshot of an AKS network troubleshooting decision tree flowchart with branching decision points." lightbox="media/aks-networking-customer-data-collection/aks-network-troubleshooting-decision-flowchart.svg":::
 
 ### Quick index
 
