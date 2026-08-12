@@ -91,7 +91,7 @@ END
 
 #### 1.2 Examine the output
 
-There are several scenarios that can cause a query to run for a long time: long execution, long wait, and long compilation. For more information about why a query might run slowly, see [Running vs. Waiting: why are queries slow?](troubleshoot-slow-running-queries.md#running-vs-waiting-why-are-queries-slow)
+There are several scenarios that can cause a query to run for a long time: long execution, long wait, and long compilation. For more information about why a query might run slowly, see [Running vs. waiting: why are queries slow in SQL Server?](troubleshoot-slow-running-queries.md#running-vs-waiting-why-are-queries-slow-in-sql-server)
 
 ##### Long execution time
 

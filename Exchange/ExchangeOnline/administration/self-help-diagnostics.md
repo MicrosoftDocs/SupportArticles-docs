@@ -1,6 +1,6 @@
 ---
 title: Self-help diagnostics for issues in Exchange Online and Outlook
-description: Lists diagnostics to troubleshoot issues in Exchange Online and Outlook.
+description: Provides a list of diagnostics to troubleshoot issues in Exchange Online and Outlook.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -16,29 +16,22 @@ appliesto:
   - Exchange Online
   - Outlook
 search.appverid: MET150
-ms.date: 07/16/2026
+ms.date: 08/12/2026
 ---
 # Self-help diagnostics for issues in Exchange Online and Outlook
 
-It's vital that administrators be able to diagnose and resolve issues quickly in Exchange Online and Outlook. To support this effort, the Exchange and Outlook support teams have released some new features in the Microsoft 365 admin center.
+## Summary
 
-Currently, we provide diagnostics through text analytics. It's important to note that while these diagnostics can't make automatic changes to your tenant without your consent, they do offer insights into known issues, and provide instructions to fix those issues quickly. We also want to make it easier for you to find our diagnostics within the current experience. Therefore, we have created a new set of queries to help administrators.
+As an administrator, you need to diagnose and quickly resolve issues in Exchange Online and Outlook. Both the Microsoft 365 admin center and the Exchange admin center (EAC) provide diagnostics that you can run to troubleshoot various scenarios. While these diagnostics can't make automatic changes to your tenant without your consent, they offer insights into known issues and provide instructions to fix those issues quickly.
 
 > [!NOTE]
-> These diagnostics aren't available for the GCC High or DoD environments, or for Microsoft 365 operated by 21Vianet in the Microsoft 365 admin center.  
-> However, a subset of these diagnostics is available in Exchange Online PowerShell and the Exchange admin center (EAC).
+> The diagnostics in the Microsoft 365 admin center aren't available for the GCC High and DoD environments, and for Microsoft 365 operated by 21Vianet. However, a subset of these diagnostics can be accessed by using Exchange Online PowerShell or the Exchange admin center (EAC). These diagnostics might be available for the GCC High and DoD environments, and for Microsoft 365 operated by 21Vianet.
 
-|Example for an Exchange Online issue|Example for an Outlook issue|
-|----------|----------|
-|:::image type="content" source="media/self-help-diagnostics/diagnostics-exchange.png" alt-text="Screenshot of the diagnostics for an Exchange Online issue.":::|:::image type="content" source="media/self-help-diagnostics/diagnostics-outlook.png" alt-text="Screenshot of the diagnostics for an Outlook issue.":::|
+## Scenarios covered by the diagnostics in the Microsoft 365 admin center
 
-When IT admins run customer diagnostics in the Microsoft 365 admin center to resolve issues without logging support requests, Microsoft will make donations to global nonprofit organizations.
+In the Microsoft 365 admin center, select **Help & support** to launch the self-help diagnostics experience. Describe the problem that you want to resolve, and the appropriate diagnostics are surfaced through text analytics of the problem description. 
 
-For more information, see [Diagnostics for Social Good](https://aka.ms/DiagnosticsforSocialGood).
-
-## What scenarios are currently covered?
-
-Several diagnostics currently cover the various areas within Exchange Online and Outlook. Each diagnostic is listed below together with a brief description of its function and shortcut command.
+Several diagnostics currently cover the various areas within Exchange Online and Outlook. Each diagnostic is listed in the following table together with a brief description of its function and shortcut command.
 
 |Diagnostic|Description|Shortcut Link|Support article|
 |---|---|---|---|
@@ -55,7 +48,6 @@ Several diagnostics currently cover the various areas within Exchange Online and
 |Non-delivery report (NDR) diagnostics|Provide additional information about NDRs that are received through email messages.|[Run Tests: Email NDR](https://aka.ms/PillarEmailNDR)|[Email non-delivery reports in Exchange Online](/exchange/mail-flow-best-practices/non-delivery-reports-in-exchange-online/non-delivery-reports-in-exchange-online)|
 |Archive mailbox diagnostics|Check and identify issues about mailbox archiving.|[Run Tests: Archive Mailbox](https://aka.ms/PillarArchiveMailbox)|[Enable archive mailboxes in the Microsoft Purview compliance portal](/microsoft-365/compliance/enable-archive-mailboxes)|
 |Outlook user password prompt diagnostics|Diagnose Outlook password prompt issues for users by running several checks on possible service-side settings (root causes) so that a tenant admin can quickly fix the issues without involving the users.|[Run Tests: Outlook Password Prompt](https://aka.ms/PillarOutlookPasswordPrompt)|[Fix Outlook password prompt issue](/outlook/troubleshoot/authentication/continually-prompts-password-office-365)|
-|Retention policy diagnostics for a user mailbox|Check retention policy settings on a user mailbox.|[Run Tests: Retention Policy on a user mailbox](https://aka.ms/PillarRetentionPolicy)|[Retention tags and retention policies in Exchange Online](/exchange/security-and-compliance/messaging-records-management/retention-tags-and-policies)|
 |DomainKeys Identified Mail (DKIM) diagnostics|Validate that DKIM signing is configured correctly and the correct DNS entries have been published.|[Run Tests: DKIM](https://aka.ms/diagdkim)|[Use DKIM to validate outbound email sent from your custom domain](/microsoft-365/security/office-365-security/use-dkim-to-validate-outbound-email)|
 |Compromised Account diagnostics|Identify suspicious activities against an account and return information that can be used to recover the account if compromised.|[Run Tests: Compromised Account](https://aka.ms/diagca)|[Responding to a compromised email account](/microsoft-365/security/office-365-security/responding-to-a-compromised-email-account)|
 |Email threat policies diagnostics for a recipient|List threat policies in [the built-in security features for all cloud mailboxes](/defender-office-365/eop-about) and in [Microsoft Defender for Office 365](/defender-office-365/mdo-about) that apply to a received message or a recipient, and identify the inbound connector used for the message. | [Run Tests: Email Threat Policies](https://aka.ms/mdopolicy)|[Order and precedence of email protection](/defender-office-365/how-policies-and-protections-are-combined)|
@@ -64,4 +56,14 @@ Several diagnostics currently cover the various areas within Exchange Online and
 |Tenant threat policies health check|Check for coverage gaps related to Safe Links, Safe Attachments, Zero-hour auto purge (ZAP), and Enhanced Filtering configuration.|[Run Tests: Tenant Health Check](https://aka.ms/thc)| [Tune Microsoft Defender for Office 365](/defender-office-365/step-by-step-guides/tune-microsoft-defender-for-office-365)|
 | Blocked Sender History | View the detailed listing and delisting history for a sender, along with their MFA status. Useful when investigating why Defender for Office 365 restricted a sender. | [Run Tests: Sender History](https://aka.ms/senderhistory) | [Remove blocked users from the Restricted entities page](/defender-office-365/outbound-spam-restore-restricted-users) |
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+## Scenarios covered by the diagnostics in the EAC
+
+In the EAC, select **Troubleshoot** > **Diagnostics** to see a list of available diagnostics. The diagnostics listed in the following table are available both in the EAC and in Exchange Online PowerShell.
+
+|Diagnostic|Description|In Exchange Online PowerShell|
+|---|---|---|
+|[Accepted Domain](https://admin.exchange.microsoft.com/#/troubleshoot/diagnostics)| Investigate and resolve accepted domain setup and validation issues that can affect mail flow.|[Invoke-ProvisioningAcceptedDomainDiagnostic](/powershell/module/exchangepowershell/invoke-provisioningaccepteddomaindiagnostic)|
+|[Company Object](https://admin.exchange.microsoft.com/#/troubleshoot/diagnostics)|Review and resolve tenant-level company object provisioning when organization settings are not applied as expected.|[Invoke-ProvisioningCompanyObjectDiagnostic](/powershell/module/exchangepowershell/invoke-provisioningcompanyobjectdiagnostic)|
+|[RBAC User Compare](https://admin.exchange.microsoft.com/#/troubleshoot/diagnostics)|Compare RBAC assignments between users and identify permission differences.|[Invoke-ProvisioningVerifyRbacDiagnostic](/powershell/module/exchangepowershell/invoke-provisioningverifyrbacdiagnostic)|
+|[Recipient](https://admin.exchange.microsoft.com/#/troubleshoot/diagnostics)|Troubleshoot and resolve recipient provisioning problems for a specific mailbox, contact, or group identity.|[Invoke-ProvisioningRecipientDiagnostic](/powershell/module/exchangepowershell/invoke-provisioningrecipientdiagnostic)|
+|[Verify RBAC](https://admin.exchange.microsoft.com/#/troubleshoot/diagnostics)|Validate RBAC access for a cmdlet and understand why a user can or can't run it.|[Invoke-ProvisioningVerifyRbacDiagnostic](/powershell/module/exchangepowershell/invoke-provisioningverifyrbacdiagnostic)|

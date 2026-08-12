@@ -29,7 +29,7 @@ Examples of how to calculate approximate wait duration:
            AS cumulative_elapsed_time
    FROM sys.dm_exec_query_stats qs
            CROSS apply sys.Dm_exec_sql_text (sql_handle) t
-   WHERE (qs.total_elapsed_time - qs.total_worker_time) / qs.total_elapsed_time
+   WHERE 1.0 * (qs.total_elapsed_time - qs.total_worker_time) / NULLIF(qs.total_elapsed_time, 0)
            > 0.2
    ORDER BY qs.total_elapsed_time / qs.execution_count DESC
    ```
