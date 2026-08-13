@@ -6982,13 +6982,11 @@
     },
     {
       "source_path": "support/sql/linux/release-history-2017.md",
-      "redirect_url": "/troubleshoot/sql/releases/linux/release-history-2017",
-      "redirect_document_id": true
+      "redirect_url": "/troubleshoot/sql/releases/linux/download-and-install-latest-updates-linux"
     },
     {
       "source_path": "support/sql/linux/release-history-2019.md",
-      "redirect_url": "/troubleshoot/sql/releases/linux/release-history-2019",
-      "redirect_document_id": true
+      "redirect_url": "/troubleshoot/sql/releases/linux/download-and-install-latest-updates-linux"
     },
     {
       "source_path": "support/windows-client/shell-experience/disabling-autoplay-cause-hotstart-buttons-not-working.md",
@@ -6997,8 +6995,7 @@
     },
     {
       "source_path": "support/sql/linux/release-history-2022.md",
-      "redirect_url": "/troubleshoot/sql/releases/linux/release-history-2022",
-      "redirect_document_id": true
+      "redirect_url": "/troubleshoot/sql/releases/linux/download-and-install-latest-updates-linux"
     },
     {
       "source_path": "support/azure/virtual-machine-scale-sets/index.md",
@@ -15885,6 +15882,22 @@
     {
       "source_path": "SkypeForBusiness/SkypeServer/skype-server-welcome.yml",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "support/sql/releases/linux/release-history-2017.md",
+      "redirect_url": "/troubleshoot/sql/releases/linux/download-and-install-latest-updates-linux"
+    },
+    {
+      "source_path": "support/sql/releases/linux/release-history-2019.md",
+      "redirect_url": "/troubleshoot/sql/releases/linux/download-and-install-latest-updates-linux"
+    },
+    {
+      "source_path": "support/sql/releases/linux/release-history-2022.md",
+      "redirect_url": "/troubleshoot/sql/releases/linux/download-and-install-latest-updates-linux"
+    },
+    {
+      "source_path": "support/sql/releases/linux/release-history-2025.md",
+      "redirect_url": "/troubleshoot/sql/releases/linux/download-and-install-latest-updates-linux"
     }
   ]
 }
