@@ -1,7 +1,7 @@
 ---
 title: Collect network data for AKS troubleshooting
-description: Collect AKS networking diagnostic data to resolve connectivity issues faster and reduce support case back-and-forth. Learn what data to gather for your symptom.
-ms.date: 08/12/2026
+description: Collect network diagnostic data for AKS troubleshooting to resolve connectivity issues faster and reduce support case back-and-forth. Learn what to gather.
+ms.date: 08/13/2026
 author: kaushika-msft
 ms.author: kaushika
 ms.reviewer: chiragpa, arfallas, v-leedennis, v-weizhu
@@ -13,7 +13,7 @@ ms.custom: sap:Connectivity
 
 ## Summary
 
-This article is a self-service data collection guide for Azure Kubernetes Service (AKS) customers who experience networking problems. Collect the data for the scenario that best matches your symptoms *before* (or while) you open a support case. Having this evidence ready reduces back-and-forth and shortens the time to resolution.
+This self-service guide explains how to collect network diagnostic data for AKS troubleshooting. Match your networking symptom to a scenario and gather the evidence before or while you open a support case to reduce back-and-forth and shorten the time to resolution.
 
 ## How to use this guide
 
@@ -35,7 +35,7 @@ This article is a self-service data collection guide for Azure Kubernetes Servic
 
 Follow the diamonds. The green boxes are the section that you should go to and collect data from. If more than one path applies to your symptom, collect data for each section.
 
-:::image type="content" source="media/aks-networking-customer-data-collection/aks-network-troubleshooting-decision-flowchart.svg" alt-text="Screenshot of an AKS network troubleshooting decision tree flowchart with branching decision points." lightbox="media/aks-networking-customer-data-collection/aks-network-troubleshooting-decision-flowchart.svg":::
+:::image type="content" source="media/aks-networking-customer-data-collection/aks-network-troubleshoot-decision-flowchart.png" alt-text="Screenshot of an AKS network troubleshooting decision tree flowchart with branching decision points." lightbox="media/aks-networking-customer-data-collection/aks-network-troubleshoot-decision-flowchart.png":::
 
 ### Quick index
 
