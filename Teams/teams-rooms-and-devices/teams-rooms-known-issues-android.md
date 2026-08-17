@@ -23,7 +23,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 07/09/2026
+ms.date: 08/17/2026
 ---
 # Known issues with Teams on Android devices
 
@@ -54,6 +54,7 @@ ms.date: 07/09/2026
 |Unable to save app configuration settings in the Teams admin center.|In the Microsoft Teams admin center you're not able to access the **Allowed apps** feature to remove applications that're installed on Teams Phone devices. This feature has been rolled back temporarily.|No workaround is available at this time.|
 |Can't configure ringtones for line keys on my device.|When you use line keys on a Yealink, Audiocodes, or Poly device that is provisioned with a Teams Shared Space license, you can't configure ringtones for individual line keys.|Use a user license, such as an E5 license, to configure a ringtone for a line key. 
 Use the following steps:<br/><ol><li>On the home screen, select the **Line Keys** app on a touch-enabled device.<br/>On a non-touch device, select an assigned line key to configure a ringtone.</li><li>Using your finger, long press on an assigned line key and select **Manage Ringtone**.|
+|Basic Calling displays instead of Advanced Calling.| You're using a Teams Shared Devices license that has the sign-in mode set to Common Area Phone (CAP) and is enabled for Advanced Calling. However, you see the Basic Calling experience instead of the expected Advanced Calling experience. This issue occurs after you update the device to version 1449/1.0.94.2026220406.| Use one of the following workarounds:<ol><li> [Change the sign-in mode to UserSignIn by using the Teams IP Phone policy](/microsoftteams/phones/set-up-common-area-phones).</li><li>[Re-enable Advanced Calling in the Microsoft Teams admin center](/microsoftteams/phones/set-up-common-area-phones#turn-on-advanced-calling-in-teams-admin-center).</li><li>[Enable Advanced Calling directly on the device](/microsoftteams/phones/set-up-common-area-phones#turn-on-advanced-calling-from-a-teams-phone-device).</li></ol>|
 
 ## Limitations
 
