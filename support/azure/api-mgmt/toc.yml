@@ -1,14 +1,15 @@
+items:
 - name: Welcome
   href: welcome-api-mgmt.yml
-- name: Blank response is returned
-  href: availability/api-return-blank-response.md
-- name: HTTP 403 - Forbidden issues
-  href: availability/request-throttling-http-403.md
-- name: HTTP 404 and 500 status codes
-  href: availability/soap-based-api-return-404-http-code.md
-- name: Unauthorized errors (401)
-  href: availability/unauthorized-errors-invoke-apis.md
-- name: Performance issues in API calls
-  href: availability/performance-hit-api-calls.md
 - name: Troubleshooting overview
   href: availability/apim-troubleshooting-series.md
+- name: Scenario 1 - API returns blank responses
+  href: availability/api-return-blank-response.md
+- name: Scenario 2 - SOAP-based API returns HTTP 404 and HTTP 500 errors
+  href: availability/soap-based-api-return-404-http-code.md
+- name: Scenario 3 - HTTP 401 errors encountered when using APIs
+  href: availability/unauthorized-errors-invoke-apis.md
+- name: Scenario 4 - Performance issues in API calls
+  href: availability/performance-hit-api-calls.md
+- name: Scenario 5 - HTTP 403 and HTTP 429 errors due to request throttling
+  href: availability/request-throttling-http-403.md
