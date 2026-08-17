@@ -1,32 +1,36 @@
 ---
-title: Azure API Management Troubleshooting Series
-description: A brief description about troubleshooting series articles for API Management (APIM).
-ms.date: 04/24/2022
+title: Azure API Management troubleshooting series
+description: Explore the Azure API Management troubleshooting series to diagnose blank responses, HTTP errors, throttling, and API performance issues. Start troubleshooting.
+ms.date: 08/13/2026
+manager: dcscontentpm
 ms.service: azure-api-management
+ms.topic: troubleshooting
 ms.author: kaushika
 author: kaushika-msft
-ms.reviewer: 
+ms.reviewer: kaushika
 ms.custom: sap:Availability or Unexpected API Responses
 ---
-# Azure API Management Troubleshooting Series
+# Azure API Management troubleshooting series
 
 _Original product version:_ &nbsp; Cloud and Online Services  
 _Original KB number:_ &nbsp; 4466541
 
 ## Summary
 
-These troubleshooting series articles provide some of the scenarios, which would be helpful for you having intermediate experience in Azure API Management (APIM). To troubleshoot these issues, you need to have some basic understanding of how APIM works along with the key concepts and terminology associated with it. You can refer [this link](/azure/api-management/api-management-key-concepts) if you are at beginner or Rookie level with regards to APIM.
+This article introduces the Azure API Management troubleshooting series. Use these scenario-based articles to diagnose and resolve identified issues.
 
-[Here](https://github.com/prchanda/apimlab) are the prerequisites or instructions that you need to follow to set up the lab.
+To troubleshoot these issues, you need to have a basic understanding of how API Management works along with key concepts and terminology. For more information, see [What is Azure API Management?](/azure/api-management/api-management-key-concepts).
 
-This troubleshooting series will not only help you to get accustomed with various APIM policies but also give you an idea how to leverage [APIM inspector trace](/azure/api-management/api-management-howto-api-inspector) to debug issues related to failed API calls, exceptions thrown from policies, performance problems, etc.
+Make sure you follow the lab setup instructions as per the [API Management troubleshooting series lab instructions](https://github.com/prchanda/apimlab).
 
-Troubleshooting scenarios:
+This troubleshooting series helps you get familiar with various API Management policies. It also gives you more clarity on how to leverage an [API Management inspector trace](/azure/api-management/api-management-howto-api-inspector) to resolve issues related to the identified scenarios.
 
-- [Scenario 1 - API is returning blank response](api-return-blank-response.md).
-- [Scenario 2 - SOAP based API is returning 404 and 500 HTTP status codes](soap-based-api-return-404-http-code.md).
-- [Scenario 3 - Unauthorized errors (401) while invoking APIs](unauthorized-errors-invoke-apis.md).
-- [Scenario 4 - Performance hit in API calls](performance-hit-api-calls.md).
-- [Scenario 5 - Request throttling problems and HTTP 403 - Forbidden issues](request-throttling-http-403.md).
+## API Management troubleshooting scenarios
 
- 
+The following scenarios are covered in this troubleshooting series:
+
+- [Scenario 1 - Troubleshoot API blank responses](api-return-blank-response.md).
+- [Scenario 2 - Troubleshoot SOAP-based API HTTP 404 and HTTP 500 errors](soap-based-api-return-404-http-code.md).
+- [Scenario 3 - Troubleshoot HTTP 401 errors encountered when using APIs](unauthorized-errors-invoke-apis.md).
+- [Scenario 4 - Troubleshoot performance issues in API calls](performance-hit-api-calls.md).
+- [Scenario 5 - Troubleshoot HTTP 403 and HTTP 429 errors due to request throttling](request-throttling-http-403.md).

@@ -1,43 +1,49 @@
 ---
-title: Azure API Management Troubleshooting Scenario 5 - Request throttling problems and HTTP 403 - Forbidden issues
-description: Provides troubleshooting steps to an issue in which GetPosts operation throws HTTP 403 - Forbidden error.
-ms.date: 08/14/2020
+title: Azure API Management troubleshooting scenario 5 - HTTP 403 and HTTP 429 errors due to request throttling
+description: Troubleshoot Azure API Management HTTP 403 and HTTP 429 errors caused by request throttling. Follow these steps to identify and resolve restrictive policies.
+ms.date: 08/13/2026
 ms.service: azure-api-management
+ms.topic: troubleshooting
+manager: dcscontentpm
 ms.author: kaushika
 author: kaushika-msft
-ms.reviewer: 
+ms.reviewer: kaushika
 ms.custom: sap:Availability or Unexpected API Responses
 ---
-# Request throttling problems and HTTP 403 - Forbidden issues
+# Troubleshoot HTTP 403 and HTTP 429 errors due to request throttling
 
-Referring to the article on [Azure API Management Troubleshooting Series](apim-troubleshooting-series.md), this is the fifth scenario of the lab. Make sure you have followed the lab setup instructions as per [this](https://github.com/prchanda/apimlab), to recreate the problem.
+## Summary
+
+This article explains how to troubleshoot HTTP 403 and HTTP 429 errors caused by Azure API Management request throttling policies, so you can identify restrictive policies and restore expected API behavior. 
+
+This article is the fifth scenario of the [Azure API Management troubleshooting series](apim-troubleshooting-series.md) lab. Ensure you follow the lab setup instructions as per the [API Management troubleshooting series lab instructions](https://github.com/prchanda/apimlab).
 
 _Original product version:_ &nbsp; API Management Service  
 _Original KB number:_ &nbsp; 4464928
 
 ## Symptoms
 
-The **Resources** API fetches user's personal details, social media posts, comments, and photos and utilizes the response returned for a machine learning project. Strangely after few days of using it, **GetPosts** operation started throwing **HTTP 403 - Forbidden** error whereas the other operations are working fine as expected.
+The **Resources** API fetches a user's personal details, social media posts, comments, and photos and uses the response for a machine learning project. The **GetPosts** operation starts to return **HTTP 403 - Forbidden** errors while the other operations work as expected. 
 
-> {  
-   "statusCode": 403,  
-   "message": "Forbidden"  
-}
+The following example shows the error message returned by the **GetPosts** operation:
 
-Apart from the above, we are also encountering **HTTP 429 - Too many requests** error while invoking **GetComments** operation for every second request. The issue automatically gets resolve after 10 secs, however it reoccurs once the first call to API is made again. The behavior is not observed for the other operations.
+> "statusCode": 403,  
+> "message": "Forbidden"  
 
-> {  
-   "statusCode": 429,  
-   "message": "Rate limit is exceeded. Try again in 5 seconds."  
-}
+You might also encounter **HTTP 429 - Too many requests** errors while performing the **GetComments** operation for every second request. The issue resolves automatically after 10 seconds. However, it recurs once the first call to the API is made again. This behavior doesn't happen for the other operations. 
 
-## Troubleshooting steps
+The following example shows the error message returned by the **GetComments** operation:
 
-- **HTTP 403 - Forbidden** error can be thrown when there is any access restriction policy implemented.
-- Check the [APIM inspector trace](/azure/api-management/api-management-howto-api-inspector) and you should notice the existence of a 'ip-filter' policy that filters (allows/denies) calls from specific IP addresses and/or address ranges.
-- To check the scope of the 'ip-filter' policy, select the **Calculate effective policy** button. If you don't see any access restriction policy implemented at any scopes, next validation step should be done at product level, by navigating to the associated product and then click on Policies option.
+> "statusCode": 429,  
+> "message": "Rate limit is exceeded. Try again in 5 seconds."
 
-    ```xml
+## Troubleshooting 
+
+### HTTP 403 - Forbidden error 
+
+This error occurs when an access restriction policy is implemented. Check the [API Management inspector trace](/azure/api-management/api-management-howto-api-inspector). You should notice the existence of an `ip-filter` policy that filters (allows or denies) calls from specific IP addresses and address ranges as shown in the following example:
+
+```xml
     <inbound>
         <base />
         <choose>
@@ -48,12 +54,17 @@ Apart from the above, we are also encountering **HTTP 429 - Too many requests** 
             </when>
         </choose>
     </inbound>
-    ```
+```
 
-- For the second issue (**HTTP 429 - Too many requests**) we will follow the same procedure by checking the APIM inspector trace and check if there is any 'rate-limit' or 'rate-limit-by-key' policy implemented at any scope.
-- If you calculate the effective policy, you should notice an access restriction policy (rate-limit-by-key) implemented at Global scope, i.e under 'Inbound processing' in 'All APIs' option.
+To check the scope of the `ip-filter` policy, select **Calculate effective policy**. If you don't see any access restriction policy implemented at any scopes, check the product level. Go to the associated product and then select **Policies**.
 
-    ```xml
+### HTTP 429 - Too many requests error
+
+Use the same procedure as previously mentioned by checking the API Management inspector trace to see if there's any `rate-limit` or `rate-limit-by-key` policy implemented at any scope.
+
+You should notice an access restriction policy (`rate-limit-by-key`) implemented at Global scope, like in `Inbound processing` in the `All APIs` option as shown in the following example:
+
+```xml
     <inbound>
         <choose>
             <when condition="@(context.Operation.Name.Equals("GetComments"))">
@@ -61,8 +72,8 @@ Apart from the above, we are also encountering **HTTP 429 - Too many requests** 
             </when>
         </choose>
     </inbound>
-    ```
+```
 
-Read more about [ip-filter](/azure/api-management/api-management-access-restriction-policies#RestrictCallerIPs)  and [rate-limit-by-key](/azure/api-management/api-management-access-restriction-policies#LimitCallRateByKey) policies in APIM.
+For more information, see [API Management policy reference](/azure/api-management/api-management-policies#access-restriction-policies).
 
  
