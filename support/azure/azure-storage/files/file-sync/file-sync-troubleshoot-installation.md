@@ -102,18 +102,9 @@ Action ended 8:51:12: InstallExecute. Return value 3.
 MSI (s) (EC:B4) [08:51:12:439]: Note: 1: 2265 2:  3: -2147287035
 ```
 
-This issue occurs if you try to install the sync agent on an Active Directory domain controller where the PDC role owner is on a Windows Server 2008 R2 or earlier OS version.
+This issue occurs if you try to install the sync agent on an Active Directory domain controller where the PDC role owner is on an early version of Windows Server.
 
-To resolve, transfer the PDC role to another domain controller running Windows Server 2012 R2 or more recent, then install sync.
-
-<a id="parameter-is-incorrect"></a>**Accessing a volume on Windows Server 2012 R2 fails with error: The parameter is incorrect**
-
-After creating a server endpoint on Windows Server 2012 R2, the following error occurs when accessing the volume:
-
-> drive letter:\ isn't accessible.  
-> The parameter is incorrect.
-
-To resolve this issue, install [KB2919355](https://support.microsoft.com/help/2919355/windows-rt-8-1-windows-8-1-windows-server-2012-r2-update-april-2014) and restart the server. If this update can't install because a later update is already installed, go to **Windows Update**, install the latest updates for Windows Server 2012 R2, and restart the server.
+To resolve, transfer the PDC role to another domain controller running Windows Server 2016 or more recent, then install sync.
 
 ## Agent installation via Azure Arc extension
 
