@@ -1,7 +1,7 @@
 ---
 title: Anonymous image pulls from Docker Hub to Azure Container Instances fail due to rate limits
 description: Provides a solution to errors when you try to create or update an Azure container instance and pull images anonymously from Docker Hub.
-ms.date: 09/24/2024
+ms.date: 08/18/2026
 ms.reviewer: kegonzal
 ms.service: azure-container-instances
 ms.custom: sap:Configuration and Setup
@@ -39,11 +39,11 @@ This issue might occur due to the rate limits on image pulls from Docker Hub. An
 Create a Docker account and use the Docker account credentials to authenticate the image pulls and immediately increase the rate limit. However, we strongly recommend using the Artifact Cache feature within Azure Container Registry (ACR) with your Docker subscription. This setup allows you to configure an authenticated cache rule for caching images from Docker Hub to your ACR. You can then modify your build and deployment scripts to pull the same images directly from ACR.
 
 > [!NOTE]
-> Docker offers a free subscription that allows customers to get 200 pulls every six hours. If 200 pulls aren't enough for you, we recommend purchasing a paid Docker subscription. A paid Docker subscription gives you 5,000 pulls every 24 hours, which can be increased by contacting Docker directly.
+> Docker Hub pull limits vary by account type and are subject to change. For current limits, see [Docker Hub usage and rate limits](https://docs.docker.com/docker-hub/usage/).
 
 ## Resources
 
-- [Docker Hub usage and rate limits](https://docs.docker.com/docker-hub/download-rate-limit/)
+- [Docker Hub usage and rate limits](https://docs.docker.com/docker-hub/usage/)
 - [Configure Artifact Cache to consume public content](/azure/container-registry/buffer-gate-public-content#configure-artifact-cache-to-consume-public-content)
 - [Artifact cache in Azure Container Registry](/azure/container-registry/container-registry-artifact-cache)
 
