@@ -1,11 +1,13 @@
 ---
 title: Use Azure App Service Certificate with Azure Front Door
-description: Provides detailed steps to use Azure App Service Certificate together with Azure Front Door.
+description: Learn how to use an Azure App Service Certificate with Azure Front Door to secure custom domains, automate certificate renewal, and support global delivery.
 author: kaushika-msft
 ms.author: kaushika
 ms.service: azure-app-service
-ms.date: 07/21/2025
-ms.reviewer: v-liuamson; v-gsitser
+manager: dcscontentpm
+ms.topic: troubleshooting
+ms.date: 08/14/2026
+ms.reviewer: kaushika
 ms.custom: sap:Connection issues with SSL or TLS, SSL Certificates and Domains  
 ---
 
@@ -29,24 +31,24 @@ To purchase a certificate, see [Buy and configure an App Service Certificate](/a
 A managed identity enables Azure Front Door to securely retrieve the certificate from Azure Key Vault:
 
 1. Navigate to your Azure Front Door profile.
-2. Under **Security**, select **Identity**, and then enable a managed identity:
+1. Under **Security**, select **Identity**, and then enable a managed identity:
    - **System-assigned** (Recommended): Tied to the Front Door
      lifecycle
    - **User-assigned** (Optional): For reuse across multiple services
-3. Select **Save**.
+1. Select **Save**.
 
 For more information, see [Use managed identities to access Azure Key Vault certificates](/azure/frontdoor/managed-identity).
 
-### Step 2: Configure Key Vault Access for Front Door
+### Step 2: Configure Key Vault access for Front Door
 
 Grant permission to Azure Front Door to access the certificate by using one of the following methods:
 
 #### Method A: Azure RBAC (recommended)
 
 1. Open **Key Vault** > **Access control (IAM)** > **+ Add** > **Add role assignment**.
-2. Assign the **Key Vault Secrets User** role.
-3. Select **Managed identity**, then select the system-assigned identity of Azure Front Door.
-4. Select **Review + assign**.
+1. Assign the **Key Vault Secrets User** role.
+1. Select **Managed identity**, then select the system-assigned identity of Azure Front Door.
+1. Select **Review + assign**.
 
     ```bash
         az role assignment create \
@@ -65,30 +67,30 @@ To retrieve the identity object ID:
 ```
 
 > [!NOTE]
-> Make sure that the Key Vault firewall allows trusted services or specific Front Door IP ranges.
+> Ensure that the Key Vault firewall allows trusted services or specific Front Door IP ranges.
 
-#### Method B: Key Vault Access Policy
+#### Method B: Key Vault access policy
 
 1. Navigate to your key vault > **Access policies**.
-2. Select **+ Add Access Policy**.
-3. Grant **Get** and **List** permissions for **Secrets** and **Certificates**.
-4. Assign the policy to the managed identity for Azure Front Door.
-5. Save the access policy.
+1. Select **+ Add Access Policy**.
+1. Grant **Get** and **List** permissions for **Secrets** and **Certificates**.
+1. Assign the policy to the managed identity for Azure Front Door.
+1. Save the access policy.
 
 > [!NOTE]
 > This method is suitable for legacy scenarios or if RBAC isn't enabled.
 
 ### Step 3: Add certificate as a secret in Azure Front Door
 
-Before you do this step, make sure that the App Service Certificate is successfully stored in Azure Key Vault through the App Service Certificate blade. For more information, see [Buy and configure an App Service Certificate](/azure/app-service/configure-ssl-app-service-certificate?tabs=portal#buy-and-configure-an-app-service-certificate).
+Before you do this step, ensure that the App Service Certificate is successfully stored in Azure Key Vault through the App Service Certificate blade. For more information, see [Buy and configure an App Service Certificate](/azure/app-service/configure-ssl-app-service-certificate?tabs=portal#buy-and-configure-an-app-service-certificate).
 
 To add the certificate:
 
 1. Go to your Azure Front Door (Standard/Premium) profile.
-2. Under **Security**, select **Secrets** > **+ Add**.
-3. Select your key vault, and then select the stored App Service Certificate.
-4. Select the version. (Use `Latest` to enable automatic certificate rotation.)
-5. Select **Add**.
+1. Under **Security**, select **Secrets** > **+ Add**.
+1. Select your key vault, and then select the stored App Service Certificate.
+1. Select the version. (Use `Latest` to enable automatic certificate rotation.)
+1. Select **Add**.
 
 > [!NOTE]
 > Azure Front Door supports automatic certificate renewal when you reference the `Latest` version. Updates in Key Vault are reflected in Front Door within 72 hours. For more information, see [Renew customer-managed TLS certificates](/azure/frontdoor/standard-premium/how-to-configure-https-custom-domain?tabs=powershell#renew-customer-managed-tls-certificates).
@@ -98,19 +100,19 @@ To add the certificate:
 ### Step 4: Configure a custom domain with BYOC
 
 1. In your Front Door profile, go to **Domains** > **+ Add**.
-2. Provide the domain details:
+1. Enter the domain details:
     - **Custom domain**: for example, `www.contoso.com`
     - **DNS zone**: Choose Azure DNS, if applicable.
     - **DNS management**: Azure-managed (recommended) or external
-3. Verify domain ownership:
+1. Verify domain ownership:
     - Use **TXT record** if you use custom DNS provider
 4. Under **HTTPS Configuration**:
     - **Certificate type**: `Bring Your Own Certificate (BYOC)`
     - **Secret**: Select the secret that you added in Step 3 (for example, `certname-latest`).
     - **TLS policy**: Select a supported policy (for example, `TLS 1.2_2023`)
-5. Select **Add** to finish the setup.
+1. Select **Add** to finish the setup.
 
-After verification is made, Front Door serves traffic securely by using the certificate from Azure Key Vault. For more information, see [Add a custom domain in Azure Front Door](/azure/frontdoor/standard-premium/how-to-add-custom-domain).
+After verification is complete, Front Door serves traffic securely by using the certificate from Azure Key Vault. For more information, see [Add a custom domain in Azure Front Door](/azure/frontdoor/standard-premium/how-to-add-custom-domain).
 
 ### Summary
 
