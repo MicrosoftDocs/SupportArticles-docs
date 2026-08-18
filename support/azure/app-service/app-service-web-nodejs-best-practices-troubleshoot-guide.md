@@ -1,44 +1,43 @@
 ---
-title: Node.js Best Practices and Troubleshooting Guide
-description: Learn the best practices and troubleshooting steps for Node.js applications running in Azure App Service.
+title: Node.js best practices and troubleshooting guide
+description: Learn Node.js best practices and troubleshooting steps for applications running in Azure App Service. Diagnose common issues and improve app performance.
 ms.assetid: 387ea217-7910-4468-8987-9a1022a99bef
 manager: dcscontentpm
-ms.topic: best-practice
-ms.date: 02/25/2026
-author: msangapu-msft
-ms.author: msangapu
-ms.reviewer: v-ryanberg
+ms.topic: troubleshooting
+ms.date: 08/14/2026
+author: kaushika-msft
+ms.author: kaushika
+ms.reviewer: kaushika
 ms.service: azure-app-service
 ms.custom: sap:Availability, Performance, and Application Issues, devx-track-js
 # customer intent: As a developer, I want to learn best practices for Node.js applications that run in App Service so that I can use these apps more effectively.
 ---
-# Best practices and troubleshooting guide for node applications on Azure App Service Windows
+# Best practices and troubleshooting guide for Node.js applications on Azure App Service for Windows
 
 ## Summary
 
 In this article, you learn best practices and troubleshooting steps for [Windows Node.js applications](/azure/app-service/quickstart-nodejs?pivots=platform-windows) running on Azure App Service (with [iisnode](https://github.com/azure/iisnode)).
 
 > [!WARNING]
-> Use caution when using troubleshooting steps on your production site. Recommendation is to troubleshoot your app on a non-production setup for example your staging slot and when the issue is fixed, swap your staging slot with your production slot.
->
+> Use caution when using troubleshooting steps on your production site. Troubleshoot your app on a non-production setup (for example, your staging area). When you fix the issue, swap your staging area with your production area.
 
 ## IISNODE configuration
 
-This [schema file](https://github.com/Azure/iisnode/blob/master/src/config/iisnode_schema_x64.xml) shows all the settings that you can configure for iisnode. Some of the settings that are useful for your application:
+This [schema file](https://github.com/Azure/iisnode/blob/master/src/config/iisnode_schema_x64.xml) shows all the settings that you can configure for iisnode. Some of the settings are useful for your application:
 
 ### nodeProcessCountPerApplication
 
-This setting controls the number of node processes that are launched per IIS application. The default value is `1`. You can launch as many node.exe processes as your virtual machine vCPU count by changing the value to `0`. The recommended value is `0` for many applications so that you can use all available vCPUs.
+This setting controls the number of node processes that launch per IIS application. The default value is `1`. You can launch as many node.exe processes as your virtual machine vCPU count by changing the value to `0`. The recommended value is `0` for many applications so that you use all available vCPUs.
 
 Although the Node.js event loop runs on a single thread, a single Node.js process can still use multiple CPU cores when the app uses worker threads, the cluster module, native add-ons, or other libraries that run work in parallel. For CPU-bound workloads, you might get higher throughput by running multiple Node.js processes (up to the VM vCPU count) so IIS can distribute requests across processes.
 
 ### nodeProcessCommandLine
 
-This setting controls the path to the node.exe. You can set this value to point to your node.exe version.
+This setting controls the path to the node.exe. Set this value to point to your node.exe version.
 
 ### maxConcurrentRequestsPerProcess
 
-This setting controls the maximum number of concurrent requests sent by iisnode to each node.exe. On Azure App Service, the default value is Infinite. You can configure the value depending on how many requests your application receives and how fast your application processes each request.
+This setting controls the maximum number of concurrent requests that iisnode sends to each node.exe. On Azure App Service, the default value is Infinite. Configure the value depending on how many requests your application receives and how fast your application processes each request.
 
 ### maxNamedPipeConnectionRetry
 
@@ -84,43 +83,43 @@ In addition to this, for streaming applications, you must also set responseBuffe
 
 ### watchedFiles
 
-A semi-colon separated list of files that are watched for changes. Any change to a file causes the application to recycle. Each entry consists of an optional directory name as well as a required file name, which are relative to the directory where the main application entry point is located. Wild cards are allowed in the file name portion only. The default value is `*.js;iisnode.yml`
+A semicolon-separated list of files to watch for changes. Any change to a file causes the application to recycle. Each entry consists of an optional directory name and a required file name, both relative to the directory where the main application entry point is located. Use wildcards in the file name portion only. The default value is `*.js;iisnode.yml`.
 
 ### recycleSignalEnabled
 
-The default value is false. If enabled, your node application can connect to a named pipe (environment variable IISNODE\_CONTROL\_PIPE) and send a “recycle” message. This causes the w3wp to recycle gracefully.
+The default value is false. If enabled, your Node.js application can connect to a named pipe (environment variable `IISNODE_CONTROL_PIPE`) and send a "recycle" message. This message causes the `w3wp` process to recycle gracefully.
 
 ### idlePageOutTimePeriod
 
-The default value is 0, which means this feature is disabled. When set to some value greater than 0, iisnode will page out all its child processes every ‘idlePageOutTimePeriod’ in milliseconds. See [documentation](/windows/desktop/api/psapi/nf-psapi-emptyworkingset) to understand what page out means. This setting is useful for applications that consume a high amount of memory and want to page out memory to disk occasionally to free up RAM.
+The default value is 0, which means this feature is disabled. When set to a value greater than 0, `iisnode` pages out all its child processes every `idlePageOutTimePeriod` milliseconds. To understand what paging out means, see [documentation](/windows/desktop/api/psapi/nf-psapi-emptyworkingset). This setting is useful for applications that consume a high amount of memory and want to page out memory to disk occasionally to free up RAM.
 
 > [!WARNING]
-> Use caution when enabling the following configuration settings on production applications. The recommendation is to not enable them on live production applications.
+> Use caution when enabling the following configuration settings on production applications. Don't enable them on live production applications.
 >
 
 ### debugHeaderEnabled
 
-The default value is false. If set to true, iisnode adds an HTTP response header `iisnode-debug` to every HTTP response it sends the `iisnode-debug` header value is a URL. Individual pieces of diagnostic information can be obtained by looking at the URL fragment, however, a visualization is available by opening the URL in a browser.
+The default value is false. If set to true, `iisnode` adds an HTTP response header `iisnode-debug` to every HTTP response it sends. The `iisnode-debug` header value is a URL. You can obtain individual pieces of diagnostic information by looking at the URL fragment. To view a visualization, open the URL in a browser.
 
 ### loggingEnabled
 
-This setting controls the logging of stdout and stderr by iisnode. Iisnode captures stdout/stderr from node processes it launches and writes to the directory specified in the ‘logDirectory’ setting. Once this is enabled, your application writes logs to the file system and depending on the amount of logging done by the application, there could be performance implications.
+This setting controls the logging of `stdout` and `stderr` by `iisnode`. `iisnode` captures `stdout` and `stderr` from Node.js, processes it, launches, and then writes to the directory specified in the `logDirectory` setting. When you enable this setting, your application writes logs to the file system. Depending on the amount of logging done by the application, this setting could affect performance.
 
 ### devErrorsEnabled
 
-The default value is false. When set to true, iisnode displays the HTTP status code and Win32 error code on your browser. The Win32 code is helpful in debugging certain types of issues.
+The default value is false. When set to true, `iisnode` displays the HTTP status code and Win32 error code in your browser. The Win32 code helps you debug certain types of issues.
 
 ### debuggingEnabled (do not enable on live production site)
 
-This setting controls debugging feature. Iisnode is integrated with node-inspector. By enabling this setting, you enable debugging of your node application. Upon enabling this setting, iisnode creates node-inspector files in ‘debuggerVirtualDir’ directory on the first debug request to your node application. You can load the node-inspector by sending a request to `http://yoursite/server.js/debug`. You can control the debug URL segment with ‘debuggerPathSegment’ setting. By default, debuggerPathSegment=’debug’. You can set `debuggerPathSegment` to a GUID, for example, so that it is more difficult to be discovered by others.
+This setting controls the debugging feature. `iisnode` integrates with the node-inspector. When you enable this setting, you enable debugging for your Node.js application.  
 
 Read [Debug Node.js applications on Windows](https://tomasz.janczuk.org/2011/11/debug-nodejs-applications-on-windows.html) for more details on debugging.
 
-## Scenarios and recommendations/troubleshooting
+## Node.js troubleshooting scenarios and recommendations
 
-### My node application is making excessive outbound calls
+### My Node.js application is making excessive outbound calls
 
-Many applications would want to make outbound connections as part of their regular operation. For example, when a request comes in, your node app would want to contact a REST API elsewhere and get some information to process the request. You would want to use a keep alive agent when making http or https calls. You could use the agentkeepalive module as your keep alive agent when making these outbound calls.
+Many applications make outbound connections as part of their regular operation. For example, when a request comes in, your Node.js app might contact a REST API elsewhere to get information for processing the request. Use a keep-alive agent when making HTTP or HTTPS calls. You can use the `agentkeepalive` module as your keep-alive agent when making these outbound calls.
 
 The agentkeepalive module ensures that sockets are reused on your Azure webapp VM. Creating a new socket on each outbound request adds overhead to your application. Having your application reuse sockets for outbound requests ensures that your application doesn't exceed the maxSockets that are allocated per VM. The recommendation on Azure App Service is to set the agentKeepAlive maxSockets value to a total of (4 instances of node.exe \* 32 maxSockets/instance) 128 sockets per VM.
 
@@ -136,12 +135,12 @@ let keepaliveAgent = new Agent({
 ```
 
 > [!IMPORTANT]
-> This example assumes you have 4 node.exe running on your VM. If you have a different number of node.exe running on the VM, you must modify the maxSockets setting accordingly.
+> This example assumes you have 4 `node.exe` running on your VM. If you have a different number of `node.exe` running on the VM, modify the `maxSockets` setting accordingly.
 >
 
-#### My node application is consuming too much CPU
+### My Node.js application is consuming too much CPU
 
-You may receive a recommendation from Azure App Service on your portal about high cpu consumption. You can also set up monitors to watch for certain [metrics](/azure/app-service/web-sites-monitor). When checking the CPU usage on the [Azure portal Dashboard](/azure/azure-monitor/essentials/metrics-charts), check the MAX values for CPU so you don’t miss the peak values.
+You might receive a recommendation from Azure App Service on your portal about high CPU consumption. You can also set up monitors to watch for certain [metrics](/azure/app-service/web-sites-monitor). When checking the CPU usage on the [Azure portal Dashboard](/azure/azure-monitor/essentials/metrics-charts), check the MAX values for CPU so you don't miss the peak values.
 If you believe your application is consuming too much CPU and you cannot explain why, you can profile your node application to find out.
 
 #### Profiling your node application on Azure App Service with V8-Profiler
@@ -171,12 +170,12 @@ To go to the Debug Console site for your app, select **Development Tools** > **A
 
 Go into your site/wwwroot directory. You see a command prompt as shown in the following example:
 
-![Screenshot that shows your site/wwwroot directory and command prompt.](./media/app-service-web-nodejs-best-practices-and-troubleshoot-guide/scm-install-v8.png)
+:::image type="content" source="./media/app-service-web-nodejs-best-practices-and-troubleshoot-guide/scm-install-v8.png" alt-text="Screenshot that shows your site/wwwroot directory and command prompt." lightbox="./media/app-service-web-nodejs-best-practices-and-troubleshoot-guide/scm-install-v8.png":::
 
 Run the command `npm install v8-profiler`.
 
 This command installs the v8-profiler under node\_modules directory and all of its dependencies.
-Now, edit your server.js to profile your application.
+This command installs the `v8-profiler` under the `node_modules` directory along with all of its dependencies.
 
 ```nodejs
 const http = require('http');
@@ -202,54 +201,54 @@ http.createServer(function (req, res) {
 }).listen(process.env.PORT);
 ```
 
-The preceding code profiles the WriteConsoleLog function and then writes the profile output to the ‘profile.cpuprofile’ file under your site wwwroot. Send a request to your application. You see a ‘profile.cpuprofile’ file created under your site wwwroot.
+The preceding code profiles the WriteConsoleLog function and then writes the profile output to the 'profile.cpuprofile' file under your site wwwroot. Send a request to your application. You see a 'profile.cpuprofile' file created under your site wwwroot.
 
-![Screenshot that shows the profile.cpuprofile file.](./media/app-service-web-nodejs-best-practices-and-troubleshoot-guide/scm-profile-cpuprofile.png)
+:::image type="content" source="./media/app-service-web-nodejs-best-practices-and-troubleshoot-guide/scm-profile-cpuprofile.png" alt-text="Screenshot of the profile.cpuprofile file in the site wwwroot directory." lightbox="./media/app-service-web-nodejs-best-practices-and-troubleshoot-guide/scm-profile-cpuprofile.png":::
 
-Download this file and open it with Chrome F12 Tools. Press F12 on Chrome, then choose the **Profiles** tab. Choose the **Load** button. Select your profile.cpuprofile file that you downloaded. Click on the profile you just loaded.
+Download this file and open it with Chrome F12 Tools. Press F12 on Chrome, and then choose the **Profiles** tab. Choose the **Load** button. Select your `profile.cpuprofile` file that you downloaded. Select the profile you just loaded.
 
-![Screenshot that shows the profile.cpuprofile file that you loaded.](./media/app-service-web-nodejs-best-practices-and-troubleshoot-guide/chrome-tools-view.png)
+:::image type="content" source="./media/app-service-web-nodejs-best-practices-and-troubleshoot-guide/chrome-tools-view.png" alt-text="Screenshot of Chrome DevTools displaying the loaded profile.cpuprofile CPU profile." lightbox="./media/app-service-web-nodejs-best-practices-and-troubleshoot-guide/chrome-tools-view.png":::
 
-You can see that 95% of the time was consumed by the WriteConsoleLog function. The output also shows you the exact line numbers and source files that caused the issue.
+You can see that 95% of the time was consumed by the `WriteConsoleLog` function. The output also shows you the exact line numbers and source files that caused the issue.
 
-### My node application is consuming too much memory
+### My Node.js application is consuming too much memory
 
-If your application is consuming too much memory, you see a notice from Azure App Service on your portal about high memory consumption. You can set up monitors to watch for certain [metrics](/azure/app-service/web-sites-monitor). When checking the memory usage on the [Azure portal Dashboard](/azure/azure-monitor/essentials/metrics-charts), be sure to check the MAX values for memory so you don’t miss the peak values.
+If your application consumes too much memory, you see a notice from Azure App Service on your portal about high memory consumption. You can set up monitors to watch for certain [metrics](/azure/app-service/web-sites-monitor). When checking the memory usage on the [Azure portal Dashboard](/azure/azure-monitor/essentials/metrics-charts), check the MAX values for memory so you don't miss the peak values.
 
 #### Leak detection and Heap Diff for Node.js
 
-You could use [node-memwatch](https://github.com/lloyd/node-memwatch) to help you identify memory leaks.
-You can install `memwatch` just like v8-profiler and edit your code to capture and diff heaps to identify the memory leaks in your application.
+Use [node-memwatch](https://github.com/lloyd/node-memwatch) to help you identify memory leaks.
+Install `memwatch` just like v8-profiler and edit your code to capture and differenciate heaps to identify the memory leaks in your application.
 
-### My node.exe’s are getting killed randomly
+### Node.js processes stop unexpectedly
 
-There are a few reasons why node.exe is shut down randomly:
+There are a few reasons why node.exe shuts down randomly:
 
-- Your application is throwing uncaught exceptions – Check d:\\home\\LogFiles\\Application\\logging-errors.txt file for the details on the exception thrown. This file has the stack trace to help debug and fix your application.
-- Your application is consuming too much memory, which is affecting other processes from getting started. If the total VM memory is close to 100%, your node.exe’s could be killed by the process manager. Process manager kills some processes to let other processes get a chance to do some work. To fix this issue, profile your application for memory leaks. If your application requires large amounts of memory, scale up to a larger VM (which increases the RAM available to the VM).
+- Your application throws uncaught exceptions – Check `d:\home\LogFiles\Application\logging-errors.txt` file for the details on the exception thrown. This file has the stack trace to help debug and fix your application.
+- Your application consumes too much memory, which affects other processes from getting started. If the total VM memory is close to 100%, the process manager might kill your node.exe processes. The process manager kills some processes to let other processes get a chance to do some work. To fix this issue, profile your application for memory leaks. If your application requires large amounts of memory, scale up to a larger VM (which increases the RAM available to the VM).
 
-### My node application does not start
+### My Node.js application doesn't start
 
 If your application is returning 500 Errors when it starts, there could be a few reasons:
 
-- Node.exe is not present at the correct location. Check nodeProcessCommandLine setting.
-- Main script file is not present at the correct location. Check web.config and make sure the name of the main script file in the handlers section matches the main script file.
-- Web.config configuration is not correct – check the settings names/values.
-- Cold Start – Your application is taking too long to start. If your application takes longer than (maxNamedPipeConnectionRetry \* namedPipeConnectionRetryDelay) / 1000 seconds, iisnode returns a 500 error. Increase the values of these settings to match your application start time to prevent iisnode from timing out and returning the 500 error.
+- Node.exe isn't present at the correct location. Check `nodeProcessCommandLine` setting.
+- The main script file isn't present at the correct location. Check `web.config` and make sure the name of the main script file in the handlers section matches the main script file.
+- The `web.config` configuration isn't correct – check the settings names and values.
+- Your application takes too long to start. If your application takes longer than `(maxNamedPipeConnectionRetry * namedPipeConnectionRetryDelay) / 1000` seconds, `iisnode` returns a 500 error. Increase the values of these settings to match your application start time to prevent `iisnode` from timing out and returning the 500 error.
 
-### My node application crashed
+### My Node.js application crashed
 
-Your application is throwing uncaught exceptions – Check `d:\\home\\LogFiles\\Application\\logging-errors.txt` file for the details on the exception thrown. This file has the stack trace to help diagnose and fix your application.
+Your application throws uncaught exceptions – Check `d:\home\LogFiles\Application\logging-errors.txt` file for the details on the exception thrown. This file has the stack trace to help diagnose and fix your application.
 
-### My node application takes too much time to start (Cold Start)
+### My Node.js application takes too long to start (cold start)
 
 The common cause for long application start times is a high number of files in the node\_modules. The application tries to load most of these files when starting. By default, since your files are stored on the network share on Azure App Service, loading many files can take time.
 Some solutions to make this process faster are:
 
-- Try to lazy load your node\_modules and not load all of the modules at application start. To Lazy load modules, the call to require(‘module’) should be made when you actually need the module within the function before the first execution of module code.
+- Try to lazy load your node\_modules and not load all of the modules at application start. To Lazy load modules, the call to require('module') should be made when you actually need the module within the function before the first execution of module code.
 - Azure App Service offers a feature called local cache. This feature copies your content from the network share to the local disk on the VM. Since the files are local, the load time of node\_modules is much faster.
 
-## IISNODE http status and substatus
+## IISNODE HTTP status and substatus codes
 
 The `cnodeconstants` [source file](https://github.com/Azure/iisnode/blob/master/src/iisnode/cnodeconstants.h) lists all of the possible status/substatus combinations iisnode can return due to an error.
 

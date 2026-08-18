@@ -1,54 +1,56 @@
 ---
 title: Error 403 - This web app is stopped message
-description: This article provides guidance on addressing the "Error 403 - This web app is stopped" message. 
+description: Learn how to troubleshoot and resolve the Error 403 - This web app is stopped message caused by billing limits, stopped status, or resource quotas.
 author: kaushika-msft
 manager: dcscontentpm
 ms.topic: troubleshooting
-ms.date: 12/17/2025
+ms.date: 08/17/2026
 ms.author: kaushika
-ms.reviewer: v-ryanberg
+ms.reviewer: kaushika
 ms.service: azure-app-service
 ms.custom: sap:Availability, Performance, and Application Issues
 ---
-# "Error 403 - This web app is stopped" message 
+# Error 403 - This web app is stopped message 
 
 ## Summary
 
-This article provides guidance on addressing the "Error 403 - This web app is stopped" message in Azure App Service.
+This article explains how to identify and resolve the **Error 403 - This web app is stopped** message in Azure App Service by checking billing limits, app status, and resource quotas.
 
 ## Symptom
 
-When browsing to an Azure web site, you encounter the following message: "Error 403 - This web app is stopped."
+When browsing to an Azure web site, you encounter the following message:
+
+> Error 403 - This web app is stopped.
 
 ## Cause
 
-There are three possible conditions:
+This error message can occur for three reasons:
 
-- The site has reached a [billing limit](#billing-limit) and is disabled.
-- The website has been [stopped in the portal](#website-stopped-in-the-portal).
-- The website has reached a [resource quota limit](#website-has-reached-a-resource-quota-limit).
+- The site reached a [billing limit](#billing-limit) and is disabled.
+- The website is [stopped in the portal](#website-stopped-in-the-portal).
+- The website reached a [resource quota limit](#website-reached-a-resource-quota-limit).
 
 ## Resolution
 
 ### Billing limit
 
-This can occur when your Azure subscription has a spending limit. When the limit is reached, your site is suspended. 
+This error occurs when your Azure subscription has a spending limit. When the limit is reached, Azure suspends your site. 
 
-To verify this, browse to the [Azure Account Portal](https://account.windowsazure.com/Home/Index) and select **Account Center**. 
+To verify this condition, go to the [Azure Account Portal](https://account.windowsazure.com/Home/Index) and select **Account Center**. 
 
-If this is the issue, see [Reactivate a disabled Azure subscription](/azure/cost-management-billing/manage/subscription-disabled) for information on how to resolve subscription limits.
+If this condition is the issue, see [Reactivate a disabled Azure subscription](/azure/cost-management-billing/manage/subscription-disabled) for information on how to resolve subscription limits.
 
 ### Website stopped in the portal
 
 In [Azure portal](https://portal.azure.com/), check the status of your site. If it reads **Stopped**, select **Start**.
 
-### Website has reached a resource quota limit
+### Website reached a resource quota limit
 
-In Azure portal, navigate to the **Quotas** blade and determine your quota status. 
+In Azure portal, go to the **Quotas** blade to check your quota status. 
 
-There are two recovery options if you reach a usage quota:
+If you reach a usage quota, you have two recovery options:
 
-- Wait until the quota is reset. Under each quota, you see **Resets in X hours X minutes**. This is the quota measurement period. If you choose to wait, the site isn't be functional until this time expires. For example, the **Data Out** quota is applied once per day. If the quota is reached in the first hour of the measurement period (one day), your site will be offline for 23 hours until the quota is reset.
+- Wait until the quota resets. Under each quota, you see **Resets in X hours X minutes**. This value shows the quota measurement period. If you choose to wait, the site isn't functional until this time expires. For example, the **Data Out** quota resets once per day. If the quota is reached in the first hour of the measurement period (one day), your site is offline for 23 hours until the quota resets.
 
 - Scale up the web hosting plan. Quotas only apply to the Free and Shared web hosting plans. Upgrading your plan can solve the limit issue. For more information, see [Azure plan](https://azure.microsoft.com/pricing/offers/ms-azr-0017g/) and [Pricing calculator](https://azure.microsoft.com/pricing/calculator/).
 

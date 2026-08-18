@@ -1,12 +1,12 @@
 ---
 title: ASP.NET Core applications hosted in App Service stop responding
-description: This article provides guidance on addressing ASP.NET Core applications that are hosted in Azure App Service when they stop responding. 
+description: This article provides guidance on addressing ASP.NET Core applications that are hosted in Azure App Service when they stop responding.
 author: kaushika-msft
+ms.author: kaushika
 manager: dcscontentpm
 ms.topic: troubleshooting
-ms.date: 12/18/2025
-ms.author: kaushika
-ms.reviewer: v-ryanberg
+ms.date: 08/17/2026
+ms.reviewer: kaushika
 ms.service: azure-app-service
 ms.custom: sap:Availability, Performance, and Application Issues
 ---
@@ -27,5 +27,4 @@ A known issue with an earlier [Kestrel version](https://github.com/aspnet/Kestre
 
 ## Resolution
 
-This issue is fixed in Kestrel version 1.0.2. This version is included in the ASP.NET Core 1.0.3 update. To resolve this issue, make sure you update your app dependencies to use Kestrel 1.0.2. Alternatively, you can use one of two workarounds that are described in the blog post [ASP.NET Core 1.0 slow perf issues in App Service web apps](/archive/blogs/waws/asp-net-core-slow-perf-issues-on-azure-websites).
-
+This issue is fixed in Kestrel version 1.0.2. This version is included in the ASP.NET Core 1.0.3 update. To resolve this issue, ensure you update your app dependencies to use Kestrel 1.0.2. Alternatively, you can use one of two workarounds that are described in the blog post [ASP.NET Core 1.0 slow perf issues in App Service web apps](/archive/blogs/waws/asp-net-core-slow-perf-issues-on-azure-websites).
