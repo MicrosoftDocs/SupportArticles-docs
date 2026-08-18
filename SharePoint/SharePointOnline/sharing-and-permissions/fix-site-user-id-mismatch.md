@@ -4,7 +4,7 @@ description: Provides a diagnostic that offers resolutions for common issues cau
 author: Cloud-Writer
 ms.author: meerak
 manager: dcscontentpm
-ms.date: 02/18/2026
+ms.date: 08/18/2026
 audience: Admin
 ms.topic: troubleshooting
 ms.custom: 
@@ -30,6 +30,7 @@ When users in your organization try to access a OneDrive or SharePoint site by u
 - An "Access denied" error message
 - An inconsistent user experience
 - A new OneDrive site that has a suffix appended to the expected URL such as `https://contoso-my.sharepoint.com/personal/UserA_Contoso_com1` (the suffix can be a number or a GUID)
+- There is a legacy user account in this site with same email. Please ask site owner or administrator to remove the legacy user account from this site.
 
 ## Cause
 
