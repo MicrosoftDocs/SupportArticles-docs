@@ -20,6 +20,8 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
+          - text: Troubleshoot non-zone-redundant quota requests
+            url: ./troubleshoot-non-zone-redundant-quota-requests.md
           - text: FAQ about creating or deleting web apps
             url: ./create-delete-resources-faq-new.md
           - text: FAQ about scaling web apps

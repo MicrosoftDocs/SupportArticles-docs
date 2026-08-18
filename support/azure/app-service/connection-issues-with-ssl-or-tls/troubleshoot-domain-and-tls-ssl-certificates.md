@@ -1,13 +1,13 @@
 ---
-title: Troubleshoot Domain and TLS/SSL Certificates
-description: Find solutions to the common problems that you might encounter when you configure a domain or TLS/SSL certificate in Azure App Service.
+title: Troubleshoot domain and TLS/SSL certificates
+description: Find solutions to the common problems that you might encounter when you configure a domain or TLS/SSL certificates in Azure App Service.
 author: kaushika-msft
 manager: dcscontentpm
 tags: top-support-issue
 ms.topic: troubleshooting
-ms.date: 09/22/2025
+ms.date: 08/14/2026
 ms.author: kaushika
-ms.reviewer: v-ryanberg
+ms.reviewer: kaushika
 ms.service: azure-app-service
 ms.custom: sap:SSL Certificates and Domains
 ---
@@ -17,13 +17,10 @@ ms.custom: sap:SSL Certificates and Domains
 
 When you set up a domain or TLS/SSL certificate for your web apps in Azure App Service, you might encounter the following common problems. This article explores the possible causes and solutions for these problems.
 
-In addition to the information in this article, you can get more help by contacting Azure experts on the [Microsoft Q & A and Stack Overflow forums](https://azure.microsoft.com/support/forums/). Alternatively, you can file an Azure support incident on the [Azure Support site](https://azure.microsoft.com/support/options/). Select **Get Support**.
-
 > [!NOTE]
-> We recommend that you use the Azure Az PowerShell module to interact with Azure. To get started, see [Install Azure PowerShell](/powershell/azure/install-azure-powershell). To learn how to migrate to the Az PowerShell module, see [Migrate Azure PowerShell from AzureRM to Az](/powershell/azure/migrate-from-azurerm-to-az).
+> Use the Azure Az PowerShell module to interact with Azure. To get started, see [Install Azure PowerShell](/powershell/azure/install-azure-powershell). To learn how to migrate to the Az PowerShell module, see [Migrate Azure PowerShell from AzureRM to Az](/powershell/azure/migrate-from-azurerm-to-az).
 
-
-## Certificate problems
+## TLS/SSL certificate problems
 
 ### You can't add a TLS/SSL certificate binding to an app
 
@@ -35,14 +32,14 @@ When you add a TLS binding, you receive the following error message:
 
 #### Cause
 
-This problem might happen if you have multiple IP-based TLS/SSL bindings for the same IP address across multiple apps. For example, app A has an IP-based TLS/SSL binding with an old certificate. App B has an IP-based TLS/SSL binding with a new certificate for the same IP address. When you update the app TLS binding with the new certificate, the update fails because the same IP address is used for another app, and you receive the error message.
+This problem occurs if you have multiple IP-based TLS/SSL bindings for the same IP address across multiple apps. For example, app A has an IP-based TLS/SSL binding with an old certificate. App B has an IP-based TLS/SSL binding with a new certificate for the same IP address. When you update the app TLS binding with the new certificate, the update fails because the same IP address is used for another app, and you receive the error message.
 
 #### Solution
 
 To resolve this problem, try one of the following methods:
 
-* Delete the IP-based TLS/SSL binding on the app that uses the old certificate.
-* Create a new IP-based TLS/SSL binding that uses the new certificate.
+- Delete the IP-based TLS/SSL binding on the app that uses the old certificate.
+- Create a new IP-based TLS/SSL binding that uses the new certificate.
 
 ### You can't delete a certificate
 
@@ -72,23 +69,23 @@ In the Azure portal, you can't purchase an [Azure App Service certificate](/azur
 
 This problem can happen for any of the following reasons:
 
-* The App Service plan is a Free or Shared pricing tier, which don't support TLS.
+- The App Service plan is a Free or Shared pricing tier, which don't support TLS.
 
   **Solution**: Upgrade the App Service plan to Standard.
 
-* The subscription doesn't have a valid credit card.
+- The subscription doesn't have a valid credit card.
 
   **Solution**: Add a valid credit card to your subscription.
 
-* The subscription offer doesn't support purchasing an App Service certificate. Example: Microsoft Student.  
+- The subscription offer doesn't support purchasing an App Service certificate. Example: Microsoft Student.  
 
   **Solution**: Upgrade your subscription.
 
-* The subscription reached the allowed purchase limit.
+- The subscription reached the allowed purchase limit.
 
   **Solution**: App Service certificates have a limit of 10 certificate purchases for the pay-as-you-go and Enterprise Agreement subscription types. For other subscription types, the limit is 3. To increase the limit, contact [Azure support](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade).
 
-* The App Service certificate was marked as fraud. You received the following error message: "Your certificate has been flagged for possible fraud. The request is currently under review. If the certificate does not become usable within 24 hours, contact Azure Support."
+- The App Service certificate was marked as fraud. You received the following error message: "Your certificate has been flagged for possible fraud. The request is currently under review. If the certificate does not become usable within 24 hours, contact Azure Support."
 
   **Solution**: If the certificate is marked as fraud and isn't resolved after 24 hours, follow these steps:
 
@@ -106,8 +103,7 @@ The App Service certificate was renewed, but the app that uses the App Service c
 
 #### Cause 1: Missing access policy permissions on the key vault
 
-The key vault used to store the App Service certificate is missing access policy permissions on the key vault for `Microsoft.Azure.Websites` and `Microsoft.Azure.CertificateRegistration`. The service principals and their required permissions for key vault access are:
-</br></br>
+The key vault used to store the App Service certificate is missing access policy permissions on the key vault for `Microsoft.Azure.Websites` and `Microsoft.Azure.CertificateRegistration`. The service principals and their required permissions for key vault access are listed in the following table:
 
   |Service principal|Secret permissions|Certificate permissions|
   |------|------|-----|
@@ -118,36 +114,36 @@ The key vault used to store the App Service certificate is missing access policy
 
 To modify the access policies for the key vault, follow these steps:
 
-1. Sign in to the Azure portal. Select the key vault used by your App Service certificate. Go to Access policies.</li>
-2. If you don't see the two service principals listed, you need to add them. If they're available, verify that the permissions include the recommended secret and certificate permissions.</li>
-3. Add a service principal by selecting **Create**. Then select the needed permissions for Secret and Certificate permissions.</li>
-4. For the service principal, enter the values that you previously obtained from the search box. Then, select the service principal.</li>
+1. Sign in to the Azure portal. Select the key vault used by your App Service certificate. Go to **Access policies**.
+2. If you don't see the two service principals listed, add them. If they're available, verify that the permissions include the recommended secret and certificate permissions.
+3. Add a service principal by selecting **Create**. Then select the needed permissions for Secret and Certificate permissions.
+4. For the service principal, enter the values that you previously obtained from the search box. Then, select the service principal.
   
-#### Cause 2: The app service hasn't synced with the new certificate
+#### Cause 2: The app service didn't sync with the new certificate
 
-The App Service automatically syncs your certificate within 48 hours. When you rotate or update a certificate, sometimes the application is still retrieving the old certificate and not the newly updated certificate. This happens because the job that syncs the certificate resource hasn't run. To resolve this problem, sync the certificate manually. Syncing manually updates the host name bindings for the certificate in App Service without causing any downtime to your apps.
+The App Service automatically syncs your certificate within 48 hours. When you rotate or update a certificate, sometimes the application is still retrieving the old certificate and not the newly updated certificate. This condition occurs because the job that syncs the certificate resource didn't run. To resolve this problem, sync the certificate manually. Syncing manually updates the host name bindings for the certificate in App Service without causing any downtime to your apps.
 
 #### Solution 2: Force a sync for the certificate
 
 To force a sync for the certificate, follow these steps:
 
-1. Sign in to the [Azure portal](https://portal.azure.com). Select **App Service Certificates**, and then select the certificate.</li>
-2. Select **Rekey and Sync**, and then select **Sync**. The sync takes some time to finish.</li>
-3. When the sync finishes, the following notification appears: "Successfully updated all the resources with the latest certificate."</li>
+1. Sign in to the [Azure portal](https://portal.azure.com). Select **App Service Certificates**, and then select the certificate.
+2. Select **Rekey and Sync**, and then select **Sync**. The sync takes some time to finish.
+3. When the sync finishes, the following notification appears: "Successfully updated all the resources with the latest certificate."
 
-### App Service is showing the wrong certificate
+### App Service shows the wrong certificate
 
 #### Symptom
 
-When you're browsing App Service, it's presenting the wrong certificate.
+When you browse to App Service, it presents the wrong certificate.
 
 #### Cause
 
-This problem can manifest when both IP SSL and Server Name Indication (SNI) bindings are configured for App Service. When non-SNI clients hit the IP SSL endpoint, the IP SSL certificate gets cached. Even if SNI-enabled clients hit the site, they're presented with the IP SSL certificate, which causes an invalid certificate to be presented.
+This problem occurs when you configure both IP SSL and Server Name Indication (SNI) bindings for App Service. When non-SNI clients connect to the IP SSL endpoint, the IP SSL certificate is cached. Even if SNI-enabled clients connect to the site, they see the IP SSL certificate, which results in an invalid certificate.
 
 #### Solution
 
-Ensure that you don't use SNI bindings along with IP SSL bindings and always browse to the website over custom domain URL if you have non-SNI clients. If you need to use SNI bindings, ensure that the certificate that is bound to the IP SSL binding is issued to protect all configured URLs for the site (including the SNI bindings). Configure the same certificate against all other bindings. This behavior is by design.
+Don't use SNI bindings with IP SSL bindings. If you have non-SNI clients, always browse to the website by using the custom domain URL. If you need to use SNI bindings, ensure that the certificate you bind to the IP SSL binding protects all configured URLs for the site, including the SNI bindings. Configure the same certificate for all other bindings. This behavior is by design.
 
 ## Custom domain problems
 
@@ -165,9 +161,9 @@ Your configured custom domain is missing a `CNAME record` or an `A record`.
 
 **Solution for cause 1**
 
-* If you added an `A record`, make sure that a `TXT record` is also added. For more information, see [Create the DNS records](/azure/app-service/app-service-web-tutorial-custom-domain#create-the-dns-records).
-* If you don't have to use the root domain for your app, we recommend that you use a `CNAME record` rather than an `A record`.
-* Don't use both a `CNAME record` and an `A record` for the same domain. This issue can cause a conflict and prevent domain resolution.
+- If you added an `A record`, ensure that you also add a `TXT record`. For more information, see [Create the DNS records](/azure/app-service/app-service-web-tutorial-custom-domain#create-the-dns-records).
+- If you don't need to use the root domain for your app, use a `CNAME record` rather than an `A record`.
+- Don't use both a `CNAME record` and an `A record` for the same domain. This issue can cause a conflict and prevent domain resolution.
 
 **Cause 2**
 
@@ -175,7 +171,7 @@ The internet browser might still be caching the old IP address for your domain.
 
 **Solution for Cause 2**
 
-Clear the browser. For Windows devices, you can run the command `ipconfig /flushdns`. To check that your domain points to the app's IP address, use [WhatsmyDNS.net](https://www.whatsmydns.net/).
+Clear the browser cache. For Windows devices, you can run the command `ipconfig /flushdns`. To check that your domain points to the app's IP address, use [WhatsmyDNS.net](https://www.whatsmydns.net/).
 
 ### You can't add a subdomain
 
@@ -185,8 +181,8 @@ You can't add a new host name to an app to assign a subdomain.
 
 #### Solution
 
-* Make sure that you have permissions to add a host name to an app by checking with the subscription administrator.
-* If you need more subdomains, we recommend that you change the domain hosting to Azure DNS. By using Azure DNS, you can add 500 host names to your app. For more information, see [Add a subdomain](/archive/blogs/waws/mapping-a-custom-subdomain-to-an-azure-website).
+- Make sure that you have permissions to add a host name to an app by checking with the subscription administrator.
+- If you need more subdomains, change the domain hosting to Azure DNS. By using Azure DNS, you can add 500 host names to your app. For more information, see [Add a subdomain](/archive/blogs/waws/mapping-a-custom-subdomain-to-an-azure-website).
 
 ### DNS can't be resolved
 
@@ -198,14 +194,14 @@ You received the following error message: "The DNS record could not be located."
 
 This problem happens for one of the following reasons:
 
-* The time-to-live (TTL) period hasn't expired. To determine the TTL value, check your domain's DNS configuration and wait for the period to expire.
-* The DNS configuration is incorrect.
+- The time-to-live (TTL) period hasn't expired. To determine the TTL value, check your domain's DNS configuration and wait for the period to expire.
+- The DNS configuration is incorrect.
 
 #### Solution
 
-* Wait 48 hours for this problem to resolve by itself.
-* If you can change the TTL setting in your DNS configuration, try changing the value to 5 minutes, which might solve this problem.
-* To verify that your domain points to the app's IP address, use [WhatsmyDNS.net](https://www.whatsmydns.net/). If the domain doesn't point to the IP address, configure the `A record` to the app's correct IP address.
+- Wait 48 hours for this problem to resolve itself.
+- If you can change the TTL setting in your DNS configuration, try changing the value to 5 minutes, which might solve this problem.
+- To verify that your domain points to the app's IP address, use [WhatsmyDNS.net](https://www.whatsmydns.net/). If the domain doesn't point to the IP address, configure the `A record` to the app's correct IP address.
 
 ### You need to restore a deleted domain
 
@@ -219,7 +215,7 @@ The subscription owner might have accidentally deleted the domain.
 
 #### Solution
 
-If your domain was deleted fewer than seven days ago, the domain hasn't started the deletion process. In this case, you can buy the same domain again on the Azure portal under the same subscription. (Be sure to type the exact domain name in the search box.) You won't be charged again for this domain. If the domain was deleted more than seven days ago, contact [Azure support](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade) for help with restoring the domain.
+If your domain was deleted fewer than seven days ago, the domain didn't start the deletion process. In this case, you can buy the same domain again on the Azure portal under the same subscription. (Be sure to type the exact domain name in the search box.) You won't be charged again for this domain. If the domain was deleted more than seven days ago, contact [Azure support](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade) for help with restoring the domain.
 
 ## Domain problems
 
@@ -246,17 +242,13 @@ The App Service certificate requires domain verification before the certificate 
 Manually verify your domain by adding a `TXT record`:
 
 1. Go to the DNS provider that hosts your domain name.
-
 1. Add a `TXT record` for your domain that uses the value of the domain token from the Azure portal.
-
 1. Wait a few minutes for DNS propagation to run, and then select the **Refresh** button to trigger the verification.
 
 As an alternative, you can use the HTML webpage method to manually verify your domain. This method allows the certificate authority (CA) to confirm the domain ownership of the domain for which the certificate is issued.
 
 1. Create an HTML file named `{domain verification token}.html`. The file content should contain the value of domain verification token.
-
 1. Upload this file at the root of the web server that's hosting your domain.
-
 1. Select **Refresh** to check the certificate status. It might take few minutes for verification to finish.
 
 For example, if you're buying a standard certificate for azure.com with the domain verification token `1234abcd`, a web request made to `https://azure.com/1234abcd.html` should return `1234abcd`.
@@ -274,19 +266,19 @@ You can't buy an App Service domain in the Azure portal.
 
 This problem happens for one of the following reasons:
 
-* There's no credit card on the Azure subscription, or the credit card is invalid.
+- There's no credit card on the Azure subscription, or the credit card is invalid.
 
   **Solution**: Add a valid credit card to your subscription.
 
-* Your Azure subscription type does not support the purchase of an App Service domain.
+- Your Azure subscription type doesn't support the purchase of an App Service domain.
 
   **Solution**: Upgrade your Azure subscription to another subscription type, such as a pay-as-you-go subscription.
   
-* Depending on the subscription type, you might be required to have a sufficient payment history before you can purchase an App Service domain.
+- Depending on the subscription type, you might be required to have a sufficient payment history before you can purchase an App Service domain.
 
   **Solution**: Either purchase with a different subscription that has a payment history or wait until you have a payment history with your current subscription.
   
-* You're not the subscription owner, so you don't have permission to purchase a domain.
+- You're not the subscription owner, so you don't have permission to purchase a domain.
 
   **Solution**: [Assign the Owner role](/azure/role-based-access-control/role-assignments-portal) to your account. Or, contact the subscription administrator to get permission to purchase a domain.
 
@@ -300,11 +292,11 @@ When you add a host name, the process fails to validate and verify the domain.
 
 This problem happens for one of the following reasons:
 
-* You don't have permission to add a host name.
+- You don't have permission to add a host name.
 
   **Solution**: Ask the subscription administrator to give you permission to add a host name.
 
-* Your domain ownership couldn't be verified.
+- Your domain ownership can't be verified.
 
   **Solution**: Verify that your `CNAME record` or `A record` is correctly set up. To map a custom domain to an app, create either a `CNAME record` or an `A record`. If you want to use a root domain, you must use an `A record` and a `TXT record`:
 
@@ -328,9 +320,9 @@ Yes, you can point the domain to a virtual machine. For more information, see [U
 
 App Service domains use GoDaddy for domain registration and Azure DNS to host the domains.
 
-**I enabled autorenew but still received a renewal notice for my domain via email. What should I do?**
+**I enabled auto-renew but still received a renewal notice for my domain via email. What should I do?**
 
-If you enabled autorenew, you don't need to take any action. The email informs you only that the domain is close to expiration and that you have to manually renew if autorenew isn't enabled.
+If you enabled auto-renew, you don't need to take any action. The email informs you only that the domain is close to expiration and that you have to manually renew if auto-renew isn't enabled.
 
 **Will I be charged for Azure DNS hosting my domain?**
 
@@ -376,15 +368,12 @@ When you select **Download as a certificate** for the App Service certificate un
 
 **What file format can I use to upload a certificate to App Service?**
 
-The certificate file format must be a .pfx file with a password applied to the file. The certificate must also meet the [certificate requirements](/azure/app-service/configure-ssl-certificate#private-certificate-requirements).
+You must use a .pfx file format with a password applied to the certificate file. The certificate must also meet the [certificate requirements](/azure/app-service/configure-ssl-certificate#private-certificate-requirements).
 
-If you obtained your certificate from a third-party CA and the file format is a .pem/.key format, you can use a tool like OpenSSL to convert the files to a .pfx file format. The private key must be included during the conversion because the .pfx file format requires it.
+If you get your certificate from a third-party CA and the file format is .pem or .key, use a tool like OpenSSL to convert the files to a .pfx file format. You need to include the private key during the conversion because the .pfx file format requires it.
 
-Also, if your CA gives you multiple certificates in the certificate chain, you have to merge the certificates by following the same order. For more information, see [Merge intermediate certificates](/azure/app-service/configure-ssl-certificate?tabs=apex%2Crbac%2Cazure-cli#merge-intermediate-certificates).
+If your CA gives you multiple certificates in the certificate chain, you need to merge the certificates by following the same order. For more information, see [Merge intermediate certificates](/azure/app-service/configure-ssl-certificate?tabs=apex%2Crbac%2Cazure-cli#merge-intermediate-certificates).
 
 **How do I generate a certificate-signing request for an App Service certificate?**
 
-For an App Service certificate, you purchase through the Azure portal or by using a Powershell/CLI command. A certificate-signing request isn't needed. However, Azure Key Vault supports storing digital certificates issued by any CA. It supports creating a certificate-signing request with a private/public key pair. The certificate-signing request can be signed by any CA (an internal enterprise CA or an external public CA). For more information, see [Create a certificate-signing request](/azure/key-vault/certificates/create-certificate-signing-request).
-
-
- 
+For an App Service certificate, purchase the certificate through the Azure portal or by using a PowerShell or CLI command. You don't need a certificate-signing request. However, Azure Key Vault supports storing digital certificates issued by any CA. It supports creating a certificate-signing request with a private/public key pair. The certificate-signing request can be signed by any CA, such as an internal enterprise CA or an external public CA. For more information, see [Create a certificate-signing request](/azure/key-vault/certificates/create-certificate-signing-request).

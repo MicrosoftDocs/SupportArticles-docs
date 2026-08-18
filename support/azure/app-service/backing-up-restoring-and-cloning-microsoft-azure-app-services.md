@@ -1,11 +1,13 @@
 ---
 title: Back up, restore, and clone an Azure App Service application
 description: Watch this video to learn how to back up, restore, and clone an Azure App Service app, including backup options, restore requirements, and regional cloning steps.
-ms.date: 02/13/2026
+ms.date: 08/17/2026
 ms.service: azure-app-service
-ms.author: shwagarwal
-author: ShwetaAgarwal-MS
-ms.reviewer: 
+manager: dcscontentpm
+author: kaushika-msft
+ms.author: kaushika
+ms.reviewer: kaushika
+ms.topic: troubleshooting
 ms.custom: sap:Configuration and Management
 ---
 

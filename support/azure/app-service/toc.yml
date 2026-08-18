@@ -33,6 +33,8 @@ items:
           href: temporary-storage-for-azure-app-service.md
       - name: Configuration and management
         items:
+        - name: Troubleshoot non-zone-redundant quota requests
+          href: troubleshoot-non-zone-redundant-quota-requests.md
         - name: Create or delete web apps FAQs
           href: ./create-delete-resources-faq-new.md
         - name: FAQs about scaling web apps

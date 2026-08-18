@@ -68,6 +68,14 @@ landingContent:
             url: general/troubleshoot-marketing-solution-health.md
 
   # Card
+  - title: Personalization
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot personalization issues
+            url: personalization/troubleshoot-personalization.md
+
+  # Card
   - title: Segments
     linkLists:
       - linkListType: how-to-guide
