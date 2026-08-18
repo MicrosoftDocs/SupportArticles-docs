@@ -252,18 +252,18 @@ items:
       href: ./tabs/websites-not-loaded-new-teams.md
   - name: Teams Rooms and devices
     items:
+    - name: Known issues with Teams Android devices
+      href: ./teams-rooms-and-devices/teams-rooms-known-issues-android.md
+    - name: Known issues with Teams Rooms on Windows
+      href: ./teams-rooms-and-devices/teams-rooms-known-issues-windows.md
+    - name: How to create a support request for Teams device issues
+      href: ./teams-rooms-and-devices/create-support-request-teams-device-issues.md
     - name: Certified Android devices get signed out of Teams
       href: ./teams-rooms-and-devices/signed-out-of-teams-android-devices.md
     - name: Collect Android Teams device logs
       href: ./teams-rooms-and-devices/collect-device-logs.md
     - name: Conditional Access-related issues on Teams Android devices
       href: ./teams-rooms-and-devices/teams-android-devices-conditional-access-issues.md
-    - name: Create a support request for Teams device issues
-      href: ./teams-rooms-and-devices/create-support-request-teams-device-issues.md
-    - name: Known issues with Teams Rooms on Android
-      href: ./teams-rooms-and-devices/teams-rooms-known-issues-android.md
-    - name: Known issues with Teams Rooms on Windows
-      href: ./teams-rooms-and-devices/teams-rooms-known-issues-windows.md
     - name: On-screen keyboard size is reduced on some devices
       href: ./teams-rooms-and-devices/teams-rooms-device-keyboard-size-reduced.md
     - name: Teams Rooms app doesn't start automatically after updates

@@ -22,7 +22,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 08/14/2026
+ms.date: 08/18/2026
 ---
 # Known issues with Teams Rooms on Windows
 
@@ -33,7 +33,7 @@ ms.date: 08/14/2026
 | Issue  |  Description | Workaround |
 | --- | --- | --- |
 |Teams Rooms app out of date|The Teams Rooms console displays the **system config out of date** error.|To fix this issue, [use the Microsoft Teams Rooms recovery tool](/MicrosoftTeams/rooms/recovery-tool).|
-|Can't access Windows Settings from the desktop right-click menu.|On Teams Rooms devices that are running app version 3.1.98.0 or later versions, any user account that has the Teams Rooms app installed can access Windows Settings only by using the Start menu. If you try to access Windows Settings by using another method, the Teams Rooms app opens instead.|Use one of the following workarounds to access Windows Settings:<ul><li>Select the **Settings** option from the **Start** menu.</li><li>Uninstall the Teams Rooms app for the affected user. Locate the app on the **Start** menu, right-click it, and select **Uninstall**.</li></ul>|
+|Can't access Windows Settings from the desktop right-click menu in admin mode.|On Teams Rooms devices, any user account that has the Teams Rooms app installed can access Windows Settings only by using the Start menu. If you try to access Windows Settings by using another method, the Teams Rooms app opens instead.|Use one of the following workarounds to access Windows Settings:<ul><li>Select the **Settings** option from the **Start** menu.</li><li>Uninstall the Teams Rooms app for the affected user. Locate the app on the **Start** menu, right-click it, and select **Uninstall**.</li></ul>|
 |Test service plans display in Teams Rooms Pro and Teams Rooms Basic licenses|IT Admins who assign user licenses in the Microsoft Teams admin center or in Microsoft Entra ID see the following test service plans in Teams Rooms Pro and Teams Rooms Basic licenses:<ul><li>Teams Rooms Test 1</li><li>Teams Rooms Test 2</li></ul> | No workaround is required. These service plans don't have any capabilities and can be ignored. They'll continue to display for the lifetime of the two SKUs.|
 |Unable to join some Webex meetings|When you select the **Join** button to join a Cisco Webex meeting from a Teams Rooms on Windows device, you're not connected to the meeting and see the home screen on the device instead.|No workaround is available at this time. Cisco is investigating the issue.|
 |Automatic remediation in Pro Management portal keeps failing.|The built-in remediation in the Microsoft Teams Rooms Pro Management portal to disable the USB peripheral power draining option under Windows USB settings keeps failing with the error message:<br/><br/>`Auto Remediation was unable to resolve this issue.`|To resolve the issue, implement a manual fix as described in [USB Peripheral Power Drain signal is unhealthy](./usb-peripheral-power-drain-status-unhealthy.md).|
@@ -45,7 +45,6 @@ ms.date: 08/14/2026
 |Settings window doesn't display on the console.|On a Teams Rooms on Windows device, when you select the **Settings** menu on the console, the console display becomes blank and the Settings menu opens in the Front of Room display instead.<br/><br/>This issue occurs on devices that are running version 5.5.129 of the Teams Rooms app, and their console display is not connected permanently to the compute system.|To work around the issue, use the following steps:<ol><li>Disconnect all Front of Room displays, but keep the console connected.</li><li>Select the **Settings** menu and verify that it displays on the console.</li><li>Connect the Front of Room displays again.</li></ol>|
 |File Explorer view appears when Google Meet starts.|When you join a Google Meet meeting by using a Teams Rooms on Windows device, the display shows a view of File Explorer briefly before the Google Meet interface appears.|No workaround is needed. The view of File Explorer disappears automatically when the meeting finishes loading.|
 |Brief spike in volume after disconnecting from Google Meet.|You join a Google Meet meeting by using a Teams Rooms on Windows device. Another user joins the meeting by using a different device such as a laptop, and shares a presentation involving audio. The volume of the presentation audio heard on the Teams Rooms device is low.<br/><br/>If you disconnect the Teams Rooms device while the presentation is ongoing, then for a brief moment while the device disconnects from the meeting, you hear a significant increase in the volume of the presentation audio.|No workaround is available at this time.|
-|Camera preview doesn't load during a meeting.|During a meeting on Teams Rooms for Windows devices, the camera preview might not load when you access the camera controls on the meeting toolbar. This issue might occur across multiple OEM devices and camera configurations, including single-camera, multi-camera, and Plaza deployments.<br/><br/>The camera preview pane might display a spinning wheel, but the issue doesn't affect the display video. All other camera controls and functionality within the meeting remain available.|No workaround is available at this time.|
 |Zoom Direct Guest Join selects incorrect audio device. | When you join a Zoom Meeting by using Direct Guest Join on a Teams Rooms on Windows device, the Zoom web application might not select the same audio device that you've selected in the Teams Rooms app.| Manually select the correct microphone and speaker from the Zoom web interface during the meeting. <br/> Alternatively, administrators can switch to Admin mode in the Teams Rooms device and set the default audio device in **Sound** settings in the Control Panel. This setting will ensure that the preferred audio device is selected each time. |
 
 ## Hardware issues
@@ -59,19 +58,10 @@ ms.date: 08/14/2026
 ## Limitations
 
 - Teams Rooms doesn't support High-Bandwidth Digital Content Protection (HDCP) input. Using HDCP input might cause issues that affect High-Definition Multimedia Interface (HDMI) ingest functionality, such as video and audio. To avoid these issues, make sure that the HDCP options are turned off for switches that are connected to Teams Rooms.
-- When you use the Call app on a Teams Rooms device to dial the toll number or conference ID for a Teams meeting, the conference bridge triggers multiple call flows. Because the Teams Rooms app is designed to support only one active call at a time, the call fails.
-
-  Instead of using the Call app, join the meeting by using the **Join with an ID** option and entering the meeting ID.
+- When you use the Call app on a Teams Rooms device to dial the toll number or conference ID for a Teams meeting, the conference bridge triggers multiple call flows. Because the Teams Rooms app is designed to support only one active call at a time, the call fails. Instead of using the Call app, join the meeting by using the **Join with an ID** option and entering the meeting ID.
 - If you're in a call with another user who is on a Teams Rooms device, you can't transfer the call. This issue occurs because the Teams Rooms app is designed to support only one call at a time.
-- If your organization configured policies to block legacy authentication for the Teams Rooms app, then Teams Rooms on Windows devices, can't join Teams meetings.
 - When you use multiple connected USB cameras of the same make and model with Teams Rooms on Windows, you experience the following issues:<br/><ul><li>Inability to reliably select or control a specific physical camera.</li><li>Unexpected changes in camera selection, framing behavior, and source switching. </li><li>Change to the active camera setting after it is disconnected and reconnected, or after the Teams Rooms app or the meeting restart.</li><li>Intelligent or enhanced framing experiences target the wrong camera.</li></ul>
 
-## Support for non-Microsoft Teams devices
 
-For issues with Teams devices offered by providers other than Microsoft, contact their individual sites for support:
-
-- Logitech: [Logitech Support](https://support.logi.com/hc/)
-- Crestron: [Crestron Support](https://support.crestron.com/)
-- Poly: [Poly Support](https://www.poly.com/us/support)
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-contact-disclaimer.md)]
