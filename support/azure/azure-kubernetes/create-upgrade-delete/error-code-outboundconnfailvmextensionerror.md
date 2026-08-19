@@ -76,7 +76,7 @@ If the Azure Virtual Network Verifier (Preview) tool doesn't provide enough insi
 
    ```bash
    nc -vz mcr.microsoft.com 443 
-   dig mcr.microsoft.com 443
+   dig mcr.microsoft.com
    ```
 
    > [!NOTE]  
@@ -108,7 +108,7 @@ If the Azure Virtual Network Verifier (Preview) tool doesn't provide enough insi
    curl --proxy https://<https-proxy-address>:<port>/ --head https://mcr.microsoft.com
    
    # Test DNS functionality.
-   dig mcr.microsoft.com 443
+   dig mcr.microsoft.com
    ```
    > [!NOTE]  
    > If you can't access the node through SSH, you can test the outbound connectivity by running the `az vmss run-command invoke` command against the Virtual Machine Scale Set instance:
@@ -141,7 +141,7 @@ If the Azure Virtual Network Verifier (Preview) tool doesn't provide enough insi
    >     --command-id RunShellScript \
    >     --instance-id <vmss-instance-id> \
    >     --output json \
-   >     --scripts "dig mcr.microsoft.com 443"
+   >     --scripts "dig mcr.microsoft.com"
    > ```
 
 ## Solution
