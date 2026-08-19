@@ -4,11 +4,11 @@ description: Troubleshooting application evaluation technical reference for Conf
 ms.manager: dcscontentpm
 audience: itpro
 ms.date: 03/25/2026
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: troubleshooting
 ms.collection: tier3
 ms.custom: sap:Application Management\Application Evaluation
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Application Deployment Evaluation
