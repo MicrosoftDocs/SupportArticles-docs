@@ -167,6 +167,8 @@ items:
         href: procurement/purchase-order-language-not-reflect-legal-entity-settings.md
       - name: Purchase requisition creation fails with "You are not set up as an employee"
         href: procurement/purchase-requisition-employee-not-linked.md
+      - name: Purchase requisition Submit, Workflow, or approval actions are unavailable
+        href: procurement/purchase-requisition-workflow-actions-unavailable.md
       - name: Purchase requisitions created before the current fiscal year can't be released
         href: procurement/purchase-requisitions-cannot-released.md
       - name: "\"Source document lines cannot be finalized\" error"

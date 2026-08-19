@@ -4,11 +4,11 @@ description: Helps resolve SQL Server Service Broker configuration issues that a
 ms.manager: dcscontentpm
 audience: itpro
 ms.date: 07/30/2026
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: troubleshooting
 ms.collection: tier3
 ms.custom: sap:Configuration Manager Database\SQL Settings and Configuration
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ai-usage: ai-assisted
 ms.reviewer: umaikhan
 ---

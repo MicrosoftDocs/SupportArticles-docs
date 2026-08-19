@@ -4,13 +4,13 @@ description: Introduces a set of diagrams that help you understand and troublesh
 ms.manager: dcscontentpm
 audience: itpro
 ms.date: 07/30/2026
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: overview
 ai-usage: ai-assisted
 ms.reviewer: umaikhan
 ms.collection: tier3
 ms.custom: sap:Configuration Manager Database\Database Replication Links
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 <!-- markdownlint-disable-next-line MD025 -->
