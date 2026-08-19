@@ -149,6 +149,8 @@ items:
         href: procurement/cant-correct-product-receipt-quantity-below-invoiced.md
       - name: Canceled purchase orders appear in the draft list in the workspace
         href: procurement/canceled-po-in-draft-list.md
+      - name: Canceled purchase orders can't be finalized when the source document header is "In process"
+        href: procurement/unable-to-finalize-cancelled-purchase-orders.md
       - name: Cancelling delivery remainder moves purchase order to a Confirmed state
         href: procurement/change-management-canceled-remainder.md
       - name: Default tax group and cash discount aren't filled in from the invoice account
