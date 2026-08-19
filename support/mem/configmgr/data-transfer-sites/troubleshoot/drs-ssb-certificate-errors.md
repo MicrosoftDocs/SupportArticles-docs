@@ -5,8 +5,8 @@ ms.manager: dcscontentpm
 audience: itpro
 ms.date: 07/30/2026
 ms.reviewer: umaikhan
-ms.subservice: core-infrastructure
-ms.service: microsoft-endpoint-configuration-manager
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: troubleshooting
 ms.collection: tier3
 ms.custom: sap:Configuration Manager Database\Database Replication Links

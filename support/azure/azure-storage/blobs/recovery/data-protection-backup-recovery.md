@@ -1,12 +1,13 @@
 ---
 title: Azure Storage data protection, backup, and recovery
 description: This article discusses data backup and protection options and recovery scenarios for Azure Storage.
-ms.date: 04/17/2023
+ms.date: 08/17/2026
 ms.service: azure-storage
 ms.reviewer: jiajwu, ryanchen, azurestocic, v-weizhu
 ms.topic: how-to
 ms.custom: sap:Deletion and Recovery
 ---
+
 # Best practices for Azure Storage data protection, backup, and recovery
 
 The article provides Azure Storage data protection and backup options, self-serve recovery scenarios, and Microsoft-assist recovery possibilities.
@@ -224,7 +225,7 @@ Microsoft doesn't support the following storage recovery scenarios:
 
 - Azure Storage Queue recovery isn't supported.
 - Azure Storage Table entries recovery isn't supported, while deleted table recovery is supported. For more information, see [Supported Storage Recovery](#supported-storage-recovery).
-- Azure Blob files recovery without enabling blob file protection isn't supported, but deleted container recovery is supported. For more information, see [Supported Storage Recovery](#supported-storage-recovery).
+- Azure Blob files recovery without enabling blob file protection isn't supported.
 
 ## Supported storage recovery
 
@@ -232,10 +233,9 @@ This section describes several supported storage recovery scenarios when some pr
 
 - [Scenario 1: Storage account recovery (ARM storage account recovery)](#scenario-1-storage-account-recovery-arm-storage-account-recovery)
 - [Scenario 2: Classic storage account recovery](#scenario-2-classic-storage-account-recovery)
-- [Scenario 3: Container recovery](#scenario-3-container-recovery)
-- [Scenario 4: ADLS Gen 2 data and file system recovery](#scenario-4-adls-gen-2-data-and-file-system-recovery)
-- [Scenario 5: Table recovery](#scenario-5-table-recovery)
-- [Scenario 6: Disk recovery](#scenario-6-disk-recovery)
+- [Scenario 3: ADLS Gen 2 data and file system recovery](#scenario-3-adls-gen-2-data-and-file-system-recovery)
+- [Scenario 4: Table recovery](#scenario-4-table-recovery)
+- [Scenario 5: Disk recovery](#scenario-5-disk-recovery)
 
 Microsoft is making every effort to recover the data but cannot guarantee the amount of data that can be restored.
 
@@ -268,17 +268,7 @@ Suggestions:
 
 - Seek help from support engineers to evaluate the situation.
 
-### Scenario 3: Container recovery
-
-Prerequisites:
-
-- The storage account replication was set to geo-redundant storage (GRS), geo-zone-redundant storage (GZRS), read-access geo-zone-redundant storage (RAGZRS), or read-access geo-redundant storage (RA-GRS) prior to "container" deletion. Storage accounts with LRS aren't supported to recover a deleted container.
-
-Suggestions:
-
-- Seek help from support engineers to evaluate the situation.
-
-### Scenario 4: ADLS Gen 2 data and file system recovery
+### Scenario 3: ADLS Gen 2 data and file system recovery
 
 Prerequisites:
 
@@ -289,7 +279,7 @@ Suggestions:
 
 - Seek help from support engineers to evaluate the situation.
 
-### Scenario 5: Table recovery
+### Scenario 4: Table recovery
 
 Prerequisites:
 
@@ -299,7 +289,7 @@ Suggestions:
 
 - Seek help from support engineers to evaluate the situation.
 
-### Scenario 6: Disk recovery
+### Scenario 5: Disk recovery
 
 Prerequisites:
 

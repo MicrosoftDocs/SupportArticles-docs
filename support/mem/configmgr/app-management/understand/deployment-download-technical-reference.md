@@ -4,11 +4,11 @@ description: Troubleshooting application download technical reference for Config
 ms.manager: dcscontentpm
 audience: itpro
 ms.date: 03/25/2026
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: troubleshooting
 ms.collection: tier3
 ms.custom: sap:Application Management\Application Download
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Application download in Configuration Manager
