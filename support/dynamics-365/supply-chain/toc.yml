@@ -145,6 +145,8 @@ items:
         href: procurement/approved-vendor-effective-date.md
       - name: Can't delete a purchase order line after it's confirmed
         href: procurement/purchase-order-line-deletion-restriction.md
+      - name: Can't reduce a product receipt quantity below the invoiced quantity
+        href: procurement/cant-correct-product-receipt-quantity-below-invoiced.md
       - name: Canceled purchase orders appear in the draft list in the workspace
         href: procurement/canceled-po-in-draft-list.md
       - name: Cancelling delivery remainder moves purchase order to a Confirmed state
