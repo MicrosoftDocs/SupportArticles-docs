@@ -77,6 +77,8 @@
     href: recurring-icon-background-is-black.md
   - name: Third-party drivers fail on USB IPP multifunction printers in Windows 11
     href: known-issues-third-party-drivers.md
+  - name: Create multiple print queues for an IPP printer
+    href: create-multiple-print-queues-for-ipp-printer.md
 
 - name: Storage Driver
   items:
