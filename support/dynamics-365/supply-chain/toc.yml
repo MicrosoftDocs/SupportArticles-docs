@@ -165,6 +165,8 @@ items:
         href: procurement/po-so-order-taker-not-auto-filled.md
       - name: PO confirmation fails with "Cannot create a record in Source document line"
         href: procurement/cannot-create-record-sourcedocumentline.md
+      - name: Product receipt posting fails with the "only allowed in state draft" error
+        href: procurement/product-receipt-fails-with-changes-only-allowed-in-draft-state-error.md
       - name: Purchase order line data discrepancies
         href: procurement/purchase-order-line-data-issues.md
       - name: Purchase orders don't reflect the language settings of the legal entity
