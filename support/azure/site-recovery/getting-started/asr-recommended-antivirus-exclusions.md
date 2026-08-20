@@ -1,7 +1,7 @@
 ---
 title: Recommended antivirus exclusions for Azure Recovery Services
 description: Describes recommended antivirus (AV) settings for servers that have Microsoft Azure Recovery Services software installed. The various exclusion sets for each role are described.
-ms.date: 10/10/2020
+ms.date: 08/20/2026
 ms.service: azure-site-recovery
 ms.author: kaushika
 author: kaushika-msft
@@ -79,6 +79,6 @@ Exclude the installation path of the Recovery Services agent, which is `C:\Progr
 
 #### Protected VMs  
 
-Guest virtual machines (VMs) that are protected by Azure Recovery Services should exclude the installation folder where the guest agent is installed. The default path is `C:\Program Files (x86)\Azure Site Recovery`.
+Guest virtual machines (VMs) that are protected by Azure Site Recovery should exclude the installation folder where the guest agent is installed. The default path is `C:\Program Files (x86)\Microsoft Azure Site Recovery`.
 
  

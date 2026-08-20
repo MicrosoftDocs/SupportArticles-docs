@@ -155,6 +155,8 @@ items:
         href: procurement/change-management-canceled-remainder.md
       - name: Default tax group and cash discount aren't filled in from the invoice account
         href: procurement/default-tax-group-and-discount.md
+      - name: "\"Enter the mandatory warehouse\" error when you post a product receipt (GRN)"
+        href: procurement/grn-receiving-error-item-transactions-mandatory-warehouse.md
       - name: Error "Object reference not set" occurs during purchase order confirmation
         href: procurement/object-reference-not-set.md
       - name: Failures when submitting a Prospective Vendor Registration Request
