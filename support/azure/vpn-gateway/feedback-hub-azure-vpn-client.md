@@ -18,6 +18,9 @@ This article helps you report an Azure VPN Client problem or improve the Azure V
 
 The Feedback Hub app is automatically a part of Windows 10 and Windows 11. You don't need to download it separately. The screenshots shown in this article might be slightly different, depending on the version of Feedback Hub. For more information about FeedBack Hub, see [Send feedback to Microsoft with the Feedback Hub app](https://support.microsoft.com/en-us/windows/send-feedback-to-microsoft-with-the-feedback-hub-app-f59187f8-8739-22d6-ba93-f66612949332).
 
+> [!NOTE]
+>Microsoft recommends using Windows 11 with Point-to-Site VPN connections. Windows 10 reached end of support in October 2025. For more information, see [supported Windows versions for Azure VPN Client](azure/vpn-gateway/azure-vpn-client-versions#supported-windows-versions).
+
 ## Open Feedback Hub
 
 1. To open the Feedback Hub app, on your Windows computer, press the **Windows logo key** + **F**, or select **Start** on your Windows 10 or Windows 11 computer and type **Feedback Hub**.
