@@ -1,10 +1,11 @@
 ---
 title: Windows 365 Enterprise and Windows 365 Flex Known issues
-description: Learn about known issues for Windows 365 Enterprise and Windows 365 Flex.
+description: "Learn about known issues for Windows 365 Enterprise and Windows 365 Flex. This information helps you quickly troubleshoot and resolve Cloud PC issues."
 manager: dcscontentpm
-ms.date: 05/05/2026
+ms.date: 08/21/2026
 ms.topic: troubleshooting
-ms.reviewer: kaushika, msft-jasonparker, stulimat, scottduf
+ms.reviewer: kaushika, japarker, stulimat, scottduf
+ai-usage: ai-assisted
 ms.custom:
 - pcy:WinComm User Experience
 - sap:Onboarding issues
@@ -15,7 +16,9 @@ ms.collection:
 
 # Windows 365 Enterprise and Windows 365 Flex known issues
 
-The following items are known issues for Windows 365 Enterprise and Windows 365 Flex.
+## Summary
+
+The following items are known issues for Windows 365 Enterprise and Windows 365 Flex. This article describes causes and solutions for these issues, and provides links to resources that provide more information.
 
 ## First-time Cloud PC sign-in triggers an impossible travel location alert
 
@@ -46,28 +49,24 @@ Upgrading an existing Cloud PC between release versions of Windows 10 to Windows
 Find and manage the Cloud PC in Microsoft Intune by using the unchanged Intune device name, either through the **Devices** > **All devices** list or the **Devices** > **Windows 365** > **All Cloud PCs** list.
 
 ## Windows 365 provisioning fails<!--38483005-->
-   
-   Windows 365 provisioning might fail if the Desired State Configuration (DSC) extension is used and the PowerShell 
-  execution policy is set to **AllSigned** through Group Policy.
-   
-   Windows 365 sets the PowerShell execution policy to `RemoteSigned` at the `LocalMachine` scope during provisioning. 
-  This policy allows locally created scripts and scripts run through the Custom Script Extension (CSE), while requiring 
-  downloaded scripts to be digitally signed. If a customer-configured GPO sets the execution policy to `AllSigned` at the 
-  `MachinePolicy` scope, it overrides the default configuration and blocks unsigned scripts.
-   
-   You might see either of the following errors:
-   
-   - **Custom Script Extension authorization manager validation failed.** Script execution was blocked by an authorization
-   manager validation failure in the Custom Script Extension.
-   - "An internal error occurred. The virtual machine deployment timed out."
-   
-   ### Solution
-   
-   1. Ensure that the execution policy and App Control for Business policies allow required scripts to run.
-   1. Review any applied GPOs that set the PowerShell execution policy to **AllSigned**.
-   1. Remove the GPO or change the policy to **RemoteSigned**.
-   1. Retry the ANC health check. If the check succeeds, retry provisioning.
-      
+
+Windows 365 provisioning might fail if the Desired State Configuration (DSC) extension is used and the PowerShell execution policy is set to **AllSigned** through Group Policy.
+
+Windows 365 sets the PowerShell execution policy to `RemoteSigned` at the `LocalMachine` scope during provisioning. This policy allows locally created scripts and scripts run through the Custom Script Extension (CSE), while requiring downloaded scripts to be digitally signed. If a customer-configured GPO sets the execution policy to `AllSigned` at the `MachinePolicy` scope, it overrides the default configuration and blocks unsigned scripts.
+
+You might see either of the following errors:
+
+- **Custom Script Extension authorization manager validation failed.** Script execution was blocked by an authorization
+manager validation failure in the Custom Script Extension.
+- "An internal error occurred. The virtual machine deployment timed out."
+
+### Solution
+
+1. Ensure that the execution policy and App Control for Business policies allow required scripts to run.
+1. Review any applied GPOs that set the PowerShell execution policy to **AllSigned**.
+1. Remove the GPO or change the policy to **RemoteSigned**.
+1. Retry the ANC health check. If the check succeeds, retry provisioning.
+
 ## Cloud PC reports as not compliant with the compliance policy
 
 The following device compliance settings report as **Not applicable** when being evaluated for a Cloud PC:
@@ -82,13 +81,30 @@ The following device compliance settings might report as **Not Compliant** when 
 
 ### Solution
 
-To enable secure boot on the Cloud PC, reprovision the specific Cloud PC. for more information, see see [Reprovision a Cloud PC](/windows-365/enterprise/reprovision-cloud-pc)
+To enable secure boot on the Cloud PC, reprovision the specific Cloud PC. For more information, see see [Reprovision a Cloud PC](/windows-365/enterprise/reprovision-cloud-pc).
 
 To remove the "not compliant" settings:
 
 1. [Create a filter for all Cloud PCs](/windows-365/enterprise/create-filter#create-a-filter-for-all-cloud-pcs).
 1. For any existing device compliance policies that both evaluate to a Cloud PC and contain either of the **Not Compliant** settings, use this new filter to exclude Cloud PCs from the policy assignment.
 1. Create a new device compliance policy without either of the **Not Compliant** settings and use this new filter to include Cloud PCs for the policy assignment.
+
+## Administrator protection isn't supported on Cloud PCs
+
+Windows 365 Cloud PCs don't support Administrator protection. If a policy that enables it is assigned to your Cloud PCs, users might see an unexpected authentication prompt when signing in, extra approval prompts for tasks that require elevation, and elevation failures.
+
+The sign-in prompt affects all users. The elevation prompts and failures affect users who have local administrator rights. By default, users aren't administrators of their Cloud PCs.
+
+### Solution
+
+If Administrator protection is already enabled on your Cloud PCs, set **User Account Control: Configure type of Admin Approval Mode** to **Legacy Admin Approval Mode** in the policy that's assigned to them, then restart the Cloud PCs. This setting is in the Intune settings catalog under **Local Policies Security Options**.
+
+To prevent Administrator protection from being applied to Cloud PCs:
+
+1. [Create a filter for all Cloud PCs](/windows-365/enterprise/create-filter#create-a-filter-for-all-cloud-pcs).
+1. Use the filter to exclude Cloud PCs from any policy that enables Administrator protection.
+
+For more information, see [Administrator protection](/windows/security/application-security/application-control/administrator-protection/).
 
 ## Single sign-on users see a dialog to allow remote desktop connection during the connection attempt <!--42499792-->
 
@@ -110,24 +126,24 @@ Follow the steps in [troubleshoot sign-in problems](/azure/active-directory/cond
 
 ## When a Cloud PC locks, it immediately disconnects single sign-on users
 
-When single sign-on isn't used, users can see the Cloud PC lock screen and enter credentials to unlock their Windows session. However, when single sign-on is used, the Cloud PC fully disconnects the session to enable the following capabilities:
+When users don't use single sign-on, they can see the Cloud PC lock screen and enter credentials to unlock their Windows session. However, when users use single sign-on, the Cloud PC fully disconnects the session to enable the following capabilities:
 
 - Users can use passwordless authentication to unlock their Cloud PC.
-- Conditional Access policies and multifactor authentication can be enforced when unlocking the Cloud PC.
+- You can enforce Conditional Access policies and multifactor authentication when unlocking the Cloud PC.
 
 <a name='single-sign-on-users-arent-asked-to-reauthenticate-to-azure-ad-when-connecting-from-an-unmanaged-device---35593334--'></a>
 
 ## When single sign-on users connect from an unmanaged device, they aren't asked to reauthenticate to Microsoft Entra ID <!--35593334-->
 
-When you use single sign-on, all authentication behavior (including supported credential types and sign-in frequency) is driven through Microsoft Entra ID.
+When you use single sign-on, Microsoft Entra ID drives all authentication behavior, including supported credential types and sign-in frequency.
 
 ### Solution
 
-To enforce periodic reauthentication through Microsoft Entra ID, create a Conditional Access policy using the [sign-in frequency control](/windows-365/enterprise/set-conditional-access-policies#configure-sign-in-frequency).
+To enforce periodic reauthentication through Microsoft Entra ID, create a Conditional Access policy by using the [sign-in frequency control](/windows-365/enterprise/set-conditional-access-policies#configure-sign-in-frequency).
 
-## I don't see the Cloud PC reports on the Devices > Overview page in the Intune admin center
+## I don't see the Cloud PC reports on the **Devices** > **Overview** page in the Intune admin center
 
-If you turn on the **Use Devices preview** setting in the Intune admin center, the **Cloud PC performance (preview)** tab, **Cloud PCs with connection quality issues** report, and **Cloud PCs with low utilization** report aren't on the **Overview** page.
+If you turn on the **Use Devices preview** setting in the Intune admin center, the **Cloud PC performance (preview)** tab, **Cloud PCs with connection quality issues** report, and **Cloud PCs with low utilization** report don't appear on the **Overview** page.
 
 ### Solution
 
@@ -236,13 +252,13 @@ When screen capture protection is enabled, Microsoft Teams on Windows 365 Cloud 
      - **Enable screen capture protection** = **Enable**
      - **Screen Capture Protection Options** = **Block screen capture on client and server**
 
-## Windows 365 role assignments do not support device groups as scope groups
+## Windows 365 role assignments don't support device groups as scope groups
 
-Windows 365 role assignments do not support adding device group as a part of scope groups. It only supports user groups. 
+Windows 365 role assignments don't support adding device groups as part of scope groups. They only support user groups. 
 
 ### Solution
 
-Make sure to add the right user groups within the administrator's role assignment. For devices that do not have associated users (Frontline in shared mode devices or CloudApps), the scope group check is skipped.  
+Add the correct user groups within the administrator's role assignment. For devices that don't have associated users (Frontline in shared mode devices or CloudApps), the scope group check is skipped.  
 
 ## Windows 365 scope tags and nested groups
 
@@ -254,7 +270,7 @@ Apply the scope tag individually to each group in the nested security group.
 
 ## Windows 365 doesn't support editing scope tags for individual Cloud PCs
 
-The Windows 365 user interface and Graph API don't support the editing of scope tags for individual Cloud PCs.
+The Windows 365 user interface and Graph API don't support editing scope tags for individual Cloud PCs.
 
 ### Solution
 
@@ -274,14 +290,14 @@ For example, if a scoped admin who's associated with the "Scope Tag A" scope tag
 
 The May 21, 2024 updates for Cloud PC gallery images lack the WebRTC Redirector Service. Without this component, Teams media redirection doesn't work.
 
-This applies to the following gallery images:
+This condition applies to the following gallery images:
 
 - Windows 11 23H2 with Microsoft 365 apps
 - Windows 11 22H2 with Microsoft 365 apps
 
 ### Troubleshooting steps
 
-For newly provisioned Cloud PCs, verify that WebRTC is available. If it's not, you can use either of the following options:
+For newly provisioned Cloud PCs, verify that WebRTC is available. If it's not, use either of the following options:
 
 - To add the WebRTC Redirector Service app to the list of apps to install by default onto Cloud PCs, follow the steps in [Add Microsoft 365 Apps to Windows 10/11 devices with Microsoft Intune](/mem/intune/apps/apps-add-office365).
 
@@ -293,7 +309,7 @@ The following items are known issues for Windows 365 Flex.
 
 ### Users can't access Windows 365 Flex Cloud PCs that are in shared mode
 
-When Windows 365 Flex Cloud PCs in shared mode are assigned to a Microsoft Entra ID group that has more than 10,000 members, some users might not receive access and don't see the Cloud PC cards in the Windows app client.
+When you assign Windows 365 Flex Cloud PCs in shared mode to a Microsoft Entra ID group that has more than 10,000 members, some users might not receive access and don't see the Cloud PC cards in the Windows app client.
 
 #### Solution
 
@@ -310,7 +326,7 @@ Perform a reprovisioning action in the provisioning policy:
 1. Go to **Microsoft Intune admin center** > **Devices** > **Windows 365**.
 1. Select **Provisioning policies**.
 1. Select the affected provisioning policy.
-1. To reset the deployment state, elect **Reprovision**.
+To reset the deployment state, select **Reprovision**.
 1. After the reprovisioning process completes, you can adjust the Cloud PC count as needed.
 
 ### Scheduled reprovisioning doesn't recover after license changes
@@ -323,8 +339,7 @@ To restore full reprovisioning functionality after you restore expired licenses:
 
 1. **Remove the provisioning policy assignment:**
    1. Go to the affected provisioning policy.
-   1. Go to the **Assignments** tab, and the remove all group assignments.
-
+   1. Go to the **Assignments** tab, and then remove all group assignments.
 
 1. **Re-add the assignment:**
    1. Wait 5-10 minutes for the removal to process.
@@ -342,7 +357,7 @@ You can't reduce the number of Cloud PCs for Windows 365 Flex Cloud PCs in share
 
 ### Autopilot Device Preparation (DPP) initially shows as failed if timeout limit is reached
 
-After you create the provisioning policy, you receive the `DevicePreparationProfileTimeout` error code. This means that the Cloud PC provisioning process reached the initial DPP timeout but hasn't successfully applied Autopilot Device Preparation.
+After you create the provisioning policy, you receive the `DevicePreparationProfileTimeout` error code. This error code means that the Cloud PC provisioning process reached the initial DPP timeout but didn't successfully apply Autopilot Device Preparation.
 
 #### Solution
 
@@ -356,13 +371,13 @@ Immediately after provisioning, the status information for the Autopilot Device 
 
 Wait for the process to continue. Cloud PC serial numbers can take up to 30 minutes to appear in the status information.
 
-### Windows Autopilot Device Preparation is not currently supported for Citrix Cloud PCs
+### Windows Autopilot Device Preparation isn't currently supported for Citrix Cloud PCs
 
-Device preparation policies (DPP) aren't supported for Cloud PCs that are configured to use Citrix integration. If you assign a device preparation policy to a provisioning policy that’s used for Citrix Cloud PCs, the policy won't be applied during Cloud PC provisioning.
+Device preparation policies (DPP) aren't supported for Cloud PCs that are configured to use Citrix integration. If you assign a device preparation policy to a provisioning policy that's used for Citrix Cloud PCs, the policy won't be applied during Cloud PC provisioning.
 
 #### Solution
 
-There is currently no workaround. To use Citrix integration, configure your Cloud PCs by using a provisioning policy that doesn’t include a device preparation policy.
+There is currently no workaround. To use Citrix integration, configure your Cloud PCs by using a provisioning policy that doesn't include a device preparation policy.
 
 ## Next steps
 

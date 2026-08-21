@@ -24,7 +24,7 @@ The Resize remote action preserves user and disk data. You can use this remote a
 > - You can't use the Resize remote action to downsize disk space.
 > - You can't use the Resize remote action on Cloud PCs that use Graphical Processing Units (GPU Cloud PCs). Although GPU Cloud PCs might show up in the resize flow, trying to resize a GPU Cloud PC results in an error.
 
-> [!NOTE]  
+> [!NOTE]
 > These operations don't require you to reprovision the Cloud PC.
 
 Consider resizing a Cloud PC when a user needs changes in the following components:
@@ -42,6 +42,8 @@ The following Business Cloud PC licenses support the Resizing remote action:
 - Single device operations.
 
 During the resizing process, the Windows 365 service automatically unassigns the original license and assigns the new license on behalf of the administrator. To avoid accidentally creating additional Cloud PCs, don't try to manually assign licenses.
+> [!NOTE]
+> The **Resize** action is unavailable (greyed out) in the Microsoft 365 admin center when the Windows 365 license assigned to the Cloud PC is in a warning state—for example, when the underlying subscription has expired and entered its warning or grace period. During a resize, the Windows 365 service unassigns the current license and assigns the new one automatically; administrators don't assign licenses manually. For the service to complete this process, the assigned license must be in an active state. Return the license to an active state (renew or replace the expired subscription, or assign a healthy license of the current size), and then retry the resize.
 
 ## Prerequisites
 
