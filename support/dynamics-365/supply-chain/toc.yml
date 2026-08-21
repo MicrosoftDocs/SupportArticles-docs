@@ -183,6 +183,8 @@ items:
         href: procurement/source-document-lines-cannot-be-finalized.md
       - name: Summary update error when you invoice a direct delivery purchase order
         href: procurement/summary-update-error-direct-delivery-po-invoice.md
+      - name: "\"The company does not exist\" when canceling a purchase order line remainder"
+        href: procurement/company-does-not-exist-cancel-po-line-remainder.md
       - name: The delivery name isn't synced after changing a purchase order delivery address
         href: procurement/delivery-name-isnt-synced.md
       - name: The Post to charge account in ledger setting isn't turned on
