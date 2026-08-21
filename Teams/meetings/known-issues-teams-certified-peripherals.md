@@ -15,7 +15,7 @@ appliesto:
   - New Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 01/30/2025
+ms.date: 08/20/2026
 ---
 # Known issues when you use Teams certified peripherals
 
@@ -34,3 +34,4 @@ ms.date: 01/30/2025
 |Mute and unmute functions on connected peripherals don't work.|When the computer that your peripherals are connected to goes to sleep, Teams and the connected peripherals stop syncing.<br/>After the computer wakes from sleep, neither Teams nor any of the peripherals respond to Mute and Unmute requests from one another.|Restart Teams to restore syncing with the connected peripherals.|
 |No ringing tone during an incoming or an outgoing call.|When someone calls you, there's no ringing sound to alert you to the incoming call. Similarly, when you make an outgoing call there's no ring tone to indicate that the call is in progress. The ring tone plays only after the callee picks up the call.<br/><br/>If the caller who is calling you or the callee when you make an outgoing call is using a native Bluetooth audio device connected to a Windows 11 computer, the device might mute the system audio and Teams ring tone, and play only the device-specific built-in ring tone.<br/><br/>When a call comes in, the computer sends the HFP RING response and might play the Teams ring tone and media playback audio to the Bluetooth device. However the paired device decides whether to play the audio received from the computer, its built-in ring tone, or both.|No workaround because this issue is caused by the connected audio device.|
 |No audio after joining a town hall event from the desktop client.|When you join a town hall event by using the Teams desktop client and connect an older Bluetooth audio device to your computer, you don't hear the event's audio.|On the pre-join screen for the town hall event, wait until you see the following alert:<br/><br/><b>`Attendee mics and cameras are turned off for this event.`</b><br/><br/>Then select the link to join the town hall event and the audio will work.|
+|Teams call drops when the Skype for Business app is launched during the call. | When you use a connected personal peripheral device during an active Teams meeting or call, and start the Skype for Business app during the call, your active Teams meeting or call drops. |No workaround is available. We don't recommended you use the Teams and Skype for Business apps simultaneously. |
