@@ -218,8 +218,6 @@ items:
           href: ../mailflow/dns-query-failed.md
         - name: Apps for Outlook 2013 can't activate in email
           href: /outlook/troubleshoot/user-interface/apps-for-outlook-2013-do-not-activate-as-expected
-        - name: Assertion Failed when editing a transport rule
-          href: ../mailflow/cannot-edit-transport-rule.md
         - name: Attachments are dropped during IMAIL conversion
           href: ../mailflow/attachments-dropped-during-imail-conversion.md
         - name: Blank emails after installing ESET NOD32 4.x

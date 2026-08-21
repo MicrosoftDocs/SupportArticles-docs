@@ -429,6 +429,10 @@
     {
       "source_path": "Exchange/ExchangeServer/mailflow/message-body-shown-as-attachment.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/mailflow/cannot-edit-transport-rule.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     }
   ]
 }
