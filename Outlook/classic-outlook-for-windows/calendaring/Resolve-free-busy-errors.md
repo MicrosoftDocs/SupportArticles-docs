@@ -22,7 +22,7 @@ appliesto:
   - Outlook for iOS
   - Outlook for Mac
 search.appverid: MET150
-ms.date: 05/29/2024
+ms.date: 08/21/2026
 ---
 
 # Resolve free/busy errors
@@ -271,11 +271,54 @@ This error can occur if organization settings are misconfigured.
 
 ### Troubleshooting steps
 
-After you complete each step, check whether the free/busy issue is fixed.
+After you complete each step, check whether the free/busy issue is fixed:
 
+1. Verify that the **TargetAddress**, **RemoteRoutingAddress**, or **ExternalEmailAddress** attribute of the target user resolves correctly in the source environment. 
+
+   For example, assume that mary@contoso.com (Exchange On-Premises User Mailbox) looks up free/busy information for john@contoso.com (Exchange Online Mailbox). In this case, the various parameter values are as follows:
+
+   - **Free/Busy** direction: On-Premises to Cloud
+   - **Source Environment**: Exchange On-Premises
+   - **Target Environment**: Exchange Online
+   - **Source User**: Mary
+   - **Target User**: John
+     
+   An Exchange On-Premises environment has a Remote Mailbox object or Mail User object for john@contoso.com. The **RemoteRoutingAddress** on Get-RemoteMailbox john@contoso.com or the **ExternalEmailAddress** on Get-MailUser john@contoso.com is set to john@contoso.mail.onmicrosoft.com. This attribute is equivalent to **TargetAddress** in Active Directory.
+
+   `Get-RemoteMailbox john@contoso.com | FL RemoteRoutingAddress`  
+   `RemoteRoutingAddress : SMTP:john@contoso.mail.onmicrosoft.com`  
+   
+   Assume that Mary receives the following error message when she looks up free/busy information for John:
+
+   > "Configuration information for forest /domain CONTOSO.COM could not be found in Active Directory"
+
+   This message indicates that John's **TargetAddress**, **RemoteRoutingAddress**, or **ExternalEmailAddress** value in Exchange On-Premises is wrong. This condition means that this address is set to john@contoso.com instead of john@contoso.mail.onmicrosoft.com. To fix this error, run the following command in Exchange Management Shell on-premises: 
+   
+   ```PowerShell
+   `Set-RemoteMailbox <your cloud user mailbox> -RemoteRoutingAddress <user's alias>@<your initial domain>.mail.onmicrosoft.com`  
+   ```
+    
+   In our example scenario, the command would be as follows:
+
+   ```PowerShell
+   `Set-RemoteMailbox john@contoso.com -RemoteRoutingAddress john@contoso.mail.onmicrosoft.com`  
+   ```
+   
+   This mail.onmicrosoft.com domain would then match the domain that's set in Exchange On-Premises Intra Organization Connector and Organization Relationship:
+
+   `Get-IntraOrganizationConnector | FL Identity, Enabled, TargetAddressDomains`
+   
+   `Get-OrganizationRelationship | FL Identity, Enabled, DomainNames`
+    
+   If the free/busy direction is different, Cloud to On-premises, where mary@contoso.com is the Target User and Exchange Online is the Source Environment, then we expect Mary to be a Mail User object in Exchange Online, with PrimarySmtpAddress mary@contoso.com and ExternalEmailAddress mary@contoso.com. This domain should match the domains that are listed in Intra Organization Connector and Organization Relationship settings, in Exchange Online PowerShell:
+
+   `Get-IntraOrganizationConnector | FL Identity, Enabled, TargetAddressDomains`
+   
+   `Get-OrganizationRelationship | FL Identity, Enabled, DomainNames`
+      
 1. Verify that the domain of a user whose free/busy information is requested exists in the organization settings of the user that's trying to view the free/busy information. Select one of the following procedures depending on the free/busy direction.
 
-   - **Cloud to on-premises**
+      - **Cloud to on-premises**
 
      For a cloud user that tries to view the free/busy information for an on-premises user, follow these steps:
 
@@ -297,7 +340,7 @@ After you complete each step, check whether the free/busy issue is fixed.
          Set-IntraOrganizationConnector -Identity <connector ID> -TargetAddressDomains @{add="<on-premises domain>"}​
          ```
 
-   - **On-premises to cloud**
+      - **On-premises to cloud**
 
      For an on-premises user that tries to view the free/busy information for a cloud user, follow these steps:
 
@@ -1768,7 +1811,7 @@ To fix the issue, use the following steps. After you complete each step, check w
 
 4. Browse to the internal URL that you found in step 3. Resolve any errors that you find, such as certificate errors.
 
-5. [Configure the Hybrid Agent to direct requests to a load balancer](/exchange/hybrid-deployment/hybrid-agent) instead of a server that's running Microsoft Exchange Server to rule out issues that might exist on that server.
+1. [Configure the Hybrid Agent to direct requests to a load balancer](/exchange/hybrid-deployment/hybrid-agent) instead of a server that's running Microsoft Exchange Server to rule out issues that might exist on that server.
 
 6. [Verify that the Hybrid Agent supports free/busy requests and mailbox migration](/exchange/hybrid-deployment/hybrid-agent).
 
