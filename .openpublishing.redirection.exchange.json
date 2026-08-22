@@ -381,6 +381,58 @@
     {
       "source_path": "Exchange/ExchangeServer/administration/multipart-mixed-mime-message-format.md",
       "redirect_url": "/exchange/mail-flow/mail-routing/multipart-mixed-mime-message-format"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/administration/s-mime-email-cannot-be-viewed.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/administration/mrsproxyconfiguration-settings-not-honored.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/client-connectivity/set-up-web-access.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/client-connectivity/user-cannot-create-new-rules-outlook-owa.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/client-connectivity/cannot-create-appointment.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/client-connectivity/cannot-connect-to-mailbox-via-owa.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/client-connectivity/cannot-use-autodiscover-to-connect-to-mailbox.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/compliance/noderunnersexe-stops-search-not-work.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/development/develop-apps-by-using-exchange-powershell.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/mailflow/cannot-send-smime-encrypted-mail-owa.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/mailflow/external-user-cannot-send-email-to-distribution-group.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/mailflow/message-body-shown-as-attachment.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/mailflow/cannot-edit-transport-rule.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     }
   ]
 }
