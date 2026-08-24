@@ -1,11 +1,13 @@
 ---
 title: Troubleshoot temporary storage on Azure App Service
 description: Learn how to troubleshoot temporary storage on Azure App Service to reduce slow performance and isolate resource issues. Watch the video now.
-ms.date: 02/13/2026
+author: kaushika-msft
+ms.author: kaushika
+ms.reviewer: kaushika
+manager: dcscontentpm
+ms.topic: troubleshooting
 ms.service: azure-app-service
-ms.author: shwagarwal
-author: ShwetaAgarwal-MS
-ms.reviewer: 
+ms.date: 08/18/2026 
 ms.custom: sap:Availability, Performance, and Application Issues
 ---
 
@@ -17,6 +19,4 @@ Use this video to troubleshoot temporary storage on Azure App Service when appli
 
 > [!VIDEO https://www.youtube.com/embed/bk8h-VYaIXs]
 
-## Related content
-
-![GitHub logo](../../media/common/github.svg). For more information, see [Understanding the Azure App Service file system - projectkudu/kudu Wiki (github.com)](https://github.com/projectkudu/kudu/wiki/Understanding-the-Azure-App-Service-file-system#:~:text=Understanding%20the%20Azure%20App%20Service%20file%20system%201,standard%20Windows%20locations%20like).
+For more information, see [Understanding the Azure App Service file system - projectkudu/kudu Wiki (github.com)](https://github.com/projectkudu/kudu/wiki/Understanding-the-Azure-App-Service-file-system#:~:text=Understanding%20the%20Azure%20App%20Service%20file%20system%201,standard%20Windows%20locations%20like).

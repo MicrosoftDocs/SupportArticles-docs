@@ -1,38 +1,40 @@
 ---
-title: An Attempt was Made to Access a Socket in a Way Forbidden by its Access Permissions Message 
-description: This article discusses possible causes and solutions for the message "An attempt was made to access a socket in a way forbidden by its access permissions" in Azure App Service.
+title: An attempt was made to access a socket in a way forbidden by its access permissions message - Azure App Service
+description: Learn how to troubleshoot the "An attempt was made to access a socket in a way forbidden by its access permissions" message in Azure App Service.
 author: kaushika-msft
+ms.author: kaushika
+ms.reviewer: kaushika
 manager: dcscontentpm
 ms.topic: troubleshooting
-ms.date: 12/19/2025
-ms.author: kaushika
-ms.reviewer: v-ryanberg
 ms.service: azure-app-service
+ms.date: 08/18/2026
 ms.custom: sap:Availability, Performance, and Application Issues
 ---
-# "An attempt was made to access a socket in a way forbidden by its access permissions" message
+# An attempt was made to access a socket in a way forbidden by its access permissions message
 
 ## Summary
 
-This article discusses possible causes and solutions for the message "An attempt was made to access a socket in a way forbidden by its access permissions" in Azure App Service.
+This article explains possible causes and solutions for the **An attempt was made to access a socket in a way forbidden by its access permissions** message in Azure App Service and helps you troubleshoot the error.
 
 ## Symptom
 
-You see the message "An attempt was made to access a socket in a way forbidden by its access permissions."
+You encounter the following message:
 
-## Cause 1
+> An attempt was made to access a socket in a way forbidden by its access permissions.
 
-This error typically occurs if the outbound TCP connections on the virtual machine (VM) instance are exhausted. In App Service, limits are enforced for the maximum number of outbound connections that can be made for each VM instance. 
+## Cause 1: Outbound TCP connections are exhausted
 
-## Solution 1
+This error usually occurs if the outbound TCP connections on the virtual machine (VM) instance are exhausted. In App Service, the platform enforces limits for the maximum number of outbound connections that you can make for each VM instance.
+
+## Solution 1: Review cross-VM numerical limits
 
 For more information, see [Cross-VM numerical limits](https://github.com/projectkudu/kudu/wiki/Azure-Web-App-sandbox#cross-vm-numerical-limits).
 
-## Cause 2
+## Cause 2: The application accesses a local address
 
 This error might also occur if you try to access a local address from your application. 
 
-## Solution 2
+## Solution 2: Review local address requests
 
 For more information, see [Local address requests](https://github.com/projectkudu/kudu/wiki/Azure-Web-App-sandbox#local-address-requests).
 
