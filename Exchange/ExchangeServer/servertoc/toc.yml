@@ -118,6 +118,8 @@ items:
           href: ../administration/server-component-state-remains-inactive.md
         - name: Set-ServerComponentState ends Exchange Frontend Transport service
           href: ../administration/frontend-transport-service-terminate-run-set-servercomponentstate.md
+        - name: Start-DatabaseAvailabilityGroup fails for DAG in DAC mode
+          href: ../administration/start-dag-fails.md
         - name: '"The term New-Mailbox is not recognized" error'
           href: ../administration/term-new-mailbox-not-recognized-error.md
         - name: Unexpected Automapping results when adding mailbox permissions
@@ -128,7 +130,7 @@ items:
           href: ../administration/unhealthy-state-monitoring-mailboxes-deleted.md
         - name: UnifiedContent folder fills up drive
           href: ../administration/unifiedcontent-folder-fills-up-drive.md
-        - name: Use event ID 2080 to help solve AD  access issues
+        - name: Use event ID 2080 to help solve Active Directory access issues
           href: ../administration/msexchangedsaccess-event-id-2080.md
     - name: Client Connectivity
       items:

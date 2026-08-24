@@ -1145,6 +1145,8 @@ items:    # Please do not delete this line, it is required for the yaml format
           href: user-profiles-and-logon/cannot-configure-a-convenience-pin.md
         - name: Retrieve certificate to troubleshoot Windows Hello for Business logon failures
           href: ./user-profiles-and-logon/retrieve-certificate-to-troubleshoot-windows-hello-for-business.md
+        - name: Troubleshoot Windows Hello for Business sign-in on captive-portal Wi-Fi
+          href: ./user-profiles-and-logon/whfb-cloud-trust-login-failure.md
         - name: Windows Hello errors during PIN creation in Windows 10
           href: ./user-profiles-and-logon/windows-hello-errors-during-pin-creation-in-windows-10.md
 - name: Virtualization
