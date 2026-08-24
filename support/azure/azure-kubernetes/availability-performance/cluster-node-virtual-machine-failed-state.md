@@ -2,7 +2,7 @@
 title: Azure Kubernetes Service cluster/node is in a failed state
 description: Learn how to troubleshoot an AKS cluster or node in a failed state and restore operations quickly. Use these steps to identify and fix common errors.
 ms.date: 06/10/2026
-ms.reviewer: chiragpa, nickoman, v-weizhu, v-six, aritraghosh
+ms.reviewer: chiragpa, schaffererin, v-weizhu, v-six
 ms.service: azure-kubernetes-service
 keywords:
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot why attach my node virtual machine is in a failed state so that I can successfully use my Azure Kubernetes Service (AKS) cluster.
@@ -65,7 +65,7 @@ To check the cluster status, select **Provisioning State Check**. Then, the prov
 
 :::image type="content" source="media/cluster-node-virtual-machine-failed-state/provisioning-state-check.png" alt-text="Screenshot of the Provisioning State Check option in an AKS cluster page.":::
 
-## Scenario 1: Cluster is in a failed state
+## Failed cluster scenario
 
 To resolve this issue, get the operation that causes the failure and figure out the error. Here are two common operation failures that can result in a failed cluster:
 
@@ -90,25 +90,25 @@ If a recently created or upgraded cluster is in a failed state, use the followin
 To view the activity logs for a failed cluster from the Azure portal, follow these steps:
 
 1. In the Azure portal, go to the **Resource groups** page and select the resource group that contains your cluster.
-2. On the **Overview** page, select the cluster name from the resource list.
-3. On the cluster page, select **Activity log** from the left menu.
-4. On the **Activity log** page, you can filter events by **Status**, **Timespan**, **Event initiated by**, and **Event category**. For example, you can select **Failed** from the **Status** drop-down list to see only failed events.
+1. On the **Overview** page, select the cluster name from the resource list.
+1. On the cluster page, select **Activity log** from the left menu.
+1. On the **Activity log** page, you can filter events by **Status**, **Timespan**, **Event initiated by**, and **Event category**. For example, you can select **Failed** from the **Status** drop-down list to see only failed events.
 
     :::image type="content" source="media/cluster-node-virtual-machine-failed-state/filter-events.png" alt-text="Screenshot of filters for failed events on the Activity log page for a cluster.":::
 
-5. To check the details of an event, select the event name from the list. A new pane opens with the event summary, properties, and JSON data. You can also download the JSON data as a file.
-6. To check the error code and message associated with the event, scroll down to the **Status** section in the event summary. You can also find the error information in the properties and JSON data sections.
+1. To check the details of an event, select the event name from the list. A new pane opens with the event summary, properties, and JSON data. You can also download the JSON data as a file.
+1. To check the error code and message associated with the event, scroll down to the **Status** section in the event summary. You can also find the error information in the properties and JSON data sections.
 
 ### View the activity log for a failed cluster using the Azure CLI
 
 If you prefer to use Azure CLI to view the activity log for a failed cluster, follow these steps:
 
 1. Install Azure CLI on your machine and log in with your Azure account.
-2. List the resource groups in your subscription using the `az group list` command and find the name of the resource group that contains your cluster.
-3. List the resources in the resource group using the `az resource list` command with the `--resource-group` parameter and find the name of the cluster.
-4. List the cluster's activity log using the `az monitor activity-log list` command with the `--resource-group` and `--resource` parameters. You can also use the `--status`, `--start-time`, `--end-time`, `--caller`, and `--filter` parameters to filter events by different criteria. For example, you can use `--status Failed` to see only failed events.
-5. Show the details of a specific event using the `az monitor activity-log show` command with the `--resource-group`, `--resource`, and `--event-id` parameters. You can find the event ID from the output of the previous command. The output will include the event summary, properties, and JSON data. You can also use the `--output` parameter to change the output format.
-6. To see the error code and message associated with the event, look for the `statusMessage` field in the command output. You can also find the error information in the properties and JSON data sections.
+1. List the resource groups in your subscription using the `az group list` command and find the name of the resource group that contains your cluster.
+1. List the resources in the resource group using the `az resource list` command with the `--resource-group` parameter and find the name of the cluster.
+1. List the cluster's activity log using the `az monitor activity-log list` command with the `--resource-group` and `--resource` parameters. You can also use the `--status`, `--start-time`, `--end-time`, `--caller`, and `--filter` parameters to filter events by different criteria. For example, you can use `--status Failed` to see only failed events.
+1. Show the details of a specific event using the `az monitor activity-log show` command with the `--resource-group`, `--resource`, and `--event-id` parameters. You can find the event ID from the output of the previous command. The output will include the event summary, properties, and JSON data. You can also use the `--output` parameter to change the output format.
+1. To see the error code and message associated with the event, look for the `statusMessage` field in the command output. You can also find the error information in the properties and JSON data sections.
 
       :::image type="content" source="media/cluster-node-virtual-machine-failed-state/json-data.png" alt-text="Screenshot of Activity log JSON data with status message details for a failed operation." lightbox="media/cluster-node-virtual-machine-failed-state/json-data.png":::
 
@@ -122,7 +122,7 @@ In the **Diagnose and Solve Problems** blade, you can select **Cluster Issues** 
 
  :::image type="content" source="media/cluster-node-virtual-machine-failed-state/diagnose-and-solve-problems-solutions.png" alt-text="Screenshot of possible solutions in the Diagnose and Solve Problems portal for cluster issues." lightbox="media/cluster-node-virtual-machine-failed-state/diagnose-and-solve-problems-solutions.png":::
 
-## Scenario 2: Node is in a failed state
+## Failed node scenario
 
 In rare cases, an Azure Disk detach operation may partially fail, which leaves the node VM in a failed state.
 
@@ -140,19 +140,19 @@ To resolve this issue, manually update the VM status using one of the following 
     az vmss update-instances --resource-group <resource-group-name> --name <scale-set-name> --instance-id <vm-or-scale-set-id>
     ``` 
 
-## Scenario 3: Node pool is in a failed state
+## Failed node pool scenario
 
 This issue can happen when the VM scale set or availability set that backs the node pool encounters an error during provisioning, scaling, or updating. This issue can be due to insufficient capacity, quota limits, network issues, policy violations, resource locks, or other factors that prevent the VM from being allocated or configured properly.
 
 To troubleshoot this issue, follow these steps:
 
 1. Check the status of the node pool using the `az aks nodepool show` command. If the provisioning state is `Failed`, you can see the error message and code in the output.
-2. Check the status of the VM scale set or availability set using the `az vmss show` or `az vm availability-set show` command. If the provisioning state is `Failed`, you can see the error message and code in the output.
-3. Check the status of the individual VM in the node pool using the `az vmss list-instances` or `az vm list `command. If any VM is in a `Failed` or `Unhealthy` state, you can see the error message and code in the output.
-4. Check the activity log and diagnostic setting of the VM scale set or availability set to see if any events or alerts that indicate the cause of the failure. You can use the Azure portal, Azure CLI, or Azure Monitor API to access the activity log and diagnostic setting.
-5. Check the quota and capacity of the region and subscription where the node pool is deployed. You can use the `az vm list-usage` command or the Azure portal to check the quota and capacity. If the quota or capacity limit is reached, you can request an increase or delete some unused resources.
-6. Check the policy and role assignments of the node pool. You can use the `az policy` and `az role` commands or the Azure portal to check the policy definitions, assignments, compliance, and exemptions. You can also check the role assignments and permissions of the node pool using the `az role assignment` command or the Azure portal.
-7. Check the resource locks of the node pool. You can use the `az lock` command or the Azure portal to check the lock level, scope, and notes. You can also delete or update the lock if needed.
+1. Check the status of the VM scale set or availability set using the `az vmss show` or `az vm availability-set show` command. If the provisioning state is `Failed`, you can see the error message and code in the output.
+1. Check the status of the individual VM in the node pool using the `az vmss list-instances` or `az vm list `command. If any VM is in a `Failed` or `Unhealthy` state, you can see the error message and code in the output.
+1. Check the activity log and diagnostic setting of the VM scale set or availability set to see if any events or alerts that indicate the cause of the failure. You can use the Azure portal, Azure CLI, or Azure Monitor API to access the activity log and diagnostic setting.
+1. Check the quota and capacity of the region and subscription where the node pool is deployed. You can use the `az vm list-usage` command or the Azure portal to check the quota and capacity. If the quota or capacity limit is reached, you can request an increase or delete some unused resources.
+1. Check the policy and role assignments of the node pool. You can use the `az policy` and `az role` commands or the Azure portal to check the policy definitions, assignments, compliance, and exemptions. You can also check the role assignments and permissions of the node pool using the `az role assignment` command or the Azure portal.
+1. Check the resource locks of the node pool. You can use the `az lock` command or the Azure portal to check the lock level, scope, and notes. You can also delete or update the lock if needed.
 
 ## Other logging and diagnostic tools
 
