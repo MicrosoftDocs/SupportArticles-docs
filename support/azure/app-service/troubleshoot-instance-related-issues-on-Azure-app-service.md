@@ -1,11 +1,12 @@
 ---
 title: Troubleshoot instance-related issues on Azure App Service
 description: Watch this video to troubleshoot instance-related issues on Azure App Service, restore availability, and optimize load distribution. Start resolving issues now.
-ms.date: 02/13/2026
 ms.service: azure-app-service
-ms.author: shwagarwal
-author: ShwetaAgarwal-MS
-ms.reviewer: 
+ms.date: 08/21/2026
+ms.author: kaushika
+author: kaushika-msft
+ms.reviewer: kaushika
+ms.topic: troubleshooting
 ms.custom: sap:Availability, Performance, and Application Issues
 ---
 

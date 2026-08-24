@@ -1,20 +1,20 @@
 ---
 title: Troubleshoot Azure App Service certificates 
-description: Azure App Service certificates provide a convenient way to purchase, provision, and manage SSL/TLS certificates for Azure App Services. This article helps developers and IT admins systematically diagnose and fix issues with App Service certificates. 
+description: Troubleshoot Azure App Service certificates by diagnosing renewal, domain verification, Key Vault, and TLS binding issues. Follow these steps to fix errors.
 author: kaushika-msft
+ms.author: kaushika
+ms.reviewer: kaushika
 manager: dcscontentpm
 ms.topic: troubleshooting
-ms.date: 10/10/2025
-ms.author: kaushika
-ms.reviewer: v-ryanberg, v-gsitser
 ms.service: azure-app-service
+ms.date: 08/18/2026
 ms.custom: sap:auto-renewal
 ---
 # Troubleshoot Azure App Service certificates 
 
 ## Summary
 
-Azure App Service certificates provide a convenient way to purchase, provision, and manage SSL/TLS certificates for Azure App Services. This article helps developers and admins systematically diagnose and fix issues that affect App Service certificates. See the following sections:
+Azure App Service certificates provide a convenient way to purchase, provision, and manage SSL and TLS certificates for App Services. This article helps developers and admins systematically diagnose and fix issues that affect App Service certificates. See the following sections:
 
 - [Step-by-step troubleshooting flow](#step-by-step-troubleshooting-flow): A sequence of checks and actions to resolve certificate problems, including portal and command-line steps.
 
@@ -24,7 +24,7 @@ Azure App Service certificates provide a convenient way to purchase, provision, 
 
 ## Step-by-step troubleshooting flow
 
-This section addresses areas in which App Service certificate setups can fail, including:
+This section addresses areas where App Service certificate setups can fail, including:
 
 - [Certificate status and renewal settings](#step-1-check-certificate-status-and-renewal)
 
@@ -36,9 +36,9 @@ This section addresses areas in which App Service certificate setups can fail, i
 
 - [Certificate renewal and reissue settings](#step-5-renew-or-reissue-the-certificate)
 
-- [Solution verfication](#step-6-verify-the-solution)
+- [Solution verification](#step-6-verify-the-solution)
 
-Azure portal instructions are provided for each step. Azure command-line interface (CLI) guidance is provided, if applicable.
+Azure portal instructions are provided for each step. Azure command-line interface (CLI) guidance is provided if applicable.
 
 > [!NOTE]
 > Make sure that you follow these steps in the given order.
@@ -49,7 +49,7 @@ Check the status of your App Service certificate to determine whether it's valid
 
 **For Azure portal**
 
-Navigate to **App Service Certificates**, and select your certificate. Check the **Status** field. The value should be **Issued**, not **Expired** or **Pending Issuance**. Also note the **Expiration Date** and whether **Auto Renew** is enabled. In the portal, you can find **Auto Renew** under **Certificate Configuration** > **Auto Renew Settings**. Make sure that it's set to **On** if you expect Azure to renew the certificate automatically when the last validation occurred within the previous 13 months (395 days). Otherwise a new validation that you still own the domain is needed.
+Navigate to **App Service Certificates**, and select your certificate. Check the **Status** field. The value should be **Issued**, not **Expired** or **Pending Issuance**. Also note the **Expiration Date** and whether **Auto Renew** is enabled. In the portal, you can find **Auto Renew** under **Certificate Configuration** > **Auto Renew Settings**. Make sure that it's set to **On** if you expect Azure to renew the certificate automatically when the last validation occurred within the previous 13 months (395 days). Otherwise, a new validation that you still own the domain is needed.
 
 **For Azure CLI**
 
@@ -207,7 +207,7 @@ Open your web app in the Azure portal, and then go to **TLS/SSL Settings** > **P
 1. Save the binding.
 
 > [!NOTE]
-> If a binding exists, make sure that it uses the intended certificate (the thumbprint and name should match your App Service certificate).
+> If a binding exists, ensure that it uses the intended certificate (the thumbprint and name should match your App Service certificate).
 
 **SNI versus IP SSL**
 
@@ -215,9 +215,9 @@ Azure supports two types of SSL bindings: SNI and IP-based. Avoid using IP-based
 
 **Multiple apps and certificate reuse**
 
-If you host the same certificate in multiple web apps, make sure that you don't run into the following Azure limitations:
+If you host the same certificate in multiple web apps, ensure that you don't run into the following Azure limitations:
 
-- You can't bind the exact same certificate to multiple apps by using IP-based SSL on the same IP*.* This condition triggers an error message: **Cannot set certificate for existing VIP because another VIP already uses that certificate**. The solution is to use SNI SSL for additional apps, use a different IP for the second app, or remove the old binding before you add it to another app.
+- You can't bind the exact same certificate to multiple apps by using IP-based SSL on the same IP. This condition triggers an error message: **Cannot set certificate for existing VIP because another VIP already uses that certificate**. The solution is to use SNI SSL for additional apps, use a different IP for the second app, or remove the old binding before you add it to another app.
 
 - By default, you can't use the certificate across different subscriptions or cloud services, such as if you try to use an App Service certificate in a different subscription's app. App Service certificates are tied to a single subscription's Key Vault. Trying to use certificates in this manner can cause such errors as `The parameter KeyVaultId & KeyVaultSecretName has an invalid value`. The certificate, its Key Vault, and the App Service that use it should reside in the same subscription. (If you have to migrate an App Service certificate to another subscription, you must contact Azure support for assistance.)
 
@@ -255,7 +255,7 @@ After binding, browse to your app by using the custom domain URL (for example, `
 
 ### Step 5: Renew or reissue the certificate 
 
-During your troubleshooting in steps 1–4, if you discover that the certificate is about to expire and didn't automatically renew, you must take action to renew or reissue it.
+During your troubleshooting in steps 1–4, if you discover that the certificate is about to expire and didn't automatically renew, take action to renew or reissue it.
 
 **Auto renewal versus manual renewal**
 
@@ -394,7 +394,7 @@ Your App Service certificate is stuck in a `Pending Issuance` state and never be
 
 **Possible causes**
 
-- **DNS records aren't configured:** For new certificates, the required TXT record or App Service domain linkage wasn't performed. Therefore, your domain registrar (su\ch as GoDaddy) can't verify you own the domain.
+- **DNS records aren't configured:** For new certificates, you didn't add the required TXT record or link the App Service domain. Therefore, your domain registrar (such as GoDaddy) can't verify you own the domain.
 
 - **Verification step missed:** After you purchase the certificate, you didn't verify domain ownership in the portal ([Step 2: Verify domain ownership](#step-2-verify-domain-ownership)). The certificate remains unusable (Key Vault secret empty) until verification is done.
 
@@ -414,7 +414,7 @@ Your App Service certificate is stuck in a `Pending Issuance` state and never be
 
 - **Post-verification sync:** After a successful domain verification in a renewal scenario, go back and select **Sync** on the certificate. If Azure didn't automatically finish the process, initiate the renewal again. The certificate status should change from **Pending** to **Issued**.
 
-Domain verification issues are resolved by completing the required verification steps. Always make sure that your domain's DNS is correctly configured *before* you purchase a certificate. Azure suggests that you map the domain first for this reason. If you follow the workflow of mapping custom a domain, buying a certificate, verifying your domain, and then importing the certificate to the app, you're less likely to encounter trouble.
+You can resolve domain verification issues by completing the required verification steps. Always ensure that your domain's DNS is correctly configured *before* you purchase a certificate. Azure suggests that you map the domain first for this reason. If you follow the workflow of mapping a custom domain, buying a certificate, verifying your domain, and then importing the certificate to the app, you're less likely to encounter trouble.
 
 ### 4. Permission and access issues
 
@@ -452,7 +452,7 @@ After you complete the setup, you find that your web app can't use the certifica
 
 **Symptoms**
 
-This section provides a broad category of "user error" or unsupported scenarios that cause certificate errors. This category includes:
+This section describes a broad category of "user error" or unsupported scenarios that cause certificate errors. This category includes:
 
 - Inability to purchase or create a certificate.
 
