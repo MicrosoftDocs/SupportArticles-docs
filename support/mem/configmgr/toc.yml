@@ -55,6 +55,8 @@ items:
       href: client-installation/client-installation-fails-with-policyagentprovider-dll.md
 - name: Client management
   items:
+    - name: Can't import the Sms_def.mof file
+      href: client-management/invalid-data-error-import-mof-file.md
     - name: Client remains in provisioning mode after upgrade
       href: client-management/configmgr-client-left-in-provisioning-mode.md
     - name: Inventory and asset intelligence
@@ -65,6 +67,8 @@ items:
       href: client-management/sms-agent-host-not-automatically-restarted.md
 - name: Cloud services
   items:
+    - name: Azure web app doesn't have the Contributor role at the subscription level
+      href: cloud-services/contributor-role-not-assigned-for-web-app.md
     - name: Clients can't communicate with CMG
       href: cloud-services/cmg-communication-error.md
     - name: Can't create a CMG in a particular region
@@ -95,12 +99,20 @@ items:
       items:
         - name: Can't distribute deployment packages
           href: content-management/deployment-package-distribution-fails.md
+        - name: Configuration Manager client uses a neighbor boundary group DP first
+          href: content-management/use-neighbor-boundary-group-dp.md
         - name: Content distribution fails with error 80070070
           href: content-management/content-distribution-error-80070070.md
+        - name: DP installations or upgrades take longer than expected
+          href: content-management/slow-dp-installation-upgrade.md
         - name: Hash mismatch error downloading Contentinfo.tar
           href: content-management/hash-mismatch-error-download-contentinfo-tar.md
+        - name: IDispatch error 3603 when you distribute content to a Configuration Manager distribution point
+          href: content-management/content-distribution-idispatch-error.md
         - name: Package distribution to a remote DP fails
           href: content-management/package-distribution-to-remote-dp-fails.md
+        - name: Windows Installer source list update fails because of HTTPS distribution points
+          href: content-management/windows-installer-source-list-update-fails.md
     - name: Troubleshoot content distribution
       items:
         - name: Content distribution overview
@@ -217,8 +229,14 @@ items:
           href: os-deployment/cannot-create-bootable-media-error-80004005-0x8004101d.md
         - name: Computer hangs during an OSD task sequence in debug mode
           href: os-deployment/computer-hangs-task-sequence-debug-mode.md
+        - name: Device displays a non-debug deployment for a task sequence instead of a debug deployment
+          href: os-deployment/debug-deployment-not-displayed.md
         - name: Dynamic Media can't get management point locations
           href: os-deployment/dynamic-media-cannot-get-mp-locations.md
+        - name: Get network captures from a task sequence in Windows PE
+          href: os-deployment/get-network-captures-from-task-sequence.md
+        - name: Migrating a driver package fails because the SMS Provider has insufficient permissions
+          href: os-deployment/insufficient-permissions-to-migrate-driver-package.md
         - name: No option to check online for updates
           href: os-deployment/check-online-updates-unavailable.md
         - name: No mouse cursor during an OSD task sequence
