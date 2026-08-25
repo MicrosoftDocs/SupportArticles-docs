@@ -2981,8 +2981,6 @@ items:    # Please do not delete this line, it is required for the yaml format
           href: ./installing-updates-features-roles/wsus-selfupdate-not-send-automatic-updates.md
     - name: Failure to install Windows Updates
       items:
-        - name: How the Windows Update client determines which proxy server to use
-          href: ./installing-updates-features-roles/windows-update-client-determines-proxy-server-connect.md
         - name: Windows servicing operations fail after you move user profile and ProgramData folders
           href: ./setup-upgrade-and-drivers/servicing-fails-moved-user-profile-programdata-folders.md
     - name: Issues installing Features on Demand (FoD)
@@ -3007,6 +3005,8 @@ items:    # Please do not delete this line, it is required for the yaml format
           href: ./installing-updates-features-roles/description-of-windows-server-update-services-3.md
         - name: How to block user access to Windows Update
           href: ./installing-updates-features-roles/block-user-access-windows-update.md
+        - name: How the Windows Update client determines which proxy server to use
+          href: ./installing-updates-features-roles/windows-update-client-determines-proxy-server-connect.md
         - name: Known Issue Rollback
           href: ./installing-updates-features-roles/known-issue-rollback.md
         - name: Re-register Windows client/server in WSUS
