@@ -1,5 +1,5 @@
 ---
-title: Disk duplication of Windows installations
+title: System preparation for duplicated or imaged Windows installations
 description: Describes the SID and supported methods for cloning or duplicating a Windows installation.
 ms.date: 02/12/2026
 manager: dcscontentpm
@@ -7,12 +7,12 @@ audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, scottmca
 ms.custom:
-- sap:backup,recovery,disk,and storage\deduplication
+- sap:Windows Setup, Upgrade and Deployment\Installing or upgrading Windows
 - pcy:WinComm Storage High Avail
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
-# The Microsoft policy for disk duplication of Windows installations
+# The Microsoft policy for creating imaged or duplicated Windows installations
 
 This article describes the SID and supported methods for cloning or duplicating a Windows installation.
 
