@@ -161,8 +161,6 @@ items:
         href: procurement/object-reference-not-set.md
       - name: Failures when submitting a Prospective Vendor Registration Request
         href: procurement/unable-to-submit-pvrr.md
-      - name: Imported purchase orders show incorrect line numbers
-        href: procurement/line-number-increments.md
       - name: Order taker not auto-filled when creating purchase or sales orders
         href: procurement/po-so-order-taker-not-auto-filled.md
       - name: PO confirmation fails with "Cannot create a record in Source document line"
@@ -171,6 +169,8 @@ items:
         href: procurement/product-receipt-fails-with-changes-only-allowed-in-draft-state-error.md
       - name: Purchase order line data discrepancies
         href: procurement/purchase-order-line-data-issues.md
+      - name: Purchase order line number errors when you import Purchase order lines V2 data
+        href: procurement/line-number-increments.md
       - name: Purchase orders don't reflect the language settings of the legal entity
         href: procurement/purchase-order-language-not-reflect-legal-entity-settings.md
       - name: Purchase requisition creation fails with "You are not set up as an employee"
@@ -197,6 +197,8 @@ items:
         href: procurement/canceled-receipts-posted.md
       - name: Unit prices on purchase orders aren't calculated based on the unit conversion
         href: procurement/po-unit-prices-not-calculated.md
+      - name: "\"Updates not allowed for PurchaseOrderNumber\" error when you import purchase order lines"
+        href: procurement/purchase-order-number-update-not-allowed.md
       - name: Vendor can't access Vendor Collaboration Portal after reonboarding
         href: procurement/vendor-unable-to-access-vendor-collaboration-portal.md
       - name: Vendor invoice not linked to purchase order
