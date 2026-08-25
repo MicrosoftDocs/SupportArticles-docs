@@ -181,6 +181,8 @@ items:
         href: procurement/purchase-requisitions-cannot-released.md
       - name: "\"Source document lines cannot be finalized\" error"
         href: procurement/source-document-lines-cannot-be-finalized.md
+      - name: "\"Summary order must be specified\" error when you post a vendor invoice"
+        href: procurement/summary-order-must-be-specified.md
       - name: Summary update error when you invoice a direct delivery purchase order
         href: procurement/summary-update-error-direct-delivery-po-invoice.md
       - name: "\"The company does not exist\" when canceling a purchase order line remainder"
