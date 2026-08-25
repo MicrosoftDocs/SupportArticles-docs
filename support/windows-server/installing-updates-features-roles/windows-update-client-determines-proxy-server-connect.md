@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-lianna, shigsato
 ms.custom:
-- sap:installing windows updates,features,or roles\failure to install windows updates
+- sap:Windows Servicing, Updates and Features on Demand\Windows Update - Configuring and managing client settings
 - pcy:WinComm Devices Deploy
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
