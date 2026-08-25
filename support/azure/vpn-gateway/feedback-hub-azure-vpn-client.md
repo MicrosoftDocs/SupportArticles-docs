@@ -16,10 +16,10 @@ ms.custom: sap:Configuration and Setup
 
 This article helps you report an Azure VPN Client problem or improve the Azure VPN Client experience using the **FeedBack Hub** app. Use the steps in this article to help collect logs, send files and screenshots, and review diagnostics. The steps in this article apply to the Windows 10 and Windows 11 operating systems and the Azure VPN Client.
 
-The Feedback Hub app is automatically a part of Windows 10 and Windows 11. You don't need to download it separately. The screenshots shown in this article might be slightly different, depending on the version of Feedback Hub. For more information about FeedBack Hub, see [Send feedback to Microsoft with the Feedback Hub app](https://support.microsoft.com/en-us/windows/send-feedback-to-microsoft-with-the-feedback-hub-app-f59187f8-8739-22d6-ba93-f66612949332).
+The Feedback Hub app is automatically a part of Windows 10 and Windows 11. You don't need to download it separately. The screenshots shown in this article might be slightly different, depending on the version of Feedback Hub. For more information about FeedBack Hub, see [Send feedback to Microsoft with the Feedback Hub app](https://support.microsoft.com/windows/send-feedback-to-microsoft-with-the-feedback-hub-app-f59187f8-8739-22d6-ba93-f66612949332).
 
 > [!NOTE]
->Microsoft recommends using Windows 11 with Point-to-Site VPN connections. Windows 10 reached end of support in October 2025. For more information, see [supported Windows versions for Azure VPN Client](azure/vpn-gateway/azure-vpn-client-versions#supported-windows-versions).
+>Microsoft recommends using Windows 11 with Point-to-Site VPN connections. Windows 10 reached end of support in October 2025. For more information, see [Azure VPN Client - Windows](/azure/vpn-gateway/azure-vpn-client-versions#azure-vpn-client---windows).
 
 ## Open Feedback Hub
 
@@ -85,7 +85,6 @@ The **Recreate my problem** option provides us with crucial information. This op
 1. Once you reproduce the issue, press **Stop recording**.
 
    :::image type="content" source="./media/feedback-hub-azure-vpn-client/stop-recording.png" alt-text="Screenshot showing the Azure VPN Client recording." lightbox="./media/feedback-hub-azure-vpn-client/stop-recording.png":::
-
 
 ### Submit the problem
 
