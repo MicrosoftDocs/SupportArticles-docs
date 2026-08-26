@@ -1,26 +1,28 @@
 ---
-title: Open-source technologies FAQs
-description: Get answers to frequently asked questions about open-source technologies in Azure App Service.
+title: Web apps open-source technologies FAQ - Azure App Service
+description: Explore answers to frequently asked questions about Azure App Service open-source technologies, including PHP, Python, Node.js, Java, and WordPress.
 author: kaushika-msft
 ms.author: kaushika
+manager: dcscontentpm
 ms.service: azure-app-service
-ms.date: 02/20/2026
-ms.reviewer: toan, shrahman
+ms.date: 08/25/2026
+ms.topic: troubleshooting
+ms.reviewer: toan, shrahman, kaushika
 ms.custom: sap:Application Code
 ---
 
-# Open-source technologies FAQs for Web Apps in Azure
+# Web apps open-source technologies FAQ for Azure App Service
 
 ## Summary
 
-This article has answers to frequently asked questions (FAQs) about issues with open-source technologies for the [Web Apps feature of Azure App Service](https://azure.microsoft.com/services/app-service/web/).
+This article has answers to frequently asked questions (FAQ) about issues with open-source technologies for [web apps feature of Azure App Service](https://azure.microsoft.com/services/app-service/web/).
 
 ## How do I turn on PHP logging to troubleshoot PHP issues?
 
 To turn on PHP logging, follow these steps:
 
-1. Sign in to your **Kudu website** (`https://*yourwebsitename*.scm.azurewebsites.net`).
-1. In the top menu, select **Debug Console** > **CMD**.
+1. Sign in to your Kudu website (`https://*yourwebsitename*.scm.azurewebsites.net`).
+1. In the menu, select **Debug Console** > **CMD**.
 1. Select the **Site** folder.
 1. Select the **wwwroot** folder.
 1. Select the **+** icon, and then select **New File**.
@@ -36,13 +38,13 @@ To turn on PHP logging, follow these steps:
    //Suppress errors and warnings to screendefine('WP_DEBUG_DISPLAY', false);//Suppress PHP errors to screenini_set('display_errors', 0);
    ```
 
-1. In the [Azure portal](https://portal.azure.com), in the web app menu, restart your web app.
+12. In the [Azure portal](https://portal.azure.com), in the web app menu, restart your web app.
 
 For more information, see [Enable WordPress error logs](/archive/blogs/azureossds/logging-php-errors-in-wordpress-2).
 
 ## How do I log Python application errors in apps that are hosted in App Service?
 
-If Python encounters an error while starting your application, it returns a simple error page. For example,
+If Python encounters an error while starting your application, it returns an error like the following example:
 
 ```python
 The page cannot be displayed because an internal server error has occurred.
@@ -50,73 +52,82 @@ The page cannot be displayed because an internal server error has occurred.
 
 To capture Python application errors, follow these steps:
 
-1. In the Azure portal, in your web app, select **Settings**.
+1. In the [Azure portal](https://portal.azure.com), in your web app, select **Settings**.
 1. On the **Settings** tab, select **Application settings**.
-1. Under **App settings**, enter the following key/value pair:
+1. In **App settings**, enter the following key and value pair:
 
-   - Key: *WSGI_LOG*
-   - Value: *D:\home\site\wwwroot\logs.txt* (enter your choice of file name)
+   - Key: **WSGI_LOG**
+   - Value: **D:\home\site\wwwroot\logs.txt** (enter your choice of file name)
 
-You should now see errors in the *logs.txt* file in the *wwwroot* folder.
+You should now see errors in the logs.txt file in the **wwwroot** folder.
 
 ## How do I change the version of the Node.js application that's hosted in App Service?
 
 To change the version of the Node.js application, use one of the following options:
 
-- In the Azure portal, use **App settings**.
+### Azure portal - use App settings
 
-  1. In the Azure portal, go to your web app.
-  1. On the **Settings** tab, select **Application settings**.
-  1. In **App settings**, you can include WEBSITE_NODE_DEFAULT_VERSION as the key, and the version of Node.js you want as the value.
-  1. Go to your **Kudu console** (`https://*yourwebsitename*.scm.azurewebsites.net`).
-  1. To check the Node.js version, enter the following command:
+1. In the Azure portal, go to your web app.
+1. On the **Settings** tab, select **Application settings**.
+1. In **App settings**, include `WEBSITE_NODE_DEFAULT_VERSION` as the key. For the value, enter the version of Node.js you want to use.
+1. Go to your Kudu console (`https://*yourwebsitename*.scm.azurewebsites.net`).
+1. To check the Node.js version, enter the following command:
 
-     ```nodejs
+```nodejs
      node -v
-     ```
+```
 
-- Modify the *iisnode.yml* file. Changing the Node.js version in the *iisnode.yml* file only sets the runtime environment that iisnode uses. Your Kudu cmd and others still use the Node.js version that is set in **App settings** in the Azure portal.
+### Manually modify the iisnode.yml file
 
-  To set the *iisnode.yml* manually, create an *iisnode.yml* file in your app root folder. In the file, include the following line:
+Changing the Node.js version in the *iisnode.yml* file only sets the runtime environment that iisnode uses. Your Kudu commands and other operations still use the Node.js version that is set in **App settings** in the Azure portal.
 
-  ```yml
+To set iisnode.yml manually, create an iisnode.yml file in your app root directory. In the file, include the following line:
+
+```yml
   nodeProcessCommandLine: "D:\Program Files (x86)\nodejs\5.9.1\node.exe"
-  ```
+```
 
-- Set the *iisnode.yml* file by using *package.json* during source control deployment.
-  The Azure source control deployment process involves the following steps:
+### Modify the iisnode.yml file by using package.json during source control deployment
 
-  1. Moves content to the Azure web app.
-  1. Creates a default deployment script, if there isn't one (*deploy.cmd*, *\.deployment* files) in the web app root folder.
-  1. Runs a deployment script in which it creates an *iisnode.yml* file if you mention the Node.js version in the *package.json* file > engine.
+The Azure source control deployment process involves the following steps:
+
+1. Move content to the Azure web app.
+2. Create a default deployment script in the web app root directory.
+
+> [!NOTE]
+> This step is necessary only if there isn't a deployment script (like deploy.cmd or \.deployment files) already in the web app root directory.
+
+3. Run a deployment script to create an iisnode.yml file if you mention the Node.js version in the package.json file engine. See the following example:
+ 
      `"engines": {"node": "5.9.1","npm": "3.7.3"}`
-  1. The *iisnode.yml* file has the following line of code:
 
-     ```yml
+4. Enter the following line of code into the iisnode.yml file, which sets the Node.js version for iisnode:
+
+```yml
      nodeProcessCommandLine: "D:\Program Files (x86)\nodejs\5.9.1\node.exe"
-     ```
+```
 
-## I see the message "Error establishing a database connection" in my WordPress app hosted in Azure App Service. How do I troubleshoot this error?
+## I see the message Error establishing a database connection in my WordPress app hosted in App Service. How do I troubleshoot this error?
 
-If you see this error in your Azure WordPress app, to enable *php_errors.log* and *debug.log*, complete the steps detailed in [Enable WordPress error logs](/archive/blogs/azureossds/logging-php-errors-in-wordpress-2).
+If you see this error in your Azure WordPress app, to enable php_errors.log and debug.log, complete the steps detailed in [Enable WordPress error logs](/archive/blogs/azureossds/logging-php-errors-in-wordpress-2).
 
-When the logs are enabled, reproduce the error, and then check the logs to see if you're running out of connections:
+When the logs are enabled, reproduce the error, and then check the logs to see if you're running out of connections as shown in the following example:
 
 ```output
 [09-Oct-2015 00:03:13 UTC] PHP Warning: mysqli_real_connect(): (HY000/1226): User 'abcdefghijk79' has exceeded the 'max_user_connections' resource (current value: 4) in D:\home\site\wwwroot\wp-includes\wp-db.php on line 1454
 ```
 
-If you see this error in your *debug.log* or *php_errors.log* files, your app is exceeding the number of connections.
+If you see this error in your debug.log or php_errors.log files, your app is exceeding the number of connections.
 
-## How do I debug a Node.js app hosted in Azure App Service?
+## How do I debug a Node.js app hosted in App Service?
 
 1. Go to your **Kudu console** (`https://*yourwebsitename*.scm.azurewebsites.net/DebugConsole`).
-1. Go to your application logs folder (*D:\home\LogFiles\Application*).
-1. In the *logging_errors.txt* file, check for content.
+2. Go to your application logs folder (**D:\home\LogFiles\Application**).
+3. In the logging_errors.txt file, check for content.
 
 ## How do I install native Python modules in an App Service web app or API app?
 
-Some packages might not install by using pip in Azure. The package might not be available on the Python Package Index. Or, a compiler might be required (a compiler isn't available on the computer that's running the web app in App Service). For information about installing native modules in App Service web apps and API apps, see [Install Python modules in App Service](/archive/blogs/azureossds/install-native-python-modules-on-azure-web-apps-api-apps).
+Some packages might not install by using `pip` in Azure. The package might not be available on the Python Package Index (PyPI). Or, a compiler might be required (for example, a compiler isn't available on the computer that's running the web app in App Service). For information about installing native modules in App Service web apps and API apps, see [Install Python modules in App Service](/archive/blogs/azureossds/install-native-python-modules-on-azure-web-apps-api-apps).
 
 ## How do I deploy a Django app to App Service by using Git and the new version of Python?
 
@@ -124,9 +135,9 @@ For information about installing Django, see [Deploying a Django app to App Serv
 
 ## Where are the Tomcat log files located?
 
-For Azure Marketplace and custom deployments:
+For Azure Marketplace and custom deployments, see the following folder locations:
 
-- Folder location: *D:\\home\\site\\wwwroot\\bin\\apache-tomcat-8.0.33\\logs*
+- Folder location: **D:\\home\\site\\wwwroot\\bin\\apache-tomcat-8.0.33\\logs**
 - Files of interest:
   - *catalina.\<yyyy-mm-dd>.log*
   - *host-manager.\<yyyy-mm-dd>.log*
@@ -134,9 +145,9 @@ For Azure Marketplace and custom deployments:
   - *manager.\<yyyy-mm-dd>.log*
   - *site_access_log.\<yyyy-mm-dd>.log*
 
-For portal **App settings** deployments:
+For Azure portal **App settings** deployments:
 
-- Folder location: *D:\\home\\LogFiles*
+- Folder location: **D:\\home\\LogFiles**
 - Files of interest:
   - *catalina.\<yyyy-mm-dd>.log*
   - *host-manager.\<yyyy-mm-dd>.log*
@@ -154,9 +165,9 @@ The web application[ROOT] registered the JDBC driver [com.mysql.jdbc.Driver] but
 
 To resolve the error, follow these steps:
 
-1. Remove the *sqljdbc\*.jar* file from your *app/lib* folder.
-1. If you're using the custom Tomcat or Azure Marketplace Tomcat web server, copy this .jar file to the Tomcat lib folder.
-1. If you're enabling Java from the Azure portal (select **Java 1.8** > **Tomcat server**), copy the *sqljdbc\*.jar* file in the folder that's parallel to your app. Then, add the following classpath setting to the *web.config* file:
+1. Remove the sqljdbc\*.jar file from your **app/lib** folder.
+2. If you're using the custom Tomcat or Azure Marketplace Tomcat web server, copy this .jar file to the **Tomcat lib** folder.
+3. If you're enabling Java from the Azure portal (select **Java 1.8** > **Tomcat server**), copy the sqljdbc\*.jar file in the folder that's parallel to your app. Then, add the following classpath setting to the web.config file:
 
    ```xml
    <httpPlatform>
@@ -187,9 +198,9 @@ Another workaround is to write a WebJob that runs on a schedule and copies these
 
 ## Where do I find the log files for Jetty?
 
-For Marketplace and custom deployments, the log file is in the *D:\\home\\site\\wwwroot\\bin\\jetty-distribution-9.1.2.v20140210\logs* folder. The folder location depends on the version of Jetty you're using. For example, the following path is for Jetty 9.1.2. Look for *jetty_\<YYYY_MM_DD>.stderrout.log*.
+For Microsoft Marketplace and custom deployments, the log file is in the D:\\home\\site\\wwwroot\\bin\\jetty-distribution-9.1.2.v20140210\logs folder. The folder location depends on the version of Jetty you're using. For example, the following path is for Jetty 9.1.2: jetty_\<YYYY_MM_DD>.stderrout.log.
 
-For portal App Setting deployments, the log file is in *D:\\home\\LogFiles*. Look for *jetty_\<YYYY_MM_DD>.stderrout.log*.
+For portal App Setting deployments, the log file is in D:\\home\\LogFiles. Look for jetty_\<YYYY_MM_DD>.stderrout.log.
 
 ## Can I send email from my Azure web app?
 
@@ -199,7 +210,7 @@ App Service doesn't have a built-in email feature. For some alternatives for sen
 
 If you recently migrated to Azure, WordPress might redirect to the old domain URL. A setting in the MySQL database causes this issue.
 
-WordPress Buddy+ is an Azure Site Extension that you can use to update the redirection URL directly in the database.
+WordPress Buddy+ is an App Service Site Extension that you can use to update the redirection URL directly in the database.
 
 Alternatively, if you prefer to manually update the redirection URL by using SQL queries or PHPMyAdmin, see [WordPress: Redirecting to wrong URL](/archive/blogs/azureossds/wordpress-redirecting-to-wrong-url).
 
@@ -209,24 +220,22 @@ If you forget your WordPress sign-in password, you can use WordPress Buddy+ to u
 
 ## I can't sign in to WordPress. How do I resolve this issue?
 
-If you find yourself locked out of WordPress after recently installing a plugin, you might have a faulty plugin. WordPress Buddy+ is an Azure Site Extension that can help you disable plugins in WordPress.
+If you find yourself locked out of WordPress after recently installing a plugin, you might have a faulty plugin. WordPress Buddy+ is an App Service Site Extension that can help you disable plugins in WordPress.
 
 ## How do I migrate my WordPress database?
 
-You have multiple options for migrating the MySQL database connected to your WordPress website:
-
-- Developers: Use the [command prompt or PHPMyAdmin](/archive/blogs/azureossds/migrating-data-between-mysql-databases-using-kudu-console-azure-app-service)
+Developers can use the [command prompt or PHPMyAdmin](/archive/blogs/azureossds/migrating-data-between-mysql-databases-using-kudu-console-azure-app-service).
 
 ## How do I help make WordPress more secure?
 
 To learn about security best practices for WordPress, see [Best practices for WordPress security in Azure](/archive/blogs/azureossds/best-practices-for-wordpress-security-on-azure).
 
-## I'm trying to use PHPMyAdmin, and I see the message "Access denied." How do I resolve this issue?
+## I'm trying to use PHPMyAdmin, and I see the Access denied error message. How do I resolve this issue?
 
 You might experience this issue if the MySQL in-app feature isn't running yet in this App Service instance. To resolve the issue, try to access your website. This action starts the required processes, including the MySQL in-app process. To verify that MySQL in-app is running, in Process Explorer, ensure that *mysqld.exe* is listed in the processes.
 
 After you ensure that MySQL in-app is running, try to use PHPMyAdmin.
 
-## I get an HTTP 403 error when I try to import or export my MySQL in-app database by using PHPMyadmin. How do I resolve this issue?
+## I get an HTTP 403 error when I try to import or export my MySQL in-app database by using PHPMyAdmin. How do I resolve this issue?
 
-If you're using an older version of Chrome, you might be experiencing a known bug. To resolve the issue, upgrade to a newer version of Chrome. Also try using a different browser, like Internet Explorer or Microsoft Edge, where the issue doesn't occur.
+If you're using an older version of Chrome, you might be experiencing a known bug. To resolve the issue, upgrade to a newer version of Chrome. You can also try using a different browser, like Microsoft Edge, where the issue doesn't occur.

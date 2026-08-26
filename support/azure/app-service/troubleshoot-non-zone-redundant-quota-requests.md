@@ -3,6 +3,7 @@ title: Troubleshoot non-zone-redundant quota requests for Azure App Service
 description: Resolve Azure App Service non-zone-redundant quota request and deployment errors so you can deploy or scale successfully. Follow these troubleshooting steps.
 ms.topic: troubleshooting
 ms.date: 08/17/2026
+manager: dcscontentpm
 author: kaushika-msft
 ms.author: kaushika
 ms.reviewer: amyluu, amehrot
