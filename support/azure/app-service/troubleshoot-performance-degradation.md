@@ -1,14 +1,15 @@
 ---
-title: Troubleshoot performance degradation
+title: Troubleshoot performance degradation - Azure App Service
 description: Learn how to troubleshoot slow app performance issues in Azure App Service, collect diagnostic data, and use these steps to mitigate them.
 tags: top-support-issue
 keywords: web app performance, slow app, app slow
 ms.assetid: b8783c10-3a4a-4dd6-af8c-856baafbdde5
 ms.topic: troubleshooting
-ms.date: 10/14/2025
-ms.author: msangapu
-author: msangapu-msft
-ms.reviewer: v-ryanberg
+ms.date: 08/24/2026
+manager: dcscontentpm
+author: kaushika-msft
+ms.author: kaushika
+ms.reviewer: kaushika
 ms.service: azure-app-service
 ms.custom: sap:Availability, Performance, and Application Issues, build-2025
 # Customer intent: As a developer, I want to learn strategies for troubleshooting slow app performance so that I can take steps to mitigate the issue.
@@ -27,24 +28,24 @@ When you browse the app, the pages load slowly and sometimes time out.
 
 This problem often occurs because of application-level problems, such as the following:
 
-- Network requests taking a long time
+- Network requests take a long time
 - Application code or database queries are inefficient
 - An application uses high memory or CPU
 - An application fails because of an exception
 
 ## Troubleshooting steps
 
-Troubleshooting involves three distinct tasks, performed in sequence:
+Troubleshooting involves three distinct tasks, performed in the following sequence:
 
-1. [Observe and monitor application behavior](#observe)
-1. [Collect data](#collect)
-1. [Mitigate the issue](#mitigate)
+1. [Observe and monitor application behavior](#observe-and-monitor-application-behavior)
+1. [Collect data](#collect-data)
+1. [Mitigate the issue](#mitigate-the-issue)
 
 [App Service](/azure/app-service/overview) provides various options at each step.
 
-<a name="observe"></a>
-
 ## Observe and monitor application behavior
+
+The following sections describe how to observe and monitor your app's behavior.
 
 ### Track service health
 
@@ -52,7 +53,7 @@ Azure publicizes each service interruption or performance degradation. You can t
 
 ### Monitor your app
 
-Use the monitoring tools in the Azure portal to determine whether your application has any problems. Under **Monitoring** in the sidebar menu, select **Metrics**. The **Metric** menu shows you all the metrics that you can add.
+Use the monitoring tools in the Azure portal to determine whether your application has any problems. In the sidebar menu, select **Monitoring**, and then select **Metrics**. The **Metric** menu shows you all the metrics that you can add.
 
 Some of the metrics that you might want to monitor for your app include:
 
@@ -77,8 +78,6 @@ Each App Service app provides an extensible management endpoint that you can use
 
 [Azure Application Insights](https://azure.microsoft.com/services/application-insights/) is a performance monitoring site extension that's also available. To use Application Insights, you rebuild your code with an SDK. You can also install an extension that provides access to additional data. The SDK lets you write code to monitor the usage and performance of your app in more detail. For more information, see [Introduction to Application Insights - OpenTelemetry observability](/azure/azure-monitor/app/app-insights-overview).
 
-<a name="collect"></a>
-
 ## Collect data
 
 App Service provides diagnostic functionality for logging information from both the web server and the web application. The information is separated into web server diagnostics and application diagnostics.
@@ -88,16 +87,16 @@ App Service provides diagnostic functionality for logging information from both 
 You can enable or disable the following kinds of logs:
 
 - **Detailed Error Logging**: Detailed error information for HTTP status codes that indicate a failure (status code 400 or greater). This log might contain information that can help determine why the server returned the error code.
-- **Failed Request Tracing**: Detailed information on failed requests, including a trace of the IIS components used to process the request and the time taken in each component. This information can be useful if you're attempting to improve app performance or isolate what is causing a specific HTTP error.
+- **Failed Request Tracing**: Detailed information on failed requests, including a trace of the Internet Information Services (IIS) components used to process the request and the time taken in each component. This information can be useful if you're attempting to improve app performance or isolate what is causing a specific HTTP error.
 - **Web Server Logging**: Information about HTTP transactions using the W3C extended log file format. This log is useful when determining overall app metrics, like the number of requests handled or how many requests are from a specific IP address.
 
 ### Enable application diagnostics
 
-You can collect application performance data from App Service, profile your application live from Visual Studio, or modify your application code to log more information and traces. Choose the options based on how much access you have to the application and what you observed from the monitoring tools.
+You can collect application performance data from App Service, profile your application live from Visual Studio, or modify your application code to log more information and traces. Choose the options based on how much access you have to the application and what you observe from the monitoring tools.
 
 #### Use Application Insights Profiler
 
-You can enable the Application Insights Profiler to start capturing detailed performance traces. You can access traces captured up to five days in the past when you need to investigate problems. You can choose this option as long as you have access to the app's Application Insights resource in the Azure portal.
+Enable the Application Insights Profiler to start capturing detailed performance traces. You can access traces captured up to five days in the past when you need to investigate problems. Choose this option as long as you have access to the app's Application Insights resource in the Azure portal.
 
 Application Insights Profiler provides statistics on response time for each web call and traces that indicate which line of code caused the slow responses. Sometimes the App Service app is slow because certain code isn't written in a performant way. Examples include sequential code that can run in parallel and undesired database lock contentions. Removing these bottlenecks in the code increases the app's performance, but they're hard to detect without setting up elaborate traces and logs. The traces collected by Application Insights Profiler help identify the lines of code that slow down the application and overcome this challenge for App Service apps.
 
@@ -115,9 +114,9 @@ App Service provides an intelligent and interactive experience to help you troub
 
 To access App Service diagnostics, go to your App Service app or App Service Environment in the [Azure portal](https://portal.azure.com). In the sidebar menu, select **Diagnose and solve problems**.
 
-### Use the Kudu Debug Console
+### Use the Kudu Console
 
-App Service includes a debug console that you can use for debugging, exploring, and uploading files. It also provides JSON endpoints for getting information about your environment. This console is called the *Kudu Console* or the *SCM Dashboard* for your app.
+App Service includes a debug console that you can use for debugging, exploring, and uploading files. It also provides JavaScript Object Notation (JSON) endpoints for getting information about your environment. This console is called the *Kudu Console* or the *SCM Dashboard* for your app.
 
 You can access this dashboard by going to your Kudu site.
 
@@ -132,13 +131,14 @@ Another useful feature of Kudu is that if your application throws first-chance e
 
 For more information about features available in Kudu, see [Windows Azure Websites online tools you should know about](https://azure.microsoft.com/blog/windows-azure-websites-online-tools-you-should-know-about/).
 
-<a name="mitigate"></a>
-
 ## Mitigate the issue
 
 ### Scale the app
 
-In App Service, for increased performance and throughput, adjust the scale at which you're running your application. Scaling up an app involves two related actions: changing your App Service plan to a higher pricing tier, and configuring certain settings after you switch to the higher pricing tier.
+In App Service, for increased performance and throughput, adjust the scale at which you're running your application. Scaling up an app involves two related actions: 
+
+- Changing your App Service plan to a higher pricing tier. 
+- Configuring certain settings after you switch to the higher pricing tier.
 
 For more information on scaling, see [Scale an app in Azure App Service](/azure/app-service/manage-scale-up).
 
@@ -148,7 +148,7 @@ You can set the scaling to be manual or automatic.
 
 ### Use auto-heal
 
-Auto-heal recycles the worker process for your app based on settings you choose, like configuration changes, requests, memory-based limits, or the time needed to execute a request. Most of the time, recycling the process is the fastest way to recover from a problem. Though you can always restart the app from directly within the Azure portal, auto-heal does it automatically for you. All you need to do is add some triggers in the root web.config for your app. These settings work in the same way even if your application isn't a .NET app.
+Auto-heal recycles the worker process for your app based on settings you choose, like configuration changes, requests, memory-based limits, or the time needed to execute a request. Most of the time, recycling the process is the fastest way to recover from a problem. Though you can always restart the app from directly within the Azure portal, auto-heal does it automatically. You need to add some triggers in the root `web.config` for your app. These settings work in the same way even if your application isn't a .NET app.
 
 For more information, see [Auto-Healing Azure Web Sites](https://azure.microsoft.com/blog/auto-healing-windows-azure-web-sites/).
 
@@ -160,7 +160,7 @@ Restarting is often the simplest way to recover from one-time issues. In the [Az
 
 You can also manage your app by using Azure PowerShell. For more information, see [Manage Azure resources by using Azure PowerShell](/azure/azure-resource-manager/management/manage-resources-powershell).
 
-## Related content
+## References
 
 - [Troubleshooting intermittent outbound connection errors in Azure App Service](/azure/app-service/troubleshoot-intermittent-outbound-connection-errors)
 - [Tutorial: Run a load test to identify performance bottlenecks in a web app](/azure/app-testing/load-testing/tutorial-identify-bottlenecks-azure-portal)
