@@ -573,11 +573,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "Office/Client/activation/use-msoaid-for-authentication-issues.md",
-      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/activation/use-msoaid-for-authentication-issues",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "Office/Client/activation/your-organization-disabled-this-device.md",
       "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/activation/your-organization-disabled-this-device",
       "redirect_document_id": false
@@ -1455,11 +1450,16 @@
     {
       "source_path": "Office/OfficeExperts/activation/discover-remove-unauthorized-office-windows-kms-hosts.md",
       "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/activation/discover-remove-unauthorized-office-windows-kms-hosts",
-      "redirect_document_id": false
+
     },
     {
       "source_path": "Office/OfficeExperts/activation/reset-office-365-proplus-activation-state.md",
       "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/activation/reset-office-365-proplus-activation-state",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Client/activation/use-msoaid-for-authentication-issues.md",
+      "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/activation/use-msoaid-for-authentication-issues",
       "redirect_document_id": false
     },
     {
