@@ -22,6 +22,12 @@ items:
           href: ../access/error-when-perform-operation-on-table.md
         - name: Can't process transactions in a multi-user environment
           href: ../access/file-sharing-lock-count-exceeded.md
+    - name: Activation
+      items:
+        - name: Microsoft Office Authentication or Identity Diagnostic (MSOAID)
+          href: ../activation/use-msoaid-tool-for-authentication-issues.md
+        - name: Reset activation state for Microsoft 365 Apps for enterprise
+          href: ../activation/reset-activation-state.md
     - name: End of Support
       items:
         - name: Office 2007 has reached end of extended support
