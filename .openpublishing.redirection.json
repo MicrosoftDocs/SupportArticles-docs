@@ -15853,10 +15853,6 @@
     {
       "source_path": "support/sql/releases/linux/release-history-2025.md",
       "redirect_url": "/troubleshoot/sql/releases/linux/download-and-install-latest-updates-linux"
-    },
-    {
-      "source_path": "support/sql/releases/sqlserver-2016/rtm-cumulativeupdate1.md",
-      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2016/cumulative-update/kb3164674-rtm-cu1"
     }
   ]
 }
