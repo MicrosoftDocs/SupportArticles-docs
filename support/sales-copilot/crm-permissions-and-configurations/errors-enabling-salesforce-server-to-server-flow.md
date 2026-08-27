@@ -1,7 +1,7 @@
 ---
 title: Errors When Enabling Salesforce with Server-to-Server Flow
 description: Troubleshoot errors that occur when you enable Salesforce with a server-to-server flow in Sales agent, including license limits and inactive users.
-ms.date: 07/13/2026
+ms.date: 08/26/2026
 ms.reviewer: marrabi, shjais, v-shaywood
 ms.custom: sap:CRM Permissions and Configurations\CRM Settings
 ai-usage: ai-assisted
@@ -10,7 +10,7 @@ ai-usage: ai-assisted
 
 ## Summary
 
-This article helps you troubleshoot errors that occur when you enable Salesforce with a server-to-server flow in the Sales agent. It covers errors related to the integration user, Salesforce Integration license limits, connected app and permission set deployment, duplicate profile names, and missing required fields or failing custom field validations.
+This article helps you troubleshoot errors that occur when you enable Salesforce with a server-to-server flow in Sales agent. It covers errors related to the integration user, Salesforce Integration license limits, connected app and permission set deployment, duplicate profile names, and missing required fields or failing custom field validations.
 
 ## Affected clients and configurations
 
@@ -35,7 +35,7 @@ When you try to enable Salesforce with a server-to-server flow, you receive the 
 
 During the Salesforce server-to-server flow setup, the process deploys a connected app to the Salesforce organization. The connected app associates with an integration user that the process creates automatically. The process assigns a permission set to the integration user. The error occurs if the integration user is inactive in Salesforce because you can't assign a permission set to an inactive user.
 
-### Resolution
+### Solution
 
 To resolve this issue:
 
@@ -53,9 +53,9 @@ When you try to enable Salesforce with a server-to-server flow, you receive the 
 
 ### Cause
 
-During the Salesforce server-to-server flow setup, the process deploys a connected app to the Salesforce organization. The connected app associates with an integration user that the process creates automatically. A Salesforce Integration user license is assigned to this integration user. The error occurs if the maximum number of Salesforce Integration user licenses is reached.
+During the Salesforce server-to-server flow setup, the process deploys a connected app to the Salesforce organization. The connected app associates with an integration user that the process creates automatically. The process assigns a Salesforce Integration user license to this integration user. You see this error if you reach the maximum number of Salesforce Integration user licenses.
 
-### Resolution
+### Solution
 
 To resolve this issue, check whether you reached the maximum number of Salesforce Integration user licenses. If you reached the maximum, reassign existing integration users to other licenses, or purchase more licenses.
 
@@ -67,7 +67,7 @@ To check the number of integration user licenses available in your Salesforce or
 
 1. Under **User Licenses**, check the number of available **Salesforce Integration** licenses in the **Remaining Licenses** column. If the number is **0**, deactivate existing integration users or change their licenses to other types. You can also purchase more licenses.
 
-## Errors when enabling Salesforce with a server-to-server flow
+## Deployment or cleanup errors during server-to-server setup
 
 ### Symptoms
 
@@ -91,7 +91,7 @@ When you try to enable Salesforce with a server-to-server flow, you receive one 
 
 During the Salesforce server-to-server flow setup, the process deploys a connected app to the Salesforce organization. The connected app associates with an integration user that the process creates automatically. The process assigns a permission set to the integration user. During this process, errors occur.
 
-### Resolution
+### Solution
 
 To resolve this issue, retry the operation. If the problem continues, gather the error details, and contact [Microsoft Support](/microsoft-sales-copilot/get-support).
 
@@ -107,11 +107,11 @@ When you try to enable Salesforce with a server-to-server flow, you receive the 
 
 During the Salesforce server-to-server flow setup, the process deploys a connected app to the Salesforce organization. The connected app associates with an integration user that the process creates automatically. The process assigns a permission set to the integration user. This error occurs if the same permission set is already assigned to the user.
 
-### Resolution
+### Solution
 
 To resolve this problem, check for any manual changes to the External Client Apps (ECA), connected app, or profiles that have the `CopilotForSales`, `M365CopilotSales`, or `M365 Copilot Sales` prefix. If you find unintentional changes, revert them. Otherwise, retry the operation. If the problem continues, contact [Microsoft Support](/microsoft-sales-copilot/get-support).
 
-## The profile name is already in use. Pick a different name or rename the existing profile in Salesforce
+## The profile name is already in use
 
 ### Symptoms
 
@@ -123,7 +123,7 @@ When you try to enable Salesforce with a server-to-server flow, you receive the 
 
 During the Salesforce server-to-server flow setup, the process creates a profile named **Sales Integration Profile** in the Salesforce organization. The error occurs if a profile with the same name already exists. This situation prevents you from creating a new profile.
 
-### Resolution
+### Solution
 
 To resolve this issue, check whether a profile with the same name already exists in the Salesforce organization. If you created the profile before you enabled the server-to-server flow, rename the existing profile, and then try again. If you didn't create the profile, contact [Microsoft Support](/microsoft-sales-copilot/get-support).
 
@@ -131,7 +131,7 @@ To resolve this issue, check whether a profile with the same name already exists
 
 ### Symptoms
 
-When you try to enable Salesforce with a server-to-server flow, you receive the following error message:
+When you try to enable Salesforce with a server-to-server flow, you receive one of the following error messages:
 
 > Required fields are missing: \<FieldNames\>
 
@@ -141,7 +141,7 @@ When you try to enable Salesforce with a server-to-server flow, you receive the 
 
 During the Salesforce server-to-server flow setup, the process deploys a connected app to the Salesforce organization. The connected app associates with an integration user that the process automatically creates. This error occurs if custom validation rules for user creation prevent the integration user from being automatically created in Salesforce.
 
-### Resolution
+### Solution
 
 To resolve this issue:
 
@@ -149,8 +149,12 @@ To resolve this issue:
 1. Try again to set up the Salesforce connection in the [Sales agent admin settings](/microsoft-sales-copilot/connect-agent-datasource).
 1. After the Salesforce connection is set up and the integration user is created, re-enable your validation rules.
 
-## More information
+## Reset the Salesforce connector
 
-If your problem isn't resolved, go to the [Sales agent - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with experts.
+If you still can't enable access after you try the solutions in this article, the artifacts in the Salesforce org and the stored credentials in Dataverse might be out of sync. As a last resort, remove both so that the org returns to a clean, unconnected state, and then set up the connection again. For the full process, see [Reset Salesforce server-to-server connector](reset-salesforce-server-to-server-connector.md).
+
+## Get help from the community
+
+If your problem isn't resolved, go to the [Sales agent - Microsoft Community Hub](https://techcommunity.microsoft.com/category/microsoftviva/discussions/vivasales) to engage with experts.
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
