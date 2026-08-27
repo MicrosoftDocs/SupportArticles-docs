@@ -1,9 +1,10 @@
 ---
-title: Troubleshoot Field Service mobile app common issues
-description: Troubleshoot common Field Service mobile app errors, including offline sync failures, blank agenda screens, and "Contact your administrator" messages.
-ms.date: 03/20/2026
+title: Troubleshoot Common Mobile App Issues and Errors
+description: Troubleshoot Dynamics 365 Field Service mobile app issues, including offline sync failures, blank agenda screens, sign-in errors, and guest access.
+ms.date: 08/25/2026
 ms.subservice: field-service-mobile
-ms.reviewer: jobaker, puneetsingh, v-shaywood
+ms.reviewer: jobaker, puneetsingh, v-shaywood, v-wesmith
+ai-usage: ai-assisted
 ms.custom: sap:Mobile Application\Application is throwing errors
 ---
 
@@ -14,10 +15,10 @@ ms.custom: sap:Mobile Application\Application is throwing errors
 This article helps you resolve common problems that affect the [Dynamics 365 Field Service mobile app](/dynamics365/field-service/mobile/overview). It covers problems that field technicians and administrators might encounter when they use the app, including:
 
 - Blank booking screens
--  Sign-in and access errors
--  Offline sync failures
--  Guest account limitations
--  Environment selection problems
+- Sign-in and access errors
+- Offline sync failures
+- Guest account limitations
+- Environment selection problems
 
 Each section describes the symptoms, identifies the cause, and provides step-by-step solution guidance.
 
@@ -35,9 +36,9 @@ Users most frequently report these symptoms on Android devices.
 
 ### Cause
 
-This problem occurs if the mobile offline profile doesn' finish its initial synchronization, or if a previous sync is interrupted. Without a successful sync, the app has no local data to display, and it shows a blank screen.
+This problem occurs if the mobile offline profile doesn't finish its initial synchronization, or if a previous sync is interrupted. Without a successful sync, the app has no local data to display, and it shows a blank screen.
 
-This problem also occurs if an offline filter references a related entity that isn't included in the mobile offline profile. When you publish the profile by having an invalid filter, the sync fails silently and data doesn't appear.
+This problem also occurs if an offline filter references a related entity that isn't included in the mobile offline profile. When you publish the profile with an invalid filter, the sync fails silently and data doesn't appear.
 
 ### Solution
 
@@ -137,13 +138,13 @@ This error occurs when a table filter in the mobile offline profile uses a looku
 
 1. Ask the affected users to sync again by going to **Offline Status** > **Sync now** in the app.
 
-For guidance baout how to build offline profiles that avoid this issue, see [Best practices and limitations for the mobile offline profile](/dynamics365/field-service/mobile/best-practices-limitations-offline-profile).
+For guidance on how to build offline profiles that avoid this issue, see [Best practices and limitations for the mobile offline profile](/dynamics365/field-service/mobile/best-practices-limitations-offline-profile).
 
 ## Guests can't sign in to the Field Service mobile app
 
 ### Symptoms
 
-A user who has an external or guest Microsoft Entra ID account can't sign in to the Field Service mobile app. One or more of the following symptoms occur:
+A user with an external or guest Microsoft Entra ID account can't sign in to the Field Service mobile app. One or more of the following symptoms occur:
 
 - The sign-in process finishes, but the app shows an access error or no data.
 - The user receives an error message that indicates that they don't have the correct permissions.
@@ -151,13 +152,17 @@ A user who has an external or guest Microsoft Entra ID account can't sign in to 
 
 ### Cause
 
-The Field Service mobile app doesn't support external guest Microsoft Entra ID accounts. Guest accounts are user accounts from an external Microsoft Entra ID tenant that you invite to your organization's tenant. These accounts have limitations that prevent full use of the mobile app, including offline sync and security role enforcement.
+Guest accounts are user accounts from an external Microsoft Entra ID tenant that you invite to your organization's tenant. These accounts have limitations that prevent full use of the mobile app, including offline sync and security role enforcement.
 
 ### Solution
 
-If the user requires full Field Service mobile access, contact your Microsoft Entra ID administrator to create an internal member account for the user in your organization's tenant. Then, assign a Dynamics 365 Field Service license to it.
+Frontline workers [enabled as Microsoft Entra B2B collaborator](/azure/active-directory/external-identities/what-is-b2b) (guest) can access the mobile app by [switching to the guest tenant](/power-apps/mobile/tenant-switcher).
 
-If the user needs only to view or update their own service appointments, use the [Field Service customer portal](/dynamics365/field-service/customer-portal-overview) instead of the mobile app. The customer portal supports guests and doesn't require a Field Service license.
+If a guest user needs to access the application with a personal account, use a formatted deep link to access the guest tenant.
+
+```text
+https://apps.powerapps.com/mobile/redirect?appid=<AppId>&tenantid=<TenantId>&playerchannel=FieldServiceMobile&sourceurl=https%3A%2F%2F<OrgUrlWithoutHttps>%2Fmain.aspx%3Fappid%<AppId>
+```
 
 For a full list of supported user types and platform requirements, see the [Field Service mobile app FAQ](/dynamics365/field-service/mobile/mobile-power-app-faq).
 
