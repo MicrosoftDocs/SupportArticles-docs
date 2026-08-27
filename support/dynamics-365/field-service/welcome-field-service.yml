@@ -31,6 +31,8 @@ landingContent:
             url: administration/entity-names-duplicated-numbers.md
           - text: '"The user has not been assigned any roles" error'
             url: administration/user-has-no-roles.md
+          - text: Troubleshoot issues with Dynamics 365 Field Service settings
+            url: administration/settings-troubleshooting.md
   
   # Card
   - title: Scheduling
