@@ -19,6 +19,8 @@ items:
       href: administration/inspection-flows-not-triggered.md
     - name: '"The user has not been assigned any roles" error'
       href: administration/user-has-no-roles.md
+    - name: Troubleshoot issues with Dynamics 365 Field Service settings
+      href: administration/settings-troubleshooting.md
 - name: Customization
   items:
     - name: Can't delete record due to a restrict-delete association
