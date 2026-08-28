@@ -2997,7 +2997,7 @@ items:    # Please do not delete this line, it is required for the yaml format
       items:
         - name: "Troubleshooting guidance: Installing Windows features or roles"
           href: ./installing-updates-features-roles/troubleshoot-install-features-roles-guidance.md
-    - name: Windows Update configuration, settings and management
+    - name: Windows Update - Configuring and managing client settings
       items:
         - name: Can't connect to WSUS Administration Website
           href: ./installing-updates-features-roles/cannot-connect-to-wsus-administration-website.md
