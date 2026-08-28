@@ -1307,7 +1307,7 @@ items:    # Please do not delete this line, it is required for the yaml format
       items:
         - name: Error message when installing RSAT
           href: ./installing-updates-features-roles/error-message-when-installing-rsat.md
-    - name: Windows Update configuration, settings and management
+    - name: Windows Update - Configuring and managing client settings
       items:
         - name: Additional resources for Windows Update
           href: ./installing-updates-features-roles/additional-resources-for-windows-update.md
