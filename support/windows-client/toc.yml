@@ -773,6 +773,8 @@ items:    # Please do not delete this line, it is required for the yaml format
           href: ./setup-upgrade-and-drivers/contact-system-administrator-to-upgrade-windows.md
         - name: HAL_INITIALIZATION_FAILED error on VMWare VM
           href: ./setup-upgrade-and-drivers/installation-error-hal-initialization-failed.md
+        - name: How to downgrade from Windows 8
+          href: ./installing-updates-features-roles/downgrade-from-windows-8.md
         - name: How to edit the Boot.ini file in Windows 2000
           href: ./setup-upgrade-and-drivers/edit-boot-ini-file-windows-2000.md
         - name: In-place upgrade to Windows 10 problem
@@ -1299,15 +1301,13 @@ items:    # Please do not delete this line, it is required for the yaml format
           href: installing-updates-features-roles/determine-whether-wsus-configuration-causes-wu-issue.md
         - name: "Troubleshooting guidance: Windows Update"
           href: ./installing-updates-features-roles/troubleshoot-windows-update-issues.md
-        - name: How to downgrade from Windows 8
-          href: ./installing-updates-features-roles/downgrade-from-windows-8.md
         - name: Windows servicing operations fail after you move user profile and ProgramData folders
           href: ../windows-server//setup-upgrade-and-drivers/servicing-fails-moved-user-profile-programdata-folders.md?context=/troubleshoot/windows-client/context/context
     - name: Issues installing Features on Demand (FoD)
       items:
         - name: Error message when installing RSAT
           href: ./installing-updates-features-roles/error-message-when-installing-rsat.md
-    - name: Windows Update configuration, settings and management
+    - name: Windows Update - Configuring and managing client settings
       items:
         - name: Additional resources for Windows Update
           href: ./installing-updates-features-roles/additional-resources-for-windows-update.md
