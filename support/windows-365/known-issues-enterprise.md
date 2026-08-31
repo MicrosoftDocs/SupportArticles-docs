@@ -91,7 +91,7 @@ To remove the "not compliant" settings:
 
 ## Administrator protection isn't supported on Cloud PCs
 
-Windows 365 Cloud PCs don't support Administrator protection. If a policy that enables it is assigned to your Cloud PCs, users might see an unexpected authentication prompt when signing in, extra approval prompts for tasks that require elevation, and elevation failures.
+Windows 365 Cloud PCs don't support [Administrator protection](/windows/security/application-security/application-control/administrator-protection/). Components in the remote connection stack require updates to work with Administrator protection's least-privilege model. Support for this environment is planned for a future release. In the meantime, configure users as standard users to maintain least privilege in this environment. If a policy that enables it is assigned to your Cloud PCs, users might see an unexpected authentication prompt when signing in, extra approval prompts for tasks that require elevation, and elevation failures.
 
 The sign-in prompt affects all users. The elevation prompts and failures affect users who have local administrator rights. By default, users aren't administrators of their Cloud PCs.
 
