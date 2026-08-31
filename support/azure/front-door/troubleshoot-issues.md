@@ -4,9 +4,10 @@ titleSuffix: Azure Front Door
 description: In this article, you learn how to troubleshoot some of the common problems that you might face for your Azure Front Door instance.
 author: kaushika-msft
 ms.author: kaushika
+ms.reviewer: halkazwini
 ms.service: azure-frontdoor
 ms.topic: troubleshooting
-ms.date: 09/24/2025
+ms.date: 08/27/2026
 ms.custom: sap:Connectivity
 #customer intent: As an Azure Front Door operator, I want to quickly diagnose and resolve common routing and timeout issues so that my applications remain available.
 ---
@@ -20,59 +21,51 @@ This article describes how to troubleshoot common issues that you might encounte
 > [!NOTE]
 > You can request Azure Front Door to return extra debugging HTTP response headers. For more information, see [optional response headers](/azure/frontdoor/front-door-http-headers-protocol#optional-debug-response-headers).
 
-## 503 or 504 response from Azure Front Door after a few seconds
+## 504 response from Azure Front Door after a few seconds
 
 ### Symptom
 
-* Regular requests sent to your backend without going through Azure Front Door are succeeding. Going through the Azure Front Door results in 503 or 504 error responses.
-* The failure from Azure Front Door typically appears after about 30 seconds.
-* Intermittent 503 errors appear with "ErrorInfo: OriginInvalidResponse."
+- Regular requests sent to your backend without going through Azure Front Door are succeeding. Going through the Azure Front Door results in 504 error responses.
+- The failure from Azure Front Door typically appears after about 30 seconds.
+- 504 errors appear with "ErrorInfo: OriginTimeout."
 
 ### Cause
 
-The cause of this issue can be one of three things:
+The cause of this issue can be one of two things:
 
-* Your origin is taking longer than the timeout configured to receive the request from Azure Front Door. The default timeout is 30 seconds.
-* The time it takes to send a response to the request from Azure Front Door is taking longer than the timeout value.
-* The client sent a byte range request with an **Accept-Encoding** header, which means compression is enabled.
+- Your origin is taking longer than the timeout configured to receive the request from Azure Front Door. The default timeout is 30 seconds.
+- The time it takes to send a response to the request from Azure Front Door is taking longer than the timeout value.
 
 ### Troubleshooting steps
 
-* Send the request to your origin directly without going through Azure Front Door. See how long your origin normally takes to respond.
-* Send the request through Azure Front Door and see if you're getting any 503 responses. If not, the problem might not be a timeout issue. Create a support request to troubleshoot the issue further.
-* If requests going through Azure Front Door result in a 503 error response code then configure the **Origin response timeout** for Azure Front Door. You can increase the default timeout to up to 4 minutes (240 seconds). To configure the setting, go to overview page of the Front Door profile. Select **Origin response timeout** and enter a value between *16* and *240* seconds.
+- Send the request to your origin directly without going through Azure Front Door. Check how long your origin normally takes to respond.
+- Send the request through Azure Front Door and check if you're getting any 504 responses. If not, the problem might not be a timeout issue. Create a support request to troubleshoot the issue further.
+- If requests going through Azure Front Door result in a 504 error response code, configure the **Origin response timeout** for Azure Front Door. You can increase the default timeout to up to 4 minutes (240 seconds). To configure the setting, go to the overview page of the Front Door profile. Select **Origin response timeout** and enter a value between *16* and *240* seconds.
     > [!NOTE]
     > The ability to configure origin response timeout is only available in Azure Front Door Standard/Premium.
 
     :::image type="content" source="media/troubleshoot-issues/origin-timeout.png" alt-text="Screenshot of the origin timeout settings on the overview page of the Azure Front Door profile." lightbox="media/troubleshoot-issues/origin-timeout.png":::
 
-* If increasing the timeout doesn't resolve the issue, use a tool like Fiddler or your browser's developer tool to check if the client is sending byte range requests with **Accept-Encoding** headers. Using this option leads to the origin responding with different content lengths.
-
-   If the client is sending byte range requests with **Accept-Encoding** headers, you have two options. The first option is to disable compression on the origin or Azure Front Door. The second option is to create a rules set rule to remove **Accept-Encoding** from the request for byte range requests.
-
-    :::image type="content" source="media/troubleshoot-issues/remove-encoding-rule.png" alt-text="Screenshot that shows the Accept-Encoding rule in a rule set." lightbox="media/troubleshoot-issues/remove-encoding-rule.png":::
-
-## 503 responses from Azure Front Door only for HTTPS
+## 502 responses from Azure Front Door only for HTTPS
 
 ### Symptom
 
-* Any 503 responses are returned only for Azure Front Door HTTPS-enabled endpoints.
-* Regular requests sent to your backend without going through Azure Front Door are succeeding. Going via Azure Front Door results in 503 error responses.
-* Intermittent 503 errors appear with "ErrorInfo: OriginInvalidResponse."
+- Azure Front Door returns 502 responses only for HTTPS-enabled endpoints.
+- Regular requests sent to your backend without going through Azure Front Door succeed. Going via Azure Front Door results in 502 error responses.
 
 ### Cause
 
 The cause of this problem can be one of three things:
 
-* The backend is an IP address.
-* The backend server returns a certificate that doesn't match the fully qualified domain name (FQDN) of the Azure Front Door backend.
-* The backend is an Azure Web Apps server.
+- The origin hostname is an IP address.
+- The origin server returns a certificate that doesn't match the fully qualified domain name (FQDN) of the Azure Front Door backend.
+- The origin server returns a certificate without a complete chain.
 
 ### Troubleshooting steps
 
-* The backend is an IP address.
+- The backend is an IP address.
 
-   `EnforceCertificateNameCheck` must be disabled.
+   You must disable `EnforceCertificateNameCheck`.
     
     Azure Front Door has a switch called `EnforceCertificateNameCheck`. By default, this setting is enabled. When enabled, Azure Front Door checks that the backend host name FQDN matches the backend server certificate's certificate name or one of the entries in the subject alternative names extension.
 
@@ -82,36 +75,42 @@ The cause of this problem can be one of three things:
     
       :::image type="content" source="./media/troubleshoot-issues/toggle-button-front-door-classic.png" alt-text="Screenshot that shows the toggle button in Azure Front Door (classic).":::
 
-      For Azure Front Door Standard and Premium tier, this setting can be found in the origin settings when you add an origin to an origin group or configuring a route.
+      For Azure Front Door Standard and Premium tier, you can find this setting in the origin settings when you add an origin to an origin group or configure a route.
 
       :::image type="content" source="./media/troubleshoot-issues/validation-checkbox.png" alt-text="Screenshot of the certificate subject name validation checkbox.":::
 
 <br>
 
-* The backend server returns a certificate that doesn't match the FQDN of the Azure Front Door backend. To resolve this issue, you have two options:
+- The backend server returns a certificate that doesn't match the FQDN of the Azure Front Door backend. To resolve this issue, you have two options:
 
     - The returned certificate must match the FQDN.
-    - `EnforceCertificateNameCheck` must be disabled.
+    - Disable `EnforceCertificateNameCheck`.
   
-* The backend is an Azure Web Apps server:
+- The origin server returns a certificate without a complete chain:
 
-    - Check if the Azure web app is configured with IP-based SSL instead of being SNI (server name indication) based. If the web app is configured as IP based, it should be changed to SNI.
-    - If the backend is unhealthy because of a certificate failure, a 503 error message is returned. You can verify the health of the backends on ports 80 and 443. If only 443 is unhealthy, it's likely an issue with SSL. Because the backend is configured to use the FQDN, we know it's sending SNI.
+    - The origin server must return a certificate with a complete certificate chain, with at least leaf and intermediate certificates. If the origin server returns only a leaf certificate, Azure Front Door returns a 502 error.
+    - Testing the origin server certificate in the browser by connecting to the origin server directly from a client machine doesn't show the error. The browser rebuilds the certificate chain of trust to be what it thinks it should be instead of showing exactly what the origin server returned.
 
-    Use OPENSSL to verify the certificate that's being returned. To do this check, connect to the backend by using `-servername`. It should return the SNI, which needs to match with the FQDN of the backend pool:
+    - Use OPENSSL to verify the certificate chain that's being returned. To do this check, connect to the origin hostname by using `-connect`. Send the origin hostname by using `-servername`. If the origin hostname is an IP, use `-noservername`. The command returns the entire certificate chain, which needs to match the FQDN of the origin and contain the full certificate chain of trust:
 
-    `openssl s_client -connect backendvm.contoso.com:443  -servername backendvm.contoso.com`
+    Origin hostname is an FQDN:
 
-## Requests sent to the custom domain return a 400 status code
+    `openssl s_client -connect backendvm.contoso.com:443  -servername backendvm.contoso.com -showcerts`
+
+    Origin hostname is an IP address:
+
+    `openssl s_client -connect 0.0.0.0:443  -noservername  -showcerts`
+
+## Requests sent to the custom domain return a 404 status code
 
 ### Symptom
 
-* You created an Azure Front Door instance. A request to the domain or frontend host returns an HTTP 400 status code.
-* You created a DNS (domain name server) mapping for a custom domain to the frontend host that you configured. Sending a request to the custom domain host name returns an HTTP 400 status code. It doesn't appear to route to the backend that you configured.
+- You created an Azure Front Door instance. A request to the domain or frontend host returns an HTTP 404 status code.
+- You created a DNS (domain name server) mapping for a custom domain to the frontend host that you configured. Sending a request to the custom domain host name returns an HTTP 404 status code. It doesn't appear to route to the origin that you configured.
 
 ### Cause
 
-The problem occurs if you didn't configure a routing rule for the custom domain that was added as the frontend host. A routing rule needs to be explicitly added for that frontend host. You need to create the rule even if a routing rule was already configured for the frontend host under the Azure Front Door subdomain, which is **.azurefd.net**.
+The problem occurs if you didn't configure a routing rule for the custom domain that you added as the frontend host. You need to explicitly add a routing rule for that frontend host. You need to create the rule even if you already configured a routing rule for the frontend host under the Azure Front Door subdomain, which is **.azurefd.net**.
 
 ### Troubleshooting step
 
@@ -121,7 +120,7 @@ Add a routing rule for the custom domain to direct traffic to the selected origi
 
 ### Symptom
 
-Azure Front Door has a routing rule that redirects HTTP to HTTPS, but accessing the domain still maintains HTTP as the protocol.
+Azure Front Door has a routing rule for both HTTP and HTTPS, but accessing the domain with HTTP keeps HTTP as the protocol.
 
 ### Cause
 
@@ -129,65 +128,41 @@ This behavior can happen if you didn't configure the routing rules correctly for
 
 ### Troubleshooting steps
 
+Ensure the **Redirect all traffic to use HTTPS** option is selected in the route.
 
-## Request to the frontend host name returns a 411 status code
+:::image type="content" source="media/troubleshoot-issues/redirect-https-route.png" alt-text="Screenshot of the redirect to HTTPS option in a Front Door route." lightbox="media/troubleshoot-issues/redirect-https-route.png":::
 
-### Symptom
-
-You created an Azure Front Door Standard/Premium instance and configured:
-
-- A frontend host.
-- An origin group with at least one origin in it.
-- A routing rule that connects the frontend host to the origin group.
-
-Your content doesn't seem to be available when a request goes to the configured frontend host because an HTTP 411 status code gets returned.
-
-Responses to these requests might also contain an HTML error page in the response body that includes an explanatory statement. An example is "HTTP Error 411. The request must be chunked or have a content length."
-
-### Cause
-
-There are several possible causes for this symptom. The overall reason is that your HTTP request isn't fully RFC-compliant.
-
-An example of noncompliance is a `POST` request sent without either a **Content-Length** or a **Transfer-Encoding** header. An example would be using `curl -X POST https://example-front-door.domain.com`. This request doesn't meet the requirements set out in [RFC 7230](https://tools.ietf.org/html/rfc7230#section-3.3.2). Azure Front Door would block it with an HTTP 411 response. Such requests don't get logged.
-
-This behavior is separate from the web application firewall (WAF) functionality of Azure Front Door. Currently, there's no way to disable this behavior. All HTTP requests must meet the requirements, even if the WAF functionality isn't in use.
-
-### Troubleshooting steps
-
-- Verify that your requests are in compliance with the requirements set out in the necessary RFCs.
-- Take note of any HTML message body that gets returned in response to your request. A message body often explains exactly *how* your request is noncompliant.
-
-## My origin is configured as an IP address.
+## My origin is configured as an IP address
 
 ### Symptom
 
-The origin is configured as an IP address. The origin is healthy, but rejecting requests from Azure Front Door.
+You configured the origin as an IP address. The origin is healthy, but it rejects requests from Azure Front Door.
 
 ### Cause
 
-Azure Front Door uses the origin host name as the SNI header during SSL handshake. Since the origin is configured as an IP address, the failure can be one of the following reasons:
-
-* If the certificate name check is disabled, it's possible that the cause of the issue lies in the origin certificate logic. This logic might be rejecting any requests that don't have a valid host header matching the certificate.
+Azure Front Door uses the origin host name as the SNI header during the SSL handshake. If you configure the origin as an IP address and disable the certificate name check, the origin certificate logic might reject requests that don't have a valid SNI matching the certificate.
 
 ### Troubleshooting steps
 
-Change the origin from an IP address to an FQDN to which a valid certificate is issued that matches the origin certificate.
+Change the origin from an IP address to a fully qualified domain name (FQDN) that has a valid certificate matching the origin certificate.
 
-## 429 responses from Azure Front Door 
+## 429 responses from Azure Front Door
 
 ### Symptom
 
-* A percentage of requests start showing errors with the response 429: Too many requests.
+A percentage of requests start showing errors with the response 429: Too many requests.
 
 ### Cause
 
-* Azure Front Door has default platform rate limits. If your traffic exceeds the limit, Front Door will start rate limiting the traffic and return 429 responses.
+Azure Front Door has default platform rate limits. If your traffic exceeds the limit, Front Door starts rate limiting the traffic and returns 429 responses.
 
 ### Troubleshooting steps
 
-* If you start seeing 429 responses for your legitimate traffic and a higher quota limit is needed, create an [Azure support request](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/newsupportrequest).
+If you start seeing 429 responses for your legitimate traffic and need a higher quota limit, create an [Azure support request](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/newsupportrequest).
 
 ## Related content
 
-* Learn how to [create a Front Door](/previous-versions/azure/frontdoor/quickstart-create-front-door).
-* Learn how to [create a Front Door Standard/Premium](/azure/frontdoor/create-front-door-portal).
+- Learn how to [configure an origin for Azure Front Door](/azure/frontdoor/how-to-configure-origin).
+- Learn about [end-to-end TLS encryption with Azure Front Door](/azure/frontdoor/end-to-end-tls).
+- Learn how Azure Front Door supports [URL redirects](/azure/frontdoor/front-door-url-redirect).
+- Learn how to [add a custom domain to Azure Front Door](/azure/frontdoor/front-door-custom-domain).
