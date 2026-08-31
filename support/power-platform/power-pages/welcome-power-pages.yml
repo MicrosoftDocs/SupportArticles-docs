@@ -37,6 +37,8 @@ landingContent:
         links:
           - text: Missing filter label text in list components
             url: filter-label-list-components.md
+          - text: Power Pages Web API requests fail after wildcard column configuration is deprecated
+            url: migrate-web-api-wildcard.md
 
   # Card
   - title: Documentation and training
