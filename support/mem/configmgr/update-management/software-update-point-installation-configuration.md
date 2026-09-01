@@ -1,140 +1,167 @@
 ---
 title: Software update point installation and configuration
-description: Describes how to tack the software update point installation and how to configure Software update point. 
-ms.date: 03/30/2026
-ms.reviewer: kaushika
-ms.custom: sap:Site Server and Roles\Site System Role Installation (any role)
+description: Understand how Configuration Manager installs and configures a software update point, communicates with WSUS, and applies LEDBAT settings.
+ms.date: 08/31/2026
+ms.topic: reference
+ms.reviewer: payur, andad, emank
+ai-usage: ai-assisted
+ms.custom: "sap: Software Update Management (SUM)/Software Update Point Installation or Configuration"
 ---
+
 # Software update point installation and configuration
 
-_Applies to:_ &nbsp; Configuration Manager
+Applies to: Configuration Manager (current branch)
 
-The software update point is required on the central administration site and on the primary sites to enable software updates compliance assessment and to deploy software updates to clients.
+## Summary
+
+To assess software update compliance and deploy software updates to clients, Configuration Manager requires a software update point on the central administration site and primary sites. This article explains how Configuration Manager installs the site system role and applies its settings to Windows Server Update Services (WSUS).
+
+## Prerequisites and supported configuration
+
+Before you install the software update point role, install WSUS on the target site system server. When you install the first software update point in a site, also install the WSUS Administration Console on the site server. WSUS Configuration Manager and WSUS Synchronization Manager use the WSUS administration APIs from this console.
+
+For dependencies and planning considerations, see [Prerequisites for software updates](/intune/configmgr/sum/plan-design/prerequisites-for-software-updates) and [Plan for software updates](/intune/configmgr/sum/plan-design/plan-for-software-updates).
+
+For the supported procedures to install the role and configure WSUS ports, TLS/SSL, proxy settings, synchronization options, products, classifications, languages, and accounts, see [Install and configure a software update point](/intune/configmgr/sum/get-started/install-a-software-update-point).
 
 ## Track software update point installation
 
-When software update point site system role is installed, an instance of the `SMS_SCI_SysResUse` class is created, and entries that resemble the following are logged in SMSProv.log:
+The following diagram shows the components involved when Configuration Manager installs the software update point role.
 
-> PutInstanceAsync SMS_SCI_SysResUse   SMS Provider  
-> CExtProviderClassObject::DoPutInstanceInstance    SMS Provider  
-> INFO: 'PR1SITE.CONTOSO.COM' is a valid FQDN.    SMS Provider  
+:::image type="content" source="./media/software-update-point-installation-flow.png" alt-text="Flowchart that shows the process flow from SMS Provider through Site Component Manager and the bootstrap service to software update point setup." lightbox="./media/software-update-point-installation-flow-expanded.png":::
 
-Site Component Manager then detects the change in site control information and initiates the installation of the software update point site system role. Entries that resemble the following are logged in SiteComp.log:
+When you add the role, SMS Provider (SMSProv) creates an instance of the `SMS_SCI_SysResUse` class. Entries that resemble the following example appear in the SMSProv.log file:
 
-> Parsed the master site control file, serial number 3559422579.    SMS_SITE_COMPONENT_MANAGER  
-> Synchronizing server table and polling servers as needed...      SMS_SITE_COMPONENT_MANAGER  
-> Synchronizing component server PR1SITE.CONTOSO.COM...    SMS_SITE_COMPONENT_MANAGER  
-> Installing component SMS_WSUS_CONTROL_MANAGER...       SMS_SITE_COMPONENT_MANAGER  
-> NFO: 'PR1SITE.CONTOSO.COM' is a valid FQDN.      SMS_SITE_COMPONENT_MANAGER  
-> Creating registry keys Operations Management\SMS Server Role\SMS Software Update Point on server PR1SITE.CONTOSO.COM.    SMS_SITE_COMPONENT_MANAGER  
-> Updated WSUS Configuration for PR1SITE.CONTOSO.COM.    SMS_SITE_COMPONENT_MANAGER  
-> The component is being installed on the site server, no files need to be installed in the "E:\ConfigMgr" directory because the files are already there.    SMS_SITE_COMPONENT_MANAGER  
-> All files installed.   SMS_SITE_COMPONENT_MANAGER  
-> Starting bootstrap operations...        SMS_SITE_COMPONENT_MANAGER  
-> Installed service SMS_SERVER_BOOTSTRAP_PR1SITE.    SMS_SITE_COMPONENT_MANAGER  
-> Starting service SMS_SERVER_BOOTSTRAP_PR1SITE with command-line arguments "PR1 E:\ConfigMgr /install E:\ConfigMgr\bin\x64\rolesetup.exe SMSWSUS "...    SMS_SITE_COMPONENT_MANAGER
-
-When the role installation is started by Site Component Manager, SUPSetup.log is created and the following are logged:
-
-> \<02/09/14 22:53:28> ====================================================================  
-> \<02/09/14 22:53:28> SMSWSUS Setup Started....  
-> \<02/09/14 22:53:28> Parameters: E:\ConfigMgr\bin\x64\rolesetup.exe /install /siteserver:PR1SITE SMSWSUS 0  
-> \<02/09/14 22:53:28> Installing Pre Reqs for SMSWSUS  
-> <02/09/14 22:53:28>    ======== Installing Pre Reqs for Role SMSWSUS ========  
-> <02/09/14 22:53:28> Found 1 Pre Reqs for Role SMSWSUS  
-> <02/09/14 22:53:28> Pre Req SqlNativeClient found.  
-> <02/09/14 22:53:28> SqlNativeClient already installed (Product Code: {D411E9C9-CE62-4DBF-9D92-4CB22B750ED5}). Would not install again.  
-> <02/09/14 22:53:28> Pre Req SqlNativeClient is already installed. Skipping it.  
-> <02/09/14 22:53:28>    ======== Completed Installation of Pre Reqs for Role SMSWSUS ========  
-> <02/09/14 22:53:28> Installing the SMSWSUS  
-> <02/09/14 22:53:28> Checking for supported version of WSUS (min WSUS 3.0 SP2 + KB2720211 + KB2734608)  
-> <02/09/14 22:53:28> Checking runtime v2.0.50727...  
-> <02/09/14 22:53:28> Did not find supported version of assembly Microsoft.UpdateServices.Administration.  
-> <02/09/14 22:53:28> Checking runtime v4.0.30319...  
-> <02/09/14 22:53:28> Found supported assembly Microsoft.UpdateServices.Administration version 4.0.0.0, file version 6.2.9200.16384  
-> <02/09/14 22:53:28> Found supported assembly Microsoft.UpdateServices.BaseApi version 4.0.0.0, file version 6.2.9200.16384  
-> <02/09/14 22:53:28> Supported WSUS version found  
-> <02/09/14 22:53:28> Supported WSUS Server version (6.2.9200.16384) is installed.  
-> <02/09/14 22:53:28> CTool::RegisterManagedBinary: run command line: "C:\Windows\Microsoft.NET\Framework64\v2.0.50727\RegAsm.exe" "E:\ConfigMgr\bin\x64\wsusmsp.dll"  
-> <02/09/14 22:53:44> CTool::RegisterManagedBinary: Registered E:\ConfigMgr\bin\x64\wsusmsp.dll successfully  
-> <02/09/14 22:53:44> Registered DLL E:\ConfigMgr\bin\x64\wsusmsp.dll  
-> <02/09/14 22:53:44> Installation was successful.  
-> <02/09/14 22:53:44> ~RoleSetup().
-
-After the role is installed, Site Component Manager removes the bootstrap service that's created to perform the installation, the following are logged in SiteComp.log:
-
-> "E:\ConfigMgr\bin\x64\rolesetup.exe /install /siteserver:PR1SITE.CONTOSO.COM" executed successfully on server PR1SITE.CONTOSO.COM.         SMS_SITE_COMPONENT_MANAGER  
-> Bootstrap operation successful.       SMS_SITE_COMPONENT_MANAGER  
-> Deinstalled service SMS_SERVER_BOOTSTRAP_PR1SITE.     SMS_SITE_COMPONENT_MANAGER  
-> Bootstrap operations completed.      SMS_SITE_COMPONENT_MANAGER
-
-## Configure proxy setting for the software update point
-
-When there is a proxy server between the WSUS server and the upstream update source, the proxy settings must be configured for the site system as well as the software update point role. The proxy server settings are site system specific, which means that all site system roles use the proxy server settings that you specify. For more information, see [Accounts used in Configuration Manager](/mem/configmgr/core/plan-design/hierarchy/accounts).
-
-### Check proxy configuration on a computer
-
-- To review the proxy configuration for the logged-on user, run the following command:
-
-    ```console
-    netsh winhttp show proxy
-    ```
-
-- To review the proxy configuration for the SYSTEM account, open a command prompt by running the following command:
-
-    ```console
-    psexec -s -i cmd
-    ```
-
-    In the Command Prompt window, run `whoami` to confirm that the command window is running under the System account.
-
-    Run the `netsh winhttp show proxy` command and review the proxy configuration for the System account.
-
-    You can also start Internet Explorer from this command window, and review the proxy configured in Internet Explorer. In some cases you may have to clear the **Automatically Detect Settings** check box, and set the correct proxy.
-
-To force WinHTTP to use proxy configuration from Internet Explorer, run the following command:
-
-```console
-netsh winhttp import proxy source =ie
+```output
+PutInstanceAsync SMS_SCI_SysResUse~
+CExtProviderClassObject::DoPutInstanceInstance~
+GetObjectAsync : SMS_SCI_SysResUse.FileType=2,ItemName="  [\"Display=\\\\[SiteServer]\\\"]MSWNET:[\"SMS_SITE=[SiteCode]\"]\\\\[SiteServer]\\,SMS Software Update Point",ItemType="System Resource Usage",SiteCode="[SiteCode]"~
 ```
 
-For more information about Netsh commands, see [Netsh Commands for Windows Hypertext Transfer Protocol (WINHTTP)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731131(v=ws.10)).
+Site Component Manager (SiteComp) detects the site control change and starts role installation. If the site system server doesn't have another role, Configuration Manager first installs the component server role. Entries that resemble the following example appear in the SiteComp.log file:
 
-### Configure the proxy settings for the Site System
+```output
+Synchronizing component server [SiteServer]...
+Component SMS_WSUS_CONTROL_MANAGER flagged for installation.
+Installing component SMS_WSUS_CONTROL_MANAGER...
+Starting service SMS_SERVER_BOOTSTRAP_[SiteCode] with command-line arguments "[SiteCode] E:\ConfigMgr /install E:\ConfigMgr\bin\x64\rolesetup.exe SMSWSUS "...
+```
 
-1. In the Configuration Manager console, go to **Administration** > **Site Configuration** > **Servers and Site System Roles**, select the *\<SiteSystemName>* on the right pane.
-2. In the bottom pane, right-click **Site System**, and then click **Properties**.
-3. Select the **Proxy** tab, specify the proxy server name, port, and credentials (if required).
+Site Component Manager starts the `SMS_SERVER_BOOTSTRAP_[SiteCode]` service on the site system. The bootstrap service runs rolesetup.exe, which creates the SUPSetup.log file and performs the prerequisite and installation checks. The SUPSetup.log file records entries that resemble the following examples:
 
-### Configure the proxy settings for the software update point
+```output
+SMSWSUS Setup Started....
+Installing Pre Reqs for SMSWSUS
+======== Installing Pre Reqs for Role SMSWSUS ========
+Found 0 Pre Reqs for Role SMSWSUS
+======== Completed Installation of Pre Reqs for Role SMSWSUS ========
+Installing the SMSWSUS
+Checking for supported version of WSUS (min WSUS 4.0)
+Checking runtime v4.0.30319...
+Found supported assembly Microsoft.UpdateServices.Administration version 4.0.0.0
+Found supported assembly Microsoft.UpdateServices.BaseApi version 4.0.0.0
+Supported WSUS version found
+Registered DLL E:\ConfigMgr\bin\x64\wsusmsp.dll
+Installation was successful.
+~RoleSetup().
+```
 
-1. In the Configuration Manager console, go to **Administration** > **Site Configuration** > **Servers and Site System Roles**, select *\<SiteSystemName>* on the right pane.
-2. In the bottom pane, right-click **Software Update Point**, and then click **Properties**.
-3. Select the **Proxy and Account Settings** tab, and select **Use a proxy server when synchronizing software updates**.
-4. (Optional) To configure automatic deployment rules (ADRs) to use a proxy server, select the **Proxy And Account Settings** tab, and then select **Use a proxy server when downloading content by using automatic deployment rules**.
+After installation succeeds, Site Component Manager removes the bootstrap service. The SiteComp.log file records entries that resemble the following examples:
 
-### Verify proxy settings in the WSUS console
+```output
+"E:\ConfigMgr\bin\x64\rolesetup.exe /install /siteserver:[SiteServer]" executed successfully on server [SiteServer].
+Bootstrap operation successful.
+Deinstalled service SMS_SERVER_BOOTSTRAP_[SiteCode].
+```
 
-1. Open the WSUS console.
-2. Select **Options** in the tree pane, and then select **Update Source and Proxy Server** in the display pane.
-3. Select the **Proxy Server** tab. Verify that the proxy settings match the settings configured for the software update point in Configuration Manager. If the settings don't match, check WCM.log on the site server.
+## Review software update point configuration data
 
-For more information, see [Proxy server settings](/mem/configmgr/sum/get-started/install-a-software-update-point#proxy-server-settings).
+Configuration Manager stores software update point settings as component properties. The following read-only query returns those properties:
 
-## Configure the WSUS Server Connection Account for the software update point
+```sql
+SELECT SC_Component.ComponentName,
+       SC_Component.Name,
+       vSMS_SC_Component_Properties.Name,
+       vSMS_SC_Component_Properties.Value1,
+       vSMS_SC_Component_Properties.Value2,
+       vSMS_SC_Component_Properties.Value3
+FROM vSMS_SC_Component_Properties
+JOIN SC_Component
+  ON SC_Component.ID = vSMS_SC_Component_Properties.ID
+WHERE SC_Component.ComponentName LIKE '%SMS_WSUS%';
+```
 
-If the software update point is remote from the site server, and if the site server computer account doesn't have permissions to connect to the WSUS server, you must specify a WSUS Server Connection Account that Configuration Manager can use to connect to the WSUS server.
+The following read-only query returns the products and update classifications enabled in the component properties:
 
-This account is used by WCM and WSyncMgr. It must be a local administrator on the computer where WSUS is installed. Additionally, the account must be part of the local WSUS Administrators group. For more information, see [Accounts used in Configuration Manager](/mem/configmgr/core/plan-design/hierarchy/accounts).
+```sql
+SELECT CI_LocalizedCategoryInstances.CategoryInstanceName,
+       CI_CategoryInstances.CategoryTypeName,
+       CI_CategoryInstances.CategoryInstance_UniqueID,
+       CI_UpdateCategorySubscription.IsSubscribed,
+       CI_CategoryInstances.DateLastModified,
+       CI_CategoryInstances.CategoryInstanceID
+FROM CI_CategoryInstances
+JOIN CI_UpdateCategorySubscription
+  ON CI_CategoryInstances.CategoryInstanceID = CI_UpdateCategorySubscription.CategoryInstanceID
+JOIN CI_LocalizedCategoryInstances
+  ON CI_CategoryInstances.CategoryInstanceID = CI_LocalizedCategoryInstances.CategoryInstanceID
+WHERE CI_UpdateCategorySubscription.IsSubscribed = 1;
+```
 
-To configure the WSUS Server Connection Account for the software update point:
+## Track software update point configuration
 
-1. In the Configuration Manager console, go to **Administration** > **Site Configuration** > **Servers and Site System Roles**, select *\<SiteSystemName>* on the right pane.
-2. In the bottom pane, right-click **Software Update Point**, and then click **Properties**.
-3. On the **Proxy And Account Settings** tab, specify the connection account under **WSUS Server Connection Account**.
+WSUS Configuration Manager (WCM) connects to the WSUS server every hour and applies the settings defined for the software update point. WCM uses the WSUS administration APIs, so the site server must have the WSUS Administration Console installed. During these sessions, WCM.log records entries that resemble the following examples:
+
+```output
+Checking for supported version of WSUS (min WSUS 3.0 SP2 + KB2720211 + KB2734608)
+Checking runtime v4.0.30319...
+Supported WSUS version found
+Successfully connected to local WSUS server
+Verify Upstream Server settings on the Active WSUS Server
+No changes - WSUS Server settings are correctly configured and Upstream Server is set to Microsoft Update
+for [SiteServer], no connection account is available
+Successfully refreshed categories from WSUS server
+Successfully connected to local WSUS server
+```
+
+The following diagram shows how a console configuration change reaches WCM and the WSUS API endpoint.
+
+:::image type="content" source="./media/software-update-point-wsus-configuration-flow.png" alt-text="Flowchart that shows the process flow from SMS Provider through database monitoring and WCM to the WSUS API endpoint." lightbox="./media/software-update-point-wsus-configuration-flow-expanded.png":::
+
+When you change products or classifications, SMS Provider modifies the applicable rows in the `CI_CategoryInstances` and `CI_UpdateCategorySubscription` tables. SMS Database Monitor detects the change and places a .csb file in WSUSMgr.box to notify WCM. When products or categories change, it also places a .ctn file in objmgr.box so Configuration Manager can populate configuration items in the database. The SMSDBMon.log file records entries that resemble the following examples:
+
+```output
+SND: Dropped E:\ConfigMgr\inboxes\objmgr.box\347.CTN [39252]
+SND: Dropped E:\ConfigMgr\inboxes\WSUSMgr.box\347.CSB [39253]
+```
+
+WCM processes the notification, connects to WSUS, and applies the software update point subscription options through the WSUS APIs. The SWCM.log file records entries that resemble the following examples:
+
+```output
+File notification triggered WCM Inbox.
+Setting new configuration state to 4 (WSUS_CONFIG_SUBSCRIPTION_PENDING)
+Successfully connected to local WSUS server
+Subscribed Update Categories <?xml version="1.0" ?> ~<Categories>~ <Category Id="[CategoryID]"><![CDATA[Example product]]></Category>~ <Category Id="[ClassificationID]"><![CDATA[Critical Updates]]></Category>~ </Categories>
+Setting new configuration state to 2 (WSUS_CONFIG_SUCCESS)
+```
+
+WCM connects to the `ApiRemoting30` virtual directory on the WSUS website. The WSUS ports in the software update point properties must match the ports assigned to the WSUS website.
+
+## WSUS configuration states
+
+WCM uses the following states during WSUS configuration:
+
+| State | Value |
+| --- | --- |
+| `WSUS_CONFIG_NONE` | 0 |
+| `WSUS_CONFIG_PENDING` | 1 |
+| `WSUS_CONFIG_SUCCESS` | 2 |
+| `WSUS_CONFIG_FAILED` | 3 |
+| `WSUS_CONFIG_SUBSCRIPTION_PENDING` | 4 |
 
 ## References
 
-- [Install and configure a software update point](/mem/configmgr/sum/get-started/install-a-software-update-point)
-- [Synchronize software updates](/mem/configmgr/sum/get-started/synchronize-software-updates)
-- [Configure classifications and products to synchronize](/mem/configmgr/sum/get-started/configure-classifications-and-products)
+- [Install and configure a software update point](/intune/configmgr/sum/get-started/install-a-software-update-point)
+- [Synchronize software updates](/intune/configmgr/sum/get-started/synchronize-software-updates)
+- [Configure classifications and products to synchronize](/intune/configmgr/sum/get-started/configure-classifications-and-products)
+- [Manage settings for software updates](/intune/configmgr/sum/get-started/manage-settings-for-software-updates)
