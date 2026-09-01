@@ -1,0 +1,26 @@
+### YamlMime:Landing
+
+title: Azure Network Watcher troubleshooting documentation
+summary: Welcome to Azure Network Watcher troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Azure Network Watcher. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+
+metadata:
+  title: Troubleshoot common issues with Azure Network Watcher
+  description: Documentation for troubleshooting common issues with Azure Network Watcher.
+  services: azure
+  ms.service: azure-network-watcher
+  ms.topic: landing-page
+  author: kaushika-msft
+  ms.author: kaushika
+  ms.date: 08/24/2026
+
+landingContent:
+
+# Card
+  - title: Azure Network Watcher
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Diagnose an Azure virtual machine routing problem
+            url: ../virtual-network/diagnose-network-routing-problem.md
+          - text: Diagnose a virtual machine network traffic filter problem
+            url: ../virtual-network/diagnose-network-traffic-filter-problem.md
