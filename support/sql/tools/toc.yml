@@ -1,5 +1,5 @@
 items:
-- name: Cannot connect to WMI provider error in Configuration manager
+- name: Cannot connect to WMI provider error in Configuration Manager
   href: error-message-when-you-open-configuration-manager.md
 - name: Description of the Replay Markup Language Utilities for SQL Server
   href: replay-markup-language-utility.md
