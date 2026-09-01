@@ -14,9 +14,9 @@ ms.custom: sap:Connectivity
 
 # Troubleshoot Azure Front Door common issues
 
-This article describes how to troubleshoot common issues that you might encounter when using your Azure Front Door.
-
 ## Summary
+
+This article describes how to troubleshoot common issues that you might encounter when using your Azure Front Door.
 
 > [!NOTE]
 > You can request Azure Front Door to return extra debugging HTTP response headers. For more information, see [optional response headers](/azure/frontdoor/front-door-http-headers-protocol#optional-debug-response-headers).
