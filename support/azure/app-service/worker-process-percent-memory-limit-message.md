@@ -1,6 +1,6 @@
 ---
 title: Worker Process requested recycle due to Percent Memory limit message
-description: Learn how to resolve the Worker Process requested recycle due to 'Percent Memory' limit message in Azure App Service by switching to a 64-bit process. 
+description: Learn how to resolve the "Worker Process requested recycle due to 'Percent Memory' limit" message in Azure App Service by switching to a 64-bit process. 
 author: kaushika-msft
 manager: dcscontentpm
 ms.topic: troubleshooting
@@ -10,15 +10,15 @@ ms.reviewer: kaushika
 ms.service: azure-app-service
 ms.custom: sap:Availability, Performance, and Application Issues
 ---
-# Worker Process requested recycle due to 'Percent Memory' limit message
+# "Worker Process requested recycle due to 'Percent Memory' limit" message
 
 ## Summary
 
-This article explains why Azure App Service displays the **Worker Process requested recycle due to 'Percent Memory' limit** message. 
+This article explains why Azure App Service displays the "Worker Process requested recycle due to 'Percent Memory' limit" message. 
 
 ## Symptom
 
-You see the message **Worker Process requested recycle due to 'Percent Memory' limit**.
+You see the message **"Worker Process requested recycle due to 'Percent Memory' limit".
 
 ## Cause
 

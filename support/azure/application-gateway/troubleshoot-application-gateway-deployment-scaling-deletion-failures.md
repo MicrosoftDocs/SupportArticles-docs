@@ -1,43 +1,14 @@
 ---
 title: Troubleshoot Application Gateway deployment, scaling, and deletion failures
-description: Diagnose and resolve Azure Application Gateway deployment, scaling, and deletion failures by using step-by-step guidance for RBAC, locks, subnet, and Key Vault issues.
+description: Diagnose and resolve Azure Application Gateway deployment, scaling, and deletion failures with steps for RBAC, locks, subnets, and Key Vault access.
+manager: dcscontentpm
+author: kaushika-msft
+ms.author: kaushika
+ms.reviewer: chadmat, kaushika
 ms.service: azure-application-gateway
 ms.topic: troubleshooting
 ms.custom: sap:Issues with Create, Update and Delete (CRUD)
-ms.date: 6/12/2026
-ai.hint.symptom-tags:
-  - deployment-failed
-  - provisioning-error
-  - scaling-failed
-  - deletion-stuck
-  - resource-lock
-  - rbac-permission-denied
-  - subnet-misconfiguration
-  - orphaned-reference
-  - key-vault-access-denied
-  - operation-not-allowed
-  - scope-locked
-  - updating-stuck
-  - autoscaling-capacity
-  - autoscaling-unexpected-scale
-ai.hint.scope: resource-level
-ai.hint.required-permissions:
-  - Microsoft.Network/applicationGateways/read
-  - Microsoft.Network/applicationGateways/write
-  - Microsoft.Network/virtualNetworks/subnets/read
-  - Microsoft.Network/virtualNetworks/subnets/join/action
-  - Microsoft.Authorization/roleAssignments/read
-  - Microsoft.Authorization/locks/read
-  - Microsoft.Resources/deployments/read
-  - Microsoft.Resources/deployments/operationStatuses/read
-  - Microsoft.KeyVault/vaults/read
-  - Microsoft.ManagedIdentity/userAssignedIdentities/read
-ai.hint.context-required:
-  - SUBSCRIPTION_ID
-  - RESOURCE_GROUP
-  - RESOURCE_NAME
-  - VNET_NAME
-  - SUBNET_NAME
+ms.date: 09/02/2026
 ---
 
 # Troubleshoot Application Gateway deployment, scaling, and deletion failures
@@ -46,14 +17,13 @@ ai.hint.context-required:
 
 This article provides step-by-step guidance to diagnose and resolve failures that occur when you deploy, scale, or delete Azure Application Gateway. 
 
-Application Gateway deployment, scaling, and deletion operations might fail for several reasons, including: 
+Application Gateway deployment, scaling, and deletion operations might fail for several reasons, including the following: 
 
 - The deploying identity lacks required role-based access control (RBAC) permissions. 
 - The resource locks block lifecycle operations. 
 - The Application Gateway subnet is misconfigured (wrong size, conflicting delegations, or a universal user-defined route (UDR) as the default route that doesn't point to the internet). 
 - Orphaned configuration references exist and prevent scaling or deletion. 
 - Azure Key Vault certificate access is denied. 
-
 
 ## Symptoms
 
@@ -65,7 +35,7 @@ You might encounter one or more of the following symptoms:
 - Deployment or deletion fails and returns `"code": "ScopeLocked"` and the following message:
 
    > `The scope '/subscriptions/{SUBSCRIPTION_ID}/resourceGroups/{RESOURCE_GROUP}' or a parent scope has a delete lock. Remove the lock before performing the delete operation.`.
-- Deployment or update fails amd returns `"code": "OperationNotAllowed"` and a message that references a locked resource.
+- Deployment or update fails and returns `"code": "OperationNotAllowed"` and a message that references a locked resource.
 - The provisioning state is stuck at `Updating` or `Failed`, and the gateway is unresponsive to further configuration changes.
 - Deployment fails and returns `"code": "SubnetTooSmall"` or the following message:
 
@@ -122,7 +92,7 @@ To troubleshoot Application Gateway deployment, scaling, and deletion failures, 
 
 Check whether the deployment succeeded, failed, or is stuck. Also, check the specific error code and message from the ARM deployment operation.
 
-Run the following commands in Azure CLI:
+Run the following commands in Azure CLI.
 
 **Option 1: Application Gateway already exists (update, scale, or delete failures)**
 
@@ -157,7 +127,7 @@ az deployment group list \
   --output json
 ```
 
-To get detailed error information from a specific failed deployment:
+To get detailed error information from a specific failed deployment, run the following command.
 
 ```azurecli-interactive
 # ── Collect inputs (cached if already set in this session) ──
@@ -178,7 +148,7 @@ az deployment operation group list \
 | Observation | Meaning | Next steps |
 |---|---|---|
 | `provisioningState: "Succeeded"` and the reported symptom is no longer occurring. | The gateway is healthy, and the reported issue was transient or already resolved. | Verify that the symptom is gone. If it is, no further action is needed. If the symptom persists, perform [Step 9](#step-9). |
-| `provisioningState: "Succeeded"`, and the symptom is unexpectedly autoscaling or you're experiencing a cost or instance-count spike. | A `Succeeded` state doesn't rule out unbounded autoscaling because the `autoscale` bounds returned by this command must be interpreted. | Perform [Step 9](#step-9). |
+| `provisioningState: "Succeeded"`, and the symptom is unexpectedly autoscaling or you're experiencing a cost or instance-count spike. | A `Succeeded` state doesn't rule out unbounded autoscaling because you must interpret the `autoscale` bounds returned by this command. | Perform [Step 9](#step-9). |
 | `provisioningState: "Failed"`. | The gateway is in a failed state. Check the error details. | Examine the following error codes, and then perform [Step 2](#step-2). |
 | `provisioningState: "Updating"` for more than 30 minutes. | The gateway is stuck in a long-running operation. | Wait up to one hour. If it's still updating, file an Azure support request. |
 | Error code `AuthorizationFailed`. | The deploying identity lacks required permissions. | Perform [Step 3](#step-3). |
@@ -188,7 +158,7 @@ az deployment operation group list \
 | Error code `ApplicationGatewaySubnetUserDefinedRouteNotAllowed`. | A UDR on the Application Gateway subnet has a `0.0.0.0/0` route and a next hop type other than `Internet`. | Perform [Step 6](#step-6). |
 | Error code `ResourceProviderNotRegistered`. | The `Microsoft.Network` provider isn't registered. | Perform [Step 2](#step-2). |
 | Error code `LinkedAccessCheckFailed` or `ApplicationGatewayKeyVaultSecretException`. | A Key Vault access issue exists. | Perform [Step 7](#step-7). |
-| Error code `InvalidResourceReference` and a reference to a path map, back-end pool, HTTP settings, or listener. | This mentiuon is an orphaned configuration reference. A configuration element references a resource that was deleted or doesn't exist. | Perform [Step 8](#step-8). |
+| Error code `InvalidResourceReference` and a reference to a path map, back-end pool, HTTP settings, or listener. | This mention is an orphaned configuration reference. A configuration element references a resource that was deleted or doesn't exist. | Perform [Step 8](#step-8). |
 | Error code `InternalServerError` and a reference to path map, back-end pool, or HTTP settings. | This mention is an orphaned configuration reference (alternative error format). | Perform [Step 8](#step-8). |
 | `ResourceNotFound` error. | A subscription, resource group, or gateway name is incorrect. | Verify your variables, and rerun. |
 
@@ -198,7 +168,7 @@ az deployment operation group list \
 
 Check whether the `Microsoft.Network` resource provider is registered in the subscription. Unregistered providers cause all network resource deployments to fail.
 
-Run the following commands in Azure CLI:
+Run the following commands in Azure CLI.
 
 ```azurecli-interactive
 # ── Collect inputs (cached if already set in this session) ──
@@ -216,14 +186,14 @@ az provider show \
 | Observation | Meaning | Next steps |
 |---|---|---|
 | `"registrationState": "Registered"`. | The provider is registered. | Perform [Step 3](#step-3). |
-| `"registrationState": "NotRegistered"` or `"Unregistered"`. | The provider must be registered before any network resources can be deployed. | Perform [Resolution A](#resolution-a). |
+| `"registrationState": "NotRegistered"` or `"Unregistered"`. | The provider must be registered before you can deploy any network resources. | Perform [Resolution A](#resolution-a). |
 | `"registrationState": "Registering"`. | Registration is in progress. Wait 2–5 minutes, and then recheck. | Rerun this step. |
 
 ### Step 3
 
 Check whether the identity that performs the deployment (user, service principal, or managed identity) has the required permissions to create or modify Application Gateway resources and join the subnet.
 
-Run the following commands in Azure CLI:
+Run the following commands in Azure CLI.
 
 ```azurecli-interactive
 # ── Collect inputs (cached if already set in this session) ──
@@ -239,9 +209,9 @@ az role assignment list \
 ```
 
 > [!IMPORTANT]
-> The `--include-inherited` flag is required. Without it, the commands return empty for an identity whose Owner or Contributor role is inherited from the subscription (or a management group). This empty result makes a correctly-permissioned identity look unpermissioned and can cause misdiagnosis of the problem. By having the flag, an inherited role is listed as having a `scope` at the subscription (`/subscriptions/{id}`) instead of the resource group.
+> The `--include-inherited` flag is required. Without it, the commands return empty for an identity whose Owner or Contributor role is inherited from the subscription (or a management group). This empty result makes a correctly permissioned identity look unpermissioned and can cause misdiagnosis of the problem. By having the flag, an inherited role is listed as having a `scope` at the subscription (`/subscriptions/{id}`) instead of the resource group.
 
-To check the specific identity that failed, use the `{OBJECT_ID}` from the `AuthorizationFailed` error message:
+To check the specific identity that failed, use the `{OBJECT_ID}` from the `AuthorizationFailed` error message.
 
 ```azurecli-interactive
 # ── Collect inputs (cached if already set in this session) ──
@@ -282,7 +252,7 @@ az role assignment list \
 
 Check whether the Application Gateway subnet meets all requirements, including minimum size, no conflicting delegations, no other resource types present, and correct network configuration.
 
-Run the following commands in Azure CLI:
+Run the following commands in Azure CLI.
 
 ```azurecli-interactive
 # ── Collect inputs (cached if already set in this session) ──
@@ -320,7 +290,7 @@ az network vnet subnet show \
 
 Check whether the NSG on the Application Gateway subnet allows the required inbound management traffic from the `GatewayManager` service tag.
 
-Extract the NSG name from the [Step 4a](#step-4a) output, then run the following commands in Azure CLI:
+Extract the NSG name from the [Step 4a](#step-4a) output, then run the following commands in Azure CLI.
 
 ```azurecli-interactive
 # ── Collect inputs (cached if already set in this session) ──
@@ -347,7 +317,7 @@ az network nsg rule list \
 
 Check whether any delete or read-only locks exist on the resource group or individual resources that block deployment, update, scaling, or deletion operations.
 
-Run the following commands in Azure CLI:
+Run the following commands in Azure CLI.
 
 ```azurecli-interactive
 # ── Collect inputs (cached if already set in this session) ──
@@ -360,7 +330,7 @@ az lock list \
   --output table
 ```
 
-To also check subscription-level locks:
+To also check subscription-level locks, run the following command.
 
 ```azurecli-interactive
 # ── Collect inputs (cached if already set in this session) ──
@@ -386,7 +356,7 @@ az lock list \
 
 Check whether a UDR on the Application Gateway subnet has a `0.0.0.0/0` default route that points to the internet. Application Gateway v2 requires that the default route next hop is the internet. Routing through a network virtual appliance (NVA) or VPN gateway causes deployment and health probe failures.
 
-If [Step 4a](#step-4a) showed a route table attached to the subnet, extract the route table name from the resource ID, and then run the following commands in Azure CLI:
+If [Step 4a](#step-4a) showed a route table attached to the subnet, extract the route table name from the resource ID, and then run the following commands in Azure CLI.
 
 ```azurecli-interactive
 # ── Collect inputs (cached if already set in this session) ──
@@ -408,8 +378,8 @@ az network route-table route list \
 |---|---|---|
 | No route for `0.0.0.0/0`. | Default system route configuration applies (the next hop is the internet). | Perform [Step 7](#step-7). |
 | `0.0.0.0/0` with `nextHopType: Internet`. | The explicit default route is to the internet. | Perform [Step 7](#step-7). |
-| `0.0.0.0/0` with `nextHopType: VirtualAppliance`. | Default traffic is routed through an NVA. This breaks Application Gateway v2, | Perform [Resolution F](#resolution-f) |
-| `0.0.0.0/0` with `nextHopType: VirtualNetworkGateway`. | Default traffic is routed through a VPN or ExpressRoute Gateway. This breaks Application Gateway v2. | Perform [Resolution F](#resolution-f). |
+| `0.0.0.0/0` with `nextHopType: VirtualAppliance`. | Default traffic is routed through an NVA. This route breaks Application Gateway v2, | Perform [Resolution F](#resolution-f) |
+| `0.0.0.0/0` with `nextHopType: VirtualNetworkGateway`. | Default traffic is routed through a VPN or ExpressRoute Gateway. This route breaks Application Gateway v2. | Perform [Resolution F](#resolution-f). |
 | `0.0.0.0/0` with `nextHopType: None`. | Default traffic is dropped and Application Gateway can't reach the internet or Azure management plane. | Perform [Resolution F](#resolution-f). |
 | Multiple routes for `0.0.0.0/0`. | The most specific prefix or lowest-priority route wins.  Verify the most effective route. | Check effective routes on an Application Gateway network interface card (NIC) if possible. |
 
@@ -423,9 +393,9 @@ Check whether the Application Gateway's managed identity has the required permis
 > [!NOTE]
 > This step applies only if the Application Gateway uses Key Vault for Transport Layer Security (TLS) certificate management. If Key Vault integration isn't used, go to [Step 8](#step-8).
 
-Run the following commands in Azure CLI:
+Run the following commands in Azure CLI.
 
-1. Identify the managed identity that's assigned to the Application Gateway:
+1. Identify the managed identity that's assigned to the Application Gateway.
 
 ```azurecli-interactive
 # ── Collect inputs (cached if already set in this session) ──
@@ -442,7 +412,7 @@ az network application-gateway show \
 ```
 
 2. Record the `{MANAGED_IDENTITY_PRINCIPAL_ID}` from `identity.userAssignedIdentities.<id>.principalId`.
-3. Check the Key Vault access policy or RBAC for that identity:
+3. Check the Key Vault access policy or RBAC for that identity.
 
 ```azurecli-interactive
 # ── Collect inputs (cached if already set in this session) ──
@@ -456,7 +426,7 @@ az keyvault show \
   --output json
 ```
 
-4. If Key Vault uses access policies (`enableRbacAuthorization` is `false`), check the access policy for the managed identity:
+4. If Key Vault uses access policies (`enableRbacAuthorization` is `false`), check the access policy for the managed identity.
 
 ```azurecli-interactive
 # ── Collect inputs (cached if already set in this session) ──
@@ -471,7 +441,7 @@ az keyvault show \
   --output json
 ```
 
-5. If Key Vault uses RBAC (`enableRbacAuthorization` is `true`), check the role assignments for the managed identity:
+5. If Key Vault uses RBAC (`enableRbacAuthorization` is `true`), check the role assignments for the managed identity.
 
 ```azurecli-interactive
 # ── Collect inputs (cached if already set in this session) ──
@@ -488,7 +458,7 @@ az role assignment list \
   --output table
 ```
 
-6. Check Key Vault network access:
+6. Check Key Vault network access.
 
 ```azurecli-interactive
 # ── Collect inputs (cached if already set in this session) ──
@@ -516,7 +486,7 @@ az keyvault network-rule list \
 
 Check whether the Application Gateway configuration contains references to deleted or nonexistent back-end pools, HTTP settings, probes, or certificates that prevent scaling, updates, or deletion.
 
-Run the following commands in Azure CLI:
+Run the following commands in Azure CLI.
 
 ```azurecli-interactive
 # ── Collect inputs (cached if already set in this session) ──
@@ -578,12 +548,12 @@ az network application-gateway show \
 
 ### Step 9
 
-Check whether autoscaling is configured to have effective minimum and maximum instance bounds. A gateway can report `provisioningState: "Succeeded"` while still scaling beyond expectations because no maximum capacity is set. This step exposes the discriminating items (the `sku` tier and the `autoscaleConfiguration` bounds) that separate an unbounded-autoscaling cost spike from a genuinely healthy gateway.
+Check whether autoscaling is configured with effective minimum and maximum instance bounds. A gateway can report `provisioningState: "Succeeded"` while still scaling beyond expectations because no maximum capacity is set. This step exposes the key items (the `sku` tier and the `autoscaleConfiguration` bounds) that separate an unbounded-autoscaling cost spike from a genuinely healthy gateway.
 
 > [!NOTE]
-> This step is read-only. The remediation that sets autoscale bounds is performed in [Resolution I](#resolution-i).
+> This step is read-only. Set autoscale bounds in [Resolution I](#resolution-i).
 
-Run the following commands in Azure CLI:
+Run the following commands in Azure CLI.
 
 ```azurecli-interactive
 # ── Collect inputs (cached if already set in this session) ──
@@ -630,9 +600,9 @@ Use the following decision map table to determine the appropriate next steps bas
 
 The `Microsoft.Network` resource provider isn't registered in the subscription. All Azure networking resource deployments (including Application Gateway) require this provider to be registered.
 
-Run the following commands in Azure CLI:
+Run the following commands in Azure CLI.
 
-1. Register the provider:
+1. Register the provider.
 
 > [!IMPORTANT]
 > The following commands are all write operations that require your approval before you can run them. Review them to better understand what each command does. This registration adds the `Microsoft.Network` resource provider to your subscription, which is required for creating any Azure networking resources. This registration doesn't create any resources or incur charges.
@@ -646,7 +616,7 @@ az provider register \
   --subscription "$SUBSCRIPTION"
 ```
 
-2. Wait for the registration to complete (1-5 minutes). After five minutes, check the status:
+2. Wait for the registration to complete (1-5 minutes). After five minutes, check the status.
 
 ```azurecli-interactive
 # ── Collect inputs (cached if already set in this session) ──
@@ -668,16 +638,16 @@ If the deployment still fails with a different error, return to [Step 1](#step-1
 
 ## Resolution B
 
-The identity performing the Application Gateway deployment (user account, service principal, or managed identity) doesn't have sufficient permissions to create, update, or delete the Application Gateway resource and join the subnet.
+The identity you use to deploy the Application Gateway (user account, service principal, or managed identity) doesn't have sufficient permissions to create, update, or delete the Application Gateway resource and join the subnet.
 
 Common contributing causes include:
 
-- The service principal used in Continuous Integration (CI) and Continuous Delivery (CD) has `Reader` instead of `Contributor` permissions.
-- The managed identity used in infrastructure-as-code (IaC) hasn't been assigned a role on the target resource group.
+- The service principal you use in Continuous Integration (CI) and Continuous Delivery (CD) has `Reader` instead of `Contributor` permissions.
+- The managed identity you use in infrastructure-as-code (IaC) isn't assigned a role on the target resource group.
 - The VNet is in a different resource group and the identity lacks `Network Contributor` permissions on that resource group.
 - A custom role definition is missing for `Microsoft.Network/virtualNetworks/subnets/join/action`.
 
-Run the following commands in Azure CLI:
+Run the following commands in Azure CLI.
 
 1. Identify the deployment scenario and the minimum role required for the identity performing the deployment.
 
@@ -692,8 +662,8 @@ Run the following commands in Azure CLI:
 2. Assign the required roles to the identity performing the deployment.
 
 > [!IMPORTANT]
-> The following commands are all write operations that require your approval before you can run them. Review them to better understand what each command does. This assigns the 
-> `{ROLE_NAME}` role to the identity `{OBJECT_ID}` at the resource group scope. This allows the identity to perform deployment and management operations on Application Gateway. The  role can be scoped more narrowly if needed.
+> The following commands are all write operations that require your approval before you can run them. Review them to better understand what each command does. This step assigns the 
+> `{ROLE_NAME}` role to the identity `{OBJECT_ID}` at the resource group scope. This role assignment allows the identity to perform deployment and management operations on Application Gateway. You can scope the role more narrowly if needed.
 
 ```azurecli-interactive
 # ── Collect inputs (cached if already set in this session) ──
@@ -709,7 +679,7 @@ az role assignment create \
   --subscription "$SUBSCRIPTION"
 ```
 
-If the VNet is in a different resource group, assign it to the correct one:
+If the VNet is in a different resource group, assign it to the correct one.
 
 ```azurecli-interactive
 # ── Collect inputs (cached if already set in this session) ──
@@ -1046,7 +1016,7 @@ az identity create \
 ```
 
 2. Record the `{IDENTITY_RESOURCE_ID}` from the output (the full resource ID) and `{IDENTITY_PRINCIPAL_ID}` (the `principalId`).
-3. Assign the identity to the Application Gateway:
+3. Assign the identity to the Application Gateway.
 
 ```azurecli-interactive
 # ── Collect inputs (cached if already set in this session) ──
@@ -1121,7 +1091,7 @@ az keyvault network-rule add \
 > [!NOTE]
 > The Application Gateway subnet must have the `Microsoft.KeyVault` service endpoint enabled in order for VNet rules to work.
 
-6. If the subnet doesn't have the Key Vault service endpoint enabled, enable it:
+6. If the subnet doesn't have the Key Vault service endpoint enabled, enable it.
 
 ```azurecli-interactive
 # ── Collect inputs (cached if already set in this session) ──
@@ -1142,7 +1112,7 @@ az network vnet subnet update \
 
 The managed identity now has the required permissions and network access. Retry the deployment or update.
 
-8. If the issue persists, verify that the certificate that's referenced in the Application Gateway SSL configuration actually exists in the Key Vault:
+8. If the issue persists, verify that the certificate that you reference in the Application Gateway SSL configuration exists in the Key Vault.
 
 ```azurecli-interactive
 # ── Collect inputs (cached if already set in this session) ──
@@ -1223,7 +1193,7 @@ az network application-gateway url-path-map rule delete \
 > If the orphaned rule is the only path rule in its path map, the prior commands fail and return `ApplicationGatewayUrlPathMapMustSpecifyPathRules`. A URL path map must always retain at least one path rule. When another routing rule remains on the gateway, you can, instead, delete the routing rule that references the path map and then the path map itself. Delete the routing rule first. A path map can't be removed while a rule still references it. The gateway must have at least one other routing rule or this `rule delete` fails and returns `ApplicationGatewayMustHaveAtleastOneResourceOfType`. If this rule is the sole routing rule, re-create the referenced resource by using step 3 instead, or add a second routing rule so that you can remove this rule.
 
 > [!IMPORTANT]
-> The following commands are all write operations that require your approval before you can run them:
+> The following commands are all write operations that require your approval before you can run them.
 
 ```azurecli-interactive
 # ── Collect inputs (cached if already set in this session) ──
@@ -1340,9 +1310,9 @@ All references should now resolve to existing resources. Retry the scaling, upda
 
 ## Resolution I
 
-Application Gateway v2 that has autoscaling enabled has no minimum or maximum instance count configured. Therefore, it scales aggressively in response to traffic spikes. This configuration can cause unexpected cost increases or reach subscription capacity limits.
+The Application Gateway v2 with autoscaling enabled doesn't have a minimum or maximum instance count configured. As a result, it scales aggressively in response to traffic spikes. This configuration can cause unexpected cost increases or reach subscription capacity limits.
 
-Run the following commands in Azure CLI (when applicable):
+Run the following commands in Azure CLI (when applicable).
 
 1. Review the current autoscaling configuration and SKU capacity.
 
@@ -1391,7 +1361,7 @@ az network application-gateway update \
 > To establish baseline and peak traffic patterns, review Application Gateway metrics (`CurrentCapacity`, `CapacityUnits`, and `ComputeUnits`) over the past 30 days. Set `minCapacity` above the baseline and `maxCapacity` above the peak by allowing some headroom.
 
 3. Rerun step 1, and verify that `minCapacity` and `maxCapacity` are set.
-4. To verify scaling stays within bounds, Monitor `CurrentCapacity` metric over the next 24–48 hours.
+4. To verify scaling stays within bounds, monitor the `CurrentCapacity` metric over the next 24–48 hours.
 
 ## References
 

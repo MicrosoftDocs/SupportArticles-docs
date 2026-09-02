@@ -1,12 +1,14 @@
 ---
-title: Troubleshoot Bad Gateway errors - Azure Application Gateway
+title: Troubleshoot bad gateway (502) errors - Azure Application Gateway
 description: Troubleshoot Azure Application Gateway 502 Bad Gateway errors and restore backend connectivity quickly. Follow this guide to identify and fix root causes.
 services: application-gateway
+manager: dcscontentpm
 author: kaushika-msft
 ms.author: kaushika
+ms.reviewer: kaushika
 ms.service: azure-application-gateway
 ms.topic: troubleshooting
-ms.date: 08/03/2026
+ms.date: 08/28/2026
 ms.custom: 
    - sap:Facing 5xx errors,devx-track-azurepowershell
    - sap:backend health
@@ -20,18 +22,18 @@ ms.custom:
 Learn how to troubleshoot bad gateway (502) errors in Azure Application Gateway so you can quickly restore reliable access to your web apps.
 
 > [!NOTE]
-> We recommend that you use the Azure Az PowerShell module to interact with Azure. To get started, see [Install Azure PowerShell](/powershell/azure/install-azure-powershell). To learn how to migrate to the Az PowerShell module, see [Migrate Azure PowerShell from AzureRM to Az](/powershell/azure/migrate-from-azurerm-to-az).
+> Use the Azure Az PowerShell module to interact with Azure. To get started, see [Install Azure PowerShell](/powershell/azure/install-azure-powershell). To learn how to migrate to the Az PowerShell module, see [Migrate Azure PowerShell from AzureRM to Az](/powershell/azure/migrate-from-azurerm-to-az).
 
 ## Symptoms
 
-After you configure an application gateway, you might see the error **Server Error: 502 - Web server received an invalid response while acting as a gateway or proxy server**. This error can happen for the following reasons:
+After you configure an application gateway, you might see the error "Server Error: 502 - Web server received an invalid response while acting as a gateway or proxy server". This error can happen for the following reasons:
 
-- [Network security group (NSG), user-defined route (UDR), or custom DNS issue](/azure/application-gateway/application-gateway-troubleshooting-502#network-security-group-user-defined-route-or-custom-dns-issue).
-- [Default health probe can't reach backend VMs](#default-health-probe-cant-reach-backend-vms).
-- [Backend request time-out is exceeded](#backend-request-time-out-is-exceeded).
-- [Application Gateway's backend pool isn't configured or empty](#application-gateways-backend-pool-isnt-configured-or-empty).
-- [Unhealthy instances in BackendAddressPool](#unhealthy-instances-in-backendaddresspool).
-- [Upstream SSL certificate doesn't match](#upstream-ssl-certificate-doesnt-match).
+- [Network security group (NSG), user-defined route (UDR), or custom Domain Name System (DNS) issue](/azure/application-gateway/application-gateway-troubleshooting-502#network-security-group-user-defined-route-or-custom-dns-issue)
+- [Default health probe can't reach backend VMs](#default-health-probe-cant-reach-backend-vms)
+- [Backend request time-out is exceeded](#backend-request-time-out-is-exceeded)
+- [Application gateway's backend pool isn't configured or is empty](#application-gateways-backend-pool-isnt-configured-or-is-empty)
+- [Unhealthy instances in BackendAddressPool](#unhealthy-instances-in-backendaddresspool)
+- [Upstream SSL certificate doesn't match](#upstream-ssl-certificate-doesnt-match)
 
 ## Network security group, user-defined route, or custom DNS issue
 
@@ -39,30 +41,31 @@ After you configure an application gateway, you might see the error **Server Err
 
 If an NSG, UDR, or custom DNS blocks access to the backend, application gateway instances can't reach the backend pool. This issue causes probe failures, resulting in 502 errors.
 
-The NSG/UDR could be present either in the application gateway subnet or the subnet where the application VMs are deployed.
+You might have an NSG or UDR in either the application gateway subnet or the subnet where the application virtual machines (VMs) are deployed.
 
-Similarly, the presence of a custom DNS in the VNet could also cause problems. An FQDN used for backend pool members might not resolve correctly by the user configured DNS server for the VNet.
+Similarly, the presence of a custom DNS in the virtual network (VNet) can also cause problems. The user-configured DNS server for the VNet might not correctly resolve a fully qualified domain name (FQDN) used for backend pool members.
 
 ### Solution
 
-Validate NSG, UDR, and DNS configuration by going through the following steps:
+Validate your NSG, UDR, and DNS configurations.
+To do so, follow these steps:
 
-1. Check NSGs associated with the application gateway subnet. Ensure that communication to backend isn't blocked. For more information, see [Network security groups](/azure/application-gateway/configuration-infrastructure#network-security-groups).
-1. Check UDR associated with the application gateway subnet. Ensure that the UDR isn't directing traffic away from the backend subnet. For example, check for routing to network virtual appliances or default routes being advertised to the application gateway subnet via ExpressRoute/VPN.
+1. Check the NSGs associated with the application gateway subnet. Ensure that communication to the backend isn't blocked. For more information, see [Network security groups](/azure/application-gateway/configuration-infrastructure#network-security-groups).
+1. Check the UDR associated with the application gateway subnet. Ensure that the UDR isn't directing traffic away from the backend subnet. For example, check for routing to network virtual appliances or default routes being advertised to the application gateway subnet by using Azure ExpressRoute or Azure VPN. Run the following commands in Azure PowerShell.
 
     ```azurepowershell
     $vnet = Get-AzVirtualNetwork -Name vnetName -ResourceGroupName rgName
     Get-AzVirtualNetworkSubnetConfig -Name appGwSubnet -VirtualNetwork $vnet
     ```
 
-1. Check effective NSG and route with the backend VM.
+1. Check for effective NSGs and routes with the backend VM. Run the following commands in Azure PowerShell.
 
     ```azurepowershell
     Get-AzEffectiveNetworkSecurityGroup -NetworkInterfaceName nic1 -ResourceGroupName testrg
     Get-AzEffectiveRouteTable -NetworkInterfaceName nic1 -ResourceGroupName testrg
     ```
 
-1. Check presence of custom DNS in the VNet. Check DNS by looking at details of the VNet properties in the output.
+1. Check for the presence of custom DNS in the VNet. Check DNS by looking at the details of the VNet properties in the output.
 
     ```json
     Get-AzVirtualNetwork -Name vnetName -ResourceGroupName rgName 
@@ -72,17 +75,20 @@ Validate NSG, UDR, and DNS configuration by going through the following steps:
                                ]
                              }
     ```
+
 1. If present, ensure that the DNS server can resolve the backend pool member's FQDN correctly.
 
 ## Default health probe can't reach backend VMs
 
 ### Cause
 
-502 errors can also indicate that the default health probe can't reach backend VMs.
+A 502 error can also indicate that the default health probe can't reach backend VMs.
 
-When you provision an application gateway instance, it automatically configures a default health probe to each BackendAddressPool by using properties of the BackendHttpSetting. You don't need to provide any input to set this probe. Specifically, when you configure a load-balancing rule, you associate a BackendHttpSetting with a BackendAddressPool. Each of these associations has a default probe configured, and the application gateway starts a periodic health check connection to each instance in the BackendAddressPool at the port specified in the BackendHttpSetting element. 
+When you provision an application gateway instance, it automatically configures a default health probe to each `BackendAddressPool` by using properties of the `BackendHttpSetting`. 
 
-The following table lists the values associated with the default health probe:
+You don't need to provide any input to set this probe. Specifically, when you configure a load-balancing rule, you associate a `BackendHttpSetting` with a `BackendAddressPool`. Each of these associations has a default probe configured, and the application gateway starts a periodic health check connection to each instance in the `BackendAddressPool` at the port specified in the `BackendHttpSetting` element. 
+
+The following table lists the values associated with the default health probe.
 
 | Probe property | Value | Description |
 | --- | --- | --- |
@@ -93,14 +99,16 @@ The following table lists the values associated with the default health probe:
 
 ### Solution
 
-* The host value of the request is set to 127.0.0.1. Ensure that a default site is configured and is listening at 127.0.0.1.
-* The BackendHttpSetting protocol determines the protocol of the request.
-* The URI Path is set to `/*`.
-* If BackendHttpSetting specifies a port other than 80, configure the default site to listen at that port.
-* The call to `protocol://127.0.0.1:port` should return an HTTP result code of 200. This code should be returned within the 30-second timeout period.
-* Ensure the configured port is open and there are no firewall rules or Azure Network Security Groups blocking incoming or outgoing traffic on the port configured.
-* If you use Azure classic VMs or Cloud Service with an FQDN or a public IP, ensure that you open the corresponding [endpoint](/previous-versions/azure/virtual-machines/windows/classic/setup-endpoints).
-* If you configure the VM via Azure Resource Manager and it's outside the VNet where the application gateway is deployed, you must configure a [Network Security Group](/azure/virtual-network/network-security-groups-overview) to allow access on the desired port.
+Use the following guidance to troubleshoot the default health probe.
+
+- The host value of the request is set to 127.0.0.1. Ensure that a default site is configured and is listening at 127.0.0.1.
+- The `BackendHttpSetting` protocol determines the protocol of the request.
+- The URI Path is set to `/*`.
+- If `BackendHttpSetting` specifies a port other than 80, configure the default site to listen at that port.
+- The call to `protocol://127.0.0.1:port` should return an HTTP result code of 200. This code should be returned within the 30-second timeout period.
+- Ensure the configured port is open and there are no firewall rules or Azure NSGs blocking incoming or outgoing traffic on the port configured.
+- If you use Azure classic VMs or Cloud Service with an FQDN or a public IP, ensure that you open the corresponding [endpoint](/previous-versions/azure/virtual-machines/windows/classic/setup-endpoints).
+- If you configure the VM using Azure Resource Manager (ARM) and it's outside the VNet where the application gateway is deployed, configure a [NSG](/azure/virtual-network/network-security-groups-overview) to allow access on the desired port.
 
 For more information, see [Application Gateway infrastructure configuration](/azure/application-gateway/configuration-infrastructure).
 
@@ -110,7 +118,7 @@ For more information, see [Application Gateway infrastructure configuration](/az
 
 Custom health probes give you more flexibility than the default probing behavior. When you use custom probes, you can set the probe interval, the URL, the path to test, and how many failed responses to accept before marking the backend pool instance as unhealthy.
 
-The following table describes the additional properties you can set:
+The following table describes the additional properties you can set.
 
 | Probe property | Description |
 | --- | --- |
@@ -120,17 +128,17 @@ The following table describes the additional properties you can set:
 | Path |Relative path of the probe. The valid path starts from '/'. The probe is sent to \<protocol\>://\<host\>:\<port\>\<path\>. |
 | Interval |Probe interval in seconds. This value sets the time interval between two consecutive probes. |
 | Time-out |Probe time-out in seconds. If a valid response isn't received within this time-out period, the probe is marked as failed. |
-| Unhealthy threshold |Probe retry count. The backend server is marked down after the consecutive probe failure count reaches the unhealthy threshold. |
+| Unhealthy threshold | Probe retry count. The backend server is marked down after the consecutive probe failure count reaches the unhealthy threshold. |
 
 ### Solution
 
-Validate that you configured the custom health probe correctly, as shown in the preceding table. In addition to the preceding troubleshooting steps, also ensure the following steps:
+Validate that you configured the custom health probe correctly, as shown in the preceding table. In addition to the preceding troubleshooting guidance, follow this guidance as well.
 
-* Ensure that you specify the probe correctly as per the [guide](/azure/application-gateway/application-gateway-create-probe-ps).
-* If you configure the application gateway for a single site, specify the default Host name as `127.0.0.1`, unless you configure otherwise in the custom probe.
-* Ensure that a call to `http://<host>:<port><path>` returns an HTTP result code of 200.
-* Ensure that Interval, Timeout, and UnhealthyThreshold values are within the acceptable ranges.
-* If you use an HTTPS probe in the v2 SKU, Application Gateway also sends the probe host name as the Server Name Indication (SNI) value. Make sure that the host name matches the backend certificate's subject alternative name (SAN), or its common name (CN) if the certificate has no SAN, as described in [RFC 6125](https://www.rfc-editor.org/rfc/rfc6125#section-6.4.4). Application Gateway doesn't send SNI when the host name is an IP address, including the default `127.0.0.1`. For steps to compare the probe host name against the certificate, see [Resolution F in Troubleshoot HTTP 502 errors in Azure Application Gateway](troubleshoot-http-502-bad-gateway.md#resolution-f). If you can't change the backend certificate, adjust the [backend HTTPS validation settings](/azure/application-gateway/configuration-http-settings#backend-https-validation-settings) to use a specific SNI value or to skip subject name validation.
+- Ensure that you specify the probe correctly as per the [guide](/azure/application-gateway/application-gateway-create-probe-ps).
+- If you configure the application gateway for a single site, specify the default host name as `127.0.0.1`, unless you configure this otherwise in the custom probe.
+- Ensure that a call to `http://<host>:<port><path>` returns an HTTP result code of 200.
+- Ensure that `Interval`, `Timeout`, and `UnhealthyThreshold` values are within the acceptable ranges.
+- If you use an HTTPS probe in the v2 SKU, Application Gateway also sends the probe host name as the SNI value. Make sure that the host name matches the backend certificate's subject alternative name (SAN), or its common name (CN) if the certificate has no SAN, as described in [RFC 6125](https://www.rfc-editor.org/rfc/rfc6125#section-6.4.4). Application Gateway doesn't send SNI when the host name is an IP address, including the default `127.0.0.1`. For steps to compare the probe host name against the certificate, see [Resolution F in Troubleshoot HTTP 502 errors in Azure Application Gateway](troubleshoot-http-502-bad-gateway.md#resolution-f). If you can't change the backend certificate, adjust the [backend HTTPS validation settings](/azure/application-gateway/configuration-http-settings#backend-https-validation-settings) to use a specific SNI value or to skip subject name validation.
 
 ## Backend request time-out is exceeded
 
@@ -142,9 +150,11 @@ If your backend application routinely takes longer than the configured interval 
 
 ### Solution
 
-The request time-out is a property of the backend HTTP setting, so different backend pools can have different request time-out values. Increase it by using the Azure portal, Azure CLI, or Azure PowerShell. The accepted range is 1 to 86400 seconds; for more information, see [Request timeout](/azure/application-gateway/configuration-http-settings#request-timeout).
+The request time-out is a property of the backend HTTP setting, so different backend pools can have different request time-out values. Increase it by using the Azure portal, Azure CLI, or Azure PowerShell. The accepted range is 1 to 86400 seconds. For more information, see [Request timeout](/azure/application-gateway/configuration-http-settings#request-timeout).
 
 #### Azure portal
+
+Follow these steps:
 
 1. In the [Azure portal](https://portal.azure.com), go to your application gateway.
 1. Under **Settings**, select **Backend settings**.
@@ -153,6 +163,8 @@ The request time-out is a property of the backend HTTP setting, so different bac
 1. Select **Save**.
 
 #### Azure CLI
+
+Run the following command in Azure CLI:
 
 ```azurecli
 az network application-gateway http-settings update \
@@ -164,6 +176,8 @@ az network application-gateway http-settings update \
 
 #### Azure PowerShell
 
+Run the following command in Azure PowerShell:
+
 ```azurepowershell
 New-AzApplicationGatewayBackendHttpSettings -Name 'Setting01' -Port 80 -Protocol Http -CookieBasedAffinity Enabled -RequestTimeout 60
 ```
@@ -171,7 +185,7 @@ New-AzApplicationGatewayBackendHttpSettings -Name 'Setting01' -Port 80 -Protocol
 > [!NOTE]
 > Increasing the request time-out only masks the symptom if the backend is slow because of an underlying issue, such as high CPU or memory pressure, database contention, or an inefficient query. Also investigate the backend application's response time before raising the time-out value.
 
-## Application Gateway's backend pool isn't configured or empty
+## Application gateway's backend pool isn't configured or is empty
 
 ### Cause
 
@@ -179,15 +193,14 @@ If the application gateway has no VMs or virtual machine scale set configured in
 
 ### Solution
 
-Ensure that the backend address pool isn't empty. You can check this condition through PowerShell, CLI, or the portal.
+Ensure that the backend address pool isn't empty. You can check this condition through Azure PowerShell, Azure CLI, or the portal.
+See the following example to check the backend address pool through Azure PowerShell.
 
 ```azurepowershell
 Get-AzApplicationGateway -Name "SampleGateway" -ResourceGroupName "ExampleResourceGroup"
 ```
 
-The output from the preceding cmdlet should contain a nonempty backend address pool. The following example shows two returned pools that are configured with an FQDN or IP addresses for the backend VMs. The provisioning state of the BackendAddressPool must be `Succeeded`.
-
-BackendAddressPoolsText:
+The output from the preceding cmdlet should contain a nonempty backend address pool. The following example shows two returned pools that are configured with an FQDN or IP addresses for the backend VMs. The provisioning state of the `BackendAddressPool` must be `Succeeded`.
 
 ```json
 [{
@@ -227,30 +240,14 @@ Ensure that the instances are healthy and the application is properly configured
 
 ### Cause
 
-The TLS certificate installed on backend servers doesn't match the hostname received in the Host request header. 
+The Transport Layer Security (TLS) certificate installed on backend servers doesn't match the hostname received in the HTTP host request header. 
 
-In scenarios where End-to-end TLS is enabled, a configuration that is achieved by editing the appropriate "Backend HTTP Settings", and changing there the configuration of the "Backend protocol" setting to HTTPS, it's mandatory to ensure that the DNS NAME of the TLS certificate installed on backend servers matches the hostname coming to the backend in the HTTP host header request.
+In scenarios where end-to-end TLS is enabled, achieve the configuration by editing the appropriate **Backend HTTP** settings. Change the configuration of the **Backend protocol** setting to **HTTPS** where necessary. Ensure that the `DNS NAME` of the TLS certificate installed on backend servers matches the hostname coming to the backend in the HTTP host header request.
 
-As a reminder, the effect of enabling on the "Backend HTTP Settings" the option of protocol HTTPS rather than HTTP, is that the second part of the communication that happens between the instances of the Application Gateway and the backend servers are encrypted with TLS.
+When you complete this step, the second part of the communication that happens with Application Gateway and the backend servers is encrypted with TLS.
 
-Due to the fact that by default Application Gateway sends the same HTTP host header to the backend as it receives from the client, you need to ensure that the TLS certificate installed on the backend server, is issued with a DNS NAME that matches the host name received by that backend server in the HTTP host header.
-Remember that, unless specified otherwise, this hostname would be the same as the one received from the client.
+By default, Application Gateway sends the same HTTP host header to the backend as it receives from the client. Ensure that the TLS certificate installed on the backend server is issued with a `DNS NAME` that matches the host name received by that backend server in the HTTP host header. This hostname should be the same as the one received from the client.
 
-For example:
+### Solution
 
-Imagine that you have an Application Gateway to serve the https requests for domain www.contoso.com. You could have the domain contoso.com delegated to an Azure DNS Public Zone, and a A DNS record in that zone pointing www.contoso.com to the public IP of the specific Application Gateway that is going to serve the requests.
-
-On that Application Gateway you should have a listener for the host www.contoso.com with a rule that has the "Backed HTTP Setting" forced to use protocol HTTPS (ensuring End-to-end TLS). That same rule could have configured a backend pool with two VMs running IIS as Web servers.
-
-As we know enabling HTTPS in the "Backed HTTP Setting" of the rule makes the second part of the communication that happens between the Application Gateway instances and the servers in the backend to use TLS.
-
-If the backend servers do not have a TLS certificate issued for the DNS NAME www.contoso.com or *.contoso.com, the request fails with **Server Error: 502 - Web server received an invalid response while acting as a gateway or proxy server** because the upstream SSL certificate (the certificate installed on the backend servers) doesn't match the hostname in the host header, and hence the TLS negotiation fails. 
-
-
-www.contoso.com --> APP GW front end IP --> Listener with a rule that configures "Backend HTTP Settings" to use protocol HTTPS rather than HTTP  --> Backend Pool --> Web server (needs to have a TLS certificate installed for www.contoso.com) 
-
-## Solution
-
-It's required that the DNS NAME of the TLS certificate installed on the backend server, matches the host name configured in the HTTP backend settings, otherwise the second part of the End-to-end communication that happens between the instances of the Application Gateway and the backend, fails with "Upstream SSL certificate doesn't match", and throws back a **Server Error: 502 - Web server received an invalid response while acting as a gateway or proxy server**
-
-For steps to align the probe host name and Server Name Indication (SNI) with the certificate's subject alternative name (SAN) or common name (CN), see [Resolution F in Troubleshoot HTTP 502 errors in Azure Application Gateway](troubleshoot-http-502-bad-gateway.md#resolution-f). For how the **Pick host name from backend target** and **Override with specific domain name** backend settings map to the certificate name that Application Gateway expects, see [Common Name (CN) doesn't match](application-gateway-backend-health-troubleshooting.md#common-name-cn-doesnt-match).
+For steps to align the probe host name and SNI with the certificate's SAN or CN, see [Resolution F in Troubleshoot HTTP 502 errors in Azure Application Gateway](troubleshoot-http-502-bad-gateway.md#resolution-f). For how the **Pick host name from backend target** and **Override with specific domain name** backend settings map to the certificate name that Application Gateway expects, see [Common Name (CN) doesn't match](application-gateway-backend-health-troubleshooting.md#common-name-cn-doesnt-match).

@@ -2968,12 +2968,12 @@ items:    # Please do not delete this line, it is required for the yaml format
     - name: Secure Boot and UEFI
       items:
         - name: Troubleshoot windows server secure boot certificate update issues
-          href: windows-security/troubleshoot-windows-server-secure-boot-certificate-update-issues.md
+          href: ./windows-security/troubleshoot-windows-server-secure-boot-certificate-update-issues.md
 - name: Windows Servicing, Updates and Features on Demand
   items:
     - name: Windows Servicing, Updates and Features on Demand
       href: ./installing-updates-features-roles/windows-servicing-updates-and-features-on-demand-overview.md
-    - name: Clients missing updates, not offered, fail to download
+    - name: Windows Update - Expected update missing or not offered
       items:
         - name: List of updates
           href: ./installing-updates-features-roles/list-updates.md

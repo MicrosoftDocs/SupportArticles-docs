@@ -1,12 +1,14 @@
 ---
 title: Azure Application Gateway Resource Health overview 
-description: This article is an overview of the resource health feature for Azure Application Gateway
+description: Learn how Azure Application Gateway Resource Health reports gateway availability, identifies service problems, and supports faster troubleshooting.
 services: application-gateway
+manager: dcscontentpm
 author: kaushika-msft
 ms.author: kaushika
+ms.reviewer: kaushika
 ms.service: azure-application-gateway
 ms.topic: troubleshooting
-ms.date: 04/03/2026
+ms.date: 09/02/2026
 ms.custom: sap:Monitoring and logging
 
 # Customer intent: "As an IT administrator managing Azure Application Gateway, I want to monitor the resource health of my application gateways, so that I can quickly diagnose issues and ensure optimal performance and reliability of my services."
@@ -16,49 +18,51 @@ ms.custom: sap:Monitoring and logging
 
 ## Summary
 
-[Azure Resource Health](/azure/service-health/resource-health-overview) helps you diagnose and get support when an Azure service problem affects your resources. It informs you about the current and past health of your resources. And it provides technical support to help you mitigate problems.
+[Azure Resource Health](/azure/service-health/resource-health-overview) helps you monitor Azure Application Gateway resource health and quickly diagnose service problems that affect your gateways. This article explains the available health statuses, how gateway health is assessed, and how this information supports troubleshooting and recovery.
 
 For Application Gateway, Resource Health relies on signals emitted by the gateway to assess whether it's healthy or not. If the gateway is unhealthy, Resource Health analyzes additional information to determine the source of the problem. It also identifies actions that Microsoft is taking or what you can do to fix the problem.
 
 For additional details on how health is assessed, review the full list of resource types and health checks in [Azure Resource Health](/azure/service-health/resource-health-checks-resource-types#microsoftnetworkapplicationgateways).
 
 
-The health status for Application Gateway is displayed as one of the following statuses:
+## Health status
 
-## Available
+The health status for Application Gateway is displayed as one of the following statuses.
+
+### Available
 
 An **Available** status means the service hasn't detected any events that affect the health of the resource. You'll see the **Recently resolved** notification in cases where the gateway has recovered from unplanned downtime during the last 24 hours.
 
-![Available health status](media/resource-health-overview/available-full.png)
+:::image type="content" source="media/resource-health-overview/available-full.png" alt-text="Screenshot of Available health status." lightbox="media/resource-health-overview/available-full.png":::
 
-## Unavailable
+### Unavailable
 
 An **Unavailable** status means the service has detected an ongoing platform or non-platform event that affects the health of the gateway.
 
 ### Platform events
 
-Platform events are triggered by multiple components of the Azure infrastructure. They include both scheduled actions (for example, planned maintenance) and unexpected incidents (for example, an unplanned host reboot).
+Multiple components of the Azure infrastructure trigger platform events. They include both scheduled actions, such as planned maintenance, and unexpected incidents, such as an unplanned host reboot.
 
-Resource Health provides additional details on the event and the recovery process. It also enables you to contact support even if you don't have an active Microsoft support agreement.
+Resource Health provides more details on the event and the recovery process. It also enables you to contact support even if you don't have an active Microsoft support agreement.
 
-![Unavailable status](media/resource-health-overview/unavailable.png)
+:::image type="content" source="media/resource-health-overview/unavailable.png" alt-text="Screenshot of Unavailable status." lightbox="media/resource-health-overview/unavailable.png":::
 
-## Unknown
+### Unknown
 
-The **Unknown** health status indicates Resource Health hasn't received information about the gateway for more than 10 minutes. This status isn't a definitive indication of the state of the gateway. But it's an important data point in the troubleshooting process.
+The **Unknown** health status indicates Resource Health didn't receive information about the gateway for more than 10 minutes. This status isn't a definitive indication of the state of the gateway, but it's an important data point in the troubleshooting process.
 
 If the gateway is running as expected, the status changes to **Available** after a few minutes.
 
 If you're experiencing problems,  the **Unknown** health status might suggest that an event in the platform is affecting the gateway.
 
-![Unknown status](media/resource-health-overview/unknown.png)
+:::image type="content" source="media/resource-health-overview/unknown.png" alt-text="Screenshot of Unknown status." lightbox="media/resource-health-overview/unknown.png":::
 
-## Degraded
+### Degraded
 
-The **Degraded** health status indicates your gateway has detected a loss in performance, although it's still available for usage.
+The **Degraded** health status indicates your gateway detected a loss in performance but is still available for usage.
 
-![Degraded status](media/resource-health-overview/degraded.png)
+:::image type="content" source="media/resource-health-overview/degraded.png" alt-text="Screenshot of Degraded status." lightbox="media/resource-health-overview/degraded.png":::
 
-## Next steps
+## References
 
 To learn about troubleshooting Application Gateway Web Application Firewall (WAF), see [Troubleshoot Web Application Firewall (WAF) for Azure Application Gateway](/azure/web-application-firewall/ag/web-application-firewall-troubleshoot).
