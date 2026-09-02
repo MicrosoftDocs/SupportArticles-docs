@@ -1,11 +1,16 @@
 ---
 title: Node Not Ready status after node is in a healthy state
 description: Learn how to troubleshoot an AKS node that changes to Not Ready after a healthy state, and restore cluster health faster.
-ms.date: 08/27/2024
-ms.reviewer: rissing, chiragpa, momajed, v-leedennis
+ms.date: 09/01/2026
+manager: dcscontentpm
+ms.topic: troubleshooting
+author: kaushika-msft
+ms.author: kaushika
+ms.reviewer: rissing, chiragpa, momajed, v-leedennis, ookour
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to prevent an Azure Kubernetes Service (AKS) cluster node from regressing to a Not Ready status so that I can continue to use the cluster node successfully.
 ms.custom: sap:Node/node pool availability and performance, innovation-engine
+ai-usage: ai-assisted
 ---
 
 # Troubleshoot an AKS node that changes to Not Ready status
@@ -50,37 +55,10 @@ kubectl describe nodes
 
 The [kubelet](https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/) stops posting its **Ready** status.
 
-Check the output of the `kubectl describe nodes` command to find the [Conditions](https://kubernetes.io/docs/reference/node/node-status/#condition) field and the [Capacity and Allocatable](https://kubernetes.io/docs/reference/node/node-status/#capacity) blocks. Do the contents of these fields appear as expected? For example, in the **Conditions** field, does the `message` property contain the "kubelet is posting ready status" string? If you have direct Secure Shell (SSH) access to the node, check the recent events to understand the error. Look within the */var/log/syslog* file instead of */var/log/messages* (not available on all distributions). Or, generate the kubelet and container daemon log files by running the following shell commands:
+Check the output of the `kubectl describe nodes` command to find the [Conditions](https://kubernetes.io/docs/reference/node/node-status/#condition) field and the [Capacity and Allocatable](https://kubernetes.io/docs/reference/node/node-status/#capacity) blocks. Do the contents of these fields appear as expected? For example, in the **Conditions** field, does the `message` property contain the "kubelet is posting ready status" string? If you have direct Secure Shell (SSH) access to the node, check the recent events to understand the error. Look within the */var/log/syslog* file instead of */var/log/messages* (not available on all distributions). 
 
-```bash
-# First, identify the NotReady node
-export NODE_NAME=$(kubectl get nodes --no-headers | grep NotReady | awk '{print $1}' | head -1)
-
-if [ -z "$NODE_NAME" ]; then
-    echo "No NotReady nodes found"
-    kubectl get nodes
-else
-    echo "Found NotReady node: $NODE_NAME"
-    
-    # Use kubectl debug to access the node
-    kubectl debug node/$NODE_NAME -it --image=mcr.microsoft.com/dotnet/runtime-deps:6.0 -- chroot /host bash -c "
-        echo '=== Checking syslog ==='
-        if [ -f /var/log/syslog ]; then
-            tail -100 /var/log/syslog
-        else
-            echo 'syslog not found'
-        fi
-        
-        echo '=== Checking kubelet logs ==='
-        journalctl -u kubelet --no-pager | tail -100
-        
-        echo '=== Checking containerd logs ==='
-        journalctl -u containerd --no-pager | tail -100
-    "
-fi
-```
-
-After you run these commands, examine the syslog and daemon log files for more information about the error.
+> [!NOTE]
+> If the affected node is still available, you can open a support ticket for assistance. However, if the node is deleted—manually or by the cluster autoscaler—you can't retrieve its logs unless a monitoring tool collected them. To learn more, see [Analyze Syslog data from Kubernetes cluster in Azure Monitor](/azure/azure-monitor/containers/container-insights-syslog).
 
 ## Solution
 
@@ -97,7 +75,7 @@ If there were changes at the network level, make any necessary corrections. If y
 
 ### Step 2: Stop and restart the nodes
 
-If only a few nodes show a **Not Ready** status, stop and restart the nodes. This action might return the nodes to a healthy state. Then, check [Azure Kubernetes Service diagnostics overview](/azure/aks/concepts-diagnostics) to see if there are any problems, like the following issues:
+If only a few nodes show a **Not Ready** status, try restarting them as a temporary mitigation. This action might return the nodes to a healthy state. Then, check [Azure Kubernetes Service diagnostics overview](/azure/aks/concepts-diagnostics) to see if there are any problems, like the following issues:
 
 - Node faults.
 - Source network address translation (SNAT) failures.
@@ -122,9 +100,9 @@ Did AKS diagnostics find any SNAT problems? If so, take some of the following ac
 
 For more information about how to troubleshoot SNAT port exhaustion, see [Troubleshoot SNAT port exhaustion on AKS nodes](../connectivity/snat-port-exhaustion.md?tabs=for-a-linux-pod).
 
-### Step 4: Fix IOPS performance problems
+### Step 4: Fix IOPS, CPU, and memory performance problems
 
-If AKS diagnostics uncovers problems that reduce IOPS performance, take some of the following actions, as appropriate:
+If AKS diagnostics identifies conditions that degrade **IOPS performance** or cause **high CPU and memory utilization**, consider taking the following remedial actions:
 
 - To increase IOPS on virtual machine (VM) scale sets, choose a larger disk size that offers better IOPS performance by deploying a new node pool. Direct resizing of VMSS isn't supported. For more information about resizing node pools, see [Resize node pools in Azure Kubernetes Service (AKS)](/azure/aks/resize-node-pool?tabs=azure-cli).
 
@@ -138,7 +116,7 @@ If AKS diagnostics uncovers problems that reduce IOPS performance, take some of 
 
 ### Step 5: Fix threading problems
 
-Kubernetes components like kubelets and [containerd runtimes](https://kubernetes.io/docs/setup/production-environment/container-runtimes/#containerd) rely heavily on threading, and they spawn new threads regularly. If the allocation of new threads is unsuccessful, this failure can affect service readiness, as follows:
+Kubernetes components like kubelets and [containerd runtimes](https://kubernetes.io/docs/setup/production-environment/container-runtimes/#containerd) rely heavily on threading, and they regularly create new threads. If the system can't allocate new threads, this failure can affect service readiness, as follows:
 
 - The node status changes to **Not Ready**, but a remediator restarts the node and recovers it.
 
@@ -150,9 +128,9 @@ Kubernetes components like kubelets and [containerd runtimes](https://kubernetes
 
 - The node status changes to **Not Ready** soon after the `pthread_create` failure entries are written to the log files.
 
-Process IDs (PIDs) represent threads. The default number of PIDs that a pod can use might depend on the operating system. However, the default number is at least 32,768. This number is more than enough PIDs for most situations. Are there any known application requirements for higher PID resources? If there aren't, even an eight-fold increase to 262,144 PIDs might not be enough to accommodate a high-resource application.
+Process IDs (PIDs) represent threads. The default number of PIDs that a pod can use might depend on the operating system. However, the default number is at least 32,768. This number provides more than enough PIDs for most situations. Are there any known application requirements for higher PID resources? If there aren't, even an eight-fold increase to 262,144 PIDs might not be enough to accommodate a high-resource application.
 
-Instead, identify the offending application, and then take the appropriate action. Consider other options, like increasing the VM size or upgrading AKS. These actions can mitigate the issue temporarily, but they aren't a guarantee that the issue won't reappear again.
+Instead, identify the problematic application, and then take the appropriate action. Consider other options, like increasing the VM size or upgrading AKS. These actions can mitigate the issue temporarily, but they aren't a guarantee that the issue won't reappear.
 
 To monitor the thread count for each control group (cgroup) and print the top eight cgroups, run the following shell command:
 
