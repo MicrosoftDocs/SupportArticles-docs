@@ -5,7 +5,7 @@ ms.reviewer: sitaramp, koagarwa
 ms.author: arijitba
 author: arijitba
 ms.date: 08/04/2025
-ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done, sap:App Management\Wrap an app
+ms.custom: no-azure-ad-ps-ref, sap:App Management\Wrap an app
 ---
 # Troubleshoot common issues when using the wrap feature
 
