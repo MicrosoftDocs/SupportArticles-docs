@@ -29,7 +29,7 @@ For more information, see [Deploy your app to App Service](/azure/app-service/de
 
 If you see the following message, you might be using an older version of the SDK:
 
-> Error during deployment for resource 'YourResourceName' in resource group 'YourResourceGroup': MissingRegistrationForLocation: The subscription isn't registered for the resource type 'components' in the location 'Central US'. Re-register for this provider to access this location.
+"Error during deployment for resource 'YourResourceName' in resource group 'YourResourceGroup': MissingRegistrationForLocation: The subscription isn't registered for the resource type 'components' in the location 'Central US'. Re-register for this provider to access this location."
 
 To resolve this error, upgrade to the [latest SDK](https://azure.microsoft.com/downloads/). If you see this message and you have the latest SDK, submit a support request.
 
@@ -45,7 +45,7 @@ App Service supports two types of credentials for local Git deployment and File 
 
 For information about the file structure of your App Service app, see [File structure in Azure](https://github.com/projectkudu/kudu/wiki/File-structure-on-azure).
 
-## How do I resolve the FTP Error 550 - There isn't enough space on the disk error message when I try to FTP my files?
+## How do I resolve the "FTP Error 550 - There isn't enough space on the disk" error message when I try to FTP my files?
 
 If you see this message, you're likely running into a disk quota in the service plan for your web app. You might need to scale up to a higher service tier based on your disk space needs. For more information about pricing plans and resource limits, see [App Service pricing](https://azure.microsoft.com/pricing/details/app-service/).
 

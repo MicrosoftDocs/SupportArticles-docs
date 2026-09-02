@@ -1,5 +1,5 @@
 ---
-title: An Attempt was Made to Access a Socket in a Way Forbidden by its Access Permissions Message 
+title: An attempt was made to access a socket in a way forbidden by its access permissions message 
 description: This article discusses possible causes and solutions for the message "An attempt was made to access a socket in a way forbidden by its access permissions" in Azure App Service.
 author: kaushika-msft
 ms.author: kaushika
