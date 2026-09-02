@@ -954,7 +954,7 @@ items:    # Please do not delete this line, it is required for the yaml format
     - name: Managing removable devices through Group Policy
       items:
         - name: "Troubleshooting guidance: Managing removable devices through Group Policy"
-          href: ./group-policy/backup-fails-vss-writer.md
+          href: ./group-policy/removable-devices-group-policy-troubleshooting-guidance.md
         - name: How to use Group Policy to disable drivers
           href: ./group-policy/adm-template-disable-drivers.md
     - name: Problems applying Group Policy objects to users or computers
