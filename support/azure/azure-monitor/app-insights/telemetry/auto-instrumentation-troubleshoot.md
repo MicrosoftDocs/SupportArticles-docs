@@ -157,15 +157,15 @@ Add the following filter to your logback.xml:
 Example:
 
 ```xml
-<configuration debug="true">
+<configuration>
   <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+      <level>OFF</level>
+    </filter>  
     <!-- encoders are  by default assigned the type
          ch.qos.logback.classic.encoder.PatternLayoutEncoder -->
     <encoder>
       <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} -%kvp- %msg%n</pattern>
-      <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
-        <level>OFF</level>
-      </filter>  
     </encoder>
   </appender>
   <root level="debug">
