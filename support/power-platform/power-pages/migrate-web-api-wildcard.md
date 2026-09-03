@@ -1,7 +1,7 @@
 ---
 title: Web API Requests Fail After Wildcard Column Deprecation
 description: Power Pages Web API requests fail after the wildcard value (*) is deprecated in the fields site setting. Migrate to an explicit column list.
-ms.date: 08/31/2026
+ms.date: 09/03/2026
 ms.reviewer: smurkute, nabha
 ms.custom: sap:Site customization or browsing\Data workspace
 ai-usage: ai-assisted
@@ -195,6 +195,10 @@ No. Add only the columns that the application requires. This approach preserves 
 ### How do I identify all required columns?
 
 Review each Web API request and the code that processes its response. Check request payloads, response properties, and OData query options such as `$select`, `$filter`, `$orderby`, and `$expand`. Then validate the resulting allow list in a nonproduction environment.
+
+### What if I can't finish migrating before the enforcement date?
+
+Migrate as soon as possible. The wildcard value is deprecated, so it isn't a long-term option. If you can't update your sites before the enforcement date, an admin can request a one-time, short-term extension on the **Manage exemptions** page in the Power Platform admin center. An extension delays enforcement, but it doesn't remove the migration requirement. For more information, see [Manage exemptions for Power Pages sites](/power-pages/admin/manage-exemptions).
 
 ## Related content
 
