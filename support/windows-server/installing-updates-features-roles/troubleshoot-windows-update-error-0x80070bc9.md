@@ -7,7 +7,7 @@ ms.date: 02/12/2026
 ms.topic: troubleshooting
 ms.reviewer: scotro, mwesley, jarretr, v-ryanberg, v-gsitser
 ms.custom:
-- sap:windows servicing,updates and features on demand\windows update fails - installation stops with error\Windows Update - Install errors starting with 0x8007 (ERROR)
+- sap:Windows Servicing, Updates and Features on Demand\Windows Update - Install errors starting with 0x8007 (ERROR)
 - pcy:WinComm Devices Deploy
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
