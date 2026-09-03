@@ -1283,18 +1283,12 @@ items:    # Please do not delete this line, it is required for the yaml format
   items:
     - name: Windows Servicing, Updates and Features on Demand
       href: ./installing-updates-features-roles/windows-servicing-updates-and-features-on-demand-overview.md
-    - name: Clients missing updates, not offered, fail to download
+    - name: Windows Update - Download of updates failed
       items:
         - name: 80072EE6 error when downloading an update from WSUS
           href: ./installing-updates-features-roles/error-80072ee6-downlaod-wsus-update.md
         - name: Automatic Updates can't download updates
           href: ./installing-updates-features-roles/automatic-updates-cannot-download-updates-event-16.md
-        - name: Error 403 when you access Windows Update
-          href: ./installing-updates-features-roles/error-403-connect-to-windows-update.md
-        - name: Error messages when you scan for updates
-          href: ./installing-updates-features-roles/error-messages-when-you-scan-updates.md
-        - name: Windows Update automatically downloads and installs updates
-          href: ./installing-updates-features-roles/updates-automatically-downloaded.md
     - name: Failure to install Windows Updates
       items:
         - name: Determine whether WSUS configuration causes WU issues
@@ -1315,6 +1309,10 @@ items:    # Please do not delete this line, it is required for the yaml format
           href: ./installing-updates-features-roles/command-line-switches-deploy-update-packages.md
         - name: Download updates from Windows Update Catalog
           href: ./installing-updates-features-roles/download-updates-drivers-hotfixes-windows-update-catalog.md
+        - name: Error 403 when you access Windows Update
+          href: ./installing-updates-features-roles/error-403-connect-to-windows-update.md
+        - name: Error messages when you scan for updates
+          href: ./installing-updates-features-roles/error-messages-when-you-scan-updates.md
         - name: How to keep Windows up to date
           href: ./installing-updates-features-roles/keep-windows-up-to-date.md
         - name: Known Issue Rollback
@@ -1329,6 +1327,8 @@ items:    # Please do not delete this line, it is required for the yaml format
           href: ./installing-updates-features-roles/processor-not-supported-together-with-windows-version.md
         - name: Update Windows Update Agent to latest version
           href: ./installing-updates-features-roles/update-windows-update-agent.md
+        - name: Windows Update automatically downloads and installs updates
+          href: ./installing-updates-features-roles/updates-automatically-downloaded.md
     - name: Windows Update fails - installation rolls back
       items:
         - name: Command-line switches supported by Self-Extractor packages
