@@ -1296,7 +1296,7 @@ items:    # Please do not delete this line, it is required for the yaml format
         - name: "Troubleshooting guidance: Windows Update"
           href: ./installing-updates-features-roles/troubleshoot-windows-update-issues.md
         - name: Windows servicing operations fail after you move user profile and ProgramData folders
-          href: ../windows-server//setup-upgrade-and-drivers/servicing-fails-moved-user-profile-programdata-folders.md?context=/troubleshoot/windows-client/context/context
+          href: ../windows-server/setup-upgrade-and-drivers/servicing-fails-moved-user-profile-programdata-folders.md?context=/troubleshoot/windows-client/context/context
     - name: Issues installing Features on Demand (FoD)
       items:
         - name: Error message when installing RSAT
