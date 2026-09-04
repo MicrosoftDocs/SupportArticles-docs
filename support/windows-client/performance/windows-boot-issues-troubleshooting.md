@@ -126,6 +126,32 @@ BOOTREC /FIXBOOT
 
 If you receive BCD-related errors, follow these steps:
 
+> [!IMPORTANT]
+> Drive letters in Windows Recovery Environment (WinRE) can differ from the drive letters in the running Windows installation. On systems with multiple disks or EFI System Partitions, don't assume that Windows is on drive C or that the first EFI System Partition contains the active BCD store.
+
+1. Identify the Windows volume and, on UEFI-based computers, the EFI System Partition. For example, run the following commands and note the volume letters:
+
+   ```console
+   diskpart
+   list volume
+   exit
+   ```
+
+1. Verify the offline Windows volume by checking for the operating system loader and kernel. Replace `<WindowsVolume>` with the volume letter that you identified:
+
+   ```console
+   dir <WindowsVolume>:\Windows\System32\winload.efi
+   dir <WindowsVolume>:\Windows\System32\ntoskrnl.exe
+   ```
+
+1. Enumerate the BCD store and verify that both `device` and `osdevice` in the applicable Windows Boot Loader entry reference the offline Windows volume. On a UEFI-based computer, use the following command if you need to inspect a specific EFI System Partition:
+
+   ```console
+   bcdedit /store <SystemPartition>:\EFI\Microsoft\Boot\BCD /enum all
+   ```
+
+   If multiple EFI System Partitions or Windows Boot Manager firmware entries exist, inspect each relevant BCD store before making changes. Export the applicable BCD store before you modify it.
+
 1. Scan for all the systems that are installed. To do this step, run the following command:
 
    ```console
