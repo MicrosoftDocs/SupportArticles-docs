@@ -7,7 +7,7 @@ ms.date: 02/12/2026
 ms.topic: troubleshooting
 ms.reviewer: scotro, mwesley, jarretr, v-ryanberg, v-gsitser
 ms.custom:
-- sap:Windows Servicing, Updates and Features on Demand\Windows Update - Install errors starting with 0x800F (CBS E)
+- sap:Windows Servicing, Updates and Features on Demand\Windows Update - Install errors unknown or code not listed
 - pcy:WinComm Devices Deploy
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>

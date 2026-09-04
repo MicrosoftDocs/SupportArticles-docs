@@ -2973,16 +2973,6 @@ items:    # Please do not delete this line, it is required for the yaml format
   items:
     - name: Windows Servicing, Updates and Features on Demand
       href: ./installing-updates-features-roles/windows-servicing-updates-and-features-on-demand-overview.md
-    - name: Windows Update - Expected update missing or not offered
-      items:
-        - name: List of updates
-          href: ./installing-updates-features-roles/list-updates.md
-        - name: WSUS SelfUpdate doesn't send automatic updates
-          href: ./installing-updates-features-roles/wsus-selfupdate-not-send-automatic-updates.md
-    - name: Failure to install Windows Updates
-      items:
-        - name: Windows servicing operations fail after you move user profile and ProgramData folders
-          href: ./setup-upgrade-and-drivers/servicing-fails-moved-user-profile-programdata-folders.md
     - name: Issues installing Features on Demand (FoD)
       items:
         - name: Can't install .NET Framework 3.5 on OEM Windows installation
@@ -2997,6 +2987,8 @@ items:    # Please do not delete this line, it is required for the yaml format
       items:
         - name: "Troubleshooting guidance: Installing Windows features or roles"
           href: ./installing-updates-features-roles/troubleshoot-install-features-roles-guidance.md
+        - name: Fail to install Network Policy Server role
+          href: ./installing-updates-features-roles/error-0x80004005-network-policy-server-role.md
     - name: Windows Update - Configuring and managing client settings
       items:
         - name: Can't connect to WSUS Administration Website
@@ -3015,55 +3007,45 @@ items:    # Please do not delete this line, it is required for the yaml format
           href: installing-updates-features-roles/unexpected-automatic-update-when-disabled-by-group-policy.md
         - name: Why you may be prompted to restart your computer
           href: ./installing-updates-features-roles/why-prompted-restart-computer.md
+        - name: Windows servicing operations fail after you move user profile and ProgramData folders
+          href: ./setup-upgrade-and-drivers/servicing-fails-moved-user-profile-programdata-folders.md
         - name: WSUS 3.0 SP2 Dynamic Install for Server Manager
           href: ./installing-updates-features-roles/windows-server-update-services-3-sp2.md
         - name: WSUS clients can't install updates
           href: ./installing-updates-features-roles/wsus-clients-cant-install-updates.md
         - name: WSUS messages and troubleshooting tips
           href: ./installing-updates-features-roles/wsus-messages-troubleshooting-tips.md
-    - name: Windows Update fails - installation stops with error
+    - name: Windows Update - Download of updates failed
       items:
-        - name: "Troubleshooting guidance: Windows Server update"
-          href: ./installing-updates-features-roles/troubleshoot-windows-server-update-guidance.md
-        - name: CBS.log file contains entries that some files aren't repaired
-          href: ./installing-updates-features-roles/cbs-log-file-record-entries-not-repaired-run-sfc.md
-        - name: Description of System File Checker (Sfc.exe)
-          href: ./installing-updates-features-roles/system-file-checker.md
-        - name: Error 0x80070003 at startup after you install a Windows update
-          href: ./installing-updates-features-roles/error-0x80070003-windows-update-fails.md
-        - name: Error 0x8007000d at startup after you install a Windows update
-          href: ./installing-updates-features-roles/error-invalid-data-startup-installing-updates.md
-        - name: Error 0x800705aa when Windows Update fails
-          href: ./installing-updates-features-roles/error-0x800705aa-windows-update-fails.md
-        - name: Error 0x800719e4 (ERROR_LOG_FULL) when Windows Update fails
-          href: ./installing-updates-features-roles/error-0x800719e4-windows-update-fails.md
-        - name: Error 0x800f0831 when installing Windows updates
-          href: ./installing-updates-features-roles/error-0x800f0831-installing-update.md
-        - name: Error 0x800f0922 when installing Windows updates
-          href: ./installing-updates-features-roles/error-0x800f0922-installing-windows-updates.md
-        - name: Error C0190003 after installing updates
-          href: ./installing-updates-features-roles/error-c0190003-install-updates-restart-computer.md
-        - name: "\"Failed to be changed to the Absent state. Status: 0x800f0922\" error"
-          href: ./installing-updates-features-roles/failed-changed-absent-state-status-0x800f0922-error.md
-        - name: Fail to install Network Policy Server role
-          href: ./installing-updates-features-roles/error-0x80004005-network-policy-server-role.md
-        - name: Fix Windows Update corruptions and installation failures
-          href: ./installing-updates-features-roles/fix-windows-update-errors.md
         - name: Troubleshoot Windows Update download errors
           href: ./installing-updates-features-roles/troubleshoot-windows-update-download-errors.md
-        - name: Troubleshoot Windows Update error 0x80004004
-          href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x80004004.md
+    - name: Windows Update - Expected update missing or not offered
+      items:
+        - name: List of updates
+          href: ./installing-updates-features-roles/list-updates.md
+        - name: WSUS SelfUpdate doesn't send automatic updates
+          href: ./installing-updates-features-roles/wsus-selfupdate-not-send-automatic-updates.md
+    - name: Windows Update - Install errors starting with 0x8007 (ERROR)
+      items:
+        - name: Error 0x80070003 at startup after you install a Windows update
+          href: ./installing-updates-features-roles/error-0x80070003-windows-update-fails.md
+        - name: Error 0x8007000D at startup after you install a Windows update
+          href: ./installing-updates-features-roles/error-invalid-data-startup-installing-updates.md
+        - name: Error 0x800705AA when Windows Update fails
+          href: ./installing-updates-features-roles/error-0x800705aa-windows-update-fails.md
+        - name: Error 0x800719E4 (ERROR_LOG_FULL) when Windows Update fails
+          href: ./installing-updates-features-roles/error-0x800719e4-windows-update-fails.md
         - name: Troubleshoot Windows Update error 0x80070002
           href: installing-updates-features-roles/troubleshoot-windows-update-error-0x80070002.md
         - name: Troubleshoot Windows Update error 0x80070005
           href: ../windows-client/installing-updates-features-roles/troubleshoot-windows-update-error-0x80070005.md?context=/troubleshoot/windows-server/context/context
         - name: Troubleshoot Windows Update error 0x80070008
           href: ../windows-client/installing-updates-features-roles/troubleshoot-windows-update-error-0x80070008.md?context=/troubleshoot/windows-server/context/context
-        - name: Troubleshoot Windows Update error 0x8007000e or 0x800705aa
+        - name: Troubleshoot Windows Update error 0x8007000E or 0x800705AA
           href: ../windows-client/installing-updates-features-roles/error-0x8007000e-0x800705aa-insufficient-virtual-memory.md?context=/troubleshoot/windows-server/context/context
         - name: Troubleshoot Windows Update error code 0x80070070
           href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x80070070.md
-        - name: Troubleshoot "Shutdown in Progress" Windows error 0x8007045b
+        - name: Troubleshoot "Shutdown in Progress" Windows error 0x8007045B
           href: installing-updates-features-roles/troubleshoot-error-shutdown-in-process.md
         - name: Troubleshoot Windows Update error 0x80070490
           href: installing-updates-features-roles/troubleshoot-windows-update-error-0x80070490.md
@@ -3071,20 +3053,28 @@ items:    # Please do not delete this line, it is required for the yaml format
           href: ../windows-client/installing-updates-features-roles/troubleshoot-windows-update-error-0x80070570.md?context=/troubleshoot/windows-server/context/context
         - name: Troubleshoot Windows Update error 0x800706D9
           href: ../windows-client/installing-updates-features-roles/troubleshoot-windows-update-error-0x800706D9.md?context=/troubleshoot/windows-server/context/context
-        - name: Troubleshoot Windows Update error 0x80070bc9
+        - name: Troubleshoot Windows Update error 0x80070BC9
           href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x80070bc9.md
         - name: Troubleshoot Windows Update error 0x80071A91
           href: ../windows-client/installing-updates-features-roles/troubleshoot-windows-update-error-0x80071a91.md?context=/troubleshoot/windows-server/context/context
-        - name: Troubleshoot Windows Update error 0x80072f8f
+        - name: Troubleshoot Windows Update error 0x80072F8F
           href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x80072f8f.md
-        - name: Troubleshoot Windows Update error 0x800f0823
+    - name: Windows Update - Install errors starting with 0x800F (CBS E)
+      items:
+        - name: Error 0x800F0831 when installing Windows updates
+          href: ./installing-updates-features-roles/error-0x800f0831-installing-update.md
+        - name: Error 0x800F0922 when installing Windows updates
+          href: ./installing-updates-features-roles/error-0x800f0922-installing-windows-updates.md
+        - name: Failed to be changed to the Absent state with status 0x800F0922
+          href: ./installing-updates-features-roles/failed-changed-absent-state-status-0x800f0922-error.md
+        - name: Troubleshoot Windows Update error 0x800F0823
           href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x800f0823.md
-        - name: Troubleshoot Windows Update error 0x800f0831
+        - name: Troubleshoot Windows Update error 0x800F0831
           href: ./installing-updates-features-roles/troubleshoot-windows-update-installation-error-corruption.md
-        - name: Troubleshoot Windows Update error 0x800f0920
+        - name: Troubleshoot Windows Update error 0x800F0920
           href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x800f0920.md
-        - name: Troubleshoot Windows Update error 0x8000FFFF
-          href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x8000ffff.md
+    - name: Windows Update - Install errors starting with 0x8024 (WU E Setup)
+      items:
         - name: Troubleshoot Windows Update error 0x8024001E
           href: ../windows-client/installing-updates-features-roles/troubleshoot-windows-update-error-0x8024001e.md?context=/troubleshoot/windows-server/context/context
         - name: Troubleshoot Windows Update error 0x8024002E
@@ -3093,6 +3083,22 @@ items:    # Please do not delete this line, it is required for the yaml format
           href: ../windows-client/installing-updates-features-roles/troubleshoot-windows-update-error-0x80240439.md?context=/troubleshoot/windows-server/context/context
         - name: Troubleshoot Windows Update error 0x80244007
           href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x80244007.md
+    - name: Windows Update - Other issues, or errors that don't list error codes
+      items:
+        - name: "Troubleshooting guidance: Windows Server update"
+          href: ./installing-updates-features-roles/troubleshoot-windows-server-update-guidance.md
+        - name: CBS.log file contains entries that some files aren't repaired
+          href: ./installing-updates-features-roles/cbs-log-file-record-entries-not-repaired-run-sfc.md
+        - name: Description of System File Checker (Sfc.exe)
+          href: ./installing-updates-features-roles/system-file-checker.md
+        - name: Error C0190003 after installing updates
+          href: ./installing-updates-features-roles/error-c0190003-install-updates-restart-computer.md
+        - name: Fix Windows Update corruptions and installation failures
+          href: ./installing-updates-features-roles/fix-windows-update-errors.md
+        - name: Troubleshoot Windows Update error 0x80004004
+          href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x80004004.md
+        - name: Troubleshoot Windows Update error 0x8000FFFF
+          href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x8000ffff.md
         - name: WUSA returns 0x5 ERROR_ACCESS_DENIED
           href: ./installing-updates-features-roles/windows-update-standalone-installer-returns-error.md
     - name: "Windows Update for Business Reports: Missing data or incomplete report data"

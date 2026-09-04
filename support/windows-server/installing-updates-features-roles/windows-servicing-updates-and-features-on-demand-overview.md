@@ -1,7 +1,7 @@
 ---
 title: Windows Servicing, Updates and Features on Demand overview
 description: Overview of Windows Servicing, Updates and Features on Demand troubleshooting articles for Windows Server.
-ms.date: 02/12/2026
+ms.date: 09/04/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: landing-page
@@ -15,10 +15,13 @@ The topics in this section provide solutions and scenario guides to help you tro
 
 ## Windows Servicing, Updates and Features on Demand sub categories
 
-- Clients missing updates, not offered, fail to download
-- Failure to install Windows Updates
 - Issues installing Features on Demand (FoD)
 - Issues installing Server Roles
-- Windows Update configuration, settings and management
-- Windows Update fails - installation stops with error
-- Windows Update for Business Reports
+- Windows Update - Configuring and managing client settings
+- Windows Update - Download of updates failed
+- Windows Update - Expected update missing or not offered
+- Windows Update - Install errors starting with 0x8007 (ERROR)
+- Windows Update - Install errors starting with 0x800F (CBS E)
+- Windows Update - Install errors starting with 0x8024 (WU E Setup)
+- Windows Update - Other issues, or errors that don't list error codes
+- Windows Update for Business Reports: Missing data or incomplete report data
