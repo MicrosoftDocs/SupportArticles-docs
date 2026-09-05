@@ -5,7 +5,7 @@ ms.date: 06/08/2026
 ms.reviewer: scotro, jdickson, kaushika, v-appelgatet
 ai.usage: ai-assisted
 ms.custom:
-- sap:windows servicing, updates and features on demand\windows update fails - installation stops with error
+- sap:Windows Servicing, Updates and Features on Demand\Windows Update - Install errors unknown or code not listed
 - pcy:WinComm Devices Deploy
 appliesto:
   - ✅ <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
