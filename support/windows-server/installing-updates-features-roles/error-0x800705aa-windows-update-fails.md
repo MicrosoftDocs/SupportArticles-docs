@@ -1,35 +1,35 @@
 ---
-title: Windows Update fails with error 0x800705aa
-description: Helps resolve an issue in which Windows Update fails with error 0x800705aa.
+title: Windows Update fails with error 0x800705AA
+description: Helps resolve an issue in which Windows Update fails with error 0x800705AA.
 manager: dcscontentpm
 audience: itpro
 ms.date: 02/12/2026
 ms.topic: troubleshooting
 ms.reviewer: kaushika, maeltedebay, v-lianna
 ms.custom:
-- sap:windows servicing,updates and features on demand\windows update fails - installation stops with error
+- sap:Windows Servicing, Updates and Features on Demand\Windows Update - Install errors starting with 0x8007 (ERROR)
 - pcy:WinComm Devices Deploy
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
-# Error 0x800705aa when Windows Update fails
+# Error 0x800705AA when Windows Update fails
 
-This article helps resolve an issue in which Windows Update fails with error 0x800705aa.
+This article helps resolve an issue in which Windows Update fails with error 0x800705AA.
 
-Windows Cumulative Updates (CUs) can't be installed, or the system shows a notification that updates are missing. 
- 
-You can also find the following error by searching "Failed to load the COMPONENTS hive" in *CBS.log* (*C:\\Windows\\Logs\\CBS*): 
- 
+Windows Cumulative Updates (CUs) can't be installed, or the system shows a notification that updates are missing.
+
+You can also find the following error by searching "Failed to load the COMPONENTS hive" in *CBS.log* (*C:\\Windows\\Logs\\CBS*):
+
 > Info CBS Failed to load the COMPONENTS hive from 'C:\Windows\System32\config\COMPONENTS' into registry key 'HKLM\COMPONENTS'. [HRESULT = 0x800705aa - ERROR_NO_SYSTEM_RESOURCES]
 
 When you check the `RegistrySizeLimit` registry value in `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control`, you find that the value is set to a value other than **0**.
 
 ## Insufficient resource prevents the system from extending the COMPONENTS hive
- 
-The value of the `RegistrySizeLimit` registry key specifies the maximum size of the registry in megabytes. When the registry reaches this size, Windows stops adding new keys and values to the registry. That means the system won't perform Windows servicing activities such as CU installation. 
- 
-## Delete the RegistrySizeLimit setting 
- 
+
+The value of the `RegistrySizeLimit` registry key specifies the maximum size of the registry in megabytes. When the registry reaches this size, Windows stops adding new keys and values to the registry. That means the system won't perform Windows servicing activities such as CU installation.
+
+## Delete the RegistrySizeLimit setting
+
 Open the Registry Editor as an administrator, and go to `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control`. Then, delete the `RegistrySizeLimit` registry key or set it to **0**, and restart the system.
 
 > [!NOTE]

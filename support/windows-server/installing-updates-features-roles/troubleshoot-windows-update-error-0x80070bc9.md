@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot Windows Update Error 0x80070bc9
-description: Learn how to resolve the Windows Update error 0x80070bc9 on Windows.
+title: Troubleshoot Windows Update Error 0x80070BC9
+description: Learn how to resolve the Windows Update error 0x80070BC9 on Windows.
 manager: dcscontentpm
 audience: itpro
 ms.date: 02/12/2026
@@ -13,13 +13,13 @@ appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 
-# Troubleshoot Windows Update Error 0x80070bc9
+# Troubleshoot Windows Update Error 0x80070BC9
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
 ## Summary
 
-The Windows Update error 0x80070bc9 occurs when the OS is stuck in a pending servicing state and the TrustedInstaller service can't clear it due to corruption in the *Transactional Entries* folder.
+The Windows Update error 0x80070BC9 occurs when the OS is stuck in a pending servicing state and the TrustedInstaller service can't clear it due to corruption in the *Transactional Entries* folder.
 
 ## Prerequisites
 
@@ -27,7 +27,7 @@ For virtual machines (VMs) running Windows in Azure, make sure that you back up 
 
 ## How to identify the issue
 
-Check the `CBS.log` file located at *C:\Windows\Logs\CBS\CBS.log* for entries indicating this error (0x80070bc9) similar to the following one:
+Check the `CBS.log` file located at *C:\Windows\Logs\CBS\CBS.log* for entries indicating this error (0x80070BC9) similar to the following one:
 
 ```output
 2025-04-02 07:15:53, Info  CBS    Session: 31171520_2564643148 initialized by client DISM Package Manager Provider.

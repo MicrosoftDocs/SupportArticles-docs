@@ -1,25 +1,25 @@
 ---
-title: Troubleshoot Windows Update Error 0x800f0920
-description: Learn how to resolve Windows Update error 0x800f0920 that occurs when the Trusted Installer service fails.
+title: Troubleshoot Windows Update Error 0x800F0920
+description: Learn how to resolve Windows Update error 0x800F0920 that occurs when the Trusted Installer service fails.
 manager: dcscontentpm
 audience: itpro
 ms.date: 02/12/2026
 ms.topic: troubleshooting
 ms.reviewer: scotro, mwesley, jarretr, v-ryanberg, v-gsitser
 ms.custom:
-- sap:windows servicing,updates and features on demand\Windows Update - Install errors starting with 0x800F (CBS E)
+- sap:Windows Servicing, Updates and Features on Demand\Windows Update - Install errors starting with 0x800F (CBS E)
 - pcy:WinComm Devices Deploy
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 
-# Troubleshoot Windows Update error 0x800f0920
+# Troubleshoot Windows Update error 0x800F0920
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
 ## Summary
 
-Error code 0x800f0920 indicates that the Windows Update installation process stopped responding. This issue occurs if the Trusted Installer service doesn't complete the installation within the default timeout period of 15 minutes.
+Error code 0x800F0920 indicates that the Windows Update installation process stopped responding. This issue occurs if the Trusted Installer service doesn't complete the installation within the default timeout period of 15 minutes.
 
 ## Prerequisites
 
