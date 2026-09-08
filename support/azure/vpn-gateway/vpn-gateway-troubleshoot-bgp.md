@@ -5,7 +5,7 @@ description: Troubleshoot BGP issues in Azure VPN Gateway by resolving peer conn
 author: kaushika-msft
 ms.service: azure-vpn-gateway
 ms.topic: troubleshooting
-ms.date: 03/23/2026
+ms.date: 09/05/2026
 ms.author: kaushika
 ms.custom: sap:Configuration and Setup
 # Customer intent: As a network administrator, I want to troubleshoot BGP issues that affect my Azure VPN Gateway so that I can restore dynamic routing between my on-premises networks and Azure.
@@ -125,6 +125,17 @@ Check your on-premises VPN device or router to verify that it meets the followin
 - The route table or network statements include the prefixes you intend to advertise.
 - No outbound route filters block the prefixes.
 
+### Check GatewaySubnet route propagation
+
+If `GatewaySubnet` has an associated route table, verify that gateway route propagation is enabled:
+
+1. In the Azure portal, go to the virtual network that contains the VPN gateway.
+1. Select **Subnets**, and then select **GatewaySubnet**.
+1. Check whether **Route table** lists an associated route table.
+1. If a route table is associated, open it and verify that **Propagate gateway routes** is set to **Yes**.
+
+Don't disable gateway route propagation on `GatewaySubnet`. Disabling this setting prevents BGP routes learned by the VPN gateway from propagating into the virtual network. As a result, the VPN gateway doesn't function, and site-to-site connectivity can fail. For more information, see [Create, change, or delete a route table](/azure/virtual-network/manage-route-table#create-a-route-table).
+
 ### Check prefix limit
 
 VPN Gateway supports up to 4,000 prefixes per BGP peer. If the on-premises device advertises more than 4,000 prefixes, Azure drops the BGP session entirely. Reduce the number of advertised prefixes to stay within the limit.
@@ -198,6 +209,10 @@ AzureDiagnostics
 ```
 
 If disconnection events correlate with specific times of day, look for scheduled processes on your on-premises network that might affect the VPN device or link stability.
+
+### Correlate session resets with Azure Resource Health
+
+Use the **TimeGenerated** values for `BgpDisconnectedEvent` and `BgpConnectedEvent` to identify the BGP session reset window. Then, open **Resource health** for the virtual network gateway and review **Health history** for a platform event, such as planned maintenance, at the same time. A related health event can provide context for the reset, but matching timestamps don't establish the cause by themselves. For more information, see [Resource Health overview](/azure/service-health/resource-health-overview).
 
 ### Check IPsec tunnel stability
 
