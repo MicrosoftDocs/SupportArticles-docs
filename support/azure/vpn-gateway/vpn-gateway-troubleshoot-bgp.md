@@ -5,7 +5,7 @@ description: Troubleshoot BGP issues in Azure VPN Gateway by resolving peer conn
 author: kaushika-msft
 ms.service: azure-vpn-gateway
 ms.topic: troubleshooting
-ms.date: 03/23/2026
+ms.date: 09/05/2026
 ms.author: kaushika
 ms.custom: sap:Configuration and Setup
 # Customer intent: As a network administrator, I want to troubleshoot BGP issues that affect my Azure VPN Gateway so that I can restore dynamic routing between my on-premises networks and Azure.
@@ -124,6 +124,17 @@ Check your on-premises VPN device or router to verify that it meets the followin
 - BGP is enabled on the correct interface.
 - The route table or network statements include the prefixes you intend to advertise.
 - No outbound route filters block the prefixes.
+
+### Check GatewaySubnet route propagation
+
+If `GatewaySubnet` has an associated route table, verify that gateway route propagation is enabled:
+
+1. In the Azure portal, go to the virtual network that contains the VPN gateway.
+1. Select **Subnets**, and then select **GatewaySubnet**.
+1. Check whether **Route table** lists an associated route table.
+1. If a route table is associated, open it and verify that **Propagate gateway routes** is set to **Yes**.
+
+Don't disable gateway route propagation on `GatewaySubnet`. Disabling this setting prevents BGP routes learned by the VPN gateway from propagating into the virtual network. As a result, the VPN gateway doesn't function, and site-to-site connectivity can fail. For more information, see [Create, change, or delete a route table](/azure/virtual-network/manage-route-table#create-a-route-table).
 
 ### Check prefix limit
 
