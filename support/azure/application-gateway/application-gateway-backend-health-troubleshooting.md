@@ -2,7 +2,7 @@
 title: Troubleshoot backend health issues in Azure Application Gateway
 description: Learn how to troubleshoot Azure Application Gateway backend health issues, diagnose unhealthy or unknown status, and resolve common probe errors.
 services: application-gateway
-ms.date: 08/28/2026
+ms.date: 09/05/2026
 manager: dcscontentpm
 ms.topic: troubleshooting
 author: kaushika-msft
@@ -90,6 +90,18 @@ The message displayed in the **Details** column provides more detailed insights 
 
 > [!NOTE]
 > The default probe request is sent in the format of `\<protocol\>://127.0.0.1:\<port\>`. For example, `http://127.0.0.1:80` for an HTTP probe on port 80. Only HTTP status codes of 200 through 399 are considered healthy. The protocol and destination port come from the HTTP settings. If you want Application Gateway to probe on a different protocol, host name, or path and to recognize a different status code as healthy, configure a custom probe and associate it with the HTTP settings.
+
+### Expired or invalid backend TLS certificate
+
+For an HTTPS backend, Application Gateway validates the backend TLS certificate chain, subject name, and validity period. If validation fails, the health probe marks the backend as **Unhealthy**. If no healthy backend is available, clients receive a **502 Bad Gateway** response.
+
+Check the **Details** column on the **Backend Health** tab to identify the certificate validation failure, and then use the matching guidance in this article:
+
+- To inspect the certificate, access the backend directly in a browser or open the certificate on the backend server. Use one of the methods in [Common Name (CN) doesn't match](#common-name-cn-doesnt-match). Check the certificate's **Valid from** and **Valid to** dates. If the current date is outside this range, follow [Backend certificate expired](#backend-certificate-expired) to renew and install the certificate.
+- To troubleshoot a certificate chain verification failure, follow [Certificate verification failed](#certificate-verification-failed) and [The intermediate certificate wasn't found](#the-intermediate-certificate-wasnt-found).
+- To configure a backend that uses a private certificate authority (CA), identify its signing root certificate. Then, follow [Trusted root certificate mismatch](#trusted-root-certificate-mismatch-root-certificate-is-available-on-the-backend-server) to upload the correct root certificate to the associated backend setting.
+
+For more information about the certificate checks and trusted root certificate configuration, see [Backend HTTPS validation settings](/azure/application-gateway/configuration-http-settings#backend-https-validation-settings).
 
 ## Error messages
 

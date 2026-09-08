@@ -8,7 +8,7 @@ ms.author: kaushika
 ms.reviewer: kaushika
 ms.service: azure-application-gateway
 ms.topic: troubleshooting
-ms.date: 08/28/2026
+ms.date: 09/05/2026
 ms.custom: 
    - sap:Facing 5xx errors,devx-track-azurepowershell
    - sap:backend health
@@ -235,6 +235,8 @@ If all the instances of `BackendAddressPool` are unhealthy, the application gate
 ### Solution
 
 Ensure that the instances are healthy and the application is properly configured. Check if the backend instances can respond to a ping from another VM in the same virtual network. If you configure a public endpoint, ensure a browser request to the web application is serviceable.
+
+For an HTTPS backend, an expired certificate, an incomplete or invalid certificate chain, or a trusted root certificate mismatch can cause health probe failures. Check the backend certificate's validity and the trusted root certificate configuration in the associated backend setting. For detailed diagnosis and remediation, see [Expired or invalid backend TLS certificate](application-gateway-backend-health-troubleshooting.md#expired-or-invalid-backend-tls-certificate).
 
 ## Upstream SSL certificate doesn't match
 
