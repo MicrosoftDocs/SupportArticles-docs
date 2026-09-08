@@ -1,7 +1,7 @@
 ---
 title: SQL Server 2025 build versions (KB5005684)
 description: This article lists cumulative update and GDR builds for SQL Server 2025.
-ms.date: 08/13/2026
+ms.date: 09/08/2026
 ms.update-cycle: 1095-days
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5005684
 appliesto:
@@ -29,6 +29,8 @@ This article lists the Microsoft SQL Server 2025 builds that were released after
 
 | GDR name  | SQL Server build version | SQL Server (sqlservr.exe) file version | Analysis Services build version | Analysis Services (msmdsrv.exe) file version | Knowledge Base number                                   | Release date     |
 | --------- | ------------------------ | -------------------------------------- | ------------------------------- | -------------------------------------------- | ------------------------------------------------------- | ---------------- |
+| CU8 + GDR | 17.0.4085.5              | 2025.170.4085.5                        | 17.0.25.223                     | 2025.170.25.223                              | [KB5122769](https://support.microsoft.com/help/5122769) | September 08, 2026   |
+| GDR       | 17.0.1135.8              | 2025.170.1135.8                        | 17.0.25.223                     | 2025.170.25.223                              | [KB5122770](https://support.microsoft.com/help/5122770) | September 08, 2026   |
 | CU6 + GDR | 17.0.4060.2              | 2025.170.4060.2                        | 17.0.25.223                     | 2025.170.25.223                              | [KB5101346](https://support.microsoft.com/help/5101346) | July 14, 2026   |
 | GDR       | 17.0.1125.2              | 2025.170.1125.2                        | 17.0.25.223                     | 2025.170.25.223                              | [KB5102333](https://support.microsoft.com/help/5102333) | July 14, 2026   |
 | CU4 + GDR | 17.0.4040.1              | 2025.170.4040.1                        | 17.0.25.223                     | 2025.170.25.223                              | [KB5089899](https://support.microsoft.com/help/5089899) | May 12, 2026   |

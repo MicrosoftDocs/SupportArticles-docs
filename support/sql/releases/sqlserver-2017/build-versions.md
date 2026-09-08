@@ -1,7 +1,7 @@
 ---
 title: SQL Server 2017 build versions (KB4047329)
 description: This article lists cumulative update and GDR builds for SQL Server 2017.
-ms.date: 11/11/2025
+ms.date: 09/08/2026
 ms.update-cycle: 1095-days
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB4047329
 appliesto:
@@ -62,6 +62,8 @@ This article lists the Microsoft SQL Server 2017 builds that were released after
 
 | Cumulative update name | SQL Server product version | SQL Server (sqlservr.exe) file version | Analysis Services product version | Analysis Services (msmdsrv.exe) file version | Knowledge Base number | Release date |
 |------------|---------------|-------------------|--------------|------------------|---------------------------------------------------------|--------------------|
+| CU31 + GDR | 14.0.3550.4   | 2017.140.3550.4   | 14.0.249.120 | 2017.140.249.120 | [KB5122774](https://support.microsoft.com/help/5122774) | September 08, 2026   |
+| GDR        | 14.0.2130.4  |  2017.140.2130.4   | 14.0.6.482   | 2017.140.6.482   | [KB5122775](https://support.microsoft.com/help/5122775) | September 08, 2026   |
 | CU31 + GDR | 14.0.3540.1   | 2017.140.3540.1   | 14.0.249.120 | 2017.140.249.120 | [KB5102337](https://support.microsoft.com/help/5102337) | July 14, 2026   |
 | GDR        | 14.0.2120.1  |  2017.140.2120.1   | 14.0.6.482   | 2017.140.6.482   | [KB5102338](https://support.microsoft.com/help/5102338) | July 14, 2026   |
 | CU31 + GDR | 14.0.3530.2   | 2017.140.3530.2   | 14.0.249.120 | 2017.140.249.120 | [KB5090354](https://support.microsoft.com/help/5090354) | May 12, 2026   |
