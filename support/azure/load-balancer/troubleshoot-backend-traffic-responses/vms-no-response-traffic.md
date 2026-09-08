@@ -20,6 +20,9 @@ ms.custom:
 
 This article explains how to troubleshoot scenarios where virtual machines (VMs) in the backend pool of an Azure Load Balancer are healthy according to the load balancer's health probes but aren't responding to traffic on the configured data port. It provides guidance on identifying common causes like misconfigured ports, network security group rules, or other connectivity issues that prevent backend VMs from receiving or responding to load-balanced traffic.
 
+> [!TIP]
+> For non-HTTP applications, verify that the health probe uses TCP and targets a port on which the backend service is listening. For Active Directory Domain Services (AD DS) examples and the required load-balancing rules, see [Use TCP probes for non-HTTP services](../load-balancer-troubleshoot-health-probe-status.md#use-tcp-probes-for-non-http-services).
+
 If a backend pool VM is listed as healthy and responds to the health probes, but is still not participating in the load balancing, or isn't responding to the data traffic, it might be due to any of the following reasons:
 
 - [Cause 1: A load balancer backend pool VM isn't listening on the data port](#cause-1-a-load-balancer-backend-pool-vm-isnt-listening-on-the-data-port).
