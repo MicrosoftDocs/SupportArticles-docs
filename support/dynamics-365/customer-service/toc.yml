@@ -12,16 +12,20 @@
   items:
     - name: Can't switch between different Teams organizations in the Dynamics 365 app
       href: cases-or-incidents/cannot-switch-teams-organizations-dynamics-365-app.md
+    - name: Case resolution dialog fields are missing in production environment
+      href: cases-or-incidents/case-resolution-dialog-fields-missing-production.md
     - name: Chatbot workstream fails to detect user's location
       href: cases-or-incidents/user-location-not-captured-displayed-to-agent.md
     - name: Icons and colors aren't displayed in case views
       href: cases-or-incidents/icons-and-colors-not-displaying-in-case-views.md
-    - name: You don't have access to the data used for case summaries error
-      href: cases-or-incidents/you-dont-have-access-to-data-for-case-summaries-error.md
+    - name: Resolved or canceled cases reopen unexpectedly
+      href: cases-or-incidents/cases-reactivate-reopen-unexpectedly.md
     - name: The Dismiss All button doesn't work in the notifications
       href: cases-or-incidents/dismiss-all-not-working-in-notifications.md
     - name: Workstreams and agents are affected by changes made to other Copilot Studio bots
       href: cases-or-incidents/add-or-manage-bots-issues.md
+    - name: You don't have access to the data used for case summaries error
+      href: cases-or-incidents/you-dont-have-access-to-data-for-case-summaries-error.md
 - name: Customer Service Insights
   items:
     - name: Troubleshoot issues using Solution Health Hub
@@ -174,7 +178,7 @@
       href: teams-collaboration/flow-connection-invalid-customer-support-swarming.md
 - name: Unified routing
   items:
-    - name: Troubleshoot failures in enabling of unified routing
+    - name: Troubleshoot failures when provisioning unified routing
       href: unified-routing/troubleshoot-enabling-unified-routing.md
     - name: Troubleshoot issues with automatic assignment
       href: unified-routing/troubleshoot-assignment-issues.md

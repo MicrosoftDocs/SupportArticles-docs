@@ -7,7 +7,7 @@ author: kaushika-msft
 ms.author: kaushika
 manager: dcscontentpm
 ms.topic: troubleshooting
-ms.date: 04/06/2026
+ms.date: 09/04/2026
 ms.custom: sap:No connectivity to backend pool
 # Customer intent: As a system administrator, I want to troubleshoot Azure Load Balancer health probe issues, so that I can ensure the backend virtual machines are properly responding and participating in load balancing.
 ---
@@ -26,6 +26,21 @@ The Load Balancer backend pool VMs may not be responding to the probes due to an
 - Load Balancer backend pool VM isn't listening on the probe port
 - Firewall, or a network security group is blocking the port on the Load Balancer backend pool VMs 
 - Other misconfigurations in Load Balancer
+
+### Use TCP probes for non-HTTP services
+
+An HTTP or HTTPS probe fails when the backend service doesn't respond to HTTP requests. For a non-HTTP service, configure a TCP health probe on a port that represents the health of the service. Confirm that each backend VM is listening on that port. For example, an internal load balancer for Active Directory Domain Services (AD DS) can probe TCP port 389 for Lightweight Directory Access Protocol (LDAP) or TCP port 3268 for Global Catalog LDAP.
+
+For port-specific load balancing, configure a separate load-balancing rule for each AD DS port that clients use:
+
+| AD DS service | TCP port |
+| --- | --- |
+| LDAP | 389 |
+| LDAP over SSL (LDAPS) | 636 |
+| Global Catalog LDAP | 3268 |
+| Global Catalog LDAPS | 3269 |
+
+Associate the load-balancing rules with the TCP health probe. For more information about selecting a protocol and port, see [Azure Load Balancer health probes](/azure/load-balancer/load-balancer-custom-probe-overview#probe-configuration).
 
 ### Cause 1: Load Balancer backend pool VM is unhealthy
 

@@ -7,7 +7,7 @@ ms.author: allensu
 manager: dcscontentpm
 ms.service: azure-virtual-network
 ms.topic: troubleshooting
-ms.date: 03/17/2026
+ms.date: 09/04/2026
 ms.custom: sap:Cannot delete Azure Virtual Network (VNet)
 
 # Customer intent: As a cloud administrator, I want to troubleshoot problems that prevent the deletion or modification of a virtual network or subnet, so I can resolve blocking resource dependencies and maintain my cloud resources.
@@ -241,9 +241,11 @@ If service association links remain after you delete the resources, they might t
 
 1. Verify no resources from the linked service are still deployed in the subnet.
 2. Wait 10-15 minutes for the platform to clean up the links.
-3. If the links still persist, open an Azure support request referencing the specific `linkedResourceType`.
+3. Check the `linkedResourceType` value, and then follow the relevant resource-specific guidance. If the following guidance doesn't apply or the link remains, open an Azure support request and include the `linkedResourceType` value.
 
 For Azure Container Instances specifically, see [Clean up resources](/azure/container-instances/container-instances-vnet#clean-up-resources) for CLI commands to remove container groups and network profiles.
+
+If `linkedResourceType` is `Microsoft.Web/serverFarms`, see [Service association links](virtual-network-troubleshoot-cannot-delete-modify-subnet.md#service-association-links) for App Service-specific troubleshooting steps.
 
 ### Check whether orphaned network interfaces remain in the subnet
 
