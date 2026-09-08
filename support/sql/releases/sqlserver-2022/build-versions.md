@@ -1,7 +1,7 @@
 ---
 title: SQL Server 2022 build versions (KB5023451)
 description: This article lists cumulative update and GDR builds for SQL Server 2022.
-ms.date: 07/16/2026
+ms.date: 09/08/2026
 ms.update-cycle: 1095-days
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5023451
 appliesto:
@@ -48,6 +48,8 @@ This article lists the Microsoft SQL Server 2022 builds that were released after
 
 | GDR name | SQL Server build version | SQL Server (sqlservr.exe) file version | Analysis Services build version | Analysis Services (msmdsrv.exe) file version | Knowledge Base number | Release date |
 |------------|-------------|-----------------|-------------|-----------------|---------------------------------------------------------|-------------------|
+| CU26 + GDR  | 16.0.4275.2 | 2022.160.4275.2 | 16.0.43.252 | 2022.160.43.252 | [KB5122768](https://support.microsoft.com/help/5122768) | September 08, 2026  |
+| GDR         | 16.0.1200.5 | 2022.160.1200.5 | 16.0.42.229 | 2022.160.42.229 | [KB5122771](https://support.microsoft.com/help/5122771) | September 08, 2026  |
 | CU25 + GDR  | 16.0.4262.2 | 2022.160.4262.2 | 16.0.43.252 | 2022.160.43.252 | [KB5101347](https://support.microsoft.com/help/5101347) | July 14, 2026  |
 | GDR         | 16.0.1190.2 | 2022.160.1190.2 | 16.0.42.229 | 2022.160.42.229 | [KB5102334](https://support.microsoft.com/help/5102334) | July 14, 2026  |
 | CU24 + GDR  | 16.0.4252.3 | 2022.160.4252.3 | 16.0.43.252 | 2022.160.43.252 | [KB5089900](https://support.microsoft.com/help/5089900) | May 12, 2026  |

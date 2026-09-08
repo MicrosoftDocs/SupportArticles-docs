@@ -2,7 +2,7 @@
 title: Latest Updates and Version History for SQL Server on Linux
 description: This article lists the builds and updates available for supported versions of SQL Server on Linux.
 ms.reviewer: v-shaywood
-ms.date: 08/10/2026
+ms.date: 09/08/2026
 ms.update-cycle: 1095-days
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, linux-related-content
 ---
@@ -33,10 +33,10 @@ Each of the following links provides information for all of the applicable produ
 
 | Version | Latest GDR | Latest cumulative update |
 | --- | --- | --- |
-| **SQL Server 2025**<br /><br />- [Build information](#sql-server-2025)<br />- [Installation](/sql/linux/sql-server-linux-setup?view=sql-server-linux-ver17&preserve-view=true) | [GDR](https://support.microsoft.com/help/5102333)<br />(17.0.1125.2 - July 2026) | [CU8 for 2025](https://support.microsoft.com/help/5104822)<br />(17.0.4075.5 - August 2026)<br /><br />[CU6 + GDR](https://support.microsoft.com/help/5101346)<br />(17.0.4060.2 - July 2026) |
-| **SQL Server 2022**<br /><br />- [Build information](#sql-server-2022)<br />- [Installation](/sql/linux/sql-server-linux-setup?view=sql-server-linux-ver16&preserve-view=true) | [GDR](https://support.microsoft.com/help/5102334)<br />(16.0.1190.2 - July 2026) | [CU26 for 2022](https://support.microsoft.com/help/5093420)<br />(16.0.4265.3 - July 2026)<br /><br />[CU25 + GDR](https://support.microsoft.com/help/5101347)<br />(16.0.4262.2 - July 2026) |
-| **SQL Server 2019**<br /><br />- [Build information](#sql-server-2019)<br />- [Installation](/sql/linux/sql-server-linux-setup?view=sql-server-linux-ver15&preserve-view=true) | [GDR](https://support.microsoft.com/help/5102336)<br />(15.0.2180.2 - July 2026) | [CU32 for 2019](https://support.microsoft.com/help/5054833)<br />(15.0.4430.1 - February 2025)<br /><br />[CU32 + GDR](https://support.microsoft.com/help/5102335)<br />(15.0.4480.2 - July 2026) |
-| **SQL Server 2017**<br /><br />- [Build information](#sql-server-2017)<br />- [Installation](/sql/linux/sql-server-linux-setup?view=sql-server-linux-2017&preserve-view=true) | [GDR](https://support.microsoft.com/help/5102338)<br />(14.0.2120.1 - July 2026) | [CU31 for 2017](https://support.microsoft.com/help/5016884)<br />(14.0.3456.2 - September 2022)<br /><br />[CU31 + GDR](https://support.microsoft.com/help/5102337)<br />(14.0.3540.1 - July 2026) |
+| **SQL Server 2025**<br /><br />- [Build information](#sql-server-2025)<br />- [Installation](/sql/linux/sql-server-linux-setup?view=sql-server-linux-ver17&preserve-view=true) | [GDR](https://support.microsoft.com/help/5122770)<br />(17.0.1135.8 - September 2026) | [CU8 for 2025](https://support.microsoft.com/help/5104822)<br />(17.0.4075.5 - August 2026)<br /><br />[CU8 + GDR](https://support.microsoft.com/help/5122769)<br />(17.0.4085.5 - September 2026) |
+| **SQL Server 2022**<br /><br />- [Build information](#sql-server-2022)<br />- [Installation](/sql/linux/sql-server-linux-setup?view=sql-server-linux-ver16&preserve-view=true) | [GDR](https://support.microsoft.com/help/5122771)<br />(16.0.1200.5 - September 2026) | [CU26 for 2022](https://support.microsoft.com/help/5093420)<br />(16.0.4265.3 - July 2026)<br /><br />[CU26 + GDR](https://support.microsoft.com/help/5122768)<br />(16.0.4275.2 - September 2026) |
+| **SQL Server 2019**<br /><br />- [Build information](#sql-server-2019)<br />- [Installation](/sql/linux/sql-server-linux-setup?view=sql-server-linux-ver15&preserve-view=true) | [GDR](https://support.microsoft.com/help/5122773)<br />(15.0.2190.7 - September 2026) | [CU32 for 2019](https://support.microsoft.com/help/5054833)<br />(15.0.4430.1 - February 2025)<br /><br />[CU32 + GDR](https://support.microsoft.com/help/5122772)<br />(15.0.4490.9 - September 2026) |
+| **SQL Server 2017**<br /><br />- [Build information](#sql-server-2017)<br />- [Installation](/sql/linux/sql-server-linux-setup?view=sql-server-linux-2017&preserve-view=true) | [GDR](https://support.microsoft.com/help/5122775)<br />(14.0.2130.4 - September 2026) | [CU31 for 2017](https://support.microsoft.com/help/5016884)<br />(14.0.3456.2 - September 2022)<br /><br />[CU31 + GDR](https://support.microsoft.com/help/5122774)<br />(14.0.3550.4 - September 2026) |
 
 ## SQL Server version list tables
 
@@ -47,6 +47,8 @@ Each of the following links provides information for all of the applicable produ
 
 | Build number or version | Update | Knowledge Base number | Release date |
 | --- | --- | --- | --- |
+| 17.0.4085.5 | CU8 + GDR | [KB5122769](https://support.microsoft.com/help/5122769) | September 08, 2026 |
+| 17.0.1135.8 | GDR | [KB5122770](https://support.microsoft.com/help/5122770) | September 08, 2026 |
 | 17.0.4075.5 | CU8 | [KB5104822](https://support.microsoft.com/help/5104822) | August 13, 2026 |
 | 17.0.4065.4 | CU7 | [KB5096981](https://support.microsoft.com/help/5096981) | July 16, 2026 |
 | 17.0.4060.2 | CU6 + GDR | [KB5101346](https://support.microsoft.com/help/5101346) | July 14, 2026 |
@@ -72,6 +74,8 @@ Each of the following links provides information for all of the applicable produ
 
 | Build number or version | Update | Knowledge Base number | Release date |
 | --- | --- | --- | --- |
+| 16.0.4275.2 | CU26 + GDR | [KB5122768](https://support.microsoft.com/help/5122768) | September 08, 2026 |
+| 16.0.1200.5 | GDR | [KB5122771](https://support.microsoft.com/help/5122771) | September 08, 2026 |
 | 16.0.4265.3 | CU26 | [KB5093420](https://support.microsoft.com/help/5093420) | July 16, 2026 |
 | 16.0.4262.2 | CU25 + GDR | [KB5101347](https://support.microsoft.com/help/5101347) | July 14, 2026 |
 | 16.0.1190.2 | GDR | [KB5102334](https://support.microsoft.com/help/5102334) | July 14, 2026 |
@@ -141,7 +145,9 @@ Each of the following links provides information for all of the applicable produ
 
 | Build number or version | Update | Knowledge Base number | Release date |
 | --- | --- | --- | --- |
-| 15.0.4480.2 | CU32 + GDR <sup>1</sup> | [KB5102335](https://support.microsoft.com/help/5102335) | July 14, 2026 |
+| 15.0.4490.9 | CU32 + GDR <sup>1</sup> | [KB5122772](https://support.microsoft.com/help/5122772) | September 08, 2026 |
+| 15.0.2190.7 | GDR | [KB5122773](https://support.microsoft.com/help/5122773) | September 08, 2026 |
+| 15.0.4480.2 | CU32 + GDR | [KB5102335](https://support.microsoft.com/help/5102335) | July 14, 2026 |
 | 15.0.2180.2 | GDR | [KB5102336](https://support.microsoft.com/help/5102336) | July 14, 2026 |
 | 15.0.4470.1 | CU32 + GDR | [KB5090407](https://support.microsoft.com/help/5090407) | May 12, 2026 |
 | 15.0.2170.1 | GDR | [KB5090408](https://support.microsoft.com/help/5090408) | May 12, 2026 |
@@ -228,7 +234,9 @@ Each of the following links provides information for all of the applicable produ
 
 | Build number or version | Update | Knowledge Base number | Release date |
 | --- | --- | --- | --- |
-| 14.0.3540.1 | CU31 + GDR <sup>1, 2</sup> | [KB5102337](https://support.microsoft.com/help/5102337) | July 14, 2026 |
+| 14.0.3550.4 | CU31 + GDR <sup>1, 2</sup> | [KB5122774](https://support.microsoft.com/help/5122774) | September 08, 2026 |
+| 14.0.2130.4 | GDR | [KB5122775](https://support.microsoft.com/help/5122775) | September 08, 2026 |
+| 14.0.3540.1 | CU31 + GDR | [KB5102337](https://support.microsoft.com/help/5102337) | July 14, 2026 |
 | 14.0.2120.1 | GDR | [KB5102338](https://support.microsoft.com/help/5102338) | July 14, 2026 |
 | 14.0.3530.2 | CU31 + GDR | [KB5090354](https://support.microsoft.com/help/5090354) | May 12, 2026 |
 | 14.0.2110.2 | GDR | [KB5090347](https://support.microsoft.com/help/5090347) | May 12, 2026 |
