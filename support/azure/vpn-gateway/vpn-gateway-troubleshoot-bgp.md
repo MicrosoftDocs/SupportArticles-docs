@@ -210,6 +210,10 @@ AzureDiagnostics
 
 If disconnection events correlate with specific times of day, look for scheduled processes on your on-premises network that might affect the VPN device or link stability.
 
+### Correlate session resets with Azure Resource Health
+
+Use the **TimeGenerated** values for `BgpDisconnectedEvent` and `BgpConnectedEvent` to identify the BGP session reset window. Then, open **Resource health** for the virtual network gateway and review **Health history** for a platform event, such as planned maintenance, at the same time. A related health event can provide context for the reset, but matching timestamps don't establish the cause by themselves. For more information, see [Resource Health overview](/azure/service-health/resource-health-overview).
+
 ### Check IPsec tunnel stability
 
 BGP session flapping often mirrors IPsec tunnel flapping. If the underlying tunnel is unstable, the BGP session drops together with it. Check the `TunnelDiagnosticLog` for tunnel connect and disconnect events that occur at the same times as the BGP events.

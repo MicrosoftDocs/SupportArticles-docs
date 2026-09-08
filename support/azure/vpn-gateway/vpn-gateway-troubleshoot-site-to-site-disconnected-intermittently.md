@@ -7,7 +7,7 @@ ms.author: kaushika
 ms.service: azure-vpn-gateway
 ms.reviewer: duau, allensu 
 ms.topic: troubleshooting
-ms.date: 08/19/2026
+ms.date: 09/05/2026
 ms.custom: sap:Connectivity
 
 # Customer intent: As a network administrator, I want to troubleshoot Azure Site-to-Site VPN connection issues, so that I can ensure stable connectivity and minimize disruptions for users.
@@ -81,6 +81,10 @@ The PFS group is the Diffie-Hellman group used for IPsec Quick Mode (Phase 2). W
    ```azurecli
    az network vpn-connection show --resource-group "<resource-group>" --name "<connection-name>" --query connectionStatus --output tsv
    ```
+
+## Correlate disconnects with Azure Service Health
+
+After you identify the disconnect time in **TunnelDiagnosticLog**, check [Azure Service Health](/azure/service-health/overview) for service issues or planned maintenance in your subscription and region at that time. A related Service Health notification provides context for your investigation, but timing alone doesn't confirm the cause. For guidance on identifying disconnect and failover events, see [Troubleshoot Azure VPN Gateway using diagnostic logs](/troubleshoot/azure/vpn-gateway/troubleshoot-vpn-with-azure-diagnostics#tunneldiagnosticlog).
 
 ## Next steps
 
