@@ -39,14 +39,14 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
+          - text: Bookable resources don't display on the schedule board
+            url: scheduling/schedule-board-missing-resources.md
           - text: Booking card shows NaN or incorrect date and time on the schedule board
             url: scheduling/schedule-board-nan-datetime.md
           - text: Issue with cascading crew changes when assigning a booking
             url: scheduling/cascade-crew-changes-booking.md
           - text: Missing form context on bookable resource forms
             url: scheduling/missing-form-context-bookable-resource.md
-          - text: Resources don't display on the schedule board
-            url: scheduling/schedule-board-missing-resources.md
           - text: Schedule board errors due to version mismatches
             url: scheduling/schedule-board-version-mismatch.md
           - text: Schedule board is slow to load or experiences extreme latency
