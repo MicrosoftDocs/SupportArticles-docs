@@ -2,14 +2,15 @@
 title: Troubleshoot backend health issues in Azure Application Gateway
 description: Learn how to troubleshoot Azure Application Gateway backend health issues, diagnose unhealthy or unknown status, and resolve common probe errors.
 services: application-gateway
-ms.date: 09/05/2026
+ms.date: 09/08/2026
 manager: dcscontentpm
 ms.topic: troubleshooting
 author: kaushika-msft
 ms.author: kaushika
-ms.reviewer: kaushika
 ms.service: azure-application-gateway
 ms.custom: sap:backend health,sfi-image-nochange
+ms.reviewer: kaushika, asudbring, duau
+ai-usage: ai-assisted
 # Customer intent: As an IT admin, I want to troubleshoot backend health issues in Application Gateway, so that I can ensure my backend servers are operational and effectively serving requests.
 ---
 
@@ -22,6 +23,8 @@ This article explains how to troubleshoot backend health issues in Azure Applica
 By default, Azure Application Gateway probes backend servers (associated with a rule) to check their health status and ensure the incoming traffic is sent only to the servers that are running. In each case, if the backend server doesn't respond successfully, Application Gateway marks the server as Unhealthy and stops forwarding requests to the server. After the server starts responding successfully, Application Gateway resumes forwarding the requests.
 
 You can also create [custom probes](/azure/application-gateway/application-gateway-probe-overview#custom-health-probe) to specify the host name, the path to probe, and the status codes to accept as **Healthy**.
+
+To learn how Application Gateway monitors backend health, see [Application Gateway health probes overview](/azure/application-gateway/application-gateway-probe-overview). To configure a trusted root certificate for a private CA or self-signed backend certificate, see [Trusted root certificate](/azure/application-gateway/configuration-http-settings?tabs=backendhttpsettings#trusted-root-certificate).
 
 ## Tools to check backend health
 
@@ -45,7 +48,7 @@ Application Gateway forwards a request to a server from the backend pool if its 
 
 ## Backend health status: Unhealthy
 
-If the backend health status is **Unhealthy**, the portal view resembles the following screenshot:
+If the backend health status is **Unhealthy**, the portal view resembles the following screenshot.
 
 :::image type="content" source="./media/application-gateway-backend-health-troubleshooting/appgwunhealthy.png" alt-text="Screenshot of Application Gateway backend health - Unhealthy." lightbox="./media/application-gateway-backend-health-troubleshooting/appgwunhealthy.png":::
 
@@ -104,6 +107,32 @@ Check the **Details** column on the **Backend Health** tab to identify the certi
 For more information about the certificate checks and trusted root certificate configuration, see [Backend HTTPS validation settings](/azure/application-gateway/configuration-http-settings#backend-https-validation-settings).
 
 ## Error messages
+
+### Authentication or trusted root certificate mismatch
+
+#### Message
+
+"Backend server certificate isn't allow-listed with Application Gateway."
+
+#### Cause
+
+Application Gateway can't validate the certificate that the backend server presents because the certificate doesn't match the one configured in the associated backend setting. For a v2 SKU that uses a private CA or self-signed certificate, the configured trusted root certificate thumbprint doesn't match the root certificate thumbprint in the backend server's certificate chain. For a v1 SKU, the configured authentication certificate doesn't exactly match the backend server's leaf certificate.
+
+#### Solution
+
+If your backend uses an internal load balancer (ILB) with an App Service Environment, see [Backend server certificate isn't allow-listed with Application Gateway](create-gateway-internal-load-balancer-app-service-environment.md) instead. Otherwise, use the resolution that matches your gateway SKU:
+
+**v2**
+
+Follow [Trusted root certificate mismatch (root certificate is available on the backend server)](#trusted-root-certificate-mismatch-root-certificate-is-available-on-the-backend-server) to export and verify the root certificate, upload it to the associated backend setting, save the configuration, and confirm the backend health. If the backend server doesn't present the signing root certificate, see [Trusted root certificate mismatch (no root certificate on the backend server)](#trusted-root-certificate-mismatch-no-root-certificate-on-the-backend-server).
+
+**v1**
+
+1. Access the backend server directly, open the leaf certificate that it presents, and record the certificate **Thumbprint**.
+1. Follow [Export authentication certificate (for v1 SKU)](/azure/application-gateway/certificates-for-backend-authentication#export-authentication-certificate-for-v1-sku) to export the backend server's leaf certificate in Base-64 encoded X.509 (.CER) format.
+1. Open the exported certificate, select the **Details** tab, and compare its **Thumbprint** with the value from the certificate that the backend server presented. Ignore spaces and letter casing when you compare the values. If they don't match, export the leaf certificate that has the presented thumbprint.
+1. [Upload the authentication certificate to the associated backend HTTP setting](/azure/application-gateway/end-to-end-ssl-portal#add-authenticationtrusted-root-certificates-of-backend-servers) and save the configuration.
+1. After the next health probe cycle, refresh **Backend Health** and confirm that the backend server's status is **Healthy**.
 
 ### Backend server timeout
 
@@ -165,7 +194,7 @@ To resolve this issue, follow these steps:
 
 1. Check whether you can connect to the backend server on the port mentioned in the HTTP settings by using a browser or PowerShell by running this command: `Test-NetConnection -ComputerName www.bing.com -Port 443`.
 1. If the port mentioned isn't the desired port, enter the correct port number for Application Gateway to connect to the backend server.
-1. If you can't connect on the port from your local machine as well, do the following:
+1. If you can't connect on the port from your local machine, do the following:
    a.  Check the network security group (NSG) settings of the backend server's network adapter and subnet and whether inbound connections to the configured port are allowed. If they aren't, create a new rule to allow the connections. To learn how to create NSG rules, see [Create security rules](/azure/virtual-network/tutorial-filter-network-traffic?tabs=portal#create-security-rules).
    b.  Check whether the NSG settings of the Application Gateway subnet allow outbound public and private traffic, so that a connection can be made. Run the following command in Azure PowerShell:
 
@@ -184,7 +213,7 @@ To resolve this issue, follow these steps:
            Get-AzEffectiveRouteTable -NetworkInterfaceName "nic1" -ResourceGroupName "testrg"
    ```
 
-1. If you don't find any issues with NSG or UDR, check your backend server for application-related issues that are preventing clients from establishing a TCP session on the ports configured. Do the following:
+1. If you don't find any issues with NSG or UDR, check your backend server for application-related issues that prevent clients from establishing a TCP session on the ports configured. Do the following:
    a.  Open a command prompt (Win+R -> cmd), enter **netstat**, and select Enter.
    b.  Check whether the server is listening on the configured port. For example:
 
@@ -201,7 +230,7 @@ To resolve this issue, follow these steps:
 
 #### Message
 
-"Status code of the backend's HTTP response did not match the probe setting. Expected:{HTTPStatusCode0} Received:{HTTPStatusCode1}."
+"Status code of the backend's HTTP response didn't match the probe setting. Expected:{HTTPStatusCode0} Received:{HTTPStatusCode1}."
 
 #### Cause
 
@@ -228,7 +257,7 @@ To create a custom probe, see [Create a custom probe for Application Gateway by 
 
 #### Message
 
-"Body of the backend's HTTP response did not match the probe setting. Received response body doesn't contain {string}."
+"Body of the backend's HTTP response didn't match the probe setting. Received response body doesn't contain {string}."
 
 #### Cause
 
@@ -351,7 +380,7 @@ The backend server doesn't have the intermediate certificates installed in the c
 
 #### Solution
 
-An intermediate certificate signs the leaf certificate and is needed to complete the chain. Check with your CA for the necessary intermediate certificates and install them on your backend server. This chain must start with the leaf certificate, then the intermediate certificate, and finally the root CA certificate. Install the complete chain on the backend server, including the root CA certificate. For reference, see the certificate chain example in the [Leaf must be topmost in chain](#leaf-must-be-topmost-in-chain) section.
+An intermediate certificate signs the leaf certificate and is needed to complete the chain. Check with your CA for the necessary intermediate certificates and install them on your backend server. This chain must start with the leaf certificate, then the intermediate certificate, and finally the root CA certificate. Install the complete chain on the backend server, including the root CA certificate. For reference, see the certificate chain example in the [Leaf certificate must be top in chain](#leaf-certificate-must-be-top-in-chain) section.
 
 > [!NOTE] 
 > A self-signed certificate that isn't a CA can also cause this error. Application Gateway treats this self-signed certificate as a leaf certificate and looks for its signing intermediate certificate. To learn more, see [generate a self-signed certificate](/azure/application-gateway/self-signed-certificates).
@@ -372,7 +401,7 @@ The backend server's certificate chain is missing the leaf certificate.
 
 #### Solution
 
-Get the leaf certificate from your CA. Install this leaf certificate and all its signing certificates (intermediate and root CA certificates) on the backend server. This chain must start with the leaf certificate, then the intermediate certificate, and finally the root CA certificate. For reference, see the certificate chain example in the [Leaf must be topmost in chain](#leaf-must-be-topmost-in-chain) section.
+Get the leaf certificate from your CA. Install this leaf certificate and all its signing certificates (intermediate and root CA certificates) on the backend server. This chain must start with the leaf certificate, then the intermediate certificate, and finally the root CA certificate. For reference, see the certificate chain example in the [Leaf certificate must be top in chain](#leaf-certificate-must-be-top-in-chain) section.
 
 ### Server certificate isn't issued by a publicly known CA
 
@@ -424,7 +453,7 @@ When you use a certificate from a private CA, upload the corresponding root CA c
 
 #### Message
 
-The root certificate of the server certificate used by the backend doesn't match the trusted root certificate added to the application gateway. Ensure that you add the correct root certificate to the allowlist for the backend.
+The root certificate of the server certificate used by the backend doesn't match the trusted root certificate added to the application gateway. Ensure that you add the correct root certificate to the allow list for the backend.
 
 #### Cause
 
@@ -448,8 +477,10 @@ To identify and download the root certificate, follow these steps:
 1. On the **Certificate Export Wizard** page, select **Next**.
 1. Select **Base-64 encoded X.509 (.CER)**, and then select **Next**.
 1. Provide a new file name, and then select **Next**.
-1. Select **Finish**. 
-1. Upload the new root .cer file to the application gateway's backend setting.
+1. Select **Finish**.
+1. Open the exported certificate, select the **Details** tab, and record its **Thumbprint**. Compare it with the thumbprint of the root certificate that you selected from the backend server's certificate chain. Ignore spaces and letter casing when you compare the values. If the thumbprints don't match, export the root certificate from the backend server's chain again.
+1. Upload the new root certificate file to the Application Gateway backend setting. For more information, see [Trusted root certificate](/azure/application-gateway/configuration-http-settings?tabs=backendhttpsettings#trusted-root-certificate).
+1. Save the backend setting. After the next health probe cycle, refresh **Backend Health** and confirm that the backend server's status is **Healthy**.
 
 **For backend server (Windows)**
 
@@ -464,10 +495,12 @@ To identify and download the root certificate, follow these steps:
 1. On the **Certificate Export Wizard** page, select **Next**.
 1. Select **Base-64 encoded X.509 (.CER)**, and then select **Next**.
 1. Provide a new file name, and then select **Next**.
-1. Select **Finish**. 
-1. Upload the new root .cer file to the application gateway's backend setting.
+1. Select **Finish**.
+1. Open the exported certificate, select the **Details** tab, and record its **Thumbprint**. Compare it with the thumbprint of the root certificate that you selected from the backend server's certificate chain. Ignore spaces and letter casing when you compare the values. If the thumbprints don't match, export the root certificate from the backend server's chain again.
+1. Upload the new root certificate file to the Application Gateway backend setting. For more information, see [Trusted root certificate](/azure/application-gateway/configuration-http-settings?tabs=backendhttpsettings#trusted-root-certificate).
+1. Save the backend setting. After the next health probe cycle, refresh **Backend Health** and confirm that the backend server's status is **Healthy**.
 
-### Leaf must be topmost in chain
+### Leaf certificate must be top in chain
 
 #### Message
 
