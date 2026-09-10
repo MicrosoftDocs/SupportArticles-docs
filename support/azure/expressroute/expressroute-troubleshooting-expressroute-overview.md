@@ -8,7 +8,7 @@ ms.author: kaushika
 ms.service: azure-expressroute
 ms.reviewer: duau, allensu 
 ms.topic: troubleshooting
-ms.date: 09/08/2026
+ms.date: 09/09/2026
 ms.custom:
   - devx-track-azurepowershell
   - sfi-image-nochange
@@ -287,6 +287,8 @@ Weight  : 0
 Path    : 123##
 ```
 
+Confirm that the output contains each on-premises prefix that you expect to reach through private peering. If an expected prefix is missing, verify that your on-premises routers are advertising the prefix and that outbound route policies aren't suppressing it. Re-enable or adjust the advertisement before you continue with traffic-flow checks.
+
 > [!NOTE]
 > If the eBGP peering state between an MSEE and a CE/PE-MSEE is **Active** or **Idle**, verify that the primary and secondary peer subnets match the configuration on the linked CE/PE-MSEE. Ensure the `VlanId`, `AzureASN`, and `PeerASN` values are correct on the MSEEs and match those values on the linked CE/PE-MSEE. If you use MD5 hashing, the shared key must be the same on both MSEE and CE/PE-MSEE pairs. For configuration changes on an MSEE router, see [Create and modify routing for an ExpressRoute circuit][CreatePeering].
 
@@ -326,6 +328,9 @@ StatusCode: 400
 ## Test private peering connectivity
 
 Test private peering connectivity by counting packets arriving at and leaving the Microsoft edge of your ExpressRoute circuit on the MSEE devices. This diagnostic tool uses an ACL to count packets hitting specific rules, confirming connectivity.
+
+
+Before you run the test, [validate BGP and routes on the MSEE](#validate-bgp-and-routes-on-the-msee) and confirm that the expected on-premises prefixes appear. This check helps distinguish a missing route advertisement from traffic-filtering issues before you evaluate packet counts.
 
 ### Run a test
 
