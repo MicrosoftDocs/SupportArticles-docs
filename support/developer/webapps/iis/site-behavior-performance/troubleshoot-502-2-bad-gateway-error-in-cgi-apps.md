@@ -1,41 +1,42 @@
 ---
-title: Troubleshoot HTTP 502.2 Bad Gateway error in CGI applications
-description: Describes HTTP 502.2 Bad Gateway error in CGI applications and provides troubleshooting steps to resolve this issue.
-ms.date: 12/31/2024
-ms.author: aartigoyle
-author: aartig13
-ms.reviewer: johnhart, zixie
+title: Fix HTTP 502.2 Bad Gateway Errors in IIS CGI Applications
+description: Troubleshoot HTTP 502.2 Bad Gateway errors in IIS CGI applications. Use Network Monitor and failed request tracing to investigate incomplete HTTP headers.
+ms.date: 09/09/2026
+ms.reviewer: johnhart, zixie, pahurkat
 ms.custom: sap:Site Behavior and Performance\Runtime errors and exceptions, including HTTP 400 and 50x errors
+ai-usage: ai-assisted
 ---
-# Troubleshoot HTTP 502.2 Bad Gateway error in CGI applications
+# HTTP error 502.2 - Bad Gateway in IIS CGI applications
 
 _Applies to:_ &nbsp; Internet Information Services
 
-This article describes HTTP 502.2 Bad Gateway error in Common Gateway Interface (CGI) applications and provides troubleshooting steps to resolve this issue.
+## Summary
 
-## Symptom
+You might receive HTTP error 502.2 - Bad Gateway when a Common Gateway Interface (CGI) application returns incomplete HTTP headers. Use Network Monitor and failed request tracing in Internet Information Services (IIS) to investigate unexpected CGI process exits.
+
+## Symptoms
 
 You have a Web site that is hosted on Internet Information Services (IIS). When you visit the Web site in a Web browser, you might receive an error message that resembles the following one:
 
-> Server Error in Application \<application name\>
-> HTTP Error 502.2 - Bad Gateway
-> HRESULT: 0xC00000FD or 0x00000003
+> Server Error in Application \<ApplicationName>  
+> HTTP Error 502.2 - Bad Gateway  
+> HRESULT: 0xC00000FD or 0x00000003  
 > Description of HRESULT: Specified CGI application did not return a complete set of HTTP headers.
 
 ## Cause
 
 This problem occurs because the CGI process terminates unexpectedly before the CGI process sends a response back to IIS.
 
-## Tools
+## Diagnostic tools
 
 - Tracing module on IIS
-- [Microsoft Network Monitor 3.4](https://www.microsoft.com/en-us/download/details.aspx?id=4865)
+- [Microsoft Network Monitor 3.4](https://www.microsoft.com/download/details.aspx?id=4865)
 
-## Troubleshooting steps
+## Solution
 
-When sending a request to a CGI application running via IIS, the user is presented with the following error instead of the expected response:
+When a user sends a request to a CGI application running through IIS, they see the following error instead of the expected response:
 
-> The specified CGI application misbehaved by not returning a complete set of HTTP headers
+> The specified CGI application misbehaved by not returning a complete set of HTTP headers.
 
 Capture a [Netmon](/windows-hardware/drivers/portable/using-the-netmon-tool) trace. It shows:
 
@@ -78,8 +79,18 @@ HTTP: Data: Number of data bytes remaining = 232 (0x00E8)
 001A0: 3E 3C 2F 68 74 6D 6C 3E ></html>
 ```
 
-Capture [FREB](../health-diagnostic-performance/troubleshoot-php-with-failed-request-tracing.md) log for the HTTP error message and locate which module is throwing this error message.
+Capture a failed request tracing ([FREB](../health-diagnostic-performance/troubleshoot-php-with-failed-request-tracing.md)) log to identify the module that reports the HTTP error.
 
-Troubleshoot the CGI process executable file to determine why the CGI process terminates unexpectedly. You might have to generate a memory dump file of the CGI process when the access violation occurs.
+Example FREB output.
 
-This problem occurs when the CGI application does exactly what the error suggests, inserting invalid data into the HTTP header values that are sent to IIS as part of its response. 
+```output
+MODULE_SET_RESPONSE_ERROR_STATUS
+ModuleName="CgiModule"
+Notification="EXECUTE_REQUEST_HANDLER"
+HttpStatus="500"
+HttpReason="Internal Server Error"
+```
+
+Troubleshoot the CGI process executable file to determine why the CGI process stops unexpectedly. You might need to generate a memory dump file of the CGI process when the access violation occurs.
+
+This problem occurs when the CGI application does exactly what the error suggests, inserting invalid data into the HTTP header values that it sends to IIS as part of its response. 
