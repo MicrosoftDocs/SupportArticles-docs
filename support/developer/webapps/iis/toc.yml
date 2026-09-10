@@ -149,7 +149,7 @@ items:
       href: site-behavior-performance/http-404-13-website.md
     - name: HTTP error 404.13 Internet printing fails
       href: site-behavior-performance/internet-printing-fails.md
-    - name: HTTP error 404.17 when you visit a Web site
+    - name: HTTP error 404.17 - Not Found in IIS
       href: site-behavior-performance/error-message-you-visit-web-site.md
     - name: HTTP error 404.2
       href: site-behavior-performance/http-error-402-webpage.md
