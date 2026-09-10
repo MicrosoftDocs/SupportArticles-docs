@@ -63,20 +63,20 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: HTTP status code list
-            url: www-administration-management/http-status-code.md
-          - text: HTTP error 500.19 - Internal Server Error
-            url: health-diagnostic-performance/http-error-500-19-webpage.md            
+          - text: HTTP error 403.6
+            url: development/403-6-forbidden-error.md
           - text: HTTP error 404 - File Not Found
             url: health-diagnostic-performance/troubleshoot-404-file-not-found-error.md
           - text: HTTP error 405.0 - Method Not Allowed
             url: health-diagnostic-performance/http-error-405-website.md
-          - text: HTTP error 501 - Not Implemented
-            url: health-diagnostic-performance/http-error-501-not-implemented.md
-          - text: HTTP error 403.6
-            url: development/403-6-forbidden-error.md
           - text: HTTP error 500.0 - Internal Server Error
             url: www-administration-management/http-error-500-when-you-visit-web-site.md          
+          - text: HTTP error 500.19 - Internal Server Error in IIS
+            url: site-behavior-performance/http-error-500-19-webpage.md
+          - text: HTTP error 501 - Not Implemented
+            url: health-diagnostic-performance/http-error-501-not-implemented.md
+          - text: HTTP status code list
+            url: www-administration-management/http-status-code.md
 
   - title: Authentication and Authorization
     linkLists:

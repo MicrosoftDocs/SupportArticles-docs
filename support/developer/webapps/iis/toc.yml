@@ -125,8 +125,6 @@ items:
       href: site-behavior-performance/troubleshoot-404-file-not-found-error.md
     - name: '"HTTP 405.0 - Method not allowed" error message'
       href: site-behavior-performance/http-error-405-website.md
-    - name: '"HTTP 500.19 - Internal Server Error" error message'
-      href: site-behavior-performance/http-error-500-19-webpage.md
     - name: HTTP error 400 in IIS
       href: site-behavior-performance/troubleshoot-http-400-errors-in-iis.md
     - name: HTTP error 400 in the CLM portal
@@ -159,6 +157,8 @@ items:
       href: site-behavior-performance/http-500-response-binarywrite.md
     - name: HTTP error 500.0 when you visit a web site
       href: site-behavior-performance/http-error-500-when-you-visit-web-site.md
+    - name: HTTP error 500.19 - Internal Server Error in IIS
+      href: site-behavior-performance/http-error-500-19-webpage.md
     - name: HTTP error 501 - Not Implemented
       href: site-behavior-performance/http-error-501-not-implemented.md
     - name: HTTP error 502.2 - Bad Gateway in IIS CGI applications
