@@ -11,11 +11,11 @@ ms.reviewer: v-weizhu, vritikanaik
 ---
 # Troubleshoot Azure File Sync sync health and errors
 
-## Summary
+## Azure File Sync troubleshooting overview
 
-This article helps you troubleshoot and resolve common sync problems that you might encounter with your Azure File Sync deployment.
+Use this article to troubleshoot Azure File Sync health and sync errors. Find causes and remediation by server endpoint health status, event ID, hexadecimal or decimal HRESULT, or error string. The article covers per-file and per-directory errors, sync-session failures, Azure storage access, networking, authentication, and agent compatibility.
 
-## Sync health
+## Diagnose Azure File Sync health
 
 <a id="afs-change-detection"></a>**If I create a file directly in my Azure file share over SMB or through the portal, how long does it take for the file to sync to servers in the sync group?**
 
@@ -23,7 +23,7 @@ Changes made to the Azure file share by using the Azure portal or SMB aren't imm
 
 To detect changes to the Azure file share, Azure File Sync has a scheduled job called *a change detection job*. A change detection job enumerates every file in the file share, and then compares it to the sync version for that file. When the change detection job determines that files changed, Azure File Sync initiates a sync session. The change detection job runs every 24 hours. Because the change detection job works by enumerating every file in the Azure file share, change detection takes longer in larger namespaces than in smaller namespaces. For large namespaces, it might take longer than 24 hours to determine which files changed.
 
-To immediately sync files that you change in the Azure file share, use the `Invoke-AzStorageSyncChangeDetection` PowerShell cmdlet to manually initiate the detection of changes in the Azure file share. This cmdlet is intended for scenarios where some type of automated process is making changes in the Azure file share or an administrator makes the changes (like moving files and directories into the share). For end user changes, install the Azure File Sync agent in an IaaS VM and have end users access the file share through the IaaS VM. This way all changes quickly sync to other agents without the need to use the `Invoke-AzStorageSyncChangeDetection` cmdlet. To learn more, see the [Invoke-AzStorageSyncChangeDetection](/powershell/module/az.storagesync/invoke-azstoragesyncchangedetection) documentation.
+To immediately sync files that you change in the Azure file share, use the [`Invoke-AzStorageSyncChangeDetection`](/powershell/module/az.storagesync/invoke-azstoragesyncchangedetection) PowerShell cmdlet to manually initiate the detection of changes in the Azure file share. This cmdlet is intended for scenarios where some type of automated process is making changes in the Azure file share or an administrator makes the changes (like moving files and directories into the share). For end user changes, install the Azure File Sync agent in an IaaS VM and have end users access the file share through the IaaS VM. This way all changes quickly sync to other agents without the need to use the `Invoke-AzStorageSyncChangeDetection` cmdlet.
 
 Microsoft is exploring adding change detection for an Azure file share similar to USN for volumes on Windows Server. Help prioritize this feature for future development by voting for it at [Azure Community Feedback](https://feedback.azure.com/d365community/idea/26f8aa9d-3725-ec11-b6e6-000d3a4f0f84).
 
@@ -31,7 +31,7 @@ Microsoft is exploring adding change detection for an Azure file share similar t
   
 This state is expected if you create a cloud endpoint and use an Azure file share that contains data. The cloud change enumeration job that scans for changes in the Azure file share must complete before files can sync between the cloud and server endpoints. The time to complete the job depends on the size of the namespace in the Azure file share. The server endpoint health updates once the change enumeration job completes.
 
-To check the status of the cloud change enumeration job, go the **Cloud Endpoint** properties in the portal. The **Change Enumeration** section provides the status.
+To check the status of the cloud change enumeration job, go to the **Cloud Endpoint** properties in the portal. The **Change Enumeration** section provides the status.
 
 ### <a id="broken-sync"></a>How do I monitor sync health?
 
@@ -159,9 +159,13 @@ Import-Module "C:\Program Files\Azure\StorageSyncAgent\StorageSync.Management.Se
 Debug-StorageSyncServer -FileSyncErrorsReport
 ```
 
-## Sync errors
+## Resolve Azure File Sync errors by HRESULT and error string
 
-### Troubleshooting per file/directory sync errors
+Use the following sections to troubleshoot per-file, per-directory, and sync-session errors. Search for the hexadecimal HRESULT, decimal HRESULT, or error string shown in the Azure portal or event log, and then follow the remediation for that error.
+
+<a id="troubleshooting-per-filedirectory-sync-errors"></a>
+
+### Troubleshoot per-file and per-directory errors by HRESULT
 
 If a file or directory fails to sync due to an error, an event is logged in the *Microsoft-FileSync-Agent/ItemResults* event log. This section covers common error codes and remediation steps for per-item errors.
 
@@ -177,7 +181,7 @@ Find the hexadecimal HRESULT, decimal HRESULT, or error string from the *ItemRes
 | Error | Code |
 |-|-|
 | **HRESULT** | 0x80070043 |
-| **HRESULT (decimal)** | -2147942467 |
+| **HRESULT (decimal)** | -2147024829 |
 | **Error string** | ERROR_BAD_NET_NAME |
 | **Description** | The tiered file on the server isn't accessible. This issue occurs if the tiered file wasn't recalled before deleting a server endpoint. |
 | **Remediation required** | Yes |
@@ -457,7 +461,7 @@ Decrypt the file and use a supported encryption solution. For more information, 
 | Error | Code |
 |-|-|
 | **HRESULT** | 0x80c80283 |
-| **HRESULT (decimal)** | -2160591491 |
+| **HRESULT (decimal)** | -2134375805 |
 | **Error string** | ECS_E_ACCESS_DENIED_DFSRRO |
 | **Description** | The file is in a Distributed File System Replication (DFS-R) read-only replication folder. |
 | **Remediation required** | Yes |
@@ -856,13 +860,15 @@ If the error persists, create a support request.
 
 If the error persists for several days, create a support request.
 
-### Handling unsupported characters
+<a id="handling-unsupported-characters"></a>
+
+### Resolve Azure File Sync errors caused by unsupported characters
 
 [Azure File Sync agent v17](https://support.microsoft.com/help/5023053) supports all characters that are supported by the [NTFS file system](/windows/win32/fileio/naming-a-file) except invalid surrogate pairs.
 
 If the portal or *FileSyncErrorsReport.ps1* PowerShell script shows per-item sync errors (error code 0x8007007b, 0x80c80255, or 0x80070459) due to unsupported characters, check whether Azure File Sync agent v17 is installed on the server. If agent v17 is installed and files still fail to sync due to invalid characters, use the [ScanUnsupportedChars](https://github.com/Azure-Samples/azure-files-samples/tree/master/ScanUnsupportedChars) script to rename files that contain unsupported characters.
 
-### Common sync errors
+### Troubleshoot sync-session errors by HRESULT
 
 This section covers common error codes and remediation steps when a sync session fails with an error.
 
@@ -1189,7 +1195,7 @@ This error happens when there's a problem with the internal database used by Azu
 | **Description** | The Azure File Sync agent version installed on the server isn't supported. |
 | **Remediation required** | Yes |
 
-This error occurs if the Azure File Sync agent version installed on the server isn't supported. To resolve this issue, [upgrade](/azure/storage/file-sync/file-sync-release-notes#azure-file-sync-agent-update-policy) to a [supported agent version](/azure/storage/file-sync/file-sync-release-notes#azure-file-sync-agent-update-policy#supported-versions).
+This error occurs if the Azure File Sync agent version installed on the server isn't supported. To resolve this issue, [upgrade](/azure/storage/file-sync/file-sync-release-notes#azure-file-sync-agent-update-policy) to a [supported agent version](/azure/storage/file-sync/file-sync-release-notes#supported-versions).
 
 <a id="-2134351810"></a>
 
@@ -1658,7 +1664,7 @@ This error occurs because the storage account has failed over to another region.
 | **Description** | Sync failed due to a transient problem with the sync database. |
 | **Remediation required** | No |
 
-This error occurs because of an internal problem with the sync database. This error will auto-resolve when sync retries. If this error continues for an extend period of time, create a support request, and we will contact you to help you resolve this issue.
+This error occurs because of an internal problem with the sync database. This error will auto-resolve when sync retries. If this error continues for an extended period of time, create a support request, and we will contact you to help you resolve this issue.
 
 <a id="-2134364024"></a>
 
@@ -1977,14 +1983,6 @@ No action required. This error should automatically resolve. If the error persis
 | **HRESULT** | 0x80c8023c |
 | **HRESULT (decimal)** | -2134375876 |
 | **Error string** | ECS_E_SYNC_CLOUD_METADATA_CORRUPT |
-| **Description** | Sync session error. |
-| **Remediation required** | Maybe |
-
-| Error | Code |
-|-|-|
-| **HRESULT** |  |
-| **HRESULT (decimal)** |  |
-| **Error string** |  |
 | **Description** | Sync session error. |
 | **Remediation required** | Maybe |
 
@@ -2417,6 +2415,8 @@ if ($storageAccount -eq $null) {
 }
 ```
 
+The check succeeds when the script completes without an exception and `$storageAccount` contains the storage account referenced by the cloud endpoint.
+
 ---
 
 <a id="troubleshoot-azure-file-share"></a>**Ensure the Azure file share exists.**
@@ -2439,6 +2439,8 @@ if ($fileShare -eq $null) {
     throw [System.Exception]::new("The Azure file share referenced by the cloud endpoint does not exist")
 }
 ```
+
+The check succeeds when the script completes without an exception and `$fileShare` contains the Azure file share referenced by the cloud endpoint.
 
 ---
 
@@ -2469,6 +2471,8 @@ if ($role -eq $null) {
                 "referenced Azure file share.")
 }
 ```
+
+The check succeeds when the script completes without an exception and `$role` contains the **Reader and Data Access** role assignment for Microsoft.StorageSync.
 
 ---
 
