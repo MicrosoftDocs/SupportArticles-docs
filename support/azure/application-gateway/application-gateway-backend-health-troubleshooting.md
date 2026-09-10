@@ -226,6 +226,14 @@ To resolve this issue, follow these steps:
    site bindings in Internet Information Services (IIS), server block in NGINX, and virtual host in Apache.
    d.  Check your OS firewall settings to make sure that incoming traffic to the port is allowed.
 
+#### Check Azure Firewall application rules
+
+Azure Firewall denies all traffic by default until you configure rules that explicitly allow it, and it evaluates network rules before application rules. If the application gateway's backend traffic passes through an Azure Firewall and no rule allows it, the firewall drops the connection, and the backend probe reports a TCP connect error or an Unknown status. To confirm this:
+
+1. [Enable diagnostic logs](/azure/firewall/monitor-firewall) for the **Azure Firewall Application Rule** category (and **Azure Firewall Network Rule**, if the backend pool uses IP addresses rather than FQDNs) on the Azure Firewall resource.
+1. Query the `AZFWApplicationRule` (or `AZFWNetworkRule`) table in Log Analytics for the probe traffic, and filter on `Action == "Deny"`. An `ActionReason` of `Default Action` confirms the default-deny behavior blocked the traffic because it didn't match any configured rule.
+1. If Azure Firewall unexpectedly denies the probe traffic, add an application rule (or network rule) that explicitly allows it. For steps, see [Configure an application rule](/azure/firewall/tutorial-firewall-deploy-portal-policy#configure-an-application-rule).
+
 ### HTTP status code mismatch
 
 #### Message
@@ -616,7 +624,7 @@ To resolve this problem, follow these steps:
    **Address prefix**: Backend pool subnet<br>
    **Next hop**: Azure Firewall private IP address
 
-   c. If the route is correct but the backend health is still Unknown or Unhealthy, Azure Firewall's rules might deny the probe traffic.
+   c. If the route is correct but the backend health is still Unknown or Unhealthy, Azure Firewall's rules might deny the probe traffic. See [Check Azure Firewall application rules](#check-azure-firewall-application-rules).
 
 > [!NOTE]
 > If the application gateway can't access the Certificate Revocation List (CRL) endpoints, it might mark the backend health status as **Unknown**. To prevent these issues, check that your application gateway subnet can access `crl.microsoft.com` and `crl3.digicert.com`. You can do this by configuring your NSGs to send traffic to the CRL endpoints. 
