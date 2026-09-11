@@ -2,7 +2,7 @@
 title: Troubleshoot backend health issues in Azure Application Gateway
 description: Learn how to troubleshoot Azure Application Gateway backend health issues, diagnose unhealthy or unknown status, and resolve common probe errors.
 services: application-gateway
-ms.date: 09/08/2026
+ms.date: 09/10/2026
 manager: dcscontentpm
 ms.topic: troubleshooting
 author: kaushika-msft
@@ -195,7 +195,7 @@ To resolve this issue, follow these steps:
 1. Check whether you can connect to the backend server on the port mentioned in the HTTP settings by using a browser or PowerShell by running this command: `Test-NetConnection -ComputerName www.bing.com -Port 443`.
 1. If the port mentioned isn't the desired port, enter the correct port number for Application Gateway to connect to the backend server.
 1. If you can't connect on the port from your local machine, do the following:
-   a.  Check the network security group (NSG) settings of the backend server's network adapter and subnet and whether inbound connections to the configured port are allowed. If they aren't, create a new rule to allow the connections. To learn how to create NSG rules, see [Create security rules](/azure/virtual-network/tutorial-filter-network-traffic?tabs=portal#create-security-rules).
+   a.  Check the network security group (NSG) settings of the backend server's network interface and subnet. Confirm that the effective inbound rules allow TCP traffic from the Application Gateway subnet to the configured backend port. Application Gateway sends health probes and data traffic over this path. For detailed checks and resolution steps, see [Resolution A in Troubleshoot HTTP 502 errors in Azure Application Gateway](troubleshoot-http-502-bad-gateway.md#resolution-a).
    b.  Check whether the NSG settings of the Application Gateway subnet allow outbound public and private traffic, so that a connection can be made. Run the following command in Azure PowerShell:
 
    ```azurepowershell
@@ -599,6 +599,8 @@ To resolve this problem, follow these steps:
    d. If an NSG is configured, search for that NSG resource on the **Search** tab or under **All resources**.
    e. In the **Inbound Rules** section, add an inbound rule to allow destination port range 65503-65534 for v1 or 65200-65535 v2 with the **Source** set as **GatewayManager** for the service tag.
    f. Select **Save** and verify that you can view the backend as **Healthy**. Alternatively, you can do that through [PowerShell/CLI](/azure/virtual-network/manage-network-security-group?tabs=network-security-group-portal).
+
+1. Check the effective NSG rules on the subnet and network interface for each backend server. Allow TCP traffic from the Application Gateway subnet to the configured backend port so health probes and data traffic can reach the backend. For detailed checks and resolution steps, see [Resolution A in Troubleshoot HTTP 502 errors in Azure Application Gateway](troubleshoot-http-502-bad-gateway.md#resolution-a). The SKU-specific port range in the previous step applies to the Application Gateway subnet; the backend rule uses the configured backend port.
 
 1. Check whether your UDR has a default route (0.0.0.0/0) with the next hop not set as **Internet**.
    a. Follow steps 1a and 1b to determine your subnet.

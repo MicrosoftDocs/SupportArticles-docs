@@ -295,7 +295,7 @@ $health.BackendAddressPools.BackendHttpSettingsCollection.Servers |
 | If you see... | Meaning | Next steps |
 |---|---|---|
 | `health` is `Healthy` and the probe returns a `200` status code. | The backend is reachable and responding to health probes. The issue is specific to request processing time, not availability. | Perform [Step 3b](#step-3b) to check backend resource utilization. |
-| `health` is `Unhealthy` with a probe timeout or connection refused. | Backend isn't responding to health probes. Requests fail with 502 or 504 errors. | Check that the backend application is running and listening on the correct port. Verify network security group (NSG) rules allow traffic from the Application Gateway subnet. |
+| `health` is `Unhealthy` with a probe timeout or connection refused. | Backend isn't responding to health probes. Requests fail with 502 (Bad Gateway) or 504 (Gateway Timeout) errors. | Check that the backend application is running and listening on the correct port. For network security group (NSG) checks, see [TCP connect error](application-gateway-backend-health-troubleshooting.md#tcp-connect-error). |
 | `health` is `Unhealthy` with non-`200` status code. | Backend responds but with an error (for example, 403 or 500). The health probe path might be misconfigured. | Verify the health probe path returns a `200` status code on the backend. Check probe settings with `az network application-gateway probe list`. |
 | There are mixed results (some healthy and some unhealthy). | There's a partial backend failure and some instances are down. | Investigate the unhealthy instances. |
 
