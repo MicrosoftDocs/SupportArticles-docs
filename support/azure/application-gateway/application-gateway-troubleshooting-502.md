@@ -50,7 +50,7 @@ Similarly, the presence of a custom DNS in the virtual network (VNet) can also c
 Validate your NSG, UDR, and DNS configurations.
 To do so, follow these steps:
 
-1. Check the NSGs associated with the application gateway subnet. Ensure that communication to the backend isn't blocked. For more information, see [Network security groups](/azure/application-gateway/configuration-infrastructure#network-security-groups).
+1. Check the NSGs associated with the Application Gateway subnet. Make sure communication to the backend isn't blocked. For more information, see [Network security groups](/azure/application-gateway/configuration-infrastructure#network-security-groups). For backend connectivity and health probe checks, see [TCP connect error](application-gateway-backend-health-troubleshooting.md#tcp-connect-error).
 1. Check the UDR associated with the application gateway subnet. Ensure that the UDR isn't directing traffic away from the backend subnet. For example, check for routing to network virtual appliances or default routes being advertised to the application gateway subnet by using Azure ExpressRoute or Azure VPN. Run the following commands in Azure PowerShell.
 
     ```azurepowershell
