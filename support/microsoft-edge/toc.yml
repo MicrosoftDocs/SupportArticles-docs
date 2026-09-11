@@ -32,6 +32,8 @@ items:
         href: performance/edge-crashes-fails-to-launch.md
   - name: Web Platform and Development
     items:
+      - name: Camera or microphone doesn't work on websites
+        href: development/edge-camera-microphone-not-working.md
       - name: Failure to deploy self-hosted extension via group policy
         href: development/self-host-extension-deploy.md
       - name: Geolocation doesn't work in Microsoft Edge but works in other browsers
