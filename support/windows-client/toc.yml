@@ -603,9 +603,9 @@ items:    # Please do not delete this line, it is required for the yaml format
           href: ./performance/memory-leak-remote-registry-service.md
         - name: Troubleshooting slow file copying in Windows
           href: ./performance/troubleshooting-slow-file-copying-in-windows.md
-- name: "Printing "
+- name: Printing
   items:
-    - name: "Printing "
+    - name: Printing
       href: ./printing/printing-overview.md
     - name: "Errors and troubleshooting: General issues"
       items:
@@ -1281,24 +1281,19 @@ items:    # Please do not delete this line, it is required for the yaml format
           href: ./windows-security/troubleshoot-zero-trust-dns-guidance.md
 - name: Windows Servicing, Updates and Features on Demand
   items:
+
     - name: Windows Servicing, Updates and Features on Demand
       href: ./installing-updates-features-roles/windows-servicing-updates-and-features-on-demand-overview.md
-    - name: Windows Update - Download of updates failed
-      items:
-        - name: 80072EE6 error when downloading an update from WSUS
-          href: ./installing-updates-features-roles/error-80072ee6-downlaod-wsus-update.md
-        - name: Automatic Updates can't download updates
-          href: ./installing-updates-features-roles/automatic-updates-cannot-download-updates-event-16.md
-    - name: Failure to install Windows Updates
-      items:
-        - name: Determine whether WSUS configuration causes WU issues
-          href: installing-updates-features-roles/determine-whether-wsus-configuration-causes-wu-issue.md
-        - name: "Troubleshooting guidance: Windows Update"
-          href: ./installing-updates-features-roles/troubleshoot-windows-update-issues.md
-        - name: Windows servicing operations fail after you move user profile and ProgramData folders
-          href: ../windows-server/setup-upgrade-and-drivers/servicing-fails-moved-user-profile-programdata-folders.md?context=/troubleshoot/windows-client/context/context
+    - name: "Troubleshooting guidance: Windows Update"
+      href: ./installing-updates-features-roles/troubleshoot-windows-update-issues.md
+    - name: Windows Update common errors and mitigation
+      href: ./installing-updates-features-roles/common-windows-update-errors.md
+    - name: Windows Update issues troubleshooting
+      href: ./installing-updates-features-roles/windows-update-issues-troubleshooting.md
     - name: Issues installing Features on Demand (FoD)
       items:
+        - name: Error code 0x8024402C when you try to install a Windows update or a Feature on Demand
+          href: ./installing-updates-features-roles/error-0x8024402c-installing-update-feature-on-demand.md
         - name: Error message when installing RSAT
           href: ./installing-updates-features-roles/error-message-when-installing-rsat.md
     - name: Windows Update - Configuring and managing client settings
@@ -1307,6 +1302,10 @@ items:    # Please do not delete this line, it is required for the yaml format
           href: ./installing-updates-features-roles/additional-resources-for-windows-update.md
         - name: Command-line switches for software update packages
           href: ./installing-updates-features-roles/command-line-switches-deploy-update-packages.md
+        - name: Command-line switches supported by Self-Extractor packages
+          href: ./installing-updates-features-roles/command-switches-supported-by-self-extractor-package.md
+        - name: Determine whether WSUS configuration causes WU issues
+          href: installing-updates-features-roles/determine-whether-wsus-configuration-causes-wu-issue.md
         - name: Download updates from Windows Update Catalog
           href: ./installing-updates-features-roles/download-updates-drivers-hotfixes-windows-update-catalog.md
         - name: Error 403 when you access Windows Update
@@ -1327,38 +1326,29 @@ items:    # Please do not delete this line, it is required for the yaml format
           href: ./installing-updates-features-roles/processor-not-supported-together-with-windows-version.md
         - name: Update Windows Update Agent to latest version
           href: ./installing-updates-features-roles/update-windows-update-agent.md
+        - name: Windows servicing operations fail after you move user profile and ProgramData folders
+          href: ../windows-server/setup-upgrade-and-drivers/servicing-fails-moved-user-profile-programdata-folders.md?context=/troubleshoot/windows-client/context/context
         - name: Windows Update automatically downloads and installs updates
           href: ./installing-updates-features-roles/updates-automatically-downloaded.md
-    - name: Windows Update fails - installation rolls back
+    - name: Windows Update - Download of updates failed
       items:
-        - name: Command-line switches supported by Self-Extractor packages
-          href: ./installing-updates-features-roles/command-switches-supported-by-self-extractor-package.md
+        - name: Automatic Updates can't download updates
+          href: ./installing-updates-features-roles/automatic-updates-cannot-download-updates-event-16.md
+        - name: Error 80072EE6 when downloading an update from WSUS
+          href: ./installing-updates-features-roles/error-80072ee6-downlaod-wsus-update.md
+    - name: Windows Update - Expected update missing or not offered
+      items:
         - name: The same update is offered repeately
           href: ./installing-updates-features-roles/repeatedly-offer-the-same-update.md
-        - name: Windows Update hangs
-          href: ./installing-updates-features-roles/windows-update-hangs-updates-uninstalled.md
-        - name: Windows Update issues troubleshooting
-          href: ./installing-updates-features-roles/windows-update-issues-troubleshooting.md
-    - name: Windows Update fails - installation stops with error
+
+    - name: Windows Update - Install errors starting with 0x8007 (ERROR)
       items:
-        - name: Analyze log file entries that SFC.exe generates
-          href: ./installing-updates-features-roles/analyze-sfc-program-log-file-entries.md
         - name: Error 0x80070003 at startup after you install a Windows update
           href: ../windows-server/installing-updates-features-roles/error-0x80070003-windows-update-fails.md?context=/troubleshoot/windows-client/context/context
-        - name: Error code 0x8024402C when you try to install a Windows update or a Feature on Demand
-          href: ./installing-updates-features-roles/error-0x8024402c-installing-update-feature-on-demand.md
-        - name: Fix errors found in CheckSUR.log
-          href: ./installing-updates-features-roles/errors-in-checksur-log.md
-        - name: SFC detects Opencl.dll as corrupted
-          href: ./installing-updates-features-roles/sfc-detects-opencl-dot-dll-corrupted.md
-        - name: System Error 126 when you start TrustedInstaller
-          href: ./installing-updates-features-roles/system-error-126-start-windows-modules-installer.md
-        - name: Error 0x8007000d at startup after you install a Windows update
+        - name: Error 0x8007000D at startup after you install a Windows update
           href: ../windows-server/installing-updates-features-roles/error-invalid-data-startup-installing-updates.md?context=/troubleshoot/windows-client/context/context
-        - name: Error 0x800719e4 (ERROR_LOG_FULL) when Windows Update fails
+        - name: Error 0x800719E4 (ERROR_LOG_FULL) when Windows Update fails
           href: ../windows-server/installing-updates-features-roles/error-0x800719e4-windows-update-fails.md?context=/troubleshoot/windows-client/context/context
-        - name: Troubleshoot Windows Update error 0x80004004
-          href: ../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-0x80004004.md?context=/troubleshoot/windows-client/context/context
         - name: Troubleshoot Windows Update error 0x80070005
           href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x80070005.md
         - name: Troubleshoot Windows Update error 0x80070008
@@ -1375,14 +1365,32 @@ items:    # Please do not delete this line, it is required for the yaml format
           href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x80071a91.md
         - name: Troubleshoot Windows Update error 0x80072EFE
           href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x80072efe-with-cipher-suite-configuration.md
-        - name: Troubleshoot Windows Update error 0x800f0823
+    - name: Windows Update - Install errors starting with 0x800F (CBS E)
+      items:
+        - name: Troubleshoot Windows Update error 0x800F0823
           href: ../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-0x800f0823.md?context=/troubleshoot/windows-client/context/context
+    - name: Windows Update - Install errors starting with 0x8024 (WU E Setup)
+      items:
+        - name: Error code 0x8024402C when you try to install a Windows update or a Feature on Demand
+          href: ./installing-updates-features-roles/error-0x8024402c-installing-update-feature-on-demand.md
         - name: Troubleshoot Windows Update error 0x8024001E
           href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x8024001e.md
         - name: Troubleshoot Windows Update error 0x80240439
           href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x80240439.md
-        - name: Windows Update common errors and mitigation
-          href: ./installing-updates-features-roles/common-windows-update-errors.md
+    - name: Windows Update - Other issues, or errors that don't list error codes
+      items:
+        - name: Analyze log file entries that SFC.exe generates
+          href: ./installing-updates-features-roles/analyze-sfc-program-log-file-entries.md
+        - name: Fix errors found in CheckSUR.log
+          href: ./installing-updates-features-roles/errors-in-checksur-log.md
+        - name: SFC detects Opencl.dll as corrupted
+          href: ./installing-updates-features-roles/sfc-detects-opencl-dot-dll-corrupted.md
+        - name: System Error 126 when you start TrustedInstaller
+          href: ./installing-updates-features-roles/system-error-126-start-windows-modules-installer.md
+        - name: Troubleshoot Windows Update error 0x80004004
+          href: ../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-0x80004004.md?context=/troubleshoot/windows-client/context/context
+        - name: Windows Update hangs
+          href: ./installing-updates-features-roles/windows-update-hangs-updates-uninstalled.md
 - name: Windows Troubleshooters
   items:
     - name: Windows Troubleshooters

@@ -5,7 +5,7 @@ ms.date: 02/12/2026
 manager: dcscontentpm
 ms.topic: troubleshooting
 ms.custom:
-- sap:windows servicing,updates and features on demand\windows update fails - installation rolls back
+- sap:Windows Servicing, Updates and Features on Demand\Windows Update - Install errors unknown or code not listed
 - pcy:WinComm Devices Deploy
 ms.collection: highpri
 ms.reviewer: dougeby, warrenw, astoica
