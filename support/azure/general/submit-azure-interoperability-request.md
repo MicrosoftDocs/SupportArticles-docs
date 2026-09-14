@@ -36,7 +36,7 @@ Other factors may be taken into consideration as needed.
 
 To submit an Azure interoperability request, follow these steps:
 
-1. Go to the [Azure interoperability request form](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR81I6umkbRREse8OtVrQOPhUN0s3OUdGNk5BSzA1Mjg3R1o1TllWQjZZVi4u) and fill out the required fields. Provide as much detail as possible about your use scenario, goal, and the Azure product or service you need access to.
+1. Go to the [Azure interoperability request form](https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbRzlfHQCaZGtKs5sGpeDnd_BUOFVOWE0zQzU2NjYxTlUwMVJXRFBBWU9ZRi4u) and fill out the required fields. Provide as much detail as possible about your use scenario, goal, and the Azure product or service you need access to.
 
 1. Submit the Azure interoperability request form.
    
