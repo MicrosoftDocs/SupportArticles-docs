@@ -15,9 +15,11 @@ ms.custom:
   - CI 12820
 appliesto: 
   - Microsoft 365
-ms.date: 06/11/2025
+ms.date: 09/15/2026
 ---
 # Microsoft Office Authentication/Identity Diagnostic (MSOAID)
+
+## Summary
 
 MSOAID is a tool that you can use to diagnose authentication issues. You can reproduce the issue while you run MSOAID to collect logs and diagnostic information for Microsoft support engineers to analyze.
 
@@ -33,7 +35,11 @@ MSOAID is a tool that you can use to diagnose authentication issues. You can rep
 
    :::image type="content" source="media/use-msoaid-tool-for-authentication-issues/data-type.png" alt-text="Screenshot of the Microsoft Office Authentication/Identity Diagnostic window that lists the diagnostic categories." border="false":::
 
-1. (Optional) You can select **Configure** to set a password to secure the **HTTP/HTTPS packet capture (Fiddler)**. Make sure that you share the password with your Microsoft support contact.
+1. (Optional) Select **Configure** for **HTTP/HTTPS packet capture (Fiddler)**, and then configure the following settings:
+
+   - To secure the packet capture, enter a password in the **Archive password** field that's at least 12 characters long. Make sure to share this password with your Microsoft support contact.
+   - If you're troubleshooting an issue in an Exchange On-premises environment that has Extended Protection enabled, enter the root domain that's used by the Exchange URLs in the **Exchange Onprem Extended Protection root domain** field. For example, if the URLs are `autodiscover.contoso.com` and `mail.contoso.com`, enter `contoso.com`. Leave this field blank if Extended Protection isn't enabled or the issue doesn't involve an Exchange On-premises environment.   
+
 1. Select **Next**, and follow the prompts until MSOAID indicates that the diagnostic collection is started.
 1. Reproduce the issue that you have to troubleshoot in Office or Windows.  
 1. Select **Finish**, and wait for MSOAID to stop collecting diagnostics.
