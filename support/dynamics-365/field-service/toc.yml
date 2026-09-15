@@ -44,18 +44,20 @@ items:
       href: mobile-app/duplicate-inspection-responses.md
     - name: Incorrect or missing data in offline mode
       href: mobile-app/incorrect-missing-data-offline-mode.md
+    - name: Resolve mobile offline profile and related-table errors
+      href: mobile-app/publish-mobile-offline-profile.md
     - name: Settings area is missing in the Field Service Mobile app module navigation
       href: mobile-app/settings-area-missing.md
-    - name: Troubleshoot common issues with the Field Service mobile app
+    - name: Troubleshoot Field Service mobile app issues
       href: mobile-app/mobile-app-common-issues.md 
-    - name: Troubleshoot issues with publishing a mobile offline profile
-      href: mobile-app/publish-mobile-offline-profile.md
     - name: Troubleshoot slow or unnecessary network calls
       href: mobile-app/unnecessary-network-calls.md
     - name: '"Validations have been restarted in the background" error'
       href: mobile-app/validation-restarted-background.md
     - name: WebView reset error
       href: mobile-app/webview-reset.md
+    - name: Work order details or booking statuses are missing in the Field Service mobile app
+      href: mobile-app/booking-missing-work-order-details.md 
 
 - name: Mobile app - New experience
   items: 

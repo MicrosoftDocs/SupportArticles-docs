@@ -75,16 +75,16 @@ landingContent:
             url: mobile-app/booking-timestamp-incorrect-time.md
           - text: Camera pictures are blurry or not focused
             url: mobile-app/camera-picture-not-focused.md
-          - text: Common issues with the Field Service mobile app
-            url: mobile-app/mobile-app-common-issues.md
           - text: Duplicated inspection responses
             url: mobile-app/duplicate-inspection-responses.md
           - text: Incorrect or missing data in offline mode
             url: mobile-app/incorrect-missing-data-offline-mode.md
+          - text: Resolve mobile offline profile and related-table errors
+            url: mobile-app/publish-mobile-offline-profile.md
           - text: Settings area is missing in the Field Service Mobile app module navigation
             url: mobile-app/settings-area-missing.md
-          - text: Troubleshoot issues with publishing a mobile offline profile
-            url: mobile-app/publish-mobile-offline-profile.md
+          - text: Troubleshoot Field Service mobile app issues
+            url: mobile-app/mobile-app-common-issues.md
           - text: Troubleshoot slow or unnecessary network calls
             url: mobile-app/unnecessary-network-calls.md
           - text: '"Validations have been restarted in the background" error'
