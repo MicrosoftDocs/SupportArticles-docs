@@ -1476,6 +1476,146 @@
       "source_path": "Office/OfficeExperts/installation/troubleshooting-office-installation-failures.md",
       "redirect_url": "/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/installation/troubleshooting-office-installation-failures",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/OfficeExperts/administration/workbook-contains-external-data-connections.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/OfficeExperts/administration/0xc004f038-computer-not-activate.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/OfficeExperts/administration/cant-open-files-most-recently-used-list.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/OfficeExperts/administration/configuration-for-office-online-server-authentication-with-external-users.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/OfficeExperts/administration/errors-when-access-documents-in-office-online-server.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/OfficeExperts/administration/how-to-determine-build-version-of-office-online-server.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/OfficeExperts/administration/manage-office-2013-first-run-screens.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/OfficeExperts/administration/office-online-limitations-and-features-with-information-rights-management.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/OfficeExperts/administration/office-viewers-or-web-apps-shows-this-page-cannot-be-displayed.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/OfficeExperts/administration/office-web-apps-and-vmware.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/OfficeExperts/administration/rebuild-an-office-web-apps-2013-farm-easily.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/OfficeExperts/administration/test-viewing-documents-by-using-office-online-server-viewer.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/OfficeExperts/administration/use-custom-fonts-with-office-online-server.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/OfficeExperts/word/force-word-document-to-open-in-edit-mode.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/OfficeExperts/powerpivot/powerpivot-data-model-does-not-refresh.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/OfficeExperts/microsoft-forms/no-email-notifications-for-responses-to-group-forms.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/OfficeExperts/microsoft-forms/forms-response-columns-out-of-order.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/OfficeExperts/diagnostic-logs/how-to-enable-office-365-proplus-uls-logging.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/OfficeExperts/excel/cannot-access-directory-error-in-excel-2016.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/OfficeExperts/excel/create-add-in-to-calculate-bmi.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/OfficeExperts/excel/excel-online-external-users-cannot-refresh-data-connections.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/OfficeExperts/excel/excel-online-refresh-fails-project-online-using-timebyday.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/OfficeExperts/excel/excel-online-refreshing-data-to-a-sql-azure-database.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/OfficeExperts/excel/request-too-long-opening-excel-workbook.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/OfficeExperts/excel/use-macro-rename-sheet.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/OfficeExperts/excel/workbook-currently-open-by-256-users-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/OfficeExperts/office-experts-welcome.yml",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/Hub/context/experts-context.yml",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement",
+      "redirect_document_id": false
     }
   ]
 }
