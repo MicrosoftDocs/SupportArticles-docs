@@ -168,6 +168,10 @@ items:
           href: ../excel/mentions-not-resolve-user-information.md
         - name: VBA writes to cells slowly when ActiveX controls are invisible
           href: ../excel/vba-writes-to-cells-slowly.md
+    - name: Forms
+      items:
+        - name: Resolve file upload errors in Microsoft Forms
+          href: ../forms/resolve-file-upload-errors-forms.md
     - name: Office Online Server
       items:
         - name: Web sites lose SSL certificate bindings
