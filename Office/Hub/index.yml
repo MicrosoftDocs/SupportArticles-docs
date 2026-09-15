@@ -40,8 +40,6 @@ productDirectory:
       links:
         - url: /troubleshoot/office/office-client-welcome
           text: Microsoft 365 Apps
-        - url: /troubleshoot/office/office-experts-welcome
-          text: From the Office Experts
     # Card
     - title: SharePoint
       imageSrc: /media/logos/logo_sharepoint.svg
@@ -52,8 +50,6 @@ productDirectory:
           text: SharePoint Online
         - url: /troubleshoot/sharepoint/sharepoint-hybrid-welcome
           text: SharePoint Hybrid
-        - url: /troubleshoot/sharepoint/sharepoint-experts-welcome
-          text: From the SharePoint Experts
     # Card
     - title: Exchange
       imageSrc: /media/logos/logo_Exchange.svg
