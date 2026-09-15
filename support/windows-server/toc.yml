@@ -2973,6 +2973,10 @@ items:    # Please do not delete this line, it is required for the yaml format
   items:
     - name: Windows Servicing, Updates and Features on Demand
       href: ./installing-updates-features-roles/windows-servicing-updates-and-features-on-demand-overview.md
+    - name: Fix Windows Update corruptions and installation failures
+      href: ./installing-updates-features-roles/fix-windows-update-errors.md
+    - name: "Troubleshooting guidance: Windows Server update"
+      href: ./installing-updates-features-roles/troubleshoot-windows-server-update-guidance.md
     - name: Issues installing Features on Demand (FoD)
       items:
         - name: Can't install .NET Framework 3.5 on OEM Windows installation
@@ -3085,16 +3089,12 @@ items:    # Please do not delete this line, it is required for the yaml format
           href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x80244007.md
     - name: Windows Update - Other issues, or errors that don't list error codes
       items:
-        - name: "Troubleshooting guidance: Windows Server update"
-          href: ./installing-updates-features-roles/troubleshoot-windows-server-update-guidance.md
         - name: CBS.log file contains entries that some files aren't repaired
           href: ./installing-updates-features-roles/cbs-log-file-record-entries-not-repaired-run-sfc.md
         - name: Description of System File Checker (Sfc.exe)
           href: ./installing-updates-features-roles/system-file-checker.md
         - name: Error C0190003 after installing updates
           href: ./installing-updates-features-roles/error-c0190003-install-updates-restart-computer.md
-        - name: Fix Windows Update corruptions and installation failures
-          href: ./installing-updates-features-roles/fix-windows-update-errors.md
         - name: Troubleshoot Windows Update error 0x80004004
           href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x80004004.md
         - name: Troubleshoot Windows Update error 0x8000FFFF
