@@ -37,15 +37,15 @@ This article helps you diagnose SQL Server installation, upgrade, service startu
 
 | Observed symptom | Go to |
 |---|---|
-| Setup rejects the gMSA or cannot validate it | Troubleshoot setup and upgrade failures with gMSAs |
-| Setup fails with 0x84BB0001 or Access is denied | Setup fails with error 0x84BB0001 |
-| Upgrade fails with error 29569 | Upgrade fails with error 29569 |
-| Error 1069, Event ID 7041, or Event ID 7038 | Troubleshoot service startup failures with gMSAs |
-| Service fails only during boot | Service fails during startup but starts manually later |
-| IsManagedAccount or qmanagedaccount is FALSE | Managed-account state is incorrect |
-| SQL Server Agent starts but jobs fail | Troubleshoot SQL Server Agent job failures with gMSAs |
-| FCI setup, add-node, startup, or failover fails | Troubleshoot failover cluster instance failures with gMSAs |
-| NTLM fallback, SPN error, ANONYMOUS LOGON, or AG endpoint authentication failure | Troubleshoot Kerberos and authentication failures with gMSAs |
+| Setup rejects the gMSA or cannot validate it | [Troubleshoot setup and upgrade failures with gMSAs](#troubleshoot-setup-and-upgrade-failures-with-gmsas) |
+| Setup fails with 0x84BB0001 or Access is denied | [Setup fails with error 0x84BB0001](#setup-fails-with-error-0x84bb0001) |
+| Upgrade fails with error 29569 | [Upgrade fails with error 29569](#upgrade-fails-with-error-29569) |
+| Error 1069, Event ID 7041, or Event ID 7038 | [Troubleshoot service startup failures with gMSAs](#troubleshoot-service-startup-failures-with-gmsas) |
+| Service fails only during boot | [Service fails during startup but starts manually later](#service-fails-during-startup-but-starts-manually-later) |
+| IsManagedAccount or qmanagedaccount is FALSE | [Managed-account state is incorrect](#managed-account-state-is-incorrect) |
+| SQL Server Agent starts but jobs fail | [Troubleshoot SQL Server Agent job failures with gMSAs](#troubleshoot-sql-server-agent-job-failures-with-gmsas) |
+| FCI setup, add-node, startup, or failover fails | [Troubleshoot failover cluster instance failures with gMSAs](#troubleshoot-failover-cluster-instance-failures-with-gmsas) |
+| NTLM fallback, SPN error, ANONYMOUS LOGON, or AG endpoint authentication failure | [Troubleshoot Kerberos and authentication failures with gMSAs](#troubleshoot-kerberos-and-authentication-failures-with-gmsas) |
 
 ## Quick validation checklist
 
@@ -258,7 +258,7 @@ _**Expected result:**_
 - Use SQL Server Configuration Manager for supported service-account changes.
 - Restart the service and verify that Event ID 7038 does not recur.
 
-Service fails during startup but starts manually later
+## Service fails during startup but starts manually later
 
 ## Symptoms
 - The service fails automatically after reboot.
@@ -288,7 +288,7 @@ _**Expected result:**_
 - For a standalone instance, evaluate Automatic (Delayed Start) only if appropriate for the environment.
 - For an FCI, retain cluster-managed startup and troubleshoot WSFC dependencies.
 
-Managed-account state is incorrect
+## Managed-account state is incorrect
 
 ## Symptoms
 - sc.exe qmanagedaccount reports FALSE.
