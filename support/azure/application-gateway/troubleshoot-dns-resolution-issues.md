@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot DNS resolution issues for Azure Application Gateway
 description: Use this guide to troubleshoot DNS resolution issues for Azure Application Gateway, restore back-end and certificate functionality, and resolve failures fast.
-ms.date: 09/02/2026
+ms.date: 09/15/2026
 manager: dcscontentpm
 ms.topic: troubleshooting
 author: kaushika-msft
@@ -23,6 +23,8 @@ Learn how to troubleshoot DNS resolution issues for Azure Application Gateway th
 - Certificate retrieval failures
 - Back-end health showing an **Unknown** status
 - Intermittent data plane and control plane issues
+
+If a back-end pool FQDN points to a private endpoint, link the [recommended private DNS zone](/azure/private-link/private-endpoint-dns) to the Application Gateway virtual network. If the virtual network uses custom DNS servers, configure name resolution for the private endpoint through Azure DNS or [Azure DNS Private Resolver](/azure/dns/dns-private-resolver-overview). Verify that the FQDN resolves to the private endpoint IP address from a VM that uses the same DNS servers and network path as Application Gateway. For probe-failure symptoms and diagnostics, see [Troubleshoot back-end health issues in Azure Application Gateway](application-gateway-backend-health-troubleshooting.md#error-messages).
 
 ## Prerequisites
 
