@@ -3696,6 +3696,11 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "support/azure/azure-kubernetes/create-upgrade-delete/error-code-invalidresourcereference.md",
+      "redirect_url": "/troubleshoot/azure/azure-kubernetes/error-codes/invalidresourcereference-error",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/azure/general/data-restore-storage.md",
       "redirect_url": "/azure/storage/blobs/data-protection-overview",
       "redirect_document_id": false
