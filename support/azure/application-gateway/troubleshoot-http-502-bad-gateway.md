@@ -3,7 +3,7 @@ title: Troubleshoot HTTP 502 errors in Azure Application Gateway
 description: Use this step-by-step guide to troubleshoot HTTP 502 Bad Gateway errors in Azure Application Gateway, and restore back-end health quickly. Start now.
 ms.service: azure-application-gateway
 ms.topic: troubleshooting
-ms.date: 6/10/2026
+ms.date: 9/15/2026
 ms.custom: sap:Facing 5xx errors
 ai.hint.symptom-tags:
   - 502-error
@@ -462,7 +462,7 @@ az network application-gateway show \
   --name "$RESOURCE_NAME" \
   --resource-group "$RG" \
   --subscription "$SUBSCRIPTION" \
-  --query "{routingRules:requestRoutingRules[].{rule:name, dataPathHttpSettings:backendHttpSettings.id, pool:backendAddressPool.id}, httpSettings:backendHttpSettingsCollection[].{name:name, dataPathHostName:hostName, pickHostNameFromBackendAddress:pickHostNameFromBackendAddress, probe:probe.id}, probes:probes[].{name:name, probeHost:host, pickHostNameFromBackendHttpSettings:pickHostNameFromBackendHttpSettings}}" \
+  --query "{routingRules:requestRoutingRules[].{rule:name, dataPathHttpSettings:backendHttpSettings.id, pool:backendAddressPool.id}, httpSettings:backendHttpSettingsCollection[].{name:name, dataPathHostName:hostName, pickHostNameFromBackendAddress:pickHostNameFromBackendAddress, validateSNI:validateSNI, sniName:sniName, probe:probe.id}, probes:probes[].{name:name, probeHost:host, pickHostNameFromBackendHttpSettings:pickHostNameFromBackendHttpSettings}}" \
   --output json
 ```
 
@@ -470,6 +470,7 @@ To correlate the probe health with the host header configuration, compare this o
 
 - **Probe health (from [Step 1b](#step-1b))** — Is this App Service back end `Healthy`? If so, the probe is sending a host that App Service accepts (its certificate is `*.azurewebsites.net`).
 - **Data-path host** — Find the `backendHttpSettings` that your `routingRules` entry points to. Then, note the `pickHostNameFromBackendAddress` and `dataPathHostName` (`hostName`) values of that HTTP setting. This value is the `Host` that's sent on real client requests.
+- **Backend SNI** — When `validateSNI` is `true`, `sniName` is the explicit SNI value that Application Gateway validates against the backend certificate. If `sniName` is empty, Application Gateway uses the incoming request's host header as SNI. Keep this value distinct from the probe host when you compare the two paths.
 - **Probe host** — The `probes` entry that's attached to that HTTP setting (`probeHost` / `pickHostNameFromBackendHttpSettings`). This value is the host that made the probe healthy.
 
 If the probe is healthy but the data-path HTTP setting has `pickHostNameFromBackendAddress: false` and an empty `dataPathHostName`, the probe and the data path are sending different hosts. The probe's value is accepted but the data path's isn't. That gap is the App Service host-header mismatch. It's what distinguishes [Resolution I](#resolution-i) from [Resolution F](#resolution-f).
@@ -1004,6 +1005,8 @@ az network application-gateway frontend-port update \
    | --- | --- | --- |
    | CN or SAN matches the probe hostname. | The hostname matches. | Go to the next step, and check the intermediate chain. |
    | CN and SAN don't include the probe hostname | A CN or SAN mismatch causes probe failure. | Align the probe hostname with the certificate (update HTTP settings `hostName` or probe `host`), or reissue the back-end certificate to include the correct SAN. |
+
+  Also compare the backend HTTP setting's `sniName` with the certificate. Prefer setting the probe host and backend SNI to a name in the certificate's SAN, or replace the certificate so it contains the required name. Keep `validateSNI` enabled in production. Disabling subject-name validation is appropriate only for temporary testing and development, not as the production resolution.
 
 1. Check for missing intermediate CA certificates in the back end's TLS chain.
 
