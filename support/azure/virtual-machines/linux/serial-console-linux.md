@@ -11,7 +11,7 @@ ms.service: azure-virtual-machines
 ms.collection: linux
 ms.tgt_pltfrm: vm-linux
 ms.workload: infrastructure-services
-ms.date: 7/17/2026
+ms.date: 9/11/2026
 ms.author: mbifeld
 ---
 
@@ -205,7 +205,7 @@ A. Provide feedback by creating a GitHub issue at  <https://aka.ms/serialconsole
 
 **Q. Does the serial console support copy/paste?**
 
-A. Yes. Use **Ctrl**+**Shift**+**C** and **Ctrl**+**Shift**+**V** to copy and paste into the terminal.
+A. Yes. Use **Ctrl**+**C** and **Ctrl**+**V** to copy and paste into the terminal.
 
 **Q. Can I use serial console instead of an SSH connection?**
 
