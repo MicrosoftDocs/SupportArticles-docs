@@ -33,3 +33,5 @@ items:
   href: sql-cannot-start-with-domain-account.md
 - name: SQL Server agent may not start or crash 
   href: sql-server-agent-crashes-upon-start.md
+- name: Troubleshoot SQL Server setup, startup, and authentication issues with gMSAs
+  href: troubleshoot-sql-server-setup-startup-authentication-issues-with-gmsas.md
