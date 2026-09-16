@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, scottmca, v-jesits
 ms.custom:
-- sap:windows setup,upgrade and deployment\installing or upgrading windows
+- sap:Windows Setup, Upgrade and Deployment\Sysprep and imaging (Windows PE, ADK, WDS)
 - pcy:WinComm Devices Deploy
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
