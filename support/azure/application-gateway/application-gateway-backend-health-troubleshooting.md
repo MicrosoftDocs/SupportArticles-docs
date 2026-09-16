@@ -2,7 +2,7 @@
 title: Troubleshoot backend health issues in Azure Application Gateway
 description: Learn how to troubleshoot Azure Application Gateway backend health issues, diagnose unhealthy or unknown status, and resolve common probe errors.
 services: application-gateway
-ms.date: 09/10/2026
+ms.date: 09/15/2026
 manager: dcscontentpm
 ms.topic: troubleshooting
 author: kaushika-msft
@@ -250,6 +250,7 @@ Depending on the backend server's response code, use the appropriate guidance in
 
 | **Error** | **Actions** |
 | --- | --- |
+| Probe status code mismatch: Received 400 | The default healthy range is 200 through 399, so a 400 response marks the backend as **Unhealthy**. Check why the probe path returns 400. If 400 is the intended healthy response for that path, use a custom probe and configure its accepted status-code range. |
 | Probe status code mismatch: Received 401 | Check whether the backend server requires authentication. Application Gateway probes can't pass credentials for authentication. Either allow "HTTP 401" in a probe status code match or probe to a path where the server doesn't require authentication. |
 | Probe status code mismatch: Received 403 | Access forbidden. Check whether access to the path is allowed on the backend server. |
 | Probe status code mismatch: Received 404 | Page not found. Check whether the host name path is accessible on the backend server. Change the host name or path parameter to an accessible value. |
@@ -260,6 +261,20 @@ Depending on the backend server's response code, use the appropriate guidance in
 If you think the response is legitimate and you want Application Gateway to accept other status codes as **Healthy**, create a custom probe. This approach is useful in situations where the backend website needs authentication. Because the probe requests don't carry any user credentials, they fail, and the backend server returns an `HTTP 401` status code.
 
 To create a custom probe, see [Create a custom probe for Application Gateway by using the portal](/azure/application-gateway/application-gateway-create-probe-portal).
+
+### Customize accepted status-code ranges
+
+Before you accept a status code outside the default 200 through 399 range, verify that the response means the probe path is healthy. Don't widen the range to hide an application or probe configuration error.
+
+To accept HTTP 400 for a probe path that intentionally returns that response:
+
+1. In the Azure portal, open the custom health probe that's associated with the affected backend settings.
+1. For **Use probe matching conditions**, select **Yes**.
+1. Change the accepted status-code range from `200-399` to `200-400`.
+1. Select **Test** and verify that the expected backend targets are healthy. If other targets become healthy unexpectedly, restore the previous range and investigate their responses.
+1. Return to the probe, and then save the probe configuration.
+
+For supported matching formats, including individual comma-separated status codes and ranges, see [Probe matching](/azure/application-gateway/application-gateway-probe-overview#probe-matching).
 
 ### HTTP response body mismatch
 
