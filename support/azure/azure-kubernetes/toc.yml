@@ -21,8 +21,8 @@ items:
     items:
     - name: Common issues with running or scaling large AKS clusters
       href: create-upgrade-delete/aks-at-scale-troubleshoot-guide.md
-    - name: Cluster upgrading and scaling errors
-      href: create-upgrade-delete/upgrading-or-scaling-does-not-succeed.md
+    - name: Upgrade, scaling, and failed-state errors
+      href: availability-performance/cluster-node-virtual-machine-failed-state.md
     - name: Node count isn't in autoscaler min and max range
       href: create-upgrade-delete/node-count-is-not-in-autoscaler-min-max-range.md
     - name: Troubleshoot pods remain in a Pending state scenario
@@ -57,7 +57,7 @@ items:
     href: create-upgrade-delete/troubleshoot-apiserver-etcd.md
 - name: Node/node pool availability and performance
   items:
-  - name: AKS cluster/node is in failed state
+  - name: Upgrade, scaling, and failed-state errors
     href: availability-performance/cluster-node-virtual-machine-failed-state.md
   - name: Identify containers facing high CPU pressure and throttling
     href: availability-performance/troubleshoot-node-cpu-pressure-psi.md

@@ -265,6 +265,8 @@ items:    # Please do not delete this line, it is required for the yaml format
           href: ./active-directory/sysvol-msdfsr-member-container-not-updated.md
         - name: Domain controllers don't demote
           href: ./active-directory/domain-controllers-not-demote.md
+        - name: Error when you configure a server with Server Manager
+          href: ./setup-upgrade-and-drivers/fail-to-configure-server-using-server-manager.md
         - name: Errors when you run DCDIAG commands
           href: ./active-directory/dcdiag-commands-running-errors.md
         - name: Fail to demote domain controller with Dcpromo.exe
@@ -2267,48 +2269,12 @@ items:    # Please do not delete this line, it is required for the yaml format
       items:
         - name: Virus alert about Blaster worm and its variants
           href: ./security-and-malware/blaster-worm-virus-alert.md
-- name: Setup, upgrades, and drivers
+- name: Setup, upgrades, and deployment
   items:
-    - name: Setup, upgrades, and drivers
+    - name: Setup, upgrades, and deployment
       href: ./setup-upgrade-and-drivers/setup-upgrade-and-drivers-overview.md
-    - name: Driver installation or driver update
-      items:
-        - name: Can't find the Microsoft Loopback Adapter
-          href: ./setup-upgrade-and-drivers/microsoft-loopback-adapter-rename.md
-        - name: Can't install a VMWare driver on Windows Server 2008 R2
-          href: ./setup-upgrade-and-drivers/error-install-vmware-driver.md
-        - name: Changes of the default behavior for Core Parking
-          href: ./setup-upgrade-and-drivers/default-core-parking-behavior-changes.md
-        - name: Enable Plug and Play feature for parallel port devices
-          href: ./setup-upgrade-and-drivers/enable-plug-play-for-parallel-port-devices.md
-        - name: Event ID 37 after you change power policy
-          href: ./setup-upgrade-and-drivers/event-id-37-windows-kernel-processor-power.md
-        - name: Event ID 56 is logged
-          href: ./setup-upgrade-and-drivers/event-id-56-logged.md
-        - name: Fail to insert a smart card in a reader
-          href: ./setup-upgrade-and-drivers/cannot-insert-smart-card-in-reader.md
-        - name: How to determine the type of processor
-          href: ./setup-upgrade-and-drivers/determine-the-type-of-processor.md
-        - name: How to replace a driver by using Recovery Console
-          href: ./setup-upgrade-and-drivers/use-recovery-console-replace-driver.md
-        - name: How to use Device Manager to configure devices
-          href: ./setup-upgrade-and-drivers/use-device-manager-configure-devices.md
-        - name: "%NUMBER_OF_PROCESSORS% environment variable shows incorrect values"
-          href: ./setup-upgrade-and-drivers/number-of-processors-environment-variable-show-incorrect-values.md
-        - name: "\"Stop 0x0000007B\" error"
-          href: ./setup-upgrade-and-drivers/stop-0x0000007b-error-group-policy-setting.md
-        - name: "\"This device cannot start\" error when deploying a hot plug NVMe SSD"
-          href: ./setup-upgrade-and-drivers/device-cannot-start-error-hot-plug-nvme-ssd.md
-        - name: VMware driver installation fails in Windows Server 2008 R2 SP1
-          href: ./setup-upgrade-and-drivers/virtual-machines-vmware-not-install-update.md
-        - name: Windows Deployment Services (WDS) support for UEFI
-          href: ./setup-upgrade-and-drivers/deploy-uefi-based-systems-wds.md
     - name: Installing or upgrading Windows
       items:
-        - name: Add OEM PnP drivers to Windows installations
-          href: ./setup-upgrade-and-drivers/add-oem-plug-play-drivers.md
-        - name: Avoid duplicate GUIDs when you image SMS clients
-          href: ./setup-upgrade-and-drivers/avoid-duplicate-guids-deploy-sms.md
         - name: Can't install Windows Server 2019 on servers with a high processor count
           href: ./setup-upgrade-and-drivers/cannot-install-windows-server-2019-high-processor-count.md
         - name: Can't open EXE files
@@ -2317,16 +2283,8 @@ items:    # Please do not delete this line, it is required for the yaml format
           href: ./setup-upgrade-and-drivers/chinese-ime-dictionaries-not-ready.md
         - name: Chinese (Simplified) input method doesn't work
           href: ./setup-upgrade-and-drivers/chinese-simplified-input-method-not-working.md
-        - name: Clone or duplicate a Windows installation
-          href: ./setup-upgrade-and-drivers/windows-installations-disk-duplication.md
-        - name: Create an ISO image for UEFI platforms
-          href: ./setup-upgrade-and-drivers/create-iso-image-for-uefi-platforms.md
-        - name: Enable logging and tracing for WDS components
-          href: ./setup-upgrade-and-drivers/enable-logging-windows-deployment-service.md
         - name: Error 0x80070003 during "Process Drivers for Migration" operation
           href: ./setup-upgrade-and-drivers/error-0x80070003-during-process-drivers-for-migration.md
-        - name: Error when you configure a server with Server Manager
-          href: ./setup-upgrade-and-drivers/fail-to-configure-server-using-server-manager.md
         - name: Event ID 307 and 304 logged for deploying Windows
           href: ./setup-upgrade-and-drivers/event-307-and-304-logged-for-deploying.md
         - name: Fail to run applications on Windows Server Core
@@ -2339,32 +2297,42 @@ items:    # Please do not delete this line, it is required for the yaml format
           href: ./setup-upgrade-and-drivers/filenames-with-spaces-require-quotation-mark.md
         - name: Manually edit Boot.ini file
           href: ./setup-upgrade-and-drivers/manually-edit-boot-file.md
-        - name: Microsoft Deployment Toolkit support life cycle
-          href: ./setup-upgrade-and-drivers/deployment-toolkit-support.md
         - name: PCR7 configuration "Binding not possible" error
           href: ./setup-upgrade-and-drivers/pcr7-configuration-binding-not-possible.md
         - name: Post-Deployment Configuration task fails
           href: ./setup-upgrade-and-drivers/post-deployment-configuration-task-fail.md
         - name: Setup fails on a VM with error 0xE0000100
           href: ./setup-upgrade-and-drivers/setup-fail-on-vm-error-0xe0000100.md
-        - name: SYSPREP and CAPTURE task sequence fails
-          href: ./setup-upgrade-and-drivers/sysprep-capture-task-sequence-fails-0x80070070.md
         - name: Unattended Setup does not Use Computer Name Specified by User during OOBE
           href: ./setup-upgrade-and-drivers/unattended-setup-not-use-computer-name-specified-oobe.md
         - name: Upgrade fails and generates error code 0xC1900101-0x20017
           href: ../windows-client/setup-upgrade-and-drivers/upgrade-fails-with-error-0xc1900101-0x20017.md?context=/troubleshoot/windows-server/context/context
         - name: Using language IDs to identify language packs
           href: ./setup-upgrade-and-drivers/use-language-id-identify-language-pack.md
-        - name: The WDS server may not start
-          href: ./setup-upgrade-and-drivers/wds-server-may-not-start.md
-        - name: Windows Deployment Service fails to start
-          href: ./setup-upgrade-and-drivers/windows-deployment-service-not-start.md
-        - name: Windows Internal Database (WID) installation fails
-          href: ./setup-upgrade-and-drivers/error-install-windows-internal-database.md
         - name: Windows Server support and installation instructions for the AMD Rome family of processors
           href: ./setup-upgrade-and-drivers/windows-server-support-installation-for-amd-role-family-processor.md
         - name: Windows servicing operations fail after you move user profile and ProgramData folders
           href: ./setup-upgrade-and-drivers/servicing-fails-moved-user-profile-programdata-folders.md
+    - name: Sysprep and imaging (Windows PE, ADK, WDS)
+      items:
+        - name: Avoid duplicate GUIDs when you image SMS clients
+          href: ./setup-upgrade-and-drivers/avoid-duplicate-guids-deploy-sms.md
+        - name: Clone or duplicate a Windows installation
+          href: ./setup-upgrade-and-drivers/windows-installations-disk-duplication.md
+        - name: Create an ISO image for UEFI platforms
+          href: ./setup-upgrade-and-drivers/create-iso-image-for-uefi-platforms.md
+        - name: Enable logging and tracing for WDS components
+          href: ./setup-upgrade-and-drivers/enable-logging-windows-deployment-service.md
+        - name: Microsoft Deployment Toolkit support life cycle
+          href: ./setup-upgrade-and-drivers/deployment-toolkit-support.md
+        - name: SYSPREP and CAPTURE task sequence fails
+          href: ./setup-upgrade-and-drivers/sysprep-capture-task-sequence-fails-0x80070070.md
+        - name: Windows Deployment Services (WDS) support for UEFI
+          href: ./setup-upgrade-and-drivers/deploy-uefi-based-systems-wds.md
+        - name: The WDS server may not start
+          href: ./setup-upgrade-and-drivers/wds-server-may-not-start.md
+        - name: Windows Deployment Service fails to start
+          href: ./setup-upgrade-and-drivers/windows-deployment-service-not-start.md
 - name: Shell Experience
   items:
     - name: Shell Experience
@@ -2783,6 +2751,46 @@ items:    # Please do not delete this line, it is required for the yaml format
           href: ./virtualization/network-connectivity-lost-on-hyper-v-vms.md
         - name: VmSwitch Error 113 event
           href: ./virtualization/vmswitch-error-113-start-live-migrate-vm.md
+- name: Windows Device and Driver Management
+  items:
+    - name: Windows Device and Driver Management
+      href: ./setup-upgrade-and-drivers/windows-device-and-driver-management-overview.md
+    - name: Issues with drivers or updates for peripheral devices
+      items:
+        - name: Add OEM PnP drivers to Windows installations
+          href: ./setup-upgrade-and-drivers/add-oem-plug-play-drivers.md
+        - name: Can't find the Microsoft Loopback Adapter
+          href: ./setup-upgrade-and-drivers/microsoft-loopback-adapter-rename.md
+        - name: Can't install a VMWare driver on Windows Server 2008 R2
+          href: ./setup-upgrade-and-drivers/error-install-vmware-driver.md
+        - name: Enable Plug and Play feature for parallel port devices
+          href: ./setup-upgrade-and-drivers/enable-plug-play-for-parallel-port-devices.md
+        - name: Event ID 56 is logged
+          href: ./setup-upgrade-and-drivers/event-id-56-logged.md
+        - name: Fail to insert a smart card in a reader
+          href: ./setup-upgrade-and-drivers/cannot-insert-smart-card-in-reader.md
+        - name: How to replace a driver by using Recovery Console
+          href: ./setup-upgrade-and-drivers/use-recovery-console-replace-driver.md
+        - name: How to use Device Manager to configure devices
+          href: ./setup-upgrade-and-drivers/use-device-manager-configure-devices.md
+        - name: "\"Stop 0x0000007B\" error"
+          href: ./setup-upgrade-and-drivers/stop-0x0000007b-error-group-policy-setting.md
+        - name: "\"This device cannot start\" error when deploying a hot plug NVMe SSD"
+          href: ./setup-upgrade-and-drivers/device-cannot-start-error-hot-plug-nvme-ssd.md
+        - name: VMware driver installation fails in Windows Server 2008 R2 SP1
+          href: ./setup-upgrade-and-drivers/virtual-machines-vmware-not-install-update.md
+    - name: Issues with drivers or updates for system components
+      items:
+        - name: Changes of the default behavior for Core Parking
+          href: ./setup-upgrade-and-drivers/default-core-parking-behavior-changes.md
+        - name: How to determine the type of processor
+          href: ./setup-upgrade-and-drivers/determine-the-type-of-processor.md
+        - name: "%NUMBER_OF_PROCESSORS% environment variable shows incorrect values"
+          href: ./setup-upgrade-and-drivers/number-of-processors-environment-variable-show-incorrect-values.md
+    - name: Power management
+      items:
+        - name: Event ID 37 after you change power policy
+          href: ./setup-upgrade-and-drivers/event-id-37-windows-kernel-processor-power.md
 - name: Windows Security
   items:
     - name: Windows Security
@@ -2985,12 +2993,16 @@ items:    # Please do not delete this line, it is required for the yaml format
           href: ./installing-updates-features-roles/error-0x800f0922-mpio-feature-installation-fails.md
         - name: Error 0x800f0922 when you uninstall roles/features
           href: ./installing-updates-features-roles/error-0x800f0922-uninstall-role-feature.md
+        - name: Using language IDs to identify language packs
+          href: ./setup-upgrade-and-drivers/use-language-id-identify-language-pack.md
         - name: You can't install features in Windows Server 2012 R2
           href: ./installing-updates-features-roles/you-cant-install-features.md
     - name: Issues installing Server Roles
       items:
         - name: "Troubleshooting guidance: Installing Windows features or roles"
           href: ./installing-updates-features-roles/troubleshoot-install-features-roles-guidance.md
+        - name: Windows Internal Database (WID) installation fails
+          href: ./setup-upgrade-and-drivers/error-install-windows-internal-database.md
         - name: Fail to install Network Policy Server role
           href: ./installing-updates-features-roles/error-0x80004005-network-policy-server-role.md
     - name: Windows Update - Configuring and managing client settings

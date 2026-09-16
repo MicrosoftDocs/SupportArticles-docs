@@ -10,7 +10,7 @@ ms.service: azure-virtual-machines
 ms.collection: windows
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure-services
-ms.date: 7/17/2026
+ms.date: 9/11/2026
 ms.author: kaushika
 ms.reviewer: mbifeld
 ms.custom: sap:Cannot connect to my VM
@@ -273,7 +273,7 @@ A. Provide feedback by creating a GitHub issue at <https://aka.ms/serialconsolef
 
 **Q. Does the serial console support copy/paste?**
 
-A. Yes. Use **Ctrl**+**Shift**+**C** and **Ctrl**+**Shift**+**V** to copy and paste into the terminal.
+A. Yes. Use **Ctrl**+**C** and **Ctrl**+**V** to copy and paste into the terminal.
 
 **Q. Who can enable or disable the serial console for my subscription?**
 
