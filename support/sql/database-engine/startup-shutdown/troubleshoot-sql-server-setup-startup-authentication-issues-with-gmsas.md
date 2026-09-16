@@ -50,12 +50,12 @@ This article helps you diagnose SQL Server installation, upgrade, service startu
 ## Quick validation checklist
 
 - Confirm the configured SQL Server and SQL Server Agent service identities by reviewing the Log On As value in SQL Server Configuration Manager and the SERVICE_START_NAME output from sc.exe qc.
-- Confirm that Active Directory can find the gMSA by running Get-ADServiceAccount and verifying that it returns the intended account. 
-- Test password retrieval from every affected host or possible owner node by running Test-ADServiceAccount locally and confirming that it returns True. 
-- Confirm that Service Control Manager treats the service account as managed by running sc.exe qmanagedaccount for the exact SQL Server or SQL Server Agent service name and verifying that it reports TRUE. 
-- Check Event ID 7041, Event ID 7038, and record the complete Error 1069 message and failure time. 
-- Confirm DNS, domain-controller discovery, secure-channel health, and time synchronization by reviewing the results of nltest /dsgetdc, nltest /sc_verify, and w32tm /query /status. 
-- If SQL Server starts, confirm the current service identity and authentication scheme  by querying sys.dm_exec_connections from a remote Windows-authenticated session. 
+- Confirm that Active Directory can find the gMSA by running Get-ADServiceAccount and verifying that it returns the intended account.
+- Test password retrieval from every affected host or possible owner node by running Test-ADServiceAccount locally and confirming that it returns True.
+- Confirm that Service Control Manager treats the service account as managed by running sc.exe qmanagedaccount for the exact SQL Server or SQL Server Agent service name and verifying that it reports TRUE.
+- Check Event ID 7041, Event ID 7038, and record the complete Error 1069 message and failure time.
+- Confirm DNS, domain-controller discovery, secure-channel health, and time synchronization by reviewing the results of nltest /dsgetdc, nltest /sc_verify, and w32tm /query /status.
+- If SQL Server starts, confirm the current service identity and authentication scheme  by querying sys.dm_exec_connections from a remote Windows-authenticated session.
 - For an FCI or availability group, run the same identity, managed-account, domain-connectivity, and authentication checks on every possible owner node or replica, and compare the results for differences.
 
 **Validate the gMSA from an elevated PowerShell session:**
@@ -201,13 +201,13 @@ Event ID 7041 indicates that the service identity does not have a required logon
 
 **Export effective security policy**
 ```PowerShell
-secedit /export /cfg C:\Temp\effective-security-policy.inf 
+secedit /export /cfg C:\Temp\effective-security-policy.inf
 Select-String -Path "C:\Temp\effective-security-policy.inf" `
-    -Pattern "SeServiceLogonRight|SeDenyServiceLogonRight" 
+  -Pattern "SeServiceLogonRight|SeDenyServiceLogonRight"
 
 **Identify applied policies**
 ```PowerShell
-gpresult /h C:\Temp\gpresult.html /f 
+gpresult /h C:\Temp\gpresult.html /f
 ```
 _**Expected result:**_
 - The gMSA or an applicable group is present in SeServiceLogonRight and absent from SeDenyServiceLogonRight.
