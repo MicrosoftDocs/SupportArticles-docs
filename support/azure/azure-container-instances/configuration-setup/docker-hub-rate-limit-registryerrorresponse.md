@@ -1,7 +1,7 @@
 ---
 title: Anonymous image pulls from Docker Hub to Azure Container Instances fail due to rate limits
 description: Provides a solution to errors when you try to create or update an Azure container instance and pull images anonymously from Docker Hub.
-ms.date: 09/24/2024
+ms.date: 08/20/2026
 ms.reviewer: kegonzal
 ms.service: azure-container-instances
 ms.custom: sap:Configuration and Setup
@@ -43,7 +43,7 @@ Create a Docker account and use the Docker account credentials to authenticate t
 
 ## Resources
 
-- [Docker Hub usage and rate limits](https://docs.docker.com/docker-hub/download-rate-limit/)
+- [Docker Hub usage and rate limits](https://docs.docker.com/docker-hub/usage/)
 - [Configure Artifact Cache to consume public content](/azure/container-registry/buffer-gate-public-content#configure-artifact-cache-to-consume-public-content)
 - [Artifact cache in Azure Container Registry](/azure/container-registry/container-registry-artifact-cache)
 
