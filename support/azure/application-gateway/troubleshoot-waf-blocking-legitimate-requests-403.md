@@ -1,42 +1,25 @@
 ---
-title: Troubleshoot WAF blocking legitimate requests (HTTP "403" Forbidden errors) in Azure Application Gateway
-description: Diagnose and fix Azure Application Gateway WAF false positives that cause HTTP "403" Forbidden errors. Follow the steps to restore traffic now.
+title: Troubleshoot WAF blocking legitimate requests (HTTP 403 Forbidden errors) in Azure Application Gateway
+description: Diagnose and fix Azure Application Gateway WAF false positives that cause HTTP 403 Forbidden errors. Follow the steps to restore traffic now.
 ms.service: azure-application-gateway
+manager: dcscontentpm
 ms.topic: troubleshooting
+author: kaushika-msft
+ms.author: kaushika
+ms.reviewer: duau, allensu
 ms.custom:
   - sap:Facing 4xx errors
-ms.date: 6/12/2026
-ai.hint.symptom-tags:
-  - 403-forbidden
-  - waf-block
-  - false-positive
-  - waf-rule
-  - waf-exclusion
-  - sqli-false-positive
-  - xss-false-positive
-  - anomaly-score
-  - managed-rule-override
-ai.hint.scope: resource-level
-ai.hint.required-permissions:
-  - Microsoft.Network/applicationGateways/read
-  - Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/read
-  - Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/write
-  - Microsoft.OperationalInsights/workspaces/query/read
-ai.hint.context-required:
-  - SUBSCRIPTION_ID
-  - RESOURCE_GROUP
-  - RESOURCE_NAME
-  - LA_WORKSPACE_GUID
-  - LA_WORKSPACE_RESOURCE_ID
+ms.date: 09/16/2026
+ai-usage: ai-assisted
 ---
 
-# Troubleshoot WAF blocking legitimate requests (HTTP "403" Forbidden errors) in Azure Application Gateway
+# Troubleshoot WAF blocking legitimate requests (HTTP 403 Forbidden errors) in Azure Application Gateway
 
 ## Summary
 
-This article provides a step-by-step diagnostic process to identify why Azure Application Gateway's Web Application Firewall (WAF) in Prevention mode is blocking legitimate requests and generating HTTP `"403" Forbidden` errors.
+This article provides a step-by-step diagnostic process to identify why Azure Application Gateway's Web Application Firewall (WAF) in Prevention mode is blocking legitimate requests and generating HTTP `403 Forbidden` errors.
 
-Azure Application Gateway WAF in Prevention mode can block legitimate requests by using HTTP `"403" Forbidden` errors when managed rules incorrectly match benign content such as form inputs, JSON payloads, or cookie values.
+Azure Application Gateway WAF in Prevention mode can block legitimate requests by using HTTP `403 Forbidden` errors when managed rules incorrectly match benign content such as form inputs, JSON payloads, or cookie values.
 
 The most common root causes are:
 
@@ -48,12 +31,12 @@ The most common root causes are:
 
 You encounter one or more of the following symptoms:
 
-- Application Gateway returns HTTP `"403" Forbidden` responses for requests that should be allowed.
+- Application Gateway returns HTTP `403 Forbidden` responses for requests that should be allowed.
 - The response body contains `Microsoft-Azure-Application-Gateway/v2` and a WAF block reference or transaction ID.
-- Specific API endpoints return HTTP `"403" Forbidden` responses while others work normally through the same Application Gateway.
-- Sign-in form submissions fail and return HTTP `"403" Forbidden` responses after you enter certain characters (for example, `'`, `--`, `<script>`, or `SELECT`).
-- JSON API POST and PUT requests fail and return HTTP `"403" Forbidden` responses if the payload contains HTML fragments, angle brackets, or SQL-like keywords.
-- HTTP `"403" Forbidden` errors occur intermittently and only when specific users, cookies, or request patterns are involved.
+- Specific API endpoints return HTTP `403 Forbidden` responses while others work normally through the same Application Gateway.
+- Sign-in form submissions fail and return HTTP `403 Forbidden` responses after you enter certain characters (for example, `'`, `--`, `<script>`, or `SELECT`).
+- JSON API POST and PUT requests fail and return HTTP `403 Forbidden` responses if the payload contains HTML fragments, angle brackets, or SQL-like keywords.
+- HTTP `403 Forbidden` errors occur intermittently and only when specific users, cookies, or request patterns are involved.
 - WAF diagnostic logs show `action_s == "Blocked"` entries that correlate with the failing requests.
 - Application Gateway worked before enabling WAF in Prevention mode or after you upgrade the managed rule set version.
 - The following error message is recorded in WAF logs for core rule set rules: `Mandatory rule. Cannot be disabled.`
@@ -62,8 +45,8 @@ You encounter one or more of the following symptoms:
 
 To troubleshoot WAF blocking legitimate requests, you need the following items:
 
-- **Permissions required**: `Network Contributor` role on the Application Gateway resource group, or equivalent read/write access to WAF policies (`Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/*`)
-- **Tools**: Azure CLI 2.x, Azure PowerShell 9.x, or an AI agent with Azure MCP access
+- **Permissions required** - `Network Contributor` role on the Application Gateway resource group, or equivalent read/write access to WAF policies (`Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/*`)
+- **Tools** - Azure CLI 2.x, Azure PowerShell 9.x, or an AI agent with Azure MCP access
 - **Required variables and examples of those variables, as shown in the following table**
 
 | Variable | Description | Example |
@@ -86,7 +69,7 @@ To troubleshoot WAF blocking legitimate requests, you need the following items:
 
 Check whether WAF is active, which mode it's in (Prevention versus Detection), and which managed rule set is in use. This check confirms that WAF is the component that produces the "403" errors.
 
-1. Run the following commands in Azure CLI:
+1. Run the following commands in Azure CLI.
 
    ```azurecli-interactive
    # -- Collect inputs (cached if already set in this session) --
@@ -103,7 +86,7 @@ Check whether WAF is active, which mode it's in (Prevention versus Detection), a
    ```
 
 1. Record the `firewallPolicy.id` and extract the policy name from the resource ID. This name is `{WAF_POLICY_NAME}`.
-1. Retrieve the WAF policy details by using Azure CLI or Azure PowerShell:
+1. Retrieve the WAF policy details by using Azure CLI or Azure PowerShell.
 
    **Azure CLI**
 
@@ -140,6 +123,8 @@ Check whether WAF is active, which mode it's in (Prevention versus Detection), a
 
 ### Interpret the results
 
+Use the following table to interpret the results of the WAF policy query.
+
 | Observation | Meaning | Next step |
 | --- | --- | --- |
 | `"policySettings.mode": "Prevention"` | WAF is actively blocking requests. This result confirms that WAF can produce "403" errors. | Perform [Step 2](#step-2). |
@@ -151,7 +136,7 @@ Check whether WAF is active, which mode it's in (Prevention versus Detection), a
 
 ### Step 1b
 
-Check which Log Analytics workspace receives WAF diagnostic logs by using Azure CLI or Azure PowerShell:
+Check which Log Analytics workspace receives WAF diagnostic logs by using Azure CLI or Azure PowerShell.
 
 **Azure CLI**
 
@@ -182,6 +167,8 @@ Get-AzDiagnosticSetting `
 
 ### Interpret the results
 
+Use the following table to interpret the results of the diagnostic settings query.
+
 | Observation | Meaning | Next steps |
 | --- | --- | --- |
 | `workspaceId` is populated and `ApplicationGatewayFirewallLog` is `true`. | WAF firewall logs flow to this workspace. Record the full ARM resource ID that's shown in `workspaceId` as `{LA_WORKSPACE_RESOURCE_ID}` (used in [Resolution E](#resolution-e)). The log-query steps need the workspace customer ID (GUID) as `{LA_WORKSPACE_GUID}`, as shown on the workspace's **Overview** page in the [Azure portal](https://portal.azure.com). | Perform [Step 2](#step-2). |
@@ -198,9 +185,9 @@ Check the specific WAF log entries to see which requests were blocked, which rul
 > [!NOTE]
 > If you recently enabled diagnostic settings on a new Log Analytics workspace, WAF log data might take 15–20 minutes to appear. If the query returns empty results, wait and retry.
 
-Run the following commands in Azure CLI or Azure PowerShell:
+Run the following commands in Azure CLI or Azure PowerShell.
 
-**Azure CLI:**
+**Azure CLI**
 
 ```azurecli-interactive
 # -- Collect inputs (cached if already set in this session) --
@@ -213,7 +200,7 @@ az monitor log-analytics query \
   --output json
 ```
 
-**Azure PowerShell:**
+**Azure PowerShell**
 
 ```powershell
 # -- Collect inputs (cached if already set in this session) --
@@ -239,13 +226,13 @@ Invoke-AzOperationalInsightsQuery `
 
 From the output, record the following information for each blocked request that matches the customer's reported issue:
 
-- **`ruleId_s`**: The managed rule ID that triggered the block (for example, `942100`, `941100`, `949110`).
-- **`ruleGroup_s`**: The rule group (for example, `REQUEST-942-APPLICATION-ATTACK-SQLI`).
-- **`Message`**: Human-readable description of what the rule detected.
-- **`details_message_s`**: The rule description only (for example, `Detect Sql Injection at ARGS.`).
-- **`details_data_s`**: The matched content (including the field) in the `[COLLECTION:selector:value]` form (for example, `{s&1c found within [ARGS:password:...]}`).
-- **`requestUri_s`**: The Uniform Resource Identifier (URI) that was blocked.
-- **`clientIp_s`**: Source IP of the blocked request.
+- **`ruleId_s`** - The managed rule ID that triggered the block (for example, `942100`, `941100`, `949110`).
+- **`ruleGroup_s`** - The rule group (for example, `REQUEST-942-APPLICATION-ATTACK-SQLI`).
+- **`Message`** - Human-readable description of what the rule detected.
+- **`details_message_s`** - The rule description only (for example, `Detect Sql Injection at ARGS.`).
+- **`details_data_s`** - The matched content (including the field) in the `[COLLECTION:selector:value]` form (for example, `{s&1c found within [ARGS:password:...]}`).
+- **`requestUri_s`** - The Uniform Resource Identifier (URI) that was blocked.
+- **`clientIp_s`** - Source IP of the blocked request.
 
 In OWASP Core Rule Set (CRS) (anomaly-scoring) mode, the only `action_s == 'Blocked'` row is the aggregator rule `949110` (rule group `REQUEST-949-BLOCKING-EVALUATION`). Its `details_data_s` is empty and its `details_message_s` reads `Greater and Equal to Tx:inbound_anomaly_score_threshold at TX:anomaly_score.` It carries no field to exclude.
 
@@ -253,6 +240,8 @@ The rules that matched the request (the `942xxx`, `941xxx`, and `920xxx` rows th
 
 > [!NOTE]
 > In the WAF log schema, `ruleSetType_s` is reported as `OWASP CRS` (having a space) even though the policy resource reports `OWASP`. This condition matters only if you add a filter on `ruleSetType_s`.
+
+Use the following table to interpret the observations from the WAF logs.
 
 | Observation | Meaning | Next step |
 | --- | --- | --- |
@@ -267,7 +256,7 @@ The rules that matched the request (the `942xxx`, `941xxx`, and `920xxx` rows th
 
 Get a detailed breakdown of the specific rule, what part of the request it matched against (argument, header, cookie, or body), and the matched content to determine if it's a false positive.
 
-Run the following commands in Azure CLI. Use the `{RULE_ID}` from the [Step 2](#step-2) results and query for detailed match information:
+Run the following commands in Azure CLI. Use the `{RULE_ID}` from the [Step 2](#step-2) results and query for detailed match information.
 
 ```azurecli-interactive
 # -- Collect inputs (cached if already set in this session) --
@@ -283,7 +272,7 @@ az monitor log-analytics query \
 
 ### Interpret the results
 
-Examine the `details_data_s` field. It carries the matched field in the `[COLLECTION:selector:value]` form (for example `{s&1c found within [ARGS:password:...]}`). The `details_message_s` field holds only the rule description (for example, `Detect Sql Injection at ARGS.`), so focus your interpretation on `details_data_s`.
+Examine the `details_data_s` field. It shows the matched field in the `[COLLECTION:selector:value]` form (for example `{s&1c found within [ARGS:password:...]}`). The `details_message_s` field holds only the rule description (for example, `Detect Sql Injection at ARGS.`), so focus your interpretation on `details_data_s`.
 
 | `details_data_s` pattern | What part of the request matched | Common false positive scenario |
 | --- | --- | --- |
@@ -293,25 +282,25 @@ Examine the `details_data_s` field. It carries the matched field in the `[COLLEC
 | `found within [REQUEST_HEADERS:Content-Type...]`. | A request header value. | A nonstandard content-type header triggers protocol enforcement. |
 | `found within [ARGS_NAMES:<name>...]`. | The argument or parameter name itself. | A parameter named `select`, `union`, or `update` triggers a SQLi rule. |
 
-Record these values for use in future steps:
+Record these values for use in future steps.
 
-- **`{RULE_ID}`**: The specific rule ID (for example, `942430`).
-- **`{RULE_GROUP_NAME}`**: The rule group (for example, `REQUEST-942-APPLICATION-ATTACK-SQLI`).
-- **`{MATCH_VARIABLE}`**: What was matched, including `RequestArgNames`, `RequestArgValues`, `RequestCookieNames`, `RequestCookieValues`, `RequestHeaderNames`, `RequestHeaderValues`, or `RequestBodyPostArgNames`.
-- **`{SELECTOR}`**: The specific field name (for example, `username`, `password`, `__RequestVerificationToken`, `Content-Type`).
+- **`{RULE_ID}`** - The specific rule ID (for example, `942430`).
+- **`{RULE_GROUP_NAME}`** - The rule group (for example, `REQUEST-942-APPLICATION-ATTACK-SQLI`).
+- **`{MATCH_VARIABLE}`** - The request attribute to exclude. Use the key/value mapping and supported ruleset requirements in [Resolution A](#resolution-a), rather than copying a log collection name into the command.
+- **`{SELECTOR}`** - The specific field name (for example, `username`, `password`, `__RequestVerificationToken`, `Content-Type`).
 
 ### Step 3b
 
-Check how many *distinct* request fields and selectors the single `{RULE_ID}` identified in [Step 2](#step-2) affects. This count is the signal that separates a targeted exclusion (the rule misfires on one or a few nameable fields. Perform [Resolution A](#resolution-a)) from disabling the rule (the same rule fires across many different fields and endpoints with no single selector to exclude. Perform [Resolution B](#resolution-b)). Without this count, both resolutions look equally plausible and the choice becomes a guess.
+Check how many *distinct* request fields and selectors the single `{RULE_ID}` you identified in [Step 2](#step-2) affects. This count helps you decide whether to use a targeted exclusion or disable the rule. A targeted exclusion is when the rule misfires on one or a few nameable fields. Perform [Resolution A](#resolution-a). Disabling the rule is when the same rule fires across many different fields and endpoints with no single selector to exclude. Perform [Resolution B](#resolution-b). Without this count, both resolutions look equally plausible and the choice becomes a guess.
 
 #### Run this command
 
-Use the `{RULE_ID}` from [Step 2](#step-2). This command summarizes every match produced by that one rule by the field or selector it matched, and counts the distinct fields involved. It's read-only.
+Use the `{RULE_ID}` from [Step 2](#step-2). This command summarizes every match that one rule produces by the field or selector it matched, and counts the distinct fields involved. It's read-only.
 
 > [!NOTE]
 > If your block was the anomaly aggregator `949110`, don't run this query against `949110`. It has an empty `details_data_s` and no selector, so it returns no field. Run it against a contributing `ruleId_s` (for example `942100`) taken from the `action_s == 'Matched'` rows you noted in [Step 2](#step-2).
 
-Run the following commands in Azure CLI or Azure PowerShell:
+Run the following commands in Azure CLI or Azure PowerShell.
 
 **Azure CLI**
 
@@ -353,7 +342,7 @@ Invoke-AzOperationalInsightsQuery `
 
 ### Interpret the results
 
-Read `DistinctFields` (the count of distinct selectors the single rule matched) together with the `Fields` and `Endpoints` sets:
+Read `DistinctFields` (the count of distinct selectors the single rule matched) together with the `Fields` and `Endpoints` sets.
 
 | Observation | Meaning | Next step |
 | --- | --- | --- |
@@ -387,9 +376,9 @@ Use the following table to determine next steps.
 
 | Evaluation | Next steps |
 | --- | --- |
-| **False positive**: Legitimate application traffic is blocked. | Perform [Step 5](#step-5). Its **Route to the correct Resolution** table maps the [Step 3b](#step-3b) field count and your stated intent to exactly one Resolution (don't pick a Resolution without this mapping). |
-| **True positive**: This situation is a genuine attack attempt that's correctly blocked. | No action needed - WAF is working as intended. Document and close. |
-| **Uncertain**: Unable to determine from logs alone. | Perform [Step 5](#step-5) to test in Detection mode and gather more data. |
+| **False positive** - Legitimate application traffic is blocked. | Perform [Step 5](#step-5). Its **Route to the correct Resolution** table maps the [Step 3b](#step-3b) field count and your stated intent to exactly one Resolution (don't pick a Resolution without this mapping). |
+| **True positive** - This situation is a genuine attack attempt that's correctly blocked. | No action needed - WAF is working as intended. Document and close. |
+| **Uncertain** - Unable to determine from logs alone. | Perform [Step 5](#step-5) to test in Detection mode and gather more data. |
 
 ### Step 5
 
@@ -398,7 +387,7 @@ Check whether switching WAF to Detection mode allows the request through while s
 > [!NOTE]
 > This step involves observing the current WAF policy mode. If the policy is already in Detection mode, skip this step. If the policy is in Prevention mode, switching to Detection is a write operation covered in [Resolution C](#resolution-c).
 
-Check the current WAF policy mode by using Azure CLI or Azure PowerShell:
+Check the current WAF policy mode by using Azure CLI or Azure PowerShell.
 
 **Azure CLI**
 
@@ -430,6 +419,8 @@ if (-not $WafPolicyName) { $WafPolicyName = Read-Host "WAF Policy Name" }
 
 ### Interpret the results
 
+Use the following table to interpret the results of the WAF policy mode check.
+
 | Observation | Meaning | Next steps |
 | --- | --- | --- |
 | `Prevention`. | WAF is actively blocking the request. Use the information you gathered (like the [Step 3b](#step-3b) field count) plus your stated intent. | Use the [Route to the correct resolution](#route-to-the-correct-resolution) table. |
@@ -437,7 +428,7 @@ if (-not $WafPolicyName) { $WafPolicyName = Read-Host "WAF Policy Name" }
 
 Verify existing exclusions and overrides.
 
-Run the following commands in Azure CLI:
+Run the following commands in Azure CLI.
 
 ```azurecli-interactive
 # -- Collect inputs (cached if already set in this session) --
@@ -455,6 +446,8 @@ az network application-gateway waf-policy show \
 
 ### Interpret the results
 
+Use the following table to interpret the results of the WAF policy exclusions and overrides.
+
 | Observation | Meaning | Next steps |
 | --- | --- | --- |
 | `exclusions` is empty or `[]`. | No exclusions configured. You might need to add one. | Perform [Resolution A](#resolution-a). |
@@ -463,13 +456,13 @@ az network application-gateway waf-policy show \
 
 ### Route to the correct resolution
 
-By using the information that you gathered in [Step 2](#step-2), [Step 3b](#step-3b), this step, and your stated intent, this table routes you to exactly one resolution. Read it completely, and use the **first** row that matches. The order is meant to resolve ties, so you should never have to choose between two resolutions by intuition.
+Use the information you gathered in [Step 2](#step-2), [Step 3b](#step-3b), this step, and your stated intent to find the correct resolution in the following table. Read it completely, and use the **first** row that matches. The order resolves ties, so you shouldn't have to choose between two resolutions by intuition.
 
 | Observable information and stated intent | Route to |
 | --- | --- |
-| WAF firewall logging was off. [Step 1b](#step-1b) showed `ApplicationGatewayFirewallLog` disabled. Therefore, you couldn't run [Step 2](#step-2). | Perform [Resolution E](#resolution-e) to enable WAF diagnostic logging first. |
+| WAF firewall logging is off. [Step 1b](#step-1b) showed `ApplicationGatewayFirewallLog` disabled. Therefore, you couldn't run [Step 2](#step-2). | Perform [Resolution E](#resolution-e) to enable WAF diagnostic logging. |
 | A trusted, known-safe source (a specific IP range or URL path) whose content is genuinely attack-like must bypass *all* managed rules. | Perform [Resolution D](#resolution-d) to create a custom allow rule. |
-| You're onboarding or replatforming a new application, and you need a tuning window across many different rules that can't be enumerated yet. [Step 3b](#step-3b) showed many distinct `ruleId_s`, none dominant. | Perform [Resolution C](#resolution-c). |
+| You're onboarding or replatforming a new application, and you need a tuning window across many different rules that you can't enumerate yet. [Step 3b](#step-3b) showed many distinct `ruleId_s`, none dominant. | Perform [Resolution C](#resolution-c). |
 | A single `{RULE_ID}` is confined to one or a few nameable fields and `{DISTINCT_SELECTOR_COUNT}` from [Step 3b](#step-3b) is small. | Perform [Resolution A](#resolution-a) to create a targeted exclusion. |
 | The same `{RULE_ID}` travels across many different fields and endpoints with no single selector to target, and `{DISTINCT_SELECTOR_COUNT}` from [Step 3b](#step-3b) is large. | Perform [Resolution B](#resolution-b) to disable the specific rule. |
 
@@ -500,9 +493,9 @@ Common scenarios include:
 - A JSON API payload with a `description` field that contains HTML triggers XSS rule `941100`.
 - An anti-forgery cookie `__RequestVerificationToken` triggers anomaly scoring.
 
-1. Create a targeted exclusion for the specific rule, match variable, and selector (field name) that are causing the false positive.
+1. Identify the specific rule, match variable, and selector (field name) that are causing the false positive.
 
-   Run the following commands in Azure CLI:
+   Run the following commands in Azure CLI.
 
    ```azurecli-interactive
    # -- Collect inputs (cached if already set in this session) --
@@ -511,7 +504,7 @@ Common scenarios include:
    
    az monitor log-analytics query \
      --workspace "$LA_WORKSPACE_GUID" \
-     --analytics-query "AzureDiagnostics | where ResourceType == 'APPLICATIONGATEWAYS' and Category == 'ApplicationGatewayFirewallLog' and action_s == 'Blocked' and ruleId_s == '$RULE_ID' | project TimeGenerated, details_message_s, details_data_s, requestUri_s | take 5" \
+      --analytics-query "AzureDiagnostics | where ResourceType == 'APPLICATIONGATEWAYS' and Category == 'ApplicationGatewayFirewallLog' and action_s in ('Matched','Blocked') and ruleId_s == '$RULE_ID' | project TimeGenerated, transactionId_g, details_message_s, details_data_s, requestUri_s | take 5" \
      --timespan PT24H \
      --output json
    ```
@@ -520,21 +513,23 @@ Common scenarios include:
 
    | WAF log shows `found within...` | Exclusion match variable | Description |
    | --- | --- | --- |
-   | `ARGS:fieldname` | `RequestArgNames` | Query parameter or form field name |
-   | `ARGS:fieldname` (the value) | `RequestArgValues` | Query parameter or form field value |
-   | `REQUEST_COOKIES:cookiename` | `RequestCookieNames` or `RequestCookieValues` | Cookie name or value |
-   | `REQUEST_HEADERS:headername` | `RequestHeaderNames` or `RequestHeaderValues` | HTTP header name or value |
-   | `REQUEST_BODY` (`urlencoded` form post) | `RequestBodyPostArgNames` or `RequestBodyPostArgValues` | Classic `application/x-www-form-urlencoded` POST body argument name or value |
-   | A JSON body field shown as `ARGS:fieldname` | `RequestArgNames` or `RequestArgValues` | OWASP CRS surfaces JSON request-body fields as `ARGS:<name>` — exclude with `RequestArgValues` (the value) or `RequestArgNames` (the name), not `RequestBodyPostArgValues` |
-   | `ARGS_NAMES:argname` | `RequestArgNames` | The name of the argument itself |
+    | `ARGS:fieldname` | `RequestArgValues` | Value of the named query parameter or form field |
+    | `REQUEST_COOKIES:cookiename` | `RequestCookieValues` | Value of the named cookie |
+    | `REQUEST_HEADERS:headername` | `RequestHeaderValues` | Value of the named header |
+    | A form or JSON body field shown as `ARGS:fieldname` | `RequestArgValues` | Value of the named request-body argument |
+    | `ARGS_NAMES:argname` | `RequestArgKeys` | The argument name itself |
 
-   - **Selector**: The specific field name (for example, `username`, `password`, `__RequestVerificationToken`, or `Content-Type`).
-   - **Selector match operator**: Use `Equals` for exact field name, `StartsWith` for prefix, `EndsWith` for suffix, `Contains` for partial match, or `EqualsAny` to match all values.
+    Request attributes by key and value require CRS 3.2 or later or another supported ruleset. The `Names` match variables are backward-compatible ways to select values, not keys. Verify the applicable [request attribute semantics](/azure/web-application-firewall/ag/application-gateway-waf-configuration#request-attributes-by-keys-and-values).
+
+   - **Selector** - The specific field name (for example, `username`, `password`, `__RequestVerificationToken`, or `Content-Type`).
+   - **Selector match operator** - Use `Equals` for exact field name, `StartsWith` for prefix, `EndsWith` for suffix, `Contains` for partial match, or `EqualsAny` to match all values.
 
 1. Create the exclusion using Azure CLI or Azure PowerShell.
 
+    Per-rule exclusions require a supported ruleset, such as OWASP CRS 3.2. Record the exact policy ruleset type/version and rule group from your diagnostic results. Don't upgrade the ruleset or substitute a global exclusion if per-rule exclusions aren't available. Review existing exclusions first: a global exclusion covering the same field remains effective even after you add a narrower one. Don't remove pre-existing exclusions without a separate review.
+
    > [!IMPORTANT]
-   > The following commands are all write operations that require your approval before you can run them. Review them to better understand what each command does. This action creates a WAF exclusion so that rule `{RULE_ID}` no longer inspects the `{SELECTOR}` field in `{MATCH_VARIABLE}`. WAF stops checking that specific field for that specific rule, while all other rules and fields remain protected. This fix is the most targeted fix. It doesn't disable the rule entirely.
+    > The following commands are write operations. Review and approve the change before running them. The exclusion omits the selected request attribute from evaluation by the specified rule; it doesn't disable the rule or change other rules' configuration. Existing exclusions and custom rules still apply. Confirm the rule and field from the failing transaction, use the narrowest selector, and don't run all examples in sequence.
 
    **Azure CLI**
 
@@ -546,11 +541,19 @@ Common scenarios include:
    [ -z "$MATCH_VARIABLE" ] && read -rp "Match Variable:         " MATCH_VARIABLE
    [ -z "$SELECTOR_MATCH_OPERATOR" ] && read -rp "Selector Match Operator: " SELECTOR_MATCH_OPERATOR
    [ -z "$SELECTOR" ] && read -rp "Selector (field name):  " SELECTOR
+   [ -z "$RULE_SET_TYPE" ] && read -rp "Configured rule set type: " RULE_SET_TYPE
+   [ -z "$RULE_SET_VERSION" ] && read -rp "Configured rule set version: " RULE_SET_VERSION
+   [ -z "$RULE_GROUP_NAME" ] && read -rp "Contributing rule group: " RULE_GROUP_NAME
+   [ -z "$RULE_ID" ] && read -rp "Contributing rule ID: " RULE_ID
    
-   az network application-gateway waf-policy managed-rule exclusion add \
+   az network application-gateway waf-policy managed-rule exclusion rule-set add \
      --policy-name "$WAF_POLICY_NAME" \
      --resource-group "$RG" \
      --subscription "$SUBSCRIPTION" \
+     --type "$RULE_SET_TYPE" \
+     --version "$RULE_SET_VERSION" \
+     --group-name "$RULE_GROUP_NAME" \
+     --rule-ids "$RULE_ID" \
      --match-variable "$MATCH_VARIABLE" \
      --selector-match-operator "$SELECTOR_MATCH_OPERATOR" \
      --selector "$SELECTOR"
@@ -565,28 +568,37 @@ Common scenarios include:
    if (-not $MatchVariable) { $MatchVariable = Read-Host "Match Variable" }
    if (-not $SelectorMatchOperator) { $SelectorMatchOperator = Read-Host "Selector Match Operator" }
    if (-not $Selector) { $Selector = Read-Host "Selector (field name)" }
+    if (-not $RuleSetType) { $RuleSetType = Read-Host "Configured rule set type" }
+    if (-not $RuleSetVersion) { $RuleSetVersion = Read-Host "Configured rule set version" }
+    if (-not $RuleGroupName) { $RuleGroupName = Read-Host "Contributing rule group" }
+    if (-not $RuleId) { $RuleId = Read-Host "Contributing rule ID" }
    
    $policy = Get-AzApplicationGatewayFirewallPolicy `
      -Name "$WafPolicyName" `
      -ResourceGroupName "$ResourceGroup"
    
-   $exclusion = New-AzApplicationGatewayFirewallExclusionConfig `
+   $rule = New-AzApplicationGatewayFirewallPolicyExclusionManagedRule -RuleId $RuleId
+   $group = New-AzApplicationGatewayFirewallPolicyExclusionManagedRuleGroup `
+     -RuleGroupName $RuleGroupName -Rule $rule
+   $ruleSet = New-AzApplicationGatewayFirewallPolicyExclusionManagedRuleSet `
+     -RuleSetType $RuleSetType -RuleSetVersion $RuleSetVersion -RuleGroup $group
+   $exclusion = New-AzApplicationGatewayFirewallPolicyExclusion `
      -MatchVariable "$MatchVariable" `
      -SelectorMatchOperator "$SelectorMatchOperator" `
-     -Selector "$Selector"
+     -Selector "$Selector" `
+     -ExclusionManagedRuleSet $ruleSet
    
-   $policy.ManagedRules.Exclusions.Add($exclusion)
+    $existingExclusions = @($policy.ManagedRules.Exclusions | Where-Object { $null -ne $_ })
+    $policy.ManagedRules.Exclusions = $existingExclusions + @($exclusion)
    
-   Set-AzApplicationGatewayFirewallPolicy `
-     -Name "$WafPolicyName" `
-     -ResourceGroupName "$ResourceGroup" `
-     -ManagedRule $policy.ManagedRules `
-     -PolicySetting $policy.PolicySettings
+   $policy | Set-AzApplicationGatewayFirewallPolicy
    ```
 
    **Common exclusion examples**
 
-   Sign-in form password field blocked by SQLi rule:
+    The first two examples assume an existing OWASP CRS 3.2 policy and confirmed matches for the stated rule and field. Don't run them against a different ruleset without checking its rule IDs and groups. Exclusions apply wherever the policy is associated, not only to a single login URL. Before reusing the generic command for another request, replace cached rule, group, and selector variables with that request's verified values.
+
+    Sign-in form password field confirmed as a false positive for SQLi rule `942430`.
 
    ```azurecli-interactive
    # -- Collect inputs (cached if already set in this session) --
@@ -594,16 +606,19 @@ Common scenarios include:
    [ -z "$RG" ] && read -rp "Resource Group:    " RG
    [ -z "$WAF_POLICY_NAME" ] && read -rp "WAF Policy Name:   " WAF_POLICY_NAME
    
-   az network application-gateway waf-policy managed-rule exclusion add \
+   az network application-gateway waf-policy managed-rule exclusion rule-set add \
      --policy-name "$WAF_POLICY_NAME" \
      --resource-group "$RG" \
      --subscription "$SUBSCRIPTION" \
+     --type OWASP --version 3.2 \
+     --group-name REQUEST-942-APPLICATION-ATTACK-SQLI \
+     --rule-ids 942430 \
      --match-variable RequestArgValues \
      --selector-match-operator Equals \
      --selector password
    ```
 
-   JSON API body field blocked by XSS rule:
+    JSON API body field confirmed as a false positive for XSS rule `941100`.
 
    ```azurecli-interactive
    # -- Collect inputs (cached if already set in this session) --
@@ -611,16 +626,19 @@ Common scenarios include:
    [ -z "$RG" ] && read -rp "Resource Group:    " RG
    [ -z "$WAF_POLICY_NAME" ] && read -rp "WAF Policy Name:   " WAF_POLICY_NAME
    
-   az network application-gateway waf-policy managed-rule exclusion add \
+   az network application-gateway waf-policy managed-rule exclusion rule-set add \
      --policy-name "$WAF_POLICY_NAME" \
      --resource-group "$RG" \
      --subscription "$SUBSCRIPTION" \
+     --type OWASP --version 3.2 \
+     --group-name REQUEST-941-APPLICATION-ATTACK-XSS \
+     --rule-ids 941100 \
      --match-variable RequestArgValues \
      --selector-match-operator Equals \
      --selector description
    ```
 
-   Cookie value triggering anomaly scoring:
+    Cookie value confirmed as a false positive for a contributing rule. Use the actual ruleset, group, and rule ID from the cookie's match, not the anomaly-scoring aggregator.
 
    ```azurecli-interactive
    # -- Collect inputs (cached if already set in this session) --
@@ -628,18 +646,38 @@ Common scenarios include:
    [ -z "$RG" ] && read -rp "Resource Group:    " RG
    [ -z "$WAF_POLICY_NAME" ] && read -rp "WAF Policy Name:   " WAF_POLICY_NAME
    
-   az network application-gateway waf-policy managed-rule exclusion add \
+   [ -z "$RULE_SET_TYPE" ] && read -rp "Configured rule set type: " RULE_SET_TYPE
+   [ -z "$RULE_SET_VERSION" ] && read -rp "Configured rule set version: " RULE_SET_VERSION
+   [ -z "$RULE_GROUP_NAME" ] && read -rp "Contributing rule group: " RULE_GROUP_NAME
+   [ -z "$RULE_ID" ] && read -rp "Contributing rule ID: " RULE_ID
+
+   az network application-gateway waf-policy managed-rule exclusion rule-set add \
      --policy-name "$WAF_POLICY_NAME" \
      --resource-group "$RG" \
      --subscription "$SUBSCRIPTION" \
+     --type "$RULE_SET_TYPE" --version "$RULE_SET_VERSION" \
+     --group-name "$RULE_GROUP_NAME" \
+     --rule-ids "$RULE_ID" \
      --match-variable RequestCookieValues \
      --selector-match-operator Equals \
      --selector __RequestVerificationToken
    ```
 
-1. Resend the request that was previously blocked. Then verify in WAF logs that the rule no longer blocks it.
+1. Read back the policy and verify the exclusion's ruleset version, group, rule IDs, match variable, and selector. Confirm that unrelated settings and existing exclusions are unchanged.
 
-   Run the following commands in Azure CLI:
+   ```azurecli-interactive
+   az network application-gateway waf-policy show \
+     --name "$WAF_POLICY_NAME" \
+     --resource-group "$RG" \
+     --subscription "$SUBSCRIPTION" \
+     --query managedRules.exclusions --output json
+   ```
+
+   To roll back, review the specific added exclusion under **Managed rules** in the WAF policy and remove only that new entry. Don't clear the exclusion list or remove pre-existing entries.
+
+1. Resend the same legitimate request that was previously blocked. Record its time and transaction ID, verify the application response, and inspect all rule matches for that transaction. A contributing rule can have action `Matched` while a separate anomaly-scoring rule blocks the request.
+
+   Run the following commands in Azure CLI.
 
    ```azurecli-interactive
    # -- Collect inputs (cached if already set in this session) --
@@ -648,18 +686,22 @@ Common scenarios include:
    
    az monitor log-analytics query \
      --workspace "$LA_WORKSPACE_GUID" \
-     --analytics-query "AzureDiagnostics | where ResourceType == 'APPLICATIONGATEWAYS' and Category == 'ApplicationGatewayFirewallLog' and ruleId_s == '$RULE_ID' and action_s == 'Blocked' | order by TimeGenerated desc | take 5" \
+      --analytics-query "AzureDiagnostics | where ResourceType == 'APPLICATIONGATEWAYS' and Category == 'ApplicationGatewayFirewallLog' and ruleId_s == '$RULE_ID' and action_s in ('Matched','Blocked','Detected') | project TimeGenerated, transactionId_g, ruleId_s, action_s, requestUri_s, details_data_s | order by TimeGenerated desc | take 20" \
      --timespan PT1H \
      --output json
    ```
 
+
+   Use the following table to interpret the results of the query:
+
    | Result | Meaning |
    | --- | --- |
-   | No new blocked entries after the exclusion is applied. | Exclusion is working, and the false positive is resolved. |
-   | Blocked entries still appear by having the same `ruleId_s` value. | Exclusion might not match the correct variable or selector. Review step 1, and adjust. |
-   | Blocked entries appear by having a different `ruleId_s` value. | Multiple rules are triggering. Repeat step 3 for the additional rule, or perform [Resolution B](#resolution-b). |
+    | The repeated request succeeds and the selected rule no longer matches the excluded field. | The observations support the targeted mitigation. Validate unrelated fields remain inspected in a controlled test environment. |
+    | The same rule still matches the excluded field in the new transaction. | Verify the persisted ruleset, group, rule ID, variable and selector before making another change. |
+    | The repeated request is still blocked. | Remove the rule-ID filter and inspect all matches for the transaction. Another rule, custom rule or backend might be responsible; don't automatically broaden the exclusion. |
+    | The query returns no rows. | Verify traffic was reproduced against this gateway and diagnostic collection is working. Absence of rows alone doesn't prove the exclusion worked. |
 
-You might encounter multirule triggers and a propagation delay. Classic attack payloads such as `' OR 1=1--` can trigger multiple overlapping SQLi rules simultaneously (for example, `942100`, `942110`, `942130`, `942180`, `942330`, and `942390`). A field-level exclusion for `RequestArgValues` or `{SELECTOR}` suppresses all rule matches for that field, but WAF exclusion changes can take 30–60 seconds to propagate. If the request is still blocked immediately after you apply an exclusion, wait 1–2 minutes, and then retest before you conclude that the exclusion is ineffective.
+Multiple rules can match the same request. A per-rule exclusion omits the selected field only from the specified rules; other rules can still inspect it and contribute to the anomaly score. Confirm each additional match is a false positive before considering another exclusion. Allow the policy update to complete and retest before changing its scope.
 
 Additionally, nonbrowser clients (such as cURL, PowerShell `Invoke-WebRequest`, and API testing tools) can trigger protocol enforcement rules in the `920xxx` range (for example, rule `920300` for a missing Accept header) that contribute to the anomaly score alongside the primary rule match. These protocol-level matches aren't caused by the application's payload but by the client's HTTP behavior. If the request passes from a browser but fails from an API client, check for `920xxx` rule matches in the logs.
 
@@ -667,14 +709,14 @@ If the issue persists after an exclusion, go to [Resolution B](#resolution-b).
 
 ## Resolution B
 
-A specific managed WAF rule produces false positives across multiple request fields or patterns. This situation makes individual exclusions impractical. In this case, you have to disable the rule entirely.
+A specific managed WAF rule produces false positives across multiple request fields or patterns. This situation makes individual exclusions impractical. In this case, you need to disable the rule entirely.
 
 > [!IMPORTANT]
 > If you disable a managed rule, you remove WAF protection for that specific attack pattern across *all* requests to the Application Gateway. Disable rules only after you verify that the matched traffic is consistently a false positive, and that alternative protections (for example, back-end input validation) exist for the attack pattern that this rule applies to.
 
 1. Identify the rule group that contains the `{RULE_ID}` that you want to disable.
 
-   Run the following commands in Azure CLI:
+   Run the following commands in Azure CLI.
 
    ```azurecli-interactive
    # -- Collect inputs (cached if already set in this session) --
@@ -706,7 +748,7 @@ A specific managed WAF rule produces false positives across multiple request fie
    > [!IMPORTANT]
    > The following commands are all write operations that require your approval before you can run them. Review them to better understand what each command does. This action disables WAF rule `{RULE_ID}` in rule group `{RULE_GROUP_NAME}`. The rule no longer inspects any requests. This action reduces protection for the specific attack pattern this rule covers. All other rules remain active. If you need a more targeted approach, perform [Resolution A](#resolution-a) instead.
 
-   Run the following commands using Azure CLI or Azure PowerShell:
+   Run the following commands using Azure CLI or Azure PowerShell.
 
    **Azure CLI**
 
@@ -766,7 +808,7 @@ A specific managed WAF rule produces false positives across multiple request fie
 
 1. Resend the request that was previously blocked, and verify the rule no longer triggers errors.
 
-   Run the following commands in Azure CLI:
+   Run the following commands in Azure CLI.
 
    ```azurecli-interactive
    # -- Collect inputs (cached if already set in this session) --
@@ -779,6 +821,7 @@ A specific managed WAF rule produces false positives across multiple request fie
      --timespan PT1H \
      --output json
    ```
+   Use the following table to interpret the results of the query.
 
    | Result | Meaning |
    | --- | --- |
@@ -793,11 +836,11 @@ If the issue persists, go to [Resolution C](#resolution-c) or [Resolution D](#re
 The WAF policy needs a tuning period in which rules log matches without blocking traffic. This period is appropriate when you deploy WAF for the first time, upgrade the managed rule set version, or onboard a new application behind an existing WAF.
 
 > [!IMPORTANT]
-> Detection mode means WAF **won't block any requests including genuine attacks**. Use this mode only as a temporary tuning measure, not as a permanent configuration for production traffic.
+> Detection mode means WAF **doesn't block any requests including genuine attacks**. Use this mode only as a temporary tuning measure, not as a permanent configuration for production traffic.
 
 1. Switch the WAF policy mode from Prevention to Detection.
 
-   Run the following commands in Azure CLI:
+   Run the following commands in Azure CLI.
 
    ```azurecli-interactive
    # -- Collect inputs (cached if already set in this session) --
@@ -821,7 +864,7 @@ The WAF policy needs a tuning period in which rules log matches without blocking
    > [!IMPORTANT]
    > `policy-setting update` rewrites the full `policySettings` block and silently resets `requestBodyCheck` to `false` if you don't specify a value. The following commands re-assert `--request-body-check true`. Be sure to verify the original value in step 1 and include its value (either `true` or `false`). The same applies to step 3 when you switch back to Prevention mode.
 
-   Perform the policy mode switch by using Azure CLI or Azure PowerShell:
+   Perform the policy mode switch by using Azure CLI or Azure PowerShell.
 
    **Azure CLI**
 
@@ -862,7 +905,7 @@ The WAF policy needs a tuning period in which rules log matches without blocking
 
 1. While in Detection mode, periodically query WAF logs to identify all false positive patterns.
 
-   Run the following commands in Azure CLI:
+   Run the following commands in Azure CLI.
 
    ```azurecli-interactive
    # -- Collect inputs (cached if already set in this session) --
@@ -882,7 +925,7 @@ The WAF policy needs a tuning period in which rules log matches without blocking
    > [!IMPORTANT]
    > The following commands are all write operations that require your approval before you can run them. Switch back to Prevention mode only after you review detected matches and apply necessary exclusions or overrides. As in step 1, re-assert `--request-body-check` so `policy-setting update` doesn't silently reset it.
 
-   Run the following commands in Azure CLI:
+   Run the following commands in Azure CLI.
 
    ```azurecli-interactive
    # -- Collect inputs (cached if already set in this session) --
@@ -903,7 +946,7 @@ After you revert to Prevention mode, monitor for "403" error responses. If false
 
 ## Resolution D
 
-A specific known-safe traffic pattern (for example, from an internal application, a trusted IP range, or a specific URL path) has to bypass managed WAF rules entirely. Custom rules are evaluated before managed rules. Therefore, an `Allow` action in a custom rule prevents managed rules from blocking the request.
+A specific known-safe traffic pattern, such as traffic from an internal application, a trusted IP range, or a specific URL path, bypasses managed WAF rules entirely. Custom rules are evaluated before managed rules. Therefore, an `Allow` action in a custom rule prevents managed rules from blocking the request.
 
 1. From [Step 2](#step-2) and [Step 3a](#step-3a), determine the distinguishing characteristic of the legitimate traffic by using the following table.
 
@@ -1005,7 +1048,7 @@ A specific known-safe traffic pattern (for example, from an internal application
 
 1. Resend the request that was previously blocked.
 
-   Run the following commands in Azure CLI:
+   Run the following commands in Azure CLI.
 
    ```azurecli-interactive
    # -- Collect inputs (cached if already set in this session) --
@@ -1018,6 +1061,7 @@ A specific known-safe traffic pattern (for example, from an internal application
      --timespan PT1H \
      --output json
    ```
+   Use the following table to interpret the results of the query.
 
    | Result | Meaning |
    | --- | --- |
@@ -1027,11 +1071,11 @@ A specific known-safe traffic pattern (for example, from an internal application
 
 ## Resolution E
 
-Because WAF diagnostic logging isn't configured, you can't analyze blocked requests.
+Because you didn't configure WAF diagnostic logging, you can't analyze blocked requests.
 
 1. Check whether WAF diagnostics are enabled for the Application Gateway.
 
-Run the following commands in Azure CLI:
+   Run the following commands in Azure CLI.
 
    ```azurecli-interactive
    # -- Collect inputs (cached if already set in this session) --
@@ -1053,7 +1097,7 @@ Run the following commands in Azure CLI:
    > [!NOTE]
    > `diagnostic-settings create` needs the workspace's full ARM resource ID or name (`{LA_WORKSPACE_RESOURCE_ID}`), not the customer-ID GUID.
 
-   Run the following commands in Azure CLI:
+   Run the following commands in Azure CLI.
 
    ```azurecli-interactive
    # -- Collect inputs (cached if already set in this session) --

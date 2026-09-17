@@ -2,14 +2,14 @@
 title: Troubleshoot backend health issues in Azure Application Gateway
 description: Learn how to troubleshoot Azure Application Gateway backend health issues, diagnose unhealthy or unknown status, and resolve common probe errors.
 services: application-gateway
-ms.date: 09/15/2026
+ms.date: 09/16/2026
 manager: dcscontentpm
 ms.topic: troubleshooting
 author: kaushika-msft
 ms.author: kaushika
 ms.service: azure-application-gateway
 ms.custom: sap:backend health,sfi-image-nochange
-ms.reviewer: kaushika, asudbring, duau
+ms.reviewer: kaushika, allensu, duau
 ai-usage: ai-assisted
 # Customer intent: As an IT admin, I want to troubleshoot backend health issues in Application Gateway, so that I can ensure my backend servers are operational and effectively serving requests.
 ---
@@ -18,7 +18,7 @@ ai-usage: ai-assisted
 
 ## Summary
 
-This article explains how to troubleshoot backend health issues in Azure Application Gateway.
+Learn how to troubleshoot backend health issues in Azure Application Gateway so that backend servers remain operational and serve requests reliably.
 
 By default, Azure Application Gateway probes backend servers (associated with a rule) to check their health status and ensure the incoming traffic is sent only to the servers that are running. In each case, if the backend server doesn't respond successfully, Application Gateway marks the server as Unhealthy and stops forwarding requests to the server. After the server starts responding successfully, Application Gateway resumes forwarding the requests.
 
@@ -228,7 +228,7 @@ To resolve this issue, follow these steps:
 
 #### Check Azure Firewall application rules
 
-Azure Firewall denies all traffic by default until you configure rules that explicitly allow it, and it evaluates network rules before application rules. If the application gateway's backend traffic passes through an Azure Firewall and no rule allows it, the firewall drops the connection, and the backend probe reports a TCP connect error or an Unknown status. To confirm this:
+Azure Firewall denies all traffic by default until you configure rules that explicitly allow it. It evaluates network rules before application rules. If the application gateway's backend traffic passes through an Azure Firewall and no rule allows it, the firewall drops the connection. The backend probe reports a TCP connect error or an Unknown status. To confirm this condition:
 
 1. [Enable diagnostic logs](/azure/firewall/monitor-firewall) for the **Azure Firewall Application Rule** category (and **Azure Firewall Network Rule**, if the backend pool uses IP addresses rather than FQDNs) on the Azure Firewall resource.
 1. Query the `AZFWApplicationRule` (or `AZFWNetworkRule`) table in Log Analytics for the probe traffic, and filter on `Action == "Deny"`. An `ActionReason` of `Default Action` confirms the default-deny behavior blocked the traffic because it didn't match any configured rule.
@@ -299,7 +299,7 @@ For more information, see [Application Gateway probe matching](/azure/applicatio
 > [!NOTE]
 > For all TLS related error messages, to learn more about Server Name Indication (SNI) behavior and differences between the v1 and v2 SKUs, see [TLS overview](/azure/application-gateway/ssl-overview).
 
-### Common Name (CN) doesn't match
+### Common name (CN) doesn't match
 
 #### Message
 
@@ -410,7 +410,7 @@ An intermediate certificate signs the leaf certificate and is needed to complete
 
 The following illustration shows the difference between the self-signed certificates.
 
-:::image type="content" source="./media/application-gateway-backend-health-troubleshooting/self-signed-types.png" alt-text="Screenshot showing difference between self-signed certificates." lightbox="./media/application-gateway-backend-health-troubleshooting/self-signed-types.png":::
+:::image type="content" source="./media/application-gateway-backend-health-troubleshooting/self-signed-types.png" alt-text="Screenshot of the difference between self-signed certificates." lightbox="./media/application-gateway-backend-health-troubleshooting/self-signed-types.png":::
 
 ### The leaf or server certificate wasn't found
 
@@ -543,7 +543,7 @@ The following example shows a server certificate installation along with its int
 OR </br>
 `s_client -connect <IPaddress>:443 -servername <TLS SNI hostname> -showcerts`
 
-:::image type="content" source="./media/application-gateway-backend-health-troubleshooting/cert-chain.png" alt-text="Screenshot showing typical chain of certificates." lightbox="./media/application-gateway-backend-health-troubleshooting/cert-chain.png":::
+:::image type="content" source="./media/application-gateway-backend-health-troubleshooting/cert-chain.png" alt-text="Screenshot of a typical chain of certificates." lightbox="./media/application-gateway-backend-health-troubleshooting/cert-chain.png":::
 
 ### Certificate verification failed
 
@@ -573,6 +573,12 @@ This error occurs only with the TLS protocol backend settings for which client I
 
 Ensure the backend server is configured to parse the Proxy protocol header on the appropriate port, in accordance with [Proxy protocol specifications](https://www.haproxy.org/download/1.8/doc/proxy-protocol.txt), when using it with Application Gateway.
 
+## Network path and return-path symmetry
+
+If you can access a backend directly but its backend health status is **Unknown**, check both the probe path to the backend and the return path to Application Gateway. A user-defined route (UDR) or a route learned through virtual network peering or Border Gateway Protocol (BGP) can send return traffic through a network virtual appliance or firewall. If that device drops or changes the traffic, the health probe can fail even though the backend responds to direct requests.
+
+Review the route tables and firewall rules for the Application Gateway and backend subnets, along with the effective routes on each backend network interface. For diagnostic and remediation steps, including Network Watcher Connection Troubleshoot, see [Routing, DNS, and gateway health checks](#routing-dns-and-gateway-health-checks).
+
 ## Backend health status: Unknown
 
 ### Error message - Updates to the DNS entries of the backend pool
@@ -589,7 +595,7 @@ For FQDN-based backend targets, Application Gateway caches and uses the last-kno
 
 Check and fix the DNS servers to ensure they serve a response for the given FQDN's DNS lookup. Also, check if your application gateway's virtual network can reach the DNS servers.
 
-### Other reasons
+### Routing, DNS, and gateway health checks
 
 If the backend health is **Unknown**, the portal view resembles the following screenshot:
 
@@ -616,6 +622,8 @@ To resolve this problem, follow these steps:
    f. Select **Save** and verify that you can view the backend as **Healthy**. Alternatively, you can do that through [PowerShell/CLI](/azure/virtual-network/manage-network-security-group?tabs=network-security-group-portal).
 
 1. Check the effective NSG rules on the subnet and network interface for each backend server. Allow TCP traffic from the Application Gateway subnet to the configured backend port so health probes and data traffic can reach the backend. For detailed checks and resolution steps, see [Resolution A in Troubleshoot HTTP 502 errors in Azure Application Gateway](troubleshoot-http-502-bad-gateway.md#resolution-a). The SKU-specific port range in the previous step applies to the Application Gateway subnet; the backend rule uses the configured backend port.
+
+1. Check the effective routes on each backend server's network interface. Look for a UDR or a BGP-propagated route that sends return traffic through a peered virtual network, network virtual appliance, or firewall. Confirm that the next hop can route the traffic to the Application Gateway subnet and that any firewall policy allows the probe traffic. Correct the route or firewall rule, and then check backend health again.
 
 1. Check whether your UDR has a default route (0.0.0.0/0) with the next hop not set as **Internet**.
    a. Follow steps 1a and 1b to determine your subnet.
