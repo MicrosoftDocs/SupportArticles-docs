@@ -1,18 +1,18 @@
 ---
-title: SQL VM Fails to Deploy or SQL Server Instance Can't Come Online
-description: Addresses a failure when you deploy a SQL Server on Azure VM image in Azure Marketplace or when a manually installed SQL Server instance fails to come online after an Azure VM is restarted or deallocated.
-ms.date: 03/04/2026
+title: Fix SQL Server on Azure VM Deployment and Startup Failures
+description: Resolve SQL Server on Azure VM deployment and startup failures caused by unavailable ephemeral storage that prevents tempdb initialization.
+ms.date: 09/17/2026
 ms.reviewer: mathoma, pamela, v-sidong, v-shaywood
 ms.custom: sap:SQL Licensing, Installation and Patching
+ai-usage: ai-assisted
 ---
-# SQL Server on Azure VM fails to deploy or SQL Server instance fails to come online
-
-This article helps you resolve the following scenarios:
-
-- A SQL Server on Azure virtual machine (VM) Azure Marketplace image fails to deploy.
-- A SQL Server instance fails to come online after an Azure VM is restarted or deallocated.
+# SQL Server on Azure VM fails to deploy or come online
 
 _Applies to:_ &nbsp;SQL Server on Azure VMs
+
+## Summary
+
+SQL Server on an Azure virtual machine (VM) can fail to deploy from an Azure Marketplace image with the error "System Drive returned status not ready for use." A manually installed SQL Server instance can also fail to come online after the VM is restarted or deallocated. These failures occur when SQL Server can't initialize the `tempdb` database on unavailable local ephemeral storage. This article helps you resolve or work around these failures.
 
 > [!NOTE]
 > The investigation of this issue is actively ongoing. The information in this article is subject to change as new details become available.
@@ -42,10 +42,10 @@ For example, if you're deploying an image from the Azure portal, you might see t
 }
 ```
 
-:::image type="content" source="media/sql-deployment-fails-drive-not-ready/sql-deployment-error.png" alt-text="Screenshot of the deployment error in the Azure portal." lightbox="media/sql-deployment-fails-drive-not-ready/sql-deployment-error.png":::
+:::image type="content" source="media/sql-deployment-fails-drive-not-ready/sql-deployment-error.png" alt-text="Screenshot of the Azure portal deployment failure with the error System Drive returned status not ready for use." lightbox="media/sql-deployment-fails-drive-not-ready/sql-deployment-error.png":::
 
 > [!WARNING]
-> When this failure happens, the Azure VM deployment succeeds, but the SQL Server installation fails. You must delete the VM to avoid incurring charges. Redeploy the VM using one of the methods described in the [Resolution](#resolution) or [Workarounds](#workaround) sections.
+> When this failure happens, the Azure VM deployment succeeds, but the SQL Server installation fails. You must delete the VM to avoid incurring charges. Redeploy the VM by using one of the methods described in the [Resolution](#resolution) or [Workarounds](#workaround) sections.
 
 ### SQL Server fails to come online after the VM is restarted
 
@@ -78,7 +78,7 @@ tempdb files could not be initialized.
 
 ## Cause
 
-Some of the newest Azure VM sizes present a RAW local SSD volume for ephemeral storage configured with the Non-Volatile Memory Express (NVMe) interface. This configuration results in failures because SQL Server attempts to place the `tempdb` database on the ephemeral storage and fails as the local SSD volume isn't available. Additionally, the ephemeral storage shows as RAW after the machine is deallocated. 
+Some of the newest Azure VM sizes present a RAW local SSD volume for ephemeral storage configured with the Non-Volatile Memory Express (NVMe) interface. This configuration results in failures because SQL Server attempts to place the `tempdb` database on the ephemeral storage and fails as the local SSD volume isn't available. Additionally, the ephemeral storage shows as RAW after the machine is deallocated.
 
 The RAW local SSD volume causes the SQL VM deployment to fail, and prevents manually installed SQL Server instances from coming online after the VM is restarted. In both cases, SQL Server tries to initialize the `tempdb` database on the ephemeral storage, which isn't available. The deployment fails because SQL Server is installed during the deployment of the Azure VM, and the ephemeral storage isn't available. Likewise, manually installed instances of SQL Server fail to come online after the VM is restarted because the ephemeral storage isn't available when SQL Server tries to create the `tempdb` database.
 
@@ -86,6 +86,9 @@ The RAW local SSD volume causes the SQL VM deployment to fail, and prevents manu
 
 This issue occurs because of the selected Azure VM size. To solve the issue, use one of the following methods:
 
+- Deploy your SQL Server VM through the Azure portal on Windows Server 2022 or later.
+  - Scripted solutions such as ARM or BICEP templates don't currently resolve this issue.
+  - Windows Server 2019 and earlier images continue experiencing this issue.
 - If possible, use another VM SKU, such as the SKUs listed in the [VM size best practices](/azure/azure-sql/virtual-machines/windows/performance-guidelines-best-practices-vm-size#checklist). 
 - If you want to use a particular VM that is on the [impacted VMs](#impacted-vms) list, use a machine without the lowercase `d` in the name, which places `tempdb` on the same storage as the SQL Server data files. For example, use the `FXmsv2` VM size instead of `FXmdsv2`. The latter uses uninitialized ephemeral storage, as indicated by `d` in the name.
 
@@ -93,9 +96,9 @@ This issue occurs because of the selected Azure VM size. To solve the issue, use
 
 If you can't use another VM SKU without a RAW local SSD, consider the following workarounds:
 
-- Deploy the VM using a Windows Server-only image, [format and initialize the temporary NVMe drive](/azure/virtual-machines/enable-nvme-temp-faqs#how-can-i-format-and-initialize-temp-nvme-disks-in-windows-when-i-create-a-vm-), and then manually install SQL Server.
+- Deploy the VM by using a Windows Server-only image, use a script to [format and initialize the temporary NVMe drive](https://github.com/Azure-Samples/azuresandbox/tree/main/extras/scripts/vm-mssql-win/NVMe), and then manually install SQL Server.
   
-  - **If you choose to put `tempdb` on the local SSD, you must reinitialize the disk before starting SQL Server every time the VM is restarted or deallocated.** 
+  - **If you choose to put `tempdb` on the local SSD, you must reinitialize the disk before starting SQL Server every time the VM restarts or deallocates.** 
 
 - Deploy the SQL Server VM image, but configure `tempdb` to use a different drive than the ephemeral storage during the deployment. For example, you can configure `tempdb` to use the `C:` drive or remote storage drive.
   
@@ -105,7 +108,7 @@ If you can't use another VM SKU without a RAW local SSD, consider the following 
   
   1. Expand **tempdb storage** and choose _any option other than_ `Use local SSD drive`:
 
-     :::image type="content" source="media/sql-deployment-fails-drive-not-ready/change-tempdb-location.png" alt-text="Screenshot of the tempdb storage configuration in the Azure portal when deploying a SQL VM image." lightbox="media/sql-deployment-fails-drive-not-ready/change-tempdb-location.png":::
+     :::image type="content" source="media/sql-deployment-fails-drive-not-ready/change-tempdb-location.png" alt-text="Screenshot of the Configure storage pane with the Use a separate drive for tempdb option selected." lightbox="media/sql-deployment-fails-drive-not-ready/change-tempdb-location.png":::
 
 ## Impacted VMs
 
@@ -123,4 +126,4 @@ This issue occurs with VMs that deploy an uninitialized temporary drive, such as
 ||[Famdsv7 series](/azure/virtual-machines/sizes/compute-optimized/famdsv7-series#sizes-in-series)|
 
 > [!NOTE]
-> Make sure the VM isn't configured using a [sector size greater than 4 KB](sql-installation-fails-sector-size-error-azure-vm.md#solution) before installing SQL Server. 
+> Before you install SQL Server, ensure the VM isn't configured with a [sector size greater than 4 KB](sql-installation-fails-sector-size-error-azure-vm.md#solution). 
