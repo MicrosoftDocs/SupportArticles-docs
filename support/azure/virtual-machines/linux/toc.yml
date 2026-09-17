@@ -316,6 +316,8 @@ items:
     href: max-linux-ram-limited-64-gb.md
   - name: Configure custom DNS servers
     href: custom-dns-configuration-for-azure-linux-vms.md
+  - name: Collect support information from Azure Linux VMs
+    href: collect-support-information-from-azure-linux-virtual-machines.md    
 
 - name: Linux High Availability Pacemaker cluster
   items:
