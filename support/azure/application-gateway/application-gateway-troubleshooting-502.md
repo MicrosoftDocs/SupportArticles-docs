@@ -5,13 +5,14 @@ services: application-gateway
 manager: dcscontentpm
 author: kaushika-msft
 ms.author: kaushika
-ms.reviewer: kaushika
+ms.reviewer: kaushika, allensu, duau
 ms.service: azure-application-gateway
 ms.topic: troubleshooting
-ms.date: 09/05/2026
+ms.date: 09/16/2026
 ms.custom: 
    - sap:Facing 5xx errors,devx-track-azurepowershell
    - sap:backend health
+ai-usage: ai-assisted
 # Customer intent: As an IT administrator troubleshooting application performance, I want to identify and fix 502 Bad Gateway errors in the application gateway, so that I can ensure reliable access and functionality of web applications for users.
 ---
 
@@ -50,7 +51,7 @@ Similarly, the presence of a custom DNS in the virtual network (VNet) can also c
 Validate your NSG, UDR, and DNS configurations.
 To do so, follow these steps:
 
-1. Check the NSGs associated with the Application Gateway subnet. Make sure communication to the backend isn't blocked. For more information, see [Network security groups](/azure/application-gateway/configuration-infrastructure#network-security-groups). For backend connectivity and health probe checks, see [TCP connect error](application-gateway-backend-health-troubleshooting.md#tcp-connect-error).
+1. Check the NSGs associated with the Application Gateway subnet. Ensure communication to the backend isn't blocked. For more information, see [Network security groups](/azure/application-gateway/configuration-infrastructure#network-security-groups). For backend connectivity and health probe checks, see [TCP connect error](application-gateway-backend-health-troubleshooting.md#tcp-connect-error).
 1. Check the UDR associated with the application gateway subnet. Ensure that the UDR isn't directing traffic away from the backend subnet. For example, check for routing to network virtual appliances or default routes being advertised to the application gateway subnet by using Azure ExpressRoute or Azure VPN. Run the following commands in Azure PowerShell.
 
     ```azurepowershell
@@ -111,6 +112,24 @@ Use the following guidance to troubleshoot the default health probe.
 - If you configure the VM using Azure Resource Manager (ARM) and it's outside the VNet where the application gateway is deployed, configure a [NSG](/azure/virtual-network/network-security-groups-overview) to allow access on the desired port.
 
 For more information, see [Application Gateway infrastructure configuration](/azure/application-gateway/configuration-infrastructure).
+
+### Return-path asymmetry
+
+A health probe can reach a backend server but still fail if the response is redirected or dropped before it returns to Application Gateway. This return-path asymmetry can occur when a UDR or a route learned through virtual network peering or Border Gateway Protocol (BGP) sends the response through a network virtual appliance or firewall.
+
+Check the route tables and firewall rules for the Application Gateway and backend subnets, along with the effective routes on each backend network interface. Confirm that the return path can reach the Application Gateway subnet and that the firewall allows the probe traffic. For a detailed routing checklist and remediation guidance, see [Network path and return-path symmetry](application-gateway-backend-health-troubleshooting.md#network-path-and-return-path-symmetry).
+
+For an Application Gateway v2 deployment that doesn't use [Private Application Gateway deployment](/azure/application-gateway/application-gateway-private-deployment), you can also use **Connection troubleshoot** in the Azure portal with Application Gateway as the source and the backend address and port as the destination. The Azure CLI command supports a virtual machine as the source. To test the path from a diagnostic VM to the backend, run:
+
+```azurecli
+az network watcher test-connectivity \
+  --source-resource '<diagnostic-vm-resource-id>' \
+  --dest-address '<backend-ip-or-fqdn>' \
+  --protocol TCP \
+  --dest-port '<backend-port>'
+```
+
+Review the returned hops and issues for a missing route or a blocking NSG rule. For more information, see [Troubleshoot connections with Azure Network Watcher](/azure/network-watcher/connection-troubleshoot-manage).
 
 ## Invalid or improper configuration of custom health probes
 
