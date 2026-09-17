@@ -18,7 +18,7 @@ This article explains how to troubleshoot AKS upgrade errors that occur due to v
 
 This article requires Azure CLI version 2.67.0 or a later version. To find the version number, run `az --version`. If you have to install or upgrade the Azure CLI, see [How to install the Azure CLI](/cli/azure/install-azure-cli).
 
-For more detailed information about the upgrade process, see the "Upgrade an AKS cluster" section in [Upgrade options and recommendations for Azure Kubernetes Service (AKS) clusters](https://learn.microsoft.com/azure/aks/upgrade-aks-control-plane#upgrade-the-full-aks-cluster).
+For more detailed information about the upgrade process, see the "Upgrade an AKS cluster" section in [Upgrade options and recommendations for Azure Kubernetes Service (AKS) clusters](/azure/aks/upgrade-cluster#upgrade-an-aks-cluster).
 
 ## Symptoms
 
@@ -53,9 +53,23 @@ To understand more about these errors, refer to the following articles:
 - [AKS supported Kubernetes versions](https://learn.microsoft.com/azure/aks/supported-kubernetes-versions)
 - [AKS upgrade version skew policy](https://learn.microsoft.com/azure/aks/upgrade-aks-control-plane#kubernetes-version-upgrade-rules)
 
-## Solution
+## Troubleshooting flow
 
-Record the returned error code, requested target version, and whether the request used `--control-plane-only`. Use the solution that matches the cause.
+Record the returned error code, requested target version, and whether the request used `--control-plane-only`. Check support status against the cluster's support plan, not just its version number. Use the following flow to choose a solution.
+
+:::image type="content" source="media/aks-upgrade-blocked/upgrade-troubleshooting-flow.png" alt-text="Flowchart for choosing an AKS upgrade solution based on current and target support, minor-version skips, LTS, and control-plane-only requests. The branches are described in the following table." lightbox="media/aks-upgrade-blocked/upgrade-troubleshooting-flow.png":::
+
+| Decision | Action |
+| --- | --- |
+| Is the current version unsupported, and is the target unavailable or unsupported? | Verify regional availability and support status in [Solution 1](#solution-1-choose-a-target-available-in-the-region-and-supported-for-the-cluster), then select an eligible recovery target in Solution 2. |
+| Is the current version unsupported, but a supported target is offered? | For non-LTS recovery to community support, use the **oldest supported GA target offered by AKS**, not an arbitrary newer version. Alternatively, consider an eligible LTS target. For unsupported LTS, check for an eligible supported LTS target. See [Solution 2](#solution-2-follow-an-offered-upgrade-path). |
+| Is the current version supported, but the request skips minor versions? | For non-LTS, upgrade to the next minor version and repeat. For LTS-to-LTS, verify that the higher LTS target is offered and satisfies skew and validation requirements. See Solution 2. |
+| Is the current version supported, the path allowed, and the request control-plane-only? | Check every pool against the target control plane's skew window in [Solution 3](#solution-3-check-node-pool-skew-before-a-control-plane-only-upgrade). |
+| Is an eligible full-cluster upgrade still blocked, or do the preceding checks not explain the error? | Follow [If the upgrade remains blocked](#if-the-upgrade-remains-blocked). |
+
+An offered target isn't a guarantee that validation will succeed. Recovery from an unsupported version remains outside support.
+
+## Solution
 
 ### Solution 1: Choose a target available in the region and supported for the cluster
 
@@ -71,7 +85,9 @@ Use that region to check version availability:
 az aks get-versions --location <region> --output table
 ```
 
-Compare the requested target with the returned versions and check the [AKS Kubernetes release calendar](https://learn.microsoft.com/azure/aks/supported-kubernetes-versions#aks-kubernetes-release-calendar-and-upcoming-versions) for its support status. If the target isn't available in the region or supported for the cluster's support plan, don't retry that target. Choose an available, supported target and use Solution 2 to verify the upgrade path for this cluster. Regional availability alone doesn't establish that a specific upgrade path is allowed.
+Compare both the current and requested target versions with the [AKS Kubernetes release calendar](https://learn.microsoft.com/azure/aks/supported-kubernetes-versions#aks-kubernetes-release-calendar-and-upcoming-versions), using the LTS calendar when the cluster has the LTS support plan. If the target isn't available in the region or supported for the cluster's support plan, don't retry that target. Choose an available, supported target and use Solution 2 to verify the upgrade path for this cluster. Regional availability alone doesn't establish that a specific upgrade path is allowed.
+
+If the target appears available and supported but AKS still returns a version-support error, capture the results and follow [If the upgrade remains blocked](#if-the-upgrade-remains-blocked). Don't infer that Azure support can make an unavailable version eligible.
 
 ### Solution 2: Follow an offered upgrade path
 
@@ -83,7 +99,12 @@ Compare the offered targets with the current control plane version from Solution
 
 For a supported non-LTS cluster, upgrade one minor version at a time. If an offered target is one minor version newer than the current version, upgrade to that target, confirm completion, and rerun `get-upgrades` before the next step. Repeat until you reach the desired supported version. Don't request a version older than the current version or skip minor versions on a supported non-LTS cluster.
 
-For LTS clusters or clusters already outside support, apply the conditional paths in the [AKS version support policy](https://learn.microsoft.com/azure/aks/supported-kubernetes-versions#can-i-skip-multiple-aks-versions-during-a-cluster-upgrade). For an unsupported non-LTS cluster with an eligible recovery target, use a full-cluster upgrade rather than `--control-plane-only`. See the LTS recovery tip below if you want to continue through supported LTS versions.
+For LTS clusters or clusters already outside support, apply the conditional paths in the [AKS version support policy](https://learn.microsoft.com/azure/aks/supported-kubernetes-versions#can-i-skip-multiple-aks-versions-during-a-cluster-upgrade):
+
+- **Supported LTS to higher LTS:** Minor-version skips can be allowed if the target is offered and satisfies skew and validation checks. LTS enrollment alone doesn't make every skip eligible. If an apparently eligible path is rejected, collect the error and contact Azure support as described below.
+- **Unsupported non-LTS to community support:** Select the oldest supported generally available (GA) target returned by `get-upgrades`, and request a full-cluster upgrade rather than `--control-plane-only`. Don't choose an arbitrary newer target or an unavailable historical intermediate version. After recovery, follow the one-minor-at-a-time rule for subsequent community upgrades.
+- **Unsupported non-LTS to LTS:** Use an offered, eligible supported LTS target and a full-cluster upgrade with explicit LTS enrollment. See the LTS recovery tip below for the subsequent sequential upgrades and return to community support.
+- **Unsupported LTS to supported LTS:** Select a supported LTS target offered by AKS and satisfy the applicable validation checks. This is still an unsupported recovery path.
 
 Review breaking changes, back up important data, and test workload compatibility before proceeding. The following command requests a full-cluster upgrade. AKS upgrades the control plane first and then the node pools sequentially; all validation checks still apply. Recovery from an unsupported version is outside support and isn't guaranteed to be safe.
 
@@ -111,9 +132,17 @@ When the target is offered and all pools meet the applicable skew requirements, 
 az aks upgrade --resource-group <RG> --name <ClusterName> --kubernetes-version <AvailableUpgradeVersion> --control-plane-only
 ```
 
+If every pool is within the applicable window but the upgrade is still rejected, retain the target version, request mode, and per-pool results and follow [If the upgrade remains blocked](#if-the-upgrade-remains-blocked). Meeting the skew rule doesn't bypass other upgrade validations.
+
 ### Confirm the upgrade result
 
 After each upgrade, rerun the cluster inspection command in Solution 1 and the node-pool inspection command in Solution 3. Confirm that the control plane and each pool included in the upgrade report the intended current version and a `Succeeded` provisioning state. If an operation failed, record its returned error and troubleshoot that error before retrying; a requested version alone doesn't confirm completion. These checks confirm the upgrade result, not workload health. Validate your workloads separately.
+
+### If the upgrade remains blocked
+
+If the preceding checks don't explain the version-policy rejection, [create an Azure support request](https://learn.microsoft.com/azure/azure-portal/supportability/how-to-create-azure-support-request). Include the error code and full message, failure time, operation or correlation ID if available, region, current and requested versions, support plan, request mode, and results of the cluster, node-pool, and offered-target checks. Submit these details through the support request rather than a public issue.
+
+Azure support can help investigate an unexplained rejection, but contacting support doesn't guarantee an upgrade exception or make unsupported recovery supported. If no eligible recovery path exists or its risk is unacceptable, use the migration guidance in Solution 2.
 
 ### Additional tips
 
