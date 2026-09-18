@@ -18,6 +18,7 @@ or combine both approaches. The article also covers how to identify affected tab
 >
 > - Starting in August 2026, newly created websites can't use the wildcard value.
 > - Starting September 14, 2026, the wildcard value isn't supported on any website.
+> - If any of your sites still use the wildcard value and can't be migrated immediately, request a temporary extension from [Manage exemptions for Power Pages sites](/en-us/power-pages/admin/manage-exemptions).
 
 ## Symptoms
 
