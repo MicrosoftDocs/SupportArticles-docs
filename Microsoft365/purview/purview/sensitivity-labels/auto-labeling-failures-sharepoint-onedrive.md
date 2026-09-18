@@ -14,7 +14,7 @@ ms.reviewer: richardstowe
 appliesto: 
   - Microsoft Purview
 search.appverid: MET150
-ms.date: 06/16/2026
+ms.date: 08/27/2026
 ---
 # Resolve auto-labeling failures in SharePoint and OneDrive files
 
@@ -37,6 +37,17 @@ The failures that occur due to infrastructure conditions that affect the SharePo
 
 > [!NOTE]
 > When a labeling operation fails, the affected file retains the same label from before the labeling or has no label if a label wasn’t assigned already.
+
+### Label removal and encrypted files
+
+For an auto-labeling policy that's configured to remove a sensitivity label, distinguish encryption applied by the sensitivity label from other types of file protection:
+
+- An auto-labeling policy that's configured to remove a sensitivity label that applies Microsoft Purview encryption is designed to remove both the label and the encryption. The policy creator doesn't need Export or Full Control permissions for this operation.
+- If a file is password-protected or uses external or non-Microsoft encryption, the service can't remove that protection. The operation fails with `EncryptedFileNotSupported`.
+- Simulation results show that a file matches the policy conditions. They don't confirm that the service can modify the file during enforcement. After you turn on the policy, review labeling failures for files that retain the label.
+- If the policy doesn't remove a Microsoft Purview-encrypted label and no listed failure reason explains the result, contact Microsoft Support. Don't treat Microsoft Purview encryption alone as an unsupported file state.
+
+For more information, see [Removing or downgrading sensitivity labels with an auto-labeling policy](/purview/apply-sensitivity-label-automatically#removing-or-downgrading-sensitivity-labels-with-an-auto-labeling-policy).
 
 ## Details of auto-labeling failures
 
@@ -68,11 +79,11 @@ Select the failure code from the following table and follow the instructions pro
 |---|---|---|
 | FileLocked | Another user or process has locked the file. | No action required. This operation is retried automatically. |
 | FileCheckOut | A user has the file checked out. | No action required. This operation is retried automatically. |
-| EncryptedFileNotSupported | The file is protected by external encryption (for example, password protection or non-Microsoft encryption) that prevents label application. | Remove the external encryption or password protection from the file to allow labeling. |
+| EncryptedFileNotSupported | The file is password-protected or uses external or non-Microsoft encryption that prevents the service from changing the label. This failure doesn't apply to Microsoft Purview encryption that's applied by the sensitivity label selected in an auto-remove policy. | Remove the external encryption or password protection from the file, and then rerun the policy. |
 | FileNotSupported | The file type isn't supported for sensitivity labeling. | No action required. This file type doesn't support sensitivity labels. |
 | FileExtensionNotSupported | The file extension isn't supported for labeling. | No action required. This file extension doesn't support sensitivity labels. |
 | UnsupportedFileType | PDF Labeling isn't enabled. | Enable sensitivity labels for files in SharePoint and OneDrive. |
-| CannotOverrideCurrentLabel | The file already has a sensitivity label with equal or higher priority than the one the policy is trying to apply. | No action required. The existing label takes precedence by design. |
+| CannotOverrideCurrentLabel | The file already has a sensitivity label with equal or higher priority than the one the policy is trying to apply or replace. | No action required. The existing label takes precedence by design. For a policy configured to remove a label, see [Label removal and encrypted files](#label-removal-and-encrypted-files). |
 | ZeroByteFile | The file is empty (0 bytes). Label metadata can't be written to an empty file. | No action required. |
 | GetTagsFailure | SharePoint couldn't read the existing label metadata from the file. | No action required. This operation is retried automatically. |
 | DisabledOrUnsupportedLabel | The sensitivity label is disabled or not supported for this tenant. | Verify that the label is published and active in your labeling policy. |
