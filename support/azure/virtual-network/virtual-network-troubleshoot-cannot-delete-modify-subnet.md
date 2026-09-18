@@ -500,6 +500,7 @@ az network vnet subnet update \
 | `InUseNetworkInterfaceCannotBeAssociatedWithSubnet` | An orphaned NIC has an IP configuration that conflicts with subnet operations. | [Delete the orphaned network adapter](#nics-and-ip-configurations), and retry the operation. |
 | `SubnetIsDelegatedAndCannotBeUsed` | The subnet is already delegated to another service. | [Change or remove the delegation](#change-or-remove-a-subnet-delegation) before deploying a new service. |
 | `NetworkProfileCannotBeDeleted` | A network profile (that's used by Azure Container Instances) still references the subnet. | See [Network profiles](#network-profiles-azure-container-instances). |
+| `SubnetMissingRequiredDelegation` | The subnet cannot remove or modify its delegation because an active Service Association Link (SAL) still depends on that delegation. Azure blocks the operation until the required delegation is present. | Identify the service by using [service association links](#service-association-links), and remove the deployed resources. | 
 
 ## Recommended deletion order
 
