@@ -129,6 +129,8 @@ For a supported non-LTS cluster, upgrade one minor version at a time. If an offe
 
 #### Supported LTS upgrades
 
+For an introduction to LTS and its benefits, including the extended support window and more time to plan and test upgrades, see [Long-term support for AKS versions](https://learn.microsoft.com/azure/aks/long-term-support).
+
 Minor-version skips to a higher LTS version can be allowed if the target is offered and satisfies skew and validation checks. LTS enrollment alone doesn't make every skip eligible. Apply the [AKS version support policy](https://learn.microsoft.com/azure/aks/supported-kubernetes-versions#can-i-skip-multiple-aks-versions-during-a-cluster-upgrade). If an apparently eligible path is rejected, collect the error and follow the support guidance below.
 
 #### Recovery from unsupported versions
