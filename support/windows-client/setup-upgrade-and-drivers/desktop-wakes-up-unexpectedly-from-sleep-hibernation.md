@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, steved
 ms.custom:
-- sap:windows setup,upgrade and deployment\power management
+- sap:Windows Device and Driver Management\Power management
 - pcy:WinComm Devices Deploy
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
@@ -31,8 +31,8 @@ If the desktop machine doesn't have an "ACPI Wake Alarm" device (or if it's disa
 
 Windows 8 automatically configures a "Regular Maintenance" event in TaskScheduler to run at 3:00 AM every day. After initial installation of Window 8, Windows Update is preconfigured to initiate the regular maintenance task and wake event to ensure that it is run.
 
->[!NOTE]
- On mobile computers, if there is no "ACPI Wake Alarm" device detected, Windows 8 disables "allow wake timers" on all in-box power plans, and **Allow scheduled maintenance to wake up my computer at the scheduled time** is not enabled.
+> [!NOTE]
+> On mobile computers, if there is no "ACPI Wake Alarm" device detected, Windows 8 disables "allow wake timers" on all in-box power plans, and **Allow scheduled maintenance to wake up my computer at the scheduled time** is not enabled.
 
 ## Resolution
 
