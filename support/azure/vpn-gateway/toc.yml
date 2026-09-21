@@ -19,6 +19,8 @@ items:
   items:    
   - name: Troubleshoot an Azure site-to-site VPN connection that can't connect
     href: vpn-gateway-troubleshoot-site-to-site-cannot-connect.md
+  - name: Troubleshoot a site-to-site or point-to-site VPN tunnel that won't connect
+    href: troubleshoot-vpn-tunnel-cannot-connect.md
   - name: Troubleshoot site-to-site connections with digital certificate authentication
     href: troubleshoot-digital-certificate-authentication.md
   - name: Troubleshoot Azure site-to-site VPN error codes
