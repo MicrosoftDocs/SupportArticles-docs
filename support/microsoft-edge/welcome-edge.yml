@@ -62,6 +62,8 @@ landingContent:
           url: development/self-host-extension-deploy.md
         - text: IE mode blocks add-on installation because of unverified publisher
           url: development/ie-mode-blocks-addon.md
+        - text: Repeated prompts for proxy credentials
+          url: development/edge-proxy-authentication-loop.md
         - text: Self-hosted extension doesn't update automatically
           url: development/self-host-extension-update.md
         - text: Troubleshoot video playback problems in Microsoft Edge
