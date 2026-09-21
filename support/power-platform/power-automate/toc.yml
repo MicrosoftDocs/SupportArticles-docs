@@ -125,132 +125,134 @@ items:
             href: desktop-flows/ui-automation/uipi-issues.md
           - name: Wrong UI element is clicked or populated in desktop flow
             href: desktop-flows/ui-automation/wrong-ui-element-clicked-populated.md
-      - name: '"Could not read the application certificate" error when creating a connection'
-        href: desktop-flows/application-certificate-error.md
       - name: Agent-related errors when running attended or unattended desktop flows
         href: desktop-flows/agent-connectivity-issues-pad.md
+      - name: Can't access the parent flow
+        href: desktop-flows/cannot-access-parent-flow.md
       - name: Can't automate websites and apps that require Windows credentials
         href: desktop-flows/windows-credentials-dialog-issues.md
       - name: Can't connect to an IBM Personal Communications session
         href: desktop-flows/cannot-connect-to-ibm-personal-communications.md 
-      - name: Can't silently join a machine group
-        href: desktop-flows/silent-join-machine-group-troubleshoot.md
       - name: Can't create a connection from a shared canvas app
         href: desktop-flows/cannot-create-desktop-flow-connection-from-a-shared-canvas-app.md
-      - name: Can't record in a VDI environment
-        href: desktop-flows/cannot-record-in-vdi-environments.md
-      - name: Can't sign in to Power Automate for desktop
-        href: desktop-flows/cannot-sign-in-to-power-automate-for-desktop.md
-      - name: Can't sign in with JavaScript error
-        href: desktop-flows/enable-webview-pad-login.md
-      - name: Can't access the parent flow
-        href: desktop-flows/cannot-access-parent-flow.md
-      - name: '"Could not establish trust relationship for the SSL/TLS secure channel" error'
-        href: desktop-flows/could-not-establish-trust-relationship-ssl-tls-secure-channel.md
-      - name: Can't interact with desktop application without an error
-        href: desktop-flows/cannot-interact-with-desktop-application.md
       - name: Can't create, edit, save, or view desktop flows
         href: desktop-flows/cannot-sign-in-create-edit-save-view-desktop-flows.md
       - name: Can't establish connection to Access Database Engine OLE DB
         href: desktop-flows/cannot-connect-access-database-engine-ole-db.md
       - name: Can't execute a shared desktop flow after changing the connection
         href: desktop-flows/sharing-deskop-flow-with-connections.md
+      - name: Can't interact with desktop application without an error
+        href: desktop-flows/cannot-interact-with-desktop-application.md
+      - name: Can't record in a VDI environment
+        href: desktop-flows/cannot-record-in-vdi-environments.md
+      - name: Can't sign in to Power Automate for desktop
+        href: desktop-flows/cannot-sign-in-to-power-automate-for-desktop.md
+      - name: Can't sign in with JavaScript error
+        href: desktop-flows/enable-webview-pad-login.md
+      - name: Can't silently join a machine group
+        href: desktop-flows/silent-join-machine-group-troubleshoot.md
       - name: Cloud flow is suspended due to missing the attended RPA capability
         href: desktop-flows/cloud-flow-suspended-missing-attended-rpa-capability.md
       - name: Cloud flow is suspended due to missing the unattended RPA capability
         href: desktop-flows/cloud-flow-suspended-missing-unattended-rpa-capability.md 
       - name: Communication error when launching Power Automate for desktop
         href: desktop-flows/communication-error-console.md
-      - name: '"MissingOnPremSidForMachineDomainJoined" in connection creation' 
-        href: desktop-flows/troubleshoot-domain-joined-error.md
       - name: '"Computer not joined Microsoft Entra or domain" in connection creation'
         href: desktop-flows/machine-not-joined-error.md
-      - name: Desktop flows don't show in console if license expired or unassigned
-        href: desktop-flows/desktop-flows-not-show-console-license-expired-unassigned.md
-      - name: Desktop flows fail because of binary caching problems
-        href: desktop-flows/binary-caching-issues.md
+      - name: '"Could not establish trust relationship for the SSL/TLS secure channel" error'
+        href: desktop-flows/could-not-establish-trust-relationship-ssl-tls-secure-channel.md
+      - name: '"Could not read the application certificate" error when creating a connection'
+        href: desktop-flows/application-certificate-error.md
+      - name: Desktop flow fails with the SessionCreationTimeout error code
+        href: desktop-flows/sessioncreationtimeout-error-code.md
       - name: Desktop flow runs are missing from the list
         href: desktop-flows/desktop-flow-runs-missing-from-list.md
       - name: Desktop flow runs list isn't updated
         href: desktop-flows/desktop-flow-runs-list-not-updated.md
+      - name: Desktop flows don't show in console if license expired or unassigned
+        href: desktop-flows/desktop-flows-not-show-console-license-expired-unassigned.md
+      - name: Desktop flows fail because of binary caching problems
+        href: desktop-flows/binary-caching-issues.md
       - name: Desktop flows run failed with AadLogonFailure
         href: desktop-flows/ui-flows-run-failed-with-aadlogonfailure-error.md
-      - name: Desktop flow fails with the SessionCreationTimeout error code
-        href: desktop-flows/sessioncreationtimeout-error-code.md
-      - name: '"ExpiredDesktopFlowConnection" error when using or testing a desktop flow connection'
-        href: desktop-flows/troubleshoot-expired-desktop-flow-connection.md
       - name: Environment load fails with insufficient permissions in the v2 schema
         href: desktop-flows/environment-load-fails-insufficient-permissions-after-2-46.md
       - name: Error communicating with the emulator using Micro Focus Reflection Desktop
         href: desktop-flows/error-communicating-with-the-emulator.md
-      - name: Expression couldn't be evaluated error when using direct encrypted text
-        href: desktop-flows/error-expression-could-not-be-evaluated.md
       - name: Errors when running attended or unattended desktop flows
         href: desktop-flows/troubleshoot-errors-running-attended-or-unattended-desktop-flows.md
-      - name: '"Failed to run PowerShell script" error'
-        href: desktop-flows/failed-to-run-powershell-script-error.md
-      - name: '"Failed to take screenshot" error in unattended desktop flow run'
-        href: desktop-flows/take-screenshot-action-fails-in-unattended-mode.md
+      - name: '"ExpiredDesktopFlowConnection" error when using or testing a desktop flow connection'
+        href: desktop-flows/troubleshoot-expired-desktop-flow-connection.md
+      - name: Expression couldn't be evaluated error when using direct encrypted text
+        href: desktop-flows/error-expression-could-not-be-evaluated.md
       - name: Failed connection between Power Automate components
         href: desktop-flows/failed-connection-between-power-automate-components.md
       - name: Failed license check on a desktop flow run
         href: desktop-flows/desktop-flow-run-time-license-check.md
-      - name: '"Invalid Private key file" error in Open secure FTP connection action'
-        href: desktop-flows/invalid-private-key-file-error.md
-      - name: Invalid credentials error when creating connection or running desktop flow
-        href: desktop-flows/invalid-credentials-errors-running-desktop-flows.md
+      - name: '"Failed to run PowerShell script" error'
+        href: desktop-flows/failed-to-run-powershell-script-error.md
+      - name: '"Failed to take screenshot" error in unattended desktop flow run'
+        href: desktop-flows/take-screenshot-action-fails-in-unattended-mode.md
       - name: Invalid credentials error using Microsoft Entra account
         href: desktop-flows/troubleshoot-ui-flow-invalid-credentials-error-using-aad-account.md
+      - name: Invalid credentials error when creating connection or running desktop flow
+        href: desktop-flows/invalid-credentials-errors-running-desktop-flows.md
+      - name: '"Invalid Private key file" error in Open secure FTP connection action'
+        href: desktop-flows/invalid-private-key-file-error.md
+      - name: Invoke web service action fails with a proxy authentication error
+        href: desktop-flows/invoke-web-service-proxy-authentication-error.md
       - name: '"Logon type not granted" error when creating connection or running desktop flow'
         href: desktop-flows/logon-type-has-not-been-granted.md
       - name: Machine registration failure
         href: desktop-flows/desktop-flow-machine-registration-troubleshooting.md
       - name: MaxRDSessionDurationReached or SessionHasLoggedOffWithMaxIdleTime
         href: desktop-flows/desktop-flow-max-session-duration-error.md
+      - name: '"MissingOnPremSidForMachineDomainJoined" in connection creation' 
+        href: desktop-flows/troubleshoot-domain-joined-error.md
+      - name: Power Automate for desktop console doesn't show any flows
+        href: desktop-flows/console-not-show-desktop-flows.md
       - name: Power Automate for desktop installation logs
         href: desktop-flows/how-to-get-power-automate-desktop-installer-logs.md
       - name: '"Power Automate needs an update" occurs when opening Power Automate for desktop'
         href: desktop-flows/cannot-update-power-automate-for-desktop.md
-      - name: Power Automate for desktop console doesn't show any flows
-        href: desktop-flows/console-not-show-desktop-flows.md
       - name: Power Automate service doesn't start automatically after restarting
         href: desktop-flows/windows-services-not-start-after-restart.md
       - name: Registration fails with RegisterFlowMachine deactivated error
         href: desktop-flows/verify-dataverse-process-registerflowmachine.md
-      - name: SessionHasLoggedOff occurs during a desktop flow run connected with the cloud
-        href: desktop-flows/session-has-logged-off-troubleshooting.md
       - name: 'Security update for "connect with sign-in" connections on AD domain-joined machines'
         href: desktop-flows/connect-with-sign-in-security-update.md
       - name: Security update for sensitive variables
         href: desktop-flows/sensitive-variables-security-update.md
-      - name: Some actions appear to be missing or aren't visible
-        href: desktop-flows/actions-not-available.md
       - name: Session creation errors for unattended desktop flow runs
         href: desktop-flows/troubleshoot-session-creation-errrors.md
+      - name: SessionHasLoggedOff occurs during a desktop flow run connected with the cloud
+        href: desktop-flows/session-has-logged-off-troubleshooting.md
+      - name: Some actions appear to be missing or aren't visible
+        href: desktop-flows/actions-not-available.md
+      - name: Temporary profile error during machine registration
+        href: desktop-flows/temporary-profile-error-machine-registration.md
       - name: Tenant restrictions for machine registration
         href: desktop-flows/tenant-restictions-machine-registration.md  
       - name: '"The specified module could not be found" error with terminal emulation action'
         href: desktop-flows/terminal-emulation-module-not-found.md
-      - name: Troubleshoot failed unattended runs using screenshots
-        href: desktop-flows/troubleshoot-unattended-runs-with-screenshots.md
-      - name: Troubleshoot direct connectivity issues
-        href: desktop-flows/troubleshoot-direct-connectivity-issues.md
       - name: Troubleshoot desktop flow run queue-based errors
         href: desktop-flows/troubleshoot-desktop-flow-run-queue-errors.md
+      - name: Troubleshoot direct connectivity issues
+        href: desktop-flows/troubleshoot-direct-connectivity-issues.md
+      - name: Troubleshoot failed unattended runs using screenshots
+        href: desktop-flows/troubleshoot-unattended-runs-with-screenshots.md
       - name: Troubleshoot hosted machines in Power Automate for desktop
         href: desktop-flows/troubleshoot-hosted-machines-in-power-automate-for-desktop.md
       - name: Troubleshoot installation issues in Power Automate for desktop
         href: desktop-flows/power-automate-desktop-installation-issues.md
-      - name: Temporary profile error during machine registration
-        href: desktop-flows/temporary-profile-error-machine-registration.md
       - name: 'UnallowedTenantForConnectWithSignIn or connection errors when using "connect with sign-in"'
         href: desktop-flows/troubleshoot-unallowed-tenant-for-connect-with-sign-in.md
-      - name: Your machine doesn't appear when creating a desktop flow connection 
-        href: desktop-flows/machine-not-shown-in-list.md
       - name: Unattended desktop flow fails with MSEntraMachineAlwaysPromptingForPassword
         href: desktop-flows/msentramachinealwayspromptingforpassword-error.md
       - name: Version control error when publishing a flow or saving it as a draft
         href: desktop-flows/version-control-update-on-draft.md
+      - name: Your machine doesn't appear when creating a desktop flow connection 
+        href: desktop-flows/machine-not-shown-in-list.md
   - name: Flow creation
     items:
       - name: Can't find Excel Online table in Microsoft Flow
