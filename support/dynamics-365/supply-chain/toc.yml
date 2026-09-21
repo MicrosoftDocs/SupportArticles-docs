@@ -161,6 +161,8 @@ items:
         href: procurement/object-reference-not-set.md
       - name: Failures when submitting a Prospective Vendor Registration Request
         href: procurement/unable-to-submit-pvrr.md
+      - name: Intercompany purchase order confirmation fails with distribution errors
+        href: procurement/intercompany-purchase-order-confirmation-over-under-distribution.md
       - name: Order taker not auto-filled when creating purchase or sales orders
         href: procurement/po-so-order-taker-not-auto-filled.md
       - name: PO confirmation fails with "Cannot create a record in Source document line"

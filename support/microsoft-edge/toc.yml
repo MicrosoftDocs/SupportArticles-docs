@@ -8,6 +8,8 @@ items:
         href: experience/copilot-chat-loading-issues.md
       - name: Copilot icon doesn't appear in the Edge sidebar
         href: experience/copilot-icon-missing-sidebar.md
+      - name: Webpage translation isn't offered or doesn't complete
+        href: experience/edge-translate-not-working.md
   - name: Manage and Deploy
     items:
       - name: Can't enable extensions for InPrivate browsing by using Group Policy
@@ -40,6 +42,8 @@ items:
         href: development/edge-geolocation-not-working.md
       - name: IE mode blocks add-on installation because of unverified publisher
         href: development/ie-mode-blocks-addon.md
+      - name: Repeated prompts for proxy credentials
+        href: development/edge-proxy-authentication-loop.md
       - name: Self-hosted extension doesn't update automatically
         href: development/self-host-extension-update.md
       - name: Troubleshoot download failures
