@@ -55,19 +55,21 @@ To understand more about these errors, refer to the following articles:
 
 ## Troubleshooting flow
 
-Record the returned error code, attempted target version, and whether the request used `--control-plane-only`. For every cluster, first [collect cluster details and verify target availability](#collect-cluster-details-and-verify-target-availability). Then use the following flow to select the applicable remediation. Check support status against the cluster's support plan, not just its version number.
+Confirm the current and target versions and support plans. Record the returned error code and whether the failed request used `--control-plane-only`. For every cluster, first [collect cluster details and verify target availability](#collect-cluster-details-and-verify-target-availability). Use the following flow to troubleshoot an upgrade that is already blocked. Check support status against the applicable support plan, not just the version number.
 
-:::image type="content" source="media/aks-upgrade-blocked/upgrade-troubleshooting-flow.png" alt-text="Flowchart that checks target availability for every cluster before selecting an upgrade path, checking applicable node-pool skew, or escalating an unexplained rejection. The branches are described in the following table." lightbox="media/aks-upgrade-blocked/upgrade-troubleshooting-flow.png":::
+:::image type="content" source="media/aks-upgrade-blocked/upgrade-troubleshooting-flow.png" alt-text="Flowchart starting with target and current version support, then minor-version distance and LTS status. The control-plane-only decision branches to the right. The decisions and outcomes are described in the following table." lightbox="media/aks-upgrade-blocked/upgrade-troubleshooting-flow.png":::
 
 | Decision | Action |
 | --- | --- |
-| Is the target unavailable, unsupported, or not offered for this cluster? | Use the [target checks](#collect-cluster-details-and-verify-target-availability) and [upgrade-path guidance](#select-the-upgrade-path-for-your-scenario) to select an eligible target, regardless of whether the current version is supported. If none is available, consider the recovery, migration, and support guidance below. |
-| Is the current version unsupported, but a supported target is offered? | For non-LTS recovery to community support, use the **oldest supported GA target offered by AKS**, not an arbitrary newer version. Alternatively, consider an eligible LTS target. For unsupported LTS, check for an eligible supported LTS target. See [Recovery from unsupported versions](#recovery-from-unsupported-versions). |
-| Is the current version supported, and is the target more than one minor version ahead? | For non-LTS, upgrade to the next minor version and repeat. For LTS-to-LTS, verify that the higher LTS target is offered and satisfies skew and validation requirements. See [Select the upgrade path for your scenario](#select-the-upgrade-path-for-your-scenario). |
-| Is the current version supported, the path allowed, and the request control-plane-only? | [Check node-pool skew](#check-node-pool-skew-for-control-plane-only-upgrades) against the intended control plane target before retrying. |
-| Is an eligible full-cluster upgrade still blocked, or do the preceding checks not explain the error? | Follow [If the upgrade remains blocked](#if-the-upgrade-remains-blocked). |
+| Is the target version supported? | **No:** Upgrading to a target outside the supported list isn't allowed. **Yes:** Check whether the current version is still supported. |
+| Is the current version still supported? | **No:** For non-LTS recovery to community support, use the **oldest supported GA target offered by AKS**, or consider an eligible supported LTS target. For unsupported LTS, use an eligible supported LTS target. See [Recovery from unsupported versions](#recovery-from-unsupported-versions). **Yes:** Check the minor-version distance. |
+| Is the target more than 1 minor version ahead? | **No:** Check whether the request is control-plane-only. **Yes:** Check whether the current AKS cluster has LTS enabled. |
+| Is this an upgrade for the control plane only? | **Yes:** Check whether the target control plane is **more than 3 minor versions ahead** of any pool, applying the [version-specific skew guidance](#check-node-pool-skew-for-control-plane-only-upgrades). **No:** Ask Azure support for further analysis of the blocked upgrade. |
+| Does the current AKS cluster have LTS enabled? | **Yes:** Ask Azure support for further troubleshooting of the blocked upgrade. **No:** For a community-supported version, upgrade to the next minor version. See [Supported community upgrades](#supported-community-upgrades). |
 
-An offered target isn't a guarantee that validation will succeed. Recovery from an unsupported version remains outside support.
+A supported target must also be available and offered for this cluster; support status alone doesn't make the path eligible. LTS-to-LTS minor-version skips can be allowed, so the support branch is for an unexplained blocked request, not a requirement to contact support before every LTS upgrade. Follow [If the upgrade remains blocked](#if-the-upgrade-remains-blocked) to provide the diagnostic details.
+
+The oldest-supported-community-target rule applies to non-LTS recovery; an eligible LTS target isn't necessarily the oldest supported LTS version. Recovery from an unsupported version remains outside support. Being exactly three minor versions ahead isn't itself a violation when the applicable policy allows that skew.
 
 ## Troubleshooting and resolution
 
