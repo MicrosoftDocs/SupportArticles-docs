@@ -6,7 +6,7 @@ manager: dcscontentpm
 ms.topic: troubleshooting
 ms.collection: highpri
 ms.custom:
-- sap:windows setup,upgrade and deployment\installing or upgrading windows
+- sap:Windows Setup, Upgrade and Deployment\Installing or upgrading Windows
 - pcy:WinComm Devices Deploy
 ms.reviewer: dougeby
 audience: itpro

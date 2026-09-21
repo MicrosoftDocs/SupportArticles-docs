@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, scottmca
 ms.custom:
-- sap:windows setup,upgrade and deployment\power management
+- sap:Windows Device and Driver Management\Power management
 - pcy:WinComm Devices Deploy
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
