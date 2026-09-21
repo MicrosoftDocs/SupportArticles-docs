@@ -22,6 +22,8 @@ landingContent:
             url: experience/copilot-chat-loading-issues.md
           - text: Copilot icon doesn't appear in the Edge sidebar
             url: experience/copilot-icon-missing-sidebar.md
+          - text: Webpage translation isn't offered or doesn't complete
+            url: experience/edge-translate-not-working.md
 
   - title: Manage and Deploy
     linkLists:
