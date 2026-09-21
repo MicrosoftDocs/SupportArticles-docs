@@ -57,15 +57,25 @@ To understand more about these errors, refer to the following articles:
 
 Confirm the current and target versions and support plans. Record the returned error code and whether the failed request used `--control-plane-only`. For every cluster, first [collect cluster details and verify target availability](#collect-cluster-details-and-verify-target-availability). Use the following flow to troubleshoot an upgrade that is already blocked. Check support status against the applicable support plan, not just the version number.
 
-:::image type="content" source="media/aks-upgrade-blocked/upgrade-troubleshooting-flow.png" alt-text="Flowchart starting with target and current version support, then minor-version distance and LTS status. The control-plane-only decision branches to the right. The decisions and outcomes are described in the following table." lightbox="media/aks-upgrade-blocked/upgrade-troubleshooting-flow.png":::
+:::image type="content" source="media/aks-upgrade-blocked/upgrade-troubleshooting-flow.png" alt-text="Flowchart for a blocked upgrade: check target and current version support, then minor-version distance and LTS status. The control-plane-only decision branches right to node-pool skew checks or Azure support. Recovery paths and escalation guidance follow below." lightbox="media/aks-upgrade-blocked/upgrade-troubleshooting-flow.png":::
 
-| Decision | Action |
-| --- | --- |
-| Is the target version supported? | **No:** Upgrading to a target outside the supported list isn't allowed. **Yes:** Check whether the current version is still supported. |
-| Is the current version still supported? | **No:** For non-LTS recovery to community support, use the **oldest supported GA target offered by AKS**, or consider an eligible supported LTS target. For unsupported LTS, use an eligible supported LTS target. See [Recovery from unsupported versions](#recovery-from-unsupported-versions). **Yes:** Check the minor-version distance. |
-| Is the target more than 1 minor version ahead? | **No:** Check whether the request is control-plane-only. **Yes:** Check whether the current AKS cluster has LTS enabled. |
-| Is this an upgrade for the control plane only? | **Yes:** Check whether the target control plane is **more than 3 minor versions ahead** of any pool, applying the [version-specific skew guidance](#check-node-pool-skew-for-control-plane-only-upgrades). **No:** Ask Azure support for further analysis of the blocked upgrade. |
-| Does the current AKS cluster have LTS enabled? | **Yes:** Ask Azure support for further troubleshooting of the blocked upgrade. **No:** For a community-supported version, upgrade to the next minor version. See [Supported community upgrades](#supported-community-upgrades). |
+### Upgrade-path combinations
+
+The following combinations summarize the [AKS minor-version upgrade policy](https://learn.microsoft.com/azure/aks/supported-kubernetes-versions#can-i-skip-multiple-aks-versions-during-a-cluster-upgrade). Non-LTS means community support (`KubernetesOfficial`); LTS means the `AKSLongTermSupport` plan. Support status is evaluated under the applicable plan.
+
+| Current version | Target version | Upgrade |
+| --- | --- | --- |
+| Unsupported non-LTS | Supported LTS | Allowed |
+| Unsupported LTS | Supported LTS | Allowed |
+| Unsupported non-LTS | Lowest supported GA non-LTS version offered by AKS | Allowed |
+| Supported LTS | Higher supported LTS | Allowed |
+| Supported non-LTS | Next supported non-LTS minor version | Allowed |
+| Supported non-LTS | Supported non-LTS more than one minor version ahead | Not allowed |
+| Any current version | Unsupported target version | Not allowed |
+
+**Conditions for "Allowed":** The target must be offered for the cluster, and the upgrade must pass the applicable skew and validation checks. Unsupported non-LTS recovery requires a full-cluster upgrade; an LTS destination also requires Premium and explicit LTS enrollment. Upgrades from unsupported versions remain unsupported recovery paths, even when the table says "Allowed." This doesn't guarantee upgrade success or workload compatibility.
+
+These rows describe version-upgrade eligibility, not a support-plan change on the same version. For supported community-to-LTS enrollment or LTS-to-community exit, see [LTS support-plan transitions](https://learn.microsoft.com/azure/aks/long-term-support).
 
 A supported target must also be available and offered for this cluster; support status alone doesn't make the path eligible. LTS-to-LTS minor-version skips can be allowed, so the support branch is for an unexplained blocked request, not a requirement to contact support before every LTS upgrade. Follow [If the upgrade remains blocked](#if-the-upgrade-remains-blocked) to provide the diagnostic details.
 
@@ -105,17 +115,7 @@ If the attempted target fails any of these checks, don't retry that target. Use 
 
 Use the cluster state and offered targets collected above to select the applicable path. For a control-plane-only request, also complete the [node-pool skew checks](#check-node-pool-skew-for-control-plane-only-upgrades) before retrying. Unsupported non-LTS recovery requires a full-cluster upgrade.
 
-The following table summarizes the [AKS upgrade-path policy](https://learn.microsoft.com/azure/aks/supported-kubernetes-versions#can-i-skip-multiple-aks-versions-during-a-cluster-upgrade) and [LTS support-plan transitions](https://learn.microsoft.com/azure/aks/long-term-support). Community support uses `KubernetesOfficial`; LTS uses `AKSLongTermSupport`. All version upgrades require an offered target and applicable validation checks.
-
-| Current state | Destination | Path and key condition |
-| --- | --- | --- |
-| Supported community | Community | Upgrade one minor version at a time. |
-| Supported community | LTS | Enable LTS on an LTS-compatible version with Premium and `AKSLongTermSupport`, then follow the LTS upgrade rules. |
-| Supported LTS | Higher supported LTS | Minor-version skips can be allowed, subject to target eligibility, skew, and validation. |
-| LTS | Community | Reach a community-supported version through an eligible path, then disable LTS with Free or Standard and `KubernetesOfficial`. |
-| Unsupported community | Supported community | Use the oldest supported GA target offered by AKS and a full-cluster upgrade. This is unsupported recovery. |
-| Unsupported community | Supported LTS | Use an eligible offered LTS target, explicit LTS enrollment, and a full-cluster upgrade. This is unsupported recovery. |
-| Expired LTS | Supported LTS | Use an eligible offered supported LTS target. This is unsupported recovery. |
+Use the [upgrade-path combinations](#upgrade-path-combinations) to check whether the current and target versions form an allowed path, then follow the applicable procedure below.
 
 > [!IMPORTANT]
 > A gapped upgrade skips one or more minor versions. An offered target or an allowed skip doesn't guarantee workload or add-on compatibility: API removals and breaking changes can accumulate across the intervening releases. An upgrade from an unsupported version remains an unsupported recovery path even when the destination is supported, and isn't guaranteed to be safe. Changing the support plan alone doesn't upgrade Kubernetes or make a version skip eligible.
@@ -135,7 +135,7 @@ Minor-version skips to a higher LTS version can be allowed if the target is offe
 
 #### Recovery from unsupported versions
 
-Use the recovery row in the table that matches the current and intended support plans. Don't choose an arbitrary newer community target or an unavailable historical intermediate version. After recovery to community support, follow the one-minor-at-a-time rule for subsequent upgrades.
+Use the recovery row in the [upgrade-path combinations](#upgrade-path-combinations) that matches the current and intended support plans. Don't choose an arbitrary newer community target or an unavailable historical intermediate version. After recovery to community support, follow the one-minor-at-a-time rule for subsequent upgrades.
 
 For the LTS recovery route:
 
