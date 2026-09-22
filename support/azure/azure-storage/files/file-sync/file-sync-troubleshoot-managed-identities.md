@@ -188,7 +188,7 @@ Make sure that the server is configured to use a managed identity.
 
 To verify this configuration:
 - Check the **Settings** > **Managed identities** details in your storage sync service, or
-- Run the following PowerShell command:
+- Run the following command from an elevated PowerShell window:
 
 ```powershell
 Get-AzStorageSyncServer -ResourceGroupName <ResourceGroupName> -StorageSyncServiceName <StorageSyncServiceName>
