@@ -1,10 +1,10 @@
 ---
 title: Troubleshoot Istio add-on Gateway API ingress in AKS 
 description: Troubleshoot Gateway API ingress on the Istio service mesh add-on for AKS. Diagnose and resolve ingress traffic routing issues quickly with this step-by-step guide.
-ms.date: 08/26/2025
+ms.date: 09/22/2026
 author: nshankar13
 ms.author: nshankar
-ms.reviewer: jkatariya
+ms.reviewer: jkatariya, mariusbutuc
 ms.service: azure-kubernetes-service
 ms.topic: troubleshooting
 ms.custom: sap:Extensions, Policies and Add-Ons
