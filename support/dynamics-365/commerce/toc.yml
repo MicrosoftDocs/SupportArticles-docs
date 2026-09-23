@@ -22,6 +22,8 @@
       href: data-synchronization/commerce-data-exchange.md
     - name: Troubleshoot Commerce offline implementation
       href: data-synchronization/commerce-offline-implementation.md
+    - name: Troubleshoot upload session warnings and delays
+      href: data-synchronization/upload-session-warnings.md
 - name: Development and SDKs
   items:
     - name: Errors when debugging against a Tier 1 Retail Server virtual machine
