@@ -471,6 +471,147 @@ If you use the **Maximum security** profile or a **Custom** security profile wit
 
 To mount the share properly in AKS, enable the **NTLM v2** authentication mechanism for the **Custom** security profile or use the **Maximum compatibility** security profile.
 
+
+## `AuthorizationFailed` error during Azure File share provisioning
+
+### Symptoms
+
+The PersistentVolumeClaim (PVC) remains in a `Pending` state and volume provisioning fails with an `AuthorizationFailed` error.
+
+Example event output:
+
+```text
+Events:
+  Type     Reason                Age                From                         Message
+  ----     ------                ----               ----                         -------
+  Normal   ExternalProvisioning  6s                 persistentvolume-controller  Waiting for a volume to be created by the external provisioner 'file.csi.azure.com' or manually by the system administrator.
+  Normal   Provisioning          3s (x3 over 6s)   file.csi.azure.com           External provisioner is provisioning volume for claim "<NAMESPACE>/<PVC_NAME>"
+  Warning  ProvisioningFailed    2s (x3 over 6s)   file.csi.azure.com           rpc error: code = Internal desc =
+
+  GET /subscriptions/<SUBSCRIPTION_ID>/resourceGroups/<RESOURCE_GROUP>/providers/Microsoft.Storage/storageAccounts/<STORAGE_ACCOUNT>/fileServices/default/shares/<FILE_SHARE>
+
+  RESPONSE 403: 403 Forbidden
+
+  ERROR CODE: AuthorizationFailed
+
+  {
+    "error": {
+      "code": "AuthorizationFailed",
+      "message": "The client '<CLIENT_ID>' with object id '<OBJECT_ID>' does not have authorization to perform action 'Microsoft.Storage/storageAccounts/fileServices/shares/read' over scope '/subscriptions/<SUBSCRIPTION_ID>/resourceGroups/<RESOURCE_GROUP>/providers/Microsoft.Storage/storageAccounts/<STORAGE_ACCOUNT>/fileServices/default/shares/<FILE_SHARE>' or the scope is invalid. If access was recently granted, please refresh your credentials."
+    }
+  }
+```
+
+### Possible causes
+
+This error occurs when the identity used by the Azure File CSI driver does not have sufficient Azure RBAC permissions to perform file share operations against the target Storage Account.
+
+Common causes include:
+
+- Missing Azure RBAC role assignments for the AKS cluster identity.
+- Role assignments configured at an incorrect scope.
+- Use of a custom role that does not include Azure Files management permissions.
+- Recent permission changes that have not yet propagated through Azure RBAC.
+- Incorrect managed identity, kubelet identity, or service principal being used during provisioning.
+
+### Troubleshooting
+
+#### Step 1: Identify the principal reported in the error
+
+Review the PVC events and note the following values:
+
+- `<CLIENT_ID>`
+- `<OBJECT_ID>`
+
+These values identify the principal attempting to access the Azure File share.
+
+#### Step 2: Determine which AKS identity is being used
+
+Check the AKS cluster configuration and identify whether the cluster uses:
+
+- System-assigned managed identity
+- User-assigned managed identity
+- Service principal
+
+Retrieve the cluster identity information:
+
+```bash
+az aks show \
+  --resource-group <AKS_RESOURCE_GROUP> \
+  --name <AKS_CLUSTER_NAME> \
+  --query identity
+```
+
+For clusters using managed identities, verify the kubelet identity:
+
+```bash
+az aks show \
+  --resource-group <AKS_RESOURCE_GROUP> \
+  --name <AKS_CLUSTER_NAME> \
+  --query identityProfile
+```
+
+Confirm that the client ID reported in the provisioning error matches the AKS identity being used.
+
+#### Step 3: Verify role assignments
+
+Check whether the identified principal has role assignments on the target Storage Account:
+
+```bash
+az role assignment list \
+  --assignee <CLIENT_ID> \
+  --scope /subscriptions/<SUBSCRIPTION_ID>/resourceGroups/<RESOURCE_GROUP>/providers/Microsoft.Storage/storageAccounts/<STORAGE_ACCOUNT>
+```
+
+Review the assigned roles and scopes.
+
+#### Step 4: Validate required permissions
+
+The Azure File CSI driver must be able to perform Azure Files management operations through Azure Resource Manager.
+
+At a minimum, the assigned role must allow operations such as:
+
+```text
+Microsoft.Storage/storageAccounts/fileServices/shares/read
+Microsoft.Storage/storageAccounts/fileServices/shares/write
+Microsoft.Storage/storageAccounts/fileServices/shares/delete
+```
+
+For most scenarios, assigning the built-in **Contributor** role on the Storage Account scope is sufficient.
+
+#### Step 5: Verify the role assignment scope
+
+Ensure the role assignment applies to a valid scope that includes the target Storage Account:
+
+- Storage Account (recommended)
+- Resource Group
+- Subscription
+
+A role assignment applied to another resource or scope will not grant access to the Storage Account referenced by the StorageClass.
+
+#### Step 6: Allow time for RBAC propagation
+
+If permissions were recently granted or modified, allow sufficient time for Azure RBAC propagation and retry the operation.
+
+After permissions have propagated:
+
+1. Recreate the PVC or retry provisioning.
+2. Monitor PVC events.
+3. Verify that the Azure File share is created successfully.
+4. Confirm that the PVC transitions to the `Bound` state.
+
+### Resolution
+
+Grant the required Azure RBAC permissions to the identity used by the Azure File CSI driver on the target Storage Account.
+
+Once the appropriate role assignment has propagated, retry provisioning and verify that the Azure File share can be accessed successfully.
+
+### Additional notes
+
+> An `AuthorizationFailed` error indicates an Azure Resource Manager authorization issue rather than a network connectivity or mounting issue. Troubleshooting should focus on identity configuration, Azure RBAC permissions, and role assignment scope.
+
+
+
 ## References
 
 If you experience other mount errors, see [Troubleshoot Azure Files problems in Linux](/azure/storage/files/storage-troubleshoot-linux-file-connection-problems).
