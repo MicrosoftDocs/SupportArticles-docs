@@ -93,6 +93,8 @@ items:
       href: availability-performance/node-not-ready-then-recovers.md
     - name: Troubleshoot node auto-repair errors
       href: availability-performance/node-auto-repair-errors.md
+    - name: Troubleshoot flex node Machine API and node pool changes
+      href: extensions/flex-nodes-for-aks.md
 - name: Connectivity issues
   items:
   - name: Can't connect to application hosted on AKS cluster
