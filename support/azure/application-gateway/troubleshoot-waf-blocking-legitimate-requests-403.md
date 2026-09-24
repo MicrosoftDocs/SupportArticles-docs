@@ -6,10 +6,10 @@ manager: dcscontentpm
 ms.topic: troubleshooting
 author: kaushika-msft
 ms.author: kaushika
-ms.reviewer: duau, allensu
+ms.reviewer: duau, allensu, kaushika
 ms.custom:
   - sap:Facing 4xx errors
-ms.date: 09/16/2026
+ms.date: 09/24/2026
 ai-usage: ai-assisted
 ---
 
@@ -21,7 +21,7 @@ This article provides a step-by-step diagnostic process to identify why Azure Ap
 
 Azure Application Gateway WAF in Prevention mode can block legitimate requests by using HTTP `403 Forbidden` errors when managed rules incorrectly match benign content such as form inputs, JSON payloads, or cookie values.
 
-The most common root causes are:
+The most common root causes include the following:
 
 - SQL injection rules that trigger on sign-in form fields or query parameters that contain SQL-like syntax.
 - Cross-site scripting rules that match JSON API payloads or HTML content in request bodies.
@@ -274,6 +274,8 @@ az monitor log-analytics query \
 
 Examine the `details_data_s` field. It shows the matched field in the `[COLLECTION:selector:value]` form (for example `{s&1c found within [ARGS:password:...]}`). The `details_message_s` field holds only the rule description (for example, `Detect Sql Injection at ARGS.`), so focus your interpretation on `details_data_s`.
 
+The following table summarizes common patterns in the `details_data_s` field and their typical false positive scenarios. 
+
 | `details_data_s` pattern | What part of the request matched | Common false positive scenario |
 | --- | --- | --- |
 | `found within [ARGS:username...]` or `[ARGS:password...]`. | A query parameter or form field value. | A sign-in form with `'` or `--` in the password field triggers a SQLi rule. |
@@ -344,6 +346,8 @@ Invoke-AzOperationalInsightsQuery `
 
 Read `DistinctFields` (the count of distinct selectors the single rule matched) together with the `Fields` and `Endpoints` sets.
 
+The following table helps you interpret the results of the query.
+
 | Observation | Meaning | Next step |
 | --- | --- | --- |
 | `DistinctFields` is `1` or a small, nameable set of specific fields (for example, only `ARGS:password`, or `ARGS:password` and `ARGS:username`). | The rule misfires on one or a few specific fields you can target individually. Record `{MATCH_VARIABLE}` and `{SELECTOR}` for each. | Perform [Resolution A](#resolution-a). |
@@ -360,6 +364,8 @@ Record `{DISTINCT_SELECTOR_COUNT}`. This value is the `DistinctFields` value tha
 Check whether the blocked request represents a genuine attack or a false positive from legitimate application traffic.
 
 This step is a manual evaluation. Consider the following factors.
+
+The following factors can help you determine whether a blocked request is a true positive or a false positive.
 
 | Factor | Points toward **True Positive** (genuine attack) | Points toward **False Positive** (legitimate traffic) |
 | --- | --- | --- |
@@ -458,6 +464,8 @@ Use the following table to interpret the results of the WAF policy exclusions an
 
 Use the information you gathered in [Step 2](#step-2), [Step 3b](#step-3b), this step, and your stated intent to find the correct resolution in the following table. Read it completely, and use the **first** row that matches. The order resolves ties, so you shouldn't have to choose between two resolutions by intuition.
 
+The following table helps you determine the correct resolution based on the observable information and your stated intent.
+
 | Observable information and stated intent | Route to |
 | --- | --- |
 | WAF firewall logging is off. [Step 1b](#step-1b) showed `ApplicationGatewayFirewallLog` disabled. Therefore, you couldn't run [Step 2](#step-2). | Perform [Resolution E](#resolution-e) to enable WAF diagnostic logging. |
@@ -509,7 +517,7 @@ Common scenarios include:
      --output json
    ```
 
-1. From the `details_data_s` field, identify the exclusion match variable, and map the WAF log field to the exclusion variable.
+1. From the `details_data_s` field, identify the exclusion match variable, and map the WAF log field to the exclusion variable. The following table provides the mapping between WAF log fields and exclusion match variables.
 
    | WAF log shows `found within...` | Exclusion match variable | Description |
    | --- | --- | --- |
@@ -692,7 +700,7 @@ Common scenarios include:
    ```
 
 
-   Use the following table to interpret the results of the query:
+   Use the following table to interpret the results of the query.
 
    | Result | Meaning |
    | --- | --- |
@@ -838,7 +846,7 @@ The WAF policy needs a tuning period in which rules log matches without blocking
 > [!IMPORTANT]
 > Detection mode means WAF **doesn't block any requests including genuine attacks**. Use this mode only as a temporary tuning measure, not as a permanent configuration for production traffic.
 
-1. Switch the WAF policy mode from Prevention to Detection.
+1. Switch the WAF policy mode from `Prevention` to `Detection`.
 
    Run the following commands in Azure CLI.
 
@@ -1122,7 +1130,7 @@ Because you didn't configure WAF diagnostic logging, you can't analyze blocked r
      --logs @logs.json
    ```
 
-   **Azure PowerShell:**
+   **Azure PowerShell**
 
    ```powershell
    # -- Collect inputs (cached if already set in this session) --

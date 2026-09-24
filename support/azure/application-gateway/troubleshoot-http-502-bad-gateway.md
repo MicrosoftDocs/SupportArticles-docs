@@ -3,27 +3,13 @@ title: Troubleshoot HTTP 502 errors in Azure Application Gateway
 description: Use this step-by-step guide to troubleshoot HTTP 502 Bad Gateway errors in Azure Application Gateway, and restore back-end health quickly. Start now.
 ms.service: azure-application-gateway
 ms.topic: troubleshooting
-ms.date: 9/15/2026
+ms.date: 09/23/2026
+manager: dcscontentpm
+author: kaushika-msft
+ms.author: kaushika
+ms.reviewer: kaushika 
 ms.custom: sap:Facing 5xx errors
-ai.hint.symptom-tags:
-  - 502-error
-  - bad-gateway
-  - backend-unhealthy
-  - backend-pool-empty
-  - connection-refused
-ai.hint.scope: resource-level
-ai.hint.required-permissions:
-  - Microsoft.Network/applicationGateways/read
-  - Microsoft.Network/applicationGateways/backendhealth/action
-  - Microsoft.Network/applicationGateways/write
-  - Microsoft.Network/networkSecurityGroups/read
-  - Microsoft.Insights/diagnosticSettings/read
-  - Microsoft.Insights/metrics/read
-  - Microsoft.Web/sites/read
-ai.hint.context-required:
-  - SUBSCRIPTION_ID
-  - RESOURCE_GROUP
-  - RESOURCE_NAME
+ai-usage: ai-assisted
 ---
 
 # Troubleshoot HTTP 502 errors in Azure Application Gateway
@@ -59,7 +45,7 @@ Common symptoms of HTTP 502 bad gateway errors include:
 
 ## Prerequisites
 
-To troubleshoot "HTTP 502 bad gateway" errors in Application Gateway, you must have the following prerequisite items:
+To troubleshoot "HTTP 502 bad gateway" errors in Application Gateway, you need the following items:
 
 - **Permissions required**: `Network Contributor` role on the Application Gateway resource group, or equivalent (`Microsoft.Network/applicationGateways/read`)
 - **Tools**: Azure CLI 2.*x*, Azure PowerShell 9.*x*, or an AI agent that uses Azure MCP
@@ -71,12 +57,12 @@ To troubleshoot "HTTP 502 bad gateway" errors in Application Gateway, you must h
 | `{RESOURCE_GROUP}` | Resource group containing your Application Gateway | `myResourceGroup` |
 | `{RESOURCE_NAME}` | Application Gateway resource name | `myAppGateway` |
 
-> **TIP:** Each script that's provided in the following sections prompts you for the required values interactively. To open Cloud Shell and answer the prompts, select **Try It**. The values are cached for that session. Therefore, you enter them only one time.
+> **TIP:** Each script in the following sections prompts you for the required values interactively. To open Cloud Shell and answer the prompts, select **Try It**. The values are cached for that session. You only need to enter them once.
 
 ## Diagnostic steps
 
 > [!NOTE]
-> These steps are for strictly for discovery ("read-only"). They don't make changes to your environment.
+> These steps are strictly for discovery ("read-only"). They don't make changes to your environment.
 
 ### Step 1a
 
@@ -99,7 +85,7 @@ az network application-gateway show \
 ```
 
 > [!IMPORTANT]
-> Record your gateway SKU now. The previous query returns a `sku.tier` value. A tier that ends in `_v2` (`Standard_v2` or `WAF_v2`) is a **v2** gateway. Any other tier (`Standard` or `WAF`) is a **v1** gateway. You have to know this value for later steps because the v1 and v2 platforms have different behaviors and diagnostic signals.
+> Record your gateway SKU now. The previous query returns a `sku.tier` value. A tier that ends in `_v2` (`Standard_v2` or `WAF_v2`) is a **v2** gateway. Any other tier (`Standard` or `WAF`) is a **v1** gateway. You need to know this value for later steps because the v1 and v2 platforms have different behaviors and diagnostic signals.
 
 ### Interpret the results
 
@@ -209,7 +195,7 @@ If the back end returns `4xx`, `5xx`, or times out, Application Gateway marks it
 
 ### Step 2c
 
-Check the specific path, timeout, and match conditions on the custom probe that are assigned to the unhealthy back end.
+Check the specific path, timeout, and match conditions on the custom probe that are assigned to the unhealthy backend.
 
 To inspect the custom probe configuration, including the path it probes, the expected healthy response codes, and the timeout value, run the following commands in Azure CLI:
 
@@ -232,10 +218,10 @@ az network application-gateway probe show \
 
 | Observation | Meaning | Next steps |
 | --- | --- | --- |
-| The `"path"` value doesn't match an existing route in your app. | The back end returns a "404" error. The probe treats this situation as `unhealthy`. | To update the probe path, perform [Resolution B](#resolution-b). |
-| `"match": {"statusCodes": ["200-399"]}` but the back end returns a redirect value of either `301` or `302` to HTTPS. | The probe uses the `301` value, but HTTPS might not be configured. | To add `301` to match codes, or switch the probe to HTTPS, perform [Resolution B](#resolution-b). |
-| The probe `path` value looks valid. The only symptom is that the back end is marked as **Unhealthy on a timeout**. | You can't tell from the probe configuration alone whether the back end is *unreachable* (blocked or not listening) or merely *slow*. A low `"timeout"` value isn't an indication of a slow back end because a blocked connection can also time out. Increasing the timeout only helps a back end that's reachable but slow. Therefore, you must verify reachability first. | Perform [Step 2c-1](#step-2c-1) to verify reachability before you change anything. |
-| The back end uses HTTPS (the probe `protocol` value is `Https`.) | TLS validation, not connectivity, might be the problem. | Perform [Step 2d](#step-2d). |
+| The `"path"` value doesn't match an existing route in your app. | The backend returns a `404` error. The probe treats this situation as `unhealthy`. | To update the probe path, perform [Resolution B](#resolution-b). |
+| `"match": {"statusCodes": ["200-399"]}` but the backend returns a redirect value of either `301` or `302` to HTTPS. | The probe uses the `301` value, but HTTPS might not be configured. | To add `301` to match codes, or switch the probe to HTTPS, perform [Resolution B](#resolution-b). |
+| The probe `path` value looks valid. The only symptom is that the backend is marked as **Unhealthy on a timeout**. | You can't tell from the probe configuration alone whether the backend is *unreachable* (blocked or not listening) or merely *slow*. A low `"timeout"` value isn't an indication of a slow backend because a blocked connection can also time out. Increasing the timeout only helps a backend that's reachable but slow. Therefore, you must verify reachability first. | Perform [Step 2c-1](#step-2c-1) to verify reachability before you change anything. |
+| The backend uses HTTPS (the probe `protocol` value is `Https`.) | TLS validation, not connectivity, might be the problem. | Perform [Step 2d](#step-2d). |
 
 ### Step 2c-1
 
@@ -428,9 +414,9 @@ az network application-gateway show \
 
 | Observation | Meaning | Next steps |
 | --- | --- | --- |
-| The `CapacityUnits` value maximum is at or near `autoscaleConfiguration.maxCapacity` during the "502" error window. | Autoscale reaches its ceiling, and the gateway is saturated. | To raise the capacity ceiling, perform [Resolution H](#resolution-h). |
+| The maximum `CapacityUnits` value is at or near `autoscaleConfiguration.maxCapacity` during the "502" error window. | Autoscale reaches its ceiling, and the gateway is saturated. | To raise the capacity ceiling, perform [Resolution H](#resolution-h). |
 | A fixed capacity (v1, or manual `sku.capacity`) and `CapacityUnits` that are pinned near the instance limit. | The gateway has no headroom to absorb the load. | To increase the instance count, perform [Resolution H](#resolution-h). |
-| The `UnhealthyHostCount` value is greater than 0 during the "502" error window. | The back ends are unhealthy. This is not a capacity-related problem. | Perform [Step 1b](#step-1b). |
+| The `UnhealthyHostCount` value is greater than 0 during the "502" error window. | The back ends are unhealthy. This condition isn't related to capacity. | Perform [Step 1b](#step-1b). |
 | The `CapacityUnits` value is below the ceiling during "502" errors. | Capacity isn't the bottleneck. | Perform [Step 5](#step-5) if the back end is Azure App Service. Otherwise, perform [Step 6a](#step-6a). |
 
 ### Step 5
@@ -443,12 +429,12 @@ App Service is multitenant. It routes by the `Host` header and rejects requests 
 > Run this check only if your back-end pool target is an App Service (either an `*.azurewebsites.net` address or a custom domain fronting one).
 
 > [!IMPORTANT]
-> **Perform [Resolution I](#resolution-i) only if the probe is healthy but client requests still have "502" errors.** [Resolution I](#resolution-i) applies if [Step 1b](#step-1b) shows this App Service back end as **Healthy** (the probe is reaching App Service by using a host that it accepts) but clients still receive "502" errors. This condition occurs because the routing rule's data-path HTTP setting sends an empty or unrecognized `Host`.
-> If [Step 1b](#step-1b) shows this App Service back end as **Unhealthy**, the host or certificate break is affecting the probe. The probe is initially failing TLS CN validation. **Don't** continue here. Go to [Step 2d](#step-2d), and then perform [Resolution F](#resolution-f). The following diagnostic reveals the signal that separates the two cases.
+> **Perform [Resolution I](#resolution-i) only if the probe is healthy but client requests still have "502" errors.** [Resolution I](#resolution-i) applies if [Step 1b](#step-1b) shows this App Service back end as **Healthy** (the probe reaches App Service by using a host that it accepts) but clients still receive "502" errors. This condition occurs because the routing rule's data-path HTTP setting sends an empty or unrecognized `Host`.
+> If [Step 1b](#step-1b) shows this App Service back end as **Unhealthy**, the host or certificate break is affecting the probe. The probe initially fails TLS CN validation. **Don't** continue here. Go to [Step 2d](#step-2d), and then perform [Resolution F](#resolution-f). The following diagnostic reveals the signal that separates the two cases.
 
 ### Verify probe health versus the data-path host
 
-Check the routing rule's data-path HTTP setting (the `Host` sent on real client requests) next to the probe's own host configuration (the healthy host that's used in [Step 1b](#step-1b)). Run this check so that you can tell whether only the data path is broken (perform [Resolution I](#resolution-i)) or the probe is also broken (perform [Resolution F](#resolution-f)).
+Check the routing rule's data-path HTTP setting (the `Host` sent on real client requests) next to the probe's own host configuration (the healthy host that you use in [Step 1b](#step-1b)). Run this check so that you can tell whether only the data path is broken (perform [Resolution I](#resolution-i)) or the probe is also broken (perform [Resolution F](#resolution-f)).
 
 Run the following commands in Azure CLI to list the routing rules with their back-end HTTP settings and attached probes. Then, check the host-header configuration on the HTTP settings.
 
@@ -468,7 +454,7 @@ az network application-gateway show \
 
 To correlate the probe health with the host header configuration, compare this output with the information from [Step 1a](#step-1a) and [Step 1b](#step-1b). 
 
-- **Probe health (from [Step 1b](#step-1b))** — Is this App Service back end `Healthy`? If so, the probe is sending a host that App Service accepts (its certificate is `*.azurewebsites.net`).
+- **Probe health (from [Step 1b](#step-1b))** — Is this App Service back end `Healthy`? If so, the probe sends a host that App Service accepts (its certificate is `*.azurewebsites.net`).
 - **Data-path host** — Find the `backendHttpSettings` that your `routingRules` entry points to. Then, note the `pickHostNameFromBackendAddress` and `dataPathHostName` (`hostName`) values of that HTTP setting. This value is the `Host` that's sent on real client requests.
 - **Backend SNI** — When `validateSNI` is `true`, `sniName` is the explicit SNI value that Application Gateway validates against the backend certificate. If `sniName` is empty, Application Gateway uses the incoming request's host header as SNI. Keep this value distinct from the probe host when you compare the two paths.
 - **Probe host** — The `probes` entry that's attached to that HTTP setting (`probeHost` / `pickHostNameFromBackendHttpSettings`). This value is the host that made the probe healthy.
@@ -491,7 +477,7 @@ If the probe is healthy but the data-path HTTP setting has `pickHostNameFromBack
      --output table
    ```
 
-1. Verify the App Service hostnames and access restrictions:
+1. Verify the App Service host names and access restrictions:
 
    ```azurecli-interactive
    # -- Collect inputs (cached if already set in this session) --
@@ -853,7 +839,7 @@ Use the following decision map table to determine the appropriate next steps bas
 1. Perform [Step 1b](#step-1b) again (seen in the following commands). Back-end IPs should return `"health": "Healthy"` within one to two probe intervals.
 
    > [!NOTE]
-   > If the back-end is Azure API Management, the default and most custom probe paths generate "404" errors. Use probe path `/status-0123456789abcdef`, and set the probe hostname to the API Management gateway fully qualified domain name (FQDN) (for example, `myapim.azure-api.net`). This is the only API Management endpoint that returns a valid health response without requiring an API subscription key.
+   > If the back end is Azure API Management, the default and most custom probe paths generate `404` errors. Use probe path `/status-0123456789abcdef`, and set the probe hostname to the API Management gateway fully qualified domain name (FQDN) (for example, `myapim.azure-api.net`). This is the only API Management endpoint that returns a valid health response without requiring an API subscription key.
 
    > [!IMPORTANT]
    > The following commands are all write operations that require your approval before you run them. Review them to better understand what each command does. 
@@ -975,7 +961,7 @@ az network application-gateway frontend-port update \
 
 ## Resolution F
 
-**Problem**: Application Gateway can't validate the back end server's TLS certificate. This problem occurs if:
+**Problem**: Application Gateway can't validate the back-end server's TLS certificate. This problem occurs if:
 
 - The certificate CN or SAN doesn't match the hostname that Application Gateway sends in the health probe.
 - Intermediate CA certificates are missing from the back end's certificate chain.
