@@ -239,7 +239,7 @@ items:
         href: desktop-flows/troubleshoot-desktop-flow-run-queue-errors.md
       - name: Troubleshoot direct connectivity issues
         href: desktop-flows/troubleshoot-direct-connectivity-issues.md
-      - name: Troubleshoot failed unattended runs using screenshots
+      - name: Troubleshoot failed unattended runs by using screenshots
         href: desktop-flows/troubleshoot-unattended-runs-with-screenshots.md
       - name: Troubleshoot hosted machines in Power Automate for desktop
         href: desktop-flows/troubleshoot-hosted-machines-in-power-automate-for-desktop.md
