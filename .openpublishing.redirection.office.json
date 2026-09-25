@@ -1563,11 +1563,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "Office/OfficeExperts/diagnostic-logs/how-to-enable-office-365-proplus-uls-logging.md",
-      "redirect_url": "/previous-versions/troubleshoot/content-retirement",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "Office/OfficeExperts/excel/cannot-access-directory-error-in-excel-2016.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement",
       "redirect_document_id": false
@@ -1614,6 +1609,11 @@
     },
     {
       "source_path": "Office/Hub/context/experts-context.yml",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Office/OfficeExperts/diagnostic-logs/how-to-enable-office-365-proplus-uls-logging.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement",
       "redirect_document_id": false
     }
