@@ -13,7 +13,7 @@ search.appverid: MET150
 ms.reviewer: jhayes, v-six
 author: cloud-writer
 ms.author: meerak
-ms.date: 01/24/2024
+ms.date: 07/30/2026
 ---
 
 # How to specify the email message format that's used for external recipients to prevent Winmail.dat attachments
@@ -30,13 +30,15 @@ Microsoft 365 admins can use Windows PowerShell to change the message format to 
 
 To change the message format to prevent Winmail.dat attachments, use one of the following methods.
 
-### Scenario 1: Change the message format for external contacts
+### Scenario 1: Change the message format for external recipients
 
-To change the message format for an external contact that was added to Exchange Online, follow these steps:
+To change the message format for an external recipient that was added to Exchange Online follow these steps:
 
 1. [Connect to Exchange Online by using remote PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
-1. Run the following Windows PowerShell commands to configure the message format as Text Only:
+1. Run the following Windows PowerShell commands to configure the message format:
+
+   - For a mail contact:
 
     ```powershell
     Set-MailContact <ExternalEmailAddress or GUID> -UseMapiRichTextFormat Never
@@ -44,10 +46,26 @@ To change the message format for an external contact that was added to Exchange 
     Set-MailContact -Identity <ExternalEmailAddress or GUID> -UsePreferMessageFormat $True
     ```
 
-1. Run the following Windows PowerShell command to confirm that the message format was applied:
+   - For a mail user:
 
     ```powershell
-    Get-MailContact | Select <ExternalEmailAddress or GUID> | Select UseMapiRichTextFormat
+    Set-MailUser <ExternalEmailAddress or GUID> -UseMapiRichTextFormat Never
+
+    Set-MailUser -Identity <ExternalEmailAddress or GUID> -UsePreferMessageFormat $True
+    ```
+
+1. Run one of the following Windows PowerShell commands to confirm that the message format was applied:
+
+   - For a mail contact:
+
+    ```powershell
+    Get-MailContact -Identity <ExternalEmailAddress or GUID> | Select UseMapiRichTextFormat, UsePreferMessageFormat
+    ```
+
+   - For a mail user:
+
+    ```powershell
+    Get-MailUser -Identity <ExternalEmailAddress or GUID> | Select UseMapiRichTextFormat, UsePreferMessageFormat
     ```
 
 ### Scenario 2: Change the message format for all messages that are sent to a specific domain
@@ -60,14 +78,12 @@ This method requires you to create a remote domain object in Exchange Online to 
 
     ```powershell
     New-RemoteDomain -Name <Name of External Domain> -DomainName domain.com
-
     ```
 
 1. Run the following Windows PowerShell command to prevent messages from being sent in rich text format:
 
     ```powershell
     Set-RemoteDomain -Identity <Name of Domain> -TNEFEnabled $false
-
     ```
 
 1. Run the following WindowsPowerShell command to check that the setting was applied:
@@ -82,6 +98,8 @@ For more information about specific Windows PowerShell cmdlets, go to the follow
 
 - [Set-MailContact](/powershell/module/exchange/set-mailcontact)
 - [Get-MailContact](/powershell/module/exchange/get-mailcontact)
+- [Set-MailUser](/powershell/module/exchange/set-mailuser)
+- [Get-MailUser](/powershell/module/exchange/get-mailuser)
 - [New-RemoteDomain](/powershell/module/exchange/new-remotedomain)
 - [Set-RemoteDomain](/powershell/module/exchange/set-remotedomain)
 
