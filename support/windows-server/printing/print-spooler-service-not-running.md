@@ -41,11 +41,11 @@ In the **Services** application, right-click **Print Spooler** in the list, and 
 Type **cmd** in the search bar, right-click **Command Prompt**, and select **Run as administrator** to open Command Prompt as an administrator. Run the following commands and press <kbd>Enter</kbd> after each one:
 
 ```console
--net stop spooler
+net stop spooler
 ```
 
 ```console
--net start spooler
+net start spooler
 ```
 
 ### Use Windows PowerShell
