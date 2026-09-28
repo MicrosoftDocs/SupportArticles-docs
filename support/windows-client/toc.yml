@@ -1315,7 +1315,7 @@ items:    # Please do not delete this line, it is required for the yaml format
           href: ./installing-updates-features-roles/command-switches-supported-by-self-extractor-package.md
         - name: Determine whether WSUS configuration causes WU issues
           href: installing-updates-features-roles/determine-whether-wsus-configuration-causes-wu-issue.md
-        - name: Download updates from Windows Update Catalog
+        - name: Download updates from Microsoft Update Catalog
           href: ./installing-updates-features-roles/download-updates-drivers-hotfixes-windows-update-catalog.md
         - name: Error 403 when you access Windows Update
           href: ./installing-updates-features-roles/error-403-connect-to-windows-update.md
