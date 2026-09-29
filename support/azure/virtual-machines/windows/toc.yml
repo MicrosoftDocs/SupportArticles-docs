@@ -228,6 +228,8 @@ items:
         href: must-change-password.md
       - name: Cannot RDP into Azure VM because of authentication errors
         href: cannot-connect-rdp-azure-vm.md
+      - name: Troubleshoot RDS instability after September 2026 Windows security updates
+        href: troubleshoot-rds-instability-september-2026-windows-updates.md  
       - name: CredSSP encryption oracle remediation
         href: credssp-encryption-oracle-remediation.md
       - name: No Internet access
