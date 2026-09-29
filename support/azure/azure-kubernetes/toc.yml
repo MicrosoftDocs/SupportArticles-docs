@@ -265,6 +265,8 @@ items:
       href: extensions/istio-add-on-cni-troubleshooting.md
   - name: Other extensions and add-ons
     items:
+    - name: Troubleshoot GitOps with Argo CD extension deployment errors
+      href: ./extensions/troubleshoot-argo-cd-deployment-errors.md
     - name: AKS Cost Analysis add-on issues
       href: extensions/aks-cost-analysis-add-on-issues.md
     - name: Troubleshoot AI toolchain operator add-on errors
