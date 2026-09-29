@@ -15319,11 +15319,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "support/windows-server/windows-security/cannot-copy-files-from-mapped-drive-to-local-directory.md",
-      "redirect_url": "/previous-versions/troubleshoot/windows-server/cannot-copy-files-from-mapped-drive-to-local-directory",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "support/windows-server/windows-security/computer-record-rejected-in-mbam.md",
       "redirect_url": "/previous-versions/troubleshoot/windows-server/computer-record-rejected-in-mbam",
       "redirect_document_id": false
