@@ -10,8 +10,7 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
-  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment,  Activation
-  - DownloadInstall\InstallErrors\ErrorCodes
+  - sap:Office Suite (Issues that affect all apps)\Installation, Update, Deployment, Activation
   - CSSTroubleshoot
   - CI 113644
 appliesto: 
@@ -22,7 +21,7 @@ ms.reviewer: ericspli
 
 ## Summary
 
-When you troubleshoot issues with Microsoft Office, traditional log settings might not collect information for issues with sign-in, installation and patching, or for issues with the app. To collect verbose logging details, you need to add a registry key.
+When you troubleshoot issues with Microsoft Office, traditional log settings might not collect information for issues with sign-in, installation and patching, or for issues with the app. To collect verbose logging details, you need to add a registry key.0
 
 ## Enable logging for sign-in and activation issues
 
