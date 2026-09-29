@@ -2934,6 +2934,8 @@ items:    # Please do not delete this line, it is required for the yaml format
           href: windows-security/troubleshoot-netlogon-service-startup-failures.md
     - name: Permissions, access control, and auditing
       items:
+        - name: Can't copy files from mapped drive to local directory
+          href: ./windows-security/cannot-copy-files-from-mapped-drive-to-local-directory.md
         - name: Default permissions for MachineKeys folders
           href: ./windows-security/default-permissions-machinekeys-folders.md
         - name: Don't have permission to access folder
