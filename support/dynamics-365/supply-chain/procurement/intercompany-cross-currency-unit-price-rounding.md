@@ -27,8 +27,6 @@ You might observe the following behavior in an intercompany order chain:
 - The voucher contains a **Purchase expenditure for product** amount that balances the inventory value to the vendor liability.
 - The difference becomes larger when the order has a large quantity or several lines.
 
-The vendor-to-ledger reconciliation report might also show a difference for the same voucher. However, that result isn't explained by the inventory rounding variance. For more information, see the [Separate vendor-to-ledger differences](#separate-vendor-to-ledger-differences) section.
-
 ## Cause
 
 During intercompany line synchronization, the source unit price is converted to the target order currency. The converted price is then rounded to the currency precision that applies to the target order. The price unit is transferred with the price.
@@ -79,21 +77,6 @@ Before you post the transaction:
 1. Confirm that the price unit is valid for the item unit and your organization's pricing policy.
 
 The appropriate price unit depends on the required precision and transaction volume. Test the setup in a nonproduction environment before you apply it to live transactions.
-
-## Handle an existing posted transaction
-
-If the voucher is balanced and the difference matches the calculated unit-price rounding, review the variance with your accounting team. You can retain the posting if the amount is acceptable under your accounting policy.
-
-If the transaction must be corrected, reverse or credit the posted document by using the supported application process, adjust the price unit or price, and then post it again. Don't update intercompany, inventory, vendor, or ledger tables directly in the database.
-
-## Separate vendor-to-ledger differences
-
-The inventory variance and a vendor-to-ledger reconciliation difference are separate conditions:
-
-- An inventory variance can be balanced in the general ledger by a **Purchase expenditure for product** posting.
-- A vendor-to-ledger difference occurs when the accounting-currency amount on the vendor transaction doesn't match the vendor balance posting in the general ledger.
-
-Changing the price unit or running inventory closing doesn't correct an existing vendor-to-ledger difference. If the vendor-to-ledger reconciliation report shows a nonzero difference, collect the legal entity, voucher, invoice, accounting date, currencies, exchange rate, line prices, price units, vendor transaction amount, and vendor balance ledger amount. Then [contact Microsoft Support](/power-platform/admin/get-help-support) for a supported investigation and correction plan.
 
 ## Related content
 
