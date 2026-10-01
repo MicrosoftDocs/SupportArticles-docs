@@ -1,12 +1,12 @@
 items:
 - name: Access is denied error and SQL Server doesn't start
   href: event-id-7000-access-denied.md
-- name: Error 17113 when you start SQL Server service
-  href: error-17113-start-service.md
 - name: Error 1068 when starting SQL Server and SQL Agent
   href: agent-service-fails-start-stand-alone-server.md
 - name: Error 1069 when starting SQL Server
   href: error-1069-service-cannot-start.md
+- name: Error 17113 when you start SQL Server service
+  href: error-17113-start-service.md
 - name: Error 17156 when starting SQL Server Agent
   href: error-17156-event-log-service.md
 - name: Error 17182 when you start SQL Server service
@@ -25,11 +25,28 @@ items:
   href: fails-start-error-17182.md
 - name: Manage the error log
   href: manage-error-log.md
-- name: SQL Server startup errors
-  href: sql-server-startup-errors.md
-- name: SQL Service cannot start after configuring SSL certificate
-  href: service-cannot-start.md
 - name: SQL can't start with a domain account
   href: sql-cannot-start-with-domain-account.md
 - name: SQL Server agent may not start or crash 
   href: sql-server-agent-crashes-upon-start.md
+- name: SQL Server startup errors
+  href: sql-server-startup-errors.md
+- name: SQL Service cannot start after configuring SSL certificate
+  href: service-cannot-start.md
+- name: Troubleshoot gMSA failures
+  items:
+  # The general article is listed first, out of alphabetical order, because it's the entry point for the scenario articles.
+  - name: Overview and quick validation checklist
+    href: sql-server-setup-startup-authentication-issues-with-gmsas.md
+  - name: Failover cluster instance failures
+    href: gmsa-failover-cluster-instance-failures.md
+  - name: Kerberos and authentication failures
+    href: gmsa-kerberos-authentication-failures.md
+  - name: Service startup failures
+    href: gmsa-service-startup-failures.md
+  - name: Setup and upgrade failures
+    href: gmsa-setup-upgrade-failures.md
+  - name: Setup error 0x84BB0001
+    href: gmsa-setup-error-0x84bb0001.md
+  - name: SQL Server Agent job failures
+    href: gmsa-sql-server-agent-job-failures.md
