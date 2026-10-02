@@ -248,5 +248,5 @@ apt-get list --installed | --grep mssql
 
 ## See also
 
-- [Latest updates and version history for SQL Server](download-and-install-latest-updates.md)
+- [Latest updates and version history for SQL Server](https://support.microsoft.com/help/321185)
 - [Determine which version and edition of SQL Server Database Engine is running](find-my-sql-version.md)

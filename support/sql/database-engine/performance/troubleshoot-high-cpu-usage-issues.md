@@ -206,7 +206,7 @@ On large-memory machines, `SOS_BLOCKALLOCPARTIALLIST` spinlock contention can pr
 
 1. **Temporarily mitigate the CPU spike.** Running [`DBCC DROPCLEANBUFFERS`](/sql/t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql) releases the partial-block-allocation list and provides temporary mitigation while you plan the permanent fix.
 
-1. **Ensure your SQL Server build includes the fix.** The partitioning behavior is delivered through trace flags 8142 and 8145 and was first introduced in the [SQL Server 2019 Cumulative Update 21](../../releases/sqlserver-2019/cumulativeupdate21.md) to address [bug 2410400](../../releases/sqlserver-2019/cumulativeupdate21.md#2410400). If you're on an older build, apply the latest cumulative update for your version before you enable the trace flags.
+1. **Ensure your SQL Server build includes the fix.** The partitioning behavior is delivered through trace flags 8142 and 8145 and was first introduced in the [SQL Server 2019 Cumulative Update 21](https://support.microsoft.com/help/5025808) to address [bug 2410400](https://support.microsoft.com/help/5025808#2410400). If you're on an older build, apply the latest cumulative update for your version before you enable the trace flags.
 
 1. **Enable trace flag 8142.** Enable [trace flag 8142](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf8142) as a global startup parameter. This trace flag partitions the spinlock-protected list by CPU, up to 64 partitions, which is typically sufficient to eliminate the contention.
 
