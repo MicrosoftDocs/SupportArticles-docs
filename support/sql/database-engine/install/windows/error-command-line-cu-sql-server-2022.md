@@ -41,5 +41,5 @@ No resolution steps are necessary as the exception doesn't affect the setup beha
 
 ## Related content
 
-- [SQL Server 2022 build versions](../../../releases/sqlserver-2022/build-versions.md).
-- [SQL Server 2025 build versions](../../../releases/sqlserver-2025/build-versions.md).
+- [SQL Server 2022 build versions](https://support.microsoft.com/help/5023451).
+- [SQL Server 2025 build versions](https://support.microsoft.com/help/5005684).
