@@ -165,6 +165,8 @@ items:
         href: procurement/intercompany-purchase-order-confirmation-over-under-distribution.md
       - name: Order taker not auto-filled when creating purchase or sales orders
         href: procurement/po-so-order-taker-not-auto-filled.md
+      - name: Physical remaining quantity in the inventory unit must not be zero when you post a product receipt
+        href: procurement/product-receipt-physical-remaining-quantity-unit-must-not-be-zero.md
       - name: PO confirmation fails with "Cannot create a record in Source document line"
         href: procurement/cannot-create-record-sourcedocumentline.md
       - name: Product receipt posting fails with the "only allowed in state draft" error
