@@ -15861,6 +15861,11 @@
     {
       "source_path": "support/sql/database-engine/install/windows/understanding-dotnet-framework-requirements.md",
       "redirect_url": "/previous-versions/troubleshoot/sql/install/understanding-dotnet-framework-requirements"
+    },
+    {
+      "source_path": "support/windows-client/setup-upgrade-and-drivers/windows-cannot-verify-the-digital-signature-for-this-file.md",
+      "redirect_url": "/troubleshoot/windows-server/setup-upgrade-and-drivers/windows-cannot-verify-the-digital-signature-for-this-file",
+      "redirect_document_id": false
     }
   ]
 }
