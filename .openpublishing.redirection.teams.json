@@ -7,6 +7,14 @@
      {
       "source_path": "Teams/meetings/teams-meeting-add-in-missing.md",
       "redirect_url": "/troubleshoot/teams/resolve-teams-meeting-add-in-issues" 
-     }         
+     },
+     {
+      "source_path": "Teams/teams-rooms-and-devices/teams-rooms-known-issues-android.md",
+      "redirect_url": "/microsoftteams/devices/known-issues"              
+     },
+     {
+      "source_path": "Teams/teams-rooms-and-devices/teams-rooms-known-issues-windows.md",
+      "redirect_url": "/microsoftteams/devices/known-issues"              
+     }     
   ]
 }
