@@ -297,7 +297,7 @@ items:
             - name: 550 5.1.1 through 550 5.1.20
               href: ../email-delivery/ndr/fix-error-code-550-5-1-1-through-5-1-20-in-exchange-online.md
             - name: 550 5.1.8 Access denied
-              href: https://support.microsoft.com/topic/e323f21d-4460-4be1-999c-c9c0cc6be4b4
+              href: ../email-delivery/ndr/fix-error-code-550-5-1-8.md            
             - name: 550 5.1.10
               href: ../email-delivery/ndr/fix-error-code-550-5-1-10-in-exchange-online.md
             - name: 550 5.1.10 RESOLVER.ADR.RecipientNotFound
@@ -307,7 +307,7 @@ items:
             - name: 550 5.2.0 RESOLVER.ADR.BadPrimary
               href: ../email-delivery/ndr/badprimary-ndr.md
             - name: 550 5.4.1
-              href: https://support.microsoft.com/topic/c0e98a8e-81db-49c2-9bf1-32a1734d3e77
+              href: ../email-delivery/ndr/fix-error-code-550-5-4-1.md            
             - name: 550 5.6.0 APPROVAL.InvalidExpiry
               href: ../email-delivery/ndr/550-5-6-0-approval-invalidexpiry-cannot-read-expiry-poilcy-error.md
             - name: 550 5.6.11
@@ -337,7 +337,7 @@ items:
             - name: 550 5.7.136
               href: ../email-delivery/ndr/fix-error-code-5-7-136-in-exchange-online.md
             - name: 550 5.7.700 through 550 5.7.750
-              href: https://support.microsoft.com/topic/f5675801-1846-4d1c-9599-5b4e26a9175d
+              href: ../email-delivery/ndr/fix-error-codes-550-5-7-703-550-5-7-705-550-5-7-708-550-5-7-750.md            
             - name: 554 4.3.2 mailbox busy
               href: ../email-delivery/ndr/remote-server-returned-mailbox-busy.md
             - name: 554 5.2.0 STOREDRV.Deliver.Exception
