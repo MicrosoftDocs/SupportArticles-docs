@@ -1,15 +1,16 @@
 ---
-title:  Troubleshoot Resource Scheduling Optimization add-in deployment issues
-description: Resolves issues with deployments of the Resource Scheduling Optimization add-in for Dynamics 365 Field Service.
-ms.reviewer: anclear, v-wendysmith, v-shaywood
-ms.date: 05/04/2026
+title: Resolve Resource Scheduling Optimization Deployment Failures
+description: Resolve a failed or incomplete Resource Scheduling Optimization add-on deployment or upgrade in Dynamics 365 Field Service by reinstalling the add-on.
+ms.reviewer: anclear, v-wesmith, v-shaywood, puneetsingh
+ms.date: 10/02/2026
 ms.custom: sap:Resource Scheduling Optimization
+ai-usage: ai-assisted
 ---
-# Troubleshoot issues with Resource Scheduling Optimization add-in deployments
+# Resource Scheduling Optimization add-on deployment or upgrade fails or doesn't complete
 
 ## Summary
 
-This article helps administrators resolve issues with deployments of the [Resource Scheduling Optimization add-in](/dynamics365/field-service/rso-overview) for Microsoft Dynamics 365 Field Service.
+This article helps administrators resolve an issue in which a deployment or upgrade of the [Resource Scheduling Optimization add-on](/dynamics365/field-service/rso-overview) for Microsoft Dynamics 365 Field Service fails or doesn't complete. It explains how to reinstall the add-on from the Power Platform admin center.
 
 ## Symptoms
 
@@ -17,9 +18,12 @@ The deployment or upgrade fails or takes a long time and doesn't complete.
 
 ## Solution
 
-For failed deployments or upgrades, go to the [Resource Scheduling Optimization deployment app](/dynamics365/field-service/rso-deployment) and select the **Delete Current Deployment** option to delete the existing deployment. Then, redeploy the latest version. If it fails again, verify the Dynamics 365 organization isn't in administration mode.
+To resolve a failed deployment or upgrade, reinstall the Resource Scheduling Optimization add-on:
 
-If your Resource Scheduling Optimization deployment still fails or doesn't complete, contact the Microsoft Support team.
+1. Open the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
+1. Select **Manage** > **Environments**.
+1. Select your environment.
+1. Select **Dynamics 365 apps**.
+1. Select **Install app**.
 
-> [!TIP]
-> Don't install the Resource Scheduling Optimization solution from the solution management page. Always use the Resource Scheduling Optimization deployment app, which deploys the Dynamics 365 solution and Azure required resources.
+If you still can't complete the Resource Scheduling Optimization add-on installation, contact Microsoft Support.
