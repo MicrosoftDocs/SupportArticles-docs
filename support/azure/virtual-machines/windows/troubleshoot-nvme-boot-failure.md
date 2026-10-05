@@ -299,7 +299,7 @@ For more information, see [Repair a Linux VM by using the Azure Virtual Machine 
    1. On the original VM, use the **Swap OS disk** option in the [Azure portal](https://portal.azure.com) to replace its OS disk with the repaired disk.
    1. Start the original VM.
 
-## Prevention
+### Prevention
 
 To prevent this issue in the future:
 
