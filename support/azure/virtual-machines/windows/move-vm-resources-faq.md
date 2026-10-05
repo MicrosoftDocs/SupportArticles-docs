@@ -1,15 +1,16 @@
 ---
-title: Azure virtual machine move and migration FAQ
-description: Get answers to Azure virtual machine move and migration questions across resource groups, subscriptions, regions, and tenants.
+title: Azure VM move and migration FAQ
+description: Find answers to common Azure VM move and migration questions across resource groups, subscriptions, regions, and tenants. Read the FAQ to plan your move.
 services: virtual-machines
-author: scotro
 manager: dcscontentpm
+author: kaushika-msft
+ms.author: kaushika
+ms.reviewer: scotro, jdickson
 ms.service: azure-virtual-machines
 ms.topic: troubleshooting
-ms.date: 03/18/2026
-ms.author: scotro
-ms.reviewer: jarrettr
+ms.date: 09/21/2026
 ms.custom: sap:Cannot create a VM
+ai-usage: ai-assisted
 ---
 
 # Azure virtual machine move and migration FAQ
@@ -18,13 +19,13 @@ ms.custom: sap:Cannot create a VM
 
 ## Summary
 
-This article answers frequently asked questions (FAQ) about how to move Microsoft Azure virtual machine (VM) resources across resource groups, subscriptions, regions, and tenants. Find answers to common questions about move operations, including supported scenarios, limitations, error troubleshooting, and post-move considerations.
+This article answers frequently asked questions (FAQ) about how to move Azure virtual machine (VM) resources across resource groups, subscriptions, regions, and tenants. Find answers to common questions about move operations, including supported scenarios, limitations, error troubleshooting, and post-move considerations.
 
 ## General move questions
 
 ### What can I move by using the Azure resource move operation?
 
-You can move VMs and their associated resources between resource groups within the same subscription, or between subscriptions within the same Azure AD tenant. Associated resources include:
+You can move VMs and their associated resources between resource groups within the same subscription, or between subscriptions within the same Microsoft Entra ID tenant. Associated resources include the following:
 
 - Managed disks
 - Network adapters
@@ -36,7 +37,7 @@ For a definitive list of which resource types support move, see [Move operation 
 
 ### Which resources must I include when I move a VM?
 
-When you move a VM, include all dependent resources in the same move request, or make sure that they already exist in the destination:
+When you move a VM, include all dependent resources in the same move request, or ensure that the following resources already exist in the destination:
 
 - Managed OS disk and all data disks
 - Network adapters
@@ -45,7 +46,7 @@ When you move a VM, include all dependent resources in the same move request, or
 - Public IP addresses that are associated with the adapters
 - NSGs that are associated with the adapters or subnets
 
-If any dependent resource is missing, the move fails and returns a `MissingMoveDependentResources` error message. For more information, see [Move fails with MissingMoveDependentResources](move-resources-missing-dependencies.md).
+If you omit any dependent resource, the move fails and returns a `MissingMoveDependentResources` error message. For more information, see [Move fails with MissingMoveDependentResources](move-resources-missing-dependencies.md).
 
 ### Can I move a VM without stopping it?
 
@@ -57,6 +58,8 @@ Most moves finish within 30 minutes. Azure Resource Manager enforces a maximum o
 
 ### Are there limits on how many resources I can move at once?
 
+The following limits apply to moving resources:
+
 - **800 resources per move request** - This limit is set by the ARM API.
 - **100 resources through the Azure portal** - The portal UI enforces a lower limit. For more than 100 resources, use Azure PowerShell, Azure CLI, or the REST API.
 
@@ -64,7 +67,7 @@ For more information, see [800 resource limit per move operation](move-resources
 
 ### Can I move a VM to a different virtual network?
 
-Not directly. The Azure move API doesn't support changing a VM's virtual network attachment. To move a VM to a different virtual network, re-create the VM:
+Not directly. The Azure move API doesn't support changing a VM's virtual network attachment. To move a VM to a different virtual network, follow these steps to re-create the VM:
 
 1. Create a backup or snapshot of the VM's OS disk.
 1. Create a VM in the target virtual network by using the OS disk copy.
@@ -75,19 +78,21 @@ Not by using the standard resource move API. Cross-region moves require [Azure R
 
 ### Can I move resources to a subscription in a different Microsoft Entra ID tenant?
 
-No. The source and destination subscriptions must be in the same tenant. Two workarounds exist:
+No. The source and destination subscriptions must be in the same tenant. The following workarounds exist:
 
-1. Transfer the subscription itself to the destination tenant.
-1. Copy the VM disks by using Azure Storage Explorer, and re-create the VM in the destination tenant.
+- Transfer the subscription itself to the destination tenant.
+- Copy the VM disks by using Azure Storage Explorer, and re-create the VM in the destination tenant.
 
 For more information, see [Move Azure VM resources to a different tenant](move-vm-to-different-tenant.md).
 
 > [!NOTE]
-> For additional FAQ about resource moves, see [Frequently asked questions](/azure/azure-resource-manager/management/move-resource-group-and-subscription?tabs=azure-cli#frequently-asked-questions) in the Azure Resource Manager documentation.
+> For more FAQ about resource moves, see [Frequently asked questions](/azure/azure-resource-manager/management/move-resource-group-and-subscription?tabs=azure-cli#frequently-asked-questions) in the Azure Resource Manager documentation.
 
 ## Pre-move checklist
 
 Before you initiate a move, verify the following information.
+
+The following table summarizes the pre-move checks.
 
 | Check | Details |
 |---|---|
@@ -96,10 +101,12 @@ Before you initiate a move, verify the following information.
 | No active locks on resource groups | Temporarily delete or move any `CanNotDelete` or `ReadOnly` locks. |
 | Resource types support move | Check [Move operation support for resources](/azure/azure-resource-manager/management/move-support-resources). |
 | Destination subscription limits not exceeded | Check core quota and resource count limits in the destination. |
-| No Marketplace plan restrictions | Third-party images with plan information might have cross-subscription restrictions. |
+| No Azure Marketplace plan restrictions | Third-party images with plan information might have cross-subscription restrictions. |
 | Boot diagnostics storage account exists | A deleted or invalid boot diagnostics storage account blocks the move. |
 
 ## Common errors quick reference
+
+The following table provides a quick reference for common errors encountered during a move.
 
 | Error code | Article |
 |---|---|
@@ -110,7 +117,7 @@ Before you initiate a move, verify the following information.
 | `ResourceTypeMoveNotSupported` | [Resource type not supported for move](move-resources-resource-type-not-supported.md) |
 | `MoveResourcesHavePendingOperations` | [Operation not allowed - system upgrade in progress](move-resources-operation-not-allowed-system-upgrade.md) |
 
-## After the move
+## After the VM move is complete
 
 ### My resources disappeared after the move. Where are they?
 
@@ -118,7 +125,7 @@ Check both the source and destination resource groups. Resources appear in only 
 
 ### The move succeeded, but now my VM won't start. Why?
 
-VM connectivity or startup problems that occur after a move typically aren't related to the move operation itself. Check:
+VM connectivity or startup problems that occur after a move typically aren't related to the move operation itself. Check the following items:
 
 - NSG rules in the destination resource group
 - Route tables and virtual network configuration in the destination
@@ -126,7 +133,7 @@ VM connectivity or startup problems that occur after a move typically aren't rel
 
 ### Do I have to update anything after a successful move?
 
-- **Role assignments** aren't moved. Reassign RBAC roles in the destination resource group.
+- **Role assignments** aren't moved. Reassign role-based access control (RBAC) roles in the destination resource group.
 - **Resource locks** don't carry over. Reapply any locks that you had on the source.
 - **Managed identities** continue to work. System-assigned identities follow the resource automatically.
 

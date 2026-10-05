@@ -1,15 +1,16 @@
 ---
 title: Azure resource move fails - resource not in Succeeded state
-description: Troubleshoot the MoveCannotProceedWithResourcesNotInSucceededState error when you move Azure resources. Learn how to identify and fix resources that aren't in the Succeeded state to complete your move operation.
+description: Troubleshoot the MoveCannotProceedWithResourcesNotInSucceededState error when you move Azure resources. Learn how to identify and fix resources that arent in the Succeeded state to complete your move operation.
 services: virtual-machines
-author: scotro
 manager: dcscontentpm
+author: kaushika-msft
+ms.author: kaushika
 ms.service: azure-virtual-machines
 ms.topic: troubleshooting
-ms.date: 03/18/2026
-ms.author: scotro
-ms.reviewer: jarrettr
+ms.date: 09/11/2026
+ms.reviewer: scotro, jdickson
 ms.custom: sap:Cannot create a VM
+ai-usage: ai-assisted
 ---
 # Azure resource move fails because a resource isn't in the Succeeded state
 
@@ -17,11 +18,11 @@ ms.custom: sap:Cannot create a VM
 
 ## Summary
 
-This article helps you troubleshoot the `MoveCannotProceedWithResourcesNotInSucceededState` error that occurs when you move Microsoft Azure virtual machine (VM) resources to another resource group or subscription. The error indicates that one or more resources that are involved in the move aren't in the `Succeeded` state. To resolve this issue, identify the resource that isn't in a `Succeeded` state, and restore it to a healthy state before you retry the move operation.
+This article helps you troubleshoot the `MoveCannotProceedWithResourcesNotInSucceededState` error when an Azure resource move fails for virtual machine (VM) resources. The error indicates that one or more resources that are involved in the move aren't in the `Succeeded` state. To resolve this issue, identify the resource that isn't in a `Succeeded` state, and restore it to a healthy state before you retry the move operation.
 
 ## Symptoms
 
-When you try to move Azure resources to a different resource group or subscription, the operation fails and returns the following error message:
+When you try to move Azure resources to a different resource group or subscription, the operation fails and returns the following error message.
 
 ```output
 {
@@ -41,7 +42,7 @@ When you try to move Azure resources to a different resource group or subscripti
 
 ## Cause
 
-When a resource group contains a virtual network, Azure checks the provisioning state of all resources that depend on it. The move fails if any dependent resource isn't in a `Succeeded` state. This condition applies even if:
+When a resource group contains a virtual network, Azure checks the provisioning state of all resources that depend on it. The move fails if any dependent resource isn't in a `Succeeded` state. This condition applies even if one of the following conditions is true:
 
 - The resource isn't one of the resources you're moving.
 - The resource isn't in the source or destination resource group.
@@ -58,24 +59,36 @@ In the [Azure portal](https://portal.azure.com), open each VM or network resourc
 
 ### Step 2: Reapply or update the resource
 
-**Reapply a VM (Azure portal)**
+Use the Azure portal, Azure PowerShell, or Azure CLI to reapply or update the resource.
 
-1. In the Azure portal, go to the VM.
-1. In the left menu, under **Help**, select **Redeploy + reapply**.
+# [Azure portal](#tab/portal)
+
+Follow these steps:
+
+1. In the [Azure portal](https://portal.azure.com), go to the VM.
+1. In the menu, in **Help**, select **Redeploy + reapply**.
 1. Select **Reapply**.
 
-**Update a VM (Azure PowerShell)**
+For more information, see [Manage resource groups in the Azure portal](/azure/azure-resource-manager/management/manage-resource-groups-portal).
 
-```powershell
-$vm = Get-AzVM -ResourceGroupName <resource-group-name> -Name <vm-name>
-Update-AzVM -VM $vm -ResourceGroupName <resource-group-name>
+# [Azure PowerShell](#tab/powershell)
+
+Run the following command.
+
+```azurepowershell
+$vm = Get-AzVM -ResourceGroupName "<resource-group-name>" -Name "<vm-name>"
+Update-AzVM -VM $vm -ResourceGroupName "<resource-group-name>"
 ```
 
-**Update a VM (Azure CLI)**
+# [Azure CLI](#tab/cli)
+
+Run the following command.
 
 ```azurecli
-az vm update --resource-group <resource-group-name> --name <vm-name>
+az vm update --resource-group "<resource-group-name>" --name "<vm-name>"
 ```
+
+---
 
 ### Step 3: Retry the move
 

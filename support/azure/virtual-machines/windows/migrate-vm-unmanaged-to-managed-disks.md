@@ -1,15 +1,16 @@
 ---
-title: Convert unmanaged disks to managed disks for an Azure virtual machine
+title: Convert unmanaged disks to managed disks for an Azure VM
 description: Learn how to convert unmanaged disks to Azure managed disks for a virtual machine by using the Azure portal, PowerShell, or Azure CLI.
 services: virtual-machines
-author: scotro
+author: kaushika-msft
+ms.author: kaushika
 manager: dcscontentpm
 ms.service: azure-virtual-machines
 ms.topic: troubleshooting
-ms.date: 03/18/2026
-ms.author: scotro
-ms.reviewer: jarrettr
+ms.date: 09/03/2026
+ms.reviewer: scotro, jdickson
 ms.custom: sap:Cannot create a VM
+ai-usage: ai-assisted
 ---
 
 # Convert unmanaged disks to managed disks for an Azure virtual machine
@@ -24,22 +25,23 @@ This article describes how to convert a virtual machine's unmanaged disks to Mic
 
 Review the following important considerations before you convert:
 
-- **The conversion isn't reversible:** After you convert disks to managed disks, you can't revert them to unmanaged.
-- **Test before production:** Migrate a test VM before you convert a production workload.
-- **The VM restarts:** The conversion process deallocates the VM. When the VM restarts, it gets a new IP address, unless you configure a static IP.
-- **Agent version requirements:** Verify that the Azure VM agent is at the minimum supported version. For more information, see [Minimum version support for VM agents in Azure](/azure/virtual-machines/extensions/agent-windows).
-- **Extensions must be in a succeeded state:** All VM extensions must be in the `Provisioning succeeded` state before conversion. Otherwise, the conversion fails and returns error code **409**.
-- **Original virtual hard disks (VHDs) aren't deleted:** The original VHD blobs and the storage account that the VM used before migration aren't deleted automatically. You continue to incur charges until you manually delete these items after you verify the migration.
-- **Virtual Machine Contributor role:** After conversion, users who have the Virtual Machine Contributor role must have the `Microsoft.Compute/disks/write` permission in order to change the VM size.
+- **The conversion isn't reversible** - After you convert disks to managed disks, you can't revert them to unmanaged.
+- **Test before production** - Migrate a test VM before you convert a production workload.
+- **The VM restarts** - The conversion process deallocates the VM. When the VM restarts, it gets a new IP address, unless you configure a static IP.
+- **Agent version requirements** - Verify that the Azure VM agent is at the minimum supported version. For more information, see [Minimum version support for VM agents in Azure](/azure/virtual-machines/extensions/agent-windows).
+- **Extensions must be in a succeeded state** - All VM extensions must be in the `Provisioning succeeded` state before conversion. Otherwise, the conversion fails and returns error code **409**.
+- **Original virtual hard disks (VHDs) aren't deleted** - The original VHD blobs and the storage account that the VM used before migration aren't deleted automatically. You continue to incur charges until you manually delete these items after you verify the migration.
+- **Virtual Machine Contributor role** - After conversion, users who have the Virtual Machine Contributor role must have the `Microsoft.Compute/disks/write` permission in order to change the VM size.
 
-## Convert using the Azure portal
+Use the [Azure portal](https://portal.azure.com), Azure PowerShell, or Azure CLI to convert unmanaged disks to managed disks. 
+
+### Azure portal
+
+Follow these steps:.
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
-
 1. Go to the VM that you want to convert.
-
 1. Under **Settings**, select **Disks**.
-
 1. At the top of the **Disks** pane, select **Migrate to managed disks**.
 
    > [!NOTE]
@@ -47,9 +49,9 @@ Review the following important considerations before you convert:
 
 1. On **Migrate to managed disks**, review the disks to convert, and then select **Migrate**. The VM is stopped and restarted after the migration finishes.
 
-## Convert by using Azure PowerShell
+### Azure PowerShell
 
-Run the following commands:
+Run the following command.
 
 ```powershell
 # Stop and deallocate the VM
@@ -59,7 +61,7 @@ Stop-AzVM -ResourceGroupName "<rg-name>" -Name "<vm-name>" -Force
 ConvertTo-AzVMManagedDisk -ResourceGroupName "<rg-name>" -VMName "<vm-name>"
 ```
 
-For VMs in an availability set, convert the availability set first:
+For VMs in an availability set, convert the availability set first.
 
 ```powershell
 # Convert all VMs in an availability set
@@ -72,9 +74,9 @@ foreach ($vmRef in $avSet.VirtualMachinesReferences) {
 }
 ```
 
-## Convert by using Azure CLI
+### Azure CLI
 
-Run the following commands:
+Run the following commands.
 
 ```azurecli
 # Stop and deallocate the VM
@@ -87,13 +89,15 @@ az vm convert --resource-group <rg-name> --name <vm-name>
 az vm start --resource-group <rg-name> --name <vm-name>
 ```
 
-## Clean up original VHD blobs
+### Clean up original VHD blobs
 
 To avoid ongoing storage charges, delete the original VHD blobs after you verify that the conversion is successful.
 
 To find unattached unmanaged disks in your subscription, see [Find and delete unattached Azure managed and unmanaged disks](/azure/virtual-machines/windows/find-unattached-disks).
 
-## Troubleshooting
+### Troubleshooting
+
+The following table lists common errors that can occur during the conversion process, along with their causes and resolutions.
 
 | Error | Cause | Resolution |
 |---|---|---|
