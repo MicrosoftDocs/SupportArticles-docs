@@ -24,3 +24,11 @@ landingContent:
             url: ../virtual-network/diagnose-network-routing-problem.md
           - text: Diagnose a virtual machine network traffic filter problem
             url: ../virtual-network/diagnose-network-traffic-filter-problem.md
+
+  # Card
+  - title: Agentic-focused
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot Network Watcher packet-capture failures and unsupported targets
+            url: troubleshoot-network-watcher-packet-capture-failures-unsupported-targets.md
