@@ -16493,6 +16493,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/windows-server/setup-upgrade-and-drivers/use-language-id-identify-language-pack.md",
+      "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/use-language-id-identify-language-pack",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/windows-server/setup-upgrade-and-drivers/error-install-windows-internal-database.md",
       "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/error-install-windows-internal-database",
       "redirect_document_id": false
