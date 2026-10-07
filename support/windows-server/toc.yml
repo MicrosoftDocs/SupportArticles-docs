@@ -83,6 +83,8 @@ items:    # Please do not delete this line, it is required for the yaml format
           href: ./active-directory/troubleshoot-ad-fs-issues.md
         - name: Troubleshoot ADFS SSO issues
           href: ./active-directory/troubleshoot-ad-fs-sso-issue.md
+        - name: Windows Internal Database (WID) installation fails
+          href: ./installing-updates-features-roles/error-install-windows-internal-database.md
     - name: Active Directory FSMO
       items:
         - name: Can't sign in to the domain
@@ -289,6 +291,8 @@ items:    # Please do not delete this line, it is required for the yaml format
           href: ./active-directory/requirements-domain-controller.md
         - name: "\"Schema mismatch\" error when try to run the Active Directory Installation Wizard"
           href: ./active-directory/schema-mismatch-error-ad-installation-wizard-dcpromo.md
+        - name: Using language IDs to identify language packs
+          href: ./installing-updates-features-roles/use-language-id-identify-language-pack.md
     - name: Domain controller scalability or performance (including LDAP)
       items:
         - name: DC returns only 5000 values in LDAP response
@@ -2309,9 +2313,6 @@ items:    # Please do not delete this line, it is required for the yaml format
           href: ../windows-client/setup-upgrade-and-drivers/upgrade-fails-with-error-0xc1900101-0x20017.md?context=/troubleshoot/windows-server/context/context
         - name: An upgrade to Windows Server 2016 fails
           href: setup-upgrade-and-drivers/windows-cannot-verify-the-digital-signature-for-this-file.md
-        - name: Using language IDs to identify language packs
-          href: ./setup-upgrade-and-drivers/use-language-id-identify-language-pack.md
-
         - name: Windows Server support and installation instructions for the AMD Rome family of processors
           href: ./setup-upgrade-and-drivers/windows-server-support-installation-for-amd-role-family-processor.md
         - name: Windows servicing operations fail after you move user profile and ProgramData folders
@@ -2999,17 +3000,17 @@ items:    # Please do not delete this line, it is required for the yaml format
         - name: Error 0x800f0922 when you uninstall roles/features
           href: ./installing-updates-features-roles/error-0x800f0922-uninstall-role-feature.md
         - name: Using language IDs to identify language packs
-          href: ./setup-upgrade-and-drivers/use-language-id-identify-language-pack.md
+          href: ./installing-updates-features-roles/use-language-id-identify-language-pack.md
         - name: You can't install features in Windows Server 2012 R2
           href: ./installing-updates-features-roles/you-cant-install-features.md
     - name: Issues installing Server Roles
       items:
         - name: "Troubleshooting guidance: Installing Windows features or roles"
           href: ./installing-updates-features-roles/troubleshoot-install-features-roles-guidance.md
-        - name: Windows Internal Database (WID) installation fails
-          href: ./setup-upgrade-and-drivers/error-install-windows-internal-database.md
         - name: Fail to install Network Policy Server role
           href: ./installing-updates-features-roles/error-0x80004005-network-policy-server-role.md
+        - name: Windows Internal Database (WID) installation fails
+          href: ./installing-updates-features-roles/error-install-windows-internal-database.md
     - name: Windows Update - Configuring and managing client settings
       items:
         - name: Can't connect to WSUS Administration Website
@@ -3025,7 +3026,7 @@ items:    # Please do not delete this line, it is required for the yaml format
         - name: Re-register Windows client/server in WSUS
           href: ./installing-updates-features-roles/re-register-windows-clientserver-in-wsus.md
         - name: Unexpected automatic update when it's disabled by Group Policy
-          href: installing-updates-features-roles/unexpected-automatic-update-when-disabled-by-group-policy.md
+          href: ./installing-updates-features-roles/unexpected-automatic-update-when-disabled-by-group-policy.md
         - name: Why you may be prompted to restart your computer
           href: ./installing-updates-features-roles/why-prompted-restart-computer.md
         - name: Windows servicing operations fail after you move user profile and ProgramData folders
@@ -3057,7 +3058,7 @@ items:    # Please do not delete this line, it is required for the yaml format
         - name: Error 0x800719E4 (ERROR_LOG_FULL) when Windows Update fails
           href: ./installing-updates-features-roles/error-0x800719e4-windows-update-fails.md
         - name: Troubleshoot Windows Update error 0x80070002
-          href: installing-updates-features-roles/troubleshoot-windows-update-error-0x80070002.md
+          href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x80070002.md
         - name: Troubleshoot Windows Update error 0x80070005
           href: ../windows-client/installing-updates-features-roles/troubleshoot-windows-update-error-0x80070005.md?context=/troubleshoot/windows-server/context/context
         - name: Troubleshoot Windows Update error 0x80070008
@@ -3067,9 +3068,9 @@ items:    # Please do not delete this line, it is required for the yaml format
         - name: Troubleshoot Windows Update error code 0x80070070
           href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x80070070.md
         - name: Troubleshoot "Shutdown in Progress" Windows error 0x8007045B
-          href: installing-updates-features-roles/troubleshoot-error-shutdown-in-process.md
+          href: ./installing-updates-features-roles/troubleshoot-error-shutdown-in-process.md
         - name: Troubleshoot Windows Update error 0x80070490
-          href: installing-updates-features-roles/troubleshoot-windows-update-error-0x80070490.md
+          href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x80070490.md
         - name: Troubleshoot Windows Update error 0x80070570
           href: ../windows-client/installing-updates-features-roles/troubleshoot-windows-update-error-0x80070570.md?context=/troubleshoot/windows-server/context/context
         - name: Troubleshoot Windows Update error 0x800706D9
@@ -3099,7 +3100,7 @@ items:    # Please do not delete this line, it is required for the yaml format
         - name: Troubleshoot Windows Update error 0x8024001E
           href: ../windows-client/installing-updates-features-roles/troubleshoot-windows-update-error-0x8024001e.md?context=/troubleshoot/windows-server/context/context
         - name: Troubleshoot Windows Update error 0x8024002E
-          href: installing-updates-features-roles/troubleshoot-windows-update-error-code-0x8024002e.md
+          href: ./installing-updates-features-roles/troubleshoot-windows-update-error-code-0x8024002e.md
         - name: Troubleshoot Windows Update error 0x80240439
           href: ../windows-client/installing-updates-features-roles/troubleshoot-windows-update-error-0x80240439.md?context=/troubleshoot/windows-server/context/context
         - name: Troubleshoot Windows Update error 0x80244007
