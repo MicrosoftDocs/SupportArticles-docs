@@ -83,6 +83,8 @@ items:    # Please do not delete this line, it is required for the yaml format
           href: ./active-directory/troubleshoot-ad-fs-issues.md
         - name: Troubleshoot ADFS SSO issues
           href: ./active-directory/troubleshoot-ad-fs-sso-issue.md
+        - name: Windows Internal Database (WID) installation fails
+          href: ./installing-updates-features-roles/error-install-windows-internal-database.md
     - name: Active Directory FSMO
       items:
         - name: Can't sign in to the domain
@@ -3006,10 +3008,10 @@ items:    # Please do not delete this line, it is required for the yaml format
       items:
         - name: "Troubleshooting guidance: Installing Windows features or roles"
           href: ./installing-updates-features-roles/troubleshoot-install-features-roles-guidance.md
-        - name: Windows Internal Database (WID) installation fails
-          href: ./setup-upgrade-and-drivers/error-install-windows-internal-database.md
         - name: Fail to install Network Policy Server role
           href: ./installing-updates-features-roles/error-0x80004005-network-policy-server-role.md
+        - name: Windows Internal Database (WID) installation fails
+          href: ./installing-updates-features-roles/error-install-windows-internal-database.md
     - name: Windows Update - Configuring and managing client settings
       items:
         - name: Can't connect to WSUS Administration Website

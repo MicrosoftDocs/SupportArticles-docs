@@ -16491,6 +16491,11 @@
       "source_path": "support/windows-client/setup-upgrade-and-drivers/windows-cannot-verify-the-digital-signature-for-this-file.md",
       "redirect_url": "/troubleshoot/windows-server/setup-upgrade-and-drivers/windows-cannot-verify-the-digital-signature-for-this-file",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/setup-upgrade-and-drivers/error-install-windows-internal-database.md",
+      "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/error-install-windows-internal-database",
+      "redirect_document_id": false
     }
   ]
 }
