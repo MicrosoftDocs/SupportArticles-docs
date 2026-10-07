@@ -136,3 +136,5 @@ items:
       href: ../sensitivity-labels/auto-labeling-failures-sharepoint-onedrive.md
     - name: Sensitivity labels are missing
       href: ../sensitivity-labels/sensitivity-labels-missing.md
+    - name: Troubleshoot auto-labeling policies
+      href: ../sensitivity-labels/troubleshoot-auto-labeling-policies.md
