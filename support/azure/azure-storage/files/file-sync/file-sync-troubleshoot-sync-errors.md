@@ -1083,6 +1083,8 @@ This error typically happens when a backup application creates a VSS snapshot an
 | **Description** | Sync can't access the Azure file share specified in the cloud endpoint. |
 | **Remediation required** | Yes |
 
+This error might occur if the server's managed identity tenant ID doesn't match the tenant ID of the Storage Sync Service or the storage account.
+
 | Error | Code |
 |-|-|
 | **HRESULT** | 0x80c86053 |
