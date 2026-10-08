@@ -33,6 +33,8 @@ landingContent:
             url: data-synchronization/commerce-data-exchange.md
           - text: Troubleshoot Commerce offline implementation
             url: data-synchronization/commerce-offline-implementation.md
+          - text: Troubleshoot upload session warnings and delays
+            url: data-synchronization/upload-session-warnings.md
 
   # Card
   - title: Development and SDKs

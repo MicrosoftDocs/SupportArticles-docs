@@ -7,7 +7,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, patste, v-jomcc
 ms.custom:
-- sap:windows setup,upgrade and deployment\power management
+- sap:Windows Device and Driver Management\Power management
 - pcy:WinComm Devices Deploy
 adobe-target: true
 appliesto:

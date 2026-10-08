@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
 ms.custom:
-- sap:windows setup,upgrade and deployment\installing or upgrading windows
+- sap:Windows Setup, Upgrade and Deployment\Installing or upgrading Windows
 - pcy:WinComm Devices Deploy
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
@@ -32,7 +32,7 @@ In this scenario, when you run *msinfo32* to check the PCR7 Configuration, it's 
 
 BitLocker only accepts the Microsoft Windows PCA 2011 certificate to be used to sign early boot components that will be validated during boot. Any other signature present on boot code will cause BitLocker to use TPM profile 0, 2, 4, 11 instead of 7, 11. In some cases, the binaries are signed with UEFI CA 2011 certificate, which will prevent you from binding BitLocker to PCR7.
 
-> [!Note]
+> [!NOTE]
 > UEFI CA can be used to sign third-party applications, Option ROMs or even third-party boot loaders that can load malicious (UEFI CA signed) code. In this case, BitLocker switches to PCR 0, 2, 4, 11. In the cases of PCR 0,2,4,11, Windows measures exact binary hashes instead of the CA certificate.
 >
 > Windows is secure regardless of using TPM profile 0, 2, 4, 11 or profile 7, 11.

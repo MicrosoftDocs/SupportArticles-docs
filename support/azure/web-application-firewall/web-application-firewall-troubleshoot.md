@@ -6,9 +6,11 @@ ms.service: azure-web-application-firewall
 author: kaushika-msft
 ms.author: kaushika
 manager: dcscontentpm
+ms.reviewer: duau, allensu
 ms.topic: troubleshooting
-ms.date: 08/05/2026
+ms.date: 09/16/2026
 ms.custom: sap:Web Application Firewall (WAF)
+ai-usage: ai-assisted
 # Customer intent: "As a web application firewall administrator, I want to troubleshoot WAF rule violations and false positives, so that I can ensure legitimate traffic is allowed while maintaining robust security for my applications."
 ---
 
@@ -143,11 +145,37 @@ With this information, and the knowledge that rule 942130 is the one that matche
 
 - Disable the rule.
 
+### Mitigate Paranoia Level 2 false positives
+
+In OWASP CRS 3.2, SQL injection rules `942430`, `942440`, and `942450` belong to Paranoia Level 2 (PL2). If WAF logs show that a legitimate authentication request matched one of these rules, identify the contributing request field before you add an exclusion. Confirm the request is legitimate and identify its rule ID and configured rule set. For descriptions and version-specific replacements, see [WAF rule groups and rules](/azure/web-application-firewall/ag/application-gateway-crs-rulegroups-rules). Don't enable an inactive rule or change rule sets just to follow this example.
+
+1. In Log Analytics, use the following query if your diagnostic setting sends firewall logs to the `AzureDiagnostics` table. Replace the resource ID and time range with the gateway and interval you're investigating. These logs can contain sensitive request data; don't share field values or authentication tokens.
+
+Run the following query.
+
+   ```kusto
+   AzureDiagnostics
+   | where TimeGenerated > ago(1h)
+   | where _ResourceId =~ "<application-gateway-resource-id>"
+   | where Category == "ApplicationGatewayFirewallLog"
+   | where ruleId_s in ("942430", "942440", "942450")
+   | project TimeGenerated, transactionId_g, requestUri_s,
+       ruleId_s, action_s, details_message_s, details_data_s
+   | order by TimeGenerated desc
+   ```
+
+1. Find the transaction for the failing request. A contributing rule can have action `Matched`, while a separate anomaly-scoring rule blocks the transaction. To inspect all matches for that transaction, replace the rule-ID filter with a filter on `transactionId_g`. Don't exclude an anomaly-scoring rule instead of the contributing rule.
+1. For a confirmed false positive, configure an exclusion for the specific field and only the contributing rule IDs. Per-rule exclusions require a supported WAF policy ruleset, such as OWASP CRS 3.2. Use `Equals` for the field selector, and preserve other rules and existing policy settings. See the [rule-scoped CLI and PowerShell procedure](../application-gateway/troubleshoot-waf-blocking-legitimate-requests-403.md#resolution-a) and the [per-rule exclusion examples](/azure/web-application-firewall/ag/application-gateway-waf-configuration#per-rule-exclusions). For rule discovery, see the [PowerShell customization guide](/azure/web-application-firewall/ag/application-gateway-customize-waf-rules-powershell) and [CLI customization guide](/azure/web-application-firewall/ag/application-gateway-customize-waf-rules-cli).
+1. Read back the policy to confirm the exclusion contains the intended ruleset version, group, rule IDs, match variable, and selector. A global exclusion already covering that field still applies; adding a narrower exclusion doesn't remove it. Review any existing broad exclusion separately rather than clearing all exclusions.
+1. Repeat the same legitimate request and check its response and new transaction logs. Confirm the selected rule no longer matches the excluded field, and investigate any other contributing rules if the request remains blocked. An empty query without reproduced traffic and working diagnostic collection doesn't establish success. Validate that unrelated fields remain inspected in a controlled test environment.
+
+Don't automatically exclude all three IDs or all authentication fields. Keep the WAF in Prevention mode for this targeted change. If you need to undo it, remove only the rule-scoped exclusion you added after reviewing the policy; preserve pre-existing exclusions.
+
 ### Use an exclusion list
 
 To make an informed decision about handling a false positive, familiarize yourself with the technologies your application uses. For example, if your technology stack doesn't include a SQL server, and you're getting false positives related to those rules, disabling those rules doesn't necessarily weaken your security.
 
-One benefit of using an exclusion list is that you disable only a specific part of a request. However, this limitation means that a specific exclusion applies to all traffic passing through your WAF because it's a global setting. For example, this setting could lead to an issue if *1=1* is a valid request in the body for a certain app, but not for others. Another benefit is that you can choose between body, headers, and cookies to exclude if a certain condition is met, as opposed to excluding the whole request.
+An exclusion omits a selected request attribute from inspection. A global exclusion applies to all managed rules, while a per-rule exclusion applies only to the selected rules in a supported ruleset. Both apply wherever the WAF policy is associated, so verify the policy's applications and paths before changing it. For example, excluding a field can create a risk when *1=1* is valid for one application but not another that shares the policy. Prefer a narrowly scoped exclusion to excluding the whole request.
 
 Occasionally, specific parameters get passed into the WAF in a manner that might not be intuitive. For example, there's a token that gets passed when authenticating by using Microsoft Entra ID. *__RequestVerificationToken* is usually passed in as a request cookie. However, in some cases where cookies are disabled, this token is also passed as a request attribute or `arg`. If this happens, you need to ensure that *__RequestVerificationToken* is added to the exclusion list as a **Request attribute name** as well.
 
@@ -176,9 +204,9 @@ You can use your browser or an external tool like Fiddler to record HTTP Archive
 
 # [**Edge**](#tab/edge)
 
-To record and save a HAR file in Microsoft Edge, follow these steps
+To record and save a HAR file in Microsoft Edge, follow these steps:
 
-1. Press **F12** or **Ctrl+Shift+I** to open Edge Developer tools. You can also open the tools from the toolbar menu under **More tools > Developer tools**.
+1. Press **F12** or **Ctrl+Shift+I** to open Edge Developer tools. You can also open the tools from the toolbar menu under **More tools** > **Developer tools**.
 
 1. In the **Console** tab, select **Clear console** or press **Ctrl+L**.
 
@@ -202,7 +230,7 @@ To record and save a HAR file in Microsoft Edge, follow these steps
 
 To record and save a HAR file in Google Chrome, follow these steps:
 
-1. Press **F12** or **Ctrl+Shift+I** to open Chrome Developer Tools. You can also open the tools from the toolbar menu under **More tools > Developer tools**.
+1. Press **F12** or **Ctrl+Shift+I** to open Chrome Developer Tools. You can also open the tools from the toolbar menu under **More tools** > **Developer tools**.
 
 1. In the **Console** tab, select **Clear console** or press **Ctrl+L**.
 
@@ -349,7 +377,7 @@ With your knowledge of how the CRS rule sets work, and that the CRS ruleset 3.0 
 
 The first entry is logged because the user used a numeric IP address to navigate to the Application Gateway, which you can ignore in this case.
 
-The second one (rule 942130) is the interesting one. You see in the details that it matched a pattern `(1=1)`, and the field is named **text1**. Follow the same previous steps to exclude the **Request Attribute Name** that equals `1=1`.
+The second entry (rule 942130) is seen in the details as it matches a pattern `(1=1)`, and the field is named **text1**. Follow the same previous steps to exclude the **Request Attribute Name** that equals `text1`.
 
 ## Find request header names
 
@@ -400,7 +428,7 @@ For v1 Web Application Firewalls, the portal now provides the following metrics:
      
 To enable metrics, select the **Metrics** tab in the portal, and select one of the three metrics.
 
-## Next step
+## References
 
 > [!div class="nextstepaction"]
 > [Configure Web Application Firewall on Application Gateway](/azure/web-application-firewall/ag/tutorial-restrict-web-traffic-powershell)

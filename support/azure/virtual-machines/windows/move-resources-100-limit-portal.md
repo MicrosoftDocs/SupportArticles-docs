@@ -1,17 +1,18 @@
 ---
-title: Azure resource move fails - can't select more than 100 resources in the Azure portal
+title: Azure resource move fails when you select more than 100 resources in the Azure portal
 description: Fix Azure portal resource move failures when you select more than 100 resources. Learn workarounds in portal, PowerShell, or CLI to move successfully.
 services: virtual-machines
-author: scotro
 manager: dcscontentpm
+author: kaushika-msft
+ms.author: kaushika
 ms.service: azure-virtual-machines
 ms.topic: troubleshooting
-ms.date: 03/18/2026
-ms.author: scotro
-ms.reviewer: jarrettr
+ms.date: 09/03/2026
+ms.reviewer: scotro, jdickson
 ms.custom: sap:Cannot create a VM
+ai-usage: ai-assisted
 ---
-# Resource selections are lost when you move more than 100 resources in the Azure portal
+# Azure resource move fails when you select more than 100 resources in the Azure portal
 
 **Applies to:** :heavy_check_mark: Linux VMs :heavy_check_mark: Windows VMs
 
@@ -24,11 +25,11 @@ When you try to move more than 100 resources by using the [Azure portal](https:/
 Imagine the following scenario:
 
 - You use the Azure portal to move more than 100 resources.
-- You select all the resources on page 1 of the resource list.
-- You go to page 2, and select extra resources.
-- You return to page 1, and see that the portal no longer shows the resources that you selected.
+- You select all the resources on page one of the resource list.
+- You go to page two, and select extra resources.
+- You return to page one, and see that the portal no longer shows the resources that you selected.
 
-In this scenario, the move fails and returns an error message that resembles the following example:
+In this scenario, the move fails and returns an error message that resembles the following example.
 
 ```output
 {
@@ -49,34 +50,46 @@ To move more than 100 resources, use one of the following workarounds.
 
 ### Workaround 1: Move resources in batches by using the portal
 
-1. Select all resources on page 1 only, and complete the move for that batch.
-1. After the first move finishes, select the next batch of resources, and repeat.
+Use the following steps to move resources in batches of 100 or fewer.
+
+1. Select all resources on page one only, and complete the move for that batch.
+1. After the first move finishes, select the next batch of resources on page one, and repeat.
 
 > [!NOTE]
-> When you move resources between subscriptions, make sure that you include all dependent resources, such as a virtual machine (VM), its network interface card (NIC), and its disks, in the same batch. This approach helps you avoid missing dependency errors.
+> When you move resources between subscriptions, ensure you include all dependent resources, such as a virtual machine (VM), its network interface card (NIC), and its disks, in the same batch. This approach helps you avoid missing dependency errors.
 
 ### Workaround 2: Use Azure PowerShell or Azure CLI
 
-To avoid the portal pagination limitation, move resources programmatically.
+To avoid the portal pagination limitation, move resources programmatically with either Azure PowerShell or Azure CLI.
 
-**Azure PowerShell**
+# [Azure PowerShell](#tab/powershell)
 
-```powershell
-$resources = Get-AzResource -ResourceGroupName <source-rg>
-Move-AzResource -DestinationResourceGroupName <destination-rg> `
-                -DestinationSubscriptionId <destination-sub-id> `
+Run this command.
+
+```azurepowershell
+$resources = Get-AzResource -ResourceGroupName "<source-rg>"
+Move-AzResource -DestinationResourceGroupName "<destination-rg>" `
+                -DestinationSubscriptionId "<destination-sub-id>" `
                 -ResourceId ($resources.ResourceId)
 ```
 
-**Azure CLI**
+# [Azure CLI](#tab/cli)
+
+Run this command.
 
 ```azurecli
-resourceIds=$(az resource list --resource-group <source-rg> --query "[].id" -o tsv | tr '\n' ' ')
-az resource move --destination-group <destination-rg> --ids $resourceIds
+resourceIds=$(az resource list --resource-group "<source-rg>" --query "[].id" -o tsv | tr '\n' ' ')
+az resource move --destination-group "<destination-rg>" --ids $resourceIds
 ```
 
+# [Azure portal](#tab/portal)
+
+The Azure portal limits move operations to 100 resources at a time. To move larger sets of resources in a single operation, use the Azure PowerShell or Azure CLI tab.
+
+---
+
 > [!TIP]
-> When you use CLI or PowerShell, the 800-resource-per-operation limit still applies. Break large moves into operations of fewer than 800 resources each.
+> When you use Azure CLI or PowerShell, the 800-resource-per-operation limit still applies. Break large moves into operations of fewer than 800 resources each.
 
 ## References
 

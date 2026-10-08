@@ -1,9 +1,10 @@
 ---
 title: Troubleshoot failover of Always On Availability Groups 
 description: This article provides troubleshooting steps to help you determine why your Always On availability group failed over in SQL Server. 
-ms.date: 05/20/2026
+ms.date: 09/24/2026
 ms.custom: sap:Always On Availability Groups (AG)
 ms.reviewer: cmathews, v-jayaramanp, jopilov, v-shaywood
+ai-usage: ai-assisted
 ---
 
 # Troubleshoot failover of Always On Availability Groups
@@ -93,9 +94,9 @@ You can locate any of these Always On specific health events by searching the cl
 00001334.00002ef4::2019/06/24-18:24:36.153 ERR [RES] SQL Server Availability Group : [hadrag] Resource Alive result 0.
 ```
 
-You can use a tool to find all the health events in the cluster log so that you can generate a summary report of Always On health problems. This report can help you identify chronological trends and determine whether a particular Always On health condition is recurring. The following screenshot shows how to use a text editor (NotePad++, in this case) to find all the lines in the cluster log that contain the `[hadrag] Resource Alive result 0` string:
+You can use a tool to find all the health events in the cluster log so that you can generate a summary report of Always On health problems. This report can help you identify chronological trends and determine whether a particular Always On health condition is recurring. The following screenshot shows how to use a text editor ([Visual Studio Code](https://code.visualstudio.com/download), in this case) to find all the lines in the cluster log that contain the `[hadrag] Resource Alive result 0` string:
 
-:::image type="content" source="media/troubleshooting-availability-group-failover/locate-health-events-in-notepad-small.png" alt-text="Screenshot that shows a tool to locate all the health events in the cluster log." lightbox="media/troubleshooting-availability-group-failover/locate-health-events-in-notepad-big.png":::
+:::image type="content" source="media/troubleshooting-availability-group-failover/locate-health-events-in-vs-code-small.png" alt-text="Screenshot that shows all the health events in the cluster log in a Visual Studio Code search editor." lightbox="media/troubleshooting-availability-group-failover/locate-health-events-in-vs-code-big.png":::
 
 ## Identify and fix the health issue that triggered the failover
 

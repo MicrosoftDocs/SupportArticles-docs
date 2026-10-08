@@ -3,26 +3,13 @@ title: Troubleshoot HTTP 504 Gateway Timeout errors in Azure Application Gateway
 description: Troubleshoot HTTP 504 Gateway Timeout errors in Azure Application Gateway with step-by-step diagnostics and targeted fixes. Follow this guide to restore traffic.
 ms.service: azure-application-gateway
 ms.topic: troubleshooting
-ms.date: 5/14/2026
+manager: dcscontentpm
+author: kaushika-msft
+ms.author: kaushika
+ms.reviewer: kaushika 
+ms.date: 09/23/2026
 ms.custom: sap:Facing 5xx errors
-ai.hint.symptom-tags:
-  - 504-error
-  - gateway-timeout
-  - request-timeout
-  - backend-slow
-  - high-latency
-  - server-response-latency
-ai.hint.scope: resource-level
-ai.hint.required-permissions:
-  - Microsoft.Network/applicationGateways/read
-  - Microsoft.Network/applicationGateways/backendhealth/action
-  - Microsoft.Network/applicationGateways/write
-  - Microsoft.Insights/diagnosticSettings/read
-  - Microsoft.Compute/virtualMachines/read
-ai.hint.context-required:
-  - SUBSCRIPTION_ID
-  - RESOURCE_GROUP
-  - RESOURCE_NAME
+ai-usage: ai-assisted
 ---
 
 # Troubleshoot HTTP 504 Gateway Timeout errors in Azure Application Gateway
@@ -56,7 +43,7 @@ To troubleshoot HTTP 504 Gateway Timeout errors in Azure Application Gateway, yo
 | `{RESOURCE_NAME}` | Application Gateway resource name | `myAppGateway` |
 
 > [!TIP]
-> Each script in this article prompts you for the required values interactively. Select **Try It** to open Cloud Shell and answer the prompts. The values are cached for the session so you only enter them once. Additional variables (Log Analytics workspace ID, backend resource IDs, subnet IDs) are discovered during the diagnostic steps. You don't need them to begin.
+> Each script in this article prompts you for the required values interactively. Select **Try It** to open Cloud Shell and answer the prompts. The values are cached for the session so you only enter them once. You discover additional variables (Log Analytics workspace ID, backend resource IDs, subnet IDs) during the diagnostic steps. You don't need them to begin.
 
 ## Diagnostic steps
 
@@ -302,7 +289,7 @@ $health.BackendAddressPools.BackendHttpSettingsCollection.Servers |
 
 ### Step 3a
 
-Determine whether the backend virtual machine (VM) or application service is under resource pressure (like CPU, memory, or IOPS) that explains slow responses.
+Determine whether the backend virtual machine (VM) or application service is under resource pressure, such as CPU, memory, or IOPS, that explains slow responses.
 
 First, run the following commands in Azure CLI or Azure PowerShell to identify which backend servers are in the Application Gateway backend pool.
 
@@ -445,7 +432,7 @@ Use the following decision map table to determine the appropriate next steps bas
 | The backend CPU, memory, or disk is exhausted. | Perform [Resolution B](#resolution-b). |
 | There's a network delay between the Application Gateway and the backend. | Perform [Resolution C](#resolution-c). |
 | Access logging isn't enabled and diagnostics are limited. | Perform [Resolution D](#resolution-d). |
-| All diagnostics pass but 504 errors still occurr. | File an Azure support request. |
+| All diagnostics pass but 504 errors still occur. | File an Azure support request. |
 
 ## Resolution A
 
@@ -612,7 +599,7 @@ Set-AzAppServicePlan `
   -Tier $Sku
 ```
 
-3. Add additional backend servers to the Application Gateway backend pool to distribute load.
+3. Add more backend servers to the Application Gateway backend pool to distribute load.
 
 **Azure CLI**
 
@@ -683,7 +670,7 @@ Set-AzApplicationGateway -ApplicationGateway $gw
 
 If the backend infrastructure metrics are healthy but responses are slow, the issue is at the application level. Check the following items:
 
-- Profile the slow API endpoints to identify bottlenecks, like database queries, external service calls, and CPU-intensive processing.
+- Profile the slow API endpoints to identify bottlenecks, such as database queries, external service calls, and CPU-intensive processing.
 - Enable Application Insights on the backend to trace slow requests.
 - Implement caching for expensive operations.
 - Review connection pooling settings for database connections.
@@ -788,8 +775,8 @@ $rt.Routes | Select-Object Name, AddressPrefix, NextHopType, NextHopIpAddress | 
 
 | If you see... | Meaning | Next steps |
 |---|---|---|
-| There's no route table or only default routes. | The network path is direct and latency isn't caused by routing. | Check the backend application performance. |
-| The route to the backend subnet happens through an NVA. | Traffic traverses a firewall or NVA and adds latency.| Verify NVA capacity and whether it's a bottleneck. |
+| There's no route table or only default routes. | The network path is direct and routing doesn't cause latency. | Check the backend application performance. |
+| The route to the backend subnet goes through an NVA. | Traffic goes through a firewall or NVA and adds latency.| Verify NVA capacity and whether it's a bottleneck. |
 
 
 ## Resolution D
@@ -837,7 +824,7 @@ if (-not $WorkspaceArmId) {
 Write-Host "Using workspace: $WorkspaceArmId"
 ```
 
-2. Run the following commands to in Azure CLI or Azure PowerShell to enable diagnostic logging.
+2. Run the following commands in Azure CLI or Azure PowerShell to enable diagnostic logging.
 
 > [!IMPORTANT]
 > The following commands are all write operations that require customer approval before running. Review them to better understand what they do when run. Set the request timeout to accommodate your backend's expected response time with a reasonable margin.

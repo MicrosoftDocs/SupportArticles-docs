@@ -5,7 +5,7 @@ ms.date: 02/12/2026
 manager: dcscontentpm
 ms.topic: troubleshooting
 ms.custom:
-- sap:windows setup,upgrade and deployment\installing or upgrading windows
+- sap:Windows Setup, Upgrade and Deployment\Installing or upgrading Windows
 - pcy:WinComm Devices Deploy
 ms.reviewer: dougeby
 audience: itpro
@@ -19,7 +19,7 @@ appliesto:
 > [!NOTE]
 > This is a 300 level topic (moderately advanced).
 >
-> For IT professionals, check more information in [Resolve Windows 10 upgrade errors](/windows/deployment/upgrade/resolve-windows-10-upgrade-errors).
+> For IT professionals, check more information in [Resolve Windows upgrade errors: Technical information for IT Pros](/windows/deployment/upgrade/resolve-windows-10-upgrade-errors).
 
 If a Windows 10 upgrade isn't successful, it can be helpful to understand when an error occurred in the upgrade process.
 

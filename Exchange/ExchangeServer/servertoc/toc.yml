@@ -192,8 +192,6 @@ items:
           href: ../compliance/ediscovery-search-ignores-attached-mail-items.md
         - name: eDiscovery search ignores some query keywords
           href: ../compliance/ediscovery-search-ignores-query-keywords.md
-        - name: Items are removed by MRM 2.0 unexpectedly
-          href: ../compliance/items-are-removed-by-mrm-2-0-unexpectedly.md
         - name: Missing items in eDiscovery search results
           href: ../compliance/ediscovery-search-missing-items.md
         - name: MRM doesn't process items in the Sync Issues folder

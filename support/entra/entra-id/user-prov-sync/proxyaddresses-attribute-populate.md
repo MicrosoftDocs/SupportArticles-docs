@@ -30,6 +30,9 @@ The proxyAddresses attribute in Active Directory is a multi-value property that 
 
 Therefore, the values of the Mail and ProxyAddresses attributes for the object in Active Directory may not be the same as the values of the ProxyAddresses attribute in Microsoft Entra ID.
 
+> [!NOTE]
+> For users synchronized from on-premises Active Directory, changing UserPrincipalName (UPN) without updating corresponding email address attributes may cause the Exchange Online mailbox primary SMTP address to differ from the authoritative synchronized address. This can occur during initial mailbox provisioning or when the existing primary SMTP address matches the previous WindowsLiveID. To preserve the intended primary SMTP address, update and synchronize the corresponding mail and proxyAddresses attributes with the UPN change.
+
 ## Terminology
 
 The following terminology is used in this article:

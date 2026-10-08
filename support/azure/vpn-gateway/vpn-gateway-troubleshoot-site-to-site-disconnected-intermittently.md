@@ -7,7 +7,7 @@ ms.author: kaushika
 ms.service: azure-vpn-gateway
 ms.reviewer: duau, allensu 
 ms.topic: troubleshooting
-ms.date: 09/05/2026
+ms.date: 09/10/2026
 ms.custom: sap:Connectivity
 
 # Customer intent: As a network administrator, I want to troubleshoot Azure Site-to-Site VPN connection issues, so that I can ensure stable connectivity and minimize disruptions for users.
@@ -81,6 +81,44 @@ The PFS group is the Diffie-Hellman group used for IPsec Quick Mode (Phase 2). W
    ```azurecli
    az network vpn-connection show --resource-group "<resource-group>" --name "<connection-name>" --query connectionStatus --output tsv
    ```
+
+### Step 8: Check for overlapping address spaces across connections
+
+If traffic to specific prefixes drops intermittently, compare the address prefixes configured on each associated local network gateway. Overlapping prefixes on different connections can cause traffic to use an unintended route. If you don't configure NAT on the VPN gateway, the overlapping prefixes can disrupt traffic.
+
+1. List the VPN connections and the address prefixes on each associated local network gateway.
+
+   **Azure PowerShell**
+
+   ```azurepowershell
+   $gateway = Get-AzVirtualNetworkGateway `
+       -ResourceGroupName "<resource-group>" `
+       -Name "<virtual-network-gateway-name>"
+   $connections = Get-AzVirtualNetworkGatewayConnection -ResourceGroupName "<resource-group>" |
+       Where-Object {
+           $_.VirtualNetworkGateway1.Id -eq $gateway.Id -and $_.LocalNetworkGateway2
+       }
+
+   $connections | ForEach-Object {
+       $localGatewayId = $_.LocalNetworkGateway2.Id -split "/"
+       $localGateway = Get-AzLocalNetworkGateway `
+           -ResourceGroupName $localGatewayId[4] `
+           -Name $localGatewayId[-1]
+
+       [PSCustomObject]@{
+           Connection          = $_.Name
+           LocalNetworkGateway = $localGateway.Name
+           AddressPrefixes     = $localGateway.LocalNetworkAddressSpace.AddressPrefixes -join ", "
+       }
+   } | Format-Table
+   ```
+
+1. Compare the `AddressPrefixes` values in the output. Look for identical or overlapping CIDR ranges on different connections.
+1. In the Azure portal, open the virtual network gateway, and then select **Connections**. Open each connection and identify its associated local network gateway. Open each local network gateway, select **Configuration**, and then compare the prefixes under **Address space**.
+1. Resolve each overlapping prefix based on its configuration:
+   - If the prefix is assigned to the wrong site, remove it from that site's local network gateway. Configure all prefixes for a site on the local network gateway resource that represents the site's VPN device. For instructions, see [Modify IP address prefixes](/azure/vpn-gateway/vpn-gateway-modify-local-network-gateway-portal#ipaddprefix).
+   - For separate sites, use a distinct local network gateway and connection for each site. If the sites intentionally use overlapping address spaces, configure NAT on each connection so that the external mappings don't overlap. Azure VPN Gateway supports NAT for IPsec/IKE cross-premises connections on route-based VpnGw2 to VpnGw5 and VpnGw2AZ to VpnGw5AZ gateway SKUs. Policy-based VPNs and connections that have **Use Policy Based Traffic Selectors** enabled don't support NAT rules. For more information, see [About NAT on Azure VPN Gateway](/azure/vpn-gateway/nat-overview).
+   - If multiple connections intentionally provide redundant paths to the same on-premises network, don't remove matching prefixes. This topology uses a distinct local network gateway for each VPN device and requires Border Gateway Protocol (BGP) and equal-cost multipath (ECMP) routing. For more information, see [Multiple on-premises VPN devices](/azure/vpn-gateway/vpn-gateway-highlyavailable#activeactiveonprem).
 
 ## Correlate disconnects with Azure Service Health
 

@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, scottmca
 ms.custom:
-- sap:Windows Setup, Upgrade and Deployment\Installing or upgrading Windows
+- sap:Windows Setup, Upgrade and Deployment\Sysprep and imaging (Windows PE, ADK, WDS)
 - pcy:WinComm Storage High Avail
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>

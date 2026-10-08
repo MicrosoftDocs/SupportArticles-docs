@@ -4,39 +4,12 @@ description: Diagnose and fix a private endpoint connection stuck in Pending in 
 ms.service: azure-private-link
 ms.topic: troubleshooting
 ms.custom: sap:Private Endpoints
-ms.date: 08/05/2026
+ms.date: 10/05/2026
+manager: dcscontentpm
 author: kaushika-msft
 ms.author: kaushika
 ms.reviewer: chadmat
-ai.hint.symptom-tags:
-  - pending-approval
-  - private-endpoint-connection
-  - private-endpoint-pending
-  - manual-approval
-  - cross-subscription
-  - cross-tenant
-  - auto-approval
-  - service-managed-private-endpoint
-  - front-door-private-endpoint
-  - authorization-failed-approve
-ai.hint.scope: resource-level
-ai.hint.required-permissions:
-  - Microsoft.Network/privateEndpoints/read
-  - Microsoft.Network/privateLinkServices/privateEndpointConnections/read
-  - Microsoft.Network/privateLinkServices/privateEndpointConnections/write
-  - Microsoft.Network/privateLinkServices/read
-  - Microsoft.Network/privateLinkServices/write
-  - Microsoft.Authorization/roleAssignments/read
-  # Service-specific approve data-action on the target resource, for example:
-  - Microsoft.Storage/storageAccounts/privateEndpointConnectionsApproval/action
-  - Microsoft.KeyVault/vaults/privateEndpointConnectionsApproval/action
-ai.hint.context-required:
-  - SUBSCRIPTION_ID
-  - RESOURCE_GROUP
-  - PE_NAME
-  - TARGET_RESOURCE_ID
-  - TARGET_SUBSCRIPTION_ID
-  - APPROVER
+ai-usage: ai-assisted
 ---
 
 # Troubleshoot a private endpoint connection stuck in the Pending state
@@ -79,7 +52,7 @@ To troubleshoot this issue, you need:
 | `{TARGET_RESOURCE_ID}` | Full resource ID of the target the endpoint connects to (like storage account, key vault, SQL server, and Private Link service). | `/subscriptions/.../resourceGroups/rg-target/providers/Microsoft.Storage/storageAccounts/mystorage` |
 | `{TARGET_SUBSCRIPTION_ID}` | Subscription that owns the target resource (can differ from the consumer subscription). | `aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb` |
 | `{APPROVER}` | Object ID (GUID) of the principal expected to approve the connection on the target side. You can also use a User Principal Name (UPN), but if the CLI returns `Insufficient privileges to complete the operation` when resolving the UPN using Microsoft Graph API, use the object ID instead (find it under **Microsoft Entra ID** > **Users** > *user* > **Object ID**). | `bbbbbbbb-1111-2222-3333-cccccccccccc` |
-| `{CONSUMER_SUBSCRIPTION_ID}` | Subscription that owns the source private endpoint, used when adding it to an auto-approval allow-list. | `aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e` |
+| `{CONSUMER_SUBSCRIPTION_ID}` | Subscription that owns the source private endpoint, used when adding it to an auto-approval allow list. | `aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e` |
 
 > [!TIP]
 > Each script that's provided in the following sections prompts you for the required values interactively. To open Cloud Shell and answer the prompts, select **Try It**. The values are cached for that session. Therefore, you enter them only one time.
@@ -308,7 +281,7 @@ Use the following decision map table to determine the appropriate next steps bas
 
 | Diagnostic result | Root cause | Next actions |
 |---|---|---|
-| [Step 3](#step-3) shows the consumer subscription isn't on the target's auto-approval allow-list (Private Link service `autoApproval.subscriptions` or first-party equivalent). | Auto-approval allow-list missing the consumer subscription. | Perform [Resolution D](#resolution-d). |
+| [Step 3](#step-3) shows the consumer subscription isn't on the target's auto-approval allow list (Private Link service `autoApproval.subscriptions` or first-party equivalent). | Auto-approval allow list missing the consumer subscription. | Perform [Resolution D](#resolution-d). |
 | [Step 4](#step-4) shows the approver lacks the target's `*/privateEndpointConnectionsApproval/action` data action permissions. |Approver RBAC missing. | Perform [Resolution C](#resolution-c). |
 | [Step 2](#step-2) source private endpoint is service-managed (Front Door Premium, App Service, Azure Synapse-managed VNet, Data Factory-managed VNet) and [Step 3](#step-3) and [Step 4](#step-4) are clean. | Service-managed source, target owner must manually approve. | Perform [Resolution B](#resolution-b). |
 | [Step 2](#step-2) source private endpoint is a user-created `Microsoft.Network/privateEndpoints` resource, the source is cross-subscription or cross-tenant from the target, and [Step 3](#step-3) and [Step 4](#step-4) are clean. | Manual approval required across the trust boundary. | Perform [Resolution A](#resolution-a). |
@@ -366,7 +339,7 @@ If the approve call returned `AuthorizationFailed` on a `*/privateEndpointConnec
 
 ## Resolution B
 
-A managed Azure service creates the source private endpoint, such as Front Door Premium, App Service VNet integration, Azure Synapse-managed VNet, or Data Factory-managed VNet. These services never auto-approve connections, regardless of subscription or auto-approval allow-list configuration. Front Door Premium specifically requires an explicit approval on the target resource for every origin (see [Stack Overflow #77273621](https://stackoverflow.com/questions/77273621) and [Microsoft Learn: Secure your origin with Private Link](/azure/frontdoor/private-link) for more details). The fix is the same approve API as [Resolution A](#resolution-a), but the approver is the target resource owner, not the owner of the managed service (like with Front Door, App Service, Azure Synapse, and Data Factory). Adding the consumer subscription to an auto-approval list doesn't clear these connections.
+A managed Azure service creates the source private endpoint, such as Front Door Premium, App Service VNet integration, Azure Synapse-managed VNet, or Data Factory-managed VNet. These services never auto-approve connections, regardless of subscription or auto-approval allow list configuration. Front Door Premium specifically requires an explicit approval on the target resource for every origin (see [Stack Overflow #77273621](https://stackoverflow.com/questions/77273621) and [Microsoft Learn: Secure your origin with Private Link](/azure/frontdoor/private-link) for more details). The fix is the same approve API as [Resolution A](#resolution-a), but the approver is the target resource owner, not the owner of the managed service (like with Front Door, App Service, Azure Synapse, and Data Factory). Adding the consumer subscription to an auto-approval list doesn't clear these connections.
 
 Run the following commands in Azure CLI.
 
@@ -411,7 +384,7 @@ az network private-endpoint-connection approve \
 
 1. Re-run [Step 2](#step-2) from the target side. The connection's `status` should now read `Approved`. For Front Door Premium, the origin's **Private endpoint status** in the Front Door portal blade also flips to `Approved` once propagation completes (usually minutes).
 
-If the approve call returned `AuthorizationFailed`, see [Resolution C](#resolution-c). If you have to repeat this approval frequently because the managed service recreates the connection (for example, after a Front Door origin reconfiguration), this is expected. Managed-service private endpoints don't benefit from auto-approval allow-lists and every recreate requires a fresh manual approve.
+If the approve call returned `AuthorizationFailed`, see [Resolution C](#resolution-c). If you have to repeat this approval frequently because the managed service recreates the connection (for example, after a Front Door origin reconfiguration), this is expected. Managed-service private endpoints don't benefit from auto-approval allow lists and every recreate requires a fresh manual approve.
 
 ## Resolution C
 

@@ -24,7 +24,7 @@ landingContent:
         - text: Frequently asked questions and acronyms
           url: releases/faq-acronyms.md
         - text: Latest updates and version history
-          url: releases/download-and-install-latest-updates.md
+          url: https://support.microsoft.com/help/321185
         - text: Microsoft Update Detection logic
           url: releases/new-mu-servicing-model.md
         - text: Naming schema and Fix areas for SQL updates

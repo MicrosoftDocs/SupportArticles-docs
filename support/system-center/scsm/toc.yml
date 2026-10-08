@@ -1,3 +1,4 @@
+items:
 - name: Welcome
   href: welcome-scsm.yml
 - name: Administrator console issues
@@ -28,6 +29,8 @@
   items:
     - name: Connector doesn't transfer uninstalled software information
       href: connector-not-transfer-uninstalled-software-information.md
+    - name: Impact of Exchange Web Services (EWS) deprecation in Exchange Online
+      href: ews-deprecation.md
     - name: Logical disks and network adapters incorrectly marked as deleted
       href: logical-disks-network-adapters-marked-deleted.md
 - name: Data warehouse and reporting
@@ -38,6 +41,10 @@
       href: data-warehouse-jobs-stuck-error.md
     - name: Troubleshoot stuck data warehouse jobs
       href: troubleshoot-stuck-data-warehouse-jobs.md
+- name: Impact of EWS Deprecation
+  items:
+    - name: Impact of Exchange Web Services (EWS) deprecation in Exchange Online
+      href: ews-deprecation.md
 - name: Setup and disaster recovery
   items:
     - name: Installation fails with SQL Server version-related error
@@ -48,3 +55,4 @@
       href: change-requests-remain-in-progress-status.md
     - name: Workflows don't execute
       href: workflows-display-needing-attention.md
+

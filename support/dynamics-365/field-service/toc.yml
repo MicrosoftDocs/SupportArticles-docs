@@ -68,6 +68,8 @@ items:
 
 - name: Resource Scheduling Optimization add-in
   items: 
+    - name: Deployment or upgrade fails or doesn't complete
+      href: rso/troubleshoot-rso-deployment.md
     - name: Locked booking is infeasible
       href: rso/locked-booking-infeasible.md
     - name: '"Object reference not set to an instance of an object" error'
@@ -80,8 +82,6 @@ items:
       href: rso/sas-key-not-configured-error.md
     - name: Troubleshoot issues with bookings
       href: rso/troubleshoot-bookings-in-rso.md
-    - name: Troubleshoot issues with deployments
-      href: rso/troubleshoot-rso-deployment.md
     - name: '"User lacks privileges" error'
       href: rso/user-lacks-privileges-error.md
 

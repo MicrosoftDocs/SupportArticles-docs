@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot known issues for printing
 description: Overview of printing known issues.
-ms.date: 02/12/2026
+ms.date: 09/11/2026
 author: kaushika-msft
 ms.author: kaushika
 manager: dcscontentpm
@@ -82,6 +82,8 @@ You don't have the appropriate permission to change the printer configuration.
 ### Resolution
 
 You have to have the Manage Printer permission to change the printer setup.
+
+If you receive an error message, “Windows cannot access the specified device, path or file. You may not have the appropriate permissions to access the item," when adding a printer in a Citrix Virtual Apps session hosted on Windows Server 2019, see the article, [Cannot add a printer in Citrix Virtual Apps on Windows Server 2019](https://support.microsoft.com/servicing/os/windows/docs/2026/09/cannot-add-printer-citrix-virtual-apps). 
 
 ## The document doesn't print completely, or appears garbled
 

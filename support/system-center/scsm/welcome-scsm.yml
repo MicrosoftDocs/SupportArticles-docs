@@ -22,3 +22,11 @@ landingContent:
         links:
           - text: Configure antivirus exclusions
             url: configure-antivirus-exclusions.md
+
+ # Card
+  - title: Impact of EWS Deprecation
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Impact of Exchange Web Services (EWS) deprecation in Exchange Online
+            url: ews-deprecation.md

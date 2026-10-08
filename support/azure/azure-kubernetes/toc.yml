@@ -21,8 +21,8 @@ items:
     items:
     - name: Common issues with running or scaling large AKS clusters
       href: create-upgrade-delete/aks-at-scale-troubleshoot-guide.md
-    - name: Cluster upgrading and scaling errors
-      href: create-upgrade-delete/upgrading-or-scaling-does-not-succeed.md
+    - name: Upgrade, scaling, and failed-state errors
+      href: availability-performance/cluster-node-virtual-machine-failed-state.md
     - name: Node count isn't in autoscaler min and max range
       href: create-upgrade-delete/node-count-is-not-in-autoscaler-min-max-range.md
     - name: Troubleshoot pods remain in a Pending state scenario
@@ -57,7 +57,7 @@ items:
     href: create-upgrade-delete/troubleshoot-apiserver-etcd.md
 - name: Node/node pool availability and performance
   items:
-  - name: AKS cluster/node is in failed state
+  - name: Upgrade, scaling, and failed-state errors
     href: availability-performance/cluster-node-virtual-machine-failed-state.md
   - name: Identify containers facing high CPU pressure and throttling
     href: availability-performance/troubleshoot-node-cpu-pressure-psi.md
@@ -93,6 +93,8 @@ items:
       href: availability-performance/node-not-ready-then-recovers.md
     - name: Troubleshoot node auto-repair errors
       href: availability-performance/node-auto-repair-errors.md
+    - name: Troubleshoot flex node Machine API and node pool changes
+      href: extensions/flex-nodes-for-aks.md
 - name: Connectivity issues
   items:
   - name: Can't connect to application hosted on AKS cluster
@@ -263,6 +265,8 @@ items:
       href: extensions/istio-add-on-cni-troubleshooting.md
   - name: Other extensions and add-ons
     items:
+    - name: Troubleshoot GitOps with Argo CD extension deployment errors
+      href: ./extensions/troubleshoot-argo-cd-deployment-errors.md
     - name: AKS Cost Analysis add-on issues
       href: extensions/aks-cost-analysis-add-on-issues.md
     - name: Troubleshoot AI toolchain operator add-on errors

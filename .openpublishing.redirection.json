@@ -3696,6 +3696,11 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "support/azure/azure-kubernetes/create-upgrade-delete/error-code-invalidresourcereference.md",
+      "redirect_url": "/troubleshoot/azure/azure-kubernetes/error-codes/invalidresourcereference-error",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/azure/general/data-restore-storage.md",
       "redirect_url": "/azure/storage/blobs/data-protection-overview",
       "redirect_document_id": false
@@ -3927,8 +3932,7 @@
     },
     {
       "source_path": "support/sql/general/determine-version-edition-update-level.md",
-      "redirect_url": "/troubleshoot/sql/releases/download-and-install-latest-updates",
-      "redirect_document_id": true
+      "redirect_url": "https://support.microsoft.com/servicing/sql/kb321185-download-and-install-latest-updates"
     },
     {
       "source_path": "support/mem/intune/app-management.yml",
@@ -6757,7 +6761,8 @@
     },
     {
       "source_path": "support/sql/install/understanding-dotnet-framework-requirements.md",
-      "redirect_url": "/previous-versions/troubleshoot/sql/install/understanding-dotnet-framework-requirements"
+      "redirect_url": "/previous-versions/troubleshoot/sql/install/understanding-dotnet-framework-requirements",
+      "redirect_document_id": true
     },
     {
       "source_path": "support/sql/install/error-set-up-update-instances.md",
@@ -6981,11 +6986,11 @@
     },
     {
       "source_path": "support/sql/linux/release-history-2017.md",
-      "redirect_url": "/troubleshoot/sql/releases/linux/download-and-install-latest-updates-linux"
+      "redirect_url": "https://support.microsoft.com/servicing/sql/linux/kb5122767-download-and-install-latest-updates-linux"
     },
     {
       "source_path": "support/sql/linux/release-history-2019.md",
-      "redirect_url": "/troubleshoot/sql/releases/linux/download-and-install-latest-updates-linux"
+      "redirect_url": "https://support.microsoft.com/servicing/sql/linux/kb5122767-download-and-install-latest-updates-linux"
     },
     {
       "source_path": "support/windows-client/shell-experience/disabling-autoplay-cause-hotstart-buttons-not-working.md",
@@ -6994,7 +6999,7 @@
     },
     {
       "source_path": "support/sql/linux/release-history-2022.md",
-      "redirect_url": "/troubleshoot/sql/releases/linux/download-and-install-latest-updates-linux"
+      "redirect_url": "https://support.microsoft.com/servicing/sql/linux/kb5122767-download-and-install-latest-updates-linux"
     },
     {
       "source_path": "support/azure/virtual-machine-scale-sets/index.md",
@@ -15130,7 +15135,7 @@
     },
     {
       "source_path": "support/windows-server/software-defined-networking/software-defined-data-center-and-networking.md",
-      "redirect_url": "/previous-versions/troublehoot/windows-server/software-defined-data-center-and-networking",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/software-defined-data-center-and-networking",
       "redirect_document_id": false
     },
     {
@@ -15311,11 +15316,6 @@
     {
       "source_path": "support/windows-server/windows-security/cannot-add-trusted-domain-user-guest-account-turn-on.md",
       "redirect_url": "/previous-versions/troubleshoot/windows-server/cannot-add-trusted-domain-user-guest-account-turn-on",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/windows-server/windows-security/cannot-copy-files-from-mapped-drive-to-local-directory.md",
-      "redirect_url": "/previous-versions/troubleshoot/windows-server/cannot-copy-files-from-mapped-drive-to-local-directory",
       "redirect_document_id": false
     },
     {
@@ -15829,38 +15829,683 @@
       "redirect_url": "/troubleshoot/dynamics-365/customer-insights/data/welcome-customer-insights-data"
     },
     {
+      "source_path": "support/sql/releases/download-and-install-latest-updates.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/kb321185-download-and-install-latest-updates"
+    },
+    {
+      "source_path": "support/sql/releases/linux/download-and-install-latest-updates-linux.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/linux/kb5122767-download-and-install-latest-updates-linux"
+    },
+    {
+      "source_path": "support/sql/releases/linux/release-history-2017.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/linux/kb5122767-download-and-install-latest-updates-linux"
+    },
+    {
+      "source_path": "support/sql/releases/linux/release-history-2019.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/linux/kb5122767-download-and-install-latest-updates-linux"
+    },
+    {
+      "source_path": "support/sql/releases/linux/release-history-2022.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/linux/kb5122767-download-and-install-latest-updates-linux"
+    },
+    {
+      "source_path": "support/sql/releases/linux/release-history-2025.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/linux/kb5122767-download-and-install-latest-updates-linux"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2014/build-versions.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2014/kb2936603-build-versions"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2016/build-versions.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2016/kb3177312-build-versions"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2016/rtm-cumulativeupdate1.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2016/cumulative-update/kb3164674-rtm-cu1"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2016/rtm-cumulativeupdate2.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2016/cumulative-update/kb3182270-rtm-cu2"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2016/rtm-cumulativeupdate3.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2016/cumulative-update/kb3205413-rtm-cu3"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2016/rtm-cumulativeupdate4.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2016/cumulative-update/kb3205052-rtm-cu4"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2016/rtm-cumulativeupdate5.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2016/cumulative-update/kb4013105-rtm-cu5"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2016/rtm-cumulativeupdate6.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2016/cumulative-update/kb4019914-rtm-cu6"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2016/rtm-cumulativeupdate7.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2016/cumulative-update/kb4024304-rtm-cu7"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2016/rtm-cumulativeupdate8.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2016/cumulative-update/kb4040713-rtm-cu8"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2016/rtm-cumulativeupdate9.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2016/cumulative-update/kb4037357-rtm-cu9"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2016/servicepack1-cumulativeupdate1.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2016/cumulative-update/kb3208177-sp1-cu1"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2016/servicepack1-cumulativeupdate10.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2016/cumulative-update/kb4341569-sp1-cu10"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2016/servicepack1-cumulativeupdate11.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2016/cumulative-update/kb4459676-sp1-cu11"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2016/servicepack1-cumulativeupdate12.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2016/cumulative-update/kb4464343-sp1-cu12"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2016/servicepack1-cumulativeupdate13.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2016/cumulative-update/kb4475775-sp1-cu13"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2016/servicepack1-cumulativeupdate14.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2016/cumulative-update/kb4488535-sp1-cu14"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2016/servicepack1-cumulativeupdate15.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2016/cumulative-update/kb4495257-sp1-cu15"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2016/servicepack1-cumulativeupdate2.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2016/cumulative-update/kb4013106-sp1-cu2"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2016/servicepack1-cumulativeupdate3.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2016/cumulative-update/kb4019916-sp1-cu3"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2016/servicepack1-cumulativeupdate4.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2016/cumulative-update/kb4024305-sp1-cu4"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2016/servicepack1-cumulativeupdate5.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2016/cumulative-update/kb4040714-sp1-cu5"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2016/servicepack1-cumulativeupdate6.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2016/cumulative-update/kb4037354-sp1-cu6"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2016/servicepack1-cumulativeupdate7.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2016/cumulative-update/kb4057119-sp1-cu7"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2016/servicepack1-cumulativeupdate8.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2016/cumulative-update/kb4077064-sp1-cu8"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2016/servicepack1-cumulativeupdate9.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2016/cumulative-update/kb4100997-sp1-cu9"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2016/servicepack1.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2016/kb3182545-servicepack1"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2016/servicepack2-cumulativeupdate1.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2016/cumulative-update/kb4135048-sp2-cu1"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2016/servicepack2-cumulativeupdate10.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2016/cumulative-update/kb4524334-sp2-cu10"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2016/servicepack2-cumulativeupdate11.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2016/cumulative-update/kb4527378-sp2-cu11"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2016/servicepack2-cumulativeupdate12.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2016/cumulative-update/kb4536648-sp2-cu12"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2016/servicepack2-cumulativeupdate13.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2016/cumulative-update/kb4549825-sp2-cu13"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2016/servicepack2-cumulativeupdate14.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2016/cumulative-update/kb4564903-sp2-cu14"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2016/servicepack2-cumulativeupdate15.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2016/cumulative-update/kb4577775-sp2-cu15"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2016/servicepack2-cumulativeupdate16.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2016/cumulative-update/kb5000645-sp2-cu16"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2016/servicepack2-cumulativeupdate17.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2016/cumulative-update/kb5001092-sp2-cu17"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2016/servicepack2-cumulativeupdate2.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2016/cumulative-update/kb4340355-sp2-cu2"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2016/servicepack2-cumulativeupdate3.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2016/cumulative-update/kb4458871-sp2-cu3"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2016/servicepack2-cumulativeupdate4.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2016/cumulative-update/kb4464106-sp2-cu4"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2016/servicepack2-cumulativeupdate5.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2016/cumulative-update/kb4475776-sp2-cu5"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2016/servicepack2-cumulativeupdate6.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2016/cumulative-update/kb4488536-sp2-cu6"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2016/servicepack2-cumulativeupdate7.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2016/cumulative-update/kb4495256-sp2-cu7"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2016/servicepack2-cumulativeupdate8.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2016/cumulative-update/kb4505830-sp2-cu8"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2016/servicepack2.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2016/kb4052908-servicepack2"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2016/servicepack3-azureconnect.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2016/kb5014242-servicepack3-azureconnect"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2016/servicepack3.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2016/kb5003279-servicepack3"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2017/azureconnect.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2017/kb5050533-azureconnect"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2017/build-versions.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2017/kb4047329-build-versions"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2017/cumulativeupdate1.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2017/cumulative-update/kb4038634-cu1"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2017/cumulativeupdate10.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2017/cumulative-update/kb4342123-cu10"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2017/cumulativeupdate11.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2017/cumulative-update/kb4462262-cu11"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2017/cumulativeupdate12.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2017/cumulative-update/kb4464082-cu12"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2017/cumulativeupdate13.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2017/cumulative-update/kb4466404-cu13"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2017/cumulativeupdate14.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2017/cumulative-update/kb4484710-cu14"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2017/cumulativeupdate15.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2017/cumulative-update/kb4498951-cu15"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2017/cumulativeupdate16.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2017/cumulative-update/kb4508218-cu16"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2017/cumulativeupdate17.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2017/cumulative-update/kb4515579-cu17"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2017/cumulativeupdate18.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2017/cumulative-update/kb4527377-cu18"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2017/cumulativeupdate19.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2017/cumulative-update/kb4535007-cu19"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2017/cumulativeupdate2.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2017/cumulative-update/kb4052574-cu2"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2017/cumulativeupdate20.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2017/cumulative-update/kb4541283-cu20"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2017/cumulativeupdate21.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2017/cumulative-update/kb4557397-cu21"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2017/cumulativeupdate22.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2017/cumulative-update/kb4577467-cu22"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2017/cumulativeupdate23.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2017/cumulative-update/kb5000685-cu23"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2017/cumulativeupdate24.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2017/cumulative-update/kb5001228-cu24"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2017/cumulativeupdate25.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2017/cumulative-update/kb5003830-cu25"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2017/cumulativeupdate26.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2017/cumulative-update/kb5005226-cu26"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2017/cumulativeupdate27.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2017/cumulative-update/kb5006944-cu27"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2017/cumulativeupdate28.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2017/cumulative-update/kb5008084-cu28"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2017/cumulativeupdate29.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2017/cumulative-update/kb5010786-cu29"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2017/cumulativeupdate3.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2017/cumulative-update/kb4052987-cu3"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2017/cumulativeupdate30.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2017/cumulative-update/kb5013756-cu30"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2017/cumulativeupdate31.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2017/cumulative-update/kb5016884-cu31"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2017/cumulativeupdate4.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2017/cumulative-update/kb4056498-cu4"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2017/cumulativeupdate5.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2017/cumulative-update/kb4092643-cu5"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2017/cumulativeupdate6.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2017/cumulative-update/kb4101464-cu6"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2017/cumulativeupdate7.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2017/cumulative-update/kb4229789-cu7"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2017/cumulativeupdate8.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2017/cumulative-update/kb4338363-cu8"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2017/cumulativeupdate9.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2017/cumulative-update/kb4341265-cu9"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2019/build-versions.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2019/kb4518398-build-versions"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2019/cumulativeupdate1.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2019/cumulative-update/kb4527376-cu1"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2019/cumulativeupdate10.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2019/cumulative-update/kb5001090-cu10"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2019/cumulativeupdate11.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2019/cumulative-update/kb5003249-cu11"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2019/cumulativeupdate12.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2019/cumulative-update/kb5004524-cu12"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2019/cumulativeupdate13.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2019/cumulative-update/kb5005679-cu13"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2019/cumulativeupdate14.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2019/cumulative-update/kb5007182-cu14"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2019/cumulativeupdate15.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2019/cumulative-update/kb5008996-cu15"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2019/cumulativeupdate16.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2019/cumulative-update/kb5011644-cu16"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2019/cumulativeupdate17.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2019/cumulative-update/kb5016394-cu17"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2019/cumulativeupdate18.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2019/cumulative-update/kb5017593-cu18"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2019/cumulativeupdate19.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2019/cumulative-update/kb5023049-cu19"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2019/cumulativeupdate2.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2019/cumulative-update/kb4536075-cu2"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2019/cumulativeupdate20.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2019/cumulative-update/kb5024276-cu20"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2019/cumulativeupdate21.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2019/cumulative-update/kb5025808-cu21"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2019/cumulativeupdate22.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2019/cumulative-update/kb5027702-cu22"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2019/cumulativeupdate23.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2019/cumulative-update/kb5030333-cu23"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2019/cumulativeupdate24.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2019/cumulative-update/kb5031908-cu24"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2019/cumulativeupdate25.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2019/cumulative-update/kb5033688-cu25"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2019/cumulativeupdate26.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2019/cumulative-update/kb5035123-cu26"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2019/cumulativeupdate27.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2019/cumulative-update/kb5037331-cu27"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2019/cumulativeupdate28.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2019/cumulative-update/kb5039747-cu28"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2019/cumulativeupdate29.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2019/cumulative-update/kb5046365-cu29"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2019/cumulativeupdate3.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2019/cumulative-update/kb4538853-cu3"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2019/cumulativeupdate30.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2019/cumulative-update/kb5049235-cu30"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2019/cumulativeupdate31.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2019/cumulative-update/kb5049296-cu31"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2019/cumulativeupdate32.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2019/cumulative-update/kb5054833-cu32"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2019/cumulativeupdate4.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2019/cumulative-update/kb4548597-cu4"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2019/cumulativeupdate5.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2019/cumulative-update/kb4552255-cu5"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2019/cumulativeupdate6.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2019/cumulative-update/kb4563110-cu6"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2019/cumulativeupdate7.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2019/cumulative-update/kb4570012-cu7"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2019/cumulativeupdate8.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2019/cumulative-update/kb4577194-cu8"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2019/cumulativeupdate9.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2019/cumulative-update/kb5000642-cu9"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2019/service-update-rtm.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2019/cumulative-update/kb4517790-service-update-rtm"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2022/build-versions.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2022/kb5023451-build-versions"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2022/cumulativeupdate1.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2022/cumulative-update/kb5022375-cu1"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2022/cumulativeupdate10.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2022/cumulative-update/kb5031778-cu10"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2022/cumulativeupdate11.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2022/cumulative-update/kb5032679-cu11"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2022/cumulativeupdate12.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2022/cumulative-update/kb5033663-cu12"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2022/cumulativeupdate13.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2022/cumulative-update/kb5036432-cu13"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2022/cumulativeupdate14.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2022/cumulative-update/kb5038325-cu14"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2022/cumulativeupdate15.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2022/cumulative-update/kb5041321-cu15"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2022/cumulativeupdate16.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2022/cumulative-update/kb5048033-cu16"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2022/cumulativeupdate17.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2022/cumulative-update/kb5048038-cu17"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2022/cumulativeupdate18.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2022/cumulative-update/kb5050771-cu18"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2022/cumulativeupdate19.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2022/cumulative-update/kb5054531-cu19"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2022/cumulativeupdate2.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2022/cumulative-update/kb5023127-cu2"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2022/cumulativeupdate20.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2022/cumulative-update/kb5059390-cu20"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2022/cumulativeupdate21.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2022/cumulative-update/kb5065865-cu21"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2022/cumulativeupdate22.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2022/cumulative-update/kb5068450-cu22"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2022/cumulativeupdate23.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2022/cumulative-update/kb5078297-cu23"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2022/cumulativeupdate24.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2022/cumulative-update/kb5080999-cu24"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2022/cumulativeupdate25.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2022/cumulative-update/kb5081477-cu25"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2022/cumulativeupdate3.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2022/cumulative-update/kb5024396-cu3"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2022/cumulativeupdate4.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2022/cumulative-update/kb5026717-cu4"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2022/cumulativeupdate5.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2022/cumulative-update/kb5026806-cu5"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2022/cumulativeupdate6.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2022/cumulative-update/kb5027505-cu6"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2022/cumulativeupdate7.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2022/cumulative-update/kb5028743-cu7"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2022/cumulativeupdate8.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2022/cumulative-update/kb5029666-cu8"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2022/cumulativeupdate9.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2022/cumulative-update/kb5030731-cu9"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2022/database-accessibility-issues-high-volume-customer-workloads.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2022/cumulative-update/kb5023236-database-accessibility-issues-high-volume-customer-workloads"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2022/database-suspend-incorrect-run-alter-server-configuration.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2022/cumulative-update/kb5048510-database-suspend-incorrect-run-alter-server-configuration"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2022/error-set-sql-server-agent-job-history-log.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2022/cumulative-update/kb5024352-error-set-sql-server-agent-job-history-log"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2022/errors-apply-cu-contained-availability-group.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2022/cumulative-update/kb5027331-errors-apply-cu-contained-availability-group"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2022/incorrect-results-run-queries.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2022/cumulative-update/kb5027811-incorrect-results-run-queries"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2022/make-enhancements-sqliosim-utility.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2022/cumulative-update/kb5028786-make-enhancements-sqliosim-utility"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2022/memory-exceed-configured-limits-memory-memorylimitmb.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2022/cumulative-update/kb5042369-memory-exceed-configured-limits-memory-memorylimitmb"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2022/microsoft-entra-managed-identity-support-for-backup-restore-database-ekm-akv.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2022/cumulative-update/kb5043526-microsoft-entra-managed-identity-support-for-backup-restore-database-ekm-akv"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2025/build-versions.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2025/kb5005684-build-versions"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2025/cumulativeupdate1.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2025/cumulative-update/kb5078298-cu1"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2025/cumulativeupdate2.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2025/cumulative-update/kb5075211-cu2"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2025/cumulativeupdate3.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2025/cumulative-update/kb5077896-cu3"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2025/cumulativeupdate4.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2025/cumulative-update/kb5081495-cu4"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2025/cumulativeupdate5.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2025/cumulative-update/kb5084896-cu5"
+    },
+    {
+      "source_path": "support/sql/releases/sqlserver-2025/cumulativeupdate6.md",
+      "redirect_url": "https://support.microsoft.com/servicing/sql/sql-server-2025/cumulative-update/kb5093421-cu6"
+    },
+    {
       "source_path": "support/power-platform/copilot-studio/generative-answers/sharepoint-no-response.md",
       "redirect_url": "/troubleshoot/power-platform/copilot-studio/knowledge/sharepoint-no-response",
       "redirect_document_id": false
-    },
-   {
-      "source_path": "support/windows-server/group-policy/backup-fails-vss-writer.md",
-      "redirect_url": "/troubleshoot/windows-server/group-policy/removable-devices-group-policy-troubleshooting-guidance",
-      "redirect_document_id": false
+
     },
     {
       "source_path": "SkypeForBusiness/SkypeServer/skype-server-welcome.yml",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "support/sql/releases/linux/release-history-2017.md",
-      "redirect_url": "/troubleshoot/sql/releases/linux/download-and-install-latest-updates-linux"
-    },
-    {
-      "source_path": "support/sql/releases/linux/release-history-2019.md",
-      "redirect_url": "/troubleshoot/sql/releases/linux/download-and-install-latest-updates-linux"
-    },
-    {
-      "source_path": "support/sql/releases/linux/release-history-2022.md",
-      "redirect_url": "/troubleshoot/sql/releases/linux/download-and-install-latest-updates-linux"
-    },
-    {
-      "source_path": "support/sql/releases/linux/release-history-2025.md",
-      "redirect_url": "/troubleshoot/sql/releases/linux/download-and-install-latest-updates-linux"
+      "source_path": "support/windows-server/group-policy/backup-fails-vss-writer.md",
+      "redirect_url": "/troubleshoot/windows-server/group-policy/removable-devices-group-policy-troubleshooting-guidance",
+      "redirect_document_id": false
     },
     {
       "source_path": "support/sql/database-engine/install/windows/understanding-dotnet-framework-requirements.md",
       "redirect_url": "/previous-versions/troubleshoot/sql/install/understanding-dotnet-framework-requirements"
+    },
+    {
+      "source_path": "support/windows-client/setup-upgrade-and-drivers/windows-cannot-verify-the-digital-signature-for-this-file.md",
+      "redirect_url": "/troubleshoot/windows-server/setup-upgrade-and-drivers/windows-cannot-verify-the-digital-signature-for-this-file",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/setup-upgrade-and-drivers/fail-to-configure-server-using-server-manager.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/fail-to-configure-server-using-server-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/setup-upgrade-and-drivers/use-language-id-identify-language-pack.md",
+      "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/use-language-id-identify-language-pack",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/setup-upgrade-and-drivers/error-install-windows-internal-database.md",
+      "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/error-install-windows-internal-database",
+      "redirect_document_id": false
     }
   ]
 }

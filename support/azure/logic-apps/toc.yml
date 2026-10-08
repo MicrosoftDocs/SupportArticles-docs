@@ -9,3 +9,5 @@ items:
       href: common-error-deploy-logic-apps-private-storage-account.md
     - name: Troubleshoot Azure Logic Apps setup and connectivity
       href: troubleshoot-logic-apps-setup-connectivity.md
+    - name: Troubleshoot Logic App Standard Connectivity
+      href: troubleshoot-logic-app-standard-connectivity.md

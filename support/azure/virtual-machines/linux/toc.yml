@@ -20,7 +20,7 @@ items:
 
 - name: Azure VM support statements
   items:
-  - name: Support for Linux and open-source technology in Azure
+  - name: Linux and open-source support in Azure
     href: support-linux-open-source-technology.md
   - name: Upgrade VMs running Canonical Ubuntu 18.04 LTS
     href: upgrade-canonical-ubuntu-18dot04-lts.md
@@ -63,9 +63,9 @@ items:
       items:
       - name: Network issues
         href: cannot-connect-linux-network.md
-      - name: SSH connection fails due to permission and ownership issues
+      - name: SSH fails due to permission/ownership issues
         href: linux-vm-sshconnectionissue-perms.md
-      - name: Fail to connect to VM through SSH due to SELinux misconfiguration
+      - name: SSH fails because of SELinux misconfiguration
         href: linux-selinux-troubleshooting.md
       - name: Debian Linux VM
         href: cannot-connect-debian-linux.md
@@ -189,7 +189,7 @@ items:
   items:
   - name: Understanding VM lifecycle and states
     href: /azure/virtual-machines/states-billing?context=/troubleshoot/azure/virtual-machines/linux/context/context
-  - name: Troubleshoot Start/Stop VMs during off-hours (Azure Automation)
+  - name: Troubleshoot Start/Stop VMs during off-hours
     href: /azure/automation/troubleshoot/start-stop-vm?context=/troubleshoot/azure/virtual-machines/linux/context/context
   - name: Swap file is not re-created
     href: swap-file-not-recreated-linux-vm-restart.md
@@ -246,42 +246,161 @@ items:
 
 - name: Move and migrate VM resources
   items:
-  - name: Top error scenarios
+  - name: Start here
     items:
-    - name: Resource is not in a Succeeded state
-      href: ../windows/move-resources-not-succeeded-state.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
-    - name: Resource type not supported for move
-      href: ../windows/move-resources-resource-type-not-supported.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
-    - name: Move not supported - resource has plan for different subscription
-      href: ../windows/move-resources-plan-different-subscription.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
-    - name: Tenant not authorized to access linked subscription
-      href: ../windows/move-resources-tenant-not-authorized.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
-    - name: 800 resource limit per move operation
-      href: ../windows/move-resources-800-limit.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
-    - name: Cannot move more than 100 resources via portal
-      href: ../windows/move-resources-100-limit-portal.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
-    - name: Backup error during resource move
-      href: ../windows/move-resources-backup-error.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
-    - name: Operation not allowed - system upgrade in progress
-      href: ../windows/move-resources-operation-not-allowed-system-upgrade.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
-    - name: Move fails with MissingMoveDependentResources
-      href: ../windows/move-resources-missing-dependencies.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
-    - name: Move operation times out after four hours
-      href: ../windows/move-resources-4-hour-timeout.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
-    - name: Move fails due to invalid or deleted storage account
-      href: ../windows/move-resources-invalid-storage-account.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
-    - name: Move fails with IncompleteRequest - hidden resources not included
-      href: ../windows/move-resources-incomplete-request-hidden-resources.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
-    - name: Move fails because a private endpoint is not in Succeeded state
-      href: ../windows/move-resources-private-endpoint-failed-state.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
-  - name: FAQ
-    href: ../windows/move-vm-resources-faq.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
-  - name: How-to guides
-    items:
-    - name: Move resources to a different tenant
+    - name: Pre-flight checklist for VM resource moves
+      href: ../windows/move-resources-preflight-checklist.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Error signature triage map
+      href: ../windows/move-resources-error-signature-triage-map.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Cross-tenant VM move
+      href: ../windows/move-vm-cross-tenant-migration-guide.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Region move vs RG/subscription move
+      href: ../windows/move-resources-region-move-vs-resource-group-subscription-move.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Azure virtual machine move and migration FAQ
+      href: ../windows/move-vm-resources-faq.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Move Azure VM resources to a different tenant
       href: ../windows/move-vm-to-different-tenant.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
     - name: Convert unmanaged disks to managed disks
       href: ../windows/migrate-vm-unmanaged-to-managed-disks.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Azure Resource Mover custom RBAC prerequisites
+      href: ../windows/resource-mover-rbac-prerequisites.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+
+  - name: Active operation conflicts and transient failures
+    items:
+    - name: Extension failed state blocks move
+      href: ../windows/move-resources-extension-failed-state.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Deployment in progress blocks move
+      href: ../windows/move-resources-deployment-active-blocks-move.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Resources already moving or RG updating
+      href: ../windows/move-resources-resources-moved-resource-group-update.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Request conflict (non-terminal provisioning state)
+      href: ../windows/move-resources-request-conflict-provisioning-state-not-terminal.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Resource group not in expected state
+      href: ../windows/move-resources-group-not-expected-state.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Batch orchestration failure
+      href: ../windows/move-resources-batch-orchestration-failed.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Operation exceeded four-hour limit
+      href: ../windows/move-resources-operation-timeout-4-hour-limit.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Operation takes longer than expected
+      href: ../windows/move-resources-operation-duration-expected.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: InternalServerError or empty BadRequest
+      href: ../windows/move-resources-internalservererror-empty-badrequest.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Resource group lock duration during move
+      href: ../windows/move-resources-resource-group-lock-duration.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Move operation times out after four hours
+      href: ../windows/move-resources-4-hour-timeout.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Resource not in Succeeded state blocks move
+      href: ../windows/move-resources-not-succeeded-state.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: OperationNotAllowed due to system upgrade
+      href: ../windows/move-resources-operation-not-allowed-system-upgrade.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+
+  - name: Dependency blocks
+    items:
+    - name: Azure Backup dependencies block move
+      href: ../windows/move-resources-backup-lock-recovery-services-vault.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Resource locks block move
+      href: ../windows/move-resources-resource-locks-blocking-move.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Load balancer dependency missing
+      href: ../windows/move-resources-load-balancer-dependency-missing.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Private endpoint dependency block
+      href: ../windows/move-resources-private-endpoint-dependency-block.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Managed identity RBAC drift at destination
+      href: ../windows/move-resources-managed-identity-rbac-drift.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: NIC IP configuration dependency conflict
+      href: ../windows/move-resources-network-interface-ip-config-conflict.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Availability set/zone constraint mismatch
+      href: ../windows/move-resources-availability-set-zonal-constraint.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Disk Encryption Set access missing (CMK)
+      href: ../windows/move-resources-cmk-disk-encryption-set-access-denied.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Proximity Placement Group constraint mismatch
+      href: ../windows/move-resources-proximity-placement-group-constraint.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Dedicated host/host group dependency block
+      href: ../windows/move-resources-dedicated-host-host-group-dependency.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Site Recovery replication enabled
+      href: ../windows/move-resources-site-recovery-replication-enabled.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Shared disk cluster dependency block
+      href: ../windows/move-resources-shared-disk-cluster-dependency.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Boot diagnostics storage dependency unresolved
+      href: ../windows/move-resources-boot-diagnostics-storage-dependency.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: VNet dependencies must move together
+      href: ../windows/move-resources-vnet-dependencies-must-move-together.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Hidden restore point/snapshot residue
+      href: ../windows/move-resources-hidden-restore-point-snapshot-residue.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: MissingMoveDependentResources error
+      href: ../windows/move-resources-missing-dependencies.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Azure Backup configured on VM blocks move
+      href: ../windows/move-resources-backup-error.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Private endpoint not in Succeeded state
+      href: ../windows/move-resources-private-endpoint-failed-state.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+
+  - name: Validation and policy failures
+    items:
+    - name: Blocked by destination Azure Policy
+      href: ../windows/move-resources-blocked-by-destination-policy.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Destination policy validation denied
+      href: ../windows/move-resources-destination-policy-deny.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Provider validation failed
+      href: ../windows/move-resources-provider-validation-failed.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Resource settings validation failed
+      href: ../windows/move-resources-validation-failed-resource-settings.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Validation-failed move error dispatcher
+      href: ../windows/move-resources-troubleshoot-validation-failed-dispatcher.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Resource name already exists at destination
+      href: ../windows/move-resources-name-conflict-at-destination.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Marketplace terms not accepted in destination subscription
+      href: ../windows/move-resources-marketplace-terms-not-accepted-destination-subscription.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Move fails with invalid or deleted storage account
+      href: ../windows/move-resources-invalid-storage-account.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Hidden resources not included in move request
+      href: ../windows/move-resources-incomplete-request-hidden-resources.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Resource has a plan with a different subscription
+      href: ../windows/move-resources-plan-different-subscription.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Tenant not authorized to access linked subscription
+      href: ../windows/move-resources-tenant-not-authorized.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+
+  - name: Unsupported scope and platform constraints
+    items:
+    - name: VM size unavailable at destination
+      href: ../windows/move-resources-resize-blocked-disk-constraints.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Ephemeral OS disk unsupported
+      href: ../windows/move-resources-ephemeral-os-disk-not-supported.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Accelerated networking capability mismatch
+      href: ../windows/move-resources-accelerated-networking-capability-mismatch.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: VMSS instance resource move unsupported
+      href: ../windows/move-resources-vmss-instance-scope-not-supported.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Reservation/capacity assumptions invalid at destination
+      href: ../windows/move-resources-reservation-capacity-association-conflict.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Encryption at host unsupported at destination
+      href: ../windows/move-resources-encryption-at-host-destination-constraint.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Individual VM in availability set unsupported
+      href: ../windows/move-resources-availability-set-individual-vm-not-supported.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Azure Disk Encryption requirements block move
+      href: ../windows/move-resources-azure-disk-encryption-blocked.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Scheduled patching/maintenance settings block move
+      href: ../windows/move-resources-scheduled-patching-maintenance-configuration-blocked.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Ultra Disk/Premium SSD v2 unsupported at destination
+      href: ../windows/move-resources-ultra-disk-premium-ssd-v2-destination-not-supported.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: VMSS with Standard LB or Standard public IP unsupported
+      href: ../windows/move-resources-vmss-standard-lb-public-ip-constraint.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Cannot move more than 100 resources via portal
+      href: ../windows/move-resources-100-limit-portal.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: 800 resource limit per move operation exceeded
+      href: ../windows/move-resources-800-limit.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Resource type not supported for move
+      href: ../windows/move-resources-resource-type-not-supported.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+
+  - name: Post-move and relocation follow-up
+    items:
+    - name: Move succeeded, VM up, workload still broken
+      href: ../windows/move-resources-post-move-vm-up-workload-broken.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Region relocation - original public IP not retained
+      href: ../windows/move-resources-region-relocation-public-ip-not-retained.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Move succeeded, identity scope not recreated
+      href: ../windows/move-resources-post-move-identity-scope-not-recreated.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Region relocation - private endpoint order incorrect
+      href: ../windows/move-resources-region-relocation-private-endpoint-order.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Region relocation - DNS/probes/routing still point to source
+      href: ../windows/move-resources-post-relocation-dns-probe-routing-still-source.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
 
 - name: Disk management
   items:
@@ -316,6 +435,8 @@ items:
     href: max-linux-ram-limited-64-gb.md
   - name: Configure custom DNS servers
     href: custom-dns-configuration-for-azure-linux-vms.md
+  - name: Collect support information from Azure Linux VMs
+    href: collect-support-information-from-azure-linux-virtual-machines.md    
 
 - name: Linux High Availability Pacemaker cluster
   items:
@@ -389,7 +510,7 @@ items:
 
 - name: On-demand Capacity Reservation issues
   items:
-  - name: Can't deploy Virtual Machines or Virtual Machine Scale Sets (Uniform) with Capacity Reservation
+  - name: Can't deploy VMs or VMSS (Uniform) with Capacity Reservation
     href: ../windows/capacity-reservation-cant-deploy-vm-vmss.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
   - name: Can't create Capacity Reservation
     href: ../windows/capacity-reservation-cant-create-vm-vmss.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
@@ -408,7 +529,7 @@ items:
     href: /azure/virtual-machines/linux/disk-encryption-troubleshooting?context=/troubleshoot/azure/virtual-machines/linux/context/context
   - name: Unlock the encrypted disk for offline repair
     href: unlock-encrypted-linux-disk-offline-repair.md
-  - name: How to display encryption settings on Azure Linux Virtual Machines
+  - name: Display encryption settings on Azure Linux VMs
     href: how-to-display-encryption-settings-with-azure-resource-explorer.md
   - name: FAQ
     href: /azure/virtual-machines/linux/disk-encryption-faq?context=/troubleshoot/azure/virtual-machines/linux/context/context
@@ -463,7 +584,7 @@ items:
         href: extensions-stop-running.md
       - name: The host keys of Linux VM are written to ec2
         href: cloud-init-writes-vm-host-keys-as-ec2.md
-      - name: Update awareness for Linux Image Provisioning Agent
+      - name: Linux Image Provisioning Agent update awareness
         href: linux-image-provisioning-agent-update-awareness.md
       - name: Can't process extensions
         href: linux-agent-cannot-process-extensions.md

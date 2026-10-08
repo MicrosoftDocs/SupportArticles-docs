@@ -30,6 +30,8 @@ items:
   items:
   - name: Azure Container Instances debugging tools
     href: management/aci-debug-tools.md
+  - name: Microsoft.virtualnodes extension installation and pod deployment issues
+    href: management/troubleshoot-microsoft-virtualnodes-extension.md
   - name: Azure Container Instances shows unexpected memory usage metrics
     href: management/unexpected-memory-usage-metrics.md
   - name: Can't pull images from Container Registry using a managed identity
