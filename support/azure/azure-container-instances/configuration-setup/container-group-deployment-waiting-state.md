@@ -1,5 +1,5 @@
 ---
-title: Container group deployment remains in Waiting state in Azure Container Instances
+title: Container group deployment remains in the Waiting state in Azure Container Instances
 description: Learn how to resolve an issue in which a container group deployment never progresses from the Waiting state in Azure Container Instances (ACI).
 ms.date: 09/30/2026
 ms.topic: troubleshooting
@@ -12,7 +12,7 @@ ms.custom: sap:Configuration and Setup
 #Customer intent: As an Azure administrator, I want to learn how to resolve a container group deployment that's stuck in the "Waiting" state so that I can successfully deploy an image onto a container instance.
 ai-usage: ai-assisted
 ---
-# Container group deployment remains in Waiting state in Azure Container Instances
+# Container group deployment remains in the Waiting state in Azure Container Instances
 
 ## Summary
 

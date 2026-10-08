@@ -7,7 +7,7 @@ author: kaushika-msft
 ms.author: kaushika
 ms.date: 09/09/2026
 ms.service: azure-container-instances
-ms.reviewer: tysonfreeman, kegonzal, jiayil 
+ms.reviewer: tysonfreeman, kegonzal, jiayil, kaushika
 ms.custom: sap:Management
 ai-usage: ai-assisted
 ---
@@ -16,9 +16,9 @@ ai-usage: ai-assisted
 
 ## Summary
 
-This article describes how to troubleshoot image pull failures when you deploy container groups to Azure Container Instances (ACI) from Azure Container Registry by using managed identity authentication.
+This article describes how to troubleshoot image pull failures when you deploy container groups to Azure Container Instances (ACI) from Azure Container Registry (ACR) by using managed identity authentication.
 
-When you deploy a container group to ACI, the container group might fail to pull an image from Azure Container Registry when you use a managed identity. Use the returned error message to identify the cause and apply the corresponding solution.
+When you deploy a container group to ACI, the container group might fail to pull an image from ACR when you use a managed identity. Use the returned error message to identify the cause and apply the corresponding solution.
 
 ## Identify the deployment error
 
@@ -184,7 +184,7 @@ az container create \
 
 ### Possible cause 2
 
-The container group uses its system-assigned managed identity as the Azure Container Registry image pull identity. ACI supports only a user-assigned managed identity for this scenario.
+The container group uses its system-assigned managed identity as the ACR image pull identity. ACI supports only a user-assigned managed identity for this scenario.
 
 ### Resolution 2
 
@@ -258,7 +258,7 @@ Deployment failed. Correlation ID: <Correlation ID>. {
 
 ### Possible cause 1
 
-The registry authentication server, repository, image tag, or digest in the container group definition is incorrect, or the image doesn't exist in Azure Container Registry.
+The registry authentication server, repository, image tag, or digest in the container group definition is incorrect, or the image doesn't exist in ACR.
 
 ### Resolution 1
 
@@ -280,7 +280,7 @@ After the role assignment takes effect, redeploy the container group.
 
 ### Possible cause 3
 
-Azure Container Registry is restricted by a private endpoint or public IP network rules, but trusted services is disabled. Therefore, ACI can't bypass the registry's network rules.
+ACR is restricted by a private endpoint or public IP network rules, but trusted services is disabled. Therefore, ACI can't bypass the registry's network rules.
 
 ### Resolution 3
 
@@ -288,11 +288,11 @@ To verify that trusted services applies to the registry's network configuration 
 
 Registry network configuration changes can take time to propagate. Wait for the setting to take effect, and then redeploy the container group.
 
-## The Azure Container Registry private endpoint uses the ACI-delegated subnet
+## The ACR private endpoint uses the ACI-delegated subnet
 
 ### Error
 
-When you create an Azure Container Registry private endpoint, the operation fails and returns an error that resembles the following output.
+When you create an ACR private endpoint, the operation fails and returns an error that resembles the following output.
 
 ```output
 Private endpoint <private-endpoint-resource-id> cannot be created as subnet <aci-subnet-resource-id> is delegated.
@@ -300,16 +300,16 @@ Private endpoint <private-endpoint-resource-id> cannot be created as subnet <aci
 
 ### Cause
 
-You're creating the Azure Container Registry private endpoint in a subnet that's delegated to `Microsoft.ContainerInstance/containerGroups`. An ACI-delegated subnet can contain only container groups.
+You're creating the ACR private endpoint in a subnet that's delegated to `Microsoft.ContainerInstance/containerGroups`. An ACI-delegated subnet can contain only container groups.
 
 ### Solution
 
-Create the Azure Container Registry private endpoint in a different subnet that isn't delegated to ACI.
+Create the ACR private endpoint in a different subnet that isn't delegated to ACI.
 
 Follow these steps:
 
 1. Create or select a nondelegated subnet that has connectivity to the ACI virtual network.
-2. Create the Azure Container Registry private endpoint in that subnet.
+2. Create the ACR private endpoint in that subnet.
 
 For more information, see [Deploy container image from Azure Container Registry using a managed identity](/azure/container-instances/using-azure-container-registry-mi).
 
@@ -334,4 +334,4 @@ Verify that:
 
 Container events can take time to appear. If the deployment succeeds but `Started` isn't present yet, wait and run the command again. Events from an earlier failed deployment don't indicate that the updated configuration failed. Use the timestamps to verify the events that the new deployment generated.
 
-For other Azure Container Registry image pull errors, see [Troubleshoot issues when you pull from Azure Container Registry](/troubleshoot/azure/azure-container-registry/troubleshoot-issues-pull-container-registry).
+For other ACR image pull errors, see [Troubleshoot issues when you pull from Azure Container Registry](/troubleshoot/azure/azure-container-registry/troubleshoot-issues-pull-container-registry).

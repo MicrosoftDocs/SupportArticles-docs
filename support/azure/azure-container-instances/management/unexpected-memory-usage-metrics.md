@@ -1,18 +1,22 @@
 ---
 title: Azure Container Instances shows unexpected memory usage metrics
-description: Learn why Azure Container Instances shows unexpected memory usage metrics in the Azure portal compared to other memory usage reporting tools.
-ms.date: 02/22/2024
-ms.author: kegonzal
-author: kennethgp
-editor: v-jsitser
-ms.reviewer: v-leedennis
+description: Learn why Azure Container Instances shows unexpected memory usage metrics in the Azure portal, and how to view accurate per-container memory values.
+ms.date: 10/07/2026
+ms.topic: troubleshooting
+manager: dcscontentpm
+author: kaushika-msft
+ms.author: kaushika
+ms.reviewer: v-leedennis, kegonzal, kaushika
 ms.service: azure-container-instances
 ms.custom: sap:Management
+ai-usage: ai-assisted
 #customer intent: As a user of Azure Container Instances, I want to fix the display of memory usage metrics in the Azure portal so that it matches the memory usage values shown in the 'free' command for an individual container.
 ---
 # Azure Container Instances shows unexpected memory usage metrics
 
-This article discusses scenarios in which you see lower-than-expected memory usage values in Microsoft Azure Container Instances when you check the values in the Azure portal.
+## Summary
+
+This article explains why Azure Container Instances (ACI) shows unexpected memory usage metrics in the [Azure portal](https://portal.azure.com) and how to view accurate memory usage for an individual container.
 
 ## Symptoms
 
@@ -28,7 +32,7 @@ Values for aggregation types (such as Average, Minimum, and Maximum) are availab
 
 You can add a dimension filter to view metrics on a per-container basis if your container group contains multiple containers. For more information, see [Get metrics in the Azure portal when monitoring container resources in Azure Container Instances](/azure/container-instances/container-instances-monitor#get-metrics---azure-portal).
 
-## Resources
+## References
 
 - [Supported metrics for Microsoft.ContainerInstance/containerGroups](/azure/azure-monitor/reference/supported-metrics/microsoft-containerinstance-containergroups-metrics)
 - [Tutorial: Deploy a multi-container group using an Azure Resource Manager template](/azure/container-instances/container-instances-multi-container-group)
