@@ -1,30 +1,32 @@
 ---
-title: Spot containers remain in the Waiting state
-description: Learn how to resolve a scenario in Azure Container Instances in which Spot containers remain in the Waiting state.
-ms.date: 05/13/2024
-author: mosbahmajed
-ms.author: momajed
-editor: v-jsitser 
-ms.reviewer: alaljase, v-rekhanain, v-leedennis, kennethgp
+title: Spot containers remain in the Waiting state in Azure Container Instances
+description: Learn how to fix Azure Container Instances Spot containers stuck in the Waiting state due to VM eviction or network problems. Follow these steps to resolve it.
+ms.date: 10/07/2026
+manager: dcscontentpm
+author: kaushika-msft
+ms.author: kaushika
+ms.reviewer: alaljase, v-rekhanain, v-leedennis, kennethgp, momajed, kaushika
 ms.service: azure-container-instances
 ms.custom: sap:Management
-ms.topic: troubleshooting-problem-resolution
+ms.topic: troubleshooting
+ai-usage: ai-assisted
 #customer intent: As a user of Azure Container Instances, I want resolve a scenario in which Spot containers remain in the Waiting state so that I can use Spot containers successfully.
 ---
-# Spot containers remain in the Waiting state
+# Spot containers remain in the Waiting state in Azure Container Instances
 
-This article discusses how to resolve a scenario in which Spot containers remain stuck in the `Waiting` state in Microsoft Azure Container Instances (ACI)
+## Summary
+
+This article discusses how to resolve a scenario in which Spot containers remain stuck in the Waiting state in Azure Container Instances (ACI).
 
 ## Symptoms
 
-Azure Spot containers remain stuck in the `Waiting` state for an extended amount of time (30 minutes or more).
+Azure Spot containers remain stuck in the Waiting state for an extended amount of time (30 minutes or more).
 
 ## Cause 1: The underlying Spot virtual machine was evicted
 
-Containers typically become stuck in the `Waiting` state because the underlying Spot virtual machine (VM) was evicted. This action forces all containers within the container group to wait for a new VM node to be assigned. Azure Spot VMs can be evicted at any time for any of the following reasons:
+Containers typically become stuck in the Waiting state because the underlying Spot virtual machine (VM) was evicted. This action forces all containers within the container group to wait for a new VM node to be assigned. Azure Spot VMs can be evicted at any time for any of the following reasons:
 
 - Resource constraints on the host VM (for example, because of insufficient CPU cores or memory).
-
 - Capacity adjustments that can cause worker VM nodes to be evicted at any time from a virtual machine scale set and, therefore, require your container group to be moved to another VM node. These capacity adjustments include the following scenarios.
 
   | Eviction scenario | Effect on the container group |
@@ -35,13 +37,13 @@ Containers typically become stuck in the `Waiting` state because the underlying 
 
 ## Cause 2: Network-related problems
 
-Network-related problems cause containers to remain in the `Waiting` state.
+Network-related problems cause containers to remain in the Waiting state.
 
 ## Solution
 
 Follow these steps to gather troubleshooting information and apply possible solutions for the problem:
 
-1. Retrieve container logs and events by running the following [az container logs](/cli/azure/container#az-container-logs) command:
+1. Retrieve container logs and events by running the following [az container logs](/cli/azure/container#az-container-logs) command.
 
    ```azurecli
    az container logs --resource-group <resource-group-name> --name <container-group-name>
@@ -59,11 +61,11 @@ Follow these steps to gather troubleshooting information and apply possible solu
 
 1. If the problem is related to capacity adjustments, consider deploying your containers during off-peak hours.
 
-By following these steps, you can identify the cause of the `Waiting` state problem for your Azure Spot containers and take the appropriate action to resolve the problem. Remember to monitor your containers and adjust your deployment strategy as necessary to reduce disruptions.
+By following these steps, you can identify the cause of the Waiting state problem for your Azure Spot containers and take the appropriate action to resolve the problem. Remember to monitor your containers and adjust your deployment strategy as necessary to reduce disruptions.
 
 > [!NOTE]
 > Spot containers with ACI is in preview and not recommended for production scenarios.
 
-## Resources
+## References
 
 - [Azure Spot Virtual Machines for Virtual Machine Scale Sets](/azure/virtual-machine-scale-sets/use-spot)

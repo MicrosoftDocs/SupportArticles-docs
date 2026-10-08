@@ -6,7 +6,7 @@ manager: dcscontentpm
 ms.topic: troubleshooting
 author: kaushika-msft
 ms.author: kaushika
-ms.reviewer: tscuiu
+ms.reviewer: tscuiu, kaushika
 ms.service: azure-container-instances
 ms.custom: sap:Management
 #Customer intent: As an Azure Kubernetes Service administrator, I want to troubleshoot Microsoft.virtualnodes extension and workload pod failures so that I can run pods on Azure Container Instances.

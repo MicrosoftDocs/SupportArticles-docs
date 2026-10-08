@@ -3,7 +3,7 @@ title: Troubleshoot HTTP 502 errors in Azure Application Gateway
 description: Use this step-by-step guide to troubleshoot HTTP 502 Bad Gateway errors in Azure Application Gateway, and restore back-end health quickly. Start now.
 ms.service: azure-application-gateway
 ms.topic: troubleshooting
-ms.date: 09/23/2026
+ms.date: 10/07/2026
 manager: dcscontentpm
 author: kaushika-msft
 ms.author: kaushika
@@ -22,7 +22,7 @@ HTTP 502 bad gateway errors can be divided into five root-cause categories:
 
 - Health probe misconfiguration
 - Back-end Transport Layer Security (TLS) certificate chain problems, such as common name (CN) and subject alternative name (SAN) mismatch or missing intermediate certificate authorities (CAs)
-- Network or infrastructure blocking, including platform upgrade IP changes
+- Network or infrastructure blocking, including platform upgrade IP changes and asymmetric return-path routing
 - Back-end errors, such as Domain Name System (DNS) resolution, port, or Server Name Indication (SNI) misconfiguration
 - A misconfigured routing rule that sends traffic to the wrong back end
 
@@ -42,6 +42,7 @@ Common symptoms of HTTP 502 bad gateway errors include:
 - "502" errors start occurring after an Azure platform upgrade without any customer-initiated configuration change.
 - The back end uses Azure API Management, and default or misconfigured probe paths return "404" errors from Azure API Management.
 - "502" errors occur in a multi-tier topology (for example, Azure Load Balancer errors either in front of or behind Application Gateway in the topology).
+- Back-end health is **Unhealthy** or **Unknown**, or "502" errors are intermittent, in a topology that includes virtual network peering, a network virtual appliance (NVA) or firewall, a route learned from a VPN or ExpressRoute gateway, or a user-defined route (UDR) between Application Gateway and the back end.
 
 ## Prerequisites
 
@@ -274,10 +275,106 @@ Check whether the network path from the Application Gateway subnet to the back e
 | --- | --- | --- |
 | A `Deny` rule whose `Source` covers the Application Gateway subnet CIDR and whose `DestPort` includes the probe port. | Because the probe is blocked at the network layer, the back end never receives it. An increase in the timeout limit doesn't help. | To fix back-end connectivity, perform [Resolution A](#resolution-a). |
 | No `Deny` rule blocks the gateway subnet on the probe port, and you verify that this back-end app is slow to start (for example, a heavyweight runtime warm-up). | The path is open, and the back end is genuinely slow to answer in time. | To increase the probe timeout limit, perform [Resolution B](#resolution-b). |
-| No `Deny` rule blocks the gateway subnet on the probe port, and you have no evidence that the app is slow. | The path looks open, but the back end still isn't answering the probe healthily. This condition usually indicates that the back end isn't listening on the probe port, or that a host-level firewall, and not a timeout problem, is blocking it. | To fix back-end connectivity, perform [Resolution A](#resolution-a). |
+| No `Deny` rule blocks the gateway subnet on the probe port, and a route table, virtual network peering, VPN or ExpressRoute gateway, or NVA or firewall is in the path between the gateway and the back end. | The back end might receive the request but send the response back by a different path than the request used. | Perform [Step 2c-2](#step-2c-2) to check the return path. |
+| No `Deny` rule blocks the gateway subnet on the probe port, no such routing component is in the path, and you have no evidence that the app is slow. | The path looks open, but the back end still isn't answering the probe healthily. This condition usually indicates that the back end isn't listening on the probe port, or that a host-level firewall, and not a timeout problem, is blocking it. | To fix back-end connectivity, perform [Resolution A](#resolution-a). |
 
  > [!NOTE]
 > A probe timeout that has a low `timeout` value looks identical whether the back end is slow or completely blocked. An increase in the timeout for a blocked back end wastes a change cycle and doesn't fix the "502" error.
+
+### Step 2c-2
+
+Check whether the response from the back end returns to Application Gateway by the same path that the request used. A mismatch between the two paths is called *asymmetric routing*. It can cause "502" errors and **Unhealthy** or **Unknown** back-end health even when the back end responds correctly to direct tests. This situation is most likely when the path includes virtual network peering, a VPN or ExpressRoute gateway, or an NVA or firewall.
+
+Application Gateway sends the request by using the routes of the Application Gateway subnet. The back end sends the response by using the routes of the back-end subnet. If those routes send the two directions through different paths, a stateful device on only one of the paths sees half of the conversation and might drop it. For example:
+
+- A UDR or a route learned through BGP on the back-end subnet, such as `0.0.0.0/0` or a prefix that covers the Application Gateway subnet, sends the response to a firewall or NVA. However, the request went directly through the virtual network or peering.
+- A UDR on the Application Gateway subnet sends the request through a firewall or NVA, but the back-end subnet returns the response directly.
+- In a hub-and-spoke topology, a broad UDR in the spoke sends the response to a different Azure Firewall instance than the one that handled the request. For more information, see [Azure Firewall and Application Gateway for virtual networks](/azure/architecture/example-scenario/gateway/firewall-application-gateway#asymmetric-routing).
+- An NVA doesn't have IP forwarding enabled, or it changes the source address of the traffic so that the response no longer routes back to the gateway subnet.
+
+For the back-end health view of this problem, see [Network path and return-path symmetry](application-gateway-backend-health-troubleshooting.md#network-path-and-return-path-symmetry).
+
+Network security groups (NSGs) are stateful. If an NSG allows a connection in one direction, the NSG allows the response automatically, so a missing NSG rule for the response isn't the cause of an asymmetric-routing failure. Check the NSG rules for the direction that starts the connection, and check the rules and policies of any NVA or firewall that's in the path in either direction.
+
+> [!IMPORTANT]
+> You can't deploy a virtual machine (VM), a VM extension, or any other resource in the Application Gateway subnet. Therefore, you can't run VM-based tools such as effective-route queries from inside that subnet. Review the gateway subnet's NSG and route table directly, and use **Connection troubleshoot** with the application gateway as the source. If you use a test VM as the source instead, deploy it in a different subnet of the same virtual network. The results reflect the routes and NSG of the VM's subnet, not the routes and NSG of the Application Gateway subnet.
+
+1. To find the NSG and route table that are associated with the Application Gateway subnet, run the following commands in Azure CLI.
+
+   **Azure CLI (read-only)**
+
+   ```azurecli-interactive
+   # -- Collect inputs (cached if already set in this session) --
+   [ -z "$SUBSCRIPTION" ] && read -rp "Subscription ID:   " SUBSCRIPTION
+   [ -z "$RG" ] && read -rp "Resource Group:    " RG
+   [ -z "$RESOURCE_NAME" ] && read -rp "App Gateway Name:  " RESOURCE_NAME
+
+   SUBNET_ID=$(az network application-gateway show \
+     --name "$RESOURCE_NAME" \
+     --resource-group "$RG" \
+     --subscription "$SUBSCRIPTION" \
+     --query "gatewayIPConfigurations[0].subnet.id" \
+     --output tsv)
+
+   az network vnet subnet show \
+     --ids "$SUBNET_ID" \
+     --query "{addressPrefix:addressPrefix, nsg:networkSecurityGroup.id, routeTable:routeTable.id}" \
+     --output json
+   ```
+
+1. If a route table is returned, run the following commands in Azure CLI to list its routes. Look for routes whose next hop type is `VirtualAppliance` or `VirtualNetworkGateway`, and for routes that cover the back-end subnet prefix. Also note whether BGP route propagation is disabled.
+
+   **Azure CLI (read-only)**
+
+   ```azurecli-interactive
+   # -- Collect inputs (cached if already set in this session) --
+   [ -z "$ROUTE_TABLE_ID" ] && read -rp "Route table resource ID (from above): " ROUTE_TABLE_ID
+
+   az network route-table show \
+     --ids "$ROUTE_TABLE_ID" \
+     --query "{disableBgpRoutePropagation:disableBgpRoutePropagation, routes:routes[].{name:name, prefix:addressPrefix, nextHopType:nextHopType, nextHopIp:nextHopIpAddress}}" \
+     --output json
+   ```
+
+1. To check the effective routes and effective NSG rules on the network interface of a back-end VM, run the following commands in Azure CLI. The effective routes show how the back end sends the response to the Application Gateway subnet. The VM must be running.
+
+   **Azure CLI (read-only)**
+
+   ```azurecli-interactive
+   # -- Collect inputs (cached if already set in this session) --
+   [ -z "$SUBSCRIPTION" ] && read -rp "Subscription ID:   " SUBSCRIPTION
+   [ -z "$BACKEND_NIC_RG" ] && read -rp "Back-end NIC resource group: " BACKEND_NIC_RG
+   [ -z "$BACKEND_NIC_NAME" ] && read -rp "Back-end NIC name:           " BACKEND_NIC_NAME
+
+   az network nic show-effective-route-table \
+     --name "$BACKEND_NIC_NAME" \
+     --resource-group "$BACKEND_NIC_RG" \
+     --subscription "$SUBSCRIPTION" \
+     --output table
+
+   az network nic list-effective-nsg \
+     --name "$BACKEND_NIC_NAME" \
+     --resource-group "$BACKEND_NIC_RG" \
+     --subscription "$SUBSCRIPTION" \
+     --output json
+   ```
+
+   In the effective routes, find the route whose address prefix is the longest match for the Application Gateway subnet CIDR from the first command. Azure selects routes by longest prefix match. If prefixes are identical, Azure prefers a UDR over a BGP route and a BGP route over a system route.
+
+1. To test the path from the gateway, in the Azure portal, go to your application gateway, and then select **Monitoring** > **Connection troubleshoot**. Set the destination to the back-end IP address or FQDN and the probe port. Review the hops and the issues that are reported. **Connection troubleshoot** supports Application Gateway v2 gateways except for gateways that use [Private Application Gateway deployment](/azure/application-gateway/application-gateway-private-deployment). For more information, see [Connection troubleshoot overview](/azure/network-watcher/connection-troubleshoot-overview).
+
+### Interpret the results
+
+| Observation | Meaning | Next steps |
+| --- | --- | --- |
+| The back-end NIC's matching route for the gateway subnet CIDR has the next hop type **Virtual network** or **Virtual network peering**, and the gateway subnet route table doesn't send the back-end prefix to an appliance. | The request and response both take the direct path. Routing isn't the cause. | Perform [Resolution A](#resolution-a) to check NSG and host firewall rules, and the listening port. |
+| The back-end NIC's matching route for the gateway subnet CIDR (for example, `0.0.0.0/0` or a broad prefix) has the next hop type **Virtual appliance**, and the gateway subnet route table doesn't send the back-end prefix to the same appliance. | The request goes directly to the back end, but the response goes through the appliance. This asymmetry causes a stateful firewall to drop the response. | Perform [Resolution J](#resolution-j). |
+| The gateway subnet route table sends the back-end prefix to an appliance, but the back-end NIC's route for the gateway subnet CIDR is direct. | The request goes through the appliance, and the response returns directly. | Perform [Resolution J](#resolution-j). |
+| The matching route has the next hop type **Virtual network gateway**, or the gateway subnet receives a default route from a VPN or ExpressRoute gateway. | Return traffic or gateway-subnet traffic is attracted toward an on-premises path. | Perform [Resolution J](#resolution-j). |
+| The matching route has the next hop type **None**. | A route discards the traffic. | Perform [Resolution J](#resolution-j). |
+| Both directions go through the same appliance, and the gateway is still unhealthy. | The appliance, its IP forwarding setting, its NSG, or its firewall policy might be dropping or modifying traffic. | Perform [Resolution J](#resolution-j). |
+| **Connection troubleshoot** reports **Unreachable** with an issue such as `UserDefinedRoute`, `NetworkSecurityRule`, `IPForwardingNotEnabled`, or `VnetAccessNotAllowed`. | The reported hop identifies the route, NSG rule, or peering setting that blocks the path. | Perform [Resolution J](#resolution-j) for route and peering issues. Perform [Resolution A](#resolution-a) for NSG rule issues. |
+| The effective NSG rules on the back-end NIC don't allow inbound traffic from the gateway subnet on the probe port. | An NSG blocks the request. | Perform [Resolution A](#resolution-a). |
 
 ### Step 2d
 
@@ -602,6 +699,7 @@ Use the following decision map table to determine the appropriate next steps bas
 | All back ends are **Unhealthy**, and NSG blocks the management range. | Perform [Resolution C](#resolution-c). |
 | "502" errors began after platform upgrade, and the NSG or firewall uses instance IPs. | Perform [Resolution A](#resolution-a). |
 | The back-end pool is empty, or no targets are configured. | Perform [Resolution D](#resolution-d). |
+| The request reaches the back end, but the response returns by a different path (for example, through an NVA or firewall, a peered virtual network, or a gateway-learned route). | Perform [Resolution J](#resolution-j). |
 | The listener or routing rule is misconfigured. | Perform [Resolution E](#resolution-e). |
 | The gateway is stopped or in a failed provisioning state. | Perform [Resolution G](#resolution-g). |
 | `CapacityUnits` is saturated at the autoscale or instance ceiling. | Perform [Resolution H](#resolution-h). |
@@ -1258,6 +1356,40 @@ az network application-gateway frontend-port update \
 
 1. Rerun [Step 5](#step-5), and then [Step 1b](#step-1b). The back end should report `"health": "Healthy"`, and the "502" errors should stop.
 
+## Resolution J
+
+**Problem**: The request reaches the back end, but the response doesn't return to Application Gateway by the same path. This asymmetric routing causes probes or client requests to fail.
+
+**Causes**
+
+- A UDR or BGP-learned route on the back-end subnet sends the response toward an NVA, a firewall, a peered virtual network, or on-premises instead of directly to the Application Gateway subnet.
+- A UDR on the Application Gateway subnet sends the request through a device that the response doesn't pass back through.
+- An NVA doesn't have IP forwarding enabled, changes the source address, or has firewall rules that allow traffic in only one direction.
+
+> [!IMPORTANT]
+> Route table changes affect every resource in the subnets that use the route table. Review the effect, and get approval for the change, before you modify a route table.
+
+1. Decide which path both directions must use. The simplest design is the direct path through the virtual network or peering. If you must inspect the traffic, send both directions through the same device.
+
+1. For the direct path, remove or narrow the routes on the back-end subnet route table that cover the Application Gateway subnet CIDR (for example, `0.0.0.0/0` or a broad aggregate prefix that points to an NVA). Make sure that the Application Gateway subnet route table doesn't send the back-end prefix to an appliance. Because Azure selects routes by longest prefix match, a more specific route for the Application Gateway subnet CIDR takes precedence over a broader route. For more information, see [Azure virtual network traffic routing](/azure/virtual-network/virtual-networks-udr-overview#how-azure-selects-routes-for-traffic-routing).
+
+1. For an inspected path, make both subnets use the same device:
+
+   - Route the back-end prefix from the Application Gateway subnet to the device.
+   - Route the Application Gateway subnet CIDR from the back-end subnet to the same device.
+   - Enable IP forwarding on the NVA network interface and in its operating system.
+   - Make sure that the NVA's NSG and firewall policy allow the traffic in both directions, and that the device doesn't change the source address in a way that breaks the return route.
+   - In hub-and-spoke topologies that use Azure Firewall, avoid UDR prefixes that include the Azure Firewall subnet. For more information, see [Azure Firewall and Application Gateway for virtual networks](/azure/architecture/example-scenario/gateway/firewall-application-gateway#asymmetric-routing).
+
+   > [!NOTE]
+   > UDRs on the Application Gateway subnet can cause the back-end health status to appear as **Unknown** and can affect logs and metrics. Application Gateway v2 doesn't support redirecting `0.0.0.0/0` through a virtual appliance, a hub-and-spoke virtual network, or on-premises (forced tunneling). Review the supported scenarios in [Application Gateway infrastructure configuration](/azure/application-gateway/configuration-infrastructure#supported-user-defined-routes) before you add a UDR to the Application Gateway subnet.
+
+1. If a VPN or ExpressRoute gateway advertises a default route that the Application Gateway subnet learns, disable BGP route propagation on the Application Gateway subnet's route table. Then, if the gateway needs an explicit internet path, add a `0.0.0.0/0` route that has the next hop type **Internet**. These are the supported v2 scenarios that are described in [Application Gateway infrastructure configuration](/azure/application-gateway/configuration-infrastructure#supported-user-defined-routes).
+
+1. If the next hop type is **None**, or **Connection troubleshoot** reports a peering issue such as `VnetAccessNotAllowed`, correct the route or the peering setting that the issue identifies.
+
+1. Rerun [Step 2c-2](#step-2c-2), and then [Step 1b](#step-1b). The back-end IPs should return `"health": "Healthy"` within one to two probe intervals, and the "502" errors should stop.
+
 ## References
 
 - [Application Gateway health monitoring overview](/azure/application-gateway/application-gateway-probe-overview)
@@ -1268,3 +1400,8 @@ az network application-gateway frontend-port update \
 - [Configure end-to-end TLS by using Application Gateway](/azure/application-gateway/end-to-end-ssl-portal)
 - [Integrate API Management in an internal VNet with Application Gateway](/azure/api-management/api-management-howto-integrate-internal-vnet-appgateway)
 - [Connection draining for Application Gateway](/azure/application-gateway/configuration-http-settings#connection-draining)
+- [Diagnose a virtual machine routing problem](/azure/virtual-network/diagnose-network-routing-problem)
+- [Azure virtual network traffic routing](/azure/virtual-network/virtual-networks-udr-overview)
+- [Azure network security groups overview](/azure/virtual-network/network-security-groups-overview)
+- [Connection troubleshoot overview](/azure/network-watcher/connection-troubleshoot-overview)
+- [Azure Firewall and Application Gateway for virtual networks](/azure/architecture/example-scenario/gateway/firewall-application-gateway)

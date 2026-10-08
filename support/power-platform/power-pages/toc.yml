@@ -10,6 +10,10 @@
       href: filter-label-list-components.md
     - name: Power Pages Web API requests fail after wildcard column configuration is deprecated
       href: migrate-web-api-wildcard.md
+- name: Visual Studio Code extension
+  items:
+    - name: Troubleshoot site configuration differences between environments
+      href: troubleshoot-site-configuration-differences.md
 - name: Support resources
   items:
     - name: Power Pages support

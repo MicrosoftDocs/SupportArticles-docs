@@ -43,6 +43,8 @@ items:    # Please do not delete this line, it is required for the yaml format
           href: ./active-directory/use-ntdsutil-manage-ad-files.md
         - name: ISMServ.exe fails to start when domain controller starts
           href: ./active-directory/ismserv-not-start-when-domain-controller-starts.md
+        - name: Windows Internal Database (WID) installation fails
+          href: ./installing-updates-features-roles/error-install-windows-internal-database.md
     - name: Active Directory domain or forest functional level updates
       items:
         - name: "\"Adprep could not contact a replica\" error when running \"Adprep /rodcprep\" command"
@@ -83,8 +85,6 @@ items:    # Please do not delete this line, it is required for the yaml format
           href: ./active-directory/troubleshoot-ad-fs-issues.md
         - name: Troubleshoot ADFS SSO issues
           href: ./active-directory/troubleshoot-ad-fs-sso-issue.md
-        - name: Windows Internal Database (WID) installation fails
-          href: ./installing-updates-features-roles/error-install-windows-internal-database.md
     - name: Active Directory FSMO
       items:
         - name: Can't sign in to the domain
@@ -293,6 +293,8 @@ items:    # Please do not delete this line, it is required for the yaml format
           href: ./active-directory/schema-mismatch-error-ad-installation-wizard-dcpromo.md
         - name: Using language IDs to identify language packs
           href: ./installing-updates-features-roles/use-language-id-identify-language-pack.md
+        - name: Windows Internal Database (WID) installation fails
+          href: ./installing-updates-features-roles/error-install-windows-internal-database.md
     - name: Domain controller scalability or performance (including LDAP)
       items:
         - name: DC returns only 5000 values in LDAP response

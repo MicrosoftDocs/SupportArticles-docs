@@ -14,12 +14,14 @@ ms.custom: sap:Connectivity
 
 Tunnel connectivity problems in Azure Kubernetes Service (AKS) can disrupt secure communication between cluster nodes and the control plane. This article explains how to troubleshoot and resolve these problems to restore expected cluster operations.
 
-Tunnel connectivity is used specifically for API server to kubelet communication (not general pod-to-pod) or ingress traffic.
+[Tunnel connectivity is used specifically for API server to kubelet communication](/azure/aks/faq#how-does-the-managed-control-plane-communicate-with-my-nodes-) (not general pod-to-pod) or ingress traffic.
 
 :::image type="content" source="./media/tunnel-connectivity-issues/kubernetes-tunnel-architecture.png" alt-text="Screenshot of AKS tunnel architecture showing node-to-control-plane communication through the tunnel pod." border="false" lightbox="./media/tunnel-connectivity-issues/kubernetes-tunnel-architecture.png":::
 
 > [!NOTE]
-> Previously, the AKS tunnel component was `tunnel-front`. It's now migrated to the [Konnectivity service](https://kubernetes.io/docs/concepts/architecture/control-plane-node-communication/#konnectivity-service), an upstream Kubernetes component. For more information about this migration, see the [AKS release notes and changelog](https://github.com/Azure/AKS/blob/master/CHANGELOG.md).
+> Previously, the AKS tunnel component was `tunnel-front`. It's now migrated to the [Konnectivity service](https://kubernetes.io/docs/concepts/architecture/control-plane-node-communication/#konnectivity-service), an upstream Kubernetes component. For more information about this migration, see the [AKS release notes](https://github.com/Azure/AKS/releases/tag/2021-10-28).
+>
+>[API Server VNet Integration](/azure/aks/api-server-vnet-integration) enables nodes to communicate directly with the API server through an internal load balancer, without requiring a tunnel. Therefore, the `konnectivity-agent` component isn't expected in clusters where Konnectivity isn't required.
 
 ## Prerequisites
 
@@ -181,20 +183,7 @@ To address your exact or potential scenario, check the [iptables manual](https:/
 > [!IMPORTANT]
 > Before you use this tool to make any changes, review the [AKS support policy](/azure/aks/support-policies) (especially [node maintenance and access](/azure/aks/support-policies#node-maintenance-and-access)) to prevent your cluster from entering into an unsupported scenario.
 
-## Cause 4: Egress port 1194 or 9000 isn't opened
-
-> [!NOTE]
-> This cause applies only to the `tunnel-front` and `aks-link` pods.
-
-Are there any egress traffic restrictions, such as from an AKS firewall? If there are, port 9000 is required to enable correct functionality of the `tunnel-front` pod. Similarly, port 1194 is required for the `aks-link` pod.
-
-Konnectivity relies on port 443. By default, this port is open. Therefore, you don't have to worry about connectivity issues on that port.
-
-### Solution 4: Open port 9000
-
-Although `tunnel-front` is moved to the [Konnectivity service](https://kubernetes.io/docs/concepts/architecture/control-plane-node-communication/#konnectivity-service), some AKS clusters still use `tunnel-front`, which relies on port 9000. Make sure that the virtual appliance or any network device or software allows access to port 9000. For more information about the required rules and dependencies, see [Azure Global required network rules](/azure/aks/limit-egress-traffic#azure-global-required-network-rules).
-
-## Cause 5: Source Network Address Translation (SNAT) port exhaustion
+## Cause 4: Source Network Address Translation (SNAT) port exhaustion
 
 > [!NOTE]
 > This cause applies to any tunnel component that you have in your AKS cluster. However, it doesn't apply to [private AKS clusters](/azure/aks/private-clusters). Source Network Address Translation (SNAT) port exhaustion can occur for public communication only. For private AKS clusters, the API server is inside the AKS virtual network or subnet.
@@ -249,19 +238,19 @@ To use service diagnostics to view the SNAT ports, follow these steps:
 
 </details>
 
-### Solution 5a: Make sure the application uses connection pooling
+### Solution 4a: Make sure the application uses connection pooling
 
 This behavior might occur because an application isn't reusing existing connections. Don't create one outbound connection per request. Such a configuration can cause connection exhaustion. Check whether the application code follows best practices and uses connection pooling. Most libraries support connection pooling. Therefore, you shouldn't have to create a new outbound connection per request.
 
-### Solution 5b: Adjust the allocated outbound ports
+### Solution 4b: Adjust the allocated outbound ports
 
-If everything is OK within the application, adjust the allocated outbound ports. For more information about outbound port allocation, see [Configure the allocated outbound ports](/azure/aks/load-balancer-standard#configure-the-allocated-outbound-ports).
+If everything is OK within the application, adjust the allocated outbound ports. For more information about outbound port allocation, see [Configure the allocated outbound ports](/azure/aks/configure-load-balancer-standard?tabs=create-cluster-ip-based%2Ccreate-cluster-managed-outbound-ips%2Ccreate-cluster-custom-ips%2Ccreate-cluster-custom-ip-prefixes%2Ccreate-cluster-outbound-ports-ips%2Ccreate-cluster-idle-timeout#configure-the-allocated-outbound-ports).
 
-### Solution 5c: Use a Managed Network Address Translation (NAT) Gateway when you create a cluster
+### Solution 4c: Use a Network Address Translation (NAT) Gateway when you create a cluster
 
-Set up a new cluster to use a Managed Network Address Translation (NAT) Gateway for outbound connections. For more information, see [Create an AKS cluster with a Managed NAT Gateway](/azure/aks/nat-gateway#create-an-aks-cluster-with-a-managed-nat-gateway).
+Set up a new cluster to use a Network Address Translation (NAT) Gateway for outbound connections. For more information, see [Create an AKS cluster with a Managed NAT Gateway](/azure/aks/nat-gateway).
 
-## Cause 6: Konnectivity agents performance problems with cluster growth
+## Cause 5: Konnectivity agents performance problems with cluster growth
 
 As the cluster grows, the performance of Konnectivity Agents might degrade because of increased network traffic, more requests, or resource constraints.
 
