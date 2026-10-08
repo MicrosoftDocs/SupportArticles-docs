@@ -268,7 +268,7 @@ items:    # Please do not delete this line, it is required for the yaml format
         - name: Domain controllers don't demote
           href: ./active-directory/domain-controllers-not-demote.md
         - name: Error when you configure a server with Server Manager
-          href: ./setup-upgrade-and-drivers/fail-to-configure-server-using-server-manager.md
+          href: ./active-directory/fail-to-configure-server-using-server-manager.md
         - name: Errors when you run DCDIAG commands
           href: ./active-directory/dcdiag-commands-running-errors.md
         - name: Fail to demote domain controller with Dcpromo.exe
