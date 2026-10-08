@@ -41,6 +41,14 @@ landingContent:
             url: migrate-web-api-wildcard.md
 
   # Card
+  - title: Visual Studio Code extension
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot site configuration differences between environments
+            url: troubleshoot-site-configuration-differences.md
+
+  # Card
   - title: Documentation and training
     linkLists:
       - linkListType: reference

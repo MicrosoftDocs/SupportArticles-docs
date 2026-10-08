@@ -1,20 +1,27 @@
 ---
-title: Common issues with confidential containers
-description: Provides solutions to common issues with confidential containers.
-ms.date: 02/01/2024
-ms.reviewer: tysonfreeman, v-weizhu, kennethgp
+title: Common issues with confidential containers in Azure Container Instances
+description: Learn how to fix common confidential container issues in Azure Container Instances, including CCE policy failures, base64 errors, and device hash errors.
+ms.date: 10/07/2026
+ms.topic: troubleshooting
+manager: dcscontentpm
+author: kaushika-msft
+ms.author: kaushika
+ms.reviewer: tysonfreeman, v-weizhu, kennethgp, kaushika
 ms.service: azure-container-instances
 ms.custom: sap:Management
+ai-usage: ai-assisted
 ---
-# Troubleshoot common issues with confidential containers
+# Troubleshoot common issues with confidential containers in Azure Container Instances
 
-This article provides solutions to common issues with confidential containers on Azure Container Instances.
+## Summary
+
+This article helps you troubleshoot and resolve common issues with confidential containers on Azure Container Instances (ACI).
 
 ## Common issues
 
-You might experience the following issues and errors when you deploy confidential containers:
+When you deploy confidential containers, you might experience the following issues and errors:
 
-- Policy failures:
+- Policy failures.
 
     ```output
     Deployment Failed.
@@ -51,7 +58,7 @@ You might experience the following issues and errors when you deploy confidentia
     Container creation denied due to policy: create_container not allowed by policy. 
     ```
 
-- A policy enforces a new framework:
+- A policy that enforces a new framework.
 
     ```output
     Failed to create containerd task: failed to create shim task: failed to mount container storage:
@@ -59,13 +66,13 @@ You might experience the following issues and errors when you deploy confidentia
     Errors: [framework_svn is ahead of the current svn: 1.1.0 > 0.1.0].
     ```
 
-- Invalid base64 confidential computing enforcement (CCE) policy:
+- Invalid base64 confidential computing enforcement (CCE) policy.
 
     ```output
     The CCE Policy is not valid Base64.
     ```
 
-- Limitation - 120 kilobytes (KB) limit on the CCE policy:
+- A 120 KB limitation on the CCE policy.
 
     ```output
     Failed to create containerd task: failed to create shim task: error while creating the compute system:
@@ -79,7 +86,7 @@ You might experience the following issues and errors when you deploy confidentia
     Refer to 'DeploymentFailedReason' event for more details.
     ```
 
-- Device hash isn't found:
+- Device hash not found.
 
     ```output
     Denied by policy: rule for mount_device is missing from policy: unknown.
@@ -104,6 +111,8 @@ You might experience the following issues and errors when you deploy confidentia
 In most cases, these issues occur due to the CCE policy definition.
 
 ## Solution
+
+Follow these steps:
 
 - If you experience any policy failures, regenerate the CCE policy and retry the deployment.
 - If the CCE policy enforces a framework, revert to an older framework svn.
