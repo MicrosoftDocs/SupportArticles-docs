@@ -197,18 +197,13 @@ On the server that's showing as "Appears offline" in the portal, look at event I
 
 - If "GetNextJob completed with status: -2134347764" is logged, the server is unable to authenticate with the Azure File Sync service due to an expired or deleted certificate.  
 
-  Run the following PowerShell commands on the server to confirm the server certificate is missing or expired:
+  Run the following PowerShell command on the server to confirm the server certificate is missing or expired:
   
     ```powershell
     Import-Module "C:\Program Files\Azure\StorageSyncAgent\StorageSync.Management.ServerCmdlets.dll"  
     Debug-StorageSyncServer -Diagnose
     ```
-
-  Run the following PowerShell command on the server to reset the certificate used for authentication:
-
-    ```powershell
-    Reset-AzStorageSyncServerCertificate -ResourceGroupName <string> -StorageSyncServiceName <string>
-    ```
+If corrupted, contact Azure File Sync support for help.
 
 - If the Telemetry event log is empty, it means the event log is more than likely corrupted. 
 
