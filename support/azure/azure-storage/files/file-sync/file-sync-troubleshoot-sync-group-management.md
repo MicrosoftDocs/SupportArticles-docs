@@ -218,12 +218,7 @@ On the server that's showing as "Appears offline" in the portal, look at event I
     Import-Module "C:\Program Files\Azure\StorageSyncAgent\StorageSync.Management.ServerCmdlets.dll"  
     Debug-StorageSyncServer -Diagnose
     ```
-    Run the following PowerShell commands on the server to fix the event log corruption:
-
-    ```powershell
-    Import-Module "C:\Program Files\Azure\StorageSyncAgent\StorageSync.Management.ServerCmdlets.dll"  
-    Debug-StorageSyncServer -FixAfsEventsCorruption
-    ```
+  If corrupted, contact Azure File Sync support for help. 
  
 <a id="endpoint-noactivity-sync"></a>**Server endpoint has a health status of "No Activity" and the server state on the registered servers blade is "Online"**
 
