@@ -1,7 +1,7 @@
 ---
 title: Reset the Salesforce Server-to-Server Connector in Sales Agent
-description: Fix a Salesforce server-to-server connector that won't enable or disable in Sales agent. Learn how to reset the Salesforce artifacts and Dataverse credentials.
-ms.date: 08/25/2026
+description: Learn how to reset the Salesforce server-to-server connector in Sales agent when you can't enable or disable the connection for a Salesforce org.
+ms.date: 10/09/2026
 ms.reviewer: shjais, v-shaywood
 ms.custom: sap:CRM Permissions and Configurations\CRM Settings
 ai-usage: ai-assisted
@@ -11,20 +11,20 @@ ai-usage: ai-assisted
 
 ## Summary
 
-This article explains how to reset the Salesforce server-to-server connector for Sales agent when you can't enable or disable the connection for a Salesforce org. Resetting the connector means that you remove the artifacts that the connector deployed to the Salesforce org and then delete the corresponding credentials row in the `msdyn_vivaorgextensioncreds` table in the `msdyn_viva` Dataverse environment. Clearing both sides returns the org to a clean, unconnected state so that you can try the connection again.
+This article explains how to reset the Salesforce server-to-server connector for Sales agent when you can't enable or disable the connection for a Salesforce org. Resetting the connector means that you remove the artifacts that the connector deployed to the Salesforce org and then delete the corresponding row in the Dataverse credentials table in the `msdyn_viva` environment. Clearing both sides returns the org to a clean, unconnected state so that you can try the connection again.
 
 Treat this reset as a last resort. First, select **Reconnect** on the error message that Sales agent shows, which deletes the existing connection and creates a new one. Next, try the error-specific guidance in [Errors when you enable Salesforce with server-to-server flow](errors-enabling-salesforce-server-to-server-flow.md), [Errors when you disable Salesforce with server-to-server flow](errors-disabling-salesforce-server-to-server-flow.md), and [Errors when accessing Salesforce with server-to-server flow](errors-when-accessing-salesforce-with-server-to-server-flow.md). Use this article only when neither approach resolves the problem.
 
 ## Affected clients and configurations
 
-| Requirement type | Description |
-|---------|---------|
-|**Client app**     | Microsoft Teams        |
-|**Platform**     | Web and desktop clients         |
-|**OS**     | Windows and Mac         |
-|**Deployment**     | User managed and admin managed       |
-|**CRM**     | Salesforce        |
-|**Users**     | Administrators   |
+| Requirement type | Description                    |
+|------------------|--------------------------------|
+| **Client app**   | Microsoft Teams                |
+| **Platform**     | Web and desktop clients        |
+| **OS**           | Windows and Mac                |
+| **Deployment**   | User managed and admin managed |
+| **CRM**          | Salesforce                     |
+| **Users**        | Administrators                 |
 
 ## Symptoms
 
@@ -39,7 +39,7 @@ When you enable the Salesforce server-to-server connection, the system deploys s
 - Permission set
 - Custom profile
 
-At the same time, a corresponding credentials record is stored in the `msdyn_vivaorgextensioncreds` [Dataverse table](/power-apps/maker/data-platform/entity-overview) in your `msdyn_viva` environment. If the Dataverse record and the Salesforce artifacts don't match, the connector can't complete an enable or disable request.
+At the same time, a corresponding credentials record is stored in a [Dataverse table](/power-apps/maker/data-platform/entity-overview) in your `msdyn_viva` environment. If the Dataverse record and the Salesforce artifacts don't match, the connector can't complete an enable or disable request.
 
 The mismatch between the Dataverse credentials and the Salesforce artifacts can occur due to:
 
@@ -55,27 +55,29 @@ When this mismatch occurs, resetting the connector by removing all artifacts and
 Before you reset the connector, verify that you have the following:
 
 - **Salesforce org admin access**: Required to delete connected apps, permission sets, and users.
-- **Dataverse admin access** (or Power Platform admin access): Required to access and modify the `msdyn_vivaorgextensioncreds` table.
+- **Dataverse admin access** (or Power Platform admin access): Required to access and modify the Dataverse credentials table.
 
 > [!IMPORTANT]
 > This process permanently deletes data from both Salesforce and Dataverse. Deletions can't be recovered. Ensure you're deleting the correct artifacts for the Salesforce org that needs to be reset.
 
 ## Solution
 
-Reset the connector by removing all artifacts and credentials, then reestablish a clean connection. The reset process involves three main steps:
+Reset the connector by removing all artifacts and credentials, and then reestablish a clean connection. The reset process involves three main steps:
 
 1. [Remove Salesforce artifacts](#step-1-remove-salesforce-artifacts): Delete the connected app, permission set, and integration user from the Salesforce org.
-1. [Delete the Dataverse credentials row](#step-2-delete-the-credentials-row-in-dataverse): Remove the connection record from the `msdyn_vivaorgextensioncreds` table.
-1. [Reconnect the Salesforce org](#step-3-re-enable-the-salesforce-server-to-server-connection: Establish a fresh server-to-server connection.
+1. [Delete the Dataverse credentials row](#step-2-delete-the-credentials-row-in-dataverse): Remove the connection record from the Dataverse credentials table.
+1. [Reconnect the Salesforce org](#step-3-re-enable-the-salesforce-server-to-server-connection): Establish a fresh server-to-server connection.
 
-## Step 1: Remove Salesforce artifacts
+### Step 1: Remove Salesforce artifacts
 
 Sign in to your Salesforce org as an admin and delete the artifacts that the Sales agent server-to-server connector deployed. Use the search box in the left navigation panel of Salesforce setup to locate each item.
 
 > [!NOTE]
-> Component names depend on when the server-to-server connection was last enabled. Recently enabled orgs use the **M365 Copilot Sales** prefix, while older orgs use the **Copilot for Sales** prefix. Look for whichever variant exists in the org.
+>
+> - Component names depend on when the server-to-server connection was last enabled. Recently enabled orgs use the **M365 Copilot Sales** prefix, while older orgs use the **Copilot for Sales** prefix. Look for whichever variant exists in the org.
+> - If you can't find an artifact, it might already have been removed. Continue with the next artifact.
 
-### Delete the connected app or external client app
+#### Delete the connected app or external client app
 
 Depending on when the connection was enabled, the Salesforce org contains either a connected app or an external client app.
 
@@ -93,7 +95,7 @@ To delete an external client app:
 1. In the top right, select the dropdown menu and choose **Delete**.
 1. Confirm the deletion.
 
-### Remove the permission set
+#### Remove the permission set
 
 Before deleting the permission set, remove it from the integration user (Salesforce doesn't allow deletion if it's still assigned).
 
@@ -108,9 +110,9 @@ Before deleting the permission set, remove it from the integration user (Salesfo
 
 For background on what this permission set grants, see [Permissions of the integration user](/microsoft-sales-copilot/connect-agent-datasource#permissions-of-the-integration-user).
 
-### Deactivate the integration user
+#### Deactivate the integration user
 
-Deactivate the integration user that the connector created in the Salesforce org. 
+Deactivate the integration user that the connector created in the Salesforce org.
 
 1. In the left sidebar, search for **Users**.
 1. Find the user named **M365 Copilot Sales Integration User** (or **Copilot for Sales Integration User** for older orgs).
@@ -120,7 +122,7 @@ Deactivate the integration user that the connector created in the Salesforce org
 
 You must reassign the profile because the next step deletes the custom profile, and Salesforce doesn't delete a profile that's still assigned to a user.
 
-### Delete the custom profile
+#### Delete the custom profile
 
 Delete the custom profile that the connector created in the Salesforce org.
 
@@ -128,21 +130,23 @@ Delete the custom profile that the connector created in the Salesforce org.
 1. Find and select **CopilotForSalesIntegrationProfile**.
 1. Select **Delete** and confirm.
 
-## Step 2: Delete the credentials row in Dataverse
+### Step 2: Delete the credentials row in Dataverse
 
-After you remove the Salesforce artifacts, delete the connection credentials from the `msdyn_vivaorgextensioncreds` table in your `msdyn_viva` Dataverse environment. This step removes the stored connection data that corresponds to the Salesforce org.
+After you remove the Salesforce artifacts, delete the connection credentials from the Dataverse credentials table in your `msdyn_viva` environment. This step removes the stored connection data that corresponds to the Salesforce org.
 
 1. Go to the [Power Apps portal](https://make.powerapps.com).
 1. In the top-right corner, select the **msdyn_viva** environment.
 1. In the left panel, select **Tables** > **All**.
-1. Search for and select **msdyn_vivaorgextensioncreds**.
+1. Search for **msdyn_vivaorgextensioncred**, and then select the credentials table. The singular search term finds both singular and plural name variants.
 1. Select **Edit** to view the table data.
 1. In the column header area, select **+\<Number\> more** to display additional columns.
 1. Ensure the following columns are visible: **Extension Name** and **Org id**. You can uncheck other columns if needed.
-1. Find and select the row containing the Salesforce org URL that needs to be reset.
-1. Delete this row.
+1. Find the row containing the Salesforce org URL that needs to be reset.
 
-## Step 3: Re-enable the Salesforce server-to-server connection
+    If you can't find a matching row, it might already have been deleted. Continue to [Step 3](#step-3-re-enable-the-salesforce-server-to-server-connection).
+1. Select the matching row, and then delete it.
+
+### Step 3: Re-enable the Salesforce server-to-server connection
 
 After you remove both the Salesforce artifacts and the Dataverse credentials, the connector is fully reset. You can now connect by following the standard setup process:
 
