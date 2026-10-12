@@ -2303,7 +2303,7 @@ items:    # Please do not delete this line, it is required for the yaml format
           href: ./setup-upgrade-and-drivers/filenames-with-spaces-require-quotation-mark.md
         - name: Manually edit Boot.ini file
           href: ./setup-upgrade-and-drivers/manually-edit-boot-file.md
-        - name: PCR7 configuration "Binding not possible" error
+        - name: PCR7 configuration in System Information shows as Binding not possible
           href: ./setup-upgrade-and-drivers/pcr7-configuration-binding-not-possible.md
         - name: Post-Deployment Configuration task fails
           href: ./setup-upgrade-and-drivers/post-deployment-configuration-task-fail.md
@@ -2821,6 +2821,8 @@ items:    # Please do not delete this line, it is required for the yaml format
           href: ./windows-security/mbam-secure-network-communication.md
         - name: How to use BitLocker Recovery Password Viewer
           href: ./windows-security/bitlocker-recovery-password-viewer-tool.md
+        - name: PCR7 configuration in System Information shows as Binding not possible
+          href: ./setup-upgrade-and-drivers/pcr7-configuration-binding-not-possible.md
     - name: Domain and forest trusts
       items:
         - name: Can't set up a trust between a Windows-based domain and an AD-based domain

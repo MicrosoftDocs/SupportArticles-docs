@@ -729,6 +729,8 @@ items:    # Please do not delete this line, it is required for the yaml format
           href: ./setup-upgrade-and-drivers/network-provider-settings-removed-in-place-upgrade.md
         - name: Operations fail if Windows 8 is improperly identified as a WTG installation
           href: ./setup-upgrade-and-drivers/windows-8-incorrectly-reported-as-wtg-installation.md
+        - name: PCR7 configuration in System Information shows as Binding not possible
+          href: ../windows-server/setup-upgrade-and-drivers/pcr7-configuration-binding-not-possible.md?context=/troubleshoot/windows-client/context/context
         - name: System restore points are disabled after upgrade
           href: ./setup-upgrade-and-drivers/system-restore-points-disabled.md
         - name: Upgrade fails and generates error code 0xC1900101-0x20017
@@ -1235,6 +1237,8 @@ items:    # Please do not delete this line, it is required for the yaml format
           href: ./windows-security/mbam-client-fails-event-id-4-0x8004100e.md
         - name: Parameter is incorrect when you enable  BitLocker
           href: ./windows-security/parameter-is-incorrect.md
+        - name: PCR7 configuration in System Information shows as Binding not possible
+          href: ../windows-server/setup-upgrade-and-drivers/pcr7-configuration-binding-not-possible.md?context=/troubleshoot/windows-client/context/context
         - name: Specified Account not exist when enabling BitLocker
           href: ./windows-security/specified-account-not-exist-enable-bitlocker.md
         - name: Suspend BitLocker protection for non-Microsoft software updates
