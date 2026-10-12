@@ -43,6 +43,14 @@ To work around this issue without rolling back the update, use one of the follow
 
 You can also prevent the failure by granting **sysadmin** permissions to the affected user. However, we don't recommend that you use this method.
 
+## October 2026 GDR update
+
+Starting with the October 2026 GDR update, this issue is addressed. If you already applied a workaround from this article, the update continues to respect it.
+
+## Security considerations
+
+As a security best practice, review access to `MSDASQL` linked servers and their associated data sources. Configure access for the users and workloads that need it, use least-privilege permissions, and periodically review authentication settings and access controls to help prevent unintended access.
+
 ## Related content
 
 - [Configuring permissions to access remote data](configure-permissions-access-remote-data.md)
