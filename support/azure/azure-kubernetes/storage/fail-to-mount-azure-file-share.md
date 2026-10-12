@@ -180,13 +180,13 @@ To create a pod that you can schedule on a FIPS-enabled node, follow these steps
     volumeBindingMode: Immediate 
     allowVolumeExpansion: true 
     parameters: 
-      skuName: Premium_LRS 
+      skuName: PremiumV2_LRS 
       protocol: nfs 
     ```
 
     The SKU is set to Premium_LRS in the YAML file because the Premium SKU is required for NFS. For more information, see [Dynamic Provision](https://github.com/kubernetes-sigs/azurefile-csi-driver/blob/master/docs/driver-parameters.md#dynamic-provision).
 
-    Because of the Premium SKU, the minimum size of the file share is 100 GB. For more information, see [Create a storage class](/azure/aks/azure-files-dynamic-pv#create-a-storage-class).
+    Because of the Premium SKU, the minimum size of the file share is 32 GiB. For more information, see [Create a storage class](/azure/aks/azure-files-dynamic-pv#create-a-storage-class).
 
 2. Create a PVC that references the custom StorageClass *azurefile-sc-fips*.
 
@@ -203,7 +203,7 @@ To create a pod that you can schedule on a FIPS-enabled node, follow these steps
       storageClassName: azurefile-sc-fips 
       resources: 
         requests: 
-          storage: 100Gi 
+          storage: 32Gi 
     ```
 
 3. Create a pod that mounts the PVC *azurefile-pvc-fips*.
