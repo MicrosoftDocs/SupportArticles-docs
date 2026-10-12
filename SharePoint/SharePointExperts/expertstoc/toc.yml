@@ -1,44 +1,44 @@
-﻿- name: SharePoint Experts
-  href: ../sharepoint-experts-welcome.yml
+- name: SharePoint Experts
+  href: /previous-versions/troubleshoot/content-retirement
   items:
   - name: Administration
     items:
     - name: '"A schedule cannot be enabled for a workbook" when scheduling a PowerPivot data refresh'
-      href: ../administration/sorry-something-went-wrong-when-try-to-schedule-a-data-refresh.md
+      href: /previous-versions/troubleshoot/content-retirement
     - name: '"Call to Excel Services failed" when running scheduled PowerPivot data refresh'
-      href: ../administration/call-to-excel-services-failed.md
+      href: /previous-versions/troubleshoot/content-retirement
     - name: Can't open Office files from SharePoint
-      href: ../administration/cant-open-office-files.md
+      href: /previous-versions/troubleshoot/content-retirement
     - name: '"Retrieving the COM class factory for component failed 800703fa" in Excel Services and PowerPivot'
-      href: ../administration/retrieving-com-class-factory-for-component-failed.md
+      href: /previous-versions/troubleshoot/content-retirement
     - name: Antivirus and intermittent issues with Online Server
-      href: ../administration/antivirus-and-intermittent-issues.md
+      href: /previous-versions/troubleshoot/content-retirement
     - name: Email notifications aren't sent for scheduled PowerPivot data refresh failures
-      href: ../administration/email-notifications-sent-for-scheduled-data-refresh-failures-in-power-pivot.md
+      href: /previous-versions/troubleshoot/content-retirement
     - name: Excel workbooks in XML format don't open from SharePoint
-      href: ../administration/excel-workbooks-in-xml-format-not-open.md
+      href: /previous-versions/troubleshoot/content-retirement
     - name: Issue when opening SharePoint documents
-      href: ../administration/edit-document-requires-compatible-application-and-web-browser.md
+      href: /previous-versions/troubleshoot/content-retirement
     - name: Large Publisher files open in read-only mode
-      href: ../administration/large-publisher-files-open-in-read-only-mode.md
+      href: /previous-versions/troubleshoot/content-retirement
     - name: Microsoft Forms shows "Sorry, something went wrong"
-      href: ../administration/microsoft-forms-shows-sorry-something-went-wrong.md
+      href: /previous-versions/troubleshoot/content-retirement
     - name: PowerPivot Gallery Snapshots Fail for SSL Host Header Sites
-      href: ../administration/troubleshooting-powerpivot-gallery-snapshot.md
+      href: /previous-versions/troubleshoot/content-retirement
     - name: PowerPivot scheduled data refresh fails
-      href: ../administration/powerpivot-scheduled-data-refresh-fails.md
+      href: /previous-versions/troubleshoot/content-retirement
   - name: Lists and libraries
     items:
     - name: Files are downloaded instead of opening
-      href: ../lists-and-libraries/files-downloaded-instead-of-opening-office-application.md
+      href: /previous-versions/troubleshoot/content-retirement
   - name: Sharing and Permissions
     items:
     - name: SharePoint Designer 2013 login Issues in a cloud scenario
-      href: ../sharing-and-permissions/login-issues-in-a-cloud-scenario.md
+      href: /previous-versions/troubleshoot/content-retirement
   - name: Web Parts
     items:
     - name: '"We could not find the file you wanted" with Excel Web Access Web Part'
-      href: ../web-parts/excel-web-access-web-part-error.md
+      href: /previous-versions/troubleshoot/content-retirement
     - name: Increasing PowerPoint size limit of embedded media
-      href: ../web-parts/increase-size-limit-embedded-media.md
+      href: /previous-versions/troubleshoot/content-retirement
 
