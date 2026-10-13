@@ -50,15 +50,10 @@ Follow these steps to gather troubleshooting information and apply possible solu
    ```
 
 1. Check the container logs for any error messages or events about image pulling, networking, or other container-specific problems.
-
 1. Check for eviction events.
-
 1. Make sure that your container deployment settings fall within the parameters that are defined in the [Resource availability & quota limits for Azure Container Instances](/azure/container-instances/container-instances-resource-and-quota-limits).
-
 1. Consider specifying lower CPU and memory settings for the container.
-
 1. If the problem persists, consider deploying your container to a different Azure region.
-
 1. If the problem is related to capacity adjustments, consider deploying your containers during off-peak hours.
 
 By following these steps, you can identify the cause of the Waiting state problem for your Azure Spot containers and take the appropriate action to resolve the problem. Remember to monitor your containers and adjust your deployment strategy as necessary to reduce disruptions.

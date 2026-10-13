@@ -1,9 +1,9 @@
 ---
 title: Fix Conditional Access-related issues for Teams Android devices
 description: Discusses how to exclude devices from Conditional Access policies or Intune device compliance policies. These policies can prevent users from signing in to or using the Teams app on Android devices.
-ms.reviewer: taherr
+ms.reviewer: taherr, mattslomka
 ms.topic: troubleshooting
-ms.date: 05/26/2024
+ms.date: 08/18/2026
 author: Cloud-Writer
 ms.author: meerak
 manager: dcscontentpm
@@ -86,8 +86,6 @@ To manually check user access to the Teams app, follow these steps:
 
    - **Status**: Select **Failure**, and then select **Apply**.
    - **Application**: Enter **Teams**, and then select **Apply**.
-
-   :::image type="content" source="media/teams-android-devices-conditional-access-issues/add-filters.png" alt-text="The Status and Application filters are available options to run a manual check on user access to the Teams app.":::
 1. For the affected usernames, look for items that have the following **Application** values:
 
    - Microsoft Teams
@@ -98,14 +96,8 @@ To manually check user access to the Teams app, follow these steps:
    - Sign-in error code
    - Failure reason
    - Additional Details
-
-   :::image type="content" source="media/teams-android-devices-conditional-access-issues/sign-in-details-basic-info.png" alt-text="The Basic info page of the sign-in page shows activity details.":::
 1. If the sign-in error code seems to be related to compliance, select the **Conditional Access** tab, and then look for policies that show a **Failure** result.
-
-   :::image type="content" source="media/teams-android-devices-conditional-access-issues/sign-in-details-conditional-access.png" alt-text="The Conditional Access page of the sign-in activity details shows policy compliance results.":::
 1. Review the policy details.
-
-   :::image type="content" source="media/teams-android-devices-conditional-access-issues/conditional-access-policy-details.png" alt-text="The Conditional Access policy details page shows compliance failure details per policy.":::
 
 After you identify the specific Conditional Access policy that's causing the issue, you can use [device filters](/azure/active-directory/conditional-access/concept-condition-filters-for-devices) to exclude the affected device from the policy. Some of the commonly used device properties in device filters are *manufacturer* and *model*. These properties are used together with the *Contains*, *StartsWith*, and *In* operators.
 
@@ -116,8 +108,6 @@ After you identify the specific Conditional Access policy that's causing the iss
 > - Check each policy setting for unsupported settings for Teams devices.
 
 The following screenshot shows a sample device filter.
-
-:::image type="content" source="media/teams-android-devices-conditional-access-issues/device-filter.png" alt-text="Example of a device filter for a device object.":::
 
 ## References
 
