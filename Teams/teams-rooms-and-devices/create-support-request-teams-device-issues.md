@@ -1,9 +1,9 @@
 ---
 title: Create a support request for Teams device issues
 description: Discusses how to create a support request and collect required information for Microsoft Support to resolve issues that affect Teams devices.
-ms.reviewer: miaitelh
+ms.reviewer: miaitelh, mattslomka
 ms.topic: troubleshooting
-ms.date: 06/24/2025
+ms.date: 08/18/2026
 manager: dcscontentpm
 audience: Admin
 search.appverid: 
@@ -13,17 +13,16 @@ appliesto:
   - Microsoft Teams
 ms.custom: 
   - sap:Teams Devices
-  - CI6186
+  - CI 6186
 ---
 # Create a support request for Teams device issues
 
-You can contact Microsoft Support for assistance if you experience issues that affect the Teams Rooms Pro Management portal, the Teams admin center, or the following Teams devices:
+You can contact Microsoft Support for assistance if you experience issues that affect the Teams Rooms Pro Management portal or the following Teams devices:
 
 - Teams Rooms on Android
 - Teams Rooms on Windows
-- Teams phones
 - Teams panels
-- Teams displays
+- Teams phones
 
 This article discusses how to create a support request for these issues.
 
@@ -31,19 +30,22 @@ This article discusses how to create a support request for these issues.
 
 Before you create a request, make sure that:
 
-- Your device is running [the latest version of Teams Rooms](/MicrosoftTeams/rooms/rooms-release-note).
-- Your device is running a supported version of [Windows](/MicrosoftTeams/rooms/rooms-lifecycle-support) or [Android](/microsoftteams/devices/android-version-support).
-- Your device is [certified for Teams](/microsoftteams/devices/certified-devices-overview). If your device isn't certified, contact the original equipment manufacturer (OEM) for support.
+- Your device is running the latest version of [Teams Rooms](/microsoftteams/rooms/rooms-release-note), [Teams panels](/microsoftteams/devices/devices-release-notes?tabs=panels), or [Teams phones](/microsoftteams/devices/devices-release-notes?tabs=phones) as appropriate.
+- Your device is running a supported version of the [Windows](/microsoftteams/rooms/rooms-lifecycle-support) or [Android](/microsoftteams/devices/android-version-support) operating system.
+- Your device is certified for Teams and check the **End of certification** tab to ensure the device is supported:
+    - [Teams Rooms on Windows](/microsoftteams/rooms/certified-hardware?tabs=Windows)
+    - [Teams Rooms on Android](/microsoftteams/devices/certified-hardware-android)
+    - [Teams panels](/microsoftteams/devices/teams-panels-certified-hardware)
+    - [Teams phones](/microsoftteams/devices/teams-phones-certified-hardware?tabs=certified-phones).
+    
+  If your device isn't certified, contact the manufacturer for support. If the certification for the device has ended, consider replacing the device.
 
 ## Create a support request
 
 To create a support request, follow these steps:
 
-1. Use one of the following options to open the **Help** pane:
-
-   - In the [Microsoft Teams Rooms Pro Management Portal](https://portal.rooms.microsoft.com/), select **Contact support** in the upper-right corner of the page.
-   - In the [Microsoft 365 admin center](https://admin.microsoft.com/), select **Help** in the upper-right corner of the page.
-   - In the [Microsoft Teams admin center](https://admin.teams.microsoft.com/), select **Help** in the upper-right corner of the page.
+1. Sign in to the [Teams Rooms Pro Management Portal](/microsoftteams/rooms/enrolling-mtrp-managed-service) or [Microsoft 365 Admin Center](https://admin.microsoft.com/) using an account that minimally has the [Service Support Administrator](/entra/identity/role-based-access-control/permissions-reference#service-support-administrator) role.
+1. Select the **Need Help** icon in the lower-right corner of the page.
 1. In the text box under **How can we help**, enter your question, and then select **Search**.
 1. Review the suggested topics. If the results aren't helpful, select **Contact support**.
 1. Select a contact method.
@@ -51,19 +53,33 @@ To create a support request, follow these steps:
 1. In the **Description** field, provide as much of the following information as possible:
 
    - Description of the issue.
-   - The time, date, and timestamp of the most recent occurrence of the issue. If the issue recurs, the recurrence rate.
-   - The number of affected devices and the total number of devices that are used in your organization.
-   - The affected accounts.
-   - If the issue can be reproduced, detailed steps to reproduce the issue. If possible, record a video of the process and anything that’s on the device display.
-   - Any recent changes that were made before the issue occurred.
-   - The Teams app version.
-   - The device type.
-   - The device model and manufacturer.
-   - The User Principal Name (UPN) of the signed-in user account on the affected device.
-   - The Windows version and build number (for Windows devices).
-   - The firmware version (for Android devices).
-   - The time and date of Android Open Source Project (AOSP) firmware migration, firmware, and Teams app version before the AOSP migration.
-1. Under **Attachments**, select **Add a file or screenshot or video**, and then upload the collected logs, screenshots, and videos. For more information about how to collect logs, see [Collect device logs for Android Teams devices](/microsoftteams/troubleshoot/teams-rooms-and-devices/collect-device-logs) and [Collect device logs on Windows Teams devices](/microsoftteams/rooms/rooms-operations#collecting-logs-on-microsoft-teams-rooms).
+   - Whether the issue affects a Teams Rooms device on Windows or Android, or the Teams Rooms Pro Management portal.
+   - Information required for all issues:
+      - Steps to reproduce the issue. If it's a Teams Rooms issue, include a video, if possible.
+      - The time, date, and time zone of the most recent occurrence of the issue.
+      - If the issue recurs, the recurrence rate.
+      - Error messages that are generated when the issue occurs. If possible, include the message text or screenshots of any message windows that are related to the issue.
+      - If available, the Teams Rooms Pro Management incident number.
+   - Additional information for Teams Rooms issues:
+      - Steps already tried from the referenced troubleshooting guide.
+      - Logs that have been collected. You can collect logs in the Teams Rooms Pro Management portal or locally by using PowerShell.
+      - Active signals in Teams Rooms Pro Management portal.
+      - Whether the issue affects all devices, some devices, or only a single device.
+      - The following system information that can be found on the Settings tab in the Teams Rooms Pro Management portal:
+          - Operating System version
+          - Device firmware version
+          - Teams app version
+          - Device model and manufacturer
+          - Attached peripherals
+          - Number of displays (if applicable)
+          - Resource account information:
+             - Account UPN
+             - Room name
+   - Additional information for calling or meeting issues:
+      - Meeting link for the affected meeting.
+      - PSTN number, if the issue involves a PSTN call.
+      - Caller and callee UPN, if the issue involves a One-to-One call.
+1. Under **Attachments**, select **Add a file or screenshot or video**, and then upload the collected logs, screenshots, and videos. For more information about how to collect logs, see [Collect device logs for Teams devices](/microsoftteams/troubleshoot/teams-rooms-and-devices/collect-device-logs).
 1. Select **Contact me**.
 
 After you submit the request, a Microsoft support engineer will follow up by using your preferred contact method.
