@@ -959,6 +959,10 @@ items:    # Please do not delete this line, it is required for the yaml format
       items:
         - name: Printer Preferences can't set default printer
           href: ./group-policy/group-policy-printer-preferences-not-set-default-printer.md
+    - name: Managing quick machine recovery through Group Policy
+      items:
+        - name: Configure quick machine recovery via Group Policy
+          href: ./group-policy/configure-quick-machine-recovery-via-group-policy.md
     - name: Managing removable devices through Group Policy
       items:
         - name: "Troubleshooting guidance: Managing removable devices through Group Policy"
