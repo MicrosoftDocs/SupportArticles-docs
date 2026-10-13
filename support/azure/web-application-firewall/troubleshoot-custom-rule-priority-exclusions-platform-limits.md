@@ -7,7 +7,7 @@ author: kaushika-msft
 ms.author: kaushika
 ms.reviewer: osartavi, chadmat
 ms.topic: troubleshooting
-ms.date: 9/25/2026
+ms.date: 09/25/2026
 ai-usage: ai-assisted
 ---
 

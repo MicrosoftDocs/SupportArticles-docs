@@ -1,7 +1,7 @@
 ---
 title: Node not ready but then recovers
 description: Learn how to troubleshoot AKS Node Not Ready events that recover, find root causes, and take preventive actions to avoid repeat outages. Start now.
-ms.date: 2/25/2024
+ms.date: 02/25/2024
 ms.reviewer: rissing, chiragpa, momajed, v-leedennis, novictor
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to prevent the Node Not Ready status for nodes that later recover so that I can avoid future errors within an AKS cluster.

@@ -1,7 +1,7 @@
 ---
 title: PCR7 configuration in System Information shows as Binding not possible
 description: Explains why System Information on either Windows Server or Windows Client shows the PCR7 configuration as Binding not possible, and how to troubleshoot the issue.
-ms.date: 10/9/2026
+ms.date: 10/09/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

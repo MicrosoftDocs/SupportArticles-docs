@@ -3,7 +3,7 @@ title: Troubleshoot Azure Bastion session failures due to unhealthy target virtu
 description: Diagnose and fix Azure Bastion session failures caused by stopped VMs, firewall blocks, or unhealthy services. Get step-by-step troubleshooting guidance to restore connectivity.
 ms.service: azure-bastion
 ms.topic: troubleshooting
-ms.date: 6/17/2026
+ms.date: 06/17/2026
 ms.custom: sap:Configuration and setup
 ai.hint.symptom-tags:
   - bastion-session-failure

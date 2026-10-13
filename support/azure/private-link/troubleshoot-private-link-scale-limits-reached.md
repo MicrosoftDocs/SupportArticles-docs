@@ -4,7 +4,7 @@ description: "Step-by-step diagnostics to identify and resolve Azure Private Lin
 ms.service: azure-private-link
 ms.topic: troubleshooting
 ms.custom: sap:Configure, Set up, or Manage
-ms.date: 6/12/2026
+ms.date: 06/12/2026
 ai.hint.symptom-tags:
   - private-endpoint-limit-reached
   - private-endpoint-quota-exceeded
