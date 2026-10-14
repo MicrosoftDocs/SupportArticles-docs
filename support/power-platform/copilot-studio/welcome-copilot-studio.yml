@@ -40,7 +40,7 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-        - text: Resolve throttling errors in agents
+        - text: Usage limit and agent unavailable errors
           url: licensing/throttling-errors-agents.md
         - text: Users outside the Copilot Studio authors security group can access Copilot Studio
           url: licensing/authors-access.md
