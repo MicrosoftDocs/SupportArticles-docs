@@ -1,5 +1,5 @@
 ---
-title: Best practices for Storage network security
+title: Best Practices for Azure Storage Network Security
 description: Learn how to design, deploy, and operate network controls for Azure Storage.
 author: aadetayo
 ms.author: aadetayo
