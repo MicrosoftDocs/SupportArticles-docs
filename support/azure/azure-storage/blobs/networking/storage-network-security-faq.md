@@ -1,5 +1,5 @@
 ---
-title: Azure Storage network security FAQ
+title: Azure Storage Network Security FAQ
 description: Answers to common questions about Azure Storage public and private endpoints, firewalls, virtual network rules, Network Security Perimeter, DNS, monitoring, and TLS.
 author: aadetayo
 ms.author: aadetayo
