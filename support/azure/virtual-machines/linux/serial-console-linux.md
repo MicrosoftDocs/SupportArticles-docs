@@ -11,7 +11,7 @@ ms.service: azure-virtual-machines
 ms.collection: linux
 ms.tgt_pltfrm: vm-linux
 ms.workload: infrastructure-services
-ms.date: 9/11/2026
+ms.date: 09/11/2026
 ms.author: mbifeld
 ---
 

@@ -3,7 +3,7 @@ title: Troubleshoot health probe failures in Azure Load Balancer
 description: Follow step-by-step diagnostics to resolve health probe failures in Azure Load Balancer, restore healthy backends, and start troubleshooting now.
 ms.service: azure-load-balancer
 ms.topic: troubleshooting
-ms.date: 6/12/2026
+ms.date: 06/12/2026
 ms.custom: sap:No connectivity to backend pool
 ai.hint.symptom-tags:
   - health-probe-failure
