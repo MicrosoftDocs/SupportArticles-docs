@@ -55,8 +55,11 @@ To resolve the "InvalidLoadBalancerProfileAllocatedOutboundPorts" error, follow 
 
     For more information about how to configure the allocated outbound ports and examples and calculations of the number of ports you might need, see [Configure the allocated outbound ports](/azure/aks/load-balancer-standard#configure-the-allocated-outbound-ports).
 
-## Reference
+## References
 
-[Use Source Network Address Translation (SNAT) for outbound connections](/azure/load-balancer/load-balancer-outbound-connections)
+- [Configure rolling upgrades for AKS node pools](/azure/aks/upgrade-aks-node-pools-rolling#customize-node-surge)
+- [AgentPoolUpgradeSettings](/rest/api/aks/agent-pools/create-or-update#agentpoolupgradesettings)
+- [Configure the allocated outbound ports](/azure/aks/load-balancer-standard#configure-the-allocated-outbound-ports)
+- [Use Source Network Address Translation (SNAT) for outbound connections](/azure/load-balancer/load-balancer-outbound-connections)
 
  
