@@ -1,12 +1,19 @@
 ---
-title: Troubleshoot Runbook Execution Issues When Using PowerShell
-description: Describes some runbook execution issues that occur when you use PowerShell in Azure Automation and provides solutions to them.
-ms.date: 06/13/2025
-ms.reviewer: adoyle, v-weizhu
+title: Troubleshoot runbook execution issues when using PowerShell
+description: Troubleshoot PowerShell runbook execution issues in Azure Automation, like deserialized object and Cannot invoke method errors. Learn how to fix them.
+ms.date: 09/29/2026
+ms.topic: troubleshooting
+manager: dcscontentpm
+author: kaushika-msft
+ms.author: kaushika
+ms.reviewer: adoyle, v-weizhu, kaushika
 ms.service: azure-automation
 ms.custom: sap:Runbook not working as expected
+ai-usage: ai-assisted
 ---
 # Troubleshoot runbook execution issues when using PowerShell in Azure Automation
+
+## Summary
 
 This article provides guidance on diagnosing and resolving runbook execution issues that occur when using PowerShell scripts or cmdlets in Azure Automation.
 
@@ -15,9 +22,9 @@ This article provides guidance on diagnosing and resolving runbook execution iss
 
 ## Limitations and known issues with PowerShell runbooks
 
-PowerShell runbooks are built on Windows PowerShell. You can edit their code directly by using the text editor in the Azure portal. You can also use an offline text editor and then [import the runbooks](/azure/automation/manage-runbooks#import-a-runbook) into Azure Automation. The PowerShell version is determined by the **Runtime version** specified.
+PowerShell runbooks are built on Windows PowerShell. You can edit their code directly by using the text editor in the [Azure portal](https://portal.azure.com). You can also use an offline text editor and then [import the runbooks](/azure/automation/manage-runbooks#import-a-runbook) into Azure Automation. The PowerShell version is determined by the **Runtime version** specified.
 
-**Limitations:**
+The following limitations apply to PowerShell runbooks:
 
 - For the PowerShell 7 runtime version, the module activities aren't extracted for the imported modules.
 - The `PSCredential` runbook parameter type isn't supported in PowerShell 7 runtime version.
@@ -27,43 +34,39 @@ PowerShell runbooks are built on Windows PowerShell. You can edit their code dir
 - Currently, only cloud jobs are supported for the PowerShell 7.2 runtime version.
 - Using Az modules and AzureRM modules in the same Automation account isn't supported. For more information, see [Update Azure PowerShell modules in Automation](/azure/automation/automation-update-azure-modules).
 
-**Known issues:**
+The following known issues apply to PowerShell runbooks:
 
-- Runbook properties defining logging preference isn't supported in PowerShell 7 runtime.
-
-  To work around this issue, explicitly set the preference at the start of the runbook as follows:
+- Runbook properties defining logging preference isn't supported in PowerShell 7 runtime. To work around this issue, explicitly set the preference at the start of the runbook as follows. Run the following command.
 
   ```azurepowershell
   $VerbosePreference = "Continue"
   $ProgressPreference = "Continue"
   ```
 
-- When you use the [ExchangeOnlineManagement](/powershell/exchange/exchange-online-powershell) module version 3.0.0 or later, you might experience errors.
-
-  To resolve this issue, make sure that you explicitly upload the `PowerShellGet` and `PackageManagement` modules.
+- When you use the [ExchangeOnlineManagement](/powershell/exchange/exchange-online-powershell) module version 3.0.0 or later, you might experience errors. To resolve this issue, make sure that you explicitly upload the `PowerShellGet` and `PackageManagement` modules.
 
 ## Before troubleshooting
 
 Follow these steps to identify and resolve common errors before further troubleshooting:
 
 1. Verify that your PowerShell script works outside of Azure Automation.
-2. Verify that the required modules are imported into your Azure Automation account.
+1. Verify that the required modules are imported into your Azure Automation account.
 
 ## Issue 1: Runbook execution fails due to deserialized object
 
-**Symptoms:**
+### Symptoms
 
-When you run a runbook, the following error message might be displayed:
+When you run a runbook, the following error message might display.
 
 > Cannot bind parameter \<ParameterName>.
 >
 > Cannot convert the \<ParameterType> value of type Deserialized \<ParameterType> to type \<ParameterType>.
 
-**Cause:**
+### Cause
 
 This error occurs with PowerShell Workflow runbooks because PowerShell Workflow stores complex objects in a deserialized format to persist your runbook state when the workflow is suspended.
 
-**Resolution:**
+### Resolution
 
 To resolve this issue, use one of the following methods:
 
@@ -73,24 +76,24 @@ To resolve this issue, use one of the following methods:
 
 ## Issue 2: PowerShell jobs fail with the "Cannot invoke method" error
 
-**Symptoms:**
+### Symptoms
 
 When you start a PowerShell job in a runbook that runs in an Azure sandbox, you receive the following error message:
 
 > Exception was thrown - Cannot invoke method. Method invocation is supported only on core types in this language mode.
 
-**Cause:**
+### Cause
 
-This error might occur because the runbook can't run in the [Full Language mode](/powershell/module/microsoft.powershell.core/about/about_language_modes).
+This error occurs because the runbook can't run in the [Full Language mode](/powershell/module/microsoft.powershell.core/about/about_language_modes).
 
-**Resolution:**
+### Resolution
 
 To resolve this error, use one of the following methods:
 
 - Use [Start-AzAutomationRunbook](/powershell/module/az.automation/start-azautomationrunbook) instead of [Start-Job](/powershell/module/microsoft.powershell.core/start-job) to start the runbook.
 - Try running the runbook on a [Hybrid Runbook Worker](/azure/automation/automation-hybrid-runbook-worker).
 
-## Reference
+## References
 
 - [Troubleshoot runbook issues](/azure/automation/troubleshoot/runbooks)
 - [Start a runbook in Azure Automation](/azure/automation/start-runbooks)

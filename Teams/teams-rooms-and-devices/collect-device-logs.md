@@ -10,26 +10,40 @@ ms.custom:
   - sap:Teams Device Management (TAC)
   - CI 160238
   - CSSTroubleshoot
-ms.reviewer: miaitelh
+ms.reviewer: miaitelh, mattslomka
 appliesto: 
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 10/30/2023
+ms.date: 08/18/2026
 ---
-# Collect device logs for Android Teams devices
+# Collect Teams device logs
 
-If you experience issues when you try to use Android devices that run Microsoft Teams, you'll have to collect diagnostic logs to be able to troubleshoot the issues. Here's how you can collect the device logs:
+If you experience issues when you try to use Microsoft Teams devices, you'll have to collect diagnostic logs to troubleshoot the issues. There are multiple methods available to collect Teams device logs but the recommended option is to use the Pro Management Portal.
 
-1. In the [Microsoft Teams admin center](https://admin.teams.microsoft.com/), select **Teams devices** on the navigation menu in the left pane, and then select the category of devices (such as **Phones**).
-2. Select the Android device from which you want to download logs, and then select **Download device logs**.
+## Collect logs by using the Pro Management Portal
 
-   :::image type="content" source="media/collect-device-logs/teams-devices.png" alt-text="Screenshot of the Teams device field. The feature that's named Download device logs is highlighted.":::
+1. Log in to the [Teams Pro Management Portal](/microsoftteams/rooms/enrolling-mtrp-managed-service).
+1. Select **Rooms** on the navigation menu in the left pane and then select the impacted device.
+4. Select the **Actions** tab > **Log Collection**.
+6. Select **Run**, and if applicable, select the logs that you want to collect.
+8. After a few minutes, open the **Activity** tab.
+9. Under **Room logs**, view the most recent log collection and select the Download icon.
 
-3. After a few minutes, select the **History** tab, and then select the **Download** link under **Diagnostics file**.
+The device logs will be downloaded to your computer, and you can open them or share them with a Microsoft Support professional for further assistance.
 
-   :::image type="content" source="media/collect-device-logs/history.png" alt-text="Screenshot of the History menu. The Download link is highlighted.":::
+## Collect Teams Rooms on Windows logs locally
 
-4. Compress the log files and share them when you create a support request with Microsoft Support. If you already have an open support request, upload the files to the location provided by the support engineer.
+You can use Teams PowerShell to collect logs locally by using the log collection script that ships with the Microsoft Teams Rooms app.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+In [Admin mode](/microsoftteams/rooms/rooms-operations#switching-to-admin-mode), start an elevated command prompt, and run the following command:
+
+```PowerShell
+powershell -ExecutionPolicy unrestricted c:\rigel\x64\scripts\provisioning\ScriptLaunch.ps1 CollectSrsV2Logs.ps1
+```
+
+The logs are output into a .zip file that's stored in the C:\rigel folder.
+
+## Collect Teams Rooms on Android logs locally
+
+Use the Original Equipment Manufacturer (OEM) tooling or web management portal to collect logs locally.

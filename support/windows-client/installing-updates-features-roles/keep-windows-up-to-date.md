@@ -7,7 +7,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-jomcc
 ms.custom:
-- sap:windows servicing,updates and features on demand\windows update configuration,settings and management
+- sap:Windows Servicing, Updates and Features on Demand\Windows Update - Configuring and managing client settings
 - pcy:WinComm Devices Deploy
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
@@ -42,7 +42,7 @@ New content is added to the site regularly so that you can obtain recent updates
 
 You can also use the Automatic Updates feature to install updates. By using Automatic Updates, you do not have to visit the Microsoft Update Web site to scan for updates. Instead, Windows automatically delivers them to your computer.
 
-Automatic Updates recognizes when you are online, and searches for updates from the Windows Update Web site. An icon appears in the notification area at the far right of the taskbar every time that new updates are available. You can specify how and when you want Windows to update your computer. For example, you can configure Windows to automatically download and to install updates on a schedule that you specify. Or you can have Windows notify you when it finds updates that are available for your computer, and then download the updates in the background. This enables you to continue to work uninterrupted. After the download is completed, an icon appears in the notification area with a message that the updates are ready to be installed. When you select the icon or the message, you can install the new updates in a few steps. For more information about the Automatic Updates feature, see [Description of the Automatic Updates feature in Windows](https://support.microsoft.com/help/294871).
+Automatic Updates recognizes when you are online, and searches for updates from the Windows Update Web site. An icon appears in the notification area at the far right of the taskbar every time that new updates are available. You can specify how and when you want Windows to update your computer. For example, you can configure Windows to automatically download and to install updates on a schedule that you specify. Or you can have Windows notify you when it finds updates that are available for your computer, and then download the updates in the background. This enables you to continue to work uninterrupted. After the download is completed, an icon appears in the notification area with a message that the updates are ready to be installed. When you select the icon or the message, you can install the new updates in a few steps. For more information about the Automatic Updates feature, see [How Windows Update works](/windows/deployment/update/how-windows-update-works).
 
 ## Download Windows updates
 

@@ -1,14 +1,16 @@
 ---
 title: Ingestion Key Rotation and Log Flow Resolution in Azure Native New Relic Service
 description: Resolve log flow issues after an ingestion key rotation in Azure Native New Relic Service. Follow the API steps to refresh the key and restore logs.
+manager: dcscontentpm
 author: kaushika-msft
 ms.author: kaushika
+ms.reviewer: learn-build-service-prod[bot]
 ms.service: partner-services
 ms.subservice: new-relic
 ms.custom: sap:Native New Relic Service
-ms.topic: troubleshooting-problem-resolution
-ms.date: 08/05/2026
-
+ms.topic: troubleshooting
+ms.date: 10/05/2026
+ai-usage: ai-assisted
 #customer intent: As a customer, I want to resolve log flow issues after ingestion key rotation so that my logs can continue flowing from Azure to New Relic without disruptions.
 ---
 
@@ -33,11 +35,12 @@ To work around the issue, manually update the ingestion key by using the followi
 1. Find the **Resource ID** of the Azure New Relic resource that's associated with the account to which the ingestion key was rotated. If multiple resources are linked to the same account, you can make the API call for any of them. The following is an example of a Resource ID: `/subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/myRG/providers/NewRelic.Observability/monitors/MyNewRelicResource`.
   It includes the subscription ID, the resource group name, and the Azure New Relic resource name.
 
-1. Make the API call to update the ingestion key. Use an API client to make a **POST** request to the following endpoint. Replace the placeholders with your actual values:
+1. Make the API call to update the ingestion key. Use an API client to make a **POST** request to the following endpoint. Replace the placeholders with your actual values.
 
      ```HTTP
      https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/NewRelic.Observability/monitors/{AzureNewRelicResourceName}/refreshIngestionKey
      ```
+
      In this example, the full API endpoint is:
      ```HTTP
      https://management.azure.com/subscriptions/aaaabbbb-0000-cccc-1111-dddd2222eeee/resourceGroups/myRG/providers/NewRelic.Observability/monitors/MyNewRelicResource/refreshIngestionKey
@@ -49,9 +52,11 @@ To work around the issue, manually update the ingestion key by using the followi
 
      **Authorization**: Use a **Bearer Token** for authentication.
      
-     To get the token, use one of the following methods:
+     To get the token, use one of the following methods.
 
      **Use Azure Cloud PowerShell**
+
+     Follow these steps:
 
      1. Sign in to the [Azure portal](https://portal.azure.com), and then open the Azure Cloud PowerShell. For more information, see [Start Azure Cloud PowerShell](/azure/cloud-shell/get-started/classic?tabs=azurecli#start-cloud-shell).
      1. Switch to Bash, and then run the following command: `az account get-access-token --resource-type arm`.
@@ -59,6 +64,8 @@ To work around the issue, manually update the ingestion key by using the followi
 
      **Use browser Developer tools**
    
+     Follow these steps:
+
       1. In the browser, press F12 to open Developer tools.
       1. Select **Network**, and then select **Disable Cache**.
       1. Open the [Azure portal](https://portal.azure.com).
@@ -66,6 +73,7 @@ To work around the issue, manually update the ingestion key by using the followi
       1. Filter the results by using **Fetch/XHR**. You can find a bearer token in the request headers of the corresponding API call. Use it while it remains active.
       
          :::image type="content" source="media/ingestion-key-rotation-log-flow/get-token.png" alt-text="Screenshot of the browser Developer tools Network tab showing the access token in the request headers." lightbox="media/ingestion-key-rotation-log-flow/get-token.png":::
+
 1. The request returns a **204** status code that indicates that the ingestion key was successfully updated.
    
     > [!NOTE]

@@ -22,6 +22,8 @@ landingContent:
             url: experience/copilot-chat-loading-issues.md
           - text: Copilot icon doesn't appear in the Edge sidebar
             url: experience/copilot-icon-missing-sidebar.md
+          - text: Webpage translation isn't offered or doesn't complete
+            url: experience/edge-translate-not-working.md
 
   - title: Manage and Deploy
     linkLists:
@@ -62,6 +64,8 @@ landingContent:
           url: development/self-host-extension-deploy.md
         - text: IE mode blocks add-on installation because of unverified publisher
           url: development/ie-mode-blocks-addon.md
+        - text: Repeated prompts for proxy credentials
+          url: development/edge-proxy-authentication-loop.md
         - text: Self-hosted extension doesn't update automatically
           url: development/self-host-extension-update.md
         - text: Troubleshoot video playback problems in Microsoft Edge

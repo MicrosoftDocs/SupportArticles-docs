@@ -1,10 +1,10 @@
 ---
 title: Unable to Mount Azure Disk Volumes
 description: Troubleshoot Azure disk volume mount errors in AKS, identify common causes, and apply fixes to restore pod startup. Start resolving issues now.
-ms.date: 03/22/2025
+ms.date: 08/31/2026
 author: kaushika-msft
 ms.author: kaushika
-ms.reviewer: chiragpa, akscsscic, v-weizhu
+ms.reviewer: chiragpa, akscsscic, v-weizhu, ookour
 ms.service: azure-kubernetes-service
 ms.custom: sap:Storage
 ---
@@ -136,15 +136,25 @@ Here are details of this error:
 
 > Multi-Attach error for volume "\<PV/disk-name>" Volume is already used by pod(s) \<pod-name>
 
-### Cause: disk is mounted to multiple pods hosted on different nodes
+### Cause 1: disk is mounted to multiple pods hosted on different nodes
 
 An Azure disk can be mounted only as [ReadWriteOnce](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#access-modes). This makes it available to one node in AKS. That means that it can be attached to only one node and mounted to only a pod that's hosted by that node. If you mount the same disk to a pod on another node, you experience this error because the disk is already attached to a node.
 
-### Solution: make sure disk isn't mounted by multiple pods hosted on different nodes
+### Solution 1: make sure disk isn't mounted by multiple pods hosted on different nodes
 
 To resolve this error, refer to [Multi-Attach error](https://github.com/andyzhangx/demo/blob/master/issues/azuredisk-issues.md#25-multi-attach-error).
 
 To share a PersistentVolume across multiple nodes, use [Azure Files](/azure/aks/azure-csi-files-storage-provision).
+
+### Cause 2: Force reboot the node without deleting the pod
+
+If a node running a pod with an Azure Disk mounted is forcibly rebooted or stopped without going through the pod deletion process, the pod will be rescheduled to another node by the scheduler after a certain period of time. However, after the pod is rescheduled to another node, it may temporarily fail to start due to a multi-attach error.
+
+### Solution 2: Typically resolves automatically within 2–3 minutes
+
+This issue is temporary and typically resolves within a few minutes without requiring any additional action. Once the issue is resolved, the pod starts successfully.
+
+This issue occurs because the node is forcibly rebooted while the Azure Disk is still mounted to the previous node and has not been detached. Therefore, to prevent this error and delays in pod startup, it is recommended to follow the pod deletion procedure before rebooting or stopping the node.
 
 ## <a id="error4"></a>StorageAccountType UltraSSD_LRS can be used only when additionalCapabilities.ultraSSDEnabled is set
 

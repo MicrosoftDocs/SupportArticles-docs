@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, LARRYGA
 ms.custom:
-- sap:windows servicing,updates and features on demand\windows update fails - installation stops with error
+- sap:Windows Servicing, Updates and Features on Demand\Windows Update - Install errors unknown or code not listed
 - pcy:WinComm Devices Deploy
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
@@ -43,8 +43,6 @@ Sfc [/Scannow] [/Scanonce] [/Scanboot] [/Revert] [/Purgecache] [/Cachesize=x]
 - `/Cachesize=x`: Sets the file cache size to **x** megabytes (MB). The default size of the cache is 50 MB. This command requires you to restart the computer, and then run the `/purgecache` command to adjust the size of the on-disk cache. This command sets the **SfcQuota** DWORD value to **x** in the following registry key:
 
     `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon`
-
-For more information about the Windows File Protection feature, see [Description of the Windows File Protection feature](https://support.microsoft.com/help/222193).
 
 ## Data collection
 

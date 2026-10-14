@@ -26,6 +26,8 @@ When you compose a new email by using Outlook on the Web or new Outlook, the **F
 
 In Outlook on the web or new Outlook, when you select the **New Mail** option, the **From** field in the form displays a secondary email address for you such as `joe@joecontoso.onmicrosoft.com` by default.
 
+:::image type="content" source="media/default-from-address-is-secondary-email/secondary-email-in-from-field.png" alt-text="Screenshot of a new email form with the secondary email address in the From field highlighted.":::
+
 ## Cause
 
 This behavior occurs when the following conditions are true:
@@ -50,6 +52,8 @@ To verify the cause of the issue, use the following steps:
    If the output of the cmdlet is your secondary email address, then this setting is likely the cause of the issue.
 
 Additionally in Outlook on the web and in new Outlook, even if the option for your secondary email address `joe@joecontoso.onmicrosoft.com` under **Mail** > **Layout** > **Compose and Reply** > **Addresses to send from** is not selected, it is still possible that this address displays as the default value in the **From** field.
+
+:::image type="content" source="media/default-from-address-is-secondary-email/secondary-email-option-unchecked.png" alt-text="Screenshot of the unchecked option for the secondary email address highlighted.":::
 
 ## Resolution
 

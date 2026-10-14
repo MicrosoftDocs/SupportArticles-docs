@@ -4,7 +4,7 @@ description: Diagnose and fix Azure private endpoint and Private DNS zone deleti
 ms.service: azure-private-link
 ms.topic: troubleshooting
 ms.custom: sap:Private Endpoints
-ms.date: 6/12/2026
+ms.date: 06/12/2026
 ai.hint.symptom-tags:
   - private-endpoint-deletion-failed
   - private-dns-zone-deletion-failed

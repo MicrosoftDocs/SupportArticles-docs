@@ -31,20 +31,22 @@ landingContent:
             url: administration/entity-names-duplicated-numbers.md
           - text: '"The user has not been assigned any roles" error'
             url: administration/user-has-no-roles.md
+          - text: Troubleshoot issues with Dynamics 365 Field Service settings
+            url: administration/settings-troubleshooting.md
   
   # Card
   - title: Scheduling
     linkLists:
       - linkListType: how-to-guide
         links:
+          - text: Bookable resources don't display on the schedule board
+            url: scheduling/schedule-board-missing-resources.md
           - text: Booking card shows NaN or incorrect date and time on the schedule board
             url: scheduling/schedule-board-nan-datetime.md
           - text: Issue with cascading crew changes when assigning a booking
             url: scheduling/cascade-crew-changes-booking.md
           - text: Missing form context on bookable resource forms
             url: scheduling/missing-form-context-bookable-resource.md
-          - text: Resources don't display on the schedule board
-            url: scheduling/schedule-board-missing-resources.md
           - text: Schedule board errors due to version mismatches
             url: scheduling/schedule-board-version-mismatch.md
           - text: Schedule board is slow to load or experiences extreme latency
@@ -73,16 +75,16 @@ landingContent:
             url: mobile-app/booking-timestamp-incorrect-time.md
           - text: Camera pictures are blurry or not focused
             url: mobile-app/camera-picture-not-focused.md
-          - text: Common issues with the Field Service mobile app
-            url: mobile-app/mobile-app-common-issues.md
           - text: Duplicated inspection responses
             url: mobile-app/duplicate-inspection-responses.md
           - text: Incorrect or missing data in offline mode
             url: mobile-app/incorrect-missing-data-offline-mode.md
+          - text: Resolve mobile offline profile and related-table errors
+            url: mobile-app/publish-mobile-offline-profile.md
           - text: Settings area is missing in the Field Service Mobile app module navigation
             url: mobile-app/settings-area-missing.md
-          - text: Troubleshoot issues with publishing a mobile offline profile
-            url: mobile-app/publish-mobile-offline-profile.md
+          - text: Troubleshoot Field Service mobile app issues
+            url: mobile-app/mobile-app-common-issues.md
           - text: Troubleshoot slow or unnecessary network calls
             url: mobile-app/unnecessary-network-calls.md
           - text: '"Validations have been restarted in the background" error'

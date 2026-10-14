@@ -1,22 +1,22 @@
 ---
-title: Troubleshoot Windows Installation Error 0x800f0831
-description: Learn how to resolve Windows Update installation error 0x800f0831 (CBS E STORE CORRUPTION).
+title: Troubleshoot Windows Update installation Error 0x800F0831
+description: Learn how to resolve Windows Update installation error 0x800F0831 (CBS E STORE CORRUPTION).
 ms.date: 04/22/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: scotro,mwesley,kaushika,v-appelgatet
 ms.custom:
-- sap:windows servicing,updates and features on demand\windows update fails - installation stops with error
+- sap:Windows Servicing, Updates and Features on Demand\Windows Update - Install errors starting with 0x800F (CBS E)
 - pcy:WinComm Devices Deploy
 appliesto:
   - ✅ <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
   - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
   - ✅ <a href=https://learn.microsoft.com/lifecycle/products/azure-virtual-machine target=_blank>Supported versions of Azure Virtual Machine</a>
 ---
-# Troubleshoot Windows Update installation error 0x800f0831 (CBS_E_STORE_CORRUPTION)
+# Troubleshoot Windows Update installation error 0x800F0831 (CBS_E_STORE_CORRUPTION)
 
-Windows Update error 0x800f0831 (`CBS_E_STORE_CORRUPTION`) indicates that the Windows component store is corrupted. This condition prevents updates from installing correctly. This error typically occurs if a required package is missing from the store or isn't fully applied to the registry.
+Windows Update error 0x800F0831 (`CBS_E_STORE_CORRUPTION`) indicates that the Windows component store is corrupted. This condition prevents updates from installing correctly. This error typically occurs if a required package is missing from the store or isn't fully applied to the registry.
 
 Use this article to identify the cause of the error and apply the appropriate fix for your environment.
 

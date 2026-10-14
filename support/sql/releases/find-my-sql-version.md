@@ -65,7 +65,7 @@ The following example shows the output of this query:
 Microsoft SQL Server 2022 (RTM-CU14) (KB5038325) - 16.0.4135.4 (X64)   Jul 10 2024 14:09:09   Copyright (C) 2022 Microsoft Corporation  Developer Edition (64-bit) on Windows 11 Enterprise 10.0 <X64> (Build 22631: ) (Hypervisor) 
 ```
 
-From the output, you can identify the SQL Server product version, service pack level, cumulative update level, or security update level (if applicable). For more information, see [Latest updates and version history for SQL Server](download-and-install-latest-updates.md).
+From the output, you can identify the SQL Server product version, service pack level, cumulative update level, or security update level (if applicable). For more information, see [Latest updates and version history for SQL Server](https://support.microsoft.com/help/321185).
 
 ## Use the SERVERPROPERTY function
 
@@ -108,5 +108,5 @@ The following image shows a sample report:
 ## Related content
 
 - [Determine version information of SQL Server components and client tools](components-client-tools-versions.md)
-- [Latest updates and version history for SQL Server](download-and-install-latest-updates.md)
+- [Latest updates and version history for SQL Server](https://support.microsoft.com/help/321185)
 - [SQL Server installation guide](/sql/database-engine/install-windows/install-sql-server)

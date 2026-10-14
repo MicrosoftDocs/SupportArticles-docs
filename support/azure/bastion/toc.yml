@@ -12,6 +12,8 @@ items:
     href: troubleshoot-nsg-configuration-problems.md
   - name: Troubleshoot authentication problems
     href: troubleshoot-authentication-problems.md
+  - name: Troubleshoot Microsoft Entra ID portal RDP through Azure Bastion
+    href: troubleshoot-bastion-entra-id-portal-rdp.md
   - name: Troubleshoot connectivity problems
     href: troubleshoot-connectivity-problems.md
   - name: Troubleshoot shareable links problems

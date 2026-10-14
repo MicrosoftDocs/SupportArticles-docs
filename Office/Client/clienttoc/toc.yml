@@ -22,6 +22,16 @@ items:
           href: ../access/error-when-perform-operation-on-table.md
         - name: Can't process transactions in a multi-user environment
           href: ../access/file-sharing-lock-count-exceeded.md
+    - name: Activation
+      items:
+        - name: Microsoft Office Authentication or Identity Diagnostic (MSOAID)
+          href: ../activation/use-msoaid-tool-for-authentication-issues.md
+        - name: Reset activation state for Microsoft 365 Apps for enterprise
+          href: ../activation/reset-activation-state.md
+    - name: Diagnostic logs
+      items:
+        - name: Enable enterprise logging
+          href: ../diagnostic-logs/enable-enterprise-logging.md    
     - name: End of Support
       items:
         - name: Office 2007 has reached end of extended support
@@ -162,6 +172,10 @@ items:
           href: ../excel/mentions-not-resolve-user-information.md
         - name: VBA writes to cells slowly when ActiveX controls are invisible
           href: ../excel/vba-writes-to-cells-slowly.md
+    - name: Forms
+      items:
+        - name: Resolve file upload errors in Microsoft Forms
+          href: ../forms/resolve-file-upload-errors-forms.md
     - name: Office Online Server
       items:
         - name: Web sites lose SSL certificate bindings

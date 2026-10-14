@@ -4,7 +4,7 @@ description: Learn to resolve private endpoint DNS issues where FQDNs resolve to
 ms.service: azure-private-link
 ms.topic: troubleshooting
 ms.custom: sap:Private Endpoints
-ms.date: 6/12/2026
+ms.date: 06/12/2026
 ai.hint.symptom-tags:
   - dns-resolution-failure
   - private-endpoint-public-ip

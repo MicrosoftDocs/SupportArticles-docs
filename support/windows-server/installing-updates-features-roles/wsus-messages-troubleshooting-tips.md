@@ -4,7 +4,7 @@ description: Windows Server Update Service (WSUS) article - Troubleshoot using W
 ms.topic: troubleshooting
 ms.date: 02/12/2026
 ms.custom:
-- sap:windows servicing,updates and features on demand\windows update configuration,settings and management"
+- sap:Windows Servicing, Updates and Features on Demand\Windows Update - Configuring and managing client settings
 - pcy:WinComm Devices Deploy
 appliesto:
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>

@@ -4,7 +4,7 @@ description: Learn how to quickly resolve many problems, which may come up durin
 ms.date: 02/12/2026
 manager: dcscontentpm
 ms.custom:
-- sap:windows setup,upgrade and deployment\installing or upgrading windows
+- sap:Windows Setup, Upgrade and Deployment\Installing or upgrading Windows
 - pcy:WinComm Devices Deploy
 ms.topic: troubleshooting
 ms.reviewer: dougeby, kaushika

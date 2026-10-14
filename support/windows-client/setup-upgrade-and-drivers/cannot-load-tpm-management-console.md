@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
 ms.custom:
-- sap:windows device and driver management\Issues with drivers or updates for peripheral devices
+- sap:Windows Device and Driver Management\Issues with drivers or updates for system components
 - pcy:WinComm Devices Deploy
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
@@ -40,7 +40,7 @@ $tpm = gwmi -n root\cimv2\security\microsofttpm win32_tpm
 $tpm.SetPhysicalPresenceRequest(6)
 ```
 
-> [!Note]
+> [!NOTE]
 > After you run the command, you must restart the operating system and accept any BIOS prompts.
 
 ## Status

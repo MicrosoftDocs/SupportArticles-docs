@@ -38,7 +38,7 @@ Error: A user request from the session with SPID <SPID> generated a fatal except
 
 This problem is a known issue with [LIGHTWEIGHT_QUERY_PROFILING](/sql/t-sql/statements/alter-database-scoped-configuration-transact-sql#lightweight_query_profiling---on--off-) in SQL Server 2022.
 
-The problem is fixed in [Cumulative Update 4 for SQL Server 2022](../../../releases/sqlserver-2022/cumulativeupdate4.md) and [Cumulative Update 20 for SQL Server 2019](../../../releases/sqlserver-2019/cumulativeupdate20.md#2204764).
+The problem is fixed in [Cumulative Update 4 for SQL Server 2022](https://support.microsoft.com/help/5026717) and [Cumulative Update 20 for SQL Server 2019](https://support.microsoft.com/help/5024276#2204764).
 
 ### Workaround
 
@@ -80,7 +80,7 @@ To bring the SQL Server instance online, bypass the running upgrade script by fo
 A replication error occurs when you upgrade to SQL Server 2022 on a server that hosts the [distribution database](/sql/relational-databases/replication/distribution-database) in an availability group (AG).
 
 > [!NOTE]
-> This issue can also occur when you upgrade SQL Server from version 2016 SP2 CU3, SQL Server 2017 CU6, or later versions to SQL Server 2019. The fix for this issue is available in [Cumulative Update 21 for SQL Server 2019](../../../releases/sqlserver-2019/cumulativeupdate21.md).
+> This issue can also occur when you upgrade SQL Server from version 2016 SP2 CU3, SQL Server 2017 CU6, or later versions to SQL Server 2019. The fix for this issue is available in [Cumulative Update 21 for SQL Server 2019](https://support.microsoft.com/help/5025808).
 
 ### Error message
 
@@ -101,7 +101,7 @@ The error occurs when the distribution database is part of an AG, and an in-plac
 
 ### Solution
 
-The fix is available in [Cumulative Update 5 for SQL Server 2022](../../../releases/sqlserver-2022/cumulativeupdate5.md).
+The fix is available in [Cumulative Update 5 for SQL Server 2022](https://support.microsoft.com/help/5026806).
 
 ### Workaround
 

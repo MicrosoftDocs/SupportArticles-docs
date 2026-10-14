@@ -1,6 +1,6 @@
 ---
-title: Error 0x800719e4 (ERROR_LOG_FULL) When Windows Update Fails
-description: Discusses how to fix Windows Update failures related to error code `0x800719e4 (ERROR_LOG_FULL)`--typically on Azure-hosted Windows virtual machines.
+title: Error 0x800719E4 (ERROR_LOG_FULL) When Windows Update Fails
+description: Discusses how to fix Windows Update failures related to error code `0x800719E4 (ERROR_LOG_FULL)`--typically on Azure-hosted Windows virtual machines.
 ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
@@ -15,15 +15,15 @@ appliesto:
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 - ✅ <a href=https://learn.microsoft.com/lifecycle/products/azure-virtual-machine target=_blank>Azure Virtual Machines</a>
 ---
-# Error 0x800719e4 (ERROR_LOG_FULL) when Windows Update fails
+# Error 0x800719E4 (ERROR_LOG_FULL) when Windows Update fails
 
 ## Summary
 
-This article explains how to fix Windows Update error `0x800719e4 (ERROR_LOG_FULL)` when updates fail on supported Windows Server, Windows client, and Azure virtual machines. It describes common causes such as full or corrupted transaction logs, ghosted network adapters or drivers, and misconfigured update orchestration and provides step-by-step guidance to restore successful Windows Update operations.
+This article explains how to fix Windows Update error `0x800719E4 (ERROR_LOG_FULL)` when updates fail on supported Windows Server, Windows client, and Azure virtual machines. It describes common causes such as full or corrupted transaction logs, ghosted network adapters or drivers, and misconfigured update orchestration and provides step-by-step guidance to restore successful Windows Update operations.
 
 ## Symptoms
 
-When you try to install a Windows update, the installation fails and returns error code `0x800719e4 (ERROR_LOG_FULL)`. The update might appear to install. However, after the computer restarts at the end of installation, the installation rolls back. The Windows Update history might list repeated failed installations.
+When you try to install a Windows update, the installation fails and returns error code `0x800719E4 (ERROR_LOG_FULL)`. The update might appear to install. However, after the computer restarts at the end of installation, the installation rolls back. The Windows Update history might list repeated failed installations.
 
 When this issue occurs, the System log and Component-Based Servicing (CBS) log might include any of the following error messages:
 

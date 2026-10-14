@@ -1,13 +1,14 @@
 ---
-title: Troubleshoot an Application Gateway in Azure – ILB ASE
-description: "Troubleshoot backend certificate issues with Application Gateway using an internal load balancer ASE in Azure. Get solutions now."
+title: Troubleshoot backend certificate issues with internal load balancer and App Service Environment
+description: Troubleshoot backend certificate issues with Application Gateway using an internal load balancer App Service Environment in Azure. Get solutions now.
 services: application-gateway
 author: kaushika-msft
 ms.author: kaushika
+ms.reviewer: kaushika
 manager: dcscontentpm
 ms.service: azure-application-gateway
 ms.topic: troubleshooting
-ms.date: 03/27/2026
+ms.date: 08/28/2026
 ms.custom: sap:Configuration and Setup
 
 # Customer intent: As a cloud administrator, I want to troubleshoot backend server certificate issues with an internal load balancer and application gateway, so that I can ensure the health of my application services and maintain secure connections in Azure.
@@ -17,13 +18,13 @@ ms.custom: sap:Configuration and Setup
 
 ## Summary
 
-This article helps you troubleshoot a common issue when using end-to-end TLS in Azure: the backend server certificate isn't allow-listed when you create an application gateway with an internal load balancer (ILB) and App Service Environment (ASE). You'll learn how to resolve certificate mismatches that cause backend server health issues.
+This article helps you troubleshoot a common issue when using end-to-end Transport Layer Security (TLS) in Azure. The backend server certificate isn't allow-listed when you create an application gateway with an internal load balancer (ILB) and App Service Environment. 
 
 ## Symptoms
 
-When you create an application gateway by using an ILB with an ASE at the back end, the backend server might become unhealthy. This problem occurs if the authentication certificate of the application gateway doesn't match the configured certificate on the backend server. The following example shows one scenario:
+When you create an application gateway by using an ILB with App Service Environment at the backend, the backend server might become unhealthy. This problem occurs if the authentication certificate of the application gateway doesn't match the configured certificate on the backend server. The following example shows one scenario:
 
-**Application Gateway configuration:**
+**Application Gateway configuration**
 
 - **Listener:** Multi-site
 - **Port:** 443
@@ -37,7 +38,7 @@ When you create an application gateway by using an ILB with an ASE at the back e
 - **Authentication Certificate:** .cer of test.appgwtestase.com
 - **Backend Health:** Unhealthy – Backend server certificate isn't allow-listed with Application Gateway.
 
-**ASE configuration:**
+**App Service Environment configuration**
 
 - **ILB IP:** 10.1.5.11
 - **Domain name:** appgwtestase.com
@@ -46,21 +47,17 @@ When you create an application gateway by using an ILB with an ASE at the back e
 
 When you access the application gateway, you receive the following error message because the backend server is unhealthy:
 
-**502 – Web server received an invalid response while acting as a gateway or proxy server.**
+"502 – Web server received an invalid response while acting as a gateway or proxy server."
 
 ## Solution
 
-When you don't use a host name to access an HTTPS website, the backend server returns the configured certificate on the default website, in case SNI is disabled. For an ILB ASE, the default certificate comes from the ILB certificate. If there are no configured certificates for the ILB, the certificate comes from the ASE App certificate.
+When you don't use a host name to access an HTTPS website, the backend server returns the configured certificate on the default website in case Server Name Indication (SNI) is disabled. For an ILB App Service Environment, the default certificate comes from the ILB certificate. If there are no configured certificates for the ILB, the certificate comes from the App Service Environment app certificate.
 
 When you use a fully qualified domain name (FQDN) to access the ILB, the backend server returns the correct certificate that's uploaded in the HTTP settings. If that condition isn't true, consider the following options:
 
-- Use FQDN in the backend pool of the application gateway to point to the IP address of the ILB. This option only works if you have a private DNS zone or a custom DNS configured. Otherwise, you have to create an "A" record for a public DNS.
-
+- Use FQDN in the backend pool of the application gateway to point to the IP address of the ILB. This option only works if you have a private Domain Name System (DNS) zone or a custom DNS configured. Otherwise, you have to create an `A` record for a public DNS.
 - Use the uploaded certificate on the ILB or the default certificate (ILB certificate) in the HTTP settings. The application gateway gets the certificate when it accesses the ILB's IP for the probe.
+- Use a wildcard certificate on the ILB and the backend server so that for all the websites, the certificate is common. However, this solution is possible only for subdomains and not if each website requires different hostnames.
+- Deselect the **Use for App service** option for the application gateway if you're using the IP address of the ILB.
 
-- Use a wildcard certificate on the ILB and the backend server, so that for all the websites, the certificate is common. However, this solution is possible only for subdomains and not if each website requires different hostnames.
-
-- Clear the **Use for App service** option for the application gateway if you're using the IP address of the ILB.
-
-To reduce overhead, upload the ILB certificate in the HTTP settings to make the probe path work. (This step is just for allow listing. It isn't used for TLS communication.) You can retrieve the ILB certificate by accessing the ILB by using its IP address from your browser on HTTPS, then exporting the TLS/SSL certificate in a Base-64 encoded CER format and uploading the certificate on the respective HTTP settings.
-
+To reduce overhead, upload the ILB certificate in the HTTP settings to make the probe path work. (This is only for allow listing. It isn't used for TLS communication.) You can retrieve the ILB certificate by accessing the ILB by using its IP address from your browser on HTTPS, exporting the TLS/SSL certificate in a Base-64 encoded .cer file format, and then uploading the certificate on the respective HTTP settings.

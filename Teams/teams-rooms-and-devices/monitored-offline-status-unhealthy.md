@@ -1,9 +1,9 @@
 ---
 title: The Monitored or Offline status of a Teams Rooms device is Unhealthy
 description: Resolve the issue that causes the Monitored or Offline signal of a Microsoft Teams Rooms device to appear as Unhealthy.
-ms.reviewer: joolive
+ms.reviewer: joolive, mattslomka
 ms.topic: troubleshooting
-ms.date: 12/10/2023
+ms.date: 08/18/2026
 author: Cloud-Writer
 ms.author: meerak
 manager: dcscontentpm
@@ -44,6 +44,9 @@ If the **Monitored** signal is **Unhealthy**, you can use the Teams Rooms Pro ag
    >
    > If you can't download directly from the device because of network access restrictions, use another device to download the file, and then copy the file to the affected device by using a USB drive.
 3. Open the .zip file, and then double-click or tap the *MTRPro.AgentTestTool.exe* executable. When you're prompted to extract the file, select **Run** to execute it directly.
+
+   > [!TIP]
+   > For GCC, GCC-High, & DoD customers: run the agent test tool with the appropriate parameter (-USGovGcc, -gcch, or -dod) to validate the corresponding configuration for your cloud.
 4. On the **User Account Control** dialog, select **Yes** to continue.
 
 After the agent test tool completes, a brief summary of the tool's results is displayed in the PowerShell console. Press **ENTER** to continue, and the following information is available:
@@ -70,7 +73,6 @@ The Teams Rooms Pro agent (also known as Microsoft Managed Rooms or MMR agent) i
 After the agent is installed, go to **Settings** > **Apps** > **Apps & features**, and verify that **Microsoft Managed Rooms** is listed under **App list**.
 
 > [!NOTE]
->
 > The agent might be removed by certain maintenance processes, such as manual uninstallation, device reset, or reimage.
 
 ### Check whether the Teams Rooms Pro agent is running

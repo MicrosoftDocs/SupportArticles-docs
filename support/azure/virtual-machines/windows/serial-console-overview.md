@@ -8,7 +8,7 @@ tags: azure-resource-manager
 ms.service: azure-virtual-machines
 ms.tgt_pltfrm: vm
 ms.workload: infrastructure-services
-ms.date: 01/27/2026
+ms.date: 09/10/2026
 ms.author: kaushika
 ms.reviewer: mbifeld
 ms.custom: sap:Cannot connect to my VM
@@ -59,6 +59,7 @@ Serial Console is available for virtual machines and virtual machine scale sets 
 - France South
 - Germany North
 - Germany West Central
+- India South Central
 - Indonesia Central
 - Israel Central
 - Israel Northwest
@@ -86,6 +87,7 @@ Serial Console is available for virtual machines and virtual machine scale sets 
 - Sweden South
 - Switzerland North
 - Switzerland West
+- Taiwan North
 - UAE Central
 - UAE North
 - UK South

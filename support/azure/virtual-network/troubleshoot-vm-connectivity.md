@@ -7,7 +7,7 @@ manager: dcscontentpm
 ms.topic: troubleshooting
 ms.service: azure-virtual-network
 ms.localizationpriority: medium
-ms.date: 04/17/2025
+ms.date: 09/15/2026
 ms.custom: sap:Connectivity
 # Customer intent: As an IT administrator, I want to diagnose and resolve connectivity issues for Azure virtual machines, so that I can ensure reliable communication between VMs and maintain optimal network performance.
 ---
@@ -51,6 +51,9 @@ To resolve these problems, follow the steps in the following section.
 
 > [!TIP]
 > If the ping test is successful, go to Step 3. Otherwise, go to the next step.
+
+> [!NOTE]
+> TCPing tests the specified TCP port, not Internet Control Message Protocol (ICMP) echo. If TCPing or a separate ICMP test fails, inspect the destination VM's guest OS firewall in addition to the Azure network security group. Allow only the required inbound TCP port and, if you use ICMP for testing, the required ICMP echo traffic from an appropriate source. For Windows, see [Create an inbound ICMP rule](/windows/security/operating-system-security/network-security/windows-firewall/configure#create-an-inbound-icmp-rule) and [manage Windows Firewall with `netsh advfirewall`](/windows/security/operating-system-security/network-security/windows-firewall/configure-with-command-line). For Linux, inspect the applicable `iptables` or `firewalld` rules; see [guest OS firewall diagnostics](../bastion/troubleshoot-session-fails-target-vm-unhealthy.md#resolution-d). Don't disable the guest firewall as a remediation.
 
 #### Step 2: Check the Network security group settings.
 

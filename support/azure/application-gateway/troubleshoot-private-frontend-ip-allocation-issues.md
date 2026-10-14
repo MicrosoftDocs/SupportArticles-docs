@@ -1,26 +1,30 @@
 ---
 title: Troubleshoot private front-end IP allocation issues in Azure Application Gateway
 description: Learn how private front-end IP allocation affects Application Gateway. Follow the troubleshooting steps to fix provisioning failures or traffic routing issues. 
-ms.date: 04/02/2026
-ms.author: lalbadarneh
-ms.editor: v-jsitser
-ms.reviewer: giverm
+ms.date: 09/23/2026
+ms.topic: troubleshooting
+manager: dcscontentpm
+author: kaushika-msft
+ms.author: kaushika
+ms.reviewer: giverm, lalbadarneh, kaushika
 ms.service: azure-application-gateway
 ms.custom: sap:Issues with Create, Update and Delete (CRUD)
-
 #customer intent: As an Azure Application Gateway administrator, I want to understand private front-end IP allocation behavior so that I can prevent provisioning failures and unexpected traffic routing issues.
+ai-usage: ai-assisted
 ---
 
 # Troubleshoot private front-end IP allocation issues in Azure Application Gateway
 
 ## Summary
 
-This article describes scenarios in which Microsoft Azure Application Gateway behavior that's related to private front-end IP allocation causes unexpected failures or traffic routing issues. This behavior is by design, and can occur in specific deployment or operational scenarios.
+This article helps you troubleshoot private front-end IP allocation issues in Azure Application Gateway that cause provisioning failures or unexpected traffic routing. Learn why these issues occur by design and how to resolve IP conflicts and IP changes after stop and start operations.
 
 ## Prerequisites
 
-- An Application Gateway deployed by having a private front-end IP
-- Access to Application Gateway configuration and DNS settings
+Ensure you have the following prerequisites:
+
+- An Application Gateway deployed with a private front-end IP
+- Access to Application Gateway configuration and Domain Name System (DNS) settings
 
 ## Troubleshooting scenarios
 
@@ -40,7 +44,7 @@ You observe the following behavior:
 
 #### Cause
 
-Application Gateway differentiates between:
+Application Gateway differentiates between the following:
 
 - Configured private front-end IPs
 - Active private front-end IPs that are tied to a listener and routing rule
@@ -77,7 +81,7 @@ If the previous front-end IP is no longer associated with a front-end configurat
 
 #### Cause
 
-On Application Gateway v1:
+On Application Gateway v1, causes include the following:
 
 - A stop and start operation might cause a new private front-end IP address if dynamic allocation is used.
 - One of the Application Gateway instances might reuse the previously assigned front-end IP address internally.
@@ -103,7 +107,7 @@ For environments that require a stable front-end private IP, consider using Appl
 
 ### Advanced troubleshooting and data collection
 
-If the issue persists:
+If the issue persists, try the following steps:
 
 - Review the Application Gateway provisioning state and recent configuration changes.
 - Verify resolution from the client perspective.

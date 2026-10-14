@@ -1,12 +1,13 @@
 ---
-title: Resolve missing resources on Dynamics 365 Schedule Board
-description: Resolve the missing bookable resources issue on the Dynamics 365 Field Service schedule board. Learn how to fix scheduling methods, filters, work hours, and permissions.
-ms.reviewer: mkelleher, puneetsingh, v-shaywood
-ms.date: 03/16/2026
+title: Bookable Resources Don't Display on the Schedule Board
+description: Fix missing bookable resources on the Dynamics 365 Field Service schedule board. Check scheduling methods, board filters, work hours, status, and permissions.
+ms.reviewer: mkelleher, puneetsingh, v-shaywood, anclear
+ms.date: 09/08/2026
 ms.custom: sap:Schedule Board\Issues with usability
+ai-usage: ai-assisted
 ---
 
-# Resources don't display on the schedule board
+# Bookable resources don't display on the schedule board
 
 ## Summary
 
@@ -28,6 +29,8 @@ Resources might not appear on the schedule board for several reasons:
 
 - The resource's **Scheduling Method** isn't set for the schedule board.
 - The board tab filters exclude the resource (territory, role, organizational unit, or resource type filters).
+- Two or more board tab filters have no resources in common. For example, if the territory filter and the resource category (role) filter don't share any resources, the combined result is empty and no resources appear.
+- The resource isn't enabled to display on the schedule board (the **Display on Schedule Board** option is turned off). The default schedule board view shows only resources that are enabled for the board.
 - The resource doesn't have work hours configured for the viewed date range.
 - The resource's status is **Inactive**.
 - The current user doesn't have **Read** access to the resource record.
@@ -39,7 +42,8 @@ Resources might not appear on the schedule board for several reasons:
 1. Check that the **Scheduling Method** field is set to **Allow** or your organization's expected value.
 1. Go to **Scheduling** > **Schedule Board**.
 1. On the active board tab, select **Settings** (gear symbol).
-1. Review all active filters. Clear filters temporarily to check whether the resource appears.
+1. Review all active filters. Clear filters temporarily to check whether the resource appears. If the resource appears only after you clear filters, check whether two filters (for example, territory and resource category) exclude each other so that no resource satisfies both.
+1. On the resource record, check that the resource is enabled to appear on the board (the **Display on Schedule Board** option is turned on).
 1. Return to the resource record, and select **Show Work Hours** on the command bar.
 1. Check that work hours are defined for the date range you're viewing on the board.
 1. On the resource record, check that the **Status** field is set to **Active**.

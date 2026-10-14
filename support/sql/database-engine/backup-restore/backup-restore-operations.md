@@ -240,7 +240,7 @@ To fix the problem, see [Move a TDE protected database to another SQL Server](/s
 - Use the latest version of SSMS to avoid known problems related to job and maintenance plan configuration.
 - Do a test run of your jobs to check that backups are created successfully. Add logic to [check your backups](/sql/t-sql/statements/restore-statements-verifyonly-transact-sql).
 - If you plan to move system databases from one server to another, review [Move system databases](/sql/relational-databases/databases/move-system-databases).
-- If you see intermittent backup failures, check whether the latest update for your SQL Server version fixes the problem. For more information, see [SQL Server versions and updates](../../releases/download-and-install-latest-updates.md).
+- If you see intermittent backup failures, check whether the latest update for your SQL Server version fixes the problem. For more information, see [SQL Server versions and updates](https://support.microsoft.com/help/321185).
 - To schedule and automate backups for SQL Server Express editions, see [Schedule and automate backups of SQL Server databases in SQL Server Express](./schedule-automate-backup-database.md).
 
 ## Reference topics for SQL Server backup and restore

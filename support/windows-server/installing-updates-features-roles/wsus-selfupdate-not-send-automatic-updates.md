@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, cclay
 ms.custom:
-- sap:windows servicing,updates and features on demand\clients missing updates,not offered,fail to download
+- sap:Windows Servicing, Updates and Features on Demand\Windows Update - Expected update missing or not offered
 - pcy:WinComm Devices Deploy
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
@@ -129,7 +129,7 @@ When you use IIS, you can move the SelfUpdate directory to a different Web site.
 
 ## References
 
-For more information about automatic updates in Windows, see [Description of the Automatic Updates feature in Windows](https://support.microsoft.com/help/294871).
+For more information about automatic updates in Windows, see [How Windows Update works](/windows/deployment/update/how-windows-update-works).
 
 ## Data collection
 

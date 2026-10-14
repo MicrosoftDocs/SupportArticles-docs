@@ -1,9 +1,9 @@
 ---
-title: Fix Teams Rooms resource account sign-in issues
+title: Resolve Teams Rooms resource account sign-in issues
 description: Troubleshoot common sign-in issues that occur when Microsoft Teams Rooms signs in to Exchange, and Microsoft Teams or Skype for Business.
-ms.reviewer: matart
+ms.reviewer: matart, mattslomka
 ms.topic: troubleshooting
-ms.date: 11/19/2024
+ms.date: 08/18/2026
 manager: dcscontentpm
 audience: Admin
 search.appverid: 
@@ -16,7 +16,7 @@ ms.custom:
   - CI167672
   - CI2522
 ---
-# Fix Teams Rooms resource account sign-in issues
+# Resolve Teams Rooms resource account sign-in issues
 
 Microsoft Teams Rooms signs in to Microsoft Exchange Server or Microsoft Exchange Online and Microsoft Teams or Skype for Business to fetch calendar information and join meetings. These interactions are monitored by using different signals in the [Microsoft Teams Rooms Pro Management portal](https://portal.rooms.microsoft.com), such as **Sign in (Exchange)** and **Sign in (Teams)**. This article helps you troubleshoot common sign-in issues and issues that are related to specific signals.
 

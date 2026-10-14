@@ -433,6 +433,11 @@
     {
       "source_path": "Exchange/ExchangeServer/mailflow/cannot-edit-transport-rule.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/compliance/items-are-removed-by-mrm-2-0-unexpectedly.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement",
+      "redirect_document_id": false
     }
   ]
 }

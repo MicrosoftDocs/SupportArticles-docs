@@ -4,7 +4,7 @@ description: Resolve 403 errors when you access Azure Storage or Key Vault throu
 ms.service: azure-private-link
 ms.topic: troubleshooting
 ms.custom: sap:Private Endpoints.
-ms.date: 6/16/2026
+ms.date: 06/16/2026
 ai.hint.symptom-tags:
   - 403-forbidden
   - access-denied

@@ -34,3 +34,11 @@ landingContent:
             url: vpn-gateway-troubleshoot-site-to-site-cannot-connect.md
           - text: Troubleshoot BGP issues
             url: vpn-gateway-troubleshoot-bgp.md
+
+  # Card
+  - title: Agentic-focused
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot a site-to-site or point-to-site VPN tunnel that won't connect
+            url: troubleshoot-vpn-tunnel-cannot-connect.md

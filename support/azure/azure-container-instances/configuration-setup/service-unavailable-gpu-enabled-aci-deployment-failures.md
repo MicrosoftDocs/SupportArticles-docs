@@ -1,23 +1,30 @@
 ---
-title: Azure Container Instances fails to run GPU-enabled containers
-description: Provides solutions to GPU-enabled Azure container instance deployment failures.
-ms.date: 05/27/2024
-ms.reviewer: v-rekhanain, momajed, v-weizhu, kennethgp
+title: Azure Container Instances fails to run GPU-enabled containers (Service unavailable error)
+description: Learn how to fix the Service unavailable error when GPU-enabled Azure Container Instances deployments fail. Check GPU quota, SKU configuration, and drivers.
+ms.date: 10/02/2026
+ms.topic: troubleshooting
+manager: dcscontentpm
+author: kaushika-msft
+ms.author: kaushika
+ms.reviewer: v-rekhanain, momajed, v-weizhu, kennethgp, kaushika
 ms.service: azure-container-instances
 ms.custom: sap:Configuration and Setup
+ai-usage: ai-assisted
 ---
-# GPU-enabled container deployment fails with "service unavailable" error
+# GPU-enabled container deployment fails in Azure Container Instances with "Service unavailable" error
 
-This article discusses the causes of GPU-enabled Azure container instance deployment failures and provides solutions.
+## Summary
+
+This article explains how to fix the "Service unavailable" error that occurs when Graphics Processing Unit (GPU)-enabled Azure Container Instances (ACI) deployments fail.
 
 > [!NOTE]
 > This product is retired as of July 14, 2025.
 
 ## Symptoms
 
-When you try to deploy a GPU-enabled container to Azure Container Instances (ACI), you encounter the following symptoms:
+When you try to deploy a GPU-enabled container to ACI, you encounter the following symptoms:
 
-- You receive the following error message:
+- You receive the following error message.
 
   > Service unavailable. Please try again later or contact support if this problem persists.
 
@@ -30,7 +37,7 @@ Your subscription or region doesn't have enough GPU quota to deploy the containe
 
 ### Solution 1: Increase GPU quota
 
-Check the GPU quota and availability for your subscription and region, and request GPU quota increases by using the Azure CLI or Azure portal.
+Check the GPU quota and availability for your subscription and region, and request GPU quota increases by using Azure CLI or the [Azure portal](https://portal.azure.com).
 
 ## Cause 2: Incompatible container group configuration
 
@@ -38,23 +45,23 @@ Your container group configuration is incompatible with the GPU SKU. Running GPU
 
 ### Solution 2: Update container group configuration to match GPU SKU
 
-Check your container group configuration and make sure that it matches the GPU SKU requirements. You can re-create or update your container group configuration by using the Azure CLI or Azure portal.
+Check your container group configuration and make sure that it matches the GPU SKU requirements. You can re-create or update your container group configuration by using Azure CLI or the [Azure portal](https://portal.azure.com).
 
 Check the region availability of the GPU SKUs that you want to use. Not all regions support all GPU SKUs. The following table shows the current region availability of GPU SKUs for Linux OS.
 
-|Region|	OS	|Available GPU SKU|
+| Region | OS | Available GPU SKU |
 |---|---|---|
-|East US|	Linux|	V100|
-|West Europe|	Linux|	V100|
-|West US 2|	Linux|	V100|
-|Southeast Asia|	Linux|	V100|
-|Central India|	Linux	|V100|
+| East US | Linux | V100 |
+| West Europe | Linux | V100 |
+| West US 2 | Linux | V100 |
+| Southeast Asia | Linux | V100 |
+| Central India | Linux | V100 |
 
-If your region doesn't support the GPU SKU that you need, you can choose a different region or a GPU SKU that's available in your region.
+If your region doesn't support the GPU SKU that you need, choose a different region or a GPU SKU that's available in your region.
 
 ## Cause 3: Incorrect GPU driver or toolkit is installed
 
-Your container image doesn't have the correct GPU driver or toolkit installed. GPU-enabled containers require NVIDIA drivers and CUDA or TensorRT libraries to access GPU resources.
+Your container image doesn't have the correct GPU driver or toolkit installed. GPU-enabled containers require NVIDIA drivers and Compute Unified Device Architecture (CUDA) or TensorRT libraries to access GPU resources.
 
 ### Solution 3: Install the NVIDIA Container Toolkit or use Azure Machine Learning base images
 

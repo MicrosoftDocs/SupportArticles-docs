@@ -1,11 +1,15 @@
 ---
 title: Troubleshoot rewrite rules in Azure Application Gateway
 description: Troubleshoot rewrite rules in Azure Application Gateway v2. Fix regex, routing, and header issues and use access logs to verify changes. Get started now.
-ms.date: 05/12/2026
-ms.author: cecilyan
-ms.reviewer: giverm
+ms.date: 09/24/2026
+ms.topic: troubleshooting
+manager: dcscontentpm
+author: kaushika-msft
+ms.author: kaushika
+ms.reviewer: giverm, cecilyan, kaushika
 ms.service: azure-application-gateway
 ms.custom: sap:Configuration and Setup
+ai-usage: ai-assisted
 ---
 
 # Troubleshoot rewrite rules in Azure Application Gateway
@@ -16,9 +20,11 @@ This article helps you troubleshoot common issues when configuring HTTP header a
 
 ## Prerequisites
 
-- Rewrite rules are only available for Application Gateway v2 SKU (Standard_v2 and WAF_v2). If you're still using the v1 SKU, you need to [migrate to v2](/azure/application-gateway/migrate-v1-v2) first.
+Ensure you meet the following prerequisites:
+
+- Rewrite rules are available only for Application Gateway v2 SKU (Standard_v2 and WAF_v2). If you're still using the v1 SKU, [migrate to v2](/azure/application-gateway/migrate-v1-v2) first.
 - Familiarize yourself with the concepts in [Rewrite HTTP headers and URL with Application Gateway](/azure/application-gateway/rewrite-http-headers-url).
-- [Diagnostic logging](/azure/application-gateway/application-gateway-diagnostics#diagnostic-logging) should be enabled for your Application Gateway so you can verify rewrite behavior using access logs.
+- [Enable diagnostic logging](/azure/application-gateway/application-gateway-diagnostics#diagnostic-logging) for your Application Gateway so you can verify rewrite behavior by using access logs.
 
 ## Symptom 1: Rewrite rule doesn't take effect
 
@@ -26,14 +32,16 @@ You configured a rewrite rule, but requests and responses pass through Applicati
 
 ### Cause 1: Rewrite rule set is attached to the wrong scope
 
-When you use a path-based routing rule, you can attach rewrite rule sets at two levels:
+When you use a path-based routing rule, you can attach rewrite rule sets at the two following levels:
 
-- The URL path map default backend: applies only when no path rule matches.
-- Individual path rules (for example, `/api/*`, `/images/*`): applies when the specific path matches.
+- The URL path map default backend: Applies only when no path rule matches.
+- Individual path rules (for example, `/api/*`, `/images/*`): Applies when the specific path matches.
 
 A common mistake is attaching the rewrite rule set only to the default backend while a catch-all path rule like `/*` exists. Because `/*` matches all incoming requests, traffic never falls through to the default backend, and the rewrite rule never executes.
 
 ### Solution
+
+Follow these steps to verify and update the association of your rewrite rule set:
 
 1. In the [Azure portal](https://portal.azure.com), go to your Application Gateway and select **Rewrites**.
 1. Verify which routing rule or path rule the rewrite rule set is associated with.
@@ -57,12 +65,14 @@ The rewrite rule is correctly attached, but the condition you configured doesn't
 
 A common but hard-to-spot mistake is having extra spaces in the regex pattern. For example, consider a condition to match the `Origin` header for Cross-Origin Resource Sharing (CORS):
 
-- ❌ `( ^https://mysite\.com$)` — leading space before `^` causes the pattern to never match.
-- ✅ `(^https://mysite\.com$)` — correct pattern without leading space.
+- ❌ `( ^https://mysite\.com$)` — Leading space before `^` causes the pattern to never match
+- ✅ `(^https://mysite\.com$)` — Correct pattern without leading space
 
 The Azure portal input fields might not visually highlight leading or trailing spaces, making this issue difficult to detect.
 
 ### Solution
+
+Follow these steps to validate and correct your regex pattern:
 
 1. Copy the regex pattern from your rewrite rule configuration.
 1. Paste it into a regex testing tool like [regex101.com](https://regex101.com/) to validate the pattern.
@@ -71,19 +81,19 @@ The Azure portal input fields might not visually highlight leading or trailing s
 
 ### Cause 2: Using literal characters instead of regex metacharacters
 
-When matching dynamic values such as port numbers or IP addresses, make sure you use regex metacharacters instead of literal characters.
+When matching dynamic values such as port numbers or IP addresses, use regex metacharacters instead of literal characters.
 
 For example, to match a port number in a URL like `https://contoso.com:8443/path`:
 
-- ❌ `(https://contoso\.com):dddd(.*)` — `dddd` matches the literal string "dddd", not four digits.
-- ✅ `(https://contoso\.com):\d{4}(.*)` — `\d{4}` correctly matches any four-digit number.
+- ❌ `(https://contoso\.com):dddd(.*)` — `dddd` matches the literal string "dddd", not four digits
+- ✅ `(https://contoso\.com):\d{4}(.*)` — `\d{4}` correctly matches any four-digit number
 
 > [!NOTE]
 > If you configure rewrite rules through Azure Resource Manager templates or REST API, remember that backslashes in regex must be escaped for JSON. For example, `\d{4}` becomes `\\d{4}` in a JSON string.
 
 ### Solution
 
-Use proper regex syntax for character classes:
+Use proper regex syntax for character classes, quantifiers, and other regex constructs. The following table summarizes common intents, correct regex patterns, and common mistakes.
 
 | Intent | Correct regex | Common mistake |
 |---|---|---|
@@ -98,13 +108,15 @@ If your rewrite action references a captured value (for example, `{http_resp_Set
 
 For example, to append `SameSite=Strict` to a `Set-Cookie` response header:
 
-- ❌ Condition pattern: `.*` — no capture group, so `{http_resp_Set-Cookie_1}` is empty.
-- ✅ Condition pattern: `(.*)` — captures the full cookie value into group 1.
+- ❌ Condition pattern: `.*` — No capture group, so `{http_resp_Set-Cookie_1}` is empty
+- ✅ Condition pattern: `(.*)` — Captures the full cookie value into group 1
 
 ### Solution
 
+Follow these steps to ensure your condition regex correctly captures the values you need.
+
 1. Ensure your condition regex includes parentheses `()` around the portion you want to capture.
-1. Reference the captured value using `{variable_name_N}` where `N` is the capture group number (starting from 1).
+1. Reference the captured value by using `{variable_name_N}` where `N` is the capture group number (starting from 1).
 1. Test the regex with your expected input at [regex101.com](https://regex101.com/) to confirm the capture groups work.
 
 > [!TIP]
@@ -116,7 +128,7 @@ Your rewrite action uses a [server variable](/azure/application-gateway/rewrite-
 
 ### Cause 1: Using the wrong server variable name
 
-Application Gateway provides multiple server variables that look similar but serve different purposes:
+Application Gateway provides multiple server variables that look similar but serve different purposes. The following table summarizes some of the commonly used server variables.
 
 | Variable | Value | Example for `https://contoso.com/app/hello?id=1` |
 |---|---|---|
@@ -128,6 +140,8 @@ A common mistake is using `{var_request_uri}` when you only need the path (which
 
 ### Solution
 
+Follow these steps to ensure you're using the correct server variable:
+
 1. Review the [full list of supported server variables](/azure/application-gateway/rewrite-http-headers-url#server-variables).
 1. Verify that the variable you chose returns the expected component of the request.
 1. Use the Application Gateway to confirm the actual values. For more information, see [How to verify rewrite behavior by using access logs](#how-to-verify-rewrite-behavior-by-using-access-logs).
@@ -138,8 +152,8 @@ When you build a URL path by using server variables, remember that `{var_uri_pat
 
 For example, to prepend `/apim` to the original path:
 
-- ❌ Action value: `/apim/{var_uri_path}` — produces `/apim//original-path` because `{var_uri_path}` is `/original-path`.
-- ✅ Action value: `/apim{var_uri_path}` — produces `/apim/original-path`.
+- ❌ Action value: `/apim/{var_uri_path}` — Produces `/apim//original-path` because `{var_uri_path}` is `/original-path`
+- ✅ Action value: `/apim{var_uri_path}` — Produces `/apim/original-path`
 
 ### Solution
 
@@ -155,7 +169,9 @@ By default, URL rewrite modifies the path but doesn't re-evaluate the path map. 
 
 ### Solution
 
-1. In the Azure portal, go to **Rewrites** > select your rewrite rule set > select the rule.
+Follow these steps to enable the **Re-evaluate path map** option:
+
+1. In the Azure portal, go to **Rewrites**, select your rewrite rule set, and then select the rule.
 1. In the **Action** section, select the **Re-evaluate path map** checkbox.
 1. Select **Save** and wait for the configuration update to complete.
 
@@ -187,6 +203,8 @@ If both Application Gateway and the backend application set the same response he
 
 ### Solution
 
+Follow these steps to troubleshoot if the backend server is overriding the response header:
+
 1. Confirm whether Application Gateway applied the rewrite. For more information, see [How to verify rewrite behavior by using access logs](#how-to-verify-rewrite-behavior-by-using-access-logs).
 1. Check whether the backend application also sets the same header.
 1. If both set the header, consider using a different header name or coordinating with the backend team to remove the duplicate.
@@ -203,7 +221,7 @@ For error responses generated by Application Gateway, consider using the [custom
 
 ## How to verify rewrite behavior by using access logs
 
-Application Gateway access logs provide two key fields for verifying URL rewrites:
+Application Gateway access logs provide two key fields for verifying URL rewrites. The following table summarizes these fields.
 
 | Field | Description |
 |---|---|
@@ -218,7 +236,7 @@ If you didn't already enable diagnostic settings, configure them to send `Applic
 
 ### Step 2: Query access logs
 
-Run the following Kusto query in your Log Analytics workspace to compare original and rewritten URLs:
+Run the following Kusto query in your Log Analytics workspace to compare original and rewritten URLs.
 
 ```kusto
 AzureDiagnostics
@@ -242,7 +260,7 @@ If the query returns no results, it confirms that no rewrite rule was applied du
 
 To verify response header rewrites, use `curl` with verbose output.
 
-Run the following command, replacing `your-appgw-url` and `path` with your Application Gateway's URL and the relevant path:
+Run the following command, replacing `your-appgw-url` and `path` with your Application Gateway's URL and the relevant path.
 
 ```bash
 curl -v https://your-appgw-url/path

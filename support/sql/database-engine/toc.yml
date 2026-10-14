@@ -129,42 +129,44 @@ items:
 
 - name: Slow query performance
   items:
-  - name: Different query performance between two SQL Servers
-    href: performance/troubleshoot-query-perf-between-servers.md
   - name: Decreased query performance after upgrade
     href: performance/decreased-query-perf-after-upgrade.md
+  - name: Different query performance between two SQL Servers
+    href: performance/troubleshoot-query-perf-between-servers.md
   - name: High CPU or high memory grants with queries that use optimized nested loops
     href: performance/decreased-perf-high-cpu-optimized-nested-loop.md
   - name: Performance degradation when common criteria compliance is enabled
     href: performance/performance-degradation-ccc-enabled.md
   - name: Performance degradation with new CE join containment assumption
     href: performance/cardinality-estimator-degrades-query-performance.md
-  - name: Resolve last-page insert PAGELATCH_EX contention
-    href: performance/resolve-pagelatch-ex-contention.md
+  - name: Performance issue from misaligned I/O
+    href: performance/performance-degradation-misaligned-io-sector-error.md
   - name: Resolve blocking problems caused by lock escalation
     href: performance/resolve-blocking-problems-caused-lock-escalation.md
+  - name: Resolve last-page insert PAGELATCH_EX contention
+    href: performance/resolve-pagelatch-ex-contention.md
   - name: Slower query in database application than in SSMS
     href: performance/troubleshoot-application-slow-ssms-fast.md
-  - name: Troubleshoot slow queries affected by Optimizer Timeout
-    href: performance/troubleshoot-optimizer-timeout-performance.md
-  - name: Troubleshoot entire SQL Server or application appears slow
-    href: performance/troubleshoot-entire-sqlserver-slow.md
-  - name: Troubleshoot slow-running queries
-    href: performance/troubleshoot-slow-running-queries.md
-  - name: Troubleshoot performance issues with narrow and wide plans
-    href: performance/troubleshoot-performance-narrow-vs-wide-plans.md
-  - name: Troubleshoot queries that seem to never end
-    href: performance/troubleshoot-never-ending-query.md
   - name: Troubleshoot ASYNC_NETWORK_IO issues
     href: performance/troubleshoot-query-async-network-io.md
   - name: Troubleshoot blocking caused by compile locks
     href: performance/troubleshoot-blocking-caused-compile-locks.md
+  - name: Troubleshoot entire SQL Server or application appears slow
+    href: performance/troubleshoot-entire-sqlserver-slow.md
+  - name: Troubleshoot performance issues with narrow and wide plans
+    href: performance/troubleshoot-performance-narrow-vs-wide-plans.md
+  - name: Troubleshoot performance problems after a SQL Server version upgrade
+    href: performance/troubleshoot-performance-version-upgrade.md
+  - name: Troubleshoot queries that seem to never end
+    href: performance/troubleshoot-never-ending-query.md
+  - name: Troubleshoot slow queries affected by Optimizer Timeout
+    href: performance/troubleshoot-optimizer-timeout-performance.md
+  - name: Troubleshoot slow-running queries
+    href: performance/troubleshoot-slow-running-queries.md
   - name: Understand and resolve blocking problems
     href: performance/understand-resolve-blocking.md
   - name: Upgrading compatibility level degrades performance for spatial queries
     href: performance/upgrade-compatibility-level-degrades-performance.md
-  - name: Performance issue from misaligned I/O
-    href: performance/performance-degradation-misaligned-io-sector-error.md
 
 - name: Security, Encryption, Auditing, Authorization
   href: security/toc.yml

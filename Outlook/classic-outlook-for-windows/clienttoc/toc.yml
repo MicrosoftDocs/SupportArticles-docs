@@ -121,8 +121,6 @@
       items:
         - name: 0x8007007A error when downloading Offline Address Book
           href: ../contacts/0x8007007a-whendownloading-offline-address-book.md
-        - name: AutoComplete not working correctly
-          href: ../contacts/autocomplete-not-working-correctly-in-outlook-2010.md
         - name: Can't create Outlook Contact Groups
           href: ../contacts/cannot-create-contact-groups-eas-account.md
         - name: Can't view the contacts of a public folder

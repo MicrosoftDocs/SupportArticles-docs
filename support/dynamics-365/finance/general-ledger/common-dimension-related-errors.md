@@ -1,8 +1,8 @@
 ---
 title: Fix Financial Dimension Errors in Dynamics 365 Finance
 description: Troubleshoot financial dimension errors in Dynamics 365 Finance, including inactive or suspended values and derived rule conflicts. Follow the steps to fix them.
-ms.date: 07/21/2026
-ms.reviewer: anaborges, setharvila, ethankallett, twheeloc, v-shaywood
+ms.date: 09/02/2026
+ms.reviewer: anaborges, setharvila, ethankallett, twheeloc, v-shaywood, shgustaf
 ms.custom: sap:General ledger - Setup, transactions and reporting\Issues with financial dimensions and financial tags
 ai-usage: ai-assisted
 ---
@@ -80,6 +80,10 @@ These errors appear if a ledger combination has a blank value that contradicts t
 1. Fill in the required dimension values that are currently blank.
 1. Make sure that all mandatory dimensions have values according to the account structure.
 
+### Check both sides of a journal line
+
+When you post a journal, Finance validates both the **Account** and **Offset account**. Verify that all mandatory dimensions are present on both sides of the journal line. If a bank, customer, vendor, or other subledger account supplies either ledger account, also review the default dimensions, ledger account setup, and legal entity overrides that apply to that account.
+
 ### Check for default or derived dimensions that cause blanks
 
 If you didn't directly leave the field blank, default dimensions or [derived dimensions](/dynamics365/finance/general-ledger/derived-dimensions) in your setup might cause blank values:
@@ -91,7 +95,7 @@ If you didn't directly leave the field blank, default dimensions or [derived dim
 
 ### Modify the account structure or advanced rules to allow blanks
 
-As an alternative solution, modify the account structure or advanced rules to allow blank values:
+If blank values are valid for your business process, modify the account structure or advanced rules:
 
 1. Go to **General ledger** > **Chart of accounts** > **Structures** > **Account structures**.
 1. Review the account structure settings, and modify them to allow blank values, as appropriate.
@@ -144,7 +148,7 @@ The main account or dimension value might be suspended, inactive, or outside its
 A [fixed dimension value](/dynamics365/finance/general-ledger/dimensions-default-values) on a main account replaces whatever value is entered on the transaction line, even if that value is blank. If the account structure requires a nonblank value and the fixed dimension is blank, the validation fails.
 
 1. Go to **General ledger** > **Chart of accounts** > **Accounts** > **Main accounts**.
-1. Select the main account that's used in the transaction.
+1. Select the main account that you use in the transaction.
 1. On the **Legal entity overrides** FastTab, check whether a fixed dimension value is set that conflicts with the value you entered or that forces a blank value where one isn't allowed.
 
 ### Verify the account structure is assigned to the ledger
@@ -170,11 +174,16 @@ You receive the following error message:
 
 The dimension value is suspended, either at the header level or as a legal entity override.
 
+Suspended values don't appear in lookups. If you manually enter a suspended value, or a default or generated transaction supplies one, Finance rejects the value during validation or posting.
+
 ### Reactivate the suspended dimension value
 
 1. Go to **General ledger** > **Chart of accounts** > **Dimensions** > **Financial dimensions**.
 1. Select the dimension type, and then select **Dimension values**.
 1. Check whether the dimension value is marked as suspended. Reactivate it, if necessary.
+
+> [!CAUTION]
+> Don't reactivate a value or change its entry restrictions only to diagnose the error. First determine why the transaction uses the value and whether reactivation is appropriate for your organization's controls.
 
 ### Check for default or derived dimensions that apply suspended values
 
@@ -251,7 +260,7 @@ If the error appears as a yellow triangle in an account field, or as a yellow or
 1. Close and then reopen the form.
 1. Re-enter the account number.
 
-If no error appears after you re-enter the account number, the form now correctly reflects any recent configuration changes. If the error persists, go to the next sections.
+If no error appears after you reenter the account number, the form now correctly reflects any recent configuration changes. If the error persists, go to the next sections.
 
 ### Verify the dimension value exists and is valid
 
@@ -264,6 +273,8 @@ If no error appears after you re-enter the account number, the form now correctl
    - The **Suspended** option isn't set to **Yes**.
    - If [legal entity overrides](/dynamics365/finance/general-ledger/financial-dimensions#legal-entity-overrides) are configured, check whether any of these three settings (**Active from**, **Active to**, or **Suspended**) are overridden for the legal entity where you enter the transaction.
    - The **Blocked for manual entry** option isn't enabled.
+
+If a generated transaction contains a value that you can't select manually, review these settings and the setup that supplied the default value. Also review [XDS and security role restrictions](#check-xds-and-security-role-restrictions). Don't change the value or its restrictions just to test whether the transaction posts.
 
 ### Review the account structure constraints
 
@@ -336,6 +347,16 @@ Go to the following URLs to clear the validation cache:
 
 If the error no longer occurs after you clear the cache, stale validation data caused the issue. To help prevent this situation in the future, avoid activating account structures while significant system activity (such as batch processing or data entry) is occurring.
 
+## Historical transaction fails after an account structure change
+
+When you post, correct, or reverse a transaction, Finance validates the ledger account against the currently active account structure, regardless of the transaction date. Therefore, an older unposted journal or a correction to a posted document might fail validation after required dimensions or allowed-value criteria change.
+
+To investigate the failure:
+
+1. Record the exact validation message and the transaction or document that triggers it.
+1. Validate or simulate posting, and compare the account combination with the currently active account structure and advanced rules.
+1. If necessary, temporarily relax account structures, required dimensions, or other ledger-wide settings so that the historical transaction passes validation. Schedule this change during a period of low business activity to minimize risk, and restore the original settings immediately afterward.
+
 ## Value isn't allowed due to derived dimension rules
 
 You receive the following error message:
@@ -387,14 +408,14 @@ You receive the following error message:
 
 [Financial dimension](/dynamics365/finance/general-ledger/financial-dimensions) names must follow specific naming conventions:
 
-- Must start with an underscore or a letter (either lowercase or uppercase)
-- Can contain only underscores, letters, or digits after the first character
-- Can't contain system field names such as `RecId`
+- Must start with an underscore or a letter (either lowercase or uppercase).
+- Can contain only underscores, letters, or digits after the first character.
+- Can't contain system field names such as `RecId`.
 
 To fix this issue, follow these steps:
 
 1. Go to **General ledger** > **Chart of accounts** > **Dimensions** > **Financial dimensions**.
-1. Review the dimension name to make sure that it follows the naming conventions.
+1. Review the dimension name to ensure that it follows the naming conventions.
 1. Rename the dimension, if necessary. Don't use system field names or invalid characters.
 
 ## Value doesn't exist for financial dimension

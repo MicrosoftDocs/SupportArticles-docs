@@ -77,15 +77,15 @@ You typically deploy a web project with the `customErrors` flag in the *Web.conf
 
 The following examples show these kinds of error messages:
 
-**Server Error in '/' Application**
+"Server Error in '/' Application"
 
 :::image type="content" source="./media/web-sites-dotnet-troubleshoot-visual-studio/genericerror.png" alt-text="Screenshot showing a Server Error in '/' Application error in a web browser." lightbox="./media/web-sites-dotnet-troubleshoot-visual-studio/genericerror.png":::
 
-**An error occurred**
+"An error occurred"
 
 :::image type="content" source="./media/web-sites-dotnet-troubleshoot-visual-studio/genericerror1.png" alt-text="Screenshot showing an example of a generic error occurring in a web browser." lightbox="./media/web-sites-dotnet-troubleshoot-visual-studio/genericerror1.png":::
 
-**The website cannot display the page**
+"The website cannot display the page"
 
 :::image type="content" source="./media/web-sites-dotnet-troubleshoot-visual-studio/genericerror2.png" alt-text="Screenshot of a browser showing that the website can't display the requested page."lightbox="./media/web-sites-dotnet-troubleshoot-visual-studio/genericerror2.png":::
 

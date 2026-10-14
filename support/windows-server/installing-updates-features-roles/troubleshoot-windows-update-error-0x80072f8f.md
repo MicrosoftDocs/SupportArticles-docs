@@ -1,23 +1,23 @@
 ---
-title: Troubleshoot Windows Update Error 0x80072f8f
-description: Learn how to resolve Windows Update error 0x80072f8f on Windows.
+title: Troubleshoot Windows Update Error 0x80072F8F
+description: Learn how to resolve Windows Update error 0x80072F8F on Windows.
 manager: dcscontentpm
 audience: itpro
 ms.date: 02/12/2026
 ms.topic: troubleshooting
 ms.reviewer: scotro, mwesley, jarretr, v-ryanberg, v-gsitser
 ms.custom:
-- sap:windows servicing,updates and features on demand\windows update fails - installation stops with error
+- sap:Windows Servicing, Updates and Features on Demand\Windows Update - Install errors starting with 0x8007 (ERROR)
 - pcy:WinComm Devices Deploy
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 
-# Troubleshoot Windows Update error 0x80072f8f
+# Troubleshoot Windows Update error 0x80072F8F
 
 ## Summary
 
-When you try to connect to Windows Update, you encounter error 0x80072f8f. This error typically indicates issues that affect SSL negotiation because of out-of-sync clock settings or untrusted SSL certificates. 
+When you try to connect to Windows Update, you encounter error 0x80072F8F. This error typically indicates issues that affect SSL negotiation because of out-of-sync clock settings or untrusted SSL certificates. 
 
 :::image type="content" source="./media/troubleshoot-windows-update-error-0x80072f8f/updateerror0x80072f8f-wusaerror.png" alt-text="Windows Update error 0x80072f8f" lightbox="media/troubleshoot-windows-update-error-0x80072f8f/updateerror0x80072f8f-wusaerror.png":::
 
@@ -29,7 +29,7 @@ For virtual machines (VMs) running Windows in Azure, make sure that you back up 
 
 ### Symptom 1
 
-Windows Update fails and returns error 0x80072f8f. Check the `WindowsUpdate.log` located at *C:\Windows\Logs\WindowsUpdate* for entries that resemble the following entry:
+Windows Update fails and returns error 0x80072F8F. Check the `WindowsUpdate.log` located at *C:\Windows\Logs\WindowsUpdate* for entries that resemble the following entry:
 
 ```output
 03E4 1668 SLS Making request with URL HTTPS://sls.update.microsoft.com/SLS/{9482F4B4-E343-43B6-B170-9A65BC822C77}/x64/10.0.14393.0/0?CH=531&L=en-US&P=&PT=0x7&WUA=10.0.14393.1794

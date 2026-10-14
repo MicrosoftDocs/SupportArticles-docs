@@ -15,9 +15,9 @@ items:
       href: crm-permissions-and-configurations/missing-record-update-edit-access.md
     - name: Errors when accessing Salesforce with server-to-server flow
       href: crm-permissions-and-configurations/errors-when-accessing-salesforce-with-server-to-server-flow.md
-    - name: Errors when disabling Salesforce with server-to-server flow
+    - name: Errors when you disable Salesforce with server-to-server flow
       href: crm-permissions-and-configurations/errors-disabling-salesforce-server-to-server-flow.md
-    - name: Errors when enabling Salesforce with server-to-server flow
+    - name: Errors when you enable Salesforce with server-to-server flow
       href: crm-permissions-and-configurations/errors-enabling-salesforce-server-to-server-flow.md
     - name: '"Fix mailbox errors in Dynamics 365" error'
       href: crm-permissions-and-configurations/fix-mailbox-errors-in-dynamics-365.md
@@ -31,6 +31,8 @@ items:
       href: crm-permissions-and-configurations/duplicate-record-error.md
     - name: '"Required fields are missing" error'
       href: crm-permissions-and-configurations/required-fields-missing.md
+    - name: Reset Salesforce server-to-server connector
+      href: crm-permissions-and-configurations/reset-salesforce-server-to-server-connector.md
     - name: Salesforce CRM users can't see data in Sales agent
       href: crm-permissions-and-configurations/no-column-error.md
     - name: Salesforce CRM users can't view, edit, or save data in Sales agent

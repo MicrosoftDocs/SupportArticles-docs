@@ -25,6 +25,9 @@ ms.author: kaushika
 
 This article describes how to troubleshoot the chroot environment on a rescue virtual machine (VM) in Linux.
 
+> [!TIP]
+> To simplify rescue VM troubleshooting, consider using the [chroot automation tool](https://github.com/Azure/azure-support-scripts/blob/master/Linux_scripts/mount-umount-helper/README.md) to automatically detect the required partitions, perform the necessary mount operations, and prepare the chroot environment before performing recovery operations.
+
 ## Ubuntu
 
 1. Stop or deallocate the affected VM.

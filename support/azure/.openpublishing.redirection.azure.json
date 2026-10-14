@@ -2957,8 +2957,13 @@
       },
       {
         "source_path": "azure-kubernetes/upgrading-or-scaling-does-not-succeed.md",
-        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/upgrading-or-scaling-does-not-succeed",
-        "redirect_document_id": true
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/availability-performance/cluster-node-virtual-machine-failed-state",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-kubernetes/create-upgrade-delete/upgrading-or-scaling-does-not-succeed.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/availability-performance/cluster-node-virtual-machine-failed-state",
+        "redirect_document_id": false
       },
       {
         "source_path": "azure-kubernetes/error-using-feature-requiring-virtual-machine-scale-set.md",

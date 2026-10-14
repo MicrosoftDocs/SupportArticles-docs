@@ -1,16 +1,21 @@
 ---
 title: Troubleshoot common node auto-repair errors
 description: Learn common node auto-repair errors in AKS, find causes and fixes for NotReady nodes, and troubleshoot issues faster with actionable guidance.
-ms.date: 10/25/2024
-ms.reviewer: juliayin, aritraghosh, shmalfat, v-weizhu
+ms.date: 09/15/2026
+manager: dcscontentpm
+ms.topic: troubleshooting
+author: kaushika-msft
+ms.author: kaushika
+ms.reviewer: juliayin, aritraghosh, shmalfat, v-weizhu, shuyingqin
 ms.service: azure-kubernetes-service
 ms.custom: sap:Node/node pool availability and performance
+ai-usage: ai-assisted
 ---
 # Troubleshoot common node auto-repair errors in AKS
 
 ## Summary
 
-When Azure Kubernetes Service (AKS) detects a node with a `NotReady` status for more than five minutes, it tries to automatically repair the node. Node auto-repair is a best-effort service. It doesn't guarantee that the node can be restored to a healthy state. For more information, see [node auto-repair process](/azure/aks/node-auto-repair).
+When Azure Kubernetes Service (AKS) detects a node with a `NotReady` status for more than five minutes, it uses node auto-repair to try to restore the node. This article helps you troubleshoot common node auto-repair errors and understand why this best-effort service might not restore a node to a healthy state. For more information, see [node auto-repair process](/azure/aks/node-auto-repair).
 
 During the node auto-repair process, AKS initiates `reboot`, `reimage`, and `redeploy` actions on your unhealthy node. Errors can occur for various reasons. You can discover error codes through [Kubernetes events](/azure/aks/events). Use Kubernetes events to monitor the status of your node and the auto-repair actions.
 
@@ -33,11 +38,11 @@ Check the following Kubernetes events to identify the type of node auto-repair e
 
 | Error code | Cause and solution |
 |---|---|
-| VMExtensionProvisioningError | One or more virtual machine (VM) extensions failed to be provisioned on the VM. For more information about possible error types and troubleshooting steps, see [Troubleshoot the ERR_VHD_FILE_NOT_FOUND error code (124)](../create-upgrade-delete/error-code-vhdfilenotfound.md). To determine the exact VM extension provisioning error on your node, [view error details in the Azure portal](../create-upgrade-delete/troubleshoot-aks-cluster-creation-issues.md#view-resources-in-the-azure-portal). |
+| VMExtensionProvisioningError | One or more virtual machine (VM) extensions failed to provision on the VM. For more information about possible error types and troubleshooting steps, see [Troubleshoot the ERR_VHD_FILE_NOT_FOUND error code (124)](../create-upgrade-delete/error-code-vhdfilenotfound.md). To determine the exact VM extension provisioning error on your node, [view error details in the Azure portal](../create-upgrade-delete/troubleshoot-aks-cluster-creation-issues.md#view-resources-in-the-azure-portal). |
 | InvalidParameter | This error occurs if the node auto-repair process tries to access a node that no longer exists.|
 | scaleSetNameAndInstanceIDFromProviderID failed | This issue occurs when the node isn't provisioned correctly. |
 | ManagedIdentityCredential authentication failed | This issue occurs when the node isn't initialized correctly.  |
-| VMRedeploymentFailed | This error occurs when you try to redeploy the node. In this case, your node pool might enter a failed state. For more information about potential causes and troubleshooting steps, see [Troubleshoot Azure Kubernetes Service clusters or nodes in a failed state](./cluster-node-virtual-machine-failed-state.md). |
+| VMRedeploymentFailed | This error occurs when you try to redeploy the node. In this case, your node pool might enter a failed state. For more information about potential causes and troubleshooting steps, see [Troubleshoot AKS upgrade, scaling, and failed-state errors](./cluster-node-virtual-machine-failed-state.md#failed-operation-or-resource). |
 | TooManyVMRedeploymentRequests | This error occurs when your cluster exceeds the limit for VM redeployment requests. `Redeploy` is one of the node auto-repair actions. This error means that the `redeploy` action can't repair your node. To troubleshoot the Node Not Ready issue, see [Basic troubleshooting of Node Not Ready failures](./node-not-ready-basic-troubleshooting.md). |
 | OutboundConnectivityNotEnabledOnVMSS | This error occurs when your node or overall Virtual Machine Scale Set doesn't have outbound access enabled. To resolve this issue, enable secure outbound access for your scale set by using a method that's best suited for your application. For more information, see ["OutboundConnectivityNotEnabledOnVM. No outbound connectivity configured for virtual machine."](../../virtual-machine-scale-sets/deploy/vmss-outbound-connectivity-not-enabled.md#solution) |
 

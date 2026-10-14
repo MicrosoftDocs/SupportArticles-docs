@@ -7,7 +7,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, chkeen, cgibson, jesko, warrenw, abjos
 ms.custom:
-- sap:windows servicing,updates and features on demand\windows update fails - installation stops with error
+- sap:Windows Servicing, Updates and Features on Demand\Windows Update - Install errors unknown or code not listed
 - pcy:WinComm Devices Deploy
 adobe-target: true
 appliesto:

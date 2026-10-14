@@ -1,32 +1,14 @@
 ---
 title: Troubleshoot routing, redirect, and hostname issues in Azure Application Gateway
-description: Use step-by-step diagnostics to identify and resolve path-based routing gaps, redirect loops, host header rewrite errors, and listener priority conflicts in Azure Application Gateway.
+description: Troubleshoot Azure Application Gateway routing, redirect loops, host header errors, and listener conflicts. Follow step-by-step diagnostics and fixes.
 ms.service: azure-application-gateway
+manager: dcscontentpm
+author: kaushika-msft
+ms.author: kaushika
+ms.reviewer: chadmat, kaushika
 ms.topic: troubleshooting
 ms.custom: sap:Configuration and Setup
-ms.date: 6/12/2026
-ai.hint.symptom-tags:
-  - 404-error
-  - redirect-loop
-  - hostname-mismatch
-  - routing-rule
-  - rewrite-error
-  - path-based-routing
-  - listener-priority
-  - host-header-rewrite
-  - wrong-backend
-  - http-to-https-redirect
-ai.hint.scope: resource-level
-ai.hint.required-permissions:
-  - Microsoft.Network/applicationGateways/read
-  - Microsoft.Network/applicationGateways/write
-  - Microsoft.Insights/diagnosticSettings/read
-  - Microsoft.OperationalInsights/workspaces/query/read
-ai.hint.context-required:
-  - SUBSCRIPTION_ID
-  - RESOURCE_GROUP
-  - RESOURCE_NAME
-  - LOG_ANALYTICS_WORKSPACE_ID
+ms.date: 09/02/2026
 ---
 
 # Troubleshoot routing, redirect, and hostname issues in Azure Application Gateway
@@ -37,7 +19,7 @@ This article provides a step-by-step guide to diagnose and resolve routing, redi
 
 Routing, redirect, and hostname problems in Application Gateway typically have the following root causes: 
 
-- Path-based routing rules that lack a path entry for the requested URL and return "404" errors. 
+- Path-based routing rules that lack a path entry for the requested URL and return `404` errors. 
 - Redirect loops that are caused by an HTTP-to-HTTPS redirect configuration that conflicts with a backend that also redirects. 
 - Rewrite rules that corrupt the `Host` header by appending a port number.  
 - Listener priority ordering that causes a lower-specificity listener to match before the intended listener. 
@@ -48,8 +30,8 @@ You might encounter one or more of the following symptoms:
 
 - HTTP `404 Not Found` errors are returned by Application Gateway for an URL path that exists on the backend.
 - Your browser shows `ERR_TOO_MANY_REDIRECTS` or the equivalent redirect loop error.
-- Browser developer tools (such as the **Network** tab) show a repeating chain of `301`and `302` redirects between HTTP and HTTPS.
-- Back-end applications receive an incorrect `Host` header that have an unexpected appended port number (for example, `contoso.com:443` instead of `contoso.com`).
+- Browser developer tools (such as the **Network** tab) show a repeating chain of `301` and `302` redirects between HTTP and HTTPS.
+- Back-end applications receive an incorrect `Host` header that has an unexpected appended port number (for example, `contoso.com:443` instead of `contoso.com`).
 - Back-end applications return the wrong content or an error because they receive a hostname that they don't recognize.
 - Requests route to an unexpected back-end pool (the wrong site's served).
 - Application Gateway returns `404` errors for some URL paths but `200` for others, despite all paths being valid on the backend.
@@ -72,7 +54,8 @@ You might encounter one or more of the following symptoms:
 | `$FAILING_HOSTNAME` | Hostname portion of `$FAILING_URL` (derived automatically, or enter it) | `contoso.com` |
 | `$FAILING_URL_PATH` | Path portion of `$FAILING_URL` (derived automatically, or enter it) | `/api/orders` |
 
-> **TIP:** Each script that's provided in the following sections prompts you for the required values interactively. To open Cloud Shell and answer the prompts, select **Try It**. The values are cached for that session. Therefore, you enter them only one time. `$FAILING_HOSTNAME` and `$FAILING_URL_PATH` are derived from `$FAILING_URL` automatically. If the Log Analytics workspace ID is unknown, it can be discovered in [Step 1b](#step-1b).
+> [!TIP]
+> Each script that's provided in the following sections prompts you for the required values interactively. To open Cloud Shell and answer the prompts, select **Try It**. The values are cached for that session. Therefore, you enter them only one time. `$FAILING_HOSTNAME` and `$FAILING_URL_PATH` are derived from `$FAILING_URL` automatically. If the Log Analytics workspace ID is unknown, it can be discovered in [Step 1b](#step-1b).
 
 ## Diagnostic steps
 
@@ -83,7 +66,7 @@ You might encounter one or more of the following symptoms:
 
 Check which listener receives the client request, which routing rule processes it, and which back-end pool (or redirect) is the target. This check establishes the end-to-end request path for the failing URL.
 
-Run the following commands in Azure CLI:
+Run the following commands in Azure CLI.
 
 ```azurecli-interactive
 # ── Collect inputs (cached if already set in this session) ──
@@ -128,7 +111,7 @@ Map the `$FAILING_URL` to a listener by matching the hostname and port, and then
 
 Check which Log Analytics workspace receives Application Gateway access logs.
 
-Run the following commands in Azure CLI:
+Run the following commands in Azure CLI.
 
 ```azurecli-interactive
 # ── Collect inputs (cached if already set in this session) ──
@@ -179,7 +162,7 @@ Wait 5–10 minutes for logs to begin flowing, and then rerun the prior diagnost
 
 Check whether the URL path map includes a rule for the path in `$FAILING_URL`. A missing path rule causes Application Gateway to route the request to the default back-end pool, which might return 404 errors if it isn't configured or points to the wrong application.
 
-Run the following commands in Azure CLI:
+Run the following commands in Azure CLI.
 
 ```azurecli-interactive
 # ── Collect inputs (cached if already set in this session) ──
@@ -212,7 +195,7 @@ Extract the URL path from `$FAILING_URL` (for example, `/api/orders`) and compar
 
 Check whether listener priorities cause a less-specific listener (for example, wildcard `*.contoso.com`) to match before a more specific one (for example, `app.contoso.com`), routing the request to the wrong back-end pool and rule.
 
-Run the following commands in Azure CLI:
+Run the following commands in Azure CLI.
 
 ```azurecli-interactive
 # ── Collect inputs (cached if already set in this session) ──
@@ -258,7 +241,7 @@ Sort rules by priority (a lower number equals a higher priority, which is evalua
 
 Check whether rewrite rule sets associated with the routing rule modify the `Host` header, inject redirect responses, or create conflicts with existing redirect configurations that cause loops.
 
-Run the following commands in Azure CLI:
+Run the following commands in Azure CLI.
 
 ```azurecli-interactive
 # ── Collect inputs (cached if already set in this session) ──
@@ -288,7 +271,7 @@ az network application-gateway redirect-config list \
 
 ### Interpret the results
 
-The `rewrite-rule set list` command returns each rewrite rule as a set, and each set carries its `rewriteRules[].actionSet.requestHeaderConfigurations`. The `Host` header rows in the following table are inspected. To see the individual rules inside one set, rerun the step by using `az network application-gateway rewrite-rule list --gateway-name "$RESOURCE_NAME" --resource-group "$RG" --subscription "$SUBSCRIPTION" --rule-set-name <set-name>`.
+The `rewrite-rule set list` command returns each rewrite rule as a set, and each set carries its `rewriteRules[].actionSet.requestHeaderConfigurations`. The following table shows the `Host` header rows that the command inspects. To see the individual rules inside one set, rerun the step by using `az network application-gateway rewrite-rule list --gateway-name "$RESOURCE_NAME" --resource-group "$RG" --subscription "$SUBSCRIPTION" --rule-set-name <set-name>`.
 
 Review each rewrite rule set for:
 
@@ -309,9 +292,9 @@ Review each rewrite rule set for:
 
 ### Step 4
 
-Check whether the HTTP settings override the `Host` header that's sent to the backend, and what the back-end pool target fully qualified domain name (FQDN) actually is. If you enable `pickHostNameFromBackendAddress`, the backend receives the FQDN of the back-end target instead of the original client `Host` header. If you set `hostName`, the backend receives that static value. If you don't set either value, the original client `Host` header is passed through unchanged. A misconfiguration in this step can cause the backend to receive a hostname it doesn't recognize. This situation is especially true if you pass the original client `Host` to a multitenant platform as a service (PaaS) backend (such as Azure App Service, Azure Functions, and Azure API Management) that answers to only its own FQDN.
+Check whether the HTTP settings override the `Host` header that you send to the backend, and check the back-end pool target fully qualified domain name (FQDN). If you enable `pickHostNameFromBackendAddress`, the backend receives the FQDN of the back-end target instead of the original client `Host` header. If you set `hostName`, the backend receives that static value. If you don't set either value, the original client `Host` header is passed through unchanged. A misconfiguration in this step can cause the backend to receive a hostname it doesn't recognize. This problem is especially true if you pass the original client `Host` to a multitenant platform as a service (PaaS) backend (such as Azure App Service, Azure Functions, and Azure API Management) that answers to only its own FQDN.
 
-Run the following commands in Azure CLI:
+Run the following commands in Azure CLI.
 
 The first command lists the HTTP settings (the `Host` header override behavior). The second command lists the back-end pool targets so that you can determine whether the backend is a multitenant PaaS service that requires its own FQDN. Both are read-only.
 
@@ -347,12 +330,12 @@ az network application-gateway address-pool list \
 
 From the second command, examine the `fqdn` of the back-end pool that serves `$FAILING_URL` (the pool that you identified in [Step 1a](#step-1a)). A backend is a multitenant PaaS service that requires its own FQDN in the `Host` header if the target `fqdn` ends in one of the following values:
 
-- `*.azurewebsites.net` — App Service or Azure Functions.
-- `*.azurewebsites.windows.net` — App Service (internal or regional form).
-- `*.azure-api.net` — API Management.
+- `*.azurewebsites.net` — App Service or Azure Functions
+- `*.azurewebsites.windows.net` — App Service (internal or regional form)
+- `*.azure-api.net` — API Management
 - Any other PaaS backend that only answers to its own hostname (it rejects or returns a default page for any other `Host` header).
 
-If the target is a plain VM or Virtual Machine Scale Sets IP address, an on-premises FQDN, or any host that's configured to answer for the client's hostname, it isn't a multitenant PaaS backend.
+If the target is a plain VM or Virtual Machine Scale Sets IP address, an on-premises FQDN, or any host that you configure to answer for the client's hostname, it isn't a multitenant PaaS backend.
 
 ### Interpret the results
 
@@ -371,7 +354,7 @@ Read the HTTP settings (first command) together with the prior backend target cl
 
 Check the actual routing decisions that Application Gateway made for recent requests, such as which listener handled the request, which backend received it, and what HTTP status code was returned.
 
-Run the following commands in Azure CLI:
+Run the following commands in Azure CLI.
 
 ```azurecli-interactive
 # ── Collect inputs (cached if already set in this session) ──
@@ -393,7 +376,7 @@ az monitor log-analytics query \
  
 ### Interpret the results
 
-Before you use the following table, when `httpStatus_d = 404` is populated with `serverRouted_s`, explicitly compare the `Host` header that was sent to the backend (`host_s`) against the backend's required FQDN (`serverRouted_s`. That value is the back-end pool target that you also saw in [Step 4](#step-4)).
+Before you use the following table, when `httpStatus_d = 404` is populated with `serverRouted_s`, explicitly compare the `Host` header that you sent to the backend (`host_s`) against the backend's required FQDN (`serverRouted_s`). That value is the back-end pool target that you also saw in [Step 4](#step-4)).
 
 - The backend rejects the request because of the `Host` header if `host_s` isn't equivalent to the backend's required FQDN, and the backend is a multitenant PaaS service that requires its own FQDN (the PaaS classification from [Step 4](#step-4), such as `*.azurewebsites.net`, `*.azurewebsites.windows.net`, `*.azure-api.net`, or any backend that answers to only its own hostname). This condition is addressed in [Resolution E](#resolution-e), even though the back-end pool target is correct.
 - The target is a pool or listener misconfiguration only if the back-end pool target (`serverRouted_s`) is, itself, the wrong application (a pool that points somewhere that the request shouldn't go). ([Resolution A](#resolution-a) or [Resolution D](#resolution-d)).
@@ -428,7 +411,7 @@ Use the following decision map table to determine the appropriate next steps bas
 | Wildcard listener has higher priority than specific listener [Step 2b](#step-2b). | Perform [Resolution D](#resolution-d). |
 | Wrong listener matches the request hostname [Step 2b](#step-2b) or [Step 5](#step-5). | Perform [Resolution D](#resolution-d). |
 | Backend receives wrong hostname through HTTP settings override [Step 4](#step-4). | Perform [Resolution E](#resolution-e). |
-| Backend is a multi-tenant PaaS service (such as App Service, Azure Functions, or API Management) but HTTP settings pass the original client `Host` unchanged [Step 4](#step-4), or the backend returns a `404` error code while `host_s` doesn't match the backend's required FQDN [Step 5](#step-5). | Perform [Resolution E](#resolution-e). |
+| Backend is a multitenant PaaS service (such as App Service, Azure Functions, or API Management) but HTTP settings pass the original client `Host` unchanged [Step 4](#step-4), or the backend returns a `404` error code while `host_s` doesn't match the backend's required FQDN [Step 5](#step-5). | Perform [Resolution E](#resolution-e). |
 | Access logs show requests routed to the wrong back-end pool [Step 5](#step-5). | Review [Resolution A](#resolution-a) or [Resolution D](#resolution-d) based on whether it's a path or listener problem. |
 | All diagnostics pass, but the problem persists. | File an Azure support request. |
 
@@ -438,9 +421,9 @@ The URL path map doesn't include a path rule for the requested URL, so the reque
 
 Common scenarios include:
 
-- A new API endpoint (`/api/v2/orders`) was deployed, but the Application Gateway path map only has a `/api/v1/*` value.
+- You deployed a new API endpoint (`/api/v2/orders`), but the Application Gateway path map only has a `/api/v1/*` value.
 - Path rules use exact paths (`/api/orders`), but clients request subpaths (`/api/orders/123`).
-- Path rules were configured by using a different case (`/API/Orders` versus `/api/orders`).
+- You configured path rules by using a different case (`/API/Orders` versus `/api/orders`).
 
 Run the following commands in Azure CLI (as applicable):
 
@@ -495,7 +478,7 @@ az network application-gateway url-path-map rule create \
 ```
 
 > [!TIP]
-> Add both forms: the exact path (`/api/orders`) and the trailing wildcard (`/api/orders/*`). The exact path includes the base URL the client originally requested. The wildcard includes every subpath (`/api/orders/123`) and the trailing-slash form (`/api/orders/`). A wildcard alone doesn't match the exact base path, so the originally failing URL would otherwise stay routed to the default pool. This mirrors the exact-versus-wildcard matching behavior noted in [Step 2a](#step-2a).
+> Add both forms: the exact path (`/api/orders`) and the trailing wildcard (`/api/orders/*`). The exact path includes the base URL the client originally requested. The wildcard includes every subpath (`/api/orders/123`) and the trailing-slash form (`/api/orders/`). A wildcard alone doesn't match the exact base path, so the originally failing URL would otherwise stay routed to the default pool. This condition mirrors the exact-versus-wildcard matching behavior noted in [Step 2a](#step-2a).
 
 4. Rerun [Step 2a](#step-2a) to verify the new path rule appears. Then request `$FAILING_URL`. It should now return the expected response instead of 404 errors.
 
@@ -532,7 +515,7 @@ Common scenarios include:
 - A rewrite rule modifies the URL scheme to HTTPS while a redirect configuration also upgrades to HTTPS. Both instigate on the same request.
 - The backend detects that `X-Forwarded-Proto` is `http` and sends a 301 value to the HTTPS URL, which Application Gateway then reintercepts on the HTTP listener.
 
-Run the following commands in Azure CLI (as applicable):
+Run the following commands in Azure CLI (as applicable).
 
 1. Check the access logs for repeating patterns of 301 or 302 value responses that alternate between the HTTP and HTTPS listeners.
 
@@ -554,9 +537,7 @@ Look for repeating patterns such as the following:
 - Repeating `httpStatus_d` 301 or 302 value entries whose `listenerName_s` alternates between the HTTP listener and the HTTPS listener (the loop bounces between the two listeners).
 - `serverRouted_s` populated only on the HTTPS listener (backend also returns a redirect).
 
-2. Check the rewrite rule sets and redirect configurations associated with the routing rule for `$FAILING_URL` to see if both are trying to upgrade HTTP-to-HTTPS.
-
-There are typically two scenarios. Choose the one that matches.
+2. Check the rewrite rule sets and redirect configurations associated with the routing rule for `$FAILING_URL` to see if both are trying to upgrade HTTP-to-HTTPS. There are typically two scenarios. Choose the one that matches.
 
 **Option 1: Fix the backend redirect if the backend sends a `Location: http://...` header**
 
@@ -592,7 +573,7 @@ az network application-gateway rewrite-rule create \
   --sequence 100
 ```
 
-Then associate the rewrite rule set with the HTTPS listener's routing rule:
+Then associate the rewrite rule set with the HTTPS listener's routing rule.
 
 ```azurecli-interactive
 # ── Collect inputs (cached if already set in this session) ──
@@ -614,7 +595,7 @@ az network application-gateway rule update \
 > [!IMPORTANT]
 > The following commands are all write operations that require your approval before you can run them. Review them to better understand what each command does. Both a redirect configuration and a rewrite rule are trying to upgrade HTTP to HTTPS, creating a conflict. The recommended approach is to keep the redirect configuration (the standard method) and remove the conflicting rewrite rule.
 
-Identify the conflicting rewrite rule from [Step 3](#step-3), then remove it:
+Identify the conflicting rewrite rule from [Step 3](#step-3), then remove it.
 
 ```azurecli-interactive
 # ── Collect inputs (cached if already set in this session) ──
@@ -636,7 +617,7 @@ az network application-gateway rewrite-rule delete \
 
 The request should finish without a redirect loop.
 
-Verify this result in access logs:
+Verify this result in access logs.
 
 ```azurecli-interactive
 # ── Collect inputs (cached if already set in this session) ──
@@ -796,7 +777,7 @@ az network application-gateway rule update \
   --priority "$CORRECT_PRIORITY"
 ```
 
-If the competing rule also needs a priority adjustment:
+If the competing rule also needs a priority adjustment, run the following commands.
 
 ```azurecli-interactive
 # ── Collect inputs (cached if already set in this session) ──
@@ -853,7 +834,7 @@ Common scenarios include:
 - Backend is an IP-based VM but `pickHostNameFromBackendAddress` sends the raw IP as the `Host` header.
 - Multiple backends behind the same pool need different `Host` headers.
 
-Run the following commands in Azure CLI (as applicable):
+Run the following commands in Azure CLI (as applicable).
 
 1. Identify the backend type and the correct `Host` header value for that backend.
 
@@ -867,7 +848,7 @@ Run the following commands in Azure CLI (as applicable):
 2. Update the HTTP settings to send the correct `Host` header.
 
 > [!IMPORTANT]
-> The following commands are all write operations that require your approval before you can run them. Review them to better understand what each command does. Use the appropriate command based on the backend type identified in step 1
+> The following commands are all write operations that require your approval before you can run them. Review them to better understand what each command does. Use the appropriate command based on the backend type identified in step 1.
 
 **Option 1: Pick hostname from back-end address (for App Service backends)**
 
@@ -906,7 +887,7 @@ az network application-gateway http-settings update \
 
 3. Rerun [Step 4](#step-4) to verify that the HTTP settings now show the correct host header configuration. Request `$FAILING_URL` and verify that the backend returns the expected response.
 
-Check access logs:
+Check access logs.
 
 ```azurecli-interactive
 # ── Collect inputs (cached if already set in this session) ──

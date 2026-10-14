@@ -34,7 +34,7 @@ To solve the issue, follow these steps:
 1. Issue a checkpoint, take a log backup, observe `log_reuse_wait_desc`, and shrink the log if needed to reclaim space.
 
 > [!NOTE]
-> This issue has been fixed in [Cumulative Update 7 for SQL Server 2022](../../releases/sqlserver-2022/cumulativeupdate7.md#2491363).
+> This issue has been fixed in [Cumulative Update 7 for SQL Server 2022](https://support.microsoft.com/help/5028743#2491363).
 
 ## More information
 

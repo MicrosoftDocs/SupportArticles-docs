@@ -54,7 +54,7 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Troubleshoot forms in Customer Insights - Journeys
+          - text: Troubleshoot forms
             url: forms/troubleshooting-forms.md
           - text: Troubleshoot reCAPTCHA issues in forms
             url: forms/troubleshoot-recaptcha.md

@@ -228,6 +228,8 @@ items:
         href: must-change-password.md
       - name: Cannot RDP into Azure VM because of authentication errors
         href: cannot-connect-rdp-azure-vm.md
+      - name: Troubleshoot RDS instability after September 2026 Windows security updates
+        href: troubleshoot-rds-instability-september-2026-windows-updates.md  
       - name: CredSSP encryption oracle remediation
         href: credssp-encryption-oracle-remediation.md
       - name: No Internet access
@@ -651,44 +653,163 @@ items:
     - name: Upload Hyper-V DC to Azure
       href: upload-existing-hyperv-dc-azure-ps.md
 
-- name: Move and migrate VM resources
+- name: Migration and Move
   items:
-  - name: Top error scenarios
+  - name: Planning and prerequisites
     items:
-    - name: Resource is not in a Succeeded state
-      href: move-resources-not-succeeded-state.md
-    - name: Resource type not supported for move
-      href: move-resources-resource-type-not-supported.md
-    - name: Move not supported - resource has plan for different subscription
-      href: move-resources-plan-different-subscription.md
-    - name: Tenant not authorized to access linked subscription
-      href: move-resources-tenant-not-authorized.md
-    - name: 800 resource limit per move operation
-      href: move-resources-800-limit.md
-    - name: Cannot move more than 100 resources via portal
-      href: move-resources-100-limit-portal.md
-    - name: Backup error during resource move
-      href: move-resources-backup-error.md
-    - name: Operation not allowed - system upgrade in progress
-      href: move-resources-operation-not-allowed-system-upgrade.md
-    - name: Move fails with MissingMoveDependentResources
-      href: move-resources-missing-dependencies.md
-    - name: Move operation times out after four hours
-      href: move-resources-4-hour-timeout.md
-    - name: Move fails due to invalid or deleted storage account
-      href: move-resources-invalid-storage-account.md
-    - name: Move fails with IncompleteRequest - hidden resources not included
-      href: move-resources-incomplete-request-hidden-resources.md
-    - name: Move fails because a private endpoint is not in Succeeded state
-      href: move-resources-private-endpoint-failed-state.md
-  - name: FAQ
-    href: move-vm-resources-faq.md
-  - name: How-to guides
-    items:
-    - name: Move resources to a different tenant
+    - name: Pre-flight checklist for VM resource moves
+      href: move-resources-preflight-checklist.md
+    - name: Error signature triage map
+      href: move-resources-error-signature-triage-map.md
+    - name: Cross-tenant VM move
+      href: move-vm-cross-tenant-migration-guide.md
+    - name: Azure Resource Mover custom RBAC prerequisites
+      href: resource-mover-rbac-prerequisites.md
+    - name: Region move vs RG/subscription move
+      href: move-resources-region-move-vs-resource-group-subscription-move.md
+    - name: Azure virtual machine move and migration FAQ
+      href: move-vm-resources-faq.md
+    - name: Move Azure VM resources to a different tenant
       href: move-vm-to-different-tenant.md
     - name: Convert unmanaged disks to managed disks
       href: migrate-vm-unmanaged-to-managed-disks.md
+
+  - name: Active operation conflicts and transient failures
+    items:
+    - name: Extension failed state blocks move
+      href: move-resources-extension-failed-state.md
+    - name: Deployment in progress blocks move
+      href: move-resources-deployment-active-blocks-move.md
+    - name: Resources already moving or RG updating
+      href: move-resources-resources-moved-resource-group-update.md
+    - name: Request conflict (non-terminal provisioning state)
+      href: move-resources-request-conflict-provisioning-state-not-terminal.md
+    - name: Resource group not in expected state
+      href: move-resources-group-not-expected-state.md
+    - name: Batch orchestration failure
+      href: move-resources-batch-orchestration-failed.md
+    - name: Operation exceeded four-hour limit
+      href: move-resources-operation-timeout-4-hour-limit.md
+    - name: Operation takes longer than expected
+      href: move-resources-operation-duration-expected.md
+    - name: InternalServerError or empty BadRequest
+      href: move-resources-internalservererror-empty-badrequest.md
+    - name: Resource group lock duration during move
+      href: move-resources-resource-group-lock-duration.md
+    - name: Move operation times out after four hours
+      href: move-resources-4-hour-timeout.md
+    - name: Resource not in Succeeded state blocks move
+      href: move-resources-not-succeeded-state.md
+    - name: OperationNotAllowed due to system upgrade
+      href: move-resources-operation-not-allowed-system-upgrade.md
+
+  - name: Dependency blocks
+    items:
+    - name: Azure Backup dependencies block move
+      href: move-resources-backup-lock-recovery-services-vault.md
+    - name: Resource locks block move
+      href: move-resources-resource-locks-blocking-move.md
+    - name: Load balancer dependency missing
+      href: move-resources-load-balancer-dependency-missing.md
+    - name: Private endpoint dependency block
+      href: move-resources-private-endpoint-dependency-block.md
+    - name: Managed identity RBAC drift at destination
+      href: move-resources-managed-identity-rbac-drift.md
+    - name: NIC IP configuration dependency conflict
+      href: move-resources-network-interface-ip-config-conflict.md
+    - name: Availability set/zone constraint mismatch
+      href: move-resources-availability-set-zonal-constraint.md
+    - name: Disk Encryption Set access missing (CMK)
+      href: move-resources-cmk-disk-encryption-set-access-denied.md
+    - name: Proximity Placement Group constraint mismatch
+      href: move-resources-proximity-placement-group-constraint.md
+    - name: Dedicated host/host group dependency block
+      href: move-resources-dedicated-host-host-group-dependency.md
+    - name: Site Recovery replication enabled
+      href: move-resources-site-recovery-replication-enabled.md
+    - name: Shared disk cluster dependency block
+      href: move-resources-shared-disk-cluster-dependency.md
+    - name: Boot diagnostics storage dependency unresolved
+      href: move-resources-boot-diagnostics-storage-dependency.md
+    - name: VNet dependencies must move together
+      href: move-resources-vnet-dependencies-must-move-together.md
+    - name: Hidden restore point/snapshot residue
+      href: move-resources-hidden-restore-point-snapshot-residue.md
+    - name: MissingMoveDependentResources error
+      href: move-resources-missing-dependencies.md
+    - name: Azure Backup configured on VM blocks move
+      href: move-resources-backup-error.md
+    - name: Hidden resources not included in move request
+      href: move-resources-incomplete-request-hidden-resources.md
+    - name: Private endpoint not in Succeeded state
+      href: move-resources-private-endpoint-failed-state.md
+    - name: Move fails with invalid or deleted storage account
+      href: move-resources-invalid-storage-account.md
+
+  - name: Validation and policy failures
+    items:
+    - name: Blocked by destination Azure Policy
+      href: move-resources-blocked-by-destination-policy.md
+    - name: Destination policy validation denied
+      href: move-resources-destination-policy-deny.md
+    - name: Provider validation failed
+      href: move-resources-provider-validation-failed.md
+    - name: Resource settings validation failed
+      href: move-resources-validation-failed-resource-settings.md
+    - name: Validation-failed move error dispatcher
+      href: move-resources-troubleshoot-validation-failed-dispatcher.md
+    - name: Resource name already exists at destination
+      href: move-resources-name-conflict-at-destination.md
+    - name: Marketplace terms not accepted in destination subscription
+      href: move-resources-marketplace-terms-not-accepted-destination-subscription.md
+    - name: Resource has a plan with a different subscription
+      href: move-resources-plan-different-subscription.md
+    - name: Tenant not authorized to access linked subscription
+      href: move-resources-tenant-not-authorized.md
+
+  - name: Unsupported scope and platform constraints
+    items:
+    - name: VM size unavailable at destination
+      href: move-resources-resize-blocked-disk-constraints.md
+    - name: Ephemeral OS disk unsupported
+      href: move-resources-ephemeral-os-disk-not-supported.md
+    - name: Accelerated networking capability mismatch
+      href: move-resources-accelerated-networking-capability-mismatch.md
+    - name: VMSS instance resource move unsupported
+      href: move-resources-vmss-instance-scope-not-supported.md
+    - name: Reservation/capacity assumptions invalid at destination
+      href: move-resources-reservation-capacity-association-conflict.md
+    - name: Encryption at host unsupported at destination
+      href: move-resources-encryption-at-host-destination-constraint.md
+    - name: Individual VM in availability set unsupported
+      href: move-resources-availability-set-individual-vm-not-supported.md
+    - name: Azure Disk Encryption requirements block move
+      href: move-resources-azure-disk-encryption-blocked.md
+    - name: Scheduled patching/maintenance settings block move
+      href: move-resources-scheduled-patching-maintenance-configuration-blocked.md
+    - name: Ultra Disk/Premium SSD v2 unsupported at destination
+      href: move-resources-ultra-disk-premium-ssd-v2-destination-not-supported.md
+    - name: VMSS with Standard LB or Standard public IP unsupported
+      href: move-resources-vmss-standard-lb-public-ip-constraint.md
+    - name: Cannot move more than 100 resources via portal
+      href: move-resources-100-limit-portal.md
+    - name: 800 resource limit per move operation exceeded
+      href: move-resources-800-limit.md
+    - name: Resource type not supported for move
+      href: move-resources-resource-type-not-supported.md
+
+  - name: Post-move and relocation follow-up
+    items:
+    - name: Move succeeded, VM up, workload still broken
+      href: move-resources-post-move-vm-up-workload-broken.md
+    - name: Region relocation - original public IP not retained
+      href: move-resources-region-relocation-public-ip-not-retained.md
+    - name: Move succeeded, identity scope not recreated
+      href: move-resources-post-move-identity-scope-not-recreated.md
+    - name: Region relocation - private endpoint order incorrect
+      href: move-resources-region-relocation-private-endpoint-order.md
+    - name: Region relocation - DNS/probes/routing still point to source
+      href: move-resources-post-relocation-dns-probe-routing-still-source.md
 
 - name: On-demand Capacity Reservation issues
   items:

@@ -5,6 +5,7 @@ ms.service: azure-app-service
 ms.date: 08/21/2026
 ms.author: kaushika
 author: kaushika-msft
+manager: dcscontentpm
 ms.reviewer: kaushika
 ms.topic: troubleshooting
 ms.custom: sap:Availability, Performance, and Application Issues

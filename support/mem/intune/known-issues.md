@@ -10,6 +10,18 @@ ms.custom: sap:Set Up Intune\Set up administrators and manage roles
 
 This page lists recent known issues with Microsoft Intune. For a list of weekly feature announcements, see [What's new in Microsoft Intune](/mem/intune/fundamentals/whats-new) in the Intune product documentation. Visit the [Intune Customer Success blog](https://techcommunity.microsoft.com/t5/intune-customer-success/bg-p/IntuneCustomerSuccess) for posts about best practices, support tips, and other tutorials, and a backlog of past known issues.
 
+## Regional selection for Microsoft Store apps is temporarily unavailable
+
+- **Status:** Active
+
+
+Regional selection for Microsoft Store apps is temporarily unavailable while Microsoft addresses an issue affecting app creation. During this time, Intune uses the default United States Microsoft Store catalog when searching for and adding Microsoft Store apps.
+
+Existing Microsoft Store apps aren't affected by this issue.
+
+Microsoft is working to resolve the issue and will update this article when regional selection is available again.
+
+
 ## Apps deployed with Configuration Manager take a long time to load on the Windows apps page in Company Portal
 
 - **Status:** Active

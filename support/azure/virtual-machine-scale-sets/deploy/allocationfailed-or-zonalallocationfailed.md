@@ -1,7 +1,7 @@
 ---
 title: "Troubleshoot allocation failures on virtual machine scale sets."
 description: Troubleshoot an AllocationFailed or ZonalAllocationFailed error message when you create, restart, or resize Virtual Machine Scale Sets in Azure.
-ms.date: 12/06/2021
+ms.date: 09/17/2026
 ms.reviewer: saraic, nameier, shache, emanders, v-leedennis
 ms.service: azure-virtual-machine-scale-sets
 ms.custom: sap:Cannot create new scale set
@@ -19,7 +19,9 @@ In this article, get information about:
 - The causes of the allocation failures.
 - How to troubleshoot allocation failures when they arise.
 
-To troubleshoot allocation failures for standard virtual machines (VMs), see [Troubleshoot allocation failures when you create, restart, or resize VMs in Azure](../../virtual-machines/windows/allocation-failure.md).
+If allocation fails after a quota increase, see [Quota and capacity](/azure/virtual-machines/quotas#quota-and-capacity) and [On-demand capacity reservation](/azure/virtual-machines/capacity-reservation-overview) for guidance on capacity availability.
+
+For `OverconstrainedZonalAllocationRequest` or `OverconstrainedAllocationRequest` errors on a scale set, see [Overconstrained allocation failures](../../virtual-machines/windows/allocation-failure.md#overconstrained-allocation-failures) in the VM troubleshooting article. For standard virtual machines (VMs), see [Troubleshoot allocation failures when you create, restart, or resize VMs in Azure](../../virtual-machines/windows/allocation-failure.md).
 
 ## Symptom
 
@@ -43,6 +45,8 @@ The following error details are an example of the allocation failure message.
 **Error message 3**: Allocation failed. If you are trying to add a new VM to a Virtual Machine Scale Set with a single placement group or update/resize an existing VM in a Virtual Machine Scale Set with a single placement group, please note that such allocation is scoped to a single cluster, and it is possible that the cluster is out of capacity. Please read more about improving likelihood of allocation success at <https://aka.ms/allocation-guidance>.
 
 ## How to avoid allocation failures
+
+Before deployment, [check VM SKU and zone support](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-use-availability-zones#check-vm-sku-and-zone-support-before-deployment) by using [az vm list-skus](/cli/azure/vm#az-vm-list-skus) with `--zone`. This diagnostic shows SKU and zone support and subscription restrictions, not live physical capacity.
 
 To avoid allocation failures, you can apply some configuration settings to the scale set to optimize allocation requests.
 

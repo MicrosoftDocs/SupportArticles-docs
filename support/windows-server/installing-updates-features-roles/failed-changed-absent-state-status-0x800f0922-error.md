@@ -1,22 +1,22 @@
 ---
-title: Failed to be changed to the Absent state with status 0x800f0922
-description: Helps fix the Failed to be changed to the Absent state error with status 0x800f0922 when installing updates in Windows Server 2019.
+title: Failed to be changed to the Absent state with status 0x800F0922
+description: Helps fix the Failed to be changed to the Absent state error with status 0x800F0922 when installing updates in Windows Server 2019.
 ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, luioan, v-lianna
 ms.custom:
-- sap:windows servicing,updates and features on demand\windows update fails - installation stops with error
+- sap:Windows Servicing, Updates and Features on Demand\Windows Update - Install errors starting with 0x800F (CBS E)
 - pcy:WinComm Devices Deploy
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
-# "Failed to be changed to the Absent state. Status: 0x800f0922" when installing updates in Windows Server 2019 
+# "Failed to be changed to the Absent state. Status: 0x800F0922" when installing updates in Windows Server 2019
 
-This article helps fix the "Failed to be changed to the Absent state. Status: 0x800f0922" error when installing updates in Windows Server 2019.
+This article helps fix the "Failed to be changed to the Absent state. Status: 0x800F0922" error when installing updates in Windows Server 2019.
 
-You receive the error code 0x800f0922 when you try to install an update in Windows Server 2019. For example:
+You receive the error code 0x800F0922 when you try to install an update in Windows Server 2019. For example:
 
 > Package KB5027222 failed to be changed to the Absent state. Status: 0x800f0922
 

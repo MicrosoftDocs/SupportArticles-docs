@@ -91,7 +91,7 @@ To remove the "not compliant" settings:
 
 ## Administrator protection isn't supported on Cloud PCs
 
-Windows 365 Cloud PCs don't support Administrator protection. If a policy that enables it is assigned to your Cloud PCs, users might see an unexpected authentication prompt when signing in, extra approval prompts for tasks that require elevation, and elevation failures.
+Windows 365 Cloud PCs don't support [Administrator protection](/windows/security/application-security/application-control/administrator-protection/). Components in the remote connection stack require updates to work with Administrator protection's least-privilege model. Support for this environment is planned for a future release. In the meantime, configure users as standard users to maintain least privilege in this environment. If a policy that enables it is assigned to your Cloud PCs, users might see an unexpected authentication prompt when signing in, extra approval prompts for tasks that require elevation, and elevation failures.
 
 The sign-in prompt affects all users. The elevation prompts and failures affect users who have local administrator rights. By default, users aren't administrators of their Cloud PCs.
 
@@ -370,14 +370,6 @@ Immediately after provisioning, the status information for the Autopilot Device 
 #### Solution
 
 Wait for the process to continue. Cloud PC serial numbers can take up to 30 minutes to appear in the status information.
-
-### Windows Autopilot Device Preparation isn't currently supported for Citrix Cloud PCs
-
-Device preparation policies (DPP) aren't supported for Cloud PCs that are configured to use Citrix integration. If you assign a device preparation policy to a provisioning policy that's used for Citrix Cloud PCs, the policy won't be applied during Cloud PC provisioning.
-
-#### Solution
-
-There is currently no workaround. To use Citrix integration, configure your Cloud PCs by using a provisioning policy that doesn't include a device preparation policy.
 
 ## Next steps
 

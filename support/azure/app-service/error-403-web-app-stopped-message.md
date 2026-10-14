@@ -1,6 +1,6 @@
 ---
 title: Error 403 - This web app is stopped message
-description: Learn how to troubleshoot and resolve the Error 403 - This web app is stopped message caused by billing limits, stopped status, or resource quotas.
+description: Learn how to troubleshoot and resolve the "Error 403 - This web app is stopped" message caused by billing limits, stopped status, or resource quotas.
 author: kaushika-msft
 manager: dcscontentpm
 ms.topic: troubleshooting
@@ -10,17 +10,17 @@ ms.reviewer: kaushika
 ms.service: azure-app-service
 ms.custom: sap:Availability, Performance, and Application Issues
 ---
-# Error 403 - This web app is stopped message 
+# "Error 403 - This web app is stopped" message 
 
 ## Summary
 
-This article explains how to identify and resolve the **Error 403 - This web app is stopped** message in Azure App Service by checking billing limits, app status, and resource quotas.
+This article explains how to identify and resolve the "Error 403 - This web app is stopped" message in Azure App Service by checking billing limits, app status, and resource quotas.
 
 ## Symptom
 
 When browsing to an Azure web site, you encounter the following message:
 
-> Error 403 - This web app is stopped.
+"Error 403 - This web app is stopped."
 
 ## Cause
 

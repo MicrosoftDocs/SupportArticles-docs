@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-rezhou
 ms.custom:
-- sap:windows servicing,updates and features on demand\clients missing updates,not offered,fail to download
+- sap:Windows Servicing, Updates and Features on Demand\Windows Update - Configuring and managing client settings
 - pcy:WinComm Devices Deploy
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>

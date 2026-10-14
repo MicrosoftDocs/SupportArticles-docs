@@ -37,13 +37,13 @@ The auto-cleanup process flushes the plan out of Query Data Store. The query enc
 
 This issue is fixed in the following service pack for SQL Server:  
 
-[Service Pack 3 for SQL Server 2016](~/sql/releases/sqlserver-2016/servicepack3.md)
+[Service Pack 3 for SQL Server 2016](https://support.microsoft.com/help/5003279)
 
 **About service packs for SQL Server:**  
 
 Service packs are cumulative. Each new service pack contains all the fixes that are in previous service packs, together with any new fixes. We recommend that you apply the latest service pack and the latest cumulative update for that service pack. You don't have to install a previous service pack before you install the latest service pack. Refer to Table 1 in the following article for more information about the latest service pack and latest cumulative update:
 
-[How to determine the version, edition and update level of SQL Server and its components](../../releases/download-and-install-latest-updates.md)
+[How to determine the version, edition and update level of SQL Server and its components](https://support.microsoft.com/help/321185)
 
 ## Workaround
 

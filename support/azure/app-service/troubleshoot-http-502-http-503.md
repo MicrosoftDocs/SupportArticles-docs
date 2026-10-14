@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot HTTP 502 and HTTP 503 errors
+title: Troubleshoot "HTTP 502" and "HTTP 503" errors
 description: Troubleshoot HTTP 502 Bad Gateway and HTTP 503 Service Unavailable errors in Azure App Service. Learn how to diagnose, mitigate, and resolve app issues.
 tags: top-support-issue
 keywords: HTTP 502 bad gateway, HTTP 503 service unavailable, HTTP error 503, HTTP error 502
@@ -14,13 +14,15 @@ ms.reviewer: msangapu, kaushika
 ms.custom: sap:Networking
 #customer intent: As an app developer, I need to troubleshoot common errors if they occur using tools provided by Azure App Service.
 ---
-# Troubleshoot HTTP 502 and 503 errors in Azure App Service
+# Troubleshoot "HTTP 502" and "HTTP 503" errors in Azure App Service
 
 ## Summary
 
-You might see **HTTP 502 Bad Gateway** and **HTTP 503 Service Unavailable** errors when you open an app that you host in [Azure App Service](/azure/app-service/overview). This article helps you troubleshoot these errors.
+You might see "HTTP 502 Bad Gateway" and "HTTP 503 Service Unavailable" errors when you open an app that you host in [Azure App Service](/azure/app-service/overview). This article helps you troubleshoot these errors.
 
 These errors often happen because of an application-level problem, such as:
+
+"HTTP 502" and "HTTP 503" errors can be caused by:
 
 - Requests take a long time.
 - The app uses high memory or CPU.

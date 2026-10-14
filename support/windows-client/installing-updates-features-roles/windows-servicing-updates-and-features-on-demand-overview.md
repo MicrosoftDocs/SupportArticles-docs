@@ -15,9 +15,11 @@ The topics in this section provide solutions and scenario guides to help you tro
 
 ## Windows Servicing, Updates and Features on Demand sub categories
 
-- Clients missing updates, not offered, fail to download
-- Failure to install Windows Updates
 - Issues installing Features on Demand (FoD)
-- Windows Update configuration, settings and management
-- Windows Update fails - installation rolls back
-- Windows Update fails - installation stops with error
+- Windows Update - Configuring and managing client settings
+- Windows Update - Download of updates failed
+- Windows Update - Expected update missing or not offered
+- Windows Update - Install errors starting with 0x8007 (ERROR)
+- Windows Update - Install errors starting with 0x800F (CBS E)
+- Windows Update - Install errors starting with 0x8024 (WU E Setup)
+- Windows Update - Other issues, or errors that don't list error codes

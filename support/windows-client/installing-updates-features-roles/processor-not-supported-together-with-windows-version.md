@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-jesits
 ms.custom:
-- sap:windows servicing,updates and features on demand\windows update configuration,settings and management
+- sap:Windows Servicing, Updates and Features on Demand\Windows Update - Configuring and managing client settings
 - pcy:WinComm Devices Deploy
 adobe-target: true
 appliesto:
