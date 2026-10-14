@@ -4,7 +4,7 @@ description: Find why an Azure Load Balancer or its resource group can't be dele
 ms.service: azure-load-balancer
 ms.topic: troubleshooting
 ms.custom: sap:Management
-ms.date: 6/17/2026
+ms.date: 06/17/2026
 ai.hint.symptom-tags:
   - cannot-delete-load-balancer
   - delete-failed
