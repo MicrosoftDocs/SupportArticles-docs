@@ -404,6 +404,12 @@ On-demand bursting is available only in the west-central United States region.
 
 **A:** To achieve the disk throughput of Standard SSD and Standard HDD large disk sizes (greater than 4 TiB) beyond 500 IOPS and 60 MiB/s, we recommend that you deploy a new VM from one of the following VM sizes to optimize your performance: B-series, DSv2-series, Dsv3-Series, ESv3-Series, Fs-series, Fsv2-series, M-series, GS-series, NCv2-series, NCv3-series, or Ls-series VMs. Be aware that attaching large disks to existing VMs or VMs that aren't using the recommended sizes can adversely affect performance.
 
+**Q: Does increasing the disk size always increase IOPS and throughput?**
+
+**A:** Not always. For some managed disk types, increasing the disk size moves the disk to a higher performance tier and provides higher baseline IOPS and throughput.
+
+However, actual performance is also limited by the selected VM size, workload pattern, host caching configuration, queue depth, I/O size, and guest operating system.
+
 **Q: How can I upgrade my large disks (greater than 4 TiB) that were deployed during the larger disk sizes preview in order to get the higher IOPS and bandwidth at GA?**
 
 **A:** You can either stop and restart the VM that the disk is attached to or detach and re-attach the disk. The performance targets of larger disk sizes were increased for both Premium SSDs and Standard SSDs at GA.
@@ -415,6 +421,14 @@ On-demand bursting is available only in the west-central United States region.
 **Q: Do we support enabling Host Caching on all disk sizes?**
 
 **A:** Host Caching (ReadOnly and Read/Write) is supported on disk sizes of less than 4 TiB. This means that any disk that is provisioned up to 4,095 GiB can take advantage of Host caching. Host caching isn't supported for disk sizes that are greater than or equal to 4,096 GiB. For example, a P50 Premium disk that's provisioned at 4,095 GiB can take advantage of host caching, and a P50 disk that's provisioned at 4,096 GiB can't take advantage of host caching. We recommend that you use caching for smaller disk sizes for which you can expect to see a better performance boost because data cached to the VM.
+
+**Q: Does deleting files from a large managed disk reduce the Azure disk charge?**
+
+**A:** No. Deleting files frees space inside the guest operating system but does not reduce the provisioned Azure disk size or billing tier.
+
+**Q: Does increasing the managed disk size automatically expand the partition or file system inside the virtual machine?**
+
+**A:** No. Increasing the Azure managed disk size expands only the underlying disk capacity. You must separately extend the partition and file system inside the Windows or Linux guest operating system before the additional capacity becomes usable.
 </details>
 
 ## Unmanaged disks
