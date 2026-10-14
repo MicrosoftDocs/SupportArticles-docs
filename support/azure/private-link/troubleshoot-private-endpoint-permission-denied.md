@@ -3,7 +3,7 @@ title: Troubleshoot AuthorizationFailed errors for Azure private endpoints
 description: Fix AuthorizationFailed errors when you create or approve an Azure private endpoint. Identify missing RBAC permissions, and apply the least-privilege role to resolve it.
 ms.service: azure-private-link
 ms.topic: troubleshooting
-ms.date: 6/12/2026
+ms.date: 06/12/2026
 ms.custom: sap:Private Endpoints
 ai.hint.symptom-tags:
   - authorization-failed

@@ -1,9 +1,9 @@
 ---
 title: The Meeting app status of a Teams Rooms device is Unhealthy
 description: Resolve the issue that causes the Meeting app signal of a Microsoft Teams Rooms device to appear as Unhealthy.
-ms.reviewer: rafilipe
+ms.reviewer: rafilipe, mattslomka
 ms.topic: troubleshooting
-ms.date: 12/08/2023
+ms.date: 08/18/2026
 author: Cloud-Writer
 ms.author: meerak
 manager: dcscontentpm
