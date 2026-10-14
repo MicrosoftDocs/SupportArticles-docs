@@ -49,7 +49,20 @@ To resolve the "InvalidLoadBalancerProfileAllocatedOutboundPorts" error, follow 
     ```
 
     > [!NOTE]
-    > When performing this check, make sure you consider node surges that happen during cluster upgrades and other operations. AKS defaults to one buffer node for upgrade operations, but this number can be modified using the [maxSurge](/azure/aks/upgrade-aks-cluster#customize-node-surge-upgrade) parameter.
+    > When performing this check, use the effective node count across all node pools and include the upgrade surge capacity required for each pool.
+    >
+    > For each node pool:
+    >
+    > - If cluster autoscaler is enabled, use `maxCount` as the base node count.
+    > - Otherwise, use the configured node count.
+    > - Add the upgrade surge capacity for that node pool.
+    >
+    > The [`maxSurge`](/azure/aks/upgrade-aks-node-pools-rolling#customize-node-surge) setting is configured per node pool and defaults to `10%`. Percentage values are calculated from the node pool size at the time of upgrade and rounded up to the nearest whole node. Therefore, the default `10%` results in at least one surge node for each non-empty node pool.
+    >
+    > For example, an eight-node pool with `maxSurge` set to `10%` requires one surge node, resulting in an effective node count of nine. With 8,000 allocated outbound ports per node and one outbound IP, the cluster requires 72,000 ports, but only 64,000 ports are available.
+    >
+    > For capacity planning, account for the full configured `maxSurge` because AKS attempts to provision that capacity first. For node pools running Kubernetes 1.35 or later, AKS can fall back to one surge node if the full surge can't be provisioned. If [`maxUnavailable` fallback](/azure/aks/upgrade-aks-node-pools-rolling#maxunavailable-fallback-preview) is configured, AKS can subsequently perform an in-place upgrade without additional surge capacity. When `maxUnavailable` is `0`, the fallback upgrade path still requires one surge node.
+
 
 2. Change the cluster's node count, the number of outbound frontend IP addresses, or the number of SNAT ports per node.
 
