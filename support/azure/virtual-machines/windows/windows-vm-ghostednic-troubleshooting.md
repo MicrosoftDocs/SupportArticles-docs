@@ -20,6 +20,7 @@ This article provides troubleshooting steps for the issue of multiple Mellanox E
 When an Azure Virtual Machine running Windows Server or Windows Client with **Accelerated Networking** enabled is **deallocated**, the following may occur:
 
 - Connectivity issues may occur for the active NIC
+- Secondary IP addresses assigned to the primary network adapter on a Windows VM may be removed or lost unexpectedly
 - Interference with scripts or automation that enumerate NICs
 - Stale IP configurations associated with removed adapters may be present
 - Windows Update download issues 
