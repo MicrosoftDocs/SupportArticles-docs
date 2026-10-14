@@ -1,26 +1,29 @@
 ---
-title: Understand Error Codes
-description: Understand error codes so that you can troubleshoot issues in your agent design by using Microsoft Copilot Studio.
-ms.date: 06/04/2026
+title: Resolve Agent Error Codes in Microsoft Copilot Studio
+description: Microsoft Copilot Studio agent error codes help you diagnose and resolve authentication errors, agent flow failures, and capacity limits.
+ms.date: 10/14/2026
 ms.reviewer:
-  - jameslew
   - erickinser
   - v-shaywood
+  - arielm
 ms.custom: sap:Authoring
+ai-usage: ai-assisted
 ---
 
-# Understand error codes
+# Resolve Microsoft Copilot Studio agent error codes
 
-When an agent encounters a problem during a conversation, it responds by sending a message that includes an error code for the specific problem. Users of the agent should give this error code to their administrator.
+## Summary
 
-As an agent maker, if a problem occurs when you use the test pane to [test your agent](/microsoft-copilot-studio/authoring-test-bot), you receive a message that contains the error code and more context about the problem. Alternatively, you can use the **Topic checker** panel to [validate your agent's configuration](/microsoft-copilot-studio/authoring-topic-management#view-topic-errors).
+Microsoft Copilot Studio agent error codes identify problems that occur during a conversation. This article explains the codes and their resolutions, including authentication errors, agent flow failures, and usage limits. Agent users should give the error code to their administrator.
 
-## Error list
+As an agent maker, you receive an error code and additional context when you [test your agent](/microsoft-copilot-studio/authoring-test-bot) in the test pane. Alternatively, use the **Topic checker** panel to [validate your agent's configuration](/microsoft-copilot-studio/authoring-topic-management#view-topic-errors).
+
+## Agent error codes and resolutions
 
 # [Web app](#tab/webApp)
 
 > [!NOTE]
-> The term _dialog_ is used in some error messages to refer to a _topic_.
+> Some error messages use the term _dialog_ to refer to a _topic_.
 
 | Error code                                                                            | Description                                                                                                                                                                        |
 | ------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -77,8 +80,8 @@ As an agent maker, if a problem occurs when you use the test pane to [test your 
 | [OpenAIndirectAttack](#openaindirectattack)                                           | Indirect attack content was detected.                                                                                                                                              |
 | [OpenAIRateLimitReached](#openairatelimitreached)                                     | The capacity limit of the agent was reached.                                                                                                                                       |
 | [OpenAISelfHarm](#openaiselfharm)                                                     | Self-harm content was detected.                                                                                                                                                    |
-| [OpenAISexual](#openaisexual)                                                         | Sexual content was detected.                                                                                                                                                       |
-| [OpenAIViolence](#openaiviolence)                                                     | Violence content was detected.                                                                                                                                                     |
+| [OpenAISexual](#openaisexual)                                                         | The system detected sexual content.                                                                                                                                                |
+| [OpenAIViolence](#openaiviolence)                                                     | The system detected violent content.                                                                                                                                               |
 | [OperationTimeout](#operationtimeout)                                                 | A specific tool operation timed out before completion.                                                                                                                             |
 | [OutgoingMessageSizeTooBig](#outgoingmessagesizetoobig)                               | A message sent by an agent was too large to process.                                                                                                                               |
 | [QuotaExceeded](#quotaexceeded)                                                       | A tool call failed because monthly, daily, or concurrency quota limits were exceeded.                                                                                              |
@@ -89,12 +92,12 @@ As an agent maker, if a problem occurs when you use the test pane to [test your 
 | [SharePoint503](#sharepoint503)                                                       | SharePoint knowledge search was unavailable.                                                                                                                                       |
 | [SharePointSearchFailed](#sharepointsearchfailed)                                     | A system issue occurred while searching SharePoint knowledge.                                                                                                                      |
 | [SystemError](#systemerror)                                                           | A system error occurred in Copilot Studio.                                                                                                                                         |
-| [TooMuchDataToHandle](#toomuchdatatohandle)                                           | The request that was made by the user is too large to process.                                                                                                                     |
+| [TooMuchDataToHandle](#toomuchdatatohandle)                                           | The request that the user made is too large to process.                                                                                                                            |
 
 [1]: /microsoft-copilot-studio/advanced-flow
 [2]: /microsoft-copilot-studio/authoring-topic-management#redirect-to-another-topic
 
-#### AIModelActionBadRequest
+### AIModelActionBadRequest
 
 **Error messages:**
 
@@ -114,25 +117,25 @@ As an agent maker, if a problem occurs when you use the test pane to [test your 
 
 For more information, see [Create a prompt action](/ai-builder/use-a-custom-prompt-in-mcs#create-a-prompt-action).
 
-#### AIModelActionRequestTimeout
+### AIModelActionRequestTimeout
 
 **Error message**: The prompt `prompt-name` execution timed out.
 
 **Resolution**: Make sure that the call to the AI Builder model doesn't exceed 100 seconds.
 
-#### AIPluginOperationNotFound
+### AIPluginOperationNotFound
 
 **Error message**: Sorry, the bot can't talk for a while. It's something the bot's owner needs to address.
 
 **Resolution**: Republish the agent. This error can occur when an agent is published through an import or a solution deployment.
 
-#### AsyncResponsePayloadTooLarge
+### AsyncResponsePayloadTooLarge
 
 **Error message**: The output returned from the connector was too large to be handled by the agent. Try reducing its size by utilizing available connector filters or by limiting the number of configured action outputs.
 
 **Resolution**: One of the agent's real-time connectors is returning a payload that's larger than the agent can handle. For more information about the payload limit, see [Copilot Studio web app limits](/microsoft-copilot-studio/requirements-quotas#copilot-studio-web-app-limits).
 
-#### AuthenticationNotConfigured
+### AuthenticationNotConfigured
 
 **Error messages:**
 
@@ -144,13 +147,13 @@ For more information, see [Create a prompt action](/ai-builder/use-a-custom-prom
 
 **Resolution:** This error occurs if your agent uses actions or features that require user authentication, but authentication isn't configured. To resolve the problem:
 
-1. In your agent, go to **Settings > Security > Authentication**.
+1. In your agent, go to **Settings** > **Security** > **Authentication**.
 1. Select an appropriate authentication method: **Authenticate with Microsoft** for Microsoft 365 users, or **Authenticate manually** for custom OAuth providers.
-1. If the error mentions a specific channel, verify that the channel supports the authentication method that you're using. Some channels don't support integrated authentication.
+1. If the error message mentions a specific channel, verify that the channel supports the authentication method that you're using. Some channels don't support integrated authentication.
 
 For more information, see [Configure user authentication](/microsoft-copilot-studio/configuration-end-user-authentication).
 
-#### BindingKeyNotFoundError
+### BindingKeyNotFoundError
 
 **Error messages**:
 
@@ -158,23 +161,23 @@ For more information, see [Configure user authentication](/microsoft-copilot-stu
 - Input binding '{0}' is not found, refresh this flow to get the latest bindings
 - Output binding '{0}' is not found, refresh this flow to get the latest bindings
 
-**Resolution**: Check that the agent flow inputs and outputs are set up correctly. Try refreshing the inputs or outputs to resolve this issue. If that doesn't work, try setting up the agent flow again.
+**Resolution**: Check that the agent flow inputs and outputs are set up correctly. Try refreshing the inputs or outputs to resolve this issue. If refreshing doesn't resolve the issue, try setting up the agent flow again.
 
 To get the latest inputs and outputs, remove and readd the agent flow.
 
-#### BingSearchFailed
+### BingSearchFailed
 
 **Error message**: This is a system issue on our side. Nothing you need to fix. Error details: Platform runtime - BingSearchFailed.
 
 **Resolution**: A platform-side Bing search failure can cause this issue. Retry later. If the issue continues, contact support.
 
-#### ConnectedAgentAuthMismatch
+### ConnectedAgentAuthMismatch
 
 **Error message:** Your connected agent with schema name `{AgentSchemaName}` has an authentication mismatch with the main agent.
 
 **Resolution:** The orchestrator agent and connected subagent have different authentication configurations. For multi-agent orchestration to work, both agents must use compatible authentication settings. To resolve the problem:
 
-1. Open both agents, and go to **Settings > Security > Authentication**.
+1. Open both agents, and go to **Settings** > **Security** > **Authentication**.
 1. Make sure that both agents use the same authentication method (for example, both use **Authenticate with Microsoft**).
 1. If you're using manual authentication, make sure that both agents are configured to use the same OAuth provider and settings.
 
@@ -184,9 +187,9 @@ The following authentication compatibility rules apply:
 - If the connected agent requires authentication, the orchestrator must use the _same_ authentication method.
 - **Manual authentication (Generic OAuth2)** on the orchestrator isn't compatible with connected agents that require authentication. Both agents must use the same manual authentication configuration, or the connected agent must have no authentication requirement.
 
-For more information, see [Configure user authentication](/microsoft-copilot-studio/configuration-end-user-authentication) and [Use agents as actions in other agents (preview)](/microsoft-copilot-studio/advanced-use-dispatcher).
+For more information, see [Configure user authentication](/microsoft-copilot-studio/configuration-end-user-authentication) and [Connect to an existing Copilot Studio agent](/microsoft-copilot-studio/add-agent-copilot-studio-agent).
 
-#### ConnectedAgentBotNotFound
+### ConnectedAgentBotNotFound
 
 **Error message:** Connected agent with schema name {AgentSchemaName} not found.
 
@@ -197,9 +200,9 @@ For more information, see [Configure user authentication](/microsoft-copilot-stu
 1. Check that you have access permissions to the connected agent.
 1. If the connected agent was recently created, wait a few minutes, and then try again.
 
-For more information, see [Use agents as actions in other agents (preview)](/microsoft-copilot-studio/advanced-use-dispatcher).
+For more information, see [Connect to an existing Copilot Studio agent](/microsoft-copilot-studio/add-agent-copilot-studio-agent).
 
-#### ConnectedAgentBotNotPublished
+### ConnectedAgentBotNotPublished
 
 **Error message:** Connected agent with schema name `{AgentSchemaName}` needs to be published to be invoked.
 
@@ -209,9 +212,9 @@ For more information, see [Use agents as actions in other agents (preview)](/mic
 1. Publish the agent.
 1. Return to the orchestrator agent, and test again.
 
-For more information, see [Use agents as actions in other agents (preview)](/microsoft-copilot-studio/advanced-use-dispatcher).
+For more information, see [Connect to an existing Copilot Studio agent](/microsoft-copilot-studio/add-agent-copilot-studio-agent).
 
-#### ConnectedAgentChainingNotSupported
+### ConnectedAgentChainingNotSupported
 
 **Error message:** Agent chaining detected. Your agent cannot be connected to agent with schema name `{AgentSchemaName}` as it already has a connected agent.
 
@@ -221,9 +224,9 @@ For more information, see [Use agents as actions in other agents (preview)](/mic
 1. Move the functionality from deeply nested agents into either the orchestrator or first-level connected agents.
 1. Consider using topics or actions instead of more connected agents.
 
-For more information, see [Use agents as actions in other agents (preview)](/microsoft-copilot-studio/advanced-use-dispatcher).
+For more information, see [Connect to an existing Copilot Studio agent](/microsoft-copilot-studio/add-agent-copilot-studio-agent).
 
-#### ConnectedAgentGptComponentNotFound
+### ConnectedAgentGptComponentNotFound
 
 **Error message:** No GPT component found for connected agent with schema name `{AgentSchemaName}`.
 
@@ -235,13 +238,13 @@ For more information, see [Use agents as actions in other agents (preview)](/mic
 1. After you make changes, publish the connected agent.
 1. Return to the orchestrator agent, and test again.
 
-For more information, see [Use agents as actions in other agents (preview)](/microsoft-copilot-studio/advanced-use-dispatcher).
+For more information, see [Connect to an existing Copilot Studio agent](/microsoft-copilot-studio/add-agent-copilot-studio-agent).
 
-#### ConnectorPowerFxError
+### ConnectorPowerFxError
 
 **Error message:** Power Fx expression evaluation failed: {ErrorDetails}
 
-**Resolution:** A Power Fx expression that's used in a connector action wasn't evaluated correctly. To resolve the problem:
+**Resolution:** A Power Fx expression used in a connector action didn't evaluate correctly. To resolve the problem:
 
 1. Open the topic that contains the connector action.
 1. Review the Power Fx expressions in the action's input parameters.
@@ -257,25 +260,25 @@ Common causes include:
 
 For more information, see [Use Power Fx in Copilot Studio](/microsoft-copilot-studio/advanced-power-fx).
 
-#### ConsentNotProvidedByUser
+### ConsentNotProvidedByUser
 
 **Error message**: No consent provided for SSO connection.
 
-**Resolution**: The user who's interacting with the agent must verify the connection by using the agent's single sign-on (SSO) connection prompt.
+**Resolution**: The user who interacts with the agent must verify the connection by using the agent's single sign-on (SSO) connection prompt.
 
-#### ContentError
+### ContentError
 
 **Error message**: This error produces dynamic messages based on the context of the error.
 
-**Resolution**: This message is a catch-all error for problems that are related to your agent's content. The error message provides more details.
+**Resolution**: This message is a catch-all error for problems related to your agent's content. The error message provides more details.
 
 Common problems include:
 
 - A node is missing required properties.
-- Invalid YAML was added by using the [code editor](/microsoft-copilot-studio/authoring-create-edit-topics#edit-topics-with-the-code-editor).
+- Invalid YAML added by using the [code editor](/microsoft-copilot-studio/authoring-create-edit-topics#edit-topics-by-using-the-code-editor).
 - A [Power Fx formula](/microsoft-copilot-studio/advanced-power-fx) contains an error.
 
-#### ConversationStateTooLarge
+### ConversationStateTooLarge
 
 **Error message:** Conversation state size exceeds the maximum allowed limit.
 
@@ -293,7 +296,7 @@ To prevent this error:
 
 For more information, see [Copilot Studio quotas and limits](/microsoft-copilot-studio/requirements-quotas).
 
-#### DataLossPreventionViolation
+### DataLossPreventionViolation
 
 **Error message**: This environment requires users to sign in before they can use the agent. Go to Manage > Security > Authentication and select the option that requires users to sign in.
 
@@ -303,13 +306,13 @@ For more information, see [Copilot Studio quotas and limits](/microsoft-copilot-
 - One or more connectors that you use in the agent aren't in the same data group. See [Copilot Studio connectors](/microsoft-copilot-studio/admin-data-loss-prevention#copilot-studio-connectors-and-data-groups).
 - The tenant administrator blocked one or more connectors that you use in the agent.
 
-#### DataverseFileAttachment429
+### DataverseFileAttachment429
 
 **Error message**: SharePoint is limiting requests right now. Try again later. Error details: DataverseFiles429.
 
 **Resolution**: Service throttling can cause this error. Wait and retry.
 
-#### DataverseSearchFailed
+### DataverseSearchFailed
 
 **Error message**: This is a system issue on our side. Nothing you need to fix. Error details: Platform runtime - DataverseSearchFailed.
 
@@ -319,7 +322,7 @@ For more information, see [Copilot Studio quotas and limits](/microsoft-copilot-
 1. Verify that the user has valid licensing and permissions for the Dataverse knowledge source.
 1. If the issue persists after reauthentication, contact support.
 
-#### DataverseStructured401
+### DataverseStructured401
 
 **Error message**: Search ran into an authentication issue. This usually resolves on its own. Nothing to fix on your side. Error details: Dataverse401.
 
@@ -331,7 +334,7 @@ For more information, see [Copilot Studio quotas and limits](/microsoft-copilot-
 
 For more information, see [Troubleshoot enterprise knowledge sources](../knowledge/enterprise-data.md).
 
-#### DataverseStructured429
+### DataverseStructured429
 
 **Error message**: Dataverse is limiting requests right now. Try again later. Error details: Dataverse429.
 
@@ -343,25 +346,25 @@ For more information, see [Troubleshoot enterprise knowledge sources](../knowled
 
 For more information, see [Microsoft Graph throttling guidance](/graph/throttling).
 
-#### DataverseStructured500
+### DataverseStructured500
 
 **Error message**: This isn't a configuration problem. The owning service needs to investigate. Error details: Dataverse500.
 
 **Resolution**: A service-side issue can cause this error. Retry later. If the issue continues, contact support.
 
-#### DataverseStructured503
+### DataverseStructured503
 
 **Error message**: This isn't a configuration problem. The owning service needs to investigate. Error details: Dataverse503.
 
 **Resolution**: Temporary service unavailability can cause this error. Retry later.
 
-#### EnforcementMessageC2
+### EnforcementMessageC2
 
 **Error message**: This agent is currently unavailable. It has reached its usage limit. Please try again later.
 
 **Resolution**: This message appears if an agent reaches its message capacity or the pay-as-you-go meter reaches its limit. To resolve the problem, add more prepaid capacity or create a pay-as-you-go billing plan. The agent chat should then resume working within five minutes. For more information, see [Overage Enforcement](/microsoft-copilot-studio/requirements-messages-management#overage-enforcement).
 
-#### ExecutionTimeout
+### ExecutionTimeout
 
 **Error message**: This tool call timed out. The operation took too long to complete. Error details: Timeout · execution.
 
@@ -372,7 +375,7 @@ For more information, see [Microsoft Graph throttling guidance](/graph/throttlin
 1. Remove unnecessary actions from the critical path.
 1. Validate loops and branching conditions for inefficiencies.
 
-#### FlowActionBadRequest
+### FlowActionBadRequest
 
 **Error messages**:
 
@@ -381,9 +384,9 @@ For more information, see [Microsoft Graph throttling guidance](/graph/throttlin
 - The parameter with name {KeyName} on flow {FlowName} ({FlowId}) evaluated to type {ResolveType}, expected type {ExpectedType}.
 - The flow {FlowName} ({FlowId}) failed to run with response code {ResponseCode}, error code: {FlowErrorCode}.
 
-**Resolution**: Verify that the [base type](/microsoft-copilot-studio/authoring-variables-about#variable-types) of any variables that you pass to the flow matches the parameter type. For more information, see [FlowActionBadRequest agent error in channels](../channels/agent-flow-action-bad-request.md)
+**Resolution**: Verify that the [base type](/microsoft-copilot-studio/authoring-variables-about#variable-types) of any variables that you pass to the flow matches the parameter type. For more information, see [FlowActionBadRequest agent error in channels](../channels/agent-flow-action-bad-request.md).
 
-#### FlowActionException
+### FlowActionException
 
 **Error messages**:
 
@@ -393,37 +396,37 @@ For more information, see [Microsoft Graph throttling guidance](/graph/throttlin
 
 **Resolution**: [Check the flow for errors](/power-automate/error-checker).
 
-#### FlowActionTimedOut
+### FlowActionTimedOut
 
 **Error message**: The flow with id {FlowId} has timed out. Error Code: {FlowErrorCode}
 
 **Resolution**: [Check the flow for errors](/power-automate/error-checker) to understand why the cloud flow took more than 100 seconds to run before it returned to your agent. Try to optimize the query and the data that you return from the back-end system. If some of the cloud flow logic can continue to run after a result is sent to the agent, put these actions after the "Return value(s) to Copilot Studio" step in your cloud flow.
 
-#### FlowMakerConnectionBlocked
+### FlowMakerConnectionBlocked
 
 **Error message**: The flow with name `{FlowName}` is using a maker connection, which isn't allowed. Error Code: `{FlowMakerConnectionBlocked}`
 
 **Resolution**: The administrator prevents using maker credentials in a connection invoked from the agent flow. [Open the flow in Power Automate](/power-automate/overview-manage-cloud-flows#open-the-details-screen-for-a-flow) and [share the cloud flow by using run-only permissions](/power-automate/create-team-flows#share-a-cloud-flow-with-run-only-permissions).
 
-#### FoundryIQSearchFailed
+### FoundryIQSearchFailed
 
 **Error message**: This is a system issue on our side. Nothing you need to fix. Error details: Platform runtime - FoundryIQSearchFailed.
 
 **Resolution**: A platform-side Foundry IQ search failure can cause this issue. Retry later. If the issue continues, contact support.
 
-#### GenAISearchandSummarizeRateLimitReached
+### GenAISearchandSummarizeRateLimitReached
 
 **Error message**: The usage limit for search and summarize has been reached. Please try again later.
 
 **Resolution**: The agent returns this message if it reaches its [generative AI limit](/microsoft-copilot-studio/requirements-quotas#generative-ai-messages-to-an-agent) to search and summarize sources. For more information, see [Resolve throttling errors in agents](../licensing/throttling-errors-agents.md).
 
-#### GenAIToolPlannerRateLimitReached
+### GenAIToolPlannerRateLimitReached
 
 **Error message**: The usage limit for generative orchestration has been reached. Please try again later.
 
 **Resolution**: The agent returns this message if it reaches its [generative orchestration limit](/microsoft-copilot-studio/requirements-quotas#generative-ai-messages-to-an-agent). For more information, see [Resolve throttling errors in agents](../licensing/throttling-errors-agents.md).
 
-#### HTTP400BadRequest
+### HTTP400BadRequest
 
 **Error message**: Bad Request.
 
@@ -434,7 +437,7 @@ For more information, see [Microsoft Graph throttling guidance](/graph/throttlin
 1. Test with known-good sample data.
 1. Validate the JSON formatting for complex payloads.
 
-#### HTTP401Unauthorized
+### HTTP401Unauthorized
 
 **Error message**: Unauthorized.
 
@@ -446,18 +449,18 @@ For more information, see [Microsoft Graph throttling guidance](/graph/throttlin
 1. Test the connection before deploying.
 1. If you use service principal authentication, verify that the credentials weren't rotated.
 
-#### HTTP403Forbidden
+### HTTP403Forbidden
 
 **Error message**: Forbidden.
 
-**Resolution**: This error can be caused by missing permissions in the target system. To resolve the problem:
+**Resolution**: Missing permissions in the target system can cause this error. To resolve the problem:
 
 1. Verify that the user or app has the required roles and permissions.
 1. Check app registration permissions and admin consent requirements.
 1. Verify resource-level sharing and delegation settings.
 1. Confirm that tenant and environment scoping are correct.
 
-#### HTTP404NotFound
+### HTTP404NotFound
 
 **Error message**: Not Found.
 
@@ -468,7 +471,7 @@ For more information, see [Microsoft Graph throttling guidance](/graph/throttlin
 1. Verify that the environment and tenant selection are correct.
 1. Prefer dynamic resource selection over manually typed IDs.
 
-#### HTTP408RequestTimeout
+### HTTP408RequestTimeout
 
 **Error message**: This tool call timed out. The operation took too long to complete. Error details: Timeout · execution.
 
@@ -479,7 +482,7 @@ For more information, see [Microsoft Graph throttling guidance](/graph/throttlin
 1. Add retries with incremental backoff.
 1. Use asynchronous patterns for long-running operations.
 
-#### HTTP422UnprocessableEntity
+### HTTP422UnprocessableEntity
 
 **Error message**: Unprocessable Entity.
 
@@ -490,7 +493,7 @@ For more information, see [Microsoft Graph throttling guidance](/graph/throttlin
 1. Check business rule constraints.
 1. Retry with known-good sample data.
 
-#### HTTP429TooManyRequests
+### HTTP429TooManyRequests
 
 **Error message**: Too Many Requests.
 
@@ -502,7 +505,7 @@ For more information, see [Microsoft Graph throttling guidance](/graph/throttlin
 1. Respect `Retry-After` headers when present.
 1. Monitor usage and throttling in analytics.
 
-#### HTTP500InternalServerError
+### HTTP500InternalServerError
 
 **Error message**: This tool is temporarily unavailable. The service didn't respond or is currently unavailable. Error details: Service availability · 5xx.
 
@@ -513,7 +516,7 @@ For more information, see [Microsoft Graph throttling guidance](/graph/throttlin
 1. Add a retry policy with exponential backoff.
 1. If the issue persists, collect request timestamp and correlation details, and contact support.
 
-#### HTTP502BadGateway
+### HTTP502BadGateway
 
 **Error message**: This tool is temporarily unavailable. The service didn't respond or is currently unavailable. Error details: Service availability · 5xx.
 
@@ -524,7 +527,7 @@ For more information, see [Microsoft Graph throttling guidance](/graph/throttlin
 1. Add retries with exponential backoff.
 1. If the issue persists, check vendor status pages and connector documentation.
 
-#### HTTP503ServiceUnavailable
+### HTTP503ServiceUnavailable
 
 **Error message**: This tool is temporarily unavailable. The service didn't respond or is currently unavailable. Error details: Service availability · 5xx.
 
@@ -535,7 +538,7 @@ For more information, see [Microsoft Graph throttling guidance](/graph/throttlin
 1. Defer noncritical operations until the service stabilizes.
 1. Implement circuit-breaker style controls for repeated failures.
 
-#### HTTP504GatewayTimeout
+### HTTP504GatewayTimeout
 
 **Error message**: This tool is temporarily unavailable. The service didn't respond or is currently unavailable. Error details: Service availability · 5xx.
 
@@ -546,13 +549,13 @@ For more information, see [Microsoft Graph throttling guidance](/graph/throttlin
 1. Break large operations into smaller batches.
 1. Increase the configured timeout where supported.
 
-#### InfiniteLoopInBotContent
+### InfiniteLoopInBotContent
 
 **Error message**: Action {DialogId}.{TriggerId}.{ActionId} was executed more than {MaxTurnCount} times in a row. This indicates a cycle in execution of the dialog and hence dialog execution will be terminated.
 
-**Resolution**: Make sure that the topic ends correctly and links to other topics that end correctly, such as the **Escalate** system topic.
+**Resolution**: Ensure that the topic ends correctly and links to other topics that end correctly, such as the **Escalate** system topic.
 
-#### InvalidAuthenticationToken
+### InvalidAuthenticationToken
 
 **Error message**: InvalidAuthenticationToken.
 
@@ -563,29 +566,29 @@ For more information, see [Microsoft Graph throttling guidance](/graph/throttlin
 1. Clear the browser or app cache if applicable.
 1. Retry the flow.
 
-#### InvalidContent
+### InvalidContent
 
 **Error message**: A total of {TotalComponents} component(s) exist in the agent, but none are valid.
 
-**Resolution**: [Open the code editor](/microsoft-copilot-studio/authoring-create-edit-topics#edit-topics-with-the-code-editor) to review problems that affect the content.
+**Resolution**: [Open the code editor](/microsoft-copilot-studio/authoring-create-edit-topics#edit-topics-by-using-the-code-editor) to review problems that affect the content.
 
-#### LatestPublishedVersionNotFound
+### LatestPublishedVersionNotFound
 
 **Error message**: Unable to retrieve the latest published version of the agent.
 
 **Resolution**: [Publish the agent](/microsoft-copilot-studio/publication-fundamentals-publish-channels).
 
-#### MsalUiException
+### MsalUiException
 
 **Error message**: MsalUiException.
 
-**Resolution**: This error can be caused when silent token acquisition fails and interactive sign-in is required. To resolve the problem:
+**Resolution**: This error can occur when silent token acquisition fails and interactive sign-in is required. To resolve the problem:
 
 1. Sign out, and sign in again to refresh your token.
 1. Complete any interactive authentication prompts.
-1. Retry the tool call after authentication completes.
+1. Retry the tool call after authentication finishes.
 
-#### OpenAIHate
+### OpenAIHate
 
 **Error message**: The content was filtered due to Responsible AI restrictions.
 
@@ -601,21 +604,21 @@ This restriction includes, but isn't limited to, content about:
 - Disability status
 - Harassment and bullying
 
-**Resolution**: To avoid this situation, reinforce responsible AI guidelines together with your agent users. You can also update the agent [content moderation](/microsoft-copilot-studio/knowledge-copilot-studio#content-moderation) policies.
+**Resolution**: To avoid this situation, reinforce responsible AI guidelines together with your agent users. You can also update the agent [content moderation](/microsoft-copilot-studio/knowledge-copilot-studio#moderation) policies.
 
-#### OpenAIJailBreak
+### OpenAIJailBreak
 
 **Error message**: The content was filtered due to Responsible AI restrictions.
 
 A security check blocks the content of a jailbreak attempt. A jailbreak attempt is a user prompt attack that ignores system prompts and tries to alter the intended agent behavior. These attacks include attempts to change system rules, embedding a conversation mockup to confuse the model, role-play, and encoding attacks. For more information, see [Prompt Shields in Azure AI Content Safety](/azure/ai-services/content-safety/concepts/jailbreak-detection).
 
-**Resolution**: To avoid this situation, reinforce responsible AI guidelines together with your agent users. You can also update the agent [content moderation](/microsoft-copilot-studio/knowledge-copilot-studio#content-moderation) policies.
+**Resolution**: To avoid this situation, reinforce responsible AI guidelines together with your agent users. You can also update the agent [content moderation](/microsoft-copilot-studio/knowledge-copilot-studio#moderation) policies.
 
-#### OpenAIndirectAttack
+### OpenAIndirectAttack
 
 **Error message**: The content was filtered due to Responsible AI restrictions.
 
-An attack was detected from information that's not directly supplied by the agent author or the user, such as external documents. Attackers try to embed instructions in grounded data that's provided by the user to maliciously gain control of the system by:
+An attack was detected from information that the agent author or user didn't directly supply, such as external documents. Attackers try to embed instructions in grounded data that the user provides to maliciously gain control of the system by:
 
 - Manipulating content
 - Intrusion
@@ -626,15 +629,15 @@ An attack was detected from information that's not directly supplied by the agen
 
 For more information, see [Prompt Shields for documents](/azure/ai-services/content-safety/concepts/jailbreak-detection#prompt-shields-for-documents).
 
-**Resolution**: If you're testing, and you didn't intend the test to be an attack, make sure that your instructions align with what you want the agent to be able to do. Otherwise, reinforce responsible AI guidelines together with your agent users to avoid this situation.
+**Resolution**: If you're testing and you didn't intend the test to be an attack, ensure that your instructions align with what you want the agent to do. Otherwise, reinforce responsible AI guidelines together with your agent users to avoid this situation.
 
-#### OpenAIRateLimitReached
+### OpenAIRateLimitReached
 
-**Error message**: An error has occurred.
+**Error message**: The OpenAI usage limit has been reached. Please try again later.
 
 **Resolution**: Your agent reached the maximum number of generative answer responses. Review your [message capacity](/microsoft-copilot-studio/requirements-messages-management), and review the information in [Resolve throttling errors in agents](../licensing/throttling-errors-agents.md).
 
-#### OpenAISelfHarm
+### OpenAISelfHarm
 
 **Error message**: The content was filtered due to Responsible AI restrictions.
 
@@ -645,9 +648,9 @@ This restriction includes, but isn't limited to, content about:
 - Eating disorders
 - Bullying and intimidation
 
-**Resolution**: To avoid this situation, reinforce responsible AI guidelines together with your agent users. You can also update the agent [content moderation](/microsoft-copilot-studio/knowledge-copilot-studio#content-moderation) policies.
+**Resolution**: To avoid this situation, reinforce responsible AI guidelines together with your agent users. You can also update the agent [content moderation](/microsoft-copilot-studio/knowledge-copilot-studio#moderation) policies.
 
-#### OpenAISexual
+### OpenAISexual
 
 **Error message**: The content was filtered due to Responsible AI restrictions.
 
@@ -661,9 +664,9 @@ This restriction includes, but isn't limited to, content about:
 - Abuse
 - Child exploitation, child abuse, child grooming
 
-**Resolution**: To avoid this situation, reinforce responsible AI guidelines together with your agent users. You can also update the agent [content moderation](/microsoft-copilot-studio/knowledge-copilot-studio#content-moderation) policies.
+**Resolution**: To avoid this situation, reinforce responsible AI guidelines together with your agent users. You can also update the agent [content moderation](/microsoft-copilot-studio/knowledge-copilot-studio#moderation) policies.
 
-#### OpenAIViolence
+### OpenAIViolence
 
 **Error message**: The content was filtered due to Responsible AI restrictions.
 
@@ -676,9 +679,9 @@ This restriction includes, but isn't limited to, content about:
 - Terrorist and violent extremism
 - Stalking
 
-**Resolution**: To avoid this situation, reinforce responsible AI guidelines together with your agent users. You can also update the agent [content moderation](/microsoft-copilot-studio/knowledge-copilot-studio#content-moderation) policies.
+**Resolution**: To avoid this situation, reinforce responsible AI guidelines together with your agent users. You can also update the agent [content moderation](/microsoft-copilot-studio/knowledge-copilot-studio#moderation) policies.
 
-#### OperationTimeout
+### OperationTimeout
 
 **Error message**: This tool call timed out. The operation took too long to complete. Error details: Timeout · execution.
 
@@ -689,17 +692,17 @@ This restriction includes, but isn't limited to, content about:
 1. Use pagination for large result sets.
 1. Review target service performance and request limits.
 
-#### OutgoingMessageSizeTooBig
+### OutgoingMessageSizeTooBig
 
 **Error message**: Outgoing message size too large.
 
-**Resolution**: Depending on the channel that you use to transfer files, such as Direct Line or Facebook, you might receive the following error message: "The request content length exceeded limit of 262,144 bytes." The [channel](/azure/bot-service/bot-service-resources-faq-general?azure-bot-service-4.0#what-is-the-size-limit-of-a-file-transferred-using-channels&preserve-view=true) imposes these limits, not Copilot Studio.
+**Resolution**: Depending on the channel that you use to transfer files, such as Direct Line or Facebook, you might receive the following error message: "The request content length exceeded limit of 262,144 bytes." The [channel](/azure/bot-service/bot-service-resources-faq-general?view=azure-bot-service-4.0&preserve-view=true#what-is-the-size-limit-of-a-file-transferred-using-channels) imposes these limits, not Copilot Studio.
 
 In this scenario, consider a few options. One option is to provide a link to the resource as an internet attachment. Another option is to review your nodes to make sure that none of them use a variable that contains a large volume of text, such as a `JSON.stringify()` static method. If you use this method or a variable that contains a large volume of text, modify the node to pass only the portion of text that's necessary. For example, if you use an Adaptive Card to pass data to another topic, update the variable to pass only the necessary property.
 
 For more information, see [Maximum channel data message size limits when using Copilot Studio in Omnichannel](/microsoft-copilot-studio/requirements-quotas#maximum-channel-data-message-size-limits-when-using-copilot-studio-in-omnichannel).
 
-#### QuotaExceeded
+### QuotaExceeded
 
 **Error message**: QuotaExceeded.
 
@@ -710,53 +713,53 @@ For more information, see [Maximum channel data message size limits when using C
 1. Consolidate operations where possible.
 1. Review and upgrade licensing or quota plans if needed.
 
-#### RedirectToDisabledDialog
+### RedirectToDisabledDialog
 
 **Error message**: The Dialog with Id {DialogId} is disabled in the definition. Please enable the Dialog before using it.
 
 **Resolution**: [Re-enable the topic](/microsoft-copilot-studio/authoring-topic-management) or [remove the redirect node](/microsoft-copilot-studio/authoring-create-edit-topics#delete-a-node).  
 
-#### RedirectToNonExistentDialog
+### RedirectToNonExistentDialog
 
 **Error message**: The Dialog with Id {DialogId} wasn't found in the definition. Please check that the Dialog is present and that the Id is correct.
 
 **Resolution**: [Create a new topic](/microsoft-copilot-studio/authoring-create-edit-topics#create-a-topic) to redirect to, or [remove the redirect node](/microsoft-copilot-studio/authoring-create-edit-topics#delete-a-node).
 
-#### SharePoint429
+### SharePoint429
 
 **Error message**: SharePoint is limiting requests right now. Try again later. Error details: SharePoint429.
 
 **Resolution**: Service throttling can cause this error. Wait and retry.
 
-#### SharePoint500
+### SharePoint500
 
 **Error message**: This isn't a configuration problem. The owning service needs to investigate. Error details: SharePoint500.
 
 **Resolution**: A service-side issue can cause this error. Retry later. If the issue continues, contact support.
 
-#### SharePoint503
+### SharePoint503
 
 **Error message**: This isn't a configuration problem. The owning service needs to investigate. Error details: SharePoint503.
 
 **Resolution**: Temporary service unavailability can cause this error. Retry later.
 
-#### SharePointSearchFailed
+### SharePointSearchFailed
 
 **Error message**: This is a system issue on our side. Nothing you need to fix. Error details: Platform runtime - SharePointSearchFailed.
 
 **Resolution**: A platform-side SharePoint search failure can cause this issue. Retry later. If the issue continues, contact support.
 
-#### SystemError
+### SystemError
 
 **Error message**: This error doesn't produce an error message.
 
 **Resolution**: [Contact customer support](/microsoft-copilot-studio/fundamentals-support).
 
-#### TooMuchDataToHandle
+### TooMuchDataToHandle
 
 **Error message**: The request is resulting in too much data to handle, please evaluate the amount of data being returned by your actions.
 
-**Resolution**: This error indicates that the request that was sent to OpenAI exceeds the maximum request size that's allowed. The request includes the user input, output from previous actions, tools that were called, and conversation history. Review the tools that you use. If it's possible, scope down their output to only the necessary fields. For more information, see [Create a Power Automate flow](/microsoft-copilot-studio/advanced-flow-create) and [Call a Power Automate flow as an action](/microsoft-copilot-studio/advanced-use-flow).
+**Resolution**: This error indicates that the request sent to OpenAI exceeds the maximum request size that's allowed. The request includes the user input, output from previous actions, tools that were called, and conversation history. Review the tools that you use. If possible, reduce their output to only the necessary fields. For more information, see [Create a Power Automate flow](/microsoft-copilot-studio/advanced-flow-create) and [Call a Power Automate flow as an action](/microsoft-copilot-studio/advanced-use-flow).
 
 # [Classic/Teams](#tab/classic+teams)
 
@@ -800,7 +803,7 @@ For more information, see [Maximum channel data message size limits when using C
 
 [3]: /microsoft-copilot-studio/advanced-hand-off
 [4]: /microsoft-copilot-studio/authoring-topic-management#view-topic-errors
-[5]: /powerapps/maker/data-platform/data-platform-intro
+[5]: /power-apps/maker/data-platform/data-platform-intro
 [6]: /power-automate/error-checker
 [7]: /power-automate/fix-flow-failures#identify-the-error
 [9]: /microsoft-copilot-studio/authoring-topic-management#view-topic-errors
