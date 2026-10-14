@@ -16,6 +16,8 @@
   - name: Invalid blob or block content, or invalid block list
     href: connectivity/invalid-blob-or-block-content-or-invalid-block-list.md
 
+- name: Networking
+
 - name: Authentication and Authorization
   items:
   - name: Troubleshoot portal access issues
