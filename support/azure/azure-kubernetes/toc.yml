@@ -245,6 +245,8 @@ items:
     href: extensions/application-routing-gateway-api.md
   - name: Troubleshoot Azure DNS and TLS integration for the Application Routing Gateway API Implementation
     href: extensions/application-routing-gateway-api-dns-tls.md
+  - name: Troubleshoot the application routing default domain feature
+    href: extensions/application-routing-default-domain.md
   - name: Troubleshoot the Istio-based service mesh add-on
     items:
     - name: General Istio add-on troubleshooting
