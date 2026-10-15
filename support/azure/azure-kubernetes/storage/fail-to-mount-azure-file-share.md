@@ -22,6 +22,7 @@ However, the pod stays in the **ContainerCreating** status. When you run the `ku
 
 - [Mount error(2): No such file or directory](#mounterror2)
 - [Mount error(13): Permission denied](#mounterror13)
+- [Mount error(22): Invalid argument](#mounterror22)
 
 Refer to the following output as an example:
 
@@ -470,6 +471,39 @@ If you use the **Maximum security** profile or a **Custom** security profile wit
 #### Solution: Enable NTLM v2 authentication or use the "Maximum compatibility" profile
 
 To mount the share properly in AKS, enable the **NTLM v2** authentication mechanism for the **Custom** security profile or use the **Maximum compatibility** security profile.
+
+## <a id="mounterror22"></a>Mount error(22): Invalid argument
+
+This error usually indicates that the Kubernetes secret referenced by the PersistentVolume (PV) or PersistentVolumeClaim (PVC) contains a value for `azurestorageaccountname` or `azurestorageaccountkey` that isn't valid, which makes the underlying `mount -t cifs` call fail with `EINVAL`.
+
+### Cause: Kubernetes secret's `data` field isn't base64 encoded
+
+If you create the Kubernetes secret manually by using a manifest with the `data` field, the values must already be base64 encoded. Unlike the `stringData` field, Kubernetes doesn't encode `data` values for you. If you paste a storage account name or key directly as plain text under `data`, the CSI driver receives a corrupted value, and the mounting operation fails with the "Mount error(22): Invalid argument" error.
+
+To verify this, decode and compare the secret's values with the real storage account name and access keys, following the same steps described in [Verify mismatch](#secretnotusecorrectstorageaccountkey).
+
+#### Solution: Base64 encode the secret values, or use `stringData` instead
+
+If you use the `data` field in your Secret manifest, base64 encode the storage account name and key before adding them. For example:
+
+```console
+echo -n '<storage account name>' | base64 | tr -d '\n' ; echo
+```
+
+Alternatively, use the `stringData` field instead of `data` in the Secret manifest. Kubernetes automatically base64 encodes `stringData` values on your behalf, so you can provide the storage account name and key as plain text:
+
+```yaml
+apiVersion: v1
+kind: Secret
+metadata:
+  name: <secret-name>
+type: Opaque
+stringData:
+  azurestorageaccountname: <storage account name>
+  azurestorageaccountkey: <storage account key>
+```
+
+After you correct the secret, re-create the pods so they pick up the updated values.
 
 ## References
 
