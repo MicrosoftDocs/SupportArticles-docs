@@ -203,7 +203,7 @@ On the server that's showing as "Appears offline" in the portal, look at event I
     Import-Module "C:\Program Files\Azure\StorageSyncAgent\StorageSync.Management.ServerCmdlets.dll"  
     Debug-StorageSyncServer -Diagnose
     ```
-Run the following PowerShell command on the server to reset the certificate used for authentication:
+  Run the following PowerShell command on the server to reset the certificate used for authentication:
 
     ```powershell
     Reset-AzStorageSyncServerCertificate -ResourceGroupName <string> -StorageSyncServiceName <string>

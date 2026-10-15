@@ -252,6 +252,8 @@ items:
       href: ./tabs/websites-not-loaded-new-teams.md
   - name: Teams Rooms and devices
     items:
+    - name: Black or blank screen or no system response
+      href: ./teams-rooms-and-devices/black-blank-screen.md   
     - name: Create a support request for Teams device issues
       href: ./teams-rooms-and-devices/create-support-request-teams-device-issues.md
     - name: Certified Android devices get signed out of Teams
@@ -262,10 +264,12 @@ items:
       href: ./teams-rooms-and-devices/teams-android-devices-conditional-access-issues.md
     - name: On-screen keyboard size is reduced on some devices
       href: ./teams-rooms-and-devices/teams-rooms-device-keyboard-size-reduced.md
+    - name: Reset a device using the recovery tool
+      href: ./teams-rooms-and-devices/reset-device-using-recovery-tool.md
     - name: Teams Rooms app doesn't start automatically after updates
       href: ./teams-rooms-and-devices/teams-rooms-not-auto-start-after-windows-updates.md
-    - name: Black or blank screen or no system response
-      href: ./teams-rooms-and-devices/black-blank-screen.md      
+    - name: Update a device manually
+      href: ./teams-rooms-and-devices/update-device-manually.md        
     - name: Teams Rooms Pro Management signals
       items:
       - name: Bluetooth disabled status is Unhealthy
