@@ -17,7 +17,7 @@ items:
     - name: Issue with reset admin password
       href: ../access-management/issue-with-reset-admin-password.md
     - name: Microsoft 365 apps on App-V enabled devices
-      href: ../access-management/resolve-issues-m365-apps-on-appv-devices.md        
+      href: ../access-management/resolve-issues-m365-apps-on-appv-devices.md
     - name: Your session has expired in Office Online
       href: ../access-management/your-session-has-expired-error.md
   - name: Account Security
@@ -73,7 +73,7 @@ items:
     - name: Authentication automatically fails
       href: ../authentication/automatic-authentication-fails.md
     - name: Certificate-based authentication fails on iOS
-      href: ../authentication/certificate-based-authentication-fails-on-ios.md    
+      href: ../authentication/certificate-based-authentication-fails-on-ios.md
     - name: Federated users account issues
       href: ../authentication/account-issues-for-federated-users.md
     - name: Federation Service certificates are expiring
@@ -95,7 +95,7 @@ items:
     - name: Configure default email client using policy
       href: ../group-policy/configure-email-client-using-policy.md
   - name: Groups
-    items: 
+    items:
     - name: Distribution group issues
       href: ../groups/distribution-list-issues.md
   - name: Installation
@@ -103,9 +103,11 @@ items:
     - name: Error when uninstalling Microsoft 365 Pro Plus
       href: ../installation/something-went-wrong-30016-4-error.md
     - name: Error when uninstalling Microsoft 365 Pro Plus
-      href: ../installation/something-went-wrong-30016-4-error.md      
+      href: ../installation/something-went-wrong-30016-4-error.md
   - name: Miscellaneous
     items:
+    - name: AI Support assistant for Commercial products
+      href: ../miscellaneous/ai-support-assistant-commercial-faq.md
     - name: Can't deploy add-in from Microsoft 365 admin center
       href: ../miscellaneous/cannot-deploy-add-in-integrated-apps-menu.md
     - name: Command line version of Get Help
@@ -135,7 +137,7 @@ items:
     - name: Open Support cases for GCC High and DoD
       href: ../miscellaneous/support-cases-for-gcc-high-dod.md
     - name: Reports show anonymous user names
-      href: ../miscellaneous/reports-show-anonymous-user-name.md    
+      href: ../miscellaneous/reports-show-anonymous-user-name.md
   - name: Orchestrated Migration
     items:
     - name: Resolve Orchestrated Migration errors
@@ -153,6 +155,6 @@ items:
     - name: Forgot sign-in password to Microsoft 365, Azure, or Intune
       href: ../sign-in/forgot-sign-in-password.md
     - name: Resolve issues related to the subscription
-      href: ../sign-in/subscription-issues-affect-access-to-services.md      
+      href: ../sign-in/subscription-issues-affect-access-to-services.md
     - name: Sign-in issues with Office modern authentication
       href: ../sign-in/sign-in-issue-with-modern-auth.md
