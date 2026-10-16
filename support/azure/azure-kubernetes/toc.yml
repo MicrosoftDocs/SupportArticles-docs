@@ -185,6 +185,8 @@ items:
     href: storage/pods-namespaces-terminating-state.md
   - name: Troubleshoot timeout and latency issues in AKS with Azure Storage
     href: storage/troubleshoot-timeout-latency-aks-azure-storage.md
+  - name: Low disk space on nodes caused by BlobFuse volumes
+    href: storage/blobfuse-low-disk-space-excessive-file-handles.md
   - name: Mount failures
     items:
     - name: Can't set the uid and gid mounting options on an Azure Disk
