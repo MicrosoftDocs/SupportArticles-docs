@@ -1,12 +1,21 @@
 ---
-title: Application Insights logs are missing or incorrect
-description: Ths article helps you resolve issues related to missing or incorrect logs for Application Insights logs in Azure Function App.
-ms.date: 01/16/2025
-ms.reviewer: gasridha, v-jayaramanp, agaltrai, jarrettr 
+title: Troubleshoot Azure Monitor Application Insights logs in Azure Functions
+description: Learn how to troubleshoot missing or incorrect Azure Monitor Application Insights logs in Azure Functions, verify configuration, and restore reliable log data.
+ms.date: 10/15/2026
+ms.topic: troubleshooting
+manager: dcscontentpm
+author: kaushika-msft
+ms.author: kaushika
+ms.reviewer: gasridha, v-jayaramanp, agaltrai, kaushika
 ms.custom: sap:Monitoring using Application Insights, Metrics and Alerts
+ai-usage: ai-assisted
 ---
 
-# Application Insights logs are missing or incorrect for Azure Function App
+# Troubleshoot Azure Monitor Application Insights logs in Azure Functions
+
+## Summary
+
+This article helps you troubleshoot missing or incorrect Azure Monitor Application Insights logs in Azure Functions so you can restore reliable monitoring data.
 
 You can closely monitor the function app through the integration between [Azure Functions](https://azure.microsoft.com/products/functions) and [Application Insights](/azure/azure-monitor/app/app-insights-overview). And you can use Application Insights without any custom configuration.
 
@@ -14,42 +23,43 @@ If the Application Insights logs are missing, or if the data appears to be parti
 
 ## Check configuration of function app
 
-1. Navigate to your function app in the [Azure portal](https://portal.azure.com).
-1. Select **Diagnose and solve problems** to open [Azure Function App diagnostics](/azure/azure-functions/functions-diagnostics).
+Follow these steps:
+
+1. Go to your function app in the [Azure portal](https://portal.azure.com).
+1. Select **Diagnose and solve problems** to open [Azure Functions diagnostics](/azure/azure-functions/functions-diagnostics).
 1. In the **Search** bar, type *Function Configuration Checks* and open it.
-1. You see a diagnostic report of all function app configuration checks. In particular for Application Insights, the following checks are performed:
-
+1. You see a diagnostic report of all function app configuration checks. For Application Insights, check the following:
     - Only one of the following connection settings exists:
-      - `APPINSIGHTS_INSTRUMENTATIONKEY` Application Insights Instrumentation key
-      - `APPLICATIONINSIGHTS_CONNECTION_STRING` connection
-
-        We recommend that you use the [APPLICATIONINSIGHTS_CONNECTION_STRING](/azure/azure-monitor/app/sdk-connection-string#overview) for more stable behavior. The ability to use `APPINSIGHTS_INSTRUMENTATIONKEY` will be deprecated by 2025.
-
+      - `APPINSIGHTS_INSTRUMENTATIONKEY` Application Insights Instrumentation key.
+      - `APPLICATIONINSIGHTS_CONNECTION_STRING` connection string.
+      Use the [APPLICATIONINSIGHTS_CONNECTION_STRING](/azure/azure-monitor/app/sdk-connection-string#overview) for more stable behavior. The ability to use `APPINSIGHTS_INSTRUMENTATIONKEY` was deprecated in 2025 and will be removed in future versions of Azure Functions.
     - The `AzureWebJobsDashboard` built-in logging is disabled, as recommended.
-    - [Sampling](/azure/azure-functions/configure-monitoring#configure-sampling) is enabled for the Azure Function App telemetry (enabled by default).
+    - [Sampling](/azure/azure-functions/configure-monitoring#configure-sampling) is enabled for the Azure Functions telemetry (enabled by default).
 
-  **Recommendation**: The function app should be on version 4 and the runtime version should be at least 4.15.2*xx*. This is because, from this version onwards, you can track the log flows from Azure Function App to the Application Insights service. By monitoring the log flows, you can check for missing logs.
+### Use a supported Azure Functions runtime version
+
+Use version 4 of the function app and runtime version 4.15.2*xx* or later. From this version onwards, you can track the log flows from Azure Functions to the Application Insights service. By monitoring the log flows, you can check for missing logs.
 
 ## Custom application logs
 
-By default, custom application logs you write are sent to the Functions host, which then sends them to Application Insights under the [Worker category](/azure/azure-functions/configure-monitoring#configure-categories). However, some language stacks allow you to send the logs directly to Application Insights, which gives you full control over how logs you write are emitted. In this case, the logging pipeline changes from `worker > Functions host > Application Insights` to `worker > Application Insights`.
+By default, Azure Functions host sends custom application logs you write to Application Insights under the [Worker category](/azure/azure-functions/configure-monitoring#configure-categories). However, some language stacks allow you to send the logs directly to Application Insights, which gives you full control over how logs you write are emitted. In this case, the logging pipeline changes from `worker > Functions host > Application Insights` to `worker > Application Insights`.
 
 The following table summarizes the configuration options available for each stack:
 
 | Language stack | Where to configure custom logs |
 |-|-|
 | .NET (in-process model) | `host.json` |
-| .NET (isolated model) | Default (send custom logs to the Functions host): `host.json`<br/>To send logs directly to Application Insights, see [Configure Application Insights in the HostBuilder](/azure/azure-functions/dotnet-isolated-process-guide#application-insights).  |
-| Node.JS | `host.json` |
+| .NET (isolated model) | Default (send custom logs to the Azure Functions host): `host.json`<br/>To send logs directly to Application Insights, see [Configure Application Insights in the HostBuilder](/azure/azure-functions/dotnet-isolated-process-guide#application-insights).  |
+| Node.js | `host.json` |
 | Python | `host.json` |
-| Java | Default (send custom logs to the Functions host): `host.json`<br/>To send logs directly to Application Insights, see [Configure the Application Insights Java agent](/azure/azure-monitor/app/monitor-functions#distributed-tracing-for-java-applications). |
+| Java | Default (send custom logs to the Azure Functions host): `host.json`<br/>To send logs directly to Application Insights, see [Configure the Application Insights Java agent](/azure/azure-monitor/app/monitor-functions#distributed-tracing-for-java-applications). |
 | PowerShell | `host.json` |
 
-When you configure custom application logs to be sent directly, the host no longer emits them, and `host.json` no longer controls their behavior. Similarly, the options exposed by each stack apply only to custom logs, and they don't change the behavior of the other runtime logs described in this article. In this case, to control the behavior of all logs, you might need to make changes in both configurations.
+When you configure custom application logs to be sent directly, the Azure Functions host no longer emits them, and `host.json` no longer controls their behavior. Similarly, the options exposed by each stack apply only to custom logs, and they don't change the behavior of the other runtime logs described in this article. In this case, to control the behavior of all logs, you might need to make changes in both configurations.
 
 ## Logs are missing or partial
 
-Application Insights collects log, performance, and error data. [Sampling configuration](/azure/azure-functions/configure-monitoring#configure-sampling) is used to reduce the volume of telemetry. The Sampling feature is enabled by default with the settings shown in the following [host.json](/azure/azure-functions/functions-host-json#applicationinsights) example. Excluded types aren't sampled.
+Application Insights collects log, performance, and error data. Use [sampling configuration](/azure/azure-functions/configure-monitoring#configure-sampling) to reduce the volume of telemetry. Sampling is enabled by default with the settings shown in the following [host.json](/azure/azure-functions/functions-host-json#applicationinsights) example. Excluded types aren't sampled.
 
 ```JSON
 {
@@ -65,7 +75,7 @@ Application Insights collects log, performance, and error data. [Sampling config
 }
 ```
 
-If you notice any partially missing logs, this might occur because of sampling. To determine the actual sampling rate, use an Analytics query that uses the required time interval that's shown in the following code snippet. If you observe that the `TelemetrySavedPercentage` for any sampling type is less than 100, then that type of telemetry is being sampled.
+If you notice any partially missing logs, this condition might occur because of sampling. To determine the actual sampling rate, use a Log Analytics query that uses the required time interval shown in the following code snippet. If you observe that the `TelemetrySavedPercentage` for any sampling type is less than 100, then that type of telemetry is being sampled.
 
 ```kusto
 union requests,dependencies,pageViews,browserTimings,exceptions,traces
@@ -78,16 +88,16 @@ For more information, see [Data collection, retention, and storage in Applicatio
 
 ## Control volume and verbosity of logs
 
-You can increase or suppress the logs that are written. To do this, you can use a combination of log level and categories as configured in *host.json*.
+You can increase or suppress the logs that are written. To do this, use a combination of log level and categories as configured in *host.json*.
 
-The Azure Function App logger includes a category for every log. The category indicates which part of the runtime code or your function code generated the log. For example:
+The Azure Functions logger includes a category for every log. The category indicates which part of the runtime code or your function code generated the log. For example:
 
-- The `Host.Results` and `Function.<YOUR_FUNCTION_NAME>` are some of the available categories.
+- The `Host.Results` and `Function.<YOUR_FUNCTION_NAME>` categories.
 - A log level is assigned to every log. The value indicates relative importance, such as `Warning` or `Information`.
 
 For more information, see the other [categories](/azure/azure-functions/configure-monitoring#configure-categories) and [log levels](/azure/azure-functions/configure-monitoring#configure-log-levels) available.
 
-You can configure how your application should write the logs by following the sample code snippet:
+You can configure how your application writes the logs by following the sample code snippet.
 
 ```JSON
 {
@@ -112,7 +122,7 @@ You can configure how your application should write the logs by following the sa
 }
 ```
 
-To configure these values at the App settings level (to avoid redeployment on *host.json* changes), override specific *host.json* values by creating an equivalent value as an application setting. For more information, see [Override host.json values](/azure/azure-functions/functions-host-json#override-hostjson-values).
+To configure these values at the app settings level (to avoid redeployment on *host.json* changes), override specific *host.json* values by creating an equivalent value as an application setting. For more information, see [Override host.json values](/azure/azure-functions/functions-host-json#override-hostjson-values).
 
 For more examples about how to suppress logs, see [functions-log-suppression](https://github.com/anthonychu/functions-log-suppression).
 
@@ -123,8 +133,6 @@ If a function app is integrated with a virtual network, you must open port 443 f
 - *dc.applicationinsights.azure.com*
 - *dc.applicationinsights.microsoft.com*
 - *dc.services.visualstudio.com*
-- **.in.applicationinsights.azure.com*
+- *.in.applicationinsights.azure.com*
 
 For more information, see [IP addresses used by Azure Monitor](/azure/azure-monitor/app/ip-addresses#outgoing-ports).
-
- 
