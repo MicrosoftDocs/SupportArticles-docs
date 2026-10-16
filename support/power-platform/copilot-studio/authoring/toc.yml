@@ -3,3 +3,5 @@ items:
   href: agent-test-no-response.md
 - name: Resolve agent error codes
   href: error-codes.md
+- name: Your organization has prevented this agent from being installed
+  href: prevent-agent-install.md
