@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Azure Kubernetes Service cluster startup issues
 description: Learn about basic troubleshooting methods to use when you can't start an Azure Kubernetes Service (AKS) cluster.
-ms.date: 03/14/2025
+ms.date: 10/19/2026
 ms.reviewer: chiragpa, v-weizhu, jovieir, addobres
 ms.service: azure-kubernetes-service
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool), devx-track-azurecli
@@ -11,38 +11,110 @@ ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool
 
 ## Summary
 
-This article outlines the basic troubleshooting methods to use if you can't start a Microsoft Azure Kubernetes Service (AKS) cluster successfully.
+This article provides basic troubleshooting steps for an Azure Kubernetes Service (AKS) cluster that was previously stopped by using the AKS stop/start feature and doesn't return to a running state. If the failure occurred during cluster creation, upgrade, node pool provisioning, or normal Kubernetes API access, use the troubleshooting guidance for that operation.
 
 ## Prerequisites
 
-- [Azure CLI](/cli/azure/install-azure-cli) (version 2.0.59 or a later version).
+- Install the latest version of the [Azure CLI](/cli/azure/install-azure-cli).
+- Sign in to Azure by using `az login`.
+- Confirm that the CLI is using the subscription that contains the AKS cluster.
+- Install `kubectl` if Kubernetes API checks will be performed after the cluster starts.
 
-- The Kubernetes [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) tool. To install kubectl by using Azure CLI, run the [az aks install-cli](/cli/azure/aks#az-aks-install-cli) command.
+Check the Azure CLI version and current subscription:
+
+```azurecli
+az version
+az account show --output table
+```
+
+If necessary, select the correct subscription:
+
+```azurecli
+az account set --subscription "<subscription-name-or-id>"
+```
+
+To install `kubectl` by using Azure CLI, run:
+
+```azurecli
+az aks install-cli
+```
+
+## Confirm that the cluster is ready to start
+
+Before you start the cluster, check its power and provisioning state:
+
+```azurecli
+az aks show \
+  --resource-group myResourceGroup \
+  --name MyManagedCluster \
+  --query "{powerState:powerState.code, provisioningState:provisioningState}" \
+  --output table
+```
+
+Confirm that:
+
+- `powerState` is `Stopped`.
+- `provisioningState` is `Succeeded`.
+- The previous stop operation is no longer in progress.
+
+If `provisioningState` is `Stopping`, wait for the stop operation to finish before you try to start the cluster. After you use the stop operation, wait 15-30 minutes before you restart the cluster so that the related services have time to stop completely.
+
+> [!CAUTION]
+> Stopping an AKS cluster deallocates the control plane and releases capacity. In a region that has limited capacity, Azure might not be able to start the stopped cluster immediately. We don't recommend using stop/start for mission-critical workloads.
+
+The stop/start feature is supported only for Virtual Machine Scale Set-backed clusters. It isn't supported for clusters that use node auto-provisioning.
 
 ## View errors from Azure CLI
 
-When you start clusters by using Azure CLI, errors are recorded as output if the operation fails. Here's how a command, user input, and operation output might appear in a `Bash` console:
+When you start a cluster by using Azure CLI, errors are recorded as output if the operation fails:
 
 ```console
-$ az aks start --resource-group myResourceGroup --name MyManagedCluster
+az aks start --resource-group myResourceGroup --name MyManagedCluster
 
-(VMExtensionProvisioningError) Unable to establish outbound connection from agents, please see https://learn.microsoft.com/en-us/troubleshoot/azure/azure-kubernetes/error-code-outboundconnfailvmextensionerror and https://aka.ms/aks-required-ports-and-addresses for more information.  
-Details: instance 3 has extension error details : {vmssCSE error messages : {vmssCSE exit status=50, output=AGE_SHA=sha-16fd35
+(VMExtensionProvisioningError) Unable to establish an outbound connection from the agent nodes.
+Code: VMExtensionProvisioningError
 ```
 
-These errors often contain detailed descriptions of what went wrong in the cluster start operation, and they provide links to articles that contain more details. Additionally, you can use our troubleshooting articles as a reference based on the error that an Azure CLI operation produces.
+Keep the complete output because the error code identifies the next troubleshooting step. Use the error code and message to locate the matching AKS troubleshooting article. Don't rely only on the last line of the CLI output.
+
+The start operation runs asynchronously. Check the cluster state:
+
+```azurecli
+az aks show \
+  --resource-group myResourceGroup \
+  --name MyManagedCluster \
+  --query "{powerState:powerState.code, provisioningState:provisioningState}" \
+  --output table
+```
+
+Interpret the result as follows:
+
+- If `provisioningState` is `Starting`, the start operation is still in progress.
+- If `powerState` is `Running` and `provisioningState` is `Succeeded`, the management-plane start operation is complete. Continue with the Kubernetes API and node checks.
+- If `provisioningState` is `Failed`, review the Azure Activity Log, AKS diagnostics, and failed resource details.
+- If `powerState` remains `Stopped` and there's no active start operation, review the start command output and Azure Activity Log.
 
 ## View error details in the Azure portal
 
 To view the details about errors in the [Azure portal](https://portal.azure.com), examine the [Azure activity log](/azure/azure-monitor/essentials/activity-log). To find the list of activity logs in the Azure portal, search on **Activity log**. Or, select **Notifications** (the bell icon), and then select **More events in the activity log**.
 
-The list of logs on the **Activity log** page contains a line entry in which the **Operation name** column value is named **Start Managed Cluster**. The corresponding **Event initiated by** column value is set to the name of your work or school account. If the operation is successful, the **Status** column value shows **Accepted**. 
+Locate the latest **Start Managed Cluster** operation for the affected cluster.
+
+Confirm that **Event initiated by** shows the expected user or workload identity. The operation might have been started by a user, service principal, managed identity, or automation process.
+
+Expand the operation, and review its final status and suboperations. A status of **Accepted** means that Azure accepted the asynchronous request. It doesn't confirm that the cluster finished starting successfully.
 
 :::image type="content" source="media/troubleshoot-aks-cluster-start-issues/activity-log-errors.png" alt-text="Screenshot of an AKS cluster activity log blade showing a failed start operation.":::
 
-What if an error occurred instead? In that case, the **Start Managed Cluster** operation **Status** field shows **Failed**. Unlike in the operations to create cluster components, here you must expand the failed operation entry to review the suboperation entries. Typical suboperation names are policy actions, such as **'audit' Policy action** and **'auditIfNotExists' Policy action.** Some suboperations will continue to show that they succeeded.
+If the final operation or a suboperation shows **Failed**, open the failed entry and review the following information:
 
-To further investigate, you can select one of the failed suboperations. A side pane opens so that you can review more information about the suboperation. You can troubleshoot values for fields such as **Summary**, **JSON**, and **Change history**. The **JSON** field contains the output text for the error in JSON format, and it usually provides the most helpful information.
+- **Summary**
+- **JSON**
+- Error code
+- Error message
+- Correlation ID, if available
+
+Use the error code and message to continue with the relevant AKS troubleshooting guidance.
 
 :::image type="content" source="media/troubleshoot-aks-cluster-start-issues/activity-log-error-details.png" alt-text="Screenshot of a suboperation side pane of an AKS cluster activity log showing why a start operation failed.":::
 
@@ -84,15 +156,37 @@ Select the row to see the **Message** field. This contains even more information
 > VM has reported a failure when processing extension 'vmssCSE'. Error message: "Enable failed: failed to execute command: command terminated with exit status=50 [stdout] [stderr] 0 0 0 --:
 Armed with this information, you can conclude that the VMs in the scale set failed and generated exit status 50.
 
-## Use Kubectl commands
+## Use kubectl commands
 
-For another option to help troubleshoot errors on your cluster, enter kubectl commands to get details about the resources that were deployed in the cluster. To use kubectl, first sign in to your AKS cluster:
+Use `kubectl` only after the cluster reports `powerState` as `Running` and `provisioningState` as `Succeeded`.
 
-```azurecli-interactive
-az aks get-credentials --resource-group MyResourceGroup --name MyManagedCluster
+Your client must also have DNS and network access to the Kubernetes API server. For a private cluster, run the commands from a network that can resolve and reach the private API server. If API server authorized IP ranges are enabled, confirm that the client IP address is allowed.
+
+Retrieve or merge the cluster credentials:
+
+```azurecli
+az aks get-credentials \
+  --resource-group MyResourceGroup \
+  --name MyManagedCluster
 ```
 
-Depending on the type of failure and when it occurred, you might not be able to sign in to your cluster to get more details. But in general, if your cluster was created and shows up in the Azure portal, you should be able to sign in and run kubectl commands.
+The `az aks get-credentials` command updates kubeconfig. It doesn't confirm that the Kubernetes API server is reachable.
+
+Test API connectivity:
+
+```azurecli
+kubectl cluster-info
+kubectl get nodes
+```
+
+If the API server can't be reached, continue checking:
+
+- The cluster power and provisioning state.
+- Private DNS and network routing.
+- Firewall rules.
+- API server authorized IP ranges.
+
+A stopped cluster remains visible in the Azure portal even though its Kubernetes API server is unavailable.
 
 ### View cluster nodes (kubectl get nodes)
 
@@ -142,5 +236,23 @@ Events:
 ```
 
 In the command output, you can see that the pod can't be deployed to a node because no nodes are available.
+
+## Confirm that the cluster recovered
+
+After the start operation is complete, confirm that:
+
+1. The cluster reports `powerState` as `Running` and `provisioningState` as `Succeeded`.
+1. `kubectl cluster-info` can reach the Kubernetes API server.
+1. The cluster nodes return to the `Ready` state.
+1. Critical pods in the `kube-system` namespace return to a healthy state.
+
+Run:
+
+```azurecli
+kubectl get nodes
+kubectl get pods --namespace kube-system
+```
+
+If nodes remain unavailable or system pods remain pending, continue with the node provisioning, networking, or VM extension troubleshooting guidance that matches the reported error.
 
  
