@@ -106,8 +106,8 @@ items:
       href: ../installation/something-went-wrong-30016-4-error.md
   - name: Miscellaneous
     items:
-    - name: AI Support assistant for Commercial products
-      href: ../miscellaneous/ai-support-assistant-commercial-faq.md
+    - name: AI assistant for Commercial products
+      href: ../miscellaneous/ai-assistant-commercial-faq.md
     - name: Can't deploy add-in from Microsoft 365 admin center
       href: ../miscellaneous/cannot-deploy-add-in-integrated-apps-menu.md
     - name: Command line version of Get Help
