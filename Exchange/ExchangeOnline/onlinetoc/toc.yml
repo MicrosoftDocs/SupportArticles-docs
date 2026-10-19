@@ -152,6 +152,14 @@ items:
       items:
         - name: Permissions
           items:
+            - name: Outlook says that delegate settings weren't saved correctly
+              href: ../calendars/permissions/fix-delegate-settings-save-error.md
+            - name: Resolve Full Access and delegate conflicts on legacy calendars
+              href: ../calendars/permissions/fix-full-access-delegate-conflicts.md
+            - name: Resolve Outlook delegate failures in Exchange hybrid
+              href: ../calendars/permissions/fix-hybrid-delegate-failures.md
+            - name: Restore delegate access to private calendar items
+              href: ../calendars/permissions/fix-private-calendar-access.md
             - name: Replace security groups used as calendar delegates
               href: ../calendars/permissions/replace-security-group-delegates.md
             - name: Reset corrupt Outlook delegate permissions
