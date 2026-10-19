@@ -150,6 +150,16 @@ items:
           href: ../antispam-and-protection/smtpsend-barelinefeedsareillegal-when-tracing-messages.md
     - name: Calendars
       items:
+        - name: Permissions
+          items:
+            - name: Replace security groups used as calendar delegates
+              href: ../calendars/permissions/replace-security-group-delegates.md
+            - name: Reset corrupt Outlook delegate permissions
+              href: ../calendars/permissions/fix-corrupt-delegate-permissions.md
+            - name: Restore Missing Delegate Meeting Invitations in Outlook
+              href: ../calendars/permissions/fix-delegate-invites.md
+            - name: Set Editor rights for calendar delegates
+              href: ../calendars/permissions/assign-editor-delegate-rights.md
         - name: ActiveSync can't download attachments to Calendar items
           href: ../calendars/activesync-not-downloading-attachments-to-calendar-items.md
         - name: Attendees receive multiple meeting invitations
