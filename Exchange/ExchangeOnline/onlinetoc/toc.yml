@@ -152,6 +152,14 @@ items:
       items:
         - name: Permissions
           items:
+            - name: Resolve calendar and delegate permissions issues
+              href: ../calendars/permissions/troubleshoot-calendar-delegate-permissions.md
+            - name: Fix corrupt calendar permission entries
+              href: ../calendars/permissions/fix-corrupt-calendar-permissions.md
+            - name: Remove stale calendar permissions
+              href: ../calendars/permissions/delete-stale-calendar-permission.md
+            - name: Resolve the Item Has Changed Error for Delegate Meetings
+              href: ../calendars/permissions/fix-delegate-draft-save-error.md
             - name: Outlook says that delegate settings weren't saved correctly
               href: ../calendars/permissions/fix-delegate-settings-save-error.md
             - name: Resolve Full Access and delegate conflicts on legacy calendars
