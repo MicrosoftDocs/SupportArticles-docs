@@ -79,7 +79,7 @@ For a private-only account, set **Public network access** to **Disabled** after 
 
 For an account that must keep the public endpoint, follow these steps:
 
-1.  Set the **Public network access scope** to **Enabled from selected networks**.
+1.  Set the default network action to **Deny**.
 2.  Add only the required virtual network, IP network, resource instance, and trusted-service rules.
 3.  Choose a resource-specific rule or private endpoint over a broad exception.
 4.  Review allowed rules regularly and remove unused entries.
@@ -89,6 +89,8 @@ For an account that must keep the public endpoint, follow these steps:
 > Don't use `0.0.0.0/0` as a routine recovery or troubleshooting rule. Maintain a tested management path and a controlled rollback procedure instead.
 
 Storage firewall rules control only the public endpoint. They don't control traffic through private endpoints.
+
+For more information, see [Azure Storage firewall rules and network access control](/azure/storage/common/storage-network-security).
 
 ## Use IP rules only for stable public addresses
 
@@ -258,7 +260,7 @@ Before enforcement, verify all the following items:
 - [ ] Inventory every client, Azure service, protocol, subresource, and region.
 - [ ] Create private endpoints for all required storage subresources.
 - [ ] Ensure standard storage FQDNs resolve to the intended private IPs from every private client network.
-- [ ] Disable public network access, or set the **Public network access scope** to **Enabled from selected networks** with minimal allow rules.
+- [ ] Disable public network access, or set the default network action to **Deny** with minimal allow rules.
 - [ ] Document and authorize trusted-service and resource instance exceptions.
 - [ ] Validate Network Security Perimeter feature coverage and protocol limitations.
 - [ ] Require secure transfer and set the minimum TLS version to TLS 1.2.
