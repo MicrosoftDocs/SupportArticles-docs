@@ -2,7 +2,7 @@
 title: Windows 365 Enterprise and Windows 365 Flex Known issues
 description: "Learn about known issues for Windows 365 Enterprise and Windows 365 Flex. This information helps you quickly troubleshoot and resolve Cloud PC issues."
 manager: dcscontentpm
-ms.date: 08/21/2026
+ms.date: 10/19/2026
 ms.topic: troubleshooting
 ms.reviewer: kaushika, japarker, stulimat, scottduf
 ai-usage: ai-assisted
@@ -95,16 +95,20 @@ Windows 365 Cloud PCs don't support [Administrator protection](/windows/security
 
 The sign-in prompt affects all users. The elevation prompts and failures affect users who have local administrator rights. By default, users aren't administrators of their Cloud PCs.
 
+If your Cloud PCs are Microsoft Entra hybrid joined and receive the Windows security baselines from the Microsoft Security Compliance Toolkit through Group Policy, Administrator protection is turned on starting with the October 2026 Windows security update, even if you didn't enable it.
+
 ### Solution
 
 If Administrator protection is already enabled on your Cloud PCs, set **User Account Control: Configure type of Admin Approval Mode** to **Legacy Admin Approval Mode** in the policy that's assigned to them, then restart the Cloud PCs. This setting is in the Intune settings catalog under **Local Policies Security Options**.
 
-To prevent Administrator protection from being applied to Cloud PCs:
+If your Cloud PCs receive these baselines through Group Policy, set **User Account Control: Configure type of Admin Approval Mode** to **Legacy Admin Approval Mode** in a Group Policy Object that applies to your Cloud PCs and takes precedence over the baseline, then restart them.
+
+To prevent Administrator protection from being applied to Cloud PCs through Intune:
 
 1. [Create a filter for all Cloud PCs](/windows-365/enterprise/create-filter#create-a-filter-for-all-cloud-pcs).
 1. Use the filter to exclude Cloud PCs from any policy that enables Administrator protection.
 
-For more information, see [Administrator protection](/windows/security/application-security/application-control/administrator-protection/).
+For more information, see [Administrator protection](/windows/security/application-security/application-control/administrator-protection/) and [Manage Administrator protection within Windows 11 security baseline](/windows/release-health/windows-message-center#5038).
 
 ## Single sign-on users see a dialog to allow remote desktop connection during the connection attempt <!--42499792-->
 

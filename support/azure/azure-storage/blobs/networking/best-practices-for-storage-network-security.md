@@ -33,7 +33,7 @@ The following table helps you create an access inventory for each storage accoun
 | Protocols | Does the workload use HTTPS, Server Message Block (SMB), Network File System (NFS), or Secure File Transfer Protocol (SFTP)? |
 | Networks | Which virtual networks, subnets, on-premises sites, and public network address translation (NAT) addresses are required? |
 | Domain Name System (DNS) | Which clients use Azure-provided DNS, custom DNS, or on-premises DNS? |
-| Authorization | Which managed identities, users, service principals, shared access signature (SAS) tokens, account keys, access control lists (ACLs), or local SFTP users are used? |
+| Authorization | Which managed identities, users, service principals, shared access signature (SAS) tokens, account keys, or local SFTP users are used? |
 | Dependencies | Which monitoring, backup, disaster recovery, analytics, security, and data-integration services read from or write to the account? |
 | Resiliency | Which regions and secondary endpoints are required during failover? |
 
@@ -109,13 +109,15 @@ The following design practices apply to IP network rules:
 
 When a subnet gains a storage service endpoint, storage-bound traffic switches from its public source IP to its virtual network private identity. Update the storage firewall before enabling the endpoint.
 
+For more information, see [Azure Storage firewall rules and network access control](/azure/storage/common/storage-network-security).
+
 ## Use service endpoints with explicit virtual network rules
 
 Use a service endpoint when a subnet needs optimized Azure-backbone routing and subnet identity to a storage account's public endpoint, and private IP connectivity isn't required.
 
 The following design practices apply to service endpoints:
 
-- Enable the storage service endpoint
+- Enable the storage service endpoint.
 - Add a storage virtual network rule for that subnet.
 - Remember that enabling the endpoint doesn't grant access by itself. The storage account must allow the subnet and the request must be authorized.
 - Choose the endpoint type deliberately:
@@ -199,6 +201,8 @@ The following design practices apply to keeping authorization independent and le
 - For SFTP, prefer SSH public-key authentication, restrict each local user to required containers and paths, and rotate credentials.
 
 Network restrictions and authorization should fail independently: a request should need both an allowed network path and valid permission.
+
+For more information, see [Authorize access to data in Azure Storage](/azure/storage/common/authorize-data-access).
 
 ## Enable logs before enforcing restrictions
 

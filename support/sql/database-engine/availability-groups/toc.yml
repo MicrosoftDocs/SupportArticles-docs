@@ -1,12 +1,12 @@
 items:
-- name: Error 2767 on secondary replica
-  href: error-2767-query-secondary-replica-fails.md
-- name: Error 9002 on primary replica
-  href: error-9002-transaction-log-large.md
-- name: Error 41131 when creating availability group
-  href: error-41131-create-availability-group.md
 - name: Always On DB in recovery pending or suspect state
   href: alwayson-availability-databases-recovery-pending-suspect.md
+- name: Error 2767 when a query against a secondary replica fails
+  href: error-2767-query-secondary-replica-fails.md
+- name: Error 41131 when creating availability group
+  href: error-41131-create-availability-group.md
+- name: Error 9002 on primary replica
+  href: error-9002-transaction-log-large.md
 - name: Issues after changing the hostname
   href: error-41041-change-hostname.md
 - name: Listener connection times out in multi-subnet
@@ -15,6 +15,10 @@ items:
   href: configure-always-on-availability-group-perform-failover.md
 - name: Query performance degradation on secondary replicas
   href: query-performance-degradation.md
+- name: Troubleshoot Always On Availability Group failover
+  href: troubleshooting-availability-group-failover.md
+- name: Troubleshoot Always On issues
+  href: troubleshooting-alwayson-issues.md
 - name: Troubleshoot automatic failover problems
   href: troubleshooting-automatic-failover-problems.md
 - name: Troubleshoot availability group database in reverting state
@@ -23,13 +27,9 @@ items:
   href: troubleshooting-intermittent-connection-timeouts-availability-groups.md
 - name: Troubleshoot log send queuing in an Always On availability group
   href: troubleshooting-log-send-queuing-in-alwayson-availability-group.md
-- name: Troubleshoot Always On issues
-  href: troubleshooting-alwayson-issues.md
-- name: Troubleshoot Always On Availability Group failover
-  href: troubleshooting-availability-group-failover.md
+- name: Troubleshoot recovery (redo) queuing in an Always On availability group
+  href: troubleshooting-recovery-queuing-in-alwayson-availability-group.md
 - name: Use AGDiag to diagnose availability group health events
   href: use-agdiag-diagnose-availability-group-health-events.md
 - name: Use the Always On Availability Group dashboard
   href: availability-replica-is-disconnected.md
-- name: Troubleshoot recovery (redo) queuing in an Always On availability group
-  href: troubleshooting-recovery-queuing-in-alwayson-availability-group.md

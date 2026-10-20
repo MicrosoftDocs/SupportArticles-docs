@@ -22,7 +22,7 @@ This article answers frequently asked questions (FAQ) about securing network acc
 
 ### What are the security implications of enabling public network access?
 
-Enabling public network access makes the storage account's public endpoints reachable from network locations that the storage firewall permits. It doesn't make data anonymous or bypass authorization, but it increases the network-reachable attack surface and can expose the account to unwanted connection attempts or configuration mistakes.
+Enabling public network access makes the storage account's public endpoints reachable from network locations that the storage firewall permits. It doesn't make data access anonymous or bypass authorization, but it increases the network-reachable attack surface and can expose the account to unwanted connection attempts or configuration mistakes.
 
 If workloads don't require the public endpoint, disable public network access and use private endpoints. If workloads require the public endpoint, set the default network action to **Deny** and allow only the required virtual networks, public IP ranges, resource instances, or trusted Azure services.
 
@@ -101,7 +101,7 @@ Use the narrowest permissions and resource scope, prefer a user delegation SAS w
 
 ### Does a private endpoint affect diagnostic logs or monitoring?
 
-A private endpoint doesn't remove storage resource logs, metrics, activity logs, or diagnostic settings. However, any service that reads from or writes to a network-restricted storage account must itself have an allowed network path. Validate diagnostic destinations, monitoring agents, export jobs, and security products before disabling public network access.
+A private endpoint doesn't affect storage resource logs, metrics, activity logs, or diagnostic settings. However, any service that reads from or writes to a network-restricted storage account must itself have an allowed network path. Validate diagnostic destinations, monitoring agents, export jobs, and security products before disabling public network access.
 
 ### Can File Transfer Protocol (SFTP) clients connect through a private endpoint?
 
@@ -148,7 +148,7 @@ Removing a service endpoint doesn't by itself prove that all access will stop. A
 
 Changing the endpoint type can change source addressing and close existing TCP connections. Update storage virtual network rules first, schedule the change during a controlled window, and ensure applications reconnect automatically. Microsoft doesn't publish a fixed downtime duration for this change.
 
-### Do storage service endpoint tags include services other than Azure Storage?
+### Do storage service endpoints include services other than Azure Storage?
 
 The `Microsoft.Storage` and `Microsoft.Storage.Global` service endpoint resources are scoped to Azure Storage. However, first-party and third-party applications can depend on Azure Storage, so changing storage connectivity can indirectly affect those applications. Inventory dependencies and test before changing a production subnet.
 
