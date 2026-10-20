@@ -1,20 +1,23 @@
 ---
-title: Error 2767 when query against the secondary replica fails
-description: Works around an issue that a query on the secondary replica fails with error 2767 - Could not locate statistics when offloading read-only workloads to a secondary replica.
-ms.date: 12/29/2022
-ms.reviewer:  
+title: 'Error 2767: Query Failure on a Secondary Replica'
+description: 'Learn how to work around error 2767, "Could not locate statistics", when queries fail on a secondary replica of an Always On availability group.'
+ms.date: 10/19/2026
+ms.reviewer: phbar
 ms.custom: sap:Always On Availability Groups (AG)
+ai-usage: ai-assisted
 ---
 
-# Error 2767 "Could not locate statistics" when query against the secondary replica fails
+# Error 2767 when a query against a secondary replica fails
 
 _Applies to:_&nbsp; SQL Server, Azure SQL Database, Azure SQL Managed Instance
 
-This article provides workarounds for the issue that a query against the secondary replica fails with error 2767 "Could not locate statistics".
+## Summary
 
-## Symptom
+When you offload read-only workloads from a primary replica to a secondary replica of an Always On availability group, a query against the secondary replica can fail with error 2767, "Could not locate statistics". This article provides workarounds for SQL Server, Azure SQL Database, and Azure SQL Managed Instance.
 
-When offloading read-only workloads to a secondary replica of an Always On availability group from a primary replica, you notice that a query against the secondary replica fails with the following error message:
+## Symptoms
+
+When you offload read-only workloads to a secondary replica of an Always On availability group from a primary replica, you notice that a query against the secondary replica fails with the following error message:
 
 > Msg 2767, Level 16, State 1, Procedure sp_table_statistics2_rowset, Line \<LineNumber> [Batch Start Line \<LineNumber>]
 >
@@ -40,6 +43,9 @@ To work around the issue, use one of the following methods as required:
     GO
     ```
 
+    > [!NOTE]
+    > Execution of the DBCC command must occur after the active transaction finishes.
+
 - Azure SQL Database
 
     If the issue occurs in Azure SQL Database, run the [Invoke-AzSqlDatabaseFailover](/powershell/module/az.sql/invoke-azsqldatabasefailover) cmdlet to fail over the readable secondary replica:
@@ -52,7 +58,7 @@ To work around the issue, use one of the following methods as required:
     
 - Azure SQL Managed Instance
 
-    If the issue occurs in a Business Critical service tier Azure SQL Managed Instance, run the [Invoke-AzSqlInstanceFailover](/powershell/module/az.sql/invoke-azsqlinstancefailover) cmdlet to fail over to a read only secondary node:
+    If the issue occurs in a Business Critical service tier Azure SQL Managed Instance, run the [Invoke-AzSqlInstanceFailover](/powershell/module/az.sql/invoke-azsqlinstancefailover) cmdlet to fail over to a read-only secondary node:
 
     ```powershell
     Invoke-AzSqlInstanceFailover -ResourceGroupName "<ResourceGroupName>" -Name "<ManagedInstanceName>" -ReadableSecondary

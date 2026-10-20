@@ -39,6 +39,8 @@ The following zones currently have capacity constraints:
 | **Physical zone 1** in **_Japan East_** |Basic, Standard, and Premium| - You can't deploy a new Azure Firewall in zone 1| Leave the Availability Zones setting unspecified and let Azure Firewall automatically assign available zones. |
 | **Physical zone 2** in **_Australia East_** |Basic, Standard, and Premium| - You can't deploy a new Azure Firewall in zone 2. |Leave the Availability Zones setting unspecified and let Azure Firewall automatically assign available zones. |
 | **West India** |Basic, Standard, and Premium| - As of September 2026, new deployments are expected to be blocked in the near future. Plan your capacity requirements accordingly. |Deploy a new Azure Firewall in a different region. |
+| **Norway East** |Basic, Standard, and Premium| New Azure Firewall deployments are temporarily blocked. |Deploy a new Azure Firewall in a different region. |
+
 
 > [!WARNING]
 > If you stop an existing Azure Firewall deployment in any of these capacity-restricted regions, you might not be able to start it again due to ongoing capacity limitations. Plan accordingly before stopping firewall instances in these regions.
