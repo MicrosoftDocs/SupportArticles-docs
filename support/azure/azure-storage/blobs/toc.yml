@@ -16,6 +16,13 @@
   - name: Invalid blob or block content, or invalid block list
     href: connectivity/invalid-blob-or-block-content-or-invalid-block-list.md
 
+- name: Networking
+  items:
+  - name: Best practices for storage network security
+    href: networking/best-practices-for-storage-network-security.md
+  - name: Storage network security FAQ
+    href: networking/storage-network-security-faq.md
+
 - name: Authentication and Authorization
   items:
   - name: Troubleshoot portal access issues

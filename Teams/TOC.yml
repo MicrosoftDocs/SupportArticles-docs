@@ -270,6 +270,8 @@ items:
       href: ./teams-rooms-and-devices/phone-sidecar-screen-black.md
     - name: Reset a device using the recovery tool
       href: ./teams-rooms-and-devices/reset-device-using-recovery-tool.md
+    - name: Sign-in delays on Teams Android devices when you use Entra ID dynamic device groups
+      href: ./teams-rooms-and-devices/resolve-sign-in-delays-dynamic-device-groups.md
     - name: Teams Rooms app doesn't start automatically after updates
       href: ./teams-rooms-and-devices/teams-rooms-not-auto-start-after-windows-updates.md
     - name: Teams Rooms on Windows sign-in fails with UserInteractionRequired
