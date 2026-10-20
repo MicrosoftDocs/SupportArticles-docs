@@ -438,6 +438,21 @@
       "source_path": "Exchange/ExchangeServer/compliance/items-are-removed-by-mrm-2-0-unexpectedly.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/development/mapi-apps-cannot-access-archive-mailboxes.md",
+      "redirect_url": "https://learn.microsoft.com/previous-versions/troubleshoot/content-retirement",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/setup/service-pack-upgrade-fails.md",
+      "redirect_url": "https://learn.microsoft.com/previous-versions/troubleshoot/content-retirement",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/development/public-protocols-support-limitations.md",
+      "redirect_url": "https://learn.microsoft.com/openspecs/exchange_standards/ms-oxstandlp/3c8dd289-b401-430c-a3a0-dec8028b5918",
+      "redirect_document_id": false
     }
   ]
 }
