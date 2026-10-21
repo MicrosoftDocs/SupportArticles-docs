@@ -126,7 +126,7 @@ This error occurs if the limit of server endpoints per server is reached. Azure 
 
 This error occurs if another server endpoint is already syncing the server endpoint path specified. Azure File Sync doesn't support multiple server endpoints syncing the same directory or volume.
 
-<a id="-2160590967"></a>**Server endpoint creation fails, with this error: "MgmtServerJobFailed" (Error code: -2160590967 or 0x80c80077)**
+<a id="-2160590967"></a>**Server endpoint creation fails, with this error: "MgmtServerJobFailed" (Error code: -2134376329 or 0x80c80077)**
   
 This error occurs if the server endpoint path contains orphaned tiered files. If a server endpoint was recently removed, wait until the orphaned tiered files cleanup has completed. An Event ID 6662 is logged to the Telemetry event log once the orphaned tiered files cleanup has started. An Event ID 6661 is logged once the orphaned tiered files cleanup has completed and a server endpoint can be recreated using the path. If the server endpoint creation fails after the tiered files cleanup has completed or if Event ID 6661 can't be found in the Telemetry event log due to event log rollover, remove the orphaned tiered files by performing the steps documented in [Tiered files are not accessible on the server after deleting a server endpoint](/azure/storage/file-sync/file-sync-troubleshoot-cloud-tiering#tiered-files-are-not-accessible-on-the-server-after-deleting-a-server-endpoint).
 
