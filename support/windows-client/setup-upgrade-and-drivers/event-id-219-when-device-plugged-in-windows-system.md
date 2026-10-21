@@ -1,7 +1,7 @@
 ---
 title: Event ID 219 is logged when a device is plugged into a Windows-based system
-description: Describes a scenario in which event ID 219 is logged when a device is plugged into a Windows-based system.
-ms.date: 02/12/2026
+description: Describes why event ID 219 might be logged with UMDF event ID 10118 during Windows startup and when no action is required.
+ms.date: 10/20/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -14,31 +14,37 @@ appliesto:
 ---
 # Event ID 219 is logged when a device is plugged into a Windows-based system
 
-This article provides a solution to an issue where event ID 219 is logged when a device is plugged into a Windows-based system.
+This article explains why event ID 219 might be logged together with User-Mode Driver Framework (UMDF) event ID 10118 during Windows startup and when these events can be safely ignored.
 
 _Original KB number:_ &nbsp; 974720
 
 ## Symptoms
 
-When a device is plugged into a Windows-based system, the following warning event Kernel-PnP ID 219 is logged together with the event DriverFrameworks-Usermode ID 10114 in the System log:
+When Windows tries to start a device that uses a UMDF driver, the following Kernel-PnP warning event might be logged in the System log:
 
-> (Logged events)  
-Warning xxxx/xx/xx xx:xx:xx Kernel-PnP 219 (212)  
-The driver \\Driver\\WudfRd failed to load for the device xxxx.  
-Information xxxx/xx/xx xx:xx:xx: DriverFrameworks-UserMode 10114 Start UMDF reflector  
-WUDFPf (part of UMDF) did not load yet. After it does, Windows will start the device again.
+> Warning xxxx/xx/xx xx:xx:xx Kernel-PnP 219 (212)  
+> The driver \\Driver\\WudfRd failed to load for the device xxxx.
+
+During Windows startup, this warning might be accompanied by the following DriverFrameworks-UserMode informational event:
+
+> Information xxxx/xx/xx xx:xx:xx DriverFrameworks-UserMode 10118 Startup of the UMDF reflector  
+> UMDF reflector is unable to connect to service control manager (SCM). This is expected during boot, when SCM has not started yet. Will retry when it starts.
 
 ## Cause
 
-When a UMDF device was connected, UMDF driver for that device will be loaded. The Windows Driver Foundation - User-mode Driver Framework service, which is necessary for loading UMDF driver, will be started triggered by loading the driver.
+The UMDF reflector is the kernel-mode component that enables a device to use a UMDF driver. During Windows startup, the reflector might try to connect to the Service Control Manager (SCM) before SCM has started.
 
-However, for some cases, when the system tries to load the driver, Windows Driver Foundation - User-mode Driver Framework has not started yet. So the two events above are logged.
+In this situation, the reflector logs informational event ID 10118 to indicate that the connection isn't yet available and will be retried when SCM starts. Kernel-PnP event ID 219 might also be logged because the device couldn't be started at that time.
 
 ## Resolution
 
-The driver that Windows tries to load will be retried. Unless the events are logged continuously there is no need to do anything, the events are safe to ignore.
+For this startup timing condition, no action is required. The UMDF reflector retries the connection when SCM starts, allowing Windows to retry starting the device.
 
-You can confirm the driver is loaded successfully in the **System Information**, and you can confirm the devices are running correctly in the **Device Manager**.
+If the events occur only during startup and the device subsequently starts and works correctly, you can safely ignore them.
+
+You can check the driver's status in **System Information** and confirm that the device is working correctly in **Device Manager**.
+
+If the events continue after startup or the device doesn't work correctly, investigate the device or driver issue. Don't assume that every Kernel-PnP event ID 219 is caused by this startup timing condition.
 
 ## Data collection
 
