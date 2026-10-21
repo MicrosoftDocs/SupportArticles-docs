@@ -40,21 +40,35 @@ Request throttling can occur on different Azure components, so the error message
 
 ## Cause
 
-Azure Resource Manager requests are being throttled. For information about how Azure Resource Manager limits work, and the specific limits per hour, see [Throttling Resource Manager requests](/azure/azure-resource-manager/management/request-limits-and-throttling).
+The operation encountered request throttling while accessing an Azure resource. ARM and individual resource providers enforce separate limits.
 
-## Solution 1: Use another subscription
+In the preceding example, the affected dependency is Microsoft.Network/PublicIPAdresses, and the error identifies the issue as a backend-storage limit.
 
-If you have access to a different subscription, you can simply deploy the cluster to that subscription.
+The applicable limit and scope depend on the service and operation. Review the complete error and available response headers to identify the affected request.
 
-## Solution 2: Modify your access patterns
+See [ARM Request Limits](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/request-limits-and-throttling)
 
-To resolve this issue, examine your access patterns for the throttled subscription. The following table lists the possible access patterns and corresponding solutions.
+## Troubleshooting
 
-| Access pattern | Solution |
-| -------------- | -------- |
-| Automated scripts constantly scan the subscription | Run the scripts less frequently |
-| Many users access the subscription | Have each user use their own subscription |
-| Scripts scan every storage account in the subscription | Scope the script to query only the resources that it must have |
+### Identify the affected request
+
+Inspect the complete error and available response headers from the failing client. Record the affected operation or dependency, HTTP status, error details, and `Retry-After` value.
+
+If the AKS resource exists, open the cluster in the Azure portal, select **Diagnose and solve problems**, and search for **Azure Resource Request Throttling**. Select the incident time range and compare total requests and throttled requests by operation and user agent. Review other clients sharing the affected scope.
+
+### Reduce requests and retry safely
+
+Reduce or pause nonessential automation that accesses the affected resources. Run discovery and monitoring queries less frequently, and query specific resources instead of repeatedly listing an entire subscription where possible.
+
+Wait at least as long as the actual response's `Retry-After` value before retrying.
+
+Before resubmitting a management operation, check whether the original operation is still running. For an accepted asynchronous operation, follow its returned operation-status URL and polling guidance instead of repeatedly submitting the same change.
+
+Apply additional mitigation when appropriate:
+
+- Space out changes and allow the preceding operation to complete before submitting another.
+- Consider distributing new deployments across subscriptions or regions after confirming the affected limit's scope.
+
 
 ## More information
 
