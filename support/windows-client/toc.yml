@@ -711,10 +711,6 @@ items:    # Please do not delete this line, it is required for the yaml format
           href: ./setup-upgrade-and-drivers/blinitializelibrary-failed-start-os-on-64-bit-uefi-based-computer.md
         - name: Fail to upgrade Windows 10 Enterprise edition
           href: ./setup-upgrade-and-drivers/contact-system-administrator-to-upgrade-windows.md
-        - name: HAL_INITIALIZATION_FAILED error on VMWare VM
-          href: ./setup-upgrade-and-drivers/installation-error-hal-initialization-failed.md
-        - name: How to downgrade from Windows 8
-          href: ./installing-updates-features-roles/downgrade-from-windows-8.md
         - name: How to edit the Boot.ini file in Windows 2000
           href: ./setup-upgrade-and-drivers/edit-boot-ini-file-windows-2000.md
         - name: In-place upgrade to Windows 10 problem
@@ -723,8 +719,6 @@ items:    # Please do not delete this line, it is required for the yaml format
           href: ./setup-upgrade-and-drivers/installation-file-location-service-pack-not-behave.md
         - name: Language packs no longer available
           href: ./setup-upgrade-and-drivers/language-packs-no-longer-available-after-upgrade.md
-        - name: .NET Framework 4.5.1 (web installer)
-          href: ./setup-upgrade-and-drivers/dotnet-framework-4dot5dot1-web-installer.md
         - name: Network provider settings are removed during an in-place upgrade
           href: ./setup-upgrade-and-drivers/network-provider-settings-removed-in-place-upgrade.md
         - name: Operations fail if Windows 8 is improperly identified as a WTG installation
@@ -745,8 +739,6 @@ items:    # Please do not delete this line, it is required for the yaml format
           href: ./setup-upgrade-and-drivers/windows-10-upgrade-quick-fixes.md
         - name: Windows 10 upgrade resolution procedures
           href: ./setup-upgrade-and-drivers/windows-10-upgrade-resolution-procedures.md
-        - name: Windows optional component setup tool
-          href: ./setup-upgrade-and-drivers/use-ocsetup-to-install-remove-components.md
         - name: Windows servicing operations fail after you move user profile and ProgramData folders
           href: ../windows-server/setup-upgrade-and-drivers/servicing-fails-moved-user-profile-programdata-folders.md?context=/troubleshoot/windows-client/context/context
         - name: Windows setup log file locations

@@ -16506,6 +16506,56 @@
       "source_path": "support/windows-server/setup-upgrade-and-drivers/error-install-windows-internal-database.md",
       "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/error-install-windows-internal-database",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/installing-updates-features-roles/description-of-windows-server-update-services-3.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/description-of-windows-server-update-services-3",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/installing-updates-features-roles/list-updates.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/list-updates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/setup-upgrade-and-drivers/avoid-duplicate-guids-deploy-sms.md",
+      "redirect_url": "/troubleshoot/windows-server/setup-upgrade-and-drivers/windows-installations-disk-duplication",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/setup-upgrade-and-drivers/sysprep-capture-task-sequence-fails-0x80070070.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/sysprep-capture-task-sequence-fails-0x80070070",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/setup-upgrade-and-drivers/stop-0x0000007b-error-group-policy-setting.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/stop-0x0000007b-error-group-policy-setting",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/setup-upgrade-and-drivers/unattended-setup-not-use-computer-name-specified-oobe.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/unattended-setup-not-use-computer-name-specified-oobe",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/installing-updates-features-roles/downgrade-from-windows-8.md",
+      "redirect_url": "https://support.microsoft.com/windows/deployment/install-upgrade/go-back-to-the-previous-version-of-windows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/setup-upgrade-and-drivers/dotnet-framework-4dot5dot1-web-installer.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/dotnet-framework-4dot5dot1-web-installer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/setup-upgrade-and-drivers/installation-error-hal-initialization-failed.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/installation-error-hal-initialization-failed",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/setup-upgrade-and-drivers/use-ocsetup-to-install-remove-components.md",
+      "redirect_url": "/windows/client-management/client-tools/add-remove-hide-features",
+      "redirect_document_id": false
     }
   ]
 }

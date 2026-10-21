@@ -2313,8 +2313,6 @@ items:    # Please do not delete this line, it is required for the yaml format
           href: ./setup-upgrade-and-drivers/post-deployment-configuration-task-fail.md
         - name: Setup fails on a VM with error 0xE0000100
           href: ./setup-upgrade-and-drivers/setup-fail-on-vm-error-0xe0000100.md
-        - name: Unattended Setup does not Use Computer Name Specified by User during OOBE
-          href: ./setup-upgrade-and-drivers/unattended-setup-not-use-computer-name-specified-oobe.md
         - name: Upgrade fails and generates error code 0xC1900101-0x20017
           href: ../windows-client/setup-upgrade-and-drivers/upgrade-fails-with-error-0xc1900101-0x20017.md?context=/troubleshoot/windows-server/context/context
         - name: An upgrade to Windows Server 2016 fails
@@ -2325,8 +2323,6 @@ items:    # Please do not delete this line, it is required for the yaml format
           href: ./setup-upgrade-and-drivers/servicing-fails-moved-user-profile-programdata-folders.md
     - name: Sysprep and imaging (Windows PE, ADK, WDS)
       items:
-        - name: Avoid duplicate GUIDs when you image SMS clients
-          href: ./setup-upgrade-and-drivers/avoid-duplicate-guids-deploy-sms.md
         - name: Clone or duplicate a Windows installation
           href: ./setup-upgrade-and-drivers/windows-installations-disk-duplication.md
         - name: Create an ISO image for UEFI platforms
@@ -2335,8 +2331,6 @@ items:    # Please do not delete this line, it is required for the yaml format
           href: ./setup-upgrade-and-drivers/enable-logging-windows-deployment-service.md
         - name: Microsoft Deployment Toolkit support life cycle
           href: ./setup-upgrade-and-drivers/deployment-toolkit-support.md
-        - name: SYSPREP and CAPTURE task sequence fails
-          href: ./setup-upgrade-and-drivers/sysprep-capture-task-sequence-fails-0x80070070.md
         - name: Windows Deployment Services (WDS) support for UEFI
           href: ./setup-upgrade-and-drivers/deploy-uefi-based-systems-wds.md
         - name: The WDS server may not start
@@ -2783,8 +2777,6 @@ items:    # Please do not delete this line, it is required for the yaml format
           href: ./setup-upgrade-and-drivers/use-recovery-console-replace-driver.md
         - name: How to use Device Manager to configure devices
           href: ./setup-upgrade-and-drivers/use-device-manager-configure-devices.md
-        - name: "\"Stop 0x0000007B\" error"
-          href: ./setup-upgrade-and-drivers/stop-0x0000007b-error-group-policy-setting.md
         - name: "\"This device cannot start\" error when deploying a hot plug NVMe SSD"
           href: ./setup-upgrade-and-drivers/device-cannot-start-error-hot-plug-nvme-ssd.md
         - name: VMware driver installation fails in Windows Server 2008 R2 SP1
@@ -3023,8 +3015,6 @@ items:    # Please do not delete this line, it is required for the yaml format
       items:
         - name: Can't connect to WSUS Administration Website
           href: ./installing-updates-features-roles/cannot-connect-to-wsus-administration-website.md
-        - name: Description of Windows Server Update Services 3.0
-          href: ./installing-updates-features-roles/description-of-windows-server-update-services-3.md
         - name: How to block user access to Windows Update
           href: ./installing-updates-features-roles/block-user-access-windows-update.md
         - name: How the Windows Update client determines which proxy server to use
@@ -3051,8 +3041,6 @@ items:    # Please do not delete this line, it is required for the yaml format
           href: ./installing-updates-features-roles/troubleshoot-windows-update-download-errors.md
     - name: Windows Update - Expected update missing or not offered
       items:
-        - name: List of updates
-          href: ./installing-updates-features-roles/list-updates.md
         - name: WSUS SelfUpdate doesn't send automatic updates
           href: ./installing-updates-features-roles/wsus-selfupdate-not-send-automatic-updates.md
     - name: Windows Update - Install errors starting with 0x8007 (ERROR)
