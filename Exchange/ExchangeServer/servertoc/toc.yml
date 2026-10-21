@@ -202,12 +202,6 @@ items:
           href: ../compliance/search-adminauditlog-mailboxauditlog-return-no-result.md
         - name: Search-Mailbox cmdlet error
           href: ../compliance/search-mailbox-cmdlet-fails.md
-    - name: Development
-      items:
-        - name: MAPI applications can't access archive mailboxes
-          href: ../development/mapi-apps-cannot-access-archive-mailboxes.md
-        - name: Support limitations for open standards
-          href: ../development/public-protocols-support-limitations.md
     - name: Distribution Lists
       items:
         - name: Get-DistributionGroupMember not return all members
@@ -322,7 +316,5 @@ items:
           href: ../setup/installing-exchange-2010-sp2-fails.md
         - name: Issues occur if arbitration mailbox isn't upgraded
           href: ../setup/issues-occur-if-arbitration-mailbox-not-upgraded.md
-        - name: Service Pack upgrade fails
-          href: ../setup/service-pack-upgrade-fails.md
         - name: Version error in RecoverServer mode install
           href: ../setup/version-error-in-recover-server-mode-install.md
