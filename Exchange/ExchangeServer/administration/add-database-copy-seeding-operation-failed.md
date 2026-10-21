@@ -20,7 +20,7 @@ appliesto:
   - Exchange Server 2019
   - Exchange Server 2016
   - Exchange Server 2013
-ms.date: 01/24/2024
+ms.date: 08/21/2026
 ---
 
 # Error when running Add-MailboxDatabaseCopy command: The seeding operation failed
