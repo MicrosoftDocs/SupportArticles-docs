@@ -1,6 +1,6 @@
 ---
-title: Event ID 219 is logged when a device is plugged into a Windows-based system
-description: Describes why event ID 219 might be logged with UMDF event ID 10118 during Windows startup and when no action is required.
+title: Kernel-PnP Event ID 219 is logged together with UMDF Event ID 10118 during Windows startup
+description: Describes why Kernel-PnP event ID 219 might be logged with UMDF event ID 10118 during Windows startup and when no action is required.
 ms.date: 10/20/2026
 manager: dcscontentpm
 audience: itpro
@@ -12,20 +12,20 @@ ms.custom:
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
-# Event ID 219 is logged when a device is plugged into a Windows-based system
+# Kernel-PnP Event ID 219 is logged together with UMDF Event ID 10118 during Windows startup
 
-This article explains why event ID 219 might be logged together with User-Mode Driver Framework (UMDF) event ID 10118 during Windows startup and when these events can be safely ignored.
+This article explains why Kernel-PnP event ID 219 might be logged together with User-Mode Driver Framework (UMDF) event ID 10118 during Windows startup and when these events can be safely ignored.
 
 _Original KB number:_ &nbsp; 974720
 
 ## Symptoms
 
-When Windows tries to start a device that uses a UMDF driver, the following Kernel-PnP warning event might be logged in the System log:
+During Windows startup, when Windows tries to start a device that uses a UMDF driver, the following Kernel-PnP warning event might be logged in the System log:
 
 > Warning xxxx/xx/xx xx:xx:xx Kernel-PnP 219 (212)  
 > The driver \\Driver\\WudfRd failed to load for the device xxxx.
 
-During Windows startup, this warning might be accompanied by the following DriverFrameworks-UserMode informational event:
+This warning might be accompanied by the following DriverFrameworks-UserMode informational event:
 
 > Information xxxx/xx/xx xx:xx:xx DriverFrameworks-UserMode 10118 Startup of the UMDF reflector  
 > UMDF reflector is unable to connect to service control manager (SCM). This is expected during boot, when SCM has not started yet. Will retry when it starts.
