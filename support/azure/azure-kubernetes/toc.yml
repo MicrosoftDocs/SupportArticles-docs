@@ -247,8 +247,12 @@ items:
     href: extensions/application-routing-gateway-api.md
   - name: Troubleshoot Azure DNS and TLS integration for the Application Routing Gateway API Implementation
     href: extensions/application-routing-gateway-api-dns-tls.md
+  - name: Troubleshoot the application routing default domain feature
+    href: extensions/application-routing-default-domain.md
   - name: AI and machine learning extensions
     items:
+    - name: Troubleshoot managed Kueue extension errors (preview)
+      href: extensions/troubleshoot-kueue-extension-errors.md
     - name: Troubleshoot managed KubeRay extension errors (preview)
       href: extensions/troubleshoot-kuberay-extension-errors.md
   - name: Troubleshoot the Istio-based service mesh add-on
