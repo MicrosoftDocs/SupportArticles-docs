@@ -15,8 +15,10 @@ ms.custom:
 appliesto:
   - Microsoft Purview
 search.appverid: MET150
-ms.date: 10/12/2026
+ms.date: 10/21/2026
 ai-usage: ai-assisted
+
+#customer intent: As an administrator, I want to diagnose unexpected auto-labeling results so that I can confirm the intended labels and protection.
 
 ---
 
@@ -24,9 +26,11 @@ ai-usage: ai-assisted
 
 ## Summary
 
-To resolve unexpected results from a Microsoft Purview auto-labeling policy, use these checks as an administrator. These policies apply sensitivity labels to files stored in SharePoint and OneDrive, and to email as Exchange sends or receives it. They don't label email already stored in mailboxes.
+Microsoft Purview auto-labeling policies apply sensitivity labels to files stored in SharePoint and OneDrive, and to email messages that a Microsoft Exchange server sends or receives. The policies don't label email messages that're already stored in mailboxes.
 
-If you need help with labels that are applied or recommended while someone works in Word, Excel, PowerPoint, or Outlook, use [auto-labeling for Office apps](/purview/apply-sensitivity-label-automatically#how-to-configure-auto-labeling-for-office-apps) instead.
+To resolve unexpected results from an auto-labeling policy, an administrator can use the information in this article to diagnose the issue and then resolve it.
+
+If you need help with labels that are applied or recommended when you work in Word, Excel, PowerPoint, or Outlook, see [auto-labeling for Office apps](/purview/apply-sensitivity-label-automatically#how-to-configure-auto-labeling-for-office-apps) instead.
 
 ## Check the policy and choose your symptom
 
@@ -49,17 +53,17 @@ Find the policy and check which stage it reached:
 
 Simulation finds matches without changing labels. A match isn't confirmation that a label was applied. After you turn on the policy, check the labeling result separately.
 
-If you can't open policy review pages, ask your administrator to check the [policy review permissions](/purview/apply-sensitivity-label-automatically#policy-level-labeling-activity-for-sharepoint-and-onedrive).
+If you're not able to open policy review pages, ask an administrator to check the [policy review permissions](/purview/apply-sensitivity-label-automatically#policy-level-labeling-activity-for-sharepoint-and-onedrive).
 
-Follow the section for your symptom. Portal layouts can vary; the steps describe the newer policy review pages.
+Use the information in the appropriate section for your symptom. Portal layouts can vary; the steps describe the newer policy review pages.
 
 ## Can't create or turn on a policy
 
 Check access, the selected label, and the simulation status before changing the policy.
 
-1. If the auto-labeling page is missing or you can't manage policies, check the [licensing and availability guidance](/purview/apply-sensitivity-label-automatically#licensing-and-where-to-find-each-surface). Ask your administrator to confirm the permissions required for your task. Turning on a policy requires **Compliance Administrator** or **Compliance Data Administrator**.
+1. If the auto-labeling page is missing or an action is unavailable, check [licensing and availability](/purview/apply-sensitivity-label-automatically#licensing-and-where-to-find-each-surface). Also check the policy's status and your access. Ask your administrator to verify the permissions that apply to your account for the action and policy scope. Permissions to view matched content are separate from permissions to manage policies.
 1. If the label can't be used, check that it's created and published. A parent label that has sublabels can't be applied to content; select an appropriate sublabel or a label without sublabels. Its scope needs **Files & other data assets** for files or **Emails** for email.
-1. If you can't turn on the policy, check whether simulation completed. Every policy needs at least one simulation before it can apply labels. If results exceed the [simulation limit](/purview/apply-sensitivity-label-automatically#learn-about-simulation-mode), narrow the locations or conditions, then rerun simulation.
+1. If you can't turn on the policy, review its simulation status and any displayed error. If results exceed the [simulation limit](/purview/apply-sensitivity-label-automatically#learn-about-simulation-mode), narrow the locations or conditions, then rerun simulation.
 
 After correcting the identified issue, save the policy and review a completed simulation before turning it on. If an error remains, record its exact text for Microsoft Support rather than deleting the policy.
 
@@ -77,9 +81,11 @@ If the run doesn't complete or shows an error, collect its status, start time, d
 
 Check what the policy looked for and when it looked.
 
+Before editing the policy or rerunning simulation, [preserve results for comparison](/purview/auto-label-simulation-results#preserve-results-before-editing-or-rerunning) when available.
+
 1. On **Simulation overview**, compare **Configuration details** with the item's location. Check included and excluded locations, conditions, and exceptions. Use **Policy matches per rule** to identify which rule matched.
 1. Open **Review sample items**, when available, to see **Items to review**. Compare an unexpected match with the rule's conditions. Viewing matched content requires the **Data Classification Content Viewer** role; a missing preview isn't evidence that an item didn't match.
-1. For a missing SharePoint or OneDrive file, compare its modified date with the simulation run. If the file changed after the run, rerun simulation to evaluate the updated content. Also check whether the file was last modified before a sensitive information type was created or changed. To classify older unchanged files, use [on-demand classification](/purview/on-demand-classification). Review that feature's permissions, billing, and scan scope before starting.
+1. For a missing SharePoint or OneDrive file, check whether classification covers the content and sensitive information types you expect. The file's modified date alone doesn't establish when it was classified. Rerunning simulation reevaluates available classification results; it doesn't itself reclassify the file. Use the [classification and simulation guidance](/purview/auto-label-classification-simulation#when-historical-files-need-updated-classification) to decide whether [on-demand classification](/purview/on-demand-classification) is needed. Before starting a scan, review its permissions, billing, scope, and potential effects on other active policies.
 1. For Exchange, check messages sent or received during the run, not older mailbox messages. Exchange simulation counts use sampled data, so a missing sample doesn't by itself establish a policy failure.
 
 If a rule matches the wrong content, refine its conditions or exceptions, then rerun simulation. Review the new matches before deployment. Simulation shows one policy at a time; other active policies can affect the final label.
@@ -103,11 +109,17 @@ An empty **Labeling failures** list doesn't prove that a file was labeled. If th
 
 Check the existing label and the intended outcome before changing protection settings.
 
-1. Compare the existing label's priority with the policy's label, and check whether you applied it manually. By default, automatic labeling doesn't replace a manually applied label. It can replace a lower-priority automatically applied or default label, but not a higher-priority label.
-1. If your organization intends to replace lower-priority manual labels, review **Additional label settings** and [existing-label behavior](/purview/apply-sensitivity-label-automatically#will-an-existing-label-be-overridden). Check other active policies too: a single policy's simulation doesn't resolve conflicts with them.
-1. Check the specific protection or marking you expected. Auto-labeling policies don't add headers, footers, or watermarks to SharePoint and OneDrive documents. For email from outside your organization, label encryption isn't applied by default. If encryption is required, review **Apply encryption to email received from outside your organization** in the [policy settings](/purview/apply-sensitivity-label-automatically#creating-an-auto-labeling-policy).
+1. **Current label and origin:** Identify the item's label and whether it was applied manually, automatically, or as a default. For a removal policy, confirm that this is the label selected for removal. Label-removal policies support SharePoint and OneDrive, not Exchange.
+1. **Configured priority:** For replacement, compare the labels' order in the Microsoft Purview portal, not their names. A policy can replace a lower-priority automatically applied or default label, but not a higher-priority label. See [label priority](/purview/apply-sensitivity-label-automatically#how-multiple-conditions-are-evaluated-when-they-apply-to-more-than-one-label).
+1. **Manual-label settings:** For replacement, check **Additional label settings** for the affected location and review the [label replacement rules](/purview/apply-sensitivity-label-automatically#will-an-existing-label-be-overridden). By default, a manually applied label isn't replaced; the override setting allows replacement with a higher-priority label. For removal, review the available settings for the selected locations, including any option for manually applied labels. Confirm the actual removal outcome rather than assuming an override setting isn't needed.
+1. **Policy mode:** Check whether the policy is on, off, or in simulation. [Simulation matches](/purview/auto-label-simulation-results) don't confirm removal or replacement: simulation doesn't change labels.
+1. **Competing apply policies:** For SharePoint and OneDrive, check other active policies that match the same files. An apply-label policy takes precedence over removal, even if it applies a different label. Another active apply-label policy without the manual-label override option can also prevent replacement of a manual label. Review the [policy conflict rules](/purview/apply-sensitivity-label-automatically#prerequisites--detailed-reference), rather than disabling protective policies to force an outcome.
 
-Test intended configuration changes in simulation, then confirm the actual label and required protection on representative items after deployment. Don't remove protection just to make labeling succeed. If you're troubleshooting a label-removal policy, review its [encryption impact](/purview/apply-sensitivity-label-automatically#removing-or-downgrading-sensitivity-labels-with-an-auto-labeling-policy) before making changes.
+Check the specific protection or marking you expected. Auto-labeling policies don't add headers, footers, or watermarks to SharePoint and OneDrive documents. For email from outside your organization, label encryption isn't applied by default. If encryption is required, review **Apply encryption to email received from outside your organization** in the [policy settings](/purview/apply-sensitivity-label-automatically#creating-an-auto-labeling-policy).
+
+Test intended changes in simulation, then confirm the actual label and required protection on representative items after deployment. For SharePoint and OneDrive, select the policy, then **View details** to open the [newer policy review pages](/purview/apply-sensitivity-label-automatically#policy-level-labeling-activity-for-sharepoint-and-onedrive). Use **Labeled items** and **Labeling failures** for application, or **Label removed items** and **Label removal failures** for removal. These views don't include Exchange email; use the [Exchange activity checks](#numbers-dont-agree-or-exchange-activity-is-missing) instead.
+
+Don't remove protection just to make labeling succeed. Removing a label that applies encryption also removes that encryption. Review the [encryption impact](/purview/apply-sensitivity-label-automatically#removing-or-downgrading-sensitivity-labels-with-an-auto-labeling-policy) before changing a removal policy.
 
 ## Numbers don't agree or Exchange activity is missing
 
@@ -123,7 +135,7 @@ If an enabled policy stopped matching expected Exchange messages, check its scop
 
 ## Advanced troubleshooting and data collection
 
-If the checks don't explain the result, contact Microsoft Support with a small, focused description:
+If the checks don't explain the result, contact Microsoft Support with a small, focused description that includes the following information:
 
 - The policy status and affected location: SharePoint, OneDrive, or Exchange.
 - What you expected and what you observed for one representative item.
@@ -131,9 +143,3 @@ If the checks don't explain the result, contact Microsoft Support with a small, 
 - The exact error or failure reason, if one is shown, and checks you already completed.
 
 Share item or policy details only through your organization's approved support channel. Remove sensitive content and personal information from screenshots. Don't post files, message contents, or identifiers in public forums.
-
-## Related content
-
-- [Create or edit an auto-labeling policy](/purview/apply-sensitivity-label-automatically#creating-an-auto-labeling-policy).
-- [Review simulation results before deployment](/purview/auto-label-simulation-results).
-- [Monitor your policy after deployment](/purview/apply-sensitivity-label-automatically#monitoring-your-auto-labeling-policy).
