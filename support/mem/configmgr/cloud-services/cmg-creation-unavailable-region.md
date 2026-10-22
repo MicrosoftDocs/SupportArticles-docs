@@ -6,7 +6,7 @@ ms.topic: troubleshooting
 ms.manager: dcscontentpm
 audience: itpro
 ms.date: 02/26/2026
-ms.reviewer: kaushika, payur
+ms.reviewer: umaikhan, shalzayed
 ms.custom: sap:Cloud Services\Cloud Management Gateway (CMG)
 ---
 # Can't create a CMG in a particular region
@@ -37,7 +37,7 @@ OK
 
 ## Cause
 
-As per February 2026, Configuration Manager supports only the following Microsoft Azure Virtual Machine (VM) SKUs for creating CMGs:
+Before version 2609, Configuration Manager supports only the following Microsoft Azure Virtual Machine (VM) SKUs for creating CMGs:
 
 - Standard_B2S
 - Standard_A2_V2
@@ -45,9 +45,13 @@ As per February 2026, Configuration Manager supports only the following Microsof
 
 These SKUs aren't available in all Azure regions that support Virtual Machine Scale Sets (VMSS). If you try to create a CMG in a region that doesn't have the selected SKU, you receive the error message.
 
+## Resolution
+
+To add support for newer Azure VM SKUs when you create CMGs, install [Configuration Manager version 2609](/intune/configmgr/core/plan-design/changes/whats-new-version-2609#new-cloud-management-gateway-virtual-machine-sizes) or later, or apply the [update rollup for Configuration Manager version 2603](/intune/configmgr/hotfix/2603/39169655).
+
 ## Workaround
 
-To mitigate this issue, Microsoft is actively working on expanding the list of SKUs that you can use to create CMGs. In the meantime, you can use either of the following methods to work around this issue.
+With Configuration Manager 2509 or older, you can use either of the following methods to work around this issue.
 
 ### Method 1: Use a different region
 
