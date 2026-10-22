@@ -163,6 +163,8 @@ items:
         href: procurement/unable-to-submit-pvrr.md
       - name: Intercompany purchase order confirmation fails with distribution errors
         href: procurement/intercompany-purchase-order-confirmation-over-under-distribution.md
+      - name: Intercompany purchase invoice has a cross-currency rounding variance
+        href: procurement/intercompany-cross-currency-unit-price-rounding.md
       - name: Order taker not auto-filled when creating purchase or sales orders
         href: procurement/po-so-order-taker-not-auto-filled.md
       - name: Physical remaining quantity in the inventory unit must not be zero when you post a product receipt
