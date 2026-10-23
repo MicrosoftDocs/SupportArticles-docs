@@ -10,7 +10,7 @@ ms.service: azure-virtual-machines
 ms.collection: windows
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure-services
-ms.date: 09/11/2026
+ms.date: 10/23/2026
 ms.author: kaushika
 ms.reviewer: mbifeld
 ms.custom: sap:Cannot connect to my VM
@@ -164,7 +164,7 @@ Serial Console uses the storage account configured for boot diagnostics in its c
    The following table lists the IPs that need to be permitted as firewall exclusions based on the region or geography where the VM is located. This is a subset of the complete list of Serial Console IP addresses used in the **SerialConsole** service tag. You can limit access to boot diagnostics storage accounts via the **SerialConsole** service tag. The service tag isn't regionally separated. Traffic on the service tag is inbound only, and the Serial Console doesn't generate traffic to Customer Controllable Destinations. Although Azure storage account firewalls don't currently support service tags, the **SerialConsole** service tag can be programmatically consumed to determine the IP list. For more information about service tags, see [Virtual network service tags](/azure/virtual-network/service-tags-overview).
 
    > [!NOTE]
-   > Storage account firewalls for the Serial Console aren't supported for VMs in geographies with only one region, such as Italy North in Italy.   
+   > Serial Console connections using a custom boot diagnostics storage account with firewall restrictions aren't supported for VMs in East US 3, Northeast US 5, or Southeast US 5, or in geographies with only one region, such as Italy North in Italy.
 
    | Geography | Regions | IP addresses |
    |-----------|---------|--------------|
@@ -186,7 +186,7 @@ Serial Console uses the storage account configured for boot diagnostics in its c
    | Switzerland | Switzerland North, Switzerland West | 20.199.207.188, 20.208.4.98, 20.208.4.99, 20.208.4.120, 20.208.149.229, 51.107.251.190, 51.107.251.191, 51.107.255.176 |
    | UAE | UAE Central, UAE North | 20.38.141.5, 20.45.95.64, 20.45.95.65, 20.45.95.66, 20.203.93.198, 20.233.132.205, 40.120.87.50, 40.120.87.51 |
    | United Kingdom | UK South, UK West | 20.58.68.62, 20.58.68.63, 20.90.32.180, 20.90.132.144, 20.90.132.145, 51.104.30.169, 172.187.0.26, 172.187.65.53 |
-   | United States | US Central, US East, US East 2, US East 2 EUAP, US East 3, US North, US South, US West, US West 2, US West 3 | 4.149.249.197, 4.150.239.210, 20.14.127.175, 20.40.200.175, 20.45.242.18, 20.45.242.19, 20.45.242.20, 20.47.232.186, 20.51.21.252, 20.69.5.160, 20.69.5.161, 20.69.5.162, 20.83.222.100, 20.83.222.101, 20.83.222.102, 20.98.146.84, 20.98.146.85, 20.98.194.64, 20.98.194.65, 20.98.194.66, 20.168.188.34, 20.241.116.153, 48.221.131.36, 52.159.214.194, 57.152.124.244, 57.167.185.233, 68.220.123.194, 74.249.127.175, 74.249.142.218, 130.213.49.7, 134.138.85.69, 135.222.48.114, 157.55.93.0, 168.61.232.59, 172.182.191.87, 172.183.234.204, 172.185.110.6, 172.191.219.35 |
+   | United States | US Central, US East, US East 2, US East 2 EUAP, US North, US South, US West, US West 2, US West 3 | 4.149.249.197, 4.150.239.210, 20.14.127.175, 20.40.200.175, 20.45.242.18, 20.45.242.19, 20.45.242.20, 20.47.232.186, 20.51.21.252, 20.69.5.160, 20.69.5.161, 20.69.5.162, 20.83.222.100, 20.83.222.101, 20.83.222.102, 20.98.146.84, 20.98.146.85, 20.98.194.64, 20.98.194.65, 20.98.194.66, 20.168.188.34, 20.241.116.153, 48.221.131.36, 52.159.214.194, 57.152.124.244, 57.167.185.233, 68.220.123.194, 74.249.127.175, 74.249.142.218, 130.213.49.7, 134.138.85.69, 135.222.48.114, 157.55.93.0, 168.61.232.59, 172.182.191.87, 172.183.234.204, 172.185.110.6, 172.191.219.35 |
    | USGov | All US Government Cloud regions | 20.140.104.48, 20.140.105.3, 20.140.144.58, 20.140.144.59, 20.140.147.168, 20.140.53.121, 20.141.10.130, 20.141.10.131, 20.141.13.121, 20.141.15.104, 52.127.55.131, 52.235.252.252, 52.235.252.253, 52.243.247.124, 52.245.155.139, 52.245.156.185, 62.10.84.240 |
 
    > [!IMPORTANT]
