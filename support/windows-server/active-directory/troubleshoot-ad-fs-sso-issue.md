@@ -474,7 +474,7 @@ The relying party identifier, client ID and redirect URI should be provided by t
 |Relying party ID|$rp.Identifier|
 |Relying party redirect URI|A prefix or wildcard match of<br /><ul><li>$rp.WSFedEndpoint for a WS-Fed relying party</li><li>$rp.SamlEndpoints for a SAML relying party</li></ul>|
 |Client ID|$client.ClientId|
-|Client redirect URI|A prefix match of $client.RedirectUri|
+|Client redirect URI|Exact match of $client.RedirectUri (scheme and host are case-insensitive; path is case-sensitive; trailing slashes are significant)|
 
 If items in the table matches, additionally check if these settings match between what they appear in the authentication request sent to AD FS and what are configured in AD FS. Try reproducing the issue during which you capture a Fiddler trace on the authentication request sent by the application to AD FS. Examine the request parameters to do the following checks depending on the request type.
 
@@ -489,7 +489,7 @@ Check if the request parameters match the settings configured in AD FS.
 |Request parameters|Settings configured in AD FS|
 |---|---|
 |client_id|$client.ClientId|
-|redirect_uri|A prefix match of @client_RedirectUri|
+|redirect_uri|Exact match of $client.RedirectUri (scheme and host are case-insensitive; path is case-sensitive; trailing slashes are significant)|
 
 The "resource" parameter should represent a valid relying party in AD FS. Get the relying party information by running one of the following commands.
 
