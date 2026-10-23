@@ -1,12 +1,12 @@
 ---
 title: Troubleshoot managed Kueue extension errors in AKS (preview)
-description: Troubleshoot managed Kueue extension errors on Azure Kubernetes Service (AKS), including installation, controller, admission, and removal failures.
+description: Troubleshoot managed Kueue extension errors on Azure Kubernetes Service (AKS), including installation, controller, and admission failures. Learn how to fix them.
 ms.topic: troubleshooting
-ms.date: 10/22/2026
+ms.date: 10/23/2026
 manager: dcscontentpm
 author: kaushika-msft
 ms.author: kaushika
-ms.reviewer: lichen5, josebl
+ms.reviewer: lichen5, josebl, alyssavu
 ms.service: azure-kubernetes-service
 ms.custom: sap:Extensions, Policies and Add-Ons
 ai-usage: ai-generated
@@ -17,7 +17,7 @@ ai-usage: ai-generated
 
 ## Summary
 
-This article helps you troubleshoot the managed Kueue extension (`microsoft.kueue`) on Azure Kubernetes Service (AKS). It covers installation and updates, controller health, managed Kueue objects, workload admission, cluster autoscaler integration, and failed removal.
+This article helps you troubleshoot managed Kueue extension errors (`microsoft.kueue`) on Azure Kubernetes Service (AKS) and restore workload admission. It covers installation and updates, controller health, managed Kueue objects, workload admission, cluster autoscaler integration, and failed removal.
 
 Use this article for an Azure-managed extension, not a self-hosted, open-source Kueue installation.
 
@@ -28,7 +28,7 @@ For installation and management instructions, see [Install the managed Kueue ext
 > [!WARNING]
 > Don't uninstall and reinstall managed Kueue as a controller-health workaround. Uninstalling deletes Kueue custom resources, including customer-created queues, Workloads, and other Kueue configuration, and clears blocking finalizers. Surviving Kubernetes Jobs and pods don't preserve queue policy or admission state. See [Uninstall the managed Kueue extension](/azure/aks/kueue-overview#uninstall-the-managed-kueue-extension) before planning removal.
 
-## Choose the matching symptom
+## Match your symptom to a troubleshooting section
 
 The following table helps you choose the troubleshooting section that matches the symptom you're experiencing.
 
@@ -36,7 +36,7 @@ The following table helps you choose the troubleshooting section that matches th
 | --- | --- |
 | The CLI rejects an option, or installation or update can't find a version | [Installation or update can't resolve a version](#installation-or-update-cant-resolve-a-version) |
 | Installation detects another Kueue controller | [Installation detects an existing Kueue controller](#installation-detects-an-existing-kueue-controller) |
-| Installation reports a namespace, image, or chart configuration error | [Installation reports a chart configuration error](#installation-reports-a-chart-configuration-error) |
+| Installation rejects configuration settings or reports a namespace error | [Installation rejects settings or reports a namespace error](#installation-rejects-settings-or-reports-a-namespace-error) |
 | Azure reports success, but a controller or Kueue API isn't ready | [Controllers or Kueue APIs aren't ready](#controllers-or-kueue-apis-arent-ready) |
 | A create, update, or delete request for a Kueue object is forbidden | [Changes to an AKS-managed object are denied](#changes-to-an-aks-managed-object-are-denied) |
 | A managed ResourceFlavor or Topology is missing or can't be updated | [Managed ResourceFlavors or Topology are missing or invalid](#managed-resourceflavors-or-topology-are-missing-or-invalid) |
@@ -44,7 +44,7 @@ The following table helps you choose the troubleshooting section that matches th
 | An autoscaling admission check is inactive, or capacity provisioning doesn't finish | [Autoscaling admission checks or ProvisioningRequests don't progress](#autoscaling-admission-checks-or-provisioningrequests-dont-progress) |
 | Extension deletion fails or appears incomplete | [Extension removal fails or is incomplete](#extension-removal-fails-or-is-incomplete) |
 
-## Diagnose the extension
+## Diagnose managed Kueue extension issues
 
 ### Confirm the subscription, cluster, and extension name
 
@@ -53,6 +53,7 @@ Set the resource group and cluster name. Confirm that the Azure subscription and
 ```bash
 RESOURCE_GROUP="<resource-group>"
 CLUSTER_NAME="<aks-cluster-name>"
+EXTENSION_NAME="aks-kueue"
 RELEASE_TRAIN="preview"
 
 az account show --query '{name:name,id:id}' --output table
@@ -68,15 +69,13 @@ az k8s-extension list \
   --resource-group "$RESOURCE_GROUP" \
   --cluster-name "$CLUSTER_NAME" \
   --cluster-type managedClusters \
-  --query '[].{name:name,type:extensionType,state:provisioningState,version:currentVersion}' \
+  --query "[?extensionType=='microsoft.kueue'].{name:name,type:extensionType,state:provisioningState,version:currentVersion}" \
   --output table
 ```
 
-Find the extension whose type is `microsoft.kueue`. Use its actual resource name in the remaining examples. The installation guide uses `aks-kueue`; don't assume that an existing extension is named `kueue` or that the Azure resource name is the Kubernetes deployment name.
+The examples use `aks-kueue`, the name in the installation guide. The list command filters out other extension types. If an existing managed Kueue extension has another name, set `EXTENSION_NAME` to that returned name for this investigation. Don't create another extension or reinstall Kueue just to change its name.
 
 ```bash
-EXTENSION_NAME="<extension-resource-name-from-list>"
-
 az k8s-extension show \
   --resource-group "$RESOURCE_GROUP" \
   --cluster-name "$CLUSTER_NAME" \
@@ -90,7 +89,7 @@ For a successful installation, expect `provisioningState` to be `Succeeded` and 
 
 ### Examine controllers, events, and image versions
 
-The default managed installation uses the `kueue-system` namespace:
+The managed Kueue extension is always installed in the `kueue-system` namespace:
 
 | Component | Deployment | Container | Responsibility |
 | --- | --- | --- | --- |
@@ -108,7 +107,7 @@ kubectl get pods --namespace kueue-system \
   --output custom-columns='POD:.metadata.name,NODE:.spec.nodeName,CONTAINER:.status.containerStatuses[*].name,RESTARTS:.status.containerStatuses[*].restartCount,IMAGE_ID:.status.containerStatuses[*].imageID'
 ```
 
-Read the actual deployment and pod names from the cluster. If you intentionally disable managed-object automation for your supported configuration, confirm which components are expected rather than treating the absent extension controller as a failure.
+Read the deployment and pod names from the cluster. Customer installations include both controllers. Managed-object automation isn't a customer-configurable setting.
 
 Record both the installed extension version and the resolved container image digests. Error wording and behavior can differ between releases. A source-code change or an upstream fix doesn't prove that the installed managed package contains it.
 
@@ -191,20 +190,22 @@ Don't use a downgrade, `helm rollback`, or uninstall and reinstall of an older p
 
 Don't add AKS management labels, rewrite Helm ownership annotations, delete Kueue CRDs, or delete the failed extension merely to bypass the conflict. Deleting a Kueue CRD also deletes its custom resources. The rejection alone doesn't prove that every part of the previous installation is unchanged.
 
-## Installation reports a chart configuration error
+<a id="installation-reports-a-chart-configuration-error"></a>
 
-**Symptom:** A supported extension operation fails during chart rendering or installation.
+## Installation rejects settings or reports a namespace error
 
-**Cause and resolution:** Preserve the complete error, including the outer Azure extension error. The following fragments identify different boundaries:
+**Symptom:** An extension create or update request rejects configuration settings, protected settings, or an unsupported namespace.
 
-| Error fragment | Next action |
+**Cause:** The managed Kueue extension doesn't expose customer Helm overrides. Customer-defined configuration and protected settings aren't supported, and the installation namespace is fixed to `kueue-system`.
+
+**Resolution:** Preserve the complete Azure error and the failed command, with any sensitive values redacted. Use the rejected input to choose the correction:
+
+| Rejected input or error fragment | Next action |
 | --- | --- |
-| `the Kueue extension must be installed into the 'kueue-system' namespace` | Confirm the namespace in the failed operation. Managed Kueue requires `kueue-system`. Use the documented managed installation settings. If a supported request still targets another namespace, contact Azure support. Don't move the controller or change its service account manually. |
-| `image.repository is required`, `image.digest is required`, or `image.digest must be sha256:` | These fragments identify a managed-package image configuration problem. Contact Azure support with the extension version and full error. Don't supply a mutable image tag or patch the deployment. |
-| `managedObjectsLifecycle.kubectlImage` or a rejected controller flag or `extraArgs` value | These fragments identify managed chart or image compatibility errors. Request a corrected managed package through Azure support, not a direct Helm override. |
-| `provisioningrequests.autoscaling.x-k8s.io already exists but does not serve v1` | The operation detected an incompatible shared API. Preserve the CRD definition and contact Azure support or its owning platform administrator. Don't delete the shared CRD or another component's requests. |
+| `--configuration-settings` or `--config-protected-settings` | Remove the unsupported settings from the request, including file-based settings inputs or equivalent properties in an ARM, Bicep, or Terraform deployment. Use the documented managed extension parameters instead of passing Helm values or controller flags. |
+| `the Kueue extension must be installed into the 'kueue-system' namespace` | Use the required `kueue-system` namespace. If a documented managed request still produces this error, contact Azure support. Don't move the controller or change its service account manually. |
 
-If the Azure API rejects an unsupported setting, remove that setting from the request according to the managed installation guide. Don't try to bypass API validation by applying Helm values directly.
+Don't bypass Azure API validation by applying Helm values directly. For the cluster autoscaler's shared ProvisioningRequest API prerequisite, use [ProvisioningRequest troubleshooting](#autoscaling-admission-checks-or-provisioningrequests-dont-progress), not an optional custom-provider setting.
 
 ## Controllers or Kueue APIs aren't ready
 
@@ -212,7 +213,7 @@ If the Azure API rejects an unsupported setting, remove that setting from the re
 
 **Resolution:**
 
-1. Check the expected deployment rollouts and core CRDs. These checks are read-only and have finite timeouts. Omit the `kueue-extension` check only if your supported configuration intentionally disables managed-object automation:
+1. Check both deployment rollouts and the core CRDs. These checks are read-only and have finite timeouts:
 
     ```bash
     kubectl rollout status deployment/kueue-controller-manager \
@@ -298,7 +299,7 @@ Verify that the intended user-managed operation succeeds, or that the supported 
     ```bash
     CLUSTER_QUEUE="<affected-clusterqueue>"
 
-    kubectl get resourceflavors.kueue.x-k8s.io,topologies.kueue.x-k8s.io
+    kubectl get resourceflavors,topologies
     kubectl describe clusterqueue "$CLUSTER_QUEUE"
     kubectl get nodes \
       --label-columns=kubernetes.azure.com/mode,node.kubernetes.io/instance-type,kubernetes.azure.com/node-type,kubernetes.azure.com/sku-series,kubernetes.azure.com/sku-gpu-name
@@ -308,10 +309,11 @@ Verify that the intended user-managed operation succeeds, or that the supported 
 
 1. Distinguish missing eligible inventory from a failed object write:
 
-    - System nodes aren't classified as user workload capacity. Excluded FlexNode inventory isn't automatically a controller failure.
-    - A new node can be waiting for its instance-type label during registration. If that label remains absent, record the node and pool and investigate the platform label-writing path.
+    - System nodes aren't classified as user workload capacity.
+    - [Flex nodes](/azure/aks/flex-nodes-for-aks-overview) are intentionally excluded from managed Kueue inventory. This exclusion is expected, not a controller failure.
+    - A new node can be waiting for its `node.kubernetes.io/instance-type` label during registration. If that label remains absent, record the node and pool and investigate the platform label-writing path.
     - An unknown GPU SKU or an incomplete SKU-series and GPU-name label pair can exclude a GPU node from generated inventory. Don't relabel GPU hardware as CPU or manually write protected AKS labels. Contact Azure support with the instance type and current labels.
-    - GPU flavor generation depends on supported GPU classification and device-plugin resource discovery. Investigate the actual GPU driver or plugin state; don't assume every GPU provisioning mechanism is supported by the installed version.
+    - Managed GPU flavor generation in this preview supports device-plugin resource discovery only. Dynamic Resource Allocation (DRA) isn't supported by this automation. Verify the GPU driver and device-plugin state instead of expecting DRA resources to generate a managed GPU flavor.
     - For `TopologyNotFound`, inspect the referenced Topology and the extension's write error. An available controller doesn't prove that the Topology write succeeded.
 
 1. If logs report `flavor_write_denied` or `topology_write_denied`, preserve the full API error and follow [managed-object denial troubleshooting](#changes-to-an-aks-managed-object-are-denied). Don't bypass the guard.
@@ -357,9 +359,13 @@ After correcting the cause, verify the intended workload's admission and pod sch
 
 **Symptom:** An autoscaling admission check is inactive, a Workload waits for capacity, or a ProvisioningRequest doesn't become provisioned.
 
+The AKS-managed provisioning path uses `aks-provisioning-check`, `aks-provisioning-config`, and class `best-effort-atomic-scale-up.autoscaling.x-k8s.io`. The cluster autoscaler provides the shared ProvisioningRequest API for this path.
+
+To use this provisioning path, have an autoscaling-enabled node pool and an established `autoscaling.x-k8s.io/v1` ProvisioningRequest API **before installing Kueue**. The manager discovers that API at process startup; creating the API later doesn't dynamically enable the skipped controller.
+
 **Resolution:**
 
-1. Confirm the actual check, config, and provisioning class. Releases with the managed native defaults use `aks-provisioning-check`, `aks-provisioning-config`, and class `best-effort-atomic-scale-up.autoscaling.x-k8s.io`:
+1. Inspect the AKS-managed check and config, shared CRD, and node-pool autoscaling state:
 
     ```bash
     kubectl get admissioncheck aks-provisioning-check --output yaml
@@ -373,10 +379,29 @@ After correcting the cause, verify the intended workload's admission and pod sch
       --output table
     ```
 
-    If your ClusterQueue uses another check, inspect that check and its referenced config instead. The mere presence of a ProvisioningRequest doesn't identify its provider or retry policy.
+    If your ClusterQueue uses another check, inspect that check and its referenced config instead. The presence of a ProvisioningRequest alone doesn't identify its provider or retry policy.
 
-1. Verify that the shared ProvisioningRequest CRD exists, serves `v1`, and is established. Verify cluster autoscaler support and that the intended node pool has autoscaling enabled. Don't delete or replace a shared CRD as a troubleshooting step.
-1. Require the admission check to report `Active=True` before using it to gate workloads. Kueue discovers the ProvisioningRequest API at process startup. If the API became available only after the manager started, ask Azure support to arrange supported controller recovery; waiting for node scale-up alone won't register the missing controller.
+1. Confirm that a node pool has autoscaling enabled and that the CRD serves `v1`. Wait for API establishment:
+
+    ```bash
+    kubectl wait --for=condition=Established \
+      crd/provisioningrequests.autoscaling.x-k8s.io --timeout=2m
+    ```
+
+    If the API is missing or incompatible, resolve the autoscaler prerequisite first. A manager restart can't create the missing API. Don't delete or replace the shared CRD or another component's requests.
+
+1. Inspect manager startup logs for provisioning discovery failures:
+
+    ```bash
+    kubectl logs deployment/kueue-controller-manager --namespace kueue-system \
+      --all-pods=true --container manager --timestamps --tail=1000 \
+      | grep -E 'Skipping (admission check|provisioning) controller setup|Provisioning Requests not supported|no matches for kind'
+    ```
+
+    - A matching startup message about ProvisioningRequest means the API wasn't discoverable by that manager process at startup. A generic `no matches for kind` message can refer to another API; read the full line before attributing it to provisioning.
+    - If the API exists now but the process logged that it skipped setup, it might have become available after startup. Follow the [conditional recovery procedure](#recover-when-the-provisioning-api-becomes-available-after-startup).
+    - An empty filtered result doesn't prove readiness. Startup logs might no longer be retained, and message wording varies by version. Require the admission check to report `Active=True` before using it to gate workloads.
+
 1. Check that the ClusterQueue references the intended check, including any flavor-specific selection in `admissionChecksStrategy`. Don't edit an AKS-managed check or config to bypass readiness.
 1. If a request exists, preserve its conditions, provisioning class, owner references, UID, and related events:
 
@@ -395,7 +420,21 @@ After correcting the cause, verify the intended workload's admission and pod sch
 1. Use the observed request and autoscaler errors to distinguish a pool size limit, Azure quota or capacity issue, scheduling constraint, template error, or API failure. Empty conditions can mean that the provider hasn't processed the request yet. A timeout alone doesn't establish a capacity or quota root cause.
 1. Follow the current request associated with the Workload. A retry can create another request, and terminal requests or placeholder pods might already be cleaned up. Don't recreate or delete requests to recover missing diagnostic evidence, and don't assume the same retry delay across providers.
 
-For the native provisioning flow, see [Configure Kueue with the cluster autoscaler](/azure/aks/configure-kueue-with-cluster-autoscaler#troubleshooting). On a managed cluster, use the installed controllers and managed defaults; don't follow the self-hosted Helm installation step or install a second Kueue controller.
+### Recover when the provisioning API becomes available after startup
+
+Use this procedure only when `aks-provisioning-check` isn't `Active=True`, the shared API is now established and serves `v1`, and startup evidence or admission-check diagnostics indicate that the manager skipped setup because the API wasn't available. Preserve the logs and conditions first. If the check is already active, don't restart just because an older startup message is present.
+
+Coordinate a controlled manager restart with your cluster administrator or Azure support. A restart replaces manager pods and can temporarily affect admission and webhook availability. If your access policy permits this recovery operation, restart the manager, wait for its rollout, and require the managed admission check to become active:
+
+```bash
+kubectl rollout restart deployment/kueue-controller-manager --namespace kueue-system
+kubectl rollout status deployment/kueue-controller-manager --namespace kueue-system --timeout=5m
+kubectl wait --for=condition=Active admissioncheck/aks-provisioning-check --timeout=2m
+```
+
+If permissions deny the restart, or the rollout or admission check doesn't become ready, stop and contact Azure support with the collected evidence. Don't bypass access controls or repeatedly restart the controller. This recovery is specific to late API availability, not a general controller-health workaround.
+
+For integration guidance, see [Configure Kueue with the cluster autoscaler](/azure/aks/configure-kueue-with-cluster-autoscaler#troubleshooting). The preceding commands use the AKS-managed ProvisioningRequestConfig and AdmissionCheck. Keep those managed resources intact rather than installing another controller or overwriting their configuration.
 
 Verify a successful current provisioning attempt, Workload admission, and actual pod scheduling before declaring recovery.
 

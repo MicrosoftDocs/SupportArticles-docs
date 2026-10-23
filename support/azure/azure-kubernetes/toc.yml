@@ -97,6 +97,8 @@ items:
       href: extensions/flex-nodes-for-aks.md
 - name: Connectivity issues
   items:
+  - name: Troubleshoot Microsoft Entra SSH access to nodes
+    href: connectivity/troubleshoot-microsoft-entra-ssh-node-access.md
   - name: Can't connect to application hosted on AKS cluster
     items:
     - name: Basic troubleshooting
