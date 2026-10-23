@@ -1307,8 +1307,6 @@ items:    # Please do not delete this line, it is required for the yaml format
           href: ./installing-updates-features-roles/additional-resources-for-windows-update.md
         - name: Command-line switches for software update packages
           href: ./installing-updates-features-roles/command-line-switches-deploy-update-packages.md
-        - name: Command-line switches supported by Self-Extractor packages
-          href: ./installing-updates-features-roles/command-switches-supported-by-self-extractor-package.md
         - name: Determine whether WSUS configuration causes WU issues
           href: installing-updates-features-roles/determine-whether-wsus-configuration-causes-wu-issue.md
         - name: Download updates from Microsoft Update Catalog
