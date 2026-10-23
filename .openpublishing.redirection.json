@@ -16556,6 +16556,11 @@
       "source_path": "support/windows-client/setup-upgrade-and-drivers/use-ocsetup-to-install-remove-components.md",
       "redirect_url": "/windows/client-management/client-tools/add-remove-hide-features",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/installing-updates-features-roles/command-switches-supported-by-self-extractor-package.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/command-switches-supported-by-self-extractor-package",
+      "redirect_document_id": false
     }
   ]
 }
