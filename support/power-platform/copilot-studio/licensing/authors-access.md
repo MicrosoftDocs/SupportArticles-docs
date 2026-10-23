@@ -2,10 +2,7 @@
 title: Users outside the Copilot Studio authors security group can access Copilot Studio
 description: Learn how to identify, troubleshoot, and resolve issues with user access for users outside the Copilot Studio authors setting in Microsoft Copilot Studio.
 ms.date: 09/09/2025
-ms.reviewer: 
-  - camogas
-  - erickinser
-  - v-shaywood
+ms.reviewer: erickinser
 ms.custom: sap:Licensing
 ---
 
