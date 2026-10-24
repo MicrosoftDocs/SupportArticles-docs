@@ -81,13 +81,17 @@ Don't rely on removal of an individually assigned Copilot Studio user license as
 
 ### Understand what each restriction controls
 
-| Intended result | Relevant control | What might remain possible |
-|---|---|---|
-| Prevent a user from entering a particular environment | Environment security group | The user might still open Copilot Studio or access another environment. |
-| Prevent a user from creating or saving agents | Environment security group and Dataverse security roles | The user might still open Copilot Studio or view resources for which they have read permission. |
-| Prevent a user from editing an existing agent | Environment permissions, security roles, and agent sharing | The user might still use a published agent. |
-| Prevent a user from publishing | Publishing permissions, licenses, and tenant settings | The user might still create or save a draft. |
-| Prevent access supplied by standard-harness licenses | Remove all applicable standard-harness entitlements and Authors-group membership | The same changes don't establish a complete block for the GitHub Copilot harness. |
+Environment-level controls apply only to the selected environment. They don't establish a tenant-wide portal-access block or restrict authoring in other environments that a user can access. Review environment-creation permissions separately; see [Control environment creation and management](/power-platform/admin/control-environment-creation).
+
+| Action to restrict | Applicable experience and scope | Supported control or procedure | What this doesn't block |
+|---|---|---|---|
+| Access to a selected environment | Environments that support security-group assignment; not default or developer environments | Assign an [environment security group](/power-platform/admin/control-user-access) containing approved users. Review the documented administrator exceptions. | Opening Copilot Studio or accessing another environment. Security-group membership restrictions don't apply to every administrator account. |
+| Agent creation and draft saves in a selected environment | Authoring in that governed environment; not a tenant-wide or harness-specific restriction | Review and remove all applicable roles that grant agent creation or modification, including assignments through group teams. See [authoring permissions](/microsoft-copilot-studio/guidance/sec-gov-phase3#assign-copilot-studio-authoring-permissions-by-using-security-roles). | The user might still open the portal or begin configuring an agent. Authoring in another environment where the user has permissions isn't affected. Verify creation and draft-save enforcement separately. |
+| Edits to an existing agent | The selected agent in its environment | Review agent sharing and all security roles that grant update privileges. Removing one sharing grant doesn't remove permissions supplied by another role. | Other actions allowed by the user's remaining permissions, potentially including using the published agent. |
+| Publishing a standard-harness agent | Standard-harness publishing; not a universal restriction across harnesses | Review the applicable license, capacity, and tenant-setting checks in the [publishing guidance](/microsoft-copilot-studio/faq-billing-licensing). Apply the control that corresponds to the publishing requirement. | Portal entry, agent creation, or draft saves aren't necessarily blocked. Don't apply standard-harness license checks as a publishing restriction for the GitHub Copilot harness. |
+| Access through the listed standard-experience entitlements | The entitlement paths listed in the standard-experience checklist | Follow the [standard-experience checklist](#restrict-access-to-agents-powered-by-the-standard-harness) and check for other access grants. Review [self-service trial signup](/microsoft-copilot-studio/requirements-licensing#trial-plans) separately. | Removing these entitlements alone doesn't establish a complete portal-access block or a verified draft-save block. It doesn't, by itself, prevent entry to the GitHub Copilot harness experience. |
+
+Test each required restriction with an account that isn't an approved maker and doesn't have administrator privileges. Record portal entry, starting agent configuration, creating and saving a draft, editing an existing agent, and publishing as separate outcomes. Being able to open an authoring page or start configuring an agent doesn't confirm permission to save or publish it.
 
 For guidance about allocations, agent limits, alerts, and other consumption controls, see [Manage costs for agents powered by the GitHub Copilot harness](/power-platform/admin/manage-usage-github-copilot-harness).
 
