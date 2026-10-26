@@ -54,6 +54,8 @@ When you retry an evaluation:
 
 If a newer version of the evaluation criteria exists, the retry continues to use the originally referenced criteria version. The system doesn't automatically upgrade or replace the criteria version. This behavior helps maintain consistency with the original evaluation context.
 
+If you need to apply updated criteria or configuration changes, create a new evaluation instead of retrying the failed one.
+
 ## Review retry results
 
 After you retry a failed evaluation:

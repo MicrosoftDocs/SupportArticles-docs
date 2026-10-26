@@ -14,11 +14,11 @@ Users may encounter an issue where they're unable to see or access the Dynamics 
 
 ## Symptoms
 
-Users with Dynamics 365 Contact Center licenses are unable to locate or access the Dynamics 365 Contact Center workspace within the system. And the workspace doesn't appear in the Dynamics 365 environment, despite license and role assignment.
+Users with Dynamics 365 Contact Center licenses are unable to locate or access the Dynamics 365 Contact Center workspace within the system. The workspace doesn't appear in the Dynamics 365 environment (for example, in the app selector), despite license and role assignment.
 
 ## Cause
 
-The Dynamics 365 Contact Center workspace and the Customer Service workspace can't be used simultaneously within the same Dynamics 365 organization. This limitation prevents the Contact Center workspace from being displayed if the Customer Service workspace is already in use.
+The Dynamics 365 Contact Center workspace and the Customer Service workspace can't be used simultaneously within the same Dynamics 365 organization. This limitation is by design and prevents the Contact Center workspace from being displayed if the Customer Service workspace is already in use.
 
 ## Resolution
 
