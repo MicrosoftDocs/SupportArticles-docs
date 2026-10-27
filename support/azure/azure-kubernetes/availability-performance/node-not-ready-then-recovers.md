@@ -1,24 +1,28 @@
 ---
-title: Node not ready but then recovers
-description: Learn how to troubleshoot AKS Node Not Ready events that recover, find root causes, and take preventive actions to avoid repeat outages. Start now.
-ms.date: 02/25/2024
-ms.reviewer: rissing, chiragpa, momajed, v-leedennis, novictor
+title: Troubleshoot Node Not Ready failures followed by recoveries in AKS
+description: Learn how to troubleshoot AKS Node Not Ready events that recover, identify root causes, and apply preventive actions to avoid repeat outages. Start now.
+ms.date: 10/27/2026
+ms.topic: troubleshooting
+manager: dcscontentpm
+author: kaushika-msft
+ms.author: kaushika
+ms.reviewer: rissing, chiragpa, momajed, v-leedennis, novictor, kaushika
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to prevent the Node Not Ready status for nodes that later recover so that I can avoid future errors within an AKS cluster.
 ms.custom: sap:Node/node pool availability and performance
+ai-usage: ai-assisted
 ---
-# Troubleshoot Node Not Ready failures that are followed by recoveries
+# Troubleshoot Node Not Ready failures followed by recoveries in Azure Kubernetes Service 
 
 ## Summary
 
-This article provides a guide to troubleshoot and resolve **Node Not Ready** problems in Azure Kubernetes Service (AKS) clusters. When a node enters a **NotReady** state, it disrupts the application's functionality and causes it to stop responding. Typically, the node recovers automatically after a short period. However, to prevent recurring problems and maintain a stable environment, you need to understand the underlying causes so you can implement effective resolutions.  
+This article helps you troubleshoot **Node Not Ready** failures in Azure Kubernetes Service (AKS) clusters that recover on their own, so you can find root causes and prevent repeat outages. When a node enters a **NotReady** state, it disrupts the application's functionality and causes it to stop responding. Typically, the node recovers automatically after a short period. However, to prevent recurring problems and maintain a stable environment, you need to understand the underlying causes so you can implement effective resolutions.  
 
 ## Cause
 
-Several scenarios can cause a **NotReady** state:
+The following scenarios can cause a **NotReady** state:
 
 - The unavailability of the API server. This condition causes the readiness probe to fail. This failure prevents the pod from being attached to the service so that traffic is no longer forwarded to the pod instance.
-
 - Virtual machine (VM) host faults. To determine whether VM host faults occurred, check the following information sources:
   - [AKS diagnostics](/azure/aks/concepts-diagnostics)
   - [Azure status](https://status.azure.com/)
@@ -39,5 +43,5 @@ For further steps, see [Basic troubleshooting of Node Not Ready failures](node-n
 
 To prevent this issue, take one or more of the following actions:
 
-- Make sure that you pay for your service tier.
+- Ensure that you pay for your service tier.
 - Reduce the number of `watch` and `get` requests to the API server.

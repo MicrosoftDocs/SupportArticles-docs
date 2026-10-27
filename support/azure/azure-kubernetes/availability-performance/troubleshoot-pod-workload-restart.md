@@ -1,19 +1,19 @@
 ---
 title: Troubleshoot pod workload restarts in AKS
-description: Learn how to troubleshoot and resolve pod workload restarts in Azure Kubernetes Service (AKS) by reviewing and adjusting container health probe configurations.
-ms.date: 09/17/2026
+description: Learn how to troubleshoot pod workload restarts in Azure Kubernetes Service (AKS) by checking termination reasons and fixing health probe settings. Resolve restarts now.
+ms.date: 10/27/2026
 manager: dcscontentpm
 ms.topic: troubleshooting
 author: kaushika-msft
 ms.author: kaushika
-ms.reviewer: pinghe, shipu.yao, zhixinsun
+ms.reviewer: pinghe, shipu.yao, zhixinsun, kaushika
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to prevent the Node Not Ready status for faulty nodes that later recover so that I can avoid future errors within an AKS cluster.
 ms.custom: sap:Node/node pool availability and performance
 ai-usage: ai-assisted
 ---
 
-# Troubleshoot pod workload restarts in AKS
+# Troubleshoot pod workload restarts in Azure Kubernetes Service
 
 ## Summary
 
@@ -78,12 +78,12 @@ Run the following command.
 kubectl get pods -n "<namespace>"
 ```
 
-See the following indicators to interpret the pod `AGE` and restart behavior:
+To interpret the pod `AGE` and restart behavior, see the following indicators:
 
-- **AGE reset around the incident and the original pod is gone** - Investigate pod replacement. Review Kubernetes audit logs for the namespace and incident time to identify pod deletion, creation, eviction, or workload updates, including the operation, timestamp, and initiating user or controller.
+- **AGE reset around the incident and the original pod is gone** - Investigate pod replacement. Review Kubernetes audit logs for the namespace and incident time to identify pod deletion, creation, eviction, or workload updates. The logs include the operation, timestamp, and initiating user or controller.
 - **The pod wasn't replaced and RESTARTS keeps increasing** - Continue to [Step 2](#2-describe-the-pod-and-check-the-termination-reason) to check the container's termination reason.
 
-`AGE` measures time since pod creation, not the last container restart. A young pod can also be an additional replica, so compare it with the original pod rather than using a low `AGE` alone.
+`AGE` measures time since pod creation, not the last container restart. A young pod can also be an extra replica, so compare it with the original pod rather than using a low `AGE` alone.
 
 Use retained `kube-audit` or `kube-audit-admin` logs. Enabling collection at this point doesn't recover earlier operations. For more information, see [AKS resource logs](/azure/aks/monitor-aks-reference#resource-logs). 
 
