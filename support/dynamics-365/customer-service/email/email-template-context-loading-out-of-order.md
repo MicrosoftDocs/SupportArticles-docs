@@ -34,3 +34,13 @@ To troubleshoot this issue, follow these steps:
 3. Remove spaces or unnecessary formatting between the lines in the affected template content.
 
 If the issue persists, consider disabling the modern rich text editor experience by following the steps in [Revert from the modern rich text editor experience to the classic experience](/power-apps/maker/model-driven-apps/rich-text-editor-control#revert-from-the-modern-rich-text-editor-experience-to-the-classic-experience). This setting can also be disabled for the entire organization via the [Setting definition](/power-apps/maker/data-platform/create-edit-configure-settings). Disabling it organization-wide will override the setting for all users.
+
+## Related scenario: localized template text appears in unexpected order
+
+In localized environments, template output can appear out of order if translation content introduces hidden formatting differences between language variants. If only one language variant reproduces the issue:
+
+1. Compare the template HTML between affected and unaffected language variants.
+1. Normalize list formatting and spacing in the affected variant.
+1. Retest with a simplified plain-text baseline and reintroduce formatting gradually.
+
+For broader formatting issues in Enhanced Email, see [Issues with email templates and formatting](email-templates-and-formatting-issues.md).
