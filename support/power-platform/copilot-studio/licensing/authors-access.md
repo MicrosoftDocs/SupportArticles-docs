@@ -1,7 +1,7 @@
 ---
 title: Users outside the Copilot Studio authors security group can access Copilot Studio
 description: Learn how to identify, troubleshoot, and resolve issues with user access for users outside the Copilot Studio authors setting in Microsoft Copilot Studio.
-ms.date: 09/09/2025
+ms.date: 10/23/2026
 ms.reviewer: 
   - camogas
   - erickinser
@@ -27,10 +27,10 @@ The "Copilot Studio authors" setting is designed to grant access to users in
 If you want to block user access to Copilot Studio, all the following conditions must be met: 
 
 1.  The user isn't in the security group assigned to the "Copilot Studio authors" setting.
-
 1.  The user doesn't have a Copilot Studio per-user license or trial license.
-
 1.  The user doesn't have a Microsoft 365 Copilot license.
+
+Important Note: This only works for the Standard Harness.
 
 ## Related information
 
