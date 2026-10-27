@@ -207,6 +207,8 @@ items:
   items:
   - name: Troubleshoot AKS control plane authentication using external identity providers
     href: security/troubleshoot-aks-control-plane-authentication-external-identity-providers.md
+  - name: Troubleshoot cluster-level FIPS errors in AKS (preview)
+    href: security/troubleshoot-cluster-level-fips.md
   - name: Troubleshoot seccomp profiles in AKS
     href: security/troubleshoot-seccomp-profiles.md
 - name: Extensions, policies, and add-ons
