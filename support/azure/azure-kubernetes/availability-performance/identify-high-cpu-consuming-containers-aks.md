@@ -1,46 +1,48 @@
 ---
-title: Identify high CPU usage in AKS clusters
-description: Learn how to identify nodes and pods causing high CPU usage in AKS clusters and apply best practices to improve performance and reliability.
-ms.date: 07/22/2026
+title: Troubleshoot high CPU usage in AKS clusters
+description: Troubleshoot high CPU usage in AKS clusters. Learn how to identify the nodes and pods causing it and apply best practices to improve performance.
+ms.date: 10/23/2026
+ms.topic: troubleshooting
+manager: dcscontentpm
 author: kaushika-msft
 ms.author: kaushika
-ms.reviewer: chiragpa, v-weizhu, angrif
+ms.reviewer: chiragpa, v-weizhu, angrif, kaushika
 ms.service: azure-kubernetes-service
 ms.custom: sap:Node/node pool availability and performance
+ai-usage: ai-assisted
 ---
-# Troubleshoot high CPU usage in AKS clusters
+# Troubleshoot high CPU usage in Azure Kubernetes Service clusters
 
 > [!NOTE]
 > This article discusses high CPU utilization. In many situations, CPU Pressure Stall Information (PSI) metrics provide a more accurate indication of CPU pressure than utilization alone. For more information, see [Troubleshoot CPU pressure in AKS clusters using PSI metrics](troubleshoot-node-cpu-pressure-psi.md).
 
 ## Summary
 
+This article helps you troubleshoot high CPU usage in an Azure Kubernetes Service (AKS) cluster. Learn how to identify the nodes and containers that consume excessive CPU and apply best practices to restore performance and reliability.
+
 High CPU usage is a symptom of one or more applications or processes that require so much CPU time that the performance or usability of the machine is impacted. High CPU usage can occur in many ways, but user configuration mostly causes it.
 
 When a node in an [Azure Kubernetes Service (AKS)](/azure/aks/intro-kubernetes) cluster experiences high CPU usage, the applications running on it can experience degradation in performance and reliability. Applications or processes also become unstable, which might lead to problems beyond slow responses.
 
-This article helps you identify the nodes and containers that consume high CPU and provides best practices to resolve high CPU usage.
-
 ## Symptoms
 
-The following table outlines the common symptoms of high CPU usage:
+The following table outlines the common symptoms of high CPU usage.
 
-|Symptom|Description|
-|---|---|
-|CPU starvation|CPU-intensive applications slow down other applications on the same node.|
-|Slow state changes|Pods may take longer to get ready.|
-|NotReady node state|Severe CPU contention can starve the kubelet of CPU time and prevent it from sending timely status updates to the API server. As a result, the node might be marked **NotReady**.|
+| Symptom | Description |
+| --- | --- |
+| CPU starvation | CPU-intensive applications slow down other applications on the same node.|
+| Slow state changes | Pods might take longer to get ready.|
+| NotReady node state | Severe CPU contention can starve the kubelet of CPU time and prevent it from sending timely status updates to the API server. As a result, the node might be marked **NotReady**.|
 
 ## Troubleshoot high CPU usage in AKS
 
-To resolve high CPU usage, use effective monitoring tools and apply best practices.
+Use the following steps to resolve high CPU usage.
 
 ### Step 1: Identify nodes and containers with high CPU usage
 
 Use either of the following methods to identify nodes and containers with high CPU usage:
 
-- In a web browser, use the Container Insights feature of AKS in the Azure portal.
-
+- In a web browser, use the Container Insights feature of AKS in the [Azure portal](https://portal.azure.com).
 - In a console, use the Kubernetes command-line tool (kubectl).
 
 ### [Browser](#tab/browser)
@@ -50,8 +52,7 @@ Use either of the following methods to identify nodes and containers with high C
 To identify nodes, containers, or pods that drive high CPU usage, follow these steps:
 
 1. Go to the cluster from the [Azure portal](https://portal.azure.com).
-
-1. Under **Monitoring**, select **Insights**.
+1. In **Monitoring**, select **Insights**.
 
    :::image type="content" source="media/identify-high-cpu-consuming-containers-aks/insights.png" alt-text="Screenshot of the Monitoring under Insights." lightbox="media/identify-high-cpu-consuming-containers-aks/insights.png":::
 
@@ -59,11 +60,9 @@ To identify nodes, containers, or pods that drive high CPU usage, follow these s
 
    :::image type="content" source="media/identify-high-cpu-consuming-containers-aks/six-hour-time-range.png" alt-text="Screenshot of a time range of six hours." lightbox="media/identify-high-cpu-consuming-containers-aks/six-hour-time-range.png":::
 
-1. Find the nodes with high CPU usage and check if the node CPU usage is stable.
+1. Find the nodes with high CPU usage and check if the node CPU usage is stable. Select **Nodes**. Set **Metric** to **CPU Usage (millicores)** and then set the sample to **Max**. Use the sort feature to order the nodes by **Max%**. The nodes with the highest CPU usage appear at the top.
 
-    Select **Nodes**. Set **Metric** to **CPU Usage (millicores)** and then set the sample to **Max**. Use the sort feature on the **Max** to order the nodes by **Max%**. The nodes with the highest CPU usage appear at the top.
-
-    In the following screenshot, the node uses only 12% of the max CPU and has been running for 16 days.
+    In the following screenshot, the node uses only 12 percent of the max CPU and has been running for 16 days.
 
     :::image type="content" source="media/identify-high-cpu-consuming-containers-aks/node-container-insights.png" alt-text="Screenshot of the Nodes under the Monitoring selection." lightbox="media/identify-high-cpu-consuming-containers-aks/node-container-insights.png":::
 
@@ -118,7 +117,7 @@ To identify nodes, containers, or pods that drive high CPU usage, follow these s
 
 1. To investigate CPU usage at the process level, connect to the affected node. For supported node-access methods and instructions, see [Connect to AKS cluster nodes for maintenance or troubleshooting](/azure/aks/node-access).
 
-    After you access the node, use `mpstat` to review CPU utilization across the node and determine whether the load affects all CPUs or specific CPUs. The following command takes five samples at one-second intervals:
+    After you access the node, use `mpstat` to review CPU utilization across the node and determine whether the load affects all CPUs or specific CPUs. The following command takes five samples at one-second intervals.
 
     ```bash
     mpstat -P ALL 1 5
@@ -140,13 +139,13 @@ To identify nodes, containers, or pods that drive high CPU usage, follow these s
 
 ### Step 2: Review best practices to avoid high CPU usage
 
-Review the following table to learn how to implement best practices for avoiding high CPU usage:
+Review the following table to learn how to implement best practices for avoiding high CPU usage.
 
 |Best practice|Description|
 |---|---|
 |[Set appropriate requests and limits for containers](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/)|CPU requests help Kubernetes schedule workloads and determine CPU allocation during contention. CPU limits restrict the maximum CPU a container can consume and can result in throttling. Configure requests and limits according to the workload's observed requirements and choose the appropriate Kubernetes [Quality of Service (QoS)](https://kubernetes.io/docs/tasks/configure-pod-container/quality-service-pod/) class for each pod.|
 |[Enable Horizontal Pod Autoscaler (HPA)](/azure/aks/concepts-scale)|Set appropriate CPU requests and use HPA for workloads that can scale horizontally. Verify that the workload hasn't reached its configured maximum replica count and that the cluster has sufficient capacity for additional replicas.|
-|[Increase or adjust node-pool capacity](https://azure.microsoft.com/pricing/details/virtual-machines/series/)|If the workload requires more CPU capacity, consider adding nodes, selecting a VM size with more or more appropriate CPU resources, or moving the workload to a dedicated node pool.|
+|[Increase or adjust node-pool capacity](https://azure.microsoft.com/pricing/details/virtual-machines/series/)|If the workload requires more CPU capacity, consider adding nodes, selecting a virtual machine (VM) size with more or more appropriate CPU resources, or moving the workload to a dedicated node pool.|
 |[Isolate system and user workloads](/azure/aks/use-system-pools)|Run application workloads on user node pools and reserve system node pools for critical system workloads. This separation reduces the risk that application CPU usage affects Kubernetes system components.|
 
 ## References

@@ -1,24 +1,23 @@
 ---
 title: Troubleshoot CSE errors that prevent AKS nodes from provisioning
-description: Learn how to troubleshoot custom script extension (CSE) errors that prevent new virtual machine scale set instances from registering as AKS nodes.
-ms.date: 09/17/2026
+description: Learn how to troubleshoot custom script extension (CSE) errors that prevent AKS nodes from provisioning. Find the exit code and fix API server timeouts.
+ms.date: 10/26/2026
 manager: dcscontentpm
 ms.topic: troubleshooting
 author: kaushika-msft
 ms.author: kaushika
-ms.reviewer: shiyao, pihe, siyueli 
+ms.reviewer: shiyao, pihe, siyueli, kaushika
 ms.service: azure-kubernetes-service
 ms.custom: sap:Node/node pool availability and performance, devx-track-azurecli, innovation-engine
 ai-usage: ai-assisted
 # Customer intent: As an AKS user, I scaled out a node pool, but the new VMSS instance didn't register as a Kubernetes node. I want to identify and resolve the provisioning failure.
 ---
 
-# Troubleshoot CSE errors that prevent AKS nodes from provisioning
+# Troubleshoot CSE errors that prevent Azure Kubernetes Service nodes from provisioning
 
 ## Summary
 
-This article describes how to troubleshoot scenarios in which Azure Kubernetes
-Service (AKS) fails to provision a new node because of a custom script extension (CSE) error.
+This article helps you troubleshoot custom script extension (CSE) errors that prevent Azure Kubernetes Service (AKS) from provisioning a new node. Identify the CSE exit code and resolve the failure so new virtual machine scale set instances register as AKS nodes.
 
 ## Prerequisites
 
@@ -26,13 +25,13 @@ Ensure that you have [Azure CLI](/cli/azure/install-azure-cli) installed and tha
 
 ## Symptoms
 
-A newly provisioned virtual machine scale set instance doesn't register as an AKS node. After a node pool scale-out operation, you might observe that the number of Virtual Machine Scale Sets (VMSS) instances increases while the number of Kubernetes nodes remains unchanged.
+A newly provisioned virtual machine scale set instance doesn't register as an AKS node. After a node pool scale-out operation, you might observe that the number of Virtual Machine Scale Sets instances increases while the number of Kubernetes nodes remains unchanged.
 
-If the cluster autoscaler is enabled, it might remove the unregistered VMSS instance after a period of time.
+If the cluster autoscaler is enabled, it might remove the unregistered Virtual Machine Scale Sets instance after a period of time.
 
 ## Troubleshooting
 
-To identify the cause, retrieve the CSE exit code from the affected VMSS instance.
+To identify the cause, retrieve the CSE exit code from the affected Virtual Machine Scale Sets instance.
 
 Use Azure CLI to perform the following steps:
 
@@ -55,7 +54,7 @@ Use Azure CLI to perform the following steps:
      --output tsv)
    ```
 
-2. List the VM scale sets in the node resource group, and identify the VM scale set for the affected node pool.
+1. List the VM scale sets in the node resource group, and identify the VM scale set for the affected node pool.
 
    ```azurecli
    az vmss list \
@@ -66,13 +65,13 @@ Use Azure CLI to perform the following steps:
    export VMSS_NAME="<affected-vmss-name>"
    ```
 
-3. Find the instance ID of the affected VMSS instance and export the value.
+1. Find the instance ID of the affected Virtual Machine Scale Sets instance and export the value.
 
    ```azurecli
    export INSTANCE_ID="<affected-vmss-instance-id>"
    ```
 
-4. Retrieve the CSE status from the affected instance.
+1. Retrieve the CSE status from the affected instance.
 
    ```azurecli
    az vmss get-instance-view \
@@ -101,15 +100,15 @@ Exit codes identify the specific issue that caused the provisioning failure. In 
 
 For mappings of other exit codes, see the [CSE helper](https://github.com/Azure/AgentBaker/blob/1bf9892afd715a34e0c6b7312e712047f10319ce/parts/linux/cloud-init/artifacts/cse_helpers.sh).
 
-## Solution: Test and fix API network time-outs
+## Solution: Test and fix API server network time-outs
 
-Make sure that the API server is reachable from the affected VMSS instance. Check the following network configurations:
+Ensure that the API server is reachable from the affected Virtual Machine Scale Sets instance. Check the following network configurations:
 
 - Check whether the network security group (NSG) associated with the AKS subnet blocks outbound traffic to the API server IP address on TCP port 443.
-- Check whether an additional NSG is associated with the VMSS network interface. Every applicable NSG must allow outbound traffic to the API server IP address on TCP port 443.
-- Check whether a firewall or network virtual appliance (NVA) is in the outbound traffic path. An NVA is typically configured through a route table associated with the AKS node subnet. Ensure that the firewall or NVA allows outbound traffic to the API server IP address on TCP port 443. For more information, see [Control egress traffic for cluster nodes in AKS](/azure/aks/limit-egress-traffic).
+- Check whether an additional NSG is associated with the Virtual Machine Scale Sets network interface. Every applicable NSG must allow outbound traffic to the API server IP address on TCP port 443.
+- Check whether a firewall or network virtual appliance (NVA) is in the outbound traffic path. You typically configure an NVA through a route table associated with the AKS node subnet. Ensure that the firewall or NVA allows outbound traffic to the API server IP address on TCP port 443. For more information, see [Control egress traffic for cluster nodes in AKS](/azure/aks/limit-egress-traffic).
 
-To test connectivity from the VMSS instance to the API server, use Azure CLI to run the following commands.
+To test connectivity from the Virtual Machine Scale Sets instance to the API server, use Azure CLI to run the following commands.
 
 ```azurecli
 az vmss run-command invoke \
@@ -187,7 +186,7 @@ TLS time: 0.000000s
 curl: (28) Connection timeout after 10000 ms
 ```
 
-If the connection times out, the VMSS instance can't reach the API server on TCP port 443. Check the effective NSG rules, user-defined routes, firewalls, NVAs, and other network devices that might block the connection.
+If the connection times out, the Virtual Machine Scale Sets instance can't reach the API server on TCP port 443. Check the effective NSG rules, user-defined routes, firewalls, NVAs, and other network devices that might block the connection.
 
 ## References
 
