@@ -260,6 +260,8 @@ items:
           href: ../mailflow/read-receipt-shows-incorrect-information.md
         - name: TLS negotiation failed with error NoCredentials error
           href: ../mailflow/tls-negotiation-failed-with-error-nocredentials-error.md
+        - name: Unreachable RMS licensing endpoints delay mail delivery
+          href: ../mailflow/mail-delay-rms.md                 
         - name: Unreadable characters in the subject line
           href: ../mailflow/unreadable-characters-in-subject-line.md
         - name: Use nslookup to get MX records for SMTP domain
