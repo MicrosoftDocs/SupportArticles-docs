@@ -276,6 +276,8 @@ items:
       href: ./teams-rooms-and-devices/phone-sidecar-screen-black.md
     - name: Reset a device using the recovery tool
       href: ./teams-rooms-and-devices/reset-device-using-recovery-tool.md
+    - name: Room Remote app doesn't connect to Teams Rooms on Windows
+      href: ./teams-rooms-and-devices/room-remote-app-connection-fails.md
     - name: Sign-in delays on Teams Android devices when you use Entra ID dynamic device groups
       href: ./teams-rooms-and-devices/resolve-sign-in-delays-dynamic-device-groups.md
     - name: Teams Rooms app doesn't start automatically after updates
