@@ -1,11 +1,12 @@
 ---
 title: Resolve Agent Error Codes in Microsoft Copilot Studio
 description: Microsoft Copilot Studio agent error codes help you diagnose and resolve authentication errors, agent flow failures, and capacity limits.
-ms.date: 10/14/2026
+ms.date: 10/28/2026
 ms.reviewer:
   - erickinser
-  - v-shaywood
   - arielm
+  - vibhutinair
+  - nansari
 ms.custom: sap:Authoring
 ai-usage: ai-assisted
 ---
@@ -39,9 +40,13 @@ As an agent maker, you receive an error code and additional context when you [te
 | [ConnectedAgentBotNotPublished](#connectedagentbotnotpublished)                       | A subagent in a multi-agent orchestration configuration wasn't published.                                                                                                          |
 | [ConnectedAgentChainingNotSupported](#connectedagentchainingnotsupported)             | Multi-level agent chaining isn't supported.                                                                                                                                        |
 | [ConnectedAgentGptComponentNotFound](#connectedagentgptcomponentnotfound)             | A connected agent is missing descriptions or instructions.                                                                                                                         |
+| [ConnectorOperationNotFound](#connectoroperationnotfound)                             | The agent called a connector operation that no longer exists in the connector definition. |
 | [ConnectorPowerFxError](#connectorpowerfxerror)                                       | There's an error in the Power Fx expression evaluation in connector actions.                                                                                                       |
+| [ConnectorRequestFailure](#connectorrequestfailure)                                   | A connector action returned an HTTP error that has no more specific code. |
 | [ConsentNotProvidedByUser](#consentnotprovidedbyuser)                                 | A user interacting with an agent rejected the agent's single sign-on (SSO) request.                                                                                                |
 | [ContentError](#contenterror)                                                         | There's an error in the topic content.                                                                                                                                             |
+| [ContentFiltered](#contentfiltered)                                                   | The request or response was blocked by Responsible AI content filtering. |
+| [ContextTokenLimitExceeded](#contexttokenlimitexceeded)                               | The request exceeds the model's maximum context length. |
 | [ConversationStateTooLarge](#conversationstatetoolarge)                               | The conversation state exceeds the size limits.                                                                                                                                    |
 | [DataLossPreventionViolation](#datalosspreventionviolation)                           | There's a data policy violation.                                                                                                                                                   |
 | [DataverseFileAttachment429](#dataversefileattachment429)                             | SharePoint throttled Dataverse file attachment search.                                                                                                                             |
@@ -52,8 +57,11 @@ As an agent maker, you receive an error code and additional context when you [te
 | [DataverseStructured503](#dataversestructured503)                                     | Dataverse structured search was unavailable.                                                                                                                                       |
 | [EnforcementMessageC2](#enforcementmessagec2)                                         | Not enough prepaid capacity is available.                                                                                                                                          |
 | [ExecutionTimeout](#executiontimeout)                                                 | A tool or flow action exceeded its configured execution timeout.                                                                                                                   |
+| [FlowActionBadGateway](#flowactionbadgateway)                                         | An agent flow returned HTTP 502 (Bad Gateway). |
 | [FlowActionBadRequest](#flowactionbadrequest)                                         | A request that was made to an [agent flow][1] is malformed.                                                                                                                        |
 | [FlowActionException](#flowactionexception)                                           | An error occurred while executing an [agent flow][1].                                                                                                                              |
+| [FlowActionForbidden](#flowactionforbidden)                                           | An agent flow returned HTTP 403 (Forbidden). |
+| [FlowActionInsufficientCredits](#flowactioninsufficientcredits)                       |  An [agent flow][1] couldn't run because the environment doesn't have enough Copilot Credits. |
 | [FlowActionTimedOut](#flowactiontimedout)                                             | An [agent flow][1] took more than 100 seconds to run and timed out.                                                                                                                |
 | [FlowMakerConnectionBlocked](#flowmakerconnectionblocked)                             | An [agent flow][1] was invoked with unauthorized maker credentials in the connection.                                                                                              |
 | [FoundryIQSearchFailed](#foundryiqsearchfailed)                                       | A system issue occurred while searching Foundry IQ knowledge.                                                                                                                      |
@@ -78,6 +86,7 @@ As an agent maker, you receive an error code and additional context when you [te
 | [OpenAIHate](#openaihate)                                                             | Hate content was detected.                                                                                                                                                         |
 | [OpenAIJailBreak](#openaijailbreak)                                                   | Jailbreak content was detected.                                                                                                                                                    |
 | [OpenAIndirectAttack](#openaindirectattack)                                           | Indirect attack content was detected.                                                                                                                                              |
+| [OpenAIMaxTokenLengthExceeded](#openaimaxtokenlengthexceeded)                         | The model's response exceeded the maximum output length. Applies to all model providers despite the name. |
 | [OpenAIRateLimitReached](#openairatelimitreached)                                     | The capacity limit of the agent was reached.                                                                                                                                       |
 | [OpenAISelfHarm](#openaiselfharm)                                                     | Self-harm content was detected.                                                                                                                                                    |
 | [OpenAISexual](#openaisexual)                                                         | The system detected sexual content.                                                                                                                                                |
@@ -99,7 +108,7 @@ As an agent maker, you receive an error code and additional context when you [te
 
 ### AIModelActionBadRequest
 
-**Error messages:**
+**Error messages**:
 
 - The output of the prompt evaluated to `{ActualType}` but expected `{ExpectedType}`.
 
@@ -109,11 +118,11 @@ As an agent maker, you receive an error code and additional context when you [te
 
 - Expected: `{ExpectedType}`. Actual: `{ActualType}`.
 
-**Resolution:** This error occurs if a prompt action receives incorrect input or returns unexpected output types. To resolve the problem, take one of the following actions, based on the error:
+**Resolution**: This error occurs if a prompt action receives incorrect input or returns unexpected output types. To resolve the problem, take one of the following actions, based on the error:
 
-- _Type mismatch:_ Check your prompt configuration to make sure that the output schema matches the expected variable type.
-- _Missing required input:_ Verify that all required inputs are connected to variables that have values.
-- _Blank required value:_ Make sure that the variable has a value before you call the prompt.
+- **Type mismatch**. Check your prompt configuration to make sure that the output schema matches the expected variable type.
+- **Missing required input**. Verify that all required inputs are connected to variables that have values.
+- **Blank required value**. Make sure that the variable has a value before you call the prompt.
 
 For more information, see [Create a prompt action](/ai-builder/use-a-custom-prompt-in-mcs#create-a-prompt-action).
 
@@ -137,7 +146,7 @@ For more information, see [Create a prompt action](/ai-builder/use-a-custom-prom
 
 ### AuthenticationNotConfigured
 
-**Error messages:**
+**Error messages**:
 
 - Authentication is not configured for this bot.
 
@@ -145,7 +154,7 @@ For more information, see [Create a prompt action](/ai-builder/use-a-custom-prom
 
 - Integrated authentication is not supported in channel `{channel}`.
 
-**Resolution:** This error occurs if your agent uses actions or features that require user authentication, but authentication isn't configured. To resolve the problem:
+**Resolution**: This error occurs if your agent uses actions or features that require user authentication, but authentication isn't configured. To resolve the problem:
 
 1. In your agent, go to **Settings** > **Security** > **Authentication**.
 1. Select an appropriate authentication method: **Authenticate with Microsoft** for Microsoft 365 users, or **Authenticate manually** for custom OAuth providers.
@@ -173,9 +182,9 @@ To get the latest inputs and outputs, remove and readd the agent flow.
 
 ### ConnectedAgentAuthMismatch
 
-**Error message:** Your connected agent with schema name `{AgentSchemaName}` has an authentication mismatch with the main agent.
+**Error message**: Your connected agent with schema name `{AgentSchemaName}` has an authentication mismatch with the main agent.
 
-**Resolution:** The orchestrator agent and connected subagent have different authentication configurations. For multi-agent orchestration to work, both agents must use compatible authentication settings. To resolve the problem:
+**Resolution**: The orchestrator agent and connected subagent have different authentication configurations. For multi-agent orchestration to work, both agents must use compatible authentication settings. To resolve the problem:
 
 1. Open both agents, and go to **Settings** > **Security** > **Authentication**.
 1. Make sure that both agents use the same authentication method (for example, both use **Authenticate with Microsoft**).
@@ -191,9 +200,9 @@ For more information, see [Configure user authentication](/microsoft-copilot-stu
 
 ### ConnectedAgentBotNotFound
 
-**Error message:** Connected agent with schema name {AgentSchemaName} not found.
+**Error message**: Connected agent with schema name {AgentSchemaName} not found.
 
-**Resolution:** This error occurs in multi-agent orchestration if the orchestrator agent can't find a connected subagent. To resolve the problem:
+**Resolution**: This error occurs in multi-agent orchestration if the orchestrator agent can't find a connected subagent. To resolve the problem:
 
 1. Verify that the connected agent exists in the same environment as the orchestrator agent.
 1. Make sure that the connected agent's schema name is spelled correctly in the orchestrator configuration.
@@ -204,9 +213,9 @@ For more information, see [Connect to an existing Copilot Studio agent](/microso
 
 ### ConnectedAgentBotNotPublished
 
-**Error message:** Connected agent with schema name `{AgentSchemaName}` needs to be published to be invoked.
+**Error message**: Connected agent with schema name `{AgentSchemaName}` needs to be published to be invoked.
 
-**Resolution:** The connected subagent must be published before the orchestrator agent can invoke it. To resolve the problem:
+**Resolution**: The connected subagent must be published before the orchestrator agent can invoke it. To resolve the problem:
 
 1. Open the connected agent in Copilot Studio.
 1. Publish the agent.
@@ -216,9 +225,9 @@ For more information, see [Connect to an existing Copilot Studio agent](/microso
 
 ### ConnectedAgentChainingNotSupported
 
-**Error message:** Agent chaining detected. Your agent cannot be connected to agent with schema name `{AgentSchemaName}` as it already has a connected agent.
+**Error message**: Agent chaining detected. Your agent cannot be connected to agent with schema name `{AgentSchemaName}` as it already has a connected agent.
 
-**Resolution:** Multi-level agent chaining isn't supported. An orchestrator agent can connect to subagents, but those subagents can't have their own connected agents. To resolve the problem:
+**Resolution**: Multi-level agent chaining isn't supported. An orchestrator agent can connect to subagents, but those subagents can't have their own connected agents. To resolve the problem:
 
 1. Review your agent architecture, and flatten the hierarchy.
 1. Move the functionality from deeply nested agents into either the orchestrator or first-level connected agents.
@@ -228,9 +237,9 @@ For more information, see [Connect to an existing Copilot Studio agent](/microso
 
 ### ConnectedAgentGptComponentNotFound
 
-**Error message:** No GPT component found for connected agent with schema name `{AgentSchemaName}`.
+**Error message**: No GPT component found for connected agent with schema name `{AgentSchemaName}`.
 
-**Resolution:** The connected agent is missing a required description or instructions. The orchestrator needs that information to know when to call the connected agent. To resolve the problem:
+**Resolution**: The connected agent is missing a required description or instructions. The orchestrator needs that information to know when to call the connected agent. To resolve the problem:
 
 1. Open the connected agent in Copilot Studio.
 1. Go to the agent's **Overview** page.
@@ -240,11 +249,21 @@ For more information, see [Connect to an existing Copilot Studio agent](/microso
 
 For more information, see [Connect to an existing Copilot Studio agent](/microsoft-copilot-studio/add-agent-copilot-studio-agent).
 
+### ConnectorOperationNotFound
+
+**Error message**: The operation id `{OperationId}` of connection reference with name `{ConnectionReferenceName}` was not found.
+
+**Resolution**: This error occurs if the connector definition changed after you added the action to your agent. For example, a custom connector was updated and an operation was renamed or removed, or a solution import brought in a different version of the connector. To resolve the problem:
+
+1. Open the topic or tool that contains the connector action, and refresh the action. If refreshing doesn't help, remove the action and add it again.
+1. If you use a custom connector, verify that the operation still exists in the connector definition and that its operation ID didn't change.
+1. Save and [publish](/microsoft-copilot-studio/publication-fundamentals-publish-channels) your agent again.
+
 ### ConnectorPowerFxError
 
-**Error message:** Power Fx expression evaluation failed: {ErrorDetails}
+**Error message**: Power Fx expression evaluation failed: {ErrorDetails}
 
-**Resolution:** A Power Fx expression used in a connector action didn't evaluate correctly. To resolve the problem:
+**Resolution**: A Power Fx expression used in a connector action didn't evaluate correctly. To resolve the problem:
 
 1. Open the topic that contains the connector action.
 1. Review the Power Fx expressions in the action's input parameters.
@@ -258,7 +277,22 @@ Common causes include:
 - Null or blank values. For handling, use functions such as `IsBlank()`, `Coalesce()`, or `IfError()`.
 - Invalid function usage.
 
-For more information, see [Use Power Fx in Copilot Studio](/microsoft-copilot-studio/advanced-power-fx).
+For more information, see [Create expressions using Power Fx](/microsoft-copilot-studio/advanced-power-fx).
+
+### ConnectorRequestFailure
+
+**Error messages**:
+
+- The connector `{ConnectorName}` returned an HTTP error with code `{StatusCode}`.
+- The connector `{ConnectorName}` returned an HTTP error with code `{StatusCode}`. Inner Error: `{InnerError}`
+
+**Resolution**: This error occurs if the service behind a connector returns an HTTP error to a connector action. An error in the 4xx range usually means the target service rejected the request. An error in the 5xx range usually means the target service had a problem. To resolve the problem:
+
+1. [Test your agent](/microsoft-copilot-studio/authoring-test-bot) in the test pane to see the connector name, the HTTP status code, and the inner error, if one is returned.
+1. Validate the action inputs, such as required fields, formats, and IDs.
+1. Verify that the connection is valid and that the signed-in account has access to the resource.
+1. For 5xx errors, retry after a short delay and check the status of the target service.
+1. Look up the status code in the [connector reference documentation](/connectors/connector-reference/) for the connector.
 
 ### ConsentNotProvidedByUser
 
@@ -278,11 +312,34 @@ Common problems include:
 - Invalid YAML added by using the [code editor](/microsoft-copilot-studio/authoring-create-edit-topics#edit-topics-by-using-the-code-editor).
 - A [Power Fx formula](/microsoft-copilot-studio/advanced-power-fx) contains an error.
 
+### ContentFiltered
+
+**Error message**: The content was filtered due to Responsible AI restrictions.
+
+**Resolution**: A Responsible AI check blocked the user's input or the response that the agent generated. The response can include content from knowledge sources and tool outputs. Copilot Studio returns this code when the specific category isn't reported. When the category is reported, the agent returns one of the category codes instead: [OpenAIHate](#openaihate), [OpenAIJailBreak](#openaijailbreak), [OpenAIndirectAttack](#openaindirectattack), [OpenAISelfHarm](#openaiselfharm), [OpenAISexual](#openaisexual), or [OpenAIViolence](#openaiviolence). To resolve the problem:
+
+- Rephrase the request.
+- Review the knowledge sources and tool outputs that the agent uses for content that might trigger the filter.
+- Reinforce responsible AI guidelines together with your agent users. You can also update the agent [content moderation](/microsoft-copilot-studio/knowledge-copilot-studio#moderation) policies.
+
+### ContextTokenLimitExceeded
+
+**Error message**: The request exceeds the model's maximum context length. Please reduce the number of messages or functions and try again.
+
+**Resolution**: Each request to the AI model includes the agent instructions, the conversation history, the descriptions of the tools that the agent can use, and the results from knowledge sources and tools. This error occurs if all of these together exceed the maximum context length of the model. To resolve the problem:
+
+1. Shorten the agent instructions.
+1. Reduce the number of tools, topics, and knowledge sources that are available to the agent.
+1. Reduce the output of tools and agent flows to only the necessary fields.
+1. If the conversation is long, start a new conversation.
+
+For more information, see [TooMuchDataToHandle](#toomuchdatatohandle) and [Quotas and limits](/microsoft-copilot-studio/requirements-quotas).
+
 ### ConversationStateTooLarge
 
-**Error message:** Conversation state size exceeds the maximum allowed limit.
+**Error message**: Conversation state size exceeds the maximum allowed limit.
 
-**Resolution:** The conversation accumulates too much data in its state, exceeding the allowed size limits. To resolve the problem:
+**Resolution**: The conversation accumulates too much data in its state, exceeding the allowed size limits. To resolve the problem:
 
 1. Reduce variable data by reviewing your topics and reducing the amount of data stored in variables during the conversation.
 1. Clear unused variables by setting them to blank if they're no longer needed.
@@ -298,9 +355,9 @@ For more information, see [Copilot Studio quotas and limits](/microsoft-copilot-
 
 ### DataLossPreventionViolation
 
-**Error message**: This environment requires users to sign in before they can use the agent. Go to Manage > Security > Authentication and select the option that requires users to sign in.
+**Error message**: This environment requires users to sign in before they can use the agent. Go to **Manage** > **Security** > **Authentication** and select the option that requires users to sign in.
 
-**Resolution**
+**Resolution**:
 
 - Your environment's data policies require that users sign in. See [Add user authentication with the Sign in system topic](/microsoft-copilot-studio/advanced-end-user-authentication#add-user-authentication-with-the-sign-in-system-topic).
 - One or more connectors that you use in the agent aren't in the same data group. See [Copilot Studio connectors](/microsoft-copilot-studio/admin-data-loss-prevention#copilot-studio-connectors-and-data-groups).
@@ -362,7 +419,7 @@ For more information, see [Microsoft Graph throttling guidance](/graph/throttlin
 
 **Error message**: This agent is currently unavailable. It has reached its usage limit. Please try again later.
 
-**Resolution**: This message appears if an agent reaches its message capacity or the pay-as-you-go meter reaches its limit. To resolve the problem, add more prepaid capacity or create a pay-as-you-go billing plan. The agent chat should then resume working within five minutes. For more information, see [Overage Enforcement](/microsoft-copilot-studio/requirements-messages-management#overage-enforcement).
+**Resolution**: This message appears if an agent reaches its message capacity or the pay-as-you-go meter reaches its limit. To resolve the problem, add more prepaid capacity or create a pay-as-you-go billing plan. The agent chat should then resume working within five minutes. For more information, see [Overage enforcement](/microsoft-copilot-studio/requirements-messages-management#overage-enforcement).
 
 ### ExecutionTimeout
 
@@ -374,6 +431,19 @@ For more information, see [Microsoft Graph throttling guidance](/graph/throttlin
 1. Optimize query and transformation logic.
 1. Remove unnecessary actions from the critical path.
 1. Validate loops and branching conditions for inefficiencies.
+
+### FlowActionBadGateway
+
+**Error message**: The flow `{FlowName}` (`{FlowId}`) failed to run with response code `{ResponseCode}`, error code: `{FlowErrorCode}`. Error details: `{FlowErrorDetails}`
+
+**Resolution**: This error occurs if Power Automate returns HTTP 502 (Bad Gateway) when it runs the agent flow. The failure usually happens in an action inside the flow, such as a connector call to a back-end service. It can also occur if the flow ends before it returns a response to the agent. To resolve the problem:
+
+1. [Open the run history](/power-automate/overview-manage-cloud-flows#open-the-details-screen-for-a-flow) of the flow, and identify the action that failed.
+1. [Check the flow for errors](/power-automate/error-checker?tabs=new-designer), and fix the failing action. For example, fix the connection, the inputs, or the back-end endpoint.
+1. Ensure that every path through the flow, including error-handling branches, reaches the action that returns values to the agent.
+1. If the back-end service was temporarily unavailable, retry after a short delay.
+
+For more information, see [Call an agent flow from an agent](/microsoft-copilot-studio/advanced-use-flow).
 
 ### FlowActionBadRequest
 
@@ -396,11 +466,35 @@ For more information, see [Microsoft Graph throttling guidance](/graph/throttlin
 
 **Resolution**: [Check the flow for errors](/power-automate/error-checker).
 
+### FlowActionForbidden
+
+**Error message**: The flow `{FlowName}` (`{FlowId}`) failed to run with response code `{ResponseCode}`, error code: `{FlowErrorCode}`. Error details: `{FlowErrorDetails}`
+
+**Resolution**: This error occurs if Power Automate refuses to run the agent flow. To resolve the problem, check the error code and error details in the message, and then take one of the following actions:
+
+- **Connections**. Verify that the connections that the flow uses are valid and haven't expired. If the flow runs with the user's credentials, make sure that the flow is [shared with run-only permissions](/power-automate/create-team-flows#share-a-cloud-flow-with-run-only-permissions).
+- **Copilot Credits**. If the error code is `InsufficientMcsCredits`, the environment doesn't have enough Copilot Credits to run the flow. An admin can allocate Copilot Credits to the environment. For more information, see [Billing rates and management](/microsoft-copilot-studio/requirements-messages-management).
+- **Permissions**. Verify that the user or the connection account has permission to the resources that the flow accesses.
+
+For more information, see [Call an agent flow from an agent](/microsoft-copilot-studio/advanced-use-flow).
+
+### FlowActionInsufficientCredits
+
+**Error message**: The flow `{FlowName}` (`{FlowId}`) couldn't run because this environment doesn't have enough Copilot Credits. An admin can allocate Copilot Credits to the environment in the Power Platform admin center, allow it to draw from the tenant's available capacity, or link a pay-as-you-go billing plan. Error details: `{FlowErrorDetails}`
+
+**Resolution**: Power Automate rejected the agent flow run because the environment doesn't have enough Copilot Credits. To resolve the problem, an admin can take one of the following actions in the Power Platform admin center:
+
+- Allocate Copilot Credits to the environment.
+- Allow the environment to draw from the tenant's available capacity.
+- Link a pay-as-you-go billing plan to the environment.
+
+For more information, see [Overage enforcement](/microsoft-copilot-studio/requirements-messages-management#overage-enforcement).
+
 ### FlowActionTimedOut
 
 **Error message**: The flow with id {FlowId} has timed out. Error Code: {FlowErrorCode}
 
-**Resolution**: [Check the flow for errors](/power-automate/error-checker) to understand why the cloud flow took more than 100 seconds to run before it returned to your agent. Try to optimize the query and the data that you return from the back-end system. If some of the cloud flow logic can continue to run after a result is sent to the agent, put these actions after the "Return value(s) to Copilot Studio" step in your cloud flow.
+**Resolution**: [Check the flow for errors](/power-automate/error-checker) to understand why the cloud flow took more than 100 seconds to run before it returned to your agent. Try to optimize the query and the data that you return from the back-end system. If some of the cloud flow logic can continue to run after a result is sent to the agent, put these actions after the **Return value(s) to Copilot Studio** step in your cloud flow.
 
 ### FlowMakerConnectionBlocked
 
@@ -418,13 +512,13 @@ For more information, see [Microsoft Graph throttling guidance](/graph/throttlin
 
 **Error message**: The usage limit for search and summarize has been reached. Please try again later.
 
-**Resolution**: The agent returns this message if it reaches its [generative AI limit](/microsoft-copilot-studio/requirements-quotas#generative-ai-messages-to-an-agent) to search and summarize sources. For more information, see [Resolve throttling errors in agents](../licensing/throttling-errors-agents.md).
+**Resolution**: The agent returns this message if it reaches its [generative AI limit](/microsoft-copilot-studio/requirements-quotas#generative-ai-messages-to-an-agent) to search and summarize sources. For more information, see [Copilot Studio usage limit and agent unavailable errors](../licensing/throttling-errors-agents.md).
 
 ### GenAIToolPlannerRateLimitReached
 
 **Error message**: The usage limit for generative orchestration has been reached. Please try again later.
 
-**Resolution**: The agent returns this message if it reaches its [generative orchestration limit](/microsoft-copilot-studio/requirements-quotas#generative-ai-messages-to-an-agent). For more information, see [Resolve throttling errors in agents](../licensing/throttling-errors-agents.md).
+**Resolution**: The agent returns this message if it reaches its [generative orchestration limit](/microsoft-copilot-studio/requirements-quotas#generative-ai-messages-to-an-agent). For more information, see [Copilot Studio usage limit and agent unavailable errors](../licensing/throttling-errors-agents.md).
 
 ### HTTP400BadRequest
 
@@ -631,11 +725,22 @@ For more information, see [Prompt Shields for documents](/azure/ai-services/cont
 
 **Resolution**: If you're testing and you didn't intend the test to be an attack, ensure that your instructions align with what you want the agent to do. Otherwise, reinforce responsible AI guidelines together with your agent users to avoid this situation.
 
+### OpenAIMaxTokenLengthExceeded
+
+**Error message**: The request is resulting in a response that is too large to handle, please try re-phrasing the question to be more precise.
+
+**Resolution**: This error occurs if the AI model needs to generate more output than its maximum response length allows. Despite its name, this error can occur with any model, not only OpenAI models. To resolve the problem:
+
+- Ask a more specific question, or ask for less content in a single response.
+- If the agent has many tools, topics, or knowledge sources, reduce them. The model's output when it selects tools and sources also counts toward the limit.
+
+For more information, see [Quotas and limits](/microsoft-copilot-studio/requirements-quotas).
+
 ### OpenAIRateLimitReached
 
 **Error message**: The OpenAI usage limit has been reached. Please try again later.
 
-**Resolution**: Your agent reached the maximum number of generative answer responses. Review your [message capacity](/microsoft-copilot-studio/requirements-messages-management), and review the information in [Resolve throttling errors in agents](../licensing/throttling-errors-agents.md).
+**Resolution**: Your agent reaches the maximum number of generative answer responses. Review your [message capacity](/microsoft-copilot-studio/requirements-messages-management), and review the information in [Copilot Studio usage limit and agent unavailable errors](../licensing/throttling-errors-agents.md).
 
 ### OpenAISelfHarm
 
@@ -759,13 +864,13 @@ For more information, see [Maximum channel data message size limits when using C
 
 **Error message**: The request is resulting in too much data to handle, please evaluate the amount of data being returned by your actions.
 
-**Resolution**: This error indicates that the request sent to OpenAI exceeds the maximum request size that's allowed. The request includes the user input, output from previous actions, tools that were called, and conversation history. Review the tools that you use. If possible, reduce their output to only the necessary fields. For more information, see [Create a Power Automate flow](/microsoft-copilot-studio/advanced-flow-create) and [Call a Power Automate flow as an action](/microsoft-copilot-studio/advanced-use-flow).
+**Resolution**: This error indicates that the request sent to OpenAI exceeds the maximum request size that's allowed. The request includes the user input, output from previous actions, tools that were called, and conversation history. Review the tools that you use. If possible, reduce their output to only the necessary fields. For more information, see [Create an agent flow as a tool](/microsoft-copilot-studio/advanced-flow-create) and [Call an agent flow from an agent](/microsoft-copilot-studio/advanced-use-flow).
 
 # [Classic/Teams](#tab/classic+teams)
 
 | Error                   | Bot response                                                                                                                                                             | Resolution                                                                                                                                                                                                                |
 | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **2000**                | "The user is trapped in an infinite loop. Check to make sure `{Topic Name}` reaches a logical conclusion."                                                               | Make sure that the topic ends correctly, or links to other topics that end correctly, such as the [Escalate][3] system topic.                                                                                             |
+| **2000**                | "The user is trapped in an infinite loop. Check to make sure `{Topic Name}` reaches a logical conclusion."                                                               | Ensure that the topic ends correctly, or links to other topics that end correctly, such as the [Escalate][3] system topic.                                                                                             |
 | **2001**                | "The bot content is invalid."                                                                                                                                            | [Check the topic for errors][4].                                                                                                                                                                                          |
 | **2002**                | "We ran into an issue with CDS."                                                                                                                                         | A problem occurred when you tried to access the [Dataverse][5]. Check your configuration for errors. Otherwise, try again later because a service issue might exist.                                                      |
 | **2003**                | "There's a problem with `{Flow Name}` in `{Topic Name}`. Please check your content."                                                                                     | [Check the flow for errors][6] and [look for failed runs in the flow run history][7].                                                                                                                                     |
@@ -776,13 +881,13 @@ For more information, see [Maximum channel data message size limits when using C
 | **2008**                | "We couldn't find the user's token."                                                                                                                                     | Check your bot's [authorization configuration][13] for errors.                                                                                                                                                            |
 | **2009**                | "To use this bot, publish it in Copilot Studio."                                                                                                                         | To use this bot, [publish it in Copilot Studio][14].                                                                                                                                                                      |
 | **2010**                | "We can't retrieve your bot content."                                                                                                                                    | Content couldn't be found because it was deleted. To configure a new agent, see [Create and delete agents][10]. To configure a new environment, see [Work with Power Platform environments][11].                          |
-| **2011**                | "We couldn't find `{Skill Name}` in `{Topic Name}`. Please check your content."                                                                                          | Your skill couldn't be found because it was deleted. To create a skill, see [Configure a Bot Framework skill][15].                                                                                                        |
+| **2011**                | "We couldn't find `{Skill Name}` in `{Topic Name}`. Please check your content."                                                                                          | Your skill couldn't be found because it was deleted. To create a skill, see [Configure Azure Bot Service skills for use in Copilot Studio agents][15].                                                                                                        |
 | **2012**                | "We couldn't find `{Flow Name}` in `{Topic Name}`. Please check your content."                                                                                           | Your Power Automate Flow couldn't be found because it was deleted. To create a flow, see [Create a flow][16].                                                                                                             |
 | **2014**                | "The translation service didn't respond."                                                                                                                                | Try again later. If the issue persists, [contact customer support][17].                                                                                                                                                   |
 | **2015**                | "You're not authorized to call `{Skill Name}`. Please check the skill and its usage for any issues."                                                                     | Check your [skill's configuration][15], and also check whether your bot is [added to the skill's allow list][18].                                                                                                          |
 | **2016**                | "Sorry, we couldn't find your bot."                                                                                                                                      | A problem affects an [Azure Bot Service channel][19]. The channel might be deleted or configured incorrectly.                                                                                                             |
 | **2017**                | "Sorry, we couldn't access your bot."                                                                                                                                    | The [Azure Bot Service channel][19] couldn't be accessed. Check the channel configuration for authentication issues.                                                                                                      |
-| **2018**                | "The user is typing too fast."                                                                                                                                           | You sent messages too quickly. Read more about [quotas and limits within Copilot Studio][11].                                                                                                                             |
+| **2018**                | "The user is typing too fast."                                                                                                                                           | You sent messages too quickly. Read more about [quotas and limits within Copilot Studio][12].                                                                                                                             |
 | **2019**                | "We couldn't find your environment. It may have been deleted."                                                                                                           | Your environment was deleted. To configure a new environment, see [Work with Power Platform environments][11].                                                                                                            |
 | **2020**                | "Something happened, and `{Flow Name}` isn't working in `{Topic Name}`. Try again later. If the issue persists, check your flow's setup and run history."                | Your Power Automate flow isn't working. Try again later. If the issue persists, [check the flow for errors][6].                                                                                                           |
 | **2021**                | "Number of dialogs executed in the current turn exceeded the maximum of `{Dialog Limit}`."                                                                               | By default, the maximum number of topics is 50. Reduce the number of topics, then try again.                                                                                                                              |

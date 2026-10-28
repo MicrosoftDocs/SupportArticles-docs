@@ -1305,7 +1305,7 @@ items:    # Please do not delete this line, it is required for the yaml format
       items:
         - name: Additional resources for Windows Update
           href: ./installing-updates-features-roles/additional-resources-for-windows-update.md
-        - name: Command-line switches for software update packages
+        - name: Command-line switches for Windows Update Standalone Installer
           href: ./installing-updates-features-roles/command-line-switches-deploy-update-packages.md
         - name: Determine whether WSUS configuration causes WU issues
           href: installing-updates-features-roles/determine-whether-wsus-configuration-causes-wu-issue.md

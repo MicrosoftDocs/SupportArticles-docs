@@ -105,7 +105,7 @@ items:
         - name: NDR 5.2.0 when sending meeting invites
           href: ../email-delivery/ndr-5-2-0-when-sending-meeting-invites.md
         - name: On-premises users not getting emails from Microsoft 365
-          href: ../email-delivery/on-premises-users-not-getting-emails-from-microsoft-365.md
+          href: ../email-delivery/on-premises-users-not-getting-emails-from-microsoft-365.md        
     - name: Groups and Distribution Lists
       items:
         - name: Can't access Microsoft 365 Groups in Outlook

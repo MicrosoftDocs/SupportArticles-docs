@@ -55,8 +55,8 @@ items:
     items:
     - name: Extended Security Updates (ESU) overview
       href: /windows-server/get-started/extended-security-updates-overview?context=/troubleshoot/azure/virtual-machines/windows/context/context
-    - name: ESU for Azure VMs (Azure Update Manager)
-      href: /azure/update-manager/extended-security-updates?context=/troubleshoot/azure/virtual-machines/windows/context/context
+    - name: ESU for Azure VMs
+      href: /windows-server/get-started/extended-security-updates-azure-vm?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: How to upgrade
       href: /azure/virtual-machines/windows-in-place-upgrade?context=/troubleshoot/azure/virtual-machines/windows/context/context
   - name: Windows Server 2008 R2 (EOS)

@@ -104,6 +104,8 @@ items:
           href: /outlook/troubleshoot/user-interface/mapi-is-the-only-way-to-change-profiles
         - name: MCDB status is Offline and SSDs aren't formatted
           href: ../administration/mcdb-status-is-offline-ssds-arent-formatted.md
+        - name: Mailbox audit events missing from Search results
+          href: ../administration/missing-mailbox-audit-events.md          
         - name: No active public folder mailboxes were found error
           href: ../administration/no-active-public-folder-mailboxes-were-found-error.md
         - name: Restarts frequently with Stop error
@@ -260,6 +262,8 @@ items:
           href: ../mailflow/read-receipt-shows-incorrect-information.md
         - name: TLS negotiation failed with error NoCredentials error
           href: ../mailflow/tls-negotiation-failed-with-error-nocredentials-error.md
+        - name: Unreachable RMS licensing endpoints delay mail delivery
+          href: ../mailflow/mail-delay-rms.md                 
         - name: Unreadable characters in the subject line
           href: ../mailflow/unreadable-characters-in-subject-line.md
         - name: Use nslookup to get MX records for SMTP domain
