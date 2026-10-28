@@ -104,6 +104,8 @@ items:
           href: /outlook/troubleshoot/user-interface/mapi-is-the-only-way-to-change-profiles
         - name: MCDB status is Offline and SSDs aren't formatted
           href: ../administration/mcdb-status-is-offline-ssds-arent-formatted.md
+        - name: Mailbox audit events missing from Search results
+          href: ../administration/missing-mailbox-audit-events.md          
         - name: No active public folder mailboxes were found error
           href: ../administration/no-active-public-folder-mailboxes-were-found-error.md
         - name: Restarts frequently with Stop error
