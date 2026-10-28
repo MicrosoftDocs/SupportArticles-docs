@@ -254,6 +254,8 @@ items:
     items:
     - name: Black or blank screen or no system response
       href: ./teams-rooms-and-devices/black-blank-screen.md   
+    - name: Check Conditional Access policies for unsupported Teams device settings
+      href: ./teams-rooms-and-devices/check-conditional-access-policies-unsupported-settings.md
     - name: Can't cast from Teams desktop client to Teams Rooms on Android
       href: ./teams-rooms-and-devices/cannot-cast-from-teams-desktop-client-to-teams-rooms-on-android.md
     - name: Can't cast from Teams desktop client to Teams Rooms on Windows
