@@ -270,16 +270,24 @@ items:
       href: ./teams-rooms-and-devices/teams-android-devices-conditional-access-issues.md
     - name: Direct Guest Join issues in Teams Rooms
       href: ./teams-rooms-and-devices/resolve-direct-guest-join-issues.md   
+    - name: Join button missing in Teams Rooms
+      href: ./teams-rooms-and-devices/join-button-missing.md
     - name: On-screen keyboard size is reduced on some devices
       href: ./teams-rooms-and-devices/teams-rooms-device-keyboard-size-reduced.md
     - name: Phone sidecar expansion module screen is black
       href: ./teams-rooms-and-devices/phone-sidecar-screen-black.md
     - name: Reset a device using the recovery tool
       href: ./teams-rooms-and-devices/reset-device-using-recovery-tool.md
+    - name: Room Remote app doesn't connect to Teams Rooms on Windows
+      href: ./teams-rooms-and-devices/room-remote-app-connection-fails.md
     - name: Sign-in delays on Teams Android devices when you use Entra ID dynamic device groups
       href: ./teams-rooms-and-devices/resolve-sign-in-delays-dynamic-device-groups.md
     - name: Teams Rooms app doesn't start automatically after updates
       href: ./teams-rooms-and-devices/teams-rooms-not-auto-start-after-windows-updates.md
+    - name: Teams Rooms on Android shows events-style meeting interface
+      href: ./teams-rooms-and-devices/incorrect-events-style-meeting-interface.md
+    - name: Teams Rooms can't display PowerPoint Live content
+      href: ./teams-rooms-and-devices/cannot-display-powerpoint-live-content.md
     - name: Teams Rooms on Windows sign-in fails with UserInteractionRequired
       href: ./teams-rooms-and-devices/sign-in-failures-interactive-authentication.md
     - name: Update a device manually

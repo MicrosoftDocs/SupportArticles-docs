@@ -3,10 +3,10 @@ title: Resolve Email Template and Formatting Issues
 description: Resolve email template formatting, spacing, and missing column issues when using Copilot with the Enhanced Email form in Dynamics 365 Customer Service.
 ms.reviewer: meghgupta, srreddy, souravbihani
 ai-usage: ai-assisted
-ms.date: 10/15/2026
+ms.date: 10/28/2026
 ms.custom: sap:E-Mail, DFM
 ---
-# Issues with email templates and formatting in Dynamics 365 Customer Service
+# Email template formatting issues in Dynamics 365 Customer Service
 
 ## Summary
 
@@ -38,5 +38,5 @@ For other template rendering scenarios, see [Email template context loading out 
 
 ## Related content
 
-- [Add the rich text editor control to a model-driven app](/power-apps/maker/model-driven-apps/rich-text-editor-control)
+- [Add the rich text editor control to a model-driven app with Power Apps](/power-apps/maker/model-driven-apps/rich-text-editor-control)
 - [Create email templates](/power-apps/user/email-template-create)

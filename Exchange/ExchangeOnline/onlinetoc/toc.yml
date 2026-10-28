@@ -224,6 +224,10 @@ items:
           href: ../calendars/users-can-see-only-basic-freebusy-mailbox-information.md
         - name: Public folder meetings cannot be modified in OWA
           href: ../calendars/public-folder-meetings-not-modified-in-owa.md
+        - name: Resolve issues with calendar sharing in classic Outlook for Windows
+          href: ../calendars/sharing/resolve-legacy-calendar-share-issues.md
+        - name: Resolve issues with modern calendar sharing
+          href: ../calendars/sharing/resolve-modern-calendar-share-issues.md
         - name: Resource doesn't respond to meeting requests
           href: ../calendars/resource-doesnt-respond-to-meeting-requests-when-using-booking.md
         - name: Room mailbox can't auto accept/decline meetings
