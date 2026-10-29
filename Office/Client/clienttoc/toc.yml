@@ -31,13 +31,7 @@ items:
     - name: Diagnostic logs
       items:
         - name: Enable enterprise logging
-          href: ../diagnostic-logs/enable-enterprise-logging.md    
-    - name: End of Support
-      items:
-        - name: Office 2007 has reached end of extended support
-          href: /lifecycle/announcements/office-2007-end-of-support
-        - name: Support for 2013 versions of Microsoft 365 Apps for enterprise ends
-          href: /lifecycle/announcements/office-365-2013-versions-ended-support
+          href: ../diagnostic-logs/enable-enterprise-logging.md              
     - name: Excel
       items:
         - name: 'A formula returns "#VALUE!" Error'
@@ -176,29 +170,3 @@ items:
       items:
         - name: Resolve file upload errors in Microsoft Forms
           href: ../forms/resolve-file-upload-errors-forms.md
-    - name: Office Online Server
-      items:
-        - name: Web sites lose SSL certificate bindings
-          href: ../office-online-server/web-sites-lose-ssl-certificate-bindings.md
-    - name: Outlook
-      items:
-        - name: Outlook for iOS and Android
-          href: /troubleshoot/outlook/outlook-mobile-welcome
-        - name: Outlook for Mac
-          href: /troubleshoot/outlook/outlook-mac-welcome
-        - name: Outlook for Windows
-          href: /troubleshoot/outlook/outlook-client-welcome
-    - name: Performance
-      items:
-        - name: Some Office applications are not responding
-          href: ../performance/office-applications-not-responding.md
-        - name: Open network file slow or stop responding
-          href: ../performance/office-slow-or-stop-responding.md
-    - name: Project
-      items:
-        - name: Error when you click project link
-          href: ../project/error-when-click-on-project-links.md
-        - name: Resource plan using FTE calculates unexpectedly
-          href: ../project/resource-plan-fte-calculate-unexpected.md
-    - name: Office Developer
-      href: /previous-versions/office/troubleshoot/office-developer/add-button-in-word
