@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot managed KubeRay extension errors in AKS (preview)
-description: Troubleshoot managed KubeRay extension errors on AKS. Diagnose installation, update, removal, and readiness failures.
+description: Troubleshoot managed KubeRay extension errors on AKS. Diagnose installation, update, removal, and readiness failures, and restore Ray workloads. Learn how.
 ms.topic: troubleshooting
-ms.date: 10/22/2026
+ms.date: 10/29/2026
 manager: dcscontentpm
 author: kaushika-msft
 ms.author: kaushika
@@ -13,11 +13,11 @@ ai-usage: ai-generated
 # Customer intent: "As a platform engineer or cluster administrator, I want to diagnose managed KubeRay extension lifecycle and operator failures so I can restore Ray workload reconciliation."
 ---
 
-# Troubleshoot the managed KubeRay extension on Azure Kubernetes Service (preview)
+# Troubleshoot managed KubeRay extension errors on Azure Kubernetes Service (preview)
 
 ## Summary
 
-This article helps you troubleshoot the managed KubeRay extension on Azure Kubernetes Service (AKS). It covers extension status, installation, updates, removal, and readiness during preview.
+This article helps you troubleshoot managed KubeRay extension errors on Azure Kubernetes Service (AKS). Use it to diagnose extension status, installation, update, removal, and readiness failures so you can restore Ray workload reconciliation during preview.
 
 For installation and management instructions, see [Install the managed KubeRay extension on AKS](/azure/aks/kuberay-overview).
 
@@ -165,53 +165,246 @@ It doesn't change the Ray runtime version in your workload images.
 **Symptom:** Installation fails.
 The error message starts with `managed KubeRay preflight failed: detected existing KubeRay operator`.
 
-**Cause:** Preview doesn't support same-cluster, in-place adoption of a self-hosted KubeRay operator.
+**Cause:** Preview doesn't support the in-place adoption of a self-hosted KubeRay operator on the same cluster.
 KubeRay requires a single operator per cluster.
 The managed extension rejects installation if it detects a self-hosted or otherwise unmanaged operator.
+The failed installation might update or claim the Ray CRDs before the extension detects the existing operator.
 
-**Resolution:**
+**Resolution:** Use this procedure only if both of the following conditions are true:
 
-1. Stop retries on the affected cluster.
-   Rejection doesn't prove that the existing CRDs are unchanged.
-1. Keep required workload data, manifests, Ray CRDs, and user-created resources.
-1. Collect the diagnostics in the following section before making further changes.
-1. Request guidance from Azure support before you uninstall an operator, delete a failed extension, or change CRD ownership.
-1. For a new managed installation, use a clean target cluster with no KubeRay installation.
-   Alternatively, [uninstall the self-hosted operator first](/azure/aks/kuberay-overview#uninstall-an-existing-oss-kuberay-operator).
-   Removal of the operator is a prerequisite.
-   It's not a supported in-place adoption procedure.
-1. On an affected cluster, resolve the CRD state with Azure support before making another managed installation attempt.
+- The failed managed extension resource still exists.
+- A Helm release installed the self-hosted operator.
+
+This procedure keeps the current CRDs and transfers reconciliation to the managed operator.
+This migration path isn't supported.
+If you use this procedure, proceed at your own risk.
+The procedure minimizes workload disruption, but the operator gap still introduces risk.
+
+1. Stop all repeated extension create, update, and delete requests.
+1. Stop new Ray control-plane changes.
+1. If possible, wait for active `RayJob` resources to finish.
+
+   Existing Ray pods can continue to run during a short operator gap.
+   During the gap, reconciliation, healing, autoscaling, and `RayJob` status transitions stop.
+
+1. Set values for the existing self-hosted operator release:
+
+    ```bash
+    OSS_RELEASE_NAME="<oss-kuberay-operator-release>"
+    OSS_RELEASE_NAMESPACE="<oss-kuberay-operator-namespace>"
+    OSS_OPERATOR_DEPLOYMENT="<oss-kuberay-operator-deployment>"
+    OSS_OPERATOR_POD_SELECTOR="$(
+      kubectl get deployment "$OSS_OPERATOR_DEPLOYMENT" \
+        --namespace "$OSS_RELEASE_NAMESPACE" \
+        --output go-template='{{range $key, $value := .spec.selector.matchLabels}}{{$key}}={{$value}},{{end}}' |
+      sed 's/,$//'
+    )"
+    BACKUP_DIR="kuberay-handoff-$(date -u +%Y%m%dT%H%M%SZ)"
+    mkdir "$BACKUP_DIR"
+    ```
+
+1. Create backups of the extension status, the Helm release, the operator, and the Ray resources:
+
+    ```bash
+    az k8s-extension show \
+      --resource-group "$RESOURCE_GROUP" \
+      --cluster-name "$CLUSTER_NAME" \
+      --cluster-type managedClusters \
+      --name "$EXTENSION_NAME" \
+      --output json > "$BACKUP_DIR/extension-status.json"
+
+    helm version > "$BACKUP_DIR/helm-version.txt"
+    helm get values "$OSS_RELEASE_NAME" \
+      --namespace "$OSS_RELEASE_NAMESPACE" \
+      --all > "$BACKUP_DIR/oss-release-values.yaml"
+    helm get manifest "$OSS_RELEASE_NAME" \
+      --namespace "$OSS_RELEASE_NAMESPACE" > "$BACKUP_DIR/oss-release-manifest.yaml"
+    helm get hooks "$OSS_RELEASE_NAME" \
+      --namespace "$OSS_RELEASE_NAMESPACE" > "$BACKUP_DIR/oss-release-hooks.yaml"
+
+    kubectl get deployment "$OSS_OPERATOR_DEPLOYMENT" \
+      --namespace "$OSS_RELEASE_NAMESPACE" \
+      --output yaml > "$BACKUP_DIR/oss-operator-deployment.yaml"
+    kubectl logs deployment/"$OSS_OPERATOR_DEPLOYMENT" \
+      --namespace "$OSS_RELEASE_NAMESPACE" \
+      --all-containers=true \
+      --prefix \
+      --tail=2000 > "$BACKUP_DIR/oss-operator-logs.txt"
+    kubectl get rayclusters,raycronjobs,rayjobs,rayservices \
+      --all-namespaces \
+      --output yaml > "$BACKUP_DIR/ray-resources.yaml"
+    kubectl get services \
+      --all-namespaces \
+      --selector ray.io/cluster \
+      --output yaml > "$BACKUP_DIR/ray-workload-services.yaml"
+    kubectl get crd \
+      rayclusters.ray.io \
+      raycronjobs.ray.io \
+      rayjobs.ray.io \
+      rayservices.ray.io \
+      --show-managed-fields \
+      --output yaml > "$BACKUP_DIR/ray-crds-managed-fields.yaml"
+    ```
+
+1. Record the workload pod unique identifiers (UIDs). This step is optional.
+   Use the UIDs to verify that the same pods remain after the operator change:
+
+    ```bash
+    kubectl get pods \
+      --all-namespaces \
+      --selector ray.io/cluster \
+      --sort-by=.metadata.uid \
+      --output custom-columns='NAMESPACE:.metadata.namespace,NAME:.metadata.name,UID:.metadata.uid' \
+      > "$BACKUP_DIR/ray-pods-before.txt"
+    ```
+
+1. Keep the current CRDs and existing resources.
+1. Don't downgrade or delete a Ray CRD.
+1. Don't delete a workload namespace.
+1. Don't change labels or managed fields.
+1. Don't force resource ownership.
+1. Inspect `$BACKUP_DIR/oss-release-manifest.yaml`.
+1. Confirm that the manifest doesn't contain a Ray `CustomResourceDefinition` resource.
+1. Inspect `$BACKUP_DIR/oss-release-hooks.yaml`.
+1. Inspect each script and ConfigMap that the hooks use.
+1. Confirm that no uninstall hook deletes a Ray CRD or Ray resource.
+
+   If the release owns a Ray CRD, stop this procedure.
+   If a hook can delete a Ray CRD or Ray resource, stop this procedure.
+   If the hook behavior isn't clear, stop this procedure.
+   Don't continue the migration.
+
+1. Uninstall only the self-hosted operator Helm release.
+
+    ```bash
+    helm uninstall "$OSS_RELEASE_NAME" \
+      --namespace "$OSS_RELEASE_NAMESPACE" \
+      --wait \
+      --timeout 5m
+    ```
+
+   Don't delete the namespace, Ray CRDs, Ray resources, Ray workload services, or workload pods.
+
+1. Wait for the self-hosted operator pods to be deleted:
+
+    ```bash
+    kubectl wait \
+      --for=delete \
+      pod \
+      --selector "$OSS_OPERATOR_POD_SELECTOR" \
+      --namespace "$OSS_RELEASE_NAMESPACE" \
+      --timeout=5m
+    ```
+
+   If the command times out, stop this procedure.
+
+1. Verify the resources after the uninstall:
+
+    ```bash
+    kubectl get deployment "$OSS_OPERATOR_DEPLOYMENT" \
+      --namespace "$OSS_RELEASE_NAMESPACE"
+    kubectl get namespace "$OSS_RELEASE_NAMESPACE" \
+      --output custom-columns='NAME:.metadata.name,STATUS:.status.phase'
+    kubectl get pods \
+      --namespace "$OSS_RELEASE_NAMESPACE" \
+      --selector "$OSS_OPERATOR_POD_SELECTOR"
+    kubectl wait \
+      --for=condition=Established \
+      crd/rayclusters.ray.io \
+      crd/raycronjobs.ray.io \
+      crd/rayjobs.ray.io \
+      crd/rayservices.ray.io \
+      --timeout=2m
+    kubectl get pods \
+      --all-namespaces \
+      --selector ray.io/cluster \
+      --output wide
+    kubectl get services \
+      --all-namespaces \
+      --selector ray.io/cluster \
+      --output wide
+    ```
+
+    The deployment command should return `NotFound`.
+    The operator pod command should return `No resources found`.
+    The namespace status must be `Active`.
+    Each Ray CRD must be `Established`.
+    Each existing workload pod must be `Running`.
+    The Ray resources and workload services must remain.
+
+    If an expected resource is missing, stop this procedure.
+
+1. Update the existing failed managed extension resource.
+   Don't run a second `create` command.
+   Don't specify a package version.
+
+    ```bash
+    az k8s-extension update \
+      --resource-group "$RESOURCE_GROUP" \
+      --cluster-name "$CLUSTER_NAME" \
+      --cluster-type managedClusters \
+      --name "$EXTENSION_NAME" \
+      --release-train "$RELEASE_TRAIN" \
+      --auto-upgrade-minor-version true \
+      --yes
+    ```
+
+1. Verify the managed extension and operator:
+
+    ```bash
+    az k8s-extension show \
+      --resource-group "$RESOURCE_GROUP" \
+      --cluster-name "$CLUSTER_NAME" \
+      --cluster-type managedClusters \
+      --name "$EXTENSION_NAME" \
+      --query "{provisioningState:provisioningState,extensionState:extensionState,currentVersion:currentVersion,errorInfo:errorInfo}" \
+      --output json
+    kubectl wait \
+      --for=condition=Available \
+      deployment/kuberay-operator \
+      --namespace kuberay-system \
+      --timeout=5m
+    kubectl wait \
+      --for=condition=Established \
+      crd/rayclusters.ray.io \
+      crd/raycronjobs.ray.io \
+      crd/rayjobs.ray.io \
+      crd/rayservices.ray.io \
+      --timeout=2m
+    kubectl get rayclusters,raycronjobs,rayjobs,rayservices \
+      --all-namespaces \
+      --output wide
+    ```
+
+    Confirm that `provisioningState` is `Succeeded`.
+    Confirm that `extensionState` is `Available` or `Ready`.
+    Confirm that the managed operator deployment is `Available`.
+    Confirm that each Ray CRD is `Established`.
+    Confirm that the existing Ray resources resume reconciliation.
+
+1. If you recorded pod UIDs, record the UIDs again:
+
+    ```bash
+    kubectl get pods \
+      --all-namespaces \
+      --selector ray.io/cluster \
+      --sort-by=.metadata.uid \
+      --output custom-columns='NAMESPACE:.metadata.namespace,NAME:.metadata.name,UID:.metadata.uid' \
+      > "$BACKUP_DIR/ray-pods-after.txt"
+    diff -u "$BACKUP_DIR/ray-pods-before.txt" "$BACKUP_DIR/ray-pods-after.txt"
+    ```
+
+    Confirm that the workload pod UIDs didn't change.
 
 > [!WARNING]
-> Don't force CRD ownership transfers, rewrite ownership metadata, or delete Ray CRDs or workload namespaces to recover.
-> If you delete a CRD, you also delete its custom resources.
->
-> A known safety issue can change Ray CRD schemas, labels, and field ownership before the conflicting-operator check rejects installation.
-> This change is a defect, not a supported migration or ownership-transfer method.
-> These precautions don't fix the defect.
->
-> If you delete the failed extension, the previous CRD state doesn't return.
-> If you uninstall the self-hosted operator, the previous CRD state doesn't return.
-
-If the extension rejected installation over a self-hosted operator, collect these diagnostics before making further changes:
-
-- The extension error.
-- The Helm version.
-- The operator deployment.
-- The CRD managed fields.
-
-```bash
-helm version
-kubectl get deployments --all-namespaces --output wide
-kubectl get crd rayclusters.ray.io \
-  --show-managed-fields \
-  --output json > rayclusters-crd-managed-fields.json
-```
-
-[Open an Azure support request](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview) to plan recovery.
-Helm 4 can report a server-side apply conflict with `extensionmanager` for `.spec.versions`.
-Helm 3 can reinstall the older operator.
-This action doesn't restore the original CRD schemas.
+> If the managed update fails after you remove the open-source operator, stop all changes.
+> Existing Ray pods might continue to run.
+> However, no operator reconciles the Ray resources.
+> Don't reinstall the self-hosted operator with Helm 4.
+> Don't downgrade the Ray CRDs.
+> Don't force resource ownership.
+> Don't delete the failed extension.
+> Keep the collected diagnostics.
 
 <a id="extension-succeeds-but-the-operator-or-crds-arent-ready"></a>
 
@@ -268,7 +461,7 @@ However, reconciliation, healing, scaling, and `RayJob` state transitions pause.
 
 <a id="update-doesnt-reach-the-requested-version"></a>
 
-## Update does not reach the requested version
+## Update doesn't reach the requested extension version
 
 **Symptom:** The update command finishes or times out.
 However, `currentVersion` does not change as expected, or the extension enters `Failed`.
