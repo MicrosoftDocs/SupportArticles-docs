@@ -227,7 +227,7 @@ To fix the problem, see [Move a TDE protected database to another SQL Server](/s
 
 #### Does backup compression work on TDE-enabled databases?
 
-  Yes. Starting with SQL Server 2016, backup compression works on TDE-enabled databases when you specify `MAXTRANSFERSIZE` greater than 65536 (64 KB) in the `BACKUP` statement. Without that setting, the backup runs uncompressed even when you request compression. For details, see [Backup compression](/sql/relational-databases/backup-restore/backup-compression-sql-server).
+  Yes. In SQL Server 2016, SQL Server 2017, and SQL Server 2019 before CU5, specify `MAXTRANSFERSIZE` greater than 65536 (64 KB) in the `BACKUP` statement. Without that setting, the backup compresses the encrypted pages directly and might not yield good compression ratios. For details, see [Backup compression](/sql/relational-databases/backup-restore/backup-compression-sql-server).
 
 #### How do VDI and VSS backups interact with Always On availability group secondary replicas?
 
