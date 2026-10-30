@@ -61,7 +61,7 @@ In-place system upgrades are supported for specific versions of Azure Windows VM
    > [!NOTE]
    > - You can't do an in-place upgrade from a single-session SKU of Windows to a multi-session SKU. For more information, see [Can I upgrade a Windows VM to Windows Enterprise multi-session?
 ](/azure/virtual-desktop/windows-multisession-faq#can-i-upgrade-a-windows-vm-to-windows-enterprise-multi-session).
-   > - When migrating from Windows 10 to Windows 11, follow best practices by deploying new VMs. This approach avoids potential compatibility issues and ensures an optimized configuration. The VM must meet the [hardware requirements for Windows 11](/windows/whats-new/windows-11-requirements#virtual-machine-support).
+> - When migrating from Windows 10 to Windows 11, follow best practices by deploying new VMs. This approach avoids potential compatibility issues and ensures an optimized configuration. The VM must meet the [hardware requirements for Windows 11](/windows/whats-new/windows-11-requirements#virtual-machine-support).
 
 ### Windows versions that don't support in-place system upgrades (consider using a workaround)
 
@@ -75,7 +75,11 @@ In-place system upgrades are supported for specific versions of Azure Windows VM
 
 ### Azure Virtual Desktop in-place upgrade support matrix
 
-The following table shows in-place upgrade supportability for Azure Virtual Desktop session hosts and standard Azure VMs. **All upgrade methods** (ISO, Settings app, WSUS) follow the same supportability.
+The following table shows in-place upgrade supportability for Azure Virtual Desktop session hosts and standard Azure VMs. **All upgrade methods** (ISO, Settings app, WSUS) follow the same supportability.  
+
+> [!NOTE]
+> ISO-based in-place upgrades are **Not supported** on AVD multi-session because Microsoft doesn't provide an ISO for it.  
+> see [Windows update management methodologies for session hosts](https://learn.microsoft.com/en-us/azure/virtual-desktop/windows-update-management-methodologies-session-hosts).
 
 **Summary:** Feature updates within the same Windows version are supported. OS version upgrades (Windows 10 to Windows 11) aren't supported on any session host type or standard Azure VM — deploy new VMs instead.
 
