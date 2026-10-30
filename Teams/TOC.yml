@@ -254,6 +254,8 @@ items:
     items:
     - name: Black or blank screen or no system response
       href: ./teams-rooms-and-devices/black-blank-screen.md   
+    - name: Capacity limit exceeded on Teams Rooms on Windows device
+      href: ./teams-rooms-and-devices/resolve-capacity-limit-notifications.md
     - name: Check Conditional Access policies for unsupported Teams device settings
       href: ./teams-rooms-and-devices/check-conditional-access-policies-unsupported-settings.md
     - name: Can't cast from Teams desktop client to Teams Rooms on Android
