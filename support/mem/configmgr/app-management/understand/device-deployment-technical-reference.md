@@ -63,7 +63,7 @@ CDCMAgent::HandleMessage - Message received for machine: '<?xml version='1.0' ?>
 
 Application installation is initiated when the deployment is enforced.
 
-- For **Required** deployments, Scheduler creates a deadline schedule after policy is downloaded to enforce the application at deployment deadline. The deadline schedule isn't randomized by default. Randomization behavior for activation can be controlled by the [Disable deadline randomization](/intune/configmgr/core/clients/deploy/about-client-settings#disable-deadline-randomization) client setting.
+- For **Required** deployments, Scheduler creates a deadline schedule after policy is downloaded to enforce the application at deployment deadline. The deadline schedule isn't randomized by default. ~Randomization behavior for activation can be controlled by the [Disable deadline randomization](/intune/configmgr/core/clients/deploy/about-client-settings#disable-deadline-randomization) client setting.~
 
   ```output
   SMSTrigger '15EF8C4000080000' for scheduler 'Machine/DEADLINE:{5F2FA409-C9B2-4100-8BC8-051820311DE1}' will fire at 08/15/2019 03:05:00 PM without randomization.
