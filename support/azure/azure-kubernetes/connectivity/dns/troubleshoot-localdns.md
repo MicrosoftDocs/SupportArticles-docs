@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot LocalDNS problems in AKS
-description: Learn a step-by-step workflow to troubleshoot LocalDNS issues in AKS, identify DNS failure patterns, and resolve problems faster. Start now.
-ms.date: 10/19/2026
-ms.reviewer: v-rekhanain, v-leedennis, josebl, v-weizhu, qasimsarfraz, amaljuna
+description: Learn a step-by-step workflow to troubleshoot LocalDNS problems in AKS, identify DNS failure patterns, and resolve them faster. Start now.
+ms.date: 10/28/2026
+ms.reviewer: v-rekhanain, v-leedennis, josebl, v-weizhu, qasimsarfraz, amaljuna, kaushika
 ms.topic: troubleshooting
 manager: dcscontentpm
 author: kaushika-msft
@@ -16,9 +16,11 @@ ai-usage: ai-assisted
 
 ## Summary
 
-This article describes how to troubleshoot LocalDNS problems in Azure Kubernetes Service (AKS). Use a step-by-step workflow to identify Domain Name System (DNS) failure patterns, collect LocalDNS query logs, and resolve resolution failures faster. To learn more about LocalDNS, see [DNS Resolution in Azure Kubernetes Service (AKS)](/azure/aks/dns-concepts#localdns-in-azure-kubernetes-service-preview).
+This article describes how to troubleshoot LocalDNS problems in Azure Kubernetes Service (AKS). Use the step-by-step workflow to identify Domain Name System (DNS) failure patterns, collect LocalDNS query logs, and resolve DNS failures faster. To learn more about LocalDNS, see [DNS Resolution in Azure Kubernetes Service (AKS)](/azure/aks/dns-concepts#localdns-in-azure-kubernetes-service-preview).
 
 ## Prerequisites
+
+To troubleshoot LocalDNS issues in AKS, you need the following tools:
 
 - The Kubernetes [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) command-line tool
 
@@ -130,7 +132,7 @@ EOF
 
 Most use cases require query logging to be turned off in production because of its high memory usage and performance implications. However, for troubleshooting purposes, you should enable query logging in your localDNS configuration to root cause the source of your errors. Once the analysis is complete, you can turn it off.
 
-Option 1 - Enable Query logging on all nodes
+Option 1 - Enable query logging on all nodes
 
 You can modify your LocalDNS configuration to reflect *queryLogging: Log* for a single or multiple DNS zones.
 
@@ -362,7 +364,7 @@ cause.
 | Observation | Likely cause | Action |
 |-------------|--------------|--------|
 | Test pod gets no response from `169.254.10.11` (KubeDNS listener) | Pod isn't reaching LocalDNS, or LocalDNS isn't running | Confirm the service with `systemctl status localdns`. Verify the pod `/etc/resolv.conf` points to the cluster DNS service IP. |
-| `cluster.local` names fail but external names resolve | Cache-miss forwarding to CoreDNS is failing | The `cluster.local` block forwards to CoreDNS with `force_tcp`. Confirm NSGs and firewalls allow **TCP** 53 from the node to the cluster DNS service IP, not only UDP 53 |
+| `cluster.local` names fail but external names resolve | Cache-miss forwarding to CoreDNS is failing | The `cluster.local` block forwards to CoreDNS with `force_tcp`. Confirm NSGs and firewalls allow **TCP** 53 from the node to the cluster DNS service IP, not only UDP 53. |
 | External names fail but `cluster.local` resolves | Upstream (VnetDNS) forwarding is failing | Check the `.:53` block upstream target and node-to-upstream reachability on UDP/TCP 53. |
 | Private DNS zone names return public IPs or `NXDOMAIN` | LocalDNS is forwarding to Azure DNS instead of your custom DNS | See [LocalDNS restarts and custom DNS](#localdns-restarts-and-custom-dns). |
 | Intermittent failures correlated with LocalDNS restarts | Service restart behavior | See [LocalDNS restarts and custom DNS](#localdns-restarts-and-custom-dns). |

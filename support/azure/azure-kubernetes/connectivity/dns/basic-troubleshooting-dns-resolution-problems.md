@@ -1,27 +1,31 @@
 ---
-title: "Troubleshoot DNS resolution problems in AKS"
-description: "Learn how to troubleshoot DNS resolution problems in AKS with a structured workflow to diagnose and fix DNS failures in Azure Kubernetes Service. Start here."
-author: sturrent
-ms.author: seturren
-ms.date: 07/21/2026
-ms.reviewer: v-rekhanain, v-leedennis, josebl, v-weizhu, qasimsarfraz, mariusbutuc
-editor: v-jsitser
+title: Troubleshoot DNS resolution problems in AKS
+description: Learn how to troubleshoot DNS resolution problems in AKS by using a structured workflow to diagnose, isolate, and fix DNS failures. Start troubleshooting now.
+ms.topic: troubleshooting
+manager: dcscontentpm
+author: kaushika-msft
+ms.author: kaushika
+ms.date: 10/28/2026
+ms.reviewer: v-rekhanain, v-leedennis, josebl, v-weizhu, qasimsarfraz, mariusbutuc, seturren, kaushika
 ms.service: azure-kubernetes-service
 ms.custom: sap:Connectivity
-ms.topic: troubleshooting
 #Customer intent: As an Azure Kubernetes user, I want to learn how to create a troubleshooting workflow so that I can fix DNS resolution problems in Azure Kubernetes Service (AKS).
+ai-usage: ai-assisted
 ---
-# Troubleshoot DNS resolution problems in AKS
+# Troubleshoot DNS resolution problems in Azure Kubernetes Service
 
 ## Summary
 
-This article explains how to troubleshoot DNS resolution problems in Azure Kubernetes Service (AKS) by building a structured workflow to diagnose, isolate, and fix Domain Name System (DNS) failures. Follow this guide to learn how to identify root causes and resolve DNS issues in your AKS cluster.
+This article explains how to troubleshoot Domain Name System (DNS) resolution problems in Azure Kubernetes Service (AKS) by using a structured workflow. Use it to diagnose, isolate, and fix DNS failures so that your cluster workloads can resolve names reliably.
 
 ## Prerequisites
 
+Ensure you have the following prerequisites before you start troubleshooting DNS resolution problems in AKS:
+
 - The Kubernetes [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) command-line tool
 
-   **Note:** To install kubectl by using [Azure CLI](/cli/azure/install-azure-cli), run the [az aks install-cli](/cli/azure/aks#az-aks-install-cli) command.
+   > [!NOTE]
+   > To install kubectl by using [Azure CLI](/cli/azure/install-azure-cli), run the [az aks install-cli](/cli/azure/aks#az-aks-install-cli) command.
 
 - The [BIND 9](https://www.isc.org/bind/) command-line tool for DNS lookup
 
@@ -31,7 +35,7 @@ This article explains how to troubleshoot DNS resolution problems in Azure Kuber
 
 ## Troubleshooting checklist
 
-Troubleshooting DNS problems in AKS is typically a complex process. You can easily get lost in the many different steps without ever seeing a clear path forward. To help make the process simpler and more effective, use the "scientific" method to organize the work:
+Troubleshooting DNS problems in AKS is typically a complex process. You can easily get lost in the many different steps without ever seeing a clear path forward. To help make the process simpler and more effective, use the following method to organize the work:
 
 - Step 1. Collect the facts.
 
@@ -469,7 +473,7 @@ In Wireshark, open the capture file of the CoreDNS pods that you merged earlier 
 
 The dialog box indicates that there were a combined total of about 4.5 million (4,540,233) packets, of which 2.68 percent caused server failure. The difference in query and response packet percentages shows that 5.94 percent of the queries (52.97 percent minus 47.03 percent) didn't receive a response. The maximum response time was 12 seconds (12,000.532227 milliseconds).
 
-If you apply the display filter for query responses that took five seconds or more (`dns.time >= 5`), most of the packets in the filter results will indicate that a server failure occurred. This is probably because of a client "timed out" error.
+If you apply the display filter for query responses that took five seconds or more (`dns.time >= 5`), most of the packets in the filter results will indicate that a server failure occurred. This condition probably caused a client "timed out" error.
 
 The following table is a summary of the capture findings.
 
@@ -556,7 +560,7 @@ To develop your first hypothesis, map each of the results from the required inpu
 
 - Indications of compute resource starvation at CoreDNS pod or node levels might suggest performance problems.
 
-- DNS captures that have a considerable mismatch between DNS queries and DNS responses can indicate that packets are being lost. This scenario suggests that there are connectivity or performance problems.
+- DNS captures that have a considerable mismatch between DNS queries and DNS responses can indicate that packets are lost. This scenario suggests that there are connectivity or performance problems.
 
 - The presence of custom configurations at the virtual network level or Kubernetes level can contain setups that don't work with AKS and CoreDNS as expected.
 
