@@ -40,10 +40,10 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
+        - text: Access persists outside the authors security group
+          url: licensing/authors-access.md
         - text: Usage limit and agent unavailable errors
           url: licensing/throttling-errors-agents.md
-        - text: Users outside the Copilot Studio authors security group can access Copilot Studio
-          url: licensing/authors-access.md
 
   # Card
   - title: Documentation and training

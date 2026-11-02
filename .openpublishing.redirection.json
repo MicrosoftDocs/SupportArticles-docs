@@ -16561,6 +16561,94 @@
       "source_path": "support/windows-client/installing-updates-features-roles/command-switches-supported-by-self-extractor-package.md",
       "redirect_url": "/previous-versions/troubleshoot/windows-client/command-switches-supported-by-self-extractor-package",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/warehousing/load-weight-positive-numbers.md",
+      "redirect_url": "/troubleshoot/dynamics-365/supply-chain/warehousing/weight-fields-on-load-lines-dont-match-weight-fields-error#load-weight-must-be-positive"
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/warehousing/inventory-status-change-work-type.md",
+      "redirect_url": "/dynamics365/supply-chain/warehousing/control-warehouse-location-directives#inventory-status-change-work-template-lines"
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/warehousing/mixed-license-plate-receiving.md",
+      "redirect_url": "/dynamics365/supply-chain/warehousing/mixed-license-plate-receiving#where-it-applies"
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/warehousing/shipment-confirmed-no-posting.md",
+      "redirect_url": "/dynamics365/supply-chain/warehousing/outbound-load-handling#outbound-load-shipment-confirmation"
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/warehousing/cant-reduce-picked-quantities.md",
+      "redirect_url": "/dynamics365/supply-chain/inventory/outbound-process#reduce-picked-quantity-on-a-warehouse-load"
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/warehousing/packing-station-not-show-product-notes.md",
+      "redirect_url": "/dynamics365/supply-chain/warehousing/packing-work"
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/warehousing/quantity-invalid-split-pick.md",
+      "redirect_url": "/dynamics365/supply-chain/warehousing/configure-mobile-devices-warehouse#menu-options"
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/warehousing/weight-must-be-positive-error.md",
+      "redirect_url": "/troubleshoot/dynamics-365/supply-chain/warehousing/weight-fields-on-load-lines-dont-match-weight-fields-error#container-weight-must-be-positive"
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/warehousing/not-enough-work-for-cluster.md",
+      "redirect_url": "/dynamics365/supply-chain/warehousing/system-directed-cluster-pick#handle-insufficient-work-for-a-cluster"
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/warehousing/partial-quantity-inventory-status.md",
+      "redirect_url": "/dynamics365/supply-chain/warehousing/configure-mobile-devices-warehouse#change-inventory-status-for-part-of-a-batch"
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/warehousing/work-is-not-blocked.md",
+      "redirect_url": "/dynamics365/supply-chain/warehousing/work-blocking-reasons#work-is-already-unblocked"
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/warehousing/invalid-license-plate.md",
+      "redirect_url": "/dynamics365/supply-chain/warehousing/configure-mobile-devices-warehouse#resolve-an-invalid-license-plate-scan"
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/warehousing/partial-picking-warehouse-app.md",
+      "redirect_url": "/dynamics365/supply-chain/warehousing/configure-mobile-devices-warehouse#menu-options"
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/warehousing/generate-work-immediately-load-release.md",
+      "redirect_url": "/dynamics365/supply-chain/warehousing/wave-templates#generate-picking-work-when-you-release-a-load"
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/warehousing/mobile-app-emulator-administrator.md",
+      "redirect_url": "/dynamics365/supply-chain/warehousing/configure-mobile-devices-warehouse#test-mobile-device-menu-items"
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/warehousing/print-documents-by-warehouse.md",
+      "redirect_url": "/dynamics365/supply-chain/warehousing/outbound-load-handling#print-documents-by-warehouse-or-site"
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/warehousing/delivery-note-correction.md",
+      "redirect_url": "/dynamics365/supply-chain/warehousing/outbound-load-handling#correct-posted-packing-slips-for-warehouse-managed-items"
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/warehousing/license-plate-specified-location.md",
+      "redirect_url": "/dynamics365/supply-chain/warehousing/confirm-and-transfer#notes-and-tips"
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/warehousing/cant-move-license-plate.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics-365/supply-chain/warehousing/cant-move-license-plate"
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/warehousing/rerelease-partially-shipped-load.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics-365/supply-chain/warehousing/rerelease-partially-shipped-load"
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/warehousing/unconfirmed-purchase-orders-confirmed.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics-365/supply-chain/warehousing/unconfirmed-purchase-orders-confirmed"
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/warehousing/license-plate-location-invalid.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics-365/supply-chain/warehousing/license-plate-location-invalid"
     }
   ]
 }
