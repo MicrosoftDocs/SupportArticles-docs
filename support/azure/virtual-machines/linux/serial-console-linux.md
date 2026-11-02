@@ -93,6 +93,9 @@ By default, all subscriptions have serial console access enabled. You can disabl
 > [!WARNING]
 > There's a known issue where Azure Serial Console might fail to connect when a custom boot diagnostics storage account has firewall restrictions when using the [az serial-console](/cli/azure/serial-console) command. To avoid connectivity issues, use Serial Console in the Azure Portal.
 
+> [!NOTE]
+> Azure Serial Console currently doesn't work when a read-only lock is applied to the boot diagnostics storage account.
+
 > [!IMPORTANT]
 > In 2026, Azure Serial Console will no longer utilize boot diagnostics storage accounts for establishing a connection. No customer action is required for this change. This change doesn't affect serial logs or screenshots.
 
