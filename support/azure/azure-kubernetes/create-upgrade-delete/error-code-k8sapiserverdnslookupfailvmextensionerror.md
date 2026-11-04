@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot the K8SAPIServerDNSLookupFailVMExtensionError error code (52)
 description: Learn how to troubleshoot the K8SAPIServerDNSLookupFailVMExtensionError error (52) when you try to start or create and deploy an Azure Kubernetes Service (AKS) cluster.
-ms.date: 01/24/2024
-ms.reviewer: rissing, chiragpa, erbookbi, v-leedennis, jovieir
+ms.date: 10/24/2026
+ms.reviewer: rissing, chiragpa, erbookbi, v-leedennis, jovieir, andraciobanu, Kavyasri Sadineni
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the K8SAPIServerDNSLookupFailVMExtensionError error code (or error code ERR_K8S_API_SERVER_DNS_LOOKUP_FAIL, error number 52) so that I can successfully start or create and deploy an Azure Kubernetes Service (AKS) cluster.
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool),  innovation-engine
@@ -37,8 +37,8 @@ When you try to start or create an AKS cluster, you receive the following error 
 > "Output": "Fri Oct 15 10:06:00 UTC 2021,aks- nodepool1-36696444-vmss000000\\nConnection to mcr.microsoft.com 443 port [tcp/https]
 
 ## Cause
+The cluster nodes can't resolve the cluster's fully qualified domain name (FQDN). This issue can occur when the DNS configuration available to the node doesn't return a valid response for the Kubernetes API server FQDN.
 
-The cluster nodes can't resolve the cluster's fully qualified domain name (FQDN) in Azure DNS. Run the following DNS lookup command on the failed cluster node to find DNS resolutions that are valid.
 
 | Node OS | Command                   |
 | ------- | ------------------------- |
@@ -89,5 +89,32 @@ Also verify that your DNS server is configured correctly for your private cluste
 ## More information
 
 - [General troubleshooting of AKS cluster creation issues](troubleshoot-aks-cluster-creation-issues.md)
+
+Because the affected node might be in a failed provisioning state and unavailable through SSH or RDP, use `az vmss run-command invoke` to run the DNS lookup directly on the Virtual Machine Scale Set instance.
+
+### Test DNS resolution from a Linux node
+
+Run `dig` against the cluster FQDN:
+
+```azurecli
+az vmss run-command invoke \
+  --resource-group <mc-resource-group-name> \
+  --name <vmss-name> \
+  --instance-id <instance-id> \
+  --command-id RunShellScript \
+  --scripts "dig <cluster-fqdn>"
+```
+
+### Test DNS resolution from a Windows node
+
+Run `nslookup` against the cluster FQDN:
+
+```azurecli
+az vmss run-command invoke \
+  --resource-group <mc-resource-group-name> \
+  --name <vmss-name> \
+  --instance-id <instance-id> \
+  --command-id RunPowerShellScript
+```
 
  
