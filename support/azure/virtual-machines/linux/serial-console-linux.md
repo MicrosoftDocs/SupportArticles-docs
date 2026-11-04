@@ -63,6 +63,7 @@ Ubuntu      | Serial console access enabled by default.
 CoreOS      | Serial console access enabled by default.
 SUSE        | SLES images available on Azure have serial console access enabled by default.
 Oracle Linux        | Serial console access enabled by default.
+Azure Linux 4 | Serial console access enabled by default.
 
 ### Custom Linux images
 
