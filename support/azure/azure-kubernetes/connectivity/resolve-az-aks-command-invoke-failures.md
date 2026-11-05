@@ -1,12 +1,12 @@
 ---
 title: Resolve az aks command invoke failures for AKS
 description: Resolve az aks command invoke failures in Azure CLI for private AKS clusters. Review the causes and apply the fixes to restore cluster access.
-ms.date: 11/03/2026
+ms.date: 11/04/2026
 ms.topic: troubleshooting
 manager: dcscontentpm
 author: kaushika-msft
 ms.author: kaushika
-ms.reviewer: chiragpa, andbar, haitch, momajed, albarqaw, v-leedennis, v-weizhu, kaushika
+ms.reviewer: chiragpa, andbar, haitch, momajed, albarqaw, v-leedennis, v-weizhu, kaushika, andraciobanu
 ms.service: azure-kubernetes-service
 ms.custom: sap:Connectivity, devx-track-azurecli
 #Customer intent: As an Azure Kubernetes user, I want to resolve az aks command invoke failures in Azure CLI so that I can successfully connect to my private Azure Kubernetes Service (AKS) cluster.
@@ -39,18 +39,18 @@ Ensure you have the following prerequisites installed and configured:
 
 ## Symptoms
 
-The following table lists common `az aks command invoke` error messages. Each error message has a link to the section that describes why the error occurs and how to fix it.
+The following table lists common `az aks command invoke` error messages. Each error message links to the section that describes why the error occurs and how to fix it.
 
 | Error message | Link |
 |--|--|
-| Operation returned an invalid status 'Not Found' | [Cause 1: The pod can't be created because of node or resource constraints](#cause-1-the-pod-cant-be-created-because-of-node-or-resource-constraints) |
+| Operation returned an invalid status 'Not Found' | [Cause 1: Node or resource constraints prevent pod creation](#cause-1-node-or-resource-constraints-prevent-pod-creation) |
 | Failed to run command in managed cluster due to kubernetes failure. details: admission webhook "validation.gatekeeper.sh" denied the request: \<policy-specific-message> | [Cause 2: Azure Policy doesn't allow the pod creation](#cause-2-azure-policy-doesnt-allow-the-pod-creation) |
 | Error from server (Forbidden): namespaces is forbidden: User "\<ID>" cannot list resource "\<resource>" in API group "" at the cluster scope | [Cause 3: Required roles aren't granted](#cause-3-required-roles-arent-granted) |
 | Failed to connect to MSI. Please make sure MSI is configured correctly.<br/><br/>Get Token request returned: Response [400]; | [Cause 4: There's a Cloud Shell issue](#cause-4-theres-a-cloud-shell-issue) |
 
-### Cause 1: The pod can't be created because of node or resource constraints
+### Cause 1: Node or resource constraints prevent pod creation
 
-The operation returns a `Not Found` status because the `command-<ID>` pod can't reach a successful state, such as `Running`. (In many cases, the pod stays in the `Pending` state.) In this case, the nodes aren't able to schedule the pod. This scenario can have different causes, such as the following causes:
+The operation returns a `Not Found` status because the `command-<ID>` pod can't reach a successful state, such as `Running`. In many cases, the pod stays in the `Pending` state. In this case, the nodes can't schedule the pod. This scenario can have different causes, such as the following causes:
 
 - Resource constraints
 - Nodes that have a `NotReady` or `SchedulingDisabled` state
@@ -64,13 +64,24 @@ Here are sample error messages for `KubernetesPerformanceError` or `KubernetesOp
 Code: KubernetesPerformanceError
 Message: Failed to run command due to cluster perf issue, container command-357ebc50d40c47a4a247ab6e067d2869 in aks-command namespace did not start within 30s on your cluster, retry may helps. If issue persist, you may need to tune your cluster with better performance (larger node/paid tier).
 ```
+When you run `az aks command invoke`, AKS creates a `command-<ID>` pod in the `aks-command` namespace. The cluster must schedule the pod onto an eligible node.
 
-### Solution 1: Change the configuration so that you can schedule and run the pod
+The pod can remain in a `Pending` state if no node satisfies its scheduling requirements. Possible reasons include:
 
-Make sure that the `command-<ID>` pod can be scheduled and run by adjusting the configuration. The following are some examples:
+* Nodes are `NotReady` or marked as unschedulable.
+* Nodes don't have sufficient allocatable CPU or memory to satisfy the pod's resource requests.
+* Nodes have taints that the `command-<ID>` pod doesn't tolerate.
+* Nodes don't satisfy the pod's node selector, affinity, or other scheduling constraints.
 
-- Increase the node pool size and make sure it has no pod secluding constraints like taints so that the `command-<ID>` pod can be deployed.
-- Adjust resource requests and limits in your pod specifications.
+
+### Solution 1: Change the configuration so you can schedule and run the pod
+
+Adjust the configuration to ensure that the cluster can schedule and run the `command-<ID>` pod. The following examples can help you resolve this problem:
+
+- Increase the node pool size if the cluster needs more capacity, and ensure that an eligible node doesn't have scheduling constraints, such as untolerated taints, that prevent the cluster from scheduling the `command-<ID>` pod.
+-  Ensure that eligible nodes have sufficient allocatable CPU and memory for the `command-<ID>` pod. If necessary, scale the node pool or adjust the resource requests of other workloads to make capacity available.
+
+This guidance avoids implying that you should modify the resource requests or limits of the automatically generated `command-<ID>` pod.
 
 ### Cause 2: Azure Policy doesn't allow the pod creation
 
@@ -121,6 +132,13 @@ To resolve this issue, follow these steps:
     ```bash
     az role assignment create --assignee {user-principal-name} --role "Azure Kubernetes Service Cluster User Role" --scope /subscriptions/{subscription-id}/resourceGroups/{resource-group}/providers/Microsoft.ContainerService/managedClusters/{aks-cluster}
     ```
+
+    Ensure that the Azure RBAC role assigned to the user includes both of the following permissions:
+>
+> - `Microsoft.ContainerService/managedClusters/runCommand/action`
+> - `Microsoft.ContainerService/managedClusters/commandResults/read`
+>
+> Review the [Azure built-in roles for Containers](/azure/role-based-access-control/built-in-roles/containers) documentation to determine whether an existing built-in role provides both permissions. If an appropriate built-in role isn't available, or if the available built-in role grants more permissions than required, create a custom Azure RBAC role containing both actions and assign it at the AKS cluster scope.
 
 ### Cause 4: There's a Cloud Shell issue
 
