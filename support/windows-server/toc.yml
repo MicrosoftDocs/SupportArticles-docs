@@ -3019,7 +3019,7 @@ items:    # Please do not delete this line, it is required for the yaml format
           href: ./installing-updates-features-roles/block-user-access-windows-update.md
         - name: How the Windows Update client determines which proxy server to use
           href: ./installing-updates-features-roles/windows-update-client-determines-proxy-server-connect.md
-        - name: Known Issue Rollback
+        - name: Known Issue Rollback for Windows updates
           href: ./installing-updates-features-roles/known-issue-rollback.md
         - name: Re-register Windows client/server in WSUS
           href: ./installing-updates-features-roles/re-register-windows-clientserver-in-wsus.md
