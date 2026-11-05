@@ -16649,6 +16649,42 @@
     {
       "source_path": "support/dynamics-365/supply-chain/warehousing/license-plate-location-invalid.md",
       "redirect_url": "/previous-versions/troubleshoot/dynamics-365/supply-chain/warehousing/license-plate-location-invalid"
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/planning/delay-value-not-updated.md",
+      "redirect_url": "/dynamics365/supply-chain/master-planning/delays#update-the-delay-when-you-reschedule-a-planned-order"
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/planning/production-schedule-not-consider-safety-margins.md",
+      "redirect_url": "/dynamics365/supply-chain/master-planning/planning-optimization/safety-margins#production-scheduling-and-safety-margins"
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/planning/unable-to-update-forecasted-unit-cost.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics-365/supply-chain/planning/unable-to-update-forecasted-unit-cost"
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/planning/no-parameters-for-master-plan.md",
+      "redirect_url": "/dynamics365/supply-chain/master-planning/planning-optimization/planned-order-firming#troubleshoot-firming-errors"
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/planning/vendor-not-specified.md",
+      "redirect_url": "/dynamics365/supply-chain/master-planning/planning-optimization/planned-order-firming#troubleshoot-firming-errors"
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/planning/planned-orders-in-stock-items.md",
+      "redirect_url": "/dynamics365/supply-chain/master-planning/dynamic-positive-days#planned-orders-are-generated-even-though-items-are-in-stock"
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/planning/planned-order-must-be-scheduled.md",
+      "redirect_url": "/dynamics365/supply-chain/master-planning/planning-optimization/planned-order-firming#troubleshoot-firming-errors"
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/planning/item-cannot-have-bom-formula.md",
+      "redirect_url": "/dynamics365/supply-chain/master-planning/planning-optimization/planned-order-firming#troubleshoot-firming-errors"
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/planning/firmed-directly-derived-orders-processed-by-in-review-workflow.md",
+      "redirect_url": "/dynamics365/supply-chain/procurement/purchase-order-approval-confirmation#changing-purchase-orders"
     }
   ]
 }

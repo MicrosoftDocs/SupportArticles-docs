@@ -79,38 +79,22 @@ items:
             href: planning/demand-planning/user-insufficient-permissions.md
       - name: BOM explosion behaves differently for firmed and estimated production orders
         href: planning/bom-explosion-works-differently.md
-      - name: Can't update the forecasted unit cost when you import demand forecast records
-        href: planning/unable-to-update-forecasted-unit-cost.md
       - name: Can't remove the warehouse demand forecast dimension from forecast lines
         href: planning/warehouse-removal-from-forest-lines-not-work.md
-      - name: Directly derived firmed orders are processed by an in-review workflow
-        href: planning/firmed-directly-derived-orders-processed-by-in-review-workflow.md
-      - name: Item can't have a BOM or formula
-        href: planning/item-cannot-have-bom-formula.md
       - name: Master planning generates planned orders for phantom products
         href: planning/planned-orders-created-for-phantom-products-master-planning.md
       - name: Master planning is scheduling more than the available capacity
         href: planning/master-planning-not-respect-capacity-limitations.md
       - name: Not enough capacity could be found
         href: planning/not-enough-capacity-error.md
-      - name: Parameters for master plan do not exist
-        href: planning/no-parameters-for-master-plan.md
       - name: Product is on hold for transactions
         href: planning/product-is-on-hold.md
       - name: Planned orders take a long time to update
         href: planning/planned-order-long-update.md
-      - name: Planned orders are generated for in-stock with production orders
-        href: planning/planned-orders-in-stock-items.md
       - name: Planned purchase order created when a purchase exists within negative days
         href: planning/planning-optimization-creates-planned-purchase-order-negative-days.md
-      - name: Production scheduling doesn't consider the safety margins
-        href: planning/production-schedule-not-consider-safety-margins.md
       - name: The system can't find a planned order when operating on multiple orders
         href: planning/planned-order-not-exist.md
-      - name: The delay value isn't updated when you reschedule a planned order
-        href: planning/delay-value-not-updated.md
-      - name: The planned production order must be scheduled before it can be firmed
-        href: planning/planned-order-must-be-scheduled.md
       - name: The selected formula number is not approved for a batch order.
         href: planning/selected-formula-not-approved.md
       - name: You receive an error when running the built-in master planning engine
@@ -121,8 +105,6 @@ items:
         href: planning/prompted-to-save-item-coverage-settings-without-changes.md
       - name: Vendor code isn't authorized for a specific product and date
         href: planning/vendor-code-not-authorized.md
-      - name: Vendor is not specified when firming planned orders
-        href: planning/vendor-not-specified.md
   - name: Purchase order, procurement, and sourcing
     items:
       - name: A product receipt voucher number is consumed even when not generating a voucher
