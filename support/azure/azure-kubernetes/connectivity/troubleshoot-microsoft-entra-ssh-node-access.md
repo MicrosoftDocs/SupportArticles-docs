@@ -1,35 +1,38 @@
 ---
 title: Troubleshoot Microsoft Entra SSH access to AKS nodes
-description: Resolve Microsoft Entra SSH failures on AKS nodes, including node pool settings, VM login roles, and network routing. Follow these steps to restore access.
-ms.date: 10/22/2026
+description: Troubleshoot Microsoft Entra SSH access to AKS nodes. Resolve node pool settings, VM login roles, and network routing issues. Follow these steps to restore access.
+ms.date: 11/05/2026
 ms.topic: troubleshooting
 manager: dcscontentpm
 author: kaushika-msft
 ms.author: kaushika
-ms.reviewer: kaarthis
+ms.reviewer: kaarthis, kaushika
 ms.service: azure-kubernetes-service
 ms.custom: sap:Connectivity
 #Customer intent: As an AKS administrator, I want to diagnose Microsoft Entra SSH connection failures so that I can securely access nodes for troubleshooting.
+ai-usage: ai-assisted
 ---
 
 # Troubleshoot Microsoft Entra SSH access to Azure Kubernetes Service nodes
 
 ## Summary
 
-This article helps you troubleshoot Microsoft Entra SSH access failures on Azure Kubernetes Service (AKS) Linux nodes so that you can restore secure node access. It covers node pool configuration, network connectivity, Azure role-based access control (RBAC), Conditional Access, and Privileged Identity Management (PIM). It also includes network checks for clusters that use kubenet.
+This article helps you troubleshoot Microsoft Entra Secure Shell (SSH) access failures on Azure Kubernetes Service (AKS) Linux nodes so that you can restore secure node access. It covers node pool configuration, network connectivity, Azure role-based access control (RBAC), Conditional Access, and Privileged Identity Management (PIM), including network checks for kubenet clusters.
 
-SSH access to a node is separate from access to the Kubernetes API. Being able to run `kubectl` commands doesn't prove that you can reach a node on TCP port 22 or that you have permission to sign in to its operating system.
+SSH access to a node is separate from access to the Kubernetes API. Being able to run `kubectl` commands doesn't prove that you can reach a node on Transmission Control Protocol (TCP) port 22 or that you have permission to sign in to its operating system.
 
 ## Prerequisites
 
+Ensure you have the following prerequisites installed and configured:
+
 - [Azure CLI](/cli/azure/install-azure-cli) version 2.92.0 or later and an OpenSSH client. Run `az version` to check your CLI version.
 - The Azure CLI `ssh` extension. Run `az extension add --name ssh` to install it, or `az extension update --name ssh` to update an existing installation.
-- Permission to read the AKS cluster, node pools, and underlying compute resources. Updating a node pool or assigning a login role requires additional permissions for those operations.
+- Permission to read the AKS cluster, node pools, and underlying compute resources. Updating a node pool or assigning a authentication role requires extra permissions for those operations.
 - A client with a network route to the node's private IP address, such as a device in the cluster virtual network, a peered network, or a connected on-premises network. Azure Cloud Shell doesn't provide this connectivity by default.
 
 Microsoft Entra ID based SSH supports Virtual Machine Scale Sets and Virtual Machines node pools. It isn't supported for Windows node pools, AKS Automatic, or Azure Container Linux (ACL) node pools. ACL's immutable file system isn't compatible with the `AADSSHLoginForLinux` extension. For current requirements and limitations, see [Manage SSH access on AKS cluster nodes](/azure/aks/manage-ssh-node-access).
 
-The Azure CLI examples in this article use Bash syntax. Set these variables to the names of your existing resources:
+The Azure CLI examples in this article use Bash syntax. Set these variables to the names of your existing resources.
 
 ```bash
 RESOURCE_GROUP="<cluster-resource-group>"
@@ -47,7 +50,7 @@ Use the following table to choose a starting point. Error text alone might not i
 | SSH works in one node pool but fails in another, or fails after a configuration change. | [Check the node pool SSH mode](#step-1-check-the-node-pool-ssh-mode). |
 | The connection times out or reports `No route to host`. | [Check private network connectivity](#cause-2-the-client-cant-reach-the-node-on-tcp-port-22). |
 | The connection reports `Connection refused`. | Verify the target IP and SSH mode, then [collect node-side diagnostics](#advanced-troubleshooting-and-data-collection). |
-| The connection reports `Permission denied (publickey)`, `Azure role not assigned`, or closes during sign-in. | [Check the login method and VM login role](#cause-3-the-user-doesnt-have-an-effective-vm-login-role). |
+| The connection reports `Permission denied (publickey)`, `Azure role not assigned`, or closes during sign-in. | [Cause 3: The user doesn't have an effective VM authentication role](#cause-3-the-user-doesnt-have-an-effective-vm-authentication-role). |
 | Sign-in is blocked by a policy, or access fails outside an activation window. | [Check Conditional Access and PIM](#cause-4-conditional-access-or-pim-blocks-sign-in). |
 | The node is reachable, but Microsoft Entra authentication still fails on a restricted-egress cluster. | [Cause 5: Node outbound dependencies or the authentication extension fail](#cause-5-node-outbound-dependencies-or-the-authentication-extension-fail). |
 
@@ -184,9 +187,9 @@ If `NetworkPlugin` is `kubenet`, apply these checks:
 
 Kubenet doesn't change the Microsoft Entra SSH mode, VM login role requirements, or Conditional Access policies. For the network model and route table requirements, see [Use kubenet networking in AKS](/azure/aks/configure-kubenet).
 
-## Cause 3: The user doesn't have an effective VM login role
+## Cause 3: The user doesn't have an effective VM authentication role
 
-The **Owner**, **Contributor**, and Kubernetes access roles don't grant operating system sign-in permission. A login role might also have been assigned to the cluster resource group instead of the node resource group, or to a VM that AKS has since replaced.
+The **Owner**, **Contributor**, and Kubernetes access roles don't grant operating system sign-in permission. You might have assigned an authentication role to the cluster resource group instead of the node resource group, or to a VM that AKS replaced.
 
 ### Solution: Check and assign the correct authentication role
 

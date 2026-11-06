@@ -1,49 +1,56 @@
 ---
-title: Troubleshoot connections to endpoints outside the virtual network
-description: Learn how to troubleshoot connections to endpoints outside the virtual network from an AKS cluster over the public internet, and fix issues fast.
-ms.date: 10/18/2024
-ms.reviewer: chiragpa, rissing, jaewonpark, v-leedennis, v-weizhu
-editor: v-jsitser
+title: Troubleshoot connections to endpoints outside the virtual network in AKS
+description: Learn how to troubleshoot connections from an AKS cluster to endpoints outside the virtual network over the public internet. Follow the steps to fix issues.
+ms.date: 11/05/2026
+ms.topic: troubleshooting
+manager: dcscontentpm
+author: kaushika-msft
+ms.author: kaushika
+ms.reviewer: chiragpa, rissing, jaewonpark, v-leedennis, v-weizhu, kaushika
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot connections to endpoints outside the virtual network so that I don't experience outbound connection issues from an Azure Kubernetes Service (AKS) cluster.
 ms.custom: sap:Connectivity
+ai-usage: ai-assisted
 ---
-# Troubleshoot connections to endpoints outside the virtual network
+# Troubleshoot connections to endpoints outside the virtual network in Azure Kubernetes Service
 
 ## Summary
 
-This article helps you troubleshoot connections to endpoints outside the virtual network (that is, through the public internet) from an AKS cluster. Use these steps to identify root causes and restore connectivity quickly.
+This article helps you troubleshoot connections from an Azure Kubernetes Service (AKS) cluster to endpoints outside the virtual network, through the public internet. Use these steps to identify root causes and restore outbound connectivity.
 
 ## Prerequisites
 
+Ensure you have the following prerequisites installed and configured:
+
 - [Azure CLI](/cli/azure/install-azure-cli).
-
 - The client URL ([curl](https://techcommunity.microsoft.com/t5/containers/tar-and-curl-come-to-windows/ba-p/382409)) tool.
-
 - The Kubernetes [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) tool, or a similar tool to connect to the cluster. To install kubectl by using Azure CLI, run the [az aks install-cli](/cli/azure/aks#az-aks-install-cli) command.
 
 ## Troubleshooting checklist
 
+Use the following checklist to troubleshoot connections to endpoints outside the virtual network for an AKS cluster.
+
 ### Is the issue persistent?
+
+Follow these steps to determine whether the connectivity issue is persistent and to troubleshoot it accordingly.
 
 #### Step 1: Do basic troubleshooting
 
-Make sure that you can connect to public endpoints on the internet. For instructions, see [Basic troubleshooting of outbound AKS cluster connections](basic-troubleshooting-outbound-connections.md).
+Ensure that you can connect to public endpoints on the internet. For instructions, see [Basic troubleshooting of outbound AKS cluster connections](basic-troubleshooting-outbound-connections.md).
 
 #### Step 2: Determine the outbound type for the AKS cluster
 
-To identify the outbound type of the AKS cluster, run the [az aks show](/cli/azure/aks#az-aks-show) command:
+To identify the outbound type of the AKS cluster, run the [az aks show](/cli/azure/aks#az-aks-show) command.
 
 ```azurecli
 az aks show --resource-group <resource_group> --name <cluster_name> --query "networkProfile.outboundType"
 ```
 
-If the outbound type is `loadBalancer`, there's no route table unless you use *kubenet* network. If you use *kubenet*, make sure that the default route table has no additional configuration that blocks outbound internet connection. If you use another network, such as Azure CNI, Dynamic Allocation, or Azure CNI Overlay, no route table is created by default. In this case, make sure the NSG (network security group) has no custom configuration that blocks outbound internet connection. 
+If the outbound type is `loadBalancer`, there's no route table unless you use *kubenet* network. If you use *kubenet*, ensure that the default route table has no extra configuration that blocks outbound internet connection. If you use another network, such as Azure CNI, Dynamic Allocation, or Azure CNI Overlay, no route table is created by default. In this case, ensure the network security group (NSG) has no custom configuration that blocks outbound internet connection. 
 
-If the outbound type is `userDefinedRouting`, make sure that the following conditions are met:
+If the outbound type is `userDefinedRouting`, ensure that the following conditions are met:
 
 - The egress device (firewall or proxy) is reachable.
-
 - The egress device allows the [required outbound traffic](/azure/aks/limit-egress-traffic#required-outbound-network-rules-and-fqdns-for-aks-clusters) from the cluster.
 
   To get the list of FQDNs that are allowed for your AKS cluster, run the [az aks egress-endpoints list](/cli/azure/aks/egress-endpoints#az-aks-egress-endpoints-list) command:
@@ -52,7 +59,7 @@ If the outbound type is `userDefinedRouting`, make sure that the following condi
   az aks egress-endpoints list --resource-group <resource_group> --name <cluster_name>
   ```
 
-If the outbound type is `managedNATGateway`, check whether the AKS subnet is associated with the NAT gateway by running the [az network nat gateway show](/cli/azure/network/nat/gateway#az-network-nat-gateway-show) command:
+If the outbound type is `managedNATGateway`, check whether the AKS subnet is associated with the Network Address Translation (NAT) gateway by running the [az network nat gateway show](/cli/azure/network/nat/gateway#az-network-nat-gateway-show) command.
 
 ```azurecli
 az network nat gateway show --resource-group <resource_group> --name <nat_gateway_name> --query "subnets[].id"
@@ -77,7 +84,7 @@ The following HTTP status codes might indicate the listed issues.
 | `4xx` | <ol> <li>An issue affects the client request.</li> <li>A network blocker exists between the client and the server.</li> </ol> | <ol> <li>The requested page doesn't exist, or the client doesn't have permission to access the page.</li> <li>Traffic is being blocked by a network security group or a firewall.</li> </ol> |
 | `5xx` | An issue affects the server. | The application is down, or a gateway isn't working. |
 
-You can try to connect to the application endpoint using curl. Here's an example command and output:
+You can try to connect to the application endpoint using curl. Here's an example command and output.
 
 ```bash
 # 404 error code example
@@ -105,11 +112,11 @@ If the egress device works well when bypassing the virtual appliance, check the 
 
 ### Is the issue intermittent?
 
-You may experience intermittent outbound issues for many reasons. For troubleshooting intermittent outbound connection issues, try the following steps:
+You might experience intermittent outbound issues for many reasons. To troubleshoot intermittent outbound connection issues, try the following steps.
 
 #### Step 1: Check if the pod or node resources are exhausted
 
-Run the following commands to check how much the resources are used:
+Run the following commands to check how much the resources are used.
 
 ```bash
 kubectl top pods
@@ -121,11 +128,8 @@ kubectl top nodes
 To check whether the operating system disk is used heavily, follow these steps:
 
 1. In the [Azure portal](https://portal.azure.com), search for and select **Virtual machine scale sets**.
-
-1. In the list of scale sets, select the scale set that's used for your AKS cluster.
-
+1. In the list of scale sets, select the scale set that you use for your AKS cluster.
 1. In the scale set navigation pane, go to the **Monitoring** section, and then select **Metrics**.
-
 1. View the disk metrics for the scale set from the **Metrics** section by looking for the following fields.
 
    | Field             | Value                       |
@@ -139,13 +143,9 @@ For more information about metrics, see [OS Disk and Data Disk metrics](/azure/v
 To view AKS recommendations about disk utilization, follow these steps:
 
 1. In the [Azure portal](https://portal.azure.com), search for and select **Kubernetes services**.
-
 1. In the list of Kubernetes services, select the name of your AKS cluster.
-
 1. In the AKS cluster navigation pane, go to the **Monitoring** section, and then select **Advisor recommendations**.
-
 1. Review the listed recommendations about disk usage.
-
 If the OS disk is used heavily, consider using the following remedies:
 
 - Increase the OS disk size.
@@ -156,16 +156,13 @@ If these remedies don't resolve the issue, analyze the process that does heavy r
 
 #### Step 3: Check if the source network address translation port is exhausted
 
-If applications are making many outbound connections, they may exhaust the number of available ports on the outbound device's IP address. Follow [Standard load balancer diagnostics with metrics, alerts, and resource health](/azure/load-balancer/load-balancer-standard-diagnostics) to monitor the usage and allocation of your existing load balancer's [source network address translation (SNAT) port](/azure/load-balancer/load-balancer-outbound-connections#what-are-snat-ports). Monitor to verify or determine the risk of [SNAT port exhaustion](/azure/load-balancer/load-balancer-outbound-connections#port-exhaustion).
+If applications make many outbound connections, they might exhaust the number of available ports on the outbound device's IP address. Follow [Standard load balancer diagnostics with metrics, alerts, and resource health](/azure/load-balancer/load-balancer-standard-diagnostics) to monitor the usage and allocation of your existing load balancer's [source network address translation (SNAT) port](/azure/load-balancer/load-balancer-outbound-connections#what-are-snat-ports). Monitor to verify or determine the risk of [SNAT port exhaustion](/azure/load-balancer/load-balancer-outbound-connections#port-exhaustion).
 
-Are you reaching or exceeding the maximum number of allocated SNAT ports? In that case, you can check your application to determine whether it's reusing existing connections. For more information, see [Design your applications to use connections efficiently](/azure/load-balancer/troubleshoot-outbound-connection#design-your-applications-to-use-connections-efficiently).
+Are you reaching or exceeding the maximum number of allocated SNAT ports? In that case, check your application to determine whether it's reusing existing connections. For more information, see [Design your applications to use connections efficiently](/azure/load-balancer/troubleshoot-outbound-connection#design-your-applications-to-use-connections-efficiently).
 
-If you feel that the application is configured correctly, and you do need more SNAT ports than the default number of allocated ports, follow these steps:
+If you feel that the application is configured correctly, and you need more SNAT ports than the default number of allocated ports, follow these steps:
 
 1. Increase the number of public IPs on the egress device. If the egress device is the load balancer, you can [Increase the number of public IP addresses on the load balancer](/azure/aks/load-balancer-standard#scale-the-number-of-managed-outbound-public-ips).
-
 1. [Increase the ports per node for your AKS worker nodes](/azure/aks/load-balancer-standard#configure-the-allocated-outbound-ports).
 
 [!INCLUDE [Third-party contact disclaimer](../../../includes/third-party-contact-disclaimer.md)]
-
- 

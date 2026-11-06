@@ -1,31 +1,35 @@
 ---
 title: Troubleshoot nftables in AKS clusters
-description: Troubleshoot nftables configuration in AKS by validating kube-proxy settings, rules, and compatibility issues to quickly restore service connectivity—start now.
-ms.date: 05/05/2026
-author: sufuf3
-ms.author: shanjungfu
-ms.reviewer: jarrettr
+description: Troubleshoot nftables in AKS by validating kube-proxy settings, rules, and CNI compatibility to restore service connectivity. Start troubleshooting now.
+ms.date: 11/05/2026
+ms.topic: troubleshooting
+manager: dcscontentpm
+author: kaushika-msft
+ms.author: kaushika
+ms.reviewer: shanjungfu, kaushika
 ms.service: azure-kubernetes-service
 keywords:
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the inability to view resources in the Kubernetes resource viewer in the Azure portal so that I can use authorized IP address ranges to access my AKS cluster that's configured with an API server.
 ms.custom: sap:Connectivity
+ai-usage: ai-assisted
 ---
 
 # Troubleshoot nftables in Azure Kubernetes Service
 
 ## Summary
 
-This article provides guidance for troubleshooting issues with nftables when used as the kube-proxy backend in Azure Kubernetes Service (AKS). It covers steps to verify that the cluster is configured to use nftables, that kube-proxy pods are running correctly, that the kube-proxy command-line arguments are set appropriately for nftables mode, and how to inspect the nftables ruleset on nodes or within kube-proxy pods.
+This article helps you troubleshoot nftables when it's used as the kube-proxy backend in Azure Kubernetes Service (AKS). Use these steps to verify the cluster configuration, confirm kube-proxy pods and arguments are correct, and inspect the nftables ruleset so you can quickly restore service connectivity.
 
 nftables is the third kube-proxy backend mode supported in AKS, alongside iptables (default) and IPVS. It leverages the Linux nftables subsystem - the successor to iptables - to implement Layer 3/Layer 4 service load balancing within the cluster.  
-Compared to iptables and IPVS, nftables provides improved performance and scalability, and is recommended as the long-term replacement for IPVS. Additionally, unlike IPVS mode, nftables is fully compatible with Azure Network Policy, making it a more suitable choice for environments requiring network policy enforcement.
+Compared to iptables and IPVS, nftables provides improved performance and scalability, and is recommended as the long-term replacement for IPVS. Unlike IPVS mode, nftables is fully compatible with Azure Network Policy, making it a more suitable choice for environments requiring network policy enforcement.
 
 ## Troubleshooting checklist 
-<!--- Provide the guidance/instruction about how the customer can troubleshoot the issues and determine the cause of the issue. --->
+
+Use this checklist to systematically verify the cluster configuration, kube-proxy pods, command-line arguments, and nftables rules.
 
 ### Step 1: Confirm the cluster is configured for nftables mode
 
-Check networkProfile.kubeProxyConfig in the cluster properties and ensure the Kubernetes version is >= 1.33.0.
+Check `networkProfile.kubeProxyConfig` in the cluster properties and ensure the Kubernetes version is 1.33.0 or later.
 
 ```bash
 $ az aks show --resource-group <ResourceGroupName> -n <ClusterName> --query networkProfile.kubeProxyConfig
@@ -68,7 +72,8 @@ Containers:
       --proxy-mode=nftables
 ```
 
-> **Note:** The command line shouldn't include any IPVS-specific arguments, such as `--ipvs-scheduler` or `--ipvs-tcp-timeout`. If `--proxy-mode=nftables` is missing, confirm the Kubernetes version is 1.33.0 or later and that the goal state has the correct mode.
+> [!NOTE]
+> The command line shouldn't include any IPVS-specific arguments, such as `--ipvs-scheduler` or `--ipvs-tcp-timeout`. If `--proxy-mode=nftables` is missing, confirm the Kubernetes version is 1.33.0 or later and that the goal state has the correct mode.
 
 ### Step 4: Verify nftables rules on a node or kube-proxy pod
 
@@ -115,7 +120,8 @@ If `nft list ruleset` shows no `kube-proxy` table:
 - The `nft` binary might not be installed - install it by running `apt install nftables`.
 - Check kube-proxy logs for errors by running `kubectl logs -n kube-system <kube-proxy-pod>`.
 
-**Tip**: To check rules for a specific service, look for the service's ClusterIP in the nftables maps:
+> [!TIP]
+> To check rules for a specific service, look for the service's ClusterIP in the nftables maps:
 
 ```bash
 $ nft list map ip kube-proxy service-ips

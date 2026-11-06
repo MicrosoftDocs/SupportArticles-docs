@@ -1,12 +1,12 @@
 ---
 title: Troubleshoot tunnel connectivity issues in AKS
-description: Resolve tunnel connectivity issues in your Azure Kubernetes Service (AKS) cluster to restore kubectl logs, exec, and port-forward access. Follow these steps.
-ms.date: 10/29/2026
+description: Resolve tunnel connectivity issues in your Azure Kubernetes Service (AKS) cluster to restore kubectl logs, exec, and port-forward access. Learn the causes and fixes.
+ms.date: 11/05/2026
 ms.topic: troubleshooting
 manager: dcscontentpm
 author: kaushika-msft
 ms.author: kaushika
-ms.reviewer: chiragpa, andbar, v-leedennis, v-weizhu, albarqaw, andraciobanu
+ms.reviewer: chiragpa, andbar, v-leedennis, v-weizhu, albarqaw, andraciobanu, kaushika
 ms.service: azure-kubernetes-service
 keywords: Azure Kubernetes Service, AKS cluster, Kubernetes cluster, tunnels, connectivity, tunnel-front, aks-link, Konnectivity agent, Cluster Proportional Autoscaler, CPA, Resource allocation, Performance bottlenecks, Networking reliability, Azure Kubernetes troubleshooting, AKS performance issues
 #Customer intent: As an Azure Kubernetes user, I want to avoid tunnel connectivity issues so that I can use an Azure Kubernetes Service (AKS) cluster successfully.
@@ -17,11 +17,11 @@ ai-usage: ai-assisted
 
 ## Summary
 
-Tunnel connectivity issues in Azure Kubernetes Service (AKS) can disrupt secure communication between cluster nodes and the control plane. This article helps you troubleshoot and resolve these issues so that you can restore kubectl logs, exec, and port-forward functionality.
+Tunnel connectivity issues in Azure Kubernetes Service (AKS) can disrupt secure communication between cluster nodes and the control plane. This article helps you troubleshoot tunnel connectivity issues, identify common causes, and restore kubectl logs, exec, and port-forward functionality.
 
 [Tunnel connectivity is used specifically for API server to kubelet communication](/azure/aks/faq#how-does-the-managed-control-plane-communicate-with-my-nodes-) (not general pod-to-pod) or ingress traffic.
 
-:::image type="content" source="./media/tunnel-connectivity-issues/kubernetes-tunnel-architecture.png" alt-text="Screenshot of AKS tunnel architecture showing node-to-control-plane communication through the tunnel pod." border="false" lightbox="./media/tunnel-connectivity-issues/kubernetes-tunnel-architecture.png":::
+:::image type="content" source="./media/tunnel-connectivity-issues/kubernetes-tunnel-architecture.png" alt-text="Screenshot of the AKS tunnel architecture that shows node-to-control-plane communication through the tunnel pod." border="false" lightbox="./media/tunnel-connectivity-issues/kubernetes-tunnel-architecture.png":::
 
 > [!NOTE]
 > Previously, the AKS tunnel component was `tunnel-front`. It migrated to the [Konnectivity service](https://kubernetes.io/docs/concepts/architecture/control-plane-node-communication/#konnectivity-service), an upstream Kubernetes component. For more information about this migration, see the [AKS release notes](https://github.com/Azure/AKS/releases/tag/2021-10-28).
