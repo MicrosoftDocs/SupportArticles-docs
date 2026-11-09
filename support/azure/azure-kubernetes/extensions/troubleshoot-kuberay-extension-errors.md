@@ -2,7 +2,7 @@
 title: Troubleshoot managed KubeRay extension errors in AKS (preview)
 description: Troubleshoot managed KubeRay extension errors on AKS. Diagnose installation, update, removal, and readiness failures, and restore Ray workloads. Learn how.
 ms.topic: troubleshooting
-ms.date: 10/29/2026
+ms.date: 11/09/2026
 manager: dcscontentpm
 author: kaushika-msft
 ms.author: kaushika
@@ -159,6 +159,122 @@ Use an AKS-supported Azure public cloud region and the `preview` release train.
 
 The extension package version controls the KubeRay operator.
 It doesn't change the Ray runtime version in your workload images.
+
+<a id="update-stays-failed-after-an-invalid-release-train-request"></a>
+
+## Update stays failed after an invalid release train request
+
+**Symptom:** An update uses a release train that has no compatible package.
+The extension enters the `Failed` provisioning state.
+The `currentVersion` and `extensionState` values are empty.
+
+A later update that specifies the `preview` release train also fails.
+An update that specifies a known compatible version also fails.
+The KubeRay operator and Ray CRDs can remain healthy while the Azure extension resource is in the `Failed` state.
+
+**Cause:** The failed request saves the invalid `releaseTrain` value on the extension resource.
+Later Azure CLI update requests validate the saved value before they apply the new value.
+
+**Resolution:** Send a full Azure Resource Manager (ARM) PUT request that changes the saved release train to `preview`.
+This action updates the extension resource.
+It doesn't delete or re-create the KubeRay operator or Ray CRDs.
+
+> [!IMPORTANT]
+> Preserve the current release namespace, `configurationSettings`, and `configurationProtectedSettings` values in the PUT request.
+> Don't replace customer-specific values with empty or default values.
+> The following procedure stores the current resource and PUT body in shell variables because `az k8s-extension show` returns protected setting values.
+> Don't enable debug output.
+> Don't enable shell command tracing.
+> Don't write the command output to logs or source control.
+
+1. Make sure that `jq` is installed.
+1. Set the values for the affected extension:
+
+    ```bash
+    SUBSCRIPTION_ID="<subscription-id>"
+    RESOURCE_GROUP="<resource-group>"
+    CLUSTER_NAME="<cluster-name>"
+    EXTENSION_NAME="kuberay"
+    ```
+
+1. Retrieve the current extension resource:
+
+    ```bash
+    CURRENT_JSON="$(az k8s-extension show \
+      --subscription "$SUBSCRIPTION_ID" \
+      --resource-group "$RESOURCE_GROUP" \
+      --cluster-name "$CLUSTER_NAME" \
+      --cluster-type managedClusters \
+      --name "$EXTENSION_NAME" \
+      --output json)" || exit 1
+    ```
+
+1. Create the PUT request body.
+   This command preserves the current upgrade setting and configuration.
+   It changes only the release train:
+
+    ```bash
+    PUT_BODY="$(jq --compact-output --exit-status '
+      if .extensionType != "microsoft.kuberay" then
+        error("The extension type is not microsoft.kuberay.")
+      elif (.scope | type) != "object" then
+        error("The extension scope is missing.")
+      elif (.configurationSettings | type) != "object" then
+        error("The configuration settings are missing.")
+      elif (.configurationProtectedSettings | type) != "object" then
+        error("The protected configuration settings are missing.")
+      else
+        {
+          properties: {
+            extensionType: .extensionType,
+            autoUpgradeMinorVersion: .autoUpgradeMinorVersion,
+            releaseTrain: "preview",
+            scope: .scope,
+            configurationSettings: .configurationSettings,
+            configurationProtectedSettings: .configurationProtectedSettings
+          }
+        }
+      end
+    ' <<< "$CURRENT_JSON")" || exit 1
+    ```
+
+1. Update the extension resource:
+
+    ```bash
+    EXTENSION_ID="/subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE_GROUP/providers/Microsoft.ContainerService/managedClusters/$CLUSTER_NAME/providers/Microsoft.KubernetesConfiguration/extensions/$EXTENSION_NAME"
+
+    printf '%s' "$PUT_BODY" | az rest \
+      --method put \
+      --url "https://management.azure.com${EXTENSION_ID}?api-version=2022-03-01" \
+      --headers Content-Type=application/json \
+      --body @- \
+      --output none
+    ```
+
+1. Clear the shell variables:
+
+    ```bash
+    unset CURRENT_JSON PUT_BODY
+    ```
+
+1. Check the recovery:
+
+    ```bash
+    az k8s-extension show \
+      --subscription "$SUBSCRIPTION_ID" \
+      --resource-group "$RESOURCE_GROUP" \
+      --cluster-name "$CLUSTER_NAME" \
+      --cluster-type managedClusters \
+      --name "$EXTENSION_NAME" \
+      --query '{releaseTrain:releaseTrain,provisioningState:provisioningState,currentVersion:currentVersion,extensionState:extensionState}'
+    ```
+
+   Confirm that `releaseTrain` is `preview`.
+   Confirm that `provisioningState` is `Succeeded`.
+   Confirm that `currentVersion` has a value.
+   Confirm that `extensionState` is `Available`.
+
+1. Retry the required Azure CLI update.
 
 ## Installation detects an existing self-hosted KubeRay operator
 
@@ -464,40 +580,40 @@ However, reconciliation, healing, scaling, and `RayJob` state transitions pause.
 ## Update doesn't reach the requested extension version
 
 **Symptom:** The update command finishes or times out.
-However, `currentVersion` does not change as expected, or the extension enters `Failed`.
+However, `currentVersion` doesn't change as expected, or the extension enters `Failed`.
 
 **Cause:** Possible causes include:
 
-- A compatible update is unavailable for the cluster and release train.
-- The extension agents cannot complete the Helm operation.
+- A compatible update isn't available for the cluster and release train.
+- The extension agents can't complete the Helm operation.
 - Another extension operation is still in progress.
 
 > [!IMPORTANT]
-> Do not downgrade or roll back the extension version.
+> Don't downgrade or roll back the extension version.
 > Preview supports only safe-forward upgrades and recovery.
-> Do not uninstall the extension to reinstall an older package.
+> Don't uninstall the extension to reinstall an older package.
 >
-> Do not use `helm rollback` or replace the operator manually.
-> Do not infer a supported rollback procedure from platform metadata.
+> Don't use `helm rollback` or replace the operator manually.
+> Don't infer a supported rollback procedure from platform metadata.
 
 **Resolution:**
 
 1. Examine `currentVersion`, `provisioningState`, `extensionState`, `errorInfo`, and `statuses` as shown in [Diagnose the extension](#diagnose-the-extension).
-   A healthy previous version does not prove that the requested update completed.
+   A healthy previous version doesn't prove that the requested update completed.
 1. Repeat cluster-specific version discovery.
-1. Make sure that discovery returns a compatible package for the cluster and release train.
+1. Ensure that discovery returns a compatible package for the cluster and release train.
 1. If another Helm operation is in progress, see [Helm operation conflicts](cluster-extension-deployment-errors.md#error-operation-is-already-in-progress-for-helm).
    Do not start another update while an operation is active or its result is unknown.
-1. Correct the cause of the failure before a retry.
+1. Correct the cause of the failure before retrying.
 1. Enable automatic upgrades with `--auto-upgrade-minor-version true`.
 1. Omit `--version` from the update command.
 1. Retry the forward update with automatic upgrades enabled.
-   Do not select an older package to avoid a failure.
+   Don't select an older package to avoid a failure.
 1. After the extension reports a healthy state, verify `currentVersion`, the operator deployment, image, CRDs, and logs.
 1. If forward recovery fails or the next safe action is unclear, [collect diagnostics for Azure support](#collect-diagnostics-and-get-support).
 1. For either condition, request Azure support before further changes.
 
-Do not upgrade the underlying Helm release or operator deployment manually.
+Don't manually upgrade the underlying Helm release or operator deployment.
 The managed extension owns these resources.
 
 ## Helm release or operator configuration drifts after installation
@@ -580,15 +696,15 @@ AKS does not add custom retry, backoff, or jitter behavior to these paths.
 **Resolution:**
 
 1. Use operator logs, pod restart counts, Kubernetes events, and timestamps to identify the component that retries.
-1. Do not assume one retry interval or recovery deadline for both the controller and kubelet.
+1. Don't assume one retry interval or recovery deadline for both the controller and kubelet.  
 1. Correct the scheduling, image, API, or runtime failure.
-1. Do not repeatedly restart pods to reset retry timing.
-1. With Helm release or configuration drift, use the [explicit ARM update or platform/support recovery path](#helm-release-or-operator-configuration-drifts-after-installation).
+1. Don't repeatedly restart pods to reset retry timing.  
+1. For Helm release or configuration drift, use the [explicit ARM update or platform/support recovery path](#helm-release-or-operator-configuration-drifts-after-installation). Upstream retries don't guarantee periodic Helm repair.  
    Upstream retries do not guarantee periodic Helm repair.
 1. If the operator remains unhealthy after you correct the failure, [collect diagnostics for Azure support](#collect-diagnostics-and-get-support).
 1. In that case, request Azure support with the diagnostics.
-1. Do not patch the managed operator to introduce an unsupported retry policy.
-1. Do not rely on an AKS-specific jitter or backoff guarantee.
+1. Don't patch the managed operator to introduce an unsupported retry policy.  
+1. Don't rely on an AKS-specific jitter or backoff guarantee.
 
 ## Collect diagnostics and get support
 
