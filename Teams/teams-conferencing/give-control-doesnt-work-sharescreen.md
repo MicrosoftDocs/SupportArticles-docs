@@ -18,6 +18,10 @@ ms.date: 10/30/2023
 
 # "Give Control" doesn't work when you share a screen in Teams
 
+## Summary
+
+When you share your screen in the Microsoft Teams desktop client, you might see another user’s request for control but have no option to approve or deny it, and the **Give Control** menu might not open. This behavior occurs when the device has no GPU or GPU hardware acceleration is disabled. Check whether hardware acceleration is available on the device to determine whether it supports Give Control.
+
 ## Symptoms
 
 You share a screen with another user on the Microsoft Teams desktop client, and the other user requests control of your screen. In this situation, you see the user's request on the Sharing toolbar. However, you don't see an option to approve or deny the request. Even the **Give Control** drop-down menu doesn't react when you try to open it.
@@ -40,5 +44,3 @@ info -- [screenSharing][control] appSharingToolbar: AppSharingToolbar created wi
 
 > [!NOTE]
 > To collect the logs on a Windows machine, go to `%appdata%\Microsoft\Teams\media-stack\*.*`. On a Mac machine, go to `~Library/Application Support/Microsoft/Teams/media-stack/*.*`.
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

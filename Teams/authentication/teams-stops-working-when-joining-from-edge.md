@@ -21,6 +21,10 @@ description: Describes a resolution where you're unable to sign in using Interne
 
 # Teams stops working when joining from Edge or Internet Explorer 
 
+## Summary
+
+When you join Microsoft Teams in Edge or Internet Explorer, the app might loop, stop working, or fail to sign in if your organization uses Trusted Sites but hasn't added the required Teams sites. This article explains how to allow the required cookies and add the Microsoft sign-in and Teams URLs to Trusted Sites.
+
 ## Symptoms
 
 When trying to join Microsoft Teams using Edge or Internet Explorer, Teams will loop, stop working, or fail to sign in.
@@ -40,7 +44,3 @@ Make the following changes to IE or Edge settings from the Control Panel, either
 
 > [!NOTE]
 > Always validate and allow all trusted URLs for Teams and the requirements from the following document: [Microsoft 365 URLs and IP address ranges.](/office365/enterprise/urls-and-ip-address-ranges)
-
-## More information
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

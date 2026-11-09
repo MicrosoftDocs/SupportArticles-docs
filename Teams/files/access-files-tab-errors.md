@@ -21,6 +21,12 @@ ms.date: 10/30/2023
 ---
 # Errors when selecting the Files tab on a Teams channel
 
+## Summary
+
+The Files tab in a Microsoft Teams channel might show “The object specified does not belong to a list,” “There was a problem reaching this app,” or “We can't get your files, we're working on getting them back.” These errors can occur when the SharePoint document library was renamed, the team’s Microsoft 365 group has no owner, or a temporary issue prevents access. This article explains how to restore the Shared Documents library name, assign a group owner, or run a diagnostic if access doesn’t return.
+
+## Symptoms
+
 This article lists some common error messages that you receive when you select the **Files** tab on a team's channel in Microsoft Teams, and it provides resolutions that you can try.
 
 ## Error: The object specified does not belong to a list
@@ -55,7 +61,7 @@ To resolve this issue, use one of the following methods to revert the name of th
 
 ### Method 2
 
-1. Open the SharePoint site in [SharePoint Designer](https://www.microsoft.com/download/details.aspx?id=35491).
+1. Open the SharePoint site in SharePoint Designer.
 2. Go to **All Files**.
 3. Locate the document library folder by its new name. For example, in the following screenshot, the default name was changed to "Renamed Documents."
 
@@ -69,7 +75,7 @@ This error occurs if the ownership information for the Microsoft 365 group that'
 
 ### Resolution
 
-Assign an owner to the Microsoft 365 group that's associated with the team. For more information, see [Assign a new owner to an orphaned group](https://support.microsoft.com/topic/assign-a-new-owner-to-an-orphaned-group-86bb3db6-8857-45d1-95c8-f6d540e45732).
+Assign an owner to the Microsoft 365 group that's associated with the team.
 
 **Note:** Only a Microsoft 365 administrator in your organization can make this change.
 
@@ -94,7 +100,3 @@ Select **Run Tests** below, which will populate the diagnostic in the Microsoft 
 > [Run Tests: Unable to access files in a team](https://aka.ms/TeamsAccessFilesInChat)
 
 The diagnostic performs a large range of verifications.
-
-### Need More Help?
-
-Get help from the [Microsoft Community](https://answers.microsoft.com/) online community, search for more information on [Microsoft Support](https://support.microsoft.com/) or [Office Help and How To](https://office.microsoft.com/support/), or learn more about [Assisted Support](https://support.microsoft.com/contactus/) options.

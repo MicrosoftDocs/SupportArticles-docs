@@ -19,15 +19,27 @@ ms.custom:
 ---
 # Resolve Windows Update issues on Teams Rooms Pro devices
 
-You may experience one or more of the following Windows Update issues on Microsoft Teams Rooms Pro devices:
+## Summary
+
+On a Microsoft Teams Rooms Pro device, Windows updates might fail to install or appear unavailable even when the device is out of date. The Security KBs or Vulnerabilities signal might also appear as Unhealthy. This article explains how to check disk space, device time, update policies, network connectivity, and Teams Rooms app compatibility. It also provides steps to resolve update errors `0x800f0831` and `0x80073701`.
+
+## Symptoms
+
+You might experience one or more of the following Windows Update issues on Microsoft Teams Rooms Pro devices:
 
 - Updates can't be installed successfully.
 - The system isn't at the current update level, but Windows Update can't find available updates.
 - If Microsoft Defender for Endpoint integration is enabled in the [Microsoft Teams Rooms Pro Management portal](https://portal.rooms.microsoft.com/), the **Security KBs** or **Vulnerabilities** signal of the device is shown as **Unhealthy**.
 
-Windows Update issues can occur for different reasons. The following options can help you fix common issues that affect Windows Update.
+## Cause
 
-## Free up drive space
+Windows Update issues can occur for different reasons.
+
+## Resolution
+
+The following options can help you fix common issues that affect Windows Update.
+
+### Free up drive space
 
 There must be enough available space on your device to run updates. Devices that are enrolled in the [Microsoft Teams Rooms Pro Management portal](https://portal.rooms.microsoft.com/) have an automatic remediation process to delete known cleanable files and optimize disk usage. If the remediation can't free up enough space to ease the problem, additional diagnostic insights are provided (as a list of the largest folders) to help you follow up.
 
@@ -40,11 +52,11 @@ You can also try the following options:
    DISM /ONLINE /CLEANUP-IMAGE /STARTCOMPONENTCLEANUP /RESETBASE
    ```
 
-## Verify date and time on the device
+### Verify date and time on the device
 
 Make sure that the date and time settings are correct, and that the time offset is within two minutes. If you use an NTP server, select a reliable server.
 
-## Check for policies that prevent update installations
+### Check for policies that prevent update installations
 
 Your organization might use Group Policy settings, mobile device management (MDM), or the registry to configure Windows client update experience.
 
@@ -54,7 +66,7 @@ For example, automatic restarts are prevented when a user is signed in if the `N
 
 In this situation, work with your organization administrator for appropriate solutions. For more information about these settings, see [Manage device restarts after updates](/windows/deployment/update/waas-restart).
 
-## Check connection with Windows Update servers
+### Check connection with Windows Update servers
 
 Verify that your devices have access to Windows Update servers, and that multipart downloads are allowed and configured correctly through a proxy, firewall, web filters, and so on.
 
@@ -67,7 +79,7 @@ If this function is blocked, the connection to the servers will time out. The Wi
 
 For more information, see [Issues related to HTTP/Proxy](/windows/deployment/update/windows-update-troubleshooting#issues-related-to-httpproxy).
 
-## Fix update error 0x800f0831 or 0x80073701
+### Fix update error 0x800f0831 or 0x80073701
 
 1. Open the *%Windir%\logs\CBS\CBS.log* file, look for entries that contain either of the error codes, 0x800f0831 and 0x80073701. Usually, the entry contains a missing package reference that's associated with orphaned language pack files.
 2. You might see an entry that resembles one of the following entries:
@@ -88,11 +100,11 @@ For more information, see [Issues related to HTTP/Proxy](/windows/deployment/upd
 
 4. If the referenced package version doesn't end in "*.1*", or the reference isn't associated with a language, use DISM to restore the files from a known good image that contains the missing packages. For more information, see [Repair a Windows Image](/windows-hardware/manufacture/desktop/repair-a-windows-image?view=windows-10&preserve-view=true).
 
-## Fix other Windows Update error codes
+### Fix other Windows Update error codes
 
 If Windows Update fails and returns other error codes, follow the instructions in [Windows Update common errors and mitigation](/windows/deployment/update/windows-update-errors).
 
-## Install the latest version of Teams Rooms app
+### Install the latest version of Teams Rooms app
 
 Each Teams Rooms app version supports only a set of specific Windows feature updates. New Windows feature updates are prevented until there is no compatibility issue. This is usually when a new version of Teams Rooms app is available. For more information, see [Windows 10 release support](/microsoftteams/rooms/rooms-lifecycle-support#windows-10-release-support).
 
@@ -103,12 +115,3 @@ Get-AppxPackage -AllUsers Microsoft.SkypeRoomSystem
 ```
 
 Compare the version with the latest version in [Microsoft Teams Rooms Release Notes](/microsoftteams/rooms/rooms-release-note). If an old version is installed, use the [Remove-AppxPackage](/powershell/module/appx/remove-appxpackage?view=windowsserver2019-ps&preserve-view=true) cmdlet to remove the old version. Then, install the latest version.
-
-## References
-
-- [Windows Update troubleshooting](/windows/deployment/update/windows-update-troubleshooting)
-- [Resolve Windows 10 upgrade errors](/windows/deployment/upgrade/resolve-windows-10-upgrade-errors)
-- [Windows 10 release information](/windows/release-health/release-information)
-- [Manage connection endpoints for Windows 10 Enterprise](/windows/privacy/manage-windows-21h2-endpoints)
-- [Windows Update error codes by component](/windows/deployment/update/windows-update-error-reference)
-- [WUA Networking Error Codes](/previous-versions/windows/desktop/aa387293(v=vs.85))

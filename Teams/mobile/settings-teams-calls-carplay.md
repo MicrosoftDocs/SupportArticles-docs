@@ -20,9 +20,19 @@ ms.date: 10/30/2023
 
 # Settings for Teams calls with Apple CarPlay
 
-[Apple CarPlay](https://support.microsoft.com/office/place-teams-calls-with-apple-carplay-a96c617f-0249-4e12-8c06-788638497679) enables you to safely make Teams audio calls when you're on the road by using Siri voice commands. However, if you use a Microsoft Intune-managed iOS device to make the calls, Siri can be blocked from use by your administrator.
+## Summary
+
+[Apple CarPlay](https://support.microsoft.com/office/place-teams-calls-with-apple-carplay-a96c617f-0249-4e12-8c06-788638497679) enables you to safely make Teams audio calls when you're on the road by using Siri voice commands. However, if you use a Microsoft Intune-managed iOS device to make the calls, Siri can be blocked from use by your administrator. This article explains how an administrator can allow Siri and update the Intune app protection policy so you can use Teams calling with CarPlay.
+
+## Symptoms
+
+If you can't make Microsoft Teams calls through Apple CarPlay on an Intune-managed iOS device, your organization's settings might block Siri or restrict data transfer to other apps.
+
+## Cause
 
 If you're unable to use Apple CarPlay in Teams, your administrator must configure the following settings by using the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/).
+
+## Resolution
 
 ### Allow your device to use Siri
 

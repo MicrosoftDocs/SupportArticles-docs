@@ -23,6 +23,10 @@ description: Describes why some Meet Now CVI coordinates do not work.
 
 ## Summary
 
+In Microsoft Teams, Cloud Video Interop (CVI) information in a Meet Now meeting might not work if the CVI license is inactive. Check the license status with your CVI partner. CVI supports Meet Now meetings started from the Teams calendar, but not from Teams channels.
+
+## Symptoms
+
 If the Cloud Video Interop (CVI) information that you populated into a **Meet Now** meeting in Microsoft Teams does not work, the cause might be the status of your CVI license. To verify the license status, check with your CVI partner.
 
 To meet right away by using working CVI coordinates, select **Meet Now** in the Teams calendar or the Outlook calendar, per the following screenshot.

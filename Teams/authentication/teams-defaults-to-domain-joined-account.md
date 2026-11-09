@@ -22,6 +22,10 @@ description: Describes how to resolve an issue where Teams uses a domain-joined 
 
 #  Teams will always log into the domain-joined PC account
 
+## Summary
+
+If you use two Microsoft Teams accounts on a domain-joined computer, Teams automatically signs in with the account associated with your Windows profile. To use the other account, sign out of Teams and sign in with its credentials. Teams returns to the domain-joined account after you restart the computer. Administrators can set `SkipUpnPrefill` to prevent the domain-joined username from appearing automatically on the sign-in screen.
+
 ## Symptom
 
 If a user has two different Microsoft Teams accounts and has a domain-joined machine, Teams uses the domain-joined profile on the machine to automatically log the user into Teams.
@@ -29,8 +33,6 @@ If a user has two different Microsoft Teams accounts and has a domain-joined mac
 ## Resolution
 
 To switch to the other Teams account, the user must manually log out of the app and enter credentials to the second account to log in. If the user logs out of Teams and restarts the machine, upon restart, Teams will automatically log in using the domain-joined profile.
-
-## More information
 
 If users are signed in to a domain-joined computer and don't want their user name pre-populated on the Teams sign-in screen, admins can set the following Windows registry to turn off pre-population of the user name:
 
@@ -41,7 +43,4 @@ Value: 0x00000001 (1)
 ```
 
 > [!NOTE]
-> Skipping the user name pre-fill for user names that end in ".local" or ".corp" is activated by default, so a registry key does not need to be set to turn these off. 
-For more information, see [Sign in to Microsoft Teams using modern authentication](/microsoftteams/sign-in-teams).
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+> Skipping the user name pre-fill for user names that end in ".local" or ".corp" is activated by default, so a registry key does not need to be set to turn these off. For more information, see [Sign in to Microsoft Teams using modern authentication](/microsoftteams/sign-in-teams).

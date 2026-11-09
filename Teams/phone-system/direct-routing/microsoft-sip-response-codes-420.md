@@ -24,6 +24,8 @@ ms.reviewer: mikebis
 
 [!INCLUDE [Teams Direct Routing note](../../../includes/teams-direct-routing-note.md)]
 
+## Summary
+
 This article provides troubleshooting information for the combination of the SIP 420 error and various Microsoft response codes.
 
 ## 540420 420 Bad Extension

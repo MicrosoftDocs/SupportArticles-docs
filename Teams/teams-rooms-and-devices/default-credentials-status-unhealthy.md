@@ -19,6 +19,10 @@ ms.custom:
 ---
 # The Default Credentials status is Unhealthy
 
+## Summary
+
+In the Microsoft Teams Rooms Pro Management portal, the **Default Credentials** signal appears as **Unhealthy** when the device’s local Admin account still uses its default password. This creates a security risk because anyone who knows the password can change the device. Change the Admin account password to resolve the warning.
+
 ## Symptoms
 
 In the [Microsoft Teams Rooms Pro Management portal](https://portal.rooms.microsoft.com/), the **Default Credentials** signal of a Microsoft Teams Rooms device is shown as **Unhealthy**, and the incident severity value is shown as **Warning**.

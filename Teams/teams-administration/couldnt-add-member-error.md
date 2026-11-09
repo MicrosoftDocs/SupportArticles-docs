@@ -21,6 +21,10 @@ description: Describes a workaround for adding members to Teams if you see the W
 
 # Error "We couldn't add member" when adding users to Teams
 
+## Summary
+
+When you add an internal or external user to Microsoft Teams, you might see “We couldn't add member. We ran into an issue. Please try again later,” even though you can add the user directly to a Microsoft 365 group. This happens when `UsersPermissionToReadOtherUsersEnabled` is set to `False` in Microsoft Entra ID. Set it to `True` to allow the user to be added in Teams.
+
 ## Symptoms
 
 When you add an internal or external member to Teams, you see the following error:
@@ -29,10 +33,6 @@ When you add an internal or external member to Teams, you see the following erro
 
 However, members can be added directly to Microsoft 365 groups.
 
-## Workaround
+## Resolution
 
 This issue occurs when the value **UsersPermissionToReadOtherUsersEnabled** is set to **False** in Microsoft Entra ID. To correct the issue, change this setting to **True**.
-
-## More information
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

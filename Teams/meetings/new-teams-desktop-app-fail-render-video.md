@@ -17,6 +17,10 @@ ms.date: 02/08/2024
 ---
 # New Teams desktop app fails to render video
 
+## Summary
+
+In the new Microsoft Teams desktop app, video might not appear during a meeting or in the pre-join preview on computers with the Nahimic audio driver installed. This issue occurs because the driver conflicts with Teams. To work around it, add `ms-teams.exe` and `msedgewebview2.exe` to Nahimic’s `BlackApps.dat` exclusion list, then restart Teams.
+
 ## Symptoms
 
 You're using the new Microsoft Teams desktop app on a computer that also has the Nahimic audio driver installed. During a Teams meeting, the app does not render video in any of the following scenarios:

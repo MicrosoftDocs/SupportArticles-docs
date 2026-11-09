@@ -22,6 +22,10 @@ description: Resolves an issue where Teams opens with a white screen when you us
 
 # Teams starts with a white screen
 
+## Summary
+
+When Microsoft Teams starts with a white screen after you use a Unix symlink or map a drive to `C:\users`, a custom installation location might prevent the client from updating. Install Teams in its default `user\AppData` location. If the mapping must remain, use Teams on the web instead.
+
 ## Symptoms
 
 When you use a Unix symlink or map a drive to C:\users, a white screen appears when the Teams app starts.

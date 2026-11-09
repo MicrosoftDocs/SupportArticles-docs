@@ -20,6 +20,10 @@ ms.custom:
 
 # The microphone or speaker status is Unhealthy
 
+## Summary
+
+In the Microsoft Teams Rooms Pro Management portal, microphone or speaker signals might appear as **Unhealthy**. Remote participants might not hear people in the room, or people in the room might not hear remote participants, incoming call ringtones, or audio from a connected laptop. These alerts occur when a configured audio device is unavailable or no viable microphone or speaker is in use. Check the peripheral’s power, USB connection, firmware, and any USB extenders to restore audio.
+
 ## Symptoms
 
 In the [Microsoft Teams Rooms Pro Management portal](https://portal.rooms.microsoft.com/), one or more of the following signals of a Microsoft Teams Rooms device are shown as **Unhealthy**:

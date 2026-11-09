@@ -18,9 +18,19 @@ ms.date: 02/01/2024
 
 # Teams is slow during video sharing on laptops docked to 4K/UHD monitors
 
-The overall performance of Microsoft Teams on laptops may be affected during meetings that use video. This issue can occur if a laptop is docked to an external 4K or ultra-high-definition (also known as ultra HD or UHD) display.
+## Summary
 
-## Workarounds
+When a laptop is docked to a 4K or UHD monitor, Microsoft Teams might run slowly during meetings that use video. To improve performance, reduce the laptop’s workload by closing unused apps, turning off video, or lowering the monitor resolution. The article also provides display-connection and Teams settings to try.
+
+## Symptoms
+
+The overall performance of Microsoft Teams on laptops may be affected during meetings that use video. 
+
+## Cause
+
+This issue can occur if a laptop is docked to an external 4K or ultra-high-definition (also known as ultra HD or UHD) display.
+
+## Resolution
 
 Reduce the resource requirements for your laptop to improve the Teams experience during the meeting by using the following workarounds:
 

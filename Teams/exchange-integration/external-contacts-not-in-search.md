@@ -22,7 +22,15 @@ ms.date: 05/28/2024
 
 # External federated contacts don't appear in Teams search
 
+## Summary
+
+External federated contacts imported into Microsoft Entra ID or Exchange Online might not appear in Microsoft Teams search. To find them, your mailbox must be hosted in Exchange Online, each contact must have a phone number, and you must search by email address rather than name. This article explains how administrators can check these requirements by using a connectivity test or the Teams Federation diagnostic.
+
+## Symptoms
+
 If you import contacts from a federated partner tenant into Microsoft Entra ID or Exchange Online, the contacts might not appear when you search for them in Microsoft Teams.
+
+## Cause
 
 The following requirements must be met for external federated contacts to appear in a search on Teams:
 
@@ -32,6 +40,8 @@ The following requirements must be met for external federated contacts to appear
 
 > [!NOTE]
 > An external federated contact might appear in the search results if the contact's information is currently cached on your computer.
+
+## Resolution
 
 To identify the cause of the issue, an administrator can use one of the following methods to check the requirements for external federated contacts to be displayed in a search on Teams.
 

@@ -23,6 +23,8 @@ ms.reviewer: teddygyabaah
 
 [!INCLUDE [Teams Direct Routing note](../../../includes/teams-direct-routing-note.md)]
 
+## Summary
+
 This article provides troubleshooting information for the combination of the SIP 412 error and Microsoft response code 510412.
 
 ## 510412 412 Get Flighting - wrong callee MRI
