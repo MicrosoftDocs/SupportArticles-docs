@@ -21,6 +21,12 @@ description: Provides possible causes and associated resolutions to resolve an e
 
 # Resolve "FAILED_TO_AUTO_DISCOVER_DOMAIN" error
 
+## Summary
+
+When you try to open the Microsoft Teams admin center, you might receive the error `FAILED_TO_AUTO_DISCOVER_DOMAIN`. This error can occur if the tenant’s SIP domain isn’t enabled, no Teams or Skype for Business user is licensed, required IP addresses or URLs are blocked, a required hybrid connection is missing, or a service incident is in progress. This article explains how to check each cause and restore access.
+
+## Symptoms
+
 You see the FAILED_TO_AUTO_DISCOVER_DOMAIN error message when you try to connect to the Microsoft Teams admin center.
 
 The situations that might cause this error to occur, and the solutions to resolve the error are as follows.

@@ -19,9 +19,13 @@ ms.date: 08/18/2026
 ---
 # Collect Teams device logs
 
-If you experience issues when you try to use Microsoft Teams devices, you'll have to collect diagnostic logs to troubleshoot the issues. There are multiple methods available to collect Teams device logs but the recommended option is to use the Pro Management Portal.
+## Summary
+
+When a Microsoft Teams device has an issue, diagnostic logs can help identify the cause. This article explains how to collect and download logs through the Teams Rooms Pro Management portal. It also describes how to collect logs locally on Teams Rooms on Windows or by using the device manufacturer’s tools for Teams Rooms on Android.
 
 ## Collect logs by using the Pro Management Portal
+
+There are multiple methods available to collect Teams device logs but the recommended option is to use the Pro Management Portal.
 
 1. Log in to the [Teams Pro Management Portal](/microsoftteams/rooms/enrolling-mtrp-managed-service).
 1. Select **Rooms** on the navigation menu in the left pane and then select the impacted device.

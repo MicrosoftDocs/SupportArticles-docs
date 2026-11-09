@@ -24,7 +24,13 @@ ms.custom:
 
 [!INCLUDE [Teams Direct Routing note](../../../includes/teams-direct-routing-note.md)]
 
-You might experience various issues when you use Direct Routing to make outbound calls from a Microsoft Teams client to a Session Border Controller (SBC). These issues include the following:
+## Summary
+
+When you use Microsoft Teams Direct Routing for outbound calls, recipients might see the wrong caller ID, calls might fail to connect to the session border controller (SBC), or some or all users might be unable to call. These issues can result from Session Initiation Protocol (SIP) header mismatches, SBC or network connectivity problems, incorrect user provisioning, voice routing policies, or a disabled gateway. This article explains how to check each cause and apply the corresponding resolution.
+
+## Symptoms
+
+You might experience various issues when you use Direct Routing to make outbound calls from a Microsoft Teams client to an SBC. These issues include the following:
 
 - An incorrect caller ID is displayed to the call recipient.
 - A connection to the SBC is not established.
@@ -168,7 +174,3 @@ The gateway is not responding to SIP options messages because some device on the
 ### Resolution 2
 
 Make sure that the SIP Signaling IPs and FQDNs are allowed on all network devices that connect the SBC to the internet. The IP addresses that must be allowed are listed at [SIP Signaling: FQDNs](/microsoftteams/direct-routing-plan#sip-signaling-fqdns).
-
-## More information
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

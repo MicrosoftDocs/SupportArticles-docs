@@ -19,6 +19,10 @@ ms.custom:
 ---
 # The HDMI ingest status is Unhealthy
 
+## Summary
+
+In the Microsoft Teams Rooms Pro Management portal, the **HDMI ingest signal** might appear as **Unhealthy**. Users might be unable to present content from a laptop, complete device setup, or find the device in the Teams admin center. This issue can occur when the touchscreen console or HDMI ingest module is disconnected, or when software or firmware is outdated. This article explains how to check the hardware connections and install the recommended updates.
+
 ## Symptoms
 
 In the [Microsoft Teams Rooms Pro Management portal](https://portal.rooms.microsoft.com/), the **HDMI ingest** signal of a Microsoft Teams Rooms device is shown as **Unhealthy**, and you experience one or more of the following issues:

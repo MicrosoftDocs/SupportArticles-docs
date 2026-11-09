@@ -20,6 +20,10 @@ ms.date: 10/30/2023
 
 # "Attempted to perform an unauthorized operation" error when accessing Files tab in Teams
 
+## Summary
+
+Guest users might see “Something went wrong. Attempted to perform an unauthorized operation” when they open the Files tab in Microsoft Teams. This error occurs when guest-sharing settings aren’t configured correctly. To restore access, allow Microsoft 365 group owners to add guests and configure SharePoint and OneDrive to permit guest sharing.
+
 ## Symptoms
 
 When guest users try to use the **Files** tab to access shared files in Microsoft Teams, they receive the following error message:

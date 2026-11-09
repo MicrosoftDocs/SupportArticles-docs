@@ -17,6 +17,10 @@ ms.reviewer: opreda
 
 # Teams-specific notification sound reverts to macOS notification sound
 
+## Summary
+
+In Microsoft Teams for Mac, a configured Teams notification sound might be replaced by the default macOS sound. This happens when macOS Notification Center recaches the sound file. To restore the Teams sound, an administrator can restart Notification Center. Users without administrator privileges can restart their Mac.
+
 ## Symptoms
 
 When you use Microsoft Teams on your macOS device, you notice that the Teams-specific notification sound that you configured doesn't play. Instead, the device reverts to using the default macOS notification sound.

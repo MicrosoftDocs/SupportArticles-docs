@@ -22,6 +22,10 @@ ms.reviewer: prbalusu
 
 # Error when opening a file in Teams: You don't have access to this file
 
+## Summary
+
+When you share a file in a Microsoft Teams chat, the recipient might see “You don't have access to this file” when they try to open it. This issue occurs when **Limited-access user permission lockdown mode** is enabled on the sender’s OneDrive site. Deactivate the feature to restore access to files shared in Teams chat.
+
 ## Symptoms
 
 In Microsoft Teams, you share a file with another user in a chat window. Then, the file is automatically stored on your OneDrive site. When the other user tries to open the file in Teams, the following error message is displayed:
@@ -57,7 +61,3 @@ Select **Run Tests** below, which will populate the diagnostic in the Microsoft 
 > [Run Tests: Unable to access files shared in Teams chat](https://aka.ms/TeamsSharedFilesInChat)
 
 The diagnostic performs a large range of verifications.
-
-### Need More Help?
-
-Get help from the [Microsoft Community](https://answers.microsoft.com/) online community, search for more information on [Microsoft Support](https://support.microsoft.com/) or [Office Help and How To](https://office.microsoft.com/support/), or learn more about [Assisted Support](https://support.microsoft.com/contactus/) options.

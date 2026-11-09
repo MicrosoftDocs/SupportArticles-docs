@@ -21,6 +21,10 @@ description: Known issues for Teams when run on a Linux system.
 
 # Teams known issues on Linux
 
+## Summary
+
+Microsoft Teams on Linux has known issues that can affect startup, notifications, microphone input, camera orientation, and Viva Connections. This article lists the symptoms and provides a workaround for an upside-down camera feed. Microsoft is investigating the remaining issues.
+
 ## Known issues
 
 This article lists known issues that occur in Teams when it runs on a Linux system.
@@ -38,7 +42,3 @@ This article lists known issues that occur in Teams when it runs on a Linux syst
 ## Resolution
 
 Microsoft is researching these problems and will post more information in this article when the information becomes available.
-
-## More information
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

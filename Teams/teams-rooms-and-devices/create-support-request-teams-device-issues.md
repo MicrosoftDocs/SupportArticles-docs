@@ -17,14 +17,16 @@ ms.custom:
 ---
 # Create a support request for Teams device issues
 
+## Summary
+
+When a Microsoft Teams Rooms device, Teams panel, or Teams phone has an issue, gather its diagnostic logs and device details before contacting Microsoft Support. This article explains how to check that the device is supported, create a support request through the Teams Rooms Pro Management portal or Microsoft 365 admin center, and include the error details, affected devices, and logs needed for investigation.
+
 You can contact Microsoft Support for assistance if you experience issues that affect the Teams Rooms Pro Management portal or the following Teams devices:
 
 - Teams Rooms on Android
 - Teams Rooms on Windows
 - Teams panels
 - Teams phones
-
-This article discusses how to create a support request for these issues.
 
 ## Prerequisites
 

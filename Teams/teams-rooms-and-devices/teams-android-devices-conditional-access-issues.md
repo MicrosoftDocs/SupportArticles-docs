@@ -20,6 +20,10 @@ ms.custom:
 ---
 # Fix Conditional Access issues for Teams Android devices
 
+## Summary
+
+Teams phones, displays, panels, and Teams Rooms on Android might fail to sign in, repeatedly sign out, or freeze when Conditional Access or Intune device compliance policies apply settings the devices don’t support. This article explains how to identify the affected policy by using a connectivity test or Microsoft Entra sign-in logs, then use device filters to exclude the affected devices where appropriate.
+
 ## Symptoms
 
 Conditional Access is a Microsoft Entra feature that helps make sure that devices that access corporate resources are correctly managed and secured. If Conditional Access policies are applied to the Microsoft Teams service, Android devices that access Teams must comply with the policies. Such devices include Teams phones, Teams displays, Teams panels, and Teams Rooms on Android devices. Otherwise, Conditional Access prevent users from signing in to or using the Teams app on the devices.
@@ -106,8 +110,6 @@ After you identify the specific Conditional Access policy that's causing the iss
 > - Device filters apply to only device objects, not user accounts.
 > - Some attributes, such as *model* and *manufacturer*, can be set only if devices are enrolled in Intune. If your devices aren't enrolled in Intune, use extension attributes.
 > - Check each policy setting for unsupported settings for Teams devices.
-
-The following screenshot shows a sample device filter.
 
 ## References
 

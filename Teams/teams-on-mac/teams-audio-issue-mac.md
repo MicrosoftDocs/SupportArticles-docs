@@ -17,6 +17,10 @@ ms.reviewer: martinmuzak
 
 # Audio issues when using Teams on macOS
 
+## Summary
+
+On a macOS device, Microsoft Teams notification sounds might not play, or you might have trouble hearing other participants during calls and meetings. These issues can occur when macOS audio processing isn’t working correctly. To restore audio, an administrator can restart the `coreaudiod` process; users without administrator privileges can restart the device.
+
 ## Symptoms
 
 You experience one of the following issues when you use Microsoft Teams on your macOS device:

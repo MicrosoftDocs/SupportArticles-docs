@@ -21,6 +21,11 @@ ms.reviewer: kponnus, mattslomka
 
 # Certified Android devices get signed out of Teams
 
+## Summary
+
+Some certified Android devices, including Teams Rooms on Android, Teams panels, phones, and displays, might be signed out of Microsoft Teams automatically. Administrators can identify affected devices by checking Microsoft Entra sign-in logs for a failed `Microsoft Authentication Broker` request to the `Device Registration Service`. This article provides device-specific connectivity tests and sign-in workarounds to restore access.
+
+## Symptoms
 Some certified Android devices in your environment are signed out of Microsoft Teams automatically. This issue affects the following devices:
 
 - Teams Rooms on Android
@@ -38,9 +43,11 @@ You can also use the information in the sign-in logs to determine whether this i
 
 These entries indicate that the issue is affecting your device.
 
+## Resolution
+
 To resolve the Teams sign-in issue on an affected device, select the appropriate option based on the device type.
 
-## Teams Rooms on Android devices and Teams panels
+### Teams Rooms on Android devices and Teams panels
 
 If Teams Rooms on Android devices and Teams panels are affected, run the [Microsoft Teams Rooms Sign in](https://testconnectivity.microsoft.com/tests/TeamsMTRDeviceSignIn/input) connectivity test in the Microsoft Remote Connectivity Analyzer tool. This tool is used to troubleshoot connectivity issues that affect Teams. The connectivity test performs checks to verify a specific user's permissions to use a Teams Rooms device to sign in to Teams.
 
@@ -60,7 +67,7 @@ To run the connectivity test, follow these steps:
 
 After the test finishes, the screen displays details about all the checks that were performed and whether the test succeeded, failed, or was successful but includes warnings. In the list of failures or warnings, select the provided links for more information about each item and how to resolve it.
 
-## Teams phones
+### Teams phones
 
 If Teams phones are affected, run the [Teams Android Desk Phone Sign in](https://testconnectivity.microsoft.com/tests/TeamsPhoneDeviceSignIn/input) connectivity test in the Microsoft Remote Connectivity Analyzer tool. This tool is used to troubleshoot connectivity issues that affect Teams. The connectivity test verifies that the user account meets the requirements for a Teams user to sign in to a Teams Android desk phone. For more information about all the checks that this test performs, see [Teams Android Desk Phone Diagnostic](https://techcommunity.microsoft.com/t5/microsoft-teams-support/new-diagnostic-updated-teams-android-desk-phone-diagnostic-now/ba-p/3957808).
 
@@ -78,11 +85,11 @@ To run the connectivity test, follow these steps:
 
 After the test finishes, the screen displays details about all the checks that were performed and whether the test succeeded, failed, or was successful but includes warnings. In the list of failures or warnings, select the provided links for more information about each item and how to resolve it.
 
-## Teams displays
+### Teams displays
 
 If Teams displays are affected, or if you're using the GCC or GCC High Microsoft 365 Government environment, use one of the following options to sign in to Teams.
 
-### Option 1: Sign in from the Microsoft Teams admin center
+#### Option 1: Sign in from the Microsoft Teams admin center
 
 > [!NOTE]
 >
@@ -95,7 +102,7 @@ If Teams displays are affected, or if you're using the GCC or GCC High Microsoft
 4. After you're signed out, select **Sign in**.
 5. A pop-up window appears. After two to five minutes, the window is populated by a URL, a code, and instructions to sign in. Use the information that's provided to sign in to the device.
 
-### Option 2: Restart the device and then sign in from the Microsoft Teams admin center
+#### Option 2: Restart the device and then sign in from the Microsoft Teams admin center
 
 > [!NOTE]
 >
@@ -116,7 +123,7 @@ Restart the Android device remotely from the Microsoft Teams admin center, and t
 
 5. A pop-up window appears. After two to five minutes, the window is populated by a URL, a code, and instructions to sign in. Use the provided information to sign in to the device.
 
-### Option 3: Generate a new code on the device to sign in
+#### Option 3: Generate a new code on the device to sign in
 
 1. Select **Refresh code** on the device to generate a new code to sign in.
 2. If a new code is generated, use it to sign in to the device.
@@ -125,7 +132,7 @@ Restart the Android device remotely from the Microsoft Teams admin center, and t
 5. If the sign-in is still unsuccessful, select **Start over**. This will sign you out of the device.
 6. Select **Refresh code** to generate a new code to sign in to the device.
 
-### Option 4: Reset the device
+#### Option 4: Reset the device
 
 If you still can't sign in to the device, reset the device to its factory settings.
 

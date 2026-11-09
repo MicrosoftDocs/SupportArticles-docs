@@ -16,6 +16,10 @@ ms.date: 04/01/2025
 
 # Voicemail messages aren't delivered in Teams or Skype for Business client
 
+## Summary
+
+Voicemail messages might not arrive in Microsoft Outlook, Microsoft Teams, or Skype for Business, or they might appear in Outlook but not in the Teams or Skype for Business client. Exchange mail flow rules and third-party email filtering can block delivery or change message headers; client access restrictions and an incorrect voicemail message class can also prevent the clients from displaying delivered messages. This article explains how to check those settings and use the Teams Voicemail diagnostic to identify the issue.
+
 ## Symptom 1
 
 Voicemails aren't delivered in Microsoft Outlook clients, the Microsoft Skype for Business client, or the Microsoft Teams client. 
@@ -90,11 +94,3 @@ To access the **Voice Mail** folder, open MFCMAPI, open the user's Outlook mailb
 
 > [!NOTE]
 > Third-party spam or antivirus filtering solutions can also modify voicemail headers that prevent voicemails from being available in the voicemail folder. 
-
-**Third-party information disclaimer**
-
-The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
-
-**Third-party contact disclaimer**
-
-Microsoft provides third-party contact information to help you find technical support. This contact information may change without notice. Microsoft does not guarantee the accuracy of this third-party contact information.

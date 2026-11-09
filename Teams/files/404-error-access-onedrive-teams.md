@@ -17,6 +17,10 @@ ms.date: 08/27/2024
 ---
 # "404 File not found" error when accessing the OneDrive app in Teams
 
+## Summary
+
+After your user principal name (UPN) changes, opening the OneDrive app in Microsoft Teams might show “404 File not found.” To work around the error, upload and send a file in a one-on-one Teams chat, then open the OneDrive app again.
+
 ## Symptoms
 
 After your User Principal Name (UPN) is changed, when you try to access the OneDrive app in Microsoft Teams, you receive the following error message: 

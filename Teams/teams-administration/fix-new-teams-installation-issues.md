@@ -17,6 +17,10 @@ ms.date: 01/14/2025
 ---
 # Resolve the new Teams client installation issues
 
+## Summary
+
+When users try to install the new Microsoft Teams client, they might see “Due to org policy, you can't install the new Teams” or, on Windows 10, “We've run into an issue.” The Try the new Teams toggle might also be missing. This article explains how to check installation policies, Windows and Teams version requirements, and WebView2 Runtime. It also covers an installation block on Windows 11, version 21H1 SV1 (build 10.0.22000).
+
 This article helps you resolve issues that occur when you try to download and install the new Microsoft Teams client.
 
 Run the [pre-installation check script](/microsoftteams/new-teams-preinstallation-script) to identify potential issues and follow the suggested resoutions to fix them.

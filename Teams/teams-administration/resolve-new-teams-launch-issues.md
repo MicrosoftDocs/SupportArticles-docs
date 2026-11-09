@@ -18,6 +18,10 @@ ms.date: 07/09/2024
 ---
 # Resolve issues when starting the new Teams app
 
+## Summary
+
+When you turn on `Try the new Teams` in classic Microsoft Teams on Windows, the new app might not start and instead show “Something went wrong.” The classic Teams log might also show `Launch api returns false, code: 11`. This article explains how to diagnose and resolve launch failures caused by reparse points, AppData or installation-folder permissions, invalid files, or the `AllowAllTrustedApps` policy.
+
 ## Symptoms
 
 When you turn on the **Try the new Teams** toggle in classic Microsoft Teams, the new Teams app doesn't start. Instead, a banner appears and displays the following error message:

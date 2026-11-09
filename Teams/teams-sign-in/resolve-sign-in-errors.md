@@ -18,9 +18,14 @@ ms.date: 10/20/2025
 ---
 # Resolve sign-in errors in Teams
 
-If your users encounter errors when they try to sign in to Microsoft Teams, use the following steps to troubleshoot the problem.
+## Summary
+
+Troubleshoot Microsoft Teams sign-in errors by running the Teams Sign-in diagnostic or the Microsoft Remote Connectivity Analyzer test. This article also provides guidance for error codes 0xCAA82EE7, 0xCAA82EE2, 0xCAA20004, 0xCAA70004, and 0xCAA70007, along with steps to check for updates, address web-client sign-in issues, and reinstall Teams if needed.
+
 
 ## Run the Teams Sign-in diagnostic
+
+If your users encounter errors when they try to sign in to Microsoft Teams, use the following steps to troubleshoot the problem.
 
 > [!NOTE]
 > This feature requires a Microsoft 365 administrator account. This feature isn't available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.

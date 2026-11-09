@@ -19,6 +19,12 @@ ms.date: 05/19/2025
 
 # The "Desktop app" option is missing when trying to edit an Office file in Teams
 
+## Summary
+
+When you edit an Office file in Microsoft Teams, the **Desktop app** option might be missing from the **Open in** menu and **File open preference** setting. This issue can occur if you aren’t using the Teams desktop app, the corresponding Office desktop app isn’t installed, or your Office license doesn’t include the required `O365ProPlusRetail` product ID. Check these prerequisites to restore the option.
+
+## Symptoms
+
 A Microsoft Office file can be edited directly in Microsoft Teams or in the file's corresponding desktop app. However, when you try to edit an Office file in its desktop app, the **\<Office application name\> desktop app** option is missing.
 
 For example, when you select a Word document, and then you select **Open in**, the **Word desktop app** option is missing, as shown in the following screenshot.
@@ -29,7 +35,11 @@ The **Desktop app** option is also missing from the **File open preference** set
 
 :::image type="content" source="media/desktop-app-option-missing/desktop-app-in-files-setting.png" alt-text="Screenshot of the File open preference setting in which the desktop app option is missing.":::
 
+## Cause
+
 The most likely reason that these options are missing is because at least one of three prerequisites isn't met.
+
+## Resolution
 
 To fix this issue, make sure that the following prerequisite items are true:
 

@@ -20,6 +20,10 @@ ms.date: 01/07/2026
 ---
 # Can't share files in a large group chat or meeting chat
 
+## Summary
+
+When a Microsoft Teams group chat or meeting chat has more than 100 participants, a file-sharing message might not send, or some participants might need to request access to the file. This can happen when the sharing setting is **People currently in this chat**, which uses a **Specific people** link. To work around the issue, change the file’s sharing setting to **People in your organization** for an internal chat or **Anyone** if the chat includes external participants.
+
 ## Symptoms
 
 When you try to share files in a Microsoft Teams group chat or meeting chat that contains more than 100 participants, the message might not be sent successfully when you select **Send** :::image type="icon" source="media/cannot-share-files-in-large-chat/send-file-icon.png":::.

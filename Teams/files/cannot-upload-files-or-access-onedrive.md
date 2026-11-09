@@ -20,6 +20,12 @@ ms.date: 10/30/2023
 ---
 # Error when uploading files to a Teams chat
 
+## Summary
+
+When you upload a file to a Microsoft Teams chat, you might see “The file is locked” or “Your OneDrive isn't available.” You might also be unable to access OneDrive files from Teams. This article explains how to troubleshoot these errors by checking whether the default **Documents** library was renamed, the OneDrive site is locked, or the user’s account or site permissions prevent access.
+
+## Symptoms
+
 When you try to upload a file in a Microsoft Teams chat, you receive either of the following error messages.
 
 ### [Error Message 1](#tab/Error-Message-1)
