@@ -20,6 +20,12 @@ ms.date: 05/28/2024
 ---
 # The correct presence status isn't reflected in Teams
 
+## Summary
+
+When you resume activity on your desktop, Microsoft Teams might continue to show your presence status as Away instead of changing it to Available. This article explains how to investigate incorrect presence status by running the Teams Presence diagnostic or the Teams Presence Based on Calendar Events connectivity test.
+
+## Symptoms
+
 In Microsoft Teams, your presence status is shown incorrectly. For example, your presence status changes to **Away** if your desktop is inactive for more than five minutes. However, when you resume activity on your desktop, your presence status doesn't change to **Available**.
 
 **Note:** Your desktop is inactive in the following scenarios:
@@ -28,9 +34,11 @@ In Microsoft Teams, your presence status is shown incorrectly. For example, your
 - The computer enters idle or sleep mode.
 - You're actively using the Teams mobile app instead of Teams on the desktop.
 
+## Cause
+
 To identify the cause of the issue, use one of the following methods.
 
-## Method 1: Run a connectivity test
+### Method 1: Run a connectivity test
 
 Both administrators and non-administrators can run the [Teams Presence Based on Calendar Events](https://testconnectivity.microsoft.com/tests/TeamsCalendarPresence/input) connectivity test in the Microsoft Remote Connectivity Analyzer tool. This tool is used to troubleshoot connectivity issues that affect Teams. The connectivity test verifies the requirements to update a user’s presence status in Teams based on their calendar events in Microsoft Outlook.
 
@@ -46,7 +54,7 @@ Follow these steps:
 
 After the test is finished, the screen displays details about the checks that were performed and whether the test succeeded, failed, or was successful but displayed a few warnings. Select the provided links for more information about the warnings and failures and how to resolve them.
 
-## Method 2: Run a self-help diagnostic
+### Method 2: Run a self-help diagnostic
 
 If you're an administrator, you can run the [Teams Presence](https://aka.ms/TeamsPresenceDiag) diagnostic in the Microsoft 365 admin center to verify the requirements to display a user's presence status in Teams.
 
@@ -61,6 +69,6 @@ Follow these steps:
    > [Run Tests: Teams Presence](https://aka.ms/TeamsPresenceDiag)
 1. In the **Username or Email** field, enter the email address of the affected user, and then select **Run Tests**.
 
-After the diagnostic is finished, select the provided links to resolve the issues that were found.
+## Resolution
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+After the diagnostic is finished, select the provided links to resolve the issues that were found.

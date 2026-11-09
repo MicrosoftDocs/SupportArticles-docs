@@ -20,6 +20,12 @@ ms.custom:
 ---
 # The Monitored or Offline status is Unhealthy
 
+## Summary
+
+In the Microsoft Teams Rooms Pro Management portal, a device’s `Monitored` or `Offline` signal might appear as `Unhealthy`. An unmonitored device might still work, but the portal can’t report its health or run remote management tasks. An offline device might be powered off, unresponsive, or disconnected from the network. This article explains how to check the Teams Rooms Pro agent, Trusted Platform Module (TPM), and management connectivity for unmonitored devices, and power, startup, and network connectivity for offline devices.
+
+## Symptoms
+
 In the [Microsoft Teams Rooms Pro Management portal](https://portal.rooms.microsoft.com/), the **Monitored** or **Offline** signal of a Microsoft Teams Rooms device is shown as **Unhealthy**.
 
 - If the **Offline** signal is unhealthy, the room system is completely deactivated. If the system was powered on, the system might stop responding and generate a stop error during startup. In other cases, the console works correctly, but a message in a purple window might appear on the console and indicate that the system has no network connection.
@@ -56,7 +62,7 @@ After the agent test tool completes, a brief summary of the tool's results is di
 
 ### Check whether TPM is enabled
 
-The Teams Rooms Pro agent relies on Trusted Platform Module (TPM) to uniquely identify a device. TPM must be enabled to enroll a device into Teams Rooms Pro Management. If TPM is disabled after the device is enrolled, the device might become unmonitored at some point (usually after several days).
+The Teams Rooms Pro agent relies on TPM to uniquely identify a device. TPM must be enabled to enroll a device into Teams Rooms Pro Management. If TPM is disabled after the device is enrolled, the device might become unmonitored at some point (usually after several days).
 
 To check the current status of TPM, run the following command in an elevated PowerShell window on the device:
 

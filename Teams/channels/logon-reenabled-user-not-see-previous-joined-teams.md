@@ -19,6 +19,10 @@ ms.date: 10/30/2023
 ---
 # You don't see team members after your account is re-enabled
 
+## Summary
+
+After a Microsoft Teams account is re-enabled for sign-in, teams that the user previously joined might not appear immediately. Team memberships are restored automatically within 24 to 48 hours, but private channel memberships aren't restored. The user must request access to each private channel again.
+
 ## Symptoms
 
 Assume that your Microsoft Teams account is disabled for signing in. By design, the account is automatically removed as a member from all teams in this situation. However, even after your account is re-enabled, you still don't see the teams of which you were previously a member.

@@ -19,6 +19,10 @@ ms.date: 10/30/2023
 ---
 # A contact's presence status is unknown in Teams
 
+## Summary
+
+In Microsoft Teams, a contact’s presence might show `Status unknown` or fail to update. This can happen if the contact hasn’t signed in, has selected `Appear offline`, is affected by a network issue, or uses Skype for Business in a coexistence scenario. This article explains how administrators can check the contact’s sign-in and presence settings, verify connectivity to Teams, and gather information for a support request if the issue persists.
+
 ## Symptoms
 
 In Microsoft Teams, the presence status of a contact is displayed as **Status unknown**, or the status doesn't update.
@@ -32,7 +36,7 @@ This issue occurs if one or more of the following conditions are true:
 - A network communication issue is affecting the unified presence service (UPS).
 - The contact is using Microsoft Skype for Business. Based on the [Presence](/microsoftteams/coexistence-chat-calls-presence#presence) in the coexistence scenario, this issue may be an expected behavior.
 
-## Workaround
+## Resolution
 
 The following steps must be performed by administrators. After each step, check whether the issue is fixed. If it isn't, go to the next step.
 
@@ -47,7 +51,3 @@ If none of these steps fixes the issue, open a support ticket that contains the 
 - The sign-in address of the contact (also known as *publisher*) whose presence shows as **Status unknown**.
 - The desktop and debug logs from both the observer and publisher. For more information about the logs, see [Use log files in troubleshooting Microsoft Teams](/microsoftteams/log-files).
 - The UTC time at which the publisher updated the presence, and the time at which the observer noticed that the contact's presence status wasn't updated. Verify that the times are captured in all the log files.
-
-## More information
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

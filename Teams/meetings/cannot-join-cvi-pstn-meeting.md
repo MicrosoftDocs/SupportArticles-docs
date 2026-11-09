@@ -17,6 +17,10 @@ ms.date: 10/23/2024
 ---
 # Can't join a Teams meeting through PSTN dial-in or CVI-enabled devices
 
+## Summary
+
+When you join a Microsoft Teams meeting by using a PSTN dial-in number or Cloud Video Interop (CVI) coordinates, you might be told that the meeting can't be found, is invalid, or has expired. This happens when the organizer's Teams account has been deprovisioned, making the meeting's dial-in and CVI details invalid. To restore access, an active user with the required license must reschedule the meeting.
+
 ## Symptoms
 
 You try to join a Teams meeting by using a Public Switched Telephone Network (PSTN) dial-in number or Cloud Video Interop (CVI) coordinates. However, you receive an error message that states that the meeting can't be found, is invalid, or has expired. The exact text of the error message varies depending on the CVI-enabled device that's being used.

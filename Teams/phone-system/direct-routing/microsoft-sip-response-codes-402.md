@@ -21,6 +21,8 @@ ms.reviewer: mikebis
 
 [!INCLUDE [Teams Direct Routing note](../../../includes/teams-direct-routing-note.md)]
 
+## Summary
+
 This article provides troubleshooting information for the combination of the SIP 402 error and Microsoft response code 560402.
 
 ## 560402 402 Payment required

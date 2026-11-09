@@ -19,6 +19,10 @@ ms.reviewer: lomeybur
 
 # A website doesn't load in the new Teams desktop client
 
+## Summary
+
+In the new Microsoft Teams desktop client, a website might not load in the **Website** tab of a chat, channel, or meeting. This can happen when the site blocks embedding or your organization enforces Conditional Access policies. Open the site in a browser instead, or use a corresponding Teams app if one is available.
+
 ## Symptoms
 
 When you select the **Website** tab in a chat, channel, or meeting in Microsoft Teams, the site doesn't load correctly.
@@ -30,7 +34,7 @@ This issue might occur in either of the following situations:
 - The website is prevented from being embedded in other sites.
 - Conditional Access policies are enforced in your organization. For more information, see [Tabs not working after enabling Conditional Access](./tabs-dont-work-after-enabling-conditional-access.md).
 
-## Workaround
+## Resolution
 
 To work around the issue, select **Open in browser** in the following banner to open the site in a new browser tab outside Teams.
 

@@ -14,11 +14,23 @@ ms.reviewer: julienp, revaldiv
 ---
 # Resolve campaign rejection errors for SMS in Microsoft Teams
 
-If you enable the [Short Message Service (SMS)](/microsoftteams/sms-overview) feature in Microsoft Teams, you might have to troubleshoot and resubmit [campaigns](/microsoftteams/sms-setup-campaign) that were rejected during the 10-digit-long code (10DLC) review process. After a campaign is submitted, Microsoft and 10DLC operators evaluate it for compliance with Mobile Network Operator (MNO) and industry standards. If the campaign doesn't meet these requirements, it's rejected and generates one or more error codes.
+## Summary
+
+When you register a [Short Message Service (SMS)](/microsoftteams/sms-overview) [campaign](/microsoftteams/sms-setup-campaign) in Microsoft Teams, the campaign might be rejected during the 10-digit long code (10DLC) review and return one or more error codes. Rejections can involve consent, required disclosures, message samples, campaign details, or brand information. This article explains what each rejection code means and what to correct before resubmitting the campaign.
+
+## Symptoms
+
+If you enable the SMS feature in Microsoft Teams, you might have to troubleshoot and resubmit campaigns that were rejected during the 10-digit-long code (10DLC) review process.
+
+## Cause
+
+After a campaign is submitted, Microsoft and 10DLC operators evaluate it for compliance with Mobile Network Operator (MNO) and industry standards. If the campaign doesn't meet these requirements, it's rejected and generates one or more error codes.
 
 The following sections provide a comprehensive list of potential rejection errors, together with clear descriptions and actionable recommendations to help you resolve issues and successfully resubmit your campaign. The sections are organized by the categories of information that you submit to register a campaign.
 
-## Call to Action 
+## Resolution
+
+### Call to Action 
 
 | Error | Description | Recommended action |
 |-------|-------------|--------------------|
@@ -45,7 +57,7 @@ The following sections provide a comprehensive list of potential rejection error
 | CallToActionConsentNotOptional | SMS consent is mandatory on a multipurpose form. This status means that users cannot opt out of SMS while they complete other actions. | Update the form so that SMS consent is presented as an optional checkbox (not pre-selected), and is independent of other actions.|
 | CallToActionVerificationIssues | The opt-in process cannot be verified because of missing confirmation steps, timestamps, or verification records. | Implement a confirmation step (e.g., "Thank you for opting in" message), and make sure that timestamps are logged for compliance audits.| 
 
-## Terms and conditions 
+### Terms and conditions 
 
 | Error | Description | Recommended action |
 |-------|-------------|--------------------|
@@ -58,14 +70,14 @@ The following sections provide a comprehensive list of potential rejection error
 | TermsAndConditionsMissingProgramDescription | The terms and conditions document doesn't contain a description of the message program. | Add a description of the message program's purpose. |
 | TermsAndConditionsMissingSweepstakesTerms | The terms and conditions document doesn't contain sweepstakes terms, as applicable. | Add sweepstakes terms if the campaign involves sweepstakes. |
 
-## Privacy policy
+### Privacy policy
 
 | Error | Description | Recommended action |
 |-------|-------------|--------------------|
 | PrivacyPolicyDataSharingIssue | The privacy policy indicates that mobile opt-in data might be shared with third parties. | Update the policy to explicitly state that data isn't shared with third parties. |
 | PrivacyPolicyMissingOrInvalid | The privacy policy URL is invalid or is missing required elements. | Provide a valid URL and make sure that all required elements are included. |
 
-## Opt-in message
+### Opt-in message
 
 | Error | Description | Recommended action |
 |-------|-------------|--------------------|
@@ -77,7 +89,7 @@ The following sections provide a comprehensive list of potential rejection error
 | OptInMessageMissingOptOutInstructions | The opt-in message doesn't include opt-out instructions. | Add STOP instructions. |
 | MandatoryMessageTerminologyMissing | Required message terminology is missing. | Add all mandatory terms: brand name, HELP, STOP, frequency, and fees. |
 
-## Opt-out message
+### Opt-out message
 
 | Error | Description | Recommended action |
 |-------|-------------|--------------------|
@@ -86,7 +98,7 @@ The following sections provide a comprehensive list of potential rejection error
 | OptOutMessageMissingConfirmation | The opt-out message doesn't confirm that no further messages will be sent. | Add confirmation that messaging will stop. |
 | MandatoryMessageTerminologyMissing | Required message terminology is missing. | Add brand name, STOP, confirmation, and fee disclosures. |
 
-## Help message
+### Help message
 
 | Error | Description | Recommended action |
 |-------|-------------|--------------------|
@@ -95,7 +107,7 @@ The following sections provide a comprehensive list of potential rejection error
 | HelpMessageMissingSupportContact | The HELP message doesn't include customer support contact information. | Add customer support contact details. |
 | MandatoryMessageTerminologyMissing | Required message terminology is missing. | Add brand name, HELP, STOP, frequency, and fees. |
 
-## Sample messages
+### Sample messages
 
 | Error | Description | Recommended action |
 |-------|-------------|--------------------|
@@ -108,7 +120,7 @@ The following sections provide a comprehensive list of potential rejection error
 | SampleMessageMissingMessageFrequencyDisclosure | Sample messages do not include disclosure of message frequency (e.g., "You will receive X messages per month"). | Update sample messages to include frequency disclosure (e.g., "You will receive up to four (4) messages per month").|
 | SampleMessageMissingDataRatesDisclosure | Sample messages do not include disclosure of potential data rates (e.g., "Msg & Data rates may apply").	| Add "Msg & Data rates may apply" to all sample messages that are provided during campaign registration.|
 
-## Campaign (use case, description, and attributes)
+### Campaign (use case, description, and attributes)
 
 | Error | Description | Recommended action |
 |-------|-------------|--------------------|
@@ -119,7 +131,7 @@ The following sections provide a comprehensive list of potential rejection error
 | CampaignDescriptionNotMatchingUseCase | The campaign description doesn't sufficiently describe the service or doesn't match the declared use cases. | Update the campaign description to clearly describe the service and align the description with the declared use cases. |
 | CampaignDescriptionNotUnique | The campaign description isn't unique or is a duplicate. | Modify the campaign description to be unique and specific to the brand's use case. |
 
-## Brand
+### Brand
 
 | Error | Description | Recommended action |  
 |-------|-------------|--------------------|

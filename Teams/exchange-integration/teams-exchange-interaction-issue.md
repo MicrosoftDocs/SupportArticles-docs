@@ -18,6 +18,10 @@ ms.date: 11/22/2024
 ---
 # Resolve interaction issues between Teams and Exchange Server
 
+## Summary
+
+When Microsoft Teams interacts with Exchange Server, delegates might be unable to schedule Teams meetings on someone else’s behalf, the Teams Calendar app might be missing or show “Sorry, we couldn't get your meeting details,” or Teams presence might not reflect Outlook calendar activity. This article explains how to troubleshoot these issues by checking Exchange integration requirements, Autodiscover, OAuth, Exchange Web Services (EWS) access, and the settings specific to delegation, calendar, and presence.
+
 ## Symptoms
 
 You experience one or more of the following issues.

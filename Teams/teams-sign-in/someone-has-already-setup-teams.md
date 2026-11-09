@@ -21,6 +21,10 @@ ms.date: 03/14/2024
 
 # "Someone has already set up Teams for your organization" error in Microsoft Teams
 
+## Summary
+
+When you try to set up Microsoft Teams, you might see “Someone has already set up Teams for your organization.” This can happen if someone already set up Teams for you, your email address is linked to both a personal and a work account, or you're trying to use a work account with a free tenant. This article explains how to sign in with the correct account or separate the accounts so you can complete setup.
+
 ## Symptoms
 
 When you try to set up a Microsoft Teams account, you receive the following error message:
@@ -33,7 +37,7 @@ This issue may have several causes.
 
 ### Cause 1: Someone has already set up Teams for you
 
-**Resolution:**
+**Resolution**
 
 - Look for a recent invitation in your email Inbox.
 - Alternatively, open [https://teams.microsoft.com](https://teams.microsoft.com) from a private or incognito browser window. Then, enter your domain credentials to sign in.
@@ -42,7 +46,7 @@ This issue may have several causes.
 
 For example, you're using the `contoso.com` domain for both your Microsoft Service Account (Live ID) and your work account (Active Directory).
 
-**Resolution:**
+**Resolution**
 
 1. Open [https://teams.microsoft.com](https://teams.microsoft.com) from a private or incognito browser window.
 1. Create a Teams account, and then sign in by using the credentials for your work or school account.
@@ -52,10 +56,6 @@ For example, you're using the `contoso.com` domain for both your Microsoft Servi
 
 For more information about tenant, see [Tenants](/microsoft-365/enterprise/subscriptions-licenses-accounts-and-tenants-for-microsoft-cloud-offerings?view=o365-worldwide&preserve-view=true#tenants).
 
-**Resolution:**
+**Resolution**
 
 Use your organization's tenant for this account. For personal use, create a free Teams account by using a personal email address.
-
-## More information
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com).

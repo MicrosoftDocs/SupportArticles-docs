@@ -15,20 +15,30 @@ ms.date: 05/21/2026
 ---
 # Resolve Teams "client crash" issues
 
+## Summary
+
+When Microsoft Teams exits unexpectedly, the Teams client health dashboard reports the issue as a Client crash. This article explains how to use the dashboard’s insights to investigate media stack and Microsoft Edge WebView2 failures, check whether antivirus or data loss prevention (DLP) tools are interfering with Teams, and interpret WebView2 exit and error codes.
+
+## Symptoms
+
 When a user in your organization uses the Teams app on their device, the app exits unexpectedly. This issue is categorized as a **Client crash** in the [Teams client health dashboard](/microsoftteams/teams-client-health).
 
+## Cause
+
 As an administrator, you can check the **Insight** column on the **Issues** tab to find potential reasons why the Teams app stopped responding. This article lists all the insights for Teams "client crash" issues and provides resolutions for them. If the issue persists after you perform the resolution, contact [Microsoft Support](https://support.microsoft.com/contactus) for more assistance.
+
+## Resolution
 
 > [!IMPORTANT]
 > As the first step to resolve any issues, make sure that all non-Microsoft antivirus and data loss prevention (DLP) applications that you're using include or approve the Teams desktop client, the executable that automatically starts the Teams app, and Microsoft Edge WebView2. For more information, see [Prevent antivirus and DLP tools from blocking or crashing Microsoft Teams](include-exclude-teams-from-antivirus-dlp.md).
 
-## Media stack technology failure
+### Media stack technology failure
 
 If your antivirus and DLP tools aren't blocking the Teams app and WebView2 processes from accessing Teams services, and you still see an issue with the media stack, then [enable Windows Error Reporting (WER)](/troubleshoot/windows-client/system-management-components/windows-error-reporting-diagnostics-enablement-guidance) to help identify the root cause of the issue and report the issue to Microsoft.
 
 We also recommend that you keep your audio and video drivers updated to ensure optimal performance and stability.
 
-## WebView2 failure
+### WebView2 failure
 
 For issues caused by WebView2 process failures, check the WebView2 process exit or error codes for more information. These codes indicate various problems, such as:
 

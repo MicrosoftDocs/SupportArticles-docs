@@ -19,6 +19,10 @@ ms.date: 11/03/2023
 
 # Chat issues in Teams meeting
 
+## Summary
+
+In a Microsoft Teams meeting, the Chat icon might be missing, selecting it might show “The Administrator has disabled the Chat,” or you might be unable to see the meeting chat history. These issues can occur when a meeting policy disables chat, the meeting exceeds the 1,000-person chat limit, or you joined through a meeting link without being added to the original invitation. This article explains how to check the meeting policy and attendee limit, and how the organizer can restore post-meeting chat access by adding you to the original invitation or recurring series.
+
 ## Symptoms
 
 As an attendee in a Microsoft Teams meeting, you might experience one of the following issues when you try to access the meeting chat:
