@@ -6,7 +6,7 @@ author: kaushika-msft
 ms.author: kaushika
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 09/28/2026
+ms.date: 11/09/2026
 ms.custom: sap:File Sync, devx-track-azurepowershell
 ms.reviewer: v-weizhu, vritikanaik, khdownie, guptasonia
 ai-usage: ai-assisted
@@ -1232,7 +1232,9 @@ Sync sessions fail with either of these errors when the Azure file share storage
 
     :::image type="content" source="media/file-sync-troubleshoot-sync-errors/edit-quota.png" alt-text="Screenshot of the Azure file share properties with the Edit quota option." lightbox="media/file-sync-troubleshoot-sync-errors/edit-quota.png":::
 
-If the file share is full (the used capacity equals the quota), free up space on the file share. One possible way to fix this issue is to make each subfolder of the current server endpoint into its own server endpoint in their own separate sync groups. This way each subfolder syncs to individual Azure file shares.
+6. If the file share has a quota, remove it so that sync can progress. In the **Edit quota** pane, select **Set to maximum**, and then select **OK**.
+
+If the file share is still full after you remove the quota (the used capacity equals the [maximum size of the Azure file share](/azure/storage/files/storage-files-scale-targets?toc=/azure/storage/filesync/toc.json)), free up space on the file share. One possible way to fix this issue is to make each subfolder of the current server endpoint into its own server endpoint in their own separate sync groups. This way each subfolder syncs to individual Azure file shares.
 
 <a id="-2134351824"></a>
 
