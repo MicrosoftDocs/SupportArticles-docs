@@ -24,6 +24,8 @@ items:
   items:
   - name: HTTP response codes - Azure Application Gateway
     href: http-response-codes.md
+  - name: Troubleshoot connectivity issues with Azure Front Door due to Virtual Network Manager rules filtering
+    href: frontdoor-virtual-network-manager-rules-filtering.md
 - name: Facing 5xx errors
   items:
   - name: Troubleshoot HTTP 504 Gateway Timeout
@@ -76,8 +78,6 @@ items:
     href: troubleshoot-application-gateway-routing-redirect-hostname-issues.md
   - name: Troubleshoot WAF blocking legitimate requests (403) in Azure Application Gateway
     href: troubleshoot-waf-blocking-legitimate-requests-403.md
-
-
 
 
 
