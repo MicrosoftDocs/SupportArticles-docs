@@ -150,6 +150,8 @@ items:
           href: ../antispam-and-protection/smtpsend-barelinefeedsareillegal-when-tracing-messages.md
     - name: Calendars
       items:
+        - name: Google attendee availability and address space endpoint
+          href: ../calendars/google-attendee-free-busy-address-space-endpoint.md
         - name: Calendar diagnostic logs (CDL)
           items:
             - name: Use Calendar diagnostic logs
