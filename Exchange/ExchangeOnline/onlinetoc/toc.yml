@@ -324,8 +324,6 @@ items:
               href: ../email-delivery/ndr/fix-error-code-451-4-7-500-699-asxxx-in-exchange-online.md
             - name: 5.4.6 or 5.4.14
               href: ../email-delivery/ndr/fix-error-code-5-4-6-through-5-4-20-in-exchange-online.md
-            - name: 5.7.1. Unable To Relay
-              href: ../email-delivery/ndr/unable-to-relay-blocked-by-allow-list.md
             - name: 550 4.4.7
               href: ../email-delivery/ndr/fix-error-code-550-4-4-7-in-exchange-online.md
             - name: 550 5.0.350
