@@ -150,6 +150,12 @@ items:
           href: ../antispam-and-protection/smtpsend-barelinefeedsareillegal-when-tracing-messages.md
     - name: Calendars
       items:
+        - name: Google attendee availability and missing mail contact
+          href: ../calendars/google-attendee-free-busy-mail-contact-not-found.md
+        - name: Cross-tenant free/busy Autodiscover call fails
+          href: ../calendars/cross-tenant-free-busy-discovery-call-failed.md
+        - name: Google attendee availability and address space endpoint
+          href: ../calendars/google-attendee-free-busy-address-space-endpoint.md
         - name: Calendar diagnostic logs (CDL)
           items:
             - name: Use Calendar diagnostic logs
