@@ -4,7 +4,7 @@ description: Resolve unexpected results from Microsoft Purview auto-labeling pol
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
-ms.reviewer: nickrob, v-kccross
+ms.reviewer: nickrob, ninachen, v-kccross
 audience: ITPro
 ms.service: purview
 ms.topic: troubleshooting-general
@@ -15,7 +15,7 @@ ms.custom:
 appliesto:
   - Microsoft Purview
 search.appverid: MET150
-ms.date: 10/21/2026
+ms.date: 11/10/2026
 ai-usage: ai-assisted
 
 #customer intent: As an administrator, I want to diagnose unexpected auto-labeling results so that I can confirm the intended labels and protection.
@@ -46,6 +46,7 @@ Find the policy and check which stage it reached:
 | --- | --- |
 | You can't create a policy or turn it on. | [Can't create or turn on a policy](#cant-create-or-turn-on-a-policy) |
 | Simulation is still running. | [Simulation hasn't completed](#simulation-hasnt-completed) |
+| Simulation shows **Simulation failed** or **Simulation couldn't be started**, or results are marked **partial** after a failure. | [Simulation failed or couldn't be started](#simulation-failed-or-couldnt-be-started) |
 | Simulation misses expected items or finds unexpected matches. | [Simulation results aren't what you expect](#simulation-results-arent-what-you-expect) |
 | The policy is on, but an expected file isn't labeled. | [Policy is on but files aren't labeled](#policy-is-on-but-files-arent-labeled) |
 | An existing label stays, changes, or doesn't provide the protection you expected. | [Existing label or protection isn't what you expect](#existing-label-or-protection-isnt-what-you-expect) |
@@ -76,6 +77,38 @@ Check the current run, not just the number of matches.
 1. When **Status** shows **Simulation complete**, [review the results](/purview/auto-label-simulation-results). A scheduled **Turn on date** doesn't confirm that activation succeeded; check the policy's status separately.
 
 If the run doesn't complete or shows an error, collect its status, start time, duration, and error text for Microsoft Support. Don't treat the expected simulation duration as a guaranteed completion or escalation time.
+
+## Simulation failed or couldn't be started
+
+On **Simulation overview**, check the error banner as well as **Status**. In portal experiences that display simulation failure messages, the banner distinguishes a request that couldn't start a simulation job from a job that encountered an error while running.
+
+| Message | What it means |
+| --- | --- |
+| **Simulation couldn't be started.** The request to start the simulation failed. Restart it to try again. | The request to start a simulation job failed. This isn't a completed simulation with no matches. Other workloads in the policy can still have available results. |
+| **Simulation failed.** The simulation ran into an error. Restart it to try again. | A simulation job encountered an error while running. Review which workload results are available before using the displayed counts. |
+
+### Interpret partial or unavailable results
+
+A failed simulation doesn't necessarily make every workload's results unavailable. For example, a policy that includes Exchange, SharePoint, and OneDrive can still show Exchange matches when the SharePoint and OneDrive simulation job couldn't be started.
+
+In this situation:
+
+- **Matched items** and **Total matches** can show a count followed by **(partial)**. The count includes only the available results, not a complete total for all configured workloads.
+- **Matches by source** can show an Exchange count while SharePoint and OneDrive show **Not available**. Check the information icon beside a partial count, when displayed, for an explanation of which results it includes.
+- A field that shows **Not available**, including a sample count, doesn't establish that there were no matches or no sample items.
+
+For example, **100 (partial)** with **Exchange: 100**, **SharePoint: Not available**, and **OneDrive: Not available** means that 100 Exchange matches are available. It doesn't mean that SharePoint and OneDrive each had zero matches.
+
+Partial matches aren't a complete validation of the policy's scope. Simulation doesn't apply or remove labels, so a simulation failure also isn't a per-file failure to apply a label. The **Labeling failures** and **Label removal failures** views diagnose enforcement, not these simulation errors.
+
+### Retry the simulation and verify the result
+
+1. Before restarting, record the exact error, policy status, affected workloads, and run times, including the time zone. [Preserve any available results you need for comparison](/purview/auto-label-simulation-results#preserve-results-before-editing-or-rerunning).
+1. Select **Restart simulation** in the page header, if the action is available to you. Restarting tries the simulation again; it doesn't guarantee that the underlying error is resolved.
+1. Check the new run's status and any error banner. Review the results for the configured workloads before deciding whether to turn on the policy. Don't use a partial count as evidence that the failed workload had no matches.
+1. If the error recurs, contact Microsoft Support with the information in [Advanced troubleshooting and data collection](#advanced-troubleshooting-and-data-collection). Don't delete the policy, change its rules, or remove protection merely to clear a simulation error.
+
+If the portal continues to show **Simulation in progress** without an error, follow [Simulation hasn't completed](#simulation-hasnt-completed). A static or zero match count alone doesn't establish whether the current run failed; Microsoft Support can help confirm its status.
 
 ## Simulation results aren't what you expect
 

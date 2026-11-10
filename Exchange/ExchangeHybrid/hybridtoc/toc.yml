@@ -52,6 +52,16 @@ items:
           href: ../administration/user-photos-not-synced-to-exchange-online.md
     - name: Calendars
       items:
+        - name: Free/busy request times out
+          href: ../calendars/hybrid-free-busy-request-timeout.md
+        - name: Free/busy connection forcibly closed
+          href: ../calendars/hybrid-free-busy-connection-forcibly-closed.md
+        - name: Cross-organization free/busy request denied
+          href: ../calendars/hybrid-free-busy-cross-organization-request-denied.md
+        - name: Free/busy client assertion key not found
+          href: ../calendars/hybrid-free-busy-client-assertion-key-not-found.md
+        - name: Free/busy Autodiscover returns InvalidUser
+          href: ../calendars/hybrid-free-busy-discovery-invalid-user.md
         - name: '"550 5.1.11 RESOLVER.ADR.ExRecipNotFound" when delegate sends update to meeting'
           href: ../calendars/550-5111-ndr-delegate-sends-update-meeting.md
         - name: Can't access free/busy of non-Internet-facing AD site
