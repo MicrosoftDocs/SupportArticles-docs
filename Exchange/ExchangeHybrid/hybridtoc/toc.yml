@@ -52,6 +52,8 @@ items:
           href: ../administration/user-photos-not-synced-to-exchange-online.md
     - name: Calendars
       items:
+        - name: Free/busy client assertion key not found
+          href: ../calendars/hybrid-free-busy-client-assertion-key-not-found.md
         - name: Free/busy Autodiscover returns InvalidUser
           href: ../calendars/hybrid-free-busy-discovery-invalid-user.md
         - name: '"550 5.1.11 RESOLVER.ADR.ExRecipNotFound" when delegate sends update to meeting'
