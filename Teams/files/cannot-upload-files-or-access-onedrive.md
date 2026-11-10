@@ -141,6 +141,4 @@ Select **Run Tests**, as follows. This will populate the diagnostic in the Micro
 
 The diagnostic performs a large range of verifications.
 
-## Contact Support
 
-If none of these resolutions fix the error, create a new service request. Use the following description: "files upload failing to teams chat." Attach the Teams desktop logs and a browser trace to the request. For information about how to collect the desktop logs and browser trace, see [Collect logs to troubleshoot Teams issues](/microsoftteams/log-files#desktop-logs).
