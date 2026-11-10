@@ -52,6 +52,8 @@ items:
           href: ../administration/user-photos-not-synced-to-exchange-online.md
     - name: Calendars
       items:
+        - name: Cross-organization free/busy request denied
+          href: ../calendars/hybrid-free-busy-cross-organization-request-denied.md
         - name: Free/busy client assertion key not found
           href: ../calendars/hybrid-free-busy-client-assertion-key-not-found.md
         - name: Free/busy Autodiscover returns InvalidUser
