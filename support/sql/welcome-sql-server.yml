@@ -42,14 +42,10 @@ landingContent:
         links:
         - text: SQL LogScout
           url: https://github.com/microsoft/sql_logscout#scenarios
-        - text: PSSDiag
-          url: https://github.com/microsoft/DiagManager/wiki/Create-a-PSSDiag-Package
         - text: SQLTrace
           url: https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/SQLTRACE          
         - text: SSPIClient
           url: https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/SSPICLIENT          
-        - text: TSS V2
-          url: ../windows-client/windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tssv2.md          
         - text: SQLDumper
           url: tools/use-sqldumper-generate-dump-file.md
           
