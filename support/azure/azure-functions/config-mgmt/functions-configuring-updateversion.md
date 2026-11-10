@@ -1,7 +1,7 @@
 ---
 title: Upgrade the Azure Functions runtime version or language version
-description: Troubleshoot Azure Functions runtime upgrade issues, such as unreachable runtime, missing modules, and worker failures. Follow these steps to fix your app.
-ms.date: 10/14/2026
+description: Troubleshoot Azure Functions runtime upgrade issues like an unreachable runtime, missing modules, and worker failures. Follow these steps to fix your app.
+ms.date: 11/09/2026
 ms.topic: troubleshooting
 manager: dcscontentpm
 author: kaushika-msft
@@ -25,7 +25,7 @@ The following Azure Functions features and runtime versions have active retireme
 | Feature or version | End-of-support date | Action required |
 |---|---|---|
 | **Azure Functions runtime v1** | September 14, 2026 | Migrate to runtime v4. See [Migrate from v1 to v4](/azure/azure-functions/migrate-version-1-version-4). |
-| **.NET in-process model** | November 10, 2026 | Migrate to the isolated worker model. This requires code changes, not just a settings change. See [Migrate .NET apps to isolated worker model](/azure/azure-functions/migrate-dotnet-to-isolated-model). |
+| **.NET in-process model** | November 10, 2026 | Migrate to the isolated worker model. This migration requires code changes, not just a settings change. See [Migrate .NET apps to isolated worker model](/azure/azure-functions/migrate-dotnet-to-isolated-model). |
 | **Runtime v3 on Linux Consumption plan** | September 30, 2026 | Migrate to runtime v4 or move to the Flex Consumption plan. See [Migrate from v3 to v4](/azure/azure-functions/migrate-version-3-version-4). |
 
 For more information and migration guidance, see the following resources:
@@ -34,6 +34,190 @@ For more information and migration guidance, see the following resources:
 - [Functions runtime versions](/azure/azure-functions/functions-versions)
 - [Migrate apps from Azure Functions version 3.x to version 4.x](/azure/azure-functions/migrate-version-3-version-4)
 - [Migrate apps from Azure Functions version 1.x to version 4.x](/azure/azure-functions/migrate-version-1-version-4)
+
+## Identify Azure Functions apps that require .NET migration across subscriptions
+
+Use the following PowerShell script to identify Azure Functions apps that use the .NET in-process or isolated worker model across multiple Azure subscriptions.
+
+The script:
+
+- Scans all enabled Azure subscriptions that your account can access.
+- Retrieves Function App runtime configurations.
+- Identifies apps that use the .NET in-process execution model.
+- Flags .NET 8 isolated worker apps for upgrade review.
+- Exports the results to a CSV file for further assessment.
+
+### Prerequisites
+
+Before running the script:
+
+1. Install the Azure CLI. For more information, see [Install Azure CLI](/cli/azure/install-azure-cli).
+1. Sign in to Azure by running `az login`.
+1. Ensure your account has permission to list Function Apps and read their configurations and application settings.
+1. Run the script in PowerShell.
+
+### PowerShell script
+
+```powershell
+$output = "function-app-migration.csv"
+$results = [System.Collections.Generic.List[object]]::new()
+
+$subscriptions = az account list --all `
+    --query "[?state=='Enabled'].id" -o json | ConvertFrom-Json
+
+if ($LASTEXITCODE -ne 0) {
+    throw "Could not list Azure subscriptions."
+}
+
+foreach ($subscriptionId in $subscriptions) {
+
+    Write-Host "Checking subscription: $subscriptionId"
+
+    $apps = az functionapp list --subscription $subscriptionId `
+        -o json --only-show-errors | ConvertFrom-Json
+
+    if ($LASTEXITCODE -ne 0) {
+        Write-Warning "Could not list Function Apps in $subscriptionId"
+        continue
+    }
+
+    foreach ($app in $apps) {
+
+        Write-Host "Checking $($app.name)"
+
+        $assessment = "Check manually"
+        $workerRuntime = ""
+        $configuredVersion = ""
+
+        try {
+            $settings = az functionapp config appsettings list `
+                --name $app.name `
+                --resource-group $app.resourceGroup `
+                --subscription $subscriptionId `
+                -o json --only-show-errors | ConvertFrom-Json
+
+            if ($LASTEXITCODE -ne 0) {
+                throw "Could not read app settings"
+            }
+
+            $workerRuntime = (
+                $settings |
+                Where-Object { $_.name -eq "FUNCTIONS_WORKER_RUNTIME" } |
+                Select-Object -First 1
+            ).value
+
+            $config = az functionapp config show `
+                --name $app.name `
+                --resource-group $app.resourceGroup `
+                --subscription $subscriptionId `
+                -o json --only-show-errors | ConvertFrom-Json
+
+            if ($LASTEXITCODE -ne 0) {
+                throw "Could not read site configuration"
+            }
+
+            $site = az functionapp show `
+                --name $app.name `
+                --resource-group $app.resourceGroup `
+                --subscription $subscriptionId `
+                -o json --only-show-errors | ConvertFrom-Json
+
+            if ($LASTEXITCODE -ne 0) {
+                throw "Could not read Function App resource"
+            }
+
+            $flexVersion = [string]$site.properties.functionAppConfig.runtime.version
+            $linuxVersion = [string]$config.linuxFxVersion
+            $windowsVersion = [string]$config.netFrameworkVersion
+
+            if ($flexVersion) {
+                $configuredVersion = $flexVersion
+                $workerRuntime = [string]$site.properties.functionAppConfig.runtime.name
+            }
+            elseif ($linuxVersion) {
+                $configuredVersion = $linuxVersion
+            }
+            else {
+                $configuredVersion = $windowsVersion
+            }
+
+            if ($workerRuntime -eq "dotnet") {
+                $assessment = "In-process: migrate to isolated"
+            }
+            elseif (
+                $workerRuntime -eq "dotnet-isolated" -and
+                $configuredVersion -match '(?i)(^|[|])(?:DOTNET-ISOLATED[|])?v?8(\.|$)'
+            ) {
+                $assessment = ".NET 8 isolated: upgrade review"
+            }
+            elseif (
+                $workerRuntime -eq "dotnet-isolated" -and
+                -not $configuredVersion
+            ) {
+                $assessment = "Isolated: verify .NET version in deployed project"
+            }
+            elseif ($workerRuntime -eq "dotnet-isolated") {
+                $assessment = "Isolated: review configured version"
+            }
+            elseif (-not $workerRuntime) {
+                $assessment = "Check manually: worker runtime not returned"
+            }
+            else {
+                $assessment = "Other runtime: not in these .NET categories"
+            }
+        }
+        catch {
+            $assessment = "Check manually: $($_.Exception.Message)"
+            Write-Warning "$($app.name): $($_.Exception.Message)"
+        }
+
+        $results.Add([pscustomobject]@{
+            SubscriptionId    = $subscriptionId
+            ResourceGroup     = $app.resourceGroup
+            FunctionApp       = $app.name
+            WorkerRuntime     = $workerRuntime
+            ConfiguredVersion = $configuredVersion
+            Assessment        = $assessment
+        })
+    }
+}
+
+$results |
+    Where-Object {
+        $_.WorkerRuntime -eq "dotnet" -or
+        $_.WorkerRuntime -eq "dotnet-isolated" -or
+        $_.Assessment -like "Check manually*"
+    } |
+    Export-Csv -Path $output -NoTypeInformation -Encoding UTF8
+
+Write-Host "Assessment exported to $output"
+```
+
+### Review the results
+
+The script generates a file named `function-app-migration.csv` in the current working directory.
+
+The CSV includes:
+
+- **SubscriptionId:** Azure subscription containing the Function App.
+- **ResourceGroup:** Resource group containing the app.
+- **FunctionApp:** Name of the Function App.
+- **WorkerRuntime:** Configured .NET execution model.
+- **ConfiguredVersion:** Runtime version reported by the platform configuration.
+- **Assessment:** Recommended migration or verification action.
+
+Use the Assessment column to identify apps that require further review:
+
+- **In-process: migrate to isolated:** Migrate the application to the .NET isolated worker model.
+- **.NET 8 isolated: upgrade review:** Review the application's target framework and upgrade to a supported version.
+- **Isolated: verify .NET version in deployed project:** Verify the .NET version in the deployed application.
+- **Isolated: review configured version:** Confirm that the configured and deployed .NET versions are supported.
+- **Check manually:** Review the application configuration manually.
+
+> [!NOTE]
+> This script provides an initial assessment based on Azure resource configuration. It doesn't inspect deployed application binaries or project files. Verify the application's target framework before making migration decisions.
+>
+> The script doesn't modify, restart, or upgrade any Function Apps. It only reads configuration information and generates a local CSV report.
 
 ## Validate function app compatibility for runtime v4
 
@@ -162,7 +346,7 @@ Follow these steps to migrate your .NET in-process function app to the isolated 
     - Replace `[FunctionName]` with `[Function]` attributes.
     - Update binding and trigger packages to isolated worker versions.
 
-3. Update platform settings after code is ready. Run the following Azure CLI command to update the function app settings.
+1. Update platform settings after code is ready. Run the following Azure CLI command to update the function app settings.
 
     ```azurecli
     az functionapp config appsettings set --name <app-name> --resource-group <rg> --settings FUNCTIONS_WORKER_RUNTIME=dotnet-isolated FUNCTIONS_EXTENSION_VERSION=~4
