@@ -52,6 +52,8 @@ items:
           href: ../administration/user-photos-not-synced-to-exchange-online.md
     - name: Calendars
       items:
+        - name: Free/busy Autodiscover returns InvalidUser
+          href: ../calendars/hybrid-free-busy-discovery-invalid-user.md
         - name: '"550 5.1.11 RESOLVER.ADR.ExRecipNotFound" when delegate sends update to meeting'
           href: ../calendars/550-5111-ndr-delegate-sends-update-meeting.md
         - name: Can't access free/busy of non-Internet-facing AD site
