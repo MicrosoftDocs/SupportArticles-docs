@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot common issues when you run or scale large AKS clusters FAQ
 description: Troubleshoot common issues when you run or scale large AKS clusters, including quota, subnet, SNAT, and upgrade errors. Read the FAQ to resolve them.
-ms.date: 10/26/2026
-ms.reviewer: paahluwalia, mariochaves, v-leedennis, v-weizhu
+ms.date: 11/09/2026
+ms.reviewer: paahluwalia, mariochaves, v-leedennis, v-weizhu, kaushika
 ms.topic: troubleshooting
 manager: dcscontentpm
 author: kaushika-msft
