@@ -213,6 +213,10 @@ items:
   items:
   - name: Troubleshoot Azure Managed Lustre CSI Driver extension errors
     href: extensions/troubleshoot-azurelustre-csi-extension-errors.md
+  - name: Troubleshoot Agent Sandbox cluster extension errors in AKS (preview)
+    href: extensions/troubleshoot-agent-sandbox-cluster-extension.md
+  - name: Troubleshoot Pod snapshot cluster extension errors in AKS (preview)
+    href: extensions/troubleshoot-pod-snapshot-cluster-extension.md
   - name: Troubleshoot Azure Policy Add-On
     items:
     - name: Troubleshoot Azure Policy Add-On for AKS
