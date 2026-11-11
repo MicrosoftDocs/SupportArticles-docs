@@ -1,22 +1,22 @@
 ---
 title: Troubleshoot Azure Managed Lustre CSI Driver extension errors
-description: Fix common installation, configuration, and mount errors for the Azure Managed Lustre CSI Driver extension on Azure Kubernetes Service (AKS).
+description: Fix installation, configuration, and mount errors for the Azure Managed Lustre CSI Driver extension on AKS. Follow these steps to resolve issues.
+manager: dcscontentpm
 author: kaushika-msft
 ms.author: kaushika
 ms.reviewer: jeffbearer, davidbradley
 ms.topic: troubleshooting
 ms.service: azure-kubernetes-service
-ms.date: 08/03/2026
+ms.date: 11/11/2026
 ms.custom: sap:Extensions, Policies and Add-Ons
+ai-usage: ai-assisted
 ---
 
 # Troubleshoot Azure Managed Lustre CSI Driver extension errors
 
 ## Summary
 
-This article helps you resolve common installation, configuration, and mount
-errors for the Azure Managed Lustre CSI Driver extension
-(`microsoft.azuremanagedlustre`) on Azure Kubernetes Service (AKS).
+This article helps you troubleshoot Azure Managed Lustre CSI Driver extension errors on Azure Kubernetes Service (AKS). Use it to resolve common installation, configuration, and mount errors for the `microsoft.azuremanagedlustre` extension and get your Lustre volumes working.
 
 The Azure Managed Lustre CSI Driver connects Kubernetes workloads to
 [Azure Managed Lustre](/azure/azure-managed-lustre/amlfs-overview) file systems
@@ -26,6 +26,34 @@ manually and configure it with the connection details of an existing Azure
 Managed Lustre file system. With dynamic provisioning, you define a
 StorageClass and the driver creates volumes automatically.
 
+For driver v0.7.0, use the
+[current compatibility and lifecycle guidance](/azure/aks/azure-managed-lustre-overview).
+The driver requires Kubernetes 1.29 or later. Chart and extension versions are
+separate from the driver image version. Check the installed versions before
+applying version-specific troubleshooting steps.
+
+## Before you begin
+
+Before running a scenario's pod or log commands, find the driver namespace.
+Don't assume that an extension-managed installation uses `kube-system`.
+Locate its CSI pods:
+
+```bash
+kubectl get pods --all-namespaces \
+    -l 'app in (csi-azurelustre-controller,csi-azurelustre-node)' -o wide
+```
+
+In the shell where you run the diagnostic commands, replace `<driver-namespace>`
+with the namespace of the installation you're diagnosing:
+
+```bash
+NAMESPACE='<driver-namespace>'
+```
+
+The following commands stop with `Set NAMESPACE first` if this variable is empty or
+unset. If installation failed before pods were created, check the extension
+status in Scenario 1 instead.
+
 ## Scenario 1: Extension installation fails with no visible error
 
 You install the Azure Managed Lustre CSI Driver extension, but the installation
@@ -33,7 +61,7 @@ doesn't complete successfully. No clear error message appears.
 
 ### Solution 1: Inspect the extension status
 
-Run the following command to inspect the extension status and find the error
+Run the following command to check the extension status and find the error
 message in the `statuses` property:
 
 ```azurecli
@@ -45,8 +73,8 @@ az k8s-extension show \
 ```
 
 > [!TIP]
-> If you don't remember the extension name you used at install time, run
-> `az k8s-extension list` to discover all extensions on the cluster.
+> If you don't remember the extension name you used when you installed it, run
+> `az k8s-extension list` to see all extensions on the cluster.
 
 Look for the `statuses` array in the output. The `message` property shows
 the specific error. For example:
@@ -60,13 +88,16 @@ the specific error. For example:
 ]
 ```
 
+Record the installed extension version, release train, provisioning state, and
+namespace.
+
 If the status shows `InstallationFailed`, try the solutions in the following
 scenarios. If your error message doesn't match any of these scenarios, see
 [general cluster extension deployment errors](/troubleshoot/azure/azure-kubernetes/extensions/cluster-extension-deployment-errors).
 
-## Scenario 2: Extension version is not available in the specified region
+## Scenario 2: Extension version isn't available in the specified region
 
-You try to install the extension and receive the following error:
+You try to install the extension and receive the following error message:
 
 > (ExtensionTypeRegistrationGetFailed) Extension type microsoft.azuremanagedlustre
 > is not registered in region \<regionname>.
@@ -93,25 +124,31 @@ After installation, the CSI driver controller or node pods aren't in a
 1. Check the controller pod status.
 
    ```bash
-   kubectl get pods -n kube-system -l app=csi-azurelustre-controller -o wide
+   kubectl get pods -n "${NAMESPACE:?Set NAMESPACE first}" -l app=csi-azurelustre-controller -o wide
    ```
 
 1. Check the node DaemonSet pod status.
 
    ```bash
-   kubectl get pods -n kube-system -l app=csi-azurelustre-node -o wide
+   kubectl get pods -n "${NAMESPACE:?Set NAMESPACE first}" -l app=csi-azurelustre-node -o wide
    ```
 
 1. If pods are in `CrashLoopBackOff` or `Error` state, check the logs.
 
    ```bash
    # Controller logs
-   kubectl logs -n kube-system -l app=csi-azurelustre-controller \
+   kubectl logs -n "${NAMESPACE:?Set NAMESPACE first}" -l app=csi-azurelustre-controller \
        -c azurelustre --tail=100
 
    # Node logs (from the specific node pod)
-   kubectl logs -n kube-system <node-pod-name> -c azurelustre --tail=100
+   kubectl logs -n "${NAMESPACE:?Set NAMESPACE first}" <node-pod-name> -c azurelustre --tail=100
+   kubectl logs -n "${NAMESPACE:?Set NAMESPACE first}" <node-pod-name> -c lustre-loader --tail=100
    ```
+
+   For v0.7.0, a node pod is ready only when all four containers are ready.
+   The `lustre-loader` native sidecar installs client packages, loads kernel
+   modules, and checks LNet readiness. A `Running` pod alone isn't proof of
+   readiness.
 
 1. Verify that the required RBAC resources exist:
 
@@ -119,8 +156,10 @@ After installation, the CSI driver controller or node pods aren't in a
    kubectl get clusterrole,clusterrolebinding | grep azurelustre
    ```
 
-   If no results appear, the RBAC resources might be missing or corrupted.
-   Try uninstalling and reinstalling the extension.
+   If resources are missing, capture the extension status and pod events,
+   and contact Microsoft Support to restore the expected managed resources.
+   Don't uninstall and reinstall solely to repair RBAC while volumes remain.
+   Don't grant broad cluster permissions as a troubleshooting shortcut.
 
 Common causes include:
 
@@ -156,27 +195,30 @@ Identify which mode you're using, then follow the matching steps below.
 
 ### Solution 4: Verify the PersistentVolume and its parameters
 
+Run PVC commands in the workload's namespace. Use the driver namespace only
+for CSI controller and node logs.
+
 1. Check for events on the PVC.
 
    ```bash
    kubectl describe pvc <pvc-name>
    ```
 
-1. Verify that a PersistentVolume (PV) exists and is bound to the PVC. The PV
-   must have the following required volume attributes:
+1. For static provisioning, verify that a PersistentVolume (PV) exists and is
+   bound to the PVC. The PV must have the following volume attributes:
 
    - `mgs-ip-address` — the MGS IP address of your Azure Managed Lustre file system
    - `fs-name` — the filesystem name of your Azure Managed Lustre file system
    - `sub-dir` (optional) — a subdirectory path within the Lustre filesystem.
      If you include this parameter, provide a valid, non-empty subpath.
 
-   You can find these values in the Azure portal on the Azure Managed Lustre
+   You find these values in the Azure portal on the Azure Managed Lustre
    resource under **Client connection**.
 
 1. Check the CSI controller logs for the specific error:
 
    ```bash
-   kubectl logs -n kube-system -l app=csi-azurelustre-controller \
+   kubectl logs -n "${NAMESPACE:?Set NAMESPACE first}" -l app=csi-azurelustre-controller \
        -c azurelustre --tail=100
    ```
 
@@ -191,7 +233,8 @@ Identify which mode you're using, then follow the matching steps below.
    - `"Invalid parameter(s) {…} in storage class"` — the StorageClass contains
      unrecognized parameters.
 
-1. Verify that the PVC references a PV that exists and has the correct name:
+1. For static provisioning, verify that the PVC references a PV that exists
+   and has the correct name:
 
    ```bash
    kubectl get pv
@@ -202,13 +245,16 @@ Identify which mode you're using, then follow the matching steps below.
    PVC stays in `Pending` state. Correct the `volumeName` in the PVC spec to
    match the actual PV name.
 
-1. **If you use dynamic provisioning**, confirm the kubelet identity has the
-   permissions required to create an Azure Managed Lustre file system (see the
-   driver's dynamic-provisioning prerequisites), then check the CSI controller
-   logs for the file-system creation error:
+1. **If you use dynamic provisioning**, confirm the configured controller
+   identity has the
+   [required provisioning permissions](/azure/aks/azure-managed-lustre-dynamic-provisioning-reference#permissions).
+   For v0.7.0, subscription-wide SKU and subnet-capacity discovery permissions
+   are optional, not prerequisites for creating a file system. Don't add
+   `mgs-ip-address` to a dynamic StorageClass to work around an unrelated
+   validation error. Check the CSI controller logs for the creation error:
 
    ```bash
-   kubectl logs -n kube-system -l app=csi-azurelustre-controller \
+   kubectl logs -n "${NAMESPACE:?Set NAMESPACE first}" -l app=csi-azurelustre-controller \
        -c azurelustre --tail=100
    ```
 
@@ -238,18 +284,20 @@ on the pod show messages like:
    kernel module on the host node. Verify that the module is loaded:
 
    ```bash
-   kubectl exec -it <node-pod-name> -n kube-system -c azurelustre -- \
+   kubectl exec -it <node-pod-name> -n "${NAMESPACE:?Set NAMESPACE first}" -c lustre-loader -- \
        lsmod | grep lustre
    ```
 
    If this command produces no output, the Lustre client kernel module isn't
-   loaded. The node OS likely doesn't include Lustre client support for the
-   running kernel version.
+   loaded. Inspect the `lustre-loader` logs for package-installation or module
+   load errors. Confirm that matching Lustre client and required OS packages
+   are available for the running kernel, and that nodes can reach
+   `packages.microsoft.com` and the OS package repositories.
 
    You can also check for existing Lustre mounts on the node:
 
    ```bash
-   kubectl exec -it <node-pod-name> -n kube-system -c azurelustre -- \
+   kubectl exec -it <node-pod-name> -n "${NAMESPACE:?Set NAMESPACE first}" -c azurelustre -- \
        mount | grep lustre
    ```
 
@@ -268,7 +316,8 @@ on the pod show messages like:
 1. **Check the node pod logs** for detailed mount error output:
 
    ```bash
-   kubectl logs -n kube-system <node-pod-name> -c azurelustre --tail=100
+   kubectl logs -n "${NAMESPACE:?Set NAMESPACE first}" <node-pod-name> -c azurelustre --tail=100
+   kubectl logs -n "${NAMESPACE:?Set NAMESPACE first}" <node-pod-name> -c lustre-loader --tail=100
    ```
 
 ## Scenario 6: Existing Lustre CSI driver conflicts with extension installation
@@ -283,41 +332,44 @@ The installation fails because resources already exist:
 > exists. Unable to continue with install: ...]} occurred while doing the
 > operation : {Installing the extension} on the config
 
-### Solution 6: Uninstall the existing driver first
+<a id="solution-6-uninstall-the-existing-driver-first"></a>
 
-1. Identify the existing installation. If you installed it via Helm, find the release
+### Solution 6: Identify the existing installation before migrating
+
+1. Identify the existing installation. If you installed it by using Helm, find the release
    name:
 
    ```bash
-   helm list -n kube-system | grep lustre
+   helm list --all --all-namespaces | grep lustre
    ```
 
-1. Uninstall the existing driver:
+1. Stop before changing ownership or deleting resources. Don't install a
+   second driver alongside the existing one. For an existing Helm release
+   that needs replacement with v0.7.0, use the
+   [remove-and-replace procedure](/azure/aks/azure-managed-lustre-uninstall#upgrade-the-csi-driver),
+   not an in-place Helm upgrade.
+   Changing from Helm or manifests to a managed extension is a separate
+   migration. Contact Microsoft Support if you need to preserve existing
+   volumes.
 
-   ```bash
-   # If installed via Helm (use the release name from step 1)
-   helm uninstall <release-name> -n kube-system
+1. If you intend to remove the driver permanently, follow the
+   [safe uninstall procedure](/azure/aks/azure-managed-lustre-uninstall#uninstall-the-driver)
+   for the actual installation method and namespace. Stop workloads and
+   provisioning, wait for unmounts, and decide which file systems to retain
+   before deleting claims. Keep the driver running until cleanup completes.
 
-   # If installed via kubectl apply
-   kubectl delete -f deploy/
-   ```
-
-1. After you remove the existing driver, retry the extension installation:
-
-   ```azurecli
-   az k8s-extension create \
-       --resource-group <resource-group-name> \
-       --cluster-name <cluster-name> \
-       --cluster-type managedClusters \
-       --name azurelustre-csi \
-       --extension-type microsoft.azuremanagedlustre
-   ```
+1. After verifying safe removal, follow the
+   [installation guide](/azure/aks/azure-managed-lustre-install) for the chosen
+   installation method. Confirm the installed extension and driver versions,
+   namespace, and node readiness before resuming workloads.
 
 > [!IMPORTANT]
-> Uninstalling the CSI driver doesn't delete existing PersistentVolumes or
-> PersistentVolumeClaims. However, workloads that use Lustre volumes are
-> disrupted during the driver swap. Restart pods that use Lustre mounts after
-> you install the new extension. The underlying volumes and data remain intact.
+> Driver v0.7.0 blocks removal by default while driver-owned PVs remain,
+> including static and retained PVs, or if it can't query the inventory.
+> Don't delete live PVs, remove finalizers, force-delete the extension, or
+> bypass hooks to clear an installation conflict. With a `Delete` reclaim
+> policy, deleting a dynamically provisioned claim can delete the backing
+> file system and its data.
 
 ## Scenario 7: Extension installs successfully but CSI pods don't appear on some nodes
 
@@ -333,24 +385,28 @@ Nodes whose OS or version isn't one of these don't get a CSI driver pod. This
 failure is silent - the extension reports success even though CSI driver
 coverage is incomplete.
 
-1. Compare the number of node pods to the number of nodes:
+1. Compare CSI node placement with the nodes intended to run Lustre workloads:
 
    ```bash
-   kubectl get pods -n kube-system -l app=csi-azurelustre-node --no-headers | wc -l
-   kubectl get nodes --no-headers | wc -l
+   kubectl get pods -n "${NAMESPACE:?Set NAMESPACE first}" -l app=csi-azurelustre-node -o wide
+   kubectl get nodes -L kubernetes.azure.com/os-sku-effective
    ```
 
-   If the pod count is less than the node count, some nodes aren't covered.
+   Every intended Lustre workload node needs a ready CSI node pod. A system
+   pool excluded by its taints isn't a coverage failure if workloads don't run
+   there. Don't compare the pod count with every node in the cluster.
 
 1. Check the OS of each node:
 
    ```bash
-   kubectl get nodes -o wide
+   kubectl get nodes -L kubernetes.azure.com/os-sku-effective -o wide
    ```
 
-   The `OS-IMAGE` column shows the node OS. Nodes running an OS or version
-   outside the supported set (Ubuntu 22.04/24.04 or AzureLinux 3) don't have a
-   CSI driver pod.
+   For v0.7.0, scheduling uses `kubernetes.azure.com/os-sku-effective`:
+   `Ubuntu2204`, `Ubuntu2404`, or `AzureLinux3`. The Jammy DaemonSet also
+   targets `Ubuntu2004` Confidential VM pools as a deprecated compatibility
+   path. Inspect architecture and taints as well as the label. AKS manages
+   this label; don't set it manually to force a driver onto an unsupported OS.
 
 1. To use Azure Managed Lustre with your cluster, ensure your Lustre workloads
    are scheduled on node pools running a supported OS (Ubuntu 22.04/24.04 or
@@ -359,9 +415,44 @@ coverage is incomplete.
    or [taints and tolerations](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/)
    to constrain workloads to compatible nodes.
 
+## Scenario 8: Uninstall is blocked by the volume guard
+
+Driver v0.7.0 adds a default pre-delete guard for Helm-based removal and a
+volume check in the manifest cleanup script. A remaining PV blocks removal
+even when its workload is stopped and its file system is unmounted.
+
+### Solution 8: Inspect the guard and complete safe cleanup
+
+Capture the extension status if the resource still exists, Helm hook Job events,
+and guard logs before retrying. Failed Jobs expire and retries replace them. Use the installed
+release's namespace and labels, not an assumed `kube-system` namespace.
+
+Follow the
+[blocked-uninstall reference](https://github.com/kubernetes-sigs/azurelustre-csi-driver/blob/v0.7.0/charts/README.md#troubleshoot-a-blocked-uninstall).
+Resolve remaining PVs through the safe retention and deletion procedure, or restore
+the guard's cluster-wide permission to list PVs if the inventory query fails.
+An API error isn't proof that no volumes remain. Don't use broad RBAC grants,
+remove Helm release secrets, or bypass hooks to clear the error.
+
+For managed extensions, complete volume cleanup before requesting removal.
+The guard can't preserve an Azure extension resource that you already deleted
+while its Helm release is removed asynchronously. Also verify retained file
+systems separately; they remain billable. Replacing an earlier extension with
+v0.7.0 requires removal and reinstallation, not an in-place upgrade. Stop and
+contact Microsoft Support if a guarded installation blocks replacement while
+volumes must be preserved. Use the
+[managed-extension precautions](https://github.com/kubernetes-sigs/azurelustre-csi-driver/blob/v0.7.0/charts/README.md#azure-managed-extensions)
+and the removal path that matches how the extension was installed. For the
+preview AKS CLI enable option, use the separate
+[CLI lifecycle guide](/azure/aks/azure-managed-lustre-upgrade-uninstall-cli-preview).
+
+If the Azure extension resource is gone but CSI pods remain, preserve their
+events and logs and contact Microsoft Support for recovery. Don't recreate the
+extension or run Helm directly against its remaining resources.
+
 ## Next steps
 
-- [Use the Azure Managed Lustre CSI driver with AKS](/azure/azure-managed-lustre/use-csi-driver-kubernetes)
+- [Use the Azure Managed Lustre CSI driver with AKS](/azure/aks/azure-managed-lustre-overview)
 - [Azure Managed Lustre file system overview](/azure/azure-managed-lustre/amlfs-overview)
 - [General cluster extension deployment errors](/troubleshoot/azure/azure-kubernetes/extensions/cluster-extension-deployment-errors)
 - [CSI driver troubleshooting guide](https://github.com/kubernetes-sigs/azurelustre-csi-driver/blob/main/docs/csi-debug.md) — advanced debugging commands for driver developers
