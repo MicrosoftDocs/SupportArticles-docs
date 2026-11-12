@@ -1,7 +1,7 @@
 ---
 title: Intercompany Purchase Order Accounting Distribution Error
 description: Intercompany purchase order confirmation can fail after price synchronization. Learn how to work around stale accounting distributions.
-ms.date: 09/21/2026
+ms.date: 11/09/2026
 ms.search.form: PurchTable, BudgetControlConfiguration
 audience: Application User
 ms.reviewer: shubhamshr, maupadhyaya, sununna
@@ -62,7 +62,7 @@ For non-intercompany scenarios or other causes of the same error, see [Accountin
 ## Related content
 
 - [Workflow approval fails with the "Accounting distribution validation failed" error](po-workflow-accounting-distribution.md)
-- [You can only complete a purchase order action for fully distributed line numbers](action-requires-full-distribution.md)
+- [You can only complete a purchase order action for fully distributed line numbers](over-under-distribution.md#symptoms)
 - [Set up intercompany trade](/dynamics365/supply-chain/sales-marketing/intercompany-trade-set-up)
 - [Create a purchase order that is governed by a budget](/dynamics365/supply-chain/procurement/tasks/create-purchase-order-governed-by-budget)
 - [Approve and confirm purchase orders](/dynamics365/supply-chain/procurement/purchase-order-approval-confirmation)

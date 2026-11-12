@@ -9,7 +9,7 @@ metadata:
   ms.service: dynamics-365-customer-insights
   author: aartig13
   ms.author: aartigoyle
-  ms.date: 06/29/2026
+  ms.date: 11/12/2026
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -82,6 +82,16 @@ landingContent:
         links:
           - text: Segments show incorrect member count
             url: segments/segment-member-count.md
+
+  # Card
+  - title: Tracking
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot link tracking
+            url: tracking/troubleshoot-link-tracking.md
+          - text: Troubleshoot web tracking
+            url: tracking/troubleshoot-web-tracking.md
 
   # Card
   - title: Documentation and training
