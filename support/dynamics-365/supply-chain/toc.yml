@@ -111,14 +111,10 @@ items:
         href: procurement/voucher-number-consumed.md
       - name: A purchase order receipt doesn't include all charges
         href: procurement/po-receipt-missing-charges.md
-      - name: A vendor rebate isn't cumulated based on invoices
-        href: procurement/vendor-rebate-not-cumulated.md
-      - name: Accounting distributions are either over- or under-distributed
+      - name: Accounting distribution errors
         href: procurement/over-under-distribution.md
       - name: An exception occurs during vendor invoice posting
         href: procurement/invocation-target-exception.md
-      - name: Can't add a line to a purchase requisition after requesting a change
-        href: procurement/cant-add-line-to-purchase-requisition-after-change.md
       - name: Can't cancel a purchase order within a closed period
         href: procurement/unable-to-cancel-po.md
       - name: Can't change accounting date or do a budget check
@@ -135,12 +131,8 @@ items:
         href: procurement/unable-to-finalize-cancelled-purchase-orders.md
       - name: Cancelling delivery remainder moves purchase order to a Confirmed state
         href: procurement/change-management-canceled-remainder.md
-      - name: Default tax group and cash discount aren't filled in from the invoice account
-        href: procurement/default-tax-group-and-discount.md
       - name: "\"Enter the mandatory warehouse\" error when you post a product receipt (GRN)"
         href: procurement/grn-receiving-error-item-transactions-mandatory-warehouse.md
-      - name: Error "Object reference not set" occurs during purchase order confirmation
-        href: procurement/object-reference-not-set.md
       - name: Failures when submitting a Prospective Vendor Registration Request
         href: procurement/unable-to-submit-pvrr.md
       - name: Intercompany purchase invoice has a cross-currency rounding variance
@@ -175,12 +167,8 @@ items:
         href: procurement/summary-update-error-direct-delivery-po-invoice.md
       - name: "\"The company does not exist\" when canceling a purchase order line remainder"
         href: procurement/company-does-not-exist-cancel-po-line-remainder.md
-      - name: The delivery name isn't synced after changing a purchase order delivery address
-        href: procurement/delivery-name-isnt-synced.md
       - name: The Post to charge account in ledger setting isn't turned on
         href: procurement/post-setting-turned-off.md
-      - name: The purchase agreement maximum limit isn't effective on a purchase requisition
-        href: procurement/max-limit-on-requisition.md
       - name: Transactions can be posted to a suspended ledger account
         href: procurement/canceled-receipts-posted.md
       - name: Unit prices on purchase orders aren't calculated based on the unit conversion
@@ -193,14 +181,8 @@ items:
         href: procurement/invoice-not-linked-purchase-order.md
       - name: Workflow approval fails with "Accounting distribution validation failed"
         href: procurement/po-workflow-accounting-distribution.md
-      - name: You can only complete a purchase order action for fully distributed line numbers
-        href: procurement/action-requires-full-distribution.md
-      - name: You can't add the Price unit field to the Purchase agreement page
-        href: procurement/personalize-purchase-agreement-price.md
       - name: You can't consolidate multiple product receipts into a single purchase order
         href: procurement/consolidate-multiple-receipts.md
-      - name: You can't invoice a customer-facing sales order
-        href: procurement/cant-invoice-original-sales-order-direct-delivery-purchase-order.md
   - name: Product management
     items:
       - name: Integers incorrectly rounded when product configuration models are calculated

@@ -16685,6 +16685,42 @@
     {
       "source_path": "support/dynamics-365/supply-chain/planning/firmed-directly-derived-orders-processed-by-in-review-workflow.md",
       "redirect_url": "/dynamics365/supply-chain/procurement/purchase-order-approval-confirmation#changing-purchase-orders"
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/procurement/personalize-purchase-agreement-price.md",
+      "redirect_url": "/dynamics365/supply-chain/procurement/purchase-agreements#price-unit-personalization"
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/procurement/vendor-rebate-not-cumulated.md",
+      "redirect_url": "/dynamics365/supply-chain/procurement/vendor-rebates#invoice-due-dates-and-rebate-calculation"
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/procurement/delivery-name-isnt-synced.md",
+      "redirect_url": "/dynamics365/supply-chain/procurement/tasks/create-purchase-order#delivery-name-isnt-updated-after-an-address-change"
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/procurement/max-limit-on-requisition.md",
+      "redirect_url": "/dynamics365/supply-chain/procurement/purchase-agreements#purchase-requisition-maximum-limits"
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/procurement/cant-invoice-original-sales-order-direct-delivery-purchase-order.md",
+      "redirect_url": "/dynamics365/supply-chain/sales-marketing/intercompany-set-up-parameters-to-post-order#cant-invoice-the-original-sales-order-or-direct-delivery-purchase-order"
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/procurement/cant-add-line-to-purchase-requisition-after-change.md",
+      "redirect_url": "/dynamics365/supply-chain/procurement/purchase-requisitions-workflow#add-a-line-after-requesting-a-change"
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/procurement/object-reference-not-set.md",
+      "redirect_url": "/troubleshoot/dynamics-365/supply-chain/procurement/over-under-distribution#symptoms"
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/procurement/action-requires-full-distribution.md",
+      "redirect_url": "/troubleshoot/dynamics-365/supply-chain/procurement/over-under-distribution#symptoms"
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/procurement/default-tax-group-and-discount.md",
+      "redirect_url": "/dynamics365/supply-chain/procurement/set-up-vendor-accounts#fiscal-data-from-an-invoice-account"
     }
   ]
 }
