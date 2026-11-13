@@ -4,9 +4,10 @@ description: General troubleshooting guide for the Enrollment Status Page (ESP) 
 author: Cloud-Writer
 ms.author: meerak
 ms.reviewer: kaushika, ybao
-ms.date: 03/30/2026
+ms.date: 11/10/2026
 search.appverid: MET150
-ms.custom: sap:Autopilot\ESP - AccountSetup - Apps
+ms.custom: sap:Autopilot\ESP - AccountSetup - Apps, msecd-doc-authoring-1031
+ai-usage: ai-assisted
 ---
 
 # Troubleshooting the Enrollment Status Page
@@ -226,6 +227,21 @@ This subkey contains diagnostics information for all applications and policies t
 This subkey is created during the account setup phase if the device setup phase is completed successfully. It  contains the installation state of Win32 apps that are deployed in user context, and the creation status of the tracking policy for the account setup phase.
 
 :::image type="content" source="media/understand-troubleshoot-esp/usersid.png" alt-text="Screenshot shows the information of the user SID subkey.":::
+
+## A PowerShell script is still running when ESP completes
+
+A PowerShell script can still be running after the Enrollment Status Page (ESP) completes. ESP doesn't track PowerShell scripts as blocking workloads or wait for them to complete successfully. It can complete when its tracked applications and policies meet the configured ESP criteria. Long-running scripts are more likely to still be running at that point.
+
+At startup, the Intune management extension processes PowerShell scripts first, then starts Win32 app processing in the same startup flow. However, other device check-ins or notifications can independently trigger app processing while a script is still running. A running script doesn't prevent Win32 app processing from starting through these other triggers.
+
+### Review the provisioning dependency
+
+To identify and address a sequencing dependency, follow these steps:
+
+1. Check whether the app deployment assumes that an independently assigned PowerShell script finishes before the app starts installing.
+1. If the script is a prerequisite for the app, include that prerequisite as part of the Win32 app deployment. Don't rely on ESP completion or the Intune management extension startup order to enforce the dependency.
+
+For more information, see [PowerShell script execution during ESP](/intune/device-enrollment/windows/setup-status-page#powershell-script-execution-during-esp).
 
 ## Common questions for ESP troubleshooting
 
