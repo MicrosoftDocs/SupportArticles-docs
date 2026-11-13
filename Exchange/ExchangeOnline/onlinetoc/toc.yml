@@ -216,6 +216,8 @@ items:
           href: ../calendars/cannot-view-another-user-calendar-free-busy-information.md
         - name: Can't view user's free/busy information in Scheduling Assistant
           href: ../calendars/no-free-busy-information-retrieved.md
+        - name: Collect a browser trace for free/busy lookups
+          href: ../calendars/collect-free-busy-browser-trace.md
         - name: Default calendar isn't returned by Graph REST API
           href: ../calendars/default-calendar-not-returned-by-graph-rest-api.md
         - name: Delegate can't accept meeting request in OWA
