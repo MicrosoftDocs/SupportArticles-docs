@@ -6,7 +6,7 @@ author: kaushika-msft
 ms.author: kaushika
 ms.reviewer: wangamanda
 ms.topic: troubleshooting
-ms.date: 11/12/2026
+ms.date: 11/13/2026
 ms.service: azure-kubernetes-service
 ms.custom: sap:Extensions, Policies and Add-Ons
 ai-usage: ai-assisted
@@ -305,11 +305,13 @@ The caller lacks the custom `restore` permission, the selected snapshot isn't us
      --namespace "$WORKLOAD_NAMESPACE"
    ```
 
-   For a controller-created pod, a cluster administrator with impersonation permission can check the controller's service account:
+   Restoring through Deployments, ReplicaSets, and Jobs isn't supported in this preview. Create a raw Pod or use the Agent Sandbox cluster extension restore workflow instead. Don't grant the `restore` verb to built-in Kubernetes controllers to bypass this restriction.
+
+   For a Sandbox pod, check the Agent Sandbox controller's restore permission. Using `--as` requires impersonation permission.
 
    ```bash
-   SERVICE_ACCOUNT_NAMESPACE="<controller-namespace>"
-   SERVICE_ACCOUNT_NAME="<controller-service-account>"
+   SERVICE_ACCOUNT_NAMESPACE="agent-sandbox-system"
+   SERVICE_ACCOUNT_NAME="agent-sandbox-controller"
 
    kubectl auth can-i restore \
      "podsnapshots.podsnapshot.aks.azure.com/$SNAPSHOT_NAME" \
@@ -519,7 +521,9 @@ Deletion also waits for coordinated storage cleanup. An unavailable execution co
 
 Don't remove finalizers, edit resource status, or manually delete storage artifacts to force completion. These actions can leave stored snapshots or staged data behind.
 
-Before planned removal of the Pod snapshot cluster extension, plan snapshot retention and intentionally delete snapshots you no longer need while the extension is healthy. Wait for their deletion to complete before uninstalling. If the extension has already been removed and snapshots remain terminating, contact Azure support for help restoring reconciliation through the same AKS extension management path. Don't create a separate Helm installation. Verify removal through the Azure extension resource; retained CRDs don't establish that cleanup succeeded or failed.
+Before uninstalling the Pod snapshot cluster extension, delete scheduled policies to stop new captures and wait for active captures to finish. Deleting a policy preserves its snapshots. Delete snapshots you no longer need while the Pod snapshot cluster extension is healthy. Wait for their deletion to complete before uninstalling.
+
+If the Pod snapshot cluster extension has already been removed and snapshots remain terminating, contact Azure support for help restoring reconciliation through the same AKS extension management path. Don't create a separate Helm installation. Verify removal through the Azure extension resource; retained CRDs don't establish that cleanup succeeded or failed.
 
 ## Inspect node operations
 
