@@ -1,28 +1,33 @@
 ---
-title: Troubleshoot Container Network Interface download failures
+title: Troubleshoot CNI Download Failures in AKS
 description: Learn how to resolve Container Network Interface download failures when you try to create and deploy an Azure Kubernetes Service (AKS) cluster.
-ms.date: 05/05/2025
-editor: v-jsitser
-ms.reviewer: axelg, chiragpa, mariochaves, v-weizhu, v-leedennis
+ms.date: 11/12/2026
+ms.topic: troubleshooting
+manager: dcscontentpm
+author: kaushika-msft
+ms.author: kaushika
+ms.reviewer: axelg, chiragpa, mariochaves, v-weizhu, v-leedennis, kaushika
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the container network interface download failures so that I can successfully create and deploy an Azure Kubernetes Service (AKS) cluster.
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool), innovation-engine
----
-
-# Troubleshoot Container Network Interface download failures
+ai-usage: ai-assisted
+---    
+# Troubleshoot Container Network Interface download failures in Azure Kubernetes Service
 
 ## Summary
 
-This article discusses how to identify and resolve the `CniDownloadTimeoutVMExtensionError` error code (also known as error code `ERR_CNI_DOWNLOAD_TIMEOUT`, error number 41) or the `WINDOWS_CSE_ERROR_DOWNLOAD_CNI_PACKAGE` error code (error number 35) that occurs when you try to create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster.
+This article discusses how to identify and resolve the `CniDownloadTimeoutVMExtensionError` error code (also known as error code `ERR_CNI_DOWNLOAD_TIMEOUT`, error number 41) or the `WINDOWS_CSE_ERROR_DOWNLOAD_CNI_PACKAGE` error code (error number 35) that occurs when you try to create and deploy an Azure Kubernetes Service (AKS) cluster.
 
 ## Prerequisites
+
+Ensure you have the following prerequisites installed and configured:
 
 - The [Curl](https://curl.se/download.html) command-line tool
 - Network access from the same environment where AKS nodes will be deployed (same VNet, firewall rules, etc.)
 
 ## Symptoms
 
-When you try to create a Linux-based AKS cluster, you receive the following error message:
+When you try to create a Linux-based AKS cluster, you receive the following error message.
 
 ```output
 Message: We are unable to serve this request due to an internal error
@@ -32,7 +37,7 @@ Error message: "Enable failed: failed to execute command: command terminated wit
 "ExitCode": "41",
 ```
 
-When you try to create a Windows-based AKS cluster, you receive the following error message:
+When you try to create a Windows-based AKS cluster, you receive the following error message.
 
 ```output
 Message="VM has reported a failure when processing extension 'vmssCSE' (publisher 'Microsoft.Compute' and type 'CustomScriptExtension').
@@ -48,7 +53,7 @@ Your cluster nodes can't connect to the endpoint that's used to download the Con
 
 ## Solution
 
-Run a Curl command to verify that your nodes can download the binaries:
+Run a Curl command to verify that your nodes can download the binaries.
 
 First, attempt a test download of the Azure CNI package for Linux from the official mirror endpoint.
 
@@ -56,7 +61,7 @@ First, attempt a test download of the Azure CNI package for Linux from the offic
 curl -I https://acs-mirror.azureedge.net/cni/azure-vnet-cni-linux-amd64-v1.0.25.tgz
 ```
 
-Results:
+The following is an example of the expected output.
 
 <!-- expected_similarity=0.3 -->
 
@@ -75,7 +80,7 @@ date: Thu, 05 Jun 2025 00:00:00 GMT
 
 This command checks if the endpoint is reachable and returns the HTTP headers. If you see a `200 OK` response, it indicates that the endpoint is accessible.
 
-Next, attempt a download with validation and save the file locally for further troubleshooting. This will help determine if SSL or outbound connectivity is correctly configured.
+Next, attempt a download with validation and save the file locally for further troubleshooting. This step helps you determine if SSL or outbound connectivity is correctly configured.
 
 ```bash
 # Create a temporary directory for testing
@@ -85,7 +90,7 @@ mkdir -p /tmp/cni-test
 curl -L --fail https://acs-mirror.azureedge.net/cni/azure-vnet-cni-linux-amd64-v1.0.25.tgz --output /tmp/cni-test/azure-vnet-cni-linux-amd64-v1.0.25.tgz && echo "Download successful" || echo "Download failed"
 ```
 
-Results:
+The following is an example of the expected output.
 
 <!-- expected_similarity=0.3 -->
 
@@ -96,14 +101,14 @@ Results:
 Download successful
 ```
 
-Verify the downloaded file:
+Verify the downloaded file.
 
 ```bash
 ls -la /tmp/cni-test/
 file /tmp/cni-test/azure-vnet-cni-linux-amd64-v1.0.25.tgz
 ```
 
-Results:
+The following is an example of the expected output.
 
 <!-- expected_similarity=0.3 -->
 
@@ -116,16 +121,14 @@ drwxrwxrwt 8 root root    4096 Jun 20 10:30 ..
 /tmp/cni-test/azure-vnet-cni-linux-amd64-v1.0.25.tgz: gzip compressed data, from Unix, original size modulo 2^32 20070400
 ```
 
-Clean up the test files:
+Clean up the test files.
 
 ```bash
 rm -rf /tmp/cni-test/
 ```
 
-If you can't download these files, make sure that traffic is allowed to the downloading endpoint. For more information, see [Azure Global required FQDN/application rules](/azure/aks/outbound-rules-control-egress#azure-global-required-fqdn--application-rules).
+If you can't download these files, ensure that traffic is allowed to the downloading endpoint. For more information, see [Azure Global required FQDN/application rules](/azure/aks/outbound-rules-control-egress#azure-global-required-fqdn--application-rules).
 
 ## References
 
 - [General troubleshooting of AKS cluster creation issues](troubleshoot-aks-cluster-creation-issues.md)
-
- 
