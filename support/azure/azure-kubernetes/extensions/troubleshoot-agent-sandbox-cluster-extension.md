@@ -6,7 +6,7 @@ author: kaushika-msft
 ms.author: kaushika
 ms.reviewer: wangamanda
 ms.topic: troubleshooting
-ms.date: 11/12/2026
+ms.date: 11/13/2026
 ms.service: azure-kubernetes-service
 ms.custom: sap:Extensions, Policies and Add-Ons
 ai-usage: ai-assisted
@@ -420,6 +420,8 @@ The referenced warm pool might be missing, have no ready unclaimed members, or c
 
 The Pod snapshot cluster extension is a separate, optional extension. Ordinary Sandbox creation, suspension, templates, pools, and claims don't require it.
 
+When you use the Agent Sandbox cluster extension and Pod snapshot cluster extension together, you can suspend and resume the same Sandbox. This preview doesn't support restoring a single snapshot to multiple independent Sandboxes, including those in a snapshot-backed warm pool.
+
 When restore is enabled, snapshot readiness, namespace, selection, and restore permissions must all be valid. The manager component of the Pod snapshot cluster extension detects the Sandbox API even if Agent Sandbox is installed later; a restart isn't required. Existing restore selection can't be changed while the backing pod exists.
 
 ### Solution
@@ -479,11 +481,11 @@ When restore is enabled, snapshot readiness, namespace, selection, and restore p
 
 1. To change or reselect a snapshot safely, use your normal manifest management process to perform these steps in order:
 
-   1. Remove the restore opt-in label from the Sandbox pod template.
-   1. Set `spec.operatingMode` to `Suspended`.
-   1. Wait for the old backing pod to be deleted.
-   1. Change the pod template or explicit snapshot reference.
-   1. Restore the opt-in label.
+   1. Set `spec.operatingMode` to `Suspended` without changing the existing restore label or annotation.
+   1. Wait for `Suspended=True` and for the backing pod to be deleted.
+   1. To clear an implicit selection, remove the restore opt-in label and wait for the Pod snapshot cluster extension to remove `restore-from`.
+   1. While still suspended, update the pod template. Set `restore=true` and an explicit `restore-from`, or omit `restore-from` for implicit selection.
+   1. Wait for the Pod snapshot cluster extension to select the intended snapshot before resuming.
    1. Set `spec.operatingMode` to `Running`.
 
    Don't set generated snapshot provenance or runtime restore annotations manually.
