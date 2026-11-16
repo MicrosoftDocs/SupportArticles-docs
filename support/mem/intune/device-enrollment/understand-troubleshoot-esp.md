@@ -1,8 +1,6 @@
 ---
 title: Troubleshoot the Enrollment Status Page (ESP)
 description: General troubleshooting guide for the Enrollment Status Page (ESP) for Windows Autopilot or OOBE for Microsoft Entra join.
-author: Cloud-Writer
-ms.author: meerak
 ms.reviewer: kaushika, ybao
 ms.date: 11/10/2026
 search.appverid: MET150
