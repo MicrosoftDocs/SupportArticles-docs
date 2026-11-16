@@ -3,8 +3,6 @@ title: Troubleshoot state message backlog
 description: Describes how to troubleshoot state messaging performance issues in Configuration Manager.
 ms.date: 03/30/2026
 ms.reviewer: kaushika, buzb, lamosley
-author: Cloud-Writer
-ms.author: meerak
 ms.custom: sap:Site Server and Roles\Inbox Backlog
 ---
 # Troubleshoot state message processing performance issues

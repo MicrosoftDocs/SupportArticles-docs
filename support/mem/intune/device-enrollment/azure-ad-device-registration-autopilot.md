@@ -1,8 +1,6 @@
 ---
 title: Troubleshoot Microsoft Entra device registration and Windows Autopilot
 description: Provides tips for troubleshooting Microsoft Entra device registration and Windows Autopilot.
-author: Cloud-Writer
-ms.author: meerak
 ms.reviewer: kaushika, horemaw
 ms.date: 03/30/2026
 search.appverid: MET150
