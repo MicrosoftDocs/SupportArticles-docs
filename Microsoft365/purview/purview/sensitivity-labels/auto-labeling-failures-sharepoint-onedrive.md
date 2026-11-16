@@ -16,7 +16,7 @@ ms.reviewer: richardstowe
 appliesto: 
   - Microsoft Purview
 search.appverid: MET150
-ms.date: 10/21/2026
+ms.date: 11/13/2026
 ai-usage: ai-assisted
 
 #customer intent: As an administrator, I want to identify auto-labeling failure reasons so that I can follow the recommended action for an affected file.
@@ -27,6 +27,10 @@ ai-usage: ai-assisted
 ## Summary
 
 This article describes why auto-labeling might fail for files on SharePoint and OneDrive for work or school. It provides a list of the failures that you might see in the Microsoft Purview portal and the recommended actions to resolve them.
+
+> [!NOTE]
+
+> If **Total labeled to date** and **Labeling activity** show different counts, see [Numbers don't agree or Exchange activity is missing](troubleshoot-auto-labeling-policies.md#numbers-dont-agree-or-exchange-activity-is-missing). A reporting mismatch alone doesn't establish a labeling failure; use the failure codes in this article when an affected file has an explicit failure reason.
 
 ## About auto-labeling failures
 
