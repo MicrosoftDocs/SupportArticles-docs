@@ -1,8 +1,6 @@
 ---
 title: Windows Servicing dashboard shows no data or stale OS versions
 description: Troubleshoot the Windows Servicing dashboard when it displays no data or contains stale operating system version information.
-author: Cloud-Writer
-ms.author: vinpa
 ms.reviewer: kaushika, payur
 ms.date: 06/24/2026
 ms.custom: sap:Configuration Manager Setup, High Availability, Migration and Recovery\Updates and Servicing
