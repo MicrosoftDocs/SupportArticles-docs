@@ -274,6 +274,8 @@ items:
       href: ./teams-rooms-and-devices/resolve-direct-guest-join-issues.md   
     - name: Join button missing in Teams Rooms
       href: ./teams-rooms-and-devices/join-button-missing.md
+    - name: Line keys issues on Teams phones
+      href: ./teams-rooms-and-devices/line-keys-issues-teams-phones.md
     - name: On-screen keyboard size is reduced on some devices
       href: ./teams-rooms-and-devices/teams-rooms-device-keyboard-size-reduced.md
     - name: Phone sidecar expansion module screen is black
