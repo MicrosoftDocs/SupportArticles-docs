@@ -252,6 +252,8 @@ items:
       href: ./tabs/websites-not-loaded-new-teams.md
   - name: Teams Rooms and devices
     items:
+    - name: Android device enrollment fails with EnrollmentUserLicense error
+      href: ./teams-rooms-and-devices/android-device-enrollment-fails-with-enrollment-user-license-error.md
     - name: Teams Rooms or laptop video feed disappears in the same meeting
       href: ./teams-rooms-and-devices/teams-rooms-laptop-video-feed-disappears-same-meeting.md
     - name: Black or blank screen or no system response
