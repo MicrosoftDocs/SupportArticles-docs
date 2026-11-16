@@ -294,6 +294,8 @@ items:
       href: ./teams-rooms-and-devices/cannot-display-powerpoint-live-content.md
     - name: Teams Rooms on Windows sign-in fails with UserInteractionRequired
       href: ./teams-rooms-and-devices/sign-in-failures-interactive-authentication.md
+    - name: Unable to reserve a room from Teams panel
+      href: ./teams-rooms-and-devices/unable-reserve-room-from-teams-panel.md
     - name: Update a device manually
       href: ./teams-rooms-and-devices/update-device-manually.md        
     - name: Teams Rooms Pro Management signals
