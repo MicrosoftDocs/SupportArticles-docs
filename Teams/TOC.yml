@@ -252,6 +252,10 @@ items:
       href: ./tabs/websites-not-loaded-new-teams.md
   - name: Teams Rooms and devices
     items:
+    - name: Camera status in Event ID 3001 is incorrect after you replace a Teams Rooms camera
+      href: ./teams-rooms-and-devices/camera-status-event-id-3001-is-incorrect-replace-teams-rooms-camera.md
+    - name: Android device enrollment fails with EnrollmentUserLicense error
+      href: ./teams-rooms-and-devices/android-device-enrollment-fails-with-enrollment-user-license-error.md
     - name: Teams Rooms or laptop video feed disappears in the same meeting
       href: ./teams-rooms-and-devices/teams-rooms-laptop-video-feed-disappears-same-meeting.md
     - name: Black or blank screen or no system response
@@ -274,6 +278,8 @@ items:
       href: ./teams-rooms-and-devices/teams-android-devices-conditional-access-issues.md
     - name: Direct Guest Join issues in Teams Rooms
       href: ./teams-rooms-and-devices/resolve-direct-guest-join-issues.md   
+    - name: HID controls don't work with Teams and Skype for Business running side by side
+      href: ./teams-rooms-and-devices/hid-controls-do-not-work-with-teams-skype-business-running-side-by-side.md
     - name: Join button missing in Teams Rooms
       href: ./teams-rooms-and-devices/join-button-missing.md
     - name: Line keys issues on Teams phones
@@ -286,6 +292,8 @@ items:
       href: ./teams-rooms-and-devices/reset-device-using-recovery-tool.md
     - name: Room Remote app doesn't connect to Teams Rooms on Windows
       href: ./teams-rooms-and-devices/room-remote-app-connection-fails.md
+    - name: Room resource accounts don't update after Pro license assignment
+      href: ./teams-rooms-and-devices/room-resource-accounts-do-not-update-pro-license-assignment.md
     - name: Sign-in delays on Teams Android devices when you use Entra ID dynamic device groups
       href: ./teams-rooms-and-devices/resolve-sign-in-delays-dynamic-device-groups.md
     - name: Teams Rooms app doesn't start automatically after updates
