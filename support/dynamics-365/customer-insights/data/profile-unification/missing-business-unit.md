@@ -1,13 +1,13 @@
 ---
-title: Missing business unit in unification
-description: Provides a resolution for an issue where the business unit is missing in the unification steps in Microsoft Dynamics 365 Customer Insights - Data.
-author: Scott-Stabbert
-ms.author: sstabbert
-ms.date: 12/21/2023
-ms.reviewer: v-wendysmith, mhart
+title: Missing Business Unit in Unification
+description: Learn how to fix a missing business unit in Dynamics 365 Customer Insights - Data by adding units to Dataverse.
+ms.date: 11/16/2026
+ms.reviewer: sstabbert, v-wendysmith
 ms.custom: sap:Data Unification\Business Unit Data Separation
 ---
 # Missing business unit in unification in Dynamics 365 Customer Insights - Data
+
+## Summary
 
 This article provides a resolution for an issue where the **Business unit** dropdown list is empty in the **Business unit separator** step in the data unification process.
 
@@ -15,9 +15,9 @@ This article provides a resolution for an issue where the **Business unit** drop
 
 During the unification process, the **Business unit** field in the **Business unit separator** step doesn't show any value.
 
-## Resolution
+## Solution
 
-Verify that the [business units has been added to the Dataverse](/power-platform/admin/create-edit-business-units) environment that's linked to the Customer Insights - Data instance.
+Verify that the [business units are added to the Dataverse](/power-platform/admin/create-edit-business-units) environment that's linked to the Customer Insights - Data instance.
 
 > [!NOTE]
 > The test and production environments have different environment IDs and names.

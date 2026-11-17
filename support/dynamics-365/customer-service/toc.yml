@@ -56,8 +56,6 @@
       href: email/formatting-lost-when-copying-word-template-text-to-email-message.md
     - name: Incoming email isn't converted to a case
       href: email/incoming-email-not-converted-case.md
-    - name: Issues with email templates and formatting
-      href: email/email-templates-and-formatting-issues.md
     - name: Troubleshoot configuration issues with automatic record creation and update rules
       href: email/common-email-error-messages.md
 - name: Entitlements
