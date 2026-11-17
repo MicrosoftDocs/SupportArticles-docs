@@ -1,25 +1,25 @@
 ---
-title: Troubleshoot the OutboundConnFailVMExtensionError error code (50) in AKS
-description: Learn how to troubleshoot the OutboundConnFailVMExtensionError (50) when you create, start, scale, or upgrade an AKS cluster, and restore outbound connectivity.
-ms.date: 10/28/2026
+title: Troubleshoot OutboundConnFailVMExtensionError error code (50) in AKS
+description: Learn how to troubleshoot the OutboundConnFailVMExtensionError (50) when you create, scale, or upgrade an AKS cluster. Follow these steps to restore outbound connectivity.
+ms.date: 11/13/2026
 ms.topic: troubleshooting
 manager: dcscontentpm
 author: kaushika-msft
 ms.author: kaushika
-ms.reviewer: rissing, chiragpa, jaewonpark, v-leedennis, jovieir, v-weizhu, andbar
+ms.reviewer: rissing, chiragpa, jaewonpark, v-leedennis, jovieir, v-weizhu, andbar, kaushika
 ms.service: azure-kubernetes-service
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ai-usage: ai-assisted
 ---
-# Troubleshoot the OutboundConnFailVMExtensionError error code (50) in Azure Kubernetes Service 
+# Troubleshoot the "OutboundConnFailVMExtensionError" error code (50) in Azure Kubernetes Service
 
 ## Summary
 
-This article helps you identify and resolve the `OutboundConnFailVMExtensionError` error (error code `ERR_OUTBOUND_CONN_FAIL`, error number 50) that might occur when you create, start, scale, or upgrade an Azure Kubernetes Service (AKS) cluster. Follow these steps to restore outbound connectivity so that node provisioning succeeds.
+This article helps you troubleshoot the `OutboundConnFailVMExtensionError` error (error code `ERR_OUTBOUND_CONN_FAIL`, error number 50) that might occur when you create, start, scale, or upgrade an Azure Kubernetes Service (AKS) cluster. Follow these steps to restore outbound connectivity so that node provisioning succeeds.
 
 ## Prerequisites
 
-Ensure the following prerequisites are met before you start troubleshooting:
+Ensure you have the following prerequisites installed and configured:
 
 - The following command-line tools. Run these tools on the AKS node where they're installed by default, not on your local computer:
   - The Client URL ([cURL](https://curl.se/download.html)) tool
@@ -29,7 +29,7 @@ Ensure the following prerequisites are met before you start troubleshooting:
 
 ## Symptoms
 
-When you try to create, scale, or upgrade an AKS cluster, you receive an error message that resembles the following example:
+When you try to create, scale, or upgrade an AKS cluster, you receive an error message that resembles the following example.
 
 ```output
 Code: OutboundConnFailVMExtensionError
@@ -69,7 +69,7 @@ Many reasons can block outbound traffic. A good starting point is to run a conne
 
 ### Check if Azure network resources are blocking traffic to the endpoint
 
-To determine if Azure network resources are blocking traffic to the endpoint, run a connectivity analysis from your AKS cluster nodes to the endpoint by using the [Azure Virtual Network Verifier](/azure/virtual-network-manager/concept-virtual-network-verifier#supported-features-of-the-reachability-analysis) tool.
+To check if Azure network resources are blocking traffic to the endpoint, run a connectivity analysis from your AKS cluster nodes to the endpoint by using the [Azure Virtual Network Verifier](/azure/virtual-network-manager/concept-virtual-network-verifier#supported-features-of-the-reachability-analysis) tool.
 
 > [!NOTE]
 > - Azure Virtual Network Verifier can't access any external or third-party networking resources, such as a custom firewall. If the connectivity analysis doesn't detect any blocked traffic, manually check any external networking to cover all hops in the traffic flow.
@@ -92,13 +92,13 @@ If the Azure Virtual Network Verifier tool doesn't provide enough insight into t
 
 #### Step 1: Test outbound connectivity to MCR
 
-After you connect to the node, run the same connectivity check that the CSE runs:
+After you connect to the node, run the same connectivity check that the CSE runs.
 
 ```bash
 curl -v --insecure --proxy-insecure https://mcr.microsoft.com/v2/
 ```
 
-If the command returns any HTTP response (for example, `HTTP/2 200`), the node can reach MCR. If the command fails, use the error in the verbose output to identify where the traffic is blocked:
+If the command returns any HTTP response (for example, `HTTP/2 200`), the node can reach MCR. If the command fails, use the error in the verbose output to identify where the traffic is blocked. The following table summarizes common `curl` errors and their likely causes.
 
 | `curl` output | Likely cause |
 | ------------- | ------------ |
@@ -106,7 +106,7 @@ If the command returns any HTTP response (for example, `HTTP/2 200`), the node c
 | `Connection timed out` or `Connection refused` | Traffic is blocked at the network layer (layer 4), for example, by an NSG, a route table, or a firewall network rule. |
 | The TCP connection succeeds, but the TLS handshake fails or the connection is reset (for example, `Connection reset by peer` or `SSL_ERROR_SYSCALL`) | Traffic is blocked at the application layer (layer 7), for example, by a firewall application rule that filters by FQDN, or by a proxy. |
 
-To narrow down the issue further, you can test DNS resolution and TCP connectivity separately:
+To narrow down the issue further, you can test DNS resolution and TCP connectivity separately.
 
 ```bash
 # Test DNS resolution.
@@ -122,7 +122,7 @@ nc -vz mcr.microsoft.com 443
 > [!NOTE]
 > The CSE runs `curl` with the `--insecure` option, so TLS inspection by a firewall or proxy doesn't cause error code 50. However, TLS inspection can cause image pull failures later. To check whether TLS inspection occurs, run the `curl` command without the `--insecure` option, and verify that the certificate is issued by a public certificate authority.
 
-If you can't access the node through SSH, you can test the outbound connectivity by running the [az vmss run-command invoke](/cli/azure/vmss/run-command#az-vmss-run-command-invoke) command against the Virtual Machine Scale Set instance:
+If you can't access the node through SSH, you can test the outbound connectivity by running the [az vmss run-command invoke](/cli/azure/vmss/run-command#az-vmss-run-command-invoke) command against the virtual machine scale set instance.
 
 ```azurecli
 # Get the VMSS instance IDs.
@@ -144,7 +144,7 @@ az vmss run-command invoke --resource-group <mc-resource-group-name> \
 
 #### Step 2: Test connectivity through an HTTP proxy
 
-If your AKS cluster uses an [HTTP proxy](/azure/aks/http-proxy), run the `nc`, `curl`, and `dig` commands after you connect to the node:
+If your AKS cluster uses an [HTTP proxy](/azure/aks/http-proxy), run the `nc`, `curl`, and `dig` commands after you connect to the node.
 
 ```bash
 # Test connectivity to the proxy server from the AKS node.
@@ -160,7 +160,7 @@ curl -v --proxy https://<https-proxy-address>:<port>/ --head https://mcr.microso
 dig mcr.microsoft.com
 ```
 
-If you can't access the node through SSH, you can run the same tests by using the `az vmss run-command invoke` command against the Virtual Machine Scale Set instance (or the `az vm run-command invoke` command for Virtual Machines node pools):
+If you can't access the node through SSH, you can run the same tests by using the `az vmss run-command invoke` command against the virtual machine scale set instance (or the `az vm run-command invoke` command for virtual machine (VM) node pools).
 
 ```azurecli
 # Get the VMSS instance IDs.
@@ -195,16 +195,16 @@ az vmss run-command invoke --resource-group <mc-resource-group-name> \
 
 ## Solution
 
-The following table lists specific reasons why traffic might be blocked, and the corresponding solution for each reason:
+The following table lists specific reasons why traffic might be blocked, and the corresponding solution for each reason.
 
 | Issue | Solution |
 | ----- | -------- |
-| Traffic is blocked by firewall rules or a Network Security Group (NSG) | This issue occurs when the AKS required ports or Fully Qualified Domain Names (FQDNs) are blocked by a firewall or NSG. Ensure these ports and FQDNs are allowed. If `nc` succeeds but `curl` fails, check for firewall application rules that filter traffic by FQDN. To determine what's blocked, check the connectivity as described in the preceding [Cause](#cause) section. For more information about AKS required ports and FQDNs, see [Outbound network and FQDN rules for Azure Kubernetes Service (AKS) clusters](/azure/aks/outbound-rules-control-egress). |
+| Traffic is blocked by firewall rules or a network security group (NSG) | This issue occurs when the AKS required ports or fully qualified domain names (FQDNs) are blocked by a firewall or NSG. Ensure these ports and FQDNs are allowed. If `nc` succeeds but `curl` fails, check for firewall application rules that filter traffic by FQDN. To determine what's blocked, check the connectivity as described in the preceding [Cause](#cause) section. For more information about AKS required ports and FQDNs, see [Outbound network and FQDN rules for Azure Kubernetes Service (AKS) clusters](/azure/aks/outbound-rules-control-egress). |
 | User-defined routes send outbound traffic to a firewall or network virtual appliance (NVA) that doesn't allow it | If the cluster uses the `userDefinedRouting` outbound type, or the node subnet has a route table that sends `0.0.0.0/0` traffic to a firewall or NVA, verify that the next hop is reachable and that it allows the AKS required FQDNs and ports. For more information, see [Customize cluster egress with outbound types in AKS](/azure/aks/egress-outboundtype). |
 | The HTTP proxy is misconfigured | If the cluster uses an HTTP proxy, verify that the proxy address and port are correct, that the proxy is reachable from the node subnet, and that the proxy allows the AKS required FQDNs. For more information, see [HTTP proxy support in AKS](/azure/aks/http-proxy). |
 | Custom DNS servers can't resolve the required endpoints | If the virtual network uses custom DNS servers, those servers must resolve public FQDNs such as `mcr.microsoft.com`. Typically, you configure them to forward queries to Azure DNS (`168.63.129.16`). For private clusters, the custom DNS servers must also resolve the private DNS zone of the API server. For more information, see [What is IP address 168.63.129.16?](/azure/virtual-network/what-is-ip-address-168-63-129-16) and [Create a private AKS cluster](/azure/aks/private-clusters). |
 | DNS queries for the required endpoints are blocked | Verify that your firewall or DNS proxy doesn't block DNS queries, including AAAA (IPv6) record queries, for the required endpoints. |
 
-## More information
+## References
 
 - [General troubleshooting of AKS cluster creation issues](troubleshoot-aks-cluster-creation-issues.md)
