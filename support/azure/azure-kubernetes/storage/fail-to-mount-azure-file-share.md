@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot errors when mounting an Azure file share in AKS
 description: Troubleshoot Azure file share mount errors in AKS by identifying common causes, fixing connectivity and permission issues, and restoring pod startup. Start now.
-ms.date: 10/22/2026
+ms.date: 11/16/2026
 manager: dcscontentpm
 author: kaushika-msft
 ms.author: kaushika
@@ -27,6 +27,7 @@ However, the pod stays in the **ContainerCreating** status. When you run the `ku
 - [Mount error(2): No such file or directory](#mounterror2)
 - [Mount error(13): Permission denied](#mounterror13)
 - [Mount error(22): Invalid argument](#mounterror22)
+- [An operation with the given Volume ID already exists](#volumeidexists)
 - [`AuthorizationFailed` error during Azure Files share provisioning](#authorizationfailed-error-during-azure-files-share-provisioning)
 
 Refer to the following output as an example:
@@ -107,7 +108,7 @@ To check whether the file share exists, follow these steps:
 
 To resolve this issue, make sure that the file share that's associated with the `PersistentVolume` (PV) or `PersistentVolumeClaim` (PVC) exists.
 
-### <a id="nsgblockstraffic"></a>Cause 2: Network Security Group blocks traffic between AKS and storage account
+### <a id="nsgblockstraffic"></a>Cause 2: Network security group blocks traffic between AKS and storage account
 
 Check the output of the `nc` or `telnet` command mentioned in the [Initial troubleshooting](#initial-troubleshooting) section. If a timeout is displayed, check the [network security group (NSG)](/azure/virtual-network/network-security-groups-overview) and make sure that the IP address of the storage account isn't blocked.
 
@@ -131,7 +132,7 @@ The **Traffic** status can be **Allowed** or **Denied**. The **Denied** status m
 
 To resolve this issue, make changes at the NSG level to allow the connectivity between the AKS cluster and the storage account on port 445.
 
-### <a id="virtualapplianceblockstraffic"></a>Cause 3: Virtual Appliance blocks traffic between AKS and storage account
+### <a id="virtualapplianceblockstraffic"></a>Cause 3: Virtual appliance blocks traffic between AKS and storage account
 
 If you use a Virtual Appliance (usually a firewall) to control outbound traffic of the AKS cluster (for example, the Virtual Appliance has a route table applied at the AKS cluster's subnet, and the route table has routes that send traffic towards the Virtual Appliance), the Virtual Appliance might block traffic between the AKS cluster and the storage account.
 
@@ -152,13 +153,13 @@ This route sends all traffic between the AKS cluster and storage account through
 
 After you add the route, test the connectivity by using the `nc` or `telnet` command and perform the mounting operation again.
 
-#### Solution: Ensure Virtual Appliance allows traffic between AKS and storage account
+#### Solution: Ensure virtual appliance allows traffic between AKS and storage account
 
 If the mounting operation succeeds, consult your networking team to make sure that the Virtual Appliance can allow traffic between the AKS cluster and storage account on port 445.
 
 ### <a id="fipsnodepool"></a>Cause 4: FIPS-enabled node pool is used
 
-If you use a [Federal Information Processing Standard (FIPS) enabled node pool](/azure/aks/use-multiple-node-pools#add-a-fips-enabled-node-pool), the mounting operation fails because FIPS disables some authentication modules. This limitation prevents the mounting of a Common Internet File System (CIFS) share. This behavior is expected and isn't specific to AKS.
+If you use a [Federal Information Processing Standard (FIPS) enabled node pool](/azure/aks/use-multiple-node-pools#add-a-fips-enabled-node-pool), the mounting operation fails because FIPS disables some authentication modules. This limitation prevents the mounting of a Common Internet File System (CIFS) share. This limitation prevents the mounting of a Common Internet File System (CIFS) share. This behavior is expected and isn't specific to AKS.
 
 To resolve the issue, use one of the following solutions:
 
@@ -283,7 +284,7 @@ To verify the mismatch, follow these steps:
 
 1. Search for and access the storage account in the Azure portal. Select **Access keys** > **Show keys** in the storage account. You see the storage account name and associated keys.
 
-    :::image type="content" source="media/fail-to-mount-azure-file-share/storage-account-keys.png" alt-text="Screenshot of storage account name and keys.":::
+    :::image type="content" source="media/fail-to-mount-azure-file-share/storage-account-keys.png" alt-text="Screenshot of storage account name and keys." lightbox="media/fail-to-mount-azure-file-share/storage-account-keys.png":::
 
 1. Go to the AKS cluster, select **Configuration** > **Secrets**, and then search for and access the associated secret.
 
@@ -509,6 +510,88 @@ stringData:
 ```
 
 After you correct the secret, re-create the pods so they pick up the updated values.
+
+## <a id="volumeidexists"></a>An operation with the given Volume ID already exists
+
+### Symptoms
+
+The pod stays in the **ContainerCreating** status. The `kubectl describe pods` command shows repeated `FailedMount` events that have the `Aborted` status code instead of the `Internal` code that mount errors usually have:
+
+```output
+Events:
+  Type     Reason       Age                   From     Message
+  ----     ------       ----                  ----     -------
+  Warning  FailedMount  22s (x10 over 4m32s)  kubelet  MountVolume.MountDevice failed for volume "<pv-name>" : rpc error: code = Aborted desc = An operation with the given Volume ID <volume-handle> already exists
+```
+
+The `<volume-handle>` value is the `volumeHandle` field of the PersistentVolume (PV).
+
+### Cause
+
+The Azure Files CSI driver allows only one operation at a time for each volume on a node. While the driver stages (mounts) or unstages a volume, it holds a lock for that volume. Kubelet retries failed or slow calls. If a retry reaches the driver while the first operation still holds the lock, the driver rejects the retry with the "An operation with the given Volume ID already exists" message.
+
+The message itself doesn't identify the problem. It means that an earlier operation for the same volume on the same node didn't finish. The most common reasons are:
+
+- **A slow or stuck mount operation.** The first mount takes longer than kubelet waits for a response. Examples are a stale or hung SMB connection to the storage account, intermittent network problems between the node and the storage account, or multiple leftover `cifs` mounts of the same share on the node.
+- **A slow ownership change on an NFS share.** If the pod sets `fsGroup`, Kubernetes recursively changes ownership and permissions of the volume contents. On a share that has a large number of files, this operation can take a long time.
+- **Two PVs that use the same `volumeHandle` on the same node.** Kubelet treats all PVs that have the same `volumeHandle` as one volume. Both pods share a single mount, so one pod might write to a different share than the one that its PV references.
+
+### Troubleshooting
+
+#### Step 1: Check whether the mount is still in progress or already exists
+
+Use the `kubectl debug` command to open a shell on the node that hosts the pod, and then check for existing SMB mounts and connections:
+
+```bash
+kubectl debug node/<node-name> -it --image=mcr.microsoft.com/azurelinux/base/core:3.0 --profile=sysadmin -- chroot /host
+```
+
+```bash
+mount | grep "type cifs"
+ss -t | grep microsoft-ds
+```
+
+If the same share appears more than once, or if connections to the storage account are stuck, the node has a stale or duplicate mount.
+
+#### Step 2: Check for duplicate volume handles
+
+List the volume handle of every PV, and look for duplicate values:
+
+```bash
+kubectl get pv -o jsonpath='{range .items[?(@.spec.csi.driver=="file.csi.azure.com")]}{.spec.csi.volumeHandle}{"\t"}{.metadata.name}{"\n"}{end}' | sort
+```
+
+Each PV must have a unique `volumeHandle` value.
+
+#### Step 3: Check the CSI driver logs on the node
+
+Find the `csi-azurefile-node` pod that runs on the affected node, and look for the lock message and the original mount operation:
+
+```bash
+kubectl get pods -n kube-system -l app=csi-azurefile-node -o wide --field-selector spec.nodeName=<node-name>
+kubectl logs -n kube-system <csi-azurefile-node-pod-name> -c azurefile | grep -E "already exists|NodeStageVolume|timed out"
+```
+
+### Solution
+
+1. If the operation is still running, wait for it to finish. Kubelet retries automatically, and the pod starts after the first operation completes.
+1. If the operation doesn't finish, or the node has stale or duplicate mounts, delete the pod so that it's re-created. Then restart the CSI node pod on the same node:
+
+   ```bash
+   kubectl delete pod -n kube-system <csi-azurefile-node-pod-name>
+   ```
+
+1. If the problem persists or occurs again, [cordon and drain](https://kubernetes.io/docs/tasks/administer-cluster/safely-drain-node/) the node, and then let the pod be scheduled on a different node or on the same node after it's uncordoned. As a last resort, restart or reimage the node.
+1. If two PVs have the same `volumeHandle`, give each PV a unique value. For a statically provisioned volume, use the `<resource-group>#<storage-account>#<file-share>` format:
+
+   ```yaml
+   csi:
+     driver: file.csi.azure.com
+     volumeHandle: <resource-group>#<storage-account>#<file-share>
+   ```
+
+   The `volumeHandle` field of an existing PV can't be changed. Delete and re-create the PV and PVC, and then re-create the pods.
+1. If the volume is an NFS share that has many files and the pod sets `fsGroup`, set `fsGroupChangePolicy: OnRootMismatch` or `None` in the pod's `securityContext` to skip the recursive ownership change.
 
 ## `AuthorizationFailed` error during Azure Files share provisioning
 
