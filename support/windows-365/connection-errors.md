@@ -2,19 +2,24 @@
 title: Troubleshoot connection errors
 description: Troubleshoot connection errors in Windows 365.
 manager: dcscontentpm
-ms.date: 02/12/2026
+ms.date: 11/17/2026
 ms.topic: troubleshooting
 ms.reviewer: traceyadams, erikje
 ms.custom:
 - pcy:WinComm User Experience
 - sap:Session connectivity\Users are not able to make a connection
+ai-usage: ai-assisted
+appliesto:
+- ✅ <a href=https://learn.microsoft.com/lifecycle/products/windows-365target=_blank>Supported versions of Windows 365</a>
 ms.collection:
 - M365-identity-device-management
 - tier2
 ---
 # Troubleshoot Cloud PC connection errors
 
-The following errors can occur when connecting to a Cloud PC.
+## Summary
+
+Connection errors in Windows 365 can prevent users from accessing their Cloud PCs or interrupt active sessions. This article helps you identify possible causes and troubleshoot specific error messages, sign-in failures, and intermittent disconnections. It also describes how administrators can use Windows 365 Admin Assistant (preview) to investigate connection errors and identify further checks.
 
 <a name='errors-when-connecting-to-an-azure-active-directory-azure-ad-joined-cloud-pc'></a>
 
@@ -38,7 +43,7 @@ Turn on PKU2U protocol requests on both the Cloud PC and the user's physical dev
 1. Create a device configuration policy [using the settings catalog](/mem/intune/configuration/settings-catalog).
 1. On the **Configuration settings** page, search for and select **Network Security Allow PKU2U Authentication Requests** > **Allow**.
 
-   :::image type="content" source="./media/connection-errors/allow-pku2u.png" alt-text="Screenshot showing the Network Security Allow PKU2U Authentication Requests option set to Allow.":::
+   :::image type="content" source="./media/connection-errors/allow-pku2u.png" alt-text="Screenshot that shows the Network Security Allow PKU2U Authentication Requests option set to Allow.":::
 
 1. On the **Assignments** page, select **Add all devices** > **Edit filter** > **Include filtered devices in assignment**, and then select the filter you created for all Cloud PCs.
 1. On the **Assignments** page, also select a Microsoft Entra group containing the user or the user's physical device.
@@ -70,7 +75,7 @@ Sign in to [Windows 365](https://windows365.microsoft.com), select the cog icon 
 
 ### Potential cause
 
-This error can be caused by network configuration settings, like:
+Network configuration settings, like the following settings, cause this error:
 
 - Custom DNS settings
 - Network Virtual Appliance blocking
@@ -118,7 +123,7 @@ Some other possible causes for Cloud PC connection failures include:
 
 ### Possible solution
 
-Update VPN clients to the most up-to-date versions.
+Update VPN clients to the latest versions.
 
 <a name='signing-in-to-the-cloud-pc-with-azure-active-directory-only-user-accounts'></a>
 
@@ -132,9 +137,9 @@ Windows 365 is currently a Microsoft Entra hybrid join device, requiring users t
 
 ### Possible solution
 
-Remote Credential Guard requires connectivity to the on-premises Active Directory Domain Controller on the client PC used to access the Cloud PC. This connection is only possible using a VPN solution. Using a KDC proxy isn't currently available for Windows 365.
+Remote Credential Guard requires that the client PC that's used to access the Cloud PC can connect to the on-premises Active Directory Domain Controller. Users can only establish this connection by using a VPN solution. KDC proxy isn't currently available for Windows 365.
 
-### Azure WireServer may be blocked
+### Azure WireServer might be blocked
 
 Windows 365 Cloud PCs require access to Azure communication channels.
 
@@ -146,11 +151,11 @@ For more information, see [What is IP Address 168.63.129.16](/azure/virtual-netw
 
 ### Move the Cloud PC to a new organizational unit (OU) with no group policies
 
-Connection problems might be caused by settings delivered by group policies. To test this possible cause, you can move the Cloud PC to a separate OU that's blocked from receiving group policies.
+Group policy settings can cause connection problems. To test this possible cause, move the Cloud PC to a separate OU that doesn't receive group policies.
 
-### On-premises GPO may affect a Cloud PC's provisioning or behavior
+### On-premises GPO might affect a Cloud PC's provisioning or behavior
 
-Settings delivered by group policies might cause connection problems. To test this problem, you can move the Cloud PC to a separate OU that's blocked from receiving group policies.
+Group policy settings can cause connection problems. To test this possible cause, move the Cloud PC to a separate OU that doesn't receive group policies.
 
 ### Intermittent disconnections
 
@@ -158,8 +163,20 @@ If users encounter intermittent connection issues, consider the following:
 
 ### Possible solution
 
-- Make sure that SSL inspection/Termination is disabled for networks used by your Cloud PCs. For more information, see [Proxy server guidelines for Azure Virtual Desktop]( /azure/virtual-desktop/proxy-server-support).
-- When using third-party software web gateways, make sure forced tunnel exceptions are in place for critical Azure Virtual Desktop (AVD) traffic. For more information, see [Optimizing RDP Connectivity for Windows 365]( https://techcommunity.microsoft.com/discussions/windows365discussions/optimizing-rdp-connectivity-for-windows-365/3554327).
+- Make sure that SSL inspection/Termination is disabled for networks used by your Cloud PCs. For more information, see [Proxy server guidelines for Azure Virtual Desktop](/azure/virtual-desktop/proxy-server-support).
+- When using third-party software web gateways, make sure that forced tunnel exceptions are in place for critical Azure Virtual Desktop (AVD) traffic. For more information, see [Optimizing RDP Connectivity for Windows 365](https://techcommunity.microsoft.com/discussions/windows365discussions/optimizing-rdp-connectivity-for-windows-365/3554327).
+
+## Investigate connection errors with Windows 365 Admin Assistant (preview)
+
+Administrators can use Windows 365 Admin Assistant in the Microsoft Intune admin center to investigate Cloud PC connection errors. Include the error message or code, affected user or Cloud PC, and the time when the failure occurred. The Assistant can analyze available connection events, health signals, and configuration data to help identify possible causes and recommend further checks.
+
+For example, you can ask:
+
+- Investigate [user UPN] gateway connection error. Did other users experience similar failures during the same period?
+
+- [User UPN] reports intermittent disconnections. Are there patterns in the connection errors, network configuration, or client version?
+
+Review the findings against the error-specific guidance in this article before making changes. The Assistant provides recommendations but doesn't perform remediation actions. If the issue persists after troubleshooting, contact Microsoft Support.
 
 ## Next steps
 
