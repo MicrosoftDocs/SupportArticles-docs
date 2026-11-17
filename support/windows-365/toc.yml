@@ -27,7 +27,7 @@ items:   # Please do not delete this line, it is required for the yaml format
           href: windows-365-ai-enabled-cloud-pc-known-issues.md
     - name: Azure Network Connection
       items:
-        - name: Azure network connection health checklist
+        - name: Azure network connection health checks
           href: health-checks.md
         - name: Troubleshoot Azure network connections
           href: troubleshoot-azure-network-connection.md
@@ -63,7 +63,7 @@ items:   # Please do not delete this line, it is required for the yaml format
           href: troubleshoot-windows-365-enterprise-cloud-pcs-grace-period-issue.md
     - name: Session connectivity
       items:
-        - name: Connection errors
+        - name: Troubleshoot Cloud PC connection errors
           href: connection-errors.md
         - name: Connection fails with "an interactive window could not be shown"
           href: connection-error-interactive-window-not-shown.md

@@ -1,17 +1,21 @@
 ---
 title: Known issues - custom kubelet configuration on AKS Windows nodes
-description: Learn about known issues that affect custom kubelet configuration on Windows nodes in an Azure Kubernetes Service (AKS) cluster.
-ms.date: 04/28/2023
-editor: v-jsitser
-ms.reviewer: allyford, abelch, jpalma, v-leedennis
+description: Learn about known issues that affect custom kubelet configuration on AKS Windows nodes, including log size and compression problems, and find workarounds.
+ms.date: 11/16/2026
+ms.topic: troubleshooting
+manager: dcscontentpm
+author: kaushika-msft
+ms.author: kaushika
+ms.reviewer: allyford, abelch, jpalma, v-leedennis, kaushika
 ms.service: azure-kubernetes-service
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
+ai-usage: ai-assisted
 ---
-# Known issues: Custom kubelet configuration on Windows nodes in AKS
+# Known issues: Custom kubelet configuration on Windows nodes in Azure Kubernetes Service
 
 ## Summary
 
-This article discusses known issues that affect custom kubelet configurations on Microsoft Windows nodes in the Azure Kubernetes Service (AKS). For more information about this feature, see [Customize node configuration for AKS node pools](/azure/aks/custom-node-configuration).
+This article describes known issues that affect custom kubelet configuration on Windows nodes in Azure Kubernetes Service (AKS), such as log size, log compression, and OS configuration failures, and provides workarounds where available. For more information about this feature, see [Customize node configuration for AKS node pools](/azure/aks/custom-node-configuration).
 
 ## Log sizes exceed the specified maximum during aggressive log writing
 
@@ -21,7 +25,7 @@ If several pods are aggressively writing to the log, the log size can grow to do
 
 For more information, see Kubernetes [GitHub issue 110630](https://github.com/kubernetes/kubernetes/issues/110630), "Kubelet does not respect `container-log-max-size` on time, during heavy log writes from container."
 
-#### Affected versions
+### Affected versions
 
 The excessive log size issue applies to all versions of Kubernetes.
 
@@ -31,9 +35,9 @@ On a Windows VM, when the kubelet tries to compress a log file into a `.gz` arch
 
 For more information, see Kubernetes [GitHub issue 111548](https://github.com/kubernetes/kubernetes/issues/111548), "Kubelet log compression fails on Windows."
 
-#### Affected versions
+### Affected versions
 
-The kubelet log file compression issue applies to all versions of Kubernetes that are older than version `1.23`. It applies also to certain early versions of Kubernetes `1.23` and `1.24`, as shown in the following table. The log file compression issue is fixed for Kubernetes version `1.25.0` (in Kubernetes [GitHub pull request 111549](https://github.com/kubernetes/kubernetes/pull/111549)) and all subsequent versions of Kubernetes.
+The kubelet log file compression issue affects all versions of Kubernetes that are older than version `1.23`. It also affects certain early versions of Kubernetes `1.23` and `1.24`, as shown in the following table. The following table shows the fix for the log file compression issue in Kubernetes version `1.25.0` (in Kubernetes [GitHub pull request 111549](https://github.com/kubernetes/kubernetes/pull/111549)) and all subsequent versions of Kubernetes.
 
 | Kubernetes *x*.*y* version | Versions that the known issue applies to | GitHub fix pull request number on Kubernetes                   |
 |----------------------------|------------------------------------------|----------------------------------------------------------------|
@@ -42,18 +46,18 @@ The kubelet log file compression issue applies to all versions of Kubernetes tha
 
 For more information, see the [January 29, 2023 release](https://github.com/Azure/AKS/releases/tag/2023-01-29) of the AKS changelog.
 
-## Custom OS configurations fail
+## Custom OS configurations fail on Windows node pools
 
-#### Symptoms
+The following sections describe the symptoms, cause, and workaround for this issue.
+
+### Symptoms
 
 A custom OS configuration doesn't get applied.
 
-#### Cause
+### Cause
 
-This issue occurs if you try to apply the custom OS configuration on a Windows node pool. Currently, OS configurations aren't supported on Windows node pools. These configurations work only on Linux node pools.
+This issue occurs if you try to apply the custom OS configuration on a Windows node pool. Currently, AKS doesn't support OS configurations on Windows node pools. These configurations work only on Linux node pools.
 
-#### Workaround
+### Workaround
 
 Apply the custom OS configuration at the cluster level or node pool level for a Linux node pool. To check whether the custom node configuration is in use, see [Confirm settings have been applied](/azure/aks/custom-node-configuration#confirm-settings-have-been-applied).
-
- 
