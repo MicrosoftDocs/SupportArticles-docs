@@ -1,45 +1,47 @@
 ---
-title: Segments return no members
-description: Learn how to find out why a segment has no members in Dynamics 365 Customer Insights - Data.
-author: ashwini-puranik
-ms.author: aspuranik
-ms.reviewer: mhart, jimsonc
-ms.date: 09/25/2023
+title: Segments Return No Members in Customer Insights - Data
+description: Learn how to fix empty segment results by checking rules, data, relationships, and unification in Customer Insights - Data.
+ms.reviewer: sstabbert, v-wendysmith
+ms.date: 11/16/2026
+author: v-wendysmith
+ms.author: v-wesmith
 ms.custom: sap:Segments, measures, insights\Segments
 ---
-# Segments return no or zero members
+# Segments return no members
 
-This article provides a resolution for an issue where a [segment](/dynamics365/customer-insights/segments) doesn't return any members as expected.
+## Summary
+
+This article helps you resolve an issue where a [segment](/dynamics365/customer-insights/segments) doesn't return any members as expected.
 
 ## Prerequisites
 
 - The segment refresh status is successful.
 - The segment is newly created or edited, or data import or unification rules or business definition of data have changed.
 
-If the segment was previously successful and had members but is showing zero members and there has been no other change as specified above, please open a support ticket.
+If the segment was previously successful and had members but is showing zero members and there was no other change as specified earlier, open a support ticket.
 
 ## Symptoms
 
 A segment runs and refreshes successfully but doesn't include any members.
 
-## Resolution
+## Solution
 
-You can take the following steps to investigate the root cause and fix the issue.
+Take the following steps to investigate the root cause and fix the issue.
 
 ### Validate basic logic for contradictory conditions or rules
 
 Contradictory `AND` conditions or rules on the same attribute always generate empty segments. For example, `FirstName = Joe` `AND` `FirstName = Frank`.
 
-Review all the rules and conditions for broken logic. Consider more complex contradictions across multiple attributes too (this requires more knowledge of the dataset). For example, `Status = 1` `AND` `StatusDescription = Inactive`, while a status value of **1** always means it's active.
+Review all the rules and conditions for broken logic. Consider more complex contradictions across multiple attributes too (this condition requires more knowledge of the dataset). For example, `Status = 1` `AND` `StatusDescription = Inactive`, while a status value of **1** always means it's active.
 
-The set operations (`Union`, `Intersect`, and `Except` are used to combine two rules) are applied on the `CustomerId` returned by each rule. So depending on the expected outcome, verify if the `CustomerId` is part (or not) of the result of each rule evaluation.
+The set operations (`Union`, `Intersect`, and `Except` are used to combine two rules) apply on the `CustomerId` returned by each rule. So depending on the expected outcome, verify if the `CustomerId` is part (or not) of the result of each rule evaluation.
 
 #### Break down complexity
 
 When working with complex segments with multiple conditions or rules, reduce complexity and isolate the condition or rule responsible for the issue.
 
 - Start from the complete segment and remove conditions and rules one by one. Run the segment after each change until it returns members.
-- Build a new segment from scratch and add conditions and rules one by one from the segment that’s yielding no members. Run the segment after each step of adding conditions or rules until no members are returned anymore.
+- Build a new segment from scratch and add conditions and rules one by one from the segment that yields no members. Run the segment after each step of adding conditions or rules until no members are returned.
 
 #### Missing data for the attribute(s) used in a segment rule or condition
 
@@ -61,7 +63,7 @@ If the value of the attribute used in a segment rule or condition is missing for
   - Use the [Power BI connector](/dynamics365/customer-insights/export-power-bi) to explore the entity in Power BI.
 
     > [!NOTE]
-    > All entities, especially source entities from an Azure Data Lake Storage data source, won't be available with this connector. It's also recommended to use it on tables with less than 1 million rows.
+    > All entities, especially source entities from an Azure Data Lake Storage data source, aren't available with this connector. It's also recommended to use it on tables with less than 1 million rows.
 
   - Export data to Azure in [Azure Blob Storage](/dynamics365/customer-insights/export-azure-blob-storage), [Azure Data Lake Storage](/dynamics365/customer-insights/export-azure-data-lake-storage-gen2), or [Azure Synapse Analytics](/dynamics365/customer-insights/export-azure-synapse-analytics). Exports can help with further investigations using Synapse Analytics, Power BI, or any other data exploration tool.
 
@@ -73,13 +75,13 @@ If the relationship between the table used for segmentation and the unified cust
 
 - Check if the intended [relationship path](/dynamics365/customer-insights/relationships#relationship-paths) is used, as several paths could be technically valid between your source table (with a filtering condition on the attributes) and the *Customer* table. If there are several tables involved, inspect each relationship and validate if they're configured correctly with the right attributes.
 
-- The attribute value evaluation is case-sensitive. For example, two tables are related through a common attribute, `MembershipType`. If the attribute value is **GOLD** in one table and **gold** in the other, it will not yield a successful join and return no results. The same logic applies to `GUIDs`, which are easy to miss.
+- The attribute value evaluation is case-sensitive. For example, two tables are related through a common attribute, `MembershipType`. If the attribute value is **GOLD** in one table and **gold** in the other, it doesn't yield a successful join and return results. The same logic applies to `GUIDs`, which are easy to miss.
 
 - Verify that the data types of the attributes align across tables.
 
-- The [deduplication process identifies a "winner" record during data unification](/dynamics365/customer-insights/review-unification#verify-output-tables-from-data-unification). Measures and segments created with the deduplicated profile source table in the relationship path may use the "winner" record, leading to unexpected results.
+- The [deduplication process identifies a "winner" record during data unification](/dynamics365/customer-insights/review-unification#verify-output-tables-from-data-unification). Measures and segments created with the deduplicated profile source table in the relationship path might use the "winner" record, leading to unexpected results.
 
-Segment and measure evaluation happens by joining tables on the attributes defined in the relationships. For example, `MembershipMaster` has a relationship with the *Contact* table, with `MembershipId` and `MembershipType` attributes. The *Contact* table has a relationship with the *Customer* table, containing unified customer profiles over the attributes `ContactId` and `ContactId (Source1_Contact)`. For details about the table relationship, see the screenshot below:
+Segment and measure evaluation happen by joining tables on the attributes defined in the relationships. For example, `MembershipMaster` has a relationship with the *Contact* table, with `MembershipId` and `MembershipType` attributes. The *Contact* table has a relationship with the *Customer* table, containing unified customer profiles over the attributes `ContactId` and `ContactId (Source1_Contact)`. For details about the table relationship, see the following screenshot:
 
 :::image type="content" source="media/segment-no-results/relationship-diagram-segment-no-result.png" alt-text="Screenshot shows a diagram example about the table relationship.":::
 
@@ -87,4 +89,4 @@ If the profile table (in this example, the *Contact* table) is [deduplicated](/d
 
 :::image type="content" source="media/segment-no-results/data-example-segment-no-result.png" alt-text="Screenshot shows sample data for the relationship diagram.":::
 
-In this example, contact C1 (with "Gold" membership) and C2 (with "Silver" membership) have been unified with C2 being the winner. Hence, when a segment is created to identify the "Gold" members, "First Person" won't be part of the segment because the relationship path is evaluated only with C2.
+In this example, contacts C1 (with "Gold" membership) and C2 (with "Silver" membership) are unified, and C2 is the winner. When you create a segment to identify the "Gold" members, "First Person" isn't part of the segment because the relationship path is evaluated only with C2.

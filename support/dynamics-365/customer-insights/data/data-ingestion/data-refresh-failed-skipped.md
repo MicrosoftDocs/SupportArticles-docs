@@ -1,15 +1,15 @@
 ---
-title: Data refresh fails and dataflow refresh is skipped
+title: Data Refresh Fails and Dataflow Refresh is Skipped
 description: Solves an issue with the data refresh schedule for Power Query-based data sources in Dynamics 365 Customer Insights - Data.
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: mhart
-ms.date: 01/03/2024
+ms.reviewer: sstabbert, v-wendysmith
+ms.date: 11/16/2026
 ms.custom: sap:Data Ingestion\Connect to a Power Query data source
 ---
 # Data refresh fails and dataflow refresh is skipped
 
-This article provides a resolution for an issue where the Power Query data source isn't refreshed successfully in Microsoft Dynamics 365 Customer Insights - Data.
+## Summary
+
+This article helps you resolve an issue where the Power Query data source isn't refreshed successfully in Microsoft Dynamics 365 Customer Insights - Data.
 
 ## Symptoms
 
@@ -23,6 +23,6 @@ Dynamics 365 Customer Insights - Data has two refresh options: [system refresh](
 
 The error message means that the system refresh in Customer Insights doesn't refresh Power Query data source, but only copies the previous state of the data source.
 
-## Resolution
+## Solution
 
 To solve this issue, [configure the refresh schedule for the Power Query data source by editing the data source settings](/dynamics365/customer-insights/data/schedule-refresh).
