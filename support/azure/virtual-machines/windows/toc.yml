@@ -328,6 +328,8 @@ items:
       href: ../linux/troubleshoot-performance-virtual-machine-linux-windows.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Poor performance on Windows Server 2012 R2
       href: poor-performance-emulated-storage-stack.md
+    - name: VM reports fewer CPU cores than expected
+      href: troubleshoot-incorrect-cpu-core-count-windows-vm.md
 
 - name: Instance Metadata Service (IMDS)
   items:
