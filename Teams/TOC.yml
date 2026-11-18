@@ -264,6 +264,8 @@ items:
       href: ./teams-rooms-and-devices/camera-status-event-id-3001-is-incorrect-replace-teams-rooms-camera.md
     - name: Android device enrollment fails with EnrollmentUserLicense error
       href: ./teams-rooms-and-devices/android-device-enrollment-fails-with-enrollment-user-license-error.md
+    - name: Teams disabled for tenant error during sign-in on Teams Rooms for Android
+      href: ./teams-rooms-and-devices/teams-disabled-tenant-error-sign-in-teams-rooms-android.md
     - name: Can't turn off device purchasing in Teams admin center
       href: ./teams-rooms-and-devices/cannot-turn-off-device-purchasing-teams-admin-center.md
     - name: Room Audio participant doesn't group with Teams Rooms roster
