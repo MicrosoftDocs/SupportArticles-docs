@@ -252,6 +252,8 @@ items:
       href: ./tabs/websites-not-loaded-new-teams.md
   - name: Teams Rooms and devices
     items:
+    - name: New Teams Rooms feature not available
+      href: ./teams-rooms-and-devices/new-teams-rooms-feature-not-available.md
     - name: Collect crash dump files on Microsoft Teams Rooms for Windows
       href: ./teams-rooms-and-devices/collect-crash-dump-files-windows.md
     - name: Camera status in Event ID 3001 is incorrect after you replace a Teams Rooms camera
