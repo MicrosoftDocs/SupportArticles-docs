@@ -262,6 +262,8 @@ items:
       href: ./teams-rooms-and-devices/camera-status-event-id-3001-is-incorrect-replace-teams-rooms-camera.md
     - name: Android device enrollment fails with EnrollmentUserLicense error
       href: ./teams-rooms-and-devices/android-device-enrollment-fails-with-enrollment-user-license-error.md
+    - name: Room Audio participant doesn't group with Teams Rooms roster
+      href: ./teams-rooms-and-devices/room-audio-participant-does-not-group-with-teams-rooms-roster.md
     - name: Teams Rooms or laptop video feed disappears in the same meeting
       href: ./teams-rooms-and-devices/teams-rooms-laptop-video-feed-disappears-same-meeting.md
     - name: Black or blank screen or no system response
