@@ -1,17 +1,17 @@
 ---
-title: Troubleshoot Non-Microsoft Contact Center Panel Issues
+title: Troubleshoot Non-Microsoft Contact Center Panel Issues (Preview)
 description: Troubleshoot common problems when you embed a non-Microsoft contact center agent panel in Copilot Service workspace with Channel Integration Framework 2.0.
 ms.reviewer: laalexan, borisvolfson
 ai-usage: ai-assisted
-ms.date: 11/16/2026
+ms.date: 11/18/2026
 ms.custom: sap:Channel Integration Framework (CIF)
 ---
 
-# Troubleshoot non-Microsoft contact center panel issues in Copilot Service workspace
+# Troubleshoot non-Microsoft contact center panel issues in Copilot Service workspace (preview)
 
 ## Summary
 
-This article helps you resolve problems that can occur when you build and run a custom [Channel Integration Framework (CIF) 2.0](/dynamics365/channel-integration-framework/v2/administer/overview-channel-integration-framework) agent panel for a contact center as a service (CCaaS) platform in Copilot Service workspace. Entries marked **NICE CXone** are specific to the NICE CXone Agent SDK. The other entries apply to any CCaaS platform. Where a cause isn't confirmed, the entry says so.
+This article helps you resolve problems that can occur when you build and run a custom [Channel Integration Framework (CIF) 2.0](/dynamics365/channel-integration-framework/v2/administer/overview-channel-integration-framework) agent panel for a contact center as a service (CCaaS) provider in Copilot Service workspace. Entries marked **NiCE CXone** are specific to the NiCE CXone Agent SDK. The other entries apply to any CCaaS provider. Where a cause isn't confirmed, the entry says so.
 
 To learn more about how to build the panel, go to [Embed a non-Microsoft contact center in Copilot Service workspace](/dynamics365/customer-service/develop/embed-third-party-contact-center).
 
@@ -114,7 +114,7 @@ Use these entries when a solution import, publish, or rollback doesn't produce t
 
 **Symptom:** Creating records or importing your solution fails with a timeout (`0x80040265` or `0x80048543`), or an import fails without details, even though no other import is running.
 
-**Cause:** The platform is installing Microsoft solution updates in the environment.
+**Cause:** The system is installing solution updates in the environment.
 
 **Resolution:** In Power Apps, go to **Solutions** > **See history**, and wait until no operation is running. Then try again. Updates can arrive in waves over about an hour.
 
@@ -130,7 +130,7 @@ Use these entries when a solution import, publish, or rollback doesn't produce t
 
 ## Sign-in and agent session
 
-Use these entries when representatives can't sign in to the CCaaS platform, can't start or rejoin an agent session, or have calls that don't connect.
+Use these entries when representatives can't sign in to the CCaaS service, can't start or rejoin an agent session, or have calls that don't connect.
 
 ### The sign-in pop-up window doesn't finish
 
@@ -151,7 +151,7 @@ Use these entries when representatives can't sign in to the CCaaS platform, can'
 
 **Resolution:** Show each step's state in the panel (signed in, session started, voice ready, and available), and check them in order.
 
-### The voice connection never becomes ready (NICE CXone)
+### The voice connection never becomes ready (NiCE CXone)
 
 **Symptom:** The session starts, but voice stays not ready, and the browser WebRTC library isn't found.
 
@@ -163,23 +163,23 @@ Use these entries when representatives can't sign in to the CCaaS platform, can'
 
 **Symptom:** Starting the agent session fails after a tab or browser was closed.
 
-**Cause:** The platform still holds the agent's earlier session.
+**Cause:** The CCaaS service still holds the agent's earlier session.
 
-**Resolution:** On HTTP 409, rejoin the existing session instead of failing. For NICE CXone, call `acd.session.joinSession`. Treat other errors as failures. A rejoined session can carry problems with it, as described in the next entry.
+**Resolution:** On HTTP 409, rejoin the existing session instead of failing. For NiCE CXone, call `acd.session.joinSession`. Treat other errors as failures. A rejoined session can carry problems with it, as described in the next entry.
 
 ### Calls ring but never connect, and the agent is set to Refused
 
-**Symptom:** After the panel rejoins an existing session, incoming calls stay in the incoming state for 30–45 seconds, never auto-accept, and then ring out. The platform sets the agent to Unavailable / Refused. **Accept** might disappear before the representative can select it.
+**Symptom:** After the panel rejoins an existing session, incoming calls stay in the incoming state for 30–45 seconds, never auto-accept, and then ring out. The CCaaS service sets the agent to Unavailable / Refused. **Accept** might disappear before the representative can select it.
 
-**Cause (suspected):** The rejoined session's voice leg still points at the browser tab that held the session before, so the platform can't connect calls to the new tab.
+**Cause (suspected):** The rejoined session's voice leg still points at the browser tab that held the session before, so the CCaaS service can't connect calls to the new tab.
 
-**How to confirm:** Log voice-leg events. When a call rings and no voice-leg "dialing" event arrives, the platform can't reach this tab. At sign-in, the log shows that the session was rejoined (409) rather than started.
+**How to confirm:** Log voice-leg events. When a call rings and no voice-leg "dialing" event arrives, the CCaaS service can't reach this tab. At sign-in, the log shows that the session was rejoined (409) rather than started.
 
 **Resolution:**
 
-1. Add a **Reset session** action to the panel. The action force-ends the vendor session, including its contacts, disconnects voice, clears the panel's call state, and starts a fresh session. Don't allow the action while a call is live. For NICE CXone, call `acd.session.endSession` with `forceLogoff`, `endContacts`, and `ignorePersonalQueue` set to `true`.
+1. Add a **Reset session** action to the panel. The action force-ends the vendor session, including its contacts, disconnects voice, clears the panel's call state, and starts a fresh session. Don't allow the action while a call is live. For NiCE CXone, call `acd.session.endSession` with `forceLogoff`, `endContacts`, and `ignorePersonalQueue` set to `true`.
 1. Select **Reset session**, set the agent to available, and place a test call.
-1. If the panel rejoins the old session again, close every other tab or app that's signed in as the agent, or ask the platform administrator to sign the agent out. Then reset again.
+1. If the panel rejoins the old session again, close every other tab or app that's signed in as the agent, or ask the CCaaS administrator to sign the agent out. Then reset again.
 
 To prevent this problem, finish wrap-up and end the agent session before you close or reload the workspace, and use one tab per agent.
 
@@ -187,13 +187,13 @@ To prevent this problem, finish wrap-up and end the agent session before you clo
 
 **Symptom:** A call that ended in an earlier session appears in the panel as disconnected. Its dispositions don't load, saving wrap-up fails, and the panel doesn't end the session because the call isn't wrapped up.
 
-**Cause:** When a session is rejoined, the platform resends contacts left from the earlier session. The platform often can't save their wrap-up anymore.
+**Cause:** When a session is rejoined, the CCaaS service resends contacts left from the earlier session. The CCaaS service often can't save wrap-up for them anymore.
 
 **Resolution:**
 
 - Flag a contact as a leftover when it already ended the first time the panel receives it. Show a warning, and let the representative remove it from the panel without saving wrap-up.
 - Don't let leftovers block ending the session.
-- Use **Reset session** to clear leftovers on the platform side as well.
+- Use **Reset session** to clear leftovers on the provider side as well.
 
 ### A wrapped-up call reappears
 
@@ -229,7 +229,7 @@ To prevent this problem, finish wrap-up and end the agent session before you clo
 
 **Resolution:** Don't treat a closed notification as a decline. Only an explicit **Decline** rejects the call. Keep the panel's **Accept** and **Decline** available while the call rings.
 
-### The panel doesn't recognize the test route (NICE CXone)
+### The panel doesn't recognize the test route (NiCE CXone)
 
 **Cause:** The contact object includes the dialed number and skill, but not the Studio script name.
 
@@ -245,7 +245,7 @@ To prevent this problem, finish wrap-up and end the agent session before you clo
 
 Use these entries when live call transcript lines are missing, duplicated, or in the wrong order in the panel.
 
-### No transcript appears (NICE CXone)
+### No transcript appears (NiCE CXone)
 
 **Symptom:** Calls connect, but no transcript lines arrive.
 
@@ -254,13 +254,13 @@ Use these entries when live call transcript lines are missing, duplicated, or in
 1. The Studio script for the route runs **Continuous Transcription**.
 1. Agent voice transcription is turned on for the agent.
 1. `agent.isVoiceTranscriptEnabledAndToggledOn` returns `true` after the session starts. It depends on the agent feature `release-agent-voice-transcription-AW-20973`.
-1. The SDK can load the agent's feature list. If the feature-list request from the Dynamics 365 origin fails its CORS check (HTTP 403), the flag stays off, and NICE support must allow the origin.
+1. The SDK can load the agent's feature list. If the feature-list request from the Dynamics 365 origin fails its CORS check (HTTP 403), the flag stays off, and NiCE support must allow the origin.
 
 For a demo only, the panel can force the flag on in memory behind a configuration switch. Don't rely on this workaround in production.
 
-### Transcript messages arrive, but no lines appear (NICE CXone)
+### Transcript messages arrive, but no lines appear (NiCE CXone)
 
-**Cause:** The panel expects text, but NICE sends `contactId` as a number and marks final lines with `messageMetaData.completeUtterance` instead of `messageIsCompletedUtterance`.
+**Cause:** The panel expects text, but NiCE sends `contactId` as a number and marks final lines with `messageMetaData.completeUtterance` instead of `messageIsCompletedUtterance`.
 
 **Resolution:** Accept both ID types and both final flags. When you debug, log field types, not values.
 
@@ -278,7 +278,7 @@ For a demo only, the panel can force the flag on in memory behind a configuratio
 
 **Cause:** The panel's transcript is for live display only. Storing transcripts in Dynamics 365 for its own AI features needs a separate server-side integration from the vendor.
 
-**Resolution:** Save the final transcript to the case yourself, for example as a note at wrap-up. Treat platform-level transcript delivery as a separate project with the vendor.
+**Resolution:** Save the final transcript to the case yourself, for example as a note at wrap-up. Treat server-side transcript delivery as a separate project with the vendor.
 
 ## Customers and cases
 
