@@ -13,9 +13,9 @@ ms.reviewer: patcatun, clausw, divargas, rondom, azurevmlnxcic, v-weizhu
 
 ## Summary
 
-This article describes the support available for Linux distributions and open-source technology in Microsoft Azure. It covers the endorsed Linux distributions, support options, and resources available for customers running Linux on Azure.
+This article describes the support available for Linux distributions and open-source technology in Microsoft Azure. It covers the [endorsed Linux distributions](/azure/virtual-machines/linux/endorsed-distros), support options, and resources available to you when you run Linux on Azure. 
 
-Microsoft Azure supports the [Linux operating system](https://azure.microsoft.com/solutions/linux-on-azure). All Linux distributions are welcome in Azure. To upload your Linux distribution to Azure, see the [requirements](/azure/virtual-machines/linux/imaging). Marketplace images of the most popular Linux distributions are also available. Support for these images is available but requires a support contract. See the following sections for more details.
+Microsoft Azure supports the [Linux operating system](https://azure.microsoft.com/solutions/linux-on-azure), and all Linux distributions are welcome. To upload your own Linux distribution, review the [requirements](/azure/virtual-machines/linux/imaging). Azure Marketplace also offers images of the most popular Linux distributions; support for these images requires a support contract. For details, see the following sections. 
 
 ## Linux support matrix
 
@@ -35,17 +35,17 @@ Microsoft Azure supports the [Linux operating system](https://azure.microsoft.co
 
 ## Linux support scope
 
-Microsoft Support provides assistance for the Azure platform or services. Microsoft also provides commercially viable support for Linux. A support plan is required to receive Microsoft Support.
+Microsoft Support helps with the Azure platform and its services, and also offers commercially viable support for Linux. To get help from Microsoft Support, you need a support plan.
 
-- Azure Marketplace offers various Linux distributions. Microsoft provides support for Linux customers, but they might need to work with specific Linux vendors for further assistance. These vendors might be required to deliver distribution-specific fixes.
-  - **Red Hat and SUSE PAYG images:** Microsoft Support manages the first levels of Linux support and will engage the vendor if required.
-  - **Red Hat and SUSE BYOS images**: Customers might contact the vendor directly for support. The vendor is primarily responsible for Linux support; however, Microsoft can provide additional assistance if required.
-- In Azure Marketplace, you may select a highly customized Linux image, such as a firewall appliance. Microsoft provides assistance for these images, but the Linux vendor must be engaged to troubleshoot specific system-related problems. Microsoft may collaborate with the vendor for those issues.
-- Microsoft Support doesn't assist customers for basic Linux administration, design, architecture, or deployment of applications or solutions on Azure.
-- The ability to customize Linux is one of the hallmarks of the operating system. We encourage you to use a Linux solution that benefits your organization. However, the Linux vendor may not support some modifications, such as custom kernels or modules. For vendor support, you may be required to use stock kernels or libraries for your image.
-- For some troubleshooting and performance tuning within Linux or applications, customers should directly contact the vendor of the supported Linux distribution or application.
-- Scenarios that are related to security aren't supported. These include but aren't limited to:
+- Azure Marketplace offers a range of Linux distributions. Microsoft supports Linux customers, but you might need to work with the specific Linux vendor for further help, because the vendor might need to deliver distribution-specific fixes.
+  - **Red Hat and SUSE PAYG images:** Start with Microsoft Support, which manages the first levels of Linux support and engages the vendor if needed.
+  - **Red Hat and SUSE BYOS images**: You can contact the vendor directly for support. The vendor is primarily responsible for Linux support, but Microsoft can provide additional help if needed. 
+- Azure Marketplace also offers highly customized Linux images, such as firewall appliances. While Microsoft supports the Azure platform hosting these images, the image vendor is responsible for guest OS and image-specific support. Microsoft may collaborate with the vendor to help resolve issues when needed.
+- Microsoft Support doesn't provide help with basic Linux administration, design, architecture, or the deployment of applications or solutions on Azure.
+- Customizing Linux is one of the operating system's key strengths, and we encourage you to use the Linux solution that best fits your organization. However, Linux vendors might not support some modifications, such as custom kernels or modules. To receive vendor support, you might need to use stock kernels or libraries in your image
+- For some troubleshooting and performance tuning in Linux or your applications, contact the vendor of the supported Linux distribution or application directly.
 
+Microsoft Support doesn't cover security-related scenarios. These include, but aren't limited to: 
   - Compromised VMs
   - Security incident response investigations
   - Intrusion prevention assistance
@@ -61,18 +61,18 @@ Microsoft may offer support for the following specific open-source technologies 
 
 ## Open-source technology support scope
 
-Microsoft assists customers for supported open-source technologies. Customers who request support for design guidance or development assistance may be directed to forums or community support. Customers may also have to work directly with our Linux partners or software vendors for scenarios that Microsoft doesn't support. Examples include but aren't limited to:
+Microsoft may offer support for the following open-source technologies (subject to change): PHP, Java, Python, and Node.js (languages); MySQL (database); Apache HTTP Server and Apache Tomcat (web and application servers); and WordPress (frameworks). 
 
+Microsoft provides help with supported open-source technologies. If you request design guidance or development assistance, you might be directed to forums or community support. For scenarios that Microsoft doesn't support, you might need to work directly with our Linux partners or software vendors. Examples include, but aren't limited to:
 - Application development
 - Custom application troubleshooting 
 - Custom code
 
-The following situations are some of the support scenarios that Microsoft provides assistance for:
-
+By contrast, Microsoft can help with support scenarios such as the following: 
 - Issues that occur during installation or configuration
-- Deployment errors that occur when customers try to deploy applications to the Azure platform and services
-- Runtime errors that occur when customers use the Azure platform and services
-- Performance issues that affect applications that are built using the supported open-source technologies on the Azure platform and services
+- Deployment errors that occur when you deploy applications to the Azure platform and services
+- Runtime errors that occur when you use the Azure platform and services
+- Performance issues that affect your applications built with supported open-source technologies on the Azure platform and services
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
