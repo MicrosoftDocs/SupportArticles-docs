@@ -252,6 +252,8 @@ items:
       href: ./tabs/websites-not-loaded-new-teams.md
   - name: Teams Rooms and devices
     items:
+    - name: Pro Management Portal shows a false unhealthy alert
+      href: ./teams-rooms-and-devices/pro-management-portal-shows-false-unhealthy-alert.md
     - name: Cannot disable lock PIN on Yealink MP54 and MP56 phones
       href: ./teams-rooms-and-devices/cannot-disable-lock-personal-identification-number-phones.md
     - name: New Teams Rooms feature not available
