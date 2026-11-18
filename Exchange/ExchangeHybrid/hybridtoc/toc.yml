@@ -82,8 +82,12 @@ items:
           href: ../calendars/cannot-display-the-folder-properties-or-could-not-be-updated-error.md
         - name: Exchange Online Hybrid Free/Busy Diagnostic
           href: ../calendars/hybird-free-busy-diagnostic.md
+        - name: Free/busy forest/domain configuration isn't found
+          href: ../calendars/free-busy-forest-domain-not-found.md
         - name: Free/busy lookups stop working in cross-premises or in hybrid deployment
           href: ../calendars/freebusy-lookups-stop-working.md
+        - name: Free/busy OAuth signing certificate is missing
+          href: ../calendars/free-busy-oauth-certificate-not-found.md
         - name: Only see availability info of resource when scheduling meeting
           href: ../calendars/only-can-see-availability-info-of-resource-when-scheduling-meeting.md
         - name: Policy doesn't allow granting permissions
