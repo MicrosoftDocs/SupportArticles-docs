@@ -117,7 +117,7 @@ latency
 **Interpreting the results**: To identify which node has I/O pressure, compare the baseline and stress scenarios:
 - **Baseline**: Most operations (4,211 count) are in the 16-32 ms range, which is typical for normal system activity.
 - **Under stress**: Significantly more operations are in higher latency ranges (9,552 operations in 131-262 ms, 6,778 in 262-524 ms).
-- **Performance degradation**: The stress test shows operations extending into the 500 ms-2 s range, which indicates disk saturation.
+- **Performance degradation**: The stress test shows operations extending into the 500 ms-2 s range, which indicates increased I/O latency. To determine whether disk saturation is occurring, correlate these results with disk queue depth, IOPS, throughput, and the applicable disk and VM performance limits.
 - **Concerning signs**: Look for high counts above 100 ms (100,000 µs) that might indicate disk performance problems.
 
 ### Step 2: Find top disk I/O consumers with `top_blockio`
@@ -156,10 +156,10 @@ Sample output:
 
 ```
 K8S.NODE                      K8S.NAMESPACE   K8S.PODNAME   K8S.CONTAINERNAME   COMM     PID    TID   READS WRITES FILE              T RBYTES WBYTES
-aks-nodepool1-…99-vmss000000  default         stress-hdd    stress-hdd          stress   49258  49258 0     17     /stress.ADneNJ    R 0 B    18 MB
+aks-nodepool1-…99-vmss000000  default         stress-hdd    stress-hdd          stress   49264  49264 0     22     /stress.fLHpBC    R 0 B    23 MB
 aks-nodepool1-…99-vmss000000  default         stress-hdd    stress-hdd          stress   49254  49254 0     20     /stress.LEbDOb    R 0 B    21 MB
 aks-nodepool1-…99-vmss000000  default         stress-hdd    stress-hdd          stress   49252  49252 0     18     /stress.eMOjmP    R 0 B    19 MB
-aks-nodepool1-…99-vmss000000  default         stress-hdd    stress-hdd          stress   49264  49264 0     22     /stress.fLHpBC    R 0 B    23 MB
+aks-nodepool1-…99-vmss000000  default         stress-hdd    stress-hdd          stress   49258  49258 0     17     /stress.ADneNJ    R 0 B    18 MB
 ...
 ```
 
