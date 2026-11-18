@@ -51,7 +51,7 @@ Examples of how to calculate approximate wait duration:
   1. Check the **WaitTimeMs** and **WaitType**.
 
 
-- If you're familiar with [PSSDiag/SQLdiag](https://github.com/microsoft/diagmanager#readme) or [SQL LogScout](https://github.com/microsoft/SQL_LogScout#readme) LightPerf/GeneralPerf scenarios, consider using either of them to collect performance statistics and identify waiting queries on your SQL Server instance. You can import the collected data files and analyze the performance data with [SQL Nexus](https://github.com/microsoft/SqlNexus).
+- Consider using [SQL LogScout](https://github.com/microsoft/SQL_LogScout#readme) with the **LightPerf** or **GeneralPerf** scenario to collect performance statistics and identify waiting queries on your SQL Server instance. You can import the collected data files and analyze the performance data with [SQL Nexus](https://github.com/microsoft/SqlNexus).
 
 ### References to help eliminate or reduce waits
 

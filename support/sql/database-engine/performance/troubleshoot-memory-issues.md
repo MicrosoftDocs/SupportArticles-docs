@@ -1,9 +1,10 @@
 ---
-title: Troubleshoot out of memory or low memory issues in SQL Server
-description: Learn how to troubleshoot SQL Server memory issues, including out-of-memory errors, low memory conditions, and performance problems caused by external, internal, and engine-level memory pressure.
-ms.date: 05/21/2026
+title: Troubleshoot SQL Server Out-of-Memory and Low-Memory Issues
+description: Troubleshoot SQL Server out-of-memory errors and low memory conditions. Identify external and internal memory pressure, collect data, and find relief.
+ms.date: 11/17/2026
 ms.custom: sap:SQL resource usage and configuration (CPU, Memory, Storage)
 ms.reviewer: jopilov, shaunbe, v-shaywood
+ai-usage: ai-assisted
 ---
 
 # Troubleshoot out of memory or low memory issues in SQL Server
@@ -97,12 +98,9 @@ To view memory usage in SQL Server Management Studio (SSMS):
 1. In **Object Explorer**, select and hold (or right-click) the SQL Server instance name.
 1. In the context menu, select **Reports** > **Standard Reports** > **Memory Consumption**.
 
-### PSSDiag or SQL LogScout
+### SQL LogScout
 
-To automatically capture these data points, use a tool like [PSSDiag](https://github.com/microsoft/DiagManager/releases) or [SQL LogScout](https://github.com/microsoft/SQL_LogScout/releases).
-
-- If you use PSSDiag, set it up to capture the **Perfmon** collector and the **Custom Diagnostics\SQL Memory Error** collector.
-- If you use SQL LogScout, set it up to capture the **Memory** scenario.
+To automatically capture these data points, use [SQL LogScout](https://github.com/microsoft/SQL_LogScout/releases) with the **Memory** scenario. For more information, see the [Memory scenario](https://github.com/microsoft/SQL_LogScout#6-memory).
 
 ## Quick relief to free memory
 
