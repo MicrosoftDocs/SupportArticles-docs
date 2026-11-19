@@ -28,7 +28,7 @@
       href: cases-or-incidents/you-dont-have-access-to-data-for-case-summaries-error.md
 - name: Channel Integration Framework (CIF)
   items:
-    - name: Troubleshoot a non-Microsoft contact center panel in Copilot Service workspace
+    - name: Troubleshoot a non-Microsoft contact center panel in Copilot Service workspace (preview)
       href: channel-integration-framework/troubleshoot-third-party-contact-center.md
 - name: Customer Service Insights
   items:
