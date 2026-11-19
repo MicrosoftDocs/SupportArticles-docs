@@ -2,7 +2,7 @@
 title: Troubleshoot Memory Grant Issues in SQL Server
 description: Troubleshoot slow queries and low memory caused by memory grants in SQL Server. Learn how to identify RESOURCE_SEMAPHORE waits and reduce memory grant size.
 ms.reviewer: jopilov
-ms.date: 10/29/2026
+ms.date: 11/17/2026
 ms.custom: sap:SQL resource usage and configuration (CPU, Memory, Storage)
 ai-usage: ai-assisted
 ---
@@ -620,13 +620,13 @@ This diagnostic query is a sample, so feel free to modify it in any way that fit
 
 ## Diagnostic tools for memory grant issues
 
-To diagnose memory grant issues, use tools like [SQL LogScout](https://github.com/microsoft/sql_logscout) and [Pssdiag Configuration Manager](https://github.com/microsoft/diagmanager) (together with [SQLDiag](/sql/tools/sqldiag-utility)) that can collect outputs of the previously described DMVs and Performance Monitor counters.
+To diagnose memory grant issues, use [SQL LogScout](https://github.com/microsoft/SQL_LogScout) to collect output from the previously described DMVs and Performance Monitor counters.
 
-If you run SQL LogScout with *LightPerf*, *GeneralPerf*, or *DetailedPerf* scenarios, the tool collects the necessary logs. You can then manually examine the YourServer_PerfStats.out and look for `-- dm_exec_query_resource_semaphores --` and `-- dm_exec_query_memory_grants --` outputs.
+Run SQL LogScout with the **LightPerf**, **GeneralPerf**, or **DetailedPerf** scenario to collect the necessary logs. In the *YourServer_PerfStats.out* file, look for the `-- dm_exec_query_resource_semaphores --` and `-- dm_exec_query_memory_grants --` output.
 
-Alternatively, instead of manual examination, you can use [SQL Nexus](https://github.com/microsoft/sqlnexus) to import the output coming from SQL LogScout or PSSDIAG into a SQL Server database. SQL Nexus creates two tables, `tbl_dm_exec_query_resource_semaphores` and `tbl_dm_exec_query_memory_grants`, which contain the information needed to diagnose memory grants. 
+Alternatively, use [SQL Nexus](https://github.com/microsoft/sqlnexus) to import the SQL LogScout output into a SQL Server database. SQL Nexus creates two tables, `tbl_dm_exec_query_resource_semaphores` and `tbl_dm_exec_query_memory_grants`, which contain the information needed to diagnose memory grants.
 
-SQL LogScout and PSSDIAG also collect Perfmon logs in the form of *.BLG* files, which you can use to review the performance counters described in the [Performance Monitor counters](#performance-monitor-counters) section.
+SQL LogScout also collects Performance Monitor logs as *.blg* files. Use these files to review the counters described in the [Performance Monitor counters](#performance-monitor-counters) section.
 
 ## Why memory grants matter to developers and DBAs
 

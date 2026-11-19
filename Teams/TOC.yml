@@ -252,12 +252,24 @@ items:
       href: ./tabs/websites-not-loaded-new-teams.md
   - name: Teams Rooms and devices
     items:
+    - name: Pro Management Portal shows a false unhealthy alert
+      href: ./teams-rooms-and-devices/pro-management-portal-shows-false-unhealthy-alert.md
+    - name: Cannot disable lock PIN on Yealink MP54 and MP56 phones
+      href: ./teams-rooms-and-devices/cannot-disable-lock-personal-identification-number-phones.md
+    - name: New Teams Rooms feature not available
+      href: ./teams-rooms-and-devices/new-teams-rooms-feature-not-available.md
     - name: Collect crash dump files on Microsoft Teams Rooms for Windows
       href: ./teams-rooms-and-devices/collect-crash-dump-files-windows.md
     - name: Camera status in Event ID 3001 is incorrect after you replace a Teams Rooms camera
       href: ./teams-rooms-and-devices/camera-status-event-id-3001-is-incorrect-replace-teams-rooms-camera.md
     - name: Android device enrollment fails with EnrollmentUserLicense error
       href: ./teams-rooms-and-devices/android-device-enrollment-fails-with-enrollment-user-license-error.md
+    - name: Teams disabled for tenant error during sign-in on Teams Rooms for Android
+      href: ./teams-rooms-and-devices/teams-disabled-tenant-error-sign-in-teams-rooms-android.md
+    - name: Can't turn off device purchasing in Teams admin center
+      href: ./teams-rooms-and-devices/cannot-turn-off-device-purchasing-teams-admin-center.md
+    - name: Room Audio participant doesn't group with Teams Rooms roster
+      href: ./teams-rooms-and-devices/room-audio-participant-does-not-group-with-teams-rooms-roster.md
     - name: Teams Rooms or laptop video feed disappears in the same meeting
       href: ./teams-rooms-and-devices/teams-rooms-laptop-video-feed-disappears-same-meeting.md
     - name: Black or blank screen or no system response

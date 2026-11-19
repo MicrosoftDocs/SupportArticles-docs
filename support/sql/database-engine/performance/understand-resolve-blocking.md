@@ -1,7 +1,7 @@
 ---
 title: Understand and Resolve SQL Server Blocking Problems
 description: Learn how to troubleshoot SQL Server blocking problems, identify head blockers, diagnose long-running transactions, and resolve common scenarios.
-ms.date: 08/04/2026
+ms.date: 11/17/2026
 ms.custom: sap:SQL resource usage and configuration (CPU, Memory, Storage)
 ms.reviewer: jopilov
 ai-usage: ai-assisted
@@ -72,11 +72,11 @@ Now let's dive in to discuss how to pinpoint the main blocking session with an a
 ## Gather blocking information
 
 To counteract the difficulty of troubleshooting blocking problems, a database administrator can use SQL scripts that constantly monitor the state of locking and blocking on SQL Server.
-To gather this data, there are two complimentary methods.
+To gather this data, use two complementary methods.
 
 The first method is to query dynamic management objects (DMOs) and store the results for comparison over time. Some objects referenced in this article are dynamic management views (DMVs) and some are dynamic management functions (DMFs).
 
-The second method is to use [Extended Events](/sql/relational-databases/extended-events/extended-events) (XEvents) or [SQL Profiler Traces](/sql/relational-databases/sql-trace/sql-trace) to capture what is executing. Since SQL Trace and SQL Server Profiler are deprecated, this troubleshooting guide focuses on XEvents.
+The second method is to use [Extended Events](/sql/relational-databases/extended-events/extended-events) (XEvents) to capture what is executing. Use SQL LogScout with the **GeneralPerf** or **DetailedPerf** scenario to collect this data. SQL Trace and SQL Server Profiler are deprecated.
 
 ## Gather information from DMVs
 
@@ -199,13 +199,13 @@ WHERE resource_database_id = DB_ID()
 AND object_name(p.object_id) = '<table_name>';
 ```
 
-With DMVs, storing the query results over time will provide data points that will allow you to review blocking over a specified time interval to identify persisted blocking or trends. The go-to tool for CSS to troubleshoot such issues is using the PSSDiag data collector. This tool uses the "SQL Server Perf Stats" to collect result sets from DMVs referenced above, over time. As this tool is constantly evolving, review the latest public version of [DiagManager on GitHub](https://github.com/Microsoft/DiagManager).
+Store DMV query results over time to identify persistent blocking or trends. The recommended tool for collecting this data is [SQL LogScout](https://github.com/microsoft/SQL_LogScout). It uses the SQL Server Perf Stats scripts to collect results from the preceding DMVs at regular intervals. Use the **LightPerf**, **GeneralPerf**, or **DetailedPerf** scenario. For more information, see [SQL LogScout scenarios](https://github.com/microsoft/SQL_LogScout#scenarios).
 
 ## Gather information from extended events
 
 In addition to the preceding information, you often need to capture a trace of the activities on the server to thoroughly investigate a blocking problem in SQL Server. For example, if a session executes multiple statements within a transaction, only the last statement that the session submits is represented. However, one of the earlier statements might be the reason locks are still held. A trace enables you to see all the commands that a session executes within the current transaction.
 
-You can capture traces in SQL Server by using two methods: [Extended Events (XEvents)](/sql/relational-databases/extended-events/extended-events) and Profiler Traces. However, SQL traces that use the [SQL Server Profiler](/sql/tools/sql-server-profiler/sql-server-profiler) are deprecated. XEvents is the newer, superior tracing platform that offers more versatility and less impact to the observed system. Its interface is integrated into SSMS.
+Use SQL LogScout with the **GeneralPerf** or **DetailedPerf** scenario to capture Extended Events for blocking diagnostics. Unlike SQL Server Profiler, which is deprecated, Extended Events provides a tracing platform with less impact on the observed system. You can also manage Extended Events in SSMS.
 
 In Object Explorer, under the menu for XEvent Profiler, you can find pre-made Extended Event sessions that are ready to start in SSMS. For more information, see [XEvent Profiler](/sql/relational-databases/extended-events/use-the-ssms-xe-profiler). You can also create your own custom Extended Event sessions in SSMS. For more information, see [Extended Events New Session Wizard](/sql/relational-databases/extended-events/quick-start-extended-events-in-sql-server). For troubleshooting blocking problems, typically you capture:
 
