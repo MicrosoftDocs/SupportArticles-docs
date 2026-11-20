@@ -11,11 +11,16 @@ ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool
 
 ## Summary
 
-This article discusses how to identify and resolve the `ServicePrincipalValidationClientError` error that might occur if you try to create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster.
+This article discusses how to identify and resolve the ServicePrincipalValidationClientError error that can occur when you create, upgrade, scale, or update credentials on a Microsoft Azure Kubernetes Service (AKS) cluster that uses a service principal. The error means Azure Kubernetes Service could not obtain a Microsoft Entra token with the service principal credentials stored for the cluster.
 
 ## Prerequisites
 
-- [Azure CLI](/cli/azure/install-azure-cli), version 2.0.59 or a later version. If Azure CLI is already installed, you can find the version number by running `az --version`.
+- [Azure CLI](/cli/azure/install-azure-cli), Azure CLI version 2.0.65 or later. Run az --version to check.
+-	Permission to read the cluster and to reset credentials on the Microsoft Entra application used as the cluster service principal.
+- For an existing cluster, confirm it still uses a service principal before following this article:
+az aks show --resource-group <resource-group> --name <aks-cluster> --query servicePrincipalProfile.clientId -o tsv
+If the output is msi, the cluster uses a managed identity. This error does not apply. See [Managed identities in Azure Kubernetes Service (AKS)](https://learn.microsoft.com/en-us/azure/aks/managed-identity-overview).
+
 
 ## Symptoms
 
@@ -49,7 +54,13 @@ When you try to deploy an AKS cluster, you receive the following error message:
 
 ## Cause
 
-The secret that's provided for the highlighted service principal isn't valid.
+The Microsoft Entra application secret that AKS uses is missing, expired, mismatched, or was never applied to the cluster. Common causes:
+- 	Expired client secret (AADSTS7000222). AKS service principal secrets expire unless rotated.
+-   The configured client secret is invalid or doesn't match the application credential. This scenario can result in the AADSTS7000215 error. Ensure that you're using the client secret value, not the secret ID.
+-   The client secret was reset in Microsoft Entra ID, but the credentials weren't updated on the AKS cluster. In this situation, the cluster can continue using the previous credential until its service principal credentials are updated.
+
+-   New service principal created, but role assignments have not propagated (can take around 30 minutes).
+
 
 ## Solution 1: Reset the service principal secret in AKS
 
@@ -74,6 +85,8 @@ For failed operations in an existing cluster, ensure that you update your AKS cl
 ```azurecli-interactive
 az aks update-credentials --resource-group <resource-group> --name <aks-cluster> --reset-service-principal --client-secret <new-client-secret>
 ```
+> [!Note]
+> On clusters that use Virtual Machine Scale Sets, resetting cluster credentials can trigger a node image upgrade so nodes pick up the new credential. Plan a maintenance window.
 
 ## Solution 2: Create a new service principal for AKS
 
@@ -101,6 +114,10 @@ To update your AKS cluster with the new service principal's credential, run the 
 ```azurecli-interactive
 az aks update-credentials --resource-group <resource-group> --name <aks-cluster> --service-principal <new-client-id> --client-secret <new-client-secret>
 ```
+## Solution 3: Use a managed identity (preferred)
+
+New AKS clusters use a system-assigned managed identity by default. Managed identities do not use a client secret and do not require this rotation.
+If the cluster still uses a service principal, consider migrating to a managed identity after you restore operations. See [Managed identities in Azure Kubernetes Service (AKS)](https://learn.microsoft.com/en-us/azure/aks/managed-identity-overview).
 
 ## More information
 
