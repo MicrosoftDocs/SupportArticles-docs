@@ -1,20 +1,25 @@
 ---
-title: Error code 1642 though update is applied
-description: This article provides more information about the 1642 error message that is reported in the application event log though the SQL Server update is applied successfully.
-ms.date: 10/23/2020
+title: Error Code 1642 After a Successful Update
+description: Learn when you can safely ignore error code 1642 in the Application event log after a SQL Server cumulative update by checking the Setup result and logs.
+ms.date: 11/20/2026
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall
-ms.reviewer: mcimfl, troymoen, sureshka, ramakoni, Daleche 
+ms.reviewer: mcimfl, troymoen, sureshka
+ai-usage: ai-assisted
 ---
-# Application event log error code 1642 even though the SQL Server update was applied successfully
+# Error code 1642 in the Application log after a successful SQL Server update
 
-This article provides more information about the 1642 error message that's reported in the application event log though the SQL Server update is applied successfully.
-
-_Original product version:_ &nbsp; SQL Server 2016, SQL Server 2014, SQL Server 2012 Developer, SQL Server 2012  
+_Original product version:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 4230836
 
-## Symptoms
+## Summary
 
-When you install a cumulative update to Microsoft SQL Server, setup may complete successfully. However, you may find the following error logged in the system's Application event log:
+When you install a cumulative update (CU) for Microsoft SQL Server on Windows, the Application event log can report error code 1642 even though Setup completed successfully. This article explains how to check the update result and determine whether you can safely ignore the event. Ignore the event only if the CU installation completed successfully and *Summary.txt* contains no error messages. This guidance describes that specific logging scenario; it doesn't establish that every SQL Server version exhibits this behavior.
+
+## Symptoms: MsiInstaller event 1024 with error code 1642
+
+After a SQL Server CU installation completes successfully, the Windows Application event log might contain an error from **MsiInstaller**, with event ID **1024** and error code **1642**.
+
+The following example shows what the event might look like in SQL Server 2016. Compare the event source, event ID, and error code with your event, rather than the example's product name or identifier.
 
 ```console
 Log Name:      Application  
@@ -56,16 +61,27 @@ Event Xml:
 </Event>
 ```
 
-## Cause
+## Cause: SQL Server Setup can't retrieve the patch file list
 
-This issue occurs in several scenarios in which an MSI installer package failure is logged in the Application event log because the setup call to the `MsiGetPatchFileList` API doesn't get a list of files from the MSP (Windows Installer patch file).
+In this logging scenario, an MSI installer package failure is recorded in the Application event log because SQL Server Setup's call to the [MsiGetPatchFileList function](/windows/win32/api/msi/nf-msi-msigetpatchfilelistw) doesn't return a list of files from the Windows Installer patch file (.msp).
 
-## Resolution
+Windows Installer defines error code 1642 as `ERROR_PATCH_TARGET_NOT_FOUND`: the program to update might be missing, or the patch might target a different version of the program. For the general definition, see [Windows Installer error codes](/windows/win32/msi/error-codes). The event alone doesn't establish whether the SQL Server CU installation succeeded; check the Setup result and logs.
 
-You can safely ignore this message in the Application event log when the following conditions are true:
+## Resolution: Verify the SQL Server update before ignoring the event
 
-- Setup of the SQL Server cumulative update completed successfully.
+You can safely ignore this error code 1642 event in the Application event log when **both** of the following conditions are true:
 
-- No error messages are recorded in the *Summary.txt* file.
+- Setup of the SQL Server CU completed successfully.
+- No error messages are recorded in the *Summary.txt* file for that update attempt.
 
-For more information, see [View and Read SQL Server Setup Log Files](/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
+To check the Setup logs:
+
+1. Open *Summary.txt* in `%programfiles%\Microsoft SQL Server\<nnn>\Setup Bootstrap\Log\`. The `<nnn>` folder corresponds to the SQL Server version being updated.
+1. Review the execution summary and search for `error` or `failed` to find error messages.
+1. If Setup failed or the summary contains error messages, continue investigating the update failure instead of ignoring the event. For update-failure guidance, see [Troubleshoot common SQL Server cumulative update installation issues](sqlserver-patching-issues.md).
+
+For log locations and details about *Summary.txt*, *Detail.txt*, and MSI logs, see [View and read SQL Server Setup log files](/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
+
+## Related content
+
+- [Install SQL Server servicing updates](/sql/database-engine/install-windows/install-sql-server-servicing-updates)
