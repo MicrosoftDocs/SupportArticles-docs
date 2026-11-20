@@ -44,7 +44,7 @@ This error happens when Outlook connects to a global catalog outside the user's 
 1. Confirm that the affected mailbox is in a hybrid environment with an on-premises Active Directory user object.
 1. Have an Active Directory administrator verify that the user's SELF security principal has the `Write personal information` permission on the user object.
 1. Confirm that Outlook connects to a global catalog in the user's domain.
-1. Restart Outlook, remove the delegate, and add the delegate again.
+1. Remove the delegate, restart Outlook, and add the delegate again.
 
 ### Verify the resolution
 
