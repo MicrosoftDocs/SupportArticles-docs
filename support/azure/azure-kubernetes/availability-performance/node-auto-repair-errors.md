@@ -40,7 +40,7 @@ The following table lists common error codes that you might encounter during nod
 
 | Error code | Cause and solution |
 |---|---|
-| VMExtensionProvisioningError | One or more virtual machine (VM) extensions failed to provision on the VM. For more information about possible error types and troubleshooting steps, see [Troubleshoot the ERR_VHD_FILE_NOT_FOUND error code (124)](../create-upgrade-delete/error-code-vhdfilenotfound.md). To determine the exact VM extension provisioning error on your node, [view error details in the Azure portal](../create-upgrade-delete/troubleshoot-aks-cluster-creation-issues.md#view-resources-in-the-azure-portal). |
+| VMExtensionProvisioningError | One or more virtual machine (VM) extensions failed to provision on the VM. For more information about possible error types and troubleshooting steps, see [Troubleshoot the ERR_VHD_FILE_NOT_FOUND error code (124)](../create-upgrade-delete/error-code-vhdfilenotfound.md). To determine the exact VM extension provisioning error on your node, [view error details in the Azure portal](../create-upgrade-delete/troubleshoot-aks-cluster-creation-issues.md#find-aks-cluster-creation-errors-in-the-azure-portal). |
 | InvalidParameter | This error occurs if the node auto-repair process tries to access a node that no longer exists.|
 | scaleSetNameAndInstanceIDFromProviderID failed | This issue occurs when the node isn't provisioned correctly. |
 | ManagedIdentityCredential authentication failed | This issue occurs when the node isn't initialized correctly.  |

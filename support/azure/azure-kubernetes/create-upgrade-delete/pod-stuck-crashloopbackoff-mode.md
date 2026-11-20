@@ -1,15 +1,17 @@
 ---
-title: Pod is stuck in CrashLoopBackOff mode
-description: Troubleshoot a scenario in which a pod is stuck in CrashLoopBackOff mode on an Azure Kubernetes Service (AKS) cluster.
-ms.date: 06/15/2026
+title: Troubleshoot pod stuck in CrashLoopBackOff mode in AKS
+description: Troubleshoot a pod stuck in CrashLoopBackOff mode on an Azure Kubernetes Service (AKS) cluster. Learn the common causes and the kubectl steps to fix them.
+ms.date: 11/18/2026
+ms.topic: troubleshooting
+manager: dcscontentpm
 author: kaushika-msft
 ms.author: kaushika
-editor: v-jsitser, addobres
-ms.reviewer: chiragpa, nickoman, cssakscic, v-leedennis, addobres
+ms.reviewer: chiragpa, nickoman, cssakscic, v-leedennis, addobres, kaushika
 ms.service: azure-kubernetes-service
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
+ai-usage: ai-assisted
 ---
-# Pod is stuck in CrashLoopBackOff mode
+# Troubleshoot when a pod is stuck in "CrashLoopBackOff" mode in Azure Kubernetes Service
 
 ## Summary
 
@@ -17,17 +19,17 @@ This article discusses how to troubleshoot a scenario in which a pod is stuck in
 
 ## Cause
 
-If a pod has a `CrashLoopBackOff` status, then the pod probably failed or exited unexpectedly, and the log contains an exit code that isn't zero. Here are several possible reasons why your pod is stuck in `CrashLoopBackOff` mode:
+If a pod has a `CrashLoopBackOff` status, the pod probably failed or exited unexpectedly, and the log contains an exit code that isn't zero. Here are several possible reasons why your pod is stuck in `CrashLoopBackOff` mode:
 
-1. **Application failure**: The application inside the container crashes shortly after starting, often due to misconfigurations, missing dependencies, or incorrect environment variables.
-2. **Incorrect resource limits**: If the pod exceeds its CPU or memory resource limits, Kubernetes might kill the container. This issue can happen if resource requests or limits are set too low.
-3. **Missing or misconfigured ConfigMaps/Secrets**: If the application relies on configuration files or environment variables stored in ConfigMaps or Secrets but they're missing or misconfigured, the application might crash.
-4. **Image pull issues**: If there's an issue with the image (for example, it's corrupted or has an incorrect tag), the container might not start properly and fail repeatedly.
-5. **Init containers failing**: If the pod has init containers and one or more fail to run properly, the pod will restart.
-6. **Liveness/Readiness probe failures**: If liveness or readiness probes are misconfigured, Kubernetes might detect the container as unhealthy and restart it.
-7. **Application dependencies not ready**: The application might depend on services that aren't yet ready, such as databases, message queues, or other APIs.
-8. **Networking issues**: Network misconfigurations can prevent the application from communicating with necessary services, causing it to fail.
-9. **Invalid commands or arguments**: The container might be started with an invalid `ENTRYPOINT`, command, or argument, leading to a crash.
+1. **Application failure** - The application inside the container crashes shortly after starting, often due to misconfigurations, missing dependencies, or incorrect environment variables.
+1. **Incorrect resource limits** - If the pod exceeds its CPU or memory resource limits, Kubernetes might kill the container. This issue can happen if you set resource requests or limits too low.
+1. **Missing or misconfigured ConfigMaps or Secrets** - If the application relies on configuration files or environment variables stored in ConfigMaps or Secrets but they're missing or misconfigured, the application might crash.
+1. **Image pull issues** - If there's an issue with the image (for example, it's corrupted or has an incorrect tag), the container might not start properly and fail repeatedly.
+1. **Init containers failing** - If the pod has init containers and one or more fail to run properly, the pod restarts.
+1. **Liveness or readiness probe failures** - If liveness or readiness probes are misconfigured, Kubernetes might detect the container as unhealthy and restart it.
+1. **Application dependencies not ready** - The application might depend on services that aren't yet ready, such as databases, message queues, or other APIs.
+1. **Networking issues** - Network misconfigurations can prevent the application from communicating with necessary services, causing it to fail.
+1. **Invalid commands or arguments** - The container might start with an invalid `ENTRYPOINT`, command, or argument, leading to a crash.
 
 For more information about the container status, see [Pod Lifecycle - Container states](https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#container-states).
 
@@ -43,7 +45,7 @@ Consider the following options and their associated [kubectl](https://kubernetes
 | [Examine the logs](https://kubernetes.io/docs/concepts/cluster-administration/logging/) | `kubectl logs <pod-name>` |
 
 > [!NOTE]  
-> A pod can also have a `CrashLoopBackOff` status if it has finished deployment, but it's configured to keep restarting even if the exit code is zero. For example, if you deploy a busybox image without specifying any arguments, the image starts, runs, finishes, and then restarts in a loop:
+> A pod can also have a `CrashLoopBackOff` status if it finishes deployment, but you configure it to keep restarting even if the exit code is zero. For example, if you deploy a busybox image without specifying any arguments, the image starts, runs, finishes, and then restarts in a loop:
 >
 > ```console
 > $ kubectl run nginx --image nginx
@@ -90,7 +92,7 @@ Consider the following options and their associated [kubectl](https://kubernetes
 >     Restart Count:  2
 > ```
 
-If you don't recognize the issue after you create more pods on the node, then run a pod on a single node to determine how many resources the pod actually uses.
+If you don't recognize the issue after you create more pods on the node, run a pod on a single node to determine how many resources the pod actually uses.
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 

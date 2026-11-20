@@ -1,54 +1,57 @@
 ---
-title: Windows Node Pools Not Upgraded to Gen2 During Cluster Node Image Upgrade
-description: Troubleshoot an issue that prevents Windows Server node pools from upgrading automatically to Gen2 when a cluster node image is upgraded in Azure Kubernetes Service.
-ms.date: 04/17/2025
-editor: v-jsitser
-ms.reviewer: chiragpa, cssakscic, momajed
+title: Windows Server node pools don't upgrade to Gen2 during cluster node image upgrade in AKS
+description: Learn how to troubleshoot Windows Server node pools that don't upgrade to Gen2 during an AKS node image upgrade, and create a Gen2 node pool to resolve it.
+ms.date: 11/17/2026
+ms.topic: troubleshooting
+manager: dcscontentpm
+author: kaushika-msft
+ms.author: kaushika
+ms.reviewer: chiragpa, cssakscic, momajed, kaushika
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes Services (AKS) user, I want to troubleshoot why Windows Server node pools don't get upgraded automatically from Gen1 to Gen2 virtual machines (VMs) when a cluster node image is upgraded in Azure Kubernetes Service (AKS).
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or node pool)
+ai-usage: ai-assisted
 ---
-
-# Windows Server node pools not upgraded to Gen2 during cluster node image upgrade
+# Windows Server node pools don't upgrade to Gen2 during cluster node image upgrade in Azure Kubernetes Service
 
 ## Summary
 
-This article discusses how to troubleshoot a scenario in which Windows Server node pools don't get upgraded automatically from Gen1 to Gen2 virtual machines (VMs) when a cluster node image is upgraded in Microsoft Azure Kubernetes Service (AKS).
+This article helps you troubleshoot Windows Server node pools that don't upgrade automatically from Gen1 to Gen2 virtual machines (VMs) during a node image upgrade in Azure Kubernetes Service (AKS). It explains the causes and shows how to create a Gen2 node pool.
 
 > [!NOTE]  
 > This scenario doesn't apply to Gen2 VMs on Linux node pools.
 
 ## Prerequisites
 
-- Azure CLI version 2.0.81 or later. See [Install Azure CLI](/cli/azure/install-azure-cli) for installation instructions.
+Ensure you have Azure CLI version 2.0.81 or later installed. See [Install Azure CLI](/cli/azure/install-azure-cli) for installation instructions.
 
 ## Symptoms
 
 Existing Windows Server node pools don't get upgraded from Gen1 to Gen2 when you [upgrade the node image](/azure/aks/node-image-upgrade) by using one of the following methods in Azure CLI:
 
-- An entire cluster upgrade (by using the [`az aks upgrade`](/cli/azure/aks#az-aks-upgrade) command)
-
-- A specific node pool upgrade (by using the [`az aks nodepool upgrade`](/cli/azure/aks/nodepool#az-aks-nodepool-upgrade) command)
+- An entire cluster upgrade (by using the [`az aks upgrade`](/cli/azure/aks#az-aks-upgrade) command).
+- A specific node pool upgrade (by using the [`az aks nodepool upgrade`](/cli/azure/aks/nodepool#az-aks-nodepool-upgrade) command).
 
 ## Cause
+
+The following causes explain why existing Windows Server node pools aren't upgraded to Gen2 VMs during a node image upgrade.
 
 ### Cause 1: Existing node pools aren't automatically upgraded to Gen2 VMs
 
 By design, a node image upgrade doesn't support updating or upgrading existing node pools. The `az aks upgrade` and `az aks nodepool upgrade` commands upgrade only the node image (to a later node image version). These commands don't upgrade the corresponding VM generation.
 
-### Cause 2: Cluster upgrade to Kubernetes version 1.25 or a later version upgrades only the OS
+### Cause 2: Cluster upgrade to Kubernetes version 1.25 or later upgrades only the OS
 
-When you upgrade your cluster to Kubernetes version 1.25 or a later version, only the operating system (OS) is upgraded (to Windows Server 2022). Existing node pools aren't affected. The associated Azure Virtual Machine Scale Sets contain VMs that have the same Gen1 VM.
+When you upgrade your cluster to Kubernetes version 1.25 or later, only the operating system (OS) upgrades to Windows Server 2022. Existing node pools aren't affected. The associated Azure Virtual Machine Scale Sets contain VMs that use the same Gen1 VM.
 
 ### Cause 3: Cluster upgraded and new node pool created by using Windows Server 2022 without specifying a valid VM size
 
-After you upgrade the cluster to Kubernetes version 1.25 or a later version, you specify Windows Server 2022 as the OS to use on the node pool's VMs. However, the VMs don't use a Gen2 node image reference for one of the following reasons:
+After you upgrade the cluster to Kubernetes version 1.25 or later, you specify Windows Server 2022 as the OS for the node pool's VMs. However, the VMs don't use a Gen2 node image reference for one of the following reasons:
 
 - You don't specify a VM size, and the default VM size in the region doesn't support Gen2 VMs.
-
 - You specify a Gen1-only VM size.
 
-When you upgrade the default OS from Windows Server 2019 (`Windows2019`) to Windows Server 2022 (`Windows2022`), the existing node pools aren't automatically upgraded to a different VM generation.
+When you upgrade the default OS from Windows Server 2019 (`Windows2019`) to Windows Server 2022 (`Windows2022`), the existing node pools don't automatically upgrade to a different VM generation.
 
 ## Solution
 
@@ -76,5 +79,3 @@ Upgrade the cluster, and then create a new Windows Server node pool that support
 > - To verify the current and available node image versions, run the following commands:
 >    - To check the current version: `az aks nodepool show --resource-group <resource-group> --cluster-name <cluster-name> --name <nodepool-name> --query nodeImageVersion`
 >    - To check the latest available version: `az aks nodepool get-upgrades --resource-group <resource-group> --cluster-name <cluster-name> --nodepool-name <nodepool-name> --query latestNodeImageVersion`
-
- 
