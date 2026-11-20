@@ -112,7 +112,7 @@ If the namespace is the InternetHeaders or PublicStrings namespace, go to [Inter
 1. Run the following PowerShell cmdlets to create a CSV list of named property definitions for your review. You can change the value of `$outputPath` if desired. Otherwise, the following command outputs to the current working directory:
 
    ```PowerShell
-   $userId = "<SMTP address or alias>"
+   $userId = "<SMTP address, alias, or mailbox GUID. For an archive mailbox, use the MainArchive or AuxArchive GUID.>"
    $publicStringsGuid = "00020329-0000-0000-c000-000000000046"
    $internetHeadersGuid = "00020386-0000-0000-C000-000000000046"
    $outputPath = Join-Path $PWD 'MailboxExtendedProperties-$userId.csv'
@@ -168,7 +168,7 @@ After the preceding steps are complete, use the following steps to repair the ma
 1. Run the following PowerShell commands to get the named properties that match the naming pattern (prefix) that you previously identified in the [InternetHeaders or PublicStrings namespace](#internetheaders-or-publicstrings-namespace):
 
    ```PowerShell
-   $userId = "<SMTP address or alias>"
+   $userId = "<SMTP address, alias, or mailbox GUID. For an archive mailbox, use the MainArchive or AuxArchive GUID.>"
    $pattern = "<wildcard pattern>" # e.g., "X-DG-*" or "MyApp_Setting_*"
    $publicStringsGuid = "00020329-0000-0000-c000-000000000046"
    $internetHeadersGuid = "00020386-0000-0000-C000-000000000046"
@@ -195,6 +195,8 @@ After the preceding steps are complete, use the following steps to repair the ma
 
    > [!NOTE]
    > This command makes no changes to the mailbox. The `CorruptionsDetected` parameter indicates the number of mailbox items found that have named properties that match the specified pattern. For information about errors that you might receive when you run this cmdlet, see [Cleanup request errors](#cleanup-request-errors).
+   >
+   > To clean an archive mailbox, supply the GUID of the specific archive location (MainArchive or AuxArchive) as the identity. The cmdlet supports cleanup of archive mailboxes.
 
    <a id="step-4"></a>
 1. Run the following PowerShell cmdlet to clean up the named properties:
@@ -292,7 +294,7 @@ The following table lists the cleanup request errors that you might receive when
 To get detailed information about a named property, run the following PowerShell cmdlet:
 
 ```PowerShell
-$userId = "<SMTP address or alias>"
+$userId = "<SMTP address, alias, or mailbox GUID. For an archive mailbox, use the MainArchive or AuxArchive GUID.>"
 $namespaceGuid = "<GUID>"
 $propertyNameOrId = "<property name or ID>"
 Get-MailboxExtendedProperty -Identity $userId | Where-Object {$_.PropertyNamespace -eq $namespaceGuid -and ($_.PropertyName -eq $propertyNameOrId -or $_.PropertyId -eq $propertyNameOrId)} | Format-List

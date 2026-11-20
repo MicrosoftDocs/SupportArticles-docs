@@ -75,7 +75,7 @@ To fix the issue, follow these steps:
     - If the data file has an *.xlsx* extension, open it in Microsoft Excel.
     - If the data file has a *.csv* extension, use the [Text Import Wizard](https://support.microsoft.com/office/text-import-wizard-c5b02af6-fda1-4440-899f-f78bafe41857) to import the data into Excel by preserving the data in its original format.
 1. Identify all users who are assigned the email address that's mentioned in the warning message in the data file.
-1. For each user that's identified in step 4, compare their Employee ID to the Employee ID of the user that's found in step 2. If the Employee ID is different, enter a unique email address for the user in the data file.
+1. For each user that's identified in step 4, compare their Employee ID to the Employee ID of the user that's found in step 2. Employee IDs must be an exact string match (Example: 032645 is not a an exact string match of 32645). If the Employee ID is different, enter a unique email address for the user in the data file.
 1. Save the employee attribute data file, and then upload it again to Viva Glint.
 
 ## DUPLICATED_EMAIL: Deleted user
