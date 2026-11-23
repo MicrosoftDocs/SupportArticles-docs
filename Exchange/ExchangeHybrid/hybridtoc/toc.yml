@@ -52,42 +52,50 @@ items:
           href: ../administration/user-photos-not-synced-to-exchange-online.md
     - name: Calendars
       items:
-        - name: Free/busy token user doesn't exist
-          href: ../calendars/hybrid-free-busy-token-user-not-found.md
-        - name: Free/busy request times out
-          href: ../calendars/hybrid-free-busy-request-timeout.md
-        - name: Free/busy connection forcibly closed
-          href: ../calendars/hybrid-free-busy-connection-forcibly-closed.md
-        - name: Cross-organization free/busy request denied
-          href: ../calendars/hybrid-free-busy-cross-organization-request-denied.md
-        - name: Free/busy client assertion key not found
-          href: ../calendars/hybrid-free-busy-client-assertion-key-not-found.md
-        - name: Free/busy Autodiscover returns InvalidUser
-          href: ../calendars/hybrid-free-busy-discovery-invalid-user.md
         - name: '"550 5.1.11 RESOLVER.ADR.ExRecipNotFound" when delegate sends update to meeting'
           href: ../calendars/550-5111-ndr-delegate-sends-update-meeting.md
+        - name: Can't accept external sharing invitation
+          href: ../calendars/cannot-accept-external-sharing-invitation-in-outlook.md          
         - name: Can't access free/busy of non-Internet-facing AD site
           href: ../calendars/cannot-access-freebusy-info-of-non-internet-facing-ad-site.md
         - name: Can't add rooms to meeting requests in Outlook on the web
           href: ../calendars/cannot-add-conference-rooms-to-meeting-in-owa.md
         - name: Can't dismiss calendar reminders
           href: ../calendars/cannot-dismiss-outlook-calendar-reminders.md
+        - name: Can't view cross-forest calendar data
+          href: ../calendars/cannot-view-cross-forest-calendar-data.md          
         - name: Can't view free/busy information for a remote user
           href: ../calendars/cannot-view-freebusy-information-for-remote-user.md
-        - name: Can't accept external sharing invitation
-          href: ../calendars/cannot-accept-external-sharing-invitation-in-outlook.md
-        - name: Can't view cross-forest calendar data
-          href: ../calendars/cannot-view-cross-forest-calendar-data.md
+        - name: Cross-organization free/busy request denied
+          href: ../calendars/hybrid-free-busy-cross-organization-request-denied.md          
         - name: Error occurs when opening a room calendar in Outlook
           href: ../calendars/cannot-display-the-folder-properties-or-could-not-be-updated-error.md
         - name: Exchange Online Hybrid Free/Busy Diagnostic
           href: ../calendars/hybird-free-busy-diagnostic.md
+        - name: Free/busy Autodiscover HTTP 404 error
+          href: ../calendars/free-busy-discovery-endpoint-not-found.md
+        - name: Free/busy Autodiscover returns InvalidUser
+          href: ../calendars/hybrid-free-busy-discovery-invalid-user.md
+        - name: Free/busy client assertion key not found
+          href: ../calendars/hybrid-free-busy-client-assertion-key-not-found.md
+        - name: Free/busy connection forcibly closed
+          href: ../calendars/hybrid-free-busy-connection-forcibly-closed.md          
+        - name: Free/busy EWS Object moved error
+          href: ../calendars/free-busy-object-moved.md
         - name: Free/busy forest/domain configuration isn't found
-          href: ../calendars/free-busy-forest-domain-not-found.md
+          href: ../calendars/free-busy-forest-domain-not-found.md          
         - name: Free/busy lookups stop working in cross-premises or in hybrid deployment
           href: ../calendars/freebusy-lookups-stop-working.md
+        - name: Free/busy malformed XML response error
+          href: ../calendars/free-busy-response-not-well-formed-xml.md
         - name: Free/busy OAuth signing certificate is missing
-          href: ../calendars/free-busy-oauth-certificate-not-found.md
+          href: ../calendars/free-busy-oauth-certificate-not-found.md          
+        - name: Free/busy remote name resolution error
+          href: ../calendars/free-busy-remote-name-not-resolved.md
+        - name: Free/busy request times out
+          href: ../calendars/hybrid-free-busy-request-timeout.md
+        - name: Free/busy token user doesn't exist
+          href: ../calendars/hybrid-free-busy-token-user-not-found.md
         - name: Only see availability info of resource when scheduling meeting
           href: ../calendars/only-can-see-availability-info-of-resource-when-scheduling-meeting.md
         - name: Policy doesn't allow granting permissions
