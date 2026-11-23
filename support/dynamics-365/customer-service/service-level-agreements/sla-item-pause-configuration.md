@@ -1,9 +1,7 @@
 ---
 title: Can't save an SLA item due to Nullable object must have a value error in Dynamics 365 Customer Service
 description: Provides a resolution for the Nullable object must have a value error that occurs when you save an SLA item in Microsoft Dynamics 365 Customer Service.
-ms.reviewer: sdas
-ms.author: ghoshsoham
-author: soham-msft
+ms.reviewer: sdas, ghoshsoham
 ms.date: 08/18/2023
 ms.custom: sap:Service Level Agreements\Unable to create a new SLA
 ---
@@ -46,25 +44,25 @@ The **Pause Configurations** section doesn't appear when **Allow Pause and Resum
 var slaId = "d68cec48-610a-eb11-a813-000d3abfb73c";
 Xrm.WebApi.retrieveMultipleRecords("slaitem", "?$select=slaitemid,msdyn_advancedpauseconfiguration&$filter=_slaid_value eq " + slaId).then(
     function success(result) {
-		// define the data to update a record
-		var data =
-		{
-			"msdyn_advancedpauseconfiguration": false,
-		}
+      // define the data to update a record
+      var data =
+      {
+         "msdyn_advancedpauseconfiguration": false,
+      }
         for (var i = 0; i < result.entities.length; i++) {
 
-			if(result.entities[i].msdyn_advancedpauseconfiguration === null)
-			{
-				// update the record
-				Xrm.WebApi.updateRecord("slaitem", result.entities[i].slaitemid, data).then(
-					function success(result) {
-						console.log("SLAItem updated");
-					},
-					function (error) {
-						console.log(error.message);
-					}
-				);
-			}
+         if(result.entities[i].msdyn_advancedpauseconfiguration === null)
+         {
+            // update the record
+            Xrm.WebApi.updateRecord("slaitem", result.entities[i].slaitemid, data).then(
+               function success(result) {
+                  console.log("SLAItem updated");
+               },
+               function (error) {
+                  console.log(error.message);
+               }
+            );
+         }
         }                    
     },
     function (error) {

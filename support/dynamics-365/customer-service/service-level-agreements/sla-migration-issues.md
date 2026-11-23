@@ -1,9 +1,7 @@
 ---
 title: Troubleshoot Issues with SLA Migration in Dynamics 365 Customer Service
 description: Provides resolutions for issues that prevent you from migrating SLAs to Unified Interface in Microsoft Dynamics 365 Customer Service.
-ms.reviewer: sdas
-ms.author: ghoshsoham
-author: soham-msft
+ms.reviewer: sdas, ghoshsoham
 ms.date: 04/23/2025
 ai-usage: ai-assisted
 ms.custom: sap:Service Level Agreements\Facing errors during SLA migration
