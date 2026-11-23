@@ -1,8 +1,7 @@
 ---
 title: Troubleshoot log emission and diagnostic settings limitations for Azure partner service integration
 description: "Learn how to identify and resolve issues with log emission and diagnostic settings when integrating Azure resources with partner solutions."
-author: ProfessorKendrick
-ms.author: kkendrick
+ms.reviewer: kkendrick
 ms.service: partner-services
 ms.custom:
   - sap:Datadog on Azure
