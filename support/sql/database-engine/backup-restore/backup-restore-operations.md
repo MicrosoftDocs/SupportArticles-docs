@@ -227,7 +227,7 @@ To fix the problem, see [Move a TDE protected database to another SQL Server](/s
 
 #### Does backup compression work on TDE-enabled databases?
 
-  Yes. Starting with SQL Server 2016, backup compression works on TDE-enabled databases when you specify `MAXTRANSFERSIZE` greater than 65536 (64 KB) in the `BACKUP` statement. Without that setting, the backup runs uncompressed even when you request compression. For details, see [Backup compression](/sql/relational-databases/backup-restore/backup-compression-sql-server).
+  Yes. In SQL Server 2016, SQL Server 2017, and SQL Server 2019 before CU5, specify `MAXTRANSFERSIZE` greater than 65536 (64 KB) in the `BACKUP` statement. Without that setting, the backup compresses the encrypted pages directly and might not yield good compression ratios. For details, see [Backup compression](/sql/relational-databases/backup-restore/backup-compression-sql-server#backup-compression-with-tde).
 
 #### How do VDI and VSS backups interact with Always On availability group secondary replicas?
 
@@ -240,7 +240,7 @@ To fix the problem, see [Move a TDE protected database to another SQL Server](/s
 - Use the latest version of SSMS to avoid known problems related to job and maintenance plan configuration.
 - Do a test run of your jobs to check that backups are created successfully. Add logic to [check your backups](/sql/t-sql/statements/restore-statements-verifyonly-transact-sql).
 - If you plan to move system databases from one server to another, review [Move system databases](/sql/relational-databases/databases/move-system-databases).
-- If you see intermittent backup failures, check whether the latest update for your SQL Server version fixes the problem. For more information, see [SQL Server versions and updates](../../releases/download-and-install-latest-updates.md).
+- If you see intermittent backup failures, check whether the latest update for your SQL Server version fixes the problem. For more information, see [SQL Server versions and updates](https://support.microsoft.com/help/321185).
 - To schedule and automate backups for SQL Server Express editions, see [Schedule and automate backups of SQL Server databases in SQL Server Express](./schedule-automate-backup-database.md).
 
 ## Reference topics for SQL Server backup and restore

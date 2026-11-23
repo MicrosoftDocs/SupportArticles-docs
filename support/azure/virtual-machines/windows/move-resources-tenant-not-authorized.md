@@ -1,15 +1,16 @@
 ---
-title: Azure resource move fails - tenant not authorized to access linked subscription
-description: Azure resource move fails with LinkedAuthorizationFailed when subscriptions are in different tenants. Learn the supported fixes to complete your move.
+title: Azure resource move fails because tenant not authorized to access linked subscription
+description: Resolve LinkedAuthorizationFailed errors when Azure resource moves fail between subscriptions in different tenants. Learn the supported fixes to complete your move.
 services: virtual-machines
-author: scotro
 manager: dcscontentpm
+author: kaushika-msft
+ms.author: kaushika
+ms.reviewer: scotro, jdickson
 ms.service: azure-virtual-machines
 ms.topic: troubleshooting
-ms.date: 03/18/2026
-ms.author: scotro
-ms.reviewer: jarrettr
+ms.date: 09/18/2026
 ms.custom: sap:Cannot create a VM
+ai-usage: ai-assisted
 ---
 # Azure resource move fails because current tenant isn't authorized for linked subscription
 
@@ -17,11 +18,11 @@ ms.custom: sap:Cannot create a VM
 
 ## Summary
 
-A Microsoft Azure resource move might fail and generate a `LinkedAuthorizationFailed` error if the source and destination subscriptions are in different Microsoft Entra ID tenants. This article explains why cross-tenant moves aren't supported, and shows how to fix the issue by aligning tenants or re-creating resources in the destination subscription.
+An Azure resource move might fail and generate a `LinkedAuthorizationFailed` error if the source and destination subscriptions are in different Microsoft Entra ID tenants. This article explains why cross-tenant moves aren't supported, and shows how to fix the issue by aligning tenants or re-creating resources in the destination subscription.
 
 ## Symptoms
 
-When you try to move a VM, image, or disk from one subscription to another, the operation fails and returns an error message that resembles the following message:
+When you try to move a virtual machine (VM), image, or disk from one subscription to another, the operation fails and returns an error message that resembles the following message:
 
 ```output
 Resource move policy validation failed.
@@ -34,7 +35,7 @@ The client has permission to perform action 'Microsoft.Compute/virtualMachines/w
 
 This error occurs if the source and destination subscriptions belong to different Microsoft Entra ID tenants. Moving resources between subscriptions that are in different tenants isn't supported. The identity (service principal or user) that performs the move must have access in the same tenant as both subscriptions.
 
-This error can affect:
+This error can affect the following items:
 
 - VMs
 - Managed images
@@ -49,15 +50,55 @@ If you control both subscriptions, transfer them to the same Microsoft Entra ID 
 
 ### Option 2: Re-create the resource in the destination subscription
 
-If you have to perform a cross-tenant move, and you can't consolidate the subscriptions, re-create the resource in the destination subscription:
+If you need to perform a cross-tenant move and you can't consolidate the subscriptions, use Azure PowerShell, Azure CLI, or the [Azure portal](https://portal.azure.com) to re-create the resource in the destination subscription.
 
-1. **For VMs:** Take a managed disk snapshot in the source subscription. Share the snapshot with the destination tenant by using [cross-tenant shared access](/azure/virtual-machines/snapshot-copy-managed-disk). Create a new VM from the snapshot in the destination subscription.
+# [Azure PowerShell](#tab/powershell)
 
-1. **For managed images:** Export the image to a storage account that the destination tenant can access. Then, re-create the image.
+**For VMs** 
+
+Take a managed disk snapshot and create a new VM in the destination. 
+
+Run the following command.
+
+```azurepowershell
+$disk = Get-AzDisk -ResourceGroupName "<source-rg>" -DiskName "<os-disk-name>"
+$snapshotConfig = New-AzSnapshotConfig -SourceUri $disk.Id -Location $disk.Location -CreateOption Copy
+$snapshot = New-AzSnapshot -ResourceGroupName "<source-rg>" -SnapshotName "<snapshot-name>" -Snapshot $snapshotConfig
+```
+
+For more information, see [Create a virtual machine from a snapshot with PowerShell](/azure/virtual-machines/scripts/virtual-machines-linux-powershell-sample-create-vm-from-snapshot).
+
+# [Azure CLI](#tab/cli)
+
+**For VMs** 
+
+Take a managed disk snapshot and create a new VM in the destination.
+
+Run the following command.
+
+```azurecli
+az snapshot create \
+  --resource-group <source-rg> \
+  --name <snapshot-name> \
+  --source <os-disk-resource-id>
+```
+
+For more information, see [Create a virtual machine from a snapshot with CLI](/azure/virtual-machines/scripts/create-vm-from-snapshot).
+
+# [Azure portal](#tab/portal)
+
+Follow these steps:
+
+1. In the [Azure portal](https://portal.azure.com), go to the source VM's managed disk.
+1. Select **Create snapshot**.
+1. Share the snapshot with the destination tenant by using [cross-tenant shared access](/azure/virtual-machines/snapshot-copy-managed-disk).
+1. Create a new VM from the snapshot in the destination subscription.
+
+---
 
 ### Option 3: Use Compute Gallery for cross-tenant image sharing
 
-For images, use [Compute Gallery with cross-tenant sharing](/azure/virtual-machines/shared-image-galleries) to share the image directly with the destination tenant without moving the original resource.
+For images, use [Azure Compute Gallery with cross-tenant sharing](/azure/virtual-machines/shared-image-galleries) to share the image directly with the destination tenant without moving the original resource.
 
 ## References
 

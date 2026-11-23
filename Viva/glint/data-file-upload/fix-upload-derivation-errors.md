@@ -2,8 +2,8 @@
 title: Resolve File Upload Errors Related to Derived Attributes
 description: Fix errors that occur when you upload employee attribute data to Microsoft Viva Glint. These errors are related to derived attributes.
 manager: dcscontentpm
-ms.reviewer: aweixelman
-ms.date: 04/30/2025
+ms.reviewer: aweixelman, ahosabettu
+ms.date: 10/29/2026
 audience: ITPro
 ms.topic: troubleshooting
 search.appverid: MET150
@@ -14,7 +14,7 @@ ms.custom:
 
 # Resolve file upload errors related to derived attributes
 
-When you upload employee attribute data to Microsoft Viva Glint, you might receive one of the following derivation error messages. Select the error that you experience from the list at the top of the article, and follow the appropriate resolution to fix the error.
+When you upload employee attribute data to Microsoft Viva Glint, you might receive one of the following derivation error messages. To fix the issue, select the relevant error, and follow the appropriate resolution.
 
 ## The date format is incorrectly configured
 
@@ -214,3 +214,34 @@ To fix the issue, follow these steps:
    > - If a manager is displayed as reporting to themself because their manager position has to be filled, specify the manager ID of their skip-level manager, instead.
 
 1. Save the file, and then upload it again to Viva Glint.
+
+## SFTP_UPLOAD_SWITCHED_OFF 
+
+**Message:**
+
+> SFTP_UPLOAD_SWITCHED_OFF: SFTP Upload is switched off for this Glint instance. To enable SFTP uploads, update the switch settings in **General Settings** > **Technical configuration** > **SFTP**.
+
+**Issue type:** File-level error
+
+This error occurs when an employee data file is submitted through SFTP, but SFTP uploads aren't enabled for the Viva Glint instance. The employee data in the file can't be uploaded through SFTP until SFTP uploads are enabled. 
+
+### Resolution
+
+To enable SFTP uploads for your Viva Glint instance, turn on the **Use SFTP** toggle in [SFTP setup in General settings](/viva/glint/setup/set-up-sftp#manage-sftp-in-general-settings), and then upload the file again. 
+
+## ORG_UPLOAD_SWITCHED_OFF 
+
+**Message:**
+
+> ORG_UPLOAD_SWITCHED_OFF: Organization data uploads are turned off for this Glint instance. To enable organization data uploads, update the switch settings in **General Settings** > **Technical configuration** > **Microsoft 365 Organizational Data Service**.
+
+**Issue type:** File-level error
+
+This error occurs when employee data is sent from Microsoft 365 Organizational Data Service while imports from Microsoft 365 Organizational Data Service are turned off for the Viva Glint instance. The employee data can't be imported until these imports are turned on. 
+
+### Resolution
+
+Turn on imports from Microsoft 365 Organizational Data Service in **General settings** > **Technical configuration**. For more information, see [Enable and disable imports from Microsoft 365 Organizational Data Service](/viva/glint/setup/modis-data-consumption#enable-and-disable-imports-from-microsoft-365-organizational-data-service). After the imports are turned on, upload the employee data file again. 
+
+If you need help turning on imports from Microsoft 365 Organizational Data Service, contact Microsoft Support. 
+

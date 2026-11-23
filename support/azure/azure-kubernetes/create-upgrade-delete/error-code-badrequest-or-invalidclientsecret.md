@@ -1,24 +1,26 @@
 ---
-title: AADSTS7000222 - BadRequest or InvalidClientSecret error
-description: Learn how to troubleshoot the BadRequest or InvalidClientSecret error when you try to create or upgrade an Azure Kubernetes Service (AKS) cluster.
-ms.topic: article
-ms.date: 07/20/2026
-ms.reviewer: mariusbutuc
-author: axelgMS
-ms.author: axelg
+title: Resolve AADSTS7000222 (BadRequest or InvalidClientSecret) error in AKS
+description: Learn how to resolve the AADSTS7000222 BadRequest or InvalidClientSecret error when you create or upgrade an AKS cluster. Follow these steps to fix it.
+ms.date: 11/12/2026
+ms.topic: troubleshooting
+manager: dcscontentpm
+author: kaushika-msft
+ms.author: kaushika
+ms.reviewer: mariusbutuc, axelg, kaushika
 ms.service: azure-kubernetes-service
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool), innovation-engine
+ai-usage: ai-assisted
 ---
 
-# AADSTS7000222 - BadRequest or InvalidClientSecret error
+# Resolve the "AADSTS7000222" ("BadRequest" or "InvalidClientSecret") error in Azure Kubernetes Service
 
 ## Summary
 
-This article discusses how to identify and resolve the `AADSTS7000222` error (`BadRequest` or `InvalidClientSecret`) that occurs when you try to create or upgrade a Microsoft Azure Kubernetes Service (AKS) cluster.
+This article helps you resolve the `AADSTS7000222` error (`BadRequest` or `InvalidClientSecret`) that occurs when you create or upgrade an Azure Kubernetes Service (AKS) cluster. Learn how to identify the cause, such as an expired client secret, and restore cluster operations by updating the service principal credentials.
 
 ## Prerequisites
 
-- [Azure CLI](/cli/azure/install-azure-cli)
+Ensure you have [Azure CLI](/cli/azure/install-azure-cli) installed and configured.
 
 ## Symptoms
 
@@ -31,17 +33,15 @@ When you try to create or upgrade an AKS cluster, you receive one of the followi
 
 ## Cause
 
-The issue that generates this service principal alert usually occurs for one of the following reasons:
+This service principal alert usually occurs for one of the following reasons:
 
 - The client secret expired.
-
-- Incorrect credentials were provided.
-
+- You provided incorrect credentials.
 - The service principal doesn't exist within the Microsoft Entra ID tenant of the subscription.
 
-#### Verify the cause
+### Verify the cause
 
-Use the following commands to retrieve the service principal profile for your AKS cluster and check the expiration date of the service principal. Make sure to set the appropriate variables for your AKS resource group and cluster name.
+Use the following commands to retrieve the service principal profile for your AKS cluster and check the expiration date of the service principal. Ensure you set the appropriate variables for your AKS resource group and cluster name.
 
 ```azurecli
 SP_ID=$(az aks show --resource-group $RESOURCE_GROUP_NAME \
@@ -54,24 +54,19 @@ az ad app credential list --id "$SP_ID"
 Alternatively, you can verify that the service principal name and secret are correct and aren't expired. To do this, follow these steps:
 
 1. In the [Azure portal](https://portal.azure.com), search for and select **Microsoft Entra ID**.
-
 1. In the navigation pane of Microsoft Entra ID, select **App registrations**.
-
 1. On the **Owned applications** tab, select the affected application.
-
 1. Find the service principal name and secret information, and verify that the information is correct and current.
 
 ## Solution
 
-1. In the [Update or rotate the credentials for an AKS cluster](/azure/aks/update-credentials) article, follow the instructions in one of the following article sections, as appropriate:
+1. In the [Update or rotate the credentials for an AKS cluster](/azure/aks/update-credentials) article, follow the instructions in one of the following sections, as appropriate:
 
    - [Reset the existing service principal credentials](/azure/aks/update-credentials#reset-the-existing-service-principal-credentials)
    - [Create a new service principal](/azure/aks/update-credentials#create-a-new-service-principal)
 
 1. Using your new service principal credentials, follow the instructions in the [Update AKS cluster with service principal credentials](/azure/aks/update-credentials#update-aks-cluster-with-service-principal-credentials) section of that article.
 
-## More information
+## References
 
 - [Use a service principal with Azure Kubernetes Service (AKS)](/azure/aks/kubernetes-service-principal) (especially the [Troubleshoot](/azure/aks/kubernetes-service-principal#troubleshoot) section)
-
- 

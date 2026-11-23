@@ -4,7 +4,7 @@ description: Follow step-by-step diagnostics to identify and resolve Azure priva
 ms.service: azure-private-link
 ms.topic: troubleshooting
 ms.custom: sap:Private Endpoints
-ms.date: 6/12/2026
+ms.date: 06/12/2026
 ai.hint.symptom-tags:
   - private-endpoint-creation-failed
   - private-endpoint-deployment-failed

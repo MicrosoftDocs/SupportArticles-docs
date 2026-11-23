@@ -1,30 +1,35 @@
 ---
-title: Troubleshoot Kubernetes resource viewer access in Azure portal
-description: Can't view resources in Kubernetes resource viewer in Azure portal? Learn fixes for authorized IP ranges and private clusters. Resolve access now.
-ms.date: 04/14/2025
-ms.reviewer: edneto, chiragpa, nickoman, jaewonpark, v-leedennis
+title: Troubleshoot Kubernetes resource viewer access in Azure portal for AKS
+description: Can't view resources in the Kubernetes resource viewer in the Azure portal? Learn how to fix authorized IP range and private cluster issues. Resolve access now.
+ms.date: 10/29/2026
+ms.topic: troubleshooting
+manager: dcscontentpm
+author: kaushika-msft
+ms.author: kaushika
+ms.reviewer: edneto, chiragpa, nickoman, jaewonpark, v-leedennis, kaushika
 ms.service: azure-kubernetes-service
 keywords:
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the inability to view resources in the Kubernetes resource viewer in the Azure portal so that I can use authorized IP address ranges to access my AKS cluster that's configured with an API server.
 ms.custom: sap:Connectivity
+ai-usage: ai-assisted
 ---
-# Can't view resources in Kubernetes resource viewer in Azure portal
+# Troubleshoot Kubernetes resource viewer access in the Azure portal for Azure Kubernetes Service
 
 ## Summary
 
-This article discusses how to resolve an issue that prevents you from using the Azure portal to view resources in the Kubernetes resource viewer.
+This article discusses how to resolve an issue that prevents you from using the Azure portal to view resources in the Kubernetes resource viewer for Azure Kubernetes Service (AKS).
 
 ## Symptoms
 
-When you try to view resources in the [Kubernetes resource viewer](/azure/aks/kubernetes-portal) in the [Azure portal](https://portal.azure.com), you receive the following error message:
+When you try to view resources in the [Kubernetes resource viewer](/azure/aks/kubernetes-portal) in the [Azure portal](https://portal.azure.com), you receive the following error message.
 
-> `Unable to reach the API server '<server-url>' or API is too busy to response. Check your network setting`.
+> `Unable to reach the API server '<server-url>' or API is too busy to respond. Check your network settings`.
 
-:::image type="content" source="media/cannot-view-resources-kubernetes-resource-viewer-portal/network-error.png" alt-text="Screenshot of the Kubernetes resource viewer in Azure portal showing an API server network connectivity error message." lightbox="media/cannot-view-resources-kubernetes-resource-viewer-portal/network-error.png":::
+:::image type="content" source="media/cannot-view-resources-kubernetes-resource-viewer-portal/network-error.png" alt-text="Screenshot of the Kubernetes resource viewer in the Azure portal showing an API server network connectivity error message." lightbox="media/cannot-view-resources-kubernetes-resource-viewer-portal/network-error.png":::
 
 ## Cause 1: You configured authorized IP address ranges
 
-You configured your Microsoft Azure Kubernetes Service (AKS) cluster to access the cluster API server by using authorized IP address ranges that your computer can't access.
+You configured your AKS cluster to access the cluster API server by using authorized IP address ranges that your computer can't access.
 
 ### Solution
 
@@ -32,14 +37,12 @@ When you run the [az aks create](/cli/azure/aks#az-aks-create) or [az aks update
 
 ## Cause 2: Your AKS cluster is private
 
-Your AKS is created as a private cluster, and you're accessing the Azure portal from a network that can't communicate with the subnet to which your AKS is connected.
+You created your AKS cluster as a private cluster, and you're accessing the Azure portal from a network that can't communicate with the subnet to which your AKS is connected.
 
 ### Solution
 
 This behavior is expected. To view the AKS resources in the Azure portal, you must access the Azure portal from a client that's located on a network that has connectivity to the AKS subnet. Then, you can view all AKS-related resources in the Azure portal.
 
-## More information
+## References
 
 - [How to find my IP to include in --api-server-authorized-ip-ranges?](/azure/aks/api-server-authorized-ip-ranges#how-to-find-my-ip-to-include-in---api-server-authorized-ip-ranges)
-
- 

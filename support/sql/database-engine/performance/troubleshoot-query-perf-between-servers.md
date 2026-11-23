@@ -1,12 +1,13 @@
 ---
-title: Troubleshoot a query that shows different performance between two servers
-description: Provides troubleshooting steps for an issue where a query shows significantly different performance on two servers.
-ms.date: 06/10/2022
+title: Troubleshoot Query Performance Differences Between Servers
+description: Troubleshoot queries that run slower on one SQL Server instance than another. Compare execution times, query plans, and server environments.
+ms.date: 11/17/2026
 ms.custom: sap:SQL resource usage and configuration (CPU, Memory, Storage)
 ms.topic: troubleshooting
 ms.reviewer: shaunbe, aartigoyle
 author: pijocoder
 ms.author: jopilov
+ai-usage: ai-assisted
 ---
 
 # Troubleshoot a query that shows a significant performance difference between two servers
@@ -37,7 +38,7 @@ Use one of the following two methods to compare the performance for two or more 
 
 - Analyze performance data with [SQL Nexus](https://github.com/microsoft/SqlNexus).
 
-  1. Collect [PSSDiag/SQLdiag](https://github.com/microsoft/DiagManager#readme) or [SQL LogScout](https://github.com/microsoft/SQL_LogScout#readme) data for the queries on the two servers.
+  1. Collect [SQL LogScout](https://github.com/microsoft/SQL_LogScout#readme) data for the queries on both servers.
   1. Import the collected data files with SQL Nexus and compare the queries from the two servers. For more information, see [Performance Comparison between two log collections (Slow and Fast for example)](https://github.com/microsoft/SqlNexus/wiki/Reports-via-SQL-Queries#performance-comparison-between-two-log-collections-slow-and-fast-for-example).
 
 ### Scenario 1: Only one single query performs differently on the two servers

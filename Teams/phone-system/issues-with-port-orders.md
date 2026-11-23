@@ -14,6 +14,10 @@ ms.reviewer: revaldiv, leiaglezer, julienp
 ---
 # Resolve issues that affect port orders
 
+## Summary
+
+When you port phone numbers to Microsoft Teams Calling Plans, your current carrier might reject the order because the Letter of Authorization contains missing or incorrect information, or the numbers have a porting freeze. If the order shows “Customer action required,” correct the issue and resubmit it. If it shows “Microsoft support engaged,” Microsoft Support is handling the order.
+
 When you submit a port order request to [port phone numbers to Microsoft Teams Calling Plans](/microsoftteams/phone-number-calling-plans/transfer-phone-numbers-to-teams), Microsoft sends the request to the carrier that currently owns the phone numbers. The carrier either approves or rejects the port order.
 
 If your order is rejected, the carrier sends Microsoft a reason for the rejection. This reason is reflected in the [status of the order](/microsoftteams/phone-number-calling-plans/transfer-phone-numbers-to-teams?tabs=new-porting-wizard#whats-the-status-of-your-port-orders).

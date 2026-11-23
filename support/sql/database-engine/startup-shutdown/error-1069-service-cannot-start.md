@@ -1,17 +1,20 @@
 ---
-title: Error 1069 when starting SQL Server Service
-description: Provides resolutions for the error 1069 when starting the SQL Server or the SQL Server Agent service. The resolutions for event ID 7041 and event ID 7038 are different.
-ms.reviewer: jopilov, joriel, v-jayaramanp
-ms.date: 01/10/2025
+title: Error 1069 When Starting SQL Server Service
+description: Learn how to fix error 1069 "service did not start due to a logon failure" for SQL Server. Resolve logon failures with event IDs 7041 and 7038.
+ms.reviewer: jopilov
+ms.date: 10/15/2026
 ms.custom: sap:Startup, shutdown, restart issues (instance or database)
+ai-usage: ai-assisted
 ---
 
 # Error 1069 occurs when you start SQL Server Service
 
-You receive error 1069 when starting the SQL Server Service, which results in a logon failure. This article provides resolutions for error 1069 related events.
-
 _Original product version:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 282254
+
+## Summary
+
+Error 1069, "The service did not start due to a logon failure," occurs when the SQL Server or SQL Server Agent service can't sign in by using its configured service account. This article explains how to resolve error 1069 when System event log entries show Service Control Manager event ID 7041 or event ID 7038. The causes include a missing "Log on as a service" right, a disabled or locked account, an expired or incorrect password, and a domain that isn't reachable during startup.
 
 ## Symptoms
 
@@ -27,19 +30,32 @@ When you try to restart Microsoft SQL Server or the SQL Server Agent, the servic
     > System error 1069 has occurred.  
       The service did not start due to a logon failure.
 
-You may find messages with event ID 7041 or 7038 logged in the System Event Log.
+You might find messages with event ID 7041 or 7038 logged in the System event log.
 
 ## Cause
 
 This problem occurs because there's an issue either with the service account itself or the information that is currently saved for the service account.
 
+## Which resolution applies to your event ID
+
+Use the event ID and error text in the System event log to select the resolution:
+
+| Event ID | Error text in the event | Resolution |
+| --- | --- | --- |
+| 7041 | Logon failure: the user has not been granted the requested logon type at this computer. | [Resolution for event ID 7041](#resolution-for-event-id-7041) |
+| 7038 | This user can't sign in because this account is currently disabled. | [Account is disabled](#this-user-cant-sign-in-because-this-account-is-currently-disabled) |
+| 7038 | The user's password must be changed before signing in. | [Password must be changed](#the-users-password-must-be-changed-before-signing-in) |
+| 7038 | The user name or password is incorrect. | [Incorrect password or gMSA flag](#the-user-name-or-password-is-incorrect) |
+| 7038 | The referenced account is currently locked out and may not be logged on to. | [Account is locked out](#the-referenced-account-is-currently-locked-out-and-may-not-be-logged-on-to) |
+| 7038 | The specified domain either does not exist or could not be contacted. | [Domain can't be contacted](#the-specified-domain-either-does-not-exist-or-could-not-be-contacted) |
+
 ## Resolution for event ID 7041
 
-The entry with event ID 7041 in the System Event Log may contain the following error message:
+The entry with event ID 7041 in the System event log might contain the following error message:
 
 > Logon failure: the user has not been granted the requested logon type at this computer.
 
-The complete message entry in event log resembles the following one:
+The complete message entry in the event log resembles the following one:
 
 ```output
 Log Name:      System
@@ -71,16 +87,16 @@ check with your domain administrator to find out if a Group Policy object associ
 
 To fix this issue, check which user rights are assigned to the SQL Server service account.
 
-1. Start the **Local Security Policy** (Start -> Secpol.msc).
-1. Expand **Local Policy** and then select **User Rights Assignment**.
-1. Verify the required user rights are assigned to the service account by following the instructions in [Windows Privileges and Rights](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions#Windows). Manually assign any missing permissions.
-1. Check if the service account was assigned any **Deny**\* permissions. Remove any **Deny**\* permissions from the SQL Service service account and then retest.
+1. Start the **Local Security Policy** snap-in (`secpol.msc`).
+1. Expand **Local Policies** and then select **User Rights Assignment**.
+1. Verify the required user rights are assigned to the service account by following the instructions in [Windows privileges and rights](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions#windows-privileges-and-rights). Manually assign any missing permissions.
+1. Check if the service account is assigned any **Deny** user rights. Remove any **Deny** user rights from the SQL Server service account and then retest.
 
-   For example, if the service account was assigned **[Deny log on as a service](/windows/security/threat-protection/security-policy-settings/deny-log-on-as-a-service)** `SeDenyServiceLogonRight` along with **[Log on as a service](/windows/security/threat-protection/security-policy-settings/log-on-as-a-service)** `SeServiceLogonRight`, revoke the `SeDenyServiceLogonRight` right for the logon and restart SQL Server.
+   For example, if the service account is assigned **[Deny log on as a service](/windows/security/threat-protection/security-policy-settings/deny-log-on-as-a-service)** `SeDenyServiceLogonRight` along with **[Log on as a service](/windows/security/threat-protection/security-policy-settings/log-on-as-a-service)** `SeServiceLogonRight`, revoke the `SeDenyServiceLogonRight` right for the logon and restart SQL Server.
 
 ## Resolution for event ID 7038
 
-In the log entries that are event ID 7038 related, you may find the following error messages:
+In the log entries that are related to event ID 7038, you might find the following error messages:
 
 - [This user can't sign in because this account is currently disabled](#this-user-cant-sign-in-because-this-account-is-currently-disabled).
 - [The user's password must be changed before signing in](#the-users-password-must-be-changed-before-signing-in).
@@ -90,7 +106,7 @@ In the log entries that are event ID 7038 related, you may find the following er
 
 ### This user can't sign in because this account is currently disabled
 
-The complete message entry in event log resembles the following one:
+The complete message entry in the event log resembles the following one:
 
 ```output
 Log Name:      System
@@ -111,13 +127,13 @@ To ensure that the service is configured properly, use the Services snap-in in M
 
 To fix this issue, use one of the following methods based on your scenario:
 
-- If SQL Server Startup account is a Local User Account on the computer, open ***Computer Management** (compmgmt.msc) and check if the service account is disabled in **Local Users and Groups**. If it's disabled, enable the account, and restart the SQL Server Service.
+- If SQL Server Startup account is a local user account on the computer, open **Computer Management** (compmgmt.msc) and check if the service account is disabled in **Local Users and Groups**. If it's disabled, enable the account, and restart the SQL Server Service.
 
-- If SQL Server Startup account is a Windows Domain Account, check whether the account is disabled in **Active Directory Users and Computers**. If it's disabled, enable the account, and restart the SQL Server Service.
+- If SQL Server Startup account is a Windows domain account, check whether the account is disabled in **Active Directory Users and Computers**. If it's disabled, enable the account, and restart the SQL Server Service.
 
 ### The user's password must be changed before signing in
 
-The complete message entry in event log resembles the following one:
+The complete message entry in the event log resembles the following one:
 
 ```output
 Log Name:      System
@@ -138,25 +154,25 @@ To ensure that the service is configured properly, use the Services snap-in in M
 
 To fix this issue, use one of the following methods based on your scenario:
 
-- If the SQL Server Startup account is a Local User Account on the computer:
+- If the SQL Server Startup account is a local user account on the computer:
 
   1. Open **Computer Management** (compmgmt.msc).
   1. Select **Local Users and Groups** and then select **Users** to locate the account.
-  1. Double-click on the user account to open its **Properties**.
-  1. Clear the **User must change password at next logon** property for SQL Server Startup Account and press **OK**.
+  1. Double-click the user account to open its **Properties**.
+  1. Clear the **User must change password at next logon** property for SQL Server Startup Account and select **OK**.
   1. Restart the SQL Server Service.
 
-- If the SQL Server Startup account is a Windows Domain Account:
+- If the SQL Server Startup account is a Windows domain account:
 
-  1. Open **Active Directory Users and Computers** on a Domain Controller.
+  1. Open **Active Directory Users and Computers** on a domain controller.
   1. Select **Users** under the correct domain.
-  1. Double-click the domain account that's used as a SQL Server service account to open its **Properties**.
+  1. Double-click the domain account that you use as a SQL Server service account to open its **Properties**.
   1. Go to the **Account** tab to check if **User must change password at next logon** is enabled. If the option is enabled, either clear this option or sign in interactively to a Windows client machine, and then set a new password.
   1. If you changed the password, update the new password for the SQL Server Service by using the **SQL Server Configuration Manager** tool.
 
 ### The user name or password is incorrect
 
-For an incorrect password issue, the complete message entry in event log resembles the following one:
+For an incorrect password issue, the complete message entry in the event log resembles the following entry:
 
 ```output
 Log Name:      System
@@ -179,7 +195,7 @@ To fix this issue, follow these steps:
 
 #### Scenario 1: Incorrect password
 
-The error message entry indicates that the current login name or password set is incorrect. To verify and solve the issue, follow these steps:
+The error message entry indicates that the current sign-in name or password set is incorrect. To verify and solve the issue, follow these steps:
 
 1. Use the `runas` option to test the service account credentials:
 
@@ -187,11 +203,11 @@ The error message entry indicates that the current login name or password set is
    1. Run the following command:
 
       ```console
-      runas /user:<localmachine>\<SQLSerivceAccount> cmd
+      runas /user:<localmachine>\<SQLServiceAccount> cmd
       ```
 
 1. If the command succeeds, carefully type the same credentials in **SQL Server Configuration Manager**, **Services**, **SQL Server service**, and **This account**.
-1. If the command fails and reports the same issue, you must reset the password for the Windows logon.
+1. If the command fails and reports the same issue, reset the password for the Windows sign-in.
 1. If the SQL Server Startup account is a Local User Account on the computer, open **Computer Management** (compmgmt.msc), and reset the password of the local user.
 1. If the SQL Server Startup account is a Windows Domain Account, open **Active Directory Users and Computers**, and then update the password for the account under **Users**. After the credentials are updated, return to the **SQL Server Configuration Manager**, **Services**, **SQL Server** and enter the same credentials.
 1. Restart the SQL Server service.
@@ -200,13 +216,13 @@ The error message entry indicates that the current login name or password set is
 
 #### Scenario 2: gMSA IsManagedAccount Flag is set improperly
 
-If you're using a group Managed Service Accounts (gMSA) account to run the SQL Server Service and the `IsManagedAccount` flag for the given service is set to **false**, you may receive a Service Control Manager event ID 7038 as soon as the cached secret is invalid.
+If you're using a group managed service account (gMSA) to run the SQL Server service and the `IsManagedAccount` flag for the given service is set to **false**, you might receive a Service Control Manager event ID 7038 as soon as the cached secret is invalid.
 
 To identify and resolve the issue, follow these steps:
   
 1. Verify the account you're using is a gMSA account. Proceed only after confirming gMSA.
 
-   - If the following command succeeds against the account, you're using a gMSG account.
+   - If the following command succeeds against the account, you're using a gMSA account.
    - If it fails with `Cannot find an object with identity: 'account'`, the service account isn't a gMSA account.
 
    ```powershell
@@ -241,9 +257,11 @@ To identify and resolve the issue, follow these steps:
 
 1. Attempt to start the service again.
 
-#### The referenced account is currently locked out and may not be logged on to
+For more troubleshooting steps that are specific to gMSAs, see [Troubleshoot SQL Server service startup failures with gMSAs](gmsa-service-startup-failures.md).
 
-The complete message entry in event log resembles the following one:
+### The referenced account is currently locked out and may not be logged on to
+
+The complete message entry in the event log resembles the following one:
 
 ```output
 Log Name:      System
@@ -264,24 +282,24 @@ To ensure that the service is configured properly, use the Services snap-in in M
 
 To fix this issue, use one of the following methods based on your scenario:
 
-- If the SQL Server Startup account is a Local User Account on the computer:
+- If the SQL Server Startup account is a local user account on the computer:
 
   1. Open **Computer Management** (compmgmt.msc) and go to **Local Users and Groups**. Then select **Users**.
   1. Clear the **Account is Locked Out** checkbox for the SQL Server Startup Account under **Local Users and Groups** and select **OK**.
   1. Restart the SQL Server Service.
 
-- If the SQL Server Startup account is a Windows Domain Account:
+- If the SQL Server Startup account is a Windows domain account:
 
   1. Open **Active Directory Users and Computers** on the Domain controller.
   1. Under **Users**, double-click on the SQL Server startup account and go to the **Account** tab.
   1. Check if the account is marked as locked.
-  1. If the account is locked, select the **Unlock account** box and select **OK**, set a strong password.
+  1. If the account is locked, select the **Unlock account** check box, and then select **OK**. Set a strong password.
   1. Then use same credentials for the SQL Server service account configuration in **SQL Server Configuration Manager**, **Services**, and **SQL Server**.
   1. Restart the SQL Server service.
 
 ### The specified domain either does not exist or could not be contacted
 
-The complete message entry in event log resembles the following one:
+The complete message entry in the event log resembles the following one:
 
 ```output
 Log Name:      System
@@ -302,10 +320,10 @@ To ensure that the service is configured properly, use the Services snap-in in M
 
 To fix this issue, use one of the following methods based on your scenario:
 
-- Configure the SQL Server startup to delayed start for particular Windows servers, which ensures other Windows services such as NetLogon complete first and SQL Server starts without problems. This is the default configuration by SQL Setup starting with SQL Server 2022.
-- If the delayed start option doesn't address the issue for your scenario, an alternative option is to change the Recovery options for the SQL Server services. Specify 'Restart the service' as the action for the failure options. You can perform this option from the Services applet of Administrative Tools using the familiar Service Control Manager interfaces.
+- Configure the SQL Server startup to delayed start for particular Windows servers, which ensures other Windows services such as Netlogon complete first and SQL Server starts without problems. This is the default configuration by SQL Setup starting with SQL Server 2022.
+- If the delayed start option doesn't address the issue for your scenario, change the Recovery options for the SQL Server services. Specify **Restart the service** as the action for the failure options. Perform this option from the Services applet of Administrative Tools by using the familiar Service Control Manager interfaces.
   - This option isn't recommended for SQL Failover Cluster Instances (FCIs) or Availability Groups (AGs) as setting this could result in delays during automatic failover scenarios.
-- If neither of the previous options are feasible, you can configure the SQL Server service to have a dependency on the NETLOGON service using the following command in an elevated command-line console:
+- If neither of the previous options are feasible, configure the SQL Server service to have a dependency on the Netlogon service by running the following command in an elevated command-line console:
   
    ```cmd
    sc config <YourSQLServiceName> depend=keyiso/netlogon
@@ -316,3 +334,9 @@ To fix this issue, use one of the following methods based on your scenario:
    ```cmd
    sc config MSSQL$SQLPROD depend=keyiso/netlogon
    ```
+
+## Related content
+
+- [SQL Server startup errors](sql-server-startup-errors.md)
+- [SQL Server services using domain credentials fail to start](sql-cannot-start-with-domain-account.md)
+- [Troubleshoot SQL Server setup, startup, and authentication failures with gMSAs](sql-server-setup-startup-authentication-issues-with-gmsas.md)

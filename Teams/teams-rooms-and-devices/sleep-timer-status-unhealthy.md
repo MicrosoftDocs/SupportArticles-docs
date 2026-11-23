@@ -1,9 +1,9 @@
 ---
 title: The Sleep timer status of a Teams Rooms device is Unhealthy
 description: Resolves an issue that causes the Sleep timer signal of a Microsoft Teams Rooms device to appear as Unhealthy.
-ms.reviewer: rebenite
+ms.reviewer: rebenite, mattslomka
 ms.topic: troubleshooting
-ms.date: 10/30/2023
+ms.date: 08/18/2026
 manager: dcscontentpm
 audience: Admin
 search.appverid: 
@@ -16,6 +16,10 @@ ms.custom:
   - CI179889
 ---
 # The Sleep timer status is Unhealthy
+
+## Summary
+
+In the Microsoft Teams Rooms Pro Management portal, the **Sleep timer** signal appears as **Unhealthy** when the device is set to sleep while plugged in. This setting can interfere with wakeup, monitoring, and maintenance. Teams Rooms Pro attempts to correct it automatically. If the warning returns, check for policies that restore the setting and set the plugged-in sleep timer to `0`.
 
 ## Symptoms
 

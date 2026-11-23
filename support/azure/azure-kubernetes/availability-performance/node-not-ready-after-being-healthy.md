@@ -1,20 +1,27 @@
 ---
 title: Node Not Ready status after node is in a healthy state
-description: Learn how to troubleshoot an AKS node that changes to Not Ready after a healthy state, and restore cluster health faster.
-ms.date: 08/27/2024
-ms.reviewer: rissing, chiragpa, momajed, v-leedennis
+description: Learn how to troubleshoot an AKS node that changes to Not Ready after a healthy state. Follow these steps to find the cause and restore your cluster.
+ms.date: 10/26/2026
+manager: dcscontentpm
+ms.topic: troubleshooting
+author: kaushika-msft
+ms.author: kaushika
+ms.reviewer: rissing, chiragpa, momajed, v-leedennis, ookour, kaushika
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to prevent an Azure Kubernetes Service (AKS) cluster node from regressing to a Not Ready status so that I can continue to use the cluster node successfully.
 ms.custom: sap:Node/node pool availability and performance, innovation-engine
+ai-usage: ai-assisted
 ---
 
-# Troubleshoot an AKS node that changes to Not Ready status
+# Troubleshoot an Azure Kubernetes Service node that changes to Not Ready status
 
 ## Summary
 
 This article explains how to troubleshoot an Azure Kubernetes Service (AKS) node that changes to **Not Ready** after staying healthy for some time. It describes the cause and shows how to restore the node to a healthy state.
 
 ## Prerequisites
+
+To troubleshoot an AKS node that changes to **Not Ready** status, you need the following prerequisites:
 
 - The Kubernetes [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) tool. To install kubectl by using Azure CLI, run the [az aks install-cli](/cli/azure/aks#az-aks-install-cli) command.
 - The Kubernetes [kubelet](https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/) tool.
@@ -29,7 +36,7 @@ This article explains how to troubleshoot an Azure Kubernetes Service (AKS) node
 
 ## Connect to the AKS cluster
 
-Before you can troubleshoot the issue, you must connect to the AKS cluster. To do so, run the following commands:
+Before you can troubleshoot the issue, you must connect to the AKS cluster. To do so, run the following commands.
 
 ```bash
 export RANDOM_SUFFIX=$(head -c 3 /dev/urandom | xxd -p)
@@ -40,7 +47,7 @@ az aks get-credentials --resource-group $RESOURCE_GROUP --name $AKS_CLUSTER --ov
 
 ## Symptoms
 
-The status of a cluster node that has a healthy state (all services running) unexpectedly changes to **Not Ready**. To view the status of a node, run the following [kubectl describe](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#describe) command:
+The status of a cluster node that has a healthy state (all services running) unexpectedly changes to **Not Ready**. To view the status of a node, run the following [kubectl describe](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#describe) command.
 
 ```bash
 kubectl describe nodes
@@ -50,37 +57,10 @@ kubectl describe nodes
 
 The [kubelet](https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/) stops posting its **Ready** status.
 
-Check the output of the `kubectl describe nodes` command to find the [Conditions](https://kubernetes.io/docs/reference/node/node-status/#condition) field and the [Capacity and Allocatable](https://kubernetes.io/docs/reference/node/node-status/#capacity) blocks. Do the contents of these fields appear as expected? For example, in the **Conditions** field, does the `message` property contain the "kubelet is posting ready status" string? If you have direct Secure Shell (SSH) access to the node, check the recent events to understand the error. Look within the */var/log/syslog* file instead of */var/log/messages* (not available on all distributions). Or, generate the kubelet and container daemon log files by running the following shell commands:
+Check the output of the `kubectl describe nodes` command to find the [Conditions](https://kubernetes.io/docs/reference/node/node-status/#condition) field and the [Capacity and Allocatable](https://kubernetes.io/docs/reference/node/node-status/#capacity) blocks. Do the contents of these fields appear as expected? For example, in the **Conditions** field, does the `message` property contain the "kubelet is posting ready status" string? If you have direct Secure Shell (SSH) access to the node, check the recent events to understand the error. Look within the */var/log/syslog* file instead of */var/log/messages* (not available on all distributions). 
 
-```bash
-# First, identify the NotReady node
-export NODE_NAME=$(kubectl get nodes --no-headers | grep NotReady | awk '{print $1}' | head -1)
-
-if [ -z "$NODE_NAME" ]; then
-    echo "No NotReady nodes found"
-    kubectl get nodes
-else
-    echo "Found NotReady node: $NODE_NAME"
-    
-    # Use kubectl debug to access the node
-    kubectl debug node/$NODE_NAME -it --image=mcr.microsoft.com/dotnet/runtime-deps:6.0 -- chroot /host bash -c "
-        echo '=== Checking syslog ==='
-        if [ -f /var/log/syslog ]; then
-            tail -100 /var/log/syslog
-        else
-            echo 'syslog not found'
-        fi
-        
-        echo '=== Checking kubelet logs ==='
-        journalctl -u kubelet --no-pager | tail -100
-        
-        echo '=== Checking containerd logs ==='
-        journalctl -u containerd --no-pager | tail -100
-    "
-fi
-```
-
-After you run these commands, examine the syslog and daemon log files for more information about the error.
+> [!NOTE]
+> If the affected node is still available, you can open a support ticket for assistance. However, if the node is deleted—manually or by the cluster autoscaler—you can't retrieve its logs unless a monitoring tool collected them. To learn more, see [Analyze Syslog data from Kubernetes cluster in Azure Monitor](/azure/azure-monitor/containers/container-insights-syslog).
 
 ## Solution
 
@@ -97,7 +77,7 @@ If there were changes at the network level, make any necessary corrections. If y
 
 ### Step 2: Stop and restart the nodes
 
-If only a few nodes show a **Not Ready** status, stop and restart the nodes. This action might return the nodes to a healthy state. Then, check [Azure Kubernetes Service diagnostics overview](/azure/aks/concepts-diagnostics) to see if there are any problems, like the following issues:
+If only a few nodes show a **Not Ready** status, try restarting them as a temporary mitigation. This action might return the nodes to a healthy state. Then, check [Azure Kubernetes Service diagnostics overview](/azure/aks/concepts-diagnostics) to see if there are any problems, like the following issues:
 
 - Node faults.
 - Source network address translation (SNAT) failures.
@@ -111,37 +91,28 @@ If the diagnostics don't find any underlying problems and the nodes return to Re
 Did AKS diagnostics find any SNAT problems? If so, take some of the following actions, as appropriate:
 
 - Check whether your connections stay idle for a long time and rely on the default idle timeout to release their port. If the connections show this behavior, you might need to reduce the default timeout of 30 minutes.
-
 - Find out how your application creates outbound connectivity. For example, does it use code review or packet capture?
-
 - Find out whether this activity represents the expected behavior or, instead, it shows that the application is misbehaving. Use metrics and logs in Azure Monitor to back up your findings. For example, you can use the **Failed** category as a SNAT Connections metric.
-
 - Check whether appropriate patterns are followed.
-
 - Check whether you should fix SNAT port exhaustion by using extra outbound IP addresses and more allocated outbound ports. For more information, see [Scale the number of managed outbound public IPs](/azure/aks/load-balancer-standard#scale-the-number-of-managed-outbound-public-ips) and [Configure the allocated outbound ports](/azure/aks/load-balancer-standard#configure-the-allocated-outbound-ports).
 
 For more information about how to troubleshoot SNAT port exhaustion, see [Troubleshoot SNAT port exhaustion on AKS nodes](../connectivity/snat-port-exhaustion.md?tabs=for-a-linux-pod).
 
-### Step 4: Fix IOPS performance problems
+### Step 4: Fix IOPS, CPU, and memory performance problems
 
-If AKS diagnostics uncovers problems that reduce IOPS performance, take some of the following actions, as appropriate:
+If AKS diagnostics identifies conditions that degrade **IOPS performance** or cause **high CPU and memory utilization**, consider taking the following remedial actions:
 
 - To increase IOPS on virtual machine (VM) scale sets, choose a larger disk size that offers better IOPS performance by deploying a new node pool. Direct resizing of VMSS isn't supported. For more information about resizing node pools, see [Resize node pools in Azure Kubernetes Service (AKS)](/azure/aks/resize-node-pool?tabs=azure-cli).
-
 - Increase the node SKU size for more memory and CPU processing capability.
-
 - Consider using [Ephemeral OS](/azure/aks/cluster-configuration#ephemeral-os).
-
 - Limit the CPU and memory usage for pods. These limits help prevent node CPU consumption and out-of-memory situations.
-
 - Use scheduling topology methods to add more nodes and distribute the load among the nodes. For more information, see [Pod topology spread constraints](https://kubernetes.io/docs/concepts/workloads/pods/pod-topology-spread-constraints/).
 
 ### Step 5: Fix threading problems
 
-Kubernetes components like kubelets and [containerd runtimes](https://kubernetes.io/docs/setup/production-environment/container-runtimes/#containerd) rely heavily on threading, and they spawn new threads regularly. If the allocation of new threads is unsuccessful, this failure can affect service readiness, as follows:
+Kubernetes components like kubelets and [containerd runtimes](https://kubernetes.io/docs/setup/production-environment/container-runtimes/#containerd) rely heavily on threading, and they regularly create new threads. If the system can't allocate new threads, this failure can affect service readiness, as follows:
 
 - The node status changes to **Not Ready**, but a remediator restarts the node and recovers it.
-
 - The */var/log/messages* and */var/log/syslog* log files show repeated occurrences of the following error entries:
 
   > pthread_create failed: Resource temporarily unavailable by various processes
@@ -150,11 +121,11 @@ Kubernetes components like kubelets and [containerd runtimes](https://kubernetes
 
 - The node status changes to **Not Ready** soon after the `pthread_create` failure entries are written to the log files.
 
-Process IDs (PIDs) represent threads. The default number of PIDs that a pod can use might depend on the operating system. However, the default number is at least 32,768. This number is more than enough PIDs for most situations. Are there any known application requirements for higher PID resources? If there aren't, even an eight-fold increase to 262,144 PIDs might not be enough to accommodate a high-resource application.
+Process IDs (PIDs) represent threads. The default number of PIDs that a pod can use might depend on the operating system. However, the default number is at least 32,768. This number provides more than enough PIDs for most situations. Are there any known application requirements for higher PID resources? If there aren't, even an eight-fold increase to 262,144 PIDs might not be enough to accommodate a high-resource application.
 
-Instead, identify the offending application, and then take the appropriate action. Consider other options, like increasing the VM size or upgrading AKS. These actions can mitigate the issue temporarily, but they aren't a guarantee that the issue won't reappear again.
+Instead, identify the problematic application, and then take the appropriate action. Consider other options, like increasing the VM size or upgrading AKS. These actions can mitigate the issue temporarily, but they aren't a guarantee that the issue won't reappear.
 
-To monitor the thread count for each control group (cgroup) and print the top eight cgroups, run the following shell command:
+To monitor the thread count for each control group (cgroup) and print the top eight cgroups, run the following shell command.
 
 ```bash
 # Show current thread count for each cgroup (top 8)
@@ -166,7 +137,6 @@ For more information, see [Process ID limits and reservations](https://kubernete
 Kubernetes offers two methods to manage PID exhaustion at the node level:
 
 1. Configure the maximum number of PIDs that a pod can use within a kubelet by using the `--pod-max-pids` parameter. This configuration sets the `pids.max` setting within the cgroup of each pod. You can also use the `--system-reserved` and `--kube-reserved` parameters to configure the system and kubelet limits, respectively.
-
 1. Configure PID-based eviction.
 
 > [!NOTE]
@@ -176,8 +146,7 @@ Kubernetes offers two methods to manage PID exhaustion at the node level:
 
 To ensure the AKS API server is highly available, use a higher service tier. For more information, see the [Azure Kubernetes Service (AKS) Uptime SLA](/azure/aks/uptime-sla).
 
-## More information
+## References
 
 - To view the health and performance of the AKS API server and kubelets, see [Managed AKS components](/azure/aks/monitor-aks#level-2---managed-aks-components).
-
 - For general troubleshooting steps, see [Basic troubleshooting of node not ready failures](node-not-ready-basic-troubleshooting.md).

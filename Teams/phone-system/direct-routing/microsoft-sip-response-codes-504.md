@@ -22,6 +22,8 @@ ms.reviewer: teddygyabaah
 
 [!INCLUDE [Teams Direct Routing note](../../../includes/teams-direct-routing-note.md)]
 
+## Summary
+
 This article provides troubleshooting information for various combinations of the SIP 504 error and various Microsoft response codes.
 
 ## 549002 504 Unable to deliver INVITE: TlsTransport is not connected, State=Disconnected
@@ -106,7 +108,7 @@ This article provides troubleshooting information for various combinations of th
 - Microsoft response code: **569003**
 - SIP response code: **504**
 - Suggested actions:  
-  - Verify that the SBC certificate is signed by a trusted certificate authority (CA) and isn't expired. For more information, see [TLS connection issues](./sip-options-tls-certificate-issues.md#tls-connection-issues).
+  - Verify that the SBC certificate is signed by a trusted certificate authority (CA) and isn't expired. For more information, see [Issue related to the TLS connection](./sip-options-tls-certificate-issues.md#issues-related-to-the-tls-connection).
 
 ## 569008 504 Unable to deliver INVITE: Outgoing TLS negotiation failed. Remote certificate expired; HRESULT=0x80090328 SEC_E_CERT_EXPIRED
 

@@ -5,7 +5,7 @@ author: rnirek
 ms.author: rnirek
 ms.reviewer: divargas, rnirek, lariasjaen
 ms.topic: troubleshooting
-ms.date: 1/13/2025
+ms.date: 01/13/2025
 ms.service: azure-virtual-machines
 ms.collection: linux
 ms.custom: sap:Issue with Pacemaker cluster, and fencing

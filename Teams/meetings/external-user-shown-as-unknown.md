@@ -19,6 +19,12 @@ ms.date: 10/30/2023
 ---
 # External users appear as Unknown in meeting details
 
+## Summary
+
+In the Microsoft Teams admin center, an external federated user might appear as Unknown on the Overview page for a meeting or call. This behavior is by design. The admin center can't retrieve the external user's display name from your Microsoft Entra tenant, so it shows Unknown instead.
+
+## Symptoms
+
 Consider the following scenario:
 
 - An external (federated) user joins meetings and calls by using the Teams client.
@@ -31,6 +37,8 @@ Consider the following scenario:
 In this scenario, the username is displayed as **Unknown** on the **Overview** page. The following screenshot shows an example.
 
 :::image type="content" source="media/external-user-shown-as-unknown/user-name-unknown.png" alt-text="Screenshot that shows the username displayed as Unknown.":::
+
+## Cause
 
 This behavior is by design. On the meeting details page, the Teams admin center UI uses the Microsoft Graph API to query the Microsoft Entra tenant for user properties, such as **displayName**. Because external users aren't available for queries, the username is displayed as **Unknown**.
 

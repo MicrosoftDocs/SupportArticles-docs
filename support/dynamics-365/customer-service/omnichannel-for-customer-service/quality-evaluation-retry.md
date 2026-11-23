@@ -1,20 +1,20 @@
 ---
-title: Quality Evaluation Agent Errors and Recommended Actions
-description: Troubleshoot failed quality evaluations by checking AI agent errors, locating failed records, and deciding whether to retry or contact support.
-ms.reviewer: deepabansal, sdas
+title: Troubleshoot Quality Evaluation Agent Errors
+description: Troubleshoot Quality Evaluation Agent errors. Review failure details, find affected records, and learn when to retry or contact Microsoft Support.
+ms.reviewer: deepabansal, sdas, souravbihani, aartigoyle
 ai-usage: ai-assisted
 ms.topic: how-to
 ms.collection: CEnSKM-ai-copilot
 ms.update-cycle: 180-days
-ms.date: 07/30/2026
+ms.date: 10/28/2026
 ms.custom: sap:Customer Service Admin Center (CSAC)\Issue with Quality Evaluation Agent (QEA)
 ---
 
-# Troubleshoot failed quality evaluations
+# Troubleshoot Quality Evaluation Agent errors
 
 ## Summary
 
-Quality evaluations can fail when the AI agent can't complete processing. Error details help supervisors and administrators identify the cause, decide whether to retry the evaluation, and choose the next steps.
+Quality Evaluation Agent errors can prevent quality evaluations from completing. Learn how to review error details, identify failed records, and decide whether to retry an evaluation or contact Microsoft Support.
 
 ## Quality evaluation failure causes
 
@@ -46,20 +46,22 @@ Retry failed evaluations only when the error can be resolved through reprocessin
 
 When you retry an evaluation:
 
-- The original evaluation configuration is reused.
-- The existing evaluation record is overwritten.
+- You reuse the original evaluation configuration.
+- You overwrite the existing evaluation record.
 - The original **Created On** date remains unchanged.
-- The **Modified On** and **Requested By** fields are updated automatically.
-- The evaluation expiration date can be changed.
+- The **Modified On** and **Requested By** fields update automatically.
+- You can change the evaluation expiration date.
 
 If a newer version of the evaluation criteria exists, the retry continues to use the originally referenced criteria version. The system doesn't automatically upgrade or replace the criteria version. This behavior helps maintain consistency with the original evaluation context.
+
+If you need to apply updated criteria or configuration changes, create a new evaluation instead of retrying the failed one.
 
 ## Review retry results
 
 After you retry a failed evaluation:
 
 - If the retry succeeds, the **AI agent status** changes to **Complete**.
-- If the retry fails, the **AI agent status** remains as **Error**. The error reason is updated with the latest message, and a notification indicates that the retry was unsuccessful.
+- If the retry fails, the **AI agent status** remains **Error**. The error reason is updated with the latest message, and a notification indicates that the retry was unsuccessful.
 
 ## Error codes and recommended actions
 

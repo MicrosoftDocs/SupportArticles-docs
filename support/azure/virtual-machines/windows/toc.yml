@@ -51,12 +51,20 @@ items:
       href: /windows-server/get-started/extended-security-updates-deploy?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: How to upgrade
       href: /azure/virtual-machines/windows-in-place-upgrade?context=/troubleshoot/azure/virtual-machines/windows/context/context
+  - name: Windows Server 2016 (EOS)
+    items:
+    - name: Extended Security Updates (ESU) overview
+      href: /windows-server/get-started/extended-security-updates-overview?context=/troubleshoot/azure/virtual-machines/windows/context/context
+    - name: ESU for Azure VMs
+      href: /windows-server/get-started/extended-security-updates-azure-vm?context=/troubleshoot/azure/virtual-machines/windows/context/context
+    - name: How to upgrade
+      href: /azure/virtual-machines/windows-in-place-upgrade?context=/troubleshoot/azure/virtual-machines/windows/context/context
   - name: Windows Server 2008 R2 (EOS)
     items:
-      - name: End of Support (EOS)
-        href: ms-azure-windows-eos.md
-      - name: How to upgrade
-        href: /azure/virtual-machines/windows-in-place-upgrade?context=/troubleshoot/azure/virtual-machines/windows/context/context
+    - name: End of Support (EOS)
+      href: ms-azure-windows-eos.md
+    - name: How to upgrade
+      href: /azure/virtual-machines/windows-in-place-upgrade?context=/troubleshoot/azure/virtual-machines/windows/context/context
   - name: Windows Server 2003 (EOS)
     href: ms-azure-windows-eos.md
   - name: 32-bit operating systems
@@ -139,7 +147,7 @@ items:
     - name: Error code 0x80240439
       href: ../../../windows-client/installing-updates-features-roles/troubleshoot-windows-update-error-0x80240439.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Error code 0x80244007
-      href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-0x80244007.md?context=/troubleshoot/azure/virtual-machines/windows/context/context   
+      href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-0x80244007.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
 
 - name: Uploading a VHD to Azure
   items:
@@ -215,7 +223,6 @@ items:
     - name: Reset local Windows password for Azure VM offline
       href: reset-local-password-without-agent.md
     - name: Ghosted Nic issue
-      href: 
       items:
       - name: Overview
         href: windows-vm-ghostednic-troubleshooting.md
@@ -224,68 +231,70 @@ items:
 
   - name: Advanced troubleshooting support
     items:
-      - name: Cannot RDP because "You must change your password before logging on the first time" error
-        href: must-change-password.md
-      - name: Cannot RDP into Azure VM because of authentication errors
-        href: cannot-connect-rdp-azure-vm.md
-      - name: CredSSP encryption oracle remediation
-        href: credssp-encryption-oracle-remediation.md
-      - name: No Internet access
-        href: no-internet-access-multi-ip.md
-      - name: Netlogon service is not starting
-        href: azure-vm-netlogon-not-starting.md
-      - name: Network Store Interface service is not starting
-        href: azure-vm-nsi-not-starting.md
-      - name: Cannot RDP into Azure VM because of a brute force attack
-        href: cannot-rdp-azure-vm-brute-force.md
-      - name: The system administrator has restricted the types of logon
-        href: ../../../windows-server/remote/system-admin-restrict-types-logon.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
-      - name: Troubleshoot a failed trust relationship in an Azure Windows VM
-        href: troubleshoot-broken-secure-channel.md
-      - name: Troubleshoot RDP error because DHCP is disabled
-        href: troubleshoot-rdp-dhcp-disabled.md
-      - name: Troubleshoot RDP error because of the NSG setting
-        href: troubleshoot-rdp-nsg-problem.md
-      - name: Troubleshoot no license server errors
-        href: troubleshoot-rdp-no-license-server.md
-      - name: Troubleshoot remote desktop services issues
-        href: troubleshoot-remote-desktop-services-issues.md
-      - name: Troubleshoot an internal error
-        href: Troubleshoot-rdp-internal-error.md
-      - name: Troubleshoot RDP access is denied error
-        href: troubleshoot-rdp-access-denied.md
-      - name: Troubleshoot connection disconnects frequently issue
-        href: troubleshoot-rdp-intermittent-connectivity.md
-      - name: Troubleshoot a general error
-        href: troubleshoot-rdp-general-error.md
-      - name: Troubleshoot Azure VM RDP connection issues by Event ID
-        href: event-id-troubleshoot-vm-rdp-connecton.md
-      - name: Troubleshoot RDP error in VM due to static IP
-        href: troubleshoot-rdp-static-ip.md
-      - name: Troubleshoot RDP error in VM due to disabled NIC
-        href: troubleshoot-rdp-nic-disabled.md
-      - name: Troubleshoot RDP error caused by Safe Mode
-        href: troubleshoot-rdp-safe-mode.md
-      - name: Disable the guest OS Firewall in Azure VM
-        href: disable-guest-os-firewall-windows.md
-      - name: Enable or disable a firewall rule on a guest OS
-        href: enable-disable-firewall-rule-guest-os.md
-      - name: Guest OS firewall is blocking inbound traffic
-        href: guest-os-firewall-blocking-inbound-traffic.md
-      - name: Guest OS firewall is misconfigured
-        href: guest-os-firewall-misconfigured.md
-      - name: Troubleshoot RDP error caused by netvsc.sys
-        href: troubleshoot-rdp-driver-netvsc.md
-      - name: Troubleshoot Mellanox mlx5 driver crashes on Azure Windows VMs
-        href: troubleshoot-windows-vm-mellanox-network-driver-crash.md
-      - name: Use the Azure VM Mellanox Driver Validation tool
-        href: windows-vm-mellanox-network-driver-validation-tool.md
-      - name: Maximum allowed connections reached
-        href: troubleshoot-rdp-too-many-admin-sessions-open.md
-      - name: Can't sign into your account
-        href: troubleshoot-rdp-cannot-sign-into-account.md
-      - name: Application access issues
-        href: troubleshoot-app-connection.md
+    - name: Cannot RDP because "You must change your password before logging on the first time" error
+      href: must-change-password.md
+    - name: Cannot RDP into Azure VM because of authentication errors
+      href: cannot-connect-rdp-azure-vm.md
+    - name: Troubleshoot RDS instability after September 2026 Windows security updates
+      href: troubleshoot-rds-instability-september-2026-windows-updates.md
+    - name: CredSSP encryption oracle remediation
+      href: credssp-encryption-oracle-remediation.md
+    - name: No Internet access
+      href: no-internet-access-multi-ip.md
+    - name: Netlogon service is not starting
+      href: azure-vm-netlogon-not-starting.md
+    - name: Network Store Interface service is not starting
+      href: azure-vm-nsi-not-starting.md
+    - name: Cannot RDP into Azure VM because of a brute force attack
+      href: cannot-rdp-azure-vm-brute-force.md
+    - name: The system administrator has restricted the types of logon
+      href: ../../../windows-server/remote/system-admin-restrict-types-logon.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
+    - name: Troubleshoot a failed trust relationship in an Azure Windows VM
+      href: troubleshoot-broken-secure-channel.md
+    - name: Troubleshoot RDP error because DHCP is disabled
+      href: troubleshoot-rdp-dhcp-disabled.md
+    - name: Troubleshoot RDP error because of the NSG setting
+      href: troubleshoot-rdp-nsg-problem.md
+    - name: Troubleshoot no license server errors
+      href: troubleshoot-rdp-no-license-server.md
+    - name: Troubleshoot remote desktop services issues
+      href: troubleshoot-remote-desktop-services-issues.md
+    - name: Troubleshoot an internal error
+      href: Troubleshoot-rdp-internal-error.md
+    - name: Troubleshoot RDP access is denied error
+      href: troubleshoot-rdp-access-denied.md
+    - name: Troubleshoot connection disconnects frequently issue
+      href: troubleshoot-rdp-intermittent-connectivity.md
+    - name: Troubleshoot a general error
+      href: troubleshoot-rdp-general-error.md
+    - name: Troubleshoot Azure VM RDP connection issues by Event ID
+      href: event-id-troubleshoot-vm-rdp-connecton.md
+    - name: Troubleshoot RDP error in VM due to static IP
+      href: troubleshoot-rdp-static-ip.md
+    - name: Troubleshoot RDP error in VM due to disabled NIC
+      href: troubleshoot-rdp-nic-disabled.md
+    - name: Troubleshoot RDP error caused by Safe Mode
+      href: troubleshoot-rdp-safe-mode.md
+    - name: Disable the guest OS Firewall in Azure VM
+      href: disable-guest-os-firewall-windows.md
+    - name: Enable or disable a firewall rule on a guest OS
+      href: enable-disable-firewall-rule-guest-os.md
+    - name: Guest OS firewall is blocking inbound traffic
+      href: guest-os-firewall-blocking-inbound-traffic.md
+    - name: Guest OS firewall is misconfigured
+      href: guest-os-firewall-misconfigured.md
+    - name: Troubleshoot RDP error caused by netvsc.sys
+      href: troubleshoot-rdp-driver-netvsc.md
+    - name: Troubleshoot Mellanox mlx5 driver crashes on Azure Windows VMs
+      href: troubleshoot-windows-vm-mellanox-network-driver-crash.md
+    - name: Use the Azure VM Mellanox Driver Validation tool
+      href: windows-vm-mellanox-network-driver-validation-tool.md
+    - name: Maximum allowed connections reached
+      href: troubleshoot-rdp-too-many-admin-sessions-open.md
+    - name: Can't sign into your account
+      href: troubleshoot-rdp-cannot-sign-into-account.md
+    - name: Application access issues
+      href: troubleshoot-app-connection.md
 
 - name: VM password reset
   items:
@@ -304,9 +313,9 @@ items:
       href: /azure/azure-monitor/vm/performance-diagnostics?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Install and run reports
       href: /azure/azure-monitor/vm/performance-diagnostics-run?context=/troubleshoot/azure/virtual-machines/windows/context/context
-    - name: Analyze data 
+    - name: Analyze data
       href: /azure/azure-monitor/vm/performance-diagnostics-analyze?context=/troubleshoot/azure/virtual-machines/windows/context/context
-    - name: Extension 
+    - name: Extension
       href: /azure/azure-monitor/vm/performance-diagnostics-extension?context=/troubleshoot/azure/virtual-machines/windows/context/context
   - name: Troubleshoot VM Performance Bottlenecks
     href: ../linux/troubleshoot-performance-bottlenecks-linux.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
@@ -319,6 +328,8 @@ items:
       href: ../linux/troubleshoot-performance-virtual-machine-linux-windows.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Poor performance on Windows Server 2012 R2
       href: poor-performance-emulated-storage-stack.md
+    - name: VM reports fewer CPU cores than expected
+      href: troubleshoot-incorrect-cpu-core-count-windows-vm.md
 
 - name: Instance Metadata Service (IMDS)
   items:
@@ -359,7 +370,7 @@ items:
     - name: Troubleshoot Windows Update installation capacity
       href: windows-update-installation-capacity.md
     - name: Troubleshoot VM boot failure after SCSI-to-NVMe disk controller change
-      href: troubleshoot-nvme-boot-failure.md  
+      href: troubleshoot-nvme-boot-failure.md
     - name: Not a bootable disk
       href: troubleshoot-guide-not-bootable-disk.md
     - name: Reboot loop
@@ -458,7 +469,6 @@ items:
       href: azure-vm-cannot-rdp-driver-irql-not-less-equal.md
     - name: Azure VM cannot RDP - working on features
       href: azure-vm-cannot-rdp-working-features.md
-    
 
 - name: Cannot start or stop my VM
   items:
@@ -481,6 +491,8 @@ items:
     href: understand-vm-reboot.md
   - name: Root Cause Analysis of unexpected VM reboot
     href: unexpected-vm-reboot-root-cause-analysis.md
+  - name: Understand Root Cause Analysis for Azure VM reboots
+    href: resource-health-rca.md
   - name: Unexpected reboots of VMs with attached VHDs
     href: unexpected-reboots-attached-vhds.md
 
@@ -552,7 +564,7 @@ items:
     href: troubleshoot-extension-certificates-issues-windows-vm.md
   - name: Offline installation
     href: install-vm-agent-offline.md
-  
+
 - name: VM Extensions
   items:
   - name: Overview
@@ -564,7 +576,7 @@ items:
   - name: Troubleshoot extension issues
     href: /azure/virtual-machines/extensions/troubleshoot?context=/troubleshoot/azure/virtual-machines/windows/context/context
   - name: Slow VM start caused by extensions
-    href: slow-vm-start-extensions-troubleshooting.md   
+    href: slow-vm-start-extensions-troubleshooting.md
 
 - name: Cannot activate Windows
   items:
@@ -651,44 +663,163 @@ items:
     - name: Upload Hyper-V DC to Azure
       href: upload-existing-hyperv-dc-azure-ps.md
 
-- name: Move and migrate VM resources
+- name: Migration and Move
   items:
-  - name: Top error scenarios
+  - name: Planning and prerequisites
     items:
-    - name: Resource is not in a Succeeded state
-      href: move-resources-not-succeeded-state.md
-    - name: Resource type not supported for move
-      href: move-resources-resource-type-not-supported.md
-    - name: Move not supported - resource has plan for different subscription
-      href: move-resources-plan-different-subscription.md
-    - name: Tenant not authorized to access linked subscription
-      href: move-resources-tenant-not-authorized.md
-    - name: 800 resource limit per move operation
-      href: move-resources-800-limit.md
-    - name: Cannot move more than 100 resources via portal
-      href: move-resources-100-limit-portal.md
-    - name: Backup error during resource move
-      href: move-resources-backup-error.md
-    - name: Operation not allowed - system upgrade in progress
-      href: move-resources-operation-not-allowed-system-upgrade.md
-    - name: Move fails with MissingMoveDependentResources
-      href: move-resources-missing-dependencies.md
-    - name: Move operation times out after four hours
-      href: move-resources-4-hour-timeout.md
-    - name: Move fails due to invalid or deleted storage account
-      href: move-resources-invalid-storage-account.md
-    - name: Move fails with IncompleteRequest - hidden resources not included
-      href: move-resources-incomplete-request-hidden-resources.md
-    - name: Move fails because a private endpoint is not in Succeeded state
-      href: move-resources-private-endpoint-failed-state.md
-  - name: FAQ
-    href: move-vm-resources-faq.md
-  - name: How-to guides
-    items:
-    - name: Move resources to a different tenant
+    - name: Pre-flight checklist for VM resource moves
+      href: move-resources-preflight-checklist.md
+    - name: Error signature triage map
+      href: move-resources-error-signature-triage-map.md
+    - name: Cross-tenant VM move
+      href: move-vm-cross-tenant-migration-guide.md
+    - name: Azure Resource Mover custom RBAC prerequisites
+      href: resource-mover-rbac-prerequisites.md
+    - name: Region move vs RG/subscription move
+      href: move-resources-region-move-vs-resource-group-subscription-move.md
+    - name: Azure virtual machine move and migration FAQ
+      href: move-vm-resources-faq.md
+    - name: Move Azure VM resources to a different tenant
       href: move-vm-to-different-tenant.md
     - name: Convert unmanaged disks to managed disks
       href: migrate-vm-unmanaged-to-managed-disks.md
+
+  - name: Active operation conflicts and transient failures
+    items:
+    - name: Extension failed state blocks move
+      href: move-resources-extension-failed-state.md
+    - name: Deployment in progress blocks move
+      href: move-resources-deployment-active-blocks-move.md
+    - name: Resources already moving or RG updating
+      href: move-resources-resources-moved-resource-group-update.md
+    - name: Request conflict (non-terminal provisioning state)
+      href: move-resources-request-conflict-provisioning-state-not-terminal.md
+    - name: Resource group not in expected state
+      href: move-resources-group-not-expected-state.md
+    - name: Batch orchestration failure
+      href: move-resources-batch-orchestration-failed.md
+    - name: Operation exceeded four-hour limit
+      href: move-resources-operation-timeout-4-hour-limit.md
+    - name: Operation takes longer than expected
+      href: move-resources-operation-duration-expected.md
+    - name: InternalServerError or empty BadRequest
+      href: move-resources-internalservererror-empty-badrequest.md
+    - name: Resource group lock duration during move
+      href: move-resources-resource-group-lock-duration.md
+    - name: Move operation times out after four hours
+      href: move-resources-4-hour-timeout.md
+    - name: Resource not in Succeeded state blocks move
+      href: move-resources-not-succeeded-state.md
+    - name: OperationNotAllowed due to system upgrade
+      href: move-resources-operation-not-allowed-system-upgrade.md
+
+  - name: Dependency blocks
+    items:
+    - name: Azure Backup dependencies block move
+      href: move-resources-backup-lock-recovery-services-vault.md
+    - name: Resource locks block move
+      href: move-resources-resource-locks-blocking-move.md
+    - name: Load balancer dependency missing
+      href: move-resources-load-balancer-dependency-missing.md
+    - name: Private endpoint dependency block
+      href: move-resources-private-endpoint-dependency-block.md
+    - name: Managed identity RBAC drift at destination
+      href: move-resources-managed-identity-rbac-drift.md
+    - name: NIC IP configuration dependency conflict
+      href: move-resources-network-interface-ip-config-conflict.md
+    - name: Availability set/zone constraint mismatch
+      href: move-resources-availability-set-zonal-constraint.md
+    - name: Disk Encryption Set access missing (CMK)
+      href: move-resources-cmk-disk-encryption-set-access-denied.md
+    - name: Proximity Placement Group constraint mismatch
+      href: move-resources-proximity-placement-group-constraint.md
+    - name: Dedicated host/host group dependency block
+      href: move-resources-dedicated-host-host-group-dependency.md
+    - name: Site Recovery replication enabled
+      href: move-resources-site-recovery-replication-enabled.md
+    - name: Shared disk cluster dependency block
+      href: move-resources-shared-disk-cluster-dependency.md
+    - name: Boot diagnostics storage dependency unresolved
+      href: move-resources-boot-diagnostics-storage-dependency.md
+    - name: VNet dependencies must move together
+      href: move-resources-vnet-dependencies-must-move-together.md
+    - name: Hidden restore point/snapshot residue
+      href: move-resources-hidden-restore-point-snapshot-residue.md
+    - name: MissingMoveDependentResources error
+      href: move-resources-missing-dependencies.md
+    - name: Azure Backup configured on VM blocks move
+      href: move-resources-backup-error.md
+    - name: Hidden resources not included in move request
+      href: move-resources-incomplete-request-hidden-resources.md
+    - name: Private endpoint not in Succeeded state
+      href: move-resources-private-endpoint-failed-state.md
+    - name: Move fails with invalid or deleted storage account
+      href: move-resources-invalid-storage-account.md
+
+  - name: Validation and policy failures
+    items:
+    - name: Blocked by destination Azure Policy
+      href: move-resources-blocked-by-destination-policy.md
+    - name: Destination policy validation denied
+      href: move-resources-destination-policy-deny.md
+    - name: Provider validation failed
+      href: move-resources-provider-validation-failed.md
+    - name: Resource settings validation failed
+      href: move-resources-validation-failed-resource-settings.md
+    - name: Validation-failed move error dispatcher
+      href: move-resources-troubleshoot-validation-failed-dispatcher.md
+    - name: Resource name already exists at destination
+      href: move-resources-name-conflict-at-destination.md
+    - name: Marketplace terms not accepted in destination subscription
+      href: move-resources-marketplace-terms-not-accepted-destination-subscription.md
+    - name: Resource has a plan with a different subscription
+      href: move-resources-plan-different-subscription.md
+    - name: Tenant not authorized to access linked subscription
+      href: move-resources-tenant-not-authorized.md
+
+  - name: Unsupported scope and platform constraints
+    items:
+    - name: VM size unavailable at destination
+      href: move-resources-resize-blocked-disk-constraints.md
+    - name: Ephemeral OS disk unsupported
+      href: move-resources-ephemeral-os-disk-not-supported.md
+    - name: Accelerated networking capability mismatch
+      href: move-resources-accelerated-networking-capability-mismatch.md
+    - name: VMSS instance resource move unsupported
+      href: move-resources-vmss-instance-scope-not-supported.md
+    - name: Reservation/capacity assumptions invalid at destination
+      href: move-resources-reservation-capacity-association-conflict.md
+    - name: Encryption at host unsupported at destination
+      href: move-resources-encryption-at-host-destination-constraint.md
+    - name: Individual VM in availability set unsupported
+      href: move-resources-availability-set-individual-vm-not-supported.md
+    - name: Azure Disk Encryption requirements block move
+      href: move-resources-azure-disk-encryption-blocked.md
+    - name: Scheduled patching/maintenance settings block move
+      href: move-resources-scheduled-patching-maintenance-configuration-blocked.md
+    - name: Ultra Disk/Premium SSD v2 unsupported at destination
+      href: move-resources-ultra-disk-premium-ssd-v2-destination-not-supported.md
+    - name: VMSS with Standard LB or Standard public IP unsupported
+      href: move-resources-vmss-standard-lb-public-ip-constraint.md
+    - name: Cannot move more than 100 resources via portal
+      href: move-resources-100-limit-portal.md
+    - name: 800 resource limit per move operation exceeded
+      href: move-resources-800-limit.md
+    - name: Resource type not supported for move
+      href: move-resources-resource-type-not-supported.md
+
+  - name: Post-move and relocation follow-up
+    items:
+    - name: Move succeeded, VM up, workload still broken
+      href: move-resources-post-move-vm-up-workload-broken.md
+    - name: Region relocation - original public IP not retained
+      href: move-resources-region-relocation-public-ip-not-retained.md
+    - name: Move succeeded, identity scope not recreated
+      href: move-resources-post-move-identity-scope-not-recreated.md
+    - name: Region relocation - private endpoint order incorrect
+      href: move-resources-region-relocation-private-endpoint-order.md
+    - name: Region relocation - DNS/probes/routing still point to source
+      href: move-resources-post-relocation-dns-probe-routing-still-source.md
 
 - name: On-demand Capacity Reservation issues
   items:
@@ -726,7 +857,7 @@ items:
     href: vm-inspector-azure-virtual-machines.md
   - name: VM Inspector error messages
     href: vm-inspector-error-messages.md
-  
+
 - name: Serial Console
   items:
   - name: Overview
@@ -745,8 +876,8 @@ items:
 - name: Azure Image Builder
   href: welcome-deployment-troubleshooting.yml
   items:
-    - name: Troubleshoot Azure VM Image Builder
-      href: /azure/virtual-machines/linux/image-builder-troubleshoot?context=/troubleshoot/azure/virtual-machines/windows/context/context
+  - name: Troubleshoot Azure VM Image Builder
+    href: /azure/virtual-machines/linux/image-builder-troubleshoot?context=/troubleshoot/azure/virtual-machines/windows/context/context
 
 - name: Azure Compute Gallery
   items:
@@ -771,4 +902,3 @@ items:
     href: ping-clustered-name-fail.md
   - name: Failed to get log in Boot Diagnostics
     href: failed-get-contents-log-error.md
-

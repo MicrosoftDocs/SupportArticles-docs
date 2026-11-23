@@ -22,7 +22,7 @@ description: Describes how to resolve the error A response was returned that did
 
 ## Symptoms
 
-When you set up SharePoint Server 2016 on Windows Server 2016 with a single WFM server, then install and configure a workflow manager with SharePoint, registering it to use "SP-WorkflowService", the workflows using SharePoint Designer fails with the following error:
+When you set up SharePoint Server 2016 on Windows Server 2016 with a single WFM server, install and configure a workflow manager with SharePoint, and then register it to use "SP-WorkflowService", the workflows using SharePoint Designer fail with the following error:
 
 ```output
 Microsoft.Workflow.Client.AuthenticationException: A response was returned that did not come from the Workflow Manager. Status code = 401:
@@ -33,7 +33,7 @@ Microsoft.Workflow.Client.AuthenticationException: A response was returned that 
 <title>401 - Unauthorized: Access is denied due to invalid credentials.</title>
 <style type="text/css">
 <!--
-body{marg
+body text-->
 ```
 
 ## Cause
@@ -105,7 +105,7 @@ The gateway received an HTTP request. Method: PUT, Uri: http://wfm.contoso.com:1
 Gateway received request details: Method: PUT, RequestUri: 'http://wfm.contoso.com:12291/SharePoint/default/09d8c9b6-1994-4dad-bf46-cf5de701c0c8', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
 {
  Accept: application/xml
- Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6ImRWaWQ1MFpHYzVuLWh1TXdEc1V3bVdCQ2hZSSJ9.eyJhdWQiOiIwMDAwMDAwNS0wMDAwLTAwMDAtYzAwMC0wMDAwMDAwMDAwMDAvd2ZtLmNvbnRvc28uY29tOjEyMjkxQGVhZWQ2MzJkLTEyZjMtNDNlNS1iYmU5LTkwMDhjOGU3YWIxYyIsImlzcyI6IjAwMDAwMDAzLTAwMDAtMGZmMS1jZTAwLTAwMDAwMDAwMDAwMEBlYWVkNjMyZC0xMmYzLTQzZTUtYmJlOS05MDA4YzhlN2FiMWMiLCJuYmYiOiIxNTY0MDMyNTMwIiwiZXhwIjoiMTU2NDE2MjEzMCIsIm5hbWVpZCI6IjAwMDAwMDAzLTAwMDAtMGZmMS1jZTAwLTAwMDAwMDAwMDAwMEBlYWVkNjMyZC0xMmYzLTQzZTUtYmJlOS05MDA4YzhlN2FiMWMifQ.gIvnI1f9EpgCaZMZ7lp-ryq9u_xJ5eVCPv-EGzqBjU_99anCgw64HsU8wCmtvYarj8Qt6XzjrNbY1eXIXLcSTyLsiww26w-OJIxYbKZgX0wvTehyzgY3k_LdkVOae--RkAZ5jRTSZ2hr_nTMbTNj0kJ8ZmLYkSEqhuuZHtqXLcaOSXXQ0xPosBElr_U513P7n8meFfty624l_WcB99wtCPAmA8_kPNhZp6vrcxVuj6vkqz7lcCzTZY0d2qcDGuW1d5DsZwcNKQ7SSdVC1tbK7VYNDi5qdHSBaaZrHWn70FwMdt_nCRLDpEbd8K2tn6w6Ssnbtdb697TqeIRKsyZ_Ew
+ Authorization: Bearer <token>
  Expect: 100-continue
  Host: wfm.contoso.com:12291
  User-Agent: Microsoft-WF/1.0.1

@@ -23,6 +23,8 @@ ms.reviewer: mikebis
 
 [!INCLUDE [Teams Direct Routing note](../../../includes/teams-direct-routing-note.md)]
 
+## Summary
+
 This article provides troubleshooting information for the combination of the SIP 422 error and Microsoft response code 540422.
 
 ## 540422 422 Session Interval Too Small

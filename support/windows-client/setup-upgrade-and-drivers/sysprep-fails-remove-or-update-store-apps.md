@@ -7,7 +7,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, vimalsh, shijithk, kaushika, wcheng, jodav
 ms.custom:
-- sap:windows setup,upgrade and deployment\sysprep and imaging (pe,adk,wds)
+- sap:Windows Setup, Upgrade and Deployment\Sysprep and imaging (Windows PE, ADK, WDS)
 - pcy:WinComm Devices Deploy
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>

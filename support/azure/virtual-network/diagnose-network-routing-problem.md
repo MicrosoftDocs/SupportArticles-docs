@@ -6,7 +6,7 @@ author: kaushika-msft
 ms.author: kaushika
 ms.service: azure-virtual-network
 ms.topic: troubleshooting
-ms.date: 04/02/2025
+ms.date: 09/04/2026
 ms.devlang: azurecli
 ms.custom: sap:Connectivity
 # Customer intent: "As a network engineer, I want to diagnose effective routing for a virtual machine's network interface, so that I can identify and resolve communication failures effectively."
@@ -119,6 +119,8 @@ Resolving routing problems typically consists of the following procedures:
 - Changed or removed a custom route that might cause routing to an undesired location. Learn how to [change](/azure/virtual-network/manage-route-table#change-a-route) or [delete](/azure/virtual-network/manage-route-table#delete-a-route) a custom route.
 
 - Ensure that the route table that contains any custom routes defined is associated to the subnet the network interface is in. Learn how to [associate a route table to a subnet](/azure/virtual-network/manage-route-table#associate-a-route-table-to-a-subnet).
+
+- If traffic reaches the destination but return traffic doesn't reach the source, check the effective routes on the destination network interface. Confirm that an active route includes the source IP address and uses the intended next hop. For detailed steps to identify and correct a missing return route, see [Diagnose asymmetric routing in hub-spoke topologies](virtual-network-troubleshoot-peering-issues.md#diagnose-asymmetric-routing-in-hub-spoke-topologies).
 
 - Ensure that devices such as Azure VPN gateway or network virtual appliances deployed are operable. Use the [VPN diagnostics](/azure/network-watcher/diagnose-communication-problem-between-networks) capability of Network Watcher to determine any problems with an Azure VPN gateway.
 

@@ -217,7 +217,7 @@ Azure supports two types of SSL bindings: SNI and IP-based. Avoid using IP-based
 
 If you host the same certificate in multiple web apps, ensure that you don't run into the following Azure limitations:
 
-- You can't bind the exact same certificate to multiple apps by using IP-based SSL on the same IP. This condition triggers an error message: **Cannot set certificate for existing VIP because another VIP already uses that certificate**. The solution is to use SNI SSL for additional apps, use a different IP for the second app, or remove the old binding before you add it to another app.
+- You can't bind the exact same certificate to multiple apps by using IP-based SSL on the same IP. This condition triggers the following error message: "Cannot set certificate for existing VIP because another VIP already uses that certificate". The solution is to use SNI SSL for additional apps, use a different IP for the second app, or remove the old binding before you add it to another app.
 
 - By default, you can't use the certificate across different subscriptions or cloud services, such as if you try to use an App Service certificate in a different subscription's app. App Service certificates are tied to a single subscription's Key Vault. Trying to use certificates in this manner can cause such errors as `The parameter KeyVaultId & KeyVaultSecretName has an invalid value`. The certificate, its Key Vault, and the App Service that use it should reside in the same subscription. (If you have to migrate an App Service certificate to another subscription, you must contact Azure support for assistance.)
 
@@ -355,7 +355,7 @@ Users can't reach your web app over HTTPS or they get security warnings. Common 
 
 - `SSL/TLS handshake error` or the connection resets when you try to load the site on HTTPS.
 
-- Browser error messages such as `Your connection isn't private` that have details that indicate a certificate name mismatch or an untrusted issuer.
+- Browser error messages such as "Your connection isn't private" that have details that indicate a certificate name mismatch or an untrusted issuer.
 
 - The site works on HTTP but not on HTTPS.
 
@@ -428,7 +428,7 @@ After you complete the setup, you find that your web app can't use the certifica
 
 - **User access versus system access:** If your Microsoft Entra ID tenant has policies (such as Conditional Access) that interfere with the back-end service principals' ability to access the Key Vault, this issue might block the sync. Typically, the service principles operate outside of those constraints. Make sure that Key Vault isn't using only private endpoints or a firewall that can block Azure services. (Azure Key Vault should allow trusted Azure services, if you're using that feature.)
 
-- **App configuration (local permissions):** If your code tries to load the certificate from the local computer certificate store, and you see an *Access denied* message or something similar, you might have to adjust the app's identity or permissions to match how you export the certificate. This situation is rare. By default, the certificate that's bound to your web app is made available to the worker process. A managed identity isn't necessary if you want only to use an App Service certificate in the web app. This is true because this task is usually handled by the platform. However, if you explicitly upload a certificate that has a password, you might have to add an app setting to grant access (**WEBSITE_LOAD_CERTIFICATES** setting).
+- **App configuration (local permissions):** If your code tries to load the certificate from the local computer certificate store, and you see an "Access denied" message or something similar, you might have to adjust the app's identity or permissions to match how you export the certificate. This situation is rare. By default, the certificate that's bound to your web app is made available to the worker process. A managed identity isn't necessary if you want only to use an App Service certificate in the web app. This is true because this task is usually handled by the platform. However, if you explicitly upload a certificate that has a password, you might have to add an app setting to grant access (**WEBSITE_LOAD_CERTIFICATES** setting).
 
 **Solutions**
 
@@ -460,7 +460,7 @@ This section describes a broad category of "user error" or unsupported scenarios
 
 - Experiencing an error when you bind a certificate.
 
-- Custom domain isn't working (*HTTP 404* error message) even after adding the certificate. This situation indicates that the domain wasn't added correctly.
+- Custom domain isn't working ("HTTP 404" error message) even after adding the certificate. This situation indicates that the domain wasn't added correctly.
 
 - Trying something and getting a generic error message because of a configuration mistake.
 

@@ -20,6 +20,10 @@ ms.date: 10/30/2023
 ---
 # Messages in the Teams and Viva Engage apps are unexpectedly deleted by retention policies
 
+## Summary
+
+Messages might disappear from Microsoft Teams or Viva Engage even if your organization excludes the conversation from its retention policies or uses a longer retention period. This happens when a retention policy in another participating organization deletes the message from the app for everyone in the conversation. Compliance copies can remain searchable through eDiscovery until they're permanently deleted.
+
 ## Symptoms
 
 Messages are unexpectedly deleted from Microsoft Teams or Viva Engage by retention policies in scenarios such as the following:

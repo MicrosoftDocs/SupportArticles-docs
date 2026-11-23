@@ -12,6 +12,9 @@ ms.custom: sap:File Sync
 
 After deploying the Storage Sync Service, the next steps in deploying Azure File Sync are installing the Azure File Sync agent and registering Windows Server with the Storage Sync Service. This article helps you troubleshoot and resolve issues that you might encounter during these steps.
 
+> [!Note]
+> The Azure File Sync agent installation package is specific to the operating system version. If you're upgrading a server to a newer version of Windows Server, you must first uninstall the Azure File Sync agent and restart the server. Don't unregister and re-register the server during the OS upgrade, or it leads to orphaned tiered files on existing server endpoints. After the OS upgrade is complete, install the Azure File Sync agent that matches the new Windows Server version such as 2016, 2019, 2022, or 2025. After installing the agent on the upgraded server, the Azure portal reflects the correct server status within 30 minutes.
+
 ## Agent installation
 
 <a id="agent-installation-restart"></a>**How to check if an Azure File Sync agent installation requires a restart**

@@ -1,241 +1,291 @@
 ---
 title: Track software update synchronization
-description: Describes the synchronization process on the top-level site and on a child primary site or secondary site.
-ms.date: 03/30/2026
-ms.reviewer: kaushika
+description: Learn how Configuration Manager synchronizes software update metadata through WSUS at top-level and child sites in a hierarchy.
+ms.date: 08/31/2026
+ai-usage: ai-assisted
+ms.topic: reference
+ms.reviewer: kaushika, vicopado
 ms.custom: sap:Software Update Management (SUM)\Software Update Synchronization
 ---
+
 # Track software update synchronization
 
-_Applies to:_ &nbsp; Configuration Manager
+_Applies to:_ Configuration Manager
 
-Software updates synchronization in Configuration Manager connects to Microsoft Update to retrieve software updates metadata.
+## Summary
 
-The top-level site (central administration site or stand-alone primary site) synchronizes with Microsoft Update on a schedule or when you manually start synchronization from the Configuration Manager console. When Configuration Manager finishes software updates synchronization at the top-level site, software updates synchronization starts at child sites, if they exist. When synchronization is complete at each primary site or secondary site, a site-wide policy is created that provides to client computers the location of the software update points.
+Software update synchronization keeps the Configuration Manager site database and WSUS databases current. Use this article to understand the underlying process and to help troubleshoot synchronization issues by reviewing the relevant log files and status messages.
 
-## Synchronization on central administration site or standalone primary site
+Software update synchronization in Configuration Manager retrieves software update metadata that meets the criteria that you configure in the software update point properties. The top-level site synchronizes with Microsoft Update or a configured upstream Windows Server Update Services (WSUS) server. Configuration Manager then replicates the resulting configuration items to child sites in the hierarchy.
 
-The software updates synchronization process at the top-level site contacts Microsoft Update and retrieves software update metadata that meets the criteria specified in the Software Update Point Component properties. This criteria is specified only at the top-level site. At the top-level site you can specify a synchronization source other than Microsoft Update, such as an existing Windows Server Update Services (WSUS) computer that's not in the Configuration Manager hierarchy.
+This article describes each step in both processes, including the components involved, such as WSUS Synchronization Manager (`WSyncMgr`), SMS Database Notification Monitor (`SMSDBMON`), and Policy Provider (`PolicyPV`). It also describes how Configuration Manager cleans up expired software update metadata from the site database.
 
-The synchronization process at the top-level site performs the following steps:
+## Synchronization at the top-level site
 
-### Step 1: Software updates synchronization starts either manually or on a schedule
+The top-level site is either a central administration site or a stand-alone primary site. You configure products, classifications, languages, and the synchronization source only at this site. The following diagram summarizes synchronization at the top-level site.
 
-When synchronization is initiated on a schedule, WSUS Synchronization Manager (WSyncMgr) wakes up on the configured schedule and initiates synchronization. The following are logged in WSyncMgr.log:
+:::image type="content" source="./media/top-level-site-synchronization.png" alt-text="Flowchart showing software update synchronization through WSUS Synchronization Manager, WSUS, and child sites." lightbox="./media/top-level-site-synchronization-expanded.png":::
 
-> Wakeup for scheduled regular sync         SMS_WSUS_SYNC_MANAGER  
-> Starting Sync     SMS_WSUS_SYNC_MANAGER  
-> Performing sync on regular schedule       SMS_WSUS_SYNC_MANAGER
+### Step 1: Start software update synchronization
 
-When synchronization is initiated manually from the console, WSyncMgr is notified to initiate a sync by executing the `SyncNow` method in the `SMS_SoftwareUpdate` WMI class. This method updates the `Update_SyncStatus` table in the site database and sets the value of `SyncNow` to **SELF**. This triggers SMS Database Notification Monitor (SMSDBMON) to place a SELF.SYN file in WSyncMgr.box, and this awakens WSyncMgr and initiates synchronization.
+Synchronization starts on a configured schedule or when you manually select **Synchronize Software Updates** in the Configuration Manager console.
 
-The following is logged in SMSProv.log:
+For a scheduled synchronization, WSUS Synchronization Manager (`WSyncMgr`) wakes up at the configured time. The WSyncMgr.log file records entries similar to the following example:
 
-> ExecMethodAsync : SMS_SoftwareUpdate::SyncNow        SMS Provider
+```output
+Wakeup for scheduled regular sync
+Starting Sync SMS_WSUS_SYNC_MANAGER
+Performing sync on regular schedule
+```
 
-In SQL Server Profiler trace:
+For a manual synchronization, the SMS Provider executes the `SyncNow` method in the `SMS_SoftwareUpdate` WMI class. The method sets the `SyncNow` value in the `Update_SyncStatus` table to `SELF`. `SMSDBMON` then creates `SELF.SYN` in the `WSyncMgr.box` inbox, which wakes up `WSyncMgr`.
 
-> update Update_SyncStatus set SyncNow = 'SELF' where SiteCode = dbo.fnGetSiteCode()  
-> update Update_SyncStatus set SyncNow = null where SiteCode = dbo.fnGetSiteCode()
+The following SQL statement illustrates the database update:
 
-In SMSDBMON.log:
+```sql
+UPDATE Update_SyncStatus
+SET SyncNow = 'SELF'
+WHERE SiteCode = dbo.fnGetSiteCode();
+```
 
-> RCV: UPDATE on Update_SyncStatus for SyncNotif_WSyncMgr [SELF][47788] SMS_DATABASE_NOTIFICATION_MONITOR  
-> SND: Dropped E:\ConfigMgr\inboxes\WSyncMgr.box\SELF.SYN [47788]      SMS_DATABASE_NOTIFICATION_MONITOR  
+> [!IMPORTANT]
+> Don't modify Configuration Manager site database data unless Microsoft Support directs you to do so. Unsupported database changes can leave the site in an unsupported state.
 
-In WSyncMgr.log:
+The relevant log files contain entries similar to these examples:
 
-> Wakeup by inbox drop SMS_WSUS_SYNC_MANAGER  
-> Found local sync request file     SMS_WSUS_SYNC_MANAGER  
-> Starting Sync      SMS_WSUS_SYNC_MANAGER  
-> Performing sync on local request              SMS_WSUS_SYNC_MANAGER
+- SMSProv.log:
 
-WSyncMgr then reads the list of software update points (SUPs) from the site control file (SCF). WSyncMgr first synchronizes the SUP that was installed as the first SUP in the site and then synchronizes the remaining SUPs. All additional SUPs are configured as replicas of the first SUP. The following are logged in WsyncMgr.log:
+  ```output
+  ExecMethodAsync : SMS_SoftwareUpdate::SyncNow
+  ```
 
-> Read SUPs from SCF for CS1SITE.CONTOSO.COM      SMS_WSUS_SYNC_MANAGER  
-> Found 1 SUPs                SMS_WSUS_SYNC_MANAGER  
-> Found active SUP CS1SITE.CONTOSO.COM from SCF File.    SMS_WSUS_SYNC_MANAGER
+- SMSDBMON.log:
 
-When synchronization starts (either on schedule or manually), WSyncMgr creates status message ID 6701 to indicate that the WSUS synchronization has started. The following are logged in WsyncMgr.log:
+  ```output
+  RCV: UPDATE on Update_SyncStatus for SyncNotif_WSyncMgr [SELF][47788]
+  SND: Dropped <ConfigMgr installation folder>\inboxes\WSyncMgr.box\SELF.SYN [47788]
+  ```
 
-> STATMSG: ID=6701 SEV=I LEV=M SOURCE="SMS Server" COMP="SMS_WSUS_SYNC_MANAGER" SYS=\<SERVERFQDN> SITE=CS1 PID=432 TID=3404 GMTDATE=Thu Jan 16 18:53:52.608 2014 ISTR0="" ISTR1="" ISTR2="" ISTR3="" ISTR4="" ISTR5="" ISTR6="" ISTR7="" ISTR8="" ISTR9="" NUMATTRS=0           SMS_WSUS_SYNC_MANAGER
+- WSyncMgr.log:
+
+  ```output
+  Wakeup by inbox drop
+  Found local sync request file
+  Starting Sync
+  Performing sync on local request
+  ```
+
+`WSyncMgr` reads the software update points from the site control file. It synchronizes the first software update point installed at the site before it synchronizes any additional software update points. Additional software update points are WSUS replicas of the first software update point.
 
 > [!TIP]
-> To manually initiate a delta site wide synchronization, you can create a zero KB file named SELF.SYN in the `Program Files\Microsoft Configuration Manager\Inboxes\WSyncMgr.box` directory on the central administration site or standalone primary site server. Similarly, to initiate a full site wide synchronization, you can create a zero KB file named FULL.SYN in the same location.
+> To initiate synchronization without the console, create a zero-byte SELF.SYN file in \<ConfigMgr installation folder>\\Microsoft Configuration Manager\\Inboxes\\WSyncMgr.box on the top-level site server. Use this method only when console-based synchronization isn't available.
 
-### Step 2: WSUS Synchronization Manager sends a request to WSUS running on the software update point to start synchronization with Microsoft Update
+### Step 2: Request synchronization from WSUS
 
-The first phase of the synchronization process is to synchronize the WSUS server with Microsoft Update. WSyncMgr instructs the WSUS computer to start a synchronization with Microsoft Update and creates status message ID 6704 (WSUS Synchronization in progress. Current phase: Synchronizing WSUS Server). The following are logged in WsyncMgr.log:
+`WSyncMgr` uses the WSUS administration API to request synchronization from WSUS on the first software update point. WSUS connects to Microsoft Update or to the upstream WSUS server configured for the top-level site.
 
-> STATMSG: ID=6704 SEV=I LEV=M SOURCE="SMS Server" COMP="SMS_WSUS_SYNC_MANAGER" SYS=\<SERVERFQDN> SITE=CS1 PID=432 TID=3404 GMTDATE=Thu Jan 16 18:53:53.698 2014 ISTR0="" ISTR1="" ISTR2="" ISTR3="" ISTR4="" ISTR5="" ISTR6="" ISTR7="" ISTR8="" ISTR9="" NUMATTRS=0         SMS_WSUS_SYNC_MANAGER  
-> Synchronizing WSUS server cs1site.contoso.com ...         SMS_WSUS_SYNC_MANAGER  
-> sync: Starting WSUS synchronization      SMS_WSUS_SYNC_MANAGER
+`WSyncMgr` creates status message ID 6701 (WSUS synchronization started) and 6704 (WSUS synchronization is in progress). WSUS records a request initiated by `WSyncMgr` as a manual synchronization in WSUS console, even when a Configuration Manager schedule triggered the request. The WsyncMgr.log file records entries that resemble the following examples:
 
-In SoftwareDistribution.log:
+```output
+STATMSG: ID=6701 SEV=I LEV=M SOURCE="SMS Server" COMP="SMS_WSUS_SYNC_MANAGER"...
+...
+STATMSG: ID=6704 SEV=I LEV=M SOURCE="SMS Server" COMP="SMS_WSUS_SYNC_MANAGER"...
+Synchronizing WSUS server <SERVERFQDN>
+sync: Starting WSUS synchronization
+```
 
-> 2014-01-16 18:53:54.231 UTC Change w3wp.58 AdminDataAccess.StartSubscriptionManually    Synchronization manually started  
-> 2014-01-16 18:53:56.168 UTC  Info         WsusService.15 EventLogEventReporter.ReportEvent  EventId=382,Type=Information,Category=Synchronization,Message=A manual synchronization was started.
+### Step 3: Synchronize metadata into the WSUS database
 
-### Step 3: WSUS synchronizes software update metadata from Microsoft Update. Any changes are inserted or updated in the WSUS database
+WSUS downloads software update metadata and applies changes to the WSUS database. `WSyncMgr` monitors progress through the WSUS API, and records the following entries in WsyncMgr.log:
 
-WSUS starts synchronizing with Microsoft Update, and WSyncMgr begins monitoring synchronization progress. The following are logged in WsyncMgr.log:
+```output
+sync: WSUS synchronizing categories
+sync: WSUS synchronizing updates
+sync: WSUS synchronizing updates, processed 130 out of 130 items (100%)
+Done synchronizing WSUS Server <SERVERFQDN>
+```
 
-> sync: WSUS synchronizing categories      SMS_WSUS_SYNC_MANAGER  
-> sync: WSUS synchronizing updates          SMS_WSUS_SYNC_MANAGER  
-> sync: WSUS synchronizing updates, processed 122 out of 130 items (93%), ETA in 00:00:03     SMS_WSUS_SYNC_MANAGER  
-> sync: WSUS synchronizing updates, processed 130 out of 130 items (100%)    SMS_WSUS_SYNC_MANAGER  
-> sync: WSUS synchronizing updates, processed 130 out of 130 items (100%)    SMS_WSUS_SYNC_MANAGER
+After WSUS finishes, `WSyncMgr` waits for the synchronization results to become available and records the content version of the update source.
 
-The following entries in the log files indicate that WSUS has finished synchronizing with Microsoft Update:
+### Step 4: Synchronize metadata into the site database
 
-- In SoftwareDistribution.log:
+`WSyncMgr` reads categories and updates from the WSUS database and inserts or updates them in the Configuration Manager site database. Configuration Manager stores software update metadata as configuration items.
 
-    > 2014-01-16 18:55:05.166 UTC  Info         WsusService.15 EventLogEventReporter.ReportEvent EventId=384,Type=Information,Category=Synchronization,Message=Synchronization completed successfully.  
-    > 2014-01-16 18:55:06.307 UTC Info WsusService.31 CatalogSyncAgent.SetSubscriptionStateWithRetry Firing event SyncFinish...
+During this phase, `WSyncMgr` creates status message ID `6705` (WSUS synchronization is in progress), and records the following entries in WsyncMgr.log:
 
-- In WSyncMgr.log:
+```output
+STATMSG: ID=6705 SOURCE="SMS Server" COMP="SMS_WSUS_SYNC_MANAGER"
+Synchronizing SMS database with WSUS server <SERVERFQDN>
+sync: SMS synchronizing categories, processed 223 out of 223 items (100%)
+sync: SMS synchronizing updates, processed 5 out of 5 items (100%)
+Done synchronizing SMS with WSUS Server <SERVERFQDN>
+```
 
-    > Done synchronizing WSUS Server \<SERVERFQDN> SMS_WSUS_SYNC_MANAGER  
-    > Sleeping 2 more minutes for WSUS server sync results to become available    SMS_WSUS_SYNC_MANAGER  
-    > Set content version of update source {C2D17964-BBDD-4339-B9F3-12D7205B39CC} for site CS1 to 33     SMS_WSUS_SYNC_MANAGER
+After the site database synchronization finishes, `WSyncMgr` calls the `spProcessSUMSyncStateMessage` stored procedure. The procedure updates the last synchronization time and content version for the software update point. The WsyncMgr.log file records an entry that resembles the following example:
 
-### Step 4: WSUS Synchronization Manager synchronizes the software updates metadata
+```output
+Set content version of update source {C2D17964-BBDD-4339-B9F3-12D7205B39CC} for site CS1 to 34
+```
 
-After WSUS has finished synchronization, WSUS Synchronization Manager synchronizes the software updates metadata. This is done from the WSUS database to the Configuration Manager database, and any changes after the last synchronization are inserted or updated in the site database. The software updates metadata is stored in the site database as a configuration item.
+### Step 5: Run WSUS maintenance
 
-The second phase of the synchronization process is to synchronize the software update metadata from the WSUS database to the Configuration Manager database. At this point, WSyncMgr creates status message ID 6705 (WSUS Synchronization in progress. Current phase: Synchronizing site database).
+If you enable WSUS maintenance in the software update point properties, `WSyncMgr` starts a separate maintenance thread after metadata synchronization. Depending on the selected options, Configuration Manager performs these tasks:
 
-The following are logged in WsyncMgr.log:
+- Adds recommended nonclustered indexes to the WSUS database if they don't exist.
+- Declines expired updates, old revisions, and updates that are superseded longer than the configured period.
+- Deletes obsolete updates that meet the WSUS deletion criteria.
 
-> STATMSG: ID=6705 SEV=I LEV=M SOURCE="SMS Server" COMP="SMS_WSUS_SYNC_MANAGER" SYS=\<SERVERFQDN> SITE=CS1 PID=432 TID=3404 GMTDATE=Thu Jan 16 18:57:09.156 2014 ISTR0="" ISTR1="" ISTR2="" ISTR3="" ISTR4="" ISTR5="" ISTR6="" ISTR7="" ISTR8="" ISTR9="" NUMATTRS=0            SMS_WSUS_SYNC_MANAGER  
-> Synchronizing SMS database with WSUS server \<SERVERFQDN> ...      SMS_WSUS_SYNC_MANAGER
+During the maintenance process, the WsyncMgr.log file records entries that resemble the following examples:
 
-WSyncMgr reads categories and updates from the WSUS database and inserts or updates the Configuration Manager database. Software update metadata for each update is stored in the site database as a configuration item (CI).
+```output
+Starting cleanup on WSUS, default server <SERVERFQDN>
+Cleaning up WSUS server <SERVERFQDN>
+Done Indexing SUSDB. Custom indexes were created if they didn't exist previously. <SERVERFQDN>
+Cleanup processed 804 total updates and declined 8
+Done Declining updates in WSUS Server <SERVERFQDN>
+6 update(s) were deleted from SUSDB in Server: <SERVERNAME> Database: SUSDB
+Waiting for 5 minutes after deleting obsolete updates. Deletion Completed
+```
 
-The following are logged in WsyncMgr.log:
+These tasks maintain the WSUS database. They're separate from the process that removes expired software update configuration items from the Configuration Manager site database.
 
-> sync: SMS synchronizing categories SMS_WSUS_SYNC_MANAGER  
-> ...\<log entries truncated>...  
-> sync: SMS synchronizing categories, processed 223 out of 223 items (100%)     SMS_WSUS_SYNC_MANAGER  
-> sync: SMS synchronizing updates SMS_WSUS_SYNC_MANAGER  
-> ...\<log entries truncated>...  
-> Synchronizing update af5eb87e-cdd6-40bf-984f-5d0630406de8 - Definition Update for Microsoft Endpoint Protection -
-KB2461484 (Definition 1.165.1945.0) SMS_WSUS_SYNC_MANAGER  
-> ...\<log entries truncated>...  
-> sync: SMS synchronizing updates, processed 5 out of 5 items (100%) SMS_WSUS_SYNC_MANAGER  
-> ...\<log entries truncated>...  
-> Done synchronizing SMS with WSUS Server cs1site.contoso.com     SMS_WSUS_SYNC_MANAGER  
-> Set content version of update source {C2D17964-BBDD-4339-B9F3-12D7205B39CC} for site CS1 to 34     SMS_WSUS_SYNC_MANAGER
+### Step 6: Notify child sites
 
-After synchronization of the site database is complete, if any changes were made to the site database, the content version of the update source is updated in the database. After synchronization finishes successfully, WSyncMgr creates status message ID 6702 (WSUS Synchronization done). The following are logged in WsyncMgr.log:
+`WSyncMgr` sends synchronization notifications to all child sites through file replication. The notifications instruct the child sites to synchronize their WSUS servers. The WsyncMgr.log file records entries that resemble the following example:
 
-> STATMSG: ID=6702 SEV=I LEV=M SOURCE="SMS Server" COMP="SMS_WSUS_SYNC_MANAGER" SYS=\<SERVEFRFQDN> SITE=CS1 PID=432 TID=3404 GMTDATE=Thu Jan 16 18:57:46.304 2014 ISTR0="" ISTR1="" ISTR2="" ISTR3="" ISTR4="" ISTR5="" ISTR6="" ISTR7="" ISTR8="" ISTR9="" NUMATTRS=0                    SMS_WSUS_SYNC_MANAGER  
-> Sync succeeded. Setting sync alert to canceled state on site CS1      SMS_WSUS_SYNC_MANAGER  
-> Updated 130 items in SMS database, new update source content version is 34     SMS_WSUS_SYNC_MANAGER  
-> Sync time: 0d00h03m53s          SMS_WSUS_SYNC_MANAGER
+```output
+Sending sync notification to child site(s): PS1, PS2
+SQL Replication type has not been set for <ConfigMgr installation folder>\inboxes\WSyncMgr.box\outbox\CS1.SYN, replicating to (PS1, PS2)
+```
 
-### Step 5: WSUS Synchronization Manager sends requests one at a time to the WSUS component running on other SUPs on the site
+### Step 7: Replicate configuration items
 
-The WSUS computers on the other SUPs are configured as replicas of the WSUS installation running on the default SUP for the site.
+Configuration Manager replicates software update configuration items from the top-level site database to child primary site databases through database replication. When synchronization finishes successfully, `WSyncMgr` creates status message ID `6702` (WSUS synchronization finished).
 
-The following are logged in WsyncMgr.log:
+## Synchronization at child sites
 
-> Synchronizing replica WSUS servers        SMS_WSUS_SYNC_MANAGER  
-> STATMSG: ID=6706 SEV=I LEV=M SOURCE="SMS Server" COMP="SMS_WSUS_SYNC_MANAGER" SYS=PS1SITE.CONTOSO.COM SITE=PS1 PID=1840 TID=2832 GMTDATE=Thu Jan 16 19:17:13.575 2014 ISTR0="" ISTR1="" ISTR2="" ISTR3="" ISTR4="" ISTR5="" ISTR6="" ISTR7="" ISTR8="" ISTR9="" NUMATTRS=0     SMS_WSUS_SYNC_MANAGER  
-> Synchronizing WSUS server ps1sys.contoso.com ...              SMS_WSUS_SYNC_MANAGER  
-> sync: Starting Replica WSUS synchronization         SMS_WSUS_SYNC_MANAGER  
-> sync: Replica WSUS synchronizing other items      SMS_WSUS_SYNC_MANAGER  
-> sync: Replica WSUS synchronizing other items, processed 4 out of 4 items (100%)      SMS_WSUS_SYNC_MANAGER  
-> Done synchronizing WSUS Server ps1sys.contoso.com      SMS_WSUS_SYNC_MANAGER
+At the end of top-level site synchronization, each child site receives a synchronization notification. Because database replication already provides the update configuration items, synchronization at a child primary or secondary site primarily synchronizes its WSUS servers.
 
-### Step 6: WSUS Synchronization Manager sends a synchronization request to all child sites
+The following diagram summarizes synchronization at a child site.
 
-Sync notifications are sent to all child sites to instruct them to start synchronization. These notifications are sent through file replication and not database replication. The following are logged in WsyncMgr.log:
+:::image type="content" source="./media/child-site-synchronization.png" alt-text="Flowchart showing child-site synchronization from the parent notification through WSUS cleanup and secondary-site notification." lightbox="./media/child-site-synchronization-expanded.png":::
 
-> Sending sync notification to child site(s): PS1, PS2               SMS_WSUS_SYNC_MANAGER  
-> SQL Replication type has not been set for E:\ConfigMgr\inboxes\WSyncMgr.box\outbox\CS1.SYN, replicating to (PS1, PS2), inbox: E:\ConfigMgr\inboxes\replmgr.box                 SMS_WSUS_SYNC_MANAGER
+### Step 1: Receive the parent-site notification
 
-### Step 7: The software updates configuration items are sent to child sites by using database replication
+The parent site sends a .syn notification through file replication. When the file arrives in `WSyncMgr.box`, `WSyncMgr` wakes up and starts synchronization. The WsyncMgr.log file records entries that resemble the following examples:
 
-## Synchronization on child primary site and secondary sites
+```output
+Wakeup by inbox drop
+Found parent sync notification file CS1.SYN
+Starting Sync
+Performing sync on parent request
+```
 
-During the software update synchronization process on the top-level site, the software update configuration items are replicated to child sites by using database replication. At the end of the process, the top-level site sends a synchronization request to the child site, and the child site then starts the WSUS synchronization process. Because the software update metadata (configuration items) from the site database is replicated to the primary sites through database replication, the synchronization process on the child primary and secondary sites consists of only the WSUS synchronization phase.
+`WSyncMgr` reads the software update points from the site control file. It identifies the first software update point and any replica software update points at the site.
 
-The synchronization process on a child primary site or secondary site performs the following steps:
+### Step 2: Start child-site synchronization
 
-### Step 1: WSUS Synchronization Manager receives a synchronization request from the top-level site
+`WSyncMgr` creates status message ID `6701` (WSUS synchronization started) and requests synchronization from WSUS on the first software update point. The WsyncMgr.log file records entries that resemble the following examples:
 
-When the sync notification that's sent by the parent site arrives in the WSyncMgr.box folder through file replication, WSyncMgr wakes up and starts synchronization. The following are logged in WsyncMgr.log:
+```output
+STATMSG: ID=6701 SEV=I LEV=M SOURCE="SMS Server" COMP="SMS_WSUS_SYNC_MANAGER"...
+Synchronizing WSUS server ps1site.contoso.com
+```
 
-> Wakeup by inbox drop SMS_WSUS_SYNC_MANAGER  
-> Found parent sync notification file CS1.SYN. SMS_WSUS_SYNC_MANAGER  
-> Starting Sync     SMS_WSUS_SYNC_MANAGER  
-> Performing sync on parent request         SMS_WSUS_SYNC_MANAGER
+### Step 3: Synchronize WSUS from the parent-site software update point
 
-WSyncMgr then reads the list of SUPs from the site control file (SCF). WSyncMgr will first synchronize the SUP that was installed as the first SUP in the site and then synchronize all remaining SUPs. All additional SUPs are configured as replicas of the first SUP. The following are logged in WsyncMgr.log:
+WSUS on the child site's first software update point synchronizes metadata from WSUS on the parent site's software update point. The WsyncMgr.log file records entries that resemble the following examples:
 
-> Read SUPs from SCF for PS1SITE.CONTOSO.COM    SMS_WSUS_SYNC_MANAGER  
-> Found 2 SUPs                SMS_WSUS_SYNC_MANAGER  
-> Found active SUP PS1SITE.CONTOSO.COM from SCF File.    SMS_WSUS_SYNC_MANAGER  
-> Found active SUP PS1SYS.CONTOSO.COM from SCF File.     SMS_WSUS_SYNC_MANAGER
+```output
+sync: Starting WSUS synchronization
+sync: WSUS synchronizing categories
+sync: WSUS synchronizing updates, processed 130 out of 130 items (100%)
+Done synchronizing WSUS Server ps1site.contoso.com
+```
 
-### Step 2: Software updates synchronization begins
+### Step 4: Update the content version and policy
 
-The following are logged in WsyncMgr.log:
+After WSUS synchronization finishes, `WSyncMgr` calls `spProcessSUMSyncStateMessage` to update the last synchronization time and content version in `Update_SyncStatus`. The WsyncMgr.log file records an entry that resembles the following example:
 
-> STATMSG: ID=6701 SEV=I LEV=M SOURCE="SMS Server" COMP="SMS_WSUS_SYNC_MANAGER" SYS=PS1SITE.CONTOSO.COM SITE=PS1 PID=1840 TID=2832 GMTDATE=Thu Jan 16 18:58:37.599 2014 ISTR0="" ISTR1="" ISTR2="" ISTR3="" ISTR4="" ISTR5="" ISTR6="" ISTR7="" ISTR8="" ISTR9="" NUMATTRS=0      SMS_WSUS_SYNC_MANAGER  
-> Synchronizing WSUS server PS1SITE.CONTOSO.COM    SMS_WSUS_SYNC_MANAGER
+```output
+Set content version of update source {C2D17964-BBDD-4339-B9F3-12D7205B39CC} for site PS1 to 34
+```
 
-### Step 3: WSUS Synchronization Manager makes a request to WSUS running on the first SUP to start synchronization
+The database update triggers `SMSDBMON` to create an \<UpdateSource_UniqueID>.stn file in policypv.box. Policy Provider (`PolicyPV`) processes this scan tool notification and creates or updates the `UpdateSource` policy in the database. The SMSDBMON.log file records entries that resemble the following examples:
 
-The following are logged in WsyncMgr.log:
+```output
+RCV: UPDATE on Update_SyncStatus for UpdSyncStatus_iu [{C2D17964-BBDD-4339-B9F3-12D7205B39CC}][46680]
+SND: Dropped <ConfigMgr installation folder>\inboxes\policypv.box\{C2D17964-BBDD-4339-B9F3-12D7205B39CC}.STN
+```
 
-> STATMSG: ID=6704 SEV=I LEV=M SOURCE="SMS Server" COMP="SMS_WSUS_SYNC_MANAGER" SYS=PS1SITE.CONTOSO.COM SITE=PS1 PID=1840 TID=2832 GMTDATE=Thu Jan 16 18:58:38.909 2014 ISTR0="" ISTR1="" ISTR2="" ISTR3="" ISTR4="" ISTR5="" ISTR6="" ISTR7="" ISTR8="" ISTR9="" NUMATTRS=0      SMS_WSUS_SYNC_MANAGER  
-> Synchronizing WSUS server ps1site.contoso.com ...    SMS_WSUS_SYNC_MANAGER
+The PolicyPV.log file records entries that resemble the following examples:
 
-### Step 4: WSUS running on the SUP on the child site synchronizes software updates metadata from WSUS running on the SUP on the parent site
+```output
+Found {C2D17964-BBDD-4339-B9F3-12D7205B39CC}.STN
+Added Scan Tool ID {C2D17964-BBDD-4339-B9F3-12D7205B39CC}
+```
 
-The following are logged in WsyncMgr.log:
+### Step 5: Synchronize replica software update points
 
-> sync: Starting WSUS synchronization    SMS_WSUS_SYNC_MANAGER  
-> sync: WSUS synchronizing categories    SMS_WSUS_SYNC_MANAGER  
-> sync: WSUS synchronizing updates    SMS_WSUS_SYNC_MANAGER  
-> sync: WSUS synchronizing updates, processed 130 out of 130 items (100%)    SMS_WSUS_SYNC_MANAGER  
-> Done synchronizing WSUS Server ps1site.contoso.com SMS_WSUS_SYNC_MANAGER  
-> Sleeping 2 more minutes for WSUS server sync results to become available     SMS_WSUS_SYNC_MANAGER  
-> Set content version of update source {C2D17964-BBDD-4339-B9F3-12D7205B39CC} for site PS1 to 34       SMS_WSUS_SYNC_MANAGER
+`WSyncMgr` sends requests one at a time to WSUS on the remaining software update points, including internet-facing software update points. These WSUS servers are replicas of WSUS on the first software update point.
 
-### Step 5: (For Configuration Manager with no service pack only) WSUS Synchronization Manager starts the synchronization process for WSUS running on the remote site system
+During this phase, `WSyncMgr` creates status message ID 6706 (WSUS synchronization is in progress). The status message description refers to an internet-facing WSUS server even when the replica isn't internet-facing. The WsyncMgr.log file records entries that resemble the following examples:
 
-When there is a remote Internet-based SUP, WSUS Synchronization Manager starts the synchronization process for WSUS running on the remote site system.
+```output
+Synchronizing replica WSUS servers
+STATMSG: ID=6706 SEV=I LEV=M SOURCE="SMS Server" COMP="SMS_WSUS_SYNC_MANAGER"
+Synchronizing WSUS server ps1replica.contoso.com
+sync: Starting Replica WSUS synchronization
+Done synchronizing WSUS Server ps1replica.contoso.com
+```
 
-### Step 6: (For System Center 2012 Configuration Manager SP1 and System Center 2012 R2 Configuration Manager only) WSUS Synchronization Manager sends requests one at a time to WSUS running on other SUPs (including Internet-based SUPs) at the site
+### Step 6: Run WSUS maintenance
 
-The WSUS servers on the other SUPs are configured as replicas of WSUS running on the default SUP at the site. WSyncMgr then creates status message ID 6706 (WSUS Synchronization in progress. Current phase: Synchronizing Internet-facing WSUS server). Even though the SUP may not be Internet-based, the status message will still be 6706.
+If WSUS maintenance is enabled, `WSyncMgr` runs the configured maintenance tasks after synchronization. The tasks run against WSUS on the child site's software update points.
 
-The following are logged in WsyncMgr.log:
+### Step 7: Complete synchronization
 
-> Synchronizing replica WSUS servers        SMS_WSUS_SYNC_MANAGER  
-> STATMSG: ID=6706 SEV=I LEV=M SOURCE="SMS Server" COMP="SMS_WSUS_SYNC_MANAGER" SYS=PS1SITE.CONTOSO.COM SITE=PS1 PID=1840 TID=2832 GMTDATE=Thu Jan 16 19:17:13.575 2014 ISTR0="" ISTR1="" ISTR2="" ISTR3="" ISTR4="" ISTR5="" ISTR6="" ISTR7="" ISTR8="" ISTR9="" NUMATTRS=0 SMS_WSUS_SYNC_MANAGER  
-> Synchronizing WSUS server ps1sys.contoso.com ...              SMS_WSUS_SYNC_MANAGER  
-> sync: Starting Replica WSUS synchronization         SMS_WSUS_SYNC_MANAGER  
-> sync: Replica WSUS synchronizing other items      SMS_WSUS_SYNC_MANAGER  
-> sync: Replica WSUS synchronizing other items, processed 4 out of 4 items (100%)      SMS_WSUS_SYNC_MANAGER  
-> Done synchronizing WSUS Server ps1sys.contoso.com        SMS_WSUS_SYNC_MANAGER
+When synchronization succeeds, `WSyncMgr` creates status message ID `6702` (WSUS synchronization finished) and records the parent site and content version. The WsyncMgr.log file records entries that resemble the following examples:
 
-### Step 7: When synchronization has finished successfully, WSUS Synchronization Manager creates status message 6702
+```output
+STATMSG: ID=6702 SEV=I LEV=M SOURCE="SMS Server" COMP="SMS_WSUS_SYNC_MANAGER"
+Sync succeeded. Setting sync alert to canceled state on site PS1
+Successfully synced site with parent CS1, version 34
+```
 
-The following are logged in WsyncMgr.log:
+If the site has child secondary sites, `WSyncMgr` sends each one a synchronization notification.
 
-> STATMSG: ID=6702 SEV=I LEV=M SOURCE="SMS Server" COMP="SMS_WSUS_SYNC_MANAGER" SYS=PS1SITE.CONTOSO.COM SITE=PS1 PID=1840 TID=2832 GMTDATE=Thu Jan 16 19:01:35.117 2014 ISTR0="" ISTR1="" ISTR2="" ISTR3="" ISTR4="" ISTR5="" ISTR6="" ISTR7="" ISTR8="" ISTR9="" NUMATTRS=0      SMS_WSUS_SYNC_MANAGER  
-> Sync succeeded. Setting sync alert to canceled state on site PS1    SMS_WSUS_SYNC_MANAGER  
-> Successfully synced site with parent CS1, version 34    SMS_WSUS_SYNC_MANAGER  
-> Sync time: 0d00h02m57s    SMS_WSUS_SYNC_MANAGER
+## Expired update cleanup in the site database
 
-### Step 8: From a primary site, WSUS Synchronization Manager sends a synchronization request to any child secondary sites
+`SMS_WSUS_SYNC_MANAGER` removes expired software update metadata from the Configuration Manager site database. This cleanup is distinct from WSUS maintenance tasks, which operate on the WSUS database.
 
-The secondary site starts the software updates synchronization with the parent primary site. The secondary site's SUP is configured as a replica of WSUS running on the parent site.
+The cleanup runs when `SMS_WSUS_SYNC_MANAGER` starts and at the end of a synchronization cycle. The component calls the `spDeleteExpiredUpdates` stored procedure when the previous call occurred more than three hours ago. The component stores the previous run time as an epoch value in this registry location:
 
-The following is logged in WsyncMgr.log:
+```text
+HKLM\Software\Microsoft\SMS\Components\SMS_WSUS_SYNC_MANAGER\LastDeleteExpiredUpdatesTime
+```
 
-> Sending sync notification to child site(s): SS1    SMS_WSUS_SYNC_MANAGER
+The stored procedure runs for up to 45 minutes. It marks eligible configuration items as tombstoned, which causes the site database to remove the items and their associations.
+
+An expired update is eligible for deletion when all of the following conditions are true:
+
+- The update isn't part of an active deployment.
+- The update isn't in a software update group, except for a supersedence relationship.
+- The expiration date is older than the site's **Updates Cleanup Age** value.
+- The site owns the configuration item.
+
+You can view the cleanup age in the site database with the following query:
+
+```sql
+SELECT *
+FROM SC_Component_Property
+WHERE Name = 'Updates Cleanup Age';
+```
+
+The default delay means an expired update can remain visible in the Configuration Manager console before cleanup removes it. Review `WSyncMgr.log` for an entry similar to `Deleted N expired updates` to confirm that cleanup is running.
+
+## Related content
+
+- [Software updates introduction](/intune/configmgr/sum/understand/software-updates-introduction)
+- [Software update maintenance](/intune/configmgr/sum/deploy-use/software-updates-maintenance)
+- [WSUS maintenance guide](wsus-maintenance-guide.md)

@@ -1,50 +1,96 @@
 ---
-title: The weight fields on load lines don't match the weight fields on the load
-description: Provides a resolution for the error that states that the weight fields on load lines don't match the weight fields on the load.
-author: Mirzaab
-ms.date: 04/15/2021
-ms.topic: troubleshooting
-ms.search.form: WHSShipmentDetails_WHSShipConfirm
+title: Resolve Load and Container Weight Errors
+description: Learn how to resolve load weight mismatches, positive load weight errors, and container gross weight errors in Dynamics 365 Supply Chain Management.
+ms.date: 10/30/2026
+ai-usage: ai-assisted
+ms.search.form: WHSShipmentDetails_WHSShipConfirm, WHSContainerCloseDiag_canClose
 audience: Application User
-ms.reviewer: kamaybac
+ms.reviewer: kamaybac, mirzaab
 ms.search.region: Global
-ms.author: mirzaab
 ms.search.validFrom: 2021-05-15
 ms.dyn365.ops.version: 10.0.18
 ms.custom: sap:Warehouse management
 ---
 
-# The weight fields on load lines don't match the weight fields on the load
+# Troubleshoot load and container weight errors
 
-Error codes: WHSLoadWeightOnLinesDoNotMatchLoadWarning
+## Summary
 
-## Symptoms
+This article helps you resolve load and container weight errors in Dynamics 365 Supply Chain Management. It covers mismatches between load and load-line weights, load weight errors when open work exists, and weight errors when you close a container.
+
+The load-related solutions use **Warehouse load weight consistency check** to recalculate weights. The container solution explains how to enter a positive **Gross weight** and select a unit, or use **Get system weight** to calculate the value. Select the section that matches your error message.
+
+- [Load line and load weight mismatch](#load-line-and-load-weight-mismatch)
+- [Load weight must be positive](#load-weight-must-be-positive)
+- [Container weight must be positive](#container-weight-must-be-positive)
+
+## Load line and load weight mismatch
+
+Error code: `WHSLoadWeightOnLinesDoNotMatchLoadWarning`
+
+### Symptoms
 
 The system shows the following error message:
 
 > The weight fields on load lines do not match the weight fields on load %1. Run the Warehouse load weight consistency check to recalculate the weight fields.
 
-## Cause
+### Cause
 
-The **Net weight** and **Tara weight** fields are set to **0** (zero) on the load line. However, the weight fields aren't set to **0** for the weight measurements on the product. When weight fields aren't set on the load line, any corrections of the quantity on the load line might cause incorrect weight calculation on the load. This issue might occur if the weights on the product have been changed since the load line was created.
+The **Net weight** and **Tara weight** fields on the load line are set to **0** (zero), but the product's weight measurements aren't zero. With these load-line weights at zero, correcting the load-line quantity might cause an incorrect load weight calculation.
 
-## Resolution
+This mismatch might occur if the product weights changed after the load line was created.
 
-By default, when a load line is created, the weight fields from the product are entered on it. If the weight is zero, you can recalculate it by using the **Warehouse load weight consistency check** functionality.
+### Solution
+
+By default, the system copies the product's weight values when it creates a load line. If the load-line weight is zero, run **Warehouse load weight consistency check** to recalculate the weights.
 
 1. Go to **System administration** > **Periodic tasks** > **Database** > **Consistency check**.
-1. In the **Consistency check** dialog box, set the **Module** field to **Warehouse management**.
-1. Set the **Check/Fix** field to **Fix error**.
-1. In the checkbox list, select the **Warehouse load weight consistency check** checkbox, and make sure that only the row for this checkbox is highlighted.
-1. At the top of the checkbox list, select the ellipsis button (**...**), and then select **Dialog** on the menu.
-1. In the **Warehouse load weight consistency check** dialog box, set the following fields to specify the criteria that the consistency check should run for:
+2. In the **Consistency check** dialog box, set the **Module** field to **Warehouse management**.
+3. Set the **Check/Fix** field to **Fix error**.
+4. In the checkbox list, select the **Warehouse load weight consistency check** checkbox, and make sure that only the row for this checkbox is highlighted.
+5. At the top of the checkbox list, select the ellipsis (**...**), and then select **Dialog**.
+6. In the **Warehouse load weight consistency check** dialog box, set the following fields:
 
-    - **Load ID**: Specify a load ID. Leave this blank to check all load IDs.
-    - **Item number**: Specify an item number. Leave this blank to check all items.
-    - **Always recalculate weight on loads**: Set this option to **Yes**.
-    - **Allow overwrite of weight on load lines**: Set this option to **Yes**.
+   - **Load ID**. Enter a load ID. Leave this field blank to check all load IDs.
+   - **Item number**. Enter an item number. Leave this field blank to check all items.
+   - **Always recalculate weight on loads**. Set this option to **Yes**.
+   - **Allow overwrite of weight on load lines**. Set this option to **Yes**.
 
-1. Select **OK** to close the **Warehouse load weight consistency check** dialog box.
-1. Select the ellipsis button, and then select **Execute** on the menu.
+7. Select **OK** to close the **Warehouse load weight consistency check** dialog box.
+8. Select the ellipsis (**...**), and then select **Execute**.
 
-The weight is recalculated based on the criteria that you specified. Select the **Message details** link to view the result of the consistency check.
+The system recalculates the weights for the loads and items that match your filters. Select **Message details** to view the consistency-check results.
+
+## Load weight must be positive
+
+### Symptoms
+
+If there's open work when you process work from packing locations to staging locations, or from staging to docking locations, you might receive the following error message:
+
+> Field 'Load weight'(=-%1) can only contain positive numbers. Update has been canceled.
+
+### Solution
+
+Go to **System administration** > **Periodic tasks** > **Database** > **Consistency check**. Follow the [consistency-check procedure](#solution) to run **Warehouse load weight consistency check**. Use its **Load ID** and **Item number** filters to limit the scope.
+
+## Container weight must be positive
+
+Error code: `WeightMustBePositive`
+
+### Symptoms
+
+When you [close a container](/dynamics365/supply-chain/warehousing/packing-containers), you might receive the following error message:
+
+> Weight must be positive.
+
+### Cause
+
+The **Gross weight** field is set to zero or a negative value.
+
+### Solution
+
+Enter a positive value in the **Gross weight** field, and select a unit. Alternatively, select **Get system weight** to calculate the value.
+
+## Related content
+
+- [Plan loads and shipments by using the outbound load planning workbench](/dynamics365/supply-chain/transportation/use-load-planning-workbench-plan-loads-shipments)

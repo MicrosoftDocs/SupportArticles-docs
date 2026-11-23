@@ -21,6 +21,10 @@ ms.reviewer: Shea Caperoon
 
 # Errors when trying to manage dial plans
 
+## Summary
+
+When you access or test a dial plan in the Microsoft Teams admin center, you might see “We can’t get the effective dial plan so the dial plan can’t be tested” or “Something went wrong while testing this phone number.” The `Get-CsEffectiveTenantDialPlan` cmdlet might also return “Management object not found for identity.” These errors occur when the administrator account doesn’t have a Teams license. Assign a Teams license to the account to manage dial plans.
+
 ## Symptoms
 
 **Error message 1**

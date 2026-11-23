@@ -1,7 +1,7 @@
 ---
 title: Factory Reset Protection Emails Not Enforced in Intune for Android
 description: Describes an issue in which an Android Enterprise device can be activated by using a Google account that isn't included in the "Factory reset protection emails" setting.
-ms.date: 03/30/2026
+ms.date: 10/02/2026
 search.appverid: MET150
 ms.custom: sap:Configure Devices - Android\Device restrictions
 ms.reviewer: kaushika
@@ -30,12 +30,12 @@ If the Intune setting, **Factory reset protection emails**, is configured, FRP i
 
   | Enrollment method | Settings > Factory data reset | Settings > Recovery/bootloader | Intune [wipe](/intune/intune-service/configuration/device-restrictions-android-for-work) |
   | --- | --- | --- | --- |
-  | **Corporate-owned devices with work profile** (COPE) | ❌ no factory reset protection | ✅ factory reset protection | ❌ no factory reset protection |
+  | **Corporate-owned devices with work profile** (COPE) | ✅ factory reset protection | ✅ factory reset protection | ❌ no factory reset protection |
   | **Fully managed** (COBO) | ❌ no factory reset protection | ✅ factory reset protection | ❌ no factory reset protection |
   | **Dedicated** (COSU) | ❌ no factory reset protection | ✅ factory reset protection | ❌ no factory reset protection |
 
 > [!NOTE]
-> - For the COPE method: FRP is no longer enforced for a Settings reset. This is a change as of July, 2026.
+> - For the COPE method: A Settings reset enforces FRP when **Factory reset protection emails** is configured with a Google account email address. If the setting is **Not configured**, a Settings reset doesn't enforce FRP.
 > - For the Intune wipe method: By default, FRP isn’t enforced because Intune doesn’t preserve FRP data in this flow.
 
 If **Factory reset protection emails** is set to **Not configured** (default), Intune doesn't change or update this setting.

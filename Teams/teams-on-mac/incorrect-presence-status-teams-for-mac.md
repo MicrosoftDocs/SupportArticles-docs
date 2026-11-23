@@ -21,6 +21,10 @@ ms.reviewer: corbinm, kristinw
 
 # Stale presence status in Teams for Mac
 
+## Summary
+
+In Microsoft Teams for Mac, your presence status might not update after you unlock your device and resume activity. This happens when the presence subscription expires and isn't re-created. Reset your status to refresh it. If the issue persists, restart Teams and sign out of Teams on any other devices you're using.
+
 ## Symptoms
 
 Your presence status is incorrect when you resume activity on a locked macOS device that's running one of the following Microsoft Teams clients:
@@ -37,12 +41,8 @@ The device might be locked manually or because of inactivity. After the device i
 
 The issue occurs because the presence subscription expires and isn't re-created when you resume activity on the macOS device.
 
-## Workaround
+## Resolution
 
 To work around this issue, reset your status. If the issue persists, restart the Teams client on the macOS device.
 
 **Note:** If you're also running Teams on other devices, sign out of the Teams app on those devices.
-
-## Status
-
-Microsoft is researching this issue and will update this article when new information becomes available.

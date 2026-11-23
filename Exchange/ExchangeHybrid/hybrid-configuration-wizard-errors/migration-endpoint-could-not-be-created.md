@@ -1,23 +1,24 @@
 ---
 title: HCW8078 error - Migration Endpoint could not be created
-description: Description here
+description: Discusses the error in the HCW when the creation of a migration endpoint fails and provides resolutions.
 author: cloud-writer
 ms.author: meerak
 ms.reviewer: dcscontentpm
 ms.topic: troubleshooting
 ms.custom: Exchange Hybrid
-ms.date: 06/03/2026
+ms.date: 10/19/2026
+ai-usage: ai-assisted
 ---
 
 # HCW8078 error - Migration endpoint can't be created
 
 ## Summary
 
-This article describes the HCW8078 error that you might experience when you run the Hybrid Configuration Wizard (HCW). The article explains the cause of the error and provides resolution options to resolve it.
+This article describes the HCW8078 error that you might experience when you run the Hybrid Configuration Wizard (HCW). The article explains the cause of the error and provides options to resolve it.
 
 ## Symptoms
 
-When you run the Hybrid Configuration Wizard (HCW), it fails with the following error:
+When you run the Hybrid Configuration Wizard (HCW), migration endpoint creation can fail with the following error:
 
 > `HCW8078 - Migration Endpoint can't be created`. 
 
@@ -29,32 +30,24 @@ Also you might see the following error in the logs:
 
 ## Cause
 
-The error occurs because the GRAPH endpoint is throttling requests from the HCW application. 
+The migration service throttles concurrent or closely spaced calls to the `New-MigrationEndpoint` command.
 
 ## Resolution
 
-Use one of the following solutions as appropriate for your scenario.
+Use one of the following methods, as appropriate, to create the migration endpoint.
 
-### Solution 1: Create the migration endpoint by using Exchange Online PowerShell
+### Method 1: Use the latest version of the HCW
 
-Use this solution if you're in the process of migration and want to create the migration endpoint.
+Download the latest version of the HCW from <https://aka.ms/HybridWizard>.
 
-Connect to Exchange Online PowerShell and create the migration endpoint. You can use the syntax from the examples provided [here](https://aka.ms/MEP).
+The HCW automatically retries creating a migration endpoint when the error occurs. It waits for the service-recommended time which is usually between 15 seconds and two minutes before retrying and then displays a retry message.  
+
+<a id="solution-1-create-the-migration-endpoint-by-using-exchange-online-powershell"></a>
+
+### Method 2: Use Exchange Online PowerShell
+
+Use this method if the HCW is unable to create the migration endpoint even after retrying.
+
+Connect to Exchange Online PowerShell and use the syntax from these [examples](https://aka.ms/MEP) to create the migration endpoint. 
 
 :::image type="content" source="media/migration-endpoint-could-not-be-created/command-to-create-endpoint.png" alt-text="Screenshot of Exchange Online PowerShell command to create a new migration endpoint for an Exchange server.":::
-
-## Solution 2: Rerun HCW and skip the Migration Endpoint option
-
-Use this solution if you're don't have a current migration from or to Exchange on-premises to Exchange Online.
-
-1. Rerun HCW. At the option selection, select **Choose Exchange Hybrid Configuration** and select **Next**.
-
-   :::image type="content" source="media/migration-endpoint-could-not-be-created/hybrid-options.png" alt-text="Screenshot of the Office 365 Hybrid Configuration Wizard configuration page showing options for Full and Modern Hybrid Topologies.":::
-
-1. Uncheck the **Migration Endpoint** option and select **Next**.
-
-   :::image type="content" source="media/migration-endpoint-could-not-be-created/uncheck-migration-endpoint.png" alt-text="Screenshot of the Office 365 Hybrid Configuration wizard showing Migration Endpoint option unchecked":::
-
-1. Select the rest of the configuration as required and complete running the wizard.
-
-   :::image type="content" source="media/migration-endpoint-could-not-be-created/hybrid-configuration-wizard-success.png" alt-text="Screenshot of the successful configuration of hybrid configuration wizard.":::

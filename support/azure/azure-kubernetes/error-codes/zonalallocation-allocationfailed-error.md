@@ -1,29 +1,32 @@
 ---
-title: Troubleshoot the ZonalAllocationFailed, AllocationFailed, or OverconstrainedAllocationRequest error code
+title: Troubleshoot ZonalAllocationFailed, AllocationFailed, or OverconstrainedAllocationRequest error codes
 description: Troubleshoot ZonalAllocationFailed and AllocationFailed errors in AKS create or update operations. Follow steps to fix capacity constraints quickly.
-ms.date: 06/12/2026
-author: axelgMS
-ms.author: axelg
-editor: v-jsitser
-ms.reviewer: rissing, chiragpa, erbookbi, andraciobanu
+ms.date: 09/17/2026
+manager: dcscontentpm
+ms.topic: troubleshooting
+author: kaushika-msft
+ms.author: kaushika
+ms.reviewer: rissing, chiragpa, erbookbi, andraciobanu, yudian
 ms.service: azure-kubernetes-service
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
+ai-usage: ai-assisted
 ---
-# Troubleshoot the ZonalAllocationFailed, AllocationFailed, or OverconstrainedAllocationRequest error code
+# Troubleshoot ZonalAllocationFailed, AllocationFailed, or OverconstrainedAllocationRequest error codes
 
 ## Summary
 
-This article describes how to identify and resolve the `ZonalAllocationFailed`, `AllocationFailed`, or `OverconstrainedAllocationRequest` error that might occur when you try to create, deploy, or update a Microsoft Azure Kubernetes Service (AKS) cluster.
+This article describes how to identify and resolve the `ZonalAllocationFailed`, `AllocationFailed`, or `OverconstrainedAllocationRequest` errors that might occur when you try to create, deploy, or update an Azure Kubernetes Service (AKS) cluster.
 
 ## Prerequisites
 
-- [Azure CLI](/cli/azure/install-azure-cli) (optional), version 2.86.0, or a later version. If Azure CLI is already installed, you can find the version number by using `az --version`.
+To troubleshoot these errors, it's suggested you have the following prerequisites:
 
+- [Azure CLI](/cli/azure/install-azure-cli) (optional), version 2.86.0, or a later version. If Azure CLI is already installed, use `az --version` to check the version number.
 - [Azure PowerShell](/powershell/azure/install-az-ps) (optional).
 
 ## Symptoms
 
-When you try to create, upgrade or scale up a cluster, you receive one of the following error messages:
+When you try to create, upgrade, or scale up a cluster, you receive one of the following error messages:
 
 Code: `ZonalAllocationFailed`
 
@@ -52,31 +55,40 @@ Try one or more of the following methods:
 
 For more information about how to fix this error, see [Resolve errors for SKU not available](/azure/azure-resource-manager/troubleshooting/error-sku-not-available).
 
-### Solution 2: Dynamically scale using Node Auto Provisioning
+### Solution 2: Resize a node pool in place when creation or scaling is blocked due to required VM size availability
+
+If another compatible VM size has capacity, resize the existing Virtual Machine Scale Sets (VMSS) or virtual machine (VM) node pool to use that size. AKS replaces the nodes through a rolling operation, so you don't have to create a new node pool and migrate the workloads manually. This feature is currently in preview and requires surge capacity for the target VM size. For prerequisites, limitations, and instructions, see [Resize a VMSS node pool in place (preview)](/azure/aks/resize-node-pool?tabs=azure-cli#resize-a-vmss-node-pool-in-place-preview).
+
+### Solution 3: Use automatic zone placement when creation or scaling is blocked by specific zonal limitation
+
+For zone-spanning workloads, create or update the node pool with automatic zone placement. AKS selects availability zones that have capacity for the requested VM SKU and reevaluates zone availability during later scale-out operations. This feature is currently in preview, and an allocation can still fail if Azure can't allocate the requested nodes while honoring the per-zone limit. For prerequisites, limitations, and instructions, see [Automatic zone placement in Azure Kubernetes Service (preview)](/azure/aks/configure-automatic-zone-placement).
+
+### Solution 4: Dynamically scale using Node Auto Provisioning
 
 [Node Auto Provisioning](/azure/aks/node-auto-provisioning) allows you to automatically provision VM SKUs based on your workload needs. If a SKU isn't available due to capacity constraints, Node Auto Provisioning (NAP) selects another SKU type based on the specifications provided in the customer resource definitions (CRDs) like `NodePool` and `AKSNodeClass`. This can be helpful for scaling scenarios when certain SKU capacity becomes limited. For more information on configuring your NAP cluster, see [Configure node pools for node auto-provisioning (NAP) in Azure Kubernetes Service (AKS)](/azure/aks/node-auto-provisioning-node-pools) and [Configure AKSNodeClass resources for node auto-provisioning (NAP) in Azure Kubernetes Service (AKS)](/azure/aks/node-auto-provisioning-aksnodeclass).
 
-### Solution 3: Upgrade in place using `MaxUnavailable`
+### Solution 5: Upgrade in place by using `MaxUnavailable`
 
-If you don't need surge nodes during upgrades, see [Customize unavailable nodes](/azure/aks/upgrade-aks-node-pools-rolling#customize-unavailable-nodes) for information on how to upgrade with the existing capacity. Set `MaxUnavailable` to a value greater than zero (0) and set `MaxSurge` equal to zero (0). Existing nodes are then cordoned and drained one at a time and pods are evicted to remaining nodes. No buffer node is created.
+If you don't need surge nodes during upgrades, see [Customize unavailable nodes](/azure/aks/upgrade-aks-node-pools-rolling#customize-unavailable-nodes) for information on how to upgrade with the existing capacity. Set `MaxUnavailable` to a value greater than zero and set `MaxSurge` to zero. The upgrade process cordons and drains existing nodes one at a time and evicts pods to remaining nodes. The process doesn't create a buffer node.
 
-### Solution 4: Use deployment recommender in portal for new cluster creates
+### Solution 6: Use deployment recommender in portal for new cluster creates
 
 During an AKS cluster creation in the Azure portal, if the selected node pool SKU isn't available in the chosen region and zones, the deployment recommender recommends an alternative SKU, zones, and region combination that has availability.
 
-### Solution 5: Use priority expanders with cluster-autoscaler
+### Solution 7: Use priority expanders with cluster-autoscaler
 
-The cluster-autoscaler [priority expander](https://github.com/kubernetes/autoscaler/blob/master/cluster-autoscaler/expander/priority/readme.md) lets you define an ordered list of node pools to attempt scaling in sequence. For example: Spot pools first (cost optimization), then on-demand pools (availability fallback). Conditional Access tries to implement the highest priority pool first. If scaling fails (for example, due to allocation failure), it tries the next pool.
+The cluster-autoscaler [priority expander](https://github.com/openshift/kubernetes-autoscaler/blob/main/cluster-autoscaler/expander/priority/readme.md) lets you define an ordered list of node pools to attempt scaling in sequence. For example: Spot pools first (cost optimization), then on-demand pools (availability fallback). Conditional Access tries to implement the highest priority pool first. If scaling fails (for example, due to allocation failure), it tries the next pool.
 
-**Limitations**
+#### Limitations
+
+The following limitations apply to the priority expander:
 
 - Conditional Access doesn't create new node pools. It only works with existing pools. If you want dynamic SKU provisioning, use NAP, which can create pools based on SKU availability.
-
-- Priority expander works at node pool level, not SKU level. You must precreate pools for each SKU family you want to use.
+- Priority expander works at the node pool level, not SKU level. You must precreate pools for each SKU family you want to use.
 
 ### Cause 2: Too many constraints for a virtual machine to accommodate
 
-If you receive an `OverconstrainedAllocationRequest` error code, the Azure Compute platform can't allocate a new virtual machine (VM) to accommodate the required constraints. These constraints usually (but not always) include the following items:
+If you receive an `OverconstrainedAllocationRequest` error code, the Azure Compute platform can't allocate a new VM to accommodate the required constraints. These constraints usually (but not always) include the following items:
 
 - VM size
 - VM SKU
@@ -87,7 +99,7 @@ If you receive an `OverconstrainedAllocationRequest` error code, the Azure Compu
 
 ### Solution: Don't associate a proximity placement group with the node pool
 
-If you receive an `OverconstrainedAllocationRequest` error code, you can try to create a new node pool that isn't associated with a proximity placement group.
+If you receive an `OverconstrainedAllocationRequest` error code, try creating a new node pool that isn't associated with a proximity placement group.
 
 ### Cause 3: Not enough dedicated hosts or fault domains
 
@@ -99,16 +111,12 @@ As per [Planning for ADH Capacity on AKS](/azure/aks/use-azure-dedicated-hosts#p
 
 ## More information
 
-Ensuring capacity for users is a top priority for Microsoft, and we're working around the clock to reach this goal. The increasing popularity of Azure services emphasizes the need to scale up our infrastructure even more rapidly. With that in mind, we're expediting expansions and improving our resource deployment process to respond to strong customer demand. We're also adding a large amount of computing infrastructure monthly.
+Ensuring capacity for users is a top priority for Microsoft. The increasing popularity of Azure services emphasizes the need to scale up our infrastructure even more rapidly. With that goal in mind, we're expediting expansions and improving our resource deployment process to respond to strong customer demand. We're also adding a large amount of computing infrastructure monthly.
 
-We have identified several methods to improve how we load-balance under a high-resource-usage situation and how to trigger the timely deployment of needed resources. Additionally, we're significantly increasing our capacity and continue to plan for strong demand across all regions. For more information about the improvements that we're making toward delivering a resilient cloud supply chain, see [Advancing reliability through a resilient cloud supply chain](https://azure.microsoft.com/blog/advancing-reliability-through-a-resilient-cloud-supply-chain/).
+We identified several methods to improve how we load-balance under a high-resource-usage situation and how to trigger the timely deployment of needed resources. Additionally, we're significantly increasing our capacity and continue to plan for strong demand across all regions. For more information about the improvements that we're making toward delivering a resilient cloud supply chain, see [Advancing reliability through a resilient cloud supply chain](https://azure.microsoft.com/blog/advancing-reliability-through-a-resilient-cloud-supply-chain/).
 
 ## References
 
 - [General troubleshooting of AKS cluster creation issues](../create-upgrade-delete/troubleshoot-aks-cluster-creation-issues.md)
-
 - [Virtual Machine Scale Sets - What to expect when using proximity placement groups](/azure/virtual-machine-scale-sets/proximity-placement-groups#what-to-expect-when-using-proximity-placement-groups)
-
 - [Fix an AllocationFailed or ZonalAllocationFailed error when you create, restart, or resize Virtual Machine Scale Sets in Azure](../../virtual-machine-scale-sets/allocationfailed-or-zonalallocationfailed.md)
-
- 

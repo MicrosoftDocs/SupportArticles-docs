@@ -3,7 +3,7 @@ title: Troubleshoot DNS resolution failures in Azure
 description: Diagnose and fix DNS resolution failures in Azure caused by conditional forwarder, custom DNS, or Private Resolver ruleset issues. Start troubleshooting now.
 ms.service: azure-dns
 ms.topic: troubleshooting
-ms.date: 6/17/2026
+ms.date: 06/17/2026
 ai.hint.symptom-tags:
   - dns-resolution-failure
   - conditional-forwarder

@@ -1,20 +1,26 @@
 ---
-title: Troubleshoot DNS resolution failures from inside the pod
-description: DNS resolution fails in AKS pods while nodes resolve correctly? Troubleshoot DNS resolution failures in Azure Kubernetes Service and restore outbound connectivity now.
-ms.date: 07/22/2026
-ms.reviewer: chiragpa, rissing, v-leedennis
-editor: v-jsitser
+title: Troubleshoot DNS resolution failures from inside the pod in AKS
+description: DNS resolution fails in AKS pods but not on nodes? Troubleshoot DNS resolution failures in Azure Kubernetes Service and restore connectivity now.
+ms.date: 10/28/2026
+ms.topic: troubleshooting
+manager: dcscontentpm
+author: kaushika-msft
+ms.author: kaushika
+ms.reviewer: chiragpa, rissing, v-leedennis, kaushika
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot failures of DNS resolution from inside the pod (but not from the worker node) so that I don't experience outbound connection issues from an Azure Kubernetes Service (AKS) cluster.
 ms.custom: sap:Connectivity
+ai-usage: ai-assisted
 ---
-# Troubleshoot DNS resolution failures from inside the pod but not from the worker node
+# Troubleshoot DNS resolution failures from inside the pod but not from the worker node in Azure Kubernetes Service 
 
 ## Summary
 
-This article discusses how to troubleshoot Domain Name System (DNS) resolution failures that occur from inside the pod, but not from the worker node, when you try to establish an outbound connection from a Microsoft Azure Kubernetes Service (AKS) cluster.
+This article discusses how to troubleshoot Domain Name System (DNS) resolution failures that occur from inside the pod, but not from the worker node, when you try to establish an outbound connection from an Azure Kubernetes Service (AKS) cluster.
 
 ## Prerequisites
+
+Ensure the following prerequisites are met before you start troubleshooting DNS resolution failures from inside the pod:
 
 - The Kubernetes [kubectl](https://kubernetes.io/docs/reference/kubectl/) tool, or a similar tool to connect to the cluster. To install kubectl by using [Azure CLI](/cli/azure/install-azure-cli), run the [az aks install-cli](/cli/azure/aks#az-aks-install-cli) command.
 
@@ -28,7 +34,7 @@ For DNS resolution, the pods send requests to the CoreDNS pods in the `kube-syst
 
 If the DNS query is for an internal component, such as a service name, the CoreDNS pod responds by itself. However, if the request is for an external domain, the CoreDNS pod sends the request to the upstream DNS server.
 
-The upstream DNS servers are obtained based on the *resolv.conf* file of the worker node in which the pod is running. The *resolv.conf* file (*/run/systemd/resolve/resolv.conf*) is updated based on the DNS settings of the virtual network on which the worker node is running.
+The upstream DNS servers are based on the *resolv.conf* file of the worker node where the pod runs. The DNS settings of the virtual network on which the worker node runs update the *resolv.conf* file (*/run/systemd/resolve/resolv.conf*).
 
 ## Troubleshooting checklist
 

@@ -1,8 +1,7 @@
 ---
 title: Diagnostic Settings Not Created as Expected After Moving a Resource
 description: "Resolve issues where diagnostic settings are missing or not created as expected after moving, renaming, or recreating Azure resources."
-author: ProfessorKendrick
-ms.author: kkendrick
+ms.reviewer: kkendrick
 ms.service: partner-services
 ms.custom:
   - sap:Datadog on Azure

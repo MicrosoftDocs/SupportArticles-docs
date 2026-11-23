@@ -104,6 +104,8 @@ items:
           href: /outlook/troubleshoot/user-interface/mapi-is-the-only-way-to-change-profiles
         - name: MCDB status is Offline and SSDs aren't formatted
           href: ../administration/mcdb-status-is-offline-ssds-arent-formatted.md
+        - name: Mailbox audit events missing from Search results
+          href: ../administration/missing-mailbox-audit-events.md          
         - name: No active public folder mailboxes were found error
           href: ../administration/no-active-public-folder-mailboxes-were-found-error.md
         - name: Restarts frequently with Stop error
@@ -192,8 +194,6 @@ items:
           href: ../compliance/ediscovery-search-ignores-attached-mail-items.md
         - name: eDiscovery search ignores some query keywords
           href: ../compliance/ediscovery-search-ignores-query-keywords.md
-        - name: Items are removed by MRM 2.0 unexpectedly
-          href: ../compliance/items-are-removed-by-mrm-2-0-unexpectedly.md
         - name: Missing items in eDiscovery search results
           href: ../compliance/ediscovery-search-missing-items.md
         - name: MRM doesn't process items in the Sync Issues folder
@@ -204,12 +204,6 @@ items:
           href: ../compliance/search-adminauditlog-mailboxauditlog-return-no-result.md
         - name: Search-Mailbox cmdlet error
           href: ../compliance/search-mailbox-cmdlet-fails.md
-    - name: Development
-      items:
-        - name: MAPI applications can't access archive mailboxes
-          href: ../development/mapi-apps-cannot-access-archive-mailboxes.md
-        - name: Support limitations for open standards
-          href: ../development/public-protocols-support-limitations.md
     - name: Distribution Lists
       items:
         - name: Get-DistributionGroupMember not return all members
@@ -268,6 +262,8 @@ items:
           href: ../mailflow/read-receipt-shows-incorrect-information.md
         - name: TLS negotiation failed with error NoCredentials error
           href: ../mailflow/tls-negotiation-failed-with-error-nocredentials-error.md
+        - name: Unreachable RMS licensing endpoints delay mail delivery
+          href: ../mailflow/mail-delay-rms.md                 
         - name: Unreadable characters in the subject line
           href: ../mailflow/unreadable-characters-in-subject-line.md
         - name: Use nslookup to get MX records for SMTP domain
@@ -324,7 +320,5 @@ items:
           href: ../setup/installing-exchange-2010-sp2-fails.md
         - name: Issues occur if arbitration mailbox isn't upgraded
           href: ../setup/issues-occur-if-arbitration-mailbox-not-upgraded.md
-        - name: Service Pack upgrade fails
-          href: ../setup/service-pack-upgrade-fails.md
         - name: Version error in RecoverServer mode install
           href: ../setup/version-error-in-recover-server-mode-install.md

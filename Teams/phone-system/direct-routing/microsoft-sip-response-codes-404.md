@@ -23,6 +23,8 @@ ms.reviewer: teddygyabaah
 
 [!INCLUDE [Teams Direct Routing note](../../../includes/teams-direct-routing-note.md)]
 
+## Summary
+
 This article provides troubleshooting information for various combinations of the SIP 404 error and Microsoft response codes.
 
 ## 10202 404 Replacement call was not found

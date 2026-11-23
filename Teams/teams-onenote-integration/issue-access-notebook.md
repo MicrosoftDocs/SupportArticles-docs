@@ -18,6 +18,10 @@ ms.date: 01/02/2024
 
 # Issue when you access a OneNote notebook from Teams
 
+## Summary
+
+You might be unable to open a Microsoft OneNote notebook from Microsoft Teams if a document library contains more than 5,000 OneNote items, including notebooks, sections, and section groups. This limit prevents Teams from querying the library. To work around the issue, open the notebook in OneNote on the web or in the OneNote app and remove unneeded items from the library.
+
 ## Symptoms
 
 You can't access a Microsoft OneNote notebook from Microsoft Teams. Additionally, you receive the following error message:
@@ -28,7 +32,7 @@ You can't access a Microsoft OneNote notebook from Microsoft Teams. Additionally
 
 This issue occurs if the document libraries contain more than 5,000 OneNote items. This is a known limitation with OneNote items when accessing them from Teams.
 
-## Workaround
+## Resolution
 
 To work around this issue, reduce the number of OneNote items in the document libraries.
 
@@ -56,5 +60,3 @@ To determine the item count, use one of the following methods:
     File Type:True
     HTML File Type:True 
     ```
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

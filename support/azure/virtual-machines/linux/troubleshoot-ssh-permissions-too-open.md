@@ -27,13 +27,26 @@ This article helps you troubleshoot the "permissions are too open" error that oc
 
 ## Symptoms
 
-You can't connect to your Microsoft Azure Linux virtual machine (VM) by using Secure Shell (SSH). You notice the following entries in the system log (/var/log/messages, /var/log/syslog, /var/log/secure, or /var/log/auth.log):
+You can't connect to your Azure Linux virtual machine (VM) by using Secure Shell (SSH). Depending on the logging configuration, messages similar to the following appear in `/var/log/messages`, `/var/log/syslog`, `/var/log/secure`, `/var/log/auth.log`, or the systemd journal:
 
->sshd: error: Permissions 0777 for '/etc/ssh/sshKeyName' are too open.</br>
->sshd: error: It is required that your private key files are NOT accessible by others.</br>
->sshd: error: This private key will be ignored.</br>
->sshd: error: key_load_private: bad permissions</br>
->sshd: error: Could not load host key: /etc/ssh/sshKeyName
+```text
+sshd: error: Permissions 0777 for '/etc/ssh/sshKeyName' are too open.
+sshd: error: It is required that your private key files are NOT accessible by others.
+sshd: error: This private key will be ignored.
+sshd: error: key_load_private: bad permissions
+sshd: error: Could not load host key: /etc/ssh/sshKeyName
+```
+
+> [!NOTE]
+> The permissions value, key path, and exact messages vary by configuration and OpenSSH version.
+
+On systems that use systemd, view journal entries for the common SSH service units by running the following command on the affected VM through an available management access method:
+
+```bash
+sudo journalctl -u ssh.service -u sshd.service --no-pager
+```
+
+Journal files are stored under `/var/log/journal` when persistent storage is enabled, or `/run/log/journal` for volatile storage. Read them by using `journalctl`, not as text logs.
 
 ## Cause
 

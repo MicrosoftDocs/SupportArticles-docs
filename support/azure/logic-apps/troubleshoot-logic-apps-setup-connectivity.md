@@ -5,7 +5,7 @@ ms.service: azure-logic-apps
 ms.reviewer: xuehongg, shrahman, v-ryanberg, v-gsitser
 ms.topic: troubleshooting
 ms.custom: Networking
-ms.date: 11/5/2025
+ms.date: 11/05/2025
 author: kaushika-msft
 ms.author: kaushika
 ---

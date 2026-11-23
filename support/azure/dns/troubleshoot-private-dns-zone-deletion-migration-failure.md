@@ -3,7 +3,7 @@ title: Troubleshoot Azure private DNS zone deletion failure
 description: Fix Azure private DNS zone deletion and migration failures caused by virtual network links, resource locks, or quota limits. Follow step-by-step diagnostics to resolve the issue.
 ms.service: azure-dns
 ms.topic: troubleshooting
-ms.date: 7/10/2026
+ms.date: 07/10/2026
 ms.reviewer: chadmat
 ms.author: kaushika
 ai.hint.symptom-tags:

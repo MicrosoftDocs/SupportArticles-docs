@@ -1,13 +1,13 @@
 ---
-title: Installation File Location not behaves
+title: Installation File Location GPOs behave differently than described in Explanation
 description: Describes how to edit the registry to specify the location of the Installation files and the location of the Service Pack Installation files.
-ms.date: 02/12/2026
+ms.date: 09/17/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
 ms.custom:
-- sap:windows setup,upgrade and deployment\installing or upgrading windows
+- sap:Windows Setup, Upgrade and Deployment\Installing or upgrading Windows
 - pcy:WinComm Devices Deploy
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>

@@ -34,7 +34,7 @@ SQL Server Installations are supported on x64-based (AMD and Intel) processors. 
 
 ## Supported virtualization technologies
 
-Microsoft supports deploying SQL Server on virtualization technologies that include Microsoft Hyper-V and other hypervisors that are certified through the Server Virtualization Validation Program (SVVP). For more information about SVVP, see [Windows Server Virtualization Validation Program](https://www.windowsservercatalog.com/svvp.aspx?svvppage=svvp.htm).
+Microsoft supports deploying SQL Server on virtualization technologies that include Microsoft Hyper-V and other hypervisors that are certified through the Server Virtualization Validation Program (SVVP). For more information about SVVP, see [Windows Server Virtualization Validation Program](https://www.windowsservercatalog.com/svvp/program-home).
 
 If you host a Linux virtual machine on Hyper-V, make sure that you have [Linux Virtual Machines on Hyper-V](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dn743675(v=ws.10)). Microsoft supports SQL Server installations on cloud infrastructure services such as Azure Virtual Machine, Amazon EC2, and Google Cloud.
 

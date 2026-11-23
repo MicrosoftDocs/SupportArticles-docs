@@ -1,18 +1,22 @@
 ---
 title: Troubleshoot High Memory Consumption in Disk-Intensive Applications
-description: Learn how to troubleshoot high memory consumption in disk-intensive Kubernetes pods caused by Linux kernel caching, and apply fixes to reduce memory pressure.
-ms.date: 04/30/2025
-ms.reviewer: claudiogodoy, v-weizhu
+description: Learn how to troubleshoot high memory consumption in disk-intensive Kubernetes pods caused by Linux kernel caching. Follow the steps to reduce memory pressure.
+ms.date: 10/23/2026
+manager: dcscontentpm
+author: kaushika-msft
+ms.author: kaushika
+ms.reviewer: claudiogodoy, v-weizhu, kaushika
 ms.service: azure-kubernetes-service
 ms.custom: sap:Node/node pool availability and performance
+ai-usage: ai-assisted
 ---
 # Troubleshoot high memory consumption in disk-intensive applications
 
 ## Summary
 
-Disk input and output operations are costly. Most operating systems implement caching strategies for reading and writing data to the filesystem. The [Linux kernel](https://www.kernel.org/doc) usually uses strategies like the [page cache](https://www.kernel.org/doc/gorman/html/understand/understand013.html) to improve overall performance. The primary goal of the page cache is to store data read from the filesystem in the cache, making it available in memory for future read operations.
+This article helps you troubleshoot high memory consumption in disk-intensive applications on Kubernetes pods. Learn how to identify Linux kernel caching as the cause and apply a fix to reduce memory pressure.
 
-This article helps you identify and avoid high memory consumption in disk-intensive applications due to Linux kernel behaviors on Kubernetes pods.
+Disk input and output operations are costly. Most operating systems implement caching strategies for reading and writing data to the filesystem. The [Linux kernel](https://www.kernel.org/doc) usually uses strategies like the [page cache](https://www.kernel.org/doc/gorman/html/understand/understand013.html) to improve overall performance. The primary goal of the page cache is to store data read from the filesystem in the cache, making it available in memory for future read operations.
 
 ## Prerequisites
 
@@ -35,7 +39,7 @@ The following table outlines common symptoms of high memory consumption:
 
 ### Step 1: Inspect the pod working set
 
-To inspect the working set of pods that the Kubernetes Metrics API reports, run the following [kubectl top pods](https://kubernetes.io/docs/reference/kubectl/generated/kubectl_top/) command:
+To inspect the working set of pods that the Kubernetes Metrics API reports, run the following [kubectl top pods](https://kubernetes.io/docs/reference/kubectl/generated/kubectl_top/) command.
 
 ```console
 $ kubectl top pods -A | grep -i "<DEPLOYMENT_NAME>"
@@ -52,13 +56,13 @@ To inspect the memory statistics of the [cgroups](https://kubernetes.io/docs/con
 > [!NOTE]
 > [Cgroups](https://kubernetes.io/docs/concepts/architecture/cgroups/) help enforce resource management for pods and containers, including CPU and memory requests and limits for containerized workloads.
 
-1. Connect to the pod:
+1. Connect to the pod.
 
     ```console
     $ kubectl exec <POD_NAME> -it -- bash
     ```
 
-1. Go to the `cgroup` statistics directory and list the memory-related files:
+1. Go to the `cgroup` statistics directory and list the memory-related files.
 
     ```console
     $ ls /sys/fs/cgroup | grep -e memory.stat -e memory.current
@@ -70,7 +74,7 @@ To inspect the memory statistics of the [cgroups](https://kubernetes.io/docs/con
 
     All the values listed in those files are in bytes.
 
-1. Get an overview of how memory consumption is distributed on the pod:
+1. Get an overview of how memory consumption is distributed on the pod.
 
     ```console
     $ cat /sys/fs/cgroup/memory.current
@@ -106,12 +110,12 @@ The following table describes some memory segments:
 
 Combined with [Step 2](#step-2-inspect-pod-memory-statistics), `anon` represents 5,197,824 bytes, which isn't close to the total amount reported by the working set metric. The `slab` memory segment used by the Linux kernel represents 354,682,456 bytes, which is almost all the memory reported by the working set metric on the pod.
 
-### Step 4: Drop the kernel cache on a debugger pod
+### Step 4: Drop the Linux kernel cache on a debugger pod
 
 > [!NOTE]
 > This step might cause availability and performance problems. Don't run it in a production environment.
 
-1. Get the node running the pod:
+1. Get the node running the pod.
 
     ```console
     $ kubectl get pod -A -o wide | grep "<POD_NAME>"
@@ -119,20 +123,20 @@ Combined with [Step 2](#step-2-inspect-pod-memory-statistics), `anon` represents
     my-deployment-fc94b7f98-m9z2l   1/1     Running   0          37m   10.244.1.17   aks-agentpool-26052128-vmss000004   <none>           <none>
     ```
 
-1. Create a debugger pod by using the [kubectl debug](https://kubernetes.io/docs/reference/kubectl/generated/kubectl_debug/) command and start a `kubectl` session:
+1. Create a debugger pod by using the [kubectl debug](https://kubernetes.io/docs/reference/kubectl/generated/kubectl_debug/) command and start a `kubectl` session.
 
     ```console
     $ kubectl debug node/<NODE_NAME> -it --image=mcr.microsoft.com/cbl-mariner/busybox:2.0
     $ chroot /host
     ```
 
-1. Drop the kernel cache:
+1. Drop the Linux kernel cache.
 
     ```console
     echo 1 > /proc/sys/vm/drop_caches
     ```
 
-1. Check if the command in the previous step causes any effect by repeating [Step 1](#step-1-inspect-the-pod-working-set) and [Step 2](#step-2-inspect-pod-memory-statistics):
+1. Check if the command in the previous step causes any effect by repeating [Step 1](#step-1-inspect-the-pod-working-set) and [Step 2](#step-2-inspect-pod-memory-statistics).
 
     ```console
     $ kubectl top pods -A | grep -i "<DEPLOYMENT_NAME>"
@@ -152,7 +156,9 @@ If you see a significant decrease in both the working set and the `slab` memory 
 
 ## Workaround: Configure appropriate memory limits and requests
 
-The only effective workaround for high memory consumption on Kubernetes pods is to set realistic resource [limits and requests](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#requests-and-limits). For example:
+The only effective workaround for high memory consumption on Kubernetes pods is to set realistic resource [limits and requests](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#requests-and-limits). 
+
+The following is an example of setting memory requests and limits for a Kubernetes pod.
 
 ```yaml
 resources:

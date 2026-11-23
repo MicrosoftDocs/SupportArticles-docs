@@ -41,7 +41,7 @@ This could also happen if a CSP Provider created the subscription and then trans
 3. In the menu on the left side of the page, select **Resource provider**.
 4. Find and select **Microsoft.DesktopVirtualization**, and then select **Re-register**.
 
-## User sees Conditional Access error preventing access to Microsoft Entra ID resource
+## 
 
 This error occurs when the user is subject to a Conditional Access policy that's blocking access to a specific Microsoft Entra ID resource, either when signing into the Windows App or when making a connection to a resource. This usually happens for one of two reasons:
 
@@ -52,6 +52,28 @@ This error occurs when the user is subject to a Conditional Access policy that's
 - The user is signing into a resource with Microsoft Entra-based single sign-on configured but doesn't have access to the Windows Cloud Login app through Conditional Access policies.
 
 To resolve this, first validate the user's [sign-in identity](/entra/identity/monitoring-health/concept-sign-ins) and then see [Enforce Microsoft Entra multifactor authentication for Azure Virtual Desktop using Conditional Access](/azure/virtual-desktop/set-up-mfa).
+
+## Windows App sign-in fails when using AD FS federated authentication
+
+In some environments using federated authentication with AD FS, signing in to Windows App can fail before the user’s resources are displayed.
+
+This issue can occur after the user selects a sign-in option and is redirected to Active Directory Federation Services (AD FS). The AD FS event logs might contain the following error:
+
+*MSIS7102: Requested Authentication Method is not supported on the STS*.
+
+**Cause**
+
+Windows App sends prompt=login to Microsoft Entra ID to request fresh authentication. If the federated domain's PromptLoginBehavior setting is unset, Microsoft Entra ID can translate this into a password authentication request. If the AD FS environment doesn't support that authentication method, the sign-in fails.
+
+**Resolution**
+
+Review the PromptLoginBehavior setting in the Microsoft Entra domain federation configuration for the affected federated domain.
+
+For supported versions of AD FS, set the value to: **PromptLoginBehavior = nativeSupport**
+
+The nativeSupport setting passes the prompt=login request through to AD FS instead of translating it into a password authentication request. AD FS can then apply the authentication methods configured for the environment.
+
+For more information, see [AD FS prompt=login | Microsoft Learn](/windows-server/identity/ad-fs/operations/ad-fs-prompt-login).
 
 ## Next steps
 

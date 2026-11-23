@@ -1,9 +1,9 @@
 ---
 title: The OS Edition status of a Teams Rooms device is Unhealthy
 description: Resolve the issue that causes the OS Edition signal of a Teams Rooms device to appear as Unhealthy.
-ms.reviewer: joolive
+ms.reviewer: joolive, mattslomka
 ms.topic: troubleshooting
-ms.date: 12/08/2023
+ms.date: 08/18/2026
 author: Cloud-Writer
 ms.author: meerak
 manager: dcscontentpm
@@ -18,6 +18,10 @@ ms.custom:
   - CI167670
 ---
 # The OS Edition status is Unhealthy
+
+## Summary
+
+In the Microsoft Teams Rooms Pro Management portal, the OS Edition signal appears as Unhealthy when a Teams Rooms device runs an unsupported edition of Windows. The device might not sign in automatically, or its console might show a black or gray screen. Verify that the hardware is supported, then reimage the device with a supported Windows IoT Enterprise or Windows Enterprise edition.
 
 ## Symptoms
 

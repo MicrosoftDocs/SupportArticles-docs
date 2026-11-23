@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot Windows Update Error Code 0x800f0823
+title: Troubleshoot Windows Update Error Code 0x800F0823
 description: Discusses how to resolve an issue that prevents Windows updates from installing.
 ai-usage: ai-assisted
 ms.date: 02/12/2026
@@ -15,7 +15,7 @@ appliesto:
   - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
   - ✅ <a href=https://learn.microsoft.com/lifecycle/products/azure-virtual-machine target=_blank>Azure Virtual Machines</a>
 ---
-# Troubleshoot Windows Update error code 0x800f0823
+# Troubleshoot Windows Update error code 0x800F0823
 
 This article discusses how to resolve an issue that prevents Windows updates from installing.
 

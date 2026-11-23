@@ -20,7 +20,9 @@ ms.date: 03/25/2026
 ---
 # Errors when external participants try to join a Teams meeting
 
-External participants who are invited to a Teams meeting that's scheduled by users in your organization can't join the meeting. Instead, they receive one of the following error messages.
+## Summary
+
+External participants might see “Sign in to join this meeting” or “Sign in with a different account to join this meeting” when they try to join a Microsoft Teams meeting. These errors can occur when anonymous join is disabled or external access settings block authenticated participants. This article explains how to check the organizer’s meeting policies and both organizations’ external access settings, then configure meeting access for the participants you want to allow.
 
 ## Error 1: Sign in to join this meeting
 

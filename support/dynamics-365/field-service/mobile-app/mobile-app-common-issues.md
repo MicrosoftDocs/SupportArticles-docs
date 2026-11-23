@@ -1,20 +1,20 @@
 ---
-title: Troubleshoot Common Mobile App Issues and Errors
-description: Troubleshoot Dynamics 365 Field Service mobile app issues, including offline sync failures, blank agenda screens, sign-in errors, and guest access.
-ms.date: 08/25/2026
+title: Troubleshoot Field Service Mobile App Issues and Errors
+description: Troubleshoot Dynamics 365 Field Service mobile app issues, including missing bookings, sign-in errors, offline sync failures, guest access, and missing environments.
+ms.date: 09/11/2026
 ms.subservice: field-service-mobile
 ms.reviewer: jobaker, puneetsingh, v-shaywood, v-wesmith
 ai-usage: ai-assisted
 ms.custom: sap:Mobile Application\Application is throwing errors
 ---
 
-# Troubleshoot common issues in the Dynamics 365 Field Service mobile app
+# Troubleshoot Dynamics 365 Field Service mobile app issues
 
 ## Summary
 
 This article helps you resolve common problems that affect the [Dynamics 365 Field Service mobile app](/dynamics365/field-service/mobile/overview). It covers problems that field technicians and administrators might encounter when they use the app, including:
 
-- Blank booking screens
+- Missing bookings and agenda errors
 - Sign-in and access errors
 - Offline sync failures
 - Guest account limitations
@@ -22,52 +22,41 @@ This article helps you resolve common problems that affect the [Dynamics 365 Fie
 
 Each section describes the symptoms, identifies the cause, and provides step-by-step solution guidance.
 
-## Booking screen or agenda is blank
+## Schedule shows no bookings or an error
 
 ### Symptoms
 
 After you sign in to the Field Service mobile app, you experience one or more of the following symptoms:
 
-- The booking screen shows a blank white page without any listed bookings.
-- The daily agenda view doesn't load and shows no content.
-- No error message appears, but the screen stays empty.
-
-Users most frequently report these symptoms on Android devices.
+- The schedule displays **No bookings**, but you expect to see one or more bookings.
+- The schedule displays an error while loading bookings.
+- The app remains blank while loading and doesn't display an empty-state or error message.
 
 ### Cause
 
-This problem occurs if the mobile offline profile doesn't finish its initial synchronization, or if a previous sync is interrupted. Without a successful sync, the app has no local data to display, and it shows a blank screen.
+The mobile agenda applies the configured agenda view and includes bookings that overlap the displayed date range. It also limits bookings to the bookable resource associated with your user account. A booking doesn't appear if it doesn't meet these conditions.
 
-This problem also occurs if an offline filter references a related entity that isn't included in the mobile offline profile. When you publish the profile with an invalid filter, the sync fails silently and data doesn't appear.
+If a request to load bookings fails, the app displays an error instead of intentionally converting the failure to an empty result. A completed request that returns no records displays **No bookings**.
+
+The native mobile client doesn't establish that an incomplete synchronization or an offline-profile filter causes a blank screen. The Power Apps mobile offline platform controls offline data and synchronization.
 
 ### Solution
 
-1. Force a manual sync. In the Field Service mobile app, select the menu icon, and go to **Offline Status** > **Sync now**.
+1. Confirm that the booking is assigned to the bookable resource associated with your user account.
 
-1. Wait for the sync to finish. Then, go back to the booking screen.
+1. Confirm that the booking's start and end times overlap the date displayed in the schedule.
 
-1. If the screen stays blank after syncing, sign out of the app, and then sign back in.
+1. Check whether the configured agenda view excludes the booking because of its filters.
 
-1. If the issue persists, ask your administrator to check the offline profile configuration:
+1. If the schedule displays an error, select **Retry**.
 
-   1. In [Power Apps](https://make.powerapps.com), go to **Apps**, and select the **Field Service Mobile** app.
-   1. Select **Settings**.
-   1. Go to **Select offline mode and profile**, select the ellipsis (**...**) that's located next to the selected offline profile.
-   1. To open the assigned profile, select **Edit selected profile**.
-   1. Verify that the **Bookable Resource Booking** (`bookableresourcebooking`) table is included in the profile.
-   1. Check each table filter for lookup fields that reference tables that aren't included in the profile. Remove or update any filters that cause validation errors.
-   1. Save and publish the profile. Then, ask the user to sync again.
+1. If bookings are missing only when you work offline, ask your administrator to verify that the mobile offline profile includes the **Bookable Resource Booking** (`bookableresourcebooking`) table and the data required by its filters. For more information, see [Troubleshoot mobile offline profile publishing and related-table issues](publish-mobile-offline-profile.md).
 
-1. On Android, if the issue continues, clear the app cache:
+1. If the app remains blank without displaying **No bookings** or an error, collect the session details and use **Send feedback**. A blank host screen requires runtime investigation and isn't the same as an agenda with no matching bookings.
 
-   1. Go to **Settings** > **Apps** > **Field Service** > **Storage**.
-   1. Select **Clear cache**.
-   1. Reopen the app.
+Signing out resets native cached state before the app delegates sign-out to the host. It doesn't force an offline synchronization or repair an offline-profile configuration.
 
-> [!NOTE]
-> This issue is common after a Field Service solution update. If the symptoms appear after a recent update, check the [Field Service version history](/dynamics365/field-service/version-history) for known issues in your release.
-
-## "Contact your administrator" error when opening the app
+## "Contact your administrator" error at app startup
 
 ### Symptoms
 
@@ -79,7 +68,7 @@ The user can't proceed past this screen.
 
 ### Cause
 
-This error occurs if the user doesn't have a security role that grants access to the Field Service mobile app. The user must have the role assigned directly to their account. Roles that are inherited through team membership alone aren't sufficient. The app requires at least one of the following security roles:
+This error occurs if you don't have the effective Dataverse privileges and app access required to use Field Service. Organizations commonly provide these privileges through one of the following security roles:
 
 - Field Service - Resource
 - Field Service - Administrator
@@ -91,16 +80,16 @@ This error occurs if the user doesn't have a security role that grants access to
 
 1. Go to **Settings** (gear symbol) > **System** > **Security (Preview)** > **Users**.
 
-1. Open the affected user's record.
+1. Open the affected user record.
 
-1. Select **Manage Roles**, assign the **Field Service - Resource** security role, and select **Save**.
+1. Select **Manage Roles**, assign a role that provides the required Field Service privileges and app access, and select **Save**.
 
 1. Ask the user to sign out of the mobile app and sign back in.
 
 You can also use the [Field Service solution health checker](/dynamics365/field-service/troubleshoot-field-service-solution-health) and select **Verify mobile user security roles** to automatically detect users who are missing required roles.
 
 > [!IMPORTANT]
-> Assign security roles directly to the user, not only through a team membership. Team-inherited roles aren't sufficient for mobile app access in some configurations. For more information, see [Set up users, licenses, and security roles](/dynamics365/field-service/users-licenses-permissions).
+> Verify the user's effective privileges and Field Service mobile app access. The native client checks effective privileges; it doesn't determine whether the privileges came from a direct role assignment or team membership. For more information, see [Set up users, licenses, and security roles](/dynamics365/field-service/users-licenses-permissions).
 
 ## Offline sync error: related entities not available offline
 
@@ -114,7 +103,7 @@ The offline sync doesn't complete, and the user can't use the data offline.
 
 ### Cause
 
-This error occurs when a table filter in the mobile offline profile uses a lookup field that references a related table that the profile doesn't include. When you publish the profile, the sync process validates all filters against the offline-enabled tables. The sync process fails if it finds a reference to a table that isn't available offline.
+This error comes from the Power Apps mobile offline platform when the profile can't make data referenced by a view or filter available offline. The Field Service native client doesn't publish or validate mobile offline profiles.
 
 ### Solution
 
@@ -136,9 +125,9 @@ This error occurs when a table filter in the mobile offline profile uses a looku
 
 1. Save and publish the updated offline profile.
 
-1. Ask the affected users to sync again by going to **Offline Status** > **Sync now** in the app.
+1. Ask the affected users to synchronize offline data again.
 
-For guidance on how to build offline profiles that avoid this issue, see [Best practices and limitations for the mobile offline profile](/dynamics365/field-service/mobile/best-practices-limitations-offline-profile).
+For more profile publishing and related-table troubleshooting, see [Troubleshoot mobile offline profile publishing and related-table issues](publish-mobile-offline-profile.md). For guidance on how to build offline profiles that avoid this issue, see [Best practices and limitations for the mobile offline profile](/dynamics365/field-service/mobile/best-practices-limitations-offline-profile).
 
 ## Guests can't sign in to the Field Service mobile app
 
@@ -156,7 +145,7 @@ Guest accounts are user accounts from an external Microsoft Entra ID tenant that
 
 ### Solution
 
-Frontline workers [enabled as Microsoft Entra B2B collaborator](/azure/active-directory/external-identities/what-is-b2b) (guest) can access the mobile app by [switching to the guest tenant](/power-apps/mobile/tenant-switcher).
+Frontline workers [enabled as Microsoft Entra B2B collaborator](/entra/external-id/what-is-b2b) (guest) can access the mobile app by [switching to the guest tenant](/power-apps/mobile/tenant-switcher).
 
 If a guest user needs to access the application with a personal account, use a formatted deep link to access the guest tenant.
 
@@ -180,9 +169,9 @@ When a user opens the Field Service mobile app, one or more of the following sym
 
 The environment picker in the Field Service mobile app shows only environments in which you have at least one Dynamics 365 security role assigned, and the Field Service solution is installed.
 
-If an environment doesn't appear, it's likely that you don't have a security role assigned in that environment, or that Field Service isn't installed in it.
+If an environment doesn't appear, you might not have the required access in that environment, or Field Service might not be installed in it.
 
-If you see data from the wrong environment, the app might have cached credentials or a previous environment selection.
+The Power Apps host controls environment discovery and selection. The native client provides a route to the host app list but doesn't determine which environments appear or when the host refreshes the list.
 
 ### Solution
 
@@ -199,15 +188,15 @@ If you see data from the wrong environment, the app might have cached credential
    1. Go to the environment's **Settings** > **Security** > **Users**.
    1. Find the user and check their roles.
 
-1. Ask the user to sign out of the mobile app completely and sign back in. The environment picker refreshes upon each sign-in.
+1. In the mobile app, go to **Settings** > **Apps** to open the host app list, and check for the expected Field Service app.
 
 #### App loads data from the wrong environment
 
-1. In the app, select the environment name at the top of the screen (if available) to open the environment picker.
+1. In the app, go to **Settings** > **Apps**.
 
-1. Select the correct environment.
+1. Select the Field Service app in the correct environment.
 
-1. If you can't open the environment picker, sign out of the app, sign back in, and then select the correct environment during the sign-in flow.
+1. If authentication or account state prevents you from opening the app list, sign out, sign back in with the correct account, and try again.
 
 > [!TIP]
 > If your organization has multiple environments and users frequently select the wrong one, consider setting a default environment. For more information, see [Set up the Field Service mobile app](/dynamics365/field-service/mobile/set-up-field-service-mobile).
@@ -216,3 +205,4 @@ If you see data from the wrong environment, the app might have cached credential
 
 - [Set up the mobile offline profile](/dynamics365/field-service/mobile/set-up-offline-profile)
 - [Troubleshoot WebView reset in the Field Service mobile app](webview-reset.md)
+- [Work order details or booking statuses are missing on a booking](booking-missing-work-order-details.md)

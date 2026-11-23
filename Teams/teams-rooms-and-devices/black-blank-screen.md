@@ -1,9 +1,9 @@
 ---
 title: The Teams Rooms device's displays show a black or blank screen
 description: Resolve the issue that causes one or more of the Teams Rooms device displays to show a black or blank screen, or the system doesn't respond.
-ms.reviewer: joolive
+ms.reviewer: joolive, mattslomka
 ms.topic: troubleshooting
-ms.date: 10/30/2023
+ms.date: 08/18/2026
 author: Cloud-Writer
 ms.author: meerak
 manager: dcscontentpm
@@ -18,6 +18,12 @@ ms.custom:
   - CI167993
 ---
 # Black or blank screen or no system response in Teams Rooms
+
+## Summary
+
+On a Microsoft Teams Rooms device, one or more displays might show a black or blank screen, or the touchscreen console might display content but stop responding. A display might not be detected, or the issue might involve device connectivity, the Teams Rooms app, Windows, or the console. This article explains how to check each area and identify the appropriate resolution.
+
+## Symptoms
 
 On a Microsoft Teams Rooms device, users experience one or more of the following issues:
 

@@ -21,6 +21,10 @@ description: Provides a resolution to an issue in which Symantec DLP interferes 
 
 # Symantec DLP interferes with Teams processes
 
+## Summary
+
+Symantec DLP Endpoint agents can interfere with Microsoft Teams processes and cause Teams to fail to start or close unexpectedly. To prevent these failures, exclude `Teams.exe` from the agents by following Broadcom article 160078.
+
 ## Symptoms
 
 Installing Symantec DLP creates operability issues with Microsoft Teams.
@@ -32,7 +36,3 @@ Symantec DLP Endpoint agents can interfere with Teams processes, which can then 
 ## Resolution
 
 Exclude Teams.exe from the Symantec DLP's Endpoint agents using the information provided in article ID 160078 on the [Broadcom website](https://knowledge.broadcom.com/).
-
-## More information
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

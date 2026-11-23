@@ -19,6 +19,10 @@ ms.date: 08/20/2026
 ---
 # Known issues when you use Teams certified peripherals
 
+## Summary
+
+When you use a peripheral with new Microsoft Teams, its buttons or audio status might stop syncing, calls might not connect from the device’s dial pad, or some features might be unavailable. These issues can occur when you switch between tenant accounts, join cross-cloud meetings, run Teams alongside Skype for Business or other apps, or use a device that isn’t certified for Teams. This article lists the known issues and available workarounds.
+
 | Issue  |  Description | Workaround |
 | --- | --- | --- |
 |Button controls on connected peripherals stop syncing with Microsoft Teams during a meeting.|You have accounts on multiple tenants, and all of them are connected to the Teams app. <br/><br/>However, when you switch from one account to another, the connected peripherals stop syncing with the Teams app. |Make sure that you're signed in to the account to which you want to sync the peripherals. Then restart the Teams app.|

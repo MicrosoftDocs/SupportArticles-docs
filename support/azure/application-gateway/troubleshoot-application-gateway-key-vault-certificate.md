@@ -2,37 +2,13 @@
 title: Troubleshoot Application Gateway Key Vault certificate errors
 description: Troubleshoot Application Gateway Key Vault certificate errors, from identity and firewall access to URI and PFX issues. Learn how to restore HTTPS.
 ms.service: azure-application-gateway
+manager: dcscontentpm
+author: kaushika-msft
+ms.author: kaushika
+ms.reviewer: chadmat, kaushika
 ms.topic: troubleshooting
 ms.custom: sap:End to end SSL or SSL offload
-ms.date: 6/12/2026
-ai.hint.symptom-tags:
-  - certificate-error
-  - key-vault
-  - key-vault-access-denied
-  - cert-rotation
-  - pfx-format
-  - listener-cert
-  - managed-identity
-  - ssl-certificate
-  - key-vault-firewall
-  - secret-uri-versioned
-  - certificate-expired
-  - tls-handshake-failure
-ai.hint.scope: resource-level
-ai.hint.required-permissions:
-  - Microsoft.Network/applicationGateways/read
-  - Microsoft.Network/applicationGateways/write
-  - Microsoft.KeyVault/vaults/read
-  - Microsoft.KeyVault/vaults/secrets/read
-  - Microsoft.ManagedIdentity/userAssignedIdentities/read
-  - Microsoft.Authorization/roleAssignments/read
-  - Microsoft.Authorization/roleAssignments/write
-ai.hint.context-required:
-  - SUBSCRIPTION_ID
-  - RESOURCE_GROUP
-  - RESOURCE_NAME
-  - KEY_VAULT_NAME
-  - CERT_NAME
+ms.date: 09/02/2026
 ---
 
 # Troubleshoot certificate management and Azure Key Vault integration in Azure Application Gateway
@@ -93,9 +69,9 @@ To troubleshoot Key Vault certificate problems on Application Gateway, you need 
 
 ### Step 1
 
-Check whether the Application Gateway is in a healthy provisioning state and whether the HTTPS listener certificates reference Key Vault. In case you don't know them, this check also discovers the `{KEY_VAULT_NAME}` and `{CERT_NAME}` values.
+Check whether the Application Gateway is in a healthy provisioning state and whether the HTTPS listener certificates reference Key Vault. If you don't know them, this check also discovers the `{KEY_VAULT_NAME}` and `{CERT_NAME}` values.
 
-Run the following commands in Azure CLI:
+Run the following commands in Azure CLI.
 
 ```azurecli-interactive
 # ── Collect inputs (cached if already set in this session) ──
@@ -133,7 +109,7 @@ az network application-gateway show \
 
 Check whether the Application Gateway has a user-assigned managed identity configured. Application Gateway requires a user-assigned managed identity to authenticate to Key Vault.
 
-Run the following commands in Azure CLI:
+Run the following commands in Azure CLI.
 
 ```azurecli-interactive
 # ── Collect inputs (cached if already set in this session) ──
@@ -163,7 +139,7 @@ az network application-gateway identity show \
 
 Check whether the Application Gateway's managed identity has the required permissions to read secrets from the key vault. This permission issue is the most common root cause for Key Vault integration failures.
 
-1. Determine the identity's principal ID by using Azure CLI:
+1. Determine the identity's principal ID by using Azure CLI.
 
 ```azurecli-interactive
 # ── Collect inputs (cached if already set in this session) ──
@@ -177,7 +153,7 @@ az identity show \
 
 2. Note the `principalId` value. This value is the `{IDENTITY_PRINCIPAL_ID}`.
 
-3. Use Azure CLI to check the Key Vault access model (RBAC versus access policy):
+3. Use Azure CLI to check the Key Vault access model (RBAC versus access policy).
 
 ```azurecli-interactive
 # ── Collect inputs (cached if already set in this session) ──
@@ -191,7 +167,7 @@ az keyvault show \
   --output json
 ```
 
-4. If Key Vault uses RBAC authorization (`enableRbacAuthorization: true`), run the following commands by using Azure CLI:
+4. If Key Vault uses RBAC authorization (`enableRbacAuthorization: true`), run the following commands by using Azure CLI.
 
 **Azure CLI:**
 ```azurecli-interactive
@@ -209,7 +185,7 @@ az role assignment list \
   --output table
 ```
 
-5. If Key Vault uses access policies (`enableRbacAuthorization: false` or `null`), run the following commands by using Azure CLI:
+5. If Key Vault uses access policies (`enableRbacAuthorization: false` or `null`), run the following commands by using Azure CLI.
 
 **Azure CLI:**
 ```azurecli-interactive
@@ -244,7 +220,7 @@ az keyvault show \
 
 Check whether the Key Vault network firewall is configured to allow traffic from the Application Gateway subnet. If the Key Vault has a firewall enabled, requests from Application Gateway's subnet are blocked unless explicitly allowed.
 
-1. Run the following commands in Azure CLI:
+1. Run the following commands in Azure CLI.
 
 ```azurecli-interactive
 # ── Collect inputs (cached if already set in this session) ──
@@ -258,7 +234,7 @@ az keyvault show \
   --output json
 ```
 
-2. Determine the Application Gateway subnet ID by using Azure CLI:
+2. Determine the Application Gateway subnet ID by using Azure CLI.
 
 ```azurecli-interactive
 # ── Collect inputs (cached if already set in this session) ──
@@ -294,7 +270,7 @@ az network application-gateway show \
 
 Check whether the Application Gateway SSL certificate configuration references a versionless secret URI (required for autorotation) or a versioned URI (that pins to a specific certificate version and prevents automatic renewal).
 
-Run the following commands in Azure CLI:
+Run the following commands in Azure CLI.
 
 ```azurecli-interactive
 # ── Collect inputs (cached if already set in this session) ──
@@ -325,7 +301,7 @@ az network application-gateway ssl-cert list \
 
 Check whether the certificate that's stored in Key Vault is in the correct format (PFX that uses a private key) and has a complete certificate chain. Application Gateway requires a PFX (PKCS#12) or Privacy Enhanced Mail (PEM) certificate that includes the private key and, for non-self-signed certificates, the full chain of intermediate CA certificates.
 
-1. Run the following commands in Azure CLI:
+1. Run the following commands in Azure CLI.
 
 **Azure CLI (retrieve the secret metadata):**
 ```azurecli-interactive
@@ -377,13 +353,13 @@ openssl pkcs12 -in "${CERT_FILE}.pfx" -clcerts -nokeys -passin pass:"$PFX_PASSWO
 
 ### Step 7
 
-Check whether the certificate that the HTTPS listener is actively serving matches the current certificate version that's in Key Vault. [Step 2](#step-2)–[6](#step-6) confirm that permissions, network, URI format, and certificate content are all correct. However, Application Gateway polls only a versionless secret URI roughly every four hours, and a gateway that's stuck in `provisioningState: "Failed"` state (recorded in [Step 1](#step-1)) keeps serving an old version indefinitely. This step exposes the discriminating signal: A mismatch between the served certificate and the live Key Vault certificate. This mismatch means autorotation stalled, and the gateway needs a forced refresh even though every upstream check seems correct.
+Check whether the certificate that the HTTPS listener is actively serving matches the current certificate version in Key Vault. [Step 2](#step-2)–[Step 6](#step-6) confirm that permissions, network, URI format, and certificate content are all correct. However, Application Gateway polls only a versionless secret URI roughly every four hours, and a gateway that's stuck in `provisioningState: "Failed"` state (recorded in [Step 1](#step-1)) keeps serving an old version indefinitely. This step exposes the discriminating signal: A mismatch between the served certificate and the live Key Vault certificate. This mismatch means autorotation stalled, and the gateway needs a forced refresh even though every upstream check seems correct.
 
 1. Get the certificate that the listener is currently serving.
 
 This step connects to the listener over TLS, and prints the Secure Hash Algorithm 1 (SHA-1) fingerprint and expiry of the certificate that Application Gateway is presenting right now. This check is a read-only network probe and makes no changes.
 
-Run the following commands in Azure CLI:
+Run the following commands in Azure CLI.
 
 ```bash
 # ── Collect inputs (cached if already set in this session) ──
@@ -397,11 +373,11 @@ openssl s_client -connect "$APPGW_FQDN_OR_IP:443" -servername "$LISTENER_HOSTNAM
 
 The output should resemble `notAfter=May  1 00:00:00 2027 GMT` and `SHA1 Fingerprint=A1:B2:C3:...`. Record both values.
 
-2. Get the current certificate version that's in Key Vault.
+2. Get the current certificate version in Key Vault.
 
-This step reads the thumbprint and expiry of the latest certificate version that's in Key Vault (that is, the version that `--version` defaults to). This version is the certificate that Application Gateway should be serving after a successful rotation.
+This step reads the thumbprint and expiry of the latest certificate version in Key Vault (that is, the version that `--version` defaults to). This version is the certificate that Application Gateway should be serving after a successful rotation.
 
-Run the following commands in Azure CLI:
+Run the following commands in Azure CLI.
 
 ```azurecli-interactive
 # ── Collect inputs (cached if already set in this session) ──
@@ -452,7 +428,7 @@ Either the application gateway has no user-assigned managed identity or the assi
 
 1. Check whether a user-assigned managed identity exists in the Application Gateway resource group. 
 
-Run the following commands in Azure CLI:
+Run the following commands in Azure CLI.
 
 ```azurecli-interactive
 # ── Collect inputs (cached if already set in this session) ──
@@ -473,7 +449,7 @@ If no suitable identity exists, create one in the next step. If an identity exis
 > [!IMPORTANT]
 > The following commands are all write operations that require your approval before you can run them. Review them to better understand what each command does. This step creates a new user-assigned managed identity in your resource group. Assign this identity to the Application Gateway so that it can authenticate to Key Vault. 
 
-Run the following commands in Azure CLI:
+Run the following commands in Azure CLI.
 
 ```azurecli-interactive
 # ── Collect inputs (cached if already set in this session) ──
@@ -495,7 +471,7 @@ Record the `id` (full resource ID) and `principalId` from the output.
 > [!IMPORTANT]
 > The following commands are all write operations that require your approval before you can run them. Review them to better understand what each command does. This step assigns the managed identity to your Application Gateway. The gateway uses this identity to authenticate when it retrieves certificates from Key Vault. This operation can take 2–5 minutes as the gateway configuration is updated.
 
-Run the following commands in Azure CLI:
+Run the following commands in Azure CLI.
 
 ```azurecli-interactive
 # ── Collect inputs (cached if already set in this session) ──
@@ -518,7 +494,7 @@ az network application-gateway identity assign \
 
 **Option 1: Key Vault uses RBAC authorization:**
 
-Run the following commands in Azure CLI:
+Run the following commands in Azure CLI.
 
 ```azurecli-interactive
 # ── Collect inputs (cached if already set in this session) ──
@@ -536,7 +512,7 @@ az role assignment create \
 
 **Option 2: Key Vault uses access policies:**
 
-Run the following commands in Azure CLI:
+Run the following commands in Azure CLI.
 
 ```azurecli-interactive
 # ── Collect inputs (cached if already set in this session) ──
@@ -561,13 +537,13 @@ If the issue persists after you grant permissions, go to [Resolution B](#resolut
 
 *The Key Vault network firewall has `defaultAction: "Deny"` set, and the Application Gateway subnet isn't in the Key Vault's virtual network rules. Application Gateway v2 doesn't qualify as an Azure trusted service for Key Vault bypass. Even if `bypass: "AzureServices"` is enabled, the subnet must be explicitly allowed.
 
-Common scenarios that trigger this include:
+Common scenarios that trigger this condition include:
 
 - Locking down Key Vault recently by using a firewall policy.
 - Moving Application Gateway to a new subnet.
 - Creating a new Key Vault that has `Disable public access` as a default value.
 
-1. Check the Key Vault firewall configuration and Application Gateway subnet ID by using Azure CLI:
+1. Check the Key Vault firewall configuration and Application Gateway subnet ID by using Azure CLI.
 
 ```azurecli-interactive
 # ── Collect inputs (cached if already set in this session) ──
@@ -590,7 +566,7 @@ Record this value as `{APPGW_SUBNET_ID}`.
 > [!IMPORTANT]
 > The following commands are all write operations that require your approval before you can run them. Review them to better understand what each command does. This operation enables the `Microsoft.KeyVault` service endpoint on your Application Gateway subnet. Service endpoints allow traffic from the subnet to reach Key Vault over the Azure backbone network. This operation doesn't interrupt existing traffic but modifies the subnet configuration.
 
-Run the following commands in Azure CLI:
+Run the following commands in Azure CLI.
 
 ```azurecli-interactive
 # ── Collect inputs (cached if already set in this session) ──
@@ -603,10 +579,10 @@ az network vnet subnet update \
   --subscription "$SUBSCRIPTION"
 ```
 
-3. After you enable the service endpoint, add the Application Gateway subnet to the Key Vault firewall allowlist.
+3. After you enable the service endpoint, add the Application Gateway subnet to the Key Vault firewall allow list.
 
 > [!IMPORTANT]
-> The following commands are all write operations that require your approval before you can run them. Review them to better understand what each command does. This operation adds your Application Gateway subnet to the Key Vault's network firewall allowlist. After you make this change, Application Gateway can reach Key Vault through the VNet service endpoint. Other traffic that's not on the allowlist remains blocked.
+> The following commands are all write operations that require your approval before you can run them. Review them to better understand what each command does. This operation adds your Application Gateway subnet to the Key Vault's network firewall allow list. After you make this change, Application Gateway can reach Key Vault through the VNet service endpoint. Other traffic that's not on the allow list remains blocked.
 
 Run the following commands in Azure CLI:
 
@@ -661,7 +637,7 @@ https://{KEY_VAULT_NAME}.vault.azure.net/secrets/{CERT_NAME}
 > [!IMPORTANT]
 > The following commands are all write operations that require your approval before you can run them. Review them to better understand what each command does. This updates the Application Gateway SSL certificate reference to use a versionless Key Vault secret URI. After this change, Application Gateway automatically polls Key Vault every four (4) hours and picks up newer versions of the certificate without manual intervention. This operation can take 2–5 minutes and doesn't interrupt existing connections.
 
-Run the following commands in Azure CLI:
+Run the following commands in Azure CLI.
 
 ```azurecli-interactive
 # ── Collect inputs (cached if already set in this session) ──
@@ -682,7 +658,7 @@ az network application-gateway ssl-cert update \
 
 4. Rerun [Step 5](#step-5). The `keyVaultSecretId` should now end with `/secrets/{CERT_NAME}` without a version segment.
 
-To verify that the next rotation cycle will work, check that the current Key Vault secret version matches what the gateway is serving by using Azure CLI:
+To verify that the next rotation cycle will work, check that the current Key Vault secret version matches what the gateway is serving by using Azure CLI.
 
 ```azurecli-interactive
 # ── Collect inputs (cached if already set in this session) ──
@@ -702,7 +678,7 @@ If the certificate in Key Vault was recently updated, the Application Gateway pi
 
 ## Resolution D
 
-The certificate that's stored in Key Vault is in an invalid format for Application Gateway. 
+The certificate you stored in Key Vault is in an invalid format for Application Gateway. 
 
 Common problems include:
 
@@ -710,7 +686,7 @@ Common problems include:
 - The PFX file uses a nonstandard encryption algorithm (for example, `AES-256-CBC` instead of `TripleDES-SHA1`).
 - The certificate chain is incomplete (missing intermediate CA certificates).
 - The content type isn't set to `application/x-pkcs12` or `application/x-pem-file`.
-- The PEM file has the certificate, and key in the wrong order or uses incorrect line endings.
+- The PEM file has the certificate and key in the wrong order or uses incorrect line endings.
 
 1. From [Step 6](#step-6), verify which specific format problem you identified from the following list:
 
@@ -732,7 +708,7 @@ The certificate must meet the following requirements for Application Gateway.
 
 **Option 1: Rebuild a correct PFX file from PEM components using OpenSSL**
 
-Run the following commands in Azure CLI:
+Run the following commands in Azure CLI.
 
 ```bash
 # ── Collect inputs (cached if already set in this session) ──
@@ -751,7 +727,7 @@ The `-legacy` flag ensures TripleDES-SHA1 encoding. This encoding has the best c
 
 **Option 2: Verify that the PFX file is correct before you upload**
 
-Run the following commands in Azure CLI:
+Run the following commands in Azure CLI.
 
 ```bash
 # ── Collect inputs (cached if already set in this session) ──
@@ -765,11 +741,11 @@ openssl pkcs12 -info -in "${CERT_NAME}.pfx" -passin pass:"$PFX_PASSWORD" 2>&1 | 
 3. Upload the corrected certificate to Key Vault.
 
 > [!IMPORTANT]
-> The following commands are all write operations that require your approval before you can run them. Review them to better understand what each command does. This process uploads a new version of the certificate to Key Vault. The existing versions are preserved (not deleted). If the application gateway uses a versionless secret URI, it automatically picks up this new version within four (4) hours. If it uses a versioned URI, you also have to apply [Resolution C](#resolution-c) to enable autorotation.
+> The following commands are all write operations that require your approval before you can run them. Review them to better understand what each command does. This process uploads a new version of the certificate to Key Vault. The existing versions are preserved (not deleted). If the application gateway uses a versionless secret URI, it automatically picks up this new version within four hours. If it uses a versioned URI, you also have to apply [Resolution C](#resolution-c) to enable autorotation.
 
 **Option 1: Upload as a Key Vault certificate (recommended because Key Vault manages metadata):**
 
-Run the following commands in Azure CLI:
+Run the following commands in Azure CLI.
 
 ```azurecli-interactive
 # ── Collect inputs (cached if already set in this session) ──
@@ -788,7 +764,7 @@ az keyvault certificate import \
 
 **Option 2: Upload as a Key Vault secret (alternative used when using raw PFX bytes):**
 
-Run the following commands in Azure CLI:
+Run the following commands in Azure CLI.
 
 ```azurecli-interactive
 # ── Collect inputs (cached if already set in this session) ──
@@ -820,7 +796,7 @@ Application Gateway serves an older certificate than the current key vault versi
 > [!IMPORTANT]
 > The following commands are all write operations that require your approval before you can run them. Review them to better understand what each command does. They force the Application Gateway to immediately reread the latest certificate from Key Vault by changing the configured secret URI to the newest version and then restoring the versionless URI. Existing connections aren't interrupted, but each update might take 2–5 minutes to complete.
 
-Run the following commands in Azure CLI:
+Run the following commands in Azure CLI.
 
 ```azurecli-interactive
 # ── Collect inputs (cached if already set in this session) ──
@@ -860,7 +836,7 @@ az network application-gateway ssl-cert update \
 > [!IMPORTANT]
 > The following commands are all write operations that require your approval before you can run them.
 
-Run the following commands in Azure CLI:
+Run the following commands in Azure CLI.
 
 ```azurecli-interactive
 # ── Collect inputs (cached if already set in this session) ──
@@ -913,7 +889,7 @@ If the certificate details match the latest Key Vault version, and the expiratio
 
 ---
 
-## Related articles
+## References
 
 - [TLS termination with Key Vault certificates on Application Gateway](/azure/application-gateway/key-vault-certs)
 - [Troubleshoot Key Vault errors on Application Gateway](/azure/application-gateway/key-vault-certs#troubleshooting)

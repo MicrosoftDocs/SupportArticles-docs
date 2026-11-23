@@ -1,8 +1,9 @@
 ---
-title: Troubleshoot Forms in Customer Insights - Journeys
-description: Fix forms in Dynamics 365 Customer Insights - Journeys, including embedding, styling, publishing, lookup, and submission issues.
-ms.date: 07/06/2026
-ms.reviewer: alfergus, v-shaywood
+title: Resolve Form Issues in Customer Insights - Journeys
+description: Troubleshoot forms in Dynamics 365 Customer Insights - Journeys, including embedding, publishing, lookup fields, submissions, and double opt-in emails.
+ms.date: 10/09/2026
+ms.reviewer: alfergus, v-shaywood, petrjantac, stbeliak
+ai-usage: ai-assisted
 search.audienceType: 
   - admin
   - customizer
@@ -16,9 +17,9 @@ ms.custom:
 
 ## Summary
 
-This article helps you troubleshoot forms in Dynamics 365 Customer Insights - Journeys. It applies to both Marketing forms and Event Registration forms. It covers embedded forms that don't appear on a page, broken styles or screen-reader problems after embedding, forms that fail to publish as a standalone page, a missing lead source on new leads, custom JavaScript that the form editor removes, failed form submissions that you resubmit or investigate, and missing values in lookup fields. Start with the symptom that matches your problem to find the cause and the fix.
+This article helps you troubleshoot Marketing forms and Event Registration forms in Dynamics 365 Customer Insights - Journeys. It covers embedded forms that don't appear, broken styles or screen-reader problems, standalone publishing failures, missing lead sources, removed JavaScript, failed submissions, missing lookup values, and double opt-in confirmation emails that aren't sent. Start with the symptom that matches your problem.
 
-## An embedded form isn't visible on the page
+## Embedded form isn't visible on the page
 
 Make sure your domain is allowed for external form hosting. You don't need to finish the domain authentication process to turn on external form hosting for your domain. For more information, see [Domain authentication](/dynamics365/customer-insights/journeys/domain-authentication).
 
@@ -32,15 +33,15 @@ To manage this setting, go to **Settings** > **Feature switches** > **Forms** an
 
 :::image type="content" source="media/troubleshooting-forms/form-enable-div-layout.png" alt-text="Screenshot of the Enable table-less layouts in Form editor toggle." lightbox="media/troubleshooting-forms/form-enable-div-layout.png":::
 
-## A form fails to publish as a standalone page
+## Form fails to publish as a standalone page
 
 If the publish operation fails, try to run it again after a few minutes.
 
 ## Lead source is missing for newly created leads
 
-Add the lead source as a field in the form editor, set the field as hidden, and set the correct default value to match your newly created lead's data.
+Add the lead source as a field in the form editor, hide the field, and set its default value to the appropriate lead source.
 
-## The form editor removes custom JavaScript or other code from the HTML body
+## Form editor removes custom JavaScript or other code from the HTML body
 
 Starting with Customer Insights - Journeys version 1.1.38813.80, you can add JavaScript code into the `<body>` section of the HTML. If you add JavaScript into the `<head>` section, the form editor automatically moves it to the top of the `<body>` section.
 
@@ -58,30 +59,54 @@ A form submission might fail because of issues with custom plug-ins or because o
 > [!IMPORTANT]
 > You can only resubmit failed submissions. By resubmitting, you might create a duplicate contact, such as when the submission fails because of a contact point consent creation error. Resubmitting runs the entire submission process again. To avoid duplicate records, you can change the matching strategy before you resubmit.
 
-## Values are missing in lookup fields
+## Lookup field values are missing
 
-If values are missing in lookup fields on a form, the issue is often caused by missing or insufficient field permissions. Follow these steps to check that all required permissions are set correctly.
+If values are missing in lookup fields on a form, the issue is often caused by missing or insufficient field permissions. Check the following settings:
 
-1. Confirm that the required permissions are granted for all fields used in the lookup. This step is especially important when you use custom fields or apply filters to lookup queries.
-1. Make sure any custom fields referenced by the lookup have the appropriate permissions. Missing permissions can prevent values from appearing in the lookup field.
-1. If the lookup uses filters, confirm that the filters are set up correctly and that all fields referenced in the filters have the necessary permissions.
+- Confirm that the required permissions are granted for all fields used in the lookup, including custom fields and fields referenced in filters.
+- If the lookup uses filters, confirm that the filters are set up correctly.
+
+## Double opt-in confirmation email isn't sent
+
+Double opt-in is turned on for the form's compliance profile, but people who submit the form don't receive the confirmation email. Instead, the submission is processed right away, and the contact or lead is created or updated without waiting for confirmation.
+
+First, rule out the settings that stop double opt-in from applying to a submission. Learn more in [Double opt-in in real-time journeys](/dynamics365/customer-insights/journeys/real-time-marketing-double-opt-in).
+
+- The **Double Opt-In** feature switch is off, or double opt-in isn't turned on in the **Double Opt-In** tab of the compliance profile.
+- Double opt-in is turned off in the form's settings. Forms that existed before the feature switch was turned on have double opt-in turned off by default.
+- The compliance profile sends the confirmation email only to new customers, and the email address already has contact point consent for that compliance profile. This behavior is by design.
+- The form is an event registration form or a preference center form. Double opt-in doesn't support these forms.
+
+If none of these settings apply, check that the form's email field is a recipient field in audience configuration. The confirmation email is sent only to an email address that comes from one of the email recipient fields set up for the form's audience (contacts, leads, or both). If the form collects the email address in a field that isn't a recipient field, such as a custom email field, there's no email address from a configured recipient field to confirm. The submission is then processed as if double opt-in were off, and no error is shown.
+
+To fix this issue, follow these steps:
+
+1. In the form editor, check which contact or lead field the form's email field is mapped to.
+1. Go to **Settings** > **Customer engagement** > **Audience configuration**.
+1. Select **Contact** or **Lead** to match the form's audience, and add the field from step 1 as an email recipient field. For more information, see [Select the audience source for journeys](/dynamics365/customer-insights/journeys/real-time-marketing-audience-data).
+1. Submit the form with a test email address, and check that the confirmation email arrives.
+
+Alternatively, map the form's email field to a field that's already an email recipient field.
+
+The change applies only to new submissions. Submissions that were already processed without double opt-in don't get a confirmation email.
 
 ## Investigate failed form submissions
 
 Failed form submissions typically appear as "Failed to create target entity" or "Failed to update target entity" in the logs. These errors often relate to a customization that creates or updates a contact or lead entity.
 
-:::image type="content" source="media/troubleshooting-forms/submission-pipeline.png" alt-text="Chart comparing successful and unsuccessful submission pipelines." lightbox="media/troubleshooting-forms/submission-pipeline.png":::
+:::image type="content" source="media/troubleshooting-forms/submission-pipeline.png" alt-text="Diagram comparing successful and unsuccessful form submission pipelines." lightbox="media/troubleshooting-forms/submission-pipeline.png":::
 
 To troubleshoot a failed form submission, follow these steps:
 
 1. Temporarily [turn on plug-in trace logs](/power-apps/developer/data-platform/logging-tracing#enable-trace-logging). Plug-in trace logs can negatively affect performance, so make sure to turn them off when you're done.
-1. Resubmit the form.
+1. Resubmit the failed form submission. See [Resubmit a failed form submission](#resubmit-a-failed-form-submission) for instructions and precautions.
 1. Check the logs. If there's a plug-in-related error, you see a plug-in name and a reason why the plug-in crashed. Follow up with the plug-in provider or [disable the plug-in](/power-platform/admin/plug-ins). Don't disable Microsoft plug-ins, which are any plug-ins whose names start with `Microsoft.Dynamics.Cxp.Forms.`.
 1. Check the processes connected to the contact, lead, or other entity you're trying to create through the form submission. Try to disable the process that's interfering with the contact creation.
 
-:::image type="content" source="media/troubleshooting-forms/dynamics-processes.png" alt-text="Screenshot of the list of processes connected to the entity." lightbox="media/troubleshooting-forms/dynamics-processes.png":::
+    :::image type="content" source="media/troubleshooting-forms/dynamics-processes.png" alt-text="Screenshot of the list of processes connected to the entity." lightbox="media/troubleshooting-forms/dynamics-processes.png":::
 
 ## Related content
 
 - [Customize the Customer Insights - Journeys form editor](/dynamics365/customer-insights/journeys/real-time-marketing-customize-forms)
 - [Customize form submission validation](/dynamics365/customer-insights/journeys/real-time-marketing-form-customize-submission-validation)
+- [Double opt-in in real-time journeys](/dynamics365/customer-insights/journeys/real-time-marketing-double-opt-in)

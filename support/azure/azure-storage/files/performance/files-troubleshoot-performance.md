@@ -1,11 +1,18 @@
 ---
-title: Azure Files performance troubleshooting guide
-description: Troubleshoot performance issues with Azure file shares and discover potential causes and associated workarounds for these problems.
+title: Troubleshoot Azure Files performance problems
+description: Troubleshoot Azure Files performance problems such as high latency, low throughput, and throttling. Find causes and workarounds to speed up your file shares.
 ms.service: azure-file-storage
-ms.custom: sap:Performance, linux-related-content
-ms.date: 06/03/2026
+ms.topic: troubleshooting
+manager: dcscontentpm
+author: kaushika-msft
+ms.author: kaushika
+ms.custom:
+ - sap:Performance, linux-related-content
+ - sfi-ropc-nochange
+ms.date: 11/18/2026
 ms.reviewer: kendownie, v-weizhu
 #Customer intent: As a system admin, I want to troubleshoot performance issues with Azure file shares to improve performance for applications and users.
+ai-usage: ai-assisted
 ---
 # Troubleshoot Azure Files performance problems
 
@@ -13,7 +20,7 @@ ms.reviewer: kendownie, v-weizhu
 
 [!INCLUDE [CentOS End Of Life](../../../../includes/centos-end-of-life-note.md)]
 
-This article lists common problems related to Azure file share performance, and provides potential causes and workarounds. To get the most value from this troubleshooting guide, first read [Understand Azure Files performance](/azure/storage/files/understand-performance).
+This article helps you troubleshoot Azure Files performance problems, such as high latency, low throughput, and throttling, by listing common causes and workarounds. To get the most value from this guide, first read [Understand Azure Files performance](/azure/storage/files/understand-performance).
 
 ## General performance troubleshooting
 
@@ -27,7 +34,7 @@ If your client virtual machine (VM) runs Windows 8.1 or Windows Server 2012 R2, 
 
 ### Considerations for Windows 8.1 and Windows Server 2012 R2
 
-Clients that run Windows 8.1 or Windows Server 2012 R2 might experience higher latency when accessing Azure file shares for I/O-intensive workloads. Make sure that the [KB3114025](https://support.microsoft.com/help/3114025) hotfix is installed. This hotfix improves the performance of create and close handles.
+Clients that run Windows 8.1 or Windows Server 2012 R2 might experience higher latency when accessing Azure file shares for I/O-intensive workloads. Ensure that the [KB3114025](https://support.microsoft.com/help/3114025) hotfix is installed. This hotfix improves the performance of create and close handles.
 
 To check whether the hotfix is installed, run the following script:
 
@@ -104,7 +111,7 @@ To confirm whether your share or storage account is throttled, access and use Az
 
     To learn more about each response type, see [Metric dimensions](/azure/storage/files/storage-files-monitoring-reference#metrics-dimensions).
 
-    :::image type="content" source="media/files-troubleshoot-performance/performance-metrics.png" alt-text="Screenshot that shows the Response type property filter.":::
+    :::image type="content" source="media/files-troubleshoot-performance/performance-metrics.png" alt-text="Screenshot that shows the Response type property filter." lightbox="media/files-troubleshoot-performance/performance-metrics.png":::
 
 #### Solution
 
@@ -116,7 +123,7 @@ If most of your requests are metadata-centric operations, such as `createfile`, 
 
 To check if most of your requests are metadata-centric, follow steps 1-4 as outlined in Cause 1. For step 5, instead of adding a filter for **Response type**, add a property filter for **API name**. For more information, see [Monitor utilization by metadata IOPS](/azure/storage/files/analyze-files-metrics?tabs=azure-portal#monitor-utilization-by-metadata-iops).
 
-:::image type="content" source="media/files-troubleshoot-performance/metadata-metrics.png" alt-text="Screenshot that shows the API name property filter.":::
+:::image type="content" source="media/files-troubleshoot-performance/metadata-metrics.png" alt-text="Screenshot that shows the API name property filter." lightbox="media/files-troubleshoot-performance/metadata-metrics.png":::
 
 #### Workarounds
 
@@ -147,7 +154,7 @@ If the application that you're using is single-threaded, this setup can result i
 
 ### Cause 4: Number of SMB channels exceeds four
 
-If you're using SMB MultiChannel and the number of channels you have exceeds four, this condition results in poor performance. To determine if your connection count exceeds four, use the PowerShell cmdlet `Get-SmbClientConfiguration` to view the current connection count settings.
+If you're using SMB Multichannel and the number of channels you have exceeds four, this condition results in poor performance. To determine if your connection count exceeds four, use the PowerShell cmdlet `Get-SmbClientConfiguration` to view the current connection count settings.
 
 #### Solution
 
@@ -242,8 +249,8 @@ If the Azure file share is close to reaching its capacity, an important step is 
 To get a comprehensive view of storage usage across the entire share, mount the root of the share. This action enables a thorough inspection of file and directory sizes. At the root of the file share, run the following commands to identify the largest files and directories:
 
 ```bash
-	cd /path/to/mount/point
-	du -ah --max-depth=1 | sort -rh | head -n 20
+    cd /path/to/mount/point
+    du -ah --max-depth=1 | sort -rh | head -n 20
 ```
 
 This command displays the 20 largest files and directories in descending order of size. This display provides a clear overview of storage consumption.
@@ -273,6 +280,78 @@ Lack of support for directory leases.
 - Avoid using excessive opening and closing handles on the same directory within a short period of time.
 - For Linux VMs, increase the directory entry cache timeout by specifying `actimeo=<sec>` as a mount option. By default, the timeout is 1 second, so a larger value, such as 30 seconds, might help.
 - For CentOS Linux or Red Hat Enterprise Linux (RHEL) VMs, upgrade the system to CentOS Linux 8.2 or RHEL 8.2. For other Linux distros, upgrade the kernel to 5.0 or later.
+
+### Additional considerations for Windows 11 version 24H2 or later
+
+After upgrading from Windows 11 version 23H2 to version 24H2 or later, clients might generate more SMB CREATE/CLOSE requests for the root of an Azure file share. When many clients access the same share root, the additional metadata operations can contribute to increased server latency and slower file access.
+
+#### Cause
+
+Starting with Windows 11 version 24H2, the SMB client doesn't normally treat a DiskFileId of 0 in the share-root SMB2_CREATE_QUERY_ON_DISK_ID (QFid) response context as a valid identity for caching.
+
+When the server returns this value for the share root, affected operations can require additional server requests instead of using cached share-root identity information.
+
+This behavior concerns caching of share-root identity information. It doesn't mean that all SMB caching is disabled.
+
+#### Identify whether this guidance applies
+
+Consider this workaround when the following conditions are present:
+
+- The affected SMB client runs Windows 11 version 24H2 or later.
+- An SMB client trace shows repeated CREATE/CLOSE exchanges for the same share root.
+- The server returns a share-root QFid DiskFileId of 0.
+
+Azure Files transaction counts and latency metrics can help identify metadata-heavy activity, but don't establish these conditions by
+themselves. Increased latency after an operating system upgrade alone isn't sufficient to identify this issue.
+
+#### Workaround
+
+On affected Windows clients, set the AllowZeroFileIdForShareRoot registry value to 1. This setting permits caching of share-root
+identity information when the share-root QFid DiskFileId is 0 and can reduce repeated share-root open requests.
+
+Apply the setting on the Windows SMB clients accessing the share, not on the file server.
+
+##### Update prerequisites
+
+Before configuring the registry value, install the July 2026 non-security preview update or a later cumulative update that includes its changes on the affected Windows client. If a qualifying update is already installed, proceed to the registry configuration below.
+
+##### Configure the registry value
+
+> [!WARNING]
+> Incorrectly modifying the registry can cause serious problems. Back up the registry and make sure that you know how to restore it before making changes.
+
+Record whether the following value already exists and, if it does, record its current type and data before changing it.
+
+| Setting | Value |
+| --- | --- |
+| Registry key | `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters` |
+| Value name | `AllowZeroFileIdForShareRoot` |
+| Value type | `REG_DWORD` |
+| Value data | `1` |
+
+Run the following command from an elevated Command Prompt:
+
+```cmd
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters" /v AllowZeroFileIdForShareRoot /t REG_DWORD /d 1 /f
+```
+
+Restart Windows for the change to take effect.
+
+Evaluate the change on a representative subset of affected clients before deploying it broadly. Compare application response times, share-root CREATE/CLOSE activity, and Azure Files latency metrics under comparable workload conditions.
+
+This workaround addresses the share-root caching condition described in this section. It doesn't resolve other causes of latency, such as throttling, network delays, or unrelated metadata-heavy activity.
+
+##### Revert the change
+
+If the registry value didn't exist before the change, remove only that value by running the following command from an elevated Command Prompt:
+
+```cmd
+reg delete "HKLM\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters" /v AllowZeroFileIdForShareRoot /f
+```
+
+If the value already exists, restore its previous type and data instead of deleting it.
+
+Restart Windows after restoring the previous configuration.
 
 ## Slow enumeration of files and folders
 
@@ -337,7 +416,7 @@ You might see slow performance when you try to transfer files to the Azure Files
 
 ### Cause
 
-If the number of **DirectoryOpen/DirectoryClose** calls is among the top API calls and you don't expect the client to make that many calls, the issue might be caused by the antivirus software that's installed on the Azure client VM.
+If the number of **DirectoryOpen** and **DirectoryClose** calls is among the top API calls and you don't expect the client to make that many calls, the issue might be caused by the antivirus software that's installed on the Azure client VM.
 
 ### Workaround
 
@@ -362,15 +441,15 @@ Depending on the exact compression method and unzip operation used, decompressio
 
 ### Cause
 
-High number of file change notifications on file shares can result in high latencies. This issue typically occurs with web sites hosted on file shares that have a deep nested directory structure. A common scenario is an IIS hosted web application where each directory in the default configuration sets up a file change notification. Each change ([ReadDirectoryChangesW](/windows/win32/api/winbase/nf-winbase-readdirectorychangesw)) on the share that the client registers for pushes a change notification from the file service to the client. This process takes system resources, and the issue worsens with the number of changes. This condition can cause share throttling and thus results in higher client-side latency.
+A high number of file change notifications on file shares can cause high latencies. This issue typically occurs with web sites hosted on file shares that have a deeply nested directory structure. A common scenario is an IIS hosted web application where each directory in the default configuration sets up a file change notification. Each change ([ReadDirectoryChangesW](/windows/win32/api/winbase/nf-winbase-readdirectorychangesw)) on the share that the client registers for pushes a change notification from the file service to the client. This process takes system resources, and the issue worsens with the number of changes. This condition can cause share throttling and results in higher client-side latency.
 
-To confirm, use Azure Metrics in the portal.
+To confirm, use Azure Metrics in the portal:
 
 1. In the Azure portal, go to your storage account.
 1. In the left menu, under **Monitoring**, select **Metrics**.
 1. Select **File** as the metric namespace for your storage account scope.
 1. Select **Transactions** as the metric.
-1. Add a filter for **ResponseType** and check to see if any requests have a response code of `SuccessWithThrottling` (for SMB or NFS) or `ClientThrottlingError` (for REST).
+1. Add a filter for **ResponseType** and check if any requests have a response code of `SuccessWithThrottling` (for SMB or NFS) or `ClientThrottlingError` (for REST).
 
 ### Solution
 

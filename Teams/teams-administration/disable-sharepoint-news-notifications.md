@@ -21,6 +21,10 @@ description: Provides a workaround to stop the notifications in Teams about Shar
 
 # Disable SharePoint News notifications in Teams
 
+## Summary
+
+If you receive unwanted SharePoint News notifications in Microsoft Teams, they’re delivered by Viva Connections. You can turn off specific Viva Connections notification types in Teams on desktop or the web. On mobile, you can turn off push notifications for all Teams apps, but not Viva Connections alone. Disabled notifications still appear in the Teams activity feed.
+
 ## Symptoms
 
 You see many notifications in Microsoft Teams about [News that's posted to Microsoft SharePoint sites](https://support.microsoft.com/office/what-happens-when-i-post-news-c0578139-6f2e-4474-9ba9-adf8a1a69a30). These notifications link to the Microsoft Viva Connections app in Teams.  
@@ -37,7 +41,7 @@ Because of a recent update, the Viva Connections app is now preinstalled for all
 - Someone "Likes" a News item that you posted.
 - Someone is @mentioned in a comment on a News item that you posted.  
 
-## Workaround
+## Resolution
 
 Viva Connections notifications follow the Teams notification settings, including the Quiet Hours settings.
 

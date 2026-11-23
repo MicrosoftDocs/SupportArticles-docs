@@ -22,11 +22,17 @@ ms.date: 10/30/2023
 
 [!INCLUDE [Teams Direct Routing note](../../../includes/teams-direct-routing-note.md)]
 
-You might find that Local Media Optimization (LMO) for Direct Routing doesn't work as expected. For instance, Microsoft Teams doesn't send the `X-Ms-UserLocation` and `X-Ms-MediaPath` headers, or the `X-Ms-UserLocation` header contains the wrong location, or calls fail.
+## Summary
 
-This article provides some resolutions that you can try to fix these issues.
+Local Media Optimization (LMO) for Microsoft Teams Direct Routing might fail when the `X-Ms-UserLocation` and `X-Ms-MediaPath` headers are missing, the user’s location is reported incorrectly, or incoming calls fail when Location-Based Routing is also enabled. These issues can result from gateway settings, missing trusted IP addresses, or incorrect session border controller (SBC) headers and site assignments. This article explains how to check and correct each configuration.
 
-## X-Ms-UserLocation and X-Ms-MediaPath headers are not sent
+## Symptoms
+
+You might find that LMO for Direct Routing doesn't work as expected. For example, Microsoft Teams doesn't send the `X-Ms-UserLocation` and `X-Ms-MediaPath` headers, or the `X-Ms-UserLocation` header contains the wrong location, or calls fail.
+
+## Cause
+
+### X-Ms-UserLocation and X-Ms-MediaPath headers are not sent
 
 The `X-Ms-UserLocation` and `X-Ms-MediaPath` headers are required for LMO. One of the most common reasons that these headers are not sent is that the gateway is not configured correctly for LMO.  
 
@@ -58,7 +64,7 @@ BypassMode      : Always
 
 **Note:** The values that are displayed here might be different from what you see.
 
-## Wrong location sent in X-Ms-UserLocation header
+### Wrong location sent in X-Ms-UserLocation header
 
 If the network location information in the `X-Ms-UserLocation` header is specified as **external**, but you expect to see a value of **internal**, this means that the public IP address of the Teams client doesn't match any entry in the list of trusted IP addresses.  
 
@@ -108,7 +114,7 @@ To fix this issue, identify the client's public IP address that's used by Teams,
 
    :::image type="content" source="media/issues-with-lmo/match-address.png" alt-text="Screenshot of the matched IP address.":::
 
-## Incoming calls fail or go to voicemail if both LMO and LBR are enabled
+### Incoming calls fail or go to voicemail if both LMO and LBR are enabled
 
 One of the most likely reasons that this issue occurs is that either the headers or the routing information is not configured correctly on the Session Border Controller (SBC) from which the call is received.
 
@@ -148,5 +154,3 @@ To determine whether the SBC assignment is correct, identify the user site that'
    Next, run the `Get-CsOnlinePSTNGateway` cmdlet to verify the SBC's updated configuration. The output should now show the correct value for the `GatewaySiteId` parameter.
 
     :::image type="content" source="media/issues-with-lmo/update-gatewaysiteid.png" alt-text="Screenshot of updating Gateway Site I d.":::
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

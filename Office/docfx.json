@@ -52,9 +52,9 @@
           "LICENSE-CODE",
           "ThirdPartyNotices"
         ]
-      }
+      },
     ],
-    "resource": [
+      "resource": [
       {
         "files": [
           "**/*.png",

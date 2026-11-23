@@ -5,22 +5,32 @@ author: Cloud-Writer
 ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
-ms.topic: troubleshooting
+ms.service: purview
+ms.topic: troubleshooting-general
 ms.custom: 
   - sap:Sensitivity Labels\Auto-Labeling
   - CI 12114
   - CSSTroubleshoot
+  - msecd-doc-authoring-1030
 ms.reviewer: richardstowe
 appliesto: 
   - Microsoft Purview
 search.appverid: MET150
-ms.date: 08/27/2026
+ms.date: 11/23/2026
+ai-usage: ai-assisted
+
+#customer intent: As an administrator, I want to identify auto-labeling failure reasons so that I can follow the recommended action for an affected file.
+
 ---
 # Resolve auto-labeling failures in SharePoint and OneDrive files
 
 ## Summary
 
 This article describes why auto-labeling might fail for files on SharePoint and OneDrive for work or school. It provides a list of the failures that you might see in the Microsoft Purview portal and the recommended actions to resolve them.
+
+> [!NOTE]
+
+> If **Total labeled to date** and **Labeling activity** show different counts, see [Numbers don't agree or Exchange activity is missing](troubleshoot-auto-labeling-policies.md#numbers-dont-agree-or-exchange-activity-is-missing). A reporting mismatch alone doesn't establish a labeling failure; use the failure codes in this article when an affected file has an explicit failure reason.
 
 ## About auto-labeling failures
 
@@ -58,15 +68,16 @@ You can see details about the failure reasons in the Microsoft Purview portal. T
 - Information Protection Admin
 - Information Protection Analyst
 
-Use the following steps:
+Portal layouts can vary. The following steps describe the newer policy review pages; earlier experiences might open Activity explorer instead.
 
 1. Sign in to the [Microsoft Purview portal](https://purview.microsoft.com/).
-1. Select **Information Protection** > **Auto-labeling**.
-1. Select the name of the auto-labeling policy that you want to check for failures.
-1. To see a snapshot of the total number of auto-labeling failures for the last 30 days and the top three reasons for the failures, select the **Overview** tab, and scroll to the **Labeling failures** card.
-1. To see a list of files for which auto-labeling failed, select the **Review items** button in the **Labeling failures** card or select the **Labeling failures** tab.
-1. Select a file from the list and in the flyout pane that opens, select the **Details** tab.
-1. Make a note of the failure code that is specified in the **Failure reason** section.
+1. Select **Solutions** > **Information Protection** > **Policies** > **Auto-labeling policies**.
+1. Select the policy you want to check, then select **View details** in the policy details panel.
+1. Select **Labeling failures** to see failed label applications, or **Label removal failures** for a policy that removes labels.
+1. Select a file and review **Failure reason**. If a **Details** tab is available, open it to find the reason.
+1. Make a note of the failure code.
+
+For a summary of label-application failures in the newer layout, open **Insights** in the policy details panel. The **Labeling failures** card shows the total failures for the last 30 days and the top three failure reasons. Select **Review items** on the card to open the failed-file list.
 
 ## Resolve auto-labeling failures
 
@@ -82,7 +93,7 @@ Select the failure code from the following table and follow the instructions pro
 | EncryptedFileNotSupported | The file is password-protected or uses external or non-Microsoft encryption that prevents the service from changing the label. This failure doesn't apply to Microsoft Purview encryption that's applied by the sensitivity label selected in an auto-remove policy. | Remove the external encryption or password protection from the file, and then rerun the policy. |
 | FileNotSupported | The file type isn't supported for sensitivity labeling. | No action required. This file type doesn't support sensitivity labels. |
 | FileExtensionNotSupported | The file extension isn't supported for labeling. | No action required. This file extension doesn't support sensitivity labels. |
-| UnsupportedFileType | PDF Labeling isn't enabled. | Enable sensitivity labels for files in SharePoint and OneDrive. |
+| UnsupportedFileType | PDF Labeling isn't enabled. | Enable [PDF support](/purview/sensitivity-labels-sharepoint-onedrive-files#adding-support-for-pdf) for sensitivity labels in SharePoint and OneDrive. |
 | CannotOverrideCurrentLabel | The file already has a sensitivity label with equal or higher priority than the one the policy is trying to apply or replace. | No action required. The existing label takes precedence by design. For a policy configured to remove a label, see [Label removal and encrypted files](#label-removal-and-encrypted-files). |
 | ZeroByteFile | The file is empty (0 bytes). Label metadata can't be written to an empty file. | No action required. |
 | GetTagsFailure | SharePoint couldn't read the existing label metadata from the file. | No action required. This operation is retried automatically. |

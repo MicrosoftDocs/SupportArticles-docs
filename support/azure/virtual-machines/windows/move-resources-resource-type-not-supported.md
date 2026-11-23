@@ -1,15 +1,16 @@
 ---
 title: Azure resource move fails - resource type not supported
-description: Troubleshoot the MoveNotSupported error when an Azure resource type can't be moved across resource groups or subscriptions. Learn how to fix your move request now.
+description: Troubleshoot why an Azure resource move fails with the MoveNotSupported error across resource groups or subscriptions. Learn how to fix the move request.
 services: virtual-machines
-author: scotro
 manager: dcscontentpm
+author: kaushika-msft
+ms.author: kaushika
+ms.reviewer: scotro, jdickson
 ms.service: azure-virtual-machines
 ms.topic: troubleshooting
-ms.date: 03/18/2026
-ms.author: scotro
-ms.reviewer: jarrettr
+ms.date: 09/16/2026
 ms.custom: sap:Cannot create a VM
+ai-usage: ai-assisted
 ---
 # Azure resource move fails because the resource type isn't supported for move
 
@@ -17,11 +18,11 @@ ms.custom: sap:Cannot create a VM
 
 ## Summary
 
-When you move Microsoft Azure resources to a different resource group or subscription, the operation might fail because one or more resource types in the move request don't support move operations. This article helps you troubleshoot this error, identify which resource types can't be moved, and adjust your move operation accordingly.
+When you move Azure resources to a different resource group or subscription, the operation might fail because one or more resource types in the move request don't support move operations. This article helps you troubleshoot this error, identify which resource types can't be moved, and adjust your move operation accordingly.
 
 ## Symptoms
 
-When you try to move Azure resources to a different resource group or subscription, the operation fails and returns an error message that resembles the following message:
+When you try to move Azure resources to a different resource group or subscription, the operation fails and returns an error message that resembles the following message.
 
 ```output
 {
@@ -47,13 +48,52 @@ The error message lists each resource type that can't be moved. Note the resourc
 
 ### Step 2: Check the move support reference
 
-Use the official move support table to verify that the resource type supports move operations: [Move operation support for resources](/azure/azure-resource-manager/management/move-support-resources).
+Use the official [move support table](/azure/azure-resource-manager/management/move-support-resources) to verify that the resource type supports move operations.
 
 For virtual machine (VM)-specific restrictions, see [Scenarios not supported for virtual machine moves](/azure/azure-resource-manager/management/move-limitations/virtual-machines-move-limitations?tabs=azure-cli#scenarios-not-supported).
 
 ### Step 3: Remove the unsupported resources and retry
 
 Remove the unsupported resource types from your move selection. Retry the move by using only supported resources. Re-create the unsupported resources in the destination resource group or subscription after the move finishes.
+
+Use the Azure portal, Azure PowerShell, or Azure CLI to move supported resources.
+
+# [Azure portal](#tab/portal)
+
+Follow these steps:
+
+1. In the [Azure portal](https://portal.azure.com), go to the source resource group.
+1. Select only the resources that support move operations.
+1. Select **Move** > **Move to another resource group** or **Move to another subscription**.
+
+# [Azure PowerShell](#tab/powershell)
+
+List the resources in the resource group, filter out unsupported types, and move the remaining resources.
+
+Run the following command.
+
+```azurepowershell
+$resources = Get-AzResource -ResourceGroupName "<resource-group-name>"
+$supported = $resources | Where-Object { $_.ResourceType -ne "<unsupported-type>" }
+Move-AzResource -DestinationResourceGroupName "<destination-resource-group>" `
+  -ResourceId $supported.ResourceId
+```
+
+# [Azure CLI](#tab/cli)
+
+List the resources in the resource group, filter out unsupported types, and move the remaining resources.
+
+Run the following command.
+
+```azurecli
+ids=$(az resource list --resource-group <resource-group-name> \
+  --query "[?type!='<unsupported-type>'].id" -o tsv)
+az resource move \
+  --destination-group <destination-resource-group> \
+  --ids $ids
+```
+
+---
 
 ## References
 

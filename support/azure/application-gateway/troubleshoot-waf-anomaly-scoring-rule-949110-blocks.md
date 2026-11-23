@@ -1,27 +1,31 @@
 ---
-title: Troubleshoot anomaly scoring and Rule 949110 blocks in Azure Application Gateway WAF
-description: Learn why rule ID 949110 blocks traffic in WAF and identify contributing rules to resolve blocks effectively.
-ms.date: 04/01/2026
-ms.author: lalbadarneh
-ms.editor: v-jsitser
-ms.reviewer: giverm
+title: Troubleshoot anomaly scoring and rule ID 949110 blocks in Azure Application Gateway WAF
+description: Learn why rule ID 949110 blocks traffic through WAF anomaly scoring in Azure Application Gateway. Identify the contributing rules and resolve blocks today.
+ms.date: 09/24/2026
+ms.topic: troubleshooting
+manager: dcscontentpm
+author: kaushika-msft
+ms.author: kaushika
+ms.reviewer: giverm, lalbadarneh, kaushika
 ms.service: azure-web-application-firewall
 ms.custom: sap:Application Gateway
-
 #customer intent: As an Azure Application Gateway administrator, I want to understand why traffic is blocked by rule ID 949110 so that I can identify and tune the underlying WAF rules correctly.
+ai-usage: ai-assisted
 ---
 
 # Troubleshoot anomaly scoring behavior and rule ID 949110 in Azure Application Gateway WAF
 
 ## Summary
 
-By default, Azure Application Gateway Web Application Firewall (WAF) uses anomaly scoring if you enable the OWASP Core Rule Set (CRS). If you use anomaly scoring, the WAF doesn't block requests immediately when a single rule matches, even if you configure the WAF policy in Prevention mode.
+When Azure Application Gateway Web Application Firewall (WAF) blocks traffic with rule ID 949110, the block is the result of anomaly scoring, which WAF uses by default when you enable the OWASP Core Rule Set (CRS). If you use anomaly scoring, the WAF doesn't block requests immediately when a single rule matches, even if you configure the WAF policy in Prevention mode.
 
 This article explains anomaly scoring behavior, and clarifies scenarios in which rule ID 949110 blocks traffic.
 
 For general WAF troubleshooting guidance, see [Troubleshoot WAF for Azure Application Gateway](/azure/web-application-firewall/ag/web-application-firewall-troubleshoot).
 
 ## Prerequisites
+
+Ensure you meet the following prerequisites:
 
 - An Azure Application Gateway that has WAF enabled
 - OWASP CRS configured
@@ -33,17 +37,17 @@ Each OWASP rule ID has an associated *severity* that contributes to an overall *
 
 When the cumulative anomaly score reaches 5 or greater, one of the following actions occurs:
 
-- **Prevention mode**: The request is blocked
-- **Detection mode**: The request is logged but not blocked
+- **Prevention mode** - The request is blocked.
+- **Detection mode** - The request is logged but not blocked.
 
-For example:
+The following examples illustrate how different rule severities contribute to the anomaly score:
 
 - A single **Critical** rule ID match increases the anomaly score to **5**. This score is sufficient to block the request in Prevention mode.
 - A **Warning** rule ID match increases the anomaly score by **3**. This score isn't enough on its own to block the request.
 
 If a rule that contributes to anomaly scoring is triggered, the rule is identified in the logs as **Action = Matched**.  
 
-If the total anomaly score reaches the blocking threshold, an another rule is triggered and marked as **Action = Blocked** or **Detected**, depending on the WAF mode.
+If the total anomaly score reaches the blocking threshold, another rule is triggered and marked as **Action = Blocked** or **Detected**, depending on the WAF mode.
 
 ## Mandatory rule triggered (rule ID: 949110)
 
@@ -62,7 +66,7 @@ To determine which rules contributed to the issue that triggered rule ID 949110,
 1. Remove the **Blocked** filter, and search for logs that contain the same **transaction ID** value.
 1. Identify the rule IDs that are listed in the **Matched** action.
 
-These matched rules are the rules that contributed to the anomaly score that caused the block.
+These matched rules contributed to the anomaly score that caused the block.
 
 ## Resolution
 
@@ -72,9 +76,9 @@ After you identify the contributing rules, take one of the following actions:
 - Create a custom WAF rule.
 - Configure a WAF exclusion to allow expected traffic.
 
-Don't try to disable rule ID 949110 directly because it's a mandatory enforcement rule and it can't be modified.
+Don't try to disable rule ID 949110 directly because it's a mandatory enforcement rule and you can't modify it.
 
-## Related content
+## References
 
 - [Troubleshoot WAF for Azure Application Gateway](/azure/web-application-firewall/ag/web-application-firewall-troubleshoot)
 - [CRS and DRS rule groups and rules](/azure/web-application-firewall/ag/application-gateway-crs-rulegroups-rules)

@@ -1,9 +1,9 @@
 ---
 title: The Camera status of a Teams Rooms device is Unhealthy
 description: Resolve the issue that causes the Room Camera, Default Room Camera, or Content Camera signals of a Teams Rooms device to appear as Unhealthy.
-ms.reviewer: lamos
+ms.reviewer: lamos, mattslomka
 ms.topic: troubleshooting
-ms.date: 10/30/2023
+ms.date: 08/18/2026
 author: Cloud-Writer
 ms.author: meerak
 manager: dcscontentpm
@@ -19,6 +19,10 @@ ms.custom:
 ---
 
 # The Camera status is Unhealthy
+
+## Summary
+
+In the Microsoft Teams Rooms Pro Management portal, the Room Camera, Default Room Camera, or Content Camera signal might appear as **Unhealthy**. During meetings, the camera control or room video might be unavailable. This article explains how to check the camera’s power, connections, configuration, firmware, and USB cables or extenders. If you replaced the default camera, select it again in the Teams Rooms app settings.
 
 ## Symptoms
 

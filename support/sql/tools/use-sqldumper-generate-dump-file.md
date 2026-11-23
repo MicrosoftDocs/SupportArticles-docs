@@ -1,33 +1,36 @@
 ---
-title: Use Sqldumper.exe to generate dump files
-description: This article introduces the Sqldumper.exe tool included with SQL Server. This tool generates different kinds of dump files.
+title: Use Sqldumper.exe to Generate Dump Files in SQL Server
+description: Learn how to use Sqldumper.exe in SQL Server to generate mini, filtered, and full memory dump files, with steps, permissions, and cluster guidance.
 ms.reviewer: sureshka, jopilov
-ms.date: 02/12/2025
+ms.date: 11/17/2026
 ms.topic: how-to
 ms.custom: sap:SQL Server Management, Query and Data Tools
+ai-usage: ai-assisted
 ---
 
-# Use the Sqldumper.exe tool to generate a dump file in SQL Server
+# Use Sqldumper.exe to generate a dump file in SQL Server
 
-This article provides general guidelines for the Sqldumper.exe tool that is included with SQL Server. This tool is used to generate different kinds of dump files.
-
-_Original product version:_ &nbsp; SQL Server 2019, SQL Server 2017, SQL Server 2016, SQL Server 2014, SQL Server 2012, SQL Server 2008, SQL Server 2005  
+_Original product version:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 917825
 
 ## Summary
 
-The Sqldumper.exe tool is included with Microsoft SQL Server. It generates memory dump files of SQL Server and related processes for debugging. This article describes how to use Sqldumper.exe to generate a dump file for Watson error reporting or debugging tasks.
+The Sqldumper.exe tool in Microsoft SQL Server enables you to generate memory dump files of the SQL Server process and other Windows processes. SQL Server supports mini, filtered, and full dumps. Use them for Watson error reporting or debugging. This article explains how to run Sqldumper.exe manually, where the dump files are stored, which permissions you need, and how dump generation affects SQL Server availability. Use this article to collect dump files to help you troubleshoot problems such as exceptions, asserts, or non-yielding schedulers.
 
-The article also describes two other methods to generate dump files:
-
-- The attached [PowerShell script](#how-to-use-a-powershell-script-to-generate-a-dump-file-with-sqldumper) automates SQLDumper.exe command line options.
-- The [DBCC STACKDUMP](#how-to-use-dbcc-stackdump) Transact-SQL (T-SQL) command can be used to generate a dump file in SQL Server.
+The article also describes two other methods to generate dump files: a [PowerShell script](#how-to-use-a-powershell-script-to-generate-a-dump-file-with-sqldumper) that automates SQLDumper.exe command line options, and the [DBCC STACKDUMP](#how-to-use-dbcc-stackdump) Transact-SQL (T-SQL) command that generates a dump file in SQL Server.
 
 ## How to run Sqldumper.exe manually
 
-Run the Sqldumper.exe tool under the context of the folder where SQL Server originally installed the tool.
+Before you run Sqldumper.exe:
 
-By default, the installation path of Sqldumper.exe is _\<SQLServerInstall Drive\>:\Program Files\Microsoft SQL Server\90\Shared\SQLDumper.exe_. Notice that \<SQLServerInstall Drive\> is a placeholder for the drive on which you installed SQL Server.
+- Check the [required permissions](#permissions-required-to-run-sqldumperexe).
+- Obtain the target application's [process identifier](#how-to-obtain-a-microsoft-windows-application-process-identifier).
+- [Choose a dump type](#dump-types) and confirm that the output drive has [sufficient space](#plan-disk-space-for-dump-files).
+- Review the [availability impact](#impact-of-dump-generation). Dump generation temporarily freezes the target process and might trigger failover on clustered systems.
+
+Run the Sqldumper.exe tool from the folder where SQL Server originally installed the tool.
+
+By default, SQL Server installs Sqldumper.exe in the _\<SQLServerInstall Drive\>:\Program Files\Microsoft SQL Server\\\<number\>\Shared_ folder. In this path, \<SQLServerInstall Drive\> is a placeholder for the drive where you installed SQL Server, and \<number\> depends on the SQL Server version, as shown in step 1. For more information about default installation paths, see [File locations for default and named instances of SQL Server](/sql/sql-server/install/file-locations-for-default-and-named-instances-of-sql-server).
 
 To generate a dump file by using the Sqldumper.exe tool, follow these steps:
 
@@ -35,6 +38,8 @@ To generate a dump file by using the Sqldumper.exe tool, follow these steps:
 
     In this folder path, \<number\> is a placeholder for one of the following versions:
 
+      - 170 for SQL Server 2025
+      - 160 for SQL Server 2022
       - 150 for SQL Server 2019
       - 140 for SQL Server 2017
       - 130 for SQL Server 2016
@@ -44,7 +49,7 @@ To generate a dump file by using the Sqldumper.exe tool, follow these steps:
       - 90 for SQL Server 2005
 
 1. Make sure that the _Dbghelp.dll_ file is in this folder.
-1. Select **Start** > **Run**, type _cmd_, and then select **OK**.
+1. Select **Start** > **Run**, type `cmd`, and then select **OK**.
 1. At the command prompt, type the following command, and then press **Enter**:
 
     ```cmd
@@ -82,24 +87,23 @@ To generate a dump file by using the Sqldumper.exe tool, follow these steps:
     > [!NOTE]
     > \<ProcessID\> is a placeholder for the process identifier of the Windows application for which you want to generate a dump file.
 
-If Sqldumper.exe runs successfully, the tool generates a dump file in the folder in which the tool is installed.
+If Sqldumper.exe runs successfully, the tool generates a dump file in the folder where the tool is installed.
 
 The dump file that Sqldumper.exe generates has a file name pattern that resembles _SQLDmpr\<xxxx\>.mdmp_.
 
-In this pattern, \<xxxx\> is an increasing number that is determined based on other files that have a similar file name in the same folder. If there are files in the folder that match the specified pattern, consider comparing their creation dates and times to find the file you want.
+In this pattern, \<xxxx\> is an increasing number that's based on other files that have a similar file name in the same folder. If the folder contains files that match the specified pattern, consider comparing their creation dates and times to find the file you want.
 
-#### How to obtain a Microsoft Windows application process identifier
+### How to obtain a Microsoft Windows application process identifier
 
-To generate a dump file by using the Sqldumper.exe tool, you must have the process identifier of the Windows application that you want to generate a dump file for. Here's how to obtain the process identifier:
+To create a dump file by using the Sqldumper.exe tool, you need the process identifier (PID) of the Windows application. Here's how to get the process identifier by using Task Manager:
 
 1. Press **Ctrl+Alt+Delete**, and select **Task Manager**.
-1. In the **Windows Task Manager** dialog box, select the **Processes** tab.
-1. On the **View** menu, select **Select Columns**.
-1. In the **Select Columns** dialog box, select the **PID (Process Identifier)** checkbox, and then select **OK**.
-1. Note the process identifier of the Windows application that you want to generate a dump file for. For the SQL Server application, note the process identifier of the _Sqlservr.exe_ process.
+1. In **Task Manager**, select the **Details** tab. In older versions of Windows, select the **Processes** tab instead.
+1. If the **PID** column isn't displayed, right-click a column header, and then select **Select columns**. Select the **PID (Process Identifier)** checkbox, and then select **OK**. In older versions of Windows, select **Select Columns** on the **View** menu, select the **PID (Process Identifier)** checkbox, and then select **OK**.
+1. Note the process identifier of the Windows application. For the SQL Server application, note the process identifier of the _Sqlservr.exe_ process.
 1. Close **Task Manager**.
 
-Alternatively, use the SQL Server error log file to obtain the process identifier of the SQL Server application that's running on your computer. Part of the SQL Server error log file resembles the following example:
+Alternatively, use the SQL Server error log file to get the process identifier of the SQL Server application that's running on your computer. Part of the SQL Server error log file resembles the following example:
 
 ```output
 2021-09-15 11:50:32.690 Server       Microsoft SQL Server 2019 (RTM-CU12) (KB5004524) - 15.0.4153.1 (X64)
@@ -118,23 +122,23 @@ The number that appears after `Server process ID` is the process identifier for 
 
 SQLDumper.exe primarily generates memory dump files for the SQL Server process when a memory dump is needed to resolve specific issues, such as exceptions, asserts, or non-yielding schedulers. In such cases, SQL Server invokes the SQLDumper.exe to generate a memory dump file of its process. By default, the memory dump file is stored in the SQL instance _MSSQL\LOG\\_ directory.
 
-### How to change the default path
+### How to change the default dump file directory
 
-If, for example, the dump file size is too large, you can modify the path by following these steps:
+If the dump file size is too large, you can change the directory by following these steps:
 
 1. Open **SQL Server Configuration Manager**.
-1. Under **SQL Server Services**, locate the SQL Server instance that's under investigation.
-1. Right-click that entry, select **Properties**, and then go to the **Advanced** tab.
-1. Change that Dump Directory to the desired path, and then select **OK**.
+1. Under **SQL Server Services**, locate the SQL Server instance that you want to investigate.
+1. Right-click the entry, select **Properties**, and then select the **Advanced** tab.
+1. Change the **Dump Directory** to the desired path, and then select **OK**.
 1. Restart SQL Server (when possible) for the new setting to take effect.
 
-When the Sqldumper.exe tool is used manually to generate a dump file for any Windows application, the dump file might be as large as the memory that the Windows application is currently using. Make sure that sufficient disk space is available on the drive to which Sqldumper.exe is writing the dump file.
+When you use the Sqldumper.exe tool manually to generate a dump file for any Windows application, the dump file can be as large as the memory that the Windows application is currently using. Ensure that there's sufficient disk space on the drive where Sqldumper.exe writes the dump file.
 
-### Specify a custom output folder in command
+### Specify a custom output folder when you run Sqldumper.exe
 
 You can specify the directory where you want the Sqldumper.exe tool to write the dump file. The directory must already exist before you run Sqldumper.exe. Otherwise, Sqldumper.exe fails. Don't use a UNC (Universal Naming Convention) path as a location for the dump file. The following steps provide an example of how to specify the location of the mini-dump file:
 
-1. Select **Start** > **Run**, type _cmd_, and then select **OK**.
+1. Select **Start** > **Run**, enter `cmd`, and then select **OK**.
 1. At the command prompt, type the following command, and then press **Enter**:
 
     ```cmd
@@ -150,53 +154,53 @@ You can specify the directory where you want the Sqldumper.exe tool to write the
     > [!NOTE]
     > \<MdumpPath\> is a placeholder for the directory where you want the Sqldumper.exe tool to write the dump file. By default, the file is written to the current folder.
 
-If you specify a full dump file or a filtered dump file to be generated, Sqldumper.exe might take several minutes to generate the dump file. The time that's taken depends on the following variables:
+If you specify a full dump file or a filtered dump file to be generated, Sqldumper.exe might take several minutes to generate the dump file. The time it takes depends on the following variables:
 
 - The amount of memory that _Sqlservr.exe_ is currently using.
 - The write speed of the drive used by the tool to store the dump file.
 
-During this time, the Sqldumper.exe tool doesn't process commands. You will notice that the server stops responding. Additionally, a cluster failover might occur.
+During this time, the Sqldumper.exe tool doesn't process commands. You notice that the server stops responding. Also, a cluster failover might occur.
 
-## Permission requirements
+## Permissions required to run Sqldumper.exe
 
-To run Sqldumper.exe, you must sign in to Windows by using one of the following methods:
+To run Sqldumper.exe, sign in to Windows by using one of the following methods:
 
 - Use an account that's a member of the administrator's group on the computer.
 - Use the same user account under which the SQL Server service is running.
 
-For the Sqldumper.exe tool to work successfully through Remote Desktop or through Terminal Services, you must start Remote Desktop or Terminal Services in the console mode. For example, to start Remote Desktop in the console mode, select **Start** > **Run**, type _mstsc /console_, and then select **OK**. If the target server runs Windows 2000, the **/console** option is silently ignored. You can connect to the server through Remote Desktop, but you won't be using the console session.
+For the Sqldumper.exe tool to work successfully through Remote Desktop (formerly Terminal Services), start Remote Desktop in the console mode. For example, to start Remote Desktop in the console mode, select **Start** > **Run**, type _mstsc /admin_ (which connects to the administrative session), and then select **OK**. In Remote Desktop Connection 6.0 and earlier versions, use _mstsc /console_ instead. If the target server runs Windows 2000, the **/console** option is silently ignored. You can connect to the server through Remote Desktop, but you don't use the console session. For more information about the options, see [mstsc](/windows-server/administration/windows-commands/mstsc).
 
-If you find that no dump file has been generated in the current folder after running Sqldumper.exe, check the command line output generated by the tool to identify the potential cause of the failure. This information is also logged in the _Sqldumper_errorlog.log_ file in current directory. The following are two possible error messages and their causes:
+## Troubleshoot Sqldumper.exe errors
+
+If no dump file is generated in the current folder after running Sqldumper.exe, check the command line output generated by the tool to identify the potential cause of the failure. This information is also logged in the _Sqldumper_errorlog.log_ file in the current directory. The following table lists two possible error messages and their causes:
 
 | Message | Cause |
 |--|--|
 | "OpenProcess failed 0x57 - The parameter is incorrect" | An invalid Process ID was passed to the Sqldumper.exe utility. |
 | "Invalid value for thread id - \<invalid parameter\> Parameter error" | An invalid parameter was passed to the Sqldumper.exe utility. |
 
-If an error message that resembles one of the following is generated, you can safely ignore this message:
+If an error message that resembles one of the following messages is generated, you can safely ignore it:
 
 - "Unknown callback type during minidump 6"
 - "Unknown callback type during minidump 7"
 
 ## Impact of dump generation
 
-When a dump file of a user-mode process is requested (as discussed in this article, as opposed to Operating System Kernel Dumps, which are outside our scope), the target Process (here SQLServer.exe) is frozen for the duration it takes to serialize the dump content to its file target.
+When you request a dump file of a user-mode process (as discussed in this article, as opposed to Operating System Kernel Dumps, which are outside our scope), the target process (here SQLServer.exe) is frozen for the duration it takes to serialize the dump content to its file target.
 
-Frozen means that the process won't be able to run any user request or any internal operation, including any Resource Polling mechanism such as the implementation of Windows Clustering's IsAlive and Looks Alive (see the [Memory dumps on cluster failovers section](#generate-a-memory-dump-on-cluster-failovers) for details about how to handle that situation). Any time-out that relies on wall clock time might also be breached because of the freeze.
+Frozen means that the process can't run any user request or any internal operation, including any Resource Polling mechanism such as the implementation of Windows Clustering's IsAlive and Looks Alive (see the [Memory dumps on cluster failovers section](#generate-a-memory-dump-on-cluster-failovers) for details about how to handle that situation). The freeze might also breach any timeout that relies on wall clock time.
 
-Based on the previous statement, the duration of the freeze is the critical factor here, driven by the following:
+The duration of the freeze is the critical factor, driven by the following factors:
 
 - The **type of dump** selected.
 - The **size of SQL Server process in memory**, which in the case of a single active instance running default parameters is often close to the **total physical RAM of the server**.
 - The performance of the disk used as a target for the dump.
 
-Furthermore, the **size of the dump file** on disk should be planned for, especially if multiple dumps are a possibility and if large, non-default dump types are selected. Make sure you review the [Dump types](#dump-types) to know what to expect. By default, some dump methods create the dump in SQL Server Instance's _\Log_ folder, which, in default simple configuration would also be system disk and data+log disk for SQL Server. Bringing that disk to saturation has severe impact on SQL Server and/or system availability.
-
 ## Manage the impact on clustered systems
 
-The process is suspended temporarily during the dump generation. This might affect the SQL Server service availability and trigger resources failover in Always On contexts (both Failover cluster instance and Availability group). The dump generation of different processes impacts resources differently. Read the [Impact of dump generation](#impact-of-dump-generation) and [Dump types](#dump-types) sections carefully.
+The process is temporarily suspended during dump generation. This suspension might affect SQL Server service availability and trigger resource failover in Always On contexts (both [Failover cluster instance](/sql/sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server) and [Availability group](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server)). The dump generation of different processes impacts resources differently. Read the [Impact of dump generation](#impact-of-dump-generation) and [Dump types](#dump-types) sections carefully.
 
-When you capture a SQL Server dump on a failover clustered instance or an availability group (AG) instance of SQL Server, the clustered SQL Server or AG might fail over to another node if the dump takes too long to complete. This might be especially problematic on systems that use large amounts of RAM or if you're generating a filtered or a full memory dump. To prevent failover, use the following settings before capturing the dump file. The change can be reverted after a dump file is taken:
+When you capture a SQL Server dump on a failover clustered instance or an availability group (AG) instance of SQL Server, the clustered SQL Server or AG might fail over to another node if the dump takes too long to complete. This behavior might be especially problematic on systems that use large amounts of RAM or if you're generating a filtered or a full memory dump. To prevent failover, use the following settings before capturing the dump file. You can revert the change after taking the dump file:
 
 - For failover clustered instance (FCI):
   - Right-click SQL Server resource in **Cluster Administrator**, select **If resource fails, do not restart** on the **Policies** tab.
@@ -209,40 +213,42 @@ When you capture a SQL Server dump on a failover clustered instance or an availa
 
 ## Product improvements to reduce the impact on SQL Server
 
-Four major improvements are added to recent versions of SQL Server to reduce the size of the dump file and/or time for generating the memory dump:
+Recent versions of SQL Server include four major improvements that reduce the size of the dump file and the time it takes to generate the memory dump:
 
 - [Bitmap filtering mechanism](#bitmap-filtering-mechanism)
 - [Elimination of repeated dumps on the same issue](#elimination-of-repeated-dumps-on-the-same-issue)
 - [Shortened output in the error log](#shortened-output-in-the-error-log)
 - [Parallel compression of memory dumps](#parallel-compression-of-memory-dumps)
 
-#### Bitmap filtering mechanism
+### Bitmap filtering mechanism
 
-SQL Server allocates a bitmap that keeps track of memory pages to be excluded from a filtered dump. Sqldumper.exe reads the bitmap and filters out pages without the need to read any other memory manager metadata. You see the following messages in the SQL Server error log when the bitmap is enabled or disabled respectively:
+SQL Server allocates a bitmap that keeps track of memory pages to exclude from a filtered dump. Sqldumper.exe reads the bitmap and filters out pages without needing to read any other memory manager metadata. You see the following messages in the SQL Server error log when the bitmap is enabled or disabled respectively:
 
 `Page exclusion bitmap is enabled.` and `Page exclusion bitmap is disabled.`
 
 - SQL Server 2016
 
-    Starting with SQL Server 2016 SP2 CU13 the bitmap filtering is enabled by default.
+    Starting with SQL Server 2016 SP2 CU13, the bitmap filtering is enabled by default.
 
 - SQL Server 2017
 
-  - This isn't available in RTM through CU15.
+  - This feature isn't available in RTM through CU15.
   - In SQL Server 2017 CU16, you can enable the bitmap filtering via T8089 and disable it by turning off T8089.
-  - Starting with SQL Server 2017 CU20 the bitmap filtering is enabled by default. Trace flag T8089 will no longer apply and will be ignored if turned on. The bitmap filtering can be disabled via T8095.
+  - Starting with SQL Server 2017 CU20, the bitmap filtering is enabled by default. Trace flag T8089 no longer applies and is ignored if turned on. You can disable the bitmap filtering via T8095.
 
 - SQL Server 2019
 
-    This is enabled by default in SQL Server 2019 RTM. It can be disabled via T8095.
+    This feature is enabled by default in SQL Server 2019 RTM. You can disable it via T8095.
 
-#### Elimination of repeated dumps on the same issue
+### Elimination of repeated dumps on the same issue
 
-Repeated memory dumps on the same problem are eliminated. Using a stack signature, the SQL engine keeps track if an exception has already occurred and won't produce a new memory dump if there's one already. This applies to access violations, stack overflow, asserts, and index corruption exceptions. This significantly reduces the amount of disk space used by memory dumps and doesn't freeze the process temporarily to generate a dump. This was added in SQL Server 2019.
+SQL Server eliminates repeated memory dumps on the same problem. By using a stack signature, the SQL engine keeps track if an exception already occurred and won't produce a new memory dump if there's one already. This behavior applies to access violations, stack overflow, asserts, and index corruption exceptions. This feature significantly reduces the amount of disk space used by memory dumps and doesn't freeze the process temporarily to generate a dump. SQL Server 2019 introduced this feature.
 
-#### Shortened output in the error log
+In SQL Server 2022 CU12 and later versions, you can turn on trace flag 2616 so that Sqldumper.exe generates a single dump per unique stack signature per hour. This feature helps prevent dump flooding when the same issue repeats frequently. When you enable trace flag 2616, the dump file name format changes. For more information, see [DBCC TRACEON trace flags](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#trace-flags).
 
-The content generated in the SQL Server error log from a single memory dump can not only be overwhelming, but it can also slow down the process of generating a memory dump due to the time required for serializing all this information into a text format in the error log. In SQL Server 2019, the content stored in the Error log upon dump generation has been greatly reduced and it may look like this:
+### Shortened output in the error log
+
+The content generated in the SQL Server error log from a single memory dump can be overwhelming. It can also slow down the process of generating a memory dump because of the time required to serialize all this information into a text format in the error log. In SQL Server 2019, the content stored in the error log upon dump generation is greatly reduced and might look like this:
 
 ```output
 DateTimespidS pid    **Dump thread - spid = 0, EC = 0x0000015C7169BF40
@@ -254,13 +260,13 @@ DateTimespidS pid    External dump process return code 0x20000001.
 External dump process returned no errors.
 ```
 
-Previously SQL Server would print information for each session or thread when a manual dump was triggered by the user for example.
+Previously, SQL Server printed information for each session or thread when a user triggered a manual dump.
 
-#### Parallel compression of memory dumps
+### Parallel compression of memory dumps
 
-To generate dumps faster and make them smaller in size, a compressed memory dump feature was introduced in [SQL Server 2022 CU8](../releases/sqlserver-2022/cumulativeupdate8.md#2591508) and [SQL Server 2019 CU23](../releases/sqlserver-2019/cumulativeupdate23.md#2639915). When activated, Sqldumper.exe creates multiple threads to read a process's memory simultaneously, compresses it, and then saves it to the dump file. This multi-thread, parallel compression reduces file size and speeds up the dumping process when used with full and filtered dumps.
+To generate dumps faster and make them smaller, [SQL Server 2022 CU8](https://support.microsoft.com/help/5029666#2591508) and [SQL Server 2019 CU23](https://support.microsoft.com/help/5030333#2639915) introduced a compressed memory dump feature. When activated, Sqldumper.exe creates multiple threads to read a process's memory simultaneously, compresses it, and then saves it to the dump file. This multithreaded, parallel compression reduces file size and speeds up the dumping process when used with full and filtered dumps.
 
-You can turn on trace flag 2610 to enable compressed memory dump:
+Turn on trace flag 2610 to enable compressed memory dump:
 
 ```sql
 DBCC TRACEON (2610,-1)
@@ -270,7 +276,7 @@ GO
 DBCC TRACEOFF (2610,-1)
 ```
 
-Alternatively, you can add `-T2610` as a startup parameter to your SQL Server instance so it always creates compressed memory dumps.
+Alternatively, add `-T2610` as a startup parameter to your SQL Server instance so it always creates compressed memory dumps.
 
 If you manually run Sqldumper.exe, you can use the `-zdmp` parameter to capture a compressed memory dump. For example:
 
@@ -286,31 +292,33 @@ Sqldumper.exe <ProcessID> 0 0x8100 0 d:\temp -zdmp -cpu:8
 
 ## Factors that prevent or delay creation of memory dumps
 
-The following factors are known to cause delays or prevent the creation of memory dumps.
+The following factors can cause delays or prevent the creation of memory dumps.
 
-- The IO path where memory dumps are written performs poorly. In such cases, to investigate and resolve disk I/O performance is the next logical step.
-- An anti-virus or other monitoring software is interfering with SQLDumper.exe. In some cases, third party software detour [ReadProcessMemory](/windows/win32/api/memoryapi/nf-memoryapi-readprocessmemory) function. This can dramatically increase the dump duration. To resolve most of these issues, disable the interfering software or add SQLDumper.exe to an exclusion list.
+- The IO path where memory dumps are written performs poorly. In such cases, investigate and resolve disk I/O performance.
+- An antivirus or other monitoring software is interfering with SQLDumper.exe. In some cases, third-party software detours the [ReadProcessMemory](/windows/win32/api/memoryapi/nf-memoryapi-readprocessmemory) function. This behavior can dramatically increase the dump duration. To resolve most of these issues, disable the interfering software or add SQLDumper.exe to an exclusion list.
 
 ## Dump types
 
-The following methods can be used to generate three different types of dumps: [mini dumps](#mini-dumps-with-referenced-memory), [full dumps](#full-dumps), and [filtered dumps](#filtered-dumps).
+You can use the following methods to generate three different types of dumps: [mini dumps](#mini-dumps-with-referenced-memory), [full dumps](#full-dumps), and [filtered dumps](#filtered-dumps). Choose the dump type based on the size of the SQL Server process and how long the process can be frozen.
 
-#### Mini dumps with referenced memory
+### Mini dumps with referenced memory
 
-This type of memory dump is a snapshot of all active threads of the process ("thread stacks"), along with a limited extract of the memory referenced by the thread stacks and some other key process or thread data. They're typically a few megabytes in size, and are fast to generate (from less than a second to a couple of seconds). Even larger server systems (with hundreds of CPU indirectly driving massive number of threads in SQL Server process) will rarely exceed 20-30 MB: the size of a mini dump doesn't grow with the size of SQL Server process. This dump type is the default type used by SQL Server when generating memory dumps automatically on exceptions, scheduler issues, latch issues, database corruption, and asserts.
+This type of memory dump is a snapshot of all active threads of the process ("thread stacks"), along with a limited extract of the memory referenced by the thread stacks and some other key process or thread data. They're typically a few megabytes in size, and are fast to generate (from less than a second to a couple of seconds). Even larger server systems (with hundreds of CPU indirectly driving massive number of threads in SQL Server process) rarely exceed 20-30 MB: the size of a mini dump doesn't grow with the size of SQL Server process. This dump type is the default type used by SQL Server when generating memory dumps automatically on exceptions, scheduler issues, latch issues, database corruption, and asserts.
 
 > [!NOTE]
-> SQL Server, as part of its built-in instrumentation, will generate automated "diagnostic mini dumps" in some specific situations. This operation is therefore considered safe enough that SQL Server can trigger it automatically when needed.
+> SQL Server, as part of its built-in instrumentation, generates automated "diagnostic mini dumps" in some specific situations. This operation is therefore considered safe enough that SQL Server can trigger it automatically when needed.
 
-#### Full dumps
+### Full dumps
 
-A Full memory dump is a complete copy of the active target process space. That would therefore include all thread state, all process allocated memory, and all loaded modules. Full dumps will therefore have a size, which is roughly the same of SQL Server process, which in turn may be **almost as large as total system RAM**. On large servers dedicated to a single SQL Server instance that might mean a file, which is several hundreds of gigabytes or more. Needlessly to say, such a file will take a long time to generate and will therefore induce prolonged freeze. Disk performance for the file target of the dump will significantly influence the freezing time. This type of dump is rarely used for SQL Server nowadays, as described in the following explanation.
+A full memory dump is a complete copy of the active target process space. It includes all thread state, all process allocated memory, and all loaded modules. Full dumps have a size that's roughly the same as the SQL Server process, which in turn might be **almost as large as total system RAM**. On large servers dedicated to a single SQL Server instance, this size might mean a file that's several hundred gigabytes or more. Such a file takes a long time to generate and induces prolonged freeze. Disk performance for the file target of the dump significantly influences the freezing time. This type of dump is rarely used for SQL Server nowadays, as described in the following explanation.
 
-#### Filtered dumps
+### Filtered dumps
 
-As the RAM size of typical servers running SQL Server steadily increases, full dumps become more unwieldy. Filtered dumps are therefore implemented. A filtered dump is a subset of a full dump, where large areas of SQL Server memory are excluded on the fly and not written to disk. Typically the excluded memory brings no added value to troubleshooting. Examples are data/index pages and some internal caches like Hekaton data pages and Log Pool memory. This filtered dump results in a smaller file than a full dump does, but the dump still retains almost all its usefulness. **Filtered dumps have replaced full dumps as the preferred option in a vast majority of situations where mini dumps are not sufficient**. The decrease in size can vary compared to a full dump, but it's still a rather large file, which is often 30-60 percent of SQL Server process size. Therefore, it's best to plan for a possible size as large as a full dump as a worst option, which leaves a good safety margin. A filtered dump might not be necessarily faster to generate than a full dump in every case: it's a matter of whether the gains related to the number of avoided IO exceed the time required to implement the filter logic (disk speed and CPU/RAM speed will influence that).
+As the RAM size of typical servers running SQL Server steadily increases, full dumps become more unwieldy. Filtered dumps exclude large areas of SQL Server memory on the fly and don't write them to disk. Typically, the excluded memory brings no added value to troubleshooting. Examples are data and index pages, and some internal caches like Hekaton data pages and Log Pool memory.
 
-You can use the following query to get a rough estimate of the filtered dump size. Though the expectation is that most data or index pages are excluded from the dump, the ones that are exclusively latched and being modified won't be omitted.
+This filtered dump results in a smaller file than a full dump, but the dump still retains almost all its usefulness. **Filtered dumps have replaced full dumps as the preferred option in a vast majority of situations where mini dumps aren't sufficient**. The decrease in size can vary compared to a full dump, but it's still a rather large file, which is often 30-60 percent of SQL Server process size. Plan for a possible size as large as a full dump as a worst option, which leaves a good safety margin. A filtered dump might not be necessarily faster to generate than a full dump in every case. It's a matter of whether the gains related to the number of avoided IO exceed the time required to implement the filter logic. Disk speed and CPU/RAM speed influence that.
+
+You can use the following query to get a rough estimate of the filtered dump size. Although most data or index pages are excluded from the dump, the ones that are exclusively latched and being modified aren't omitted.
 
 ```sql
 SELECT SUM(pages_kb)
@@ -318,23 +326,29 @@ FROM sys.dm_os_memory_clerks
 WHERE type != 'MEMORYCLERK_SQLBUFFERPOOL'
 ```
 
-Since you can use Sqldumper.exe to generate a dump file on demand for any Microsoft Windows application, you might consider using the filtered dump option. However, a filtered dump file is only applicable and meaningful in the context of SQL Server. You can still generate a mini-dump, a full dump file, or non-SQL Server applications successfully.
+Since you can use Sqldumper.exe to generate a dump file on demand for any Microsoft Windows application, consider using the filtered dump option. However, a filtered dump file is only applicable and meaningful in the context of SQL Server. You can still generate a mini dump, a full dump file, or non-SQL Server applications successfully.
 
-The SQL Server process calls the Sqldumper.exe tool internally to generate a dump file when the process experiences any exceptions. SQL Server passes parameters to Sqldumper.exe. You can use trace flags to change the parameters that SQL Server passes to the tool by default when an exception or assertion occurs. These trace flags are in the range from 2540 to 2559. You can use one of these trace flags to change the default dump type SQLDumper.exe generate (the default is a mini-dump with referenced memory). For example:
+### Change the default dump type by using trace flags
+
+The SQL Server process calls the Sqldumper.exe tool internally to generate a dump file when the process experiences any exceptions. SQL Server passes parameters to Sqldumper.exe. You can use trace flags to change the parameters that SQL Server passes to the tool by default when an exception or assertion occurs. These trace flags are in the range from 2540 to 2559. You can use one of these trace flags to change the default dump type SQLDumper.exe generates (the default is a mini-dump with referenced memory). For more information, see [DBCC TRACEON trace flags](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#trace-flags). For example:
 
 - Trace Flag 2551: Produces a filtered memory dump.
 - Trace Flag 2544: Produces a full memory dump.
-- Trace Flag 8026: SQL Server will clear a dump trigger after generating the dump once.
+- Trace Flag 8026: SQL Server clears a dump trigger after generating the dump once.
 
-If two or more trace flags are active, the option indicating the largest memory dump is honored. For example, if trace flags 2551 and 2544 are used, SQL Server creates a full memory dump.
+If two or more trace flags are active, the option indicating the largest memory dump takes effect. For example, if trace flags 2551 and 2544 are used, SQL Server creates a full memory dump.
+
+### Plan disk space for dump files
+
+Plan for the **size of the dump file** on disk, especially if multiple dumps are possible and if you select large, non-default dump types. Review the [Dump types](#dump-types) to know what to expect. By default, some dump methods create the dump in SQL Server Instance's _\Log_ folder, which in default simple configuration is also the system disk and data+log disk for SQL Server. Bringing that disk to saturation has severe impact on SQL Server and system availability.
 
 ## Generate a memory dump on cluster failovers
 
-In cluster failover scenarios, the SQL Server resource DLL can obtain a dump file before the failover occurs to assist with troubleshooting. When the SQL Server resource DLL determines that a SQL Server resource has failed, the SQL Server resource DLL uses the Sqldumper.exe utility to obtain a dump file of the SQL Server process. To make sure that the Sqldumper.exe tool successfully generates the dump file, you must set the following three properties as prerequisites:
+In cluster failover scenarios, the SQL Server resource DLL can obtain a dump file before the failover occurs to assist with troubleshooting. When the SQL Server resource DLL determines that a SQL Server resource has failed, the SQL Server resource DLL uses the Sqldumper.exe utility to obtain a dump file of the SQL Server process. To ensure that the Sqldumper.exe tool successfully generates the dump file, you must set the following three properties as prerequisites:
 
 - `SqlDumperDumpTimeOut`
 
-    A user-specified time-out. The resource DLL waits for the dump file to be completed before the resource DLL stops the SQL Server service.
+    A user-specified timeout. The resource DLL waits for the dump file to be completed before the resource DLL stops the SQL Server service.
 
 - `SqlDumperDumpPath`
 
@@ -344,11 +358,11 @@ In cluster failover scenarios, the SQL Server resource DLL can obtain a dump fil
 
     Flags that Sqldumper.exe uses.
 
-If any one of the properties isn't set, Sqldumper.exe can't generate the dump file. A warning message is logged both in the event log and in the cluster log whenever the resource is brought online.
+If you don't set any one of these properties, Sqldumper.exe can't generate the dump file. A warning message is logged in both the event log and the cluster log whenever the resource is brought online.
 
-#### Cluster configuration for SQLDumper on SQL Server 2012 and later versions
+### Cluster configuration for SQLDumper on SQL Server 2012 and later versions
 
-You can use the `ALTER SERVER CONFIGURATION` (T-SQL) command to modify these properties. For example:
+Use the `ALTER SERVER CONFIGURATION` (T-SQL) command to change these properties. For example:
 
 ```sql
 ALTER SERVER CONFIGURATION SET FAILOVER CLUSTER PROPERTY SqlDumperDumpTimeOut = 0;
@@ -356,7 +370,7 @@ ALTER SERVER CONFIGURATION SET FAILOVER CLUSTER PROPERTY SqlDumperDumpPath = 'C:
 ALTER SERVER CONFIGURATION SET FAILOVER CLUSTER PROPERTY SqlDumperDumpFlags = 296;
 ```
 
-Alternatively, you can use PowerShell scripts. For example, for a named instance SQL2017AG:
+You can also use PowerShell scripts. For example, for a named instance SQL2017AG:
 
 ```powershell
 Get-ClusterResource -Name "SQL Server (SQL2017AG)" | Set-ClusterParameter -Name "SqlDumperDumpPath" -Value "C:\temp"
@@ -364,13 +378,13 @@ Get-ClusterResource -Name "SQL Server (SQL2017AG)" | Set-ClusterParameter -Name 
 Get-ClusterResource -Name "SQL Server (SQL2017AG)" | Set-ClusterParameter -Name "SqlDumperDumpTimeOut" -Value 0
 ```
 
-To check if the settings are applied, you can run the following PowerShell command:
+To verify the settings, run the following PowerShell command:
 
 ```powershell
 Get-ClusterResource -Name "SQL Server (SQL2017AG)" | Get-ClusterParameter
 ```
 
-#### Cluster configuration for SQLDumper on SQL Server 2008/2008 R2 or Windows 2012 and earlier versions
+### Cluster configuration for SQLDumper on SQL Server 2008/2008 R2 or Windows 2012 and earlier versions
 
 To set the Sqldumper.exe utility properties for cluster failover by using the [cluster resource](/previous-versions/windows/it-pro/windows-server-2003/cc785087(v=ws.10)) command, follow these steps:
 
@@ -426,7 +440,7 @@ To set the Sqldumper.exe utility properties for cluster failover by using the [c
      ```
 
      > [!NOTE]
-     > \<DirectoryPath\> is a placeholder for the directory in which the dump file will be generated, and it should be specified within quotation marks (" ").
+     > `<DirectoryPath>` is a placeholder for the directory where the dump file will be generated. Specify it within quotation marks (" ").
 
    - The `SqlDumperDumpTimeOut` property
 
@@ -435,22 +449,22 @@ To set the Sqldumper.exe utility properties for cluster failover by using the [c
      ```
 
      > [!NOTE]
-     > \<Timeout\> is a placeholder for the time-out in milliseconds (ms).
+     > `<Timeout>` is a placeholder for the timeout in milliseconds (ms).
 
-The time that the tool takes to generate a dump file of a SQL Server process depends on the computer configuration. For a computer with a large amount of memory, the time could be significant. To estimate the time required for the process, use the Sqldumper.exe tool to manually generate a dump file. The valid values for the `SqlDumperDumpTimeOut` property are from **10,000 ms** to **MAXDWORD.MAXDWORD** represents the highest value in the range of the DWORD data type (4294967295).
+The time that the tool takes to generate a dump file of a SQL Server process depends on the computer configuration. For a computer with a large amount of memory, the time could be significant. To estimate the time required for the process, use the Sqldumper.exe tool to manually generate a dump file. The valid values for the `SqlDumperDumpTimeOut` property are from **10,000 ms** to **MAXDWORD**. `MAXDWORD` represents the highest value in the range of the DWORD data type (4294967295).
 
-To verify that the settings are enabled, you can run the following command:
+To verify that the settings are enabled, run the following command:
 
 ```cmd
 cluster resource "SQL Server" /priv
 ```
 
-#### Remove Sqldumper.exe properties for cluster failover
+### Remove Sqldumper.exe properties for cluster failover
 
 To remove the Sqldumper.exe tool properties for cluster failover, follow these steps:
 
 1. Select **Start** > **Run**, type _cmd_, and then select **OK**.
-1. For a specific property, type the corresponding command at the command prompt, and then press **Enter**:
+1. For a specific property, enter the corresponding command at the command prompt, and then press **Enter**:
 
    - The `SqlDumperDumpFlags` property
 
@@ -496,7 +510,7 @@ To remove the Sqldumper.exe tool properties for cluster failover, follow these s
 
 ## How to use DBCC STACKDUMP
 
-The `DBCC STACKDUMP` command can help you create a memory dump in the LOG directory of your SQL Server instance installation. The command will by default create a minidump with all threads, which has limited size and is adequate to reflect the state of SQL Server process. Run the following command in a SQL Server client:
+The `DBCC STACKDUMP` command helps you create a memory dump in the LOG directory of your SQL Server instance installation. By default, the command creates a minidump with all threads. This minidump has a limited size and adequately reflects the state of the SQL Server process. Run the following command in a SQL Server client:
 
 ```sql
 DBCC STACKDUMP
@@ -504,7 +518,7 @@ DBCC STACKDUMP
 
 For extended functionality of `DBCC STACKDUMP` in SQL Server 2019, see [Extended DBCC STACKDUMP functionality introduced in SQL Server 2019](#extended-dbcc-stackdump-functionality-introduced-in-sql-server-2019).
 
-To enable this method to create a filtered dump, turn on trace flags 2551 by using the following command:
+To enable this method to create a filtered dump, turn on trace flag 2551 by using the following command:
 
 ```sql
 DBCC TRACEON(2551, -1)
@@ -514,19 +528,19 @@ DBCC STACKDUMP
 
 To create a full dump, use the trace flag 2544.
 
-After you get the dump file, you should disable the trace flag by using the command `DBCC TRACEOFF (<TraceNumber>, -1);` to avoid inadvertently upgrading all further SQL Server self-diagnostic minidumps to larger dumps. In the command, \<TraceNumber\> is the trace flag you have previously enabled like 2551 or 2544. For example:
+After you get the dump file, disable the trace flag by using the command `DBCC TRACEOFF (<TraceNumber>, -1);` to avoid inadvertently upgrading all further SQL Server self-diagnostic minidumps to larger dumps. In the command, \<TraceNumber\> is the trace flag you previously enabled, such as 2551 or 2544. For example:
 
 ```sql
 DBCC TRACEOFF(2551, -1)
 ```
 
-In case you're unsure of which trace flag remains active, run the following command:
+If you're unsure which trace flag remains active, run the following command:
 
 ```sql
 DBCC TRACESTATUS(-1)
 ```
 
-An empty result set indicates that no trace flag is active. Conversely, if 2551 is still active, you would see:
+An empty result set indicates that no trace flag is active. If 2551 is still active, you see:
 
 | TraceFlag | Status | Global | Session |
 | --- | --- | --- | --- |
@@ -535,15 +549,15 @@ An empty result set indicates that no trace flag is active. Conversely, if 2551 
 > [!NOTE]
 > The `traceflag` enabled by `DBCC TRACEON` are reset (removed) after a service restart.
 
-#### Extended DBCC STACKDUMP functionality introduced in SQL Server 2019
+### Extended DBCC STACKDUMP functionality introduced in SQL Server 2019
 
-Starting with SQL Server 2019 CU2, the `DBCC STACKDUMP` command was extended to support generating dumps of different types: mini, filtered, and full dumps. This command eliminates the need for using trace flags. It also allows you to limit the text output in the other text file that gets generated with the memory dump. Doing so might provide visible performance gain in the time it takes SQLDumper.exe to generate a memory dump.
+Starting with SQL Server 2019 CU2, the `DBCC STACKDUMP` command supports generating mini, filtered, and full dumps. This command removes the need for trace flags. You can also use it to limit the text output in the text file that accompanies the memory dump. Limiting the text output might improve the performance of SQLDumper.exe when it generates a memory dump.
 
 ```syntaxsql
 DBCC STACKDUMP WITH MINI_DUMP | FILTERED_DUMP | FULL_DUMP [, TEXT_DUMP = LIMITED | DETAILED]
 ```
 
-The `TEXT_DUMP = LIMITED` is the default option. If you would like to receive detailed output in the *SQLDump000X.txt* file, you can use `TEXT_DUMP = DETAILED`.
+The default option is `TEXT_DUMP = LIMITED`. To get detailed output in the *SQLDump000X.txt* file, use `TEXT_DUMP = DETAILED`.
 
 To generate a filtered dump with limited output in the *.txt* file, run the following command:
 
@@ -916,18 +930,24 @@ DBCC STACKDUMP WITH FILTERED_DUMP , TEXT_DUMP = LIMITED
     ```
 
 > [!NOTE]
-> If you have never run PowerShell scripts on your system, you might receive the following error message:
+> If you never ran PowerShell scripts on your system, you might receive the following error message:
 >
 > "File ...SQLDumpHelper.ps1 cannot be loaded because running scripts is disabled on this system."
 
-To enable the ability to run the commands, follow these steps:
+To enable running the commands, follow these steps:
 
 1. Start Windows PowerShell console by using the **Run as Administrator** option. Only members of the administrators group on the computer can change the execution policy.
-1. Enable running unsigned scripts by the following command:
+1. Enable running unsigned scripts by running the following command:
 
     ```powershell
     Set-ExecutionPolicy RemoteSigned
     ```
 
     > [!NOTE]
-    > This will enable you to run unsigned scripts that you create on your local computer and signed scripts from the internet.
+    > This command enables running unsigned scripts that you create on your local computer and signed scripts from the internet.
+
+## Related content
+
+- [Windows Server Failover Clustering with SQL Server](/sql/sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server)
+- [Troubleshoot entire SQL Server or database application that appears to be slow](/troubleshoot/sql/database-engine/performance/troubleshoot-entire-sqlserver-slow)
+- [Non-yielding scheduler error in large memory server if the lock pages in memory option is disabled](/troubleshoot/sql/database-engine/performance/non-yielding-error-lock-pages-disable)

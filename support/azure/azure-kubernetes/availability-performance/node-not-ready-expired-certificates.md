@@ -1,26 +1,33 @@
 ---
 title: Troubleshoot Node Not Ready state when certificates have expired
-description: "Learn how to fix expired certificates causing Node Not Ready failures in AKS. Follow steps to rotate certificates and restore your cluster nodes."
-ms.date: 04/10/2025
-ms.reviewer: rissing, chiragpa, momajed, v-leedennis, addobres, v-weizhu
+description: Learn how to fix expired certificates causing Node Not Ready failures in AKS. Follow steps to rotate certificates and restore your cluster nodes.
+ms.date: 10/26/2026
+ms.topic: troubleshooting
+manager: dcscontentpm
+author: kaushika-msft
+ms.author: kaushika
+ms.reviewer: rissing, chiragpa, momajed, v-leedennis, addobres, v-weizhu, kaushika
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to fix expired certificates so that they don't cause Node Not Ready failures within an Azure Kubernetes Service (AKS) cluster.
 ms.custom: sap:Node/node pool availability and performance
+ai-usage: ai-assisted
 ---
-# Troubleshoot Node Not Ready failures caused by expired certificates in AKS
+# Troubleshoot Node Not Ready failures caused by expired certificates in Azure Kubernetes Service
 
 ## Summary
 
-This article helps you troubleshoot Node Not Ready failures in an Azure Kubernetes Service (AKS) cluster caused by expired certificates. Learn how to identify expired certificates and rotate them to restore node availability.
+This article helps you troubleshoot **Node Not Ready** failures in an Azure Kubernetes Service (AKS) cluster caused by expired certificates. Learn how to identify expired certificates and rotate them to restore node availability.
 
 ## Prerequisites
+
+To troubleshoot and fix expired certificates in an AKS cluster, you need the following prerequisites:
 
 - [Azure CLI](/cli/azure/install-azure-cli)
 - The [OpenSSL](https://www.openssl.org/source/) command-line tool for certificate display and signing
 
 ## Symptoms
 
-You discover that an AKS cluster node is in the Node Not Ready state.
+You discover that an AKS cluster node is in the **Node Not Ready** state.
 
 ## Cause
 
@@ -30,7 +37,7 @@ One or more certificates are expired.
 
 Check the expiration dates of certificates by invoking the [openssl-x509](https://www.openssl.org/docs/man3.0/man1/openssl-x509.html) command, as follows:
 
-- For virtual machine (VM) scale set nodes, use the [az vmss run-command invoke](/cli/azure/vmss/run-command#az-vmss-run-command-invoke) command:
+- For virtual machine (VM) scale set nodes, use the [az vmss run-command invoke](/cli/azure/vmss/run-command#az-vmss-run-command-invoke) command.
 
   ```azurecli
   az vmss run-command invoke \
@@ -43,7 +50,7 @@ Check the expiration dates of certificates by invoking the [openssl-x509](https:
       --scripts "openssl x509 -in /etc/kubernetes/certs/apiserver.crt -noout -enddate"
   ```
 
-- For VM availability set nodes, use the [az vm run-command invoke](/cli/azure/vm/run-command#az-vm-run-command-invoke) command:
+- For VM availability set nodes, use the [az vm run-command invoke](/cli/azure/vm/run-command#az-vm-run-command-invoke) command.
 
   ```azurecli
   az vm run-command invoke \
@@ -55,7 +62,7 @@ Check the expiration dates of certificates by invoking the [openssl-x509](https:
       --scripts "openssl x509 -in /etc/kubernetes/certs/apiserver.crt -noout -enddate"
   ```
 
-You might receive certain error codes after you invoke these commands. For information about error codes 50, 51, and 52, see the following links, as necessary:
+You might receive certain error codes after you invoke these commands. For information about error codes 50, 51, and 52, see the following articles:
 
 - [Troubleshoot the OutboundConnFailVMExtensionError error code (50)](../create-upgrade-delete/error-code-outboundconnfailvmextensionerror.md)
 - [Troubleshoot the K8SAPIServerConnFailVMExtensionError error code (51)](../create-upgrade-delete/error-code-k8sapiserverconnfailvmextensionerror.md)
@@ -84,6 +91,6 @@ If you can accommodate cluster downtime, you can [manually rotate the certificat
 >
 > Only a full upgrade (that is, an upgrade for both the control plane and the node pool) helps renew the expired certificates.
 
-## More information
+## References
 
 - For general troubleshooting steps, see [Basic troubleshooting of Node Not Ready failures](node-not-ready-basic-troubleshooting.md).

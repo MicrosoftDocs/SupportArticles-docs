@@ -2,14 +2,15 @@
 title: Move operation times out after four hours
 description: Troubleshoot the ResourceMoveTimedOut error when an Azure resource move operation exceeds four hours. Follow the steps to verify, recover, and retry.
 services: virtual-machines
-author: scotro
 manager: dcscontentpm
+author: kaushika-msft
+ms.author: kaushika
 ms.service: azure-virtual-machines
 ms.topic: troubleshooting
-ms.date: 03/18/2026
-ms.author: scotro
-ms.reviewer: jarrettr
+ms.date: 09/03/2026
+ms.reviewer: scotro, jdickson
 ms.custom: sap:Cannot create a VM
+ai-usage: ai-assisted
 ---
 
 # Move operation times out after four hours
@@ -18,11 +19,11 @@ ms.custom: sap:Cannot create a VM
 
 ## Summary
 
-The operation to move Microsoft Azure resources to another resource group or subscription can fail if it exceeds the four-hour time limit that's enforced by Azure Resource Manager. This article explains the symptoms, causes, and resolution steps for the `ResourceMoveTimedOut` error.
+The operation to move Microsoft Azure resources to another resource group or subscription can fail if it exceeds the four-hour time limit that Azure Resource Manager (ARM) enforces. This article explains the symptoms, causes, and resolution steps for the `ResourceMoveTimedOut` error.
 
 ## Symptoms
 
-When you try to move Azure resources to another resource group or subscription, the operation fails after approximately four hours. Additionally, the operation returns an error message that resembles the following message:
+When you try to move Azure resources to another resource group or subscription, the operation fails after approximately four hours. Also, the operation returns an error message that resembles the following message.
 
 ```json
 {
@@ -33,7 +34,7 @@ When you try to move Azure resources to another resource group or subscription, 
 
 ## Cause
 
-Azure Resource Manager enforces a maximum duration of four hours for any move operation. During a move, both the source and destination resource groups are locked. The lock blocks all write and delete operations until the move finishes or times out.
+ARM enforces a maximum duration of four hours for any move operation. During a move, both the source and destination resource groups are locked. The lock blocks all write and delete operations until the move finishes or times out.
 
 When the four-hour limit is reached, Resource Manager rolls back the provisioning state of both resource groups, and releases all locks. The move is marked as failed.
 
@@ -44,9 +45,9 @@ Most move operations finish in less than 30 minutes. A timeout typically indicat
 
 ## Resolution
 
-### Step 1: Check whether the move actually finished
+### Step 1: Check whether the move operation finished
 
-Even after a timeout error, the underlying resources might move successfully. Resource Manager can report a timeout while the operation continues in the background.
+Even after a timeout error, the underlying resources might move successfully. ARM can report a timeout while the operation continues in the background.
 
 Verify resource locations in the [Azure portal](https://portal.azure.com):
 
@@ -54,28 +55,42 @@ Verify resource locations in the [Azure portal](https://portal.azure.com):
 1. Verify that the resources appear there.
 1. Check the source resource group to determine whether the resources are still present.
 
-If resources appear in the destination, the move succeeded despite the timeout message. No further action is needed.
+If resources appear in the destination, the move operation succeeded despite the timeout message. No further action is needed.
 
 ### Step 2: Check for resources missing from either group
 
-If resources don't appear in either the source or the destination, or if the move status remains in a failed state after the timeout, check both resource groups carefully by using the Azure portal or the following Azure CLI commands:
+If resources don't appear in either the source or the destination, or if the move status remains in a failed state after the timeout, check both resource groups carefully.
+
+Use Azure CLI or Azure PowerShell to list all resources in both the source and destination resource groups. Compare the lists to determine whether any resources are missing.
+
+# [Azure CLI](#tab/cli)
+
+Run the following command.
 
 ```azurecli
-az resource list --resource-group <source-rg> --output table
-az resource list --resource-group <destination-rg> --output table
+az resource list --resource-group "<source-rg>" --output table
+az resource list --resource-group "<destination-rg>" --output table
 ```
+
+# [Azure PowerShell](#tab/powershell)
+
+Run the following command.
+
+```azurepowershell
+Get-AzResource -ResourceGroupName "<source-rg>" | Format-Table
+Get-AzResource -ResourceGroupName "<destination-rg>" | Format-Table
+```
+
+# [Azure portal](#tab/portal)
+
+Comparing resources across source and destination resource groups programmatically isn't available in the Azure portal. To list and compare both groups, use the Azure PowerShell or Azure CLI tab.
+
+---
 
 If resources are missing from both groups, contact [Azure Support](https://azure.microsoft.com/support/create-ticket/).
 
-You can also check both resource groups by using Azure PowerShell:
-
-```powershell
-Get-AzResource -ResourceGroupName <source-rg> | Format-Table
-Get-AzResource -ResourceGroupName <destination-rg> | Format-Table
-```
-
 > [!NOTE]
-> For additional information about long-running move operations, see [Move Azure resources to a new resource group or subscription](/azure/azure-resource-manager/management/move-resource-group-and-subscription).
+> For more information about long-running move operations, see [Move Azure resources to a new resource group or subscription](/azure/azure-resource-manager/management/move-resource-group-and-subscription).
 
 ### Step 3: Retry the move with a smaller batch
 
@@ -85,9 +100,9 @@ The Azure portal allows a maximum of 800 resources per move request. However, fo
 
 ## Prevent future timeouts
 
-- **Move during low-activity periods:** If any dependent services (like storage accounts or databases) are processing large amounts of data during the move, linked notification steps take longer.
-- **Avoid moving shared resources.** Virtual networks and other resources that are shared by many VMs increase the notification chain that must complete within the four-hour window.
-- **Use Azure Resource Mover for cross-region moves.** For cross-region scenarios, use [Azure Resource Mover](/azure/resource-mover/overview) instead of the standard move API because it handles the complexity by using more granular progress tracking.
+- **Move during low-activity periods** - If any dependent services (like storage accounts or databases) process large amounts of data during the move, linked notification steps take longer.
+- **Avoid moving shared resources** - Virtual networks and other resources that many VMs share increase the notification chain that must complete within the four-hour window.
+- **Use Azure Resource Mover for cross-region moves** - For cross-region scenarios, use [Azure Resource Mover](/azure/resource-mover/overview) instead of the standard move API because it handles the complexity by using more granular progress tracking.
 
 ## References
 

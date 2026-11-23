@@ -21,6 +21,10 @@ ms.date: 03/17/2024
 
 # "You're missing out!" error when signing in to Teams
 
+## Summary
+
+When users sign in to Microsoft Teams, they might see “You're missing out! Ask your admin to enable Microsoft Teams for your organization.” This can happen when Teams isn't enabled in a Microsoft 365 Education tenant or users can't access the Teams Exploratory experience. Enable Teams for the school, or check whether eligible users can use Teams Exploratory.
+
 ## Symptoms
 
 When users try to sign in to Microsoft Teams, they receive the following error message:
@@ -36,5 +40,3 @@ If your organization is eligible for the Microsoft Teams Exploratory experience,
 ## More information
 
 For the latest guidance about how to set up your school for lesson planning, virtual meetings, and content sharing, see [Remote teaching and learning](https://support.microsoft.com/office/remote-teaching-and-learning-in-office-365-education-f651ccae-7b65-478b-8366-51bb884025c4). You can view Microsoft Teams IT admin training videos and more at [Admin training for Teams](/microsoftteams/itadmin-readiness).
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com).

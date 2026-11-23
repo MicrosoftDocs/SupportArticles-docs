@@ -1,43 +1,49 @@
 ---
-title: Image pull takes a long time to complete
-description: Learn about troubleshooting steps that you can take if an image pull takes a long time to run on Azure Container Instances.
-ms.date: 04/14/2025
+title: Image pull takes a long time to complete in Azure Container Instances
+description: Learn about troubleshooting steps that you can take if an image pull takes a long time to run on Azure Container Instances (ACI).
+ms.date: 10/01/2026
 ms.service: azure-container-instances
-author: tysonfms
-ms.author: tysonfreeman
-editor: v-jsitser
-ms.reviewer: edneto, v-leedennis, kennethgp
+ms.topic: troubleshooting
+manager: dcscontentpm
+author: kaushika-msft
+ms.author: kaushika
+ms.reviewer: edneto, v-leedennis, kennethgp, tysonfreeman, kaushika
 ms.custom: sap:Configuration and Setup
 #Customer intent: As a user of Azure Container Instances, I want to learn why an image pull takes a long time to complete so that I can create and use container groups successfully.
+ai-usage: ai-assisted
 ---
-# Image pull takes a long time to complete
+# Image pull takes a long time to complete in Azure Container Instances
 
-This article discusses possible causes for an image pull taking long time to complete on Microsoft Azure Container Instances.
+## Summary
+
+This article discusses possible causes and solutions for an image pull that takes a long time to complete on Azure Container Instances (ACI).
 
 ## Prerequisites
 
-- [Azure CLI](/cli/azure/install-azure-cli)
+Have [Azure CLI](/cli/azure/install-azure-cli) installed.
 
 ## Symptoms
+
+The following symptoms can indicate that an image pull is taking a long time to complete:
 
 - Container groups are stuck in a **Creating** status for a significant amount of time.
 - The image size is large.
 
 ## Cause
 
-In Container Instances, images aren't cached forever. If the image isn't cached, the image is pulled from the registry. A registry pull can take a long time if the image is large. This is expected behavior for large, uncached images.
+In ACI, images aren't cached forever. If the image isn't cached, the service pulls the image from the registry. A registry pull can take a long time if the image is large. This behavior is expected for large, uncached images.
 
-If you need faster pull times, you might want to check whether one of the [listed cached images](/rest/api/container-instances/location/list-cached-images) would work successfully for your use case.
+If you need faster pull times, check whether one of the [listed cached images](/rest/api/container-instances/location/list-cached-images) can work successfully for your use case.
 
 ## Solution
 
-To view the timeline of the container events, run the following [az container show](/cli/azure/container#az-container-show) command:
+To view the timeline of the container events, run the following [az container show](/cli/azure/container#az-container-show) command.
 
 ```azurecli
 az container show --resource-group <resource-group-name> --name <container-group-name>
 ```
 
-The time span between the `Pulling` and `Pulled` events allows you to determine whether the image pull time is expected or abnormal. The following is a sample command output:
+The time span between the `Pulling` and `Pulled` events helps you determine whether the image pull time is expected or abnormal. The following example shows command output.
 
 ```json
 {
@@ -149,6 +155,6 @@ The time span between the `Pulling` and `Pulled` events allows you to determine 
 }
 ```
 
-## Resources
+## References
 
 - [Azure Container Apps image pull with managed identity](/azure/container-apps/managed-identity-image-pull)

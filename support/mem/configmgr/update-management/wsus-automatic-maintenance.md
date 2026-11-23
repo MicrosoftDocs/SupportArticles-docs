@@ -1,15 +1,16 @@
 ---
 title: Manual and automatic WSUS database maintenance
-description: Describes steps and scripts to perform the maintenance of the Windows Server Update Services (WSUS) database manually or automatically.
-author: danschuh
-ms.author: daschuh
+description: Describes steps and scripts to automatically or manually maintain the Windows Server Update Services (WSUS) database.
 ms.reviewer: daschuh
-ms.date: 05/23/2026
+ms.date: 09/01/2026
+ai-usage: ai-assisted
 ms.custom: sap:Software Update Management (SUM)\WSUS Database Maintenance
 ---
 # Maintain the Windows Server Update Services (WSUS) database manually or automatically
 
-Routine maintenance of the WSUS database (SUSDB) is important to ensure the application's health and optimal performance. This article describes concise steps and scripts to maintain SUSDB manually or automatically.
+## Summary
+
+This article describes how to maintain the Windows Server Update Services (WSUS) database (SUSDB) manually or automatically. Over time, SUSDB accumulates superseded, expired, and obsolete updates that can degrade synchronization performance, slow down the WSUS console, and cause scan failures on client computers. Follow these concise steps and scripts to assess SUSDB health and keep your update management infrastructure running efficiently.
 
 For more information, see [The complete guide to WSUS and Configuration Manager SUP maintenance](wsus-maintenance-guide.md).
 
@@ -47,156 +48,166 @@ select
 
 > [!IMPORTANT]
 >
-> - Run the steps on each WSUS server in the hierarchy. When performing a cleanup and removing items from WSUS servers, start at the lowest level of the hierarchy.
-> - Ensure that any scheduled synchronizations are disabled, either in Configuration Manager (if used) or on standalone WSUS servers.
+> - Run the steps on each WSUS server in the hierarchy. When you clean up and remove items from WSUS servers, start at the lowest level of the hierarchy.
+> - Ensure that you disable any scheduled synchronizations, either in Configuration Manager (if used) or on standalone WSUS servers.
 
 The following steps can resolve many issues with scanning and synchronization. If there are a large number of declined updates, you might need to repeat steps 9 through 12 multiple times. After each run, execute the [SQL query](#query-to-obtain-the-update-count) to confirm that the update count is decreasing. Steps 8 and 9 might result in errors each time, which is expected. Therefore, you need to repeat steps 9 through 12 multiple times. Some steps (especially step 9) might take several hours to complete.
 
 1. Run the SQL script described in [Slow performance of the spDeleteUpdate procedure](spdeleteupdate-slow-performance.md).
-2. Shrink the SUSDB files.
-3. Shrink the SUSDB database.
-4. Reindex and update statistics on SUSDB.
+1. Shrink the SUSDB files.
+1. Shrink the SUSDB database.
+1. Reindex and update statistics on SUSDB.
 
-    1. To reindex SUSDB, run the following SQL script:
+   1. To reindex SUSDB, run the following SQL script:
 
-        ```sql
-        EXEC sp_MSforeachtable @command1="SET QUOTED_IDENTIFIER ON;ALTER INDEX ALL ON ? REBUILD;"
-        ```
+      ```sql
+      EXEC sp_MSforeachtable @command1="SET QUOTED_IDENTIFIER ON;ALTER INDEX ALL ON ? REBUILD;"
+      ```
 
-    2. To update statistics, run the following SQL script:
+   1. To update statistics, run the following SQL script:
 
-        ```sql
-        Exec sp_msforeachtable "UPDATE STATISTICS ? WITH FULLSCAN, COLUMNS" 
-        ```
+      ```sql
+      Exec sp_msforeachtable "UPDATE STATISTICS ? WITH FULLSCAN, COLUMNS" 
+      ```
 
-5. Perform a cleanup of the synchronization history.
+1. Clean up the synchronization history.
 
-    > [!NOTE]
-    > If there are a large number of synchronizations, the WSUS console may crash.
+   > [!NOTE]
+   > If there are a large number of synchronizations, the WSUS console might crash.
 
-    ```sql
-    USE SUSDB 
-    GO 
-    DELETE FROM tbEventInstance WHERE EventNamespaceID = '2' AND EVENTID IN ('381', '382', '384', '386', '387', '389')
-    ```
+   ```sql
+   USE SUSDB 
+   GO 
+   DELETE FROM tbEventInstance WHERE EventNamespaceID = '2' AND EVENTID IN ('381', '382', '384', '386', '387', '389')
+   ```
 
-6. Perform a cleanup of superseded updates older than 30 days or according to your specific configuration.
+1. Clean up superseded updates that are older than 30 days or that match your specific configuration.
 
-    > [!NOTE]
-    >
-    > - The value of `30` in the first line indicates the number of days between today and the release date, during which superseded updates shouldn't be marked as declined.
-    > - In Configuration Manager, this value should align with the [supersedence rules](/mem/configmgr/sum/plan-design/plan-for-software-updates#BKMK_SupersedenceRules) configured in the software update point (SUP) component properties.
-    > - On standalone WSUS servers, specify the number of days you want to retain superseded updates. For instance, set the value to `60` instead of `30` to keep two months of superseded updates. Any updates older than this period will be marked as declined and subsequently cleaned up.
+   > [!NOTE]
+   >
+   > - The value of `30` in the first line indicates the number of days between today and the release date, during which superseded updates shouldn't be marked as declined.
+   > - In Configuration Manager, this value should align with the [supersedence rules](/mem/configmgr/sum/plan-design/plan-for-software-updates#BKMK_SupersedenceRules) that you configure in the software update point (SUP) component properties.
+   > - On standalone WSUS servers, specify the number of days you want to retain superseded updates. For example, set the value to `60` instead of `30` to keep two months of superseded updates. Any updates that are older than this period are marked as declined and cleaned up.
 
-    ```sql
-    DECLARE @thresholdDays INT = 30   -- Specify the number of days between today and the release date during which superseded updates should not be marked as declined. If Configuration Manager is being used with WSUS, this value should match the configuration of supersedence rules in the software update point (SUP) component properties.
-    DECLARE @testRun BIT = 0          -- Set this value to 1 to test without declining anything. 
-    -- There shouldn't be any need to modify anything after this line.
-    DECLARE @uid UNIQUEIDENTIFIER
-    DECLARE @title NVARCHAR(500)
-    DECLARE @date DATETIME
-    DECLARE @userName NVARCHAR(100) = SYSTEM_USER 
-    DECLARE @count INT = 0 
-    DECLARE DU CURSOR FOR
-           SELECT MU.UpdateID, U.DefaultTitle, U.CreationDate FROM vwMinimalUpdate MU 
-           JOIN PUBLIC_VIEWS.vUpdate U ON MU.UpdateID = U.UpdateId
-           WHERE MU.IsSuperseded = 1 AND MU.Declined = 0 AND MU.IsLatestRevision = 1
-           AND MU.CreationDate < DATEADD(dd,-@thresholdDays,GETDATE())
-           ORDER BY MU.CreationDate 
-    PRINT 'Declining superseded updates older than ' + CONVERT(NVARCHAR(5), @thresholdDays) + ' days.' + CHAR(10) 
-    OPEN DU
-    FETCH NEXT FROM DU INTO @uid, @title, @date
-    WHILE (@@FETCH_STATUS > - 1)
-    BEGIN  
-           SET @count = @count + 1
-           PRINT 'Declining update ' + CONVERT(NVARCHAR(50), @uid) + ' (Creation Date ' + CONVERT(NVARCHAR(50), @date) + ') - ' + @title + ' ...'
-           IF @testRun = 0
-                  EXEC spDeclineUpdate @updateID = @uid, @adminName = @userName, @failIfReplica = 1 
-           FETCH NEXT FROM DU INTO @uid, @title, @date
-    END 
-    CLOSE DU
-    DEALLOCATE DU 
-    PRINT CHAR(10) + 'Attempted to decline ' + CONVERT(NVARCHAR(10), @count) + ' updates.'
-    ```
+   ```sql
+   DECLARE @thresholdDays INT = 30   -- Specify the number of days between today and the release date during which superseded updates should not be marked as declined. If Configuration Manager is being used with WSUS, this value should match the configuration of supersedence rules in the software update point (SUP) component properties.
+   DECLARE @testRun BIT = 0        -- Set this value to 1 to test without declining anything. 
+   -- There shouldn't be any need to modify anything after this line.
+   DECLARE @uid UNIQUEIDENTIFIER
+   DECLARE @title NVARCHAR(500)
+   DECLARE @date DATETIME
+   DECLARE @userName NVARCHAR(100) = SYSTEM_USER 
+   DECLARE @count INT = 0 
+   DECLARE DU CURSOR FOR
+         SELECT MU.UpdateID, U.DefaultTitle, U.CreationDate FROM vwMinimalUpdate MU 
+         JOIN PUBLIC_VIEWS.vUpdate U ON MU.UpdateID = U.UpdateId
+         WHERE MU.IsSuperseded = 1 AND MU.Declined = 0 AND MU.IsLatestRevision = 1
+         AND MU.CreationDate < DATEADD(dd,-@thresholdDays,GETDATE())
+         ORDER BY MU.CreationDate 
+   PRINT 'Declining superseded updates older than ' + CONVERT(NVARCHAR(5), @thresholdDays) + ' days.' + CHAR(10) 
+   OPEN DU
+   FETCH NEXT FROM DU INTO @uid, @title, @date
+   WHILE (@@FETCH_STATUS > - 1)
+   BEGIN  
+         SET @count = @count + 1
+         PRINT 'Declining update ' + CONVERT(NVARCHAR(50), @uid) + ' (Creation Date ' + CONVERT(NVARCHAR(50), @date) + ') - ' + @title + ' ...'
+         IF @testRun = 0
+              EXEC spDeclineUpdate @updateID = @uid, @adminName = @userName, @failIfReplica = 1 
+         FETCH NEXT FROM DU INTO @uid, @title, @date
+   END 
+   CLOSE DU
+   DEALLOCATE DU 
+   PRINT CHAR(10) + 'Attempted to decline ' + CONVERT(NVARCHAR(10), @count) + ' updates.'
+   ```
 
-7. Perform a cleanup of obsolete updates.
+1. Clean up obsolete updates.
 
-    ```sql
-    DECLARE @var1 INT
-    DECLARE @msg nvarchar(100)
-    CREATE TABLE #results (Col1 INT)
-            INSERT INTO #results(Col1) EXEC spGetObsoleteUpdatesToCleanup
-    DECLARE WC Cursor
-            FOR
-            SELECT Col1 FROM #results
-    OPEN WC
-            FETCH NEXT FROM WC
-            INTO @var1
-            WHILE (@@FETCH_STATUS > -1)
-            BEGIN SET @msg = 'Deleting' + CONVERT(varchar(10), @var1)
-            RAISERROR(@msg,0,1) WITH NOWAIT EXEC spDeleteUpdate @localUpdateID=@var1
-            FETCH NEXT FROM WC INTO @var1 END        
-    CLOSE WC
-            DEALLOCATE WC
-            
-            DROP TABLE #results
-    ```
+   ```sql
+   DECLARE @var1 INT
+   DECLARE @msg nvarchar(100)
+   CREATE TABLE #results (Col1 INT)
+         INSERT INTO #results(Col1) EXEC spGetObsoleteUpdatesToCleanup
+   DECLARE WC Cursor
+         FOR
+         SELECT Col1 FROM #results
+   OPEN WC
+         FETCH NEXT FROM WC
+         INTO @var1
+         WHILE (@@FETCH_STATUS > -1)
+         BEGIN SET @msg = 'Deleting' + CONVERT(varchar(10), @var1)
+         RAISERROR(@msg,0,1) WITH NOWAIT EXEC spDeleteUpdate @localUpdateID=@var1
+         FETCH NEXT FROM WC INTO @var1 END      
+   CLOSE WC
+         DEALLOCATE WC
+         
+         DROP TABLE #results
+   ```
 
-8. From an elevated Windows PowerShell prompt, run the following script to initiate the WSUS Cleanup wizard:
+1. From an elevated Windows PowerShell prompt, run the following script to start the WSUS Cleanup wizard:
 
-    ```powershell
-    [reflection.assembly]::LoadWithPartialName("Microsoft.UpdateServices.Administration") | out-null
-    $wsus = [Microsoft.UpdateServices.Administration.AdminProxy]::GetUpdateServer();
-    $cleanupScope = new-object Microsoft.UpdateServices.Administration.CleanupScope;
-    $cleanupScope.DeclineSupersededUpdates = $true
-    $cleanupScope.DeclineExpiredUpdates = $true
-    $cleanupScope.CleanupObsoleteUpdates = $true
-    $cleanupScope.CompressUpdates = $true
-    $cleanupScope.CleanupObsoleteComputers = $true
-    $cleanupScope.CleanupUnneededContentFiles = $true
-    $cleanupManager = $wsus.GetCleanupManager();
-    $cleanupManager.PerformCleanup($cleanupScope); 
-    ```
+   ```powershell
+   [reflection.assembly]::LoadWithPartialName("Microsoft.UpdateServices.Administration") | out-null
+   $wsus = [Microsoft.UpdateServices.Administration.AdminProxy]::GetUpdateServer();
+   $cleanupScope = new-object Microsoft.UpdateServices.Administration.CleanupScope;
+   $cleanupScope.DeclineSupersededUpdates = $true
+   $cleanupScope.DeclineExpiredUpdates = $true
+   $cleanupScope.CleanupObsoleteUpdates = $true
+   $cleanupScope.CompressUpdates = $true
+   $cleanupScope.CleanupObsoleteComputers = $true
+   $cleanupScope.CleanupUnneededContentFiles = $true
+   $cleanupManager = $wsus.GetCleanupManager();
+   $cleanupManager.PerformCleanup($cleanupScope); 
+   ```
 
-9. From an elevated Windows PowerShell prompt, run the following script to perform a cleanup of declined updates:
+1. From an elevated Windows PowerShell prompt, run the following script to clean up declined updates:
 
-    ```powershell
-    [reflection.assembly]::LoadWithPartialName("Microsoft.UpdateServices.Administration")
-    $wsus = [Microsoft.UpdateServices.Administration.AdminProxy]::GetUpdateServer();
-    $wsus.GetUpdates() | Where {$_.IsDeclined -eq $true} | ForEach-Object {$wsus.DeleteUpdate($_.Id.UpdateId.ToString()); Write-Host $_.Title removed } 
-    ```
+   ```powershell
+   [reflection.assembly]::LoadWithPartialName("Microsoft.UpdateServices.Administration")
+   $wsus = [Microsoft.UpdateServices.Administration.AdminProxy]::GetUpdateServer();
+   $wsus.GetUpdates() | Where {$_.IsDeclined -eq $true} | ForEach-Object {$wsus.DeleteUpdate($_.Id.UpdateId.ToString()); Write-Host $_.Title removed } 
+   ```
 
-10. Shrink the SUSDB files.
-11. Shrink the SUSDB database.
-12. Reindex and update statistics on SUSDB.
+1. Shrink the SUSDB files.
+1. Shrink the SUSDB database.
+1. Reindex and update statistics on SUSDB.
 
-    1. To reindex SUSDB, run the following SQL script:
+   1. To reindex SUSDB, run the following SQL script:
 
-        ```sql
-        EXEC sp_MSforeachtable @command1="SET QUOTED_IDENTIFIER ON;ALTER INDEX ALL ON ? REBUILD;"
-        ```
+      ```sql
+      EXEC sp_MSforeachtable @command1="SET QUOTED_IDENTIFIER ON;ALTER INDEX ALL ON ? REBUILD;"
+      ```
 
-    2. To update statistics, run the following SQL script:
+   1. To update statistics, run the following SQL script:
 
-        ```sql
-        Exec sp_msforeachtable "UPDATE STATISTICS ? WITH FULLSCAN, COLUMNS" 
-        ```
+      ```sql
+      Exec sp_msforeachtable "UPDATE STATISTICS ? WITH FULLSCAN, COLUMNS"
+      ```
 
 ## Maintain the WSUS database (SUSDB) automatically
 
-The following PowerShell script replicates the manual steps. When the script is executed, a *SUSDB-Maintenance.log* file will be created and opened.
+The following PowerShell script replicates the manual steps. When you run the script, it creates and opens a SUSDB-Maintenance.log file.
 
 > [!IMPORTANT]
-> Ensure that any scheduled synchronizations are disabled, either in Configuration Manager (if used) or on standalone WSUS servers.
+> Ensure that you disable any scheduled synchronizations, either in Configuration Manager (if used) or on standalone WSUS servers.
 
 ```powershell
 <# SUSDB-Maintenance
+
+Version 2.8
+Last Update: 08/10/2026
 
 Requirements
 * WID must be local.
 * Remote connections for SQL now supported, choose [S] Change SQL Server from menu to set the SQL Server.
 * WSUS Console must be installed local.
 * No longer requires SQL Server PowerShell Module - uses native .NET SqlClient.
+* Runs on Windows PowerShell 5.1 and PowerShell 7. The WSUS API is .NET Framework only, so on PowerShell 7 steps [6], [8] and [9] relay that work to powershell.exe.
+* SUSDB-Maintenance.log rolls over to SUSDB-Maintenance.lo_ once it passes 5 MB.
+* Set $Global:TrustServerCertificate to $false where the SQL Server certificate is already trusted by this machine.
+* WSUS replica mode blocks declines and cleanup. Steps [6], [8] and [9] detect it, temporarily disable it and restore it when the step ends.
+  [RA] holds a single window open across those steps instead of toggling the setting for each one.
+  Replica mode is read and written through the local WSUS console API, not SUSDB.
+  Set $Global:AutoDisableReplicaMode to $false to leave replica mode alone and only warn.
 
 This script will present the following menu options for performing SUSDB Maintenance.  SUSDB-Maintenance.log will be created and opened when the script is run.
 
@@ -210,7 +221,7 @@ This script will present the following menu options for performing SUSDB Mainten
 [3] Shrink Database
 [4] Reindex and Update Statistics
 [5] Cleanup Sync History
-[6] Cleanup Superseded Updates Older than x Days
+[6] Cleanup Superseded Updates Older than x Months
 [7] Cleanup Obsolete Updates
 [8] WSUS Cleanup Wizard
 [9] Cleanup Declined
@@ -229,13 +240,35 @@ of or inability to use the sample script or documentation, even if Microsoft has
 #>
 
 #Global Variables
+$Global:ScriptVersion = '2.8'
 $Global:LogFile = $null
-$Global:SQLoutput = $null
-$Global:Spaceused = $null
 $Global:progresspreference = 'SilentlyContinue'
-$Global:DaysSupersededNotDeclined = 30
+# Expressed in months to match the supersedence rule in ConfigMgr SUP component properties.
+$Global:MonthsSupersededNotDeclined = 3
 $Global:MaxXMLDefault = 5242880
+# Cached MaxXMLPerRequest so the menu does not query SQL on every redraw. Null means "re-read".
+$Global:MaxXMLCache = $null
+# Tracks that the read was attempted, so an unreachable server is not retried on every redraw.
+$Global:MaxXMLChecked = $false
 $Global:TestDetectoidPattern = 'Product Detectoid for ProductName TestProduct%'
+# Set to $false to warn about replica mode but never change it.
+$Global:AutoDisableReplicaMode = $true
+# Nesting depth of the current replica mode window, so Run All toggles the setting once rather than per step.
+$Global:ReplicaModeDepth = 0
+$Global:ReplicaModeRestore = $false
+# Resume-ReplicaMode runs from a finally block, so it flags a failed restore here instead of throwing over the step's own exception.
+$Global:ReplicaModeRestoreFailed = $false
+# CMTrace and OneTrace skip lines whose thread or file attribute is empty, so both are always populated.
+$Global:LogSourceFile = 'SUSDB-Maintenance.ps1'
+# BOM-less UTF8 - Out-File -Encoding utf8 on 5.1 emits a BOM that shows up as ??? in the log viewer.
+$Global:LogEncoding = New-Object System.Text.UTF8Encoding($false)
+# Standard-time bias only, so it cannot change mid-run - read once rather than on every log line.
+$Global:TimeZoneBias = (Get-CimInstance -ClassName Win32_TimeZone).Bias
+# Set to $false where the SQL Server presents a certificate this machine already trusts.
+$Global:TrustServerCertificate = $true
+# Microsoft.UpdateServices.Administration is .NET Framework only - on PowerShell 7 it fails with
+# "The requested security protocol is not supported", so WSUS API work is relayed to Windows PowerShell.
+$Global:WindowsPowerShellPath = "$env:SystemRoot\System32\WindowsPowerShell\v1.0\powershell.exe"
 
 $ErrorActionPreference = "Stop"
 
@@ -243,10 +276,11 @@ try {
     $SQLsetup = (Get-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft\Update Services\Server\Setup' -Name SqlServerName).SqlServerName
 }
 catch {
-    $global:LocalSQLInstance = "SQL Server or WID NOT Found"
+    $SQLsetup = $null
 }
 
-if ($SQLsetup -contains "MICROSOFT##WID" ) {
+# -like rather than -contains: the registry value can be server-qualified, and -contains on a string is exact equality.
+if ($SQLsetup -like "*MICROSOFT##WID*") {
     $global:LocalSQLInstance = '\\.\pipe\MICROSOFT##WID\tsql\query'
 }
 elseif ($null -ne $SQLsetup) {
@@ -373,7 +407,7 @@ $UpdateStatistics = $DB + 'Exec sp_msforeachtable "UPDATE STATISTICS ? WITH FULL
 $CleanupSyncHistory = "USE SUSDB;
 DELETE FROM tbEventInstance WHERE EventNamespaceID = '2' AND EVENTID IN ('381', '382', '384', '386', '387', '389');"
 
-$UpdateCount = "use SUSDB;
+$UpdateCountQuery = "use SUSDB;
 GO
 
 DECLARE @numberOfMatch INT
@@ -402,35 +436,6 @@ USE SUSDB;
 GO
 DBCC SHRINKDATABASE (SUSDB, 0);
 GO"
-
-$CleanupSupersededUpdates = "DECLARE @thresholdDays INT = $Global:DaysSupersededNotDeclined   -- Specify the number of days between today and the release date for which the superseded updates must not be declined. This should match configuration of supersedence rules in SUP component properties, if ConfigMgr is being used with WSUS.
-DECLARE @testRun BIT = 0          -- Set this to 1 to test without declining anything. 
--- There shouldn't be any need to modify anything after this line.
-DECLARE @uid UNIQUEIDENTIFIER
-DECLARE @title NVARCHAR(500)
-DECLARE @date DATETIME
-DECLARE @userName NVARCHAR(100) = SYSTEM_USER 
-DECLARE @count INT = 0 
-DECLARE DU CURSOR FOR
-       SELECT MU.UpdateID, U.DefaultTitle, U.CreationDate FROM vwMinimalUpdate MU 
-       JOIN PUBLIC_VIEWS.vUpdate U ON MU.UpdateID = U.UpdateId
-       WHERE MU.IsSuperseded = 1 AND MU.Declined = 0 AND MU.IsLatestRevision = 1
-       AND MU.CreationDate < DATEADD(dd,-@thresholdDays,GETDATE())
-       ORDER BY MU.CreationDate 
-PRINT 'Declining superseded updates older than ' + CONVERT(NVARCHAR(5), @thresholdDays) + ' days.' + CHAR(10) 
-OPEN DU
-FETCH NEXT FROM DU INTO @uid, @title, @date
-WHILE (@@FETCH_STATUS > - 1)
- Begin  
-       SET @count = @count + 1
-       PRINT 'Declining update ' + CONVERT(NVARCHAR(50), @uid) + ' (Creation Date ' + CONVERT(NVARCHAR(50), @date) + ') - ' + @title + ' ...'
-       IF @testRun = 0
-              EXEC spDeclineUpdate @updateID = @uid, @adminName = @userName, @failIfReplica = 1 
-       FETCH NEXT FROM DU INTO @uid, @title, @date
- End 
-CLOSE DU
-DEALLOCATE DU 
-PRINT CHAR(10) + 'Attempted to decline ' + CONVERT(NVARCHAR(10), @count) + ' updates.'"
 
 $CleanupObsoleteUpdates = "DECLARE @var1 INT
 DECLARE @msg nvarchar(100)
@@ -530,11 +535,18 @@ Function Write-log {
         [string]$component
     )
  
-    $TimeZoneBias = Get-WmiObject -Query "Select Bias from Win32_TimeZone"
     $Date = Get-Date -Format "HH:mm:ss.fff"
     $Date2 = Get-Date -Format "MM-dd-yyyy"    
  
-    "<![LOG[$Message]LOG]!><time=$([char]34)$date$($TimeZoneBias.bias)$([char]34) date=$([char]34)$date2$([char]34) component=$([char]34)$component$([char]34) context=$([char]34)$([char]34) type=$([char]34)$severity$([char]34) thread=$([char]34)$([char]34) file=$([char]34)$([char]34)>" | Out-File -FilePath $Path -Append -NoClobber -Encoding default
+    $Line = "<![LOG[$Message]LOG]!><time=$([char]34)$date$($Global:TimeZoneBias)$([char]34) date=$([char]34)$date2$([char]34) component=$([char]34)$component$([char]34) context=$([char]34)$([char]34) type=$([char]34)$severity$([char]34) thread=$([char]34)$PID$([char]34) file=$([char]34)$Global:LogSourceFile$([char]34)>"
+
+    # Every catch block in this script logs, so a locked or unwritable log must not throw back at the caller.
+    try {
+        [System.IO.File]::AppendAllText($Path, $Line + [Environment]::NewLine, $Global:LogEncoding)
+    }
+    catch {
+        Write-Host "Unable to write to log [$Path]: $($_.Exception.Message)" -ForegroundColor DarkYellow
+    }
 
 #Write-Log -Message "Starting installation" -severity 1 -component "Installation"
     #Write-Log -Message "Something went wrong" -severity 2 -component "Installation"
@@ -547,6 +559,67 @@ function Write-Color([String[]]$Text, [ConsoleColor[]]$Color) {
         Write-Host $Text[$i] -Foreground $Color[$i] -NoNewline
     }
     Write-Host
+}
+
+function Format-Elapsed([TimeSpan]$Span) {
+    # 'c' keeps the day component, which hh\:mm\:ss silently drops on runs over 24 hours.
+    return [timespan]::FromSeconds([math]::Round($Span.TotalSeconds)).ToString('c')
+}
+
+function Get-SqlConnectionString {
+    param(
+        [Parameter(Mandatory = $true)]
+        [string]$ServerInstance,
+
+        [Parameter(Mandatory = $false)]
+        [string]$Database,
+
+        [Parameter(Mandatory = $false)]
+        [int]$ConnectTimeout = 15
+    )
+
+    $trustCert = if ($Global:TrustServerCertificate) { 'True' } else { 'False' }
+
+    if ($ServerInstance -like '*pipe*') {
+        # WID connection
+        return "Server=np:$ServerInstance;Database=SUSDB;Integrated Security=True;TrustServerCertificate=$trustCert;Connect Timeout=$ConnectTimeout;"
+    }
+
+    if ($Database) {
+        return "Server=$ServerInstance;Database=$Database;Integrated Security=True;TrustServerCertificate=$trustCert;Connect Timeout=$ConnectTimeout;"
+    }
+
+    return "Server=$ServerInstance;Integrated Security=True;TrustServerCertificate=$trustCert;Connect Timeout=$ConnectTimeout;"
+}
+
+function Test-SqlInstance {
+    <#
+    .SYNOPSIS
+    Opens and closes a connection so a bad server name fails in seconds instead of stalling the menu.
+    #>
+    param(
+        [Parameter(Mandatory = $true)]
+        [string]$ServerInstance,
+
+        [Parameter(Mandatory = $false)]
+        [int]$TimeoutSeconds = 5
+    )
+
+    $connection = New-Object System.Data.SqlClient.SqlConnection
+    $connection.ConnectionString = Get-SqlConnectionString -ServerInstance $ServerInstance -Database 'SUSDB' -ConnectTimeout $TimeoutSeconds
+
+    try {
+        $connection.Open()
+        return $true
+    }
+    catch {
+        Write-Host "Connection failed: $($_.Exception.Message)" -ForegroundColor Red
+        Write-log -Message "Connection test to [$ServerInstance] failed: $($_.Exception.Message)" -severity 3 -component "Change SQL"
+        return $false
+    }
+    finally {
+        $connection.Dispose()
+    }
 }
 
 function Invoke-CustomSqlCommand {
@@ -562,9 +635,6 @@ function Invoke-CustomSqlCommand {
     
     .PARAMETER Database
     Database name (optional)
-    
-    .PARAMETER OutputResults
-    Return results as objects (default: $true)
     #>
     param(
         [Parameter(Mandatory = $true)]
@@ -574,40 +644,31 @@ function Invoke-CustomSqlCommand {
         [string]$Query,
         
         [Parameter(Mandatory = $false)]
-        [string]$Database,
-        
-        [Parameter(Mandatory = $false)]
-        [bool]$OutputResults = $true
+        [string]$Database
     )
     
     $startTime = Get-Date
-    $infoMessages = @()
+    # A List mutated via Add() avoids the event handler having to reassign a captured variable.
+    $infoMessages = [System.Collections.Generic.List[string]]::new()
+    $sqlErrors = [System.Collections.Generic.List[string]]::new()
     
     try {
-        # Build connection string
-        if ($ServerInstance -like '*pipe*') {
-            # WID connection
-            $connectionString = "Server=np:$ServerInstance;Database=SUSDB;Integrated Security=True;TrustServerCertificate=True;"
-        }
-        else {
-            # Regular SQL Server connection
-            if ($Database) {
-                $connectionString = "Server=$ServerInstance;Database=$Database;Integrated Security=True;TrustServerCertificate=True;"
-            }
-            else {
-                $connectionString = "Server=$ServerInstance;Integrated Security=True;TrustServerCertificate=True;"
-            }
-        }
-        
         # Create connection
         $connection = New-Object System.Data.SqlClient.SqlConnection
-        $connection.ConnectionString = $connectionString
+        $connection.ConnectionString = Get-SqlConnectionString -ServerInstance $ServerInstance -Database $Database
         
         # Add event handler for info messages (PRINT statements, etc.)
+        # FireInfoMessageEventOnUserErrors below sends severity 11-16 errors here instead of throwing,
+        # so separate them out by Class rather than letting them pass as ordinary PRINT output.
         $connection.add_InfoMessage({
-            param($sender, $event)
-            $script:infoMessages += $event.Message
-        })
+            param($eventSender, $eventArgs)
+            foreach ($sqlError in $eventArgs.Errors) {
+                if ($sqlError.Class -ge 11) {
+                    $sqlErrors.Add("Msg $($sqlError.Number), Level $($sqlError.Class), State $($sqlError.State), Line $($sqlError.LineNumber): $($sqlError.Message)")
+                }
+            }
+            $infoMessages.Add($eventArgs.Message)
+        }.GetNewClosure())
         
         $connection.FireInfoMessageEventOnUserErrors = $true
         $connection.Open()
@@ -615,7 +676,6 @@ function Invoke-CustomSqlCommand {
         # Split query by GO statements (batch separator)
         $batches = $Query -split '\r?\nGO\r?\n|\r?\nGO$|^GO\r?\n' | Where-Object { $_.Trim() -ne '' }
         
-        $allResults = @()
         $lastResultSet = $null
         
         foreach ($batch in $batches) {
@@ -638,7 +698,6 @@ function Invoke-CustomSqlCommand {
                 $dataTable.Load($reader)
                 
                 if ($dataTable.Rows.Count -gt 0) {
-                    $allResults += $dataTable
                     $lastResultSet = $dataTable
                 }
             } while (!$reader.IsClosed)
@@ -649,6 +708,27 @@ function Invoke-CustomSqlCommand {
         # Calculate execution time
         $endTime = Get-Date
         $executionTime = ($endTime - $startTime).TotalMilliseconds
+
+        if ($sqlErrors.Count -gt 0) {
+            Write-Host "SQL reported $($sqlErrors.Count) error(s) - failing this step. See the log." -ForegroundColor Red
+            Write-log -Message "SQL reported $($sqlErrors.Count) error(s) of severity 11-16. Failing the operation so callers can detect it." -severity 3 -component "SQL"
+
+            if ($sqlErrors -match 'replica mode') {
+                Write-Host "`n*************************************************************" -ForegroundColor Red
+                Write-Host "*** WSUS REPLICA MODE DETECTED" -ForegroundColor Red
+                Write-Host "*** SQL rejected the work with 'Cannot perform this action" -ForegroundColor Red
+                Write-Host "*** when the server is in replica mode'. Nothing was changed." -ForegroundColor Red
+                Write-Host "*************************************************************`n" -ForegroundColor Red
+                Write-log -Message "WSUS REPLICA MODE DETECTED - SQL rejected the operation ('Cannot perform this action when the server is in replica mode'). No changes were made by this step." -severity 3 -component "SQL"
+            }
+
+            # Sample only - a single cleanup pass can raise the same error thousands of times.
+            foreach ($sqlErrorText in ($sqlErrors | Sort-Object -Unique | Select-Object -First 5)) {
+                Write-log -Message "SQL: $sqlErrorText" -severity 3 -component "SQL"
+            }
+
+            throw "SQL execution failed with $($sqlErrors.Count) error(s) of severity 11-16. First error: $($sqlErrors[0])"
+        }
         
         # Create return object with statistics
         $result = [PSCustomObject]@{
@@ -656,13 +736,10 @@ function Invoke-CustomSqlCommand {
             ExecutionTime = $executionTime
             RowsAffected = if ($lastResultSet) { $lastResultSet.Rows.Count } else { 0 }
             InfoMessages = $infoMessages
+            SqlErrors = $sqlErrors
         }
         
         return $result
-    }
-    catch {
-        Write-Error "SQL Error: $($_.Exception.Message)"
-        throw
     }
     finally {
         if ($connection.State -eq 'Open') {
@@ -671,17 +748,223 @@ function Invoke-CustomSqlCommand {
     }
 }
 
+function Invoke-WsusApi {
+    <#
+    .SYNOPSIS
+    Runs WSUS API script text in process on Windows PowerShell, or through powershell.exe on PowerShell 7.
+
+    .DESCRIPTION
+    Every body emits plain text rather than objects, so both paths behave identically and long
+    operations keep streaming their progress to the caller.
+    #>
+    param(
+        [Parameter(Mandatory = $true)]
+        [string]$Body
+    )
+
+    # 'Stop' turns non-terminating WSUS API errors into failures instead of output that the caller mistakes for success.
+    $prologue = "`$ErrorActionPreference = 'Stop'`r`n[void][Reflection.Assembly]::LoadWithPartialName('Microsoft.UpdateServices.Administration')`r`n"
+
+    if ($PSVersionTable.PSEdition -ne 'Core') {
+        # & gives the scriptblock its own scope, so the preference does not leak back into the caller.
+        & ([scriptblock]::Create($prologue + $Body))
+        return
+    }
+
+    if (-not (Test-Path -Path $Global:WindowsPowerShellPath -PathType Leaf)) {
+        throw "PowerShell 7 cannot call the WSUS API and Windows PowerShell was not found at [$Global:WindowsPowerShellPath]."
+    }
+
+    # powershell.exe still exits 0 after an unhandled error, so the relayed script has to set the exit code itself.
+    $script = @"
+$prologue
+try {
+$Body
+}
+catch {
+    Write-Output "WSUS API call failed: `$(`$_.Exception.Message)"
+    exit 1
+}
+"@
+
+    $encoded = [Convert]::ToBase64String([System.Text.Encoding]::Unicode.GetBytes($script))
+    & $Global:WindowsPowerShellPath -NoProfile -NonInteractive -EncodedCommand $encoded 2>&1 | ForEach-Object { [string]$_ }
+
+    if ($LASTEXITCODE -ne 0) {
+        throw "The Windows PowerShell relay for the WSUS API exited with code $LASTEXITCODE - see the output above."
+    }
+}
+
+function Get-ReplicaMode {
+    # Replica mode is not exposed as a SUSDB column, so it has to come from the WSUS API.
+    try {
+        $output = @(Invoke-WsusApi -Body '[Microsoft.UpdateServices.Administration.AdminProxy]::GetUpdateServer().GetConfiguration().IsReplicaServer')
+        $value = $output | Where-Object { $_ -match '^(True|False)$' } | Select-Object -Last 1
+
+        if ($null -eq $value) {
+            throw "Unexpected output from the WSUS API: $($output -join ' ')"
+        }
+
+        return [bool]::Parse([string]$value)
+    }
+    catch {
+        Write-log -Message "Unable to read replica mode from the WSUS API: $($_.Exception.Message)" -severity 2 -component "Replica Mode"
+        return $null
+    }
+}
+
+function Set-ReplicaMode {
+    param(
+        [Parameter(Mandatory = $true)]
+        [bool]$Enabled
+    )
+
+    $value = if ($Enabled) { '$true' } else { '$false' }
+
+    $null = Invoke-WsusApi -Body @"
+`$config = [Microsoft.UpdateServices.Administration.AdminProxy]::GetUpdateServer().GetConfiguration()
+`$config.IsReplicaServer = $value
+`$config.Save()
+"@
+}
+
+function Invoke-WithoutReplicaMode {
+    <#
+    .SYNOPSIS
+    Runs a step with WSUS replica mode turned off, then puts the original setting back.
+
+    .DESCRIPTION
+    A replica server refuses declines and cleanup ("Cannot perform this action when the server is
+    in replica mode"). Replica mode is restored in a finally block so it survives a failed step.
+    #>
+    param(
+        [Parameter(Mandatory = $true)]
+        [scriptblock]$Action,
+
+        [Parameter(Mandatory = $true)]
+        [string]$Component
+    )
+
+    Suspend-ReplicaMode -Component $Component
+
+    try {
+        & $Action
+    }
+    finally {
+        Resume-ReplicaMode -Component $Component
+    }
+}
+
+function Suspend-ReplicaMode {
+    <#
+    .SYNOPSIS
+    Turns WSUS replica mode off and records whether Resume-ReplicaMode has to turn it back on.
+
+    .DESCRIPTION
+    Calls are nested by depth, so Run All can hold one window open across the whole cleanup block
+    while the steps inside it call Invoke-WithoutReplicaMode without toggling replica mode again.
+    #>
+    param(
+        [Parameter(Mandatory = $true)]
+        [string]$Component
+    )
+
+    $Global:ReplicaModeDepth++
+    if ($Global:ReplicaModeDepth -gt 1) {
+        Write-log -Message "Replica mode window is already open - leaving the setting alone for this step." -severity 1 -component $Component
+        return
+    }
+
+    $wasReplica = Get-ReplicaMode
+
+    if ($null -eq $wasReplica) {
+        Write-Host "Unable to read the replica mode setting from WSUS - continuing without changing it." -ForegroundColor Yellow
+        Write-log -Message "Unable to read replica mode - continuing without changing it. If this server is a replica the step will fail." -severity 2 -component $Component
+        return
+    }
+
+    if (-not $wasReplica) {
+        return
+    }
+
+    Write-Host "`n*************************************************************" -ForegroundColor Yellow
+    Write-Host "*** WSUS REPLICA MODE DETECTED - this server is a replica." -ForegroundColor Yellow
+    Write-Host "*** Declines and cleanup are blocked while replica mode is on." -ForegroundColor Yellow
+    if ($Global:AutoDisableReplicaMode) {
+        Write-Host "*** Temporarily disabling replica mode - it is re-enabled" -ForegroundColor Yellow
+        Write-Host "*** automatically once the affected steps have finished." -ForegroundColor Yellow
+    }
+    else {
+        Write-Host "*** AutoDisableReplicaMode is off - this step will likely fail." -ForegroundColor Yellow
+    }
+    Write-Host "*************************************************************`n" -ForegroundColor Yellow
+    Write-log -Message "WSUS REPLICA MODE DETECTED (IsReplicaServer = True)." -severity 2 -component $Component
+
+    if (-not $Global:AutoDisableReplicaMode) {
+        Write-log -Message "AutoDisableReplicaMode is disabled - replica mode left enabled." -severity 2 -component $Component
+        return
+    }
+
+    try {
+        Set-ReplicaMode -Enabled $false
+        $Global:ReplicaModeRestore = $true
+        Write-Host "Replica mode temporarily disabled.`n" -ForegroundColor Cyan
+        Write-log -Message "Replica mode temporarily disabled." -severity 2 -component $Component
+    }
+    catch {
+        Write-Host "Failed to disable replica mode: $($_.Exception.Message)" -ForegroundColor Red
+        Write-log -Message "Failed to disable replica mode: $($_.Exception.Message)" -severity 3 -component $Component
+    }
+}
+
+function Resume-ReplicaMode {
+    param(
+        [Parameter(Mandatory = $true)]
+        [string]$Component
+    )
+
+    if ($Global:ReplicaModeDepth -le 0) {
+        return
+    }
+
+    $Global:ReplicaModeDepth--
+    if ($Global:ReplicaModeDepth -gt 0 -or -not $Global:ReplicaModeRestore) {
+        return
+    }
+
+    try {
+        Set-ReplicaMode -Enabled $true
+        $Global:ReplicaModeRestore = $false
+        $Global:ReplicaModeRestoreFailed = $false
+        Write-Host "`nReplica mode re-enabled.`n" -ForegroundColor Cyan
+        Write-log -Message "Replica mode re-enabled." -severity 2 -component $Component
+    }
+    catch {
+        # Leaving a replica server out of replica mode changes how it syncs, so this must be impossible to miss.
+        # Keep ReplicaModeRestore = $true so a later replica-mode window can retry the restore.
+        # Throwing here would run from a finally block and mask the step's own exception, so the caller reads the flag instead.
+        $Global:ReplicaModeRestoreFailed = $true
+        Write-Host "`n*************************************************************" -ForegroundColor Red
+        Write-Host "*** REPLICA MODE COULD NOT BE RE-ENABLED" -ForegroundColor Red
+        Write-Host "*** $($_.Exception.Message)" -ForegroundColor Red
+        Write-Host "*** Re-enable it manually: WSUS console > Options >" -ForegroundColor Red
+        Write-Host "*** Update Source and Proxy Server > This server is a replica." -ForegroundColor Red
+        Write-Host "*************************************************************`n" -ForegroundColor Red
+        Write-log -Message "FAILED to re-enable replica mode: $($_.Exception.Message). Re-enable it manually in the WSUS console (Options > Update Source and Proxy Server)." -severity 3 -component $Component
+    }
+}
+
 function UpdateCount {
 
 Write-log -Message "--> Begin Update Count" -severity 1 -component "Update Count"      
     Write-log -Message "Update Count" -severity 1 -component "Update Count"
 
-$result = Invoke-CustomSqlCommand -ServerInstance $LocalSQLInstance -Query $UpdateCount
+$result = Invoke-CustomSqlCommand -ServerInstance $LocalSQLInstance -Query $UpdateCountQuery
     
     if ($result.Results -and $result.Results.Rows.Count -gt 0) {
         $SQLoutput = $result.Results.Rows[0]
         
-        Write-log -Message ("Total execution time for Update Count.........:" + ($result.ExecutionTime / 1000) + " seconds")
+        Write-log -Message ("Total execution time for Update Count.........:" + ($result.ExecutionTime / 1000) + " seconds") -severity 1 -component "Update Count"
         Write-log -Message ("Total Updates " + $SQLoutput.'Total Updates') -severity 1 -component "Update Count"
         Write-log -Message ("Live Updates " + $SQLoutput.'Live Updates') -severity 1 -component "Update Count"
         Write-log -Message ("Superseded " + $SQLoutput.'Superseded') -severity 1 -component "Update Count"
@@ -702,7 +985,6 @@ function Update_spDeleteUpdate_Procedure {
 Write-log -Message "--> Begin update spDeleteUpdate procedure" -severity 1 -component "Update spDeleteUpdate"
     $result = Invoke-CustomSqlCommand -ServerInstance $LocalSQLInstance -Query $spDeleteUpdate
     Write-log -Message ("Total execution time.........:" + ($result.ExecutionTime / 1000) + " seconds") -severity 1 -component "Update spDeleteUpdate"
-    Write-log -Message "SQL Output is $($result.Results)" -severity 1 -component "Update spDeleteUpdate"
     Write-log -Message "--> End update spDeleteUpdate procedure" -severity 1 -component "Update spDeleteUpdate"
 }
 
@@ -781,9 +1063,14 @@ Write-log -Message "--> Begin cleanup sync history" -severity 1 -component "Clea
 
 function CleanupSupersedUpdates {
     Write-log -Message "--> Begin cleanup superseded updates" -severity 1 -component "Cleanup Superseded Updates"
-    Write-log -Message "Days specified: $Global:DaysSupersededNotDeclined" -severity 1 -component "Cleanup Superseded Updates"
 
-$CleanupSupersededUpdates = "DECLARE @thresholdDays INT = $Global:DaysSupersededNotDeclined   -- Specify the number of days between today and the release date for which the superseded updates must not be declined. This should match configuration of supersedence rules in SUP component properties, if ConfigMgr is being used with WSUS.
+    # The query works in days, so convert against the real calendar rather than assuming 30-day months.
+    $Now = Get-Date
+    $ThresholdDays = [int]($Now - $Now.AddMonths(-$Global:MonthsSupersededNotDeclined)).TotalDays
+    Write-log -Message "Months specified: $Global:MonthsSupersededNotDeclined ($ThresholdDays days, cutoff $($Now.AddMonths(-$Global:MonthsSupersededNotDeclined).ToString('MM-dd-yyyy')))" -severity 1 -component "Cleanup Superseded Updates"
+
+$CleanupSupersededUpdates = "DECLARE @thresholdMonths INT = $Global:MonthsSupersededNotDeclined   -- Specify the number of months between today and the release date for which the superseded updates must not be declined. This should match configuration of supersedence rules in SUP component properties, if ConfigMgr is being used with WSUS.
+DECLARE @thresholdDays INT = $ThresholdDays   -- Calendar-accurate day equivalent of @thresholdMonths, calculated by the script.
 DECLARE @testRun BIT = 0          -- Set this to 1 to test without declining anything. 
 -- There shouldn't be any need to modify anything after this line.
 DECLARE @uid UNIQUEIDENTIFIER
@@ -797,7 +1084,7 @@ DECLARE DU CURSOR FOR
        WHERE MU.IsSuperseded = 1 AND MU.Declined = 0 AND MU.IsLatestRevision = 1
        AND MU.CreationDate < DATEADD(dd,-@thresholdDays,GETDATE())
        ORDER BY MU.CreationDate 
-PRINT 'Declining superseded updates older than ' + CONVERT(NVARCHAR(5), @thresholdDays) + ' days.' + CHAR(10) 
+PRINT 'Declining superseded updates older than ' + CONVERT(NVARCHAR(5), @thresholdMonths) + ' months (' + CONVERT(NVARCHAR(10), @thresholdDays) + ' days).' + CHAR(10) 
 OPEN DU
 FETCH NEXT FROM DU INTO @uid, @title, @date
 WHILE (@@FETCH_STATUS > - 1)
@@ -812,9 +1099,17 @@ CLOSE DU
 DEALLOCATE DU 
 PRINT CHAR(10) + 'Attempted to decline ' + CONVERT(NVARCHAR(10), @count) + ' updates.'"
 
-$result = Invoke-CustomSqlCommand -ServerInstance $LocalSQLInstance -Query $CleanupSupersededUpdates -Database "SUSDB"
-    Write-log -Message ("Total execution time for Cleaning up Superseded Updates.........:" + ($result.ExecutionTime / 1000) + " seconds") -severity 1 -component "Cleanup Superseded Updates"
-    Write-log -Message "SQL Output is $($result.Results)" -severity 1 -component "Cleanup Superseded Updates"
+    # spDeclineUpdate is called with @failIfReplica = 1, so replica mode has to be off for this to do anything.
+    Invoke-WithoutReplicaMode -Component "Cleanup Superseded Updates" -Action {
+        $result = Invoke-CustomSqlCommand -ServerInstance $LocalSQLInstance -Query $CleanupSupersededUpdates -Database "SUSDB"
+        Write-log -Message ("Total execution time for Cleaning up Superseded Updates.........:" + ($result.ExecutionTime / 1000) + " seconds") -severity 1 -component "Cleanup Superseded Updates"
+
+        # Last PRINT from the query is the 'Attempted to decline N updates.' summary.
+        if ($result.InfoMessages.Count -gt 0) {
+            Write-log -Message ("SQL: " + $result.InfoMessages[-1]) -severity 1 -component "Cleanup Superseded Updates"
+        }
+    }
+
     Write-log -Message "--> End cleanup superseded updates" -severity 1 -component "Cleanup Superseded Updates"
 }
 
@@ -829,56 +1124,98 @@ Write-log -Message "--> Begin cleanup obsolete updates" -severity 1 -component "
 function WSUSCleanUpWizard {
 
 Write-log -Message "--> Begin WSUS cleanup wizard" -severity 1 -component "WSUS Cleanup Wizard"
-    [reflection.assembly]::LoadWithPartialName("Microsoft.UpdateServices.Administration") | Out-Null
-    $CleanUpWizard = {
-        [reflection.assembly]::LoadWithPartialName("Microsoft.UpdateServices.Administration") | Out-Null
-        $wsus = [Microsoft.UpdateServices.Administration.AdminProxy]::GetUpdateServer();
-        $cleanupScope = New-Object Microsoft.UpdateServices.Administration.CleanupScope;
-        $cleanupScope.DeclineSupersededUpdates = $true
-        $cleanupScope.DeclineExpiredUpdates = $true
-        $cleanupScope.CleanupObsoleteUpdates = $true
-        $cleanupScope.CompressUpdates = $true
-        $cleanupScope.CleanupObsoleteComputers = $true
-        $cleanupScope.CleanupUnneededContentFiles = $true
-        $cleanupManager = $wsus.GetCleanupManager();
-        $cleanupManager.PerformCleanup($cleanupScope);                         
+
+    $CleanUpWizardBody = @'
+$wsus = [Microsoft.UpdateServices.Administration.AdminProxy]::GetUpdateServer()
+$cleanupScope = New-Object Microsoft.UpdateServices.Administration.CleanupScope
+$cleanupScope.DeclineSupersededUpdates = $true
+$cleanupScope.DeclineExpiredUpdates = $true
+$cleanupScope.CleanupObsoleteUpdates = $true
+$cleanupScope.CompressUpdates = $true
+$cleanupScope.CleanupObsoleteComputers = $true
+$cleanupScope.CleanupUnneededContentFiles = $true
+$result = $wsus.GetCleanupManager().PerformCleanup($cleanupScope)
+"Disk Space Freed $($result.DiskSpaceFreed) MB"
+"Expired Updates Declined $($result.ExpiredUpdatesDeclined)"
+"Obsolete Computers Deleted $($result.ObsoleteComputersDeleted)"
+"Obsolete Updates Deleted $($result.ObsoleteUpdatesDeleted)"
+"Superseded Updates Declined $($result.SupersededUpdatesDeclined)"
+"Updates Compressed $($result.UpdatesCompressed)"
+'@
+
+    # DeclineSupersededUpdates and DeclineExpiredUpdates are rejected while the server is a replica.
+    Invoke-WithoutReplicaMode -Component "WSUS Cleanup Wizard" -Action {
+        Invoke-WsusApi -Body $CleanUpWizardBody | ForEach-Object {
+            Write-log -Message ([string]$_) -severity 1 -component "WSUS Cleanup Wizard"
+        }
     }
 
-$RunCleanUpWizard = Invoke-Command -ScriptBlock $CleanUpWizard
-
-Write-log -Message ("Disk Space Freed " + $RunCleanUpWizard.DiskSpaceFreed + " MB") -severity 1 -component "WSUS Cleanup Wizard"
-    Write-log -Message ("Expired Updates Declined " + $RunCleanUpWizard.ExpiredUpdatesDeclined) -severity 1 -component "WSUS Cleanup Wizard"
-    Write-log -Message ("Obsolete Computers Deleted " + $RunCleanUpWizard.ObsoleteComputersDeleted) -severity 1 -component "WSUS Cleanup Wizard"
-    Write-log -Message ("Obsolete Updates Deleted " + $RunCleanUpWizard.ObsoleteUpdatesDeleted) -severity 1 -component "WSUS Cleanup Wizard"
-    Write-log -Message ("Superseded Updates Declined " + $RunCleanUpWizard.SupersededUpdatesDeclined) -severity 1 -component "WSUS Cleanup Wizard"
-    Write-log -Message ("Updates Compressed " + $RunCleanUpWizard.UpdatesCompressed) -severity 1 -component "WSUS Cleanup Wizard"
     Write-log -Message "--> End WSUS cleanup wizard" -severity 1 -component "WSUS Cleanup Wizard"
 }
 
 function CleanUpDeclined {
 
 Write-log -Message "--> Begin cleanup declined" -severity 1 -component "Cleanup Declined"
-    
-    # Load WSUS administration assembly
-    [void][Reflection.Assembly]::LoadWithPartialName("Microsoft.UpdateServices.Administration")
-    
-    # Connect to WSUS
-    $wsus = [Microsoft.UpdateServices.Administration.AdminProxy]::GetUpdateServer()
-    
-    # Attempt to delete all declined updates, but skip those that are referenced
-    $wsus.GetUpdates() |
-        Where-Object { $_.IsDeclined -eq $true } |
-        ForEach-Object {
-            try {
-                # Use the UpdateId GUID directly (no ToString() needed)
-                $wsus.DeleteUpdate($_.Id.UpdateId)
-                Write-log -Message "Removed: $($_.Title)" -severity 1 -component "Cleanup Declined"
+
+    # Emitted line by line so the parent can log and show progress while the deletes are still running.
+    $CleanUpDeclinedBody = @'
+$wsus = [Microsoft.UpdateServices.Administration.AdminProxy]::GetUpdateServer()
+$declined = @($wsus.GetUpdates() | Where-Object { $_.IsDeclined -eq $true })
+"COUNT=$($declined.Count)"
+foreach ($update in $declined) {
+    try {
+        $wsus.DeleteUpdate($update.Id.UpdateId)
+        "REMOVED=$($update.Title)"
+    }
+    catch {
+        "SKIPPED=$($update.Title)"
+    }
+}
+'@
+
+    # A replica takes its approvals from the upstream server and refuses update deletions.
+    Invoke-WithoutReplicaMode -Component "Cleanup Declined" -Action {
+        $total = 0
+        $removed = 0
+        $skipped = 0
+        $processed = 0
+
+        Write-Host "Retrieving updates from WSUS - this can take a long time..." -ForegroundColor Cyan
+
+        Invoke-WsusApi -Body $CleanUpDeclinedBody | ForEach-Object {
+            $line = [string]$_
+
+            if ($line -like 'COUNT=*') {
+                $total = [int]$line.Substring(6)
+                Write-Host "Found $total declined update(s) to process." -ForegroundColor Cyan
+                Write-log -Message "Declined updates found: $total" -severity 1 -component "Cleanup Declined"
+                return
             }
-            catch {
-                Write-log -Message "Skipped: $($_.Title)" -severity 2 -component "Cleanup Declined"
+
+            if ($line -like 'REMOVED=*') {
+                $removed++
+                Write-log -Message "Removed: $($line.Substring(8))" -severity 1 -component "Cleanup Declined"
+            }
+            elseif ($line -like 'SKIPPED=*') {
+                $skipped++
+                Write-log -Message "Skipped: $($line.Substring(8))" -severity 2 -component "Cleanup Declined"
+            }
+            else {
+                return
+            }
+
+            $processed++
+
+            # Every 50 keeps the console alive without emitting a line per update.
+            if ($processed % 50 -eq 0) {
+                Write-Host ("[{0}] {1} of {2} processed - {3} removed, {4} skipped" -f (Get-Date).ToString('MM-dd-yyyy HH:mm:ss'), $processed, $total, $removed, $skipped) -ForegroundColor DarkGray
             }
         }
-    
+
+        Write-Host "`nCleanup declined complete - $removed removed, $skipped skipped (still referenced).`n" -ForegroundColor Green
+        Write-log -Message "Cleanup declined complete - $removed removed, $skipped skipped (still referenced)." -severity 1 -component "Cleanup Declined"
+    }
+
     Write-log -Message "--> End cleanup declined" -severity 1 -component "Cleanup Declined"
 }
 
@@ -908,6 +1245,7 @@ function ToggleMaxXML {
     }
 
     Write-log -Message "Current MaxXMLPerRequest value: $current" -severity 1 -component "MaxXMLPerRequest"
+    $Global:MaxXMLCache = $current
 
     $target = $null
     if ($current -eq 0) {
@@ -938,6 +1276,7 @@ function ToggleMaxXML {
         # $target is always an integer (0 or the default) - safe to embed in the statement.
         $setQuery = "USE SUSDB; UPDATE tbConfigurationC SET MaxXMLPerRequest = $target;"
         $result = Invoke-CustomSqlCommand -ServerInstance $LocalSQLInstance -Query $setQuery -Database "SUSDB"
+        $Global:MaxXMLCache = $target
         $targetLabel = if ($target -eq $Global:MaxXMLDefault) { "$target (default)" } else { "$target" }
         Write-Host "`nMaxXMLPerRequest changed from $current to $targetLabel.`n" -ForegroundColor Green
         Write-log -Message "MaxXMLPerRequest changed from $current to $target." -severity 1 -component "MaxXMLPerRequest"
@@ -1011,18 +1350,52 @@ function DeleteTestDetectoids {
 
 function ChangeSQL {
     Write-log -Message "--> Begin change SQL" -severity 1 -component "Change SQL"
-    $global:LocalSQLInstance = Read-Host -Prompt 'Enter the name of the SQL Server'
+
+    $Previous = $global:LocalSQLInstance
+    $Entry = (Read-Host -Prompt 'Enter the name of the SQL Server').Trim()
+
+    if ([string]::IsNullOrWhiteSpace($Entry)) {
+        Write-Host "`nNothing entered - SQL Server left at $Previous.`n" -ForegroundColor Yellow
+        Write-log -Message "No server name entered - SQL Server left at $Previous." -severity 2 -component "Change SQL"
+        Write-log -Message "--> End change SQL" -severity 1 -component "Change SQL"
+        return
+    }
+
+    # Validate here, otherwise an unreachable name only surfaces as a stalled menu on the next redraw.
+    Write-Host "`nTesting connection to [$Entry]..." -ForegroundColor Cyan
+
+    if (-not (Test-SqlInstance -ServerInstance $Entry)) {
+        Write-Host "`nCould not reach [$Entry] or its SUSDB database - SQL Server left at $Previous.`n" -ForegroundColor Red
+        Write-log -Message "Connection test failed - SQL Server left at $Previous." -severity 3 -component "Change SQL"
+        Write-log -Message "--> End change SQL" -severity 1 -component "Change SQL"
+        return
+    }
+
+    $global:LocalSQLInstance = $Entry
+    # MaxXMLPerRequest is per-server, so force a re-read against the new instance.
+    $Global:MaxXMLCache = $null
+    $Global:MaxXMLChecked = $false
+
+    Write-Host "`nConnected. SQL Server set to $Entry.`n" -ForegroundColor Green
     Write-log -Message "--> SQL Server changed to $LocalSQLInstance" -severity 1 -component "Change SQL"
     Write-log -Message "--> End change SQL" -severity 1 -component "Change SQL"
 }
 function Show-Menu {
-    Write-log -Message "--> Begin Show Menu" -severity 1 -component "Show Menu"
+    param([string]$Title)
+
     Clear-Host
     Write-Host "================ $Title ================" -BackgroundColor Black -ForegroundColor Yellow
       
     #Write-Color -Text "[S] ", "Change SQL Server, currently set to $LocalSQLInstance" -Color Yellow, Cyan
     Write-Color -Text "[S] ", "Change SQL Server, currently set to ", $LocalSQLInstance -Color Yellow, Cyan, Green
-    $currentMaxXML = Get-MaxXMLPerRequest
+
+    # Read once per session rather than on every redraw; [M] refreshes it and [S] clears it.
+    if (-not $Global:MaxXMLChecked) {
+        $Global:MaxXMLCache = Get-MaxXMLPerRequest
+        $Global:MaxXMLChecked = $true
+    }
+    $currentMaxXML = $Global:MaxXMLCache
+
     if ($null -eq $currentMaxXML) {
         $maxXMLDisplay = "Unknown"
     }
@@ -1032,7 +1405,7 @@ function Show-Menu {
     else {
         $maxXMLDisplay = "$currentMaxXML"
     }
-    Write-Color -Text "[M] ", "Toggle MaxXMLPerRequest, currently set to ", $maxXMLDisplay -Color Yellow, Cyan, Green
+    Write-Color -Text "[M] ", "Toggle MaxXMLPerRequest, currently set to ", $maxXMLDisplay, " (cached, re-read on [M] or [S])" -Color Yellow, Cyan, Green, DarkGray
     Write-Color -Text "[D] ", "Delete Test Detectoids" -Color Yellow, Cyan
     Write-Host
     Write-Color -Text "[A] ", "Update Count" -Color Yellow, Cyan
@@ -1041,13 +1414,13 @@ function Show-Menu {
     Write-Color -Text "[3] ", "Shrink Database" -Color Yellow, Cyan
     Write-Color -Text "[4] ", "Reindex and Update Statistics" -Color Yellow, Cyan
     Write-Color -Text "[5] ", "Cleanup Sync History" -Color Yellow, Cyan
-    Write-Color -Text "[6] ", "Cleanup Superseded Updates Older than x Days" -Color Yellow, Cyan
+    Write-Color -Text "[6] ", "Cleanup Superseded Updates Older than x Months" -Color Yellow, Cyan
     Write-Color -Text "[7] ", "Cleanup Obsolete Updates" -Color Yellow, Cyan
     Write-Color -Text "[8] ", "WSUS Cleanup Wizard" -Color Yellow, Cyan
     Write-Color -Text "[9] ", "Cleanup Declined" -Color Yellow, Cyan
     Write-Color -Text "[10] ", "Shrink Files" -Color Yellow, Cyan
     Write-Color -Text "[11] ", "Shrink Database" -Color Yellow, Cyan
-    Write-Color -Text "[12] ", "Reindex and Update Statistics" -Color Yellow, Cyan { {} }
+    Write-Color -Text "[12] ", "Reindex and Update Statistics" -Color Yellow, Cyan
     Write-Color -Text "[RA] ", "Run all above steps sequentially" -Color Yellow, Cyan
     Write-Host
     Write-Color -Text "[Q] ", "Quit" -Color Yellow, Cyan
@@ -1058,40 +1431,58 @@ function Show-Menu {
 #Region Initialize
 #Check if running as admin
 $admin = ([Security.Principal.WindowsIdentity]::GetCurrent().Groups -contains 'S-1-5-32-544')
-if ($admin -ne 'True') {
+if (-not $admin) {
     Write-Host "`nMust run PowerShell as administrator.`n" -ForegroundColor Yellow
     Exit
 }
+
+#Region LogCheck
+# $PSScriptRoot is empty when the body is run as a selection rather than as a .ps1 file.
+$ScriptLocation = if ($PSScriptRoot) { $PSScriptRoot } else { (Get-Location).Path }
+$LogFile = "$ScriptLocation\SUSDB-Maintenance.log"
+
+# Roll over at 5 MB using the ConfigMgr .lo_ convention so CMTrace stays responsive.
+if ((Test-Path -Path $LogFile -PathType Leaf) -and ((Get-Item -Path $LogFile).Length -gt 5MB)) {
+    Move-Item -Path $LogFile -Destination ([System.IO.Path]::ChangeExtension($LogFile, 'lo_')) -Force
+}
+
+If ( -not (Test-Path -Path $LogFile -PathType Leaf)) {
+    try {
+        $null = New-Item -ItemType File -Path $LogFile -Force -ErrorAction Stop
+        Write-Host "The file [$LogFile] has been created."
+    }
+    catch {
+        throw $_.Exception.Message
+    }
+}
 else {
-    #Region LogCheck
-    $ScriptLocation = Get-Location
-    $LogFile = "$ScriptLocation\SUSDB-Maintenance.log"
-    If ( -not (Test-Path -Path $LogFile -PathType Leaf)) {
-        try {
-            $null = New-Item -ItemType File -Path $LogFile -Force -ErrorAction Stop
-            Write-Host "The file [$LogFile] has been created."
-            Invoke-Expression $LogFile
-        }
-        catch {
-            throw $_.Exception.Message
-        }
-    }
-    else {
-        Write-Host "Log file [$LogFile] already existed."
-        Invoke-Expression $LogFile
-    }
-    #EndRegion LogCheck
+    Write-Host "Log file [$LogFile] already existed."
+}
+
+# CMTrace and OneTrace decide the format from the first line they see, so the log must not be empty when it opens.
+Write-log -Message "--> SUSDB-Maintenance $Global:ScriptVersion started by $env:USERDOMAIN\$env:USERNAME on $env:COMPUTERNAME" -severity 1 -component "Initialize"
+Write-log -Message "PowerShell $($PSVersionTable.PSVersion) | SQL Server: $LocalSQLInstance | Log: $LogFile" -severity 1 -component "Initialize"
+
+# Opening the log is a convenience - a missing .log file association must not stop the script.
+try {
+    Invoke-Item -Path $LogFile
+}
+catch {
+    Write-Host "Could not open the log automatically: $($_.Exception.Message)" -ForegroundColor Yellow
+}
+#EndRegion LogCheck
 
 Write-Host "Script initialized - using native .NET SqlClient (no SQL module required)" -ForegroundColor Green
-    
-}
 #EndRegion Initialize
 
 #Region ShowMenu
 do {
     Show-Menu -Title 'SUSDB Maintenance'
     $selection = Read-Host "Please make a selection"
-    switch ($selection) {
+
+    # Keeps a failed operation from terminating the whole script, since $ErrorActionPreference is Stop.
+    try {
+        switch ($selection) {
         'S' {
             #Change SQL Server
             ChangeSQL
@@ -1129,16 +1520,20 @@ do {
 
 }'6' {
             #Cleanup Superseded Updates
-            Write-Host "Specify the number of days between today and the release date for which the superseded updates must not be declined.`nThis should match configuration of supersedence rules in SUP component properties, if ConfigMgr is being used with WSUS.`n"
-            $Global:DaysSupersededNotDeclined = Read-Host -Prompt 'Days '
-            
-            if ($Global:DaysSupersededNotDeclined -gt 0 -and $Global:DaysSupersededNotDeclined -le 99) {
-                Write-log -Message "Number of days entered :  $Global:DaysSupersededNotDeclined , proceeding with cleaning up superseded updates." -severity 1 -component "Cleanup Superseded Updates"
+            Write-Host "Specify the number of months between today and the release date for which the superseded updates must not be declined.`nThis should match configuration of supersedence rules in SUP component properties, if ConfigMgr is being used with WSUS.`n"
+            $MonthsEntry = Read-Host -Prompt 'Months '
+            $MonthsValue = 0
+
+            # Read-Host returns a string, so the range test must be done on a parsed integer.
+            # 600 months (50 years) is far beyond the age of any update in SUSDB and keeps the calculated cutoff date clear of the SQL datetime floor of 01-01-1753.
+            if ([int]::TryParse($MonthsEntry.Trim(), [ref]$MonthsValue) -and $MonthsValue -gt 0 -and $MonthsValue -le 600) {
+                $Global:MonthsSupersededNotDeclined = $MonthsValue
+                Write-log -Message "Number of months entered :  $Global:MonthsSupersededNotDeclined , proceeding with cleaning up superseded updates." -severity 1 -component "Cleanup Superseded Updates"
                 CleanupSupersedUpdates 
             }
             else {
-                Write-Host "`nInvalid entry, must be between 1-99.`n" -ForegroundColor Red
-                Write-log -Message "Number of days entered [$Global:DaysSupersededNotDeclined] is invalid, must be between 1-99." -severity 3 -component "Cleanup Superseded Updates"                
+                Write-Host "`nInvalid entry, must be a whole number between 1 and 600.`n" -ForegroundColor Red
+                Write-log -Message "Number of months entered [$MonthsEntry] is invalid, must be a whole number between 1 and 600." -severity 3 -component "Cleanup Superseded Updates"                
             }
 
 }'7' {
@@ -1167,33 +1562,105 @@ do {
         }'RA' {
             Write-log -Message "--> Begin run all" -severity 1 -component "Run All"
             
-            Write-Host "Specify the number of days between today and the release date for which the superseded updates must not be declined.`nThis should match configuration of supersedence rules in SUP component properties, if ConfigMgr is being used with WSUS.`n"
-            $Global:DaysSupersededNotDeclined = Read-Host -Prompt 'Days '
-            
-            if ($Global:DaysSupersededNotDeclined -gt 0 -and $Global:DaysSupersededNotDeclined -le 99) {
-                Write-log -Message "Number of days entered :  $Global:DaysSupersededNotDeclined , proceeding with cleaning up superseded updates." -severity 1 -component "Run All"                
+            Write-Host "Specify the number of months between today and the release date for which the superseded updates must not be declined.`nThis should match configuration of supersedence rules in SUP component properties, if ConfigMgr is being used with WSUS.`n"
+            $MonthsEntry = Read-Host -Prompt 'Months '
+            $MonthsValue = 0
+
+            # Read-Host returns a string, so the range test must be done on a parsed integer.
+            # 600 months (50 years) is far beyond the age of any update in SUSDB and keeps the calculated cutoff date clear of the SQL datetime floor of 01-01-1753.
+            if ([int]::TryParse($MonthsEntry.Trim(), [ref]$MonthsValue) -and $MonthsValue -gt 0 -and $MonthsValue -le 600) {
+                $Global:MonthsSupersededNotDeclined = $MonthsValue
+                Write-log -Message "Number of months entered :  $Global:MonthsSupersededNotDeclined , proceeding with cleaning up superseded updates." -severity 1 -component "Run All"                
+
+                $RunAllSteps = 'UpdateCount', 'DeleteTestDetectoids', 'Update_spDeleteUpdate_Procedure',
+                               'ShrinkFile', 'ShrinkDatabase', 'ReindexStatistics', 'CleanUpSyncHistory',
+                               'CleanupSupersedUpdates', 'CleanupObsoleteUpdates', 'WSUSCleanUpWizard',
+                               'CleanUpDeclined', 'ShrinkFile', 'ShrinkDatabase', 'ReindexStatistics', 'UpdateCount'
+
+                $FailedSteps = [System.Collections.Generic.List[string]]::new()
+                $RunAllStart = Get-Date
+                $StepNumber = 0
+
+                # One replica mode window spanning the first to the last step WSUS blocks on a replica,
+                # rather than one per step - the guards inside those steps then become no-ops.
+                $ReplicaSteps = 'CleanupSupersedUpdates', 'WSUSCleanUpWizard', 'CleanUpDeclined'
+                $ReplicaIndexes = @(0..($RunAllSteps.Count - 1) | Where-Object { $RunAllSteps[$_] -in $ReplicaSteps })
+                $ReplicaFirst = if ($ReplicaIndexes.Count -gt 0) { $ReplicaIndexes[0] } else { -1 }
+                $ReplicaLast = if ($ReplicaIndexes.Count -gt 0) { $ReplicaIndexes[-1] } else { -1 }
+
+                # Console progress matters here because the log may be closed and steps can run for a long time silently.
+                Write-Host "`nRun All started $($RunAllStart.ToString('MM-dd-yyyy HH:mm:ss')) - $($RunAllSteps.Count) steps to run.`n" -ForegroundColor Cyan
+
+                try {
+                    foreach ($RunAllStep in $RunAllSteps) {
+                        $StepNumber++
+                        $StepStart = Get-Date
+
+                        if (($StepNumber - 1) -eq $ReplicaFirst) {
+                            Write-log -Message "Opening a single replica mode window for steps $($ReplicaFirst + 1) to $($ReplicaLast + 1)." -severity 1 -component "Run All"
+                            Suspend-ReplicaMode -Component "Run All"
+                        }
+
+                        Write-Host ("[{0}] Step {1} of {2} - {3} - running..." -f $StepStart.ToString('MM-dd-yyyy HH:mm:ss'), $StepNumber, $RunAllSteps.Count, $RunAllStep) -ForegroundColor Cyan
+                        Write-log -Message "Step $StepNumber of $($RunAllSteps.Count) - $RunAllStep - running" -severity 1 -component "Run All"
+
+                        try {
+                            & $RunAllStep
+
+                            $StepEnd = Get-Date
+                            Write-Host ("[{0}] Step {1} of {2} - {3} - done in {4}" -f $StepEnd.ToString('MM-dd-yyyy HH:mm:ss'), $StepNumber, $RunAllSteps.Count, $RunAllStep, (Format-Elapsed ($StepEnd - $StepStart))) -ForegroundColor Green
+                            Write-log -Message "Step $StepNumber of $($RunAllSteps.Count) - $RunAllStep - done in $(Format-Elapsed ($StepEnd - $StepStart))" -severity 1 -component "Run All"
+                        }
+                        catch {
+                            $StepEnd = Get-Date
+                            $FailedSteps.Add($RunAllStep)
+                            Write-Host "`n*************************************************************" -ForegroundColor Red
+                            Write-Host ("*** [{0}] STEP FAILED: Step {1} of {2} - {3}" -f $StepEnd.ToString('MM-dd-yyyy HH:mm:ss'), $StepNumber, $RunAllSteps.Count, $RunAllStep) -ForegroundColor Red
+                            Write-Host "*** $($_.Exception.Message)" -ForegroundColor Red
+                            Write-Host "*** Continuing with the next step." -ForegroundColor Red
+                            Write-Host "*************************************************************`n" -ForegroundColor Red
+                            Write-log -Message "STEP FAILED [Step $StepNumber of $($RunAllSteps.Count) - $RunAllStep]: $($_.Exception.Message)" -severity 3 -component "Run All"
+                        }
+
+                        if (($StepNumber - 1) -eq $ReplicaLast) {
+                            Resume-ReplicaMode -Component "Run All"
+                        }
+                    }
+                }
+                finally {
+                    # Covers a break out of the loop before the last replica step was reached.
+                    while ($Global:ReplicaModeDepth -gt 0) {
+                        Resume-ReplicaMode -Component "Run All"
+                    }
+                }
+
+                # A server left out of replica mode is a failure of the run, even when every step itself succeeded.
+                if ($Global:ReplicaModeRestoreFailed) {
+                    $Global:ReplicaModeRestoreFailed = $false
+                    $FailedSteps.Add('Restore replica mode')
+                }
+
+                $RunAllElapsed = (Get-Date) - $RunAllStart
+
+                if ($FailedSteps.Count -gt 0) {
+                    Write-Host "`n*************************************************************" -ForegroundColor Red
+                    Write-Host "*** RUN ALL COMPLETED WITH ERRORS - $($FailedSteps.Count) failure(s) across $($RunAllSteps.Count) step(s)" -ForegroundColor Red
+                    Write-Host "*** Failed: $($FailedSteps -join ', ')" -ForegroundColor Red
+                    Write-Host "*** Total elapsed $(Format-Elapsed $RunAllElapsed)" -ForegroundColor Red
+                    Write-Host "*** Review $LogFile for details." -ForegroundColor Red
+                    Write-Host "*************************************************************`n" -ForegroundColor Red
+                    Write-log -Message "RUN ALL COMPLETED WITH ERRORS - $($FailedSteps.Count) failure(s) across $($RunAllSteps.Count) step(s): $($FailedSteps -join ', ') - total elapsed $(Format-Elapsed $RunAllElapsed)" -severity 3 -component "Run All"
+                }
+                else {
+                    Write-Host "`nRun All completed - all $($RunAllSteps.Count) steps succeeded in $(Format-Elapsed $RunAllElapsed).`n" -ForegroundColor Green
+                    Write-log -Message "Run All completed - all $($RunAllSteps.Count) steps succeeded in $(Format-Elapsed $RunAllElapsed)" -severity 1 -component "Run All"
+                }
             }
             else {
-                Write-Host "`nInvalid entry, must be between 1-99.`n" -ForegroundColor Red
-                Write-log -Message "Number of days entered [$Global:DaysSupersededNotDeclined] is invalid, must be between 1-99." -severity 3 -component "Run All"
-                Exit
+                Write-Host "`nInvalid entry, must be a whole number between 1 and 600.`n" -ForegroundColor Red
+                Write-log -Message "Number of months entered [$MonthsEntry] is invalid, must be a whole number between 1 and 600. Run All cancelled." -severity 3 -component "Run All"
             }
 
-UpdateCount
-            DeleteTestDetectoids
-            Update_spDeleteUpdate_Procedure
-            ShrinkFile
-            ShrinkDatabase
-            ReindexStatistics
-            CleanUpSyncHistory
-            CleanupSupersedUpdates
-            CleanupObsoleteUpdates
-            WSUSCleanUpWizard
-            CleanUpDeclined
-            ShrinkFile
-            ShrinkDatabase
-            ReindexStatistics
-            UpdateCount
             Write-log -Message "--> End run all" -severity 1 -component "Run All"
             
         }'q' {
@@ -1204,9 +1671,26 @@ UpdateCount
             Write-Host
             Write-Host "You didn't make a valid selection.`n" -ForegroundColor Red            
         }
+        }
+    }
+    catch {
+        Write-Host "`nSelection [$selection] failed: $($_.Exception.Message)`n" -ForegroundColor Red
+        Write-log -Message "Selection [$selection] failed: $($_.Exception.Message)" -severity 3 -component "Menu"
+
+        # A replica server must never be left out of replica mode because a step threw.
+        while ($Global:ReplicaModeDepth -gt 0) {
+            Resume-ReplicaMode -Component "Menu"
+        }
     }
 
-Pause
+    # Run All folds this into its own summary and clears the flag, so anything left here belongs to a single selection.
+    if ($Global:ReplicaModeRestoreFailed) {
+        $Global:ReplicaModeRestoreFailed = $false
+        Write-Host "`nSelection [$selection] FAILED - replica mode could not be re-enabled.`n" -ForegroundColor Red
+        Write-log -Message "Selection [$selection] failed - replica mode could not be re-enabled. Re-enable it manually in the WSUS console (Options > Update Source and Proxy Server)." -severity 3 -component "Menu"
+    }
+
+    if ($selection -ne 'q') { Pause }
 }
 until ($selection -eq 'q')
 #EndRegion ShowMenu

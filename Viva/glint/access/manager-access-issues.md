@@ -2,8 +2,8 @@
 title: Resolve Issues When Accessing Viva Glint Survey Results
 description: Resolves common issues that you might encounter when you try to view survey results for your team.
 manager: dcscontentpm
-ms.reviewer: aweixelman
-ms.date: 04/01/2025
+ms.reviewer: aweixelman, isaackim
+ms.date: 10/30/2026
 audience: ITPro
 ms.topic: troubleshooting
 search.appverid: MET150
@@ -68,6 +68,12 @@ To resolve the issue, select the appropriate solution for your situation:
 
 - If the number of respondents is less than the confidentiality threshold, select **View Guide for Smaller Teams**, and then follow the guidelines. If your organization has enabled [Broader Team Insights (BTI)](/viva/glint/reports/broader-team-insights), you can view the summary of your manager's results.
 - If you lack access to a data segment, ask your Viva Glint admin for the required access.
+
+## Can't find new report filters in closed surveys
+
+Surveys capture data at launch, so newly created attributes to be used as report filters will not appear in closed surveys unless you perform a retroactive update. 
+
+To resolve this issue and learn more about retroactive updates, see [Perform Retroactive User Updates](/viva/glint/setup/advanced-config-uploads#perform-retroactive-user-updates).
 
 ## Incorrect team information or broken trend
 

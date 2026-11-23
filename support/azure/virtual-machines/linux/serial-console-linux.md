@@ -11,7 +11,7 @@ ms.service: azure-virtual-machines
 ms.collection: linux
 ms.tgt_pltfrm: vm-linux
 ms.workload: infrastructure-services
-ms.date: 7/17/2026
+ms.date: 10/23/2026
 ms.author: mbifeld
 ---
 
@@ -63,6 +63,7 @@ Ubuntu      | Serial console access enabled by default.
 CoreOS      | Serial console access enabled by default.
 SUSE        | SLES images available on Azure have serial console access enabled by default.
 Oracle Linux        | Serial console access enabled by default.
+Azure Linux 4 | Serial console access enabled by default.
 
 ### Custom Linux images
 
@@ -93,6 +94,9 @@ By default, all subscriptions have serial console access enabled. You can disabl
 > [!WARNING]
 > There's a known issue where Azure Serial Console might fail to connect when a custom boot diagnostics storage account has firewall restrictions when using the [az serial-console](/cli/azure/serial-console) command. To avoid connectivity issues, use Serial Console in the Azure Portal.
 
+> [!NOTE]
+> Azure Serial Console currently doesn't work when a read-only lock is applied to the boot diagnostics storage account.
+
 > [!IMPORTANT]
 > In 2026, Azure Serial Console will no longer utilize boot diagnostics storage accounts for establishing a connection. No customer action is required for this change. This change doesn't affect serial logs or screenshots.
 
@@ -108,12 +112,12 @@ Serial Console uses the storage account configured for boot diagnostics in its c
    The following table lists the IPs that need to be permitted as firewall exclusions based on the region or geography where the VM is located. This is a subset of the complete list of Serial Console IP addresses used in the **SerialConsole** service tag. You can limit access to boot diagnostics storage accounts via the **SerialConsole** service tag. The service tag isn't regionally separated. Traffic on the service tag is inbound only, and the Serial Console doesn't generate traffic to Customer Controllable Destinations. Although Azure storage account firewalls don't currently support service tags, the **SerialConsole** service tag can be programmatically consumed to determine the IP list. For more information about service tags, see [Virtual network service tags](/azure/virtual-network/service-tags-overview).
 
    > [!NOTE]
-   > Storage account firewalls for the Serial Console aren't supported for VMs in geographies with only one region, such as Italy North in Italy.
+   > Serial Console connections using a custom boot diagnostics storage account with firewall restrictions aren't supported for VMs in East US 3, Northeast US 5, or Southeast US 5, or in geographies with only one region, such as Italy North in Italy.
 
    | Geography | Regions | IP addresses |
    |-----------|---------|--------------|
    | Asia | Asia East, Asia Southeast | 4.145.74.168, 20.195.85.180, 20.195.85.181, 20.205.68.106, 20.205.68.107, 20.205.69.28, 23.97.88.117, 23.98.106.151 |
-   | Australia | Australia Central, Australia Central 2, Australia East, Australia Southeast | 4.198.45.55, 4.200.251.224, 20.167.131.228, 20.53.52.250, 20.53.53.224, 20.53.55.174, 20.70.222.112, 20.70.222.113, 68.218.123.133 |
+   | Australia | Australia Central, Australia Central 2, Australia East, Australia Southeast | 4.198.45.55, 4.200.251.224, 20.37.198.141, 20.167.131.228, 20.53.52.250, 20.53.53.224, 20.53.55.174, 20.70.222.112, 20.70.222.113, 68.218.123.133 |
    | Brazil | Brazil South, Brazil Southeast | 20.206.0.192, 20.206.0.193, 20.206.0.194, 20.226.211.157, 108.140.5.172, 191.234.136.63, 191.238.77.232, 191.238.77.233 |
    | Canada | Canada Central, Canada East | 20.175.7.183, 20.48.201.78, 20.48.201.79, 20.220.7.246, 52.139.106.74, 52.139.106.75, 52.228.86.177, 52.242.40.90 |
    | Canary (EUAP) | US Central EUAP, US East 2 EUAP | 20.45.242.18, 20.45.242.19, 20.45.242.20, 20.47.232.186, 20.47.232.187, 20.51.21.252, 68.220.123.194, 168.61.232.59 |
@@ -121,7 +125,7 @@ Serial Console uses the storage account configured for boot diagnostics in its c
    | Europe | Europe North, Europe West | 4.210.131.60, 20.105.209.72, 20.105.209.73, 40.113.178.49, 52.146.137.65, 52.146.139.220, 52.146.139.221, 98.71.107.78 |
    | France | France Central, France South | 20.111.0.244, 40.80.103.247, 51.138.215.126, 51.138.215.127, 52.136.191.8, 52.136.191.9, 52.136.191.10, 98.66.128.35 |
    | Germany | Germany North, Germany West Central | 20.52.94.114, 20.52.94.115, 20.52.95.48, 20.113.251.155, 51.116.75.88, 51.116.75.89, 51.116.75.90, 98.67.183.186 |
-   | India | India Central, India South, India West | 4.187.107.68, 20.192.47.134, 20.192.47.135, 20.192.152.150, 20.192.152.151, 20.192.153.104, 20.207.175.96, 52.172.82.199, 98.70.20.180 |
+   | India | India Central, India South, India West, India South Central | 4.187.107.68, 20.192.47.134, 20.192.47.135, 20.192.152.150, 20.192.152.151, 20.192.153.104, 20.192.168.150, 20.207.175.96, 52.172.82.199, 57.159.151.112, 57.159.151.113, 98.70.20.180, 172.198.95.140, 172.198.95.141, 172.198.107.56, 172.198.107.57 |
    | Japan | Japan East, Japan West | 20.18.7.188, 20.43.70.205, 20.89.12.192, 20.89.12.193, 20.189.194.100, 20.189.228.222, 20.189.228.223, 20.210.144.254 |
    | Korea | Korea Central, Korea South | 20.200.166.136, 20.200.194.238, 20.200.194.239, 20.200.196.96, 20.214.133.81, 52.147.119.28, 52.147.119.29, 52.147.119.30 |
    | Norway | Norway East, Norway West | 20.100.1.154, 20.100.1.155, 20.100.1.184, 20.100.21.182, 51.13.138.76, 51.13.138.77, 51.13.138.78, 51.120.183.54 |
@@ -130,7 +134,7 @@ Serial Console uses the storage account configured for boot diagnostics in its c
    | Switzerland | Switzerland North, Switzerland West | 20.199.207.188, 20.208.4.98, 20.208.4.99, 20.208.4.120, 20.208.149.229, 51.107.251.190, 51.107.251.191, 51.107.255.176 |
    | UAE | UAE Central, UAE North | 20.38.141.5, 20.45.95.64, 20.45.95.65, 20.45.95.66, 20.203.93.198, 20.233.132.205, 40.120.87.50, 40.120.87.51 |
    | United Kingdom | UK South, UK West | 20.58.68.62, 20.58.68.63, 20.90.32.180, 20.90.132.144, 20.90.132.145, 51.104.30.169, 172.187.0.26, 172.187.65.53 |
-   | United States | US Central, US East, US East 2, US East 2 EUAP, US North, US South, US West, US West 2, US West 3 | 4.149.249.197, 4.150.239.210, 20.14.127.175, 20.40.200.175, 20.45.242.18, 20.45.242.19, 20.45.242.20, 20.47.232.186, 20.51.21.252, 20.69.5.160, 20.69.5.161, 20.69.5.162, 20.83.222.100, 20.83.222.101, 20.83.222.102, 20.98.146.84, 20.98.146.85, 20.98.194.64, 20.98.194.65, 20.98.194.66, 20.168.188.34, 20.241.116.153, 52.159.214.194, 57.152.124.244, 68.220.123.194, 74.249.127.175, 74.249.142.218, 157.55.93.0, 168.61.232.59, 172.183.234.204, 172.191.219.35 |
+   | United States | US Central, US East, US East 2, US East 2 EUAP, US North, US South, US West, US West 2, US West 3 | 4.149.249.197, 4.150.239.210, 20.14.127.175, 20.40.200.175, 20.45.242.18, 20.45.242.19, 20.45.242.20, 20.47.232.186, 20.51.21.252, 20.69.5.160, 20.69.5.161, 20.69.5.162, 20.83.222.100, 20.83.222.101, 20.83.222.102, 20.98.146.84, 20.98.146.85, 20.98.194.64, 20.98.194.65, 20.98.194.66, 20.168.188.34, 20.241.116.153, 48.221.131.36, 52.159.214.194, 57.152.124.244, 57.167.185.233, 68.220.123.194, 74.249.127.175, 74.249.142.218, 130.213.49.7, 134.138.85.69, 135.222.48.114, 157.55.93.0, 168.61.232.59, 172.182.191.87, 172.183.234.204, 172.185.110.6, 172.191.219.35 |
    | USGov | All US Government Cloud regions | 20.140.104.48, 20.140.105.3, 20.140.144.58, 20.140.144.59, 20.140.147.168, 20.140.53.121, 20.141.10.130, 20.141.10.131, 20.141.13.121, 20.141.15.104, 52.127.55.131, 52.235.252.252, 52.235.252.253, 52.243.247.124, 52.245.155.139, 52.245.156.185, 62.10.84.240 |
 
    > [!IMPORTANT]
@@ -205,7 +209,7 @@ A. Provide feedback by creating a GitHub issue at  <https://aka.ms/serialconsole
 
 **Q. Does the serial console support copy/paste?**
 
-A. Yes. Use **Ctrl**+**Shift**+**C** and **Ctrl**+**Shift**+**V** to copy and paste into the terminal.
+A. Yes. Use **Ctrl**+**C** and **Ctrl**+**V** to copy and paste into the terminal.
 
 **Q. Can I use serial console instead of an SSH connection?**
 

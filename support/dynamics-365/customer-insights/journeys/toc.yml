@@ -26,7 +26,7 @@ items:
           href: event-management/troubleshoot-teams-integration.md
     - name: Forms
       items:
-        - name: Troubleshoot forms in Customer Insights - Journeys
+        - name: Troubleshoot forms
           href: forms/troubleshooting-forms.md
         - name: Troubleshoot reCAPTCHA issues in forms
           href: forms/troubleshoot-recaptcha.md
@@ -42,3 +42,9 @@ items:
       items:
         - name: Segments show incorrect member count
           href: segments/segment-member-count.md
+    - name: Tracking
+      items:
+        - name: Troubleshoot link tracking
+          href: tracking/troubleshoot-link-tracking.md
+        - name: Troubleshoot web tracking
+          href: tracking/troubleshoot-web-tracking.md

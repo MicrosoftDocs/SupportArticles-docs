@@ -1,33 +1,39 @@
 ---
-title: Determine app behavior with HTTP response codes
-description: Use cURL or a browser to get HTTP response codes and analyze app behavior in AKS. Start troubleshooting faster with clear response insights.
-ms.date: 09/26/2024
-ms.reviewer: chiragpa, jopalhei, v-leedennis, v-weizhu
+title: Determine app behavior with HTTP response codes in AKS
+description: Use cURL or a browser to get HTTP response codes and analyze app behavior in AKS. Start troubleshooting faster with clear response insights today.
+ms.date: 11/02/2026
+ms.topic: troubleshooting
+manager: dcscontentpm
+author: kaushika-msft
+ms.author: kaushika
+ms.reviewer: chiragpa, jopalhei, v-leedennis, v-weizhu, kaushika
 ms.service: azure-kubernetes-service
-#Customer intent: As an Azure Kubernetes user, I want to get HTTP response codes by using the Client ULR (cURL) command or a browser so that I can analyze the behavior of an application that's hosted on an Azure Kubernetes Service (AKS) cluster.
+#Customer intent: As an Azure Kubernetes user, I want to get HTTP response codes by using the Client URL (cURL) command or a browser so that I can analyze the behavior of an application that's hosted on an Azure Kubernetes Service (AKS) cluster.
 ms.custom: sap:Connectivity
+ai-usage: ai-assisted
 ---
-# Get and analyze HTTP response codes for app behavior
+# Get and analyze HTTP response codes for app behavior in Azure Kubernetes Service
 
 ## Summary
 
-If an application responds to HTTP or HTTPS requests, you can check the HTTP response codes to determine the behavior of the application.
+To determine app behavior in Azure Kubernetes Service (AKS), check the HTTP response codes that your application returns for HTTP or HTTPS requests. This article shows how to get those codes by using cURL, a browser, or other API tools so that you can start troubleshooting faster.
 
 ## Prerequisites
 
-- The Client URL ([cURL](https://curl.se)) tool, or another similar command-line tool.
+Ensure you have the following prerequisites installed and configured:
 
+- The Client URL ([cURL](https://curl.se)) tool, or another similar command-line tool.
 - The Kubernetes [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) tool, or a similar tool to connect to the cluster. To install kubectl by using [Azure CLI](/cli/azure/install-azure-cli), run the [az aks install-cli](/cli/azure/aks#az-aks-install-cli) command.
 
 ## Get HTTP response codes by using cURL
 
-The [cURL](https://curl.se) command-line tool can send an HTTP request to an application endpoint and get the response. For a load balancer service (that responds on the path "/" on port 80), a curl request can be initiated by running the following command:
+The [cURL](https://curl.se) command-line tool can send an HTTP request to an application endpoint and get the response. For a load balancer service that responds on the path "/" on port 80, you can initiate a curl request by running the following command.
 
 ```bash
 curl -Iv http://<load-balancer-service-ip-address>:80/
 ```
 
-For example, you can use cURL together with the [kubectl get](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#get) command, as follows:
+For example, you can use cURL together with the [kubectl get](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#get) command as follows.
 
 ```console
 $ kubectl get service
@@ -62,12 +68,11 @@ The response from this URI is `HTTP 200`.
 You can also get the HTTP response of an HTTP endpoint from a browser. Follow these steps:
 
 1. In a browser window, press Ctrl+Shift+I or F12. The developer tools window or pane appears.
-
 1. Select the **Network** tab, and then access the endpoint. The details about the HTTP response appear in the developer tools window or pane.
 
 ## Get HTTP response codes by issuing API requests
 
-To make API requests to the application and get details about the response, you can choose from many other command-line and GUI tools. These tools include the following:
+To make API requests to the application and get details about the response, you can choose from many other command-line and graphical user interface (GUI) tools. These tools include the following.
 
 | Tool | Link |
 | ---- | ---- |
@@ -75,7 +80,7 @@ To make API requests to the application and get details about the response, you 
 | wget | [GNU Wget 1.21.1-dirty Manual](https://www.gnu.org/software/wget/manual/wget.html) |
 | PowerShell | [Invoke-WebRequest cmdlet](/powershell/module/microsoft.powershell.utility/invoke-webrequest) |
 
-After you get an HTTP response code, start troubleshooting to better understand the application's behavior. For more information about the HTTP status codes and the behavior that they indicate, see the following content:
+After you get an HTTP response code, start troubleshooting to better understand the application's behavior. For more information about the HTTP status codes and the behavior that they indicate, see the following content.
 
 | Information source | Link |
 | ------------------ | ---- |

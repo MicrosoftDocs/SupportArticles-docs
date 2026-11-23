@@ -20,6 +20,10 @@ ms.date: 10/30/2023
 
 # Unable to view websites using Teams on the web
 
+## Summary
+
+Some websites don't appear in Microsoft Teams on the web because they can't be displayed in an iframe. Open the website directly in your browser or use the Teams desktop client instead.
+
 ## Symptoms
 
 Some websites can't be viewed in [Microsoft Teams on the web](https://teams.microsoft.com/).

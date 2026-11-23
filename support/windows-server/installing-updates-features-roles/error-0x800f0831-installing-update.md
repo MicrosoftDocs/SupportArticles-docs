@@ -1,17 +1,17 @@
 ---
-title: Error 0x800f0831 when installing an update
+title: Error 0x800F0831 when installing an update
 description: Describes an issue in which you receive the CBS called Error with 0x800f083 error when you install a cumulative update.
 ms.date: 02/12/2026
 ms.reviewer: kaushika, andad
 ms.custom:
-- sap:windows servicing,updates and features on demand\windows update fails - installation stops with error
+- sap:Windows Servicing, Updates and Features on Demand\Windows Update - Install errors starting with 0x800F (CBS E)
 - pcy:WinComm Devices Deploy
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
-# Error 0x800f0831 when you install an update
+# Error 0x800F0831 when you install an update
 
-This article fixes an issue in which you receive error 0x800f0831 when you install a cumulative update.
+This article fixes an issue in which you receive error 0x800F0831 when you install a cumulative update.
 
 _Original product version:_ &nbsp; Configuration Manager (current branch), Windows Server Update Services  
 _Original KB number:_ &nbsp; 4477073
@@ -20,7 +20,7 @@ _Original KB number:_ &nbsp; 4477073
 
 When you try to install a Windows update, especially a cumulative update, you receive the following error message in _WindowsUpdate.log_:
 
-> FATAL: CBS called Error with 0x800f0831
+> FATAL: CBS called Error with 0x800F0831
 
 This issue is more likely to occur when there's no access to Microsoft Update.
 

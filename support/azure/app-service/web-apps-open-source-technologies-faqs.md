@@ -107,7 +107,7 @@ The Azure source control deployment process involves the following steps:
      nodeProcessCommandLine: "D:\Program Files (x86)\nodejs\5.9.1\node.exe"
 ```
 
-## I see the message Error establishing a database connection in my WordPress app hosted in App Service. How do I troubleshoot this error?
+## I see the message "Error establishing a database connection" in my WordPress app hosted in App Service. How do I troubleshoot this error?
 
 If you see this error in your Azure WordPress app, to enable php_errors.log and debug.log, complete the steps detailed in [Enable WordPress error logs](/archive/blogs/azureossds/logging-php-errors-in-wordpress-2).
 
@@ -230,12 +230,12 @@ Developers can use the [command prompt or PHPMyAdmin](/archive/blogs/azureossds/
 
 To learn about security best practices for WordPress, see [Best practices for WordPress security in Azure](/archive/blogs/azureossds/best-practices-for-wordpress-security-on-azure).
 
-## I'm trying to use PHPMyAdmin, and I see the Access denied error message. How do I resolve this issue?
+## I'm trying to use PHPMyAdmin, and I see the "Access denied" error message. How do I resolve this issue?
 
 You might experience this issue if the MySQL in-app feature isn't running yet in this App Service instance. To resolve the issue, try to access your website. This action starts the required processes, including the MySQL in-app process. To verify that MySQL in-app is running, in Process Explorer, ensure that *mysqld.exe* is listed in the processes.
 
 After you ensure that MySQL in-app is running, try to use PHPMyAdmin.
 
-## I get an HTTP 403 error when I try to import or export my MySQL in-app database by using PHPMyAdmin. How do I resolve this issue?
+## I get an "HTTP 403" error when I try to import or export my MySQL in-app database by using PHPMyAdmin. How do I resolve this issue?
 
 If you're using an older version of Chrome, you might be experiencing a known bug. To resolve the issue, upgrade to a newer version of Chrome. You can also try using a different browser, like Microsoft Edge, where the issue doesn't occur.

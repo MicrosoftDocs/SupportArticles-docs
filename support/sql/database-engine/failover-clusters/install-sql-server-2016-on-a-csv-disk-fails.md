@@ -1,22 +1,25 @@
 ---
-title: Installation of SQL Server on a CSV disk fails
-description: Provides a workaround for permissions problem that occurs when you install SQL Server 2016 on a CSV disk.
-ms.date: 07/22/2020
+title: Installation of SQL Server on a CSV Disk Fails
+description: Provides a workaround for the folder permissions error that occurs when you install SQL Server on a Cluster Shared Volume (CSV) disk.
+ms.date: 11/20/2026
 ms.custom: sap:Always On Failover Cluster Instance (FCI)
-ms.reviewer: Mnilson, cmathews
+ms.reviewer: jopilov
+ai-usage: ai-assisted
 ---
-# Error occurs when you install SQL Server 2016 on a Cluster Shared Volume disk
+# Error when you install SQL Server on a Cluster Shared Volume disk
 
-This article helps you work around the permissions problem that occurs when you install SQL Server 2016 on a Cluster Shared Volume (CSV) disk.
-
-_Original product version:_ &nbsp; SQL Server 2016 Standard, SQL Server 2016 Enterprise  
+_Original product version:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 4082888
+
+## Summary
+
+This article helps you work around the folder permissions error that occurs when you install a Microsoft SQL Server instance on a Cluster Shared Volume (CSV) disk. The error occurs when the folder that you choose for the database files has inheritable permissions enabled. To work around the error, disable permission inheritance on the folder and convert the inherited permissions into explicit permissions. Then, retry the installation.
 
 ## Symptoms
 
-Assume that you try to install an instance of Microsoft SQL Server 2016 on a CSV disk, you may receive an error that resembles the following:
+When you install an instance of SQL Server on a CSV disk, SQL Server Setup might display an error message that resembles the following message:
 
-> TITLE: Microsoft SQL Server 2016 Setup
+> TITLE: Microsoft SQL Server Setup
 >
 > The following error has occurred:  
 >
@@ -26,16 +29,21 @@ Assume that you try to install an instance of Microsoft SQL Server 2016 on a CSV
 
 ## Cause
 
-The folder that has been chosen for the database locations has **Inheritable Permissions** button enabled.
+The folder that you choose for the database locations has inheritable permissions enabled. In the folder's advanced security settings, the **Disable inheritance** button is available.
 
-## Workaround
+## Workaround: Convert inherited permissions to explicit permissions
 
-The workaround for this issue is as follows:
+To work around this issue, disable permission inheritance on the folder that you want to use for the database files. The following steps use `C:\ClusterStorage\Volume1\Data1\` as an example folder.
 
-Assume that we are using the folder `C:\ClusterStorage\Volume1\Data1\` as an example.
+1. Go to `C:\ClusterStorage\Volume1\`.
+2. Right-click the **Data1** folder, and then select **Properties**.
+3. Select the **Security** tab, and then select **Advanced**.
+4. Select **Disable inheritance**, and then select **Convert inherited permissions into explicit permissions on this object**.
+5. Retry the installation.
 
-1. Navigate to `C:\ClusterStorage\Volume1\`.
-2. Right-click the **Data1** folder, and then select the **Properties** button.
-3. Select the **Security** tab, and then select the **Advanced** button at the bottom.
-4. Select the **Disable Inheritance** button, and then choose the **Convert inherited permissions into explicit permissions on this object** option.
-5. Retry the install again.
+## Related content
+
+- [Cluster Shared Volumes overview](/windows-server/failover-clustering/failover-cluster-csvs)
+- [Manage Cluster Shared Volumes](/windows-server/failover-clustering/failover-cluster-manage-cluster-shared-volumes)
+- [Create a new Always On failover cluster instance (Setup)](/sql/sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup)
+- [Always On failover cluster instances (SQL Server)](/sql/sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server)

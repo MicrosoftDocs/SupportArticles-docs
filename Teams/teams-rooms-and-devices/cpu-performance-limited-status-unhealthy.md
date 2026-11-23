@@ -1,9 +1,9 @@
 ---
 title: The CPU performance limited status of a Teams Rooms device is Unhealthy
 description: Resolves an issue that causes the CPU performance limited signal of a Microsoft Teams Rooms device to appear as Unhealthy.
-ms.reviewer: rebenite
+ms.reviewer: rebenite, mattslomka
 ms.topic: troubleshooting
-ms.date: 10/30/2023
+ms.date: 08/18/2026
 author: Cloud-Writer
 ms.author: meerak
 manager: dcscontentpm
@@ -18,6 +18,10 @@ ms.custom:
   - CI177322
 ---
 # The CPU performance limited status is Unhealthy
+
+## Summary
+
+In the Microsoft Teams Rooms Pro Management portal, the CPU performance limited signal appears as Unhealthy when the device’s **Maximum processor state** setting for plugged-in power is below 100 percent. This setting can limit performance when the room device is under heavy load. Teams Rooms Pro attempts to restore the setting automatically. If the warning persists or returns, check whether Group Policy or device management settings are changing it, then set it to 100 percent.
 
 ## Symptoms
 

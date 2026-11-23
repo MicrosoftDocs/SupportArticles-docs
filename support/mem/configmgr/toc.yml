@@ -39,12 +39,19 @@ items:
       href: app-management/understand/deployment-download-technical-reference.md
     - name: Application installation
       href: app-management/understand/deployment-install-technical-reference.md
+  - name: Understand package management
+    items:
+    - name: Package creation
+      href: packages-and-programs/package-creation-understand.md
+    - name: Program deployment
+      href: packages-and-programs/package-deployment-understand.md
   - name: Troubleshoot application management
     items:
     - name: Troubleshooting tips for application deployments
       href: app-management/troubleshoot/troubleshoot-application-deployment.md
     - name: Troubleshoot Microsoft Store for Business and Education integration
       href: app-management/troubleshoot/troubleshoot-microsoft-store-for-business-integration.md
+      
 - name: Client installation and assignment
   items:
     - name: Error 80041002 when installing client agent

@@ -21,14 +21,14 @@ description: Describes a workaround for starting Teams when using Dell Encryptio
 
 # Dell Encryption prevents Teams from starting correctly 
 
-## Problem
+## Summary
 
-Dell Encryption (formerly Dell Data Protection Encryption) is known to corrupt Teams installations during the update process, leading to a permanent failure to start the application. 
+Dell Encryption can corrupt a Microsoft Teams installation during an update and prevent Teams from starting. To avoid this issue, exclude `%LocalAppData%\Microsoft\Teams` from the Dell Encryption policy.
 
-## Solution
+## Symptoms
 
-Exclude the Teams folder %LocalAppData%\Microsoft\Teams from the encryption policy.
+Dell Encryption (formerly Dell Data Protection Encryption) is known to corrupt Teams installations during the update process, leading to a permanent failure to start the application.
 
-## More information
+## Resolution
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com).
+Exclude the Teams folder `%LocalAppData%\Microsoft\Teams` from the encryption policy.

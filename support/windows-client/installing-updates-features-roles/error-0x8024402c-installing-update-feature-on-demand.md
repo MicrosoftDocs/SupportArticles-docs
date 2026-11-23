@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
 ms.custom:
-- sap:windows servicing,updates and features on demand\windows update fails - installation stops with error
+- sap:Windows Servicing, Updates and Features on Demand\Windows Update - Install errors starting with 0x8024 (WU E Setup)
 - pcy:WinComm Devices Deploy
 ---
 

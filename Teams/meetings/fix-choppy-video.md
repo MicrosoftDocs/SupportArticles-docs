@@ -19,6 +19,10 @@ ms.date: 07/08/2024
 ---
 # Fix screen sharing video display lag issue in Teams
 
+## Summary
+
+When you share a video or other high-motion content during a Microsoft Teams call, attendees might see lag or dropped frames. Teams normally uses a low screen-sharing frame rate to keep static content sharp. This article explains how to enable high-motion screen sharing in Teams 1.6.00.12455 and later, and explains that a higher frame rate might reduce the shared content’s resolution.
+
 ## Symptoms
 
 During a call in Microsoft Teams, when you share a video or other content that requires a higher frame rate for optimal viewing, the display for the other attendees appears to lag and frames are intermittently dropped.

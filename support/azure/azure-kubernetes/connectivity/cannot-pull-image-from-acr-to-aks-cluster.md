@@ -1,20 +1,25 @@
 ---
-title: Troubleshoot AKS image pull errors
-description: Troubleshoot AKS image pull errors from ACR, MCR and other image registries. Learn how to fix 401, 403, timeout, and platform issues. Get solutions now.
-ms.date: 07/31/2026
+title: Troubleshoot AKS image pull errors from Azure Container Registry
+description: Troubleshoot AKS image pull errors from ACR, MCR, and other registries. Learn how to fix 401, 403, timeout, and platform issues. Get solutions now.
+ms.date: 10/29/2026
+ms.topic: troubleshooting
+manager: dcscontentpm
 author: kaushika-msft
 ms.author: kaushika
-ms.reviewer: chiragpa, andbar, albarqaw, v-weizhu, v-leedennis, v-ryanberg
+ms.reviewer: chiragpa, andbar, albarqaw, v-weizhu, v-leedennis, kaushika
 ms.service: azure-kubernetes-service
 ms.custom: sap:Connectivity
+ai-usage: ai-assisted
 ---
-# Troubleshoot AKS image pull errors from Azure Container Registry
+# Troubleshoot Azure Kubernetes Service image pull errors from Azure Container Registry
 
 [!INCLUDE [Feedback](../../../includes/feedback.md)]
 
 ## Summary
 
-When you use Microsoft Azure Container Registry together with Azure Kubernetes Service (AKS), you need to establish an authentication mechanism. Set up the AKS to Container Registry integration by using a few simple Azure CLI or Azure PowerShell commands. This integration assigns either the [Container Registry Repository Reader role](/azure/role-based-access-control/built-in-roles#container-registry-repository-reader) (for attribute-based access control (ABAC)-enabled registries) or the [AcrPull role](/azure/role-based-access-control/built-in-roles#acrpull) (for non-ABAC-enabled registries) for the kubelet identity that's associated with the AKS cluster to pull images from a container registry. For more information about the necessary ACR role to assign based on whether your ACR registry is ABAC-enabled, see [Microsoft Entra attribute-based access control (ABAC) for repository permissions](/azure/container-registry/container-registry-rbac-abac-repository-permissions?tabs=azure-portal).
+This article helps you troubleshoot image pull errors from Azure Container Registry to an Azure Kubernetes Service (AKS) cluster. It provides guidance for resolving common issues such as authentication failures, network connectivity problems, and misconfigured roles.
+
+When you use Azure Container Registry together with Azure Kubernetes Service (AKS), you need to establish an authentication mechanism. Set up the AKS to Container Registry integration by using a few simple Azure CLI or Azure PowerShell commands. This integration assigns either the [Container Registry Repository Reader role](/azure/role-based-access-control/built-in-roles#container-registry-repository-reader) (for attribute-based access control (ABAC)-enabled registries) or the [AcrPull role](/azure/role-based-access-control/built-in-roles#acrpull) (for non-ABAC-enabled registries) for the kubelet identity that's associated with the AKS cluster to pull images from a container registry. For more information about the necessary ACR role to assign based on whether your ACR registry is ABAC-enabled, see [Microsoft Entra attribute-based access control (ABAC) for repository permissions](/azure/container-registry/container-registry-rbac-abac-repository-permissions?tabs=azure-portal).
 
 In some cases, pulling images from a container registry to an AKS cluster fails. This article provides guidance for troubleshooting the most common errors that you encounter when you pull images from a container registry to an AKS cluster.
 
@@ -290,7 +295,7 @@ The `403 Forbidden` error message appears as follows:
 
 ### Solution 1: Make sure the AKS virtual network link is set in the container registry's Private DNS zone
 
-If the network interface of the container registry's private endpoint and the AKS cluster are in different virtual networks, make sure that the [virtual network link](/azure/dns/private-dns-virtual-network-links) for the AKS cluster's virtual network is set in the private DNS zone of the container registry. (That link is named **privatelink.azurecr.io** by default.) If the virtual network link isn't in the private DNS zone of the container registry, add it using one of the following methods:
+If the network interface of the container registry's private endpoint and the AKS cluster are in different virtual networks, make sure that the [virtual network link](/azure/dns/private-dns-virtual-network-links) for the AKS cluster's virtual network is set in the private DNS zone of the container registry. That link is named **privatelink.azurecr.io** by default. If the virtual network link isn't in the private DNS zone of the container registry, add it by using one of the following methods:
 
 - Use the Azure portal:
 
@@ -348,7 +353,7 @@ If the AKS cluster connects publicly to the container registry (**not** through 
       > [!NOTE]
       > If **Public network access** is set to **Disabled**, switch it to **Selected networks** first.
 
-      :::image type="content" source="media/cannot-pull-image-from-acr-to-aks-cluster/add-aks-load-balancer-public-ip.png" alt-text="Screenshot showing how to add AKS Load Balancer's public IP address to address range." lightbox="media/cannot-pull-image-from-acr-to-aks-cluster/add-aks-load-balancer-public-ip.png":::
+      :::image type="content" source="media/cannot-pull-image-from-acr-to-aks-cluster/add-aks-load-balancer-public-ip.png" alt-text="Screenshot of the Networking page in the Azure portal showing the AKS load balancer's public IP address added to the address range." lightbox="media/cannot-pull-image-from-acr-to-aks-cluster/add-aks-load-balancer-public-ip.png":::
 
 ## Cause 4: `i/o timeout` error
 
@@ -361,9 +366,9 @@ The `i/o timeout` error message appears as follows:
 
 ### Solution 1: Make sure virtual network peering is used
 
-If the network interface of the container registry's private endpoint and the AKS cluster are in different virtual networks, make sure that [virtual network peering](/azure/virtual-network/virtual-network-peering-overview) is used for both virtual networks. You can check virtual network peering by running the Azure CLI command `az network vnet peering list --resource-group <MyResourceGroup> --vnet-name <MyVirtualNetwork> --output table` or in the Azure portal by selecting the **VNETs** > **Peerings** in the **Settings** panel. For more information about listing all peerings of a specified virtual network, see [az network vnet peering list](/cli/azure/network/vnet/peering#az-network-vnet-peering-list).
+If the network interface of the container registry's private endpoint and the AKS cluster are in different virtual networks, ensure that you use [virtual network peering](/azure/virtual-network/virtual-network-peering-overview) for both virtual networks. You can check virtual network peering by running the Azure CLI command `az network vnet peering list --resource-group <MyResourceGroup> --vnet-name <MyVirtualNetwork> --output table` or in the Azure portal by selecting the **VNETs** > **Peerings** in the **Settings** panel. For more information about listing all peerings of a specified virtual network, see [az network vnet peering list](/cli/azure/network/vnet/peering#az-network-vnet-peering-list).
 
-If the virtual network peering is used for both virtual networks, make sure that the status is **Connected**. If the status is [Disconnected](/azure/virtual-network/virtual-network-troubleshoot-peering-issues#the-peering-status-is-disconnected), delete the peering from both virtual networks, and then recreate it. If the status is **Connected**, see the troubleshooting guide: [The peering status is "Connected"](/azure/virtual-network/virtual-network-troubleshoot-peering-issues#the-peering-status-is-connected).
+If you use virtual network peering for both virtual networks, ensure that the status is **Connected**. If the status is [Disconnected](/azure/virtual-network/virtual-network-troubleshoot-peering-issues#the-peering-status-is-disconnected), delete the peering from both virtual networks, and then recreate it. If the status is **Connected**, see the troubleshooting guide: [The peering status is "Connected"](/azure/virtual-network/virtual-network-troubleshoot-peering-issues#the-peering-status-is-connected).
 
 For further troubleshooting, connect to one of the AKS nodes or [pods](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#exec) and then test the connectivity with the container registry at the TCP level by using the telnet or netcat utility. Check the IP address with the `nslookup <acrname>.azurecr.io` command and then run the `telnet <ip-address-of-the-container-registry> 443` command.
 
@@ -371,7 +376,7 @@ For more information about connecting to AKS nodes, see [Connect with SSH to Azu
 
 ### Solution 2: Use Azure Firewall
 
-If the network interface of the container registry's private endpoint and the AKS cluster are in different virtual networks (in addition to virtual network peering), you can use Azure Firewall  to set up a [Hub-spoke network topology in Azure](/azure/architecture/reference-architectures/hybrid-networking/hub-spoke?tabs=cli). When you set up the firewall rule, you need to use network rules to explicitly allow the [outbound connection](/azure/firewall/rule-processing#outbound-connectivity) to the container registry private endpoint IP addresses.
+If the network interface of the container registry's private endpoint and the AKS cluster are in different virtual networks (in addition to virtual network peering), you can use Azure Firewall  to set up a [Hub-spoke network topology in Azure](/azure/architecture/reference-architectures/hybrid-networking/hub-spoke?tabs=cli). When you set up the firewall rule, use network rules to explicitly allow the [outbound connection](/azure/firewall/rule-processing#outbound-connectivity) to the container registry private endpoint IP addresses.
 
 ## Cause 5: No match for platform in manifest
 
@@ -384,11 +389,11 @@ The host operating system (node OS) is incompatible with the image that you use 
 &nbsp; desc = failed to pull and unpack image "\<acrname>.azurecr.io/\<repository:tag>": **no match for platform in manifest**: not found,\
 ]`
 
-This error occurs for an image that's pulled from any source if the image is incompatible with the host OS. The error isn't limited to images that you pull from the container registry.
+This error occurs for an image that you pull from any source if the image is incompatible with the host OS. The error isn't limited to images that you pull from the container registry.
 
 ### Solution: Configure the nodeSelector field correctly in your pod or deployment
 
-Specify the correct `nodeSelector` field in the configuration settings of your pod or deployment. The correct value for this field's `kubernetes.io/os` setting ensures that the pod is scheduled on the correct type of node. The following table shows how to set the `kubernetes.io/os` setting in YAML:
+Specify the correct `nodeSelector` field in the configuration settings of your pod or deployment. The correct value for this field's `kubernetes.io/os` setting ensures that the pod is scheduled on the correct type of node. The following table shows how to set the `kubernetes.io.os` setting in YAML:
 
 | Container type | YAML setting |
 | -------------- | ------------ |
@@ -474,7 +479,7 @@ The following events and messages might occur when pulling images from ACR to AK
 
 ### Solution: Update Azure Virtual Network Appliance (NVAs) by using validated routes
  
-If you receive this `net/http: TLS handshake` time-out, check your network configuration, including firewall, proxy, and network connectivity settings. 
+If you receive this `net/http: TLS handshake` timeout, check your network configuration, including firewall, proxy, and network connectivity settings. 
 
 
 ## Cause 8: Data endpoint DNS or egress blocked
@@ -491,9 +496,9 @@ or:
 
 `Get "https://<region>.data.mcr.microsoft.com/...": connection reset by peer`
 
-### Solution 1: Add the data endpoint to your firewall or egress allowlist
+### Solution 1: Add the data endpoint to your firewall or egress allow list
 
-If you use Azure Firewall, a proxy, or an NVA for egress filtering, add the data endpoints to the allowlist:
+If you use Azure Firewall, a proxy, or an NVA for egress filtering, add the data endpoints to the allow list:
 
 - For ACR: allow `*.blob.core.windows.net` (or the specific `<registry-name>.<region>.data.azurecr.io` host) on TCP 443.
 - For MCR: allow `*.data.mcr.microsoft.com` on TCP 443.
@@ -547,7 +552,7 @@ containers:
   image: myacr.azurecr.io/myapp:latest
   imagePullPolicy: Always
 ```
-Refer to [Impage Pull Policy Behavior](https://kubernetes.io/docs/concepts/containers/images/#image-pull-policy) for more details.
+Refer to [Image Pull Policy Behavior](https://kubernetes.io/docs/concepts/containers/images/#image-pull-policy) for more details.
 
 ### Solution 3: Force a rollout restart to re-resolve the tag
 
@@ -608,15 +613,15 @@ If this call times out, check that no NVA, network security group, or custom rou
 
 ## Cause 11: Public or third-party registry rate limits
 
-When pulling images from Docker Hub, GitHub Container Registry (`ghcr.io`), or other public registries, the AKS cluster shares a rate limit with all traffic from the node's outbound IP address. If the limit is exceeded, the pull fails with:
+When you pull images from Docker Hub, GitHub Container Registry (`ghcr.io`), or other public registries, the AKS cluster shares a rate limit with all traffic from the node's outbound IP address. If you exceed the limit, the pull fails with:
 
 `Failed to pull image "docker.io/library/nginx:latest": ... 429 Too Many Requests`
 
 or:
 
-`You have reached your pull rate limit. You may increase the limit by authenticating...`
+`You have reached your pull rate limit. You can increase the limit by authenticating...`
 
-This commonly affects clusters that:
+This limit commonly affects clusters that:
 
 - Pull many different public images during node scale-up.
 - Use `imagePullPolicy: Always` with frequently restarting pods.
@@ -634,7 +639,7 @@ Then update your deployments to reference `<myacr>.azurecr.io/nginx:latest`.
 
 ### Solution 2: Use ACR Artifact Cache (pull-through cache)
 
-Configure [ACR Artifact Cache](/azure/container-registry/container-registry-artifact-cache) to automatically cache upstream images. This provides a pull-through proxy that caches images from Docker Hub, `ghcr.io`, and other registries inside your ACR.
+Configure [ACR Artifact Cache](/azure/container-registry/container-registry-artifact-cache) to automatically cache upstream images. This setup provides a pull-through proxy that caches images from Docker Hub, `ghcr.io`, and other registries inside your ACR.
 
 ### Solution 3: Authenticate with the upstream registry
 

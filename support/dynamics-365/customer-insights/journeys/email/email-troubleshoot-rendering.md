@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot Email Rendering in Customer Insights - Journeys
 description: Troubleshoot email rendering issues in Customer Insights - Journeys. Fix problems in Outlook, Gmail, and other clients with custom HTML and CSS solutions.
-ms.date: 07/06/2026
-ms.reviewer: alfergus, v-shaywood
+ms.date: 10/22/2026
+ms.reviewer: alfergus, v-shaywood, anpatala, udag
 ms.custom: sap:Outbound marketing emails, templates, content blocks - view in browser, personalization, validation, and publishing
 search.audienceType: 
   - admin
@@ -262,6 +262,19 @@ To fix this problem, add the following MSO conditional style to the `<head>` of 
 </style>
 <![endif]-->
 ```
+
+### Images appear sideways or upside down
+
+Outlook (Classic) can ignore Exchangeable Image File Format (EXIF) orientation metadata, which specifies how to rotate an image. The image might appear sideways or upside down even though it appears correctly in the email designer and other email clients.
+
+To fix this problem, apply the rotation directly to the image's pixels and save a new copy:
+
+1. Open the original image in Microsoft Paint.  
+    If the image appears sideways or upside down, rotate it until it appears upright.  
+1. Select **File** > **Save as** > **PNG** picture to save a new copy.
+1. Upload the new copy to Customer Insights - Journeys.
+1. Replace the affected image in the email with the new copy.
+1. Send a test email and verify that the image appears upright in Outlook (Classic).
 
 ### Custom font fallback isn't applied
 

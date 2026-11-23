@@ -150,6 +150,58 @@ items:
           href: ../antispam-and-protection/smtpsend-barelinefeedsareillegal-when-tracing-messages.md
     - name: Calendars
       items:
+        - name: Cross-tenant free/busy Autodiscover call fails
+          href: ../calendars/cross-tenant-free-busy-discovery-call-failed.md      
+        - name: Cross-tenant free/busy caller access denied
+          href: ../calendars/cross-tenant-free-busy-access-denied.md
+        - name: Cross-tenant free/busy federated proxy address error
+          href: ../calendars/cross-tenant-free-busy-federated-proxy-mismatch.md
+        - name: Google attendee availability and address space endpoint
+          href: ../calendars/google-attendee-free-busy-address-space-endpoint.md      
+        - name: Google attendee availability and missing mail contact
+          href: ../calendars/google-attendee-free-busy-mail-contact-not-found.md
+        - name: Calendar diagnostic logs (CDL)
+          items:
+            - name: Use Calendar diagnostic logs
+              href: ../calendars/cdl/use-calendar-diagnostic-logs.md
+            - name: Get Calendar diagnostic logs
+              href: ../calendars/cdl/get-calendar-diagnostic-logs.md
+            - name: Analyze Calendar diagnostic logs
+              href: ../calendars/cdl/analyze-calendar-diagnostic-logs.md
+            - name: Get the ID of a meeting
+              href: ../calendars/cdl/get-meeting-id.md
+        - name: Sharing
+          items:
+            - name: Resolve issues with calendar sharing in classic Outlook for Windows
+              href: ../calendars/sharing/resolve-legacy-calendar-share-issues.md
+            - name: Resolve issues with modern calendar sharing
+              href: ../calendars/sharing/resolve-modern-calendar-share-issues.md              
+        - name: Permissions
+          items:
+            - name: Fix corrupt calendar permission entries
+              href: ../calendars/permissions/fix-corrupt-calendar-permissions.md              
+            - name: Resolve calendar and delegate permissions issues
+              href: ../calendars/permissions/troubleshoot-calendar-delegate-permissions.md
+            - name: Outlook says that delegate settings weren't saved correctly
+              href: ../calendars/permissions/fix-delegate-settings-save-error.md
+            - name: Remove stale calendar permissions
+              href: ../calendars/permissions/delete-stale-calendar-permission.md
+            - name: Replace security groups used as calendar delegates
+              href: ../calendars/permissions/replace-security-group-delegates.md
+            - name: Reset corrupt Outlook delegate permissions
+              href: ../calendars/permissions/fix-corrupt-delegate-permissions.md          
+            - name: Restore delegate access to private calendar items
+              href: ../calendars/permissions/fix-private-calendar-access.md
+            - name: Restore Missing Delegate Meeting Invitations in Outlook
+              href: ../calendars/permissions/fix-delegate-invites.md              
+            - name: Resolve Full Access and delegate conflicts on legacy calendars
+              href: ../calendars/permissions/fix-full-access-delegate-conflicts.md
+            - name: Resolve Outlook delegate failures in Exchange hybrid
+              href: ../calendars/permissions/fix-hybrid-delegate-failures.md             
+            - name: Resolve the "Item Has Changed" Error for Delegate Meetings
+              href: ../calendars/permissions/fix-delegate-draft-save-error.md
+            - name: Set Editor rights for calendar delegates
+              href: ../calendars/permissions/assign-editor-delegate-rights.md
         - name: ActiveSync can't download attachments to Calendar items
           href: ../calendars/activesync-not-downloading-attachments-to-calendar-items.md
         - name: Attendees receive multiple meeting invitations
@@ -166,8 +218,12 @@ items:
           href: ../calendars/room-list-not-viewable-in-outlook.md
         - name: Can't view other user's free/busy information
           href: ../calendars/cannot-view-another-user-calendar-free-busy-information.md
+        - name: Free/busy is unavailable within the same tenant
+          href: ../calendars/troubleshoot-same-tenant-free-busy.md
         - name: Can't view user's free/busy information in Scheduling Assistant
           href: ../calendars/no-free-busy-information-retrieved.md
+        - name: Collect a browser trace for free/busy lookups
+          href: ../calendars/collect-free-busy-browser-trace.md
         - name: Default calendar isn't returned by Graph REST API
           href: ../calendars/default-calendar-not-returned-by-graph-rest-api.md
         - name: Delegate can't accept meeting request in OWA
@@ -176,16 +232,6 @@ items:
           href: ../calendars/delegate-only-sees-freebusy-info-if-manager-is-in-another-forest.md
         - name: Delegates accept meetings automatically
           href: ../calendars/delegates-accept-meetings-automatically.md
-        - name: Calendar diagnostic logs (CDL)
-          items:
-            - name: Use Calendar diagnostic logs
-              href: ../calendars/cdl/use-calendar-diagnostic-logs.md
-            - name: Get Calendar diagnostic logs
-              href: ../calendars/cdl/get-calendar-diagnostic-logs.md
-            - name: Analyze Calendar diagnostic logs
-              href: ../calendars/cdl/analyze-calendar-diagnostic-logs.md
-            - name: Get the ID of a meeting
-              href: ../calendars/cdl/get-meeting-id.md
         - name: Meeting requests added to resource delegate's calendar
           href: ../calendars/meeting-requests-sent-to-resource-mailbox-added-to-resource-delegate-calendar.md
         - name: Message store has reached its maximum size
@@ -198,6 +244,10 @@ items:
           href: ../calendars/users-can-see-only-basic-freebusy-mailbox-information.md
         - name: Public folder meetings cannot be modified in OWA
           href: ../calendars/public-folder-meetings-not-modified-in-owa.md
+        - name: Resolve issues with calendar sharing in classic Outlook for Windows
+          href: ../calendars/sharing/resolve-legacy-calendar-share-issues.md
+        - name: Resolve issues with modern calendar sharing
+          href: ../calendars/sharing/resolve-modern-calendar-share-issues.md
         - name: Resource doesn't respond to meeting requests
           href: ../calendars/resource-doesnt-respond-to-meeting-requests-when-using-booking.md
         - name: Room mailbox can't auto accept/decline meetings
@@ -282,8 +332,6 @@ items:
               href: ../email-delivery/ndr/fix-error-code-451-4-7-500-699-asxxx-in-exchange-online.md
             - name: 5.4.6 or 5.4.14
               href: ../email-delivery/ndr/fix-error-code-5-4-6-through-5-4-20-in-exchange-online.md
-            - name: 5.7.1. Unable To Relay
-              href: ../email-delivery/ndr/unable-to-relay-blocked-by-allow-list.md
             - name: 550 4.4.7
               href: ../email-delivery/ndr/fix-error-code-550-4-4-7-in-exchange-online.md
             - name: 550 5.0.350
@@ -297,7 +345,7 @@ items:
             - name: 550 5.1.1 through 550 5.1.20
               href: ../email-delivery/ndr/fix-error-code-550-5-1-1-through-5-1-20-in-exchange-online.md
             - name: 550 5.1.8 Access denied
-              href: https://support.microsoft.com/topic/e323f21d-4460-4be1-999c-c9c0cc6be4b4
+              href: ../email-delivery/ndr/fix-error-code-550-5-1-8.md            
             - name: 550 5.1.10
               href: ../email-delivery/ndr/fix-error-code-550-5-1-10-in-exchange-online.md
             - name: 550 5.1.10 RESOLVER.ADR.RecipientNotFound
@@ -307,7 +355,7 @@ items:
             - name: 550 5.2.0 RESOLVER.ADR.BadPrimary
               href: ../email-delivery/ndr/badprimary-ndr.md
             - name: 550 5.4.1
-              href: https://support.microsoft.com/topic/c0e98a8e-81db-49c2-9bf1-32a1734d3e77
+              href: ../email-delivery/ndr/fix-error-code-550-5-4-1.md            
             - name: 550 5.6.0 APPROVAL.InvalidExpiry
               href: ../email-delivery/ndr/550-5-6-0-approval-invalidexpiry-cannot-read-expiry-poilcy-error.md
             - name: 550 5.6.11
@@ -337,7 +385,7 @@ items:
             - name: 550 5.7.136
               href: ../email-delivery/ndr/fix-error-code-5-7-136-in-exchange-online.md
             - name: 550 5.7.700 through 550 5.7.750
-              href: https://support.microsoft.com/topic/f5675801-1846-4d1c-9599-5b4e26a9175d
+              href: ../email-delivery/ndr/fix-error-codes-550-5-7-703-550-5-7-705-550-5-7-708-550-5-7-750.md            
             - name: 554 4.3.2 mailbox busy
               href: ../email-delivery/ndr/remote-server-returned-mailbox-busy.md
             - name: 554 5.2.0 STOREDRV.Deliver.Exception

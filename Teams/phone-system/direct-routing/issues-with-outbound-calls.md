@@ -1,11 +1,11 @@
 ---
-title: Issues with outbound calls
-description: Discusses potential causes and resolutions for issues that affect outbound calls when you use Direct Routing.
-ms.date: 10/30/2023
+title: Resolve issues with outbound calls
+description: Describes outbound call issues in Microsoft Teams Direct Routing, including wrong caller ID and SBC failures. Also provides resolutions to restore calling.
+ms.date: 11/23/2026
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
-ms.reviewer: mikebis, v-kccross
+ms.reviewer: mikebis, v-kccross, v-gsitser
 audience: Admin
 ms.topic: troubleshooting
 search.appverid: 
@@ -13,80 +13,79 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft Teams
+ai-usage: ai-assisted
 ms.custom: 
-  - sap:Teams Calling (PSTN)\Direct Routing
-  - CI-126689
+  - sap:Teams Calling\Direct Routing
+  - CI 126689
   - CSSTroubleshoot
   - scenario:Direct-Routing-3
 ---
 
-# Issues that affect outbound direct routing calls
+# Resolve issues that affect outbound Direct Routing calls
 
 [!INCLUDE [Teams Direct Routing note](../../../includes/teams-direct-routing-note.md)]
 
-You might experience various issues when you use Direct Routing to make outbound calls from a Microsoft Teams client to a Session Border Controller (SBC). These issues include the following:
+## Summary
+
+When you use Microsoft Teams Direct Routing for outbound calls, recipients might see the wrong caller ID, calls might fail to connect to the session border controller (SBC), or some or all users might be unable to call. These issues can result from Session Initiation Protocol (SIP) header mismatches, SBC or network connectivity problems, incorrect user provisioning, voice routing policies, or a disabled gateway. This article explains how to check each cause and apply the corresponding resolution.
+
+## Symptoms
+
+The following sections describe common scenarios and troubleshooting steps for outbound calls from a Microsoft Teams client through Direct Routing to a Session Border Controller (SBC):
 
 - An incorrect caller ID is displayed to the call recipient.
-- A connection to the SBC is not established.
-- Some users in a tenant are unable to make calls.
-- No users in a tenant are able to make calls.
+- A connection to the SBC isn't established.
+- Some users in a tenant can't make calls.
+- No users in a tenant can make calls.
 
 This article discusses potential causes of these issues, and provides resolutions that you can try.
 
 ## Incorrect caller ID displayed to the recipient
 
-When you use Direct Routing, the caller ID information that is delivered to the call recipient is listed in the `From` and `P-Asserted-Identity` headers in the Session Initiation Protocol (SIP) options message.
+When you use Direct Routing, the caller ID information that is delivered to the call recipient is listed in the `From` and `P-Asserted-Identity` headers in the SIP INVITE message.
 
-The `From` header contains any of the following items:
+The `From` header contains the number that should be displayed and can be one of the following, depending on the scenario and settings:
 
-- The phone number that's assigned to the caller who is initiating the call.
-  If the caller's phone number has to be hidden from the call recipient, it's replaced with "anonymous".
-- A service number that is assigned to the caller by using the `CsCallingLineIdentity` cmdlet.
+- The phone number that's assigned to the Teams user or app that is initiating the call.
+  If the caller's phone number has to be hidden from the call recipient, it's replaced with "anonymous". This can result from an assigned caller ID policy, the user's Teams client settings, or the absence of an assigned phone number.
+- A resource number that you assign to the caller by using the `New-CsCallingLineIdentity` and `Grant-CsCallingLineIdentity` cmdlets.
 - The phone number of the original caller if the call was forwarded.
 
-The `P-Asserted-Identity` header contains the phone number of the user who is billed for the call. If `Privacy:id` is set, this indicates that the information in the header has to be hidden from the call recipient.
+The `P-Asserted-Identity` header contains the phone number of the user who is billed for the call. If `Privacy:id` is set, this setting indicates that the information in the header has to be hidden from the call recipient.
 
 ### Cause
 
-If the information in the `From` and `P-Asserted-Identity` headers doesn't match, and if the Public Switched Telephone Network (PSTN) prioritizes the `P-Asserted-Identity` header information over the `From` header information, then incorrect information is displayed.
+If the information in the `From` and `P-Asserted-Identity` headers doesn't match, and if the public switched telephone network (PSTN) prioritizes the `P-Asserted-Identity` header information over the `From` header information, then incorrect information might be displayed.
 
 ### Resolution
 
-To make sure that the correct caller ID is displayed to the call recipient, configure the SBC to either remove the `P-Asserted-Identity` header from the SIP options message or modify its contents.
+To ensure that the correct caller ID is displayed to the call recipient, configure the SBC to either remove the `P-Asserted-Identity` header from the SIP INVITE message or modify its contents.
 
-## Connection to the SBC not established
+## Outbound calls fail after reaching the SBC
 
-Sometimes, calls reach the SBC but no connection is established. In this situation, when the SBC receives a SIP options message from Teams, it returns a failure message that includes error codes in the range of 400 to 699.
+Sometimes, calls reach the SBC but aren't established. In this situation, when the SBC receives a SIP INVITE message from Teams, it returns a failure message that includes error codes in the range of 400 to 699.
 
-Any of the following causes might prevent a connection to the SBC.
+The following causes might prevent call establishment.
 
 ### Cause 1
 
-The SIP failure message is generated by another telephony device that is on the same network as the SBC.
+An SBC or another device on your network generates the SIP failure message.
 
 ### Resolution 1
 
-Troubleshoot the other device to fix the error. If you need assistance, contact the device vendor.
+Troubleshoot the device that returns the error. If you need assistance, contact the device vendor.
 
 ### Cause 2
 
-Your PSTN provider is experiencing some issue and is sending the SIP failure message. This is most likely the case if the failure error code is SIP 403 or SIP 404.
+Your PSTN provider is experiencing an issue and sends the SIP failure message.
 
 ### Resolution 2
 
-Contact your PSTN provider for support to fix the issue.
+Inspect the SIP trace. If you see the failure originating from the PSTN network, contact your PSTN provider for assistance.
 
-### Cause 3
+## Some users can't make outbound calls
 
-The issue is not caused by another device on the network or by your PSTN provider. However, the cause is otherwise unknown.
-
-### Resolution 3
-
-Contact the SBC vendor for support to fix the issue.
-
-## Some users are unable to make calls
-
-If the connection between the Teams client and the SBC is working correctly, but some users cannot make calls, the issue might be caused by incorrect settings or incorrect provisioning of those users.
+If the connection between the Teams SIP proxy and the SBC is working correctly, but some users can't make calls, incorrect settings or incorrect provisioning might cause the problem.
 
 ### Cause 1
 
@@ -94,81 +93,78 @@ Users are missing the dial pad on the **Calls** tab in Teams.
 
 ### Resolution 1
 
-Make sure that the user has the correct license (E3 with Phone System or E5) and all required settings. To check the settings, run the [Get-CsOnlineUser](/powershell/module/skype/get-csonlineuser) cmdlet in Teams PowerShell, as follows:
+Ensure that the user has the [required licenses](/microsoftteams/direct-routing-plan#licensing-requirements) and all required settings. To check the settings, run the [Get-CsOnlineUser](/powershell/module/skype/get-csonlineuser) cmdlet in Teams PowerShell, as follows:
 
 ```powershell
-Get-CsOnlineUser -Identity <UserIdParameter> | fl Identity,EnterpriseVoiceEnabled,HostedVoiceMail,OnPremLineURI
+Get-CsOnlineUser -Identity <UserId> | fl Identity,EnterpriseVoiceEnabled,HostedVoiceMail,OnPremLineURI
 ```
 
-All the required values must be specified as described in [Enable users for Direct Routing, voice, and voicemail](/microsoftteams/direct-routing-enable-users).
+The required values are described in [Enable users for Direct Routing, voice, and voicemail](/microsoftteams/direct-routing-enable-users).
 
 ### Cause 2
 
-None of the patterns in the Online Voice Routing policy (OVRP) match the number that was dialed by the user.
+None of the patterns in the voice routes available through the user's Online Voice Routing Policy (OVRP) match the number that was dialed by the user.
 
 ### Resolution 2
 
-Make sure that the following conditions are true:
+Ensure that the following conditions are true:
 
-- There is a pattern in the OVRP that matches the dialed number.
-- The usage profile for the call matches the one that's set up for the specific user.
-- The gateway that's specified for the SBC is enabled. If it's disabled, either enable it or select a different gateway that is enabled.
+- The user's effective OVRP, whether explicitly assigned or inherited from the global policy, contains a valid PSTN Usage record.
+- There is a pattern in the voice route that matches the dialed number.
+- The PSTN Usage in the voice route matches the one that's set up for the specific user through their OVRP.
+- The gateway that's specified for the [SBC exists, is enabled, and is reachable](/microsoftteams/direct-routing-connect-the-sbc).
 
 ### Cause 3
 
-The user's OVRP contains invalid characters.
+The voice routing configuration contains invalid characters.
 
 ### Resolution 3
 
-Invalid, invisible characters can be inserted in the OVRP when you paste information into it from Microsoft Word or other WYSIWYG editors. Although the characters are not displayed, they are considered when deciding the route that the call should take.
+Invalid or invisible characters can be introduced into voice routing configuration when you paste information from rich-text editors. Invisible characters aren't displayed but can still affect route matching.
 
-To fix the issue, remove the policy, and then recreate it by either rewriting it manually or copying it from a non-WYSIWYG editor, such as Notepad.
+To fix the issue, identify the invalid or invisible character by using a tool that reveals hidden characters and character codes, remove the affected configuration, and then re-create it by either entering the configuration manually or copying it from a plain-text editor, such as Notepad.
 
-## No users are able to make calls
+## No users can make outbound calls
 
-If none of the users are able to make calls, the calls are probably not reaching the SBC. Check for one of the following causes.
+If users can't make calls, the calls might not reach the SBC. Check the following possible causes.
 
 ### Cause 1
 
-Teams has a disabled gateway.
+The gateway for outbound calls is disabled.
 
 ### Resolution 1
 
-Use the Microsoft Teams admin center to make sure that the gateway that's used by Teams is available and enabled.
+Use the Microsoft Teams admin center to ensure that the gateway Teams uses is available and enabled.
 
-You can also use Teams PowerShell to check and update the gateway, as necessary.
+You can also use PowerShell cmdlets to check and update the gateway, as necessary.
 
-To check the status of the gateway, run the [Get-CsOnlinePSTNGateway](/powershell/module/skype/get-csonlinepstngateway) cmdlet. The output must show that the value of the `Enabled` parameter is set to `True`. In the following example,  the `Enabled` parameter is set to `True` for the `sbc1.contoso.com` gateway but not for the `sbc2.contoso.com` gateway.
+To check the status of the gateway, run the [Get-CsOnlinePSTNGateway](/powershell/module/skype/get-csonlinepstngateway) cmdlet. The output must show that the value of the `Enabled` property is set to `True`. In the following example, the `Enabled` property is set to `True` for the `sbc1.contoso.com` gateway but not for the `sbc2.contoso.com` gateway.
 
 ```powershell
 Get-CsOnlinePSTNGateway | fl Identity,Fqdn,SipSignalingPort,MaxConcurrentSessions,Enabled
 ```
 
-:::image type="content" source="media/issues-with-outbound-calls/gateway-status-1.png" alt-text="Screenshot that shows the gateway status.":::
+:::image type="content" source="media/issues-with-outbound-calls/gateway-status-1.png" alt-text="Screenshot of the PowerShell output that shows the sbc2.contoso.com gateway Enabled property set to False.":::
 
-To make sure that the `sbc2.contoso.com` gateway is available to Teams, run the [Set-CsOnlinePSTNGateway](/powershell/module/skype/set-csonlinepstngateway) cmdlet to set the `Enabled` parameter to `True`.
+To enable the `sbc2.contoso.com` gateway in Teams, run the [Set-CsOnlinePSTNGateway](/powershell/module/skype/set-csonlinepstngateway) cmdlet to set the `Enabled` parameter to `True`.
 
 ```powershell
 Set-CsOnlinePSTNGateway -Identity "sbc2.contoso.com" -Enabled $true
 ```
 
-To check whether the `sbc2.contoso.com` gateway is now available, run the `Get-CsOnlinePSTNGateway` cmdlet again:
+To verify that the `sbc2.contoso.com` gateway is now enabled, run the `Get-CsOnlinePSTNGateway` cmdlet again:
 
 ```powershell
 Get-CsOnlinePSTNGateway -Identity "sbc2.contoso.com" | fl Identity,Fqdn,SipSignalingPort,MaxConcurrentSessions,Enabled
 ```
-:::image type="content" source="media/issues-with-outbound-calls/gateway-status-2.png" alt-text="Second screenshot that shows the gateway status.":::
+:::image type="content" source="media/issues-with-outbound-calls/gateway-status-2.png" alt-text="Screenshot of the PowerShell output that shows the sbc2.contoso.com gateway Enabled property set to True.":::
 
 For more information, see [Connect your SBC to Direct Routing](/microsoftteams/direct-routing-connect-the-sbc).
 
 ### Cause 2
 
-The gateway is not responding to SIP options messages because some device on the network, such as a firewall, is blocking the messages.
+The gateway doesn't respond to SIP requests because a device on the network, such as a firewall, blocks the messages.
 
 ### Resolution 2
 
-Make sure that the SIP Signaling IPs and FQDNs are allowed on all network devices that connect the SBC to the internet. The IP addresses that must be allowed are listed at [SIP Signaling: FQDNs](/microsoftteams/direct-routing-plan#sip-signaling-fqdns).
-
-## More information
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Ensure that you [allow SIP signaling IP addresses and FQDNs](/microsoftteams/direct-routing-plan#sip-signaling-fqdns) on all network devices that connect the SBC to the internet. You can find the IP addresses that you need to allow in [SIP Signaling: FQDNs](/microsoftteams/direct-routing-plan#sip-signaling-fqdns).

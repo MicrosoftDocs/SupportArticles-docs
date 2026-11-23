@@ -158,14 +158,21 @@ If the EFI System Partition (ESP) has been deleted or is missing, the VM cannot 
     | Debian 11 | 15 | 8192 |262143 |
     | RHEL 7 | 1 |2048 | 1026047 |
     | RHEL 8 | 15 |10240 | 1024000 |
+    | RHEL 9 | 1 | 2048 | 411647 |
+    | RHEL 10(raw) | 2 | 4096 | 413695 |
+    | RHEL 10(lvm) | 1 | 2048 | 1026047 |
     | Oracle Linux 7 | 15 |10240 | 1024000 |
     | Oracle Linux 8 | 15 |10240 | 1024000 |
     | Ubuntu 18.04 | 15 |10240 | 227327 |
     | Ubuntu 20.04 | 15 |10240 | 227327 |
+    | Ubuntu 22.04 | 15 | 10240 | 227327 |
+    | Ubuntu 24.04 | 15 | 10240 | 227327 |
+    | Ubuntu 26.04 | 15 | 2107392 | 2324479 | 
     | SLES 12 | 2| 6144 | 1054719 |
     | SLES 15 | 2| 6144 | 1054719 |
+    | SLES 16 | 2| 6144 | 1054719 |
 
-3. Once the partition is recreated, restore the VM by swapping the repaired OS disk with the original OS disk of the VM by using the [az vm repair restore](/cli/azure/vm/repair#az-vm-repair-restore) command. For more information, see the step 5 in [Repair a Linux VM by using the Azure Virtual Machine repair commands](repair-linux-vm-using-azure-virtual-machine-repair-commands.md).
+4. Once the partition is recreated, restore the VM by swapping the repaired OS disk with the original OS disk of the VM by using the [az vm repair restore](/cli/azure/vm/repair#az-vm-repair-restore) command. For more information, see the step 5 in [Repair a Linux VM by using the Azure Virtual Machine repair commands](repair-linux-vm-using-azure-virtual-machine-repair-commands.md).
 
 ## <a id="scenario2"></a>Scenario 2: UEFI partition in boot image is corrupted
 

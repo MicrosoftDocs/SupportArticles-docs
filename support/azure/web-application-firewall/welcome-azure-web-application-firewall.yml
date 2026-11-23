@@ -24,3 +24,11 @@ landingContent:
         links:
           - text: Troubleshoot WAF for Azure Application Gateway
             url: web-application-firewall-troubleshoot.md
+
+  # Card
+  - title: Agentic-focused
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot Application Gateway WAF custom rules, exclusions, and platform limits
+            url: troubleshoot-custom-rule-priority-exclusions-platform-limits.md

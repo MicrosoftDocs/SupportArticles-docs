@@ -19,6 +19,10 @@ ms.date: 10/30/2023
 ---
 # "Couldn't complete the call" error when you call from a contact card
 
+## Summary
+
+In the Microsoft Teams Windows desktop client, calling a coworker from their contact card might fail with “Couldn't complete the call. With your calling license, you can only call people within your organization.” This happens when the caller isn’t enabled for Enterprise Voice. To make the call, use the **Audio call** button in a one-to-one chat or find the user on the **Calls** tab.
+
 ## Symptoms
 
 In the Microsoft Teams Windows desktop client, you try to call a user in your organization by selecting the **Call** icon:::image type="icon" source="media/error-call-from-contact-card/call-icon.png"::: from their contact card. However, you receive the following error message:

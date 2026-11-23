@@ -1,9 +1,9 @@
 ---
 title: The Front of Room status of a Teams Rooms device is Unhealthy
 description: Resolve the issue that causes the Front of Room signal of a Microsoft Teams Rooms device to appear as Unhealthy.
-ms.reviewer: lamos
+ms.reviewer: lamos, mattslomka
 ms.topic: troubleshooting
-ms.date: 10/30/2023
+ms.date: 08/18/2026
 author: Cloud-Writer
 ms.author: meerak
 manager: dcscontentpm
@@ -19,6 +19,10 @@ ms.custom:
 ---
 
 # The Front of Room status is Unhealthy
+
+## Summary
+
+When a Microsoft Teams Rooms device no longer detects a Front of Room display, the Teams Rooms Pro Management portal shows **Display - Front of Room** as **Unhealthy**. The display might be blank or show “No Signal,” and the room console might report that it’s disconnected. This article explains how to check the HDMI cable, display power, extenders, video adapters, and EDID devices to restore the connection.
 
 ## Symptoms
 

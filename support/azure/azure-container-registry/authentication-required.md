@@ -1,10 +1,11 @@
 ---
 title: Authentication required error message in Azure Container Registry
-description: Understand how to resolve a scenario in which an authentication required error occurs when you try to access Azure Container Registry.
-ms.date: 08/20/2026
+description: Learn how to fix the "unauthorized - authentication required" error when you pull images from Azure Container Registry by checking credentials and pull permissions.
+ms.date: 10/08/2026
+manager: dcscontentpm
 author: kaushika-msft
 ms.author: kaushika
-ms.reviewer: zhixinsun, shiyao, pihe
+ms.reviewer: zhixinsun, shiyao, pihe, kaushika
 ms.service: azure-container-registry
 ms.topic: troubleshooting
 ai-usage: ai-assisted
@@ -15,11 +16,11 @@ ms.custom: sap:Image Pull Issues
 
 ## Summary
 
-This article describes how to resolve an **unauthorized: authentication required** error that occurs when you try to pull a container image or artifact from a Microsoft Azure Container Registry.
+This article describes how to resolve an "unauthorized: authentication required" error that occurs when you try to pull a container image or artifact from an Azure Container Registry (ACR).
 
 ## Symptoms
 
-When you pull a container image or artifact from Azure Container Registry, the pull fails with an authentication error that resembles the following message:
+When you pull a container image or artifact from ACR, the pull fails with an authentication error that resembles the following message.
 
 > Head "https\://\<container-registry-name>.azurecr.io/v2/\<repository>/manifests/\<tag>": unauthorized: authentication required, visit <https://aka.ms/acr/authorization> for more information.
 
@@ -39,14 +40,14 @@ When you pull a container image or artifact from Azure Container Registry, the p
 
 ## Cause
 
-Azure Container Registry is private by default. Unless you [enable anonymous pull access](/azure/container-registry/anonymous-pull-access), the client must provide a valid credential, and the authenticated identity must be authorized to pull from the target repository.
+ACR is private by default. Unless you [enable anonymous pull access](/azure/container-registry/anonymous-pull-access), the client must provide a valid credential, and the authenticated identity must be authorized to pull from the target repository.
 
-The failure can occur at either of these stages:
+The following table lists the types of failure that can occur at either of these stages.
 
 | Stage | Common causes | Possible error |
 | --- | --- | --- |
 | Authentication or token exchange | No credential, incorrect password, disabled administrator account, disabled repository token, expired credential, or a Microsoft Entra identity that can't obtain an ACR token | `unauthorized: authentication required` |
-| Repository authorization | Missing pull role, a role that isn't valid for the registry's role assignment mode, an ABAC condition that doesn't match the repository, or a scope map without `content/read` | `authentication required` or `pull access denied` |
+| Repository authorization | Missing pull role, a role that isn't valid for the registry's role assignment mode, an attribute-based access control (ABAC) condition that doesn't match the repository, or a scope map without `content/read` | `authentication required` or `pull access denied` |
 
 Registry authentication and repository authorization are separate. Successful registry authentication doesn't prove that the credential can pull from a particular repository.
 
@@ -58,14 +59,14 @@ For supported authentication methods and client-specific sign-in instructions, s
 
 ### Microsoft Entra identity
 
-For an interactive user, sign in again and authenticate to the registry:
+For an interactive user, sign in again and authenticate to the registry. Use Azure CLI to run the following command.
 
 ```azurecli
 az login
 az acr login --name <registry-name>
 ```
 
-For unattended workloads, validate the service principal or managed identity that actually performs the pull. Check that:
+For unattended workloads, validate the service principal or managed identity that actually performs the pull. Check that the following conditions are met:
 
 - The service principal client ID and tenant are correct.
 - The client secret or certificate hasn't expired or been replaced.
@@ -76,7 +77,7 @@ Microsoft Entra registry tokens issued through `az acr login` are valid for thre
 
 ### Administrator account
 
-Confirm that the registry administrator account is enabled and that the client uses the current username and one of the current passwords:
+Confirm that the registry administrator account is enabled and that the client uses the current username and one of the current passwords. Run the following command.
 
 ```azurecli
 az acr show --name <registry-name> --query adminUserEnabled
@@ -86,7 +87,7 @@ The administrator account has registry-wide push and pull permissions and is int
 
 ### Repository-scoped token
 
-Confirm that:
+Confirm that the following conditions are met:
 
 - The token status is `enabled`.
 - The token password isn't expired or regenerated.
@@ -96,7 +97,7 @@ For more information, see [Non-Microsoft Entra token-based repository permission
 
 ### Clear stale Docker credentials
 
-Docker can continue to send an old cached credential after a password or token is changed. Clear the cached credential, authenticate again, and retry the pull:
+Docker can continue to send an old cached credential after a password or token is changed. Clear the cached credential, authenticate again, and retry the pull. Run the following command to do so.
 
 ```console
 docker logout <registry-name>.azurecr.io
@@ -108,7 +109,7 @@ If anonymous pull is enabled, clear existing Docker credentials before testing a
 
 ## Solution 2: Add authorization permission to pull from the container registry
 
-First, determine the registry's role assignment permissions mode:
+First, determine the registry's role assignment permissions mode. Run the following command.
 
 ```azurecli
 az acr show \
@@ -118,7 +119,7 @@ az acr show \
   --output tsv
 ```
 
-Use the authorization model that matches the registry:
+Use the authorization model in the following table that matches the registry.
 
 | Registry authorization model | Pull permission |
 | --- | --- |
@@ -131,7 +132,7 @@ For detailed role definitions and permissions, see [Azure Container Registry rol
 > [!IMPORTANT]
 > An ABAC-enabled registry doesn't honor the legacy `AcrPull`, `AcrPush`, or `AcrDelete` roles. In this mode, `Owner`, `Contributor`, and `Reader` grant control-plane access but don't grant repository data-plane access.
 
-For example, assign `AcrPull` to an identity on a registry that uses **RBAC Registry Permissions**:
+For example, assign `AcrPull` to an identity on a registry that uses **RBAC Registry Permissions**. Run the following command.
 
 ```azurecli
 ACR_ID=$(az acr show --name <registry-name> --query id --output tsv)
@@ -143,7 +144,7 @@ az role assignment create \
   --scope "$ACR_ID"
 ```
 
-For an ABAC-enabled registry, assign the repository reader role instead:
+For an ABAC-enabled registry, assign the repository reader role instead. Run the following command.
 
 ```azurecli
 az role assignment create \
@@ -153,7 +154,7 @@ az role assignment create \
   --scope "$ACR_ID"
 ```
 
-Role assignments and role assignment mode changes can take time to propagate. After the configuration is effective, authenticate again and validate authorization with an actual pull. For example, if you use Docker:
+Role assignments and role assignment mode changes can take time to propagate. After the configuration is effective, authenticate again and validate authorization with an actual pull. For example, if you use Docker, run the following command.
 
 ```console
 docker pull <registry-name>.azurecr.io/<repository>:<tag>
@@ -165,7 +166,7 @@ Don't use successful registry authentication as the only validation. Authenticat
 
 Azure Container Registry doesn't collect or store resource logs by default. This step applies only if you configured a diagnostic setting to route `ContainerRegistryLoginEvents` to a Log Analytics workspace before the issue occurred, and you have access to that workspace.
 
-Query the authentication failures:
+Investigate the authentication failures by running the following query.
 
 ```kusto
 ContainerRegistryLoginEvents

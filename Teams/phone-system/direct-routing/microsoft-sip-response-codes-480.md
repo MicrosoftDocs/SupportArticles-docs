@@ -22,6 +22,8 @@ ms.reviewer: teddygyabaah
 
 [!INCLUDE [Teams Direct Routing note](../../../includes/teams-direct-routing-note.md)]
 
+## Summary
+
 This article provides troubleshooting information for various combinations of the SIP "480" error and various Microsoft response codes.
 
 ## 10037 480 No callee endpoints were found

@@ -47,7 +47,7 @@ Two supported scenarios exist:
 
 ### Scenario 1: The client uses a public endpoint to access storage accounts
 
-In this scenario, you must add the client's public IP address or virtual network (VNet) to the firewall allowlist in the source and destination storage accounts.
+In this scenario, you must add the virtual network (VNet) to the firewall allowlist in the source and destination storage accounts.
 
 The following image shows the process of copying blobs between storage accounts in this scenario:
 

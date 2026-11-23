@@ -21,8 +21,8 @@ items:
     items:
     - name: Common issues with running or scaling large AKS clusters
       href: create-upgrade-delete/aks-at-scale-troubleshoot-guide.md
-    - name: Cluster upgrading and scaling errors
-      href: create-upgrade-delete/upgrading-or-scaling-does-not-succeed.md
+    - name: Upgrade, scaling, and failed-state errors
+      href: availability-performance/cluster-node-virtual-machine-failed-state.md
     - name: Node count isn't in autoscaler min and max range
       href: create-upgrade-delete/node-count-is-not-in-autoscaler-min-max-range.md
     - name: Troubleshoot pods remain in a Pending state scenario
@@ -57,7 +57,7 @@ items:
     href: create-upgrade-delete/troubleshoot-apiserver-etcd.md
 - name: Node/node pool availability and performance
   items:
-  - name: AKS cluster/node is in failed state
+  - name: Upgrade, scaling, and failed-state errors
     href: availability-performance/cluster-node-virtual-machine-failed-state.md
   - name: Identify containers facing high CPU pressure and throttling
     href: availability-performance/troubleshoot-node-cpu-pressure-psi.md
@@ -93,8 +93,12 @@ items:
       href: availability-performance/node-not-ready-then-recovers.md
     - name: Troubleshoot node auto-repair errors
       href: availability-performance/node-auto-repair-errors.md
+    - name: Troubleshoot flex node Machine API and node pool changes
+      href: extensions/flex-nodes-for-aks.md
 - name: Connectivity issues
   items:
+  - name: Troubleshoot Microsoft Entra SSH access to nodes
+    href: connectivity/troubleshoot-microsoft-entra-ssh-node-access.md
   - name: Can't connect to application hosted on AKS cluster
     items:
     - name: Basic troubleshooting
@@ -183,6 +187,8 @@ items:
     href: storage/pods-namespaces-terminating-state.md
   - name: Troubleshoot timeout and latency issues in AKS with Azure Storage
     href: storage/troubleshoot-timeout-latency-aks-azure-storage.md
+  - name: Low disk space on nodes caused by BlobFuse volumes
+    href: storage/blobfuse-low-disk-space-excessive-file-handles.md
   - name: Mount failures
     items:
     - name: Can't set the uid and gid mounting options on an Azure Disk
@@ -207,6 +213,10 @@ items:
   items:
   - name: Troubleshoot Azure Managed Lustre CSI Driver extension errors
     href: extensions/troubleshoot-azurelustre-csi-extension-errors.md
+  - name: Troubleshoot Agent Sandbox cluster extension errors in AKS (preview)
+    href: extensions/troubleshoot-agent-sandbox-cluster-extension.md
+  - name: Troubleshoot Pod snapshot cluster extension errors in AKS (preview)
+    href: extensions/troubleshoot-pod-snapshot-cluster-extension.md
   - name: Troubleshoot Azure Policy Add-On
     items:
     - name: Troubleshoot Azure Policy Add-On for AKS
@@ -243,6 +253,14 @@ items:
     href: extensions/application-routing-gateway-api.md
   - name: Troubleshoot Azure DNS and TLS integration for the Application Routing Gateway API Implementation
     href: extensions/application-routing-gateway-api-dns-tls.md
+  - name: Troubleshoot the application routing default domain feature
+    href: extensions/application-routing-default-domain.md
+  - name: AI and machine learning extensions
+    items:
+    - name: Troubleshoot managed Kueue extension errors (preview)
+      href: extensions/troubleshoot-kueue-extension-errors.md
+    - name: Troubleshoot managed KubeRay extension errors (preview)
+      href: extensions/troubleshoot-kuberay-extension-errors.md
   - name: Troubleshoot the Istio-based service mesh add-on
     items:
     - name: General Istio add-on troubleshooting
@@ -263,6 +281,8 @@ items:
       href: extensions/istio-add-on-cni-troubleshooting.md
   - name: Other extensions and add-ons
     items:
+    - name: Troubleshoot GitOps with Argo CD extension deployment errors
+      href: ./extensions/troubleshoot-argo-cd-deployment-errors.md
     - name: AKS Cost Analysis add-on issues
       href: extensions/aks-cost-analysis-add-on-issues.md
     - name: Troubleshoot AI toolchain operator add-on errors

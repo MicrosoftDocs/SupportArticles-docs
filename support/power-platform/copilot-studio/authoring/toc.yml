@@ -1,5 +1,7 @@
 items:
 - name: Agent doesn't respond in the Test your agent panel
   href: agent-test-no-response.md
-- name: Understand error codes
+- name: Resolve agent error codes
   href: error-codes.md
+- name: Your organization has prevented this agent from being installed
+  href: prevent-agent-install.md

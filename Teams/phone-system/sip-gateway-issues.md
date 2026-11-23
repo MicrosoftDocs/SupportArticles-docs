@@ -18,6 +18,8 @@ ms.reviewer: scapero, chasing, cafarric
 
 # Common issues when you use SIP devices with Teams
 
+## Summary
+
 SIP Gateway enables your organization to use any compatible SIP device together with Microsoft Teams. This article lists some common issues that might occur when you use a compatible SIP device to make and receive calls through Teams, and provides steps to help you troubleshoot these issues.
 
 ## Teams SIP phone is offboarded

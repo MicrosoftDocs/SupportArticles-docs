@@ -79,7 +79,6 @@ To avoid being sent through the relay pool, the forwarded or relayed email messa
 
 - SPF passes when the email message enters the Microsoft 365 environment.
 
-- DKIM on the sender’s domain passes when the message arrives at Microsoft 365.
 
 If none of these conditions are met, the message might be routed through the relay pool.
 

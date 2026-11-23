@@ -24,7 +24,7 @@ landingContent:
         - text: Frequently asked questions and acronyms
           url: releases/faq-acronyms.md
         - text: Latest updates and version history
-          url: releases/download-and-install-latest-updates.md
+          url: https://support.microsoft.com/help/321185
         - text: Microsoft Update Detection logic
           url: releases/new-mu-servicing-model.md
         - text: Naming schema and Fix areas for SQL updates
@@ -42,14 +42,10 @@ landingContent:
         links:
         - text: SQL LogScout
           url: https://github.com/microsoft/sql_logscout#scenarios
-        - text: PSSDiag
-          url: https://github.com/microsoft/DiagManager/wiki/Create-a-PSSDiag-Package
         - text: SQLTrace
           url: https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/SQLTRACE          
         - text: SSPIClient
           url: https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/SSPICLIENT          
-        - text: TSS V2
-          url: ../windows-client/windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tssv2.md          
         - text: SQLDumper
           url: tools/use-sqldumper-generate-dump-file.md
           

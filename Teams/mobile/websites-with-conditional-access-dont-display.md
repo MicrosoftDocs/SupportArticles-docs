@@ -21,16 +21,18 @@ description: Some websites (such as internet portals) do not display in the Team
 
 # A website with Conditional Access does not display when viewed in the Website tab 
 
+## Summary
+
+When a website with Conditional Access restrictions doesn't display in the **Website** tab of the Microsoft Teams desktop app, browser or IP address restrictions might prevent it from loading. Use Teams in a browser to access the website instead.
+
 ## Symptoms
 
 A website (such as an intranet portal) does not render as a tab inside of the Teams desktop app when that website has Conditional Access policies in place (such as browser or IP address restrictions).
 
-## Workaround
+## Resolution
 
-We recommend that you use Teams in a browser instead of the desktop app.
+Use Teams in a browser instead of the desktop app.
 
 ## More information
 
 [What is Conditional Access?](/azure/active-directory/conditional-access/overview)
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

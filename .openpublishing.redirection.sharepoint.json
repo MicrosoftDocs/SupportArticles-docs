@@ -335,6 +335,91 @@
     {
       "source_path": "SharePoint/OneDrive/storage/check-storage-increase-eligibility.md",
       "redirect_url": "/office365/servicedescriptions/onedrive-for-business-service-description"
+    },
+    {
+      "source_path": "SharePoint/SharePointExperts/administration/antivirus-and-intermittent-issues.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "SharePoint/SharePointExperts/administration/call-to-excel-services-failed.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "SharePoint/SharePointExperts/administration/cant-open-office-files.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "SharePoint/SharePointExperts/administration/edit-document-requires-compatible-application-and-web-browser.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "SharePoint/SharePointExperts/administration/email-notifications-sent-for-scheduled-data-refresh-failures-in-power-pivot.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "SharePoint/SharePointExperts/administration/excel-workbooks-in-xml-format-not-open.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "SharePoint/SharePointExperts/administration/large-publisher-files-open-in-read-only-mode.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "SharePoint/SharePointExperts/administration/microsoft-forms-shows-sorry-something-went-wrong.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "SharePoint/SharePointExperts/administration/powerpivot-scheduled-data-refresh-fails.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "SharePoint/SharePointExperts/administration/retrieving-com-class-factory-for-component-failed.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "SharePoint/SharePointExperts/administration/sorry-something-went-wrong-when-try-to-schedule-a-data-refresh.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "SharePoint/SharePointExperts/administration/troubleshooting-powerpivot-gallery-snapshot.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "SharePoint/SharePointExperts/lists-and-libraries/files-downloaded-instead-of-opening-office-application.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "SharePoint/SharePointExperts/sharing-and-permissions/login-issues-in-a-cloud-scenario.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "SharePoint/SharePointExperts/web-parts/excel-web-access-web-part-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "SharePoint/SharePointExperts/web-parts/increase-size-limit-embedded-media.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "SharePoint/SharePointExperts/sharepoint-experts-welcome.yml",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement",
+      "redirect_document_id": false
     }
   ]
 }

@@ -1,21 +1,23 @@
 ---
 title: Troubleshoot TCP connection timeout problems in Azure Application Gateway
 description: Diagnose and fix TCP connection timeouts in Azure Application Gateway. Use this checklist to restore client connectivity and resolve front-end issues.
-ms.date: 04/02/2026
-ms.author: lalbadarneh
-ms.editor: v-jsitser
-ms.reviewer: giverm
+ms.date: 09/24/2026
+ms.topic: troubleshooting
+manager: dcscontentpm
+author: kaushika-msft
+ms.author: kaushika
+ms.reviewer: giverm, lalbadarneh, kaushika
 ms.service: azure-application-gateway
 ms.custom: sap:Connection timed out
-
 #customer intent: As a cloud administrator, I want to troubleshoot TCP connection timeout problems in Azure Application Gateway so that client traffic can successfully establish a TCP connection to the gateway front end.
+ai-usage: ai-assisted
 ---
 
 # Troubleshoot TCP connection timeout problems in Azure Application Gateway
 
 ## Summary
 
-This article helps you diagnose and resolve TCP connection timeout problems when traffic routes through Microsoft Azure Application Gateway.
+This article helps you diagnose and resolve TCP connection timeout problems when traffic routes through Azure Application Gateway.
 
 A TCP connection timeout occurs if a client can't establish a TCP connection to the Application Gateway front end. These problems occur before HTTP processing. Therefore, the request never reaches the back-end application.
 
@@ -25,7 +27,9 @@ A TCP connection timeout occurs if a client can't establish a TCP connection to 
 
 ## Prerequisites
 
-- An Application Gateway deployed by having a public or private front-end IP
+Ensure you have the following prerequisites in place:
+
+- An Application Gateway deployed with a public or private front-end IP
 - Client access to the Application Gateway front-end IP and port
 - Permission to review Application Gateway, network security group (NSG), and route table configurations
  
@@ -46,14 +50,14 @@ In this scenario, requests time out before any HTTP response is received, and tr
 
 A TCP connection timeout indicates that the client can't establish a TCP connection to the Application Gateway front end.
 
-Common causes include:
+Common causes include the following:
 
 - Client network problems. These problems include firewall or proxy configurations that block or inspect outbound traffic.
 - NSG rules are applied to the Application Gateway subnet.
 - User-defined routes (UDRs) are applied to the subnet, including forced tunneling scenarios.
 - No front-end listener is configured on the destination port.
 - A listener exists but isn't associated with a routing rule.
-- Client-side DNS resolution problems occur.
+- Client-side Domain Name System (DNS) resolution problems occur.
 
 ## Troubleshooting checklist
 
@@ -66,7 +70,7 @@ Client network components that commonly affect connectivity include:
 - Firewalls that restrict outbound ports.    
 - Proxy servers that block, inspect, or require authentication for outbound traffic.
 
-Make sure that outbound traffic to the Application Gateway front-end IP and port is allowed and isn't changed before it reaches Azure.
+Make sure that you allow outbound traffic to the Application Gateway front-end IP and port and that it isn't changed before it reaches Azure.
 
 ### Review NSG and UDR configuration on the Application Gateway subnet
 
@@ -114,16 +118,16 @@ If this option is enabled, follow these steps:
 
 ### Verify DNS configuration
 
-DNS problems don't cause a TCP connection time out. Instead, they prevent the TCP connection from being created because the client can't resolve the destination hostname to an IP address.
+DNS problems don't cause a TCP connection timeout. Instead, they prevent the TCP connection from being created because the client can't resolve the destination hostname to an IP address.
 
 If you encounter DNS-related errors, such as `ERR_NAME_NOT_RESOLVED` or host not found, take the following actions:
 
-- Make sure that the DNS record resolves to the Application Gateway front-end IP address.
+- Ensure that the DNS record resolves to the Application Gateway front-end IP address.
 - Verify that the resolved IP belongs to the intended application gateway.
 
 ### Verify front-end listener configuration
 
-To make sure that Application Gateway is listening on the expected IP address and port, follow these guidelines:
+To ensure that Application Gateway is listening on the expected IP address and port, follow these guidelines:
 
 - A front-end listener must exist on the destination port.
 - The listener must be associated with a routing rule that forwards traffic to a back-end pool.

@@ -1,17 +1,23 @@
 ---
 title: Identify containers causing high disk I/O latency in AKS clusters
-description: Identify containers and pods causing high disk I/O latency in AKS, and troubleshoot faster with Inspektor Gadget. Start diagnosing bottlenecks now.
-ms.date: 07/16/2025
-ms.author: burakok
-ms.reviewer: burakok, mayasingh, blanquicet
+description: Identify containers and pods causing high disk I/O latency in AKS clusters by using Inspektor Gadget. Start diagnosing disk bottlenecks now.
+ms.date: 10/26/2026
+ms.topic: troubleshooting
+manager: dcscontentpm
+author: kaushika-msft
+ms.author: kaushika
+ms.reviewer: burakok, mayasingh, blanquicet, kaushika
 ms.service: azure-kubernetes-service
 ms.custom: sap:Node/node pool availability and performance
+ai-usage: ai-assisted
 ---
-# Troubleshoot high disk I/O latency in AKS clusters
+# Troubleshoot high disk I/O latency in Azure Kubernetes Service clusters
 
 ## Summary
 
-Disk I/O latency can severely affect the performance and reliability of workloads running in Azure Kubernetes Service (AKS) clusters. This article shows how to use the open source project [Inspektor Gadget](https://aka.ms/ig-website) to identify which containers and pods cause high disk I/O latency in AKS.
+This article helps you identify containers and pods that cause high disk I/O latency in Azure Kubernetes Service (AKS) clusters. It also provides guidance for troubleshooting these issues.
+
+Disk I/O latency can severely affect the performance and reliability of workloads running in AKS clusters. This article shows how to use the open source project [Inspektor Gadget](https://aka.ms/ig-website) to identify which containers and pods cause high disk I/O latency in AKS.
 
 Inspektor Gadget provides eBPF-based gadgets that help you observe and troubleshoot disk I/O problems in Kubernetes environments.
 
@@ -20,7 +26,7 @@ Inspektor Gadget provides eBPF-based gadgets that help you observe and troublesh
 You might suspect disk I/O latency problems when you observe the following behaviors in your AKS cluster:
 
 - Applications become unresponsive during file operations.
-- [Azure Portal metrics](/azure/aks/monitor-aks-reference#supported-metrics-for-microsoftcomputevirtualmachines)(`Data Disk Bandwidth Consumed Percentage` and `Data Disk IOPS Consumed Percentage`) or other system monitoring shows high disk utilization with low throughput.
+- [Azure portal metrics](/azure/aks/monitor-aks-reference#supported-metrics-for-microsoftcomputevirtualmachines)(`Data Disk Bandwidth Consumed Percentage` and `Data Disk IOPS Consumed Percentage`) or other system monitoring tools show high disk utilization with low throughput.
 - Database operations take significantly longer than expected.
 - Pod logs show file system operation errors or timeouts.
 

@@ -19,7 +19,7 @@ appliesto:
   - Exchange Server 2019
   - Exchange Server 2016
 search.appverid: MET150
-ms.date: 4/03/2026
+ms.date: 04/03/2026
 ---
 
 # Shared or resource mailbox UPN and SamAccountName contain a GUID

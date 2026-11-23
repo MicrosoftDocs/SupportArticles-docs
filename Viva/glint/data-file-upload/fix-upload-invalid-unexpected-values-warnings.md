@@ -2,8 +2,8 @@
 title: Resolve file upload warnings and errors related to invalid or unexpected values
 description: Fix issues that cause invalid or unexpected values when you upload employee attribute data to Viva Glint.
 manager: dcscontentpm
-ms.reviewer: aweixelman
-ms.date: 05/12/2025
+ms.reviewer: aweixelman, ahosabettu
+ms.date: 10/29/2026
 audience: ITPro
 ms.topic: troubleshooting
 search.appverid: MET150
@@ -16,7 +16,7 @@ ms.custom:
 
 # Resolve file upload warnings and errors related to invalid or unexpected values
 
-When you upload employee attribute data to Microsoft Viva Glint, you receive one of the following warning or error messages. Select the warning or error that you experience from the list at the top of the article, and follow the appropriate resolution to fix the issue.
+When you upload employee attribute data to Microsoft Viva Glint, you receive one of the following warning or error messages. To fix the issue, select the relevant error, and follow the appropriate resolution.
 
 ## RECORD_STAGING_FAILURE
 
@@ -279,3 +279,36 @@ To fix the issue, follow these steps:
 
    > [!NOTE]
    > You can confirm the current upload, and add the corrected addresses in a future upload. However, until they are corrected, personal email addresses that are in an invalid format will remain associated with the affected users in Viva Glint.
+
+## VALUE_WHITESPACE_TRIMMED 
+
+**Message:**
+
+> Line {line}: Leading and/or trailing spaces in {field} for Employee ID {id} were removed. Stored value: "{stored_value}".
+
+**Issue type:** Line-level warning
+
+This warning occurs when an employee data value contains leading or trailing spaces. Viva Glint automatically removes the spaces before storing the value. The employee record is processed with the trimmed value shown in the warning. 
+
+### Resolution
+
+No action is required for the current upload, because the leading or trailing spaces were removed automatically. 
+
+To prevent this warning in future uploads, remove unintended leading or trailing spaces from values in your source employee data before you upload the file. 
+
+**Message:**
+
+> UPN_EMAIL_VALUE: Email {value} is a UPN containing #EXT#, indicating a guest address rather than a valid mailbox.
+
+**Issue type:** Line-level warning
+
+This warning occurs when the Email value for an employee contains #EXT#, which indicates that the value is associated with a guest user rather than the employee's valid email address. 
+
+### Resolution
+
+To fix the issue, follow these steps: 
+
+1. Review the Email value for the affected employee. 
+1. If the value is a guest UPN that contains #EXT#, replace it with the employee's valid email address. 
+1. If a valid email address isn't available and a synthetic value is required, use a valid email format, such as 12345@example.com. 
+1. Upload the employee data again.

@@ -12,16 +12,24 @@
   items:
     - name: Can't switch between different Teams organizations in the Dynamics 365 app
       href: cases-or-incidents/cannot-switch-teams-organizations-dynamics-365-app.md
+    - name: Case resolution dialog fields are missing in production environment
+      href: cases-or-incidents/case-resolution-dialog-fields-missing-production.md
     - name: Chatbot workstream fails to detect user's location
       href: cases-or-incidents/user-location-not-captured-displayed-to-agent.md
     - name: Icons and colors aren't displayed in case views
       href: cases-or-incidents/icons-and-colors-not-displaying-in-case-views.md
-    - name: You don't have access to the data used for case summaries error
-      href: cases-or-incidents/you-dont-have-access-to-data-for-case-summaries-error.md
+    - name: Resolved or canceled cases reopen unexpectedly
+      href: cases-or-incidents/cases-reactivate-reopen-unexpectedly.md
     - name: The Dismiss All button doesn't work in the notifications
       href: cases-or-incidents/dismiss-all-not-working-in-notifications.md
     - name: Workstreams and agents are affected by changes made to other Copilot Studio bots
       href: cases-or-incidents/add-or-manage-bots-issues.md
+    - name: You don't have access to the data used for case summaries error
+      href: cases-or-incidents/you-dont-have-access-to-data-for-case-summaries-error.md
+- name: Channel Integration Framework (CIF)
+  items:
+    - name: Troubleshoot a non-Microsoft contact center panel in Copilot Service workspace (preview)
+      href: channel-integration-framework/troubleshoot-third-party-contact-center.md
 - name: Customer Service Insights
   items:
     - name: Troubleshoot issues using Solution Health Hub
@@ -42,10 +50,10 @@
       href: email/email-preview-text-showing-error-when-not-configured.md
     - name: Email template context loads out of order
       href: email/email-template-context-loading-out-of-order.md
+    - name: Email template formatting issues
+      href: email/email-templates-and-formatting-issues.md
     - name: Formatting is lost when copying Word template content to an email message
       href: email/formatting-lost-when-copying-word-template-text-to-email-message.md
-    - name: Issues with email templates and formatting
-      href: email/email-templates-and-formatting-issues.md  
     - name: Incoming email isn't converted to a case
       href: email/incoming-email-not-converted-case.md
     - name: Troubleshoot configuration issues with automatic record creation and update rules
@@ -66,7 +74,7 @@
       href: knowledge-management/knowledge-articles-not-supporting-multilingual-search.md  
 - name: Quality Management
   items:
-    - name: Troubleshoot failed quality evaluations
+    - name: Troubleshoot quality evaluation errors
       href: omnichannel-for-customer-service/quality-evaluation-retry.md
 - name: Queues
   items:  
@@ -174,7 +182,7 @@
       href: teams-collaboration/flow-connection-invalid-customer-support-swarming.md
 - name: Unified routing
   items:
-    - name: Troubleshoot failures in enabling of unified routing
+    - name: Troubleshoot failures when provisioning unified routing
       href: unified-routing/troubleshoot-enabling-unified-routing.md
     - name: Troubleshoot issues with automatic assignment
       href: unified-routing/troubleshoot-assignment-issues.md
@@ -254,7 +262,7 @@
           href: omnichannel-for-customer-service/error-communication-panel.md
     - name: Quality Management
       items:
-        - name: Troubleshoot failed quality evaluations
+        - name: Troubleshoot quality evaluation errors
           href: omnichannel-for-customer-service/quality-evaluation-retry.md
     - name: Social channels
       items:

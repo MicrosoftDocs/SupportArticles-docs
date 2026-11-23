@@ -1,7 +1,7 @@
 ---
 title: QuotaExceeded error when scaling virtual machine scale sets
 description: Steps to resolve issues when QuotaExceeded error appears.
-ms.date: 05/04/2020
+ms.date: 09/17/2026
 author: kaushika-msft
 ms.author: kaushika
 manager: dcscontentpm
@@ -14,6 +14,10 @@ ms.custom: sap:Scaling issue with my scale set
 # QuotaExceeded error when scaling virtual machine scale sets
 
 This article provides guidance on resolving "QuotaExceeded" errors during the deployment, migration, or scaling of Azure Virtual Machine Scale Sets.
+
+For the distinction between quota approval and physical capacity, see [Quota and capacity](/azure/virtual-machines/quotas#quota-and-capacity) and [On-demand capacity reservation](/azure/virtual-machines/capacity-reservation-overview).
+
+If you receive `AllocationFailed` or `ZonalAllocationFailed` after a quota increase, see [Troubleshoot allocation failures on virtual machine scale sets](../deploy/allocationfailed-or-zonalallocationfailed.md).
 
 ## Symptom
 

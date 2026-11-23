@@ -3,4 +3,6 @@ items:
   href: welcome-azure-web-application-firewall.yml
   items:
   - name: Troubleshoot WAF for Azure Application Gateway
-    href: web-application-firewall-troubleshoot.md   
+    href: web-application-firewall-troubleshoot.md
+  - name: Troubleshoot Application Gateway WAF custom rules, exclusions, and platform limits
+    href: troubleshoot-custom-rule-priority-exclusions-platform-limits.md

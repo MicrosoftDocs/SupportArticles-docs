@@ -1,30 +1,34 @@
 ---
-title: Fix AKS time-out errors from custom NSG blocks
+title: Troubleshoot AKS time-out errors from custom NSG blocks
 description: Fix AKS time-out errors caused by a custom NSG blocking app traffic. Use this guide to identify the cause and restore access quickly.
-ms.date: 09/16/2024
-ms.reviewer: chiragpa, v-leedennis
-editor: v-jsitser
+ms.date: 10/30/2026
+ms.topic: troubleshooting
+manager: dcscontentpm
+author: kaushika-msft
+ms.author: kaushika
+ms.reviewer: chiragpa, v-leedennis, kaushika
 ms.service: azure-kubernetes-service
 ms.custom: sap:Connectivity, linux-related-content
 #Customer intent: As an Azure Kubernetes user, I want to fix custom network security group (NSG) configuration issues so that I don't get time-out errors when trying to access an application that's hosted on an Azure Kubernetes Service (AKS) cluster.
+ai-usage: ai-assisted
 ---
-# A custom network security group blocks traffic
+# Troubleshoot Azure Kubernetes Service timeout errors from custom network security group blocks
 
 ## Summary
 
-When you access an application that's hosted on an Azure Kubernetes Service (AKS) cluster, you receive a "Timed out" error message. This error can occur even if the application is running and the rest of the configuration appears to be correct.
+AKS time-out errors can occur when a custom network security group (NSG) blocks traffic to an application that's hosted on an Azure Kubernetes Service (AKS) cluster. You receive a "Timed out" error message even if the application is running and the rest of the configuration appears correct. This article helps you identify the cause and allow the traffic.
 
 ## Prerequisites
 
+Ensure you have the following prerequisites:
+
 - The Kubernetes [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) tool, or a similar tool, to connect to the cluster. To install kubectl by using [Azure CLI](/cli/azure/install-azure-cli), run the [az aks install-cli](/cli/azure/aks#az-aks-install-cli) command.
-
 - The Client URL ([cURL](https://www.tecmint.com/install-curl-in-linux/)) tool, or a similar command-line tool.
-
 - The [apt-get](https://linux.die.net/man/8/apt-get) command-line tool for handling packages.
 
 ## Symptoms
 
-If you run the following [kubectl get](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#get) and cURL commands, you experience "Timed out" errors that resemble the following console output:
+If you run the following [kubectl get](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#get) and cURL commands, you experience "Timed out" errors that resemble the following console output.
 
 ```console
 $ kubectl get pods
@@ -45,11 +49,11 @@ curl: (28) Failed to connect to 10.81.x.x port 80 after 21033 ms: Timed out
 
 ## Cause
 
-If you experience the same "Timed out" error every time, that usually suggests that a network component is blocking the traffic.
+If you experience the same "Timed out" error every time, that error usually suggests that a network component is blocking the traffic.
 
-To troubleshoot this issue, you can start by checking access to the pod, and then move on to the client in an *inside-out* approach.
+To troubleshoot this issue, start by checking access to the pod, and then move on to the client in an *inside-out* approach.
 
-To check the pod, run the following `kubectl get` and [kubectl describe](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#describe) commands:
+To check the pod, run the following `kubectl get` and [kubectl describe](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#describe) commands.
 
 ```console
 $ kubectl get pods -o wide
@@ -71,7 +75,7 @@ Events:
 
 Based on this output, the pod seems to be running correctly, without any restarts.
 
-Open a test pod to check access to the application pod. Run the following `kubectl get`, [kubectl run](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#run), `apt-get`, and cURL commands:
+Open a test pod to check access to the application pod. Run the following `kubectl get`, [kubectl run](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#run), `apt-get`, and cURL commands.
 
 ```console
 $ kubectl get pods -o wide  # Get the pod IP address.
@@ -106,16 +110,16 @@ HTTP/1.1 200 OK
 
 The pod is accessible directly. Therefore, the application is running.
 
-The defined service is a `LoadBalancer` type. This means that the request flow from the end client to the pod will be as follows:
+The defined service is a `LoadBalancer` type. This type means that the request flow from the end client to the pod is as follows.
 
 > Client >> Load balancer >> AKS node >> Application pod
 
-In this request flow, we can block the traffic through the following components:
+In this request flow, you can block the traffic through the following components:
 
 - Network policies in the cluster
 - The network security group (NSG) for the AKS subnet and AKS node
 
-To check network policy, run the following `kubectl get` command:
+To check the network policy, run the following `kubectl get` command.
 
 ```console
 $ kubectl get networkpolicy --all-namespaces
@@ -123,23 +127,21 @@ NAMESPACE     NAME                 POD-SELECTOR             AGE
 kube-system   konnectivity-agent   app=konnectivity-agent   3h8m
 ```
 
-Only the AKS default policy exists. Therefore, network policy doesn't seem to be blocking the traffic.
+Only the AKS default policy exists. Therefore, the network policy doesn't seem to be blocking the traffic.
 
 To check the NSGs and their associated rules by using AKS, follow these steps:
 
 1. In the [Azure portal](https://portal.azure.com), search for and select **Virtual machine scale sets**.
-
 1. In the list of scale set instances, select the one that you're using.
-
 1. In the menu pane of your scale set instance, select `Networking`.
 
-The **Networking** page for the scale set instance appears. In the **Inbound port rules** tab, two sets of rules are displayed that are based on the two NSGs that act on the scale set instance:
+The **Networking** page for the scale set instance appears. In the **Inbound port rules** tab, you see two sets of rules that are based on the two NSGs that act on the scale set instance:
 
-- The first set is composed of NSG rules at the subnet level. These rules are displayed under the following note heading:
+- The first set is composed of NSG rules at the subnet level. These rules are displayed under the following note heading.
 
   > Network security group *\<my-aks-nsg>* (attached to subnet: *\<my-aks-subnet>*)
 
-  This arrangement is common if a custom virtual network and custom subnet for the AKS cluster are used. The set of rules at the subnet level might resemble the following table.
+  This arrangement is common if you use a custom virtual network and custom subnet for the AKS cluster. The set of rules at the subnet level might resemble the following table.
 
   | Priority | Name | Port | Protocol | Source | Destination | Action |
   | -------- | ---- | ---- | -------- | ------ | ----------- | ------ |
@@ -147,11 +149,11 @@ The **Networking** page for the scale set instance appears. In the **Inbound por
   | 65001 | AllowAzureLoadBalancerInBound | Any | Any | AzureLoadBalancer | Any | Allow |
   | 65500 | DenyAllInBound | Any | Any | Any | Any | Deny |
 
-- The second set is composed of NSG rules at the network adapter level. These rules are displayed under the following note heading:
+- The second set is composed of NSG rules at the network adapter level. You see these rules under the following note heading.
 
   > Network security group *aks-agentpool-\<agentpool-number>-nsg* (attached to network interface: *aks-agentpool-\<vm-scale-set-number>-vmss*)
 
-  This NSG is applied by the AKS cluster, and it's managed by AKS. The corresponding set of rules might resemble the following table.
+  This NSG is applied by the AKS cluster, and AKS manages it. The corresponding set of rules might resemble the following table.
 
   | Priority | Name | Port | Protocol | Source | Destination | Action |
   | -------- | ---- | ---- | -------- | ------ | ----------- | ------ |
@@ -160,13 +162,13 @@ The **Networking** page for the scale set instance appears. In the **Inbound por
   | 65001 | AllowAzureLoadBalancerInBound | Any | Any | AzureLoadBalancer | Any | Allow |
   | 65500 | DenyAllInBound | Any | Any | Any | Any | Deny |
 
-At the network adapter level, there's an NSG inbound rule for TCP at IP address 10.81.*x*.*x* on port 80 (highlighted in the table). However, an equivalent rule is missing from the rules for the NSG at the subnet level.
+At the network adapter level, there's an NSG inbound rule for TCP at IP address 10.81.*x*.*x* on port 80 (highlighted in the preceding table). However, the rules for the NSG at the subnet level don't include an equivalent rule.
 
-Why didn't AKS apply the rule to the custom NSG? Because AKS doesn't apply NSGs to its subnet, and it won't modify any of the NSGs that are associated with that subnet. AKS will modify the NSGs only at the network adapter level. For more information, see [Can I configure NSGs with AKS?](/azure/aks/faq#can-i-configure-nsgs-with-aks).
+Why didn't AKS apply the rule to the custom NSG? AKS doesn't apply NSGs to its subnet, and it doesn't modify any of the NSGs that are associated with that subnet. AKS only modifies the NSGs at the network adapter level. For more information, see [Can I configure NSGs with AKS?](/azure/aks/faq#can-i-configure-nsgs-with-aks).
 
 ## Solution
 
-If the application is enabled for access on a certain port, you must make sure that the custom NSG allows that port as an `Inbound` rule. After the appropriate rule is added in the custom NSG at the subnet level, the application is accessible.
+If the application is enabled for access on a certain port, ensure that the custom NSG allows that port as an `Inbound` rule. After you add the appropriate rule in the custom NSG at the subnet level, the application is accessible.
 
 ```console
 $ curl -Iv http://10.81.x.x

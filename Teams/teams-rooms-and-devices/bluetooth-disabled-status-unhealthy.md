@@ -1,9 +1,9 @@
 ---
 title: The Bluetooth disabled status of a Teams Rooms device is Unhealthy
 description: Resolves an issue that causes the Bluetooth disabled signal of a Microsoft Teams Rooms device to appear as Unhealthy.
-ms.reviewer: rebenite, v-lianna
+ms.reviewer: rebenite, v-lianna, mattslomka
 ms.topic: troubleshooting
-ms.date: 10/30/2023
+ms.date: 08/18/2026
 author: Cloud-Writer
 ms.author: meerak
 manager: dcscontentpm
@@ -18,6 +18,10 @@ ms.custom:
   - CI174031
 ---
 # The Bluetooth disabled status is Unhealthy
+
+## Summary
+
+When Bluetooth is turned off in Windows on a Microsoft Teams Rooms device, the **Bluetooth disabled** signal appears as **Unhealthy** in the Teams Rooms Pro Management portal. Nearby users might also have trouble discovering and adding the room to a meeting. Turn on Bluetooth in Windows to clear the warning. If Bluetooth must remain unavailable for meetings, disable it in the Teams Rooms app instead.
 
 ## Symptoms
 

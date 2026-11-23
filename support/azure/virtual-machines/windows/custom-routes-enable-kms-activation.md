@@ -1,8 +1,10 @@
 ---
 title: Use Azure custom routes to enable KMS activation with forced tunneling
-description: Shows how to use Azure custom routes to enable KMS activation when using forced tunneling in Azure.
+description: Learn how to use Azure custom routes to enable KMS activation with forced tunneling for Windows VMs and restore successful Windows activation.
 services: virtual-machines, azure-resource-manager
 author: kaushika-msft
+ms.author: kaushika
+ms.reviewer: hinishiz
 manager: dcscontentpm
 tags: top-support-issue, azure-resource-manager
 ms.custom: sap:Cannot activate my Windows VM, devx-track-azurepowershell
@@ -11,8 +13,8 @@ ms.collection: windows
 ms.workload: na
 ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
-ms.date: 07/17/2024
-ms.author: kaushika
+ms.date: 09/02/2026
+ai-usage: ai-assisted
 ---
 
 # Windows activation fails in forced tunneling scenario
@@ -37,24 +39,28 @@ The Azure Windows VMs need to connect to the Azure KMS server for Windows activa
 
 To resolve this problem, use the Azure custom route to route activation traffic to the Azure KMS server.
 
-The first DNS name of the KMS server for the Azure Global cloud is `azkms.core.windows.net` with two IP addresses: `20.118.99.224` and `40.83.235.53`. The second DNS name of the KMS server for the Azure Global cloud is `kms.core.windows.net` with an IP address of `23.102.135.246`. If you use other Azure platforms such as Azure Germany, you must use the IP address of the corresponding KMS server. For more information, see the following table:
+The first DNS name of the KMS server for the Azure Global cloud is `azkms.core.windows.net` with two IP addresses: `20.118.99.224` and `40.83.235.53`. The second DNS name of the KMS server for the Azure Global cloud is `kms.core.windows.net`, which now resolves to `20.118.99.224`. If you use other Azure platforms such as Azure Germany, you must use the IP address of the corresponding KMS server. For more information, see the following table:
+
 
 |Platform| KMS DNS|KMS IP|
 |------|-------|-------|
-|Azure Global |azkms.core.windows.net<br>kms.core.windows.net|20.118.99.224, 40.83.235.53 <br> 23.102.135.246|
+|Azure Global |azkms.core.windows.net<br>kms.core.windows.net|20.118.99.224, 40.83.235.53|
 |Azure Germany|kms.core.cloudapi.de|51.4.143.248|
 |Azure US Government|kms.core.usgovcloudapi.net<br>azkms.core.usgovcloudapi.net|23.97.0.13<br>52.126.105.2|
 |Azure China 21Vianet|azkms.core.chinacloudapi.cn<br>kms.core.chinacloudapi.cn|159.27.28.100, 163.228.64.161<br>42.159.7.249|
 
 > [!NOTE] 
-> All the three IP addresses for the Azure Global cloud and Azure China, as well as the two IP addresses for Azure US Government should be added to the custom route.
+> Add both IP addresses for the Azure Global cloud, all three IP addresses for Azure China, and the two IP addresses for Azure US Government to the custom route.
+
+> [!NOTE]
+> The IP address `23.102.135.246` was previously used by `kms.core.windows.net` for the Azure Global cloud. As of March 1, 2023, `kms.core.windows.net` resolves to `20.118.99.224`, and `23.102.135.246` is no longer used. If you previously added `23.102.135.246` to a custom route, you can remove it. For more information, see [Windows activation stopped working in Azure](windows-activation-stopped-working.md).
 
 To add the custom route, follow these steps:
 
 ### For Resource Manager VMs
 
 > [!NOTE]
-> Activation uses public IP addresses and will be affected by a Standard SKU Load Balancer configuration. Carefully review [Outbound connections in Azure](/azure/load-balancer/load-balancer-outbound-connections) to learn about the requirements.
+> Activation uses public IP addresses and Standard SKU Load Balancer configuration affects activation. To learn about the requirements, review [Outbound connections in Azure](/azure/load-balancer/load-balancer-outbound-connections).
 
 1. Open Azure PowerShell, and then [sign in to your Azure subscription](/powershell/azure/authenticate-azureps).
 2. Run the following commands:
@@ -67,7 +73,6 @@ To add the custom route, follow these steps:
     $RouteTable = New-AzRouteTable -Name "ArmVNet-DM-KmsDirectRoute" -ResourceGroupName "ArmVNet-DM" -Location "centralus"
 
     # Next, configure the route table:
-    Add-AzRouteConfig -Name "DirectRouteToKMS" -AddressPrefix 23.102.135.246/32 -NextHopType Internet -RouteTable $RouteTable
     Add-AzRouteConfig -Name "DirectRouteToAZKMS01" -AddressPrefix 20.118.99.224/32 -NextHopType Internet -RouteTable $RouteTable
     Add-AzRouteConfig -Name "DirectRouteToAZKMS02" -AddressPrefix 40.83.235.53/32 -NextHopType Internet -RouteTable $RouteTable
 
@@ -92,5 +97,3 @@ To add the custom route, follow these steps:
 
 - [KMS Client Setup Keys](/windows-server/get-started/kmsclientkeys)
 - [Review and Select Activation Methods](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134256(v=ws.11))
-
- 

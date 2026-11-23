@@ -1,0 +1,220 @@
+---
+title: Resolve issues with Microsoft Purview auto-labeling policies
+description: Resolve unexpected results from Microsoft Purview auto-labeling policies. Learn how to check simulation matches, file labeling, existing labels, and Exchange activity.
+author: cloud-writer
+ms.author: meerak
+manager: dcscontentpm
+ms.reviewer: nickrob, ninachen, v-kccross
+audience: ITPro
+ms.service: purview
+ms.topic: troubleshooting-general
+ms.custom:
+  - sap:Sensitivity Labels\Auto-Labeling
+  - CSSTroubleshoot
+  - msecd-doc-authoring-1030
+appliesto:
+  - Microsoft Purview
+search.appverid: MET150
+ms.date: 11/13/2026
+ai-usage: ai-assisted
+
+#customer intent: As an administrator, I want to diagnose unexpected auto-labeling results so that I can confirm the intended labels and protection.
+
+---
+
+# Resolve issues with auto-labeling policies in Microsoft Purview
+
+## Summary
+
+Microsoft Purview auto-labeling policies apply sensitivity labels to files stored in SharePoint and OneDrive, and to email messages that a Microsoft Exchange server sends or receives. The policies don't label email messages that're already stored in mailboxes.
+
+To resolve unexpected results from an auto-labeling policy, an administrator can use the information in this article to diagnose the issue and then resolve it.
+
+If you need help with labels that are applied or recommended when you work in Word, Excel, PowerPoint, or Outlook, see [auto-labeling for Office apps](/purview/apply-sensitivity-label-automatically#how-to-configure-auto-labeling-for-office-apps) instead.
+
+## Check the policy and choose your symptom
+
+Start with one policy and one example item. Use the following steps to choose the checks that fit your problem.
+
+Find the policy and check which stage it reached:
+
+1. Sign in to the [Microsoft Purview portal](https://purview.microsoft.com/). Go to **Solutions** > **Information Protection** > **Policies** > **Auto-labeling policies**.
+1. Select the policy. Check its status, target label, locations, and rules. Note whether you're reviewing simulation results or results after the policy was turned on.
+1. Choose your symptom from the following table.
+
+| What you see | Where to start |
+| --- | --- |
+| You can't create a policy or turn it on. | [Can't create or turn on a policy](#cant-create-or-turn-on-a-policy) |
+| Simulation is still running. | [Simulation hasn't completed](#simulation-hasnt-completed) |
+| Simulation shows **Simulation failed** or **Simulation couldn't be started**, or results are marked **partial** after a failure. | [Simulation failed or couldn't be started](#simulation-failed-or-couldnt-be-started) |
+| Simulation misses expected items or finds unexpected matches. | [Simulation results aren't what you expect](#simulation-results-arent-what-you-expect) |
+| The policy is on, but an expected file isn't labeled. | [Policy is on but files aren't labeled](#policy-is-on-but-files-arent-labeled) |
+| An existing label stays, changes, or doesn't provide the protection you expected. | [Existing label or protection isn't what you expect](#existing-label-or-protection-isnt-what-you-expect) |
+| Counts differ between views, or you can't find Exchange activity. | [Numbers don't agree or Exchange activity is missing](#numbers-dont-agree-or-exchange-activity-is-missing) |
+
+Simulation finds matches without changing labels. A match isn't confirmation that a label was applied. After you turn on the policy, check the labeling result separately.
+
+If you're not able to open policy review pages, ask an administrator to check the [policy review permissions](/purview/apply-sensitivity-label-automatically#policy-level-labeling-activity-for-sharepoint-and-onedrive).
+
+Use the information in the appropriate section for your symptom. Portal layouts can vary; the steps describe the newer policy review pages.
+
+## Can't create or turn on a policy
+
+Check access, the selected label, and the simulation status before changing the policy.
+
+1. If the auto-labeling page is missing or an action is unavailable, check [licensing and availability](/purview/apply-sensitivity-label-automatically#licensing-and-where-to-find-each-surface). Also check the policy's status and your access. Ask your administrator to verify the permissions that apply to your account for the action and policy scope. Permissions to view matched content are separate from permissions to manage policies.
+1. If the label can't be used, check that it's created and published. A parent label that has sublabels can't be applied to content; select an appropriate sublabel or a label without sublabels. Its scope needs **Files & other data assets** for files or **Emails** for email.
+1. If you can't turn on the policy, review its simulation status and any displayed error. If results exceed the [simulation limit](/purview/apply-sensitivity-label-automatically#learn-about-simulation-mode), narrow the locations or conditions, then rerun simulation.
+
+After correcting the identified issue, save the policy and review a completed simulation before turning it on. If an error remains, record its exact text for Microsoft Support rather than deleting the policy.
+
+## Simulation hasn't completed
+
+Check the current run, not just the number of matches.
+
+1. Select the policy, then **Summary** > **View details**. On **Simulation overview**, check **Status** and **Duration**. Simulation can take 12 hours to complete; this value isn't a deadline for labels to appear, because simulation doesn't apply them.
+1. If simulation is still running, allow it to complete before judging its results. Don't restart it just because the match count isn't changing.
+1. When **Status** shows **Simulation complete**, [review the results](/purview/auto-label-simulation-results). A scheduled **Turn on date** doesn't confirm that activation succeeded; check the policy's status separately.
+
+If the run doesn't complete or shows an error, collect its status, start time, duration, and error text for Microsoft Support. Don't treat the expected simulation duration as a guaranteed completion or escalation time.
+
+## Simulation failed or couldn't be started
+
+On **Simulation overview**, check the error banner as well as **Status**. In portal experiences that display simulation failure messages, the banner distinguishes a request that couldn't start a simulation job from a job that encountered an error while running.
+
+| Message | What it means |
+| --- | --- |
+| **Simulation couldn't be started.** The request to start the simulation failed. Restart it to try again. | The request to start a simulation job failed. This isn't a completed simulation with no matches. Other workloads in the policy can still have available results. |
+| **Simulation failed.** The simulation ran into an error. Restart it to try again. | A simulation job encountered an error while running. Review which workload results are available before using the displayed counts. |
+
+### Interpret partial or unavailable results
+
+A failed simulation doesn't necessarily make every workload's results unavailable. For example, a policy that includes Exchange, SharePoint, and OneDrive can still show Exchange matches when the SharePoint and OneDrive simulation job couldn't be started.
+
+In this situation:
+
+- **Matched items** and **Total matches** can show a count followed by **(partial)**. The count includes only the available results, not a complete total for all configured workloads.
+- **Matches by source** can show an Exchange count while SharePoint and OneDrive show **Not available**. Check the information icon beside a partial count, when displayed, for an explanation of which results it includes.
+- A field that shows **Not available**, including a sample count, doesn't establish that there were no matches or no sample items.
+
+For example, **100 (partial)** with **Exchange: 100**, **SharePoint: Not available**, and **OneDrive: Not available** means that 100 Exchange matches are available. It doesn't mean that SharePoint and OneDrive each had zero matches.
+
+Partial matches aren't a complete validation of the policy's scope. Simulation doesn't apply or remove labels, so a simulation failure also isn't a per-file failure to apply a label. The **Labeling failures** and **Label removal failures** views diagnose enforcement, not these simulation errors.
+
+### Retry the simulation and verify the result
+
+1. Before restarting, record the exact error, policy status, affected workloads, and run times, including the time zone. [Preserve any available results you need for comparison](/purview/auto-label-simulation-results#preserve-results-before-editing-or-rerunning).
+1. Select **Restart simulation** in the page header, if the action is available to you. Restarting tries the simulation again; it doesn't guarantee that the underlying error is resolved.
+1. Check the new run's status and any error banner. Review the results for the configured workloads before deciding whether to turn on the policy. Don't use a partial count as evidence that the failed workload had no matches.
+1. If the error recurs, contact Microsoft Support with the information in [Advanced troubleshooting and data collection](#advanced-troubleshooting-and-data-collection). Don't delete the policy, change its rules, or remove protection merely to clear a simulation error.
+
+If the portal continues to show **Simulation in progress** without an error, follow [Simulation hasn't completed](#simulation-hasnt-completed). A static or zero match count alone doesn't establish whether the current run failed; Microsoft Support can help confirm its status.
+
+## Simulation results aren't what you expect
+
+Check what the policy looked for and when it looked.
+
+Before editing the policy or rerunning simulation, [preserve results for comparison](/purview/auto-label-simulation-results#preserve-results-before-editing-or-rerunning) when available.
+
+1. On **Simulation overview**, compare **Configuration details** with the item's location. Check included and excluded locations, conditions, and exceptions. Use **Policy matches per rule** to identify which rule matched.
+1. Open **Review sample items**, when available, to see **Items to review**. Compare an unexpected match with the rule's conditions. Viewing matched content requires the **Data Classification Content Viewer** role; a missing preview isn't evidence that an item didn't match.
+1. For a missing SharePoint or OneDrive file, check whether classification covers the content and sensitive information types you expect. The file's modified date alone doesn't establish when it was classified. Rerunning simulation reevaluates available classification results; it doesn't itself reclassify the file. Use the [classification and simulation guidance](/purview/auto-label-classification-simulation#when-historical-files-need-updated-classification) to decide whether [on-demand classification](/purview/on-demand-classification) is needed. Before starting a scan, review its permissions, billing, scope, and potential effects on other active policies.
+1. For Exchange, check messages sent or received during the run, not older mailbox messages. Exchange simulation counts use sampled data, so a missing sample doesn't by itself establish a policy failure.
+
+If a rule matches the wrong content, refine its conditions or exceptions, then rerun simulation. Review the new matches before deployment. Simulation shows one policy at a time; other active policies can affect the final label.
+
+## Policy is on but files aren't labeled
+
+For SharePoint and OneDrive, separate a missing match from a failed attempt to apply a label.
+
+1. Select the policy, then **View details**. Open **Labeled items** to check successful label applications. Open **Labeling failures** to check failed attempts. Select the file and find **Failure reason**, under **Details** when that tab is available.
+1. If there's a failure reason, follow its recommended action in [Resolve auto-labeling failures in SharePoint and OneDrive files](auto-labeling-failures-sharepoint-onedrive.md#resolve-auto-labeling-failures). Some failures are retried automatically; others need a specific correction. Don't apply a remedy for a different failure code.
+1. If the file isn't listed, check its location and the policy conditions. Then check whether the file can be labeled:
+   - Auto-labeling supports Word `.docx`, Excel `.xlsx`, PowerPoint `.pptx`, and PDF files. Attachments to SharePoint list items aren't supported.
+   - Confirm that [sensitivity labels are enabled for SharePoint and OneDrive](/purview/sensitivity-labels-sharepoint-onedrive-files). PDFs also need [PDF support enabled](/purview/sensitivity-labels-sharepoint-onedrive-files#adding-support-for-pdf).
+   - A file open for editing can't be auto-labeled. Close it or check it in, as appropriate.
+   - If the policy's label applies encryption, check the [encryption prerequisites](/purview/apply-sensitivity-label-automatically#prerequisites--detailed-reference): **Assign permissions now** and **User access to content expires** set to **Never**.
+1. After correcting the identified issue, return to **Labeled items** to check for successful application. Processing isn't immediate. If the result remains unexplained, collect the evidence in [Advanced troubleshooting and data collection](#advanced-troubleshooting-and-data-collection).
+
+An empty **Labeling failures** list doesn't prove that a file was labeled. If the file never matched, use the [simulation checks](#simulation-results-arent-what-you-expect). If it already has a label, check whether the policy is intended to replace it.
+
+## Existing label or protection isn't what you expect
+
+Check the existing label and the intended outcome before changing protection settings.
+
+1. **Current label and origin:** Identify the item's label and whether it was applied manually, automatically, or as a default. For a removal policy, confirm that this is the label selected for removal. Label-removal policies support SharePoint and OneDrive, not Exchange.
+1. **Configured priority:** For replacement, compare the labels' order in the Microsoft Purview portal, not their names. A policy can replace a lower-priority automatically applied or default label, but not a higher-priority label. See [label priority](/purview/apply-sensitivity-label-automatically#how-multiple-conditions-are-evaluated-when-they-apply-to-more-than-one-label).
+1. **Manual-label settings:** For replacement, check **Additional label settings** for the affected location and review the [label replacement rules](/purview/apply-sensitivity-label-automatically#will-an-existing-label-be-overridden). By default, a manually applied label isn't replaced; the override setting allows replacement with a higher-priority label. For removal, review the available settings for the selected locations, including any option for manually applied labels. Confirm the actual removal outcome rather than assuming an override setting isn't needed.
+1. **Policy mode:** Check whether the policy is on, off, or in simulation. [Simulation matches](/purview/auto-label-simulation-results) don't confirm removal or replacement: simulation doesn't change labels.
+1. **Competing apply policies:** For SharePoint and OneDrive, check other active policies that match the same files. An apply-label policy takes precedence over removal, even if it applies a different label. Another active apply-label policy without the manual-label override option can also prevent replacement of a manual label. Review the [policy conflict rules](/purview/apply-sensitivity-label-automatically#prerequisites--detailed-reference), rather than disabling protective policies to force an outcome.
+
+Check the specific protection or marking you expected. Auto-labeling policies don't add headers, footers, or watermarks to SharePoint and OneDrive documents. For email from outside your organization, label encryption isn't applied by default. If encryption is required, review **Apply encryption to email received from outside your organization** in the [policy settings](/purview/apply-sensitivity-label-automatically#creating-an-auto-labeling-policy).
+
+Test intended changes in simulation, then confirm the actual label and required protection on representative items after deployment. For SharePoint and OneDrive, select the policy, then **View details** to open the [newer policy review pages](/purview/apply-sensitivity-label-automatically#policy-level-labeling-activity-for-sharepoint-and-onedrive). Use **Labeled items** and **Labeling failures** for application, or **Label removed items** and **Label removal failures** for removal. These views don't include Exchange email; use the [Exchange activity checks](#numbers-dont-agree-or-exchange-activity-is-missing) instead.
+
+Don't remove protection just to make labeling succeed. Removing a label that applies encryption also removes that encryption. Review the [encryption impact](/purview/apply-sensitivity-label-automatically#removing-or-downgrading-sensitivity-labels-with-an-auto-labeling-policy) before changing a removal policy.
+
+## Numbers don't agree or Exchange activity is missing
+
+Choose the view that answers your question before comparing totals.
+
+### Compare SharePoint and OneDrive counts
+
+The [Insights tab](/purview/auto-label-insights-tab) reports progress and activity for different purposes. Neither measure alone proves how many distinct files are currently protected.
+
+| Measure | What it reports | How to use it |
+| --- | --- | --- |
+| **Total labeled to date** | Periodically refreshed progress derived from stored item state. It isn't an immutable lifetime count of labeling operations or a guaranteed real-time inventory of distinct files labeled by this policy. | Describe the policy's reported progress at an observation time, with its scope and freshness. |
+| **Labeling activity** | Recorded labeling operations in the selected time window; the policy activity view covers the last 30 days. The same file can contribute more than once. These counts don't represent unique files or every access, scan, evaluation, or retry. | Describe recent labeling operations, specifying the time window and successful or failed outcomes. See also [Monitoring your daily labeling volume](/purview/apply-sensitivity-label-automatically#monitoring-your-daily-labeling-volume). |
+
+When comparing successful labeling, use the successful activity count, not the donut's combined successful-plus-failed total. A file can have a failed operation and a later successful operation; don't treat these outcomes as two successfully labeled files.
+
+Simulation matches aren't successful label applications or a fixed target for enforcement. Content, labels, and policy scope can change between simulation and enforcement.
+
+### Understand why either count can be higher
+
+The following examples use synthetic numbers to illustrate different comparisons. They aren't a diagnosis of a particular policy.
+
+| Direction | Illustrative scenario | What to check |
+| --- | --- | --- |
+| Activity is higher than progress. | A policy labels 1,000 files, then makes 400 further recorded label changes to those same files within the activity window. That can produce 1,400 successful events without 1,400 distinct files. | Confirm actual recorded labeling operations. An access, evaluation, or retry without a recorded labeling operation doesn't explain extra activity. |
+| Activity is higher than progress. | A policy labels 1,000 files within the activity window. Later, 200 files are deleted or recycled. Refreshed progress can decrease as stored item state changes, while the 1,000 historical operations remain in the activity window. | Check deletion, recycling, and subsequent changes to labels or policy-related item state. Don't infer the current file count from historical activity. |
+| Progress is higher than activity. | A policy's reported progress includes 2,000 files labeled more than 30 days ago and 300 labeled within the last 30 days. Progress can show 2,300 while the activity window contains only the 300 recent operations. | Verify first enforcement and policy history, not just the displayed modification or turn-on date. Editing a policy doesn't necessarily reset its progress. |
+| Progress is higher than activity. | At one observation time, progress shows 800 and successful activity shows 600. If 200 corresponding operations haven't appeared or aren't attributed in the activity report, the report doesn't yet explain the progress value. This can also require investigation of filters or a report error. | Check independent reporting freshness, completeness, and attribution. Don't assume that the 200 operations are missing solely because of delay, or that they will appear within a guaranteed time. |
+
+For a policy whose **first-ever enforcement is verified to be within the last 30 days**, older activity outside the window doesn't explain the gap. A recent displayed date alone doesn't establish this history. If first enforcement is confirmed, investigate reporting freshness, how progress represents item state, treatment of failures, and completeness of activity attribution. Don't assume that successful activity must always be greater than or equal to progress.
+
+A numerical mismatch alone doesn't establish an enforcement failure. If a representative file has an explicit failure reason, follow [Resolve auto-labeling failures](auto-labeling-failures-sharepoint-onedrive.md#resolve-auto-labeling-failures) for that reason instead.
+
+### Reconcile the reports
+
+1. Record the policy identity and history: creation, first activation, edits, and any disable/re-enable actions. Distinguish the displayed dates from confirmed first enforcement.
+1. Capture the exact progress, successful activity, failed activity, and combined activity counts at the same observation time. Record the selected interval and observation time in UTC, the report's freshness information, and any errors or partial results. A missing, unavailable, or partial report isn't evidence of zero labeling.
+1. Align the policy, SharePoint and OneDrive workloads, included and excluded locations, labels, and report filters. Confirm that you're comparing enforcement with enforcement, not simulation matches with label applications.
+1. Inspect representative files and their recorded operations. Check later label changes, deletion or recycling, explicit failures, and any later success. Don't add successful and failed operations together as a successful-file count.
+1. Allow for documented reporting refresh expectations, then compare again with a new paired observation. [Activity explorer reporting delay](/purview/data-classification-activity-explorer#when-activities-appear) isn't a guaranteed availability time for every reporting pipeline or a deadline for the counts to agree.
+1. If a gap remains unexplained, contact Microsoft Support through your organization's approved channel. Provide the observations and representative examples. Work with Support to collect the policy response and activity request/response for the same observation, so Support can reconcile the state contributing to progress with the attribution of recorded events.
+
+For reporting, use activity to describe recorded operations during a stated period, and progress to describe the periodically refreshed policy report. To assess current protection, check the actual labels and required protection on the relevant files rather than treating either total as a unique-file inventory. Don't disable or recreate a protective policy merely to make the numbers match.
+
+### Check Exchange activity
+
+For Exchange, don't use **Labeled items** or policy-level enforcement counts. Those views cover SharePoint and OneDrive files only.
+
+1. Open [Activity explorer](/purview/data-classification-activity-explorer), filter for **Sensitivity label applied**, and narrow by date, label, location, and item details. Check **How applied** for automatic application.
+1. Allow for [Activity explorer reporting delay](/purview/data-classification-activity-explorer#when-activities-appear): for Exchange, SharePoint, and OneDrive, allow 60 to 90 minutes after the activity. This isn't a guaranteed availability time or a label-application deadline.
+
+Use the resulting activity to confirm the label and how it was applied. Activity explorer doesn't identify the specific auto-labeling policy or rule that labeled an Exchange message.
+
+If an enabled policy stopped matching expected Exchange messages, check its scope and conditions and use newly sent or received messages to confirm the symptom. If it remains unexplained, contact Microsoft Support. Support can determine whether a rule failed to load; missing activity alone doesn't establish that cause. Follow [support-confirmed rule guidance](/purview/apply-sensitivity-label-automatically#policy-rule-fails-to-load) only after Support identifies the affected rule.
+
+## Advanced troubleshooting and data collection
+
+If the checks don't explain the result, contact Microsoft Support with a small, focused description that includes the following information:
+
+- The policy status and affected location: SharePoint, OneDrive, or Exchange.
+- What you expected and what you observed for one representative item.
+- Relevant simulation or activity times, including the time zone.
+- The exact error or failure reason, if one is shown, and checks you already completed.
+
+Share item or policy details only through your organization's approved support channel. Remove sensitive content and personal information from screenshots. Don't post files, message contents, or identifiers in public forums.

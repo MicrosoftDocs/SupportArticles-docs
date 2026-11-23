@@ -20,6 +20,10 @@ ms.date: 10/30/2023
 ---
 # Error when switching a tenant to Teams Only mode
 
+## Summary
+
+When you try to switch a tenant to Teams Only mode, the change might fail because a SIP-enabled domain’s `lyncdiscover` DNS record points to an on-premises Skype for Business server or a required DNS record is missing. This article explains how to identify affected domains, update their DNS records to point to Microsoft 365, or disable SIP for unused domains before trying again.
+
 ## Symptoms
 
 When you try to switch a tenant to Teams Only mode at the organization level either by using the Microsoft Teams admin center or by running the `Grant-CsTeamsUpgradePolicy` cmdlet, the action does not finish, and you receive an error message that resembles one of the following messages, depending on which UI you're using.

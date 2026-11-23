@@ -20,6 +20,10 @@ ms.date: 02/27/2025
 ---
 # User presence status issues in Outlook
 
+## Summary
+
+When you check a contact’s presence in Outlook, the indicator might be missing, show the wrong status, or display `Status unknown`. This article explains how to troubleshoot Teams presence in Outlook by checking that Teams is running, the contact’s email and Teams sign-in addresses match, and the presence integration is configured correctly. It also covers known cases in which Outlook doesn’t display the same status as Teams.
+
 ## Symptoms
 
 You see any of the following issues when you check the presence status for a user in Outlook:

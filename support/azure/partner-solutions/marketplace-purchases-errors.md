@@ -1,8 +1,7 @@
 ---
 title: Resolve Azure Marketplace purchase error
 description: Provides solutions for common errors you might experience when subscribing to Azure Native Integrations in Azure Marketplace.
-author: ProfessorKendrick
-ms.author: kkendrick
+ms.reviewer: kkendrick
 ms.service: partner-services
 ms.topic: error-reference #Don't change
 ms.date: 05/29/2025

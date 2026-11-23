@@ -1,45 +1,45 @@
 ---
-title: Troubleshoot AKS service load balancer health probe mode
-description: Troubleshoot AKS service load balancer health probe mode issues, resolve common failures quickly, and use the steps to restore healthy traffic routing.
-ms.date: 06/03/2024
-ms.reviewer: niqi, cssakscic, v-weizhu
+title: Troubleshoot AKS load balancer health probe mode
+description: Troubleshoot AKS load balancer health probe mode issues, resolve common failures quickly, and use the steps to restore healthy traffic routing.
+ms.date: 10/16/2026
+ms.topic: troubleshooting
+manager: dcscontentpm
+author: kaushika-msft
+ms.author: kaushika
+ms.reviewer: niqi, cssakscic, v-weizhu, kaushika
 ms.service: azure-kubernetes-service
 ms.custom: sap:Node/node pool availability and performance, devx-track-azurecli, innovation-engine
+ai-usage: ai-assisted
 ---
 
-# Troubleshoot issues when enabling the AKS cluster service health probe mode
+# Troubleshoot issues when enabling the Azure Kubernetes Service load balancer health probe mode
 
 ## Summary
 
-The health probe mode feature enables you to configure how Azure Load Balancer checks the health of the nodes in your Azure Kubernetes Service (AKS) cluster. You can choose between two modes: Shared and ServiceNodePort. The Shared mode uses a single health probe for all external traffic policy cluster services that use the same load balancer. In contrast, the ServiceNodePort mode uses a separate health probe for each service. The Shared mode can reduce the number of health probes and improve the performance of the load balancer, but it requires some extra components to work properly. To enable this feature, see [How to enable the health probe mode feature by using Azure CLI](#how-to-enable-the-health-probe-mode-feature-by-using-azure-cli).
+This article provides guidance on troubleshooting issues related to the Azure Kubernetes Service (AKS) load balancer health probe mode.
 
-This article describes some common problems with using the health probe mode feature in an AKS cluster and helps you troubleshoot and resolve these problems.
+The health probe mode feature enables you to configure how Azure Load Balancer checks the health of the nodes in your Azure Kubernetes Service (AKS) cluster. You can choose between two modes: Shared and ServiceNodePort. The Shared mode uses a single health probe for all external traffic policy cluster services that use the same load balancer. In contrast, the ServiceNodePort mode uses a separate health probe for each service. The Shared mode can reduce the number of health probes and improve the performance of the load balancer, but it requires some extra components to work properly. To enable this feature, see [How to enable the health probe mode feature by using Azure CLI](#how-to-enable-the-health-probe-mode-feature-by-using-azure-cli).
 
 ## Symptoms 
 
-When you create or update an AKS cluster by using the Azure CLI and enable the health probe mode feature by using the `--cluster-service-load-balancer-health-probe-mode Shared` flag, the following problems can occur:
+When you create or update an AKS cluster by using Azure CLI and enable the health probe mode feature by using the `--cluster-service-load-balancer-health-probe-mode Shared` flag, the following problems can occur:
 
 - The load balancer doesn't distribute traffic to the nodes as expected. 
-
 - The load balancer reports unhealthy nodes even if they're healthy. 
-
 - The health-probe-proxy sidecar container crashes or doesn't start. 
-
 - The cloud-node-manager pod crashes or doesn't start.  
 
-The following operations also happen:
+The following operations can also happen:
 
-1. RP frontend checks if the request is valid and updates the corresponding property in the LoadBalancerProfile.
-
-1. RP async calls the cloud provider config secret reconciler to update the cloud provider config secret based on the LoadBalancerProfile. 
-
-1. Overlaymgr reconciles the cloud-node-manager chart to enable the health-probe-proxy sidecar.
+1. The resource provider frontend checks if the request is valid and updates the corresponding property in the `LoadBalancerProfile`.
+1. The resource provider asynchronously calls the cloud provider configuration secret reconciler to update the cloud provider configuration secret based on the `LoadBalancerProfile`.
+1. The overlay manager asynchronously reconciles the cloud-node-manager chart to enable the health-probe-proxy sidecar.
 
 ## Initial troubleshooting
 
 To troubleshoot these problems, follow these steps:
 
-1. First, connect to your AKS cluster by using the Azure CLI:
+1. Connect to your AKS cluster by using Azure CLI. Run the following command.
 
     ```azurecli
     export RESOURCE_GROUP="aks-rg"
@@ -47,14 +47,15 @@ To troubleshoot these problems, follow these steps:
     az aks get-credentials --resource-group $RESOURCE_GROUP --name $AKS_CLUSTER_NAME --overwrite-existing
     ```
 
-1. Next, check the RP frontend log to see if the health probe mode in the LoadBalancerProfile is properly configured. Use the `az aks show` command to view the LoadBalancerProfile property of your cluster. 
+1. Check the resource provider frontend log to see if the health probe mode in the `LoadBalancerProfile` is properly configured. Use the `az aks show` command to view the `LoadBalancerProfile` property of your cluster. Run the following commands.
 
     ```azurecli
     export RESOURCE_GROUP="aks-rg"
     export AKS_CLUSTER_NAME="aks-cluster"
     az aks show --resource-group $RESOURCE_GROUP --name $AKS_CLUSTER_NAME --query "networkProfile.loadBalancerProfile"
     ```
-    Results:
+
+    Results after checking the resource provider frontend log.
 
     <!-- expected_similarity=0.3 -->
 
@@ -76,8 +77,7 @@ To troubleshoot these problems, follow these steps:
     }
     ```
 
-1. Check the cloud provider configuration. In modern AKS clusters, the cloud provider configuration is managed internally and the `ccp` namespace doesn't exist. Instead, check for cloud provider related resources and verify the cloud-node-manager pods are running properly:
-
+1. Check the cloud provider configuration. In modern AKS clusters, the cloud provider configuration is managed internally and the `ccp` namespace doesn't exist. Instead, check for cloud provider related resources and verify the cloud-node-manager pods are running properly. Run the following commands.
 
     ```bash
     # Check for cloud provider related ConfigMaps in kube-system
@@ -89,7 +89,8 @@ To troubleshoot these problems, follow these steps:
     # Check the azure-ip-masq-agent-config if it exists
     kubectl get configmap azure-ip-masq-agent-config-reconciled -n kube-system -o yaml 2>/dev/null || echo "ConfigMap not found"
     ```
-    Results:
+
+    Results after checking the cloud provider configuration.
 
     <!-- expected_similarity=0.3 -->
 
@@ -99,12 +100,13 @@ To troubleshoot these problems, follow these steps:
     cloud-node-manager-rfb2w                        2/2     Running   0          16m
     ```
 
-1. Check the chart or overlay daemonset cloud-node-manager to see if the health-probe-proxy sidecar container is enabled. Use the `kubectl get ds` command to view the daemonset.
+1. Check the chart or overlay daemonset cloud-node-manager to see if the health-probe-proxy sidecar container is enabled. Use the `kubectl get ds` command to view the daemonset. Run the following commands.
 
     ```shell
     kubectl get ds -n kube-system cloud-node-manager -o yaml
     ```
-    Results:
+    
+    Results after checking the cloud-node-manager daemonset.
 
     <!-- expected_similarity=0.3 -->
 
@@ -126,7 +128,7 @@ To troubleshoot these problems, follow these steps:
           ...
     ```
 
-## Cause 1: The health probe mode isn't Shared or ServiceNodePort
+## Cause 1: The health probe mode isn't set to Shared or ServiceNodePort
 
 The health probe mode feature works only with these two modes. If you use any other mode, the feature doesn't work. 
 
@@ -144,7 +146,7 @@ Contact the AKS team to check if the toggle for the health probe mode feature is
 
 ## Cause 3: The load balancer SKU is Basic
 
-The health probe mode feature works only with the Standard Load Balancer SKU. If you use the Basic Load Balancer SKU, the feature doesn't work. 
+The health probe mode feature works only with the Azure Standard Load Balancer SKU. If you use the Azure Basic Load Balancer SKU, the feature doesn't work.
 
 ### Solution 3: Use the Standard Load Balancer SKU
 
@@ -156,14 +158,15 @@ You need to register the health probe mode feature on your subscription. If the 
 
 ### Solution 4: Register the feature
 
-Before you create or update your cluster, register the feature for your subscription. Use the `az feature register` command to register the feature. 
+Before you create or update your cluster, register the feature for your subscription. Use the `az feature register` command to register the feature. Run the following commands. 
 
 ```azurecli
 export FEATURE_NAME="EnableSLBSharedHealthProbePreview"
 export PROVIDER_NAMESPACE="Microsoft.ContainerService"
 az feature register --name $FEATURE_NAME --namespace $PROVIDER_NAMESPACE
 ```
-Results:
+
+Results after registering the feature for your subscription.
 
 <!-- expected_similarity=0.3 -->
 
@@ -188,20 +191,21 @@ Use Kubernetes v1.28.0 or a later version when creating or updating your cluster
 
 ## Known issues 
 
-For Windows, the kube-proxy component doesn't start until you create the first non-HPC pod in a node. This issue affects the health probe mode feature and causes the load balancer to report unhealthy nodes. It will be fixed in a future update.
+For Windows, the kube-proxy component doesn't start until you create the first non-high-performance computing (HPC) pod in a node. This issue affects the health probe mode feature and causes the load balancer to report unhealthy nodes. It will be fixed in a future update.
 
 ## How to enable the health probe mode feature by using Azure CLI
 
-To enable the health probe mode feature, run one of the following commands:
+To enable the health probe mode feature, run one of the following commands.
 
-Enable `ServiceNodePort` health probe mode (default) for a cluster:
+- Enable `ServiceNodePort` health probe mode (default) for a cluster.
 
 ```shell
 export RESOURCE_GROUP="aks-rg"
 export AKS_CLUSTER_NAME="aks-cluster"
 az aks update --resource-group $RESOURCE_GROUP --name $AKS_CLUSTER_NAME --cluster-service-load-balancer-health-probe-mode ServiceNodePort 
 ```
-Results:
+
+Results after enabling `ServiceNodePort` health probe mode
 
 ```output
 {
@@ -218,7 +222,7 @@ Results:
 }
 ```
 
-Enable `Shared` health probe mode for a cluster:
+- Enable `Shared` health probe mode for a cluster.
 
 ```shell
 export RESOURCE_GROUP="MyAksResourceGroup"
@@ -226,7 +230,7 @@ export AKS_CLUSTER_NAME="MyAksCluster"
 az aks update --resource-group $RESOURCE_GROUP --name $AKS_CLUSTER_NAME --cluster-service-load-balancer-health-probe-mode Shared
 ```
 
-Results:
+Results after enabling `Shared` health probe mode
 
 ```output
 {
@@ -242,5 +246,3 @@ Results:
   ...
 }
 ```
-
-  

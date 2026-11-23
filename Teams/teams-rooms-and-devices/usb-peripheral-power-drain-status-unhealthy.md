@@ -1,9 +1,9 @@
 ---
 title: The USB Peripheral Power Drain status of a Teams Rooms device is Unhealthy
 description: Resolves an issue that causes the USB Peripheral Power Drain signal of a Microsoft Teams Rooms device to appear as Unhealthy.
-ms.reviewer: rebenite
+ms.reviewer: rebenite, mattslomka
 ms.topic: troubleshooting
-ms.date: 10/30/2023
+ms.date: 08/18/2026
 author: Cloud-Writer
 ms.author: meerak
 manager: dcscontentpm
@@ -18,6 +18,10 @@ ms.custom:
   - CI171525
 ---
 # The USB Peripheral Power Drain status is Unhealthy
+
+## Summary
+
+When the `USB Peripheral Power Drain` signal for a Microsoft Teams Rooms device appears as `Unhealthy`, connected USB devices might become unresponsive or disconnect after the device wakes from sleep. This issue occurs when `Stop devices when my screen is off to help save battery` is enabled. Teams Rooms Pro attempts to fix the setting automatically; if the issue persists, this article explains how to disable it by using PowerShell, Registry Editor, or Microsoft Intune.
 
 ## Symptoms
 

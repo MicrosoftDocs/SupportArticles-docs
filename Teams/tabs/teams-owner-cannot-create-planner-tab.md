@@ -20,6 +20,10 @@ ms.date: 10/30/2023
 
 # Teams owner unable to create a Planner tab
 
+## Summary
+
+When a team owner tries to create a **Planner** tab in Microsoft Teams, they might see “Failed to create the plan.” This happens when the owner isn't a member of the Microsoft 365 group associated with the team. Add the owner as a group member to enable plan creation.
+
 ## Symptoms
 
 When trying to create a new Planner tab in Microsoft Teams, a team owner receives this error message from the Teams client:
@@ -33,7 +37,3 @@ The owner isn't a member of the Microsoft 365 group associated with the team. Th
 ## Resolution
 
 Add the owner as a member of the Microsoft 365 group. For more information, see [Add or remove members from Microsoft 365 groups using the admin center](/microsoft-365/admin/create-groups/add-or-remove-members-from-groups?preserve-view=true&view=o365-worldwide).
-
-## More information
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

@@ -1,13 +1,14 @@
 ---
 title: Can't delete a virtual network or subnet used by ACI
 description: Learn how to troubleshoot and resolve failures when you delete a virtual network or subnet used by Azure Container Instances (ACI).
-ms.date: 08/20/2026
+ms.date: 10/05/2026
+manager: dcscontentpm
 author: kaushika-msft
 ms.author: kaushika
 ms.topic: troubleshooting
 ms.service: azure-container-instances
 ms.custom: sap:Connectivity, devx-track-azurecli
-ms.reviewer: zhixinsun, shiyao, pihe
+ms.reviewer: zhixinsun, shiyao, pihe, kaushika
 ai-usage: ai-assisted
 ---
 
@@ -20,14 +21,14 @@ This article discusses errors that occur when you delete a virtual network (VNet
 > [!NOTE]
 > This article uses the following terms to distinguish the ACI networking models:
 >
-> - **Modern ACI networking**: The container group references the delegated subnet directly. The subnet's `ipConfigurationProfiles` property is empty or absent. This model is used by ACI API version `2021-07-01` and later.
+> - **Modern ACI networking**: The container group references the delegated subnet directly. The subnet's `ipConfigurationProfiles` property is empty or absent. ACI API version `2021-07-01` and later use this model.
 > - **Legacy ACI networking**: The subnet's `ipConfigurationProfiles` property references a `Microsoft.Network/networkProfiles` resource. Network profiles are retired starting with ACI API version `2021-07-01`, but existing legacy profiles can still block subnet deletion.
 >
 > Use the subnet's `ipConfigurationProfiles` property to distinguish the models. A current `az container show` response might display `subnetIds` for a container group that you originally deployed by using a legacy network profile.
 
 ## Symptoms
 
-- When you delete a subnet used by ACI, you receive errors that resemble the following ones:
+- When you delete a subnet used by ACI, you receive errors that resemble the following ones.
 
     ```output
     (SubnetInUse) The subnet '<subnet-resource-id>' is still in use.
@@ -53,7 +54,7 @@ This article discusses errors that occur when you delete a virtual network (VNet
     In order to delete the subnet, delete all the resources within the subnet. See aka.ms/deletesubnet.
     ```
 
-- When you delete a VNet used by ACI, you receive the following error:
+- When you delete a VNet used by ACI, you receive the following error.
 
     ```output
     Failed to delete virtual network '<vnet-name>'. 
@@ -71,7 +72,7 @@ ACI creates a service association link (SAL) named `acisal` on the delegated sub
 ### Workaround: Delete the service association link
 
 1. Attempt to explicitly delete the subnet first to discard cascading delete operation errors.
-2. Check the subnet dependencies:
+1. Check the subnet dependencies. Run the following commands.
 
     ```azurecli
     az network vnet subnet show \
@@ -89,7 +90,8 @@ ACI creates a service association link (SAL) named `acisal` on the delegated sub
       }" \
       --output json
     ```
-1. Delete every container group that references the subnet. A container group doesn't have to be in the `Running` state to retain the subnet dependency.
+
+1. Delete every container group that references the subnet. A container group doesn't have to be in the `Running` state to retain the subnet dependency. Run the following commands.
 
     ```azurecli
     az container list \
@@ -103,7 +105,7 @@ ACI creates a service association link (SAL) named `acisal` on the delegated sub
       --output json
     ```
 
-    Delete each matching container group:
+    Delete each matching container group.
 
     ```azurecli
     az container delete \
@@ -116,7 +118,9 @@ ACI creates a service association link (SAL) named `acisal` on the delegated sub
 
 1. If no container group or legacy network profile references the subnet and the SAL continues to block deletion, remove the SAL by using one of the following methods.
 
-    **Az PowerShell:**
+    **Az PowerShell**
+
+    Run the following command.
 
     ```powershell
     Remove-AzContainerInstanceSubnetServiceAssociationLink `
@@ -125,8 +129,10 @@ ACI creates a service association link (SAL) named `acisal` on the delegated sub
       -SubnetName <subnet-name>
     ```
 
-    **Azure CLI:**
+    **Azure CLI**
    
+    Run the following commands.
+
     ```azurecli
     SUBNET_ID=$(az network vnet subnet show \
       --resource-group <vnet-resource-group> \
@@ -155,7 +161,7 @@ When you remove a container group that uses legacy ACI networking, its network p
 
 After deleting all ACI container groups, follow these steps:
 
-1. Query the target subnet and identify the exact network profile resource ID in `ipConfigurationProfiles`.
+1. Query the target subnet and identify the exact network profile resource ID in `ipConfigurationProfiles`. Run the following command.
 
     ```azurecli
     az network vnet subnet show \
@@ -178,7 +184,7 @@ After deleting all ACI container groups, follow these steps:
 
 After deleting all ACI container groups, follow these steps:
 
-1. Get the network profile IDs from the target subnet:
+1. Get the network profile IDs from the target subnet. Run the following command.
 
     ```azurecli
     NETWORK_PROFILE=$(az network vnet subnet show \
@@ -189,7 +195,7 @@ After deleting all ACI container groups, follow these steps:
       --output tsv)
     ```
 
-1. Delete the network profile,  Azure CLI accepts these child resource IDs and resolves the corresponding parent profiles:
+1. Delete the network profile. Azure CLI accepts these child resource IDs and resolves the corresponding parent profiles. Run the following command.
 
     ```azurecli
     az network profile delete --ids $NetworkProfile --yes
@@ -197,7 +203,7 @@ After deleting all ACI container groups, follow these steps:
 
 1. Retry the intended operation.
 
-    To delete only the subnet:
+    To delete only the subnet, run the following command.
 
     ```azurecli
     az network vnet subnet delete \
@@ -206,7 +212,7 @@ After deleting all ACI container groups, follow these steps:
       --name <subnet-name>
     ```
 
-    To delete the entire VNet:
+    To delete the entire VNet, run the following command.
 
     ```azurecli
     az network vnet delete \
@@ -223,7 +229,7 @@ After deleting all ACI container groups, follow these steps:
 
 If deleting the network profile through the Azure portal and Azure CLI fails with `NetworkProfileAlreadyInUseWithContainerNics`, update the network profile property `containerNetworkInterfaceConfigurations` to an empty list.
 
-1. Get the exact network profile ID from the target subnet.
+1. Get the exact network profile ID from the target subnet. Run the following command.
 
     ```azurecli
     NETWORK_PROFILE_ID=$(az network vnet subnet show \
@@ -234,7 +240,7 @@ If deleting the network profile through the Azure portal and Azure CLI fails wit
       --output tsv)
     ```
     
-1. Convert the returned child resource ID to the parent network profile ID, and review it:
+1. Convert the returned child resource ID to the parent network profile ID, and review it. Run the following commands.
 
     ```bash
     NETWORK_PROFILE_ID=${NETWORK_PROFILE_ID%%/containerNetworkInterfaceConfigurations/*}
@@ -251,10 +257,11 @@ If deleting the network profile through the Azure portal and Azure CLI fails wit
       --set properties.containerNetworkInterfaceConfigurations=[]
     ```
 
-1. Delete the network profile.
-       ```azurecli
+1. Delete the network profile. Run the following command.
+
+    ```azurecli
     az network profile delete --ids "$NETWORK_PROFILE_ID" --yes
     ```
     
 1. Query the subnet again and verify that `ipConfigurationProfiles` is empty.
-1. Delete either the subnet or the VNet by using the appropriate command from Workaround 2.
+1. Delete either the subnet or the VNet by using the appropriate command from [Workaround 2](#workaround-2-delete-the-network-profile-of-the-container-group-via-azure-cli).

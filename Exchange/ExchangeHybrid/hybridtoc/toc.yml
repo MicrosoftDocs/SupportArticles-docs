@@ -52,6 +52,18 @@ items:
           href: ../administration/user-photos-not-synced-to-exchange-online.md
     - name: Calendars
       items:
+        - name: Free/busy token user doesn't exist
+          href: ../calendars/hybrid-free-busy-token-user-not-found.md
+        - name: Free/busy request times out
+          href: ../calendars/hybrid-free-busy-request-timeout.md
+        - name: Free/busy connection forcibly closed
+          href: ../calendars/hybrid-free-busy-connection-forcibly-closed.md
+        - name: Cross-organization free/busy request denied
+          href: ../calendars/hybrid-free-busy-cross-organization-request-denied.md
+        - name: Free/busy client assertion key not found
+          href: ../calendars/hybrid-free-busy-client-assertion-key-not-found.md
+        - name: Free/busy Autodiscover returns InvalidUser
+          href: ../calendars/hybrid-free-busy-discovery-invalid-user.md
         - name: '"550 5.1.11 RESOLVER.ADR.ExRecipNotFound" when delegate sends update to meeting'
           href: ../calendars/550-5111-ndr-delegate-sends-update-meeting.md
         - name: Can't access free/busy of non-Internet-facing AD site
@@ -70,8 +82,12 @@ items:
           href: ../calendars/cannot-display-the-folder-properties-or-could-not-be-updated-error.md
         - name: Exchange Online Hybrid Free/Busy Diagnostic
           href: ../calendars/hybird-free-busy-diagnostic.md
+        - name: Free/busy forest/domain configuration isn't found
+          href: ../calendars/free-busy-forest-domain-not-found.md
         - name: Free/busy lookups stop working in cross-premises or in hybrid deployment
           href: ../calendars/freebusy-lookups-stop-working.md
+        - name: Free/busy OAuth signing certificate is missing
+          href: ../calendars/free-busy-oauth-certificate-not-found.md
         - name: Only see availability info of resource when scheduling meeting
           href: ../calendars/only-can-see-availability-info-of-resource-when-scheduling-meeting.md
         - name: Policy doesn't allow granting permissions
@@ -105,7 +121,7 @@ items:
         - name: NDR 5.2.0 when sending meeting invites
           href: ../email-delivery/ndr-5-2-0-when-sending-meeting-invites.md
         - name: On-premises users not getting emails from Microsoft 365
-          href: ../email-delivery/on-premises-users-not-getting-emails-from-microsoft-365.md
+          href: ../email-delivery/on-premises-users-not-getting-emails-from-microsoft-365.md        
     - name: Groups and Distribution Lists
       items:
         - name: Can't access Microsoft 365 Groups in Outlook

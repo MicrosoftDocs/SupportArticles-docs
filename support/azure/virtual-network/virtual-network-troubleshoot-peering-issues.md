@@ -8,7 +8,7 @@ manager: dcscontentpm
 ms.assetid: 1a3d1e84-f793-41b4-aa04-774a7e8f7719
 ms.service: azure-virtual-network
 ms.topic: troubleshooting
-ms.date: 03/05/2026
+ms.date: 09/04/2026
 ms.custom: 
   - sap:Issues configuring Azure Virtual Network (VNet) Peering
 
@@ -251,17 +251,22 @@ In hub-spoke topologies where an NVA in the hub inspects traffic, you typically 
 
 To diagnose asymmetric routing:
 
-1. Check the effective routes on the network interface of a VM in the spoke subnet:
-    a. In the Azure portal, go to the VM, select **Networking**, select the network interface, and then select **Effective routes**.
-    b. Look for routes with the next hop type **VNet peering** and compare them with any UDR entries that might override them.
+1. Check the effective routes on the network interfaces of the source and destination VMs:
+    a. In the Azure portal, go to each VM, select **Networking**, select the network interface, and then select **Effective routes**.
+    b. On the destination network interface, find the active route whose address prefix includes the source IP address.
+    c. Confirm that the route uses the intended **Virtual appliance** or **Virtual network gateway** next hop type. If the route is missing or uses an unexpected next hop, the return path isn't configured correctly.
 
-2. Use Azure CLI to view effective routes:
+2. Use Azure CLI to view effective routes for each network interface:
 
    ```azurecli
    az network nic show-effective-route-table --resource-group <resource-group> --name <nic-name> --output table
    ```
 
-3. Verify that UDRs in both the source and destination subnets create a symmetric path through the NVA. If the NVA only sees traffic in one direction, the stateful firewall might drop the return traffic.
+3. Use Network Watcher [next hop](/azure/network-watcher/network-watcher-next-hop-overview) to test the forward path from the source VM to the destination IP address. Repeat the test from the destination VM to the source IP address to verify the return path.
+
+4. If the destination network interface doesn't have an active route whose address prefix includes the source subnet, add a UDR to the route table associated with the destination subnet. Set the address prefix to the source subnet. For an NVA return path, select **Virtual appliance** and enter the NVA's private IP address. For a VPN gateway return path, select **Virtual network gateway**. Azure supports this next hop type only for VPN gateways. For instructions, see [Create a route](/azure/virtual-network/manage-route-table#create-a-route).
+
+5. Recheck the effective routes and next hop in both directions. Verify that the forward and return paths use the intended NVA or gateway. If the NVA sees traffic in only one direction, a stateful firewall might drop the return traffic.
 
 ### Common route table conflict scenarios
 
@@ -270,9 +275,6 @@ To diagnose asymmetric routing:
 | UDR overrides peering route | Traffic to a peered virtual network goes to an NVA or is dropped instead of flowing directly to the peer. | Review the route table associated with the subnet. Remove or adjust the UDR that conflicts with the peering address space. |
 | Missing UDR for return traffic | Traffic flows to the destination through an NVA, but the return traffic bypasses the NVA, causing the connection to fail. | Add a UDR to the destination subnet that routes return traffic back through the same NVA. |
 | BGP route overlaps with peering address space | A BGP route advertised from on-premises has an address prefix that overlaps with a peered virtual network address space. Although [peering system routes always take precedence over BGP routes](/azure/virtual-network/virtual-networks-udr-overview#how-azure-selects-routes-for-traffic-routing), the overlap can cause confusion in route diagnostics. | Verify the effective routes on the affected VM's network interface. Confirm that the peering system route takes precedence over the BGP route. If traffic is still misdirected, check for a UDR that might be overriding the peering route. |
-
-> [!TIP]
-> Use Network Watcher [next hop](/azure/network-watcher/network-watcher-next-hop-overview) to verify the next hop for a specific traffic flow between VMs in peered virtual networks. This step helps you confirm whether a UDR is overriding the expected peering route.
 
 ## Troubleshoot overlapping address spaces in peered virtual networks
 
