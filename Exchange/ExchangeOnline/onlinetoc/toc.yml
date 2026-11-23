@@ -154,6 +154,8 @@ items:
           href: ../calendars/cross-tenant-free-busy-discovery-call-failed.md      
         - name: Cross-tenant free/busy caller access denied
           href: ../calendars/cross-tenant-free-busy-access-denied.md
+        - name: Cross-tenant free/busy federated proxy address error
+          href: ../calendars/cross-tenant-free-busy-federated-proxy-mismatch.md
         - name: Google attendee availability and address space endpoint
           href: ../calendars/google-attendee-free-busy-address-space-endpoint.md      
         - name: Google attendee availability and missing mail contact
