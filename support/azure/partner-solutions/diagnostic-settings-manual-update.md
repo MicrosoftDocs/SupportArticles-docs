@@ -1,8 +1,7 @@
 ---
 title: Manual Updates to Diagnostic Settings Created via Tag Rules
 description: "Understand the limitations and behavior when manually updating diagnostic settings that are created based on tag rules in Azure."
-author: ProfessorKendrick
-ms.author: kkendrick
+ms.reviewer: kkendrick
 ms.service: partner-services
 ms.topic: troubleshooting-problem-resolution
 ms.custom:

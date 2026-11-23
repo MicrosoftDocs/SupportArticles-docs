@@ -1,8 +1,7 @@
 ---
 title: Log Forwarding Persists After Service Is Disabled
 description: "Learn how to resolve persistent log forwarding in Azure when a service is disabled but diagnostic settings remain active due to a delete lock."
-author: ProfessorKendrick
-ms.author: kkendrick
+ms.reviewer: kkendrick
 ms.service: partner-services
 ms.custom:
   - sap:Datadog on Azure
@@ -37,7 +36,7 @@ To remove the delete lock from the affected resource or resource group:
 1. Use the **Search** bar at the top of the portal to locate the specific **resource** or **resource group**.
 1. Select the resource name to open its **Overview** page.
 1. In the left-hand menu, under the **Settings** section, select **Locks**.
-1. You’ll see a list of any **management locks** applied to the resource.
+1. You'll see a list of any **management locks** applied to the resource.
 1. Look for a lock with **Lock type: Delete** (often labeled as `CanNotDelete`).
 1. Select the **ellipsis (⋯)** next to the lock entry.
 1. Choose **Delete** from the dropdown menu.
