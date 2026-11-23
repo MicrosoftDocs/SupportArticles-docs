@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Connectivity and Registration for SUSE SLES VMs
 description: "Learn how to troubleshoot SUSE SLES VM connectivity and registration issues with the SUSE SMT repository on Azure. Find fixes for common scenarios."
-ms.date: 05/12/2025
+ms.date: 11/23/2026
 author: kaushika-msft
 ms.author: kaushika
 ms.reviewer: scotro, divargas
@@ -142,19 +142,108 @@ DONE
 
 The output doesn't show the server certificate or SSL session. 
 
-### Cause
+To identify the cause, compare the `issuer=` lines of the [region and SMT servers](#step-2-check-connectivity-to-server-ip-addresses-on-port-443):
+
+```bash
+echo "" | sudo openssl s_client -connect 52.149.120.86:443 2>&1 | grep "issuer="
+echo "" | sudo openssl s_client -connect 40.121.202.140:443 2>&1 | grep "issuer="
+echo "" | sudo openssl s_client -connect 23.100.36.229:443 2>&1 | grep "issuer="
+```
+
+```output
+# 52.149.120.86
+issuer=C = DE, ST = Bavaria, L = Nuremberg, O = SUSE, OU = Public Cloud, CN = SUSE, emailAddress = suse-public-cloud@susecloud.net   # <-- SUSE certificate (working scenario)
+# 40.121.202.140
+issuer=CN = (firewall or NVA certificate authority)                     # <-- Certificate not issued by SUSE (Cause 1)
+# 23.100.36.229
+                                                                        # <-- No server certificate at all (Cause 2)
+```
+
+If no `issuer=` line appears although the TCP connection on port 443 succeeds, see Cause 2. Otherwise, see Cause 1.
+
+### Cause 1
 
 This scenario usually occurs when the command crosses a Network Virtual Appliance (NVA) that performs SSL packet inspection. This inspection causes the NVA to inject its own SSL certificate into the encrypted session.
 
 Because SUSE uses certificate pinning, another injected SSL certificate can break the pinning operation. If the pinning is broken, the SUSE repository denies the connection.
 
+To confirm this cause, compare the certificate fingerprint that's stored on the VM (in the `certLocation` directory of `/etc/regionserverclnt.cfg`) with the one that the region server returns. If they don't match, the NVA replaced the certificate:
+
+```bash
+sudo openssl x509 -noout -fingerprint -sha256 -in <certLocation>/<region server IP>.pem
+echo "" | sudo openssl s_client -connect <region server IP>:443 2>/dev/null | openssl x509 -noout -fingerprint -sha256
+```
+
+For example:
+
+```bash
+sudo openssl x509 -noout -fingerprint -sha256 -in /usr/lib/regionService/certs/23.100.36.229.pem
+echo "" | sudo openssl s_client -connect 23.100.36.229:443 2>/dev/null | openssl x509 -noout -fingerprint -sha256
+```
+
+```output
+sha256 Fingerprint=EB:8C:08:9D:FF:2D:...:09:79:14:2F   # <-- Stored on the VM
+sha256 Fingerprint=CE:14:F0:DA:77:64:...:BD:D1:D0      # <-- Returned through the NVA (doesn't match)
+```
+
+### Cause 2
+
+A firewall or NVA allows the TCP connection on port 443. However, it resets the session as soon as the VM starts the TLS handshake.
+
+To check this behavior, run the following commands on the VM:
+
+```bash
+sudo -v                                                                   # Enter the sudo password once
+sudo tcpdump -i any -nn -w /tmp/tls-reset.pcap host <SUSE server IP> &    # Start the capture in the background
+sleep 2
+sudo registercloudguest --force-new < /dev/null                           # Reproduce the issue
+sleep 2
+sudo pkill tcpdump                                                        # Stop the capture
+sudo tcpdump -nn -v -r /tmp/tls-reset.pcap                                # Read the capture
+```
+
+In the output, look for the following flow:
+
+```output
+(SUSE server IP).443 → (VM IP): Flags [S.], ttl (TTL A)    ← 1. The SUSE server sends a SYN-ACK to the VM
+104.45.31.195.443 → 10.0.0.4: Flags [S.], ttl 57
+
+(VM IP) → (SUSE server IP).443: Flags [P.], ttl (VM TTL)   ← 2. The VM sends a ClientHello to the SUSE server
+10.0.0.4 → 104.45.31.195.443: Flags [P.], ttl 64
+
+(SUSE server IP).443 → (VM IP): Flags [R], ttl (TTL B)     ← 3. The "SUSE server" sends an RST to the VM instead of a ServerHello
+104.45.31.195.443 → 10.0.0.4: Flags [R], ttl 63
+```
+
+Then, compare TTL A with TTL B:
+
+```text
+(VM) ──────────────────── (firewall or NVA) ──── ... ──── (SUSE server)
+ │                                │                             │
+ClientHello: VM TTL          RST: TTL B                  SYN-ACK: TTL A
+
+Example:
+VM TTL = 64           TTL B = (64 - 1 hop) = 63    TTL A = (64 - 7 hops) = 57
+```
+
+- If TTL B > TTL A, the firewall or NVA sent the reset. In this example, 63 > 57.
+- If TTL B ≈ TTL A, the SUSE server sent the reset.
+
 ### Resolution
 
-Make sure that the NVA doesn't do the following actions:
+1. In the firewall or NVA traffic logs, find the rule that affects the traffic to the SUSE server IP addresses. For example, on a Palo Alto Networks firewall, check the Rule, Action, and Session End Reason.
 
-- Block access to the SUSE repository IP addresses.
-- Perform SSL packet inspection on the secure connection to the SUSE repositories.
-- Insert the NVA SSL certificate on the server.
+2. Then, ask the firewall or NVA team to apply the following changes for the [region server](https://susepubliccloudinfo.suse.com/v1/microsoft/servers/regionserver.xml) and [SMT server](https://susepubliccloudinfo.suse.com/v1/microsoft/servers/smt.xml) IP addresses for your region:
+
+    - Allow access to these IP addresses.
+    - Stop resetting the TLS session to these IP addresses after the TCP connection succeeds.
+    - Disable SSL packet inspection on the secure connection to these IP addresses, so that the NVA stops inserting its own SSL certificate.
+
+3. Finally, re-register the VM, and refresh the repositories:
+
+    ```bash
+    sudo registercloudguest --force-new && sudo zypper refresh
+    ```
 
 ## Scenario 2: Cloud-regionsrv-client issues and registration failures
 
@@ -694,7 +783,7 @@ sudo ls -l /etc/products.d/
    -rw-r--r-- 1 root root 2746 2024-10-08 07:40 SLES-LTSS-Extended-Security.prod
    -rw-r--r-- 1 root root 2621 2024-10-08 05:13 SLES-LTSS.prod
    -rw-r--r-- 1 root root 2922 2024-09-25 14:21 SLES.prod
-   lrwxrwxrwx 1 root root    9 2018-01-09 08:47 baseproduct -> SLES.prod
+   lrwxrwxrwx 1 root root    9 2018-01-09 08:47 baseproduct -> SLES.prod
    -rw-r--r-- 1 root root 2254 2017-11-23 04:48 sle-module-web-scripting.prod
    -rw-r--r-- 1 root root 2363 2019-10-18 06:58 sle-sdk.prod
 ```
@@ -716,7 +805,7 @@ sudo ls -l /etc/products.d/
    -rw-r--r-- 1 root root 2746 2024-10-08 07:40 SLES-LTSS-Extended-Security.prod-bkp
    -rw-r--r-- 1 root root 2621 2024-10-08 05:13 SLES-LTSS.prod-bkp
    -rw-r--r-- 1 root root 2922 2024-09-25 14:21 SLES.prod
-   lrwxrwxrwx 1 root root    9 2018-01-09 08:47 baseproduct -> SLES.prod
+   lrwxrwxrwx 1 root root    9 2018-01-09 08:47 baseproduct -> SLES.prod
    -rw-r--r-- 1 root root 2254 2017-11-23 04:48 sle-module-web-scripting.prod
    -rw-r--r-- 1 root root 2363 2019-10-18 06:58 sle-sdk.prod
 ```
