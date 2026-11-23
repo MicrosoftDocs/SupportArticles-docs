@@ -1,73 +1,135 @@
 ---
-title: Troubleshoot AvailabilityZoneNotSupported Error Code
-description: Learn how to troubleshoot the AvailabilityZoneNotSupported error in AKS cluster creation, verify SKU restrictions, and create your cluster successfully.
-ms.date: 06/04/2025
+title: Troubleshoot AvailabilityZoneNotSupported error code in AKS
+description: Troubleshoot the AvailabilityZoneNotSupported error when you create an AKS cluster or node pool. Identify SKU and zone restrictions and choose a supported configuration.
+ms.date: 11/20/2026
+ms.topic: troubleshooting
+manager: dcscontentpm
+author: kaushika-msft
+ms.author: kaushika
 ms.reviewer: marcha, skuchipudi, v-weizhu
 ms.service: azure-kubernetes-service
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
-#Customer intent: As an Azure Kubernetes Services (AKS) user, I want to troubleshoot an Azure Kubernetes Service cluster create that failed because of a AvailabilityZoneNotSupported error code so that I can create the cluster successfully.
+#Customer intent: As an Azure Kubernetes Service (AKS) user, I want to troubleshoot cluster or node pool creation that failed with an AvailabilityZoneNotSupported error so that I can deploy a supported configuration.
+ai-usage: ai-assisted
 ---
-# Troubleshoot the AvailabilityZoneNotSupported error code
+# Troubleshoot the "AvailabilityZoneNotSupported" error code in Azure Kubernetes Service
 
 ## Summary
 
-This article discusses how to identify and resolve the "AvailabilityZoneNotSupported" error that occurs when you try to create an Azure Kubernetes Service (AKS) cluster.
-
-## Prerequisites
-
-Access to [Azure CLI](/cli/azure/get-started-with-azure-cli).
+This article helps you resolve the "AvailabilityZoneNotSupported" error that occurs when you create an Azure Kubernetes Service (AKS) cluster or add a node pool. Identify SKU and zone restrictions so you can deploy a supported configuration.
 
 ## Symptoms
 
-An AKS cluster creation fails in specified availability zones, and you receive an "AvailabilityZoneNotSupported" error with the following message:
+An AKS cluster or node pool creation fails in the specified availability zones, and you receive an "AvailabilityZoneNotSupported" error with a message similar to the following example.
 
-> Preflight validation check for resource(s) for container service \<resource-name> in resource group \<resource-group-name> failed. Message: The zone(s) '1' for resource '\<agentpoolName>' is not supported. The supported zones for location '\<location>' are 'A', 'B'
+> Preflight validation check for resource(s) for container service \<resource-name> in resource group \<resource-group-name> failed. Message: The zone(s) '\<requested-zone>' for resource '\<node-pool-name>' is not supported. The supported zones for location '\<location>' are '\<supported-zones>'.
+
+The error might appear without the preflight validation prefix.
 
 ## Cause
 
-The issue occurs because the requested SKU has restrictions in some or all zones of your subscription. To verify the restrictions, go to the [Verify SKU restrictions](#verify-sku-restrictions) section.
+The requested zones aren't supported for the node pool's configuration. Possible causes include:
 
-## Solution
+- The VM SKU doesn't support the requested zones in the selected region.
+- The subscription has [SKU availability restrictions](/azure/azure-resource-manager/troubleshooting/error-sku-not-available) in the region or in specific zones.
+- The selected region doesn't support availability zones for AKS.
 
-To resolve this issue, follow the [Azure region access request process](../../general/region-access-request-process.md) to request access to the specified region or zone.
+The supported zone list in the error applies to the affected SKU and subscription.
 
 ## Verify SKU restrictions
 
-1. List the SKU details by running one of the following commands:
+The following steps help you verify whether the requested zones are supported for the node pool's VM SKU and your subscription.
 
-    ```azurecli
-    az vm list-skus -l <location> --size <SKU> 
-    ```
-        
-    ```azurecli
-    az rest --method get \
-        --url "https://management.azure.com/subscriptions/<subscription>/providers/Microsoft.Compute/skus?%24filter=location+eq+%27<location>%27&api-version=2022-03-01"  >> availableSkus.txt
-    ```
-    
-    > [!NOTE]
-    > Replace `<subscription>`, `<SKU>`, and `<location>` accordingly.
-2. Search for the requested SKU from the command output.
-3. If you see information like the following, it indicates that the requested SKU has restrictions in some or all zones of your subscription:
+### List the SKU and its restrictions
 
-    ```json
+Use [Azure CLI](/cli/azure/get-started-with-azure-cli) to list the SKU's zones and restrictions. Replace the placeholders with the affected subscription, region, and node pool VM size.
+
+```azurecli
+az vm list-skus --subscription <subscription-id> -l <location> --size <SKU> --resource-type virtualMachines --all --output table
+```
+
+The `--all` parameter includes SKUs unavailable to the subscription. Because `--size` accepts partial names, review **Zones** and **Restrictions** for the exact SKU name.
+
+For details, filter JSON output to the exact SKU:
+
+```azurecli
+az vm list-skus --subscription <subscription-id> -l <location> --size <SKU> --resource-type virtualMachines --all --query "[?name=='<SKU>'].{name:name,locationInfo:locationInfo,restrictions:restrictions}" --output json
+```
+
+The following example shows the relevant fields for a SKU that supports zones `1`, `2`, and `3` in `southeastasia`, but has a subscription restriction on zone `2`:
+
+```json
+[
+  {
+    "name": "Standard_D2s_v5",
+    "locationInfo": [
+      {
+        "location": "southeastasia",
+        "zones": [
+          "1",
+          "2",
+          "3"
+        ]
+      }
+    ],
     "restrictions": [
-                    {
-                        "type": "Zone",
-                        "values": [
-                            "<zone>"
-                        ],
-                        "restrictionInfo": {
-                            "locations": [
-                                "<location>"
-                            ],
-                            "zones": [
-                                "1",
-                                "2",
-                                "3"
-                            ]
-                        },
-                        "reasonCode": "NotAvailableForSubscription"
-                    }
-                ]
-    ```
- 
+      {
+        "reasonCode": "NotAvailableForSubscription",
+        "restrictionInfo": {
+          "locations": [
+            "southeastasia"
+          ],
+          "zones": [
+            "2"
+          ]
+        },
+        "type": "Zone",
+        "values": [
+          "southeastasia"
+        ]
+      }
+    ]
+  }
+]
+```
+
+### Interpret the results
+
+Compare the requested zones with the SKU's **Zones** and **Restrictions**:
+
+| Query result | Meaning |
+|---|---|
+| A `Zone` restriction includes the target region and a requested zone | The subscription can't use this SKU in that zone. |
+| A `Location` restriction includes the target region | The subscription can't use this SKU in that region, regardless of zone. |
+| A requested zone isn't listed in `locationInfo.zones` for the target region | The SKU doesn't advertise support for that zone. |
+| No restriction applies to the target region and requested zones | No matching subscription restriction is reported; check zone support separately. |
+| No exact SKU match is returned, even with `--all` | The query doesn't establish SKU availability or the cause of the error. |
+
+In the preceding table, the SKU lists zones `1`, `2`, and `3`, but `restrictionInfo.zones` excludes zone `2` for this subscription. The `values` field contains the region name, not the zone number.
+
+> [!NOTE]
+> For `AllocationFailed` or `ZonalAllocationFailed`, see [allocation failure guidance](zonalallocation-allocationfailed-error.md). For `QuotaExceeded`, see [quota error guidance](quota-exceeded-error.md).
+
+## Solution
+
+Choose an option that meets your placement requirements:
+
+- **Use supported zones.** See [Configure availability zones in AKS](/azure/aks/reliability-availability-zones-configure) for configuration steps and limitations.
+- **Choose another SKU, or another region for a new cluster.** See [Resolve errors for SKU not available](/azure/azure-resource-manager/troubleshooting/error-sku-not-available#solution) and [AKS VM size and region requirements](/azure/aks/quotas-skus-regions).
+- **Request access if the required SKU is restricted for your subscription.** Follow the [SKU request guidance](/azure/azure-resource-manager/troubleshooting/error-sku-not-available#solution) or, for region access, the [Azure region access request process](/troubleshoot/azure/general/region-access-request-process). A quota increase alone doesn't resolve a SKU or zone access restriction.
+
+Retry the original deployment with the supported configuration, preserving other settings.
+
+## Verify the deployment
+
+Check the cluster and affected node pool:
+
+```azurecli
+az aks show --subscription <subscription-id> --resource-group <resource-group-name> --name <cluster-name> --query "{state:provisioningState,location:location}" --output table
+```
+
+```azurecli
+az aks nodepool show --subscription <subscription-id> --resource-group <resource-group-name> --cluster-name <cluster-name> --name <node-pool-name> --query "{state:provisioningState,vmSize:vmSize,zones:availabilityZones,count:count}" --output json
+```
+
+Confirm that the provisioning state is `Succeeded` and that the deployed VM size, region, and availability zones match the intended configuration.

@@ -16721,6 +16721,22 @@
     {
       "source_path": "support/dynamics-365/supply-chain/procurement/default-tax-group-and-discount.md",
       "redirect_url": "/dynamics365/supply-chain/procurement/set-up-vendor-accounts#fiscal-data-from-an-invoice-account"
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/inventory/minimum-quantity-pick-qty-catch-weight-quantity-split-into-batches.md",
+      "redirect_url": "/dynamics365/supply-chain/inventory/outbound-process#example-of-an-outbound-process-for-a-sales-order"
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/inventory/last-tested-date-not-updated.md",
+      "redirect_url": "/dynamics365/supply-chain/master-planning/planning-optimization/shelf-life#set-up-shelf-life-for-a-product"
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/inventory/picking-list-report-not-show-new-notes-attached-to-journal.md",
+      "redirect_url": "/dynamics365/supply-chain/inventory/outbound-process#notes-on-the-picking-list-report"
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/inventory/reverse-report-as-finished-creates-open-transaction.md",
+      "redirect_url": "/dynamics365/supply-chain/production-control/report-production-orders-as-finished#inventory-dimensions-when-you-reverse-reporting-as-finished"
     }
   ]
 }
