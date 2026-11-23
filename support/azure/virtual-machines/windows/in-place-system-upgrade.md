@@ -79,7 +79,7 @@ The following table shows in-place upgrade supportability for Azure Virtual Desk
 
 > [!NOTE]
 > ISO-based in-place upgrades are **Not supported** on AVD multi-session because Microsoft doesn't provide an ISO for it.  
-> see [Windows update management methodologies for session hosts](https://learn.microsoft.com/en-us/azure/virtual-desktop/windows-update-management-methodologies-session-hosts).
+> see [Windows update management methodologies for session hosts](/azure/virtual-desktop/windows-update-management-methodologies-session-hosts).
 
 **Summary:** Feature updates within the same Windows version are supported. OS version upgrades (Windows 10 to Windows 11) aren't supported on any session host type or standard Azure VM — deploy new VMs instead.
 
