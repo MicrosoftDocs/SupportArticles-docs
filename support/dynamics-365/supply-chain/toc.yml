@@ -43,22 +43,14 @@ items:
         href: inventory/maximum-number-of-decimals-for-stock-keeping-unit-is-0.md
       - name: Multiple inventory transactions for batch numbers without "On physical update"
         href: inventory/multiple-inventory-transactions-on-physical-update-disabled.md
-      - name: Picking list report doesn't show new notes that are attached to a journal
-        href: inventory/picking-list-report-not-show-new-notes-attached-to-journal.md
       - name: Quantity on a started quarantine order doesn't update when the order is split
         href: inventory/quantity-started-quarantine-order-not-updated.md
-      - name: Reversing a report as finished creates an unexpected open transaction
-        href: inventory/reverse-report-as-finished-creates-open-transaction.md
       - name: Transfer order line data discrepancy or corruption
         href: inventory/correct-inventory-transfer-order-lines-manually.md
       - name: The unit and unit quantity aren't working correctly in the inventory journal
         href: inventory/journal-unit-quantity-incorrect.md
       - name: The filter pane on the On-hand list page doesn't work as expected
         href: inventory/on-hand-filter-unexpected.md
-      - name: The Last tested date field isn't updated when multiple quality orders are created
-        href: inventory/last-tested-date-not-updated.md
-      - name: When a catch-weight quantity is split, minimum quantity is used instead of nominal quantity
-        href: inventory/minimum-quantity-pick-qty-catch-weight-quantity-split-into-batches.md
       - name: You can't find the "Workflow" drop-down dialog box for inventory journals
         href: inventory/cant-find-workflow-dropdown.md
       - name: Your inventory journal is locked and the workflow batch job doesn't work
