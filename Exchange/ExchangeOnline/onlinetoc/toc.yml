@@ -150,6 +150,16 @@ items:
           href: ../antispam-and-protection/smtpsend-barelinefeedsareillegal-when-tracing-messages.md
     - name: Calendars
       items:
+        - name: Free/busy lookup fails with invalid room work hours
+          href: ../calendars/free-busy-room-invalid-work-hours.md
+        - name: Same-tenant free/busy access denied
+          href: ../calendars/free-busy-caller-no-access.md
+        - name: Free/busy
+          items:
+            - name: Free/busy information is unavailable
+              href: ../calendars/diagnose-free-busy-unavailability.md
+        - name: Google attendee availability and missing mail contact
+          href: ../calendars/google-attendee-free-busy-mail-contact-not-found.md
         - name: Cross-tenant free/busy Autodiscover call fails
           href: ../calendars/cross-tenant-free-busy-discovery-call-failed.md      
         - name: Cross-tenant free/busy caller access denied
