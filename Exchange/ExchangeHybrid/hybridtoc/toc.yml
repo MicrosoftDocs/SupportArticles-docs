@@ -86,6 +86,14 @@ items:
           href: ../calendars/free-busy-forest-domain-not-found.md          
         - name: Free/busy lookups stop working in cross-premises or in hybrid deployment
           href: ../calendars/freebusy-lookups-stop-working.md
+        - name: Free/busy couldn't connect to the remote server
+          href: ../calendars/free-busy-unable-connect-remote-server.md
+        - name: Free/busy couldn't create an SSL/TLS secure channel
+          href: ../calendars/free-busy-ssl-tls-secure-channel.md
+        - name: Free/busy returns HTTP 401 at a preauthentication device
+          href: ../calendars/free-busy-perimeter-authentication-unauthorized.md
+        - name: Free/busy token user-context value is ambiguous
+          href: ../calendars/free-busy-user-context-ambiguous.md
         - name: Free/busy malformed XML response error
           href: ../calendars/free-busy-response-not-well-formed-xml.md
         - name: Free/busy OAuth signing certificate is missing
