@@ -193,8 +193,8 @@ The following PowerShell script replicates the manual steps. When you run the sc
 ```powershell
 <# SUSDB-Maintenance
 
-Version 2.8
-Last Update: 08/10/2026
+Version 2.9
+Last Update: 09/04/2026
 
 Requirements
 * WID must be local.
@@ -208,6 +208,9 @@ Requirements
   [RA] holds a single window open across those steps instead of toggling the setting for each one.
   Replica mode is read and written through the local WSUS console API, not SUSDB.
   Set $Global:AutoDisableReplicaMode to $false to leave replica mode alone and only warn.
+* Steps [6] and [RA] accept 0 months, which declines every superseded update regardless of age.
+  That is intended for a standalone WSUS environment only and requires a typed YES confirmation.
+  Do not use 0 where ConfigMgr uses this WSUS as a SUP - enter the months configured in the SUP component supersedence rules.
 
 This script will present the following menu options for performing SUSDB Maintenance.  SUSDB-Maintenance.log will be created and opened when the script is run.
 
@@ -240,10 +243,11 @@ of or inability to use the sample script or documentation, even if Microsoft has
 #>
 
 #Global Variables
-$Global:ScriptVersion = '2.8'
+$Global:ScriptVersion = '2.9'
 $Global:LogFile = $null
 $Global:progresspreference = 'SilentlyContinue'
 # Expressed in months to match the supersedence rule in ConfigMgr SUP component properties.
+# 0 declines every superseded update regardless of age - standalone WSUS only.
 $Global:MonthsSupersededNotDeclined = 3
 $Global:MaxXMLDefault = 5242880
 # Cached MaxXMLPerRequest so the menu does not query SQL on every redraw. Null means "re-read".
@@ -1061,6 +1065,42 @@ Write-log -Message "--> Begin cleanup sync history" -severity 1 -component "Clea
     Write-log -Message "--> End cleanup sync history" -severity 1 -component "Cleanup Sync History"
 }
 
+function Confirm-DeclineAllSuperseded {
+    <#
+    .SYNOPSIS
+    Confirms an entry of 0 months, which declines every superseded update regardless of age.
+    #>
+    param(
+        [Parameter(Mandatory = $true)]
+        [string]$Component
+    )
+
+    Write-Host "`n*************************************************************" -ForegroundColor Yellow
+    Write-Host "*** 0 MONTHS - DECLINE ALL SUPERSEDED UPDATES" -ForegroundColor Yellow
+    Write-Host "*** Every superseded update will be declined regardless of" -ForegroundColor Yellow
+    Write-Host "*** age, including updates that are approved and currently" -ForegroundColor Yellow
+    Write-Host "*** deploying." -ForegroundColor Yellow
+    Write-Host "***" -ForegroundColor Yellow
+    Write-Host "*** Intended for a STANDALONE WSUS environment only. If" -ForegroundColor Yellow
+    Write-Host "*** ConfigMgr uses this WSUS as a SUP, enter the months" -ForegroundColor Yellow
+    Write-Host "*** configured in the SUP component supersedence rules." -ForegroundColor Yellow
+    Write-Host "***" -ForegroundColor Yellow
+    Write-Host "*** [9] Cleanup Declined then deletes those declines" -ForegroundColor Yellow
+    Write-Host "*** permanently - recovering any of them needs a full resync." -ForegroundColor Yellow
+    Write-Host "*************************************************************`n" -ForegroundColor Yellow
+    Write-log -Message "0 months entered - declines ALL superseded updates regardless of age, including approved ones. Standalone WSUS only." -severity 2 -component $Component
+
+    # -ne is case-insensitive in PowerShell, so YES and yes both confirm.
+    if ((Read-Host "Type YES to continue, anything else to cancel").Trim() -ne 'YES') {
+        Write-Host "`nCancelled - nothing was declined.`n" -ForegroundColor Green
+        Write-log -Message "Operator cancelled the 0 month decline-all." -severity 1 -component $Component
+        return $false
+    }
+
+    Write-log -Message "Operator confirmed the 0 month decline-all." -severity 2 -component $Component
+    return $true
+}
+
 function CleanupSupersedUpdates {
     Write-log -Message "--> Begin cleanup superseded updates" -severity 1 -component "Cleanup Superseded Updates"
 
@@ -1520,20 +1560,26 @@ do {
 
 }'6' {
             #Cleanup Superseded Updates
-            Write-Host "Specify the number of months between today and the release date for which the superseded updates must not be declined.`nThis should match configuration of supersedence rules in SUP component properties, if ConfigMgr is being used with WSUS.`n"
+            Write-Color -Text "Specify the number of ", "months", " (not days) between today and the release date for which the superseded updates must not be declined." -Color Cyan, Yellow, Cyan
+            Write-Host "This should match configuration of supersedence rules in SUP component properties, if ConfigMgr is being used with WSUS." -ForegroundColor Cyan
+            Write-Host
+            Write-Host "Enter 0 *only* in a standalone WSUS environment to decline every superseded update regardless of age." -ForegroundColor Yellow
+            Write-Host
             $MonthsEntry = Read-Host -Prompt 'Months '
             $MonthsValue = 0
 
             # Read-Host returns a string, so the range test must be done on a parsed integer.
             # 600 months (50 years) is far beyond the age of any update in SUSDB and keeps the calculated cutoff date clear of the SQL datetime floor of 01-01-1753.
-            if ([int]::TryParse($MonthsEntry.Trim(), [ref]$MonthsValue) -and $MonthsValue -gt 0 -and $MonthsValue -le 600) {
-                $Global:MonthsSupersededNotDeclined = $MonthsValue
-                Write-log -Message "Number of months entered :  $Global:MonthsSupersededNotDeclined , proceeding with cleaning up superseded updates." -severity 1 -component "Cleanup Superseded Updates"
-                CleanupSupersedUpdates 
+            if ([int]::TryParse($MonthsEntry.Trim(), [ref]$MonthsValue) -and $MonthsValue -ge 0 -and $MonthsValue -le 600) {
+                if ($MonthsValue -gt 0 -or (Confirm-DeclineAllSuperseded -Component "Cleanup Superseded Updates")) {
+                    $Global:MonthsSupersededNotDeclined = $MonthsValue
+                    Write-log -Message "Number of months entered :  $Global:MonthsSupersededNotDeclined , proceeding with cleaning up superseded updates." -severity 1 -component "Cleanup Superseded Updates"
+                    CleanupSupersedUpdates
+                }
             }
             else {
-                Write-Host "`nInvalid entry, must be a whole number between 1 and 600.`n" -ForegroundColor Red
-                Write-log -Message "Number of months entered [$MonthsEntry] is invalid, must be a whole number between 1 and 600." -severity 3 -component "Cleanup Superseded Updates"                
+                Write-Host "`nInvalid entry, must be a whole number between 0 and 600.`n" -ForegroundColor Red
+                Write-log -Message "Number of months entered [$MonthsEntry] is invalid, must be a whole number between 0 and 600." -severity 3 -component "Cleanup Superseded Updates"                
             }
 
 }'7' {
@@ -1562,13 +1608,26 @@ do {
         }'RA' {
             Write-log -Message "--> Begin run all" -severity 1 -component "Run All"
             
-            Write-Host "Specify the number of months between today and the release date for which the superseded updates must not be declined.`nThis should match configuration of supersedence rules in SUP component properties, if ConfigMgr is being used with WSUS.`n"
+            Write-Color -Text "Specify the number of ", "MONTHS", " (not days) between today and the release date for which the superseded updates must not be declined." -Color Cyan, Yellow, Cyan
+            Write-Host "This should match configuration of supersedence rules in SUP component properties, if ConfigMgr is being used with WSUS." -ForegroundColor Cyan
+            Write-Host
+            Write-Host "Enter 0 in a standalone WSUS environment to decline every superseded update regardless of age." -ForegroundColor Yellow
+            Write-Host
             $MonthsEntry = Read-Host -Prompt 'Months '
             $MonthsValue = 0
 
             # Read-Host returns a string, so the range test must be done on a parsed integer.
             # 600 months (50 years) is far beyond the age of any update in SUSDB and keeps the calculated cutoff date clear of the SQL datetime floor of 01-01-1753.
-            if ([int]::TryParse($MonthsEntry.Trim(), [ref]$MonthsValue) -and $MonthsValue -gt 0 -and $MonthsValue -le 600) {
+            $MonthsValid = [int]::TryParse($MonthsEntry.Trim(), [ref]$MonthsValue) -and $MonthsValue -ge 0 -and $MonthsValue -le 600
+            $RunAllCancelled = $false
+
+            # Later steps delete the declines permanently, so 0 is confirmed before any step runs.
+            if ($MonthsValid -and $MonthsValue -eq 0) {
+                $MonthsValid = Confirm-DeclineAllSuperseded -Component "Run All"
+                $RunAllCancelled = -not $MonthsValid
+            }
+
+            if ($MonthsValid) {
                 $Global:MonthsSupersededNotDeclined = $MonthsValue
                 Write-log -Message "Number of months entered :  $Global:MonthsSupersededNotDeclined , proceeding with cleaning up superseded updates." -severity 1 -component "Run All"                
 
@@ -1656,9 +1715,9 @@ do {
                     Write-log -Message "Run All completed - all $($RunAllSteps.Count) steps succeeded in $(Format-Elapsed $RunAllElapsed)" -severity 1 -component "Run All"
                 }
             }
-            else {
-                Write-Host "`nInvalid entry, must be a whole number between 1 and 600.`n" -ForegroundColor Red
-                Write-log -Message "Number of months entered [$MonthsEntry] is invalid, must be a whole number between 1 and 600. Run All cancelled." -severity 3 -component "Run All"
+            elseif (-not $RunAllCancelled) {
+                Write-Host "`nInvalid entry, must be a whole number between 0 and 600.`n" -ForegroundColor Red
+                Write-log -Message "Number of months entered [$MonthsEntry] is invalid, must be a whole number between 0 and 600. Run All cancelled." -severity 3 -component "Run All"
             }
 
             Write-log -Message "--> End run all" -severity 1 -component "Run All"
