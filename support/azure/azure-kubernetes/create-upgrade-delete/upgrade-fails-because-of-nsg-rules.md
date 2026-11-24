@@ -1,12 +1,12 @@
 ---
 title: AKS cluster upgrade fails because of NSG rules
-description: Learn how to fix an AKS cluster upgrade that fails because NSG rules block required outbound traffic. Identify the blocking rules and retry the upgrade.
-ms.date: 11/20/2026
+description: Learn how to fix an AKS cluster upgrade that fails because NSG rules block outbound traffic. Identify the blocking rules, fix them, and retry the upgrade.
+ms.date: 11/24/2026
 ms.topic: troubleshooting
 manager: dcscontentpm
 author: kaushika-msft
 ms.author: kaushika
-ms.reviewer: chiragpa, v-leedennis, andbar, kaushika
+ms.reviewer: chiragpa, v-leedennis, andbar, ping.he, zhixinsun, kaushika
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes Services (AKS) user, I want to troubleshoot an AKS cluster upgrade that failed because of network security group (NSG) rules so that I can upgrade successfully.
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
@@ -16,7 +16,7 @@ ai-usage: ai-generated
 
 ## Summary
 
-If an Azure Kubernetes Service (AKS) cluster upgrade fails, network security group (NSG) rules might block required outbound traffic. This article helps you identify the blocking rules, fix them, and retry the upgrade successfully.
+If an Azure Kubernetes Service (AKS) cluster upgrade fails, network security group (NSG) rules might block required outbound traffic. This article explains how to identify the blocking NSG rules, fix them, and retry the AKS cluster upgrade successfully.
 
 Unless you use a [network isolated cluster](/azure/aks/concepts-network-isolated), AKS nodes need [outbound connectivity](/azure/aks/outbound-rules-control-egress) to a set of [required endpoints and FQDNs](/azure/aks/outbound-rules-control-egress#required-outbound-network-rules-and-fqdns-for-aks-clusters). Nodes use this connectivity during provisioning, upgrades, and scaling. For example, a node must be able to:
 
@@ -74,13 +74,18 @@ If an NSG rule blocks any of this traffic, the CSE fails with an exit code, the 
 - An outbound rule denies traffic to the IP addresses or ports of a required endpoint, such as the API server IP address (public, or the private endpoint IP of a private cluster) on TCP port 443.
 - An outbound rule blocks DNS traffic (UDP/TCP port 53) to a custom DNS server that's configured on the virtual network.
 
-You can apply NSG rules at two levels, and both levels are evaluated:
+You can apply NSG rules at the subnet and network interface levels. When troubleshooting, check the actual NSG associations:
 
-- **Subnet level** - An NSG that you associate with the node subnet, typically when you use your own virtual network.
+- **Subnet level** - An NSG associated with the node subnet, typically when you use your own virtual network.
 - **Network interface level** - The AKS-managed NSG in the node resource group (by default named `MC_<resource-group>_<cluster-name>_<location>`).
 
+If NSGs are associated at both levels, both must allow the required traffic.
+
+> [!IMPORTANT]
+> The AKS-managed NSGs might change but modifying the AKS-managed NSGs isn't a supported operation. If a customer-managed NSG on the node subnet blocks required traffic, update that NSG to allow the [required outbound traffic](/azure/aks/outbound-rules-control-egress). 
+
 > [!NOTE]
-> An upgrade often fails after you add or change an NSG rule since the last successful cluster operation. Existing nodes keep working because their connections are already established. New nodes that are created during the upgrade can't bootstrap.
+> An upgrade often fails after you add or change an NSG rule since the last successful cluster operation. Existing nodes keep working because their connections are already established. New nodes that you create during the upgrade can't bootstrap.
 
 ## Troubleshooting
 
@@ -119,7 +124,10 @@ For more information, see [Check if Azure network resources are blocking traffic
 [Connect to a node in the affected cluster](/azure/aks/node-access), and then run the test that matches your exit code.
 
 > [!TIP]
-> If outbound traffic to MCR is blocked, `kubectl debug` might not be able to pull the debug image. In that case, run the commands through [`az vmss run-command invoke`](/cli/azure/vmss/run-command#az-vmss-run-command-invoke) instead.
+> If you don't have access to an AKS node or outbound traffic to MCR is blocked, `kubectl debug` might not be able to pull the debug image. In that case, run the commands through [`az vmss run-command invoke`](/cli/azure/vmss/run-command#az-vmss-run-command-invoke) instead.
+
+> [!NOTE]
+> On clusters that use API Server VNet Integration, node bootstrap connects directly to the private IP address of the API server's internal load balancer (ILB). A blocked connection can cause repeated `nc` timeouts and exit code 124 instead of 51. Follow [the VNet Integration troubleshooting steps](/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/error-code-k8sapiserverconnfailvmextensionerror#clusters-that-use-api-server-vnet-integration). Exit code 124 alone doesn't prove that an NSG is the cause.
 
 To get the API server FQDN, run the following command. For a private cluster, query `privateFqdn` instead of `fqdn`.
 
@@ -132,13 +140,13 @@ az aks show --resource-group <resource-group> --name <cluster-name> --query fqdn
 Test connectivity to a [required FQDN](/azure/aks/outbound-rules-control-egress#required-outbound-network-rules-and-fqdns-for-aks-clusters). Run the following command.
 
 ```bash
-curl -v --insecure --proxy-insecure https://<required-fqdn>
+curl -v --insecure --proxy-insecure --max-time 5 https://<required-fqdn>
 ```
 
-The following is an example of testing connectivity to MCR.
+The following command tests connectivity to MCR.
 
 ```bash
-curl -v --insecure --proxy-insecure https://mcr.microsoft.com/v2/
+curl -v --insecure --proxy-insecure --max-time 5 https://mcr.microsoft.com/v2/
 ```
 
 #### Exit code 51: K8SAPIServerConnFailVMExtensionError
@@ -146,13 +154,13 @@ curl -v --insecure --proxy-insecure https://mcr.microsoft.com/v2/
 Test connectivity to the API server on TCP port 443. Run the following command.
 
 ```bash
-curl -v --insecure --proxy-insecure https://<API-server-FQDN>:443
+curl -v --insecure --proxy-insecure --max-time 5 https://<API-server-FQDN>:443
 ```
 
-The following is an example of testing connectivity to the API server.
+The following command tests connectivity to the API server.
 
 ```bash
-curl -v --insecure --proxy-insecure https://mycluster-dns-a1b2c3d4.hcp.eastus.azmk8s.io:443
+curl -v --insecure --proxy-insecure --max-time 5 https://mycluster-dns-a1b2c3d4.hcp.eastus.azmk8s.io:443
 ```
 
 #### Exit code 52: K8SAPIServerDNSLookupFailVMExtensionError
@@ -163,7 +171,7 @@ Test DNS resolution of the API server FQDN. Run the following command.
 nslookup <API-server-FQDN>
 ```
 
-The following is an example of testing DNS resolution of the API server FQDN.
+The following command tests DNS resolution of the API server FQDN.
 
 ```bash
 nslookup mycluster-dns-a1b2c3d4.hcp.eastus.azmk8s.io
@@ -208,7 +216,7 @@ If the connection or DNS lookup fails, first make sure that the other components
 
     - The `Internet` service tag, or `*` destinations, on TCP port 443.
     - The IP addresses that the required FQDNs resolve to, as found in [Interpret the results](#interpret-the-results).
-    - The API server IP address on TCP port 443. For a private cluster, this is the IP address of the private endpoint.
+    - The API server IP address on TCP port 443. For a private cluster, this address is the IP address of the private endpoint.
     - The DNS server IP addresses on UDP/TCP port 53.
     - Other [required outbound network rules](/azure/aks/outbound-rules-control-egress#azure-global-required-network-rules), such as UDP port 123 (NTP).
 
@@ -260,3 +268,4 @@ az aks upgrade --resource-group <resource-group> --name <cluster-name> --kuberne
 - [Troubleshoot AKS outbound connections](../connectivity/basic-troubleshooting-outbound-connections.md)
 - [Network security groups overview](/azure/virtual-network/network-security-groups-overview)
 - [Azure Virtual Network Verifier](/azure/virtual-network-manager/concept-virtual-network-verifier)
+- [Virtual network flow logs overview](/azure/network-watcher/vnet-flow-logs-overview)
