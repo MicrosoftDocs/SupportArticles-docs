@@ -4,9 +4,7 @@ titleSuffix: SQL Server & Azure SQL
 description: This article helps you to monitor and identify the issue of continuous transaction log growth caused by long-running transactions in a database with Change Data Capture (CDC) enabled on SQL Server, Azure SQL Database, and Azure SQL Managed Instance.
 ms.date: 07/20/2023
 ms.custom: sap:Replication, Change Tracking, Change Data Capture, Synapse Link
-ms.reviewer: mathoma
-author: croblesm
-ms.author: roblescarlos
+ms.reviewer: mathoma, roblescarlos
 ---
 # Transaction log grows due to long-running transactions when you use Change Data Capture - SQL Server & Azure SQL
 
