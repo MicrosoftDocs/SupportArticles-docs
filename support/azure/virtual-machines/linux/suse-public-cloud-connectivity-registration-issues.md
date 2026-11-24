@@ -1,15 +1,17 @@
 ---
 title: Troubleshoot Connectivity and Registration for SUSE SLES VMs
 description: "Learn how to troubleshoot SUSE SLES VM connectivity and registration issues with the SUSE SMT repository on Azure. Find fixes for common scenarios."
-ms.date: 05/12/2025
+ms.date: 11/24/2026
+ms.topic: troubleshooting
+manager: dcscontentpm
 author: kaushika-msft
 ms.author: kaushika
 ms.reviewer: scotro, divargas
-editor: v-jsitser
 ms.service: azure-virtual-machines
 ms.custom: sap:Kernel Upgrades, Package Management issue (Yum, Zypper, RPM, DPKG, APT)
 keywords:
 #Customer intent: As a user who wants to set up an Azure virtual machine by using a SUSE Linux Enterprise Server image, I want establish an internet connection to the SUSE Subscription Management Tool repository so that I can successfully register the virtual machine.
+ai-usage: ai-assisted
 ---
 # Troubleshoot connectivity and registration issues for SUSE Linux Enterprise Server VMs
 
@@ -17,7 +19,7 @@ keywords:
 
 ## Summary
 
-This article discusses an issue in which a Microsoft Azure Virtual Machine (VM) is set up by using a SUSE Linux Enterprise Server (SLES) image, but the VM can't connect to the SUSE Subscription Management Tool (SMT) repository. This article provides some basic troubleshooting steps and actions to take for specific scenarios, like failures in the Zypper command-line tool for managing packages in SUSE. Linux specialists at Microsoft assembled this information based on support experience and documentation from SUSE.
+This article helps you troubleshoot connectivity and registration issues when a Microsoft Azure Virtual Machine (VM) that uses a SUSE Linux Enterprise Server (SLES) image can't connect to the SUSE Subscription Management Tool (SMT) repository. This article provides some basic troubleshooting steps and actions to take for specific scenarios, like failures in the Zypper command-line tool for managing packages in SUSE. Linux specialists at Microsoft assembled this information based on support experience and documentation from SUSE.
 
 It's important to read the output of each command for more clues. Save the results and messages for further troubleshooting.
 
@@ -31,10 +33,10 @@ It's important to read the output of each command for more clues. Save the resul
 - [SUSEConnect](https://github.com/SUSE/connect) tool
 - [registercloudguest](https://github.com/SUSE-Enceladus/cloud-regionsrv-client/tree/master/cloudregister) tool
 
-> [!Note]
+> [!NOTE]
 > If your SLES VM is behind a proxy server, review the technical considerations discussed in [Accessing the Public Cloud Update Infrastructure via a Proxy](https://www.suse.com/c/accessing-the-public-cloud-update-infrastructure-via-a-proxy/).
 > For SLES VMs on Azure, the following conditions apply:
-> - Connecting to update servers from a SLES VM relies on hostname resolution that public DNS servers can't resolve. Therefore, some Linux/Unix proxy server implementations might require that you manually put a record in */etc/hosts* on the proxy server side so that the "smt-azure" name can be resolved.
+> - Connecting to update servers from a SLES VM relies on hostname resolution that public DNS servers can't resolve. Therefore, some Linux/Unix proxy server implementations might require that you manually put a record in */etc/hosts* on the proxy server side so that the `smt-azure` name can be resolved.
 >
 >    Here's an example record:
 >    
@@ -142,19 +144,108 @@ DONE
 
 The output doesn't show the server certificate or SSL session. 
 
-### Cause
+To identify the cause, compare the `issuer=` lines of the [region and SMT servers](#step-2-check-connectivity-to-server-ip-addresses-on-port-443):
+
+```bash
+echo "" | sudo openssl s_client -connect 52.149.120.86:443 2>&1 | grep "issuer="
+echo "" | sudo openssl s_client -connect 40.121.202.140:443 2>&1 | grep "issuer="
+echo "" | sudo openssl s_client -connect 23.100.36.229:443 2>&1 | grep "issuer="
+```
+
+```output
+# 52.149.120.86
+issuer=C = DE, ST = Bavaria, L = Nuremberg, O = SUSE, OU = Public Cloud, CN = SUSE, emailAddress = suse-public-cloud@susecloud.net   # <-- SUSE certificate (working scenario)
+# 40.121.202.140
+issuer=CN = (firewall or NVA certificate authority)                     # <-- Certificate not issued by SUSE (Cause 1)
+# 23.100.36.229
+                                                                        # <-- No server certificate at all (Cause 2)
+```
+
+If no `issuer=` line appears although the TCP connection on port 443 succeeds, see Cause 2. Otherwise, see Cause 1.
+
+### Cause 1
 
 This scenario usually occurs when the command crosses a Network Virtual Appliance (NVA) that performs SSL packet inspection. This inspection causes the NVA to inject its own SSL certificate into the encrypted session.
 
 Because SUSE uses certificate pinning, another injected SSL certificate can break the pinning operation. If the pinning is broken, the SUSE repository denies the connection.
 
+To confirm this cause, compare the certificate fingerprint that's stored on the VM (in the `certLocation` directory of `/etc/regionserverclnt.cfg`) with the one that the region server returns. If they don't match, the NVA replaced the certificate:
+
+```bash
+sudo openssl x509 -noout -fingerprint -sha256 -in <certLocation>/<region server IP>.pem
+echo "" | sudo openssl s_client -connect <region server IP>:443 2>/dev/null | openssl x509 -noout -fingerprint -sha256
+```
+
+For example:
+
+```bash
+sudo openssl x509 -noout -fingerprint -sha256 -in /usr/lib/regionService/certs/23.100.36.229.pem
+echo "" | sudo openssl s_client -connect 23.100.36.229:443 2>/dev/null | openssl x509 -noout -fingerprint -sha256
+```
+
+```output
+sha256 Fingerprint=EB:8C:08:9D:FF:2D:...:09:79:14:2F   # <-- Stored on the VM
+sha256 Fingerprint=CE:14:F0:DA:77:64:...:BD:D1:D0      # <-- Returned through the NVA (doesn't match)
+```
+
+### Cause 2
+
+A firewall or NVA allows the TCP connection on port 443. However, it resets the session as soon as the VM starts the TLS handshake.
+
+To check this behavior, run the following commands on the VM:
+
+```bash
+sudo -v                                                                   # Enter the sudo password once
+sudo tcpdump -i any -nn -w /tmp/tls-reset.pcap host <SUSE server IP> &    # Start the capture in the background
+sleep 2
+sudo registercloudguest --force-new < /dev/null                           # Reproduce the issue
+sleep 2
+sudo pkill tcpdump                                                        # Stop the capture
+sudo tcpdump -nn -v -r /tmp/tls-reset.pcap                                # Read the capture
+```
+
+In the output, look for the following flow:
+
+```output
+(SUSE server IP).443 → (VM IP): Flags [S.], ttl (TTL A)    ← 1. The SUSE server sends a SYN-ACK to the VM
+104.45.31.195.443 → 10.0.0.4: Flags [S.], ttl 57
+
+(VM IP) → (SUSE server IP).443: Flags [P.], ttl (VM TTL)   ← 2. The VM sends a ClientHello to the SUSE server
+10.0.0.4 → 104.45.31.195.443: Flags [P.], ttl 64
+
+(SUSE server IP).443 → (VM IP): Flags [R], ttl (TTL B)     ← 3. The "SUSE server" sends an RST to the VM instead of a ServerHello
+104.45.31.195.443 → 10.0.0.4: Flags [R], ttl 63
+```
+
+Then, compare TTL A with TTL B:
+
+```text
+(VM) ──────────────────── (firewall or NVA) ──── ... ──── (SUSE server)
+ │                                │                             │
+ClientHello: VM TTL          RST: TTL B                  SYN-ACK: TTL A
+
+Example:
+VM TTL = 64           TTL B = (64 - 1 hop) = 63    TTL A = (64 - 7 hops) = 57
+```
+
+- If TTL B > TTL A, the firewall or NVA sent the reset. In this example, 63 > 57.
+- If TTL B ≈ TTL A, the SUSE server sent the reset.
+
 ### Resolution
 
-Make sure that the NVA doesn't do the following actions:
+1. In the firewall or NVA traffic logs, find the rule that affects the traffic to the SUSE server IP addresses. For example, on a Palo Alto Networks firewall, check the Rule, Action, and Session End Reason.
 
-- Block access to the SUSE repository IP addresses.
-- Perform SSL packet inspection on the secure connection to the SUSE repositories.
-- Insert the NVA SSL certificate on the server.
+1. Then, ask the firewall or NVA team to apply the following changes for the [region server](https://susepubliccloudinfo.suse.com/v1/microsoft/servers/regionserver.xml) and [SMT server](https://susepubliccloudinfo.suse.com/v1/microsoft/servers/smt.xml) IP addresses for your region:
+
+    - Allow access to these IP addresses.
+    - Stop resetting the TLS session to these IP addresses after the TCP connection succeeds.
+    - Disable SSL packet inspection on the secure connection to these IP addresses, so that the NVA stops inserting its own SSL certificate.
+
+1. Finally, re-register the VM, and refresh the repositories:
+
+    ```bash
+    sudo registercloudguest --force-new && sudo zypper refresh
+    ```
 
 ## Scenario 2: Cloud-regionsrv-client issues and registration failures
 
@@ -183,7 +274,7 @@ To diagnose this scenario, check the state of the installed `cloud-regionsrv-cli
 
 The main client package should be at least version `10.x`.  
 
-As shown in the example, if you retry the manual re-registration or use the repocheck in [Step 1](#step1), the following output is displayed in `/var/log/cloudregister`:
+As shown in the following example, if you retry the manual re-registration or use the repocheck in [Step 1](#step1), the following output is displayed in `/var/log/cloudregister`:
 
 ```bash
 sudo tail /var/log/cloudregister
@@ -208,7 +299,7 @@ The script output might also mistakenly indicate that a certificate for one of t
 
 ### Cause
 
-If instances aren't regularly updated, they can become incompatible with our update infrastructure API. This situation causes failure of the repositories that are required to update an instance.
+If you don't regularly update instances, they can become incompatible with the update infrastructure API. This situation causes failure of the repositories that are required to update an instance.
 
 ### Resolution
 
@@ -262,7 +353,7 @@ If instances aren't regularly updated, they can become incompatible with our upd
     sudo registercloudguest --force-new
     ```
 
-1. Zypper can fail running in non-interactive mode. This failure happens due to additional dependencies requesting to select a solution. If this failure occurs, run the following command and select a solution:
+1. Zypper can fail running in non-interactive mode. This failure happens due to extra dependencies that request selecting a solution. If this failure occurs, run the following command and select a solution:
 
     ```bash
     sudo zypper --no-refresh --no-remote install --force *.rpm
@@ -338,7 +429,7 @@ The VMs can't connect to SUSE repositories because of outdated SUSE Public Cloud
 
 1. Run the [repository diagnostic script](#step1) again.
 
-2. If the "422" error persists, modify the `/etc/regionserverclnt.cfg` configuration file to match the following text:
+1. If the "422" error persists, modify the `/etc/regionserverclnt.cfg` configuration file to match the following text:
 
     ```config
     [server]
@@ -351,7 +442,7 @@ The VMs can't connect to SUSE repositories because of outdated SUSE Public Cloud
     instanceArgs = msftazure
     httpsOnly = true
     ```
-3. Re-register the VM:
+1. Re-register the VM:
 
     ```bash
     sudo registercloudguest --force-new
@@ -396,7 +487,7 @@ These errors occur only in the following modules:
     sudo mv sle-module-hpc.prod sle-module-legacy.prod sle-module-web-scripting.prod sle-sdk.prod /tmp 
     ```
 
-2. Register the VM to the SUSE repositories:
+1. Register the VM to the SUSE repositories.
 
     ```bash
     sudo registercloudguest --force-new
@@ -406,13 +497,13 @@ These errors occur only in the following modules:
     Registration should now be successful.
     ```
 
-3. Refresh the repository cache:
+1. Refresh the repository cache.
 
     ```bash
     sudo zypper ref -s  
     ```
 
-4. Update the `suseconnect-ng` package to version 1.6.0 or a later version, if necessary:
+1. Update the `suseconnect-ng` package to version 1.6.0 or a later version, if necessary.
 
     > [!NOTE]
     > To verify the version of `suseconnect-ng`, run the following command:
@@ -428,14 +519,14 @@ These errors occur only in the following modules:
     sudo zypper up suseconnect-ng
     ```
 
-5. After `suseconnect-ng` is updated, restore the module definition files to `/etc/products.d`:
+1. After `suseconnect-ng` is updated, restore the module definition files to `/etc/products.d`.
 
     ```bash
     sudo cd /tmp  
     sudo mv sle-module-hpc.prod sle-module-legacy.prod sle-module-web-scripting.prod sle-sdk.prod /etc/products.d
     ```
 
-6. Rerun the registration to the repositories:
+1. Rerun the registration to the repositories.
 
     ```bash
     sudo registercloudguest --force-new
@@ -472,12 +563,12 @@ This problem happens because of an incorrect temporary certificate bundle, `ca-b
     sudo registercloudguest --clean
     sudo rm /var/lib/ca-certificates/ca-bundle.pem.tmp
     ```
-2. Update the certificates:
+1. Update the certificates:
 
     ```bash
     sudo update-ca-certificates
     ```
-3. Register the VM successfully:
+1. Register the VM successfully:
 
     ```bash
     sudo registercloudguest --force-new
@@ -549,7 +640,7 @@ instanceArgs = msftazure
     ```bash
     sudo sed -i "s/--subscriptionId //" regionserverclnt.cfg
     ```
-2.  Re-register the VM: 
+1.  Re-register the VM: 
 
     ```bash
     sudo SUSEConnect --cleanup
@@ -572,7 +663,7 @@ An error occurs when you register the SUSE server to the repo by using the `/usr
     ```bash
     sudo mv /etc/zypp/credentials.d /tmp
     ```
-2.  Re-register the VM:
+1.  Re-register the VM:
 
     ```bash
     sudo SUSEConnect --cleanup
@@ -624,11 +715,11 @@ ModuleNotFoundError: No module named 'cloudregister'
 
 ### Cause
 
-No supported modules are available together with Python 3.11.
+No supported modules are available for Python 3.11.
 
 ### Workaround
 
-According to SUSE, the package doesn't yet support Python 3.11 on SLES15 SP5. Don't use Python 3.11 as the default `python3` interpreter on existing SLES systems because it's currently unsupported in all SLES systems.
+According to SUSE, the package doesn't yet support Python 3.11 on SLES 15 SP5. Don't use Python 3.11 as the default `python3` interpreter on existing SLES systems because it's currently unsupported in all SLES systems.
 
 For more information, see [incompatible-changes-ahead-for-public-cloud-sdks](https://www.suse.com/c/incompatible-changes-ahead-for-public-cloud-sdks/).
 
@@ -641,7 +732,7 @@ To work around the issue, set the VM to use the default Python version 3.6:
     sudo ln -s /usr/bin/python3.6 /usr/bin/python3
     ```
 
-2. Verify the `python3` version in the VM:
+1. Verify the `python3` version in the VM:
 
     ```bash
     sudo python3 --version
@@ -661,7 +752,7 @@ To work around the issue, set the VM to use the default Python version 3.6:
     Registration succeeded
     ```
 
-4. Verify that the VM is successfully registered:
+1. Verify that the VM is successfully registered:
 
     ```bash
     sudo SUSEConnect -s 
@@ -673,7 +764,7 @@ To work around the issue, set the VM to use the default Python version 3.6:
     tatus":"Registered"}, {"identifier": "sle-module-web-scripting", "version":"15.5","arch":"x86 64","status":"Registered"}]
     ```
 
-## Scenario 9: SUSE registration fails on LTSS enabled VMs SLES 12 SP5
+## Scenario 9: SUSE registration fails on LTSS-enabled SLES 12 SP5 VMs
 SLES 12 SP5 VM with LTSS enabled failed to connect to SMT repository. The following error message is displayed in `/var/log/cloudregister`.
 
    ```output
@@ -694,12 +785,12 @@ sudo ls -l /etc/products.d/
    -rw-r--r-- 1 root root 2746 2024-10-08 07:40 SLES-LTSS-Extended-Security.prod
    -rw-r--r-- 1 root root 2621 2024-10-08 05:13 SLES-LTSS.prod
    -rw-r--r-- 1 root root 2922 2024-09-25 14:21 SLES.prod
-   lrwxrwxrwx 1 root root    9 2018-01-09 08:47 baseproduct -> SLES.prod
+   lrwxrwxrwx 1 root root    9 2018-01-09 08:47 baseproduct -> SLES.prod
    -rw-r--r-- 1 root root 2254 2017-11-23 04:48 sle-module-web-scripting.prod
    -rw-r--r-- 1 root root 2363 2019-10-18 06:58 sle-sdk.prod
 ```
 
-2. Disable the LTSS related modules by renaming them.  
+1. Disable the LTSS related modules by renaming them.  
 
    ```bash
    sudo mv SLES-LTSS.prod SLES-LTSS.prod-bkp 
@@ -716,12 +807,12 @@ sudo ls -l /etc/products.d/
    -rw-r--r-- 1 root root 2746 2024-10-08 07:40 SLES-LTSS-Extended-Security.prod-bkp
    -rw-r--r-- 1 root root 2621 2024-10-08 05:13 SLES-LTSS.prod-bkp
    -rw-r--r-- 1 root root 2922 2024-09-25 14:21 SLES.prod
-   lrwxrwxrwx 1 root root    9 2018-01-09 08:47 baseproduct -> SLES.prod
+   lrwxrwxrwx 1 root root    9 2018-01-09 08:47 baseproduct -> SLES.prod
    -rw-r--r-- 1 root root 2254 2017-11-23 04:48 sle-module-web-scripting.prod
    -rw-r--r-- 1 root root 2363 2019-10-18 06:58 sle-sdk.prod
 ```
 
-4. Re-register the VM by using the following commands.
+1. Re-register the VM by using the following commands.
 
    ```bash        
    sudo SUSEConnect --cleanup
@@ -747,7 +838,7 @@ sudo ls -l /etc/products.d/
    sudo SUSEConnect --status
    ```
 
-6. Once the registration to SMT repository is successful, re-enable the LTSS as specified in [SUSE article - How to assign Long Term Service Pack Support repositories to installed systems](https://support.scc.suse.com/s/kb/How-to-assign-Long-Term-Service-Pack-Support-repositories-to-installed-systems-1583239391022?language=en_US).    
+6. Once the registration to SMT repository is successful, re-enable the LTSS as specified in [SUSE article - How to assign Long Term Service Pack Support repositories to installed systems](https://support.scc.suse.com/s/kb/How-to-assign-Long-Term-Service-Pack-Support-repositories-to-installed-systems?language=en_US).    
 
 ## Next steps
 
@@ -763,6 +854,6 @@ The third-party products that this article discusses are manufactured by compani
 
 ## Third-party contact information disclaimer
 
-Microsoft provides third-party contact information to help you find additional information about this topic. This contact information might change without notice. Microsoft doesn't guarantee the accuracy of third-party contact information.
+Microsoft provides third-party contact information to help you find more information about this topic. This contact information might change without notice. Microsoft doesn't guarantee the accuracy of third-party contact information.
 
  

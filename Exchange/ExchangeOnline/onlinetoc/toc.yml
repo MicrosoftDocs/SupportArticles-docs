@@ -150,22 +150,20 @@ items:
           href: ../antispam-and-protection/smtpsend-barelinefeedsareillegal-when-tracing-messages.md
     - name: Calendars
       items:
-        - name: Free/busy lookup fails with invalid room work hours
-          href: ../calendars/free-busy-room-invalid-work-hours.md
-        - name: Same-tenant free/busy access denied
-          href: ../calendars/free-busy-caller-no-access.md
         - name: Free/busy
           items:
+            - name: Cross-tenant free/busy Autodiscover call fails
+              href: ../calendars/cross-tenant-free-busy-discovery-call-failed.md      
+            - name: Cross-tenant free/busy caller access denied
+              href: ../calendars/cross-tenant-free-busy-access-denied.md
+            - name: Cross-tenant free/busy federated proxy address error
+              href: ../calendars/cross-tenant-free-busy-federated-proxy-mismatch.md
             - name: Free/busy information is unavailable
               href: ../calendars/diagnose-free-busy-unavailability.md
-        - name: Google attendee availability and missing mail contact
-          href: ../calendars/google-attendee-free-busy-mail-contact-not-found.md
-        - name: Cross-tenant free/busy Autodiscover call fails
-          href: ../calendars/cross-tenant-free-busy-discovery-call-failed.md      
-        - name: Cross-tenant free/busy caller access denied
-          href: ../calendars/cross-tenant-free-busy-access-denied.md
-        - name: Cross-tenant free/busy federated proxy address error
-          href: ../calendars/cross-tenant-free-busy-federated-proxy-mismatch.md
+            - name: Free/busy lookup fails with invalid room work hours
+              href: ../calendars/free-busy-room-invalid-work-hours.md
+            - name: Same-tenant free/busy access denied
+              href: ../calendars/free-busy-caller-no-access.md  
         - name: Google attendee availability and address space endpoint
           href: ../calendars/google-attendee-free-busy-address-space-endpoint.md      
         - name: Google attendee availability and missing mail contact
@@ -190,26 +188,26 @@ items:
           items:
             - name: Fix corrupt calendar permission entries
               href: ../calendars/permissions/fix-corrupt-calendar-permissions.md              
-            - name: Resolve calendar and delegate permissions issues
-              href: ../calendars/permissions/troubleshoot-calendar-delegate-permissions.md
             - name: Outlook says that delegate settings weren't saved correctly
-              href: ../calendars/permissions/fix-delegate-settings-save-error.md
+              href: ../calendars/permissions/fix-delegate-settings-save-error.md           
             - name: Remove stale calendar permissions
               href: ../calendars/permissions/delete-stale-calendar-permission.md
             - name: Replace security groups used as calendar delegates
               href: ../calendars/permissions/replace-security-group-delegates.md
             - name: Reset corrupt Outlook delegate permissions
-              href: ../calendars/permissions/fix-corrupt-delegate-permissions.md          
-            - name: Restore delegate access to private calendar items
-              href: ../calendars/permissions/fix-private-calendar-access.md
-            - name: Restore Missing Delegate Meeting Invitations in Outlook
-              href: ../calendars/permissions/fix-delegate-invites.md              
+              href: ../calendars/permissions/fix-corrupt-delegate-permissions.md
+            - name: Resolve calendar and delegate permissions issues
+              href: ../calendars/permissions/troubleshoot-calendar-delegate-permissions.md
             - name: Resolve Full Access and delegate conflicts on legacy calendars
               href: ../calendars/permissions/fix-full-access-delegate-conflicts.md
             - name: Resolve Outlook delegate failures in Exchange hybrid
               href: ../calendars/permissions/fix-hybrid-delegate-failures.md             
-            - name: Resolve the "Item Has Changed" Error for Delegate Meetings
-              href: ../calendars/permissions/fix-delegate-draft-save-error.md
+            - name: Resolve the "Item Has Changed" error for delegate meetings
+              href: ../calendars/permissions/fix-delegate-draft-save-error.md                                         
+            - name: Restore delegate access to private calendar items
+              href: ../calendars/permissions/fix-private-calendar-access.md
+            - name: Restore missing delegate meeting invitations in Outlook
+              href: ../calendars/permissions/fix-delegate-invites.md            
             - name: Set Editor rights for calendar delegates
               href: ../calendars/permissions/assign-editor-delegate-rights.md
         - name: ActiveSync can't download attachments to Calendar items

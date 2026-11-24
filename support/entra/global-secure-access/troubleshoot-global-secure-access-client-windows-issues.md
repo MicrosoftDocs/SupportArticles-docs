@@ -2,10 +2,8 @@
 title: Troubleshoot issues in Global Secure Access client for Windows
 description: Learn how to troubleshoot issues that occur when you use the Global Secure Access client for Windows.
 ms.date: 01/08/2025
-author: Abizerh
-ms.author: abizerh
 editor: v-jsitser
-ms.reviewer: tdetzner, pudwivedi, joflore, shacharrozin, azureidcic, v-leedennis
+ms.reviewer: tdetzner, pudwivedi, joflore, shacharrozin, azureidcic, v-leedennis, abizerh
 ms.service: entra-id
 ms.custom: sap:Private Access
 ---

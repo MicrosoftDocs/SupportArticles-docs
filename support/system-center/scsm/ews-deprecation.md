@@ -33,9 +33,9 @@ Then plan to apply the respective permanent solution. See the following list for
 
 - If your Exchange Connectors are impacted, upgrade to [Exchange Connector 5.0](https://www.microsoft.com/download/details.aspx?id=101579).
 - If your Email Notifications are impacted:
-   - For System Center Service Manager 2022, apply [System Center Service Manager 2022 Update Rollup 4](https://support.microsoft.com/en-us/servicing/management-tools/service-manager/update/2026/09/update-rollup-4-for-system-center-2022-service-manager).
+   - For System Center Service Manager 2022, apply [System Center Service Manager 2022 Update Rollup 4](https://support.microsoft.com/servicing/management-tools/service-manager/update/2026/09/update-rollup-4-for-system-center-2022-service-manager).
    - For System Center – Service Manager 2025, wait for System Center – Service Manager 2025 Update Rollup 2 to be released.
-   - For System Center Service Manager 2019, there are currently no plans to provide a permanent solution. Please plan [upgrading to System Center Service Manager 2022](/system-center/scsm/upgrade-service-manager?view=sc-sm-2022) and then apply the latest System Center Service Manager 2022 Update Rollup.
+   - For System Center Service Manager 2019, there are currently no plans to provide a permanent solution. Please plan [upgrading to System Center Service Manager 2022](/system-center/scsm/upgrade-service-manager?view=sc-sm-2022&preserve-view=true) and then apply the latest System Center Service Manager 2022 Update Rollup.
 
 ## Temporary workaround (valid until April 2027)
 
