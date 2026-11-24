@@ -1,9 +1,7 @@
 ---
 title: Troubleshoot Common Issues When Using Wrap Feature
 description: Provides solutions to common issues when using the wrap feature in Power Apps.
-ms.reviewer: sitaramp, koagarwa
-ms.author: arijitba
-author: arijitba
+ms.reviewer: sitaramp, koagarwa, arijitba
 ms.date: 08/04/2025
 ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done, sap:App Management\Wrap an app
 ---
