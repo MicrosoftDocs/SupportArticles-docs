@@ -285,7 +285,9 @@ items:
     - name: Default room camera mismatch in Teams Rooms
       href: ./teams-rooms-and-devices/default-room-camera-mismatch-teams-rooms.md      
     - name: Direct Guest Join issues in Teams Rooms
-      href: ./teams-rooms-and-devices/resolve-direct-guest-join-issues.md   
+      href: ./teams-rooms-and-devices/resolve-direct-guest-join-issues.md
+    - name: Fix Windows OS activation status
+      href: ./teams-rooms-and-devices/fix-windows-os-activation-status-teams-rooms-windows.md      
     - name: HID controls don't work with Teams and Skype for Business running side by side
       href: ./teams-rooms-and-devices/hid-controls-do-not-work-with-teams-skype-business-running-side-by-side.md
     - name: Join button missing in Teams Rooms
@@ -348,20 +350,22 @@ items:
         href: ./teams-rooms-and-devices/microphone-speaker-status-unhealthy.md
       - name: Monitored or Offline status is Unhealthy
         href: ./teams-rooms-and-devices/monitored-offline-status-unhealthy.md
+      - name: NightlyReboot task disabled
+        href: ./teams-rooms-and-devices/nightly-reboot-disabled-signal.md       
       - name: OS Edition status is Unhealthy
         href: ./teams-rooms-and-devices/os-edition-status-unhealthy.md
       - name: Pro Management Portal shows a false unhealthy alert
         href: ./teams-rooms-and-devices/pro-management-portal-shows-false-unhealthy-alert.md        
+      - name: Resolve Teams Rooms resource account sign-in issues
+        href: ./teams-rooms-and-devices/teams-rooms-resource-account-sign-in-issues.md
+      - name: Resolve Windows Update issues on Teams Rooms Pro devices
+        href: ./teams-rooms-and-devices/teams-rooms-device-windows-update-issues.md
       - name: Sleep timer status is Unhealthy
         href: ./teams-rooms-and-devices/sleep-timer-status-unhealthy.md
       - name: USB Peripheral Power Drain status is Unhealthy
         href: ./teams-rooms-and-devices/usb-peripheral-power-drain-status-unhealthy.md
       - name: USB Selective Suspend status is Unhealthy
         href: ./teams-rooms-and-devices/usb-selective-suspend-status-unhealthy.md
-      - name: Resolve Teams Rooms resource account sign-in issues
-        href: ./teams-rooms-and-devices/teams-rooms-resource-account-sign-in-issues.md
-      - name: Resolve Windows Update issues on Teams Rooms Pro devices
-        href: ./teams-rooms-and-devices/teams-rooms-device-windows-update-issues.md
   - name: Teams on Linux
     items: 
     - name: Known issues on Linux

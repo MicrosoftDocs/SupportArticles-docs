@@ -2,9 +2,7 @@
 title: Troubleshoot Azure DNS and TLS integration for the application routing Gateway API implementation
 description: Learn how to troubleshoot Azure DNS and TLS integration issues for AKS Gateway API, and fix missing certificates or DNS records.
 ms.date: 06/15/2026
-author: jaiveerk
-ms.author: jkatariya
-ms.reviewer: nshankar
+ms.reviewer: nshankar, jkatariya
 ms.service: azure-kubernetes-service
 ms.topic: troubleshooting-general
 ms.custom: sap:Extensions, Policies and Add-Ons

@@ -166,3 +166,5 @@
     href: error-3000-unable-to-register-to-advisor-service.md
   - name: Use CA certificate on SCX agent
     href: use-ca-certificate-on-scx-agent.md
+  - name: Troubleshoot MsiInstaller Event ID 1024 
+    href: troubleshoot-scom-server-log-remediation-steps.md
