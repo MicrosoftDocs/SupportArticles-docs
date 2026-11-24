@@ -1,7 +1,7 @@
 ---
 title: Diagnostic logging for troubleshooting Workplace Join issues
 description: Describes how to troubleshoot Workplace Join issues by collecting and reviewing log information through Event Viewer.
-ms.date: 02/12/2026
+ms.date: 11/23/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -48,7 +48,7 @@ Start Network Capture, and then reproduce the issue.
 
 For information about how to enable Capi2 logging, go to the following website:
 
-[Enable CAPI2 event logging to troubleshoot PKI and SSL certificate issues](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-vista/cc749296(v=ws.10)#enabling-and-saving-the-capi2-log)
+[Enable CAPI2 event logging to troubleshoot PKI and SSL certificate issues](/previous-versions/windows/it-pro/windows-vista/cc749296(v=ws.10)#enabling-and-saving-the-capi2-log)
 
 This enables verbose logging in **Applications and Services Logs/Microsoft/Windows/Capi2** in Event Viewer.
 

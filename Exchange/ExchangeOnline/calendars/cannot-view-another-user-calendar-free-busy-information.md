@@ -1,60 +1,57 @@
 ---
-title: Can't view other user's free/busy information
-description: Describes a problem that prevents you from viewing free/busy information for a specific user in Exchange Online. And if troubleshooting logging is enabled for the user, the Outlook log contains a The result set contains too many calendar entries error.
+title: Can't View Another User's free/busy information in Exchange Online
+description: Resolve the "too many calendar entries" error if you can't view another user's free/busy information in Exchange Online.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.custom: 
+ms.custom:
   - sap:Calendaring
   - Exchange Online
   - CSSTroubleshoot
-ms.reviewer: v-six
-appliesto: 
+ms.reviewer: v-six, shanefe, v-gsitser
+appliesto:
   - Exchange Online
-  - Outlook 2016
-  - Outlook 2019
-  - Microsoft 365 Apps for enterprise
+  - Outlook on the web
+  - Outlook for Windows
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 11/23/2026
+ms.service: exchange-online
+ai-usage: ai-assisted
 ---
-# You can't view free/busy information on another user's Calendar in Exchange Online
 
-_Original KB number:_ &nbsp; 2962513
+# Can't view another user's free/busy information in Exchange Online
 
-## Problem
+*Original KB number:* 2962513
 
-You cannot view free/busy information for a specific user in Exchange Online. You experience this issue in Outlook Web App and Microsoft Outlook (including Outlook for Mac 2011). Specifically, you experience the following symptoms:
+## Summary
 
-- When you try to view the user's Calendar in Outlook, you receive the following error message:
+This article explains how to resolve `The result set contains too many calendar entries` when you can't view another user's free/busy information in Exchange Online. It covers the affected time slot limit, how to reduce unwanted entries, and the evidence to collect if the error persists.
 
-    > could not be updated
+## Symptoms
 
-   :::image type="content" source="media/cannot-view-another-user-calendar-free-busy-information/could-not-be-updated.png" alt-text="Screenshot of could not be updated error.":::
+In Outlook on the web or Outlook for Windows, availability for a particular user is unavailable. When you try to view the user's calendar, you might see `could not be updated` or a red triangle with an exclamation mark.
 
-- When you try to view the user's Calendar through Outlook Web App, you see a red triangle with an exclamation mark.
+When you analyze an HTTP Archive (HAR) network trace of the failed lookup in Outlook on the web, the response contains the following error message:
 
-   :::image type="content" source="media/cannot-view-another-user-calendar-free-busy-information/red-triangle.png" alt-text="Screenshot of the user's Calendar showing a red triangle with an exclamation mark.":::
+```text
+The result set contains too many calendar entries. The allowed size = 1000; the actual size = ...
+```
+
+The [Microsoft Graph getSchedule API](/graph/api/calendar-getschedule) returns response code `5006` with this message when the user's calendar has a time slot that contains more than 1,000 entries.
 
 ## Cause
 
-This issue occurs if the user's Calendar has a time slot that contains more than 1,000 entries.
+This issue occurs if the user's calendar has a time slot that contains more than 1,000 entries. The limit applies to the affected time slot, not the total number of items in the calendar folder.
 
-## Solution
+## Resolution
 
-Delete unwanted items from the user's Calendar so that there are fewer than 1,000 items in that particular time slot.
+1. Identify the user whose availability can't be retrieved and the date range in which the error occurs.
+1. Ask the calendar owner to review the affected period and [delete unwanted calendar entries](/troubleshoot/outlook/calendaring/resolve-free-busy-errors#the-result-set-contains-too-many-calendar-entries) so that there are fewer than 1,000 entries in the affected time slot. Don't delete appointments that the user still needs.
+1. Repeat the availability lookup for the same user and date range.
+1. Verify that the user's free/busy information is displayed and that the request no longer returns `The result set contains too many calendar entries`. If it succeeds, stop troubleshooting.
 
-## More information
+### If the issue persists
 
-To confirm that this is the issue that you're experiencing (if the user is running Outlook 2010 or Outlook 2007), follow these steps:
-
-1. Enable troubleshooting logging in Outlook. For more info about how to do this, see [How to enable global and advanced logging for Microsoft Outlook](https://support.microsoft.com/help/831053).
-2. In the `%temp%\OLkAS` folder, look for the availability service log file that's named \<date>-\<time>-AS.log or \<date>-\<time>-fb.log.
-3. Search the log file for an entry that resembles the following:
-
-    > \<MessageResponseClass="Error">\<MessageText>Microsoft.Exchange.InfoWorker.Common.Availability. ResultSetTooBigException: The result set contains too many calendar entries. The allowed size = 1000; the actual size = \<xxxx>
-
-    The number that's represented by the \<xxxx> placeholder. If you're experiencing this issue, this number will be more than 1,000.
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+[Contact Microsoft Support](/microsoft-365/admin/get-help-support) with the affected user, date range, client, reproduction time with its time zone, and exact error message. If Support requests a browser trace, follow [Collect a browser trace for free/busy lookups in Outlook on the web](/troubleshoot/exchange/calendars/collect-free-busy-browser-trace) to capture, inspect, and safely share a sanitized HAR file for the lookup. Review the trace for personal information before sharing it, and don't post it publicly.
