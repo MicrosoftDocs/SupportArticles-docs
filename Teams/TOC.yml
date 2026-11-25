@@ -252,8 +252,6 @@ items:
       href: ./tabs/websites-not-loaded-new-teams.md
   - name: Teams Rooms and devices
     items:
-    - name: NightlyReboot task disabled signal
-      href: ./teams-rooms-and-devices/nightly-reboot-disabled-signal.md
     - name: Android device enrollment fails with EnrollmentUserLicense error
       href: ./teams-rooms-and-devices/android-device-enrollment-fails-with-enrollment-user-license-error.md
     - name: Black or blank screen or no system response
