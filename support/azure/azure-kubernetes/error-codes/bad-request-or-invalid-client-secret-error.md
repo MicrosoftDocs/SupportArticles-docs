@@ -1,17 +1,17 @@
 ---
 title: Troubleshoot BadRequest or InvalidClientSecret errors in AKS
 description: Identify and resolve expired or invalid service principal client secrets that block AKS cluster creation or upgrade. Learn how to fix them now.
-ms.date: 09/21/2026
+ms.date: 11/24/2026
 manager: dcscontentpm
 ms.topic: troubleshooting
 author: kaushika-msft
 ms.author: kaushika
-ms.reviewer: pihe, shiyao, zhixinsun
+ms.reviewer: pihe, shiyao, zhixinsun, kaushika
 ms.service: azure-kubernetes-service
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ai-usage: ai-assisted
 ---
-# Troubleshoot BadRequest or InvalidClientSecret error
+# Troubleshoot "BadRequest" or "InvalidClientSecret" errors in Azure Kubernetes Service
 
 ## Summary
 
@@ -103,16 +103,16 @@ Alternatively, you can use the [Azure portal](https://portal.azure.com) to verif
 Follow these steps:
 
 1. In the [Azure portal](https://portal.azure.com), search for and select **Microsoft Entra ID**.
-2. In the navigation pane of Microsoft Entra ID, select **App registrations**.
-3. On the **Owned applications** tab, select the affected application.
-4. Find the service principal name and secret information, and verify that the information is correct and current.
+1. In the navigation pane of Microsoft Entra ID, select **App registrations**.
+1. On the **Owned applications** tab, select the affected application.
+1. Find the service principal name and secret information, and verify that the information is correct and current.
 
 Compare the expiration with the failure time in Coordinated Universal Time (UTC). These checks show metadata, not the secret value stored in AKS. For `AADSTS7000215`, also verify the supplied value against the approved credential source.
 
 ## Solution
 
 1. Obtain valid credentials for the application. For `AADSTS7000222`, replace the expired secret. For `AADSTS7000215`, first correct the secret value and client ID pairing. A typing error or using a secret ID instead of the value doesn't require a new secret. If you need a replacement, see [Reset the existing service principal credentials](/azure/aks/update-credentials#reset-the-existing-service-principal-credentials) or [Create a new service principal](/azure/aks/update-credentials#create-a-new-service-principal) if you need to replace the service principal.
-2. Apply the credentials according to the failed operation. The following table summarizes the actions for each operation.
+1. Apply the credentials according to the failed operation. The following table summarizes the actions for each operation.
 
    | Operation | Action |
    |---|---|
@@ -121,7 +121,6 @@ Compare the expiration with the failure time in Coordinated Universal Time (UTC)
    | Update service principal credentials | Follow the same [credential-update procedure](/azure/aks/update-credentials#update-aks-cluster-with-service-principal-credentials) with the corrected client ID and secret value. |
 
 Follow the credential rotation precautions in the linked documentation and confirm that the originally requested operation completes successfully.
-
 
 ## References
 

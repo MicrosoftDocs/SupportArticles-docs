@@ -61,7 +61,8 @@ The following table lists possible status values for SFTP file uploads, indicate
 |Failed|Yes|Review and resolve errors|
 
 > [!NOTE]
-> SFTP upload notification messages can contain up to 100 lines of warnings and errors.
+> - SFTP upload notification messages can contain up to 100 lines of warnings and errors.
+> - Make sure there are no configuration mismatches between the SFTP setup in Glint and the SSH remote profile. File uploads using mismatching host names or mismatching ports can result in the file upload appearing successful, but the files won't show up in Via Glint as expected. To learn more about SFTP file uploads, see [Troubleshoot SFTP file detection and processing](/viva/glint/setup/set-up-sftp#troubleshoot-sftp-file-detection-and-processing).
 
 ## Activity Audit Log
 
