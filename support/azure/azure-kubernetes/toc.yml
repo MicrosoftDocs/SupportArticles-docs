@@ -7,6 +7,8 @@ items:
     items:
     - name: Basic troubleshooting
       href: create-upgrade-delete/troubleshoot-aks-cluster-creation-issues.md
+    - name: Troubleshoot AKS managed GPU nodes with dynamic resource allocation (DRA)
+      href: create-upgrade-delete/aks-dynamic-resource-allocation-gpus-troubleshoot.md
   - name: Upgrade operations
     items:
     - name: Memory saturation occurs in pods after cluster upgrade
