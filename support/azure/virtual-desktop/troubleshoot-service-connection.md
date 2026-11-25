@@ -41,7 +41,7 @@ This could also happen if a CSP Provider created the subscription and then trans
 3. In the menu on the left side of the page, select **Resource provider**.
 4. Find and select **Microsoft.DesktopVirtualization**, and then select **Re-register**.
 
-## 
+## User sees Conditional Access error preventing access to Microsoft Entra ID resource
 
 This error occurs when the user is subject to a Conditional Access policy that's blocking access to a specific Microsoft Entra ID resource, either when signing into the Windows App or when making a connection to a resource. This usually happens for one of two reasons:
 
@@ -55,7 +55,7 @@ To resolve this, first validate the user's [sign-in identity](/entra/identity/mo
 
 ## Windows App sign-in fails when using AD FS federated authentication
 
-In some environments using federated authentication with AD FS, signing in to Windows App can fail before the user’s resources are displayed.
+In some environments using federated authentication with AD FS, signing in to Windows App can fail before the user's resources are displayed.
 
 This issue can occur after the user selects a sign-in option and is redirected to Active Directory Federation Services (AD FS). The AD FS event logs might contain the following error:
 
