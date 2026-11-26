@@ -1,7 +1,7 @@
 ---
 title: Manifest unknown - manifest tagged by <tag> is not found in Azure Container Registry
 description: Learn how to resolve the manifest unknown error when a tagged manifest isn't found in Azure Container Registry. Verify tags and pull your image.
-ms.date: 10/12/2026
+ms.date: 11/26/2026
 manager: dcscontentpm
 author: kaushika-msft
 ms.author: kaushika
@@ -26,11 +26,11 @@ You receive the following error message.
 
 ## Cause
 
-The tag that you associated with the image you want to pull isn't found.
+The requested tag isn't found in the specified repository and registry. The manifest can still exist without that tag, for example after the image is untagged.
 
 ## Solution
 
-Ensure that the tag exists within the associated repository and registry.
+Ensure that the tag exists within the associated repository and registry. Verify the registry hostname, repository path, and tag in the image reference that you're trying to pull.
 
 To find the tags within the associated repository and registry, use one of the following methods.
 
@@ -54,3 +54,5 @@ In Azure CLI, run the [az acr repository show-tags](/cli/azure/acr/repository#az
 
 > [!NOTE]
 > Checking the repositories from the [Azure portal](https://portal.azure.com) or running the `az acr repository show-tags` command works only if the Azure Container Registry network rules allow these actions.
+
+If the requested tag is missing, correct the image reference to use the intended existing tag, or push or import the intended image with the required tag. Then retry the pull.
