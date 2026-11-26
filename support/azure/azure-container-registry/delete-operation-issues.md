@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Azure Container Registry delete operation issues
 description: Troubleshoot Azure Container Registry delete issues, including empty repositories, private endpoints, locks, and storage not clearing. Learn the solutions.
-ms.date: 10/09/2026
+ms.date: 11/26/2026
 ms.topic: troubleshooting
 manager: dcscontentpm
 author: kaushika-msft
@@ -37,11 +37,13 @@ Add a dummy image before you delete the entire repository.
 
 ## Issue 2: Can't delete a container registry associated with private endpoints
 
-If an Azure container registry is associated with private endpoints, deleting the container registry fails. Before you can delete it, you must remove all private endpoints that are associated with it. 
+A private endpoint doesn't necessarily prevent you from deleting a container registry. If deletion fails, check the returned error before assuming that private endpoint connections are the cause.
 
 ### Solution
 
-Use the Azure portal or the [az acr private-endpoint-connection delete](/cli/azure/acr/private-endpoint-connection#az-acr-private-endpoint-connection-delete) command. For more information, see [Manage private endpoint connections](/azure/container-registry/container-registry-private-link#manage-private-endpoint-connections).
+If the error identifies a private endpoint connection dependency, use the Azure portal or the [az acr private-endpoint-connection delete](/cli/azure/acr/private-endpoint-connection#az-acr-private-endpoint-connection-delete) command to remove the affected registry-side connection, then retry deletion. Coordinate with endpoint owners before disconnecting active consumers.
+
+Deleting the registry or its registry-side connection can leave the network-side private endpoint disconnected. The connection-delete command doesn't delete the private endpoint resource or its network interface. Remove unneeded private endpoint resources separately and review any associated DNS configuration.
 
 ## Issue 3: Delete operation doesn't clear used storage
 
