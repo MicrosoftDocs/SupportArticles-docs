@@ -323,15 +323,15 @@ To identify the slow steps in the query, follow these steps:
 1. Select the XML link in the `query_plan` column. After the graphical query plan opens in a new window, right-click it, and then select **Save Execution Plan As...**. Repeat these steps to capture three or four snapshots, one minute apart, to obtain sufficient data for analysis. Specifically, you can compare the row count (actual number of rows) for each operator over time to learn which operators are showing a significant increase in row count (by million or more).
 
     > [!NOTE]
-    > If you aren't getting any output from `sys.dm_exec_query_statistics_xml`, you can check whether the database option `LAST_QUERY_PLAN_STATS` is disabled by running the following command:
+    > If you aren't getting any output from `sys.dm_exec_query_statistics_xml`, you can check whether the database option `LIGHTWEIGHT_QUERY_PROFILING` is disabled in the database where the query runs by running the following command:
     >
     > ```sql
     > SELECT name, value, value_for_secondary, is_value_default 
     > FROM sys.database_scoped_configurations
-    > WHERE name = 'LAST_QUERY_PLAN_STATS'
+    > WHERE name = 'LIGHTWEIGHT_QUERY_PROFILING'
     > ```
     >
-    > You can enable the last query plan statistics at the database level by running `ALTER DATABASE SCOPED CONFIGURATION SET LAST_QUERY_PLAN_STATS = ON`.
+    > You can enable lightweight profiling at the database level by running `ALTER DATABASE SCOPED CONFIGURATION SET LIGHTWEIGHT_QUERY_PROFILING = ON`.
 
 ---
 
