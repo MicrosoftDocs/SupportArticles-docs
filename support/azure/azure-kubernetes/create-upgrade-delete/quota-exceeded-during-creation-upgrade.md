@@ -1,12 +1,12 @@
 ---
 title: Troubleshoot QuotaExceeded or InsufficientVCPUQuota error during creation or upgrade in AKS
 description: Fix the QuotaExceeded or InsufficientVCPUQuota error when you create or upgrade an Azure Kubernetes Service (AKS) cluster. Learn how to increase vCPU quotas.
-ms.date: 11/18/2026
+ms.date: 11/25/2026
 ms.topic: troubleshooting
 manager: dcscontentpm
 author: kaushika-msft
 ms.author: kaushika
-ms.reviewer: chiragpa, nickoman, v-weizhu, mariusbutuc, kaushika
+ms.reviewer: chiragpa, nickoman, v-weizhu, mariusbutuc, kaushika, addobres
 ms.service: azure-kubernetes-service
 keywords:
 #Customer intent: As an Azure Kubernetes user, I want to avoid the "QuotaExceeded" or "InsufficientVCPUQuota" error for virtual CPU (vCPU) usage so that I can create or upgrade an AKS cluster successfully.
