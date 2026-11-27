@@ -3,7 +3,7 @@ metadata:
   title: Azure Kubernetes Service (AKS) common issues FAQ
   description: Review a list of frequently asked questions (FAQ) about common issues when you're working with an Azure Kubernetes Service (AKS) cluster.
   ms.topic: faq
-  ms.date: 05/08/2025
+  ms.date: 11/25/2026
   ms.reviewer: chiragpa, nickoman, jotavar, wilsondarko, v-leedennis, v-weizhu
   ms.service: azure-kubernetes-service
   ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
@@ -19,14 +19,22 @@ sections:
           Try the [official guide to troubleshooting Kubernetes clusters](https://kubernetes.io/docs/tasks/debug/). There's also a [troubleshooting guide](https://github.com/feiskyer/kubernetes-handbook/blob/master/en/troubleshooting/index.md) that was published by a Microsoft engineer. This guide helps you troubleshoot pods, nodes, clusters, and other features.
 
       - question: |
-          I'm trying to enable Kubernetes role-based access control (Kubernetes RBAC) on an existing cluster. How can I do that?
+          Why is my AKS create, update, scale, or upgrade operation taking a long time?
         answer: |
-          Enabling Kubernetes role-based access control (Kubernetes RBAC) on existing clusters isn't supported at this time. This feature can be set only when you create new clusters. Kubernetes RBAC is enabled by default when you use the [Azure CLI](/cli/azure/install-azure-cli), the [Azure portal](https://portal.azure.com), or an API version later than `2020-03-01`.
+          AKS operations can involve Azure infrastructure provisioning, node creation or replacement, workload draining, and resource allocation. Upgrade duration can also depend on the number of nodes, surge settings, Pod Disruption Budgets (PDBs), drain timeout, and node soak duration. Check the cluster and node-pool provisioning states and review the Activity log for the current operation. If an operation remains in progress unexpectedly, verify that another operation isn't blocking it. 
+          See: [Troubleshoot cluster pending operation guide](https://learn.microsoft.com/en-us/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/operationnotallowed).
 
       - question: |
-          Can I move my cluster to a different subscription, or move my subscription with my cluster to a new tenant?
+          Can I modify the VMSS or other resources in the AKS node resource group?
         answer: |
-          No. If you've moved your AKS cluster to a different subscription or the cluster's subscription to a new tenant, the cluster won't function because of missing cluster identity permissions. AKS doesn't support moving clusters across subscriptions or tenants because of this constraint. For more information, see [Operations FAQ](/azure/aks/faq#operations).
+          No. Directly modifying AKS-managed resources in the node resource group is unsupported and can cause cluster operations to fail. For more information, see [AKS FAQ](https://learn.microsoft.com/en-us/azure/aks/faq#why-are-two-resource-groups-created-with-aks-).
+
+      - question: |
+          Can I perform another operation while an AKS operation is running?
+        answer: |
+          You should generally wait for the current AKS operation to finish before starting another operation on the same cluster or affected node pool. A new operation might be blocked with OperationNotAllowed or might preempt an existing operation. Check the provisioning or operation status before submitting another request and avoid repeatedly submitting the same operation.
+          See: [Troubleshoot cluster pending operation guide](https://learn.microsoft.com/en-us/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/operationnotallowed).
+      
       - question: |
           What naming restrictions are enforced for AKS resources and parameters?
         answer: |
